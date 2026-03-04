@@ -8,8 +8,8 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            background: #0d1117;
-            color: #e8dcc8;
+            background: #0a0e1a;
+            color: #ffffff;
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
         }
@@ -30,8 +30,8 @@
             pointer-events: none;
             z-index: 2;
             background:
-                radial-gradient(ellipse at 20% 50%, rgba(139, 119, 80, 0.04) 0%, transparent 70%),
-                radial-gradient(ellipse at 80% 30%, rgba(139, 119, 80, 0.03) 0%, transparent 60%);
+                radial-gradient(ellipse at 20% 50%, rgba(0, 180, 180, 0.02) 0%, transparent 70%),
+                radial-gradient(ellipse at 80% 30%, rgba(0, 180, 180, 0.015) 0%, transparent 60%);
         }
         .compass {
             position: fixed;
@@ -49,15 +49,15 @@
         .title-overlay h1 {
             font-size: clamp(20px, 3vw, 36px);
             font-weight: 700;
-            color: #e8dcc8;
+            color: #ffffff;
             letter-spacing: -0.5px;
-            text-shadow: 0 2px 20px rgba(13,17,23,0.8);
+            text-shadow: 0 2px 20px rgba(10,14,26,0.8);
         }
         .title-overlay .subtitle {
             font-family: 'Source Serif 4', serif;
             font-size: clamp(12px, 1.5vw, 16px);
             font-style: italic;
-            color: rgba(232, 220, 200, 0.5);
+            color: rgba(255, 255, 255, 0.5);
             margin-top: 4px;
         }
         .phase-indicator {
@@ -81,12 +81,12 @@
         .phase-dot .dot {
             width: 8px; height: 8px;
             border-radius: 50%;
-            background: #e8dcc8;
+            background: #ffffff;
             transition: all 0.3s;
         }
         .phase-dot.active .dot {
             width: 12px; height: 12px;
-            box-shadow: 0 0 10px rgba(232,220,200,0.5);
+            box-shadow: 0 0 10px rgba(255,255,255,0.5);
         }
         .phase-dot .label {
             font-size: 11px;
@@ -100,7 +100,7 @@
             z-index: 50;
             font-size: clamp(48px, 8vw, 96px);
             font-weight: 700;
-            color: rgba(232, 220, 200, 0.1);
+            color: rgba(255, 255, 255, 0.1);
             pointer-events: none;
             transition: color 0.5s;
             font-variant-numeric: tabular-nums;
@@ -108,9 +108,9 @@
         .waypoint-tooltip {
             position: fixed;
             z-index: 200;
-            background: rgba(13, 17, 23, 0.95);
+            background: rgba(10, 14, 26, 0.95);
             backdrop-filter: blur(15px);
-            border: 1px solid rgba(232, 220, 200, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 12px;
             padding: 20px;
             max-width: 320px;
@@ -124,14 +124,14 @@
         }
         .waypoint-tooltip .date {
             font-size: 12px;
-            color: rgba(232, 220, 200, 0.5);
+            color: rgba(255, 255, 255, 0.5);
             margin-bottom: 8px;
         }
         .waypoint-tooltip .desc {
             font-family: 'Source Serif 4', serif;
             font-size: 13px;
             line-height: 1.6;
-            color: rgba(232, 220, 200, 0.8);
+            color: rgba(255, 255, 255, 0.8);
         }
         .waypoint-tooltip .founder-badge {
             display: inline-block;
@@ -162,7 +162,7 @@
             align-items: center;
             gap: 8px;
             font-size: 11px;
-            color: rgba(232, 220, 200, 0.6);
+            color: rgba(255, 255, 255, 0.6);
         }
         .legend-line {
             width: 24px; height: 3px;
@@ -174,7 +174,7 @@
             transform: translateX(-50%);
             z-index: 50;
             font-size: 12px;
-            color: rgba(232, 220, 200, 0.3);
+            color: rgba(255, 255, 255, 0.3);
             animation: pulse 2s ease-in-out infinite;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -188,7 +188,7 @@
             top: 20px; right: 40px;
             z-index: 50;
             font-size: 9px;
-            color: rgba(232, 220, 200, 0.15);
+            color: rgba(255, 255, 255, 0.15);
             letter-spacing: 2px;
             text-transform: uppercase;
         }
@@ -241,7 +241,7 @@
 
         <div class="legend" id="legend">
             <div class="legend-item">
-                <div class="legend-line" style="background:#e8dcc8;"></div>
+                <div class="legend-line" style="background:#d4a44a;"></div>
                 Sillage maritime
             </div>
             <div class="legend-item">
@@ -264,16 +264,16 @@
     </div>
 
     <svg class="compass" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="48" stroke="rgba(232,220,200,0.3)" stroke-width="0.5"/>
-        <circle cx="50" cy="50" r="35" stroke="rgba(232,220,200,0.15)" stroke-width="0.5"/>
-        <path d="M50 5 L53 45 L50 40 L47 45 Z" fill="rgba(232,220,200,0.4)"/>
-        <path d="M50 95 L53 55 L50 60 L47 55 Z" fill="rgba(232,220,200,0.15)"/>
-        <path d="M5 50 L45 47 L40 50 L45 53 Z" fill="rgba(232,220,200,0.15)"/>
-        <path d="M95 50 L55 47 L60 50 L55 53 Z" fill="rgba(232,220,200,0.15)"/>
-        <text x="50" y="3" text-anchor="middle" font-size="5" fill="rgba(232,220,200,0.5)" font-family="Poppins">N</text>
-        <text x="50" y="100" text-anchor="middle" font-size="5" fill="rgba(232,220,200,0.3)" font-family="Poppins">S</text>
-        <text x="1" y="52" font-size="5" fill="rgba(232,220,200,0.3)" font-family="Poppins">O</text>
-        <text x="95" y="52" font-size="5" fill="rgba(232,220,200,0.3)" font-family="Poppins">E</text>
+        <circle cx="50" cy="50" r="48" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
+        <circle cx="50" cy="50" r="35" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+        <path d="M50 5 L53 45 L50 40 L47 45 Z" fill="rgba(255,255,255,0.4)"/>
+        <path d="M50 95 L53 55 L50 60 L47 55 Z" fill="rgba(255,255,255,0.15)"/>
+        <path d="M5 50 L45 47 L40 50 L45 53 Z" fill="rgba(255,255,255,0.15)"/>
+        <path d="M95 50 L55 47 L60 50 L55 53 Z" fill="rgba(255,255,255,0.15)"/>
+        <text x="50" y="3" text-anchor="middle" font-size="5" fill="rgba(255,255,255,0.5)" font-family="Poppins">N</text>
+        <text x="50" y="100" text-anchor="middle" font-size="5" fill="rgba(255,255,255,0.3)" font-family="Poppins">S</text>
+        <text x="1" y="52" font-size="5" fill="rgba(255,255,255,0.3)" font-family="Poppins">O</text>
+        <text x="95" y="52" font-size="5" fill="rgba(255,255,255,0.3)" font-family="Poppins">E</text>
     </svg>
 
     <script>
@@ -286,14 +286,14 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     // COLORS
     // ═══════════════════════════════════════════
     const COLORS = {
-        sillage: '#e8dcc8',
+        sillage: '#d4a44a',
         techno:  '#2a55b3',
         enviro:  '#00bf63',
         socio:   '#b32a55',
-        bg:      '#0d1117',
-        grid:    'rgba(232, 220, 200, 0.06)',
-        coast:   'rgba(232, 220, 200, 0.45)',
-        coastFill: 'rgba(232, 220, 200, 0.08)',
+        bg:      '#0a0e1a',
+        grid:    'rgba(100, 140, 180, 0.08)',
+        coast:   'rgba(140, 170, 210, 0.4)',
+        coastFill: 'rgba(30, 45, 70, 0.35)',
         sea:     'rgba(42, 85, 179, 0.04)'
     };
 
@@ -409,8 +409,8 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     // ═══════════════════════════════════════════
     // MAP PROJECTION (Mercator)
     // ═══════════════════════════════════════════
-    let mapCenter = { lon: 15, lat: 25 };
-    let mapZoom = 1.0;
+    let mapCenter = { lon: 0, lat: 20 };
+    let mapZoom = 0.38;
 
     function project(lon, lat) {
         const x = W / 2 + (lon - mapCenter.lon) * (W / 120) * mapZoom;
@@ -429,46 +429,46 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         ctx.strokeStyle = COLORS.grid;
         ctx.lineWidth = 0.5;
 
-        for (let lon = -80; lon <= 160; lon += 10) {
+        for (let lon = -180; lon <= 180; lon += 10) {
             ctx.beginPath();
-            const p1 = project(lon, -60);
-            const p2 = project(lon, 75);
+            const p1 = project(lon, -80);
+            const p2 = project(lon, 85);
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
             ctx.stroke();
         }
-        for (let lat = -60; lat <= 75; lat += 10) {
+        for (let lat = -80; lat <= 85; lat += 10) {
             ctx.beginPath();
-            const p1 = project(-80, lat);
-            const p2 = project(160, lat);
+            const p1 = project(-180, lat);
+            const p2 = project(180, lat);
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
             ctx.stroke();
         }
 
         // Equator — slightly more visible
-        ctx.strokeStyle = 'rgba(232, 220, 200, 0.1)';
+        ctx.strokeStyle = 'rgba(100, 140, 180, 0.15)';
         ctx.lineWidth = 0.8;
         ctx.beginPath();
-        const eq1 = project(-80, 0);
-        const eq2 = project(160, 0);
+        const eq1 = project(-180, 0);
+        const eq2 = project(180, 0);
         ctx.moveTo(eq1.x, eq1.y);
         ctx.lineTo(eq2.x, eq2.y);
         ctx.stroke();
 
         // Coordinate labels at edges
-        ctx.fillStyle = 'rgba(232, 220, 200, 0.08)';
+        ctx.fillStyle = 'rgba(100, 140, 180, 0.12)';
         ctx.font = '8px "Source Serif 4", serif';
         ctx.textAlign = 'center';
-        for (let lon = -60; lon <= 140; lon += 20) {
-            const p = project(lon, -55);
+        for (let lon = -160; lon <= 160; lon += 20) {
+            const p = project(lon, -70);
             if (p.x > 10 && p.x < W - 10) {
                 ctx.fillText(lon + '°', p.x, p.y);
             }
         }
         ctx.textAlign = 'right';
-        for (let lat = -40; lat <= 60; lat += 20) {
-            const p = project(-75, lat);
+        for (let lat = -60; lat <= 80; lat += 20) {
+            const p = project(-175, lat);
             if (p.y > 10 && p.y < H - 10) {
                 ctx.fillText(lat + '°', p.x, p.y + 3);
             }
@@ -536,7 +536,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
 
         // Draw dashed wake trail behind the main route
         ctx.beginPath();
-        ctx.strokeStyle = 'rgba(232, 220, 200, 0.15)';
+        ctx.strokeStyle = 'rgba(212, 164, 74, 0.2)';
         ctx.lineWidth = 1;
         ctx.setLineDash([4, 8]);
         for (let i = 0; i <= Math.min(drawnPoints, totalPoints - 1); i++) {
@@ -665,7 +665,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             // Label — only if smart label check says visible
             if (labelVisible[i]) {
                 const isSpecial = wp.isFounder || wp.isDecisive;
-                const labelColor = wp.isFounder ? COLORS.enviro : (wp.isDecisive ? '#ff6b6b' : 'rgba(232, 220, 200, 0.7)');
+                const labelColor = wp.isFounder ? COLORS.enviro : (wp.isDecisive ? '#ff6b6b' : 'rgba(255, 255, 255, 0.7)');
 
                 ctx.fillStyle = labelColor;
                 ctx.font = isSpecial ? 'bold 12px Poppins' : '10px Poppins';
@@ -695,8 +695,8 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
 
         // Hub glow
         const hubGlow = ctx.createRadialGradient(hub.x, hub.y, 0, hub.x, hub.y, 35);
-        hubGlow.addColorStop(0, 'rgba(232, 220, 200, 0.35)');
-        hubGlow.addColorStop(0.5, 'rgba(232, 220, 200, 0.1)');
+        hubGlow.addColorStop(0, 'rgba(255, 255, 255, 0.35)');
+        hubGlow.addColorStop(0.5, 'rgba(255, 255, 255, 0.1)');
         hubGlow.addColorStop(1, 'transparent');
         ctx.fillStyle = hubGlow;
         ctx.beginPath();
@@ -704,17 +704,17 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         ctx.fill();
 
         // Hub dot
-        ctx.fillStyle = '#e8dcc8';
+        ctx.fillStyle = '#ffffff';
         ctx.beginPath();
         ctx.arc(hub.x, hub.y, 6, 0, Math.PI * 2);
         ctx.fill();
 
-        ctx.fillStyle = 'rgba(232, 220, 200, 0.85)';
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
         ctx.font = '600 13px Poppins';
         ctx.textAlign = 'center';
         ctx.fillText('ANNECY', hub.x, hub.y - 18);
         ctx.font = 'italic 10px "Source Serif 4"';
-        ctx.fillStyle = 'rgba(232, 220, 200, 0.45)';
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.45)';
         ctx.fillText('Port d\'attache', hub.x, hub.y + 22);
 
         // Draw threads
@@ -787,7 +787,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
                 ctx.fillText(thread.label, labelX, labelY);
 
                 ctx.font = '9px "Source Serif 4"';
-                ctx.fillStyle = 'rgba(232, 220, 200, 0.4)';
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
                 ctx.fillText(thread.role, labelX, labelY + 14);
 
                 ctx.globalAlpha = 1;
@@ -836,7 +836,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         } else if (year === 2017 && progress > 0.55 && progress < 0.7) {
             document.getElementById('year-display').style.color = 'rgba(255, 107, 107, 0.2)';
         } else {
-            document.getElementById('year-display').style.color = 'rgba(232, 220, 200, 0.1)';
+            document.getElementById('year-display').style.color = 'rgba(255, 255, 255, 0.1)';
         }
     }
 
@@ -852,14 +852,14 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
 
         // Adjust map view based on progress
         if (scrollProgress < 0.6) {
-            mapCenter.lon = 15 + scrollProgress * 20;
-            mapCenter.lat = 25;
-            mapZoom = 1.0 + scrollProgress * 0.3;
+            mapCenter.lon = 0 + scrollProgress * 25;
+            mapCenter.lat = 20 + scrollProgress * 8;
+            mapZoom = 0.38 + scrollProgress * 1.2;
         } else {
             const t = (scrollProgress - 0.6) / 0.4;
-            mapCenter.lon = 15 + 12 - t * 20;
+            mapCenter.lon = 15 + 10 - t * 20;
             mapCenter.lat = 25 + t * 20;
-            mapZoom = 1.3 + t * 1.5;
+            mapZoom = 1.1 + t * 1.7;
         }
 
         // Draw layers

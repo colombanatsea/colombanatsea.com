@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proto 4 — Média-viz Constellation · Colomban</title>
+    <title>Proto 4 — Prises de position · Colomban</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -314,7 +314,7 @@
 
     <!-- Top bar: title + filters + stats -->
     <div class="top-bar">
-        <div class="title">Constellation mediatique<span>2013 -- 2026</span></div>
+        <div class="title">Prises de position<span>2013 -- 2026</span></div>
         <div class="filters">
             <button class="filter-btn active" data-axis="all">Tous</button>
             <button class="filter-btn" data-axis="techno">Techno</button>
@@ -331,15 +331,15 @@
         <div class="stats">
             <div class="stat">
                 <div class="number" id="stat-total">0</div>
-                <div class="label">pubs</div>
+                <div class="label">publications visibles</div>
             </div>
             <div class="stat">
                 <div class="number" id="stat-reach">0</div>
-                <div class="label">portee</div>
+                <div class="label">portée cumulée</div>
             </div>
             <div class="stat">
                 <div class="number" id="stat-media">0</div>
-                <div class="label">media</div>
+                <div class="label">articles presse</div>
             </div>
         </div>
     </div>
@@ -376,7 +376,7 @@
         </div>
     </div>
 
-    <div class="watermark">COLOMBAN -- PROTO 4 -- SCROLL-VIZ</div>
+    <div class="watermark">COLOMBAN -- PRISES DE POSITION -- SCROLL-VIZ</div>
 
     <script>
     // =============================================
@@ -869,16 +869,23 @@
                 ctx.stroke();
             }
 
-            // Lane label (left side, rotated)
+            // Colored accent bar on left edge of each lane
+            const accentBarW = 3;
+            ctx.fillStyle = isActiveAxis
+                ? lane.lightColor
+                : `rgba(${r},${g},${b},0.15)`;
+            ctx.globalAlpha = isActiveAxis ? 0.6 : 0.15;
+            ctx.fillRect(marginLeft - 10, laneTop + 8, accentBarW, laneH - 16);
+            ctx.globalAlpha = 1;
+
+            // Lane label (left side, horizontal - no rotation to avoid overlap)
             ctx.save();
-            const labelY = laneTop + laneH / 2;
-            ctx.translate(14, labelY);
-            ctx.rotate(-Math.PI / 2);
-            ctx.globalAlpha = isActiveAxis ? 0.25 : 0.08;
+            const labelY = laneTop + 20;
+            ctx.globalAlpha = isActiveAxis ? 0.45 : 0.1;
             ctx.fillStyle = lane.lightColor;
-            ctx.font = '600 9px Poppins';
-            ctx.textAlign = 'center';
-            ctx.fillText(lane.label, 0, 0);
+            ctx.font = '700 9px Poppins';
+            ctx.textAlign = 'left';
+            ctx.fillText(lane.label, marginLeft + 2, labelY);
             ctx.restore();
             ctx.globalAlpha = 1;
         });

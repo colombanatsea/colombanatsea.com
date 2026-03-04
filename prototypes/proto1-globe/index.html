@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proto 1 — Globe Archipel France | Colomban</title>
+  <title>ZEE de France — Globe Interactif | Colomban at Sea</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap');
 
     body {
       background: #0a0e1a;
@@ -15,1613 +15,939 @@
       font-family: 'Poppins', sans-serif;
       overflow: hidden;
       height: 100vh;
+      width: 100vw;
     }
 
     #globe-container {
       width: 100vw;
       height: 100vh;
       position: relative;
+      cursor: grab;
     }
 
-    /* Central message overlay */
-    #message-overlay {
+    #globe-container:active {
+      cursor: grabbing;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    /* Header overlay */
+    #header-overlay {
       position: absolute;
-      top: 40px;
+      top: 32px;
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
       z-index: 10;
       pointer-events: none;
       width: 90%;
-      max-width: 700px;
+      max-width: 720px;
     }
 
-    #message-overlay h1 {
+    #header-overlay h1 {
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
-      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      font-size: clamp(1.3rem, 3vw, 2rem);
       color: #fff;
-      text-shadow: 0 2px 20px rgba(0,0,0,0.8);
-      letter-spacing: 0.02em;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.9);
+      letter-spacing: 0.03em;
       line-height: 1.3;
     }
 
-    #message-overlay .subtitle {
+    #header-overlay h1 span {
+      color: #00d4d4;
+    }
+
+    #header-overlay .subtitle {
       font-family: 'Source Serif 4', serif;
       font-weight: 400;
       font-style: italic;
-      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-      color: rgba(255,255,255,0.7);
-      margin-top: 8px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+      font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+      color: rgba(255,255,255,0.6);
+      margin-top: 6px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.7);
     }
 
-    /* Version selector */
-    #version-selector {
+    /* Total counter bottom right */
+    #total-counter {
       position: absolute;
-      top: 20px;
-      right: 20px;
-      z-index: 20;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .version-btn {
-      background: rgba(42, 85, 179, 0.3);
-      border: 1px solid rgba(42, 85, 179, 0.6);
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 400;
-      transition: all 0.3s;
-      backdrop-filter: blur(10px);
-    }
-
-    .version-btn:hover, .version-btn.active {
-      background: rgba(42, 85, 179, 0.7);
-      border-color: #2a55b3;
-    }
-
-    /* Layer controls */
-    #layer-controls {
-      position: absolute;
-      bottom: 30px;
-      left: 30px;
-      z-index: 20;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .layer-toggle {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(10, 14, 26, 0.7);
-      backdrop-filter: blur(10px);
-      padding: 8px 14px;
-      border-radius: 8px;
-      cursor: pointer;
-      border: 1px solid rgba(255,255,255,0.1);
-      transition: all 0.3s;
-      user-select: none;
-    }
-
-    .layer-toggle:hover {
-      border-color: rgba(255,255,255,0.3);
-    }
-
-    .layer-toggle .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .layer-toggle .label {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.8);
-      font-weight: 300;
-    }
-
-    .layer-toggle.inactive .label {
-      color: rgba(255,255,255,0.3);
-    }
-
-    .layer-toggle.inactive .dot {
-      opacity: 0.3;
-    }
-
-    /* Stats counter */
-    #stats-panel {
-      position: absolute;
-      bottom: 30px;
-      right: 30px;
-      z-index: 20;
+      bottom: 32px;
+      right: 36px;
+      z-index: 10;
+      pointer-events: none;
       text-align: right;
     }
 
-    #stats-panel .stat {
+    #total-counter .label {
       font-family: 'Poppins', sans-serif;
-      margin-bottom: 8px;
-    }
-
-    #stats-panel .stat-number {
-      font-size: clamp(1.5rem, 3vw, 2.5rem);
-      font-weight: 700;
-      color: #2a55b3;
-      line-height: 1;
-    }
-
-    #stats-panel .stat-label {
-      font-size: 0.7rem;
-      color: rgba(255,255,255,0.5);
       font-weight: 300;
-      letter-spacing: 0.05em;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.45);
       text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    #total-counter .value {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: #00d4d4;
+      text-shadow: 0 0 30px rgba(0, 212, 212, 0.4);
+      line-height: 1.1;
+    }
+
+    #total-counter .unit {
+      font-family: 'Source Serif 4', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 2px;
     }
 
     /* Tooltip */
     #tooltip {
       position: absolute;
-      z-index: 30;
-      background: rgba(10, 14, 26, 0.9);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(42, 85, 179, 0.5);
-      border-radius: 8px;
-      padding: 12px 16px;
+      z-index: 100;
       pointer-events: none;
-      display: none;
-      max-width: 280px;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      background: rgba(10, 14, 30, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 200, 200, 0.35);
+      border-radius: 10px;
+      padding: 14px 20px;
+      min-width: 180px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 20px rgba(0,180,180,0.1);
     }
 
-    #tooltip h3 {
-      font-size: 0.85rem;
+    #tooltip.visible {
+      opacity: 1;
+    }
+
+    #tooltip .zone-name {
+      font-family: 'Poppins', sans-serif;
       font-weight: 600;
-      color: #2a55b3;
+      font-size: 0.95rem;
+      color: #fff;
       margin-bottom: 4px;
     }
 
-    #tooltip p {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.7);
-      font-weight: 300;
-      line-height: 1.4;
+    #tooltip .zone-area {
+      font-family: 'Source Serif 4', serif;
+      font-style: italic;
+      font-size: 0.85rem;
+      color: #00d4d4;
     }
 
-    /* Loading */
+    #tooltip .zone-detail {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+    }
+
+    /* Legend bottom left */
+    #legend {
+      position: absolute;
+      bottom: 32px;
+      left: 36px;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    #legend .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    #legend .swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      border: 1px solid rgba(0,200,200,0.5);
+      background: rgba(0, 180, 180, 0.35);
+    }
+
+    #legend .legend-label {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* Loading screen */
     #loading {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 100;
-      text-align: center;
+      inset: 0;
+      z-index: 999;
+      background: #0a0e1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      transition: opacity 0.8s ease;
+    }
+
+    #loading.fade-out {
+      opacity: 0;
+      pointer-events: none;
     }
 
     #loading .spinner {
       width: 40px;
       height: 40px;
-      border: 3px solid rgba(42, 85, 179, 0.3);
-      border-top-color: #2a55b3;
+      border: 2px solid rgba(0,212,212,0.15);
+      border-top-color: #00d4d4;
       border-radius: 50%;
       animation: spin 1s linear infinite;
-      margin: 0 auto 16px;
     }
 
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    #loading p {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.5);
-      font-weight: 300;
-    }
-
-    /* Brand watermark */
-    #brand {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      z-index: 20;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    #brand .logo-text {
+    #loading .load-text {
       font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.8);
+      font-weight: 300;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
     }
 
-    #brand .logo-sub {
-      font-size: 0.65rem;
-      font-weight: 300;
-      color: rgba(255,255,255,0.4);
-      display: block;
+    @keyframes spin {
+      to { transform: rotate(360deg); }
     }
   </style>
 </head>
 <body>
 
+  <div id="globe-container">
+    <div id="header-overlay">
+      <h1>La France, <span>2&#7497;</span> puissance maritime mondiale</h1>
+      <p class="subtitle">11,7 millions de km&#178; de Zone &Eacute;conomique Exclusive</p>
+    </div>
+
+    <div id="total-counter">
+      <div class="label">Surface totale ZEE</div>
+      <div class="value">11 691 000</div>
+      <div class="unit">km&#178;</div>
+    </div>
+
+    <div id="legend">
+      <div class="legend-item">
+        <div class="swatch"></div>
+        <span class="legend-label">Zone &Eacute;conomique Exclusive fran&ccedil;aise</span>
+      </div>
+    </div>
+
+    <div id="tooltip">
+      <div class="zone-name"></div>
+      <div class="zone-area"></div>
+      <div class="zone-detail"></div>
+    </div>
+  </div>
+
   <div id="loading">
     <div class="spinner"></div>
-    <p>Chargement du globe...</p>
+    <div class="load-text">Chargement du globe...</div>
   </div>
 
-  <div id="globe-container"></div>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
 
-  <!-- Brand -->
-  <div id="brand">
-    <div>
-      <span class="logo-text">Colomban</span>
-      <span class="logo-sub">Le maritime dans le sang depuis 1991</span>
-    </div>
-  </div>
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-  <!-- Message versions -->
-  <div id="message-overlay">
-    <h1 id="main-message">Oceanocratie</h1>
-    <p class="subtitle" id="sub-message">Une nation libre regarde la mer</p>
-  </div>
-
-  <!-- Version selector -->
-  <div id="version-selector">
-    <button class="version-btn" onclick="setVersion('A', this)">Version A</button>
-    <button class="version-btn active" onclick="setVersion('B', this)">Version B</button>
-    <button class="version-btn" onclick="setVersion('C', this)">Version C</button>
-  </div>
-
-  <!-- Layer toggles -->
-  <div id="layer-controls">
-    <div class="layer-toggle" data-layer="eez" onclick="toggleLayer('eez')">
-      <span class="dot" style="background: rgba(42, 85, 179, 0.8);"></span>
-      <span class="label">ZEE francaises (11,7M km2)</span>
-    </div>
-    <div class="layer-toggle" data-layer="cables" onclick="toggleLayer('cables')">
-      <span class="dot" style="background: #f0c040;"></span>
-      <span class="label">Cables sous-marins (97% des donnees)</span>
-    </div>
-    <div class="layer-toggle" data-layer="territories" onclick="toggleLayer('territories')">
-      <span class="dot" style="background: #00bf63;"></span>
-      <span class="label">Territoires ultramarins</span>
-    </div>
-    <div class="layer-toggle" data-layer="shipping" onclick="toggleLayer('shipping')">
-      <span class="dot" style="background: #ff6b35;"></span>
-      <span class="label">Densite du trafic commercial</span>
-    </div>
-    <div class="layer-toggle" data-layer="fishing" onclick="toggleLayer('fishing')">
-      <span class="dot" style="background: #00d4aa;"></span>
-      <span class="label">Densite de peche</span>
-    </div>
-  </div>
-
-  <!-- Stats -->
-  <div id="stats-panel">
-    <div class="stat">
-      <div class="stat-number" id="counter-km">0</div>
-      <div class="stat-label">km2 de ZEE</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">37</div>
-      <div class="stat-label">Etats frontaliers maritimes</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">97%</div>
-      <div class="stat-label">Donnees par cables sous-marins</div>
-    </div>
-  </div>
-
-  <!-- Tooltip -->
-  <div id="tooltip">
-    <h3 id="tooltip-title"></h3>
-    <p id="tooltip-text"></p>
-  </div>
-
-  <script src="https://unpkg.com/globe.gl@2.32.0/dist/globe.gl.min.js"></script>
-  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
-
-  <script>
-    // ============================================================
-    // MESSAGE VERSIONS — Default is B (Oceanocratie)
-    // ============================================================
-    const versions = {
-      A: {
-        title: "Construire le monde maritime de demain",
-        subtitle: "La France possede le 2e espace maritime mondial. Il est temps de l'embrasser."
+    // ====================================================
+    // ZEE DATA — French Exclusive Economic Zones
+    // ====================================================
+    const ZEE_ZONES = [
+      {
+        name: 'Métropole',
+        detail: 'Atlantique + Méditerranée',
+        lat: 46, lng: -3,
+        area: 350000
       },
-      B: {
-        title: "Oceanocratie",
-        subtitle: "Une nation libre regarde la mer"
+      {
+        name: 'Guyane',
+        detail: 'Amérique du Sud',
+        lat: 5, lng: -52,
+        area: 130000
       },
-      C: {
-        title: "L'Archipel France",
-        subtitle: "11,7 millions de km2 d'opportunites. Du TERRitoire au MERitoire."
+      {
+        name: 'Martinique',
+        detail: 'Antilles',
+        lat: 14.6, lng: -61,
+        area: 50000
+      },
+      {
+        name: 'Guadeloupe',
+        detail: 'Antilles',
+        lat: 16.2, lng: -61.5,
+        area: 90000
+      },
+      {
+        name: 'La Réunion',
+        detail: 'Océan Indien',
+        lat: -21, lng: 55.5,
+        area: 315000
+      },
+      {
+        name: 'Mayotte',
+        detail: 'Océan Indien',
+        lat: -12.8, lng: 45.2,
+        area: 74000
+      },
+      {
+        name: 'Nouvelle-Calédonie',
+        detail: 'Océan Pacifique',
+        lat: -21, lng: 165,
+        area: 1740000
+      },
+      {
+        name: 'Polynésie française',
+        detail: 'Océan Pacifique',
+        lat: -17, lng: -149,
+        area: 4800000
+      },
+      {
+        name: 'Wallis-et-Futuna',
+        detail: 'Océan Pacifique',
+        lat: -13.3, lng: -176.2,
+        area: 260000
+      },
+      {
+        name: 'Kerguelen',
+        detail: 'TAAF — Océan Indien austral',
+        lat: -49.5, lng: 69.5,
+        area: 570000
+      },
+      {
+        name: 'Crozet',
+        detail: 'TAAF — Océan Indien austral',
+        lat: -46, lng: 51,
+        area: 570000
+      },
+      {
+        name: 'Saint-Pierre-et-Miquelon',
+        detail: 'Atlantique Nord',
+        lat: 46.8, lng: -56.2,
+        area: 12000
+      },
+      {
+        name: 'Saint-Martin / Saint-Barthélemy',
+        detail: 'Antilles',
+        lat: 18, lng: -63,
+        area: 10000
+      },
+      {
+        name: 'Clipperton',
+        detail: 'Océan Pacifique',
+        lat: 10.3, lng: -109.2,
+        area: 440000
+      },
+      {
+        name: 'Amsterdam / Saint-Paul',
+        detail: 'TAAF — Océan Indien austral',
+        lat: -37.8, lng: 77.5,
+        area: 500000
+      },
+      {
+        name: 'Îles Éparses',
+        detail: 'Glorieuses, Juan de Nova, Europa, Bassas da India',
+        lat: -15, lng: 43,
+        area: 640000
       }
-    };
+    ];
 
-    function setVersion(v, btnEl) {
-      document.getElementById('main-message').textContent = versions[v].title;
-      document.getElementById('sub-message').textContent = versions[v].subtitle;
-      document.querySelectorAll('.version-btn').forEach(b => b.classList.remove('active'));
-      if (btnEl) btnEl.classList.add('active');
+    // ====================================================
+    // SIMPLIFIED CONTINENT OUTLINES (lon/lat polylines)
+    // Highly simplified for rendering as thin lines on the globe.
+    // ====================================================
+    const CONTINENT_OUTLINES = [
+      // Africa (simplified)
+      [[-17,14.7],[-16,12],[-12,8],[-8,5],[-5,5],[2,5],[10,4],[10,2],[9,0],[9,-3],[12,-5],[14,-6],[17,-11],[20,-15],[25,-20],[28,-26],[30,-30],[32,-34],[28,-33],[26,-30],[20,-28],[17,-25],[15,-22],[12,-17],[10,-12],[9,-7],[8,-4],[6,0],[5,4],[3,6],[1,7],[-2,6],[-5,5],[-8,5],[-10,7],[-13,8],[-16,12],[-17,14.7]],
+      // Africa North coast
+      [[-17,14.7],[-16,16],[-17,21],[-13,24],[-8,28],[-6,30],[-5,33],[-2,35],[3,36],[8,37],[10,37],[11,33],[12,32],[15,32],[20,32],[25,31],[30,31],[32,30],[33,31],[35,32],[36,34]],
+      // Africa East
+      [[36,34],[37,32],[40,29],[42,26],[44,22],[44,17],[48,12],[50,10],[49,8],[46,5],[43,2],[42,-2],[40,-5],[40,-8],[40,-11],[36,-14],[35,-18],[33,-25],[32,-34]],
+      // Europe (simplified)
+      [[-10,36],[-9,38],[-9,42],[-8,43],[-2,43],[0,44],[3,43],[5,43],[7,44],[5,46],[3,47],[-1,46],[-5,48],[-4,52],[-5,55],[-6,58],[-3,58],[0,57],[2,55],[5,53],[7,54],[8,55],[10,57],[12,57],[12,56],[10,54],[8,54],[7,53],[4,51],[3,50],[4,49],[8,49],[9,48],[13,48],[14,49],[14,51],[17,55],[18,56],[20,56],[20,55],[18,54],[16,52],[14,48],[14,46],[15,45],[13,44],[12,42],[13,41],[16,40],[18,40],[20,39],[22,37],[24,36],[26,37],[28,37],[29,36],[30,36],[32,37],[35,37],[36,34]],
+      // Europe North
+      [[20,56],[21,57],[24,58],[25,60],[23,62],[20,63],[18,63],[15,62],[12,60],[10,58],[12,57]],
+      // Scandinavia
+      [[10,57],[12,60],[15,62],[18,63],[20,65],[19,68],[17,69],[15,70],[14,71],[16,72],[20,70],[25,71],[28,70],[30,70],[30,65],[28,63],[26,60],[25,60]],
+      // UK
+      [[-6,50],[-5,52],[-4,53],[-3,55],[-5,57],[-6,58],[-3,58],[-2,57],[0,53],[1,52],[0,51],[-1,50],[-3,50],[-5,50],[-6,50]],
+      // Asia (very simplified)
+      [[36,34],[40,38],[42,41],[44,42],[50,42],[52,40],[54,38],[56,36],[60,36],[62,35],[65,34],[66,33],[68,30],[70,28],[72,26],[72,22],[75,20],[77,15],[79,10],[80,8],[80,10],[82,12],[85,16],[88,20],[90,22],[92,21],[92,18],[96,16],[98,16],[100,14],[100,10],[103,6],[103,2],[104,1],[106,0],[108,-2],[110,-5],[114,-7],[116,-8],[120,-8],[121,-7],[120,-5],[117,-3],[117,0],[118,2],[120,5],[120,8],[118,10],[116,12],[115,14],[117,15],[119,18],[120,20],[121,22],[121,24],[119,25],[118,27],[120,30],[121,31],[122,30],[123,33],[121,35],[120,36],[121,37],[122,40],[124,40],[126,38],[127,36],[129,35],[129,37],[130,39],[132,42],[135,43],[137,42],[139,37],[140,36],[141,38],[141,40],[141,42],[141,44],[142,46],[143,48],[144,46],[143,44],[144,43],[146,44],[149,46],[150,48],[152,50],[155,52],[157,54],[159,56],[160,58],[162,60],[165,62],[170,63],[175,65],[180,66]],
+      // Asia Russia continued
+      [[180,66],[175,68],[170,70],[175,72],[180,70]],
+      [[-180,70],[-175,72],[-170,70],[-170,68],[-170,65],[-168,64],[-166,62],[-165,60]],
+      // North America (simplified)
+      [[-165,60],[-162,58],[-155,58],[-150,60],[-148,61],[-140,60],[-138,58],[-135,57],[-130,55],[-128,52],[-125,50],[-124,46],[-124,42],[-120,38],[-118,34],[-115,32],[-112,30],[-110,28],[-107,26],[-105,22],[-100,20],[-97,18],[-95,17],[-92,16],[-90,16],[-88,16],[-86,15],[-84,14],[-82,10],[-80,9],[-78,8],[-77,9],[-76,8],[-75,7]],
+      // North America East coast
+      [[-75,7],[-78,10],[-80,12],[-80,16],[-82,18],[-84,20],[-86,21],[-88,21],[-90,22],[-90,25],[-88,28],[-85,30],[-82,30],[-80,32],[-78,35],[-76,37],[-74,39],[-72,41],[-70,42],[-68,44],[-66,44],[-65,46],[-64,47],[-62,46],[-60,47],[-58,48],[-56,50],[-54,52],[-52,53],[-50,52],[-48,50],[-46,48],[-44,49]],
+      // North America arctic
+      [[-44,49],[-52,55],[-55,57],[-56,60],[-60,62],[-64,63],[-68,64],[-72,65],[-80,66],[-85,67],[-90,68],[-95,70],[-100,72],[-105,73],[-110,72],[-115,72],[-120,73],[-130,72],[-135,70],[-138,66],[-142,64],[-148,64],[-150,63],[-152,62],[-155,60],[-160,60],[-165,60]],
+      // Greenland
+      [[-44,60],[-48,62],[-52,64],[-50,66],[-48,68],[-44,70],[-40,72],[-35,73],[-30,74],[-25,73],[-22,72],[-20,70],[-18,68],[-20,66],[-22,64],[-30,62],[-35,60],[-38,59],[-42,59],[-44,60]],
+      // South America (simplified)
+      [[-75,7],[-76,5],[-78,3],[-80,0],[-80,-3],[-78,-5],[-75,-6],[-72,-8],[-70,-15],[-70,-18],[-68,-22],[-67,-24],[-65,-28],[-62,-33],[-58,-36],[-56,-34],[-52,-33],[-49,-30],[-46,-24],[-42,-22],[-40,-18],[-38,-14],[-36,-10],[-35,-8],[-35,-5],[-34,-2],[-35,0],[-38,2],[-42,3],[-47,3],[-50,3],[-52,4],[-56,5],[-58,6],[-60,7],[-62,8],[-65,8],[-68,10],[-70,10],[-72,10],[-75,10],[-75,7]],
+      // South America south
+      [[-62,-33],[-64,-37],[-65,-40],[-66,-42],[-67,-45],[-66,-47],[-68,-49],[-70,-50],[-72,-52],[-74,-51],[-74,-48],[-72,-45],[-72,-42],[-73,-40],[-73,-37],[-72,-34],[-70,-32],[-68,-30],[-65,-28],[-62,-33]],
+      // Australia (simplified)
+      [[115,-35],[117,-34],[120,-34],[122,-34],[125,-33],[128,-32],[130,-31],[132,-30],[133,-28],[134,-26],[135,-24],[136,-22],[137,-18],[138,-16],[140,-15],[142,-14],[143,-12],[145,-14],[147,-16],[149,-18],[150,-20],[152,-22],[153,-24],[153,-26],[153,-28],[151,-30],[150,-32],[148,-34],[146,-36],[144,-38],[142,-38],[140,-37],[138,-36],[136,-35],[134,-34],[132,-34],[130,-34],[127,-34],[124,-34],[121,-34],[118,-35],[115,-35]],
+      // New Zealand (simplified)
+      [[166,-46],[168,-44],[172,-42],[174,-40],[176,-38],[178,-37],[178,-40],[176,-42],[174,-44],[172,-45],[170,-46],[168,-46],[166,-46]]
+    ];
+
+    // ====================================================
+    // CONFIG
+    // ====================================================
+    const GLOBE_RADIUS = 1.0;
+    const ATMOSPHERE_RADIUS = 1.015;
+    const ZEE_HEIGHT = 1.003;       // slightly above globe for zones
+    const ZONE_SEGMENTS = 64;       // circle resolution
+    const AUTO_ROTATE_SPEED = 0.08; // degrees per frame
+
+    // Compute radius on the sphere for each zone from area
+    // real earth radius ~6371 km, sphere radius = 1.0
+    // angular radius in radians: r = sqrt(area / pi) / 6371
+    const EARTH_RADIUS_KM = 6371;
+
+    function areaToAngularRadius(areaKm2) {
+      return Math.sqrt(areaKm2 / Math.PI) / EARTH_RADIUS_KM;
     }
 
-    // ============================================================
-    // FRENCH OVERSEAS TERRITORIES DATA
-    // ============================================================
-    const frenchTerritories = [
-      { name: "France metropolitaine", lat: 46.6, lng: 2.3, eezKm2: 334604, info: "Facade Atlantique, Manche, Mediterranee" },
-      { name: "Polynesie francaise", lat: -17.5, lng: -149.5, eezKm2: 4804000, info: "118 iles, plus grande ZEE francaise" },
-      { name: "Nouvelle-Caledonie", lat: -21.3, lng: 165.5, eezKm2: 1422543, info: "Recif corallien classe UNESCO" },
-      { name: "La Reunion", lat: -21.1, lng: 55.5, eezKm2: 315000, info: "Ocean Indien. NRL, navires de service" },
-      { name: "Mayotte", lat: -12.8, lng: 45.2, eezKm2: 63000, info: "Lagon le plus grand du monde" },
-      { name: "Guyane francaise", lat: 4.0, lng: -53.0, eezKm2: 130000, info: "Acces a l'Amazonie, base spatiale" },
-      { name: "Guadeloupe", lat: 16.2, lng: -61.5, eezKm2: 90000, info: "Archipel caribeen" },
-      { name: "Martinique", lat: 14.6, lng: -61.0, eezKm2: 47000, info: "Caraibe" },
-      { name: "Saint-Pierre-et-Miquelon", lat: 46.8, lng: -56.2, eezKm2: 12000, info: "Atlantique Nord, pres du Canada" },
-      { name: "Wallis-et-Futuna", lat: -13.3, lng: -176.2, eezKm2: 266000, info: "Pacifique Sud" },
-      { name: "Clipperton", lat: 10.3, lng: -109.2, eezKm2: 434000, info: "Atoll inhabite, Pacifique oriental" },
-      { name: "Iles Eparses", lat: -15.9, lng: 42.7, eezKm2: 640000, info: "Canal du Mozambique" },
-      { name: "TAAF - Kerguelen", lat: -49.3, lng: 69.3, eezKm2: 567000, info: "Terres Australes, reserve naturelle" },
-      { name: "TAAF - Crozet", lat: -46.4, lng: 51.8, eezKm2: 567000, info: "Ocean Indien austral" },
-      { name: "TAAF - Amsterdam", lat: -37.8, lng: 77.6, eezKm2: 500000, info: "Ile volcanique isolee" },
-      { name: "Saint-Martin", lat: 18.1, lng: -63.0, eezKm2: 5000, info: "Caraibe, frontiere franco-neerlandaise" },
-      { name: "Saint-Barthelemy", lat: 17.9, lng: -62.8, eezKm2: 4000, info: "Caraibe" }
-    ];
+    // ====================================================
+    // SCENE SETUP
+    // ====================================================
+    const container = document.getElementById('globe-container');
+    const tooltip = document.getElementById('tooltip');
+    const tooltipName = tooltip.querySelector('.zone-name');
+    const tooltipArea = tooltip.querySelector('.zone-area');
+    const tooltipDetail = tooltip.querySelector('.zone-detail');
 
-    // ============================================================
-    // REALISTIC FRENCH EEZ POLYGON COORDINATES
-    // GeoJSON standard: [lng, lat] with counterclockwise winding
-    // for exterior rings. Each polygon is a proper closed ring.
-    // ============================================================
-    const frenchEEZPolygons = [
-      // ----- FRANCE METROPOLITAINE - ATLANTIC/CHANNEL -----
-      {
-        name: "France metropolitaine (Atlantique)",
-        eezKm2: 334604,
-        info: "Facade Atlantique et Manche",
-        coordinates: [
-          [-2.0, 43.3],
-          [-5.0, 43.2],
-          [-6.5, 43.5],
-          [-8.5, 44.0],
-          [-9.5, 45.0],
-          [-10.0, 46.0],
-          [-9.8, 47.0],
-          [-10.5, 47.5],
-          [-9.5, 48.3],
-          [-8.0, 49.0],
-          [-6.5, 49.5],
-          [-5.0, 49.8],
-          [-3.5, 50.0],
-          [-2.0, 50.2],
-          [-0.5, 50.5],
-          [0.5, 50.8],
-          [1.5, 51.2],
-          [2.5, 51.5],
-          [2.8, 51.3],
-          [2.5, 51.0],
-          [1.5, 50.5],
-          [1.0, 50.0],
-          [0.0, 49.5],
-          [-1.5, 49.0],
-          [-2.0, 48.5],
-          [-4.0, 48.0],
-          [-5.0, 47.5],
-          [-4.5, 47.0],
-          [-3.5, 46.5],
-          [-2.5, 46.0],
-          [-1.5, 45.5],
-          [-1.2, 44.5],
-          [-1.5, 43.5],
-          [-2.0, 43.3]
-        ]
-      },
-      // ----- FRANCE METROPOLITAINE - MEDITERRANEE -----
-      {
-        name: "France metropolitaine (Mediterranee)",
-        eezKm2: 0,
-        info: "Facade Mediterranee et Corse",
-        coordinates: [
-          [3.0, 42.0],
-          [3.5, 41.5],
-          [4.5, 41.5],
-          [5.5, 42.0],
-          [6.5, 42.5],
-          [7.5, 42.8],
-          [8.0, 43.0],
-          [9.5, 43.0],
-          [10.0, 42.5],
-          [9.5, 41.2],
-          [8.5, 41.0],
-          [7.5, 41.5],
-          [6.5, 42.0],
-          [5.0, 42.8],
-          [3.5, 42.5],
-          [3.0, 42.0]
-        ]
-      },
-      // ----- POLYNESIE FRANCAISE -----
-      {
-        name: "Polynesie francaise",
-        eezKm2: 4804000,
-        info: "118 iles, plus grande ZEE francaise",
-        coordinates: [
-          [-134.0, -6.0],
-          [-137.0, -6.5],
-          [-140.0, -7.0],
-          [-142.0, -7.5],
-          [-145.0, -8.0],
-          [-148.0, -8.5],
-          [-150.0, -9.0],
-          [-152.0, -10.0],
-          [-154.0, -11.0],
-          [-155.0, -13.0],
-          [-155.5, -15.0],
-          [-155.0, -17.0],
-          [-154.5, -19.0],
-          [-154.0, -21.0],
-          [-153.5, -23.0],
-          [-153.0, -25.0],
-          [-151.0, -26.0],
-          [-149.0, -27.0],
-          [-147.0, -27.5],
-          [-145.0, -27.5],
-          [-143.0, -27.0],
-          [-141.0, -26.5],
-          [-139.0, -26.0],
-          [-137.0, -25.0],
-          [-135.0, -24.0],
-          [-133.0, -22.5],
-          [-132.0, -20.0],
-          [-131.5, -18.0],
-          [-131.5, -16.0],
-          [-132.0, -14.0],
-          [-132.5, -12.0],
-          [-133.0, -10.0],
-          [-133.5, -8.0],
-          [-134.0, -6.0]
-        ]
-      },
-      // ----- NOUVELLE-CALEDONIE -----
-      {
-        name: "Nouvelle-Caledonie",
-        eezKm2: 1422543,
-        info: "Recif corallien classe UNESCO",
-        coordinates: [
-          [157.0, -17.0],
-          [159.0, -16.5],
-          [161.0, -16.5],
-          [163.0, -17.0],
-          [165.0, -17.5],
-          [167.0, -18.0],
-          [169.0, -18.5],
-          [171.0, -19.0],
-          [172.0, -19.5],
-          [172.5, -20.5],
-          [172.0, -21.5],
-          [171.5, -22.5],
-          [170.5, -23.5],
-          [169.0, -24.5],
-          [167.5, -25.0],
-          [166.0, -25.5],
-          [164.0, -26.0],
-          [162.0, -25.5],
-          [160.0, -24.5],
-          [158.5, -23.5],
-          [157.5, -22.0],
-          [157.0, -20.5],
-          [156.5, -19.0],
-          [157.0, -17.0]
-        ]
-      },
-      // ----- LA REUNION -----
-      {
-        name: "La Reunion",
-        eezKm2: 315000,
-        info: "Ocean Indien. NRL, navires de service",
-        coordinates: [
-          [53.0, -18.5],
-          [53.5, -18.0],
-          [54.5, -17.5],
-          [55.5, -17.5],
-          [56.5, -18.0],
-          [57.0, -18.5],
-          [57.0, -19.5],
-          [57.0, -20.5],
-          [57.0, -21.5],
-          [56.5, -22.5],
-          [55.5, -23.5],
-          [54.5, -24.0],
-          [53.5, -23.5],
-          [52.5, -22.5],
-          [52.0, -21.5],
-          [51.5, -20.5],
-          [52.0, -19.5],
-          [52.5, -19.0],
-          [53.0, -18.5]
-        ]
-      },
-      // ----- MAYOTTE -----
-      {
-        name: "Mayotte",
-        eezKm2: 63000,
-        info: "Lagon le plus grand du monde",
-        coordinates: [
-          [43.5, -11.0],
-          [44.5, -11.0],
-          [45.5, -11.2],
-          [46.5, -11.5],
-          [47.0, -12.0],
-          [47.0, -12.8],
-          [46.5, -13.5],
-          [46.0, -14.0],
-          [45.0, -14.5],
-          [44.0, -14.5],
-          [43.0, -14.0],
-          [42.5, -13.5],
-          [42.0, -13.0],
-          [42.0, -12.0],
-          [42.5, -11.5],
-          [43.0, -11.0],
-          [43.5, -11.0]
-        ]
-      },
-      // ----- GUYANE FRANCAISE -----
-      {
-        name: "Guyane francaise",
-        eezKm2: 130000,
-        info: "Acces a l'Amazonie, base spatiale",
-        coordinates: [
-          [-54.5, 2.0],
-          [-54.0, 2.0],
-          [-53.0, 2.5],
-          [-52.0, 3.5],
-          [-51.5, 4.5],
-          [-51.0, 5.5],
-          [-51.5, 6.5],
-          [-52.0, 7.5],
-          [-53.0, 8.5],
-          [-54.0, 9.0],
-          [-55.0, 9.0],
-          [-56.0, 8.5],
-          [-57.0, 7.5],
-          [-57.5, 6.5],
-          [-57.0, 5.5],
-          [-56.0, 4.5],
-          [-55.5, 3.5],
-          [-55.0, 2.5],
-          [-54.5, 2.0]
-        ]
-      },
-      // ----- GUADELOUPE -----
-      {
-        name: "Guadeloupe",
-        eezKm2: 90000,
-        info: "Archipel caribeen",
-        coordinates: [
-          [-63.0, 15.0],
-          [-62.5, 15.0],
-          [-62.0, 15.2],
-          [-61.0, 15.5],
-          [-60.0, 15.8],
-          [-59.5, 16.0],
-          [-59.0, 16.5],
-          [-59.0, 17.0],
-          [-59.5, 17.5],
-          [-60.0, 17.8],
-          [-61.0, 18.0],
-          [-62.0, 17.8],
-          [-63.0, 17.5],
-          [-63.5, 17.0],
-          [-64.0, 16.5],
-          [-64.0, 16.0],
-          [-63.5, 15.5],
-          [-63.0, 15.0]
-        ]
-      },
-      // ----- MARTINIQUE -----
-      {
-        name: "Martinique",
-        eezKm2: 47000,
-        info: "Caraibe",
-        coordinates: [
-          [-62.0, 13.5],
-          [-61.5, 13.5],
-          [-60.5, 13.8],
-          [-59.5, 14.0],
-          [-59.0, 14.5],
-          [-58.5, 15.0],
-          [-59.0, 15.5],
-          [-59.5, 15.8],
-          [-60.5, 15.8],
-          [-61.5, 15.5],
-          [-62.5, 15.0],
-          [-63.0, 14.5],
-          [-62.5, 14.0],
-          [-62.0, 13.5]
-        ]
-      },
-      // ----- SAINT-PIERRE-ET-MIQUELON -----
-      {
-        name: "Saint-Pierre-et-Miquelon",
-        eezKm2: 12000,
-        info: "Atlantique Nord, pres du Canada",
-        coordinates: [
-          [-56.5, 46.0],
-          [-56.0, 46.0],
-          [-55.5, 46.3],
-          [-55.0, 46.7],
-          [-55.0, 47.0],
-          [-55.5, 47.5],
-          [-56.0, 47.8],
-          [-56.5, 48.0],
-          [-57.0, 47.5],
-          [-57.5, 47.0],
-          [-57.5, 46.5],
-          [-57.0, 46.2],
-          [-56.5, 46.0]
-        ]
-      },
-      // ----- WALLIS-ET-FUTUNA -----
-      {
-        name: "Wallis-et-Futuna",
-        eezKm2: 266000,
-        info: "Pacifique Sud",
-        coordinates: [
-          [-178.5, -11.0],
-          [-177.5, -11.0],
-          [-176.0, -11.5],
-          [-174.5, -12.0],
-          [-174.0, -13.0],
-          [-174.0, -14.0],
-          [-174.5, -15.0],
-          [-175.5, -15.5],
-          [-177.0, -15.5],
-          [-178.5, -15.0],
-          [-179.5, -14.5],
-          [-180.0, -13.5],
-          [-179.5, -12.5],
-          [-179.0, -11.5],
-          [-178.5, -11.0]
-        ]
-      },
-      // ----- CLIPPERTON -----
-      {
-        name: "Clipperton",
-        eezKm2: 434000,
-        info: "Atoll inhabite, Pacifique oriental",
-        coordinates: [
-          [-109.2, 7.0],
-          [-107.5, 7.5],
-          [-106.0, 8.5],
-          [-105.5, 10.0],
-          [-106.0, 11.5],
-          [-107.0, 12.5],
-          [-108.5, 13.0],
-          [-110.0, 13.0],
-          [-111.5, 12.5],
-          [-112.5, 11.5],
-          [-113.0, 10.0],
-          [-112.5, 8.5],
-          [-111.5, 7.5],
-          [-110.0, 7.0],
-          [-109.2, 7.0]
-        ]
-      },
-      // ----- ILES EPARSES -----
-      {
-        name: "Iles Eparses",
-        eezKm2: 640000,
-        info: "Canal du Mozambique",
-        coordinates: [
-          [39.0, -10.5],
-          [40.5, -10.0],
-          [42.5, -10.5],
-          [44.0, -10.5],
-          [45.5, -10.8],
-          [47.0, -11.0],
-          [48.5, -12.0],
-          [50.0, -13.0],
-          [52.0, -14.0],
-          [54.0, -15.0],
-          [55.0, -15.5],
-          [56.0, -16.5],
-          [55.5, -17.5],
-          [54.0, -18.0],
-          [52.0, -18.0],
-          [49.0, -17.5],
-          [46.0, -17.5],
-          [43.5, -18.0],
-          [41.5, -19.0],
-          [40.0, -20.0],
-          [39.0, -20.5],
-          [38.0, -20.0],
-          [37.0, -19.0],
-          [36.5, -17.5],
-          [37.0, -16.0],
-          [37.5, -14.5],
-          [38.0, -12.5],
-          [38.5, -11.0],
-          [39.0, -10.5]
-        ]
-      },
-      // ----- TAAF - KERGUELEN -----
-      {
-        name: "TAAF - Kerguelen",
-        eezKm2: 567000,
-        info: "Terres Australes, reserve naturelle",
-        coordinates: [
-          [63.0, -46.0],
-          [65.0, -45.5],
-          [67.0, -45.5],
-          [69.0, -46.0],
-          [71.0, -46.5],
-          [73.0, -47.0],
-          [75.0, -47.5],
-          [76.0, -48.5],
-          [76.0, -49.5],
-          [75.5, -51.0],
-          [74.0, -52.0],
-          [72.0, -52.5],
-          [70.0, -52.5],
-          [68.0, -52.0],
-          [66.0, -51.5],
-          [64.0, -51.0],
-          [62.5, -50.0],
-          [62.0, -49.0],
-          [62.0, -47.5],
-          [62.5, -46.5],
-          [63.0, -46.0]
-        ]
-      },
-      // ----- TAAF - CROZET -----
-      {
-        name: "TAAF - Crozet",
-        eezKm2: 567000,
-        info: "Ocean Indien austral",
-        coordinates: [
-          [46.0, -43.5],
-          [48.0, -43.0],
-          [50.0, -43.0],
-          [52.0, -43.5],
-          [54.0, -44.0],
-          [55.5, -45.0],
-          [56.0, -46.0],
-          [55.5, -47.5],
-          [54.5, -48.5],
-          [53.0, -49.5],
-          [51.0, -49.5],
-          [49.0, -49.5],
-          [47.0, -49.0],
-          [45.5, -48.0],
-          [45.0, -47.0],
-          [44.5, -46.0],
-          [45.0, -45.0],
-          [45.5, -44.0],
-          [46.0, -43.5]
-        ]
-      },
-      // ----- TAAF - AMSTERDAM / SAINT-PAUL -----
-      {
-        name: "TAAF - Amsterdam",
-        eezKm2: 500000,
-        info: "Ile volcanique isolee",
-        coordinates: [
-          [73.0, -34.5],
-          [75.0, -34.0],
-          [77.0, -34.0],
-          [79.0, -34.5],
-          [80.5, -35.5],
-          [81.5, -37.0],
-          [81.5, -38.5],
-          [81.0, -40.0],
-          [79.5, -41.0],
-          [78.0, -41.5],
-          [76.0, -41.5],
-          [74.0, -41.0],
-          [72.5, -40.0],
-          [72.0, -38.5],
-          [72.0, -37.0],
-          [72.5, -35.5],
-          [73.0, -34.5]
-        ]
-      },
-      // ----- SAINT-MARTIN -----
-      {
-        name: "Saint-Martin",
-        eezKm2: 5000,
-        info: "Caraibe, frontiere franco-neerlandaise",
-        coordinates: [
-          [-63.5, 17.8],
-          [-63.0, 17.8],
-          [-62.5, 18.0],
-          [-62.5, 18.3],
-          [-62.8, 18.5],
-          [-63.3, 18.5],
-          [-63.8, 18.3],
-          [-63.8, 18.0],
-          [-63.5, 17.8]
-        ]
-      },
-      // ----- SAINT-BARTHELEMY -----
-      {
-        name: "Saint-Barthelemy",
-        eezKm2: 4000,
-        info: "Caraibe",
-        coordinates: [
-          [-63.2, 17.6],
-          [-62.8, 17.6],
-          [-62.3, 17.8],
-          [-62.3, 18.1],
-          [-62.5, 18.3],
-          [-63.0, 18.3],
-          [-63.5, 18.1],
-          [-63.5, 17.8],
-          [-63.2, 17.6]
-        ]
+    const scene = new THREE.Scene();
+
+    const camera = new THREE.PerspectiveCamera(
+      45,
+      window.innerWidth / window.innerHeight,
+      0.01,
+      100
+    );
+    camera.position.set(0, 0.4, 2.8);
+
+    const renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      alpha: false,
+      powerPreference: 'high-performance'
+    });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setClearColor(0x0a0e1a, 1);
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    container.appendChild(renderer.domElement);
+
+    // ====================================================
+    // CONTROLS
+    // ====================================================
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.06;
+    controls.rotateSpeed = 0.5;
+    controls.enableZoom = true;
+    controls.minDistance = 1.5;
+    controls.maxDistance = 5;
+    controls.enablePan = false;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = AUTO_ROTATE_SPEED;
+
+    // ====================================================
+    // LIGHTING
+    // ====================================================
+    const ambientLight = new THREE.AmbientLight(0x334466, 1.2);
+    scene.add(ambientLight);
+
+    const dirLight = new THREE.DirectionalLight(0xaabbcc, 0.8);
+    dirLight.position.set(5, 3, 5);
+    scene.add(dirLight);
+
+    const backLight = new THREE.DirectionalLight(0x223344, 0.3);
+    backLight.position.set(-3, -2, -5);
+    scene.add(backLight);
+
+    // ====================================================
+    // GLOBE — dark ocean sphere
+    // ====================================================
+    const globeGeometry = new THREE.SphereGeometry(GLOBE_RADIUS, 96, 96);
+    const globeMaterial = new THREE.MeshPhongMaterial({
+      color: 0x0b1525,
+      emissive: 0x050a14,
+      emissiveIntensity: 0.3,
+      shininess: 15,
+      transparent: false
+    });
+    const globe = new THREE.Mesh(globeGeometry, globeMaterial);
+    scene.add(globe);
+
+    // ====================================================
+    // SUBTLE GRID LINES (latitude/longitude)
+    // ====================================================
+    function createGridLines() {
+      const gridGroup = new THREE.Group();
+      const gridMaterial = new THREE.LineBasicMaterial({
+        color: 0x1a2540,
+        transparent: true,
+        opacity: 0.25
+      });
+
+      const R = GLOBE_RADIUS + 0.001;
+
+      // Latitude lines every 30 degrees
+      for (let lat = -60; lat <= 60; lat += 30) {
+        const phi = (90 - lat) * Math.PI / 180;
+        const points = [];
+        for (let lng = 0; lng <= 360; lng += 3) {
+          const theta = lng * Math.PI / 180;
+          points.push(new THREE.Vector3(
+            R * Math.sin(phi) * Math.cos(theta),
+            R * Math.cos(phi),
+            -R * Math.sin(phi) * Math.sin(theta)
+          ));
+        }
+        const geo = new THREE.BufferGeometry().setFromPoints(points);
+        gridGroup.add(new THREE.Line(geo, gridMaterial));
       }
-    ];
 
-    // ============================================================
-    // SUBMARINE CABLES — Real routes with waypoints that follow
-    // ocean paths and go AROUND continents, not through them.
-    // Based on TeleGeography cable map data.
-    // Format: [lat, lng] waypoints for pathsData (surface paths)
-    // ============================================================
-    const submarineCables = [
-      // --- SEA-ME-WE 3 (Europe - SE Asia via Med, Red Sea, Indian Ocean) ---
-      {
-        name: "SEA-ME-WE 3",
-        color: "#e8b030",
-        coords: [
-          [50.8, 1.1],
-          [48.5, -5.5],
-          [43.5, -9.5],
-          [36.8, -6.0],
-          [35.9, -5.3],
-          [37.0, 5.0],
-          [37.0, 10.0],
-          [35.5, 12.5],
-          [33.5, 20.0],
-          [31.5, 29.5],
-          [31.2, 32.3],
-          [30.0, 32.6],
-          [29.0, 33.0],
-          [27.5, 34.0],
-          [22.0, 38.0],
-          [15.0, 42.0],
-          [12.6, 43.2],
-          [12.0, 45.0],
-          [11.5, 51.0],
-          [8.0, 58.0],
-          [8.5, 73.0],
-          [7.0, 79.8],
-          [6.0, 80.5],
-          [4.0, 85.0],
-          [2.0, 95.0],
-          [1.3, 103.8],
-          [5.0, 107.0],
-          [10.5, 108.0],
-          [22.3, 114.1],
-          [25.0, 121.5],
-          [33.0, 130.0],
-          [35.5, 139.7]
-        ]
-      },
-      // --- SEA-ME-WE 5 ---
-      {
-        name: "SEA-ME-WE 5",
-        color: "#e8b030",
-        coords: [
-          [43.3, 5.3],
-          [38.0, 7.0],
-          [36.5, 12.5],
-          [33.5, 20.0],
-          [31.5, 29.5],
-          [31.2, 32.3],
-          [30.0, 32.6],
-          [29.0, 33.0],
-          [22.0, 38.0],
-          [12.6, 43.2],
-          [11.5, 51.0],
-          [8.5, 73.0],
-          [6.0, 80.5],
-          [1.3, 103.8],
-          [22.3, 114.1]
-        ]
-      },
-      // --- TAT-14 ---
-      {
-        name: "TAT-14",
-        color: "#f0c040",
-        coords: [
-          [40.8, -72.0],
-          [41.5, -65.0],
-          [43.0, -55.0],
-          [46.0, -45.0],
-          [48.0, -35.0],
-          [49.5, -25.0],
-          [50.5, -15.0],
-          [51.0, -10.0],
-          [50.5, -5.5],
-          [50.8, 1.1]
-        ]
-      },
-      // --- MAREA ---
-      {
-        name: "MAREA",
-        color: "#f0c040",
-        coords: [
-          [36.8, -76.0],
-          [38.0, -68.0],
-          [39.5, -55.0],
-          [40.5, -45.0],
-          [41.0, -35.0],
-          [42.0, -25.0],
-          [42.5, -15.0],
-          [43.0, -8.0],
-          [43.3, -3.0]
-        ]
-      },
-      // --- SAFE ---
-      {
-        name: "SAFE",
-        color: "#d4a030",
-        coords: [
-          [-34.0, 18.5],
-          [-33.5, 25.0],
-          [-31.0, 31.0],
-          [-27.0, 38.0],
-          [-23.0, 43.0],
-          [-21.1, 55.5],
-          [-18.0, 63.0],
-          [-12.0, 75.0],
-          [-5.0, 85.0],
-          [0.0, 95.0],
-          [1.3, 103.8]
-        ]
-      },
-      // --- Honotua ---
-      {
-        name: "Honotua",
-        color: "#2a55b3",
-        coords: [
-          [-17.5, -149.5],
-          [-12.0, -148.0],
-          [-5.0, -150.0],
-          [5.0, -152.0],
-          [15.0, -154.0],
-          [20.0, -156.0],
-          [21.3, -157.8],
-          [25.0, -150.0],
-          [30.0, -140.0],
-          [35.0, -130.0],
-          [37.8, -122.4]
-        ]
-      },
-      // --- LION / LION2 ---
-      {
-        name: "LION / LION2",
-        color: "#f0c040",
-        coords: [
-          [43.3, 5.3],
-          [42.0, 5.0],
-          [40.0, 4.0],
-          [38.5, 3.5],
-          [37.0, 3.2],
-          [36.8, 3.0]
-        ]
-      },
-      // --- Americas-II ---
-      {
-        name: "Americas-II",
-        color: "#d4a030",
-        coords: [
-          [40.7, -74.0],
-          [38.0, -74.5],
-          [32.0, -76.0],
-          [25.0, -78.0],
-          [22.0, -76.0],
-          [19.0, -72.0],
-          [18.5, -69.9],
-          [17.0, -65.0],
-          [16.2, -61.5],
-          [14.6, -61.0],
-          [10.5, -61.5],
-          [8.0, -58.0],
-          [4.0, -53.0]
-        ]
-      },
-      // --- Gondwana-1 ---
-      {
-        name: "Gondwana-1",
-        color: "#2a55b3",
-        coords: [
-          [-22.2, 166.5],
-          [-24.0, 165.0],
-          [-26.0, 162.0],
-          [-28.0, 158.0],
-          [-30.0, 155.0],
-          [-33.8, 151.3]
-        ]
-      },
-      // --- ACE ---
-      {
-        name: "ACE",
-        color: "#d4a030",
-        coords: [
-          [48.5, -5.0],
-          [43.5, -9.5],
-          [38.0, -10.0],
-          [33.0, -10.0],
-          [28.5, -15.5],
-          [21.0, -17.5],
-          [14.7, -17.4],
-          [9.5, -13.7],
-          [6.3, -10.8],
-          [5.5, -1.5],
-          [4.0, 5.0],
-          [0.0, 9.0],
-          [-4.5, 11.8],
-          [-12.0, 13.5],
-          [-23.0, 14.5],
-          [-34.0, 18.5]
-        ]
-      },
-      // --- WACS ---
-      {
-        name: "WACS",
-        color: "#d4a030",
-        coords: [
-          [51.0, 1.5],
-          [49.0, -2.0],
-          [43.5, -9.5],
-          [38.0, -10.0],
-          [28.5, -15.5],
-          [14.7, -17.4],
-          [6.3, 3.3],
-          [4.0, 5.0],
-          [-4.3, 11.8],
-          [-23.0, 14.5],
-          [-34.0, 18.5]
-        ]
-      },
-      // --- Natitua ---
-      {
-        name: "Natitua",
-        color: "#2a55b3",
-        coords: [
-          [-17.5, -149.5],
-          [-15.0, -148.0],
-          [-10.0, -140.0],
-          [-9.0, -139.5]
-        ]
-      },
-      // --- APG ---
-      {
-        name: "APG",
-        color: "#d4a030",
-        coords: [
-          [35.5, 139.7],
-          [33.0, 133.0],
-          [28.0, 127.0],
-          [22.3, 114.1],
-          [15.0, 110.0],
-          [10.8, 106.6],
-          [5.0, 105.0],
-          [1.3, 103.8]
-        ]
-      },
-      // --- Southern Cross ---
-      {
-        name: "Southern Cross",
-        color: "#d4a030",
-        coords: [
-          [-33.9, 151.2],
-          [-35.0, 160.0],
-          [-36.0, 170.0],
-          [-36.8, 174.8],
-          [-35.0, -178.0],
-          [-25.0, -170.0],
-          [-15.0, -160.0],
-          [-5.0, -150.0],
-          [5.0, -145.0],
-          [15.0, -140.0],
-          [25.0, -130.0],
-          [33.7, -118.2]
-        ]
+      // Longitude lines every 30 degrees
+      for (let lng = 0; lng < 360; lng += 30) {
+        const theta = lng * Math.PI / 180;
+        const points = [];
+        for (let lat = -90; lat <= 90; lat += 3) {
+          const phi = (90 - lat) * Math.PI / 180;
+          points.push(new THREE.Vector3(
+            R * Math.sin(phi) * Math.cos(theta),
+            R * Math.cos(phi),
+            -R * Math.sin(phi) * Math.sin(theta)
+          ));
+        }
+        const geo = new THREE.BufferGeometry().setFromPoints(points);
+        gridGroup.add(new THREE.Line(geo, gridMaterial));
       }
-    ];
 
-    // ============================================================
-    // VESSEL DENSITY HEATMAP DATA
-    // Generate realistic point data for commercial shipping lanes
-    // and fishing vessel density. Points have lat, lng, weight.
-    // ============================================================
+      return gridGroup;
+    }
+    scene.add(createGridLines());
 
-    // Helper: generate points along a route with jitter
-    function generateRoutePoints(waypoints, density, baseWeight, jitter) {
-      const points = [];
-      for (let i = 0; i < waypoints.length - 1; i++) {
-        const [lat1, lng1] = waypoints[i];
-        const [lat2, lng2] = waypoints[i + 1];
-        const dist = Math.sqrt((lat2 - lat1) ** 2 + (lng2 - lng1) ** 2);
-        const numPoints = Math.max(2, Math.round(dist * density));
-        for (let j = 0; j < numPoints; j++) {
-          const t = j / numPoints;
-          const lat = lat1 + (lat2 - lat1) * t + (Math.random() - 0.5) * jitter;
-          const lng = lng1 + (lng2 - lng1) * t + (Math.random() - 0.5) * jitter;
-          const w = baseWeight * (0.6 + Math.random() * 0.8);
-          points.push({ lat, lng, weight: w });
+    // ====================================================
+    // CONTINENT OUTLINES
+    // ====================================================
+    function latLngToVec3(lat, lng, radius) {
+      const phi = (90 - lat) * Math.PI / 180;
+      const theta = -lng * Math.PI / 180;
+      return new THREE.Vector3(
+        radius * Math.sin(phi) * Math.cos(theta),
+        radius * Math.cos(phi),
+        radius * Math.sin(phi) * Math.sin(theta)
+      );
+    }
+
+    function createContinentOutlines() {
+      const group = new THREE.Group();
+      const R = GLOBE_RADIUS + 0.002;
+      const material = new THREE.LineBasicMaterial({
+        color: 0x2a3550,
+        transparent: true,
+        opacity: 0.55
+      });
+
+      for (const outline of CONTINENT_OUTLINES) {
+        const points = outline.map(([lng, lat]) => latLngToVec3(lat, lng, R));
+        const geo = new THREE.BufferGeometry().setFromPoints(points);
+        group.add(new THREE.Line(geo, material));
+      }
+
+      return group;
+    }
+    scene.add(createContinentOutlines());
+
+    // ====================================================
+    // LAND MASSES — simplified filled polygons
+    // We add subtle filled land as a very dark gray tone
+    // by creating a second sphere with slightly different color
+    // and masking with the outlines. But since that's complex,
+    // we'll just rely on outlines for simplicity. The dark globe
+    // already looks like ocean; outlines define land.
+    // ====================================================
+
+    // ====================================================
+    // ATMOSPHERE GLOW
+    // ====================================================
+    const atmosphereVS = `
+      varying vec3 vNormal;
+      void main() {
+        vNormal = normalize(normalMatrix * normal);
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      }
+    `;
+    const atmosphereFS = `
+      varying vec3 vNormal;
+      void main() {
+        float intensity = pow(0.65 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 3.0);
+        gl_FragColor = vec4(0.1, 0.5, 0.6, 1.0) * intensity * 0.6;
+      }
+    `;
+    const atmosphereMaterial = new THREE.ShaderMaterial({
+      vertexShader: atmosphereVS,
+      fragmentShader: atmosphereFS,
+      blending: THREE.AdditiveBlending,
+      side: THREE.BackSide,
+      transparent: true,
+      depthWrite: false
+    });
+    const atmosphere = new THREE.Mesh(
+      new THREE.SphereGeometry(GLOBE_RADIUS * 1.12, 64, 64),
+      atmosphereMaterial
+    );
+    scene.add(atmosphere);
+
+    // ====================================================
+    // ZEE ZONES — circular patches on the sphere surface
+    // ====================================================
+    const zoneMeshes = [];  // for raycasting
+    const zoneGroup = new THREE.Group();
+    scene.add(zoneGroup);
+
+    function createZoneDisc(zone) {
+      const angularRadius = areaToAngularRadius(zone.area);
+
+      // Clamp very large zones for display (Polynésie = huge)
+      const maxAngularRadius = 0.35; // ~2200km radius visual cap
+      const displayRadius = Math.min(angularRadius, maxAngularRadius);
+
+      const centerPhi = (90 - zone.lat) * Math.PI / 180;
+      const centerTheta = -zone.lng * Math.PI / 180;
+
+      // Create a disc of triangles on the sphere surface
+      const vertices = [];
+      const indices = [];
+
+      // Center point
+      const cx = ZEE_HEIGHT * Math.sin(centerPhi) * Math.cos(centerTheta);
+      const cy = ZEE_HEIGHT * Math.cos(centerPhi);
+      const cz = ZEE_HEIGHT * Math.sin(centerPhi) * Math.sin(centerTheta);
+      vertices.push(cx, cy, cz);
+
+      // Perimeter points
+      for (let i = 0; i <= ZONE_SEGMENTS; i++) {
+        const angle = (i / ZONE_SEGMENTS) * Math.PI * 2;
+
+        // Calculate point on sphere at angular distance from center
+        // Using spherical coordinate offset
+        const sinR = Math.sin(displayRadius);
+        const cosR = Math.cos(displayRadius);
+        const sinA = Math.sin(angle);
+        const cosA = Math.cos(angle);
+
+        // Point relative to north pole at angular distance displayRadius
+        const px = sinR * cosA;
+        const py = cosR;
+        const pz = sinR * sinA;
+
+        // Rotate from north pole to center position
+        // First rotate by centerPhi around Z axis (latitude)
+        // Then rotate by centerTheta around Y axis (longitude)
+        const sinPhi = Math.sin(centerPhi);
+        const cosPhi = Math.cos(centerPhi);
+
+        // Rotate around X-axis by centerPhi
+        const rx = px;
+        const ry = py * cosPhi - pz * sinPhi;
+        const rz = py * sinPhi + pz * cosPhi;
+
+        // Rotate around Y-axis by centerTheta
+        const sinT = Math.sin(centerTheta);
+        const cosT = Math.cos(centerTheta);
+        const fx = rx * cosT + rz * sinT;
+        const fy = ry;
+        const fz = -rx * sinT + rz * cosT;
+
+        vertices.push(fx * ZEE_HEIGHT, fy * ZEE_HEIGHT, fz * ZEE_HEIGHT);
+
+        if (i > 0) {
+          indices.push(0, i, i + 1);
         }
       }
-      return points;
-    }
 
-    // Helper: generate cluster of fishing points around a center
-    function generateFishingCluster(centerLat, centerLng, radius, count, baseWeight) {
-      const points = [];
-      for (let i = 0; i < count; i++) {
-        const angle = Math.random() * Math.PI * 2;
-        const r = Math.random() * radius;
-        const lat = centerLat + r * Math.cos(angle);
-        const lng = centerLng + r * Math.sin(angle) / Math.cos(centerLat * Math.PI / 180);
-        const w = baseWeight * (0.3 + Math.random() * 1.0);
-        points.push({ lat, lng, weight: w });
-      }
-      return points;
-    }
+      const geometry = new THREE.BufferGeometry();
+      geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+      geometry.setIndex(indices);
+      geometry.computeVertexNormals();
 
-    function buildShippingHeatmapPoints() {
-      let points = [];
+      // Fill material
+      const fillMaterial = new THREE.MeshBasicMaterial({
+        color: 0x00b4b4,
+        transparent: true,
+        opacity: 0.22,
+        side: THREE.DoubleSide,
+        depthWrite: false
+      });
 
-      // === MAJOR COMMERCIAL SHIPPING LANES ===
+      const mesh = new THREE.Mesh(geometry, fillMaterial);
+      mesh.userData = { zone: zone, isZEE: true };
+      mesh.renderOrder = 1;
+      zoneGroup.add(mesh);
+      zoneMeshes.push(mesh);
 
-      // 1. Suez-Gibraltar-English Channel (heaviest traffic)
-      points = points.concat(generateRoutePoints([
-        [51.0, 3.0], [51.5, 1.5], [50.0, -2.0], [48.5, -5.5],
-        [43.5, -9.5], [38.0, -9.5], [36.2, -5.8], [35.9, -5.3],
-        [36.5, -2.0], [37.5, 5.0], [37.0, 10.0], [35.5, 12.5],
-        [33.0, 20.0], [31.5, 29.5], [31.2, 32.3], [30.0, 32.6],
-        [29.0, 33.0], [22.0, 38.0], [15.0, 42.0], [12.6, 43.2]
-      ], 3.5, 1.0, 1.5));
-
-      // 2. Gulf of Aden - Arabian Sea - Malacca Strait
-      points = points.concat(generateRoutePoints([
-        [12.6, 43.2], [12.0, 50.0], [10.0, 60.0], [8.0, 72.0],
-        [6.0, 80.5], [3.0, 90.0], [2.0, 98.0], [1.5, 103.0], [1.3, 103.8]
-      ], 3.0, 0.95, 1.8));
-
-      // 3. Malacca - South China Sea - East Asia
-      points = points.concat(generateRoutePoints([
-        [1.3, 103.8], [5.0, 108.0], [10.0, 112.0], [15.0, 115.0],
-        [22.3, 114.1], [25.0, 118.0], [31.2, 121.5], [35.5, 139.7]
-      ], 3.0, 0.9, 1.5));
-
-      // 4. Transatlantic: Europe - North America
-      points = points.concat(generateRoutePoints([
-        [51.0, 3.0], [51.5, 1.5], [50.0, -2.0], [48.5, -5.5],
-        [48.0, -15.0], [47.0, -25.0], [44.0, -40.0], [42.0, -55.0], [40.7, -74.0]
-      ], 2.5, 0.75, 2.0));
-
-      // 5. Transpacific: Asia - North America
-      points = points.concat(generateRoutePoints([
-        [35.5, 139.7], [38.0, 150.0], [42.0, 165.0],
-        [45.0, 180.0], [45.0, -170.0], [43.0, -155.0],
-        [40.0, -140.0], [36.0, -125.0], [33.7, -118.2]
-      ], 2.0, 0.85, 2.5));
-
-      // 6. Europe - West Africa
-      points = points.concat(generateRoutePoints([
-        [48.0, -4.5], [43.5, -9.5], [38.0, -10.0], [33.0, -10.0],
-        [28.5, -15.5], [21.0, -17.5], [14.7, -17.4],
-        [6.4, 3.4], [4.0, 5.0], [0.0, 9.0],
-        [-4.5, 11.8], [-12.0, 13.5]
-      ], 2.0, 0.5, 1.5));
-
-      // 7. Cape of Good Hope
-      points = points.concat(generateRoutePoints([
-        [14.7, -17.4], [5.0, -2.0], [-6.0, 12.0], [-15.0, 12.0],
-        [-25.0, 14.5], [-34.4, 18.5], [-34.0, 26.0], [-30.0, 32.0],
-        [-20.0, 42.0], [-12.0, 50.0], [0.0, 60.0]
-      ], 1.8, 0.45, 2.0));
-
-      // 8. Middle East - Persian Gulf - Hormuz
-      points = points.concat(generateRoutePoints([
-        [26.0, 56.5], [25.0, 58.0], [22.0, 60.0], [18.0, 63.0],
-        [12.0, 70.0], [8.0, 76.0], [6.0, 80.5]
-      ], 3.0, 0.85, 1.2));
-
-      // 9. Panama Canal approaches
-      points = points.concat(generateRoutePoints([
-        [40.7, -74.0], [35.0, -75.0], [28.0, -78.0],
-        [22.0, -80.0], [18.0, -78.0], [12.0, -80.0],
-        [9.0, -79.5], [8.5, -79.5], [5.0, -85.0],
-        [10.0, -95.0], [25.0, -115.0], [33.7, -118.2]
-      ], 2.0, 0.6, 1.8));
-
-      // 10. Europe - South America
-      points = points.concat(generateRoutePoints([
-        [48.0, -4.5], [43.5, -9.5], [38.0, -10.0], [28.5, -15.5],
-        [15.0, -25.0], [5.0, -30.0], [-5.0, -35.0],
-        [-15.0, -38.0], [-23.5, -43.2]
-      ], 1.8, 0.4, 2.0));
-
-      // 11. Mediterranean internal traffic
-      points = points.concat(generateRoutePoints([
-        [36.2, -5.8], [37.0, 0.0], [38.0, 5.0], [37.5, 10.0],
-        [35.5, 12.5], [34.0, 15.0], [35.0, 20.0], [36.0, 25.0],
-        [35.0, 28.0], [36.5, 30.0], [36.0, 33.0], [35.0, 35.0]
-      ], 2.5, 0.6, 1.0));
-
-      // 12. North Sea / Baltic approaches
-      points = points.concat(generateRoutePoints([
-        [51.5, 1.5], [52.5, 3.5], [54.0, 6.0], [55.5, 8.0],
-        [56.5, 10.0], [57.5, 11.5], [58.5, 13.0], [59.5, 16.0]
-      ], 3.0, 0.7, 0.8));
-
-      // 13. Singapore hub cluster (very dense)
-      points = points.concat(generateFishingCluster(1.3, 103.8, 2.0, 80, 1.0));
-
-      // 14. Rotterdam/English Channel dense zone
-      points = points.concat(generateFishingCluster(51.0, 2.0, 1.5, 60, 0.8));
-
-      // 15. Strait of Gibraltar cluster
-      points = points.concat(generateFishingCluster(36.0, -5.5, 1.0, 40, 0.7));
-
-      // 16. Hormuz cluster
-      points = points.concat(generateFishingCluster(26.0, 56.5, 1.0, 35, 0.75));
-
-      // 17. Bab el-Mandeb cluster
-      points = points.concat(generateFishingCluster(12.6, 43.5, 1.0, 30, 0.7));
-
-      return points;
-    }
-
-    function buildFishingHeatmapPoints() {
-      let points = [];
-
-      // === MAJOR FISHING GROUNDS ===
-
-      // 1. North Sea (very dense fishing)
-      points = points.concat(generateFishingCluster(55.0, 3.0, 4.0, 120, 0.8));
-      points = points.concat(generateFishingCluster(57.0, 1.0, 3.0, 80, 0.7));
-      points = points.concat(generateFishingCluster(53.0, 5.0, 2.5, 60, 0.6));
-
-      // 2. Grand Banks / Newfoundland
-      points = points.concat(generateFishingCluster(44.0, -52.0, 4.0, 100, 0.75));
-      points = points.concat(generateFishingCluster(46.0, -48.0, 3.0, 70, 0.65));
-
-      // 3. West Africa coast (Mauritania, Senegal, Guinea)
-      points = points.concat(generateFishingCluster(18.0, -17.0, 3.0, 90, 0.7));
-      points = points.concat(generateFishingCluster(12.0, -17.5, 3.0, 70, 0.6));
-      points = points.concat(generateFishingCluster(5.0, -4.0, 3.0, 60, 0.5));
-
-      // 4. Southeast Asia (South China Sea, Gulf of Thailand)
-      points = points.concat(generateFishingCluster(8.0, 110.0, 5.0, 100, 0.7));
-      points = points.concat(generateFishingCluster(12.0, 109.0, 3.0, 80, 0.65));
-      points = points.concat(generateFishingCluster(3.0, 107.0, 3.0, 60, 0.55));
-      points = points.concat(generateFishingCluster(10.0, 100.0, 2.5, 50, 0.5));
-
-      // 5. Southern Ocean near Antarctica (Kerguelen, Crozet area)
-      points = points.concat(generateFishingCluster(-50.0, 70.0, 5.0, 60, 0.55));
-      points = points.concat(generateFishingCluster(-48.0, 52.0, 4.0, 50, 0.5));
-      points = points.concat(generateFishingCluster(-55.0, -40.0, 4.0, 40, 0.45));
-
-      // 6. Bay of Biscay / Celtic Sea
-      points = points.concat(generateFishingCluster(47.0, -6.0, 3.0, 70, 0.6));
-      points = points.concat(generateFishingCluster(49.0, -8.0, 2.5, 50, 0.55));
-
-      // 7. Norwegian Sea / Barents Sea
-      points = points.concat(generateFishingCluster(62.0, 5.0, 3.5, 70, 0.65));
-      points = points.concat(generateFishingCluster(70.0, 20.0, 4.0, 50, 0.5));
-
-      // 8. Eastern Pacific (Peru/Chile upwelling)
-      points = points.concat(generateFishingCluster(-12.0, -78.0, 4.0, 80, 0.7));
-      points = points.concat(generateFishingCluster(-20.0, -72.0, 3.0, 50, 0.55));
-
-      // 9. Japan / East China Sea
-      points = points.concat(generateFishingCluster(35.0, 135.0, 4.0, 90, 0.75));
-      points = points.concat(generateFishingCluster(30.0, 125.0, 3.5, 70, 0.65));
-      points = points.concat(generateFishingCluster(40.0, 145.0, 3.0, 60, 0.6));
-
-      // 10. Indian Ocean (Mozambique Channel / near French territories)
-      points = points.concat(generateFishingCluster(-15.0, 43.0, 3.0, 50, 0.5));
-      points = points.concat(generateFishingCluster(-20.0, 57.0, 2.5, 40, 0.45));
-
-      // 11. Bering Sea
-      points = points.concat(generateFishingCluster(57.0, -170.0, 4.0, 60, 0.6));
-
-      // 12. Icelandic waters
-      points = points.concat(generateFishingCluster(64.0, -20.0, 3.0, 50, 0.55));
-
-      // 13. Polynesie francaise tuna grounds
-      points = points.concat(generateFishingCluster(-15.0, -145.0, 6.0, 40, 0.4));
-
-      return points;
-    }
-
-    // Pre-generate the data (deterministic per page load)
-    const shippingHeatmapData = buildShippingHeatmapPoints();
-    const fishingHeatmapData = buildFishingHeatmapPoints();
-
-    // ============================================================
-    // LAYER STATE
-    // ============================================================
-    const layerState = {
-      eez: true,
-      cables: true,
-      territories: true,
-      shipping: true,
-      fishing: true
-    };
-
-    function toggleLayer(layer) {
-      layerState[layer] = !layerState[layer];
-      const el = document.querySelector(`[data-layer="${layer}"]`);
-      el.classList.toggle('inactive', !layerState[layer]);
-      updateGlobe();
-    }
-
-    // ============================================================
-    // COUNTER ANIMATION
-    // ============================================================
-    function animateCounter(target, duration = 2000) {
-      const el = document.getElementById('counter-km');
-      const start = 0;
-      const startTime = performance.now();
-
-      function update(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        const current = Math.floor(start + (target - start) * eased);
-        el.textContent = current.toLocaleString('fr-FR');
-        if (progress < 1) requestAnimationFrame(update);
-      }
-      requestAnimationFrame(update);
-    }
-
-    // ============================================================
-    // CONVERT EEZ DATA TO GEOJSON FEATURES
-    // globe.gl polygonsData expects GeoJSON Features.
-    // coordinates are [lng, lat] pairs forming a closed ring.
-    // We wrap them in the proper GeoJSON Polygon structure
-    // with correct [ring] nesting.
-    // ============================================================
-    function generateEEZFeatures() {
-      return frenchEEZPolygons.map(zone => {
-        // Ensure the ring is closed (first == last)
-        const ring = zone.coordinates.slice();
-        const first = ring[0];
-        const last = ring[ring.length - 1];
-        if (first[0] !== last[0] || first[1] !== last[1]) {
-          ring.push([first[0], first[1]]);
+      // Border ring
+      const borderPoints = [];
+      for (let i = 0; i <= ZONE_SEGMENTS; i++) {
+        const idx = (i + 1) * 3; // skip center point
+        if (idx + 2 < vertices.length) {
+          borderPoints.push(new THREE.Vector3(
+            vertices[idx] * 1.0005,
+            vertices[idx + 1] * 1.0005,
+            vertices[idx + 2] * 1.0005
+          ));
         }
-        return {
-          type: "Feature",
-          properties: {
-            name: zone.name,
-            eezKm2: zone.eezKm2,
-            info: zone.info
-          },
-          geometry: {
-            type: "Polygon",
-            // GeoJSON Polygon: array of rings, each ring is array of [lng, lat]
-            coordinates: [ring]
-          }
-        };
+      }
+
+      const borderGeo = new THREE.BufferGeometry().setFromPoints(borderPoints);
+      const borderMaterial = new THREE.LineBasicMaterial({
+        color: 0x00e0e0,
+        transparent: true,
+        opacity: 0.55,
+        linewidth: 1
       });
+      const borderLine = new THREE.Line(borderGeo, borderMaterial);
+      borderLine.renderOrder = 2;
+      zoneGroup.add(borderLine);
+
+      // Small center marker dot
+      const dotGeo = new THREE.SphereGeometry(0.006, 8, 8);
+      const dotMat = new THREE.MeshBasicMaterial({
+        color: 0x00ffff,
+        transparent: true,
+        opacity: 0.7
+      });
+      const dot = new THREE.Mesh(dotGeo, dotMat);
+      dot.position.set(cx * 1.005, cy * 1.005, cz * 1.005);
+      zoneGroup.add(dot);
+
+      return { mesh, borderLine, dot };
     }
 
-    // ============================================================
-    // PREPARE CABLE PATH DATA (for pathsData — surface-hugging)
-    // ============================================================
-    function buildCablePathData() {
-      return submarineCables.map(cable => ({
-        coords: cable.coords,
-        name: cable.name,
-        color: cable.color
-      }));
-    }
+    // Create all zones
+    const zoneObjects = ZEE_ZONES.map(zone => createZoneDisc(zone));
 
-    // ============================================================
-    // GLOBE INITIALIZATION
-    // ============================================================
-    let globe;
+    // ====================================================
+    // STARFIELD BACKGROUND
+    // ====================================================
+    function createStarfield() {
+      const starCount = 2000;
+      const positions = new Float32Array(starCount * 3);
+      const sizes = new Float32Array(starCount);
 
-    function initGlobe() {
-      const container = document.getElementById('globe-container');
+      for (let i = 0; i < starCount; i++) {
+        const r = 15 + Math.random() * 35;
+        const theta = Math.random() * Math.PI * 2;
+        const phi = Math.acos(2 * Math.random() - 1);
 
-      globe = Globe()
-        .globeImageUrl('https://unpkg.com/three-globe@2.31.0/example/img/earth-blue-marble.jpg')
-        .bumpImageUrl('https://unpkg.com/three-globe@2.31.0/example/img/earth-topology.png')
-        .backgroundImageUrl('https://unpkg.com/three-globe@2.31.0/example/img/night-sky.png')
-        .showAtmosphere(true)
-        .atmosphereColor('#2a55b3')
-        .atmosphereAltitude(0.25)
-        .width(window.innerWidth)
-        .height(window.innerHeight)
-        (container);
+        positions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+        positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+        positions[i * 3 + 2] = r * Math.cos(phi);
+        sizes[i] = 0.3 + Math.random() * 1.2;
+      }
 
-      // Set initial view on France / Atlantic
-      globe.pointOfView({ lat: 30, lng: 20, altitude: 2.5 }, 1000);
+      const geo = new THREE.BufferGeometry();
+      geo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+      geo.setAttribute('size', new THREE.Float32BufferAttribute(sizes, 1));
 
-      // Custom globe material
-      const globeMaterial = globe.globeMaterial();
-      globeMaterial.bumpScale = 10;
-
-      // Dim ambient light for dramatic effect
-      const scene = globe.scene();
-      scene.children.forEach(child => {
-        if (child.isAmbientLight) child.intensity = 0.4;
-        if (child.isDirectionalLight) child.intensity = 0.9;
+      const mat = new THREE.PointsMaterial({
+        color: 0xaabbdd,
+        size: 0.04,
+        transparent: true,
+        opacity: 0.6,
+        sizeAttenuation: true,
+        depthWrite: false
       });
 
-      updateGlobe();
-
-      // Animate counter
-      setTimeout(() => animateCounter(11691000), 500);
-
-      // Hide loading
-      document.getElementById('loading').style.display = 'none';
-
-      // Auto-rotate slowly
-      globe.controls().autoRotate = true;
-      globe.controls().autoRotateSpeed = 0.3;
-
-      // Stop rotation on interaction
-      container.addEventListener('mousedown', () => {
-        globe.controls().autoRotate = false;
-      });
+      return new THREE.Points(geo, mat);
     }
+    scene.add(createStarfield());
 
-    function updateGlobe() {
-      if (!globe) return;
+    // ====================================================
+    // RAYCASTING for hover detection
+    // ====================================================
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2(-999, -999);
+    let hoveredZone = null;
+    let isUserInteracting = false;
 
-      // === EEZ POLYGONS (proper GeoJSON with [ring] wrapping) ===
-      const eezFeatures = layerState.eez ? generateEEZFeatures() : [];
-      globe
-        .polygonsData(eezFeatures)
-        .polygonCapColor(() => 'rgba(42, 85, 179, 0.12)')
-        .polygonSideColor(() => 'rgba(42, 85, 179, 0.06)')
-        .polygonStrokeColor(() => 'rgba(42, 85, 179, 0.6)')
-        .polygonAltitude(0.006)
-        .polygonLabel(d => `
-          <div style="background:rgba(10,14,26,0.9);padding:10px 14px;border-radius:8px;border:1px solid rgba(42,85,179,0.5);font-family:Poppins,sans-serif;">
-            <div style="font-weight:600;color:#2a55b3;font-size:0.85rem;">${d.properties.name}</div>
-            <div style="color:rgba(255,255,255,0.7);font-size:0.75rem;margin-top:4px;">${d.properties.eezKm2 > 0 ? d.properties.eezKm2.toLocaleString('fr-FR') + ' km2 de ZEE' : ''}</div>
-            <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;margin-top:2px;">${d.properties.info}</div>
-          </div>
-        `);
+    container.addEventListener('pointermove', (e) => {
+      mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+      mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
 
-      // === TERRITORY POINTS (pulsing green dots) ===
-      const territoryPoints = layerState.territories ? frenchTerritories : [];
-      globe
-        .pointsData(territoryPoints)
-        .pointLat('lat')
-        .pointLng('lng')
-        .pointColor(() => '#00bf63')
-        .pointAltitude(0.01)
-        .pointRadius(d => Math.max(0.15, Math.sqrt(d.eezKm2) / 2000))
-        .pointLabel(d => `
-          <div style="background:rgba(10,14,26,0.9);padding:10px 14px;border-radius:8px;border:1px solid rgba(0,191,99,0.5);font-family:Poppins,sans-serif;">
-            <div style="font-weight:600;color:#00bf63;font-size:0.85rem;">${d.name}</div>
-            <div style="color:rgba(255,255,255,0.7);font-size:0.75rem;margin-top:4px;">${d.eezKm2.toLocaleString('fr-FR')} km2</div>
-            <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;margin-top:2px;">${d.info}</div>
-          </div>
-        `);
+      // Position tooltip
+      tooltip.style.left = (e.clientX + 18) + 'px';
+      tooltip.style.top = (e.clientY - 10) + 'px';
 
-      // === RINGS (pulsing effect on territories) ===
-      globe
-        .ringsData(layerState.territories ? frenchTerritories : [])
-        .ringLat('lat')
-        .ringLng('lng')
-        .ringColor(() => t => `rgba(0, 191, 99, ${1 - t})`)
-        .ringMaxRadius(d => Math.max(1, Math.sqrt(d.eezKm2) / 1500))
-        .ringPropagationSpeed(1)
-        .ringRepeatPeriod(3000);
-
-      // === SUBMARINE CABLES as PATHS (surface-hugging, altitude 0) ===
-      const cablePaths = layerState.cables ? buildCablePathData() : [];
-      globe
-        .pathsData(cablePaths)
-        .pathPoints('coords')
-        .pathPointLat(p => p[0])
-        .pathPointLng(p => p[1])
-        .pathColor(d => d.color)
-        .pathStroke(1.2)
-        .pathDashLength(0.6)
-        .pathDashGap(0.15)
-        .pathDashAnimateTime(4000)
-        .pathTransitionDuration(0)
-        .pathLabel(d => `
-          <div style="background:rgba(10,14,26,0.9);padding:8px 12px;border-radius:6px;border:1px solid rgba(240,192,64,0.5);font-family:Poppins,sans-serif;">
-            <div style="font-weight:600;color:#f0c040;font-size:0.8rem;">${d.name}</div>
-            <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;">Cable sous-marin</div>
-          </div>
-        `);
-
-      // === COMMERCIAL SHIPPING DENSITY HEATMAP (hexBinPointsData) ===
-      // Orange/red gradient for commercial vessel traffic
-      const shippingPoints = layerState.shipping ? shippingHeatmapData : [];
-      globe
-        .hexBinPointsData(shippingPoints)
-        .hexBinPointLat('lat')
-        .hexBinPointLng('lng')
-        .hexBinPointWeight('weight')
-        .hexBinResolution(3)
-        .hexAltitude(d => Math.min(d.sumWeight * 0.006, 0.06))
-        .hexTopColor(d => {
-          const intensity = Math.min(d.sumWeight / 4, 1);
-          const r = 255;
-          const g = Math.floor(80 + (1 - intensity) * 100);
-          const b = Math.floor(20 + (1 - intensity) * 40);
-          return `rgba(${r}, ${g}, ${b}, ${0.15 + intensity * 0.55})`;
-        })
-        .hexSideColor(d => {
-          const intensity = Math.min(d.sumWeight / 4, 1);
-          return `rgba(255, 107, 53, ${0.05 + intensity * 0.2})`;
-        })
-        .hexBinMerge(true)
-        .hexTransitionDuration(0);
-
-      // === FISHING VESSEL DENSITY (arcsData repurposed as custom layer) ===
-      // We use the custom layer approach: render fishing points as a second
-      // set of data. Since hexBinPointsData is taken by shipping, we use
-      // heatmapsData for fishing.
-      // globe.gl supports heatmapsData — let's use it for the fishing layer.
-      // Actually, heatmapsData is available. Let's use it with cyan/teal colors.
-      const fishingPoints = layerState.fishing ? fishingHeatmapData : [];
-      globe
-        .heatmapsData(fishingPoints.length > 0 ? [{
-          points: fishingPoints.map(p => ({ lat: p.lat, lng: p.lng, val: p.weight })),
-          maxVal: 1.0
-        }] : [])
-        .heatmapPointLat('lat')
-        .heatmapPointLng('lng')
-        .heatmapPointWeight('val')
-        .heatmapBandwidth(1.5)
-        .heatmapColorSaturation(2.5)
-        .heatmapColorFn(() => {
-          // Create a cyan/teal color function
-          return (t) => {
-            const alpha = t * 0.7;
-            if (alpha < 0.05) return 'rgba(0,0,0,0)';
-            const r = Math.floor(0 + t * 30);
-            const g = Math.floor(180 + t * 75);
-            const b = Math.floor(160 + t * 95);
-            return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-          };
-        })
-        .heatmapTopAltitude(0.01)
-        .heatmapBaseAltitude(0.001)
-        .heatmapsTransitionDuration(0);
-
-      // === ARCS: not used anymore (shipping replaced by heatmap) ===
-      globe.arcsData([]);
-    }
-
-    // ============================================================
-    // RESIZE HANDLER
-    // ============================================================
-    window.addEventListener('resize', () => {
-      if (globe) {
-        globe.width(window.innerWidth).height(window.innerHeight);
+      // Keep tooltip on screen
+      const rect = tooltip.getBoundingClientRect();
+      if (rect.right > window.innerWidth - 10) {
+        tooltip.style.left = (e.clientX - rect.width - 18) + 'px';
+      }
+      if (rect.bottom > window.innerHeight - 10) {
+        tooltip.style.top = (e.clientY - rect.height - 10) + 'px';
       }
     });
 
-    // ============================================================
-    // INIT
-    // ============================================================
-    window.addEventListener('DOMContentLoaded', initGlobe);
+    container.addEventListener('pointerdown', () => {
+      isUserInteracting = true;
+      controls.autoRotate = false;
+    });
+
+    container.addEventListener('pointerup', () => {
+      isUserInteracting = false;
+      // Resume auto-rotate after 3 seconds of inactivity
+      clearTimeout(window._resumeTimer);
+      window._resumeTimer = setTimeout(() => {
+        if (!isUserInteracting) {
+          controls.autoRotate = true;
+        }
+      }, 3000);
+    });
+
+    function formatArea(km2) {
+      if (km2 >= 1000000) {
+        return (km2 / 1000000).toFixed(1).replace('.', ',') + ' M km\u00B2';
+      }
+      return km2.toLocaleString('fr-FR') + ' km\u00B2';
+    }
+
+    function checkHover() {
+      raycaster.setFromCamera(mouse, camera);
+
+      const intersects = raycaster.intersectObjects(zoneMeshes);
+
+      if (intersects.length > 0) {
+        const hit = intersects[0].object;
+        const zone = hit.userData.zone;
+
+        if (hoveredZone !== zone) {
+          // Reset previous hover
+          if (hoveredZone) {
+            resetZoneHighlight(hoveredZone);
+          }
+
+          hoveredZone = zone;
+          highlightZone(zone);
+
+          // Update tooltip
+          tooltipName.textContent = zone.name;
+          tooltipArea.textContent = formatArea(zone.area);
+          tooltipDetail.textContent = zone.detail;
+        }
+
+        tooltip.classList.add('visible');
+        container.style.cursor = 'pointer';
+      } else {
+        if (hoveredZone) {
+          resetZoneHighlight(hoveredZone);
+          hoveredZone = null;
+        }
+        tooltip.classList.remove('visible');
+        container.style.cursor = isUserInteracting ? 'grabbing' : 'grab';
+      }
+    }
+
+    function highlightZone(zone) {
+      for (const obj of zoneObjects) {
+        if (obj.mesh.userData.zone === zone) {
+          obj.mesh.material.opacity = 0.45;
+          obj.mesh.material.color.set(0x00e8e8);
+          obj.borderLine.material.opacity = 0.9;
+          obj.borderLine.material.color.set(0x00ffff);
+          obj.dot.material.opacity = 1.0;
+          obj.dot.scale.set(1.5, 1.5, 1.5);
+          break;
+        }
+      }
+    }
+
+    function resetZoneHighlight(zone) {
+      for (const obj of zoneObjects) {
+        if (obj.mesh.userData.zone === zone) {
+          obj.mesh.material.opacity = 0.22;
+          obj.mesh.material.color.set(0x00b4b4);
+          obj.borderLine.material.opacity = 0.55;
+          obj.borderLine.material.color.set(0x00e0e0);
+          obj.dot.material.opacity = 0.7;
+          obj.dot.scale.set(1, 1, 1);
+          break;
+        }
+      }
+    }
+
+    // ====================================================
+    // ANIMATION LOOP
+    // ====================================================
+    let frameCount = 0;
+
+    function animate() {
+      requestAnimationFrame(animate);
+      frameCount++;
+
+      controls.update();
+
+      // Subtle zone pulse animation
+      if (frameCount % 2 === 0) {
+        const pulse = 0.18 + Math.sin(frameCount * 0.015) * 0.04;
+        for (const obj of zoneObjects) {
+          if (obj.mesh.userData.zone !== hoveredZone) {
+            obj.mesh.material.opacity = pulse;
+          }
+        }
+      }
+
+      checkHover();
+
+      renderer.render(scene, camera);
+    }
+
+    // ====================================================
+    // RESIZE HANDLER
+    // ====================================================
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    // ====================================================
+    // START
+    // ====================================================
+    // Hide loading screen
+    requestAnimationFrame(() => {
+      const loadingEl = document.getElementById('loading');
+      loadingEl.classList.add('fade-out');
+      setTimeout(() => loadingEl.remove(), 900);
+    });
+
+    animate();
+
   </script>
 </body>
 </html>
