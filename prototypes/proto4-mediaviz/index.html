@@ -168,19 +168,6 @@
         }
         .year-label.current { color: #fff; font-weight: 700; }
         .year-label.past { color: rgba(255,255,255,0.9); }
-        .current-year-display {
-            position: fixed;
-            bottom: 44px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 101;
-            font-size: 28px;
-            font-weight: 700;
-            color: rgba(255,255,255,0.9);
-            font-variant-numeric: tabular-nums;
-            pointer-events: none;
-            letter-spacing: 2px;
-        }
         .scroll-hint {
             position: fixed;
             bottom: 58px;
@@ -283,8 +270,7 @@
         }
         .legend-dot.media {
             width: 10px; height: 10px;
-            box-shadow: 0 0 6px rgba(212,168,87,0.5);
-            border: 1.5px solid rgba(255,255,255,0.4);
+            border: 1px solid rgba(255,255,255,0.6);
         }
         .legend-dot.conf {
             width: 7px; height: 7px;
@@ -334,10 +320,6 @@
                 <div class="label">publications visibles</div>
             </div>
             <div class="stat">
-                <div class="number" id="stat-reach">0</div>
-                <div class="label">portée cumulée</div>
-            </div>
-            <div class="stat">
                 <div class="number" id="stat-media">0</div>
                 <div class="label">articles presse</div>
             </div>
@@ -351,16 +333,15 @@
         </div>
         <div class="year-labels" id="year-labels"></div>
     </div>
-    <div class="current-year-display" id="current-year-display">2013</div>
     <div class="scroll-hint">Scroll pour naviguer dans le temps</div>
 
     <!-- Legend: axis colors + tier sizes -->
     <div class="legend">
-        <div class="legend-item"><div class="legend-dot" style="width:8px;height:8px;background:#2a55b3;box-shadow:0 0 6px rgba(42,85,179,0.6);"></div> <span style="color:rgba(255,255,255,0.7)">Technologique</span></div>
-        <div class="legend-item"><div class="legend-dot" style="width:8px;height:8px;background:#00bf63;box-shadow:0 0 6px rgba(0,191,99,0.6);"></div> <span style="color:rgba(255,255,255,0.7)">Environnementale</span></div>
-        <div class="legend-item"><div class="legend-dot" style="width:8px;height:8px;background:#b32a55;box-shadow:0 0 6px rgba(179,42,85,0.6);"></div> <span style="color:rgba(255,255,255,0.7)">Socioculturelle</span></div>
+        <div class="legend-item"><div class="legend-dot" style="width:8px;height:8px;background:#2a55b3;"></div> <span style="color:rgba(255,255,255,0.7)">Technologique</span></div>
+        <div class="legend-item"><div class="legend-dot" style="width:8px;height:8px;background:#00bf63;"></div> <span style="color:rgba(255,255,255,0.7)">Environnementale</span></div>
+        <div class="legend-item"><div class="legend-dot" style="width:8px;height:8px;background:#b32a55;"></div> <span style="color:rgba(255,255,255,0.7)">Socioculturelle</span></div>
         <div style="width:1px;height:14px;background:rgba(255,255,255,0.15);margin:0 4px;"></div>
-        <div class="legend-item"><div class="legend-dot media" style="width:10px;height:10px;background:rgba(255,255,255,0.8);box-shadow:0 0 6px rgba(212,168,87,0.5);border:1.5px solid rgba(255,255,255,0.4);"></div> Presse</div>
+        <div class="legend-item"><div class="legend-dot media" style="width:10px;height:10px;background:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.6);"></div> Presse</div>
         <div class="legend-item"><div class="legend-dot" style="width:7px;height:7px;background:rgba(255,255,255,0.45);"></div> Conf</div>
         <div class="legend-item"><div class="legend-dot" style="width:4px;height:4px;background:rgba(255,255,255,0.3);"></div> Social</div>
     </div>
@@ -375,7 +356,6 @@
         <div class="channel" id="popup-channel"></div>
         <div class="excerpt" id="popup-excerpt"></div>
         <div class="metrics">
-            <span><strong id="popup-reach">--</strong> portee</span>
             <span><strong id="popup-date">--</strong></span>
         </div>
     </div>
@@ -392,10 +372,7 @@
         socio:  '#b32a55',
         technoLight: '#6b9fff',
         enviroLight: '#4dff99',
-        socioLight:  '#ff6b99',
-        technoGlow: 'rgba(42, 85, 179, 0.35)',
-        enviroGlow: 'rgba(0, 191, 99, 0.25)',
-        socioGlow:  'rgba(179, 42, 85, 0.35)'
+        socioLight:  '#ff6b99'
     };
 
     const CHANNELS = {
@@ -578,44 +555,39 @@
     // =============================================
     // SCALE REACH TO HIT CUMULATIVE TARGETS
     // =============================================
-    // Targets: cumulative reach = 2,400,000 by end 2024, 3,600,000 by end 2025
+    // Targets: cumulative reach = 2,700,000 by end 2024, 3,600,000 by end 2025
     // Extrapolate 2023 and 2026 proportionally.
     (function scaleReachValues() {
         // Group pubs by year-end buckets
         const pubsThrough2024 = publications.filter(p => p.year <= 2024);
         const pubsIn2025 = publications.filter(p => p.year === 2025);
         const pubsIn2026 = publications.filter(p => p.year === 2026);
-        const pubsThrough2023 = publications.filter(p => p.year <= 2023);
 
         // Raw sums
         const rawThrough2024 = pubsThrough2024.reduce((s, p) => s + p.reach, 0);
         const rawIn2025 = pubsIn2025.reduce((s, p) => s + p.reach, 0);
 
-        // Scale all pubs through 2024 so their cumulative = 2,400,000
-        const scale2024 = 2400000 / rawThrough2024;
+        // Scale all pubs through 2024 so their cumulative = 2,700,000
+        const scale2024 = 2700000 / rawThrough2024;
         pubsThrough2024.forEach(p => { p.reach = Math.round(p.reach * scale2024); });
 
         // Scale 2025 pubs so cumulative through 2025 = 3,600,000
-        // Need 2025 to add 1,200,000
-        const target2025Delta = 3600000 - 2400000; // 1,200,000
+        // Need 2025 to add 900,000
+        const target2025Delta = 3600000 - 2700000; // 900,000
         const scale2025 = target2025Delta / rawIn2025;
         pubsIn2025.forEach(p => { p.reach = Math.round(p.reach * scale2025); });
 
-        // Extrapolate 2026: growth from 2024->2025 was 1.2M over 2.4M = 50% growth
-        // Apply same 50% growth for 2026 delta = 1,800,000
-        const target2026Delta = 1800000;
+        // Extrapolate 2026: growth from 2024->2025 was 900K over 2.7M ≈ 33%
+        // Apply same 33% growth for 2026 delta ≈ 1,200,000
+        const target2026Delta = 1200000;
         const rawIn2026 = pubsIn2026.reduce((s, p) => s + p.reach, 0);
         if (rawIn2026 > 0) {
             const scale2026 = target2026Delta / rawIn2026;
             pubsIn2026.forEach(p => { p.reach = Math.round(p.reach * scale2026); });
         }
 
-        // For 2023: proportionally back-calculate
-        // Through 2023 is part of the 2,400,000 total through 2024
-        // The raw ratio of through-2023 vs through-2024 determines how much
-        // cumulative was reached by end of 2023.
-        // Already scaled, so cumulative through 2023 is just the sum of scaled pubs through 2023.
-        // This is already correct since we scaled all pubs through 2024 uniformly.
+        // For 2023: proportionally handled by uniform scaling of through-2024 pubs.
+        // Already correct since we scaled all pubs through 2024 uniformly.
     })();
 
     // =============================================
@@ -740,10 +712,6 @@
         // Progress bar
         document.getElementById('scroll-progress-fill').style.width = (scrollProgress * 100) + '%';
 
-        // Year display
-        const display = document.getElementById('current-year-display');
-        display.textContent = currentYear;
-
         // Year labels highlight
         document.querySelectorAll('.year-label').forEach(lbl => {
             const y = parseInt(lbl.dataset.year);
@@ -782,24 +750,6 @@
     function updateStats() {
         const visible = animatedPositions.filter(ap => ap.targetOpacity > 0.5);
         document.getElementById('stat-total').textContent = visible.length;
-
-        // Cumulative reach: sum reach of all publications up to the current scroll position
-        // (i.e., all pubs that have appeared so far, regardless of axis/channel filter)
-        const timelineStart = new Date(YEAR_MIN, 0, 1).getTime();
-        const timelineEnd = new Date(YEAR_MAX + 1, 0, 1).getTime();
-        const timeRange = timelineEnd - timelineStart;
-        let cumulativeReach = 0;
-        for (const ap of animatedPositions) {
-            const pubTimeNorm = (ap.pub.date.getTime() - timelineStart) / timeRange;
-            if (scrollProgress >= pubTimeNorm - 0.002) {
-                cumulativeReach += ap.pub.reach;
-            }
-        }
-        document.getElementById('stat-reach').textContent = cumulativeReach > 1000000
-            ? (cumulativeReach / 1000000).toFixed(1) + 'M'
-            : cumulativeReach > 1000
-                ? Math.floor(cumulativeReach / 1000) + 'K'
-                : cumulativeReach;
 
         const mediaCount = visible.filter(ap => ap.pub.tier === 'media').length;
         document.getElementById('stat-media').textContent = mediaCount;
@@ -898,7 +848,6 @@
             document.getElementById('popup-title').textContent = hoveredPub.title;
             document.getElementById('popup-channel').textContent = CHANNELS[hoveredPub.channel].label + ' \u00B7 ' + hoveredPub.date.toLocaleDateString('fr-FR');
             document.getElementById('popup-excerpt').textContent = hoveredPub.excerpt;
-            document.getElementById('popup-reach').textContent = hoveredPub.reach.toLocaleString('fr-FR');
             document.getElementById('popup-date').textContent = hoveredPub.date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long' });
         } else {
             document.getElementById('detail-popup').style.display = 'none';
@@ -910,20 +859,6 @@
             document.getElementById('detail-popup').style.display = 'none';
         }
     });
-
-    // =============================================
-    // STAR DRAWING HELPER
-    // =============================================
-    function drawStar(ctx, cx, cy, outerR, innerR, points) {
-        ctx.beginPath();
-        for (let i = 0; i < points * 2; i++) {
-            const r = i % 2 === 0 ? outerR : innerR;
-            const angle = (i * Math.PI / points) - Math.PI / 2;
-            if (i === 0) ctx.moveTo(cx + r * Math.cos(angle), cy + r * Math.sin(angle));
-            else ctx.lineTo(cx + r * Math.cos(angle), cy + r * Math.sin(angle));
-        }
-        ctx.closePath();
-    }
 
     // =============================================
     // RENDER
@@ -1036,8 +971,6 @@
 
             const color = COLORS[ap.pub.axis];
             const lightColor = COLORS[ap.pub.axis + 'Light'];
-            const glowColor = COLORS[ap.pub.axis + 'Glow'];
-            const breathe = Math.sin(time * 0.5 + i * 0.3) * 0.15;
 
             const isHovered = (i === hoveredPubIdx);
             const isHighlighted = ap._highlight;
@@ -1046,8 +979,8 @@
             const isMedia = ap.pub.tier === 'media';
             const isConf = ap.pub.tier === 'conference';
 
-            const scaleFactor = isHovered ? 1.8 : isHighlighted ? 1.3 : 1;
-            const displaySize = ap.size * (1 + breathe * 0.1) * scaleFactor;
+            const scaleFactor = isHovered ? 1.4 : isHighlighted ? 1.15 : 1;
+            const displaySize = ap.size * scaleFactor;
 
             // Appear animation
             let extraAlpha = 1;
@@ -1058,61 +991,33 @@
 
             ctx.globalAlpha = ap.opacity * extraAlpha;
 
-            // === MEDIA PUBLICATIONS: large star with glow + ring ===
             if (isMedia) {
-                const outerR = displaySize * 1.4;
-                const innerR = outerR * 0.45;
-
-                // Outer glow aura (pulsing)
-                const pulseSize = displaySize * (3.5 + Math.sin(time * 1.2 + i) * 0.5);
-                const glow = ctx.createRadialGradient(ap.x, ap.y, displaySize * 0.5, ap.x, ap.y, pulseSize);
-                glow.addColorStop(0, glowColor);
-                glow.addColorStop(0.5, glowColor.replace(/[\d.]+\)$/, '0.1)'));
-                glow.addColorStop(1, 'transparent');
-                ctx.fillStyle = glow;
+                // Press/media: medium circle, solid fill, thin white border
+                const r = displaySize * 1.2;
+                ctx.fillStyle = isHovered ? lightColor : color;
                 ctx.beginPath();
-                ctx.arc(ap.x, ap.y, pulseSize, 0, Math.PI * 2);
+                ctx.arc(ap.x, ap.y, r, 0, Math.PI * 2);
                 ctx.fill();
-
-                // Bright core star
-                ctx.fillStyle = (isHovered || isHighlighted) ? '#ffffff' : lightColor;
-                drawStar(ctx, ap.x, ap.y, outerR, innerR, 5);
-                ctx.fill();
-
-                // Ring around media stars
-                ctx.strokeStyle = isHovered ? '#ffffff' : 'rgba(255,255,255,0.45)';
-                ctx.lineWidth = isHovered ? 2 : 1.2;
-                drawStar(ctx, ap.x, ap.y, outerR + 3, innerR + 1.5, 5);
+                // White border ring
+                ctx.strokeStyle = isHovered ? '#ffffff' : 'rgba(255,255,255,0.6)';
+                ctx.lineWidth = 1;
                 ctx.stroke();
 
             } else if (isConf) {
-                // Conference: medium star with subtle glow
-                const outerR = displaySize * 1.2;
-                const innerR = outerR * 0.45;
-
-                if (isHovered || isHighlighted || displaySize > 4) {
-                    const glowSize = displaySize * (isHovered ? 3.5 : 2.2);
-                    const glow = ctx.createRadialGradient(ap.x, ap.y, 0, ap.x, ap.y, glowSize);
-                    glow.addColorStop(0, glowColor);
-                    glow.addColorStop(1, 'transparent');
-                    ctx.fillStyle = glow;
-                    ctx.beginPath();
-                    ctx.arc(ap.x, ap.y, glowSize, 0, Math.PI * 2);
-                    ctx.fill();
-                }
-
-                ctx.fillStyle = (isHovered || isHighlighted) ? lightColor : color;
-                drawStar(ctx, ap.x, ap.y, outerR, innerR, 5);
+                // Conference: smaller circle, solid fill, no border
+                const r = displaySize * 0.9;
+                ctx.fillStyle = isHovered ? lightColor : color;
+                ctx.beginPath();
+                ctx.arc(ap.x, ap.y, r, 0, Math.PI * 2);
                 ctx.fill();
 
             } else {
-                // Social: small, subtle star
-                const outerR = displaySize * 1.0;
-                const innerR = outerR * 0.45;
-                const muted = color;
-                ctx.fillStyle = (isHovered || isHighlighted) ? lightColor : muted;
-                ctx.globalAlpha = ap.opacity * extraAlpha * (isHovered ? 1 : 0.6);
-                drawStar(ctx, ap.x, ap.y, outerR, innerR, 5);
+                // Social: tiny dot, muted color at 50% opacity
+                const r = Math.max(1.5, displaySize * 0.55);
+                ctx.fillStyle = isHovered ? lightColor : color;
+                ctx.globalAlpha = ap.opacity * extraAlpha * (isHovered ? 0.9 : 0.5);
+                ctx.beginPath();
+                ctx.arc(ap.x, ap.y, r, 0, Math.PI * 2);
                 ctx.fill();
                 ctx.globalAlpha = ap.opacity * extraAlpha;
             }
@@ -1128,7 +1033,7 @@
 
                 ctx.fillStyle = 'rgba(255,255,255,0.4)';
                 ctx.font = '9px Poppins';
-                const tierLabel = ap.pub.tier === 'media' ? ' \u2605 PRESSE' : ap.pub.tier === 'conference' ? ' CONF' : '';
+                const tierLabel = isMedia ? ' PRESSE' : isConf ? ' CONF' : '';
                 ctx.fillText(CHANNELS[ap.pub.channel].label + ' \u00B7 ' + ap.pub.year + tierLabel, ap.x, ap.y - displaySize - 4);
 
                 canvas.style.cursor = 'pointer';
