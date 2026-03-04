@@ -225,6 +225,10 @@
                 <span class="label">Choix décisif</span>
                 <div class="dot"></div>
             </div>
+            <div class="phase-dot" id="phase-entrepreneuriat">
+                <span class="label">Entrepreneuriat</span>
+                <div class="dot"></div>
+            </div>
             <div class="phase-dot" id="phase-reseau">
                 <span class="label">Réseau</span>
                 <div class="dot"></div>
@@ -303,35 +307,41 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     const sillageWaypoints = [
         { id: 1, year: 2000, name: 'Bretagne & Irlande', label: 'Enfance',
           lon: -4.5, lat: 48.4, detail: 'Traversées en bateau entre Bretagne et Irlande. Naissance de la vocation maritime.', phase: 'enfance' },
-        { id: 2, year: 2010, name: 'ENSM Marseille', label: 'Formation',
+        { id: 2, year: 2010, name: 'ENSM Marseille', label: 'ENMM',
           lon: 5.37, lat: 43.30, detail: 'Entrée à l\'École Nationale Supérieure Maritime. Nul en maths mais accroché.', phase: 'formation' },
         { id: 3, year: 2010, name: 'Jeanne Marie', label: 'Jeanne Marie',
           lon: 103.85, lat: 1.29, detail: 'Embarquement sur le navire Jeanne Marie.',
           phase: 'navigation',
           routePoints: [ [51.5, 25.3], [151.2, -33.9] ] },
-        { id: 4, year: 2011, name: 'Sicile / Méditerranée', label: 'M/Y Queen Aida — Sicile',
+        { id: 4, year: 2011, name: 'Queen Aida', label: 'Queen Aida',
           lon: 15.2, lat: 37.5, detail: 'Yachting en Méditerranée. Escale en Sicile.', phase: 'navigation' },
-        { id: 5, year: 2011, name: 'Croatie / Méditerranée', label: 'M/Y Queen Aida',
-          lon: 15.97, lat: 43.51, detail: 'Yachting en Méditerranée. Le capitaine lui offre un poste pour l\'été. Découverte du monde premium.', phase: 'navigation' },
-        { id: 6, year: 2012, name: 'France (Bretagne)', label: 'Bourbon Ailette',
-          lon: -3.0, lat: 47.7, detail: 'Navire de service Bourbon. Premières responsabilités.', phase: 'navigation' },
-        { id: 7, year: 2013, name: 'Manche', label: 'Brittany Ferries',
+        { id: 5, year: 2011, name: 'Queen Aida', label: 'Queen Aida',
+          lon: 15.97, lat: 43.51, detail: 'Yachting en Méditerranée. Le capitaine lui offre un poste pour l\'été.', phase: 'navigation' },
+        { id: 6, year: 2012, name: 'Bourbon Ailette', label: 'Ailette',
+          lon: 9.15, lat: 42.15, detail: 'Navire de service Bourbon. Premières responsabilités.', phase: 'navigation' },
+        { id: 7, year: 2013, name: 'Normandie', label: 'Normandie',
           lon: -2.0, lat: 49.8, detail: 'Navire à passagers Normandie. Chargement/déchargement rapide, exercices d\'abandon grande échelle.', phase: 'navigation' },
         { id: 8, year: 2013, name: 'Marseille — Bourbon HQ', label: 'MOMENT FONDATEUR',
           lon: 5.37, lat: 43.30,
-          detail: 'C\'est à Marseille en 2013 que naît la conviction fondatrice : technologie et environnement sont indissociables dans la transformation du maritime. Première confrontation aux données maritimes de ~600 navires Bourbon — gap technologique abyssal + impact environnemental massif. Alliance avec Arnaud Dianoux → naissance du projet Opsealog.',
+          detail: 'C\'est à Marseille en 2013 que naît la conviction fondatrice : technologie et environnement sont indissociables dans la transformation du maritime.',
           phase: 'fondateur', isFounder: true },
-        { id: 9, year: 2014, name: 'Angola', label: 'Bourbon Ungundja',
+        { id: 9, year: 2014, name: 'Bourbon Ungundja', label: 'Ungundja',
           lon: 12.3, lat: -8.8, detail: 'Retour en mer avec humilité. Opérations IMR.', phase: 'navigation' },
-        { id: 10, year: 2015, name: 'Chine → Namibie', label: 'Bourbon Evolution 807',
-          lon: 121, lat: 31, detail: 'Suivi de construction neuve, FMEA, JDPO. Transit Chine-Namibie.', phase: 'navigation' },
-        { id: 11, year: 2015, name: 'Brest / Fromveur', label: 'Bourbon Argonaute',
+        { id: 10, year: 2015, name: 'Bourbon Evolution 807', label: 'Evolution 807',
+          lon: 121, lat: 31, detail: 'Suivi de construction neuve, FMEA, JDPO. Transit Chine.', phase: 'navigation' },
+        { id: 11, year: 2015, name: 'Bourbon Explorer 509', label: 'Explorer 509',
+          lon: 12.3, lat: -8.8, detail: 'Opérations offshore en Angola.', phase: 'navigation' },
+        { id: 12, year: 2015, name: 'Bourbon Evolution 801', label: 'Evolution 801',
+          lon: 14.5, lat: -22.9, detail: 'Transit en Namibie.', phase: 'navigation' },
+        { id: 13, year: 2016, name: 'Bourbon Vissolela', label: 'Vissolela',
+          lon: 12.3, lat: -8.8, detail: '2nd Mate / JDPO / Safety Officer.', phase: 'navigation' },
+        { id: 14, year: 2015, name: 'Bourbon Argonaute', label: 'Argonaute',
           lon: -4.49, lat: 48.39, detail: 'Pose câble hydrolienne Sabella (EMR). Missions Marine Nationale dans le Fromveur.', phase: 'navigation' },
-        { id: 12, year: 2016, name: 'Angola', label: 'Bourbon Vissolela',
-          lon: 12.3, lat: -8.8, detail: '2nd Mate / JDPO / Safety Officer. Maintenance sous-marine, quarts navigation et DP.', phase: 'navigation' },
-        { id: 13, year: 2017, name: 'La Réunion', label: 'CHOIX DÉCISIF',
+        { id: 15, year: 2017, name: 'Zourite — La Réunion', label: 'CHOIX DÉCISIF',
           lon: 55.53, lat: -21.11, detail: 'Barge NRL Zourite. 4800t de levage. Dernier embarquement. Le choix délibéré de quitter la mer pour un impact plus global.',
-          phase: 'choix', isDecisive: true }
+          phase: 'choix', isDecisive: true },
+        { id: 16, year: 2018, name: 'Paris', label: 'Entrepreneuriat',
+          lon: 2.35, lat: 48.86, detail: 'Lancement de l\'aventure entrepreneuriale depuis Paris.', phase: 'entrepreneuriat' },
     ];
 
     const annecyHub = { lon: 6.13, lat: 45.90, name: 'Annecy', label: 'Port d\'attache' };
@@ -611,20 +621,28 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         }
 
         // ── Smart label management ──
-        // For each visible waypoint, determine if its label should show.
-        // Rule: if a LATER visible waypoint is at the same approximate location,
-        // hide the earlier one's label (keep only the most recent).
-        // Exception: founder and decisive moments always show.
+        // Only show labels for the current waypoint and at most 1-2 recent ones.
+        // Older labels fade out so they don't accumulate on screen.
+        // Exception: founder and decisive moments show when they are the most recent special waypoint.
         const visibleCount = visibleWaypointCount;
-        const labelVisible = new Array(visibleCount).fill(true);
+        const labelOpacity = new Array(visibleCount).fill(0);
+        const currentIdx = visibleCount - 1; // most recent waypoint
 
         for (let i = 0; i < visibleCount; i++) {
-            if (sillageWaypoints[i].isFounder || sillageWaypoints[i].isDecisive) continue;
-            for (let j = i + 1; j < visibleCount; j++) {
-                const a = sillageWaypoints[i], b = sillageWaypoints[j];
-                if (Math.abs(a.lon - b.lon) < 3 && Math.abs(a.lat - b.lat) < 3) {
-                    labelVisible[i] = false;
-                    break;
+            const age = currentIdx - i; // how many waypoints ago
+            if (age === 0) {
+                labelOpacity[i] = 1.0; // current waypoint: full opacity
+            } else if (age === 1) {
+                labelOpacity[i] = 0.5; // previous waypoint: half opacity
+            } else if (age === 2) {
+                labelOpacity[i] = 0.2; // two ago: faint
+            } else {
+                labelOpacity[i] = 0; // older: hidden
+            }
+            // Special waypoints (founder/decisive) stay visible a bit longer but still fade
+            if (sillageWaypoints[i].isFounder || sillageWaypoints[i].isDecisive) {
+                if (age <= 4) {
+                    labelOpacity[i] = Math.max(labelOpacity[i], Math.max(0, 0.6 - age * 0.12));
                 }
             }
         }
@@ -687,9 +705,11 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             ctx.stroke();
             ctx.globalAlpha = 1;
 
-            // Label — only if smart label check says visible
-            if (labelVisible[i]) {
+            // Label — with fade based on recency
+            if (labelOpacity[i] > 0.01) {
                 const isSpecial = wp.isFounder || wp.isDecisive;
+                const alpha = labelOpacity[i];
+                ctx.globalAlpha = alpha;
                 const labelColor = wp.isFounder ? COLORS.enviro : (wp.isDecisive ? '#ff6b6b' : 'rgba(255, 255, 255, 0.7)');
 
                 ctx.fillStyle = labelColor;
@@ -700,9 +720,11 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
                 // Year below label for special waypoints
                 if (isSpecial) {
                     ctx.font = '9px "Source Serif 4", serif';
-                    ctx.fillStyle = labelColor + '80';
+                    ctx.fillStyle = labelColor;
+                    ctx.globalAlpha = alpha * 0.5;
                     ctx.fillText(wp.year, p.x, p.y - dotSize - 1);
                 }
+                ctx.globalAlpha = 1;
             }
         }
 
@@ -891,14 +913,15 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     }
 
     function updatePhaseIndicator(progress) {
-        const phases = ['enfance', 'formation', 'navigation', 'fondateur', 'choix', 'reseau'];
+        const phases = ['enfance', 'formation', 'navigation', 'fondateur', 'choix', 'entrepreneuriat', 'reseau'];
         let activePhase;
 
-        if (progress < 0.07) activePhase = 'enfance';
-        else if (progress < 0.12) activePhase = 'formation';
-        else if (progress < 0.38) activePhase = 'navigation';
-        else if (progress < 0.48) activePhase = 'fondateur';
-        else if (progress < 0.62) activePhase = 'choix';
+        if (progress < 0.06) activePhase = 'enfance';
+        else if (progress < 0.10) activePhase = 'formation';
+        else if (progress < 0.32) activePhase = 'navigation';
+        else if (progress < 0.40) activePhase = 'fondateur';
+        else if (progress < 0.58) activePhase = 'choix';
+        else if (progress < 0.70) activePhase = 'entrepreneuriat';
         else activePhase = 'reseau';
 
         phases.forEach(p => {
@@ -909,14 +932,15 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
 
     function updateYear(progress) {
         let year;
-        if (progress < 0.07) year = Math.floor(1991 + progress / 0.07 * 19);
-        else if (progress < 0.62) year = Math.floor(2010 + (progress - 0.07) / 0.55 * 7);
-        else year = Math.floor(2017 + (progress - 0.62) / 0.38 * 9);
+        if (progress < 0.06) year = Math.floor(1991 + progress / 0.06 * 19);
+        else if (progress < 0.58) year = Math.floor(2010 + (progress - 0.06) / 0.52 * 7);
+        else if (progress < 0.70) year = Math.floor(2017 + (progress - 0.58) / 0.12 * 2);
+        else year = Math.floor(2019 + (progress - 0.70) / 0.30 * 7);
         document.getElementById('year-display').textContent = year;
 
-        if (year === 2013 && progress > 0.30 && progress < 0.45) {
+        if (year === 2013 && progress > 0.25 && progress < 0.38) {
             document.getElementById('year-display').style.color = 'rgba(0, 191, 99, 0.25)';
-        } else if (year === 2017 && progress > 0.50 && progress < 0.65) {
+        } else if (year === 2017 && progress > 0.52 && progress < 0.62) {
             document.getElementById('year-display').style.color = 'rgba(255, 107, 107, 0.2)';
         } else {
             document.getElementById('year-display').style.color = 'rgba(255, 255, 255, 0.1)';
@@ -935,35 +959,44 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         ctx.fillRect(0, 0, W, H);
 
         // Adjust map view based on progress
-        if (scrollProgress < 0.40) {
-            // Phase 1: Atlantic & Indian Ocean (sillage up to La Reunion)
+        // With 16 waypoints + Paris, sillage runs 0-68%, then zoom to France/Annecy
+        if (scrollProgress < 0.30) {
+            // Phase 1: Atlantic & Mediterranean (enfance through fondateur)
             mapCenter.lon = 0 + scrollProgress * 15;
             mapCenter.lat = 20 + scrollProgress * 5;
             mapZoom = 0.38;
-        } else if (scrollProgress < 0.55) {
-            // Phase 2: Pan east toward China (lon ~121, lat ~31)
-            const t = (scrollProgress - 0.40) / 0.15;
-            mapCenter.lon = 6.0 + t * 60;
-            mapCenter.lat = 22.0 + t * 10;
+        } else if (scrollProgress < 0.45) {
+            // Phase 2: Pan east toward China/Australia (Evolution 807, Jeanne Marie route)
+            const t = (scrollProgress - 0.30) / 0.15;
+            mapCenter.lon = 4.5 + t * 60;
+            mapCenter.lat = 22.5 + t * 10;
             mapZoom = 0.38;
-        } else if (scrollProgress < 0.62) {
-            // Phase 3: Return west — zoom in on France hexagonale (after Choix Decisif)
-            const t = (scrollProgress - 0.55) / 0.07;
+        } else if (scrollProgress < 0.58) {
+            // Phase 3: Back west through Angola, Brest, then to La Réunion
+            const t = (scrollProgress - 0.45) / 0.13;
+            const eased = t * t * (3 - 2 * t);
+            // From far east (~64, 32) to Indian Ocean view centered on Réunion area (~40, -5)
+            mapCenter.lon = 64.5 + eased * (40 - 64.5);
+            mapCenter.lat = 32.5 + eased * (-5 - 32.5);
+            mapZoom = 0.38;
+        } else if (scrollProgress < 0.68) {
+            // Phase 4: After La Réunion — zoom into France for Paris/Entrepreneuriat
+            const t = (scrollProgress - 0.58) / 0.10;
             const eased = t * t * (3 - 2 * t); // smoothstep
-            // From far east (66, 32) to France overview (2.5, 46.5)
-            mapCenter.lon = 66.0 + eased * (2.5 - 66.0);
-            mapCenter.lat = 32.0 + eased * (46.5 - 32.0);
+            // From Indian Ocean view (40, -5) to France overview (2.5, 46.5)
+            mapCenter.lon = 40 + eased * (2.5 - 40);
+            mapCenter.lat = -5 + eased * (46.5 - (-5));
             mapZoom = 0.38 + eased * 1.2;
-        } else if (scrollProgress < 0.70) {
-            // Phase 3b: Hold on France then transition to Annecy network
-            const t = (scrollProgress - 0.62) / 0.08;
+        } else if (scrollProgress < 0.76) {
+            // Phase 5: Hold on France (Paris) then transition to Annecy network
+            const t = (scrollProgress - 0.68) / 0.08;
             const eased = t * t * (3 - 2 * t);
             mapCenter.lon = 2.5 + eased * (6.13 - 2.5);
             mapCenter.lat = 46.5 + eased * (45.9 - 46.5);
             mapZoom = 1.58 + eased * 0.8;
         } else {
-            // Phase 4: Zoom into Annecy / Réseau
-            const t = Math.min(1, (scrollProgress - 0.70) / 0.15);
+            // Phase 6: Zoom into Annecy / Réseau
+            const t = Math.min(1, (scrollProgress - 0.76) / 0.12);
             const eased = t * t * (3 - 2 * t); // smoothstep
             mapCenter.lon = 6.13;
             mapCenter.lat = 45.9;
@@ -978,19 +1011,19 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         drawGrid();
         drawCoastlines();
 
-        // Phase 1: Sillage (0-62% scroll)
-        const sillageProgress = Math.min(1, scrollProgress / 0.62);
+        // Phase 1: Sillage (0-70% scroll — includes Paris waypoint)
+        const sillageProgress = Math.min(1, scrollProgress / 0.70);
         drawSillage(sillageProgress);
 
-        // Phase 2: Réseau (65-100% scroll)
-        const reseauProgress = scrollProgress > 0.65 ? (scrollProgress - 0.65) / 0.35 : 0;
+        // Phase 2: Réseau (72-100% scroll)
+        const reseauProgress = scrollProgress > 0.72 ? (scrollProgress - 0.72) / 0.28 : 0;
         drawReseau(reseauProgress, time);
 
         // UI updates
         updatePhaseIndicator(scrollProgress);
         updateYear(scrollProgress);
 
-        document.getElementById('legend').classList.toggle('visible', scrollProgress > 0.68);
+        document.getElementById('legend').classList.toggle('visible', scrollProgress > 0.75);
         document.getElementById('scroll-hint').style.opacity = scrollProgress < 0.05 ? '1' : '0';
     }
 
@@ -1006,8 +1039,8 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         const mouseY = e.clientY;
         let found = false;
 
-        const sillageProgress = Math.min(1, scrollProgress / 0.6);
-        const drawnNodesForTooltip = Math.floor(sillageProgress * routeNodes.length);
+        const sillageProgressTT = Math.min(1, scrollProgress / 0.70);
+        const drawnNodesForTooltip = Math.floor(sillageProgressTT * routeNodes.length);
         let visibleWaypoints = 0;
         for (let n = 0; n < Math.min(drawnNodesForTooltip, routeNodes.length); n++) {
             if (!routeNodes[n].isIntermediate) visibleWaypoints = routeNodes[n].waypointIndex + 1;
@@ -1039,8 +1072,8 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             }
         }
 
-        if (!found && scrollProgress > 0.65) {
-            const reseauProg = (scrollProgress - 0.65) / 0.35;
+        if (!found && scrollProgress > 0.72) {
+            const reseauProg = (scrollProgress - 0.72) / 0.28;
             const visibleThreads = Math.ceil(reseauProg * reseauThreads.length);
 
             for (let i = 0; i < visibleThreads; i++) {

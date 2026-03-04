@@ -133,22 +133,51 @@
       bottom: 32px;
       left: 36px;
       z-index: 10;
-      pointer-events: none;
+      pointer-events: auto;
     }
 
     #legend .legend-item {
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+      cursor: pointer;
+      user-select: none;
+      transition: opacity 0.25s ease;
+    }
+
+    #legend .legend-item:hover {
+      opacity: 0.85;
+    }
+
+    #legend .legend-item.disabled {
+      opacity: 0.35;
+    }
+
+    #legend .legend-item.disabled .legend-label {
+      text-decoration: line-through;
     }
 
     #legend .swatch {
       width: 14px;
       height: 14px;
       border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    #legend .swatch.zee {
       border: 1px solid rgba(0,200,200,0.5);
       background: rgba(0, 180, 180, 0.35);
+    }
+
+    #legend .swatch.cables {
+      border: 1px solid rgba(0, 180, 180, 0.5);
+      background: rgba(0, 180, 180, 0.30);
+    }
+
+    #legend .swatch.traffic {
+      border: 1px solid rgba(255, 100, 50, 0.5);
+      background: rgba(255, 100, 50, 0.30);
     }
 
     #legend .legend-label {
@@ -210,9 +239,17 @@
     </div>
 
     <div id="legend">
-      <div class="legend-item">
-        <div class="swatch"></div>
+      <div class="legend-item" data-layer="zee">
+        <div class="swatch zee"></div>
         <span class="legend-label">Zone &Eacute;conomique Exclusive fran&ccedil;aise</span>
+      </div>
+      <div class="legend-item" data-layer="cables">
+        <div class="swatch cables"></div>
+        <span class="legend-label">C&acirc;bles sous-marins</span>
+      </div>
+      <div class="legend-item" data-layer="traffic">
+        <div class="swatch traffic"></div>
+        <span class="legend-label">Trafic maritime (routes majeures)</span>
       </div>
     </div>
 
@@ -562,6 +599,178 @@
       return new THREE.Points(geo, mat);
     }
     scene.add(createStarfield());
+
+    // ====================================================
+    // SUBMARINE CABLES LAYER
+    // ====================================================
+    const cableGroup = new THREE.Group();
+    scene.add(cableGroup);
+    const CABLE_RADIUS = GLOBE_RADIUS + 0.02;
+
+    function latLonToVec3(lat, lon, radius) {
+      const phi = (90 - lat) * Math.PI / 180;
+      const theta = -lon * Math.PI / 180;
+      return new THREE.Vector3(
+        radius * Math.sin(phi) * Math.cos(theta),
+        radius * Math.cos(phi),
+        radius * Math.sin(phi) * Math.sin(theta)
+      );
+    }
+
+    function buildCableLine(coords, color) {
+      const points = [];
+      for (let i = 0; i < coords.length; i++) {
+        const lon = coords[i][0];
+        const lat = coords[i][1];
+        points.push(latLonToVec3(lat, lon, CABLE_RADIUS));
+      }
+      if (points.length < 2) return null;
+      const geo = new THREE.BufferGeometry().setFromPoints(points);
+      const mat = new THREE.LineBasicMaterial({
+        color: color,
+        transparent: true,
+        opacity: 0.3,
+        depthWrite: false
+      });
+      return new THREE.Line(geo, mat);
+    }
+
+    // Fetch submarine cables GeoJSON
+    fetch('https://www.submarinecablemap.com/api/v3/cable/cable-geo.json')
+      .then(res => res.json())
+      .then(geojson => {
+        if (!geojson || !geojson.features) return;
+        for (const feature of geojson.features) {
+          const geom = feature.geometry;
+          if (!geom) continue;
+
+          // Determine color: use feature's own color or default cyan/teal
+          let cableColor;
+          if (feature.properties && feature.properties.color) {
+            cableColor = new THREE.Color(feature.properties.color);
+          } else {
+            cableColor = new THREE.Color(0x00b4b4);
+          }
+
+          const coordSets = [];
+          if (geom.type === 'MultiLineString') {
+            for (const lineCoords of geom.coordinates) {
+              coordSets.push(lineCoords);
+            }
+          } else if (geom.type === 'LineString') {
+            coordSets.push(geom.coordinates);
+          }
+
+          for (const coords of coordSets) {
+            const line = buildCableLine(coords, cableColor);
+            if (line) {
+              line.renderOrder = 3;
+              cableGroup.add(line);
+            }
+          }
+        }
+      })
+      .catch(err => console.warn('Could not load submarine cables:', err));
+
+    // ====================================================
+    // MARITIME TRAFFIC DENSITY LAYER
+    // ====================================================
+    const trafficGroup = new THREE.Group();
+    scene.add(trafficGroup);
+    const TRAFFIC_RADIUS = GLOBE_RADIUS + 0.012;
+
+    // Major shipping lanes: arrays of [lat, lon] waypoints
+    const SHIPPING_LANES = [
+      { name: 'Strait of Malacca',
+        waypoints: [[1.2,103.8],[2.5,101.5],[4.0,99.5],[5.5,97.0],[6.5,95.0]] },
+      { name: 'Suez Canal corridor',
+        waypoints: [[31.3,32.3],[30.0,32.6],[27.5,34.0],[24.0,36.5],[20.0,38.5],[15.0,42.0],[12.5,43.5],[12.0,45.0],[10.0,51.0],[8.0,55.0],[6.0,60.0]] },
+      { name: 'English Channel / North Sea',
+        waypoints: [[48.5,-5.5],[49.5,-3.0],[50.0,-1.5],[50.8,0.5],[51.5,1.5],[52.5,3.0],[54.0,5.0],[56.0,6.0],[58.0,5.0]] },
+      { name: 'Panama Canal corridor',
+        waypoints: [[9.0,-79.5],[9.3,-80.0],[9.5,-81.0],[10.0,-82.0],[10.5,-84.0],[10.0,-86.0],[9.0,-89.0]] },
+      { name: 'Strait of Hormuz',
+        waypoints: [[25.0,56.5],[26.0,56.3],[26.5,56.5],[27.0,56.0],[26.5,55.0],[25.5,54.5],[24.5,54.0]] },
+      { name: 'Cape of Good Hope route',
+        waypoints: [[-6.0,60.0],[-10.0,52.0],[-15.0,45.0],[-20.0,40.0],[-28.0,35.0],[-34.0,26.0],[-35.5,20.0],[-34.0,17.0],[-30.0,14.0],[-20.0,8.0],[-10.0,2.0],[0.0,-2.0],[5.0,-5.0]] },
+      { name: 'South China Sea lanes',
+        waypoints: [[1.2,103.8],[4.0,107.0],[8.0,110.0],[12.0,113.0],[16.0,115.0],[20.0,117.0],[22.3,114.2]] },
+      { name: 'Mediterranean east-west',
+        waypoints: [[36.0,-5.5],[36.5,-2.0],[37.0,1.0],[37.5,5.0],[37.0,10.0],[36.0,13.0],[35.5,16.0],[35.0,20.0],[35.0,24.0],[34.5,28.0],[33.0,30.0],[31.5,32.0]] },
+      { name: 'Atlantic crossing EU-NA',
+        waypoints: [[40.5,-74.0],[40.0,-65.0],[42.0,-55.0],[45.0,-40.0],[48.0,-25.0],[49.0,-12.0],[49.5,-5.5]] },
+      { name: 'Japan - China lanes',
+        waypoints: [[35.5,139.8],[34.0,135.0],[33.5,132.0],[33.0,129.0],[31.5,126.0],[30.0,123.0],[31.2,121.5]] }
+    ];
+
+    function createShippingLaneTube(waypoints) {
+      // Build the path as a series of points on the globe
+      const points = [];
+      // Interpolate between waypoints for smoothness
+      for (let w = 0; w < waypoints.length - 1; w++) {
+        const lat0 = waypoints[w][0], lon0 = waypoints[w][1];
+        const lat1 = waypoints[w + 1][0], lon1 = waypoints[w + 1][1];
+        const steps = 12;
+        for (let s = 0; s <= (w < waypoints.length - 2 ? steps - 1 : steps); s++) {
+          const t = s / steps;
+          const lat = lat0 + (lat1 - lat0) * t;
+          const lon = lon0 + (lon1 - lon0) * t;
+          points.push(latLonToVec3(lat, lon, TRAFFIC_RADIUS));
+        }
+      }
+      if (points.length < 2) return;
+
+      // Draw a wide "heat strip" using a TubeGeometry around the path
+      const curve = new THREE.CatmullRomCurve3(points, false, 'centripetal', 0.5);
+      const tubeGeo = new THREE.TubeGeometry(curve, points.length * 2, 0.008, 6, false);
+      const tubeMat = new THREE.MeshBasicMaterial({
+        color: 0xff6432,
+        transparent: true,
+        opacity: 0.15,
+        depthWrite: false,
+        side: THREE.DoubleSide
+      });
+      const tube = new THREE.Mesh(tubeGeo, tubeMat);
+      tube.renderOrder = 4;
+      trafficGroup.add(tube);
+
+      // Add a brighter core line for definition
+      const lineGeo = new THREE.BufferGeometry().setFromPoints(points);
+      const lineMat = new THREE.LineBasicMaterial({
+        color: 0xff8040,
+        transparent: true,
+        opacity: 0.22,
+        depthWrite: false
+      });
+      const line = new THREE.Line(lineGeo, lineMat);
+      line.renderOrder = 5;
+      trafficGroup.add(line);
+    }
+
+    for (const lane of SHIPPING_LANES) {
+      createShippingLaneTube(lane.waypoints);
+    }
+
+    // ====================================================
+    // LAYER TOGGLES
+    // ====================================================
+    const layerVisibility = { zee: true, cables: true, traffic: true };
+
+    document.querySelectorAll('#legend .legend-item[data-layer]').forEach(item => {
+      item.addEventListener('click', () => {
+        const layer = item.dataset.layer;
+        layerVisibility[layer] = !layerVisibility[layer];
+        item.classList.toggle('disabled', !layerVisibility[layer]);
+
+        if (layer === 'zee') {
+          zoneGroup.visible = layerVisibility.zee;
+        } else if (layer === 'cables') {
+          cableGroup.visible = layerVisibility.cables;
+        } else if (layer === 'traffic') {
+          trafficGroup.visible = layerVisibility.traffic;
+        }
+      });
+    });
 
     // ====================================================
     // RAYCASTING
