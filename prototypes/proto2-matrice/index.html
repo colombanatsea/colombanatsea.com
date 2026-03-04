@@ -367,6 +367,10 @@
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setClearColor(COLORS.bg, 1);
+    // Three.js r155+ uses physically-correct lighting by default,
+    // which makes legacy intensity values (designed for the old model) appear black.
+    // Re-enable legacy light behaviour so the original intensity values work.
+    renderer.useLegacyLights = true;
     container.appendChild(renderer.domElement);
 
     const raycaster = new THREE.Raycaster();

@@ -318,7 +318,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         { id: 7, year: 2014, name: 'Angola', label: 'Bourbon Ungundja',
           lon: 12.3, lat: -8.8, detail: 'Retour en mer avec humilité. Opérations IMR.', phase: 'navigation' },
         { id: 8, year: 2015, name: 'Chine → Namibie', label: 'Bourbon Evolution 807',
-          lon: 40, lat: 5, detail: 'Suivi de construction neuve, FMEA, JDPO. Transit Chine-Namibie.', phase: 'navigation' },
+          lon: 121, lat: 31, detail: 'Suivi de construction neuve, FMEA, JDPO. Transit Chine-Namibie.', phase: 'navigation' },
         { id: 9, year: 2015, name: 'Brest / Fromveur', label: 'Bourbon Argonaute',
           lon: -4.49, lat: 48.39, detail: 'Pose câble hydrolienne Sabella (EMR). Missions Marine Nationale dans le Fromveur.', phase: 'navigation' },
         { id: 10, year: 2016, name: 'Angola', label: 'Bourbon Vissolela',
@@ -851,15 +851,21 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         ctx.fillRect(0, 0, W, H);
 
         // Adjust map view based on progress
-        if (scrollProgress < 0.6) {
-            mapCenter.lon = 0 + scrollProgress * 25;
-            mapCenter.lat = 20 + scrollProgress * 8;
-            mapZoom = 0.38 + scrollProgress * 1.2;
+        if (scrollProgress < 0.45) {
+            mapCenter.lon = 0 + scrollProgress * 15;
+            mapCenter.lat = 20 + scrollProgress * 5;
+            mapZoom = 0.38 + scrollProgress * 0.3;
+        } else if (scrollProgress < 0.6) {
+            // Pan toward east for China waypoint (lon ~121)
+            const t = (scrollProgress - 0.45) / 0.15;
+            mapCenter.lon = 6.75 + t * 50;
+            mapCenter.lat = 22.25 + t * 5;
+            mapZoom = 0.515 + t * 0.3;
         } else {
             const t = (scrollProgress - 0.6) / 0.4;
-            mapCenter.lon = 15 + 10 - t * 20;
-            mapCenter.lat = 25 + t * 20;
-            mapZoom = 1.1 + t * 1.7;
+            mapCenter.lon = 56.75 - t * 50;
+            mapCenter.lat = 27.25 + t * 15;
+            mapZoom = 0.815 + t * 1.5;
         }
 
         // Draw layers

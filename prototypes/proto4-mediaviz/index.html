@@ -161,13 +161,13 @@
         }
         .year-label {
             font-size: 9px;
-            color: rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.6);
             transition: all 0.2s;
             text-align: center;
             min-width: 28px;
         }
-        .year-label.current { color: #fff; font-weight: 600; }
-        .year-label.past { color: rgba(255,255,255,0.45); }
+        .year-label.current { color: #fff; font-weight: 700; }
+        .year-label.past { color: rgba(255,255,255,0.75); }
         .current-year-display {
             position: fixed;
             bottom: 44px;
@@ -176,7 +176,7 @@
             z-index: 101;
             font-size: 28px;
             font-weight: 700;
-            color: rgba(255,255,255,0.12);
+            color: rgba(255,255,255,0.55);
             font-variant-numeric: tabular-nums;
             pointer-events: none;
             letter-spacing: 2px;
@@ -188,7 +188,7 @@
             transform: translateX(-50%);
             z-index: 101;
             font-size: 9px;
-            color: rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.45);
             letter-spacing: 1.5px;
             text-transform: uppercase;
             pointer-events: none;
@@ -268,7 +268,7 @@
             gap: 12px;
             align-items: center;
             font-size: 8px;
-            color: rgba(255,255,255,0.3);
+            color: rgba(255,255,255,0.5);
             text-transform: uppercase;
             letter-spacing: 0.8px;
         }
@@ -354,11 +354,15 @@
     <div class="current-year-display" id="current-year-display">2013</div>
     <div class="scroll-hint">Scroll pour naviguer dans le temps</div>
 
-    <!-- Legend -->
+    <!-- Legend: axis colors + tier sizes -->
     <div class="legend">
-        <div class="legend-item"><div class="legend-dot media" style="background:#d4a857;"></div> Presse</div>
-        <div class="legend-item"><div class="legend-dot conf" style="background:rgba(255,255,255,0.4);"></div> Conference</div>
-        <div class="legend-item"><div class="legend-dot social" style="background:rgba(255,255,255,0.25);"></div> Social</div>
+        <div class="legend-item"><div class="legend-dot" style="width:8px;height:8px;background:#2a55b3;box-shadow:0 0 6px rgba(42,85,179,0.6);"></div> <span style="color:rgba(255,255,255,0.7)">Technologique</span></div>
+        <div class="legend-item"><div class="legend-dot" style="width:8px;height:8px;background:#00bf63;box-shadow:0 0 6px rgba(0,191,99,0.6);"></div> <span style="color:rgba(255,255,255,0.7)">Environnementale</span></div>
+        <div class="legend-item"><div class="legend-dot" style="width:8px;height:8px;background:#b32a55;box-shadow:0 0 6px rgba(179,42,85,0.6);"></div> <span style="color:rgba(255,255,255,0.7)">Socioculturelle</span></div>
+        <div style="width:1px;height:14px;background:rgba(255,255,255,0.15);margin:0 4px;"></div>
+        <div class="legend-item"><div class="legend-dot media" style="width:10px;height:10px;background:rgba(255,255,255,0.8);box-shadow:0 0 6px rgba(212,168,87,0.5);border:1.5px solid rgba(255,255,255,0.4);"></div> Presse</div>
+        <div class="legend-item"><div class="legend-dot" style="width:7px;height:7px;background:rgba(255,255,255,0.45);"></div> Conf</div>
+        <div class="legend-item"><div class="legend-dot" style="width:4px;height:4px;background:rgba(255,255,255,0.3);"></div> Social</div>
     </div>
 
     <!-- Detail popup -->
@@ -528,6 +532,49 @@
     const publications = generatePublications();
 
     // =============================================
+    // SCALE REACH TO HIT CUMULATIVE TARGETS
+    // =============================================
+    // Targets: cumulative reach = 2,400,000 by end 2024, 3,600,000 by end 2025
+    // Extrapolate 2023 and 2026 proportionally.
+    (function scaleReachValues() {
+        // Group pubs by year-end buckets
+        const pubsThrough2024 = publications.filter(p => p.year <= 2024);
+        const pubsIn2025 = publications.filter(p => p.year === 2025);
+        const pubsIn2026 = publications.filter(p => p.year === 2026);
+        const pubsThrough2023 = publications.filter(p => p.year <= 2023);
+
+        // Raw sums
+        const rawThrough2024 = pubsThrough2024.reduce((s, p) => s + p.reach, 0);
+        const rawIn2025 = pubsIn2025.reduce((s, p) => s + p.reach, 0);
+
+        // Scale all pubs through 2024 so their cumulative = 2,400,000
+        const scale2024 = 2400000 / rawThrough2024;
+        pubsThrough2024.forEach(p => { p.reach = Math.round(p.reach * scale2024); });
+
+        // Scale 2025 pubs so cumulative through 2025 = 3,600,000
+        // Need 2025 to add 1,200,000
+        const target2025Delta = 3600000 - 2400000; // 1,200,000
+        const scale2025 = target2025Delta / rawIn2025;
+        pubsIn2025.forEach(p => { p.reach = Math.round(p.reach * scale2025); });
+
+        // Extrapolate 2026: growth from 2024->2025 was 1.2M over 2.4M = 50% growth
+        // Apply same 50% growth for 2026 delta = 1,800,000
+        const target2026Delta = 1800000;
+        const rawIn2026 = pubsIn2026.reduce((s, p) => s + p.reach, 0);
+        if (rawIn2026 > 0) {
+            const scale2026 = target2026Delta / rawIn2026;
+            pubsIn2026.forEach(p => { p.reach = Math.round(p.reach * scale2026); });
+        }
+
+        // For 2023: proportionally back-calculate
+        // Through 2023 is part of the 2,400,000 total through 2024
+        // The raw ratio of through-2023 vs through-2024 determines how much
+        // cumulative was reached by end of 2023.
+        // Already scaled, so cumulative through 2023 is just the sum of scaled pubs through 2023.
+        // This is already correct since we scaled all pubs through 2024 uniformly.
+    })();
+
+    // =============================================
     // CANVAS SETUP
     // =============================================
     const canvas = document.getElementById('canvas');
@@ -560,13 +607,11 @@
     const mousePos = { x: -9999, y: -9999 };
 
     // =============================================
-    // LAYOUT - 3 horizontal lanes
+    // LAYOUT - Single merged lane
     // =============================================
-    // The 3 axes are horizontal bands:
-    //   Top:    TECH   (blue)
-    //   Middle: ENVIRO (green)
-    //   Bottom: SOCIO  (burgundy)
-    // X = time (years), Y = category lane + jitter
+    // All axes share a single vertical space.
+    // X = time (years), Y = random jitter across full usable height
+    // Color coding distinguishes axes.
 
     function layoutPublications() {
         const marginLeft = 60;
@@ -576,14 +621,6 @@
 
         const usableW = W - marginLeft - marginRight;
         const usableH = H - marginTop - marginBottom;
-
-        // 3 equal lanes
-        const laneH = usableH / 3;
-        const laneCenters = {
-            techno: marginTop + laneH * 0.5,
-            enviro: marginTop + laneH * 1.5,
-            socio:  marginTop + laneH * 2.5
-        };
 
         const timelineStart = new Date(YEAR_MIN, 0, 1).getTime();
         const timelineEnd = new Date(YEAR_MAX + 1, 0, 1).getTime();
@@ -597,11 +634,11 @@
             const tNorm = (pub.date.getTime() - timelineStart) / timeRange;
             const x = marginLeft + tNorm * usableW;
 
-            // Y within the lane, with jitter
-            const laneCenter = laneCenters[pub.axis];
-            const jitterRange = laneH * 0.35;
+            // Y across full usable height with jitter
+            const yCenter = marginTop + usableH * 0.5;
+            const jitterRange = usableH * 0.42;
             const yJitter = (rand() - 0.5) * 2 * jitterRange;
-            const y = laneCenter + yJitter;
+            const y = yCenter + yJitter;
 
             // Size depends on tier:
             // media (presse) = large, prominent
@@ -701,12 +738,25 @@
     function updateStats() {
         const visible = animatedPositions.filter(ap => ap.targetOpacity > 0.5);
         document.getElementById('stat-total').textContent = visible.length;
-        const totalReach = visible.reduce((sum, ap) => sum + ap.pub.reach, 0);
-        document.getElementById('stat-reach').textContent = totalReach > 1000000
-            ? (totalReach / 1000000).toFixed(1) + 'M'
-            : totalReach > 1000
-                ? Math.floor(totalReach / 1000) + 'K'
-                : totalReach;
+
+        // Cumulative reach: sum reach of all publications up to the current scroll position
+        // (i.e., all pubs that have appeared so far, regardless of axis/channel filter)
+        const timelineStart = new Date(YEAR_MIN, 0, 1).getTime();
+        const timelineEnd = new Date(YEAR_MAX + 1, 0, 1).getTime();
+        const timeRange = timelineEnd - timelineStart;
+        let cumulativeReach = 0;
+        for (const ap of animatedPositions) {
+            const pubTimeNorm = (ap.pub.date.getTime() - timelineStart) / timeRange;
+            if (scrollProgress >= pubTimeNorm - 0.002) {
+                cumulativeReach += ap.pub.reach;
+            }
+        }
+        document.getElementById('stat-reach').textContent = cumulativeReach > 1000000
+            ? (cumulativeReach / 1000000).toFixed(1) + 'M'
+            : cumulativeReach > 1000
+                ? Math.floor(cumulativeReach / 1000) + 'K'
+                : cumulativeReach;
+
         const mediaCount = visible.filter(ap => ap.pub.tier === 'media').length;
         document.getElementById('stat-media').textContent = mediaCount;
     }
@@ -833,68 +883,12 @@
         const marginRight = 30;
         const usableH = H - marginTop - marginBottom;
         const usableW = W - marginLeft - marginRight;
-        const laneH = usableH / 3;
-
-        // Draw lane backgrounds
-        const lanes = [
-            { axis: 'techno', color: COLORS.techno, label: 'TECHNOLOGIQUE', lightColor: COLORS.technoLight },
-            { axis: 'enviro', color: COLORS.enviro, label: 'ENVIRONNEMENTALE', lightColor: COLORS.enviroLight },
-            { axis: 'socio',  color: COLORS.socio,  label: 'SOCIOCULTURELLE', lightColor: COLORS.socioLight }
-        ];
-
-        lanes.forEach((lane, idx) => {
-            const laneTop = marginTop + idx * laneH;
-            const isActiveAxis = activeAxis === 'all' || activeAxis === lane.axis;
-
-            // Lane background band
-            ctx.fillStyle = isActiveAxis
-                ? lane.color.replace(')', ', 0.04)').replace('rgb', 'rgba').replace('#', '')
-                : 'rgba(255,255,255,0.008)';
-            // Convert hex to rgba for fill
-            const r = parseInt(lane.color.slice(1,3), 16);
-            const g = parseInt(lane.color.slice(3,5), 16);
-            const b = parseInt(lane.color.slice(5,7), 16);
-            ctx.fillStyle = isActiveAxis
-                ? `rgba(${r},${g},${b},0.04)`
-                : 'rgba(255,255,255,0.008)';
-            ctx.fillRect(marginLeft - 10, laneTop, usableW + 40, laneH);
-
-            // Lane separator line
-            if (idx > 0) {
-                ctx.strokeStyle = 'rgba(255,255,255,0.04)';
-                ctx.lineWidth = 1;
-                ctx.beginPath();
-                ctx.moveTo(marginLeft - 10, laneTop);
-                ctx.lineTo(marginLeft + usableW + 30, laneTop);
-                ctx.stroke();
-            }
-
-            // Colored accent bar on left edge of each lane
-            const accentBarW = 3;
-            ctx.fillStyle = isActiveAxis
-                ? lane.lightColor
-                : `rgba(${r},${g},${b},0.15)`;
-            ctx.globalAlpha = isActiveAxis ? 0.6 : 0.15;
-            ctx.fillRect(marginLeft - 10, laneTop + 8, accentBarW, laneH - 16);
-            ctx.globalAlpha = 1;
-
-            // Lane label (left side, horizontal - no rotation to avoid overlap)
-            ctx.save();
-            const labelY = laneTop + 20;
-            ctx.globalAlpha = isActiveAxis ? 0.45 : 0.1;
-            ctx.fillStyle = lane.lightColor;
-            ctx.font = '700 9px Poppins';
-            ctx.textAlign = 'left';
-            ctx.fillText(lane.label, marginLeft + 2, labelY);
-            ctx.restore();
-            ctx.globalAlpha = 1;
-        });
 
         // Draw year grid lines
         const timelineStart = new Date(YEAR_MIN, 0, 1).getTime();
         const timelineEnd = new Date(YEAR_MAX + 1, 0, 1).getTime();
         const timeRange = timelineEnd - timelineStart;
-        ctx.globalAlpha = 0.06;
+        ctx.globalAlpha = 0.1;
         ctx.strokeStyle = 'rgba(255,255,255,0.5)';
         ctx.lineWidth = 0.5;
         for (let y = YEAR_MIN; y <= YEAR_MAX; y++) {
@@ -1096,14 +1090,25 @@
 
         if (!hoveredPub) canvas.style.cursor = 'default';
 
-        // Year labels on canvas (bottom of each year column, very subtle)
-        ctx.globalAlpha = 0.08;
-        ctx.font = '500 8px Poppins';
+        // Year labels on canvas (bottom of each year column)
+        ctx.font = '500 9px Poppins';
         ctx.textAlign = 'center';
-        ctx.fillStyle = '#ffffff';
         for (let y = YEAR_MIN; y <= YEAR_MAX; y++) {
             const tNorm = (new Date(y, 6, 1).getTime() - timelineStart) / timeRange; // mid-year
             const x = marginLeft + tNorm * usableW;
+            if (y === currentYear) {
+                ctx.globalAlpha = 0.7;
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '700 10px Poppins';
+            } else if (y < currentYear) {
+                ctx.globalAlpha = 0.35;
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '500 9px Poppins';
+            } else {
+                ctx.globalAlpha = 0.18;
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '500 9px Poppins';
+            }
             ctx.fillText(y, x, marginTop + usableH + 14);
         }
         ctx.globalAlpha = 1;

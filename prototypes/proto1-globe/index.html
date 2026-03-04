@@ -13,15 +13,15 @@
       background: #0a0e1a;
       color: #fff;
       font-family: 'Poppins', sans-serif;
-      overflow: hidden;
-      height: 100vh;
+      min-height: 100vh;
       width: 100vw;
     }
 
     #globe-container {
-      width: 100vw;
+      width: 100%;
       height: 100vh;
       position: relative;
+      overflow: hidden;
       cursor: grab;
     }
 
@@ -443,7 +443,7 @@
 
     const camera = new THREE.PerspectiveCamera(
       45,
-      window.innerWidth / window.innerHeight,
+      container.clientWidth / container.clientHeight,
       0.01,
       100
     );
@@ -454,7 +454,7 @@
       alpha: false,
       powerPreference: 'high-performance'
     });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setClearColor(0x0a0e1a, 1);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -467,7 +467,7 @@
     controls.enableDamping = true;
     controls.dampingFactor = 0.06;
     controls.rotateSpeed = 0.5;
-    controls.enableZoom = true;
+    controls.enableZoom = false;
     controls.minDistance = 1.5;
     controls.maxDistance = 5;
     controls.enablePan = false;
@@ -493,7 +493,7 @@
     // ====================================================
     const globeGeometry = new THREE.SphereGeometry(GLOBE_RADIUS, 96, 96);
     const globeMaterial = new THREE.MeshPhongMaterial({
-      color: 0x0b1525,
+      color: 0x0f1d30,
       emissive: 0x050a14,
       emissiveIntensity: 0.3,
       shininess: 15,
@@ -508,9 +508,9 @@
     function createGridLines() {
       const gridGroup = new THREE.Group();
       const gridMaterial = new THREE.LineBasicMaterial({
-        color: 0x1a2540,
+        color: 0x253555,
         transparent: true,
-        opacity: 0.25
+        opacity: 0.35
       });
 
       const R = GLOBE_RADIUS + 0.001;
@@ -568,9 +568,9 @@
       const group = new THREE.Group();
       const R = GLOBE_RADIUS + 0.002;
       const material = new THREE.LineBasicMaterial({
-        color: 0x2a3550,
+        color: 0xffffff,
         transparent: true,
-        opacity: 0.55
+        opacity: 0.6
       });
 
       for (const outline of CONTINENT_OUTLINES) {
@@ -797,8 +797,9 @@
     let isUserInteracting = false;
 
     container.addEventListener('pointermove', (e) => {
-      mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
-      mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+      const rect = container.getBoundingClientRect();
+      mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+      mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
 
       // Position tooltip
       tooltip.style.left = (e.clientX + 18) + 'px';
@@ -931,9 +932,11 @@
     // RESIZE HANDLER
     // ====================================================
     window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
+      const w = container.clientWidth;
+      const h = container.clientHeight;
+      camera.aspect = w / h;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(w, h);
     });
 
     // ====================================================
