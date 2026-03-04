@@ -13,22 +13,16 @@
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
         }
-
-        /* Scroll container */
         .scroll-container {
             position: relative;
-            height: 800vh; /* Long scroll for animation */
+            height: 800vh;
         }
-
-        /* Fixed map canvas */
         #map-canvas {
             position: fixed;
             top: 0; left: 0;
             width: 100vw; height: 100vh;
             z-index: 1;
         }
-
-        /* Parchment texture overlay */
         .parchment-overlay {
             position: fixed;
             top: 0; left: 0;
@@ -39,8 +33,6 @@
                 radial-gradient(ellipse at 20% 50%, rgba(139, 119, 80, 0.04) 0%, transparent 70%),
                 radial-gradient(ellipse at 80% 30%, rgba(139, 119, 80, 0.03) 0%, transparent 60%);
         }
-
-        /* Compass rose */
         .compass {
             position: fixed;
             bottom: 30px; right: 30px;
@@ -48,8 +40,6 @@
             width: 80px; height: 80px;
             opacity: 0.4;
         }
-
-        /* Title overlay */
         .title-overlay {
             position: fixed;
             top: 40px; left: 40px;
@@ -70,8 +60,6 @@
             color: rgba(232, 220, 200, 0.5);
             margin-top: 4px;
         }
-
-        /* Phase indicator */
         .phase-indicator {
             position: fixed;
             top: 50%; right: 40px;
@@ -106,8 +94,6 @@
             text-transform: uppercase;
             white-space: nowrap;
         }
-
-        /* Year display */
         .year-display {
             position: fixed;
             bottom: 40px; left: 40px;
@@ -119,8 +105,6 @@
             transition: color 0.5s;
             font-variant-numeric: tabular-nums;
         }
-
-        /* Popup tooltip */
         .waypoint-tooltip {
             position: fixed;
             z-index: 200;
@@ -129,7 +113,7 @@
             border: 1px solid rgba(232, 220, 200, 0.2);
             border-radius: 12px;
             padding: 20px;
-            max-width: 300px;
+            max-width: 320px;
             display: none;
             pointer-events: none;
         }
@@ -162,8 +146,6 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
-        /* Legend */
         .legend {
             position: fixed;
             bottom: 30px; left: 50%;
@@ -186,8 +168,6 @@
             width: 24px; height: 3px;
             border-radius: 2px;
         }
-
-        /* Scroll hint */
         .scroll-hint {
             position: fixed;
             bottom: 30px; left: 50%;
@@ -203,8 +183,6 @@
             0%, 100% { opacity: 0.3; transform: translateX(-50%) translateY(0); }
             50% { opacity: 0.6; transform: translateX(-50%) translateY(5px); }
         }
-
-        /* Watermark */
         .watermark {
             position: fixed;
             top: 20px; right: 40px;
@@ -285,7 +263,6 @@
         <div class="watermark">COLOMBAN — PROTO 3 — CARTE MARINE</div>
     </div>
 
-    <!-- Compass rose SVG -->
     <svg class="compass" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="50" cy="50" r="48" stroke="rgba(232,220,200,0.3)" stroke-width="0.5"/>
         <circle cx="50" cy="50" r="35" stroke="rgba(232,220,200,0.15)" stroke-width="0.5"/>
@@ -301,9 +278,8 @@
 
     <script>
     // ═══════════════════════════════════════════
-    // DATA — Waypoints
+    // COLORS
     // ═══════════════════════════════════════════
-    // Coordinates: [lon, lat] → projected to canvas
     const COLORS = {
         sillage: '#e8dcc8',
         techno:  '#2a55b3',
@@ -311,12 +287,14 @@
         socio:   '#b32a55',
         bg:      '#0d1117',
         grid:    'rgba(232, 220, 200, 0.06)',
-        coast:   'rgba(232, 220, 200, 0.35)',
-        coastFill: 'rgba(232, 220, 200, 0.06)',
+        coast:   'rgba(232, 220, 200, 0.45)',
+        coastFill: 'rgba(232, 220, 200, 0.08)',
         sea:     'rgba(42, 85, 179, 0.04)'
     };
 
-    // Phase 1: Sillage unique
+    // ═══════════════════════════════════════════
+    // WAYPOINTS DATA
+    // ═══════════════════════════════════════════
     const sillageWaypoints = [
         { id: 1, year: 2000, name: 'Bretagne & Irlande', label: 'Enfance',
           lon: -4.5, lat: 48.4, detail: 'Traversées en bateau entre Bretagne et Irlande. Naissance de la vocation maritime.', phase: 'enfance' },
@@ -329,7 +307,8 @@
         { id: 5, year: 2013, name: 'Manche', label: 'Brittany Ferries',
           lon: -2.0, lat: 49.8, detail: 'Navire à passagers Normandie. Chargement/déchargement rapide, exercices d\'abandon grande échelle.', phase: 'navigation' },
         { id: 6, year: 2013, name: 'Marseille — Bourbon HQ', label: 'MOMENT FONDATEUR',
-          lon: 5.37, lat: 43.30, detail: 'Données environnementales catastrophiques de ~600 navires. Alliance avec Arnaud Dianoux → naissance du projet Opsealog.',
+          lon: 5.37, lat: 43.30,
+          detail: 'C\'est à Marseille en 2013 que naît la conviction fondatrice : technologie et environnement sont indissociables dans la transformation du maritime. Première confrontation aux données maritimes de ~600 navires Bourbon — gap technologique abyssal + impact environnemental massif. Alliance avec Arnaud Dianoux → naissance du projet Opsealog.',
           phase: 'fondateur', isFounder: true },
         { id: 7, year: 2014, name: 'Angola', label: 'Bourbon Ungundja',
           lon: 12.3, lat: -8.8, detail: 'Retour en mer avec humilité. Opérations IMR.', phase: 'navigation' },
@@ -344,10 +323,8 @@
           phase: 'choix', isDecisive: true }
     ];
 
-    // Annecy hub for the network phase
     const annecyHub = { lon: 6.13, lat: 45.90, name: 'Annecy', label: 'Port d\'attache' };
 
-    // Phase 2: Réseau en étoile depuis Annecy
     const reseauThreads = [
         { color: COLORS.techno, destination: { lon: 5.37, lat: 43.30 }, label: 'Opsealog', role: 'Stratégie → PM → Innovation', since: '2021', axis: 'Technologique' },
         { color: COLORS.techno, destination: { lon: 6.13, lat: 45.90 }, label: 'VAIATA Dynamics', role: 'Co-fondateur', since: '—', axis: 'Technologique', isLocal: true },
@@ -361,28 +338,144 @@
     ];
 
     // ═══════════════════════════════════════════
+    // DETAILED CONTINENT COASTLINES
+    // ═══════════════════════════════════════════
+    const continents = {
+        europe: [
+            [-10,36],[-9.5,37],[-9,38.7],[-8.5,40],[-9.2,41.5],[-8.5,42],[-8,43.3],[-2,43.5],[-1.8,44],[0,43.5],
+            [3,43.3],[3.5,43.1],[5,43.3],[6.3,43.1],[7.5,43.7],[8,44],[9.5,44.2],[10,44],[12,44],[13.8,45.5],
+            [13.5,44.8],[15,44],[16,43.5],[17,43],[16.5,42.5],[18,42],[19,41.5],[19.5,40],[20,39.5],[21,38.5],
+            [22,37.5],[23,36],[24,35.5],[26,35],[27,36.5],[28,37],[29,38],[30,39],[29.5,41],[28.5,41.5],[27,42],
+            [29,43],[30,44],[31,46],[30,46.5],[28,45.5],[28.5,44.5],[27,44],[24,44],[23,45],[20,46],[17,46],
+            [14,46.5],[13,47],[12,48],[8,48],[5.5,49],[2,51],[1.5,51.5],[3,53],[5,53.5],[7,54],[8,55],[10,55.5],
+            [12,56],[13,56],[12,58],[11,58.5],[10,57.5],[8,58],[7,60],[5,61],[5,63],[7,65],[10,64],[12,66],
+            [15,67],[16,68],[18,69],[20,70],[25,71],[28,71],[30,70],[28,68],[26,65],[25,62],[24,60],[22,58.5],
+            [20,57.5],[18,56.5],[16,56],[14.5,54.5],[14,54],[13,54.5],[11,54],[10,54],[9,54],[7,53.5],[4.5,52],[3.5,51.5],
+            [4,51],[2.5,51],[1.5,50.7],[0,50.7],[-1,50.5],[-3,49],[-5,48.5],[-4.5,47.5],[-2.5,47],[-1.5,46.5],
+            [-1,44.5],[-1.5,43.5],[-2,43.5],[-4,43.3],[-5.5,43],[-7,43.5],[-8.5,42],[-9.2,41.5],[-8.7,40],
+            [-9,39],[-9.5,38],[-7,37.5],[-6,36.5],[-5.5,36],[-6,35.9],[-10,36]
+        ],
+        britain: [
+            [-5.5,50],[-4.5,50.3],[-3.5,51],[-5,51.5],[-4.5,52.5],[-3,53],[-3.5,54],[-4,54.5],[-5,55.5],
+            [-5.5,56.5],[-6,57.5],[-5,58.5],[-3,58.5],[-2,57.5],[-1.5,56],[-0.5,55],[0,53.5],[0.5,52.5],
+            [1.5,52.5],[1.7,52],[0.5,51],[-1,50.7],[-3,50.3],[-5.5,50]
+        ],
+        ireland: [
+            [-10,51.5],[-10.5,52],[-10,53],[-10.2,54],[-8.5,55.3],[-7,55.4],[-6,54.5],[-6,53],[-7,52],
+            [-9,51.5],[-10,51.5]
+        ],
+        africaWest: [
+            [-17,15],[-17.5,14.5],[-16,13],[-16.5,12],[-15,11],[-12,8],[-8,5],[-5,5],[0,5.5],[2.5,6],[5,4.5],
+            [8,4],[9.5,4],[10,3],[9.5,1],[9,-1],[9,-3],[9.5,-5],[12,-6],[12,-8.5],[13,-10],[12.5,-13],[12,-17.5],
+            [14,-22.5],[15,-26],[17,-29],[18.5,-33],[20,-34.5],[25,-34],[28,-33.5],[30,-30],[32,-27.5],[33,-24],
+            [35.5,-21],[40,-16],[42,-12],[44.5,-12],[48,-10],[50,-6.5],[51,-2],[51,3],[48,8],[44,11.5],[43,12.5],
+            [42,15],[38,18],[35,20],[35,23],[33,28],[32,31.5],[33,34],[35.2,35]
+        ],
+        africaEast: [
+            [35.2,35],[35,33],[33,30.5],[32,28],[31,25],[32,22],[35,20],[38,18],[42,15],[43,12.5],[44.5,11.5],[48,8],[50,5]
+        ],
+        northAmerica: [
+            [-80,25],[-82,27],[-84,30],[-88,30],[-90,29.5],[-94,29.5],[-97,26],[-97,28],[-96,30],[-94,32],
+            [-90,30],[-88,30.5],[-85,31],[-82,30],[-81,27],[-80,25]
+        ],
+        southAmerica: [
+            [-35,-5],[-38,-3],[-42,0],[-50,2],[-52,4],[-59,8],[-62,10.5],[-65,10.5],[-71,12],[-75,11],
+            [-77,9],[-79,8],[-80,7],[-78,4],[-80,1],[-80,-2],[-77,-5],[-75,-8],[-72,-14],[-71,-17],
+            [-70,-18.5],[-70,-22],[-68,-24],[-66,-27],[-65,-32],[-63,-38],[-65,-40],[-67,-44],[-66,-46],
+            [-68,-48],[-73,-50],[-75,-53],[-69,-55],[-65,-55],[-59,-52],[-55,-48],[-52,-44],[-50,-40],
+            [-48,-36],[-48,-30],[-46,-24],[-43,-22.5],[-41,-20],[-39,-15],[-38,-12],[-35,-7],[-35,-5]
+        ],
+        madagascar: [
+            [44,-12.5],[48,-14],[50,-18],[50,-22],[48,-25.5],[44,-25],[43.5,-22],[43,-17.5],[44,-12.5]
+        ],
+        india: [
+            [68,23],[66,25],[67,28],[72,22],[73,18],[74,15],[76,10],[78,8],[80,10],[80.5,13],[82,16],
+            [86,20],[88,22],[90,22],[92,20],[88,15],[85,10],[82,8],[80,8],[78,8.5],[76,11],[74,15],
+            [73,18],[72,20.5],[68,23]
+        ],
+        china: [
+            [105,22],[108,21.5],[110,20],[112,21.5],[114,22.5],[117,24],[120,26],[122,30],[121,31.5],
+            [119,34.5],[118,37],[120,39],[122,40.5],[124,40],[126,42],[128,43],[130,43],[132,45],
+            [135,48],[140,45],[141,43],[140,40],[137,35],[136,33],[133,34],[130,33],[128,35],[127,37],
+            [126,38],[125,40]
+        ],
+        australia: [
+            [115,-34.5],[114,-28],[114,-25],[119,-20],[127,-14],[131,-12],[136,-12],[139,-15],[143,-14.5],
+            [145,-15],[146,-19],[150,-23],[153,-26],[153,-30],[151,-34],[148,-38],[146,-39],[142,-38.5],
+            [137,-36],[135,-34],[130,-32],[128,-33],[121,-34],[117,-35],[115,-34.5]
+        ],
+        reunionIsland: [
+            [55.2,-20.9],[55.8,-20.9],[55.9,-21.4],[55.3,-21.4],[55.2,-20.9]
+        ]
+    };
+
+    // ═══════════════════════════════════════════
+    // PLACE NAMES (for geographic context)
+    // ═══════════════════════════════════════════
+    const placeNames = [
+        // Countries and continents
+        { name: 'FRANCE', lon: 2.5, lat: 47, size: 13, opacity: 0.22 },
+        { name: 'ESPAGNE', lon: -3.5, lat: 40, size: 11, opacity: 0.15 },
+        { name: 'ITALIE', lon: 12, lat: 42.5, size: 11, opacity: 0.15 },
+        { name: 'GRÈCE', lon: 23, lat: 39, size: 9, opacity: 0.12 },
+        { name: 'ROYAUME-UNI', lon: -2, lat: 54, size: 9, opacity: 0.15 },
+        { name: 'IRLANDE', lon: -8, lat: 53.3, size: 9, opacity: 0.18 },
+        { name: 'ALLEMAGNE', lon: 10, lat: 51, size: 10, opacity: 0.12 },
+        { name: 'TURQUIE', lon: 33, lat: 39, size: 10, opacity: 0.12 },
+        { name: 'ANGOLA', lon: 17, lat: -12, size: 11, opacity: 0.18 },
+        { name: 'NAMIBIE', lon: 18, lat: -22, size: 10, opacity: 0.12 },
+        { name: 'AFRIQUE DU SUD', lon: 25, lat: -30, size: 9, opacity: 0.1 },
+        { name: 'MOZAMBIQUE', lon: 35, lat: -18, size: 9, opacity: 0.1 },
+        { name: 'CHINE', lon: 115, lat: 35, size: 13, opacity: 0.15 },
+        { name: 'INDE', lon: 80, lat: 20, size: 12, opacity: 0.12 },
+        { name: 'ARABIE', lon: 45, lat: 23, size: 10, opacity: 0.1 },
+        { name: 'AUSTRALIE', lon: 135, lat: -27, size: 12, opacity: 0.12 },
+        { name: 'BRÉSIL', lon: -50, lat: -15, size: 12, opacity: 0.1 },
+        // Oceans and seas
+        { name: 'Océan Atlantique', lon: -30, lat: 20, size: 14, opacity: 0.08, italic: true },
+        { name: 'Atlantique Sud', lon: -15, lat: -20, size: 11, opacity: 0.06, italic: true },
+        { name: 'Océan Indien', lon: 70, lat: -15, size: 14, opacity: 0.08, italic: true },
+        { name: 'Océan Pacifique', lon: 150, lat: 0, size: 14, opacity: 0.07, italic: true },
+        { name: 'Mer Méditerranée', lon: 18, lat: 36, size: 10, opacity: 0.08, italic: true },
+        { name: 'Mer du Nord', lon: 3, lat: 57, size: 8, opacity: 0.06, italic: true },
+        { name: 'Golfe de Guinée', lon: 2, lat: 1, size: 8, opacity: 0.06, italic: true },
+        { name: 'Mer de Chine', lon: 115, lat: 18, size: 9, opacity: 0.06, italic: true },
+        { name: 'Mer Rouge', lon: 38, lat: 20, size: 8, opacity: 0.06, italic: true },
+        // Key cities
+        { name: 'Bretagne', lon: -3.5, lat: 48.6, size: 9, opacity: 0.18 },
+        { name: 'Marseille', lon: 5.8, lat: 42.5, size: 9, opacity: 0.15 },
+        { name: 'Brest', lon: -5, lat: 48.8, size: 8, opacity: 0.12 },
+        { name: 'Le Havre', lon: 0.3, lat: 50.1, size: 8, opacity: 0.1 },
+        { name: 'Annecy', lon: 6.4, lat: 46.4, size: 8, opacity: 0.1 },
+        { name: 'Paris', lon: 2.6, lat: 49.2, size: 9, opacity: 0.12 },
+        { name: 'Luanda', lon: 13.2, lat: -9.2, size: 8, opacity: 0.12 },
+        { name: 'La Réunion', lon: 55.5, lat: -22.5, size: 9, opacity: 0.18 },
+        { name: 'Madagascar', lon: 47, lat: -19, size: 10, opacity: 0.12, italic: true },
+    ];
+
+    // ═══════════════════════════════════════════
     // CANVAS SETUP
     // ═══════════════════════════════════════════
     const canvas = document.getElementById('map-canvas');
     const ctx = canvas.getContext('2d');
-    let W, H;
+    let W, H, DPR;
 
     function resize() {
+        DPR = window.devicePixelRatio || 1;
         W = window.innerWidth;
         H = window.innerHeight;
-        canvas.width = W * window.devicePixelRatio;
-        canvas.height = H * window.devicePixelRatio;
+        canvas.width = W * DPR;
+        canvas.height = H * DPR;
         canvas.style.width = W + 'px';
         canvas.style.height = H + 'px';
-        ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+        ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
     }
     resize();
     window.addEventListener('resize', resize);
 
     // ═══════════════════════════════════════════
-    // MAP PROJECTION (Mercator simplified)
+    // MAP PROJECTION (Mercator)
     // ═══════════════════════════════════════════
-    // Map bounds to show from Ireland to Réunion and Angola to China
     let mapCenter = { lon: 15, lat: 25 };
     let mapZoom = 1.0;
 
@@ -397,96 +490,92 @@
     }
 
     // ═══════════════════════════════════════════
-    // SIMPLIFIED COASTLINES (key geographic features)
-    // ═══════════════════════════════════════════
-    const coastlines = [
-        // Western Europe simplified
-        [[-10,36],[-9,38],[-9,40],[-8,42],[-4,43],[-2,43.5],[0,43],[3,43],[5,43.5],[7,43.7],[9,44],[11,44],[13,44],[14,42],[15,41],[16,40],[18,40],[20,39],[23,38],[26,39],[28,41],[30,41],[32,36],[35,33],[30,31],[25,31],[10,35],[0,35],[-6,35],[-10,36]],
-        // British Isles simplified
-        [[-6,50],[-5,51],[-4,52],[-4,54],[-3,55],[-5,57],[-3,58],[-2,57],[0,53],[1,52],[0,51],[-1,50.5],[-4,50],[-6,50]],
-        // Ireland
-        [[-10,51.5],[-10,53],[-9,54],[-7,55],[-6,54],[-6,52.5],[-8,51.5],[-10,51.5]],
-        // Africa west
-        [[-17,15],[-16,13],[-15,11],[-8,5],[0,5],[5,4],[10,4],[10,2],[9,-1],[9,-4],[12,-6],[12,-10],[13,-13],[12,-17],[15,-22],[17,-25],[18,-29],[20,-33],[25,-34],[28,-33],[30,-30],[32,-28],[33,-25],[35,-22],[40,-15],[42,-12],[44,-12],[48,-10],[50,-6],[50,0],[48,5],[44,10],[43,12],[42,15],[35,20],[33,30],[32,33],[35,33]],
-        // Madagascar
-        [[44,-13],[49,-16],[50,-22],[47,-25],[44,-23],[43,-18],[44,-13]],
-        // Réunion (dot — island)
-        // India simplified
-        [[68,23],[72,18],[77,8],[80,10],[83,15],[87,22],[90,22],[90,20],[88,15],[82,8],[78,8],[75,12],[72,20],[68,23]],
-        // China coast simplified
-        [[105,22],[108,21],[110,20],[115,22],[118,24],[121,28],[122,30],[121,31],[119,34],[118,36],[120,38],[122,40],[125,40]]
-    ];
-
-    // ═══════════════════════════════════════════
     // DRAWING FUNCTIONS
     // ═══════════════════════════════════════════
     function drawGrid() {
         ctx.strokeStyle = COLORS.grid;
         ctx.lineWidth = 0.5;
 
-        // Longitude lines
-        for (let lon = -30; lon <= 130; lon += 10) {
+        for (let lon = -80; lon <= 160; lon += 10) {
             ctx.beginPath();
-            const p1 = project(lon, -40);
-            const p2 = project(lon, 65);
+            const p1 = project(lon, -60);
+            const p2 = project(lon, 75);
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
             ctx.stroke();
         }
-        // Latitude lines
-        for (let lat = -40; lat <= 65; lat += 10) {
+        for (let lat = -60; lat <= 75; lat += 10) {
             ctx.beginPath();
-            const p1 = project(-30, lat);
-            const p2 = project(130, lat);
+            const p1 = project(-80, lat);
+            const p2 = project(160, lat);
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
             ctx.stroke();
+        }
+
+        // Equator — slightly more visible
+        ctx.strokeStyle = 'rgba(232, 220, 200, 0.1)';
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        const eq1 = project(-80, 0);
+        const eq2 = project(160, 0);
+        ctx.moveTo(eq1.x, eq1.y);
+        ctx.lineTo(eq2.x, eq2.y);
+        ctx.stroke();
+
+        // Coordinate labels at edges
+        ctx.fillStyle = 'rgba(232, 220, 200, 0.08)';
+        ctx.font = '8px "Source Serif 4", serif';
+        ctx.textAlign = 'center';
+        for (let lon = -60; lon <= 140; lon += 20) {
+            const p = project(lon, -55);
+            if (p.x > 10 && p.x < W - 10) {
+                ctx.fillText(lon + '°', p.x, p.y);
+            }
+        }
+        ctx.textAlign = 'right';
+        for (let lat = -40; lat <= 60; lat += 20) {
+            const p = project(-75, lat);
+            if (p.y > 10 && p.y < H - 10) {
+                ctx.fillText(lat + '°', p.x, p.y + 3);
+            }
         }
     }
 
-    // Place names for geographic context
-    const placeNames = [
-        { name: 'FRANCE', lon: 2.5, lat: 47, size: 12, opacity: 0.2 },
-        { name: 'ESPAGNE', lon: -3.5, lat: 40, size: 10, opacity: 0.12 },
-        { name: 'ITALIE', lon: 12, lat: 42, size: 10, opacity: 0.12 },
-        { name: 'ROYAUME-UNI', lon: -2, lat: 54, size: 9, opacity: 0.12 },
-        { name: 'IRLANDE', lon: -8, lat: 53.3, size: 9, opacity: 0.15 },
-        { name: 'AFRIQUE', lon: 15, lat: 5, size: 14, opacity: 0.1 },
-        { name: 'ANGOLA', lon: 17, lat: -12, size: 10, opacity: 0.15 },
-        { name: 'CHINE', lon: 110, lat: 35, size: 12, opacity: 0.12 },
-        { name: 'INDE', lon: 80, lat: 20, size: 11, opacity: 0.1 },
-        { name: 'MADAGASCAR', lon: 47, lat: -20, size: 9, opacity: 0.12 },
-        { name: 'Océan Atlantique', lon: -25, lat: 25, size: 11, opacity: 0.08, italic: true },
-        { name: 'Océan Indien', lon: 65, lat: -10, size: 11, opacity: 0.08, italic: true },
-        { name: 'Mer Méditerranée', lon: 18, lat: 36, size: 9, opacity: 0.08, italic: true },
-        { name: 'La Réunion', lon: 55.5, lat: -22.5, size: 8, opacity: 0.15 },
-        { name: 'BRETAGNE', lon: -3.5, lat: 48.2, size: 8, opacity: 0.15 },
-        { name: 'Marseille', lon: 5.5, lat: 42.5, size: 8, opacity: 0.12 },
-        { name: 'NAMIBIE', lon: 18, lat: -22, size: 9, opacity: 0.1 },
-    ];
+    function drawContinent(points, fillColor, strokeColor, lineWidth) {
+        if (!points || points.length < 3) return;
+        ctx.beginPath();
+        let first = true;
+        for (let i = 0; i < points.length; i++) {
+            const p = project(points[i][0], points[i][1]);
+            if (first) { ctx.moveTo(p.x, p.y); first = false; }
+            else ctx.lineTo(p.x, p.y);
+        }
+        ctx.closePath();
+        ctx.fillStyle = fillColor || COLORS.coastFill;
+        ctx.fill();
+        ctx.strokeStyle = strokeColor || COLORS.coast;
+        ctx.lineWidth = lineWidth || 1.2;
+        ctx.stroke();
+    }
 
     function drawCoastlines() {
-        coastlines.forEach(coast => {
-            ctx.beginPath();
-            ctx.strokeStyle = COLORS.coast;
-            ctx.lineWidth = 1.5;
-            coast.forEach((point, i) => {
-                const p = project(point[0], point[1]);
-                if (i === 0) ctx.moveTo(p.x, p.y);
-                else ctx.lineTo(p.x, p.y);
-            });
-            ctx.closePath();
-            ctx.stroke();
+        // Draw all continents
+        drawContinent(continents.europe);
+        drawContinent(continents.britain);
+        drawContinent(continents.ireland);
+        drawContinent(continents.africaWest);
+        drawContinent(continents.madagascar);
+        drawContinent(continents.india);
+        drawContinent(continents.china);
+        drawContinent(continents.australia);
+        drawContinent(continents.southAmerica);
+        drawContinent(continents.reunionIsland, 'rgba(232, 220, 200, 0.15)', COLORS.coast, 1);
 
-            // Visible land fill
-            ctx.fillStyle = COLORS.coastFill;
-            ctx.fill();
-        });
-
-        // Draw place names for geographic context
+        // Draw place names
         placeNames.forEach(place => {
             const p = project(place.lon, place.lat);
-            if (p.x < -100 || p.x > W + 100 || p.y < -50 || p.y > H + 50) return;
+            if (p.x < -200 || p.x > W + 200 || p.y < -100 || p.y > H + 100) return;
             ctx.globalAlpha = place.opacity;
             ctx.fillStyle = COLORS.sillage;
             const fontStyle = place.italic ? 'italic ' : '';
@@ -497,20 +586,41 @@
         });
     }
 
+    // ═══════════════════════════════════════════
+    // SILLAGE (route) DRAWING with smart labels
+    // ═══════════════════════════════════════════
     function drawSillage(progress) {
-        // progress: 0 to 1 (how much of the sillage is drawn)
         const totalPoints = sillageWaypoints.length;
         const drawnPoints = Math.floor(progress * totalPoints);
         const partialProgress = (progress * totalPoints) - drawnPoints;
 
         if (drawnPoints < 1) return;
 
-        // Draw the route
+        // Draw dashed wake trail behind the main route
+        ctx.beginPath();
+        ctx.strokeStyle = 'rgba(232, 220, 200, 0.15)';
+        ctx.lineWidth = 1;
+        ctx.setLineDash([4, 8]);
+        for (let i = 0; i <= Math.min(drawnPoints, totalPoints - 1); i++) {
+            const wp = sillageWaypoints[i];
+            const p = project(wp.lon, wp.lat);
+            if (i === 0) ctx.moveTo(p.x, p.y);
+            else {
+                const prev = sillageWaypoints[i - 1];
+                const prevP = project(prev.lon, prev.lat);
+                const cpX = (prevP.x + p.x) / 2;
+                const cpY = Math.min(prevP.y, p.y) - Math.abs(p.x - prevP.x) * 0.12;
+                ctx.quadraticCurveTo(cpX, cpY, p.x, p.y);
+            }
+        }
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Draw the main route
         ctx.beginPath();
         ctx.strokeStyle = COLORS.sillage;
         ctx.lineWidth = 2.5;
-        ctx.setLineDash([]);
-        ctx.globalAlpha = 0.7;
+        ctx.globalAlpha = 0.8;
 
         for (let i = 0; i <= Math.min(drawnPoints, totalPoints - 1); i++) {
             const wp = sillageWaypoints[i];
@@ -519,14 +629,12 @@
             if (i === 0) {
                 ctx.moveTo(p.x, p.y);
             } else {
-                // Curved line through control point
                 const prev = sillageWaypoints[i - 1];
                 const prevP = project(prev.lon, prev.lat);
                 const cpX = (prevP.x + p.x) / 2;
-                const cpY = Math.min(prevP.y, p.y) - Math.abs(p.x - prevP.x) * 0.15;
+                const cpY = Math.min(prevP.y, p.y) - Math.abs(p.x - prevP.x) * 0.12;
 
                 if (i === drawnPoints && partialProgress < 1) {
-                    // Partial segment
                     const t = partialProgress;
                     const ix = (1-t)*(1-t)*prevP.x + 2*(1-t)*t*cpX + t*t*p.x;
                     const iy = (1-t)*(1-t)*prevP.y + 2*(1-t)*t*cpY + t*t*p.y;
@@ -539,8 +647,27 @@
         ctx.stroke();
         ctx.globalAlpha = 1;
 
-        // Draw waypoint dots
-        for (let i = 0; i < Math.min(drawnPoints + 1, totalPoints); i++) {
+        // ── Smart label management ──
+        // For each visible waypoint, determine if its label should show.
+        // Rule: if a LATER visible waypoint is at the same approximate location,
+        // hide the earlier one's label (keep only the most recent).
+        // Exception: founder and decisive moments always show.
+        const visibleCount = Math.min(drawnPoints + 1, totalPoints);
+        const labelVisible = new Array(visibleCount).fill(true);
+
+        for (let i = 0; i < visibleCount; i++) {
+            if (sillageWaypoints[i].isFounder || sillageWaypoints[i].isDecisive) continue;
+            for (let j = i + 1; j < visibleCount; j++) {
+                const a = sillageWaypoints[i], b = sillageWaypoints[j];
+                if (Math.abs(a.lon - b.lon) < 3 && Math.abs(a.lat - b.lat) < 3) {
+                    labelVisible[i] = false;
+                    break;
+                }
+            }
+        }
+
+        // Draw waypoint dots and labels
+        for (let i = 0; i < visibleCount; i++) {
             const wp = sillageWaypoints[i];
             const p = project(wp.lon, wp.lat);
 
@@ -549,24 +676,37 @@
             let glowSize = 0;
 
             if (wp.isFounder) {
-                dotSize = 7;
-                dotColor = COLORS.enviro;
-                glowSize = 20;
-            } else if (wp.isDecisive) {
                 dotSize = 8;
-                dotColor = '#ff6b6b';
+                dotColor = COLORS.enviro;
                 glowSize = 25;
+            } else if (wp.isDecisive) {
+                dotSize = 9;
+                dotColor = '#ff6b6b';
+                glowSize = 30;
             }
 
-            // Glow
+            // Glow for special waypoints
             if (glowSize > 0) {
                 const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, glowSize);
-                gradient.addColorStop(0, dotColor + '40');
+                gradient.addColorStop(0, dotColor + '50');
+                gradient.addColorStop(0.5, dotColor + '20');
                 gradient.addColorStop(1, 'transparent');
                 ctx.fillStyle = gradient;
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, glowSize, 0, Math.PI * 2);
                 ctx.fill();
+
+                // Pulsing ring for special waypoints
+                const pulsePhase = (Date.now() / 1000) % 2;
+                const pulseRadius = glowSize + pulsePhase * 10;
+                const pulseAlpha = Math.max(0, 0.3 - pulsePhase * 0.15);
+                ctx.strokeStyle = dotColor;
+                ctx.globalAlpha = pulseAlpha;
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, pulseRadius, 0, Math.PI * 2);
+                ctx.stroke();
+                ctx.globalAlpha = 1;
             }
 
             // Dot
@@ -575,52 +715,69 @@
             ctx.arc(p.x, p.y, dotSize, 0, Math.PI * 2);
             ctx.fill();
 
-            // Ring
+            // Outer ring
             ctx.strokeStyle = dotColor;
             ctx.lineWidth = 1;
+            ctx.globalAlpha = 0.5;
             ctx.beginPath();
             ctx.arc(p.x, p.y, dotSize + 3, 0, Math.PI * 2);
             ctx.stroke();
+            ctx.globalAlpha = 1;
 
-            // Label — only show if this is the latest waypoint at this approximate location
-            // to avoid overlapping labels when returning to same place
-            const isDuplicate = sillageWaypoints.slice(i + 1, Math.min(drawnPoints + 1, totalPoints))
-                .some(other => Math.abs(other.lon - wp.lon) < 2 && Math.abs(other.lat - wp.lat) < 2);
-            if (!isDuplicate || wp.isFounder || wp.isDecisive) {
-                ctx.fillStyle = 'rgba(232, 220, 200, 0.7)';
-                ctx.font = wp.isFounder || wp.isDecisive ? 'bold 11px Poppins' : '10px Poppins';
+            // Label — only if smart label check says visible
+            if (labelVisible[i]) {
+                const isSpecial = wp.isFounder || wp.isDecisive;
+                const labelColor = wp.isFounder ? COLORS.enviro : (wp.isDecisive ? '#ff6b6b' : 'rgba(232, 220, 200, 0.7)');
+
+                ctx.fillStyle = labelColor;
+                ctx.font = isSpecial ? 'bold 12px Poppins' : '10px Poppins';
                 ctx.textAlign = 'center';
-                ctx.fillText(wp.label, p.x, p.y - dotSize - 10);
+                ctx.fillText(wp.label, p.x, p.y - dotSize - 12);
+
+                // Year below label for special waypoints
+                if (isSpecial) {
+                    ctx.font = '9px "Source Serif 4", serif';
+                    ctx.fillStyle = labelColor + '80';
+                    ctx.fillText(wp.year, p.x, p.y - dotSize - 1);
+                }
             }
         }
     }
 
+    // ═══════════════════════════════════════════
+    // RÉSEAU (network) DRAWING
+    // ═══════════════════════════════════════════
+    // Seeded random for consistent thread curves
+    let threadSeeds = reseauThreads.map((_, i) => (i * 137.508 + 42) % 100 - 50);
+
     function drawReseau(progress, time) {
-        // progress: 0 to 1 (how much of the network has appeared)
         if (progress <= 0) return;
 
-        // Draw Annecy hub
         const hub = project(annecyHub.lon, annecyHub.lat);
-        const hubGlow = ctx.createRadialGradient(hub.x, hub.y, 0, hub.x, hub.y, 30);
-        hubGlow.addColorStop(0, 'rgba(232, 220, 200, 0.3)');
+
+        // Hub glow
+        const hubGlow = ctx.createRadialGradient(hub.x, hub.y, 0, hub.x, hub.y, 35);
+        hubGlow.addColorStop(0, 'rgba(232, 220, 200, 0.35)');
+        hubGlow.addColorStop(0.5, 'rgba(232, 220, 200, 0.1)');
         hubGlow.addColorStop(1, 'transparent');
         ctx.fillStyle = hubGlow;
         ctx.beginPath();
-        ctx.arc(hub.x, hub.y, 30, 0, Math.PI * 2);
+        ctx.arc(hub.x, hub.y, 35, 0, Math.PI * 2);
         ctx.fill();
 
+        // Hub dot
         ctx.fillStyle = '#e8dcc8';
         ctx.beginPath();
         ctx.arc(hub.x, hub.y, 6, 0, Math.PI * 2);
         ctx.fill();
 
-        ctx.fillStyle = 'rgba(232, 220, 200, 0.8)';
-        ctx.font = '600 12px Poppins';
+        ctx.fillStyle = 'rgba(232, 220, 200, 0.85)';
+        ctx.font = '600 13px Poppins';
         ctx.textAlign = 'center';
-        ctx.fillText('ANNECY', hub.x, hub.y - 16);
-        ctx.font = '10px "Source Serif 4"';
-        ctx.fillStyle = 'rgba(232, 220, 200, 0.4)';
-        ctx.fillText('Port d\'attache', hub.x, hub.y - 4 + 22);
+        ctx.fillText('ANNECY', hub.x, hub.y - 18);
+        ctx.font = 'italic 10px "Source Serif 4"';
+        ctx.fillStyle = 'rgba(232, 220, 200, 0.45)';
+        ctx.fillText('Port d\'attache', hub.x, hub.y + 22);
 
         // Draw threads
         const threadsToShow = Math.ceil(progress * reseauThreads.length);
@@ -634,9 +791,9 @@
             const isLocal = thread.isLocal;
 
             if (!isLocal) {
-                // Draw curved line from Annecy to destination
-                const cpX = (hub.x + dest.x) / 2 + (Math.random() * 20 - 10);
-                const cpY = (hub.y + dest.y) / 2 - 30;
+                const seed = threadSeeds[i];
+                const cpX = (hub.x + dest.x) / 2 + seed * 0.3;
+                const cpY = (hub.y + dest.y) / 2 - 30 + seed * 0.2;
 
                 ctx.beginPath();
                 ctx.strokeStyle = thread.color;
@@ -644,7 +801,6 @@
                 ctx.globalAlpha = 0.6 * threadProgress;
                 ctx.setLineDash([6, 4]);
 
-                // Draw partial line
                 const steps = 50;
                 const maxStep = Math.floor(steps * threadProgress);
                 for (let s = 0; s <= maxStep; s++) {
@@ -658,7 +814,7 @@
                 ctx.setLineDash([]);
                 ctx.globalAlpha = 1;
 
-                // Animated particle on thread
+                // Animated particle
                 const particleT = ((time * 0.3 + i * 0.7) % 2) / 2;
                 if (particleT <= threadProgress) {
                     const px = (1-particleT)*(1-particleT)*hub.x + 2*(1-particleT)*particleT*cpX + particleT*particleT*dest.x;
@@ -672,23 +828,24 @@
                 }
             }
 
-            // Destination dot
+            // Destination dot and label
             if (threadProgress > 0.5) {
                 const dotAlpha = (threadProgress - 0.5) * 2;
                 ctx.globalAlpha = dotAlpha;
 
-                // Dot
+                const offsetX = isLocal ? (i * 4 - 2) : 0;
+                const offsetY = isLocal ? (15 + i * 12) : 0;
+
                 ctx.fillStyle = thread.color;
                 ctx.beginPath();
-                ctx.arc(dest.x + (isLocal ? (i * 4 - 2) : 0), dest.y + (isLocal ? 15 + i * 12 : 0), 4, 0, Math.PI * 2);
+                ctx.arc(dest.x + offsetX, dest.y + offsetY, 4, 0, Math.PI * 2);
                 ctx.fill();
 
-                // Label
                 ctx.fillStyle = thread.color;
                 ctx.font = '600 10px Poppins';
                 ctx.textAlign = 'left';
-                const labelX = dest.x + (isLocal ? (i * 4 + 8) : 10);
-                const labelY = dest.y + (isLocal ? 15 + i * 12 + 4 : 4);
+                const labelX = dest.x + offsetX + (isLocal ? 8 : 10);
+                const labelY = dest.y + offsetY + 4;
                 ctx.fillText(thread.label, labelX, labelY);
 
                 ctx.font = '9px "Source Serif 4"';
@@ -731,14 +888,13 @@
 
     function updateYear(progress) {
         let year;
-        if (progress < 0.08) year = Math.floor(1991 + progress / 0.08 * 19); // 1991-2010
-        else if (progress < 0.65) year = Math.floor(2010 + (progress - 0.08) / 0.57 * 7); // 2010-2017
-        else year = Math.floor(2017 + (progress - 0.65) / 0.35 * 9); // 2017-2026
+        if (progress < 0.08) year = Math.floor(1991 + progress / 0.08 * 19);
+        else if (progress < 0.65) year = Math.floor(2010 + (progress - 0.08) / 0.57 * 7);
+        else year = Math.floor(2017 + (progress - 0.65) / 0.35 * 9);
         document.getElementById('year-display').textContent = year;
 
-        // Moment fondateur highlight
         if (year === 2013 && progress > 0.35 && progress < 0.5) {
-            document.getElementById('year-display').style.color = COLORS.enviro + '30';
+            document.getElementById('year-display').style.color = 'rgba(0, 191, 99, 0.25)';
         } else if (year === 2017 && progress > 0.55 && progress < 0.7) {
             document.getElementById('year-display').style.color = 'rgba(255, 107, 107, 0.2)';
         } else {
@@ -758,12 +914,10 @@
 
         // Adjust map view based on progress
         if (scrollProgress < 0.6) {
-            // Phase 1: Wide view centered on route
             mapCenter.lon = 15 + scrollProgress * 20;
             mapCenter.lat = 25;
             mapZoom = 1.0 + scrollProgress * 0.3;
         } else {
-            // Phase 2: Zoom into France/Europe
             const t = (scrollProgress - 0.6) / 0.4;
             mapCenter.lon = 15 + 12 - t * 20;
             mapCenter.lat = 25 + t * 20;
@@ -786,10 +940,7 @@
         updatePhaseIndicator(scrollProgress);
         updateYear(scrollProgress);
 
-        // Show legend when réseau phase starts
         document.getElementById('legend').classList.toggle('visible', scrollProgress > 0.65);
-
-        // Hide scroll hint after scrolling
         document.getElementById('scroll-hint').style.opacity = scrollProgress < 0.05 ? '1' : '0';
     }
 
@@ -804,7 +955,6 @@
         const mouseY = e.clientY;
         let found = false;
 
-        // Check sillage waypoints
         const sillageProgress = Math.min(1, scrollProgress / 0.6);
         const visibleWaypoints = Math.floor(sillageProgress * sillageWaypoints.length);
 
@@ -814,13 +964,19 @@
             const dist = Math.hypot(mouseX - p.x, mouseY - p.y);
 
             if (dist < 20) {
+                // Position tooltip, keep on screen
+                let tx = mouseX + 20;
+                let ty = mouseY - 10;
+                if (tx + 320 > W) tx = mouseX - 340;
+                if (ty + 200 > H) ty = H - 210;
+
                 tooltip.style.display = 'block';
-                tooltip.style.left = (mouseX + 20) + 'px';
-                tooltip.style.top = (mouseY - 10) + 'px';
+                tooltip.style.left = tx + 'px';
+                tooltip.style.top = ty + 'px';
                 document.getElementById('tooltip-title').textContent = wp.name;
                 document.getElementById('tooltip-date').textContent = wp.year;
                 document.getElementById('tooltip-desc').innerHTML = wp.detail +
-                    (wp.isFounder ? '<div class="founder-badge">Moment Fondateur</div>' : '') +
+                    (wp.isFounder ? '<div class="founder-badge">Moment Fondateur — Naissance d\'Opsealog</div>' : '') +
                     (wp.isDecisive ? '<div class="founder-badge" style="background:rgba(255,107,107,0.2);border-color:rgba(255,107,107,0.3);color:#ff6b6b;">Choix Décisif</div>' : '');
                 found = true;
                 canvas.style.cursor = 'pointer';
@@ -828,7 +984,6 @@
             }
         }
 
-        // Check réseau threads
         if (!found && scrollProgress > 0.6) {
             const reseauProg = (scrollProgress - 0.6) / 0.4;
             const visibleThreads = Math.ceil(reseauProg * reseauThreads.length);
@@ -839,9 +994,13 @@
                 const dist = Math.hypot(mouseX - p.x, mouseY - p.y);
 
                 if (dist < 20) {
+                    let tx = mouseX + 20;
+                    let ty = mouseY - 10;
+                    if (tx + 320 > W) tx = mouseX - 340;
+
                     tooltip.style.display = 'block';
-                    tooltip.style.left = (mouseX + 20) + 'px';
-                    tooltip.style.top = (mouseY - 10) + 'px';
+                    tooltip.style.left = tx + 'px';
+                    tooltip.style.top = ty + 'px';
                     document.getElementById('tooltip-title').textContent = thread.label;
                     document.getElementById('tooltip-date').textContent = 'Depuis ' + thread.since;
                     document.getElementById('tooltip-desc').textContent = thread.role + ' — ' + thread.axis;

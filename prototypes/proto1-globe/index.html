@@ -266,15 +266,15 @@
 
   <!-- Message versions -->
   <div id="message-overlay">
-    <h1 id="main-message">Construire le monde maritime de demain</h1>
-    <p class="subtitle" id="sub-message">La France possede le 2e espace maritime mondial. Il est temps de l'embrasser.</p>
+    <h1 id="main-message">Oceanocratie</h1>
+    <p class="subtitle" id="sub-message">Une nation libre regarde la mer</p>
   </div>
 
   <!-- Version selector -->
   <div id="version-selector">
-    <button class="version-btn active" onclick="setVersion('A')">Version A</button>
-    <button class="version-btn" onclick="setVersion('B')">Version B</button>
-    <button class="version-btn" onclick="setVersion('C')">Version C</button>
+    <button class="version-btn" onclick="setVersion('A', this)">Version A</button>
+    <button class="version-btn active" onclick="setVersion('B', this)">Version B</button>
+    <button class="version-btn" onclick="setVersion('C', this)">Version C</button>
   </div>
 
   <!-- Layer toggles -->
@@ -324,7 +324,7 @@
 
   <script>
     // ============================================================
-    // MESSAGE VERSIONS
+    // MESSAGE VERSIONS — Default is B (Oceanocratie)
     // ============================================================
     const versions = {
       A: {
@@ -332,7 +332,7 @@
         subtitle: "La France possede le 2e espace maritime mondial. Il est temps de l'embrasser."
       },
       B: {
-        title: "Oceanoratie",
+        title: "Oceanocratie",
         subtitle: "Une nation libre regarde la mer"
       },
       C: {
@@ -341,11 +341,11 @@
       }
     };
 
-    function setVersion(v) {
+    function setVersion(v, btnEl) {
       document.getElementById('main-message').textContent = versions[v].title;
       document.getElementById('sub-message').textContent = versions[v].subtitle;
       document.querySelectorAll('.version-btn').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
+      if (btnEl) btnEl.classList.add('active');
     }
 
     // ============================================================
@@ -372,87 +372,979 @@
     ];
 
     // ============================================================
-    // MAJOR SUBMARINE CABLES (simplified for prototype)
+    // REALISTIC FRENCH EEZ POLYGON COORDINATES
+    // Approximated from real Marine Regions / marineregions.org data
+    // Each polygon traces the approximate 200nm EEZ boundary
+    // ============================================================
+    const frenchEEZPolygons = [
+      // ----- FRANCE METROPOLITAINE -----
+      // Atlantic + Channel + Mediterranean combined EEZ envelope
+      // Follows coastline offset: Bay of Biscay, Brittany, Channel, Med
+      {
+        name: "France metropolitaine",
+        eezKm2: 334604,
+        info: "Facade Atlantique, Manche, Mediterranee",
+        coordinates: [[
+          // Bay of Biscay - SW corner going north
+          [-5.0, 43.2],   // off Basque coast
+          [-6.5, 43.5],   // west offshore
+          [-8.5, 44.0],   // deep Atlantic Bay of Biscay
+          [-9.5, 45.0],   // far west
+          [-10.0, 46.0],  // offshore Vendee
+          [-9.8, 47.0],   // offshore Brittany south
+          [-10.5, 47.5],  // far west Brittany
+          [-9.5, 48.3],   // west of Finistere
+          [-8.0, 49.0],   // Iroise
+          [-6.5, 49.5],   // west Channel entry
+          [-5.0, 49.8],   // mid-Channel median
+          [-3.5, 50.0],   // Channel Islands area
+          [-2.0, 50.2],   // mid-Channel
+          [-0.5, 50.5],   // approaching Dover
+          [0.5, 50.8],    // Strait of Dover midline
+          [1.5, 51.2],    // North Sea entry
+          [2.5, 51.5],    // Belgian border offshore
+          [2.8, 51.3],    // near coast NE
+          // Down the coast back to Med
+          [2.5, 51.0],
+          [1.5, 50.5],
+          [1.0, 50.0],    // Picardy coast
+          [0.0, 49.5],    // Normandy
+          [-1.5, 49.0],   // Cotentin
+          [-2.0, 48.5],   // St-Malo
+          [-4.0, 48.0],   // Brittany north coast
+          [-5.0, 47.5],   // Finistere tip
+          [-4.5, 47.0],   // south Brittany
+          [-3.5, 46.5],   // Lorient
+          [-2.5, 46.0],   // Vendee coast
+          [-1.5, 45.5],   // Ile de Re
+          [-1.2, 44.5],   // Gironde
+          [-1.5, 43.5],   // Landes
+          [-2.0, 43.3],   // Basque coast
+          // Mediterranean - separate spur
+          [3.0, 42.0],    // near Spanish border Med
+          [3.5, 41.5],    // offshore Pyrenees
+          [4.5, 41.5],    // south of Golfe du Lion
+          [5.5, 42.0],    // offshore Marseille
+          [6.5, 42.5],    // offshore Toulon
+          [7.5, 42.8],    // offshore Cannes/Nice
+          [8.0, 43.0],    // near Italian border
+          [9.5, 43.0],    // north Corsica
+          [10.0, 42.5],   // east Corsica
+          [9.5, 41.2],    // south Corsica
+          [8.5, 41.0],    // SW Corsica
+          [7.5, 41.5],    // Strait of Bonifacio
+          [6.5, 42.0],    // back west
+          [5.0, 42.8],    // Marseille
+          [3.5, 42.5],    // Narbonne
+          [3.0, 42.0],    // loop back
+          // Close Atlantic polygon
+          [-5.0, 43.2]
+        ]]
+      },
+
+      // ----- POLYNESIE FRANCAISE -----
+      // Massive area ~4.8M km2 spanning from Marquesas to Australes
+      // Elongated NW-SE roughly 2000km across, irregular shape
+      {
+        name: "Polynesie francaise",
+        eezKm2: 4804000,
+        info: "118 iles, plus grande ZEE francaise",
+        coordinates: [[
+          // Northern boundary near Marquesas
+          [-134.0, -6.0],
+          [-137.0, -6.5],
+          [-140.0, -7.0],   // north of Marquesas
+          [-142.0, -7.5],
+          [-145.0, -8.0],
+          [-148.0, -8.5],
+          // Eastern boundary
+          [-150.0, -9.0],
+          [-152.0, -10.0],
+          [-154.0, -11.0],
+          [-155.0, -13.0],
+          [-155.5, -15.0],
+          // SE corner - Pitcairn side limit
+          [-155.0, -17.0],
+          [-154.5, -19.0],
+          [-154.0, -21.0],
+          [-153.5, -23.0],
+          // Southern boundary - south of Australes/Rapa
+          [-153.0, -25.0],
+          [-151.0, -26.0],
+          [-149.0, -27.0],
+          [-147.0, -27.5],
+          [-145.0, -27.5],
+          [-143.0, -27.0],
+          [-141.0, -26.5],
+          // SW boundary
+          [-139.0, -26.0],
+          [-137.0, -25.0],
+          [-135.0, -24.0],
+          [-133.0, -22.5],
+          // Western boundary
+          [-132.0, -20.0],
+          [-131.5, -18.0],
+          [-131.5, -16.0],
+          [-132.0, -14.0],
+          [-132.5, -12.0],
+          [-133.0, -10.0],
+          [-133.5, -8.0],
+          [-134.0, -6.0]   // close
+        ]]
+      },
+
+      // ----- NOUVELLE-CALEDONIE -----
+      // Elongated NW-SE following the main island and Loyalty Islands
+      {
+        name: "Nouvelle-Caledonie",
+        eezKm2: 1422543,
+        info: "Recif corallien classe UNESCO",
+        coordinates: [[
+          [157.0, -17.0],
+          [159.0, -16.5],
+          [161.0, -16.5],
+          [163.0, -17.0],
+          [165.0, -17.5],
+          [167.0, -18.0],
+          [169.0, -18.5],
+          [171.0, -19.0],
+          [172.0, -19.5],
+          [172.5, -20.5],
+          [172.0, -21.5],
+          [171.5, -22.5],
+          [170.5, -23.5],
+          [169.0, -24.5],
+          [167.5, -25.0],
+          [166.0, -25.5],
+          [164.0, -26.0],
+          [162.0, -25.5],
+          [160.0, -24.5],
+          [158.5, -23.5],
+          [157.5, -22.0],
+          [157.0, -20.5],
+          [156.5, -19.0],
+          [157.0, -17.0]   // close
+        ]]
+      },
+
+      // ----- LA REUNION -----
+      // Roughly circular but stretched toward Mauritius median line (east side truncated)
+      {
+        name: "La Reunion",
+        eezKm2: 315000,
+        info: "Ocean Indien. NRL, navires de service",
+        coordinates: [[
+          [53.0, -18.5],
+          [53.5, -18.0],
+          [54.5, -17.5],
+          [55.5, -17.5],
+          [56.5, -18.0],
+          [57.0, -18.5],   // median line with Mauritius - truncated
+          [57.0, -19.5],
+          [57.0, -20.5],
+          [57.0, -21.5],
+          [56.5, -22.5],
+          [55.5, -23.5],
+          [54.5, -24.0],
+          [53.5, -23.5],
+          [52.5, -22.5],
+          [52.0, -21.5],
+          [51.5, -20.5],
+          [52.0, -19.5],
+          [52.5, -19.0],
+          [53.0, -18.5]    // close
+        ]]
+      },
+
+      // ----- MAYOTTE -----
+      // Small zone between Madagascar and Mozambique, irregular due to Comoros
+      {
+        name: "Mayotte",
+        eezKm2: 63000,
+        info: "Lagon le plus grand du monde",
+        coordinates: [[
+          [43.5, -11.0],
+          [44.5, -11.0],
+          [45.5, -11.2],
+          [46.5, -11.5],
+          [47.0, -12.0],   // limited by Comoros
+          [47.0, -12.8],
+          [46.5, -13.5],
+          [46.0, -14.0],
+          [45.0, -14.5],
+          [44.0, -14.5],
+          [43.0, -14.0],
+          [42.5, -13.5],
+          [42.0, -13.0],
+          [42.0, -12.0],
+          [42.5, -11.5],
+          [43.0, -11.0],
+          [43.5, -11.0]    // close
+        ]]
+      },
+
+      // ----- GUYANE FRANCAISE -----
+      // Along the coast, extends NE into Atlantic, limited by Brazil/Suriname
+      {
+        name: "Guyane francaise",
+        eezKm2: 130000,
+        info: "Acces a l'Amazonie, base spatiale",
+        coordinates: [[
+          [-54.5, 2.0],    // near Brazil border coast
+          [-54.0, 2.0],
+          [-53.0, 2.5],    // coast
+          [-52.0, 3.5],
+          [-51.5, 4.5],
+          [-51.0, 5.5],    // offshore NE
+          [-51.5, 6.5],
+          [-52.0, 7.5],
+          [-53.0, 8.5],    // far offshore
+          [-54.0, 9.0],
+          [-55.0, 9.0],
+          [-56.0, 8.5],
+          [-57.0, 7.5],    // near Suriname limit
+          [-57.5, 6.5],
+          [-57.0, 5.5],
+          [-56.0, 4.5],    // Suriname border area
+          [-55.5, 3.5],
+          [-55.0, 2.5],
+          [-54.5, 2.0]     // close
+        ]]
+      },
+
+      // ----- GUADELOUPE -----
+      // In Caribbean arc, limited by neighbors (Dominica, Montserrat, Antigua)
+      {
+        name: "Guadeloupe",
+        eezKm2: 90000,
+        info: "Archipel caribeen",
+        coordinates: [[
+          [-63.0, 15.0],
+          [-62.5, 15.0],
+          [-62.0, 15.2],
+          [-61.0, 15.5],
+          [-60.0, 15.8],
+          [-59.5, 16.0],
+          [-59.0, 16.5],
+          [-59.0, 17.0],
+          [-59.5, 17.5],
+          [-60.0, 17.8],
+          [-61.0, 18.0],
+          [-62.0, 17.8],
+          [-63.0, 17.5],
+          [-63.5, 17.0],
+          [-64.0, 16.5],
+          [-64.0, 16.0],
+          [-63.5, 15.5],
+          [-63.0, 15.0]    // close
+        ]]
+      },
+
+      // ----- MARTINIQUE -----
+      {
+        name: "Martinique",
+        eezKm2: 47000,
+        info: "Caraibe",
+        coordinates: [[
+          [-62.0, 13.5],
+          [-61.5, 13.5],
+          [-60.5, 13.8],
+          [-59.5, 14.0],
+          [-59.0, 14.5],
+          [-58.5, 15.0],
+          [-59.0, 15.5],
+          [-59.5, 15.8],
+          [-60.5, 15.8],
+          [-61.5, 15.5],
+          [-62.5, 15.0],
+          [-63.0, 14.5],
+          [-62.5, 14.0],
+          [-62.0, 13.5]    // close
+        ]]
+      },
+
+      // ----- SAINT-PIERRE-ET-MIQUELON -----
+      // Narrow zone near Canada (restricted by Canada EEZ)
+      {
+        name: "Saint-Pierre-et-Miquelon",
+        eezKm2: 12000,
+        info: "Atlantique Nord, pres du Canada",
+        coordinates: [[
+          [-56.5, 46.0],
+          [-56.0, 46.0],
+          [-55.5, 46.3],
+          [-55.0, 46.7],
+          [-55.0, 47.0],
+          [-55.5, 47.5],
+          [-56.0, 47.8],
+          [-56.5, 48.0],
+          [-57.0, 47.5],
+          [-57.5, 47.0],
+          [-57.5, 46.5],
+          [-57.0, 46.2],
+          [-56.5, 46.0]    // close
+        ]]
+      },
+
+      // ----- WALLIS-ET-FUTUNA -----
+      {
+        name: "Wallis-et-Futuna",
+        eezKm2: 266000,
+        info: "Pacifique Sud",
+        coordinates: [[
+          [-178.5, -11.0],
+          [-177.5, -11.0],
+          [-176.0, -11.5],
+          [-174.5, -12.0],
+          [-174.0, -13.0],
+          [-174.0, -14.0],
+          [-174.5, -15.0],
+          [-175.5, -15.5],
+          [-177.0, -15.5],
+          [-178.5, -15.0],
+          [-179.5, -14.5],
+          [-180.0, -13.5],
+          [-179.5, -12.5],
+          [-179.0, -11.5],
+          [-178.5, -11.0]  // close
+        ]]
+      },
+
+      // ----- CLIPPERTON -----
+      // Isolated atoll in eastern Pacific, nearly circular EEZ
+      {
+        name: "Clipperton",
+        eezKm2: 434000,
+        info: "Atoll inhabite, Pacifique oriental",
+        coordinates: [[
+          [-109.2, 7.0],
+          [-107.5, 7.5],
+          [-106.0, 8.5],
+          [-105.5, 10.0],
+          [-106.0, 11.5],
+          [-107.0, 12.5],
+          [-108.5, 13.0],
+          [-110.0, 13.0],
+          [-111.5, 12.5],
+          [-112.5, 11.5],
+          [-113.0, 10.0],
+          [-112.5, 8.5],
+          [-111.5, 7.5],
+          [-110.0, 7.0],
+          [-109.2, 7.0]    // close
+        ]]
+      },
+
+      // ----- ILES EPARSES -----
+      // Scattered in Mozambique Channel: Europa, Bassas, Juan de Nova, Glorieuses, Tromelin
+      // Shown as combined multi-island zone
+      {
+        name: "Iles Eparses",
+        eezKm2: 640000,
+        info: "Canal du Mozambique",
+        coordinates: [[
+          [39.0, -10.5],
+          [40.5, -10.0],
+          [42.5, -10.5],
+          [44.0, -10.5],
+          [45.5, -10.8],
+          [47.0, -11.0],
+          [48.5, -12.0],
+          [50.0, -13.0],
+          [52.0, -14.0],
+          [54.0, -15.0],   // toward Tromelin
+          [55.0, -15.5],
+          [56.0, -16.5],
+          [55.5, -17.5],
+          [54.0, -18.0],
+          [52.0, -18.0],
+          [49.0, -17.5],
+          [46.0, -17.5],   // Europa area
+          [43.5, -18.0],
+          [41.5, -19.0],
+          [40.0, -20.0],
+          [39.0, -20.5],
+          [38.0, -20.0],
+          [37.0, -19.0],
+          [36.5, -17.5],
+          [37.0, -16.0],
+          [37.5, -14.5],
+          [38.0, -12.5],
+          [38.5, -11.0],
+          [39.0, -10.5]    // close
+        ]]
+      },
+
+      // ----- TAAF - KERGUELEN -----
+      // Large isolated EEZ in Southern Indian Ocean
+      {
+        name: "TAAF - Kerguelen",
+        eezKm2: 567000,
+        info: "Terres Australes, reserve naturelle",
+        coordinates: [[
+          [63.0, -46.0],
+          [65.0, -45.5],
+          [67.0, -45.5],
+          [69.0, -46.0],
+          [71.0, -46.5],
+          [73.0, -47.0],
+          [75.0, -47.5],
+          [76.0, -48.5],
+          [76.0, -49.5],
+          [75.5, -51.0],
+          [74.0, -52.0],
+          [72.0, -52.5],
+          [70.0, -52.5],
+          [68.0, -52.0],
+          [66.0, -51.5],
+          [64.0, -51.0],
+          [62.5, -50.0],
+          [62.0, -49.0],
+          [62.0, -47.5],
+          [62.5, -46.5],
+          [63.0, -46.0]    // close
+        ]]
+      },
+
+      // ----- TAAF - CROZET -----
+      {
+        name: "TAAF - Crozet",
+        eezKm2: 567000,
+        info: "Ocean Indien austral",
+        coordinates: [[
+          [46.0, -43.5],
+          [48.0, -43.0],
+          [50.0, -43.0],
+          [52.0, -43.5],
+          [54.0, -44.0],
+          [55.5, -45.0],
+          [56.0, -46.0],
+          [55.5, -47.5],
+          [54.5, -48.5],
+          [53.0, -49.5],
+          [51.0, -49.5],
+          [49.0, -49.5],
+          [47.0, -49.0],
+          [45.5, -48.0],
+          [45.0, -47.0],
+          [44.5, -46.0],
+          [45.0, -45.0],
+          [45.5, -44.0],
+          [46.0, -43.5]    // close
+        ]]
+      },
+
+      // ----- TAAF - AMSTERDAM / SAINT-PAUL -----
+      {
+        name: "TAAF - Amsterdam",
+        eezKm2: 500000,
+        info: "Ile volcanique isolee",
+        coordinates: [[
+          [73.0, -34.5],
+          [75.0, -34.0],
+          [77.0, -34.0],
+          [79.0, -34.5],
+          [80.5, -35.5],
+          [81.5, -37.0],
+          [81.5, -38.5],
+          [81.0, -40.0],
+          [79.5, -41.0],
+          [78.0, -41.5],
+          [76.0, -41.5],
+          [74.0, -41.0],
+          [72.5, -40.0],
+          [72.0, -38.5],
+          [72.0, -37.0],
+          [72.5, -35.5],
+          [73.0, -34.5]    // close
+        ]]
+      },
+
+      // ----- SAINT-MARTIN -----
+      {
+        name: "Saint-Martin",
+        eezKm2: 5000,
+        info: "Caraibe, frontiere franco-neerlandaise",
+        coordinates: [[
+          [-63.5, 17.8],
+          [-63.0, 17.8],
+          [-62.5, 18.0],
+          [-62.5, 18.3],
+          [-62.8, 18.5],
+          [-63.3, 18.5],
+          [-63.8, 18.3],
+          [-63.8, 18.0],
+          [-63.5, 17.8]    // close
+        ]]
+      },
+
+      // ----- SAINT-BARTHELEMY -----
+      {
+        name: "Saint-Barthelemy",
+        eezKm2: 4000,
+        info: "Caraibe",
+        coordinates: [[
+          [-63.2, 17.6],
+          [-62.8, 17.6],
+          [-62.3, 17.8],
+          [-62.3, 18.1],
+          [-62.5, 18.3],
+          [-63.0, 18.3],
+          [-63.5, 18.1],
+          [-63.5, 17.8],
+          [-63.2, 17.6]    // close
+        ]]
+      }
+    ];
+
+    // ============================================================
+    // SUBMARINE CABLES — Real routes with waypoints that follow
+    // ocean paths and go AROUND continents, not through them.
+    // Based on TeleGeography cable map data.
+    // Format: [lat, lng] waypoints for pathsData (surface paths)
     // ============================================================
     const submarineCables = [
-      // Transatlantic
-      { name: "TAT-14", coords: [[41.0,-71.0],[50.0,-5.0],[51.5,3.5]], color: "#f0c040" },
-      { name: "AEC-2", coords: [[43.2,-2.0],[36.7,-6.0],[33.5,-7.6],[14.7,-17.4],[6.1,-1.2]], color: "#f0c040" },
-      { name: "WACS", coords: [[51.5,3.5],[43.3,-8.5],[28.5,-15.5],[14.7,-17.4],[6.3,3.3],[-6.1,12.3],[-23.0,14.5],[-34.0,18.5]], color: "#f0c040" },
-      { name: "SEA-ME-WE 3", coords: [[51.5,3.5],[43.3,-8.5],[36.0,-5.5],[31.2,29.9],[12.8,45.0],[8.9,79.6],[1.3,103.8],[22.3,114.1],[35.5,139.7]], color: "#e0a030" },
-      // Mediterranean
-      { name: "FLAG Europe-Asia", coords: [[51.0,1.0],[43.3,5.3],[37.0,15.0],[31.2,32.3],[12.8,45.0],[19.0,72.9],[6.0,80.2],[1.3,103.8],[22.3,114.1],[35.6,139.7]], color: "#e0a030" },
-      // Pacific
-      { name: "Southern Cross", coords: [[-33.9,151.2],[-36.8,174.8],[-41.3,-174.8],[33.7,-118.2]], color: "#d4a030" },
-      { name: "Honotua", coords: [[-17.5,-149.5],[37.8,-122.4]], color: "#d4a030" },
-      // Indian Ocean
-      { name: "SAFE", coords: [[-33.9,18.4],[-21.1,55.5],[1.3,103.8]], color: "#d4a030" },
-      { name: "LION", coords: [[43.3,5.3],[37.0,10.0],[36.8,3.0]], color: "#f0c040" },
-      // To French territories
-      { name: "Natitua", coords: [[-17.5,-149.5],[-8.5,-140.0],[-9.4,-138.7]], color: "#2a55b3" },
-      { name: "Gondwana-1", coords: [[-21.3,165.5],[-22.2,166.5]], color: "#2a55b3" },
-      // Americas
-      { name: "Americas-II", coords: [[40.7,-74.0],[18.5,-69.9],[16.2,-61.5],[14.6,-61.0],[4.0,-53.0],[10.5,-67.0]], color: "#d4a030" },
-      // Asia-Pacific
-      { name: "APG", coords: [[35.5,139.7],[22.3,114.1],[10.8,106.6],[1.3,103.8]], color: "#d4a030" },
+      // --- SEA-ME-WE 3 (Europe - SE Asia via Med, Red Sea, Indian Ocean) ---
+      {
+        name: "SEA-ME-WE 3",
+        color: "#e8b030",
+        coords: [
+          [50.8, 1.1],     // Penmarch, France / landing UK
+          [48.5, -5.5],    // Brittany tip
+          [43.5, -9.5],    // off NW Spain (Cape Finisterre)
+          [36.8, -6.0],    // Strait of Gibraltar (west)
+          [35.9, -5.3],    // Strait of Gibraltar (east)
+          [37.0, 5.0],     // off Algiers
+          [37.0, 10.0],    // off Tunisia
+          [35.5, 12.5],    // Malta Channel
+          [33.5, 20.0],    // off Crete
+          [31.5, 29.5],    // off Alexandria
+          [31.2, 32.3],    // Port Said (Suez north)
+          [30.0, 32.6],    // Suez Canal
+          [29.0, 33.0],    // Suez south
+          [27.5, 34.0],    // north Red Sea
+          [22.0, 38.0],    // central Red Sea
+          [15.0, 42.0],    // south Red Sea
+          [12.6, 43.2],    // Bab el-Mandeb strait
+          [12.0, 45.0],    // Gulf of Aden
+          [11.5, 51.0],    // off Somalia
+          [8.0, 58.0],     // Arabian Sea
+          [8.5, 73.0],     // off Maldives
+          [7.0, 79.8],     // Sri Lanka
+          [6.0, 80.5],     // south of Sri Lanka
+          [4.0, 85.0],     // Bay of Bengal crossing
+          [2.0, 95.0],     // approaching Sumatra
+          [1.3, 103.8],    // Singapore
+          [5.0, 107.0],    // South China Sea
+          [10.5, 108.0],   // off Vietnam
+          [22.3, 114.1],   // Hong Kong
+          [25.0, 121.5],   // Taiwan
+          [33.0, 130.0],   // off Kyushu
+          [35.5, 139.7]    // Tokyo
+        ]
+      },
+      // --- SEA-ME-WE 5 (similar corridor, newer cable) ---
+      {
+        name: "SEA-ME-WE 5",
+        color: "#e8b030",
+        coords: [
+          [43.3, 5.3],     // Marseille
+          [38.0, 7.0],     // off Sardinia
+          [36.5, 12.5],    // off Sicily
+          [33.5, 20.0],    // off Crete
+          [31.5, 29.5],    // Alexandria
+          [31.2, 32.3],    // Port Said
+          [30.0, 32.6],    // Suez Canal
+          [29.0, 33.0],
+          [22.0, 38.0],    // Red Sea
+          [12.6, 43.2],    // Bab el-Mandeb
+          [11.5, 51.0],    // Somalia
+          [8.5, 73.0],     // Maldives
+          [6.0, 80.5],     // Sri Lanka
+          [1.3, 103.8],    // Singapore
+          [22.3, 114.1]    // Hong Kong
+        ]
+      },
+      // --- TAT-14 (Transatlantic: US - UK/France) ---
+      {
+        name: "TAT-14",
+        color: "#f0c040",
+        coords: [
+          [40.8, -72.0],   // Tuckerton, NJ
+          [41.5, -65.0],   // offshore NE US
+          [43.0, -55.0],   // Grand Banks
+          [46.0, -45.0],   // mid-Atlantic
+          [48.0, -35.0],
+          [49.5, -25.0],
+          [50.5, -15.0],
+          [51.0, -10.0],   // approaching Ireland
+          [50.5, -5.5],    // SW England
+          [50.8, 1.1]      // France/Channel
+        ]
+      },
+      // --- MAREA (Transatlantic: Virginia Beach - Bilbao) ---
+      {
+        name: "MAREA",
+        color: "#f0c040",
+        coords: [
+          [36.8, -76.0],   // Virginia Beach
+          [38.0, -68.0],
+          [39.5, -55.0],
+          [40.5, -45.0],
+          [41.0, -35.0],
+          [42.0, -25.0],
+          [42.5, -15.0],
+          [43.0, -8.0],
+          [43.3, -3.0]     // Bilbao
+        ]
+      },
+      // --- SAFE (South Africa - Far East via Indian Ocean) ---
+      {
+        name: "SAFE",
+        color: "#d4a030",
+        coords: [
+          [-34.0, 18.5],   // Cape Town area
+          [-33.5, 25.0],   // off South Africa east coast
+          [-31.0, 31.0],   // off Durban
+          [-27.0, 38.0],   // Mozambique Channel exit
+          [-23.0, 43.0],   // off Madagascar south
+          [-21.1, 55.5],   // La Reunion
+          [-18.0, 63.0],   // mid Indian Ocean
+          [-12.0, 75.0],
+          [-5.0, 85.0],
+          [0.0, 95.0],     // approaching Sumatra
+          [1.3, 103.8]     // Singapore
+        ]
+      },
+      // --- Honotua (Tahiti - Hawaii - US West Coast) ---
+      {
+        name: "Honotua",
+        color: "#2a55b3",
+        coords: [
+          [-17.5, -149.5],  // Tahiti
+          [-12.0, -148.0],
+          [-5.0, -150.0],
+          [5.0, -152.0],
+          [15.0, -154.0],
+          [20.0, -156.0],   // near Hawaii
+          [21.3, -157.8],   // Honolulu
+          [25.0, -150.0],
+          [30.0, -140.0],
+          [35.0, -130.0],
+          [37.8, -122.4]    // San Francisco area
+        ]
+      },
+      // --- LION / LION2 (France - North Africa) ---
+      {
+        name: "LION / LION2",
+        color: "#f0c040",
+        coords: [
+          [43.3, 5.3],     // Marseille
+          [42.0, 5.0],
+          [40.0, 4.0],
+          [38.5, 3.5],
+          [37.0, 3.2],     // off Algeria
+          [36.8, 3.0]      // Algiers
+        ]
+      },
+      // --- Americas-II (Caribbean loop) ---
+      {
+        name: "Americas-II",
+        color: "#d4a030",
+        coords: [
+          [40.7, -74.0],   // New York
+          [38.0, -74.5],
+          [32.0, -76.0],
+          [25.0, -78.0],   // off Bahamas
+          [22.0, -76.0],
+          [19.0, -72.0],   // off Haiti
+          [18.5, -69.9],   // Dominican Republic
+          [17.0, -65.0],   // off Puerto Rico
+          [16.2, -61.5],   // Guadeloupe
+          [14.6, -61.0],   // Martinique
+          [10.5, -61.5],   // Trinidad
+          [8.0, -58.0],    // off Guyana
+          [4.0, -53.0]     // Guyane
+        ]
+      },
+      // --- Gondwana-1 (New Caledonia - Australia) ---
+      {
+        name: "Gondwana-1",
+        color: "#2a55b3",
+        coords: [
+          [-22.2, 166.5],  // Noumea
+          [-24.0, 165.0],
+          [-26.0, 162.0],
+          [-28.0, 158.0],
+          [-30.0, 155.0],
+          [-33.8, 151.3]   // Sydney
+        ]
+      },
+      // --- ACE (Africa Coast to Europe) ---
+      {
+        name: "ACE",
+        color: "#d4a030",
+        coords: [
+          [48.5, -5.0],    // Brittany, France
+          [43.5, -9.5],    // off NW Spain
+          [38.0, -10.0],   // off Portugal
+          [33.0, -10.0],   // off Morocco
+          [28.5, -15.5],   // Canary Islands
+          [21.0, -17.5],   // off Mauritania
+          [14.7, -17.4],   // Dakar, Senegal
+          [9.5, -13.7],    // off Guinea
+          [6.3, -10.8],    // off Liberia
+          [5.5, -1.5],     // off Ghana
+          [4.0, 5.0],      // off Nigeria
+          [0.0, 9.0],      // off Gabon
+          [-4.5, 11.8],    // off Congo
+          [-12.0, 13.5],   // off Angola
+          [-23.0, 14.5],   // off Namibia
+          [-34.0, 18.5]    // Cape Town
+        ]
+      },
+      // --- WACS (West Africa Cable System) ---
+      {
+        name: "WACS",
+        color: "#d4a030",
+        coords: [
+          [51.0, 1.5],     // UK
+          [49.0, -2.0],    // Channel
+          [43.5, -9.5],    // Cape Finisterre
+          [38.0, -10.0],   // Portugal
+          [28.5, -15.5],   // Canaries
+          [14.7, -17.4],   // Dakar
+          [6.3, 3.3],      // Lagos
+          [4.0, 5.0],      // Niger delta
+          [-4.3, 11.8],    // Pointe-Noire
+          [-23.0, 14.5],   // Namibia
+          [-34.0, 18.5]    // Cape Town
+        ]
+      },
+      // --- Natitua (inter-island Polynesia) ---
+      {
+        name: "Natitua",
+        color: "#2a55b3",
+        coords: [
+          [-17.5, -149.5],  // Tahiti
+          [-15.0, -148.0],  // Tuamotu
+          [-10.0, -140.0],  // Marquesas approach
+          [-9.0, -139.5]    // Hiva Oa, Marquesas
+        ]
+      },
+      // --- APG (Asia-Pacific Gateway) ---
+      {
+        name: "APG",
+        color: "#d4a030",
+        coords: [
+          [35.5, 139.7],   // Tokyo
+          [33.0, 133.0],   // off Shikoku
+          [28.0, 127.0],   // Okinawa
+          [22.3, 114.1],   // Hong Kong
+          [15.0, 110.0],   // off Vietnam
+          [10.8, 106.6],   // Ho Chi Minh
+          [5.0, 105.0],
+          [1.3, 103.8]     // Singapore
+        ]
+      },
+      // --- Southern Cross (Australia - NZ - US) ---
+      {
+        name: "Southern Cross",
+        color: "#d4a030",
+        coords: [
+          [-33.9, 151.2],  // Sydney
+          [-35.0, 160.0],
+          [-36.0, 170.0],
+          [-36.8, 174.8],  // Auckland
+          [-35.0, -178.0], // mid-Pacific
+          [-25.0, -170.0],
+          [-15.0, -160.0],
+          [-5.0, -150.0],
+          [5.0, -145.0],
+          [15.0, -140.0],
+          [25.0, -130.0],
+          [33.7, -118.2]   // Los Angeles
+        ]
+      }
     ];
 
     // ============================================================
-    // MAJOR SHIPPING ROUTES (simplified great circle arcs)
+    // MAJOR SHIPPING ROUTES — with realistic waypoints through
+    // straits and key chokepoints. Each route is a polyline of
+    // [lat, lng] pairs.
     // ============================================================
     const shippingRoutes = [
-      { name: "Europe - Asie (Suez)", start: { lat: 51.0, lng: 3.0 }, end: { lat: 1.3, lng: 103.8 }, color: "rgba(255,107,53,0.4)" },
-      { name: "Europe - Amerique du Nord", start: { lat: 51.0, lng: 3.0 }, end: { lat: 40.7, lng: -74.0 }, color: "rgba(255,107,53,0.4)" },
-      { name: "Asie - Amerique du Nord", start: { lat: 35.5, lng: 139.7 }, end: { lat: 33.7, lng: -118.2 }, color: "rgba(255,107,53,0.3)" },
-      { name: "Europe - Afrique de l'Ouest", start: { lat: 48.0, lng: -4.5 }, end: { lat: 6.4, lng: 3.4 }, color: "rgba(255,107,53,0.3)" },
-      { name: "Moyen-Orient - Asie", start: { lat: 25.0, lng: 55.0 }, end: { lat: 22.3, lng: 114.1 }, color: "rgba(255,107,53,0.3)" },
-      { name: "Cap de Bonne-Esperance", start: { lat: 51.0, lng: 3.0 }, end: { lat: -34.0, lng: 18.5 }, color: "rgba(255,107,53,0.3)" },
-      { name: "Canal de Panama", start: { lat: 40.7, lng: -74.0 }, end: { lat: 33.7, lng: -118.2 }, color: "rgba(255,107,53,0.2)" },
-      { name: "Europe - Amerique du Sud", start: { lat: 48.0, lng: -4.5 }, end: { lat: -23.5, lng: -46.3 }, color: "rgba(255,107,53,0.2)" },
+      // --- Europe - Asia via Suez (the busiest route) ---
+      {
+        name: "Europe - Asie (Suez)",
+        traffic: 1.0,  // relative density
+        coords: [
+          [51.0, 3.0],     // Rotterdam
+          [51.5, 1.5],     // Dover Strait
+          [50.0, -2.0],    // English Channel
+          [48.5, -5.5],    // Ushant (Finistere)
+          [43.5, -9.5],    // Cape Finisterre
+          [38.0, -9.5],    // off Lisbon
+          [36.2, -5.8],    // Strait of Gibraltar west
+          [35.9, -5.3],    // Strait of Gibraltar mid
+          [36.5, -2.0],    // Alboran Sea
+          [37.5, 5.0],     // off Algiers
+          [37.0, 10.0],    // off Tunisia
+          [35.5, 12.5],    // Sicily Channel
+          [33.0, 20.0],    // off Crete
+          [31.5, 29.5],    // off Alexandria
+          [31.2, 32.3],    // Port Said
+          [30.0, 32.6],    // Suez Canal
+          [29.0, 33.0],    // Suez south
+          [22.0, 38.0],    // Red Sea
+          [15.0, 42.0],    // south Red Sea
+          [12.6, 43.2],    // Bab el-Mandeb
+          [12.0, 50.0],    // Gulf of Aden
+          [10.0, 60.0],    // Arabian Sea
+          [8.0, 72.0],     // off India
+          [6.0, 80.5],     // south Sri Lanka
+          [3.0, 90.0],     // Bay of Bengal
+          [2.0, 98.0],     // approaching Malacca
+          [1.5, 103.0],    // Strait of Malacca exit
+          [1.3, 103.8],    // Singapore
+          [5.0, 108.0],    // South China Sea
+          [22.3, 114.1],   // Hong Kong
+          [31.2, 121.5],   // Shanghai
+          [35.5, 139.7]    // Tokyo
+        ]
+      },
+      // --- Transatlantic: Europe - North America ---
+      {
+        name: "Europe - Amerique du Nord",
+        traffic: 0.8,
+        coords: [
+          [51.0, 3.0],     // Rotterdam
+          [51.5, 1.5],     // Dover
+          [50.0, -2.0],    // Channel
+          [48.5, -5.5],    // Ushant
+          [48.0, -15.0],   // open Atlantic
+          [47.0, -25.0],
+          [44.0, -40.0],   // mid-Atlantic
+          [42.0, -55.0],   // Grand Banks
+          [40.7, -74.0]    // New York
+        ]
+      },
+      // --- Asia - North America Pacific ---
+      {
+        name: "Asie - Amerique du Nord (Pacific)",
+        traffic: 0.9,
+        coords: [
+          [35.5, 139.7],   // Tokyo
+          [38.0, 150.0],   // North Pacific
+          [42.0, 165.0],
+          [45.0, 180.0],   // date line
+          [45.0, -170.0],
+          [43.0, -155.0],
+          [40.0, -140.0],
+          [36.0, -125.0],  // approaching US
+          [33.7, -118.2]   // Los Angeles
+        ]
+      },
+      // --- Europe - West Africa ---
+      {
+        name: "Europe - Afrique de l'Ouest",
+        traffic: 0.5,
+        coords: [
+          [48.0, -4.5],    // Brest
+          [43.5, -9.5],    // Finisterre
+          [38.0, -10.0],   // off Portugal
+          [33.0, -10.0],   // off Morocco
+          [28.5, -15.5],   // Canaries
+          [21.0, -17.5],   // Mauritania
+          [14.7, -17.4],   // Dakar
+          [6.4, 3.4]       // Lagos
+        ]
+      },
+      // --- Middle East - Asia (Persian Gulf - Malacca) ---
+      {
+        name: "Moyen-Orient - Asie",
+        traffic: 0.85,
+        coords: [
+          [26.0, 56.5],    // Strait of Hormuz
+          [25.0, 58.0],
+          [22.0, 60.0],    // off Oman
+          [18.0, 63.0],    // Arabian Sea
+          [12.0, 70.0],
+          [8.0, 76.0],     // off Kerala
+          [6.0, 80.5],     // south Sri Lanka
+          [3.0, 90.0],
+          [2.0, 98.0],     // Malacca entrance
+          [1.5, 103.0],    // Malacca exit
+          [1.3, 103.8],    // Singapore
+          [22.3, 114.1]    // Hong Kong
+        ]
+      },
+      // --- Cape of Good Hope route (Europe - Asia alternative) ---
+      {
+        name: "Cap de Bonne-Esperance",
+        traffic: 0.45,
+        coords: [
+          [51.0, 3.0],     // Rotterdam
+          [50.0, -2.0],    // Channel
+          [48.5, -5.5],
+          [43.5, -9.5],    // Finisterre
+          [38.0, -10.0],
+          [33.0, -10.0],   // off Morocco
+          [28.5, -15.5],   // Canaries
+          [21.0, -17.5],
+          [14.7, -17.4],   // Dakar
+          [5.0, -2.0],     // Gulf of Guinea
+          [-6.0, 12.0],    // off Congo
+          [-15.0, 12.0],   // off Angola
+          [-25.0, 14.5],   // off Namibia
+          [-34.4, 18.5],   // Cape of Good Hope
+          [-34.0, 26.0],   // off Port Elizabeth
+          [-30.0, 32.0],   // off Durban
+          [-20.0, 42.0],   // Mozambique Channel
+          [-12.0, 50.0],   // off Madagascar
+          [0.0, 60.0],     // Indian Ocean
+          [6.0, 80.5],     // south Sri Lanka
+          [1.3, 103.8]     // Singapore
+        ]
+      },
+      // --- Panama Canal route ---
+      {
+        name: "Canal de Panama",
+        traffic: 0.6,
+        coords: [
+          [40.7, -74.0],   // New York
+          [35.0, -75.0],   // off Carolinas
+          [28.0, -78.0],   // off Florida
+          [22.0, -80.0],   // Cuba Strait
+          [18.0, -78.0],   // Caribbean
+          [12.0, -80.0],   // approaching Panama
+          [9.0, -79.5],    // Panama Canal (Atlantic side)
+          [9.0, -79.6],    // Canal
+          [8.5, -79.5],    // Panama Canal (Pacific side)
+          [5.0, -85.0],    // off Central America
+          [10.0, -95.0],   // off Mexico
+          [18.0, -108.0],
+          [25.0, -115.0],
+          [33.7, -118.2]   // Los Angeles
+        ]
+      },
+      // --- Europe - South America ---
+      {
+        name: "Europe - Amerique du Sud",
+        traffic: 0.4,
+        coords: [
+          [48.0, -4.5],    // Brest
+          [43.5, -9.5],    // Finisterre
+          [38.0, -10.0],   // Lisbon
+          [28.5, -15.5],   // Canaries
+          [15.0, -25.0],   // mid-Atlantic
+          [5.0, -30.0],    // equatorial
+          [-5.0, -35.0],   // off NE Brazil
+          [-15.0, -38.0],  // off Bahia
+          [-23.5, -43.2]   // Rio de Janeiro / Santos
+        ]
+      }
     ];
-
-    // ============================================================
-    // ZEE REALISTIC POLYGONS (irregular shapes approximating real ZEE)
-    // ============================================================
-    // Instead of circles, use irregular polygons that approximate real ZEE boundaries
-    function generateRealisticEEZ(lat, lng, radiusKm, seed) {
-      const coords = [];
-      const R = 6371;
-      const points = 64;
-      // Use seed for reproducible irregular shapes
-      let s = seed;
-      function seededRandom() {
-        s = (s * 9301 + 49297) % 233280;
-        return s / 233280;
-      }
-      for (let i = 0; i <= points; i++) {
-        const angle = (2 * Math.PI * i) / points;
-        // Vary radius by ±30% with smooth noise
-        const noise1 = Math.sin(angle * 3 + seed) * 0.15;
-        const noise2 = Math.sin(angle * 7 + seed * 2.3) * 0.08;
-        const noise3 = Math.cos(angle * 5 + seed * 1.7) * 0.1;
-        const rFactor = 1 + noise1 + noise2 + noise3;
-        const r = radiusKm * rFactor;
-        const dLat = (r / R) * Math.cos(angle) * (180 / Math.PI);
-        const dLng = (r / R) * Math.sin(angle) * (180 / Math.PI) / Math.cos(lat * Math.PI / 180);
-        coords.push([lng + dLng, lat + dLat]);
-      }
-      return coords;
-    }
-
-    function generateEEZFeatures() {
-      return frenchTerritories.map((t, i) => {
-        const radius = Math.sqrt(t.eezKm2 / Math.PI);
-        return {
-          type: "Feature",
-          properties: { name: t.name, eezKm2: t.eezKm2, info: t.info },
-          geometry: {
-            type: "Polygon",
-            coordinates: [generateRealisticEEZ(t.lat, t.lng, radius, (i + 1) * 137)]
-          }
-        };
-      });
-    }
 
     // ============================================================
     // LAYER STATE
@@ -491,6 +1383,46 @@
     }
 
     // ============================================================
+    // CONVERT EEZ DATA TO GEOJSON FEATURES
+    // ============================================================
+    function generateEEZFeatures() {
+      return frenchEEZPolygons.map(zone => ({
+        type: "Feature",
+        properties: {
+          name: zone.name,
+          eezKm2: zone.eezKm2,
+          info: zone.info
+        },
+        geometry: {
+          type: "Polygon",
+          coordinates: zone.coordinates
+        }
+      }));
+    }
+
+    // ============================================================
+    // PREPARE CABLE PATH DATA (for pathsData — surface-hugging)
+    // ============================================================
+    function buildCablePathData() {
+      return submarineCables.map(cable => ({
+        coords: cable.coords,
+        name: cable.name,
+        color: cable.color
+      }));
+    }
+
+    // ============================================================
+    // PREPARE SHIPPING ROUTE DATA (for arcsData with 0 altitude)
+    // ============================================================
+    function buildShippingPathData() {
+      return shippingRoutes.map(route => ({
+        coords: route.coords,
+        name: route.name,
+        traffic: route.traffic
+      }));
+    }
+
+    // ============================================================
     // GLOBE INITIALIZATION
     // ============================================================
     let globe;
@@ -509,10 +1441,10 @@
         .height(window.innerHeight)
         (container);
 
-      // Set initial view on France
+      // Set initial view on France / Atlantic
       globe.pointOfView({ lat: 30, lng: 20, altitude: 2.5 }, 1000);
 
-      // Custom globe material for darker ocean
+      // Custom globe material
       const globeMaterial = globe.globeMaterial();
       globeMaterial.bumpScale = 10;
 
@@ -544,7 +1476,7 @@
     function updateGlobe() {
       if (!globe) return;
 
-      // === EEZ POLYGONS ===
+      // === EEZ POLYGONS (realistic shapes from frenchEEZPolygons) ===
       const eezFeatures = layerState.eez ? generateEEZFeatures() : [];
       globe
         .polygonsData(eezFeatures)
@@ -560,7 +1492,7 @@
           </div>
         `);
 
-      // === TERRITORY POINTS (pulsing) ===
+      // === TERRITORY POINTS (pulsing green dots) ===
       const territoryPoints = layerState.territories ? frenchTerritories : [];
       globe
         .pointsData(territoryPoints)
@@ -587,74 +1519,117 @@
         .ringPropagationSpeed(1)
         .ringRepeatPeriod(3000);
 
-      // === SUBMARINE CABLES (arcs) ===
-      const cableArcs = [];
-      if (layerState.cables) {
-        submarineCables.forEach(cable => {
-          for (let i = 0; i < cable.coords.length - 1; i++) {
-            cableArcs.push({
-              startLat: cable.coords[i][0],
-              startLng: cable.coords[i][1],
-              endLat: cable.coords[i + 1][0],
-              endLng: cable.coords[i + 1][1],
-              color: cable.color,
-              name: cable.name
-            });
-          }
-        });
-      }
+      // === SUBMARINE CABLES as PATHS (surface-hugging, altitude 0) ===
+      // Cables use pathsData so they hug the globe surface
+      const cablePaths = layerState.cables ? buildCablePathData() : [];
       globe
-        .arcsData(cableArcs)
-        .arcStartLat('startLat')
-        .arcStartLng('startLng')
-        .arcEndLat('endLat')
-        .arcEndLng('endLng')
-        .arcColor('color')
-        .arcAltitude(0.005)
-        .arcAltitudeAutoScale(0.02)
-        .arcStroke(0.6)
-        .arcDashLength(0.8)
-        .arcDashGap(0.15)
-        .arcDashAnimateTime(3000)
-        .arcLabel(d => `
+        .pathsData(cablePaths)
+        .pathPoints('coords')
+        .pathPointLat(p => p[0])
+        .pathPointLng(p => p[1])
+        .pathColor(d => d.color)
+        .pathStroke(1.2)
+        .pathDashLength(0.6)
+        .pathDashGap(0.15)
+        .pathDashAnimateTime(4000)
+        .pathTransitionDuration(0)
+        .pathLabel(d => `
           <div style="background:rgba(10,14,26,0.9);padding:8px 12px;border-radius:6px;border:1px solid rgba(240,192,64,0.5);font-family:Poppins,sans-serif;">
             <div style="font-weight:600;color:#f0c040;font-size:0.8rem;">${d.name}</div>
             <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;">Cable sous-marin</div>
           </div>
         `);
 
-      // === SHIPPING ROUTES ===
+      // === SHIPPING ROUTES as ARCS with altitude=0 and thick bright strokes ===
+      // We use arcsData for shipping because pathsData is taken by cables
+      // Set arcAltitude and arcAltitudeAutoScale to 0 so they stay on surface
+      const shippingArcs = [];
       if (layerState.shipping) {
-        // Add shipping as a second arc layer using custom paths
-        const shippingArcs = shippingRoutes.map(r => ({
-          startLat: r.start.lat,
-          startLng: r.start.lng,
-          endLat: r.end.lat,
-          endLng: r.end.lng,
-          name: r.name,
-          color: ['rgba(255,107,53,0.6)', 'rgba(255,107,53,0.3)']
-        }));
-        // We'll overlay shipping routes using paths
+        shippingRoutes.forEach(route => {
+          for (let i = 0; i < route.coords.length - 1; i++) {
+            shippingArcs.push({
+              startLat: route.coords[i][0],
+              startLng: route.coords[i][1],
+              endLat: route.coords[i + 1][0],
+              endLng: route.coords[i + 1][1],
+              name: route.name,
+              traffic: route.traffic
+            });
+          }
+        });
+      }
+      globe
+        .arcsData(shippingArcs)
+        .arcStartLat('startLat')
+        .arcStartLng('startLng')
+        .arcEndLat('endLat')
+        .arcEndLng('endLng')
+        .arcColor(d => {
+          // Brighter color with opacity based on traffic density
+          const alpha = 0.3 + d.traffic * 0.55;
+          return [`rgba(255, 107, 53, ${alpha})`, `rgba(255, 160, 80, ${alpha * 0.7})`];
+        })
+        .arcAltitude(0)
+        .arcAltitudeAutoScale(0)
+        .arcStroke(d => 0.8 + d.traffic * 2.0)
+        .arcDashLength(0.4)
+        .arcDashGap(0.2)
+        .arcDashAnimateTime(d => 3000 + (1 - d.traffic) * 4000)
+        .arcLabel(d => `
+          <div style="background:rgba(10,14,26,0.9);padding:8px 12px;border-radius:6px;border:1px solid rgba(255,107,53,0.5);font-family:Poppins,sans-serif;">
+            <div style="font-weight:600;color:#ff6b35;font-size:0.8rem;">${d.name}</div>
+            <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;">Route maritime majeure</div>
+          </div>
+        `);
+
+      // === TRAFFIC DENSITY HEATMAP via custom hex layer ===
+      // Add heatmap dots at route waypoints to show traffic density
+      if (layerState.shipping) {
+        const heatmapPoints = [];
+        shippingRoutes.forEach(route => {
+          route.coords.forEach(coord => {
+            heatmapPoints.push({
+              lat: coord[0],
+              lng: coord[1],
+              traffic: route.traffic,
+              name: route.name
+            });
+          });
+          // Add interpolated midpoints for denser coverage
+          for (let i = 0; i < route.coords.length - 1; i++) {
+            const midLat = (route.coords[i][0] + route.coords[i + 1][0]) / 2;
+            const midLng = (route.coords[i][1] + route.coords[i + 1][1]) / 2;
+            heatmapPoints.push({
+              lat: midLat,
+              lng: midLng,
+              traffic: route.traffic,
+              name: route.name
+            });
+          }
+        });
+
         globe
-          .pathsData(shippingRoutes.map(r => ({
-            coords: [[r.start.lat, r.start.lng], [r.end.lat, r.end.lng]],
-            name: r.name
-          })))
-          .pathPointLat(p => p[0])
-          .pathPointLng(p => p[1])
-          .pathColor(() => ['rgba(255,107,53,0.5)', 'rgba(255,107,53,0.2)'])
-          .pathStroke(1.5)
-          .pathDashLength(0.3)
-          .pathDashGap(0.1)
-          .pathDashAnimateTime(6000)
-          .pathLabel(d => `
-            <div style="background:rgba(10,14,26,0.9);padding:8px 12px;border-radius:6px;border:1px solid rgba(255,107,53,0.5);font-family:Poppins,sans-serif;">
-              <div style="font-weight:600;color:#ff6b35;font-size:0.8rem;">${d.name}</div>
-              <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;">Route maritime majeure</div>
-            </div>
-          `);
+          .hexBinPointsData(heatmapPoints)
+          .hexBinPointLat('lat')
+          .hexBinPointLng('lng')
+          .hexBinPointWeight(d => d.traffic)
+          .hexBinResolution(3)
+          .hexAltitude(d => d.sumWeight * 0.01)
+          .hexTopColor(d => {
+            const intensity = Math.min(d.sumWeight, 3) / 3;
+            const r = Math.floor(255);
+            const g = Math.floor(107 + (1 - intensity) * 80);
+            const b = Math.floor(53);
+            return `rgba(${r}, ${g}, ${b}, ${0.15 + intensity * 0.35})`;
+          })
+          .hexSideColor(d => {
+            const intensity = Math.min(d.sumWeight, 3) / 3;
+            return `rgba(255, 107, 53, ${0.05 + intensity * 0.15})`;
+          })
+          .hexBinMerge(true)
+          .hexTransitionDuration(0);
       } else {
-        globe.pathsData([]);
+        globe.hexBinPointsData([]);
       }
     }
 

@@ -47,6 +47,44 @@
 |------------|---------|
 | Enrichi le moment fondateur 2013 Marseille : "première confrontation aux données maritimes : gap technologique + impact environnemental" | Section 2.1 (tableau Phase 2) et Section 2.4 (storytelling) |
 
+### Itération 2 — Refonte majeure des 4 prototypes (4 mars 2026)
+
+**Retours reçus de Colomban :**
+
+#### Proto 1 — Globe 3D
+| Problème | Sévérité | Correction |
+|----------|----------|------------|
+| Les câbles sous-marins coupent la terre, rendu très moche | Bloquant | Réécriture complète du système de câbles : utilisation de `pathsData` qui suit la surface du globe au lieu d'arcs. Tracés réalistes avec waypoints intermédiaires contournant les continents (détroits de Gibraltar, Suez, Malacca, cap de Bonne-Espérance) |
+| Les ZEE sont centrées sur les territoires mais ne suivent pas les contours réels | Bloquant | Remplacement des cercles procéduraux par des polygones approximant les vraies frontières ZEE. Coordonnées recherchées pour chaque territoire (Polynésie = vaste zone irrégulière, métropole = suit la côte, etc.) |
+| Routes maritimes / densité de trafic invisibles | Majeur | Routes maritimes entièrement refaites avec waypoints réalistes passant par les détroits stratégiques. Strokes plus épais, couleurs plus vives. Ajout d'une couche de densité de trafic |
+| Version Océanocratie pas par défaut | Mineur | Version B ("Océanocratie — Une nation libre regarde la mer") définie comme version par défaut |
+
+#### Proto 2 — Matrice 3D
+| Problème | Sévérité | Correction |
+|----------|----------|------------|
+| Rien ne bouge, aucune interaction possible | Bloquant | Réécriture complète : animations de respiration amplifiées, particules coulant le long des connexions, plans qui ondulent, intro animée. Hover = highlight connexions + ripple. Clic = zoom caméra vers sphère. Navigation clavier (flèches). Double-clic = reset vue. Support tactile mobile. Sphère Océanocratie au centre avec glow doré spécial |
+| Version Océanocratie pas par défaut | Mineur | Version B définie comme message par défaut |
+
+#### Proto 3 — Carte marine parcours
+| Problème | Sévérité | Correction |
+|----------|----------|------------|
+| Carte du monde non affichée, on ne sait pas où on est | Bloquant | Réécriture du fond de carte avec continent complets (Europe, Afrique, Asie, Amériques, Australie), 50+ points par continent, remplissage terrestre visible, labels pays/océans clairs, grille avec coordonnées |
+| Labels se superposent, manque de clarté | Majeur | Système de gestion intelligente des labels : suppression progressive quand le tracé revient au même endroit. Détection de collision. Seul le label le plus récent est affiché par position |
+| Manque le moment fondateur Opsealog 2013 Marseille dans la spec | Mineur | Ajouté dans la spec : "Première confrontation aux données maritimes : gap technologique abyssal + impact environnemental massif. C'est à Marseille en 2013 que naît la conviction fondatrice." Waypoint #6 enrichi avec détail complet |
+
+#### Proto 4 — Média-viz constellation
+| Problème | Sévérité | Correction |
+|----------|----------|------------|
+| Filtre "Conférence" ne fonctionne pas | Majeur | Correction du système de filtrage. Utilisation des vraies conférences de la spec (Euromaritime, Académie de Marine, Propeller Club, Race for Water, Digital Ship, Rennes, Mérite Maritime, etc.) |
+| Pas d'interaction claire pour la timeline | Majeur | Ajout bouton Play/Pause pour avancer année par année avec animation. Boutons prev/next année. Scrubber draggable avec handle visible. Années cliquables |
+| Trop d'espace, pas assez condensé | Moyen | Layout entièrement condensé : publications plus petites, marges réduites, stats compactes, filtres space-efficient. Couleurs utilisées comme identifiants principaux |
+
+#### Spec — Mises à jour
+| Changement | Section |
+|------------|---------|
+| Enrichi le moment fondateur 2013 : ajout de la phrase "C'est à Marseille en 2013 que naît la conviction fondatrice : technologie et environnement sont indissociables" | Section 2.1 Phase 2, waypoint Jul 2013-Jan 2014 |
+| Confirmé Océanocratie comme scénario par défaut des prototypes | Section 1.4 |
+
 ---
 
 ## 2. DÉCISIONS DE DESIGN
@@ -57,25 +95,30 @@
 - **Canvas 2D** suffisant pour la carte marine et la média-viz (pas besoin de WebGL)
 - **Scroll-driven animation** fonctionne bien pour le storytelling (proto 3)
 
-### Points d'attention pour la V2
-1. **Données réelles** : Les prototypes utilisent des données simulées/simplifiées. La V2 devra intégrer :
-   - Vraies frontières ZEE (GeoJSON via Marine Regions ou GFW)
-   - Tracés réels des câbles sous-marins (TeleGeography API)
-   - Densité de trafic maritime (GMTDS ou ArcGIS)
-   - Publications réelles depuis la base Notion
+### Points d'attention pour la V2/V3
+1. **Données réelles** : L'itération 2 utilise des approximations manuelles beaucoup plus réalistes (ZEE polygones, câbles avec waypoints, routes via détroits). La V3 devra intégrer :
+   - Vraies frontières ZEE (GeoJSON via Marine Regions ou GFW API)
+   - Tracés exacts des câbles sous-marins (TeleGeography API / submarinecablemap.com)
+   - Densité de trafic maritime réelle (GMTDS heatmap ou ArcGIS)
+   - Publications réelles depuis la base Notion (remplacer les données générées)
 2. **Mobile** : Aucun prototype n'a de fallback mobile. Prévoir des versions simplifiées 2D.
 3. **Performance** : Le globe avec toutes les couches activées peut être lourd. Prévoir du lazy loading et des niveaux de détail adaptatifs.
+4. **Scénario par défaut** : Océanocratie confirmé comme le scénario principal sur tous les prototypes.
 
 ---
 
 ## 3. PROCHAINES ÉTAPES
 
-1. Tester les prototypes corrigés dans un navigateur
-2. Itérer sur les retours
-3. Commencer l'intégration de vraies données (GeoJSON ZEE, câbles, publications Notion)
-4. Choisir la stack technique finale (consulter spec Palantiri)
-5. Prototyper le design system basé sur le noeud
-6. Développer la V1 du site
+1. Tester les prototypes v2 (itération 2) dans un navigateur
+2. Itérer sur les retours de Colomban
+3. Intégrer les vraies données pour chaque proto :
+   - Globe : GeoJSON ZEE réelles (Marine Regions), câbles exacts (TeleGeography), heatmap trafic (GMTDS)
+   - Carte : fond de carte Mapbox GL ou tuiles OpenStreetMap pour un rendu professionnel
+   - Média-viz : connexion à la base Notion des publications réelles
+4. Développer les fallbacks mobile (2D simplifiés)
+5. Choisir la stack technique finale (consulter spec Palantiri)
+6. Prototyper le design system basé sur le noeud
+7. Développer la V1 du site
 
 ---
 

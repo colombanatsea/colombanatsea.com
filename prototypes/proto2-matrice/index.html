@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Proto 2 — Matrice Triple Transition Maritime</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
@@ -13,6 +13,7 @@
             font-family: 'Poppins', sans-serif;
             overflow: hidden;
             height: 100vh;
+            touch-action: none;
         }
 
         #canvas-container {
@@ -20,6 +21,16 @@
             top: 0; left: 0;
             width: 100%; height: 100%;
             z-index: 1;
+        }
+
+        /* Vignette overlay */
+        .vignette {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 2;
+            pointer-events: none;
+            background: radial-gradient(ellipse at center, transparent 50%, rgba(5,7,15,0.7) 100%);
         }
 
         /* Message versions toggle */
@@ -35,6 +46,8 @@
             border-radius: 30px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.1);
+            opacity: 0;
+            animation: fadeInDown 0.8s ease 2.5s forwards;
         }
         .msg-btn {
             padding: 8px 18px;
@@ -110,10 +123,19 @@
             border-radius: 16px;
             padding: 32px;
             z-index: 200;
-            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             overflow-y: auto;
         }
         .detail-panel.open { right: 30px; }
+        .detail-panel .panel-content {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
+        }
+        .detail-panel.open .panel-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
         .detail-panel .close-btn {
             position: absolute;
             top: 16px; right: 16px;
@@ -122,7 +144,9 @@
             color: rgba(255,255,255,0.5);
             font-size: 20px;
             cursor: pointer;
+            transition: color 0.2s;
         }
+        .detail-panel .close-btn:hover { color: #fff; }
         .detail-panel h2 {
             font-size: 22px;
             font-weight: 700;
@@ -145,6 +169,7 @@
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
+            margin-bottom: 16px;
         }
         .axis-tag {
             padding: 4px 12px;
@@ -158,6 +183,34 @@
         .axis-tag.enviro { background: rgba(0,191,99,0.2); color: #4dff99; border: 1px solid rgba(0,191,99,0.3); }
         .axis-tag.socio { background: rgba(179,42,85,0.3); color: #ff6b99; border: 1px solid rgba(179,42,85,0.4); }
 
+        .panel-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .panel-nav button {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            padding: 6px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            transition: all 0.2s;
+        }
+        .panel-nav button:hover {
+            background: rgba(255,255,255,0.12);
+            color: #fff;
+        }
+        .panel-nav .counter {
+            font-size: 11px;
+            color: rgba(255,255,255,0.35);
+        }
+
         /* Legend */
         .legend {
             position: fixed;
@@ -167,6 +220,8 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 2.8s forwards;
         }
         .legend-item {
             display: flex;
@@ -191,6 +246,8 @@
             color: rgba(255,255,255,0.3);
             text-align: right;
             line-height: 1.8;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 3s forwards;
         }
 
         /* Watermark */
@@ -205,30 +262,57 @@
             letter-spacing: 2px;
             text-transform: uppercase;
         }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .detail-panel {
+                width: calc(100% - 32px);
+                right: -110%;
+                top: auto;
+                bottom: 16px;
+                transform: none;
+                max-height: 55vh;
+                border-radius: 16px;
+            }
+            .detail-panel.open { right: 16px; }
+            .controls-hint { display: none; }
+            .legend { bottom: 16px; left: 16px; }
+            .message-toggle { top: 12px; }
+            .msg-btn { padding: 6px 12px; font-size: 11px; }
+        }
     </style>
 </head>
 <body>
     <div id="canvas-container"></div>
+    <div class="vignette"></div>
 
     <!-- Message versions -->
     <div class="message-toggle">
-        <button class="msg-btn active" data-msg="A">A — Construire</button>
-        <button class="msg-btn" data-msg="B">B — Océanocratie</button>
+        <button class="msg-btn" data-msg="A">A — Construire</button>
+        <button class="msg-btn active" data-msg="B">B — Oceanocratie</button>
         <button class="msg-btn" data-msg="C">C — Triple transition</button>
     </div>
 
     <!-- Central messages -->
-    <div class="central-message" id="msg-A">
+    <div class="central-message" id="msg-A" style="opacity:0;">
         <h1>Construire le monde<br>maritime de demain</h1>
         <div class="subtitle">Le maritime dans le sang depuis 1991</div>
     </div>
-    <div class="central-message" id="msg-B" style="opacity:0;">
-        <h1>Océanocratie</h1>
+    <div class="central-message" id="msg-B">
+        <h1>Oceanocratie</h1>
         <div class="subtitle">Une nation libre regarde la mer</div>
     </div>
     <div class="central-message" id="msg-C" style="opacity:0;">
         <h1>La triple transition<br>maritime</h1>
-        <div class="subtitle">Technologique · Environnementale · Socioculturelle</div>
+        <div class="subtitle">Technologique . Environnementale . Socioculturelle</div>
     </div>
 
     <!-- Legend -->
@@ -251,25 +335,34 @@
     <div class="controls-hint">
         Clic gauche : rotation<br>
         Molette : zoom<br>
-        Clic sur sphère : détails
+        Clic sur sphere : details<br>
+        Double-clic : reset vue<br>
+        Fleches : naviguer
     </div>
 
     <div class="watermark">COLOMBAN — PROTO 2 — MATRICE 3D</div>
 
     <!-- Detail panel -->
     <div class="detail-panel" id="detail-panel">
-        <button class="close-btn" onclick="closePanel()">✕</button>
-        <h2 id="panel-title"></h2>
-        <div class="role" id="panel-role"></div>
-        <div class="description" id="panel-desc"></div>
-        <div class="axes-tags" id="panel-axes"></div>
+        <button class="close-btn" id="close-panel-btn">&#x2715;</button>
+        <div class="panel-content">
+            <h2 id="panel-title"></h2>
+            <div class="role" id="panel-role"></div>
+            <div class="description" id="panel-desc"></div>
+            <div class="axes-tags" id="panel-axes"></div>
+            <div class="panel-nav">
+                <button id="panel-prev">&#8592; Prec.</button>
+                <span class="counter" id="panel-counter"></span>
+                <button id="panel-next">Suiv. &#8594;</button>
+            </div>
+        </div>
     </div>
 
     <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
     <script>
-    // ═══════════════════════════════════════════
-    // DATA — Engagements de Colomban
-    // ═══════════════════════════════════════════
+    // =============================================
+    // DATA
+    // =============================================
     const COLORS = {
         techno: 0x2a55b3,
         enviro: 0x00bf63,
@@ -280,122 +373,74 @@
 
     const engagements = [
         {
-            id: 'gaspe',
-            name: 'GASPE',
-            role: 'Délégué Général',
-            description: 'Groupement des Armateurs de Services Publics maritimes et de Passages d\'Eau. Représentation et défense des intérêts des armateurs de service public maritime.',
-            axes: ['socio'],
-            position: { x: 3.2, y: -1.5, z: 1.8 },
-            size: 0.45
+            id: 'gaspe', name: 'GASPE', role: 'Delegue General',
+            description: 'Groupement des Armateurs de Services Publics maritimes et de Passages d\'Eau. Representation et defense des interets des armateurs de service public maritime.',
+            axes: ['socio'], position: { x: 3.2, y: -1.5, z: 1.8 }, size: 0.45
         },
         {
-            id: 'vaiata',
-            name: 'VAIATA Dynamics',
-            role: 'Co-fondateur',
-            description: 'Technologie au service du sauvetage en mer et sauvetage digital des compagnies maritimes. Volet cyberdéfense maritime.',
-            axes: ['techno'],
-            position: { x: -2.8, y: 2.0, z: -1.2 },
-            size: 0.4
+            id: 'vaiata', name: 'VAIATA Dynamics', role: 'Co-fondateur',
+            description: 'Technologie au service du sauvetage en mer et sauvetage digital des compagnies maritimes. Volet cyberdefense maritime.',
+            axes: ['techno'], position: { x: -2.8, y: 2.0, z: -1.2 }, size: 0.4
         },
         {
-            id: 'fondation',
-            name: 'Fondation ENSM',
-            role: 'Président du conseil de gestion',
-            description: 'Former les futurs officiers de marine marchande. Assurer que la formation maritime française reste à la hauteur des enjeux de transition.',
-            axes: ['enviro', 'socio'],
-            position: { x: 0.5, y: -2.8, z: -2.0 },
-            size: 0.42
+            id: 'fondation', name: 'Fondation ENSM', role: 'President du conseil de gestion',
+            description: 'Former les futurs officiers de marine marchande. Assurer que la formation maritime francaise reste a la hauteur des enjeux de transition.',
+            axes: ['enviro', 'socio'], position: { x: 0.5, y: -2.8, z: -2.0 }, size: 0.42
         },
         {
-            id: 'enseignant',
-            name: 'Enseignant DD',
-            role: 'Professeur à l\'ENSM',
-            description: 'Enseignement de l\'écologie et du développement durable aux futurs officiers de marine marchande. Transmettre la conscience environnementale.',
-            axes: ['enviro'],
-            position: { x: -1.5, y: -2.2, z: 2.5 },
-            size: 0.35
+            id: 'enseignant', name: 'Enseignant DD', role: 'Professeur a l\'ENSM',
+            description: 'Enseignement de l\'ecologie et du developpement durable aux futurs officiers de marine marchande. Transmettre la conscience environnementale.',
+            axes: ['enviro'], position: { x: -1.5, y: -2.2, z: 2.5 }, size: 0.35
         },
         {
-            id: 'hydros',
-            name: 'HYDROS Alumni',
-            role: 'Bureau',
-            description: 'Réseau des anciens de l\'ENSM. Animation de la communauté maritime, transmission intergénérationnelle.',
-            axes: ['socio'],
-            position: { x: 2.5, y: 0.8, z: -2.5 },
-            size: 0.3
+            id: 'hydros', name: 'HYDROS Alumni', role: 'Bureau',
+            description: 'Reseau des anciens de l\'ENSM. Animation de la communaute maritime, transmission intergenerationnelle.',
+            axes: ['socio'], position: { x: 2.5, y: 0.8, z: -2.5 }, size: 0.3
         },
         {
-            id: 'propeller',
-            name: 'Propeller Club',
-            role: 'Membre',
-            description: 'Réseau international du commerce maritime. Échange entre acteurs du maritime, promotion du transport maritime.',
-            axes: ['socio'],
-            position: { x: 3.5, y: 1.8, z: 0.5 },
-            size: 0.28
+            id: 'propeller', name: 'Propeller Club', role: 'Membre',
+            description: 'Reseau international du commerce maritime. Echange entre acteurs du maritime, promotion du transport maritime.',
+            axes: ['socio'], position: { x: 3.5, y: 1.8, z: 0.5 }, size: 0.28
         },
         {
-            id: 'aperitifs',
-            name: 'Apéritifs de la Mer',
-            role: 'Ambassadeur & animateur',
+            id: 'aperitifs', name: 'Aperitifs de la Mer', role: 'Ambassadeur & animateur',
             description: 'Rendre le maritime accessible au grand public. Vulgarisation festive et culturelle des enjeux maritimes.',
-            axes: ['socio'],
-            position: { x: 1.0, y: 2.8, z: 2.2 },
-            size: 0.32
+            axes: ['socio'], position: { x: 1.0, y: 2.8, z: 2.2 }, size: 0.32
         },
         {
-            id: 'advisory',
-            name: 'Advisory Boards',
-            role: 'Membre consultatif',
-            description: 'Conseil stratégique auprès d\'entreprises maritimes en transition (de 2 à 47 000 salariés). Stratégie, digitalisation, environnement.',
-            axes: ['techno', 'enviro', 'socio'],
-            position: { x: -3.0, y: -0.5, z: -1.8 },
-            size: 0.38
+            id: 'advisory', name: 'Advisory Boards', role: 'Membre consultatif',
+            description: 'Conseil strategique aupres d\'entreprises maritimes en transition (de 2 a 47 000 salaries). Strategie, digitalisation, environnement.',
+            axes: ['techno', 'enviro', 'socio'], position: { x: -3.0, y: -0.5, z: -1.8 }, size: 0.38
         },
         {
-            id: 'medias',
-            name: 'Leader d\'opinion',
-            role: 'Prises de parole & médias',
-            description: 'Publications, conférences, médias (Marine & Océans, Conflits, Jeune Marine, Le Monde). Construire le narratif de la transition maritime.',
-            axes: ['techno', 'enviro', 'socio'],
-            position: { x: 0, y: 3.0, z: -0.5 },
-            size: 0.5
+            id: 'medias', name: 'Leader d\'opinion', role: 'Prises de parole & medias',
+            description: 'Publications, conferences, medias (Marine & Oceans, Conflits, Jeune Marine, Le Monde). Construire le narratif de la transition maritime.',
+            axes: ['techno', 'enviro', 'socio'], position: { x: 0, y: 3.0, z: -0.5 }, size: 0.5
         },
         {
-            id: 'coespc',
-            name: 'COESPC',
-            role: 'Bureau',
-            description: 'Fête villageoise caritative à Annecy-le-Vieux. Ancrage local, engagement citoyen au-delà du maritime.',
-            axes: ['socio'],
-            position: { x: -2.0, y: 1.5, z: 3.0 },
-            size: 0.25
+            id: 'coespc', name: 'COESPC', role: 'Bureau',
+            description: 'Fete villageoise caritative a Annecy-le-Vieux. Ancrage local, engagement citoyen au-dela du maritime.',
+            axes: ['socio'], position: { x: -2.0, y: 1.5, z: 3.0 }, size: 0.25
         },
         {
-            id: 'opsealog',
-            name: 'Opsealog',
-            role: 'Participation à la création',
-            description: 'Pionnier de la donnée maritime. Réduction de 15% des consommations de centaines de navires dans 17 pays. Outils réglementaires EU MRV, CII, EEXI.',
-            axes: ['techno', 'enviro'],
-            position: { x: -2.5, y: -1.0, z: 1.5 },
-            size: 0.4
+            id: 'opsealog', name: 'Opsealog', role: 'Participation a la creation',
+            description: 'Pionnier de la donnee maritime. Reduction de 15% des consommations de centaines de navires dans 17 pays. Outils reglementaires EU MRV, CII, EEXI.',
+            axes: ['techno', 'enviro'], position: { x: -2.5, y: -1.0, z: 1.5 }, size: 0.4
         },
         {
-            id: 'oceanocrat',
-            name: 'Océanocratie',
-            role: 'Le livre — fin 2026',
-            description: 'Une nation libre regarde la mer. Manifeste pour une France qui assume sa dimension maritime de 11 millions de km².',
-            axes: ['techno', 'enviro', 'socio'],
-            position: { x: 0, y: 0, z: 0 },
-            size: 0.6
+            id: 'oceanocrat', name: 'Oceanocratie', role: 'Le livre — fin 2026',
+            description: 'Une nation libre regarde la mer. Manifeste pour une France qui assume sa dimension maritime de 11 millions de km2.',
+            axes: ['techno', 'enviro', 'socio'], position: { x: 0, y: 0, z: 0 }, size: 0.6
         }
     ];
 
-    // ═══════════════════════════════════════════
+    // =============================================
     // THREE.JS SCENE SETUP
-    // ═══════════════════════════════════════════
+    // =============================================
     const container = document.getElementById('canvas-container');
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
-    camera.position.set(0, 0, 12);
+    camera.position.set(0, 0, 14);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -403,26 +448,39 @@
     renderer.setClearColor(COLORS.bg, 1);
     container.appendChild(renderer.domElement);
 
-    // Raycaster for interaction
     const raycaster = new THREE.Raycaster();
-    const mouse = new THREE.Vector2();
+    const mouse = new THREE.Vector2(-999, -999);
     let hoveredObject = null;
     let selectedObject = null;
+    let selectedIndex = -1;
+    const isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-    // ═══════════════════════════════════════════
-    // ORBIT CONTROLS (minimal custom implementation)
-    // ═══════════════════════════════════════════
+    if (isMobile) {
+        raycaster.params.Mesh = { threshold: 0.5 };
+    }
+
+    // =============================================
+    // ORBIT CONTROLS (custom with touch)
+    // =============================================
     let isDragging = false;
+    let dragMoved = false;
     let previousMousePosition = { x: 0, y: 0 };
     let rotationTarget = { x: 0, y: 0 };
     let currentRotation = { x: 0, y: 0 };
-    let zoom = 12;
+    let zoom = 14;
+    let zoomTarget = 14;
     let autoRotate = true;
+    let cameraLookTarget = new THREE.Vector3(0, 0, 0);
+    let cameraLookCurrent = new THREE.Vector3(0, 0, 0);
+    let zoomingToSphere = false;
 
+    // Mouse events
     container.addEventListener('mousedown', (e) => {
         isDragging = true;
+        dragMoved = false;
         previousMousePosition = { x: e.clientX, y: e.clientY };
         autoRotate = false;
+        resetAutoRotateTimer();
     });
     container.addEventListener('mousemove', (e) => {
         mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
@@ -430,6 +488,7 @@
         if (isDragging) {
             const dx = e.clientX - previousMousePosition.x;
             const dy = e.clientY - previousMousePosition.y;
+            if (Math.abs(dx) > 2 || Math.abs(dy) > 2) dragMoved = true;
             rotationTarget.y += dx * 0.005;
             rotationTarget.x += dy * 0.005;
             rotationTarget.x = Math.max(-Math.PI / 3, Math.min(Math.PI / 3, rotationTarget.x));
@@ -438,15 +497,88 @@
     });
     container.addEventListener('mouseup', () => { isDragging = false; });
     container.addEventListener('wheel', (e) => {
-        zoom += e.deltaY * 0.01;
-        zoom = Math.max(5, Math.min(20, zoom));
+        e.preventDefault();
+        zoomTarget += e.deltaY * 0.008;
+        zoomTarget = Math.max(5, Math.min(20, zoomTarget));
+        autoRotate = false;
+        resetAutoRotateTimer();
+    }, { passive: false });
+
+    // Touch events
+    let touchStartDist = 0;
+    let lastTap = 0;
+    container.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+            isDragging = true;
+            dragMoved = false;
+            previousMousePosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+            mouse.x = (e.touches[0].clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(e.touches[0].clientY / window.innerHeight) * 2 + 1;
+            autoRotate = false;
+            resetAutoRotateTimer();
+
+            // Double-tap detection
+            const now = Date.now();
+            if (now - lastTap < 300) { resetCameraView(); }
+            lastTap = now;
+        } else if (e.touches.length === 2) {
+            isDragging = false;
+            const dx = e.touches[0].clientX - e.touches[1].clientX;
+            const dy = e.touches[0].clientY - e.touches[1].clientY;
+            touchStartDist = Math.sqrt(dx * dx + dy * dy);
+        }
+    }, { passive: true });
+    container.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        if (e.touches.length === 1 && isDragging) {
+            const tx = e.touches[0].clientX;
+            const ty = e.touches[0].clientY;
+            const dx = tx - previousMousePosition.x;
+            const dy = ty - previousMousePosition.y;
+            if (Math.abs(dx) > 2 || Math.abs(dy) > 2) dragMoved = true;
+            rotationTarget.y += dx * 0.005;
+            rotationTarget.x += dy * 0.005;
+            rotationTarget.x = Math.max(-Math.PI / 3, Math.min(Math.PI / 3, rotationTarget.x));
+            previousMousePosition = { x: tx, y: ty };
+            mouse.x = (tx / window.innerWidth) * 2 - 1;
+            mouse.y = -(ty / window.innerHeight) * 2 + 1;
+        } else if (e.touches.length === 2) {
+            const dx = e.touches[0].clientX - e.touches[1].clientX;
+            const dy = e.touches[0].clientY - e.touches[1].clientY;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            const delta = touchStartDist - dist;
+            zoomTarget += delta * 0.02;
+            zoomTarget = Math.max(5, Math.min(20, zoomTarget));
+            touchStartDist = dist;
+        }
+    }, { passive: false });
+    container.addEventListener('touchend', (e) => {
+        if (e.touches.length === 0) {
+            // Simulate click on touch end if no drag
+            if (!dragMoved) {
+                handleClick();
+            }
+            isDragging = false;
+        }
     });
 
-    // ═══════════════════════════════════════════
+    // Double-click to reset
+    container.addEventListener('dblclick', () => { resetCameraView(); });
+
+    function resetCameraView() {
+        zoomTarget = 14;
+        rotationTarget.x = 0;
+        rotationTarget.y = currentRotation.y;
+        cameraLookTarget.set(0, 0, 0);
+        zoomingToSphere = false;
+        closePanel();
+        autoRotate = true;
+    }
+
+    // =============================================
     // LIGHTING
-    // ═══════════════════════════════════════════
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
-    scene.add(ambientLight);
+    // =============================================
+    scene.add(new THREE.AmbientLight(0xffffff, 0.3));
 
     const pointLight1 = new THREE.PointLight(0x2a55b3, 1.5, 30);
     pointLight1.position.set(-8, 5, 5);
@@ -460,123 +592,184 @@
     pointLight3.position.set(0, -8, 8);
     scene.add(pointLight3);
 
-    // ═══════════════════════════════════════════
-    // 3 TRANSITION PLANES (semi-transparent)
-    // ═══════════════════════════════════════════
-    function createTransitionPlane(color, rotation, opacity = 0.06) {
-        const geometry = new THREE.PlaneGeometry(18, 18, 20, 20);
+    // =============================================
+    // 3 TRANSITION PLANES (undulating)
+    // =============================================
+    const planeSegments = 32;
+    function createTransitionPlane(color, rotation, opacity) {
+        const geometry = new THREE.PlaneGeometry(18, 18, planeSegments, planeSegments);
         const material = new THREE.MeshBasicMaterial({
-            color: color,
-            transparent: true,
-            opacity: opacity,
-            side: THREE.DoubleSide,
-            wireframe: false,
-            depthWrite: false
+            color: color, transparent: true, opacity: opacity || 0.06,
+            side: THREE.DoubleSide, depthWrite: false
         });
         const plane = new THREE.Mesh(geometry, material);
         plane.rotation.set(rotation.x, rotation.y, rotation.z);
 
-        // Add grid wireframe overlay
         const wireMaterial = new THREE.MeshBasicMaterial({
-            color: color,
-            transparent: true,
-            opacity: opacity * 2,
-            wireframe: true,
-            depthWrite: false
+            color: color, transparent: true, opacity: (opacity || 0.06) * 2,
+            wireframe: true, depthWrite: false
         });
-        const wireframe = new THREE.Mesh(geometry.clone(), wireMaterial);
+        const wireframe = new THREE.Mesh(new THREE.PlaneGeometry(18, 18, planeSegments, planeSegments), wireMaterial);
         wireframe.rotation.copy(plane.rotation);
+
+        // Store original positions for undulation
+        plane.userData.origPositions = new Float32Array(geometry.attributes.position.array);
+        wireframe.userData.origPositions = new Float32Array(wireframe.geometry.attributes.position.array);
 
         return { plane, wireframe };
     }
 
-    // Techno plane — tilted X
     const technoPlane = createTransitionPlane(COLORS.techno, { x: Math.PI * 0.4, y: 0.3, z: 0 });
     scene.add(technoPlane.plane);
     scene.add(technoPlane.wireframe);
 
-    // Enviro plane — tilted Y
     const enviroPlane = createTransitionPlane(COLORS.enviro, { x: 0.2, y: Math.PI * 0.35, z: 0.4 });
     scene.add(enviroPlane.plane);
     scene.add(enviroPlane.wireframe);
 
-    // Socio plane — tilted Z
     const socioPlane = createTransitionPlane(COLORS.socio, { x: -0.3, y: -0.2, z: Math.PI * 0.3 });
     scene.add(socioPlane.plane);
     scene.add(socioPlane.wireframe);
 
-    // ═══════════════════════════════════════════
+    const allPlanes = [technoPlane, enviroPlane, socioPlane];
+
+    function undulateGeometry(geom, origPositions, time, speed, amplitude, waveLength) {
+        const positions = geom.attributes.position.array;
+        const count = positions.length / 3;
+        for (let i = 0; i < count; i++) {
+            const ox = origPositions[i * 3];
+            const oy = origPositions[i * 3 + 1];
+            positions[i * 3 + 2] = origPositions[i * 3 + 2] +
+                Math.sin(ox * waveLength + time * speed) * amplitude +
+                Math.cos(oy * waveLength * 0.7 + time * speed * 0.8) * amplitude * 0.6;
+        }
+        geom.attributes.position.needsUpdate = true;
+    }
+
+    // =============================================
     // ENGAGEMENT SPHERES
-    // ═══════════════════════════════════════════
+    // =============================================
     const sphereGroup = new THREE.Group();
     const sphereMeshes = [];
+    const glowRings = [];
+    const sphereStartPositions = []; // for intro animation
 
-    engagements.forEach(eng => {
-        // Determine primary color (mix if multi-axis)
+    engagements.forEach((eng, idx) => {
         const axisColors = eng.axes.map(a => new THREE.Color(COLORS[a]));
         const mixedColor = new THREE.Color(0, 0, 0);
         axisColors.forEach(c => mixedColor.add(c));
         mixedColor.multiplyScalar(1 / axisColors.length);
 
-        // Sphere
-        const geometry = new THREE.SphereGeometry(eng.size, 32, 32);
+        const isOceanocrat = eng.id === 'oceanocrat';
+        const sphereColor = isOceanocrat ? new THREE.Color(0xffd480) : mixedColor;
+
+        // Sphere with higher segment count for smoothness
+        const geometry = new THREE.SphereGeometry(eng.size * (isOceanocrat ? 1.3 : 1), 48, 48);
         const material = new THREE.MeshPhongMaterial({
-            color: mixedColor,
+            color: sphereColor,
             transparent: true,
-            opacity: 0.85,
-            emissive: mixedColor,
-            emissiveIntensity: 0.3,
-            shininess: 80
+            opacity: 0.9,
+            emissive: sphereColor,
+            emissiveIntensity: isOceanocrat ? 0.5 : 0.3,
+            shininess: isOceanocrat ? 120 : 80
         });
         const sphere = new THREE.Mesh(geometry, material);
-        sphere.position.set(eng.position.x, eng.position.y, eng.position.z);
         sphere.userData = eng;
+        sphere.userData.baseColor = sphereColor.clone();
+        sphere.userData.mixedColor = mixedColor.clone();
+        sphere.userData.isOceanocrat = isOceanocrat;
+
+        // Start far away for intro animation
+        const angle = (idx / engagements.length) * Math.PI * 2;
+        const startDist = 25 + Math.random() * 15;
+        sphere.position.set(
+            Math.cos(angle) * startDist,
+            (Math.random() - 0.5) * startDist,
+            Math.sin(angle) * startDist
+        );
+        sphereStartPositions.push(sphere.position.clone());
+
         sphereGroup.add(sphere);
         sphereMeshes.push(sphere);
 
-        // Glow ring
-        const glowGeom = new THREE.RingGeometry(eng.size * 1.2, eng.size * 1.5, 32);
-        const glowMat = new THREE.MeshBasicMaterial({
-            color: mixedColor,
-            transparent: true,
-            opacity: 0.15,
-            side: THREE.DoubleSide,
-            depthWrite: false
+        // Billboard glow ring (using sprite approach)
+        const ringCanvas = document.createElement('canvas');
+        ringCanvas.width = 128;
+        ringCanvas.height = 128;
+        const ctx = ringCanvas.getContext('2d');
+        const hexColor = '#' + (isOceanocrat ? 'ffd480' : sphereColor.getHexString());
+        const grad = ctx.createRadialGradient(64, 64, 30, 64, 64, 64);
+        grad.addColorStop(0, 'rgba(0,0,0,0)');
+        grad.addColorStop(0.5, hexColor + '30');
+        grad.addColorStop(0.7, hexColor + '18');
+        grad.addColorStop(1, 'rgba(0,0,0,0)');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, 128, 128);
+
+        const spriteTex = new THREE.CanvasTexture(ringCanvas);
+        const spriteMat = new THREE.SpriteMaterial({
+            map: spriteTex, transparent: true, depthWrite: false,
+            blending: THREE.AdditiveBlending
         });
-        const glow = new THREE.Mesh(glowGeom, glowMat);
-        glow.position.copy(sphere.position);
-        glow.lookAt(camera.position);
-        glow.userData = { isGlow: true, parent: sphere };
-        sphereGroup.add(glow);
+        const sprite = new THREE.Sprite(spriteMat);
+        const glowSize = eng.size * (isOceanocrat ? 5 : 3.5);
+        sprite.scale.set(glowSize, glowSize, 1);
+        sprite.position.copy(sphere.position);
+        sprite.userData = { isGlow: true, parentSphere: sphere, baseScale: glowSize };
+        sphereGroup.add(sprite);
+        glowRings.push(sprite);
+
+        // Extra golden outer glow for Oceanocratie
+        if (isOceanocrat) {
+            const outerCanvas = document.createElement('canvas');
+            outerCanvas.width = 256;
+            outerCanvas.height = 256;
+            const octx = outerCanvas.getContext('2d');
+            const ograd = octx.createRadialGradient(128, 128, 20, 128, 128, 128);
+            ograd.addColorStop(0, 'rgba(255,212,128,0.2)');
+            ograd.addColorStop(0.3, 'rgba(255,240,200,0.1)');
+            ograd.addColorStop(0.6, 'rgba(255,212,128,0.04)');
+            ograd.addColorStop(1, 'rgba(0,0,0,0)');
+            octx.fillStyle = ograd;
+            octx.fillRect(0, 0, 256, 256);
+
+            const outerTex = new THREE.CanvasTexture(outerCanvas);
+            const outerMat = new THREE.SpriteMaterial({
+                map: outerTex, transparent: true, depthWrite: false,
+                blending: THREE.AdditiveBlending
+            });
+            const outerSprite = new THREE.Sprite(outerMat);
+            outerSprite.scale.set(8, 8, 1);
+            outerSprite.position.copy(sphere.position);
+            outerSprite.userData = { isGlow: true, parentSphere: sphere, baseScale: 8, isOuter: true };
+            sphereGroup.add(outerSprite);
+            glowRings.push(outerSprite);
+        }
     });
 
     scene.add(sphereGroup);
 
-    // ═══════════════════════════════════════════
-    // CORDAGE CONNECTIONS (animated)
-    // ═══════════════════════════════════════════
+    // =============================================
+    // CONNECTIONS with flowing particles
+    // =============================================
     const connections = [];
     const connectionMeshes = [];
+    const connectionCurves = [];
+    const flowParticleGroups = [];
 
-    // Generate connections between engagements sharing axes
     for (let i = 0; i < engagements.length; i++) {
         for (let j = i + 1; j < engagements.length; j++) {
             const shared = engagements[i].axes.filter(a => engagements[j].axes.includes(a));
             if (shared.length > 0) {
-                connections.push({
-                    from: engagements[i],
-                    to: engagements[j],
-                    sharedAxes: shared
-                });
+                connections.push({ from: engagements[i], to: engagements[j], sharedAxes: shared });
             }
         }
     }
 
-    connections.forEach(conn => {
+    connections.forEach((conn, ci) => {
         const from = conn.from.position;
         const to = conn.to.position;
 
-        // Curved line with control point
         const mid = {
             x: (from.x + to.x) / 2 + (Math.random() - 0.5) * 1.5,
             y: (from.y + to.y) / 2 + (Math.random() - 0.5) * 1.5,
@@ -588,26 +781,51 @@
             new THREE.Vector3(mid.x, mid.y, mid.z),
             new THREE.Vector3(to.x, to.y, to.z)
         );
+        connectionCurves.push(curve);
 
-        const points = curve.getPoints(50);
+        const points = curve.getPoints(60);
         const geometry = new THREE.BufferGeometry().setFromPoints(points);
 
         const axisColor = new THREE.Color(COLORS[conn.sharedAxes[0]]);
         const material = new THREE.LineBasicMaterial({
-            color: axisColor,
-            transparent: true,
-            opacity: 0.25
+            color: axisColor, transparent: true, opacity: 0.2
         });
 
         const line = new THREE.Line(geometry, material);
-        line.userData = { connection: conn };
+        line.userData = { connection: conn, baseOpacity: 0.2, color: axisColor };
         connectionMeshes.push(line);
         scene.add(line);
+
+        // Flow particles along connection
+        const flowCount = 3 + Math.floor(Math.random() * 3);
+        const flowGeo = new THREE.BufferGeometry();
+        const flowPositions = new Float32Array(flowCount * 3);
+        const flowSizes = new Float32Array(flowCount);
+        const flowOffsets = new Float32Array(flowCount);
+
+        for (let f = 0; f < flowCount; f++) {
+            flowOffsets[f] = Math.random();
+            flowSizes[f] = 0.04 + Math.random() * 0.04;
+        }
+
+        flowGeo.setAttribute('position', new THREE.BufferAttribute(flowPositions, 3));
+        flowGeo.setAttribute('size', new THREE.BufferAttribute(flowSizes, 1));
+
+        const flowMat = new THREE.PointsMaterial({
+            color: axisColor, size: 0.08, transparent: true, opacity: 0.8,
+            depthWrite: false, sizeAttenuation: true,
+            blending: THREE.AdditiveBlending
+        });
+
+        const flowPoints = new THREE.Points(flowGeo, flowMat);
+        flowPoints.userData = { curveIndex: ci, offsets: flowOffsets, speed: 0.15 + Math.random() * 0.15 };
+        flowParticleGroups.push(flowPoints);
+        scene.add(flowPoints);
     });
 
-    // ═══════════════════════════════════════════
-    // PARTICLE FIELD (ambient)
-    // ═══════════════════════════════════════════
+    // =============================================
+    // AMBIENT PARTICLE FIELD
+    // =============================================
     const particlesCount = 1500;
     const particlesGeometry = new THREE.BufferGeometry();
     const particlesPositions = new Float32Array(particlesCount * 3);
@@ -623,7 +841,6 @@
         particlesPositions[i * 3] = (Math.random() - 0.5) * 30;
         particlesPositions[i * 3 + 1] = (Math.random() - 0.5) * 30;
         particlesPositions[i * 3 + 2] = (Math.random() - 0.5) * 30;
-
         const col = axisColorsList[Math.floor(Math.random() * 3)];
         particlesColors[i * 3] = col.r;
         particlesColors[i * 3 + 1] = col.g;
@@ -633,21 +850,15 @@
     particlesGeometry.setAttribute('position', new THREE.BufferAttribute(particlesPositions, 3));
     particlesGeometry.setAttribute('color', new THREE.BufferAttribute(particlesColors, 3));
 
-    const particlesMaterial = new THREE.PointsMaterial({
-        size: 0.03,
-        vertexColors: true,
-        transparent: true,
-        opacity: 0.5,
-        depthWrite: false,
-        sizeAttenuation: true
-    });
-
-    const particles = new THREE.Points(particlesGeometry, particlesMaterial);
+    const particles = new THREE.Points(particlesGeometry, new THREE.PointsMaterial({
+        size: 0.03, vertexColors: true, transparent: true, opacity: 0.5,
+        depthWrite: false, sizeAttenuation: true
+    }));
     scene.add(particles);
 
-    // ═══════════════════════════════════════════
-    // LABELS (HTML overlays for sphere names)
-    // ═══════════════════════════════════════════
+    // =============================================
+    // LABELS (HTML overlays)
+    // =============================================
     const labelsContainer = document.createElement('div');
     labelsContainer.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:80;';
     document.body.appendChild(labelsContainer);
@@ -658,7 +869,7 @@
         label.style.cssText = `
             position: absolute;
             font-family: 'Poppins', sans-serif;
-            font-size: 11px;
+            font-size: ${isMobile ? '10px' : '11px'};
             font-weight: 600;
             color: rgba(255,255,255,0.7);
             text-transform: uppercase;
@@ -666,22 +877,22 @@
             white-space: nowrap;
             transform: translate(-50%, -50%);
             text-shadow: 0 0 10px rgba(10,14,26,1), 0 0 20px rgba(10,14,26,0.8);
-            transition: color 0.3s, font-size 0.3s;
+            transition: color 0.3s, font-size 0.3s, opacity 0.5s;
+            opacity: 0;
         `;
         label.textContent = eng.name;
         labelsContainer.appendChild(label);
         labelElements[eng.id] = label;
     });
 
-    // ═══════════════════════════════════════════
-    // MESSAGE VERSION TOGGLE
-    // ═══════════════════════════════════════════
-    let currentMsg = 'A';
+    // =============================================
+    // MESSAGE VERSION TOGGLE (default B)
+    // =============================================
+    let currentMsg = 'B';
     document.querySelectorAll('.msg-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.msg-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
             ['A', 'B', 'C'].forEach(m => {
                 document.getElementById('msg-' + m).style.opacity = m === btn.dataset.msg ? '1' : '0';
             });
@@ -689,187 +900,360 @@
         });
     });
 
-    // ═══════════════════════════════════════════
-    // CLICK INTERACTION
-    // ═══════════════════════════════════════════
+    // =============================================
+    // CLICK / PANEL INTERACTION
+    // =============================================
     container.addEventListener('click', (e) => {
-        if (isDragging) return;
+        if (dragMoved) return;
+        handleClick();
+    });
+
+    function handleClick() {
         raycaster.setFromCamera(mouse, camera);
         const intersects = raycaster.intersectObjects(sphereMeshes);
 
         if (intersects.length > 0) {
             const eng = intersects[0].object.userData;
-            openPanel(eng);
+            const idx = engagements.findIndex(e => e.id === eng.id);
+            openPanel(eng, idx);
             selectedObject = intersects[0].object;
+            selectedIndex = idx;
+
+            // Smooth camera zoom toward sphere
+            const pos = intersects[0].object.position;
+            cameraLookTarget.copy(pos).multiplyScalar(0.3);
+            zoomTarget = Math.max(6, zoom - 3);
+            zoomingToSphere = true;
         } else {
             closePanel();
         }
-    });
+    }
 
-    function openPanel(eng) {
+    function openPanel(eng, idx) {
         const panel = document.getElementById('detail-panel');
         document.getElementById('panel-title').textContent = eng.name;
         document.getElementById('panel-role').textContent = eng.role;
         document.getElementById('panel-desc').textContent = eng.description;
+        document.getElementById('panel-counter').textContent = (idx + 1) + ' / ' + engagements.length;
 
         const axesDiv = document.getElementById('panel-axes');
         axesDiv.innerHTML = '';
         eng.axes.forEach(axis => {
             const tag = document.createElement('span');
-            tag.className = `axis-tag ${axis}`;
+            tag.className = 'axis-tag ' + axis;
             tag.textContent = axis === 'techno' ? 'Technologique' : axis === 'enviro' ? 'Environnementale' : 'Socioculturelle';
             axesDiv.appendChild(tag);
         });
 
         panel.classList.add('open');
+        selectedIndex = idx;
 
         // Highlight connections
-        connectionMeshes.forEach(line => {
-            const conn = line.userData.connection;
-            if (conn.from.id === eng.id || conn.to.id === eng.id) {
-                line.material.opacity = 0.7;
-            } else {
-                line.material.opacity = 0.08;
-            }
-        });
+        highlightConnections(eng.id);
     }
 
     function closePanel() {
         document.getElementById('detail-panel').classList.remove('open');
         selectedObject = null;
-        connectionMeshes.forEach(line => { line.material.opacity = 0.25; });
+        selectedIndex = -1;
+        zoomingToSphere = false;
+        cameraLookTarget.set(0, 0, 0);
+
+        // Restore all connections
+        connectionMeshes.forEach(line => { line.userData.highlighted = false; });
+        sphereMeshes.forEach(s => { s.userData.dimmed = false; });
     }
 
-    // ═══════════════════════════════════════════
+    function highlightConnections(engId) {
+        const connectedIds = new Set([engId]);
+        connectionMeshes.forEach(line => {
+            const conn = line.userData.connection;
+            if (conn.from.id === engId || conn.to.id === engId) {
+                line.userData.highlighted = true;
+                connectedIds.add(conn.from.id);
+                connectedIds.add(conn.to.id);
+            } else {
+                line.userData.highlighted = false;
+            }
+        });
+        sphereMeshes.forEach(s => {
+            s.userData.dimmed = !connectedIds.has(s.userData.id);
+        });
+    }
+
+    // Panel navigation
+    document.getElementById('close-panel-btn').addEventListener('click', closePanel);
+    document.getElementById('panel-prev').addEventListener('click', () => navigatePanel(-1));
+    document.getElementById('panel-next').addEventListener('click', () => navigatePanel(1));
+
+    function navigatePanel(dir) {
+        if (selectedIndex < 0) return;
+        selectedIndex = (selectedIndex + dir + engagements.length) % engagements.length;
+        const eng = engagements[selectedIndex];
+        selectedObject = sphereMeshes[selectedIndex];
+        openPanel(eng, selectedIndex);
+
+        // Move camera to new sphere
+        const pos = sphereMeshes[selectedIndex].position;
+        cameraLookTarget.copy(pos).multiplyScalar(0.3);
+        zoomingToSphere = true;
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') { navigatePanel(1); }
+        else if (e.key === 'ArrowLeft') { navigatePanel(-1); }
+        else if (e.key === 'Escape') { closePanel(); resetCameraView(); }
+    });
+
+    // =============================================
+    // INTRO ANIMATION STATE
+    // =============================================
+    let introProgress = 0;
+    const introDuration = 2.0; // seconds
+    let introComplete = false;
+
+    // =============================================
     // ANIMATION LOOP
-    // ═══════════════════════════════════════════
+    // =============================================
     const clock = new THREE.Clock();
+    let prevHoveredId = null;
 
     function animate() {
         requestAnimationFrame(animate);
         const elapsed = clock.getElapsedTime();
-        const delta = clock.getDelta();
+
+        // -- Intro animation: spheres fly to positions --
+        if (!introComplete) {
+            introProgress = Math.min(elapsed / introDuration, 1);
+            const ease = 1 - Math.pow(1 - introProgress, 3); // ease-out cubic
+            sphereMeshes.forEach((sphere, i) => {
+                const eng = sphere.userData;
+                const start = sphereStartPositions[i];
+                const target = eng.position;
+                sphere.position.x = start.x + (target.x - start.x) * ease;
+                sphere.position.y = start.y + (target.y - start.y) * ease;
+                sphere.position.z = start.z + (target.z - start.z) * ease;
+            });
+            if (introProgress >= 1) {
+                introComplete = true;
+                // Fade in labels
+                Object.values(labelElements).forEach((l, i) => {
+                    setTimeout(() => { l.style.opacity = '1'; }, i * 80);
+                });
+            }
+        }
 
         // Auto-rotate
         if (autoRotate) {
-            rotationTarget.y += 0.002;
+            rotationTarget.y += 0.0015;
         }
 
         // Smooth rotation
         currentRotation.x += (rotationTarget.x - currentRotation.x) * 0.05;
         currentRotation.y += (rotationTarget.y - currentRotation.y) * 0.05;
 
+        // Smooth zoom
+        zoom += (zoomTarget - zoom) * 0.06;
+
+        // Camera look target smooth
+        cameraLookCurrent.lerp(cameraLookTarget, 0.04);
+
         // Camera orbit
-        const targetZoom = zoom;
-        camera.position.x = Math.sin(currentRotation.y) * Math.cos(currentRotation.x) * targetZoom;
-        camera.position.y = Math.sin(currentRotation.x) * targetZoom;
-        camera.position.z = Math.cos(currentRotation.y) * Math.cos(currentRotation.x) * targetZoom;
-        camera.lookAt(0, 0, 0);
+        camera.position.x = Math.sin(currentRotation.y) * Math.cos(currentRotation.x) * zoom;
+        camera.position.y = Math.sin(currentRotation.x) * zoom;
+        camera.position.z = Math.cos(currentRotation.y) * Math.cos(currentRotation.x) * zoom;
+        camera.lookAt(cameraLookCurrent);
 
-        // Sphere animations (breathing + orbit)
-        sphereMeshes.forEach((sphere, i) => {
-            const eng = sphere.userData;
-            const basePos = eng.position;
-            const breathe = Math.sin(elapsed * 0.8 + i * 0.7) * 0.15;
-            const orbit = Math.sin(elapsed * 0.3 + i * 1.3) * 0.2;
+        // -- Sphere animations --
+        if (introComplete) {
+            sphereMeshes.forEach((sphere, i) => {
+                const eng = sphere.userData;
+                const basePos = eng.position;
+                const isOcean = eng.isOceanocrat;
 
-            sphere.position.x = basePos.x + orbit;
-            sphere.position.y = basePos.y + breathe;
-            sphere.position.z = basePos.z + Math.cos(elapsed * 0.4 + i) * 0.15;
+                // Pronounced breathing
+                const breatheAmp = isOcean ? 0.25 : 0.18;
+                const breathe = Math.sin(elapsed * 1.0 + i * 0.8) * breatheAmp;
+                const orbit = Math.sin(elapsed * 0.4 + i * 1.5) * 0.2;
+                const drift = Math.cos(elapsed * 0.5 + i * 1.1) * 0.15;
 
-            // Scale pulse on hover
-            const isHovered = hoveredObject === sphere;
-            const targetScale = isHovered ? 1.3 : 1.0;
-            sphere.scale.lerp(new THREE.Vector3(targetScale, targetScale, targetScale), 0.1);
+                sphere.position.x = basePos.x + orbit;
+                sphere.position.y = basePos.y + breathe;
+                sphere.position.z = basePos.z + drift;
 
-            // Emissive pulse
-            sphere.material.emissiveIntensity = 0.3 + Math.sin(elapsed * 1.5 + i) * 0.15;
+                // Scale pulse (breathing effect)
+                const breathScale = 1.0 + Math.sin(elapsed * 1.2 + i * 0.9) * 0.06;
+                const isHovered = hoveredObject === sphere;
+                const isDimmed = eng.dimmed;
+                let targetScale = breathScale;
+                if (isHovered) targetScale = 1.35;
+                if (isDimmed) targetScale = 0.85;
+                sphere.scale.lerp(new THREE.Vector3(targetScale, targetScale, targetScale), 0.1);
+
+                // Emissive pulse
+                const baseEmissive = isOcean ? 0.5 : 0.3;
+                sphere.material.emissiveIntensity = baseEmissive + Math.sin(elapsed * 1.8 + i) * 0.2;
+
+                // Dimming
+                const targetOpacity = isDimmed ? 0.3 : 0.9;
+                sphere.material.opacity += (targetOpacity - sphere.material.opacity) * 0.08;
+            });
+        }
+
+        // -- Glow rings follow spheres (billboard via Sprite) --
+        glowRings.forEach(sprite => {
+            const parent = sprite.userData.parentSphere;
+            sprite.position.copy(parent.position);
+            // Pulse glow scale
+            const pulse = 1.0 + Math.sin(elapsed * 1.5 + parent.userData.size * 10) * 0.08;
+            const base = sprite.userData.baseScale;
+            sprite.scale.set(base * pulse, base * pulse, 1);
+
+            // Dim if parent is dimmed
+            if (parent.userData.dimmed) {
+                sprite.material.opacity = Math.max(0.05, sprite.material.opacity - 0.02);
+            } else {
+                sprite.material.opacity = Math.min(1, sprite.material.opacity + 0.02);
+            }
         });
 
-        // Plane subtle animation
+        // -- Plane undulation --
+        allPlanes.forEach((p, pi) => {
+            const speed = 0.5 + pi * 0.15;
+            const amp = 0.25 + pi * 0.05;
+            const wl = 0.4 + pi * 0.1;
+            undulateGeometry(p.plane.geometry, p.plane.userData.origPositions, elapsed, speed, amp, wl);
+            undulateGeometry(p.wireframe.geometry, p.wireframe.userData.origPositions, elapsed, speed, amp, wl);
+        });
+
+        // Slight plane rotation drift
         technoPlane.plane.rotation.z = Math.sin(elapsed * 0.15) * 0.1;
         enviroPlane.plane.rotation.z = Math.cos(elapsed * 0.12) * 0.1;
-        socioPlane.plane.rotation.x = Math.sin(elapsed * 0.18) * 0.08;
+        socioPlane.plane.rotation.x += Math.sin(elapsed * 0.18) * 0.0003;
         technoPlane.wireframe.rotation.copy(technoPlane.plane.rotation);
         enviroPlane.wireframe.rotation.copy(enviroPlane.plane.rotation);
         socioPlane.wireframe.rotation.copy(socioPlane.plane.rotation);
 
-        // Particles slow drift
+        // -- Connection animations --
+        connectionMeshes.forEach((line, i) => {
+            const data = line.userData;
+            if (selectedObject) {
+                const targetOp = data.highlighted ? 0.8 : 0.04;
+                line.material.opacity += (targetOp - line.material.opacity) * 0.1;
+            } else {
+                // Pulse along constellation lines
+                const basePulse = 0.15 + Math.sin(elapsed * 0.8 + i * 0.6) * 0.1;
+                line.material.opacity += (basePulse - line.material.opacity) * 0.1;
+            }
+        });
+
+        // -- Flow particles along connections --
+        flowParticleGroups.forEach(fp => {
+            const curve = connectionCurves[fp.userData.curveIndex];
+            const positions = fp.geometry.attributes.position.array;
+            const offsets = fp.userData.offsets;
+            const speed = fp.userData.speed;
+
+            for (let f = 0; f < offsets.length; f++) {
+                offsets[f] = (offsets[f] + speed * 0.005) % 1;
+                const pt = curve.getPoint(offsets[f]);
+                positions[f * 3] = pt.x;
+                positions[f * 3 + 1] = pt.y;
+                positions[f * 3 + 2] = pt.z;
+            }
+            fp.geometry.attributes.position.needsUpdate = true;
+
+            // Dim flow particles when connection is dimmed
+            if (selectedObject) {
+                const conn = connectionMeshes[fp.userData.curveIndex];
+                fp.material.opacity = conn.userData.highlighted ? 0.9 : 0.05;
+            } else {
+                fp.material.opacity = 0.6;
+            }
+        });
+
+        // -- Ambient particles drift --
         particles.rotation.y = elapsed * 0.02;
         particles.rotation.x = Math.sin(elapsed * 0.01) * 0.1;
 
-        // Update labels positions
-        engagements.forEach(eng => {
-            const sphere = sphereMeshes.find(s => s.userData.id === eng.id);
-            if (sphere) {
-                const vector = sphere.position.clone().project(camera);
-                const label = labelElements[eng.id];
+        // -- Labels --
+        engagements.forEach((eng, idx) => {
+            const sphere = sphereMeshes[idx];
+            const vector = sphere.position.clone().project(camera);
+            const label = labelElements[eng.id];
+            if (vector.z < 1) {
                 const x = (vector.x * 0.5 + 0.5) * window.innerWidth;
                 const y = (-vector.y * 0.5 + 0.5) * window.innerHeight;
                 label.style.left = x + 'px';
                 label.style.top = (y - sphere.userData.size * 40 - 15) + 'px';
-
-                // Hide labels behind camera
-                label.style.display = vector.z < 1 ? 'block' : 'none';
+                label.style.display = 'block';
+                // Dim label if sphere is dimmed
+                if (introComplete) {
+                    if (eng.dimmed) {
+                        label.style.color = 'rgba(255,255,255,0.15)';
+                    } else if (hoveredObject === sphere) {
+                        label.style.color = '#ffffff';
+                        label.style.fontSize = '13px';
+                    } else {
+                        label.style.color = 'rgba(255,255,255,0.7)';
+                        label.style.fontSize = isMobile ? '10px' : '11px';
+                    }
+                }
+            } else {
+                label.style.display = 'none';
             }
         });
 
-        // Raycaster hover detection
+        // -- Raycaster hover detection --
         raycaster.setFromCamera(mouse, camera);
         const intersects = raycaster.intersectObjects(sphereMeshes);
 
         if (intersects.length > 0) {
-            if (hoveredObject !== intersects[0].object) {
-                hoveredObject = intersects[0].object;
+            const hitObj = intersects[0].object;
+            if (hoveredObject !== hitObj) {
+                hoveredObject = hitObj;
                 container.style.cursor = 'pointer';
-                const label = labelElements[hoveredObject.userData.id];
-                if (label) {
-                    label.style.color = '#ffffff';
-                    label.style.fontSize = '13px';
+
+                // Hover highlight connections if no panel is open
+                if (!selectedObject) {
+                    highlightConnections(hitObj.userData.id);
                 }
             }
         } else {
             if (hoveredObject) {
-                const label = labelElements[hoveredObject.userData.id];
-                if (label) {
-                    label.style.color = 'rgba(255,255,255,0.7)';
-                    label.style.fontSize = '11px';
-                }
                 hoveredObject = null;
                 container.style.cursor = 'default';
+                // Un-highlight if no panel
+                if (!selectedObject) {
+                    connectionMeshes.forEach(l => { l.userData.highlighted = false; });
+                    sphereMeshes.forEach(s => { s.userData.dimmed = false; });
+                }
             }
         }
-
-        // Connection pulse animation
-        connectionMeshes.forEach((line, i) => {
-            if (!selectedObject) {
-                line.material.opacity = 0.15 + Math.sin(elapsed * 0.8 + i * 0.5) * 0.1;
-            }
-        });
 
         renderer.render(scene, camera);
     }
 
     animate();
 
-    // ═══════════════════════════════════════════
+    // =============================================
     // RESIZE
-    // ═══════════════════════════════════════════
+    // =============================================
     window.addEventListener('resize', () => {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
     });
 
-    // Resume auto-rotate after 5s of inactivity
+    // Auto-rotate resume timer
     let autoRotateTimer;
-    ['mousedown', 'wheel', 'touchstart'].forEach(evt => {
-        container.addEventListener(evt, () => {
-            autoRotate = false;
-            clearTimeout(autoRotateTimer);
-            autoRotateTimer = setTimeout(() => { autoRotate = true; }, 5000);
-        });
-    });
+    function resetAutoRotateTimer() {
+        clearTimeout(autoRotateTimer);
+        autoRotateTimer = setTimeout(() => {
+            if (!selectedObject) autoRotate = true;
+        }, 6000);
+    }
     </script>
 </body>
 </html>
