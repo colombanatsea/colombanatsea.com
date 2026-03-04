@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proto 2 — Matrice Triple Transition Maritime</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0e1a;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        #canvas-container {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 1;
+        }
+
+        /* Message versions toggle */
+        .message-toggle {
+            position: fixed;
+            top: 20px; left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            display: flex;
+            gap: 8px;
+            background: rgba(10, 14, 26, 0.8);
+            padding: 6px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .msg-btn {
+            padding: 8px 18px;
+            border: none;
+            background: transparent;
+            color: rgba(255,255,255,0.5);
+            cursor: pointer;
+            border-radius: 24px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .msg-btn.active {
+            background: rgba(42, 85, 179, 0.4);
+            color: #ffffff;
+        }
+        .msg-btn:hover:not(.active) { color: rgba(255,255,255,0.8); }
+
+        /* Central message */
+        .central-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 50;
+            text-align: center;
+            pointer-events: none;
+            transition: opacity 0.6s ease;
+        }
+        .central-message h1 {
+            font-size: clamp(24px, 4vw, 48px);
+            font-weight: 700;
+            letter-spacing: -1px;
+            line-height: 1.15;
+            text-shadow: 0 0 60px rgba(10,14,26,0.9), 0 0 120px rgba(10,14,26,0.7);
+        }
+        .central-message .subtitle {
+            font-family: 'Source Serif 4', serif;
+            font-size: clamp(14px, 1.8vw, 20px);
+            font-style: italic;
+            color: rgba(255,255,255,0.6);
+            margin-top: 12px;
+            text-shadow: 0 0 40px rgba(10,14,26,0.9);
+        }
+
+        /* Axis labels */
+        .axis-label {
+            position: fixed;
+            z-index: 60;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        .axis-techno { color: #2a55b3; }
+        .axis-enviro { color: #00bf63; }
+        .axis-socio { color: #b32a55; }
+
+        /* Detail panel */
+        .detail-panel {
+            position: fixed;
+            right: -420px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 380px;
+            max-height: 80vh;
+            background: rgba(10, 14, 26, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 32px;
+            z-index: 200;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+        }
+        .detail-panel.open { right: 30px; }
+        .detail-panel .close-btn {
+            position: absolute;
+            top: 16px; right: 16px;
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.5);
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .detail-panel h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .detail-panel .role {
+            font-family: 'Source Serif 4', serif;
+            font-style: italic;
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        .detail-panel .description {
+            font-size: 14px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+        }
+        .detail-panel .axes-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .axis-tag {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .axis-tag.techno { background: rgba(42,85,179,0.3); color: #6b9fff; border: 1px solid rgba(42,85,179,0.4); }
+        .axis-tag.enviro { background: rgba(0,191,99,0.2); color: #4dff99; border: 1px solid rgba(0,191,99,0.3); }
+        .axis-tag.socio { background: rgba(179,42,85,0.3); color: #ff6b99; border: 1px solid rgba(179,42,85,0.4); }
+
+        /* Legend */
+        .legend {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.7);
+        }
+        .legend-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+        }
+
+        /* Controls hint */
+        .controls-hint {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            font-size: 11px;
+            color: rgba(255,255,255,0.3);
+            text-align: right;
+            line-height: 1.8;
+        }
+
+        /* Watermark */
+        .watermark {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            font-size: 10px;
+            color: rgba(255,255,255,0.2);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+
+    <!-- Message versions -->
+    <div class="message-toggle">
+        <button class="msg-btn active" data-msg="A">A — Construire</button>
+        <button class="msg-btn" data-msg="B">B — Océanocratie</button>
+        <button class="msg-btn" data-msg="C">C — Triple transition</button>
+    </div>
+
+    <!-- Central messages -->
+    <div class="central-message" id="msg-A">
+        <h1>Construire le monde<br>maritime de demain</h1>
+        <div class="subtitle">Le maritime dans le sang depuis 1991</div>
+    </div>
+    <div class="central-message" id="msg-B" style="opacity:0;">
+        <h1>Océanocratie</h1>
+        <div class="subtitle">Une nation libre regarde la mer</div>
+    </div>
+    <div class="central-message" id="msg-C" style="opacity:0;">
+        <h1>La triple transition<br>maritime</h1>
+        <div class="subtitle">Technologique · Environnementale · Socioculturelle</div>
+    </div>
+
+    <!-- Legend -->
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-dot" style="background:#2a55b3;box-shadow:0 0 8px #2a55b3;"></div>
+            Technologique
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background:#00bf63;box-shadow:0 0 8px #00bf63;"></div>
+            Environnementale
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background:#b32a55;box-shadow:0 0 8px #b32a55;"></div>
+            Socioculturelle
+        </div>
+    </div>
+
+    <!-- Controls hint -->
+    <div class="controls-hint">
+        Clic gauche : rotation<br>
+        Molette : zoom<br>
+        Clic sur sphère : détails
+    </div>
+
+    <div class="watermark">COLOMBAN — PROTO 2 — MATRICE 3D</div>
+
+    <!-- Detail panel -->
+    <div class="detail-panel" id="detail-panel">
+        <button class="close-btn" onclick="closePanel()">✕</button>
+        <h2 id="panel-title"></h2>
+        <div class="role" id="panel-role"></div>
+        <div class="description" id="panel-desc"></div>
+        <div class="axes-tags" id="panel-axes"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js"></script>
+    <script>
+    // ═══════════════════════════════════════════
+    // DATA — Engagements de Colomban
+    // ═══════════════════════════════════════════
+    const COLORS = {
+        techno: 0x2a55b3,
+        enviro: 0x00bf63,
+        socio:  0xb32a55,
+        bg:     0x0a0e1a,
+        white:  0xffffff
+    };
+
+    const engagements = [
+        {
+            id: 'gaspe',
+            name: 'GASPE',
+            role: 'Délégué Général',
+            description: 'Groupement des Armateurs de Services Publics maritimes et de Passages d\'Eau. Représentation et défense des intérêts des armateurs de service public maritime.',
+            axes: ['socio'],
+            position: { x: 3.2, y: -1.5, z: 1.8 },
+            size: 0.45
+        },
+        {
+            id: 'vaiata',
+            name: 'VAIATA Dynamics',
+            role: 'Co-fondateur',
+            description: 'Technologie au service du sauvetage en mer et sauvetage digital des compagnies maritimes. Volet cyberdéfense maritime.',
+            axes: ['techno'],
+            position: { x: -2.8, y: 2.0, z: -1.2 },
+            size: 0.4
+        },
+        {
+            id: 'fondation',
+            name: 'Fondation ENSM',
+            role: 'Président du conseil de gestion',
+            description: 'Former les futurs officiers de marine marchande. Assurer que la formation maritime française reste à la hauteur des enjeux de transition.',
+            axes: ['enviro', 'socio'],
+            position: { x: 0.5, y: -2.8, z: -2.0 },
+            size: 0.42
+        },
+        {
+            id: 'enseignant',
+            name: 'Enseignant DD',
+            role: 'Professeur à l\'ENSM',
+            description: 'Enseignement de l\'écologie et du développement durable aux futurs officiers de marine marchande. Transmettre la conscience environnementale.',
+            axes: ['enviro'],
+            position: { x: -1.5, y: -2.2, z: 2.5 },
+            size: 0.35
+        },
+        {
+            id: 'hydros',
+            name: 'HYDROS Alumni',
+            role: 'Bureau',
+            description: 'Réseau des anciens de l\'ENSM. Animation de la communauté maritime, transmission intergénérationnelle.',
+            axes: ['socio'],
+            position: { x: 2.5, y: 0.8, z: -2.5 },
+            size: 0.3
+        },
+        {
+            id: 'propeller',
+            name: 'Propeller Club',
+            role: 'Membre',
+            description: 'Réseau international du commerce maritime. Échange entre acteurs du maritime, promotion du transport maritime.',
+            axes: ['socio'],
+            position: { x: 3.5, y: 1.8, z: 0.5 },
+            size: 0.28
+        },
+        {
+            id: 'aperitifs',
+            name: 'Apéritifs de la Mer',
+            role: 'Ambassadeur & animateur',
+            description: 'Rendre le maritime accessible au grand public. Vulgarisation festive et culturelle des enjeux maritimes.',
+            axes: ['socio'],
+            position: { x: 1.0, y: 2.8, z: 2.2 },
+            size: 0.32
+        },
+        {
+            id: 'advisory',
+            name: 'Advisory Boards',
+            role: 'Membre consultatif',
+            description: 'Conseil stratégique auprès d\'entreprises maritimes en transition (de 2 à 47 000 salariés). Stratégie, digitalisation, environnement.',
+            axes: ['techno', 'enviro', 'socio'],
+            position: { x: -3.0, y: -0.5, z: -1.8 },
+            size: 0.38
+        },
+        {
+            id: 'medias',
+            name: 'Leader d\'opinion',
+            role: 'Prises de parole & médias',
+            description: 'Publications, conférences, médias (Marine & Océans, Conflits, Jeune Marine, Le Monde). Construire le narratif de la transition maritime.',
+            axes: ['techno', 'enviro', 'socio'],
+            position: { x: 0, y: 3.0, z: -0.5 },
+            size: 0.5
+        },
+        {
+            id: 'coespc',
+            name: 'COESPC',
+            role: 'Bureau',
+            description: 'Fête villageoise caritative à Annecy-le-Vieux. Ancrage local, engagement citoyen au-delà du maritime.',
+            axes: ['socio'],
+            position: { x: -2.0, y: 1.5, z: 3.0 },
+            size: 0.25
+        },
+        {
+            id: 'opsealog',
+            name: 'Opsealog',
+            role: 'Participation à la création',
+            description: 'Pionnier de la donnée maritime. Réduction de 15% des consommations de centaines de navires dans 17 pays. Outils réglementaires EU MRV, CII, EEXI.',
+            axes: ['techno', 'enviro'],
+            position: { x: -2.5, y: -1.0, z: 1.5 },
+            size: 0.4
+        },
+        {
+            id: 'oceanocrat',
+            name: 'Océanocratie',
+            role: 'Le livre — fin 2026',
+            description: 'Une nation libre regarde la mer. Manifeste pour une France qui assume sa dimension maritime de 11 millions de km².',
+            axes: ['techno', 'enviro', 'socio'],
+            position: { x: 0, y: 0, z: 0 },
+            size: 0.6
+        }
+    ];
+
+    // ═══════════════════════════════════════════
+    // THREE.JS SCENE SETUP
+    // ═══════════════════════════════════════════
+    const container = document.getElementById('canvas-container');
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
+    camera.position.set(0, 0, 12);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setClearColor(COLORS.bg, 1);
+    container.appendChild(renderer.domElement);
+
+    // Raycaster for interaction
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2();
+    let hoveredObject = null;
+    let selectedObject = null;
+
+    // ═══════════════════════════════════════════
+    // ORBIT CONTROLS (minimal custom implementation)
+    // ═══════════════════════════════════════════
+    let isDragging = false;
+    let previousMousePosition = { x: 0, y: 0 };
+    let rotationTarget = { x: 0, y: 0 };
+    let currentRotation = { x: 0, y: 0 };
+    let zoom = 12;
+    let autoRotate = true;
+
+    container.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        previousMousePosition = { x: e.clientX, y: e.clientY };
+        autoRotate = false;
+    });
+    container.addEventListener('mousemove', (e) => {
+        mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+        mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+        if (isDragging) {
+            const dx = e.clientX - previousMousePosition.x;
+            const dy = e.clientY - previousMousePosition.y;
+            rotationTarget.y += dx * 0.005;
+            rotationTarget.x += dy * 0.005;
+            rotationTarget.x = Math.max(-Math.PI / 3, Math.min(Math.PI / 3, rotationTarget.x));
+            previousMousePosition = { x: e.clientX, y: e.clientY };
+        }
+    });
+    container.addEventListener('mouseup', () => { isDragging = false; });
+    container.addEventListener('wheel', (e) => {
+        zoom += e.deltaY * 0.01;
+        zoom = Math.max(5, Math.min(20, zoom));
+    });
+
+    // ═══════════════════════════════════════════
+    // LIGHTING
+    // ═══════════════════════════════════════════
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+    scene.add(ambientLight);
+
+    const pointLight1 = new THREE.PointLight(0x2a55b3, 1.5, 30);
+    pointLight1.position.set(-8, 5, 5);
+    scene.add(pointLight1);
+
+    const pointLight2 = new THREE.PointLight(0x00bf63, 1.0, 30);
+    pointLight2.position.set(8, -3, -5);
+    scene.add(pointLight2);
+
+    const pointLight3 = new THREE.PointLight(0xb32a55, 0.8, 30);
+    pointLight3.position.set(0, -8, 8);
+    scene.add(pointLight3);
+
+    // ═══════════════════════════════════════════
+    // 3 TRANSITION PLANES (semi-transparent)
+    // ═══════════════════════════════════════════
+    function createTransitionPlane(color, rotation, opacity = 0.06) {
+        const geometry = new THREE.PlaneGeometry(18, 18, 20, 20);
+        const material = new THREE.MeshBasicMaterial({
+            color: color,
+            transparent: true,
+            opacity: opacity,
+            side: THREE.DoubleSide,
+            wireframe: false,
+            depthWrite: false
+        });
+        const plane = new THREE.Mesh(geometry, material);
+        plane.rotation.set(rotation.x, rotation.y, rotation.z);
+
+        // Add grid wireframe overlay
+        const wireMaterial = new THREE.MeshBasicMaterial({
+            color: color,
+            transparent: true,
+            opacity: opacity * 2,
+            wireframe: true,
+            depthWrite: false
+        });
+        const wireframe = new THREE.Mesh(geometry.clone(), wireMaterial);
+        wireframe.rotation.copy(plane.rotation);
+
+        return { plane, wireframe };
+    }
+
+    // Techno plane — tilted X
+    const technoPlane = createTransitionPlane(COLORS.techno, { x: Math.PI * 0.4, y: 0.3, z: 0 });
+    scene.add(technoPlane.plane);
+    scene.add(technoPlane.wireframe);
+
+    // Enviro plane — tilted Y
+    const enviroPlane = createTransitionPlane(COLORS.enviro, { x: 0.2, y: Math.PI * 0.35, z: 0.4 });
+    scene.add(enviroPlane.plane);
+    scene.add(enviroPlane.wireframe);
+
+    // Socio plane — tilted Z
+    const socioPlane = createTransitionPlane(COLORS.socio, { x: -0.3, y: -0.2, z: Math.PI * 0.3 });
+    scene.add(socioPlane.plane);
+    scene.add(socioPlane.wireframe);
+
+    // ═══════════════════════════════════════════
+    // ENGAGEMENT SPHERES
+    // ═══════════════════════════════════════════
+    const sphereGroup = new THREE.Group();
+    const sphereMeshes = [];
+
+    engagements.forEach(eng => {
+        // Determine primary color (mix if multi-axis)
+        const axisColors = eng.axes.map(a => new THREE.Color(COLORS[a]));
+        const mixedColor = new THREE.Color(0, 0, 0);
+        axisColors.forEach(c => mixedColor.add(c));
+        mixedColor.multiplyScalar(1 / axisColors.length);
+
+        // Sphere
+        const geometry = new THREE.SphereGeometry(eng.size, 32, 32);
+        const material = new THREE.MeshPhongMaterial({
+            color: mixedColor,
+            transparent: true,
+            opacity: 0.85,
+            emissive: mixedColor,
+            emissiveIntensity: 0.3,
+            shininess: 80
+        });
+        const sphere = new THREE.Mesh(geometry, material);
+        sphere.position.set(eng.position.x, eng.position.y, eng.position.z);
+        sphere.userData = eng;
+        sphereGroup.add(sphere);
+        sphereMeshes.push(sphere);
+
+        // Glow ring
+        const glowGeom = new THREE.RingGeometry(eng.size * 1.2, eng.size * 1.5, 32);
+        const glowMat = new THREE.MeshBasicMaterial({
+            color: mixedColor,
+            transparent: true,
+            opacity: 0.15,
+            side: THREE.DoubleSide,
+            depthWrite: false
+        });
+        const glow = new THREE.Mesh(glowGeom, glowMat);
+        glow.position.copy(sphere.position);
+        glow.lookAt(camera.position);
+        glow.userData = { isGlow: true, parent: sphere };
+        sphereGroup.add(glow);
+    });
+
+    scene.add(sphereGroup);
+
+    // ═══════════════════════════════════════════
+    // CORDAGE CONNECTIONS (animated)
+    // ═══════════════════════════════════════════
+    const connections = [];
+    const connectionMeshes = [];
+
+    // Generate connections between engagements sharing axes
+    for (let i = 0; i < engagements.length; i++) {
+        for (let j = i + 1; j < engagements.length; j++) {
+            const shared = engagements[i].axes.filter(a => engagements[j].axes.includes(a));
+            if (shared.length > 0) {
+                connections.push({
+                    from: engagements[i],
+                    to: engagements[j],
+                    sharedAxes: shared
+                });
+            }
+        }
+    }
+
+    connections.forEach(conn => {
+        const from = conn.from.position;
+        const to = conn.to.position;
+
+        // Curved line with control point
+        const mid = {
+            x: (from.x + to.x) / 2 + (Math.random() - 0.5) * 1.5,
+            y: (from.y + to.y) / 2 + (Math.random() - 0.5) * 1.5,
+            z: (from.z + to.z) / 2 + (Math.random() - 0.5) * 1.5
+        };
+
+        const curve = new THREE.QuadraticBezierCurve3(
+            new THREE.Vector3(from.x, from.y, from.z),
+            new THREE.Vector3(mid.x, mid.y, mid.z),
+            new THREE.Vector3(to.x, to.y, to.z)
+        );
+
+        const points = curve.getPoints(50);
+        const geometry = new THREE.BufferGeometry().setFromPoints(points);
+
+        const axisColor = new THREE.Color(COLORS[conn.sharedAxes[0]]);
+        const material = new THREE.LineBasicMaterial({
+            color: axisColor,
+            transparent: true,
+            opacity: 0.25
+        });
+
+        const line = new THREE.Line(geometry, material);
+        line.userData = { connection: conn };
+        connectionMeshes.push(line);
+        scene.add(line);
+    });
+
+    // ═══════════════════════════════════════════
+    // PARTICLE FIELD (ambient)
+    // ═══════════════════════════════════════════
+    const particlesCount = 1500;
+    const particlesGeometry = new THREE.BufferGeometry();
+    const particlesPositions = new Float32Array(particlesCount * 3);
+    const particlesColors = new Float32Array(particlesCount * 3);
+
+    const axisColorsList = [
+        new THREE.Color(COLORS.techno),
+        new THREE.Color(COLORS.enviro),
+        new THREE.Color(COLORS.socio)
+    ];
+
+    for (let i = 0; i < particlesCount; i++) {
+        particlesPositions[i * 3] = (Math.random() - 0.5) * 30;
+        particlesPositions[i * 3 + 1] = (Math.random() - 0.5) * 30;
+        particlesPositions[i * 3 + 2] = (Math.random() - 0.5) * 30;
+
+        const col = axisColorsList[Math.floor(Math.random() * 3)];
+        particlesColors[i * 3] = col.r;
+        particlesColors[i * 3 + 1] = col.g;
+        particlesColors[i * 3 + 2] = col.b;
+    }
+
+    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(particlesPositions, 3));
+    particlesGeometry.setAttribute('color', new THREE.BufferAttribute(particlesColors, 3));
+
+    const particlesMaterial = new THREE.PointsMaterial({
+        size: 0.03,
+        vertexColors: true,
+        transparent: true,
+        opacity: 0.5,
+        depthWrite: false,
+        sizeAttenuation: true
+    });
+
+    const particles = new THREE.Points(particlesGeometry, particlesMaterial);
+    scene.add(particles);
+
+    // ═══════════════════════════════════════════
+    // LABELS (HTML overlays for sphere names)
+    // ═══════════════════════════════════════════
+    const labelsContainer = document.createElement('div');
+    labelsContainer.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:80;';
+    document.body.appendChild(labelsContainer);
+
+    const labelElements = {};
+    engagements.forEach(eng => {
+        const label = document.createElement('div');
+        label.style.cssText = `
+            position: absolute;
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            transform: translate(-50%, -50%);
+            text-shadow: 0 0 10px rgba(10,14,26,1), 0 0 20px rgba(10,14,26,0.8);
+            transition: color 0.3s, font-size 0.3s;
+        `;
+        label.textContent = eng.name;
+        labelsContainer.appendChild(label);
+        labelElements[eng.id] = label;
+    });
+
+    // ═══════════════════════════════════════════
+    // MESSAGE VERSION TOGGLE
+    // ═══════════════════════════════════════════
+    let currentMsg = 'A';
+    document.querySelectorAll('.msg-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.msg-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            ['A', 'B', 'C'].forEach(m => {
+                document.getElementById('msg-' + m).style.opacity = m === btn.dataset.msg ? '1' : '0';
+            });
+            currentMsg = btn.dataset.msg;
+        });
+    });
+
+    // ═══════════════════════════════════════════
+    // CLICK INTERACTION
+    // ═══════════════════════════════════════════
+    container.addEventListener('click', (e) => {
+        if (isDragging) return;
+        raycaster.setFromCamera(mouse, camera);
+        const intersects = raycaster.intersectObjects(sphereMeshes);
+
+        if (intersects.length > 0) {
+            const eng = intersects[0].object.userData;
+            openPanel(eng);
+            selectedObject = intersects[0].object;
+        } else {
+            closePanel();
+        }
+    });
+
+    function openPanel(eng) {
+        const panel = document.getElementById('detail-panel');
+        document.getElementById('panel-title').textContent = eng.name;
+        document.getElementById('panel-role').textContent = eng.role;
+        document.getElementById('panel-desc').textContent = eng.description;
+
+        const axesDiv = document.getElementById('panel-axes');
+        axesDiv.innerHTML = '';
+        eng.axes.forEach(axis => {
+            const tag = document.createElement('span');
+            tag.className = `axis-tag ${axis}`;
+            tag.textContent = axis === 'techno' ? 'Technologique' : axis === 'enviro' ? 'Environnementale' : 'Socioculturelle';
+            axesDiv.appendChild(tag);
+        });
+
+        panel.classList.add('open');
+
+        // Highlight connections
+        connectionMeshes.forEach(line => {
+            const conn = line.userData.connection;
+            if (conn.from.id === eng.id || conn.to.id === eng.id) {
+                line.material.opacity = 0.7;
+            } else {
+                line.material.opacity = 0.08;
+            }
+        });
+    }
+
+    function closePanel() {
+        document.getElementById('detail-panel').classList.remove('open');
+        selectedObject = null;
+        connectionMeshes.forEach(line => { line.material.opacity = 0.25; });
+    }
+
+    // ═══════════════════════════════════════════
+    // ANIMATION LOOP
+    // ═══════════════════════════════════════════
+    const clock = new THREE.Clock();
+
+    function animate() {
+        requestAnimationFrame(animate);
+        const elapsed = clock.getElapsedTime();
+        const delta = clock.getDelta();
+
+        // Auto-rotate
+        if (autoRotate) {
+            rotationTarget.y += 0.002;
+        }
+
+        // Smooth rotation
+        currentRotation.x += (rotationTarget.x - currentRotation.x) * 0.05;
+        currentRotation.y += (rotationTarget.y - currentRotation.y) * 0.05;
+
+        // Camera orbit
+        const targetZoom = zoom;
+        camera.position.x = Math.sin(currentRotation.y) * Math.cos(currentRotation.x) * targetZoom;
+        camera.position.y = Math.sin(currentRotation.x) * targetZoom;
+        camera.position.z = Math.cos(currentRotation.y) * Math.cos(currentRotation.x) * targetZoom;
+        camera.lookAt(0, 0, 0);
+
+        // Sphere animations (breathing + orbit)
+        sphereMeshes.forEach((sphere, i) => {
+            const eng = sphere.userData;
+            const basePos = eng.position;
+            const breathe = Math.sin(elapsed * 0.8 + i * 0.7) * 0.15;
+            const orbit = Math.sin(elapsed * 0.3 + i * 1.3) * 0.2;
+
+            sphere.position.x = basePos.x + orbit;
+            sphere.position.y = basePos.y + breathe;
+            sphere.position.z = basePos.z + Math.cos(elapsed * 0.4 + i) * 0.15;
+
+            // Scale pulse on hover
+            const isHovered = hoveredObject === sphere;
+            const targetScale = isHovered ? 1.3 : 1.0;
+            sphere.scale.lerp(new THREE.Vector3(targetScale, targetScale, targetScale), 0.1);
+
+            // Emissive pulse
+            sphere.material.emissiveIntensity = 0.3 + Math.sin(elapsed * 1.5 + i) * 0.15;
+        });
+
+        // Plane subtle animation
+        technoPlane.plane.rotation.z = Math.sin(elapsed * 0.15) * 0.1;
+        enviroPlane.plane.rotation.z = Math.cos(elapsed * 0.12) * 0.1;
+        socioPlane.plane.rotation.x = Math.sin(elapsed * 0.18) * 0.08;
+        technoPlane.wireframe.rotation.copy(technoPlane.plane.rotation);
+        enviroPlane.wireframe.rotation.copy(enviroPlane.plane.rotation);
+        socioPlane.wireframe.rotation.copy(socioPlane.plane.rotation);
+
+        // Particles slow drift
+        particles.rotation.y = elapsed * 0.02;
+        particles.rotation.x = Math.sin(elapsed * 0.01) * 0.1;
+
+        // Update labels positions
+        engagements.forEach(eng => {
+            const sphere = sphereMeshes.find(s => s.userData.id === eng.id);
+            if (sphere) {
+                const vector = sphere.position.clone().project(camera);
+                const label = labelElements[eng.id];
+                const x = (vector.x * 0.5 + 0.5) * window.innerWidth;
+                const y = (-vector.y * 0.5 + 0.5) * window.innerHeight;
+                label.style.left = x + 'px';
+                label.style.top = (y - sphere.userData.size * 40 - 15) + 'px';
+
+                // Hide labels behind camera
+                label.style.display = vector.z < 1 ? 'block' : 'none';
+            }
+        });
+
+        // Raycaster hover detection
+        raycaster.setFromCamera(mouse, camera);
+        const intersects = raycaster.intersectObjects(sphereMeshes);
+
+        if (intersects.length > 0) {
+            if (hoveredObject !== intersects[0].object) {
+                hoveredObject = intersects[0].object;
+                container.style.cursor = 'pointer';
+                const label = labelElements[hoveredObject.userData.id];
+                if (label) {
+                    label.style.color = '#ffffff';
+                    label.style.fontSize = '13px';
+                }
+            }
+        } else {
+            if (hoveredObject) {
+                const label = labelElements[hoveredObject.userData.id];
+                if (label) {
+                    label.style.color = 'rgba(255,255,255,0.7)';
+                    label.style.fontSize = '11px';
+                }
+                hoveredObject = null;
+                container.style.cursor = 'default';
+            }
+        }
+
+        // Connection pulse animation
+        connectionMeshes.forEach((line, i) => {
+            if (!selectedObject) {
+                line.material.opacity = 0.15 + Math.sin(elapsed * 0.8 + i * 0.5) * 0.1;
+            }
+        });
+
+        renderer.render(scene, camera);
+    }
+
+    animate();
+
+    // ═══════════════════════════════════════════
+    // RESIZE
+    // ═══════════════════════════════════════════
+    window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    // Resume auto-rotate after 5s of inactivity
+    let autoRotateTimer;
+    ['mousedown', 'wheel', 'touchstart'].forEach(evt => {
+        container.addEventListener(evt, () => {
+            autoRotate = false;
+            clearTimeout(autoRotateTimer);
+            autoRotateTimer = setTimeout(() => { autoRotate = true; }, 5000);
+        });
+    });
+    </script>
+</body>
+</html>
