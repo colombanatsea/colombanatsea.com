@@ -33,82 +33,6 @@
             background: radial-gradient(ellipse at center, transparent 50%, rgba(5,7,15,0.7) 100%);
         }
 
-        /* Message versions toggle */
-        .message-toggle {
-            position: fixed;
-            top: 20px; left: 50%;
-            transform: translateX(-50%);
-            z-index: 100;
-            display: flex;
-            gap: 8px;
-            background: rgba(10, 14, 26, 0.8);
-            padding: 6px;
-            border-radius: 30px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
-            opacity: 0;
-            animation: fadeInDown 0.8s ease 2.5s forwards;
-        }
-        .msg-btn {
-            padding: 8px 18px;
-            border: none;
-            background: transparent;
-            color: rgba(255,255,255,0.5);
-            cursor: pointer;
-            border-radius: 24px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 13px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .msg-btn.active {
-            background: rgba(42, 85, 179, 0.4);
-            color: #ffffff;
-        }
-        .msg-btn:hover:not(.active) { color: rgba(255,255,255,0.8); }
-
-        /* Central message */
-        .central-message {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 50;
-            text-align: center;
-            pointer-events: none;
-            transition: opacity 0.6s ease;
-        }
-        .central-message h1 {
-            font-size: clamp(24px, 4vw, 48px);
-            font-weight: 700;
-            letter-spacing: -1px;
-            line-height: 1.15;
-            text-shadow: 0 0 60px rgba(10,14,26,0.9), 0 0 120px rgba(10,14,26,0.7);
-        }
-        .central-message .subtitle {
-            font-family: 'Source Serif 4', serif;
-            font-size: clamp(14px, 1.8vw, 20px);
-            font-style: italic;
-            color: rgba(255,255,255,0.6);
-            margin-top: 12px;
-            text-shadow: 0 0 40px rgba(10,14,26,0.9);
-        }
-
-        /* Axis labels */
-        .axis-label {
-            position: fixed;
-            z-index: 60;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            opacity: 0.7;
-            pointer-events: none;
-        }
-        .axis-techno { color: #2a55b3; }
-        .axis-enviro { color: #00bf63; }
-        .axis-socio { color: #b32a55; }
-
         /* Detail panel */
         .detail-panel {
             position: fixed;
@@ -211,36 +135,50 @@
             color: rgba(255,255,255,0.35);
         }
 
-        /* Legend */
-        .legend {
+        /* Axis legend — small, discrete, bottom-left */
+        .axis-legend {
             position: fixed;
-            bottom: 30px;
-            left: 30px;
+            bottom: 24px;
+            left: 24px;
             z-index: 100;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
             opacity: 0;
             animation: fadeInUp 0.8s ease 2.8s forwards;
+            background: rgba(10, 14, 26, 0.6);
+            backdrop-filter: blur(8px);
+            padding: 14px 18px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.06);
         }
-        .legend-item {
+        .axis-legend-title {
+            font-size: 9px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.35);
+            margin-bottom: 2px;
+        }
+        .axis-legend-item {
             display: flex;
             align-items: center;
             gap: 10px;
             font-size: 12px;
-            font-weight: 400;
-            color: rgba(255,255,255,0.7);
+            font-weight: 500;
+            color: rgba(255,255,255,0.75);
         }
-        .legend-dot {
-            width: 10px; height: 10px;
-            border-radius: 50%;
+        .axis-legend-bar {
+            width: 18px;
+            height: 4px;
+            border-radius: 2px;
         }
 
         /* Controls hint */
         .controls-hint {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 24px;
+            right: 24px;
             z-index: 100;
             font-size: 11px;
             color: rgba(255,255,255,0.3);
@@ -263,10 +201,6 @@
             text-transform: uppercase;
         }
 
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateX(-50%) translateY(-20px); }
-            to { opacity: 1; transform: translateX(-50%) translateY(0); }
-        }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -284,9 +218,8 @@
             }
             .detail-panel.open { right: 16px; }
             .controls-hint { display: none; }
-            .legend { bottom: 16px; left: 16px; }
-            .message-toggle { top: 12px; }
-            .msg-btn { padding: 6px 12px; font-size: 11px; }
+            .axis-legend { bottom: 16px; left: 16px; padding: 10px 14px; }
+            .axis-legend-item { font-size: 11px; }
         }
     </style>
 </head>
@@ -294,39 +227,19 @@
     <div id="canvas-container"></div>
     <div class="vignette"></div>
 
-    <!-- Message versions -->
-    <div class="message-toggle">
-        <button class="msg-btn" data-msg="A">A — Construire</button>
-        <button class="msg-btn active" data-msg="B">B — Oceanocratie</button>
-        <button class="msg-btn" data-msg="C">C — Triple transition</button>
-    </div>
-
-    <!-- Central messages -->
-    <div class="central-message" id="msg-A" style="opacity:0;">
-        <h1>Construire le monde<br>maritime de demain</h1>
-        <div class="subtitle">Le maritime dans le sang depuis 1991</div>
-    </div>
-    <div class="central-message" id="msg-B">
-        <h1>Oceanocratie</h1>
-        <div class="subtitle">Une nation libre regarde la mer</div>
-    </div>
-    <div class="central-message" id="msg-C" style="opacity:0;">
-        <h1>La triple transition<br>maritime</h1>
-        <div class="subtitle">Technologique . Environnementale . Socioculturelle</div>
-    </div>
-
-    <!-- Legend -->
-    <div class="legend">
-        <div class="legend-item">
-            <div class="legend-dot" style="background:#2a55b3;box-shadow:0 0 8px #2a55b3;"></div>
+    <!-- Axis legend — small discrete corner legend -->
+    <div class="axis-legend">
+        <div class="axis-legend-title">Axes de transition</div>
+        <div class="axis-legend-item">
+            <div class="axis-legend-bar" style="background:#4080e0;box-shadow:0 0 6px #2a55b3;"></div>
             Technologique
         </div>
-        <div class="legend-item">
-            <div class="legend-dot" style="background:#00bf63;box-shadow:0 0 8px #00bf63;"></div>
+        <div class="axis-legend-item">
+            <div class="axis-legend-bar" style="background:#00e070;box-shadow:0 0 6px #00bf63;"></div>
             Environnementale
         </div>
-        <div class="legend-item">
-            <div class="legend-dot" style="background:#b32a55;box-shadow:0 0 8px #b32a55;"></div>
+        <div class="axis-legend-item">
+            <div class="axis-legend-bar" style="background:#d43a6a;box-shadow:0 0 6px #b32a55;"></div>
             Socioculturelle
         </div>
     </div>
@@ -364,11 +277,24 @@
     // DATA
     // =============================================
     const COLORS = {
-        techno: 0x2a55b3,
-        enviro: 0x00bf63,
-        socio:  0xb32a55,
+        techno: 0x4080e0,   // brighter saturated blue
+        enviro: 0x00e070,   // brighter saturated green
+        socio:  0xd43a6a,   // brighter saturated bordeaux/rose
         bg:     0x0a0e1a,
         white:  0xffffff
+    };
+
+    // Original hex values for CSS / labels
+    const AXIS_HEX = {
+        techno: '#4080e0',
+        enviro: '#00e070',
+        socio:  '#d43a6a'
+    };
+
+    const AXIS_NAMES = {
+        techno: 'TECHNOLOGIQUE',
+        enviro: 'ENVIRONNEMENTALE',
+        socio:  'SOCIOCULTURELLE'
     };
 
     const engagements = [
@@ -578,35 +504,35 @@
     // =============================================
     // LIGHTING
     // =============================================
-    scene.add(new THREE.AmbientLight(0xffffff, 0.3));
+    scene.add(new THREE.AmbientLight(0xffffff, 0.35));
 
-    const pointLight1 = new THREE.PointLight(0x2a55b3, 1.5, 30);
+    const pointLight1 = new THREE.PointLight(COLORS.techno, 1.8, 30);
     pointLight1.position.set(-8, 5, 5);
     scene.add(pointLight1);
 
-    const pointLight2 = new THREE.PointLight(0x00bf63, 1.0, 30);
+    const pointLight2 = new THREE.PointLight(COLORS.enviro, 1.2, 30);
     pointLight2.position.set(8, -3, -5);
     scene.add(pointLight2);
 
-    const pointLight3 = new THREE.PointLight(0xb32a55, 0.8, 30);
+    const pointLight3 = new THREE.PointLight(COLORS.socio, 1.0, 30);
     pointLight3.position.set(0, -8, 8);
     scene.add(pointLight3);
 
     // =============================================
-    // 3 TRANSITION PLANES (undulating)
+    // 3 TRANSITION PLANES (undulating) with stronger visibility
     // =============================================
     const planeSegments = 32;
     function createTransitionPlane(color, rotation, opacity) {
         const geometry = new THREE.PlaneGeometry(18, 18, planeSegments, planeSegments);
         const material = new THREE.MeshBasicMaterial({
-            color: color, transparent: true, opacity: opacity || 0.06,
+            color: color, transparent: true, opacity: opacity || 0.08,
             side: THREE.DoubleSide, depthWrite: false
         });
         const plane = new THREE.Mesh(geometry, material);
         plane.rotation.set(rotation.x, rotation.y, rotation.z);
 
         const wireMaterial = new THREE.MeshBasicMaterial({
-            color: color, transparent: true, opacity: (opacity || 0.06) * 2,
+            color: color, transparent: true, opacity: (opacity || 0.08) * 2.5,
             wireframe: true, depthWrite: false
         });
         const wireframe = new THREE.Mesh(new THREE.PlaneGeometry(18, 18, planeSegments, planeSegments), wireMaterial);
@@ -632,6 +558,111 @@
     scene.add(socioPlane.wireframe);
 
     const allPlanes = [technoPlane, enviroPlane, socioPlane];
+
+    // =============================================
+    // AXIS GUIDE LINES — bold colored lines along each plane's edge
+    // =============================================
+    const axisKeys = ['techno', 'enviro', 'socio'];
+    const planeConfigs = [
+        { rotation: { x: Math.PI * 0.4, y: 0.3, z: 0 }, key: 'techno' },
+        { rotation: { x: 0.2, y: Math.PI * 0.35, z: 0.4 }, key: 'enviro' },
+        { rotation: { x: -0.3, y: -0.2, z: Math.PI * 0.3 }, key: 'socio' }
+    ];
+
+    // Create axis cross-lines through center for each plane
+    planeConfigs.forEach(cfg => {
+        const color = new THREE.Color(COLORS[cfg.key]);
+        const lineLen = 10;
+
+        // Two perpendicular lines in the plane
+        for (let d = 0; d < 2; d++) {
+            const pts = [];
+            if (d === 0) {
+                pts.push(new THREE.Vector3(-lineLen, 0, 0));
+                pts.push(new THREE.Vector3(lineLen, 0, 0));
+            } else {
+                pts.push(new THREE.Vector3(0, -lineLen, 0));
+                pts.push(new THREE.Vector3(0, lineLen, 0));
+            }
+            const geo = new THREE.BufferGeometry().setFromPoints(pts);
+            const mat = new THREE.LineBasicMaterial({
+                color: color, transparent: true, opacity: 0.35
+            });
+            const line = new THREE.Line(geo, mat);
+            line.rotation.set(cfg.rotation.x, cfg.rotation.y, cfg.rotation.z);
+            scene.add(line);
+        }
+
+        // Dashed radial guidelines (4 diagonals)
+        for (let a = 0; a < 4; a++) {
+            const angle = (a / 4) * Math.PI * 2 + Math.PI / 4;
+            const pts = [
+                new THREE.Vector3(0, 0, 0),
+                new THREE.Vector3(Math.cos(angle) * lineLen, Math.sin(angle) * lineLen, 0)
+            ];
+            const geo = new THREE.BufferGeometry().setFromPoints(pts);
+            const mat = new THREE.LineDashedMaterial({
+                color: color, transparent: true, opacity: 0.12,
+                dashSize: 0.5, gapSize: 0.5
+            });
+            const line = new THREE.Line(geo, mat);
+            line.computeLineDistances();
+            line.rotation.set(cfg.rotation.x, cfg.rotation.y, cfg.rotation.z);
+            scene.add(line);
+        }
+    });
+
+    // =============================================
+    // AXIS EDGE LABELS (3D text sprites at plane edges)
+    // =============================================
+    function createAxisLabel3D(text, color, position) {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = 512;
+        canvas.height = 64;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.font = 'bold 36px Poppins, Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+
+        // Glow
+        ctx.shadowColor = color;
+        ctx.shadowBlur = 16;
+        ctx.fillStyle = color;
+        ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+
+        // Crisp text on top
+        ctx.shadowBlur = 0;
+        ctx.fillStyle = color;
+        ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+
+        const texture = new THREE.CanvasTexture(canvas);
+        texture.minFilter = THREE.LinearFilter;
+        const spriteMat = new THREE.SpriteMaterial({
+            map: texture,
+            transparent: true,
+            opacity: 0.85,
+            depthWrite: false
+        });
+        const sprite = new THREE.Sprite(spriteMat);
+        sprite.scale.set(5, 0.65, 1);
+        sprite.position.set(position.x, position.y, position.z);
+        return sprite;
+    }
+
+    // Place axis labels at the outer edges of each plane
+    // Techno plane: tilted mostly around X, put label at top-edge
+    const technoLabel = createAxisLabel3D('TECHNOLOGIQUE', AXIS_HEX.techno, { x: -6, y: 5.5, z: -3.5 });
+    scene.add(technoLabel);
+
+    // Enviro plane: tilted mostly around Y, put label at right-edge
+    const enviroLabel = createAxisLabel3D('ENVIRONNEMENTALE', AXIS_HEX.enviro, { x: 5.5, y: -3, z: -5 });
+    scene.add(enviroLabel);
+
+    // Socio plane: tilted differently, put label at another edge
+    const socioLabel = createAxisLabel3D('SOCIOCULTURELLE', AXIS_HEX.socio, { x: -4, y: -4, z: 5.5 });
+    scene.add(socioLabel);
 
     function undulateGeometry(geom, origPositions, time, speed, amplitude, waveLength) {
         const positions = geom.attributes.position.array;
@@ -670,7 +701,7 @@
             transparent: true,
             opacity: 0.9,
             emissive: sphereColor,
-            emissiveIntensity: isOceanocrat ? 0.5 : 0.3,
+            emissiveIntensity: isOceanocrat ? 0.5 : 0.35,
             shininess: isOceanocrat ? 120 : 80
         });
         const sphere = new THREE.Mesh(geometry, material);
@@ -678,6 +709,20 @@
         sphere.userData.baseColor = sphereColor.clone();
         sphere.userData.mixedColor = mixedColor.clone();
         sphere.userData.isOceanocrat = isOceanocrat;
+
+        // Add a colored ring around non-oceanocrat spheres to show axis more clearly
+        if (!isOceanocrat) {
+            const primaryAxis = eng.axes[0];
+            const ringColor = new THREE.Color(COLORS[primaryAxis]);
+            const ringGeo = new THREE.RingGeometry(eng.size * 1.15, eng.size * 1.3, 48);
+            const ringMat = new THREE.MeshBasicMaterial({
+                color: ringColor, transparent: true, opacity: 0.5,
+                side: THREE.DoubleSide, depthWrite: false
+            });
+            const ring = new THREE.Mesh(ringGeo, ringMat);
+            ring.userData = { isAxisRing: true, parentSphere: sphere, axis: primaryAxis };
+            sphere.add(ring); // child of sphere so it follows position
+        }
 
         // Start far away for intro animation
         const angle = (idx / engagements.length) * Math.PI * 2;
@@ -865,13 +910,20 @@
 
     const labelElements = {};
     engagements.forEach(eng => {
+        const isOceanocrat = eng.id === 'oceanocrat';
+        // Determine the primary axis color for the label
+        let labelColor = 'rgba(255,255,255,0.7)';
+        if (!isOceanocrat && eng.axes.length === 1) {
+            labelColor = AXIS_HEX[eng.axes[0]];
+        }
+
         const label = document.createElement('div');
         label.style.cssText = `
             position: absolute;
             font-family: 'Poppins', sans-serif;
             font-size: ${isMobile ? '10px' : '11px'};
             font-weight: 600;
-            color: rgba(255,255,255,0.7);
+            color: ${labelColor};
             text-transform: uppercase;
             letter-spacing: 1px;
             white-space: nowrap;
@@ -883,21 +935,6 @@
         label.textContent = eng.name;
         labelsContainer.appendChild(label);
         labelElements[eng.id] = label;
-    });
-
-    // =============================================
-    // MESSAGE VERSION TOGGLE (default B)
-    // =============================================
-    let currentMsg = 'B';
-    document.querySelectorAll('.msg-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.msg-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            ['A', 'B', 'C'].forEach(m => {
-                document.getElementById('msg-' + m).style.opacity = m === btn.dataset.msg ? '1' : '0';
-            });
-            currentMsg = btn.dataset.msg;
-        });
     });
 
     // =============================================
@@ -1092,7 +1129,7 @@
                 sphere.scale.lerp(new THREE.Vector3(targetScale, targetScale, targetScale), 0.1);
 
                 // Emissive pulse
-                const baseEmissive = isOcean ? 0.5 : 0.3;
+                const baseEmissive = isOcean ? 0.5 : 0.35;
                 sphere.material.emissiveIntensity = baseEmissive + Math.sin(elapsed * 1.8 + i) * 0.2;
 
                 // Dimming
@@ -1190,13 +1227,19 @@
                 label.style.display = 'block';
                 // Dim label if sphere is dimmed
                 if (introComplete) {
+                    const isOcean = eng.id === 'oceanocrat';
                     if (eng.dimmed) {
                         label.style.color = 'rgba(255,255,255,0.15)';
                     } else if (hoveredObject === sphere) {
                         label.style.color = '#ffffff';
                         label.style.fontSize = '13px';
                     } else {
-                        label.style.color = 'rgba(255,255,255,0.7)';
+                        // Use axis color for single-axis spheres, white for multi/ocean
+                        if (!isOcean && eng.axes.length === 1) {
+                            label.style.color = AXIS_HEX[eng.axes[0]];
+                        } else {
+                            label.style.color = 'rgba(255,255,255,0.7)';
+                        }
                         label.style.fontSize = isMobile ? '10px' : '11px';
                     }
                 }

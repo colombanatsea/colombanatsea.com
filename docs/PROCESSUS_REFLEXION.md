@@ -1,7 +1,7 @@
 # PROCESSUS DE RÉFLEXION — colombanatsea.com
 
 **Date de création** : 4 mars 2026
-**Dernière mise à jour** : 4 mars 2026
+**Dernière mise à jour** : 4 mars 2026 (itération 3)
 
 ---
 
@@ -85,6 +85,34 @@
 | Enrichi le moment fondateur 2013 : ajout de la phrase "C'est à Marseille en 2013 que naît la conviction fondatrice : technologie et environnement sont indissociables" | Section 2.1 Phase 2, waypoint Jul 2013-Jan 2014 |
 | Confirmé Océanocratie comme scénario par défaut des prototypes | Section 1.4 |
 
+### Itération 3 — Raffinements visuels et données réelles (4 mars 2026)
+
+**Retours reçus de Colomban :**
+
+#### Proto 1 — Globe 3D
+| Problème | Sévérité | Correction |
+|----------|----------|------------|
+| Le surlignage bleu ZEE remplit tout le globe au lieu des seuls polygones | Bloquant | Correction du rendu polygonsData : les polygones ZEE ne colorent plus que les zones françaises, remplissage très subtil |
+| Les routes maritimes sont moches (arcs) | Majeur | Remplacement total par une heatmap dynamique de densité de navires (style AIS). Trafic commercial en orange/rouge, navires de pêche en cyan/teal. Points pondérés par intensité le long des vraies routes maritimes et zones de pêche (Mer du Nord, Grand Banks, côte ouest-africaine, Asie du Sud-Est) |
+
+#### Proto 2 — Matrice 3D
+| Problème | Sévérité | Correction |
+|----------|----------|------------|
+| Titre superposé inutile sur la visualisation | Moyen | Suppression du titre overlay. La visualisation 3D occupe tout le viewport. Le titre sera le header de la page web finale |
+| Les 3 axes ne sont pas clairs | Majeur | Labels d'axes plus visibles, couleurs plus saturées, lignes directrices, légende discrète en coin |
+
+#### Proto 3 — Carte marine parcours
+| Problème | Sévérité | Correction |
+|----------|----------|------------|
+| La carte est complètement explosée (contours manuels faux) | Bloquant | Remplacement des contours manuels par les vraies données Natural Earth 110m (GeoJSON open source). Littoraux réels et reconnaissables |
+
+#### Proto 4 — Média-viz constellation
+| Problème | Sévérité | Correction |
+|----------|----------|------------|
+| Le player Play/Pause n'est pas naturel | Majeur | Remplacement par navigation au scroll (comme Proto 3). Page longue, timeline avance avec le défilement |
+| Les 3 axes occupent trop d'espace vertical | Majeur | 3 rangées horizontales au même niveau (TECH en haut, ENVIRO au milieu, SOCIO en bas). Axe X = temps, axe Y = catégories |
+| Les publications médias ne sont pas assez mises en avant | Moyen | Hiérarchie visuelle : articles médias (Jeune Marine, Marine & Océans) = gros points lumineux avec glow. Conférences = points normaux. LinkedIn = petits points discrets |
+
 ---
 
 ## 2. DÉCISIONS DE DESIGN
@@ -96,24 +124,24 @@
 - **Scroll-driven animation** fonctionne bien pour le storytelling (proto 3)
 
 ### Points d'attention pour la V2/V3
-1. **Données réelles** : L'itération 2 utilise des approximations manuelles beaucoup plus réalistes (ZEE polygones, câbles avec waypoints, routes via détroits). La V3 devra intégrer :
+1. **Données réelles** : L'itération 3 intègre les données Natural Earth pour les côtes (proto 3) et une heatmap de densité style AIS (proto 1). Reste à intégrer :
    - Vraies frontières ZEE (GeoJSON via Marine Regions ou GFW API)
    - Tracés exacts des câbles sous-marins (TeleGeography API / submarinecablemap.com)
-   - Densité de trafic maritime réelle (GMTDS heatmap ou ArcGIS)
+   - Données AIS réelles de densité de trafic (GMTDS / MarineTraffic API)
    - Publications réelles depuis la base Notion (remplacer les données générées)
 2. **Mobile** : Aucun prototype n'a de fallback mobile. Prévoir des versions simplifiées 2D.
-3. **Performance** : Le globe avec toutes les couches activées peut être lourd. Prévoir du lazy loading et des niveaux de détail adaptatifs.
-4. **Scénario par défaut** : Océanocratie confirmé comme le scénario principal sur tous les prototypes.
+3. **Performance** : Le globe avec heatmap peut être lourd. Prévoir du lazy loading et des niveaux de détail adaptatifs.
+4. **Scroll-driven storytelling** : Confirmé comme le pattern d'interaction principal (proto 3 et proto 4).
+5. **Scénario par défaut** : Océanocratie confirmé comme le scénario principal sur tous les prototypes.
 
 ---
 
 ## 3. PROCHAINES ÉTAPES
 
-1. Tester les prototypes v2 (itération 2) dans un navigateur
+1. Tester les prototypes v3 (itération 3) dans un navigateur
 2. Itérer sur les retours de Colomban
-3. Intégrer les vraies données pour chaque proto :
-   - Globe : GeoJSON ZEE réelles (Marine Regions), câbles exacts (TeleGeography), heatmap trafic (GMTDS)
-   - Carte : fond de carte Mapbox GL ou tuiles OpenStreetMap pour un rendu professionnel
+3. Intégrer les vraies données restantes :
+   - Globe : GeoJSON ZEE réelles (Marine Regions), données AIS réelles (MarineTraffic)
    - Média-viz : connexion à la base Notion des publications réelles
 4. Développer les fallbacks mobile (2D simplifiés)
 5. Choisir la stack technique finale (consulter spec Palantiri)
