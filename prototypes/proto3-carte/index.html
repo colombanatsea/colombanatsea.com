@@ -230,7 +230,7 @@
                 <div class="dot"></div>
             </div>
             <div class="phase-dot" id="phase-annecy">
-                <span class="label">Annecy — Réseau</span>
+                <span class="label">RAYONNEMENT</span>
                 <div class="dot"></div>
             </div>
         </div>
@@ -392,12 +392,13 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     const reseauThreads = [
         { year: 2021, label: 'Opsealog', lon: 5.37, lat: 43.30, color: COLORS.techno, disappearsYear: 2026 },
         { year: 2022, label: 'Fondation ENSM', lon: 0.10, lat: 49.49, color: COLORS.enviro },
-        { year: 2023, label: 'Enseignant DD ENSM', lon: 0.10, lat: 49.49, color: COLORS.enviro },
+        { year: 2023, label: 'ENSM', lon: 0.10, lat: 49.49, color: COLORS.enviro },
         { year: 2023, label: 'Propeller Club', lon: 5.37, lat: 43.30, color: COLORS.socio },
         { year: 2023, label: 'HYDROS Alumni', lon: 6.13, lat: 45.90, color: COLORS.socio },
         { year: 2025, label: 'VAIATA Dynamics', lon: 6.13, lat: 45.90, color: COLORS.techno },
-        { year: 2025, label: 'COESPC', lon: 6.13, lat: 45.90, color: COLORS.socio },
+        { year: 2025, label: 'CŒSPC', lon: 6.13, lat: 45.90, color: COLORS.socio },
         { year: 2026, label: 'GASPE', lon: -1.55, lat: 47.22, color: COLORS.socio },
+        { year: 2026, label: 'Académie de Marine', lon: 2.35, lat: 48.86, color: COLORS.socio },
     ];
 
     const annecyHub = { lon: 6.13, lat: 45.90 };
@@ -798,6 +799,18 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     // ═══════════════════════════════════════════
     let threadSeeds = reseauThreads.map((_, i) => (i * 137.508 + 42) % 100 - 50);
 
+    // Pre-compute destination groups: threads sharing the same lon/lat
+    function buildDestGroups() {
+        const groups = {};
+        reseauThreads.forEach((thread, i) => {
+            const key = thread.lon + ',' + thread.lat;
+            if (!groups[key]) groups[key] = [];
+            groups[key].push({ thread, index: i });
+        });
+        return groups;
+    }
+    const destGroups = buildDestGroups();
+
     function drawReseau(progress, time, currentYear) {
         if (progress <= 0) return;
 
@@ -830,6 +843,9 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         // Draw threads appearing in sequence
         const threadsToShow = Math.ceil(progress * reseauThreads.length);
 
+        // Track which destination groups already had a line drawn
+        const drawnLines = {};
+
         for (let i = 0; i < threadsToShow; i++) {
             const thread = reseauThreads[i];
             const threadProgress = Math.min(1, (progress * reseauThreads.length - i));
@@ -838,15 +854,18 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             // Check if this thread should disappear
             let threadAlpha = 1;
             if (thread.disappearsYear && currentYear >= thread.disappearsYear) {
-                // Fade out over the last portion of scroll
                 threadAlpha = Math.max(0, 1 - (currentYear - thread.disappearsYear) * 2);
             }
             if (threadAlpha <= 0) continue;
 
             const dest = project(thread.lon, thread.lat);
             const isLocal = (thread.lon === annecyHub.lon && thread.lat === annecyHub.lat);
+            const destKey = thread.lon + ',' + thread.lat;
 
-            if (!isLocal) {
+            // Draw the line only ONCE per unique destination (not for local threads)
+            if (!isLocal && !drawnLines[destKey]) {
+                drawnLines[destKey] = true;
+
                 const seed = threadSeeds[i];
                 const cpX = (hub.x + dest.x) / 2 + seed * 0.3;
                 const cpY = (hub.y + dest.y) / 2 - 30 + seed * 0.2;
@@ -889,24 +908,61 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
                 const dotAlpha = (threadProgress - 0.5) * 2 * threadAlpha;
                 ctx.globalAlpha = dotAlpha;
 
-                const offsetX = isLocal ? (i * 4 - 2) : 0;
-                const offsetY = isLocal ? (15 + i * 12) : 0;
+                // Count how many visible threads at this same destination appear before this one
+                const group = destGroups[destKey];
+                let stackIndex = 0;
+                for (const entry of group) {
+                    if (entry.index === i) break;
+                    // Only count if that earlier thread is also visible
+                    const eProg = Math.min(1, (progress * reseauThreads.length - entry.index));
+                    if (eProg > 0.5) {
+                        let eAlpha = 1;
+                        if (entry.thread.disappearsYear && currentYear >= entry.thread.disappearsYear) {
+                            eAlpha = Math.max(0, 1 - (currentYear - entry.thread.disappearsYear) * 2);
+                        }
+                        if (eAlpha > 0) stackIndex++;
+                    }
+                }
 
-                ctx.fillStyle = thread.color;
-                ctx.beginPath();
-                ctx.arc(dest.x + offsetX, dest.y + offsetY, 4, 0, Math.PI * 2);
-                ctx.fill();
+                if (isLocal) {
+                    // Local threads: stack vertically next to Annecy label
+                    const offsetX = 45;
+                    const offsetY = 10 + stackIndex * 14;
 
-                ctx.fillStyle = thread.color;
-                ctx.font = '600 10px Poppins';
-                ctx.textAlign = 'left';
-                const labelX = dest.x + offsetX + (isLocal ? 8 : 10);
-                const labelY = dest.y + offsetY + 4;
-                ctx.fillText(thread.label, labelX, labelY);
+                    ctx.fillStyle = thread.color;
+                    ctx.beginPath();
+                    ctx.arc(hub.x + offsetX - 6, hub.y + offsetY, 3, 0, Math.PI * 2);
+                    ctx.fill();
 
-                ctx.font = '9px "Source Serif 4"';
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
-                ctx.fillText(thread.year, labelX, labelY + 14);
+                    ctx.fillStyle = thread.color;
+                    ctx.font = '600 10px Poppins';
+                    ctx.textAlign = 'left';
+                    ctx.fillText(thread.label, hub.x + offsetX, hub.y + offsetY + 4);
+
+                } else {
+                    // Remote threads: stack labels vertically at destination
+                    const labelSpacing = 14;
+                    const offsetY = stackIndex * labelSpacing;
+
+                    // Only draw destination dot for the first visible thread in the group
+                    if (stackIndex === 0) {
+                        ctx.fillStyle = thread.color;
+                        ctx.beginPath();
+                        ctx.arc(dest.x, dest.y, 4, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+
+                    ctx.fillStyle = thread.color;
+                    ctx.font = '600 10px Poppins';
+                    ctx.textAlign = 'left';
+                    const labelX = dest.x + 10;
+                    const labelY = dest.y + 4 + offsetY;
+                    ctx.fillText(thread.label, labelX, labelY);
+
+                    ctx.font = '9px "Source Serif 4"';
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+                    ctx.fillText(thread.year, labelX, labelY + 11);
+                }
 
                 ctx.globalAlpha = 1;
             }
@@ -1008,7 +1064,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             fondateur: 'MOMENT FONDATEUR',
             choix: 'CHOIX DÉCISIF',
             entrepreneuriat: 'ENTREPRENEURIAT',
-            annecy: 'Annecy — Réseau'
+            annecy: 'RAYONNEMENT'
         };
 
         // Check if current waypoint has a sidebarLabel override
@@ -1083,7 +1139,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         } else {
             // Réseau: 2021 → 2026
             const reseauProg = (progress - reseauStart) / (1 - reseauStart);
-            return Math.floor(2021 + reseauProg * 5);
+            return Math.min(2026, Math.round(2021 + reseauProg * 5));
         }
     }
 

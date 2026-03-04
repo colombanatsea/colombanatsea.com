@@ -697,7 +697,7 @@
             // social (linkedin, instagram, youtube) = small, subtle
             let size;
             if (pub.tier === 'media') {
-                size = Math.max(6, Math.min(12, Math.sqrt(pub.reach) / 25));
+                size = Math.max(4, Math.min(8, Math.sqrt(pub.reach) / 35));
             } else if (pub.tier === 'conference') {
                 size = Math.max(3.5, Math.min(7, Math.sqrt(pub.reach) / 40));
             } else {
@@ -1045,7 +1045,7 @@
 
             if (isMedia) {
                 // Press/media: medium circle, solid fill, thin white border
-                const r = displaySize * 1.2;
+                const r = displaySize * 0.9;
                 ctx.fillStyle = isHovered ? lightColor : color;
                 ctx.beginPath();
                 ctx.arc(ap.x, ap.y, r, 0, Math.PI * 2);
@@ -1096,28 +1096,6 @@
 
         if (!hoveredPub) canvas.style.cursor = 'default';
 
-        // Year labels on canvas (bottom of each year column)
-        ctx.font = '500 9px Poppins';
-        ctx.textAlign = 'center';
-        for (let y = YEAR_MIN; y <= YEAR_MAX; y++) {
-            const tNorm = (new Date(y, 6, 1).getTime() - timelineStart) / timeRange; // mid-year
-            const x = marginLeft + tNorm * usableW;
-            if (y === currentYear) {
-                ctx.globalAlpha = 0.95;
-                ctx.fillStyle = '#ffffff';
-                ctx.font = '700 10px Poppins';
-            } else if (y < currentYear) {
-                ctx.globalAlpha = 0.85;
-                ctx.fillStyle = '#ffffff';
-                ctx.font = '500 9px Poppins';
-            } else {
-                ctx.globalAlpha = 0.5;
-                ctx.fillStyle = '#ffffff';
-                ctx.font = '500 9px Poppins';
-            }
-            ctx.fillText(y, x, marginTop + usableH + 14);
-        }
-        ctx.globalAlpha = 1;
     }
 
     // =============================================
