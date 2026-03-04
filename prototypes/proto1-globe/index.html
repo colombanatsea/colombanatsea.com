@@ -225,10 +225,7 @@
 <body>
 
   <div id="globe-container">
-    <div id="header-overlay">
-      <h1>La France, <span>2&#7497;</span> puissance maritime mondiale</h1>
-      <p class="subtitle">11,7 millions de km&#178; de Zone &Eacute;conomique Exclusive</p>
-    </div>
+    <div id="header-overlay"></div>
 
     <div id="total-counter">
       <div class="label">Surface totale ZEE</div>
@@ -650,41 +647,31 @@
       const cz = ZEE_HEIGHT * Math.sin(centerPhi) * Math.sin(centerTheta);
       vertices.push(cx, cy, cz);
 
-      // Perimeter points
+      // Perimeter points using great-circle destination point formula
       for (let i = 0; i <= ZONE_SEGMENTS; i++) {
-        const angle = (i / ZONE_SEGMENTS) * Math.PI * 2;
+        const bearing = (i / ZONE_SEGMENTS) * Math.PI * 2;
 
-        // Calculate point on sphere at angular distance from center
-        // Using spherical coordinate offset
-        const sinR = Math.sin(displayRadius);
-        const cosR = Math.cos(displayRadius);
-        const sinA = Math.sin(angle);
-        const cosA = Math.cos(angle);
+        // Great circle destination point formula
+        const lat1 = zone.lat * Math.PI / 180;
+        const lon1 = zone.lng * Math.PI / 180;
 
-        // Point relative to north pole at angular distance displayRadius
-        const px = sinR * cosA;
-        const py = cosR;
-        const pz = sinR * sinA;
+        const lat2 = Math.asin(
+          Math.sin(lat1) * Math.cos(displayRadius) +
+          Math.cos(lat1) * Math.sin(displayRadius) * Math.cos(bearing)
+        );
+        const lon2 = lon1 + Math.atan2(
+          Math.sin(bearing) * Math.sin(displayRadius) * Math.cos(lat1),
+          Math.cos(displayRadius) - Math.sin(lat1) * Math.sin(lat2)
+        );
 
-        // Rotate from north pole to center position
-        // First rotate by centerPhi around Z axis (latitude)
-        // Then rotate by centerTheta around Y axis (longitude)
-        const sinPhi = Math.sin(centerPhi);
-        const cosPhi = Math.cos(centerPhi);
+        // Convert to 3D using the same formula as latLngToVec3
+        const phi = (Math.PI / 2) - lat2;
+        const theta = -lon2;
+        const fx = ZEE_HEIGHT * Math.sin(phi) * Math.cos(theta);
+        const fy = ZEE_HEIGHT * Math.cos(phi);
+        const fz = ZEE_HEIGHT * Math.sin(phi) * Math.sin(theta);
 
-        // Rotate around X-axis by centerPhi
-        const rx = px;
-        const ry = py * cosPhi - pz * sinPhi;
-        const rz = py * sinPhi + pz * cosPhi;
-
-        // Rotate around Y-axis by centerTheta
-        const sinT = Math.sin(centerTheta);
-        const cosT = Math.cos(centerTheta);
-        const fx = rx * cosT + rz * sinT;
-        const fy = ry;
-        const fz = -rx * sinT + rz * cosT;
-
-        vertices.push(fx * ZEE_HEIGHT, fy * ZEE_HEIGHT, fz * ZEE_HEIGHT);
+        vertices.push(fx, fy, fz);
 
         if (i > 0) {
           indices.push(0, i, i + 1);

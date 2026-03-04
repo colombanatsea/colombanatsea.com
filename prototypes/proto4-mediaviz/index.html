@@ -124,7 +124,7 @@
         }
         .stat .label {
             font-size: 8px;
-            color: rgba(255,255,255,0.3);
+            color: rgba(255,255,255,0.85);
             text-transform: uppercase;
             letter-spacing: 0.8px;
         }
@@ -161,13 +161,13 @@
         }
         .year-label {
             font-size: 9px;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255,255,255,0.85);
             transition: all 0.2s;
             text-align: center;
             min-width: 28px;
         }
         .year-label.current { color: #fff; font-weight: 700; }
-        .year-label.past { color: rgba(255,255,255,0.75); }
+        .year-label.past { color: rgba(255,255,255,0.9); }
         .current-year-display {
             position: fixed;
             bottom: 44px;
@@ -176,7 +176,7 @@
             z-index: 101;
             font-size: 28px;
             font-weight: 700;
-            color: rgba(255,255,255,0.55);
+            color: rgba(255,255,255,0.9);
             font-variant-numeric: tabular-nums;
             pointer-events: none;
             letter-spacing: 2px;
@@ -426,7 +426,81 @@
     function generatePublications() {
         const pubs = [];
 
-        const subjects = [
+        // ── REAL DATA: Conferences/Interventions (9 entries) ──
+        const conferences = [
+            {title: 'Euromaritime 2026 \u2014 Avenir du mod\u00e8le \u00e9conomique des compagnies de service public maritime', axis: 'socio', channel: 'conference', type: 'Conference', date: new Date(2026, 1, 3), reach: 5000, excerpt: 'Intervention sur l\'avenir du mod\u00e8le \u00e9conomique des compagnies de service public maritime.'},
+            {title: 'Acad\u00e9mie de Marine \u2014 Potentiel strat\u00e9gique du maritime de proximit\u00e9', axis: 'socio', channel: 'conference', type: 'Conference', date: new Date(2026, 1, 18), reach: 8000, excerpt: 'Pr\u00e9sentation du potentiel strat\u00e9gique du maritime de proximit\u00e9.'},
+            {title: 'Propeller Club International \u2014 Introduction to digitalization & decarbonation', axis: 'techno', channel: 'conference', type: 'Conference', date: new Date(2025, 9, 14), reach: 6000, excerpt: '2 keynotes sur la digitalisation et la d\u00e9carbonation.'},
+            {title: 'Emission Shipping Conference (NABU + Sciences Po)', axis: 'enviro', channel: 'conference', type: 'Conference', date: new Date(2025, 8, 30), reach: 4000, excerpt: 'Participation \u00e0 la conf\u00e9rence sur les \u00e9missions du shipping.'},
+            {title: 'Conf\u00e9rence Race for Water \u2014 Propulsion v\u00e9lique et d\u00e9carbonation', axis: 'enviro', channel: 'conference', type: 'Conference', date: new Date(2025, 4, 13), reach: 5000, excerpt: 'La propulsion v\u00e9lique : un vent nouveau pour d\u00e9carboner le transport maritime.'},
+            {title: 'AG F\u00e9d\u00e9ration Nationale du M\u00e9rite Maritime \u2014 Avenir du maritime', axis: 'socio', channel: 'conference', type: 'Conference', date: new Date(2025, 4, 16), reach: 3000, excerpt: 'Intervention sur l\'avenir du maritime.'},
+            {title: 'Euromaritime 2024 \u2014 Comment relever les d\u00e9fis des exigences IMO 2030/2050', axis: 'enviro', channel: 'conference', type: 'Conference', date: new Date(2024, 0, 31), reach: 8000, excerpt: 'Panel sur les d\u00e9fis r\u00e9glementaires IMO.'},
+            {title: 'Universit\u00e9 de Rennes 1 \u2014 D\u00e9carbonation du maritime', axis: 'enviro', channel: 'conference', type: 'Conference', date: new Date(2024, 4, 24), reach: 4000, excerpt: 'Conf\u00e9rence sur la d\u00e9carbonation du transport maritime.'},
+            {title: 'Webinaire Digital Ship \u2014 Using Electronic Logbooks to Improve Efficiency', axis: 'techno', channel: 'conference', type: 'Conference', date: new Date(2023, 5, 22), reach: 6000, excerpt: 'Webinaire sur les logbooks \u00e9lectroniques et l\'efficacit\u00e9 op\u00e9rationnelle.'},
+        ];
+
+        // ── REAL DATA: Press articles (32 entries) ──
+        const press = [
+            // 2026 Press
+            {title: 'Maritime: la grande mise \u00e0 jour des comp\u00e9tences', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2026, 2, 2), reach: 15000, excerpt: 'HydroContest by ENSM'},
+            {title: 'La donn\u00e9e maritime comme boussole environnementale', axis: 'enviro', channel: 'presse', type: 'Article presse', date: new Date(2026, 2, 2), reach: 15000, excerpt: 'HydroContest by ENSM'},
+            {title: 'Propulsion v\u00e9lique: quand l\'art de la navigation est r\u00e9invent\u00e9', axis: 'enviro', channel: 'presse', type: 'Article presse', date: new Date(2026, 0, 13), reach: 15000, excerpt: 'HydroContest by ENSM'},
+            // 2025 Press
+            {title: 'M\u00e9diterran\u00e9e centrale: quand le d\u00e9litement du droit international transforme le sauvetage maritime', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 11, 20), reach: 80000, excerpt: 'Le Monde'},
+            {title: 'E-carburants: l\'Europe face au d\u00e9fi de la souverainet\u00e9 \u00e9nerg\u00e9tique', axis: 'enviro', channel: 'presse', type: 'Article presse', date: new Date(2025, 11, 8), reach: 15000, excerpt: 'HydroContest by ENSM'},
+            {title: 'Le GASPE nomme Colomban Monnier d\u00e9l\u00e9gu\u00e9 g\u00e9n\u00e9ral', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 9, 31), reach: 25000, excerpt: 'Mer & Marine'},
+            {title: 'Le GASPE nomme Colomban Monnier D\u00e9l\u00e9gu\u00e9 G\u00e9n\u00e9ral et affirme son engagement', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 9, 25), reach: 20000, excerpt: 'Jeune Marine'},
+            {title: 'La bande des 24 milles marins, une art\u00e8re \u00e9conomique et sociale m\u00e9connue', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 9, 1), reach: 18000, excerpt: 'Marine & Oc\u00e9ans N288'},
+            {title: 'L\'Irlande: nouvelle puissance maritime', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 9, 1), reach: 18000, excerpt: 'Marine & Oc\u00e9ans N288'},
+            {title: 'Les armateurs de navires de service public recrutent Colomban Monnier', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 9, 17), reach: 20000, excerpt: 'Le Marin'},
+            {title: 'L\'archipel fran\u00e7ais dans l\'oc\u00e9an Indien', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 9, 13), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'Les opportunit\u00e9s d\'impact dans l\'engagement associatif maritime', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 6, 15), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'Ukraine, la marine de commerce \u00e0 l\'\u00e9preuve de la guerre', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 6, 1), reach: 18000, excerpt: 'Marine & Oc\u00e9ans N287'},
+            {title: 'La France, terrienne appel\u00e9e par le large', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 5, 14), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'Pour une gouvernance de l\'oc\u00e9an paritaire et inclusive', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 5, 5), reach: 20000, excerpt: 'Vert'},
+            {title: 'Les Ap\u00e9ritifs de la mer rassemblent les marins et remettent l\'humain au centre', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 4, 6), reach: 20000, excerpt: 'Le Marin'},
+            {title: 'Drones marins: la nouvelle donne', axis: 'techno', channel: 'presse', type: 'Article presse', date: new Date(2025, 4, 3), reach: 18000, excerpt: 'Conflits'},
+            {title: 'La mer, une chance pour la France!', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 3, 1), reach: 18000, excerpt: 'Marine & Oc\u00e9ans N286'},
+            {title: 'Ce d\u00e9versement d\'eaux us\u00e9es par un navire de croisi\u00e8re est-il r\u00e9el?', axis: 'enviro', channel: 'presse', type: 'Article presse', date: new Date(2025, 2, 27), reach: 150000, excerpt: 'TF1'},
+            {title: 'Oc\u00e9ans: autoroutes digitales strat\u00e9giques', axis: 'techno', channel: 'presse', type: 'Article presse', date: new Date(2025, 2, 5), reach: 18000, excerpt: 'Conflits'},
+            // 2024 Press
+            {title: 'Les \u00e9quipages promotionnels ENSM', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2024, 11, 23), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'La vague sc\u00e9l\u00e9rate du num\u00e9rique dans le maritime', axis: 'techno', channel: 'presse', type: 'Article presse', date: new Date(2024, 9, 22), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'De la conqu\u00eate \u00e0 la connaissance de l\'Oc\u00e9an', axis: 'enviro', channel: 'presse', type: 'Article presse', date: new Date(2024, 8, 1), reach: 18000, excerpt: 'Marine & Oc\u00e9ans N284'},
+            {title: 'Les Ap\u00e9ritifs de la Mer ouvrent leur site Internet', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2024, 4, 30), reach: 12000, excerpt: 'Jeune Marine'},
+            {title: 'EU ETS vs FuelEU', axis: 'enviro', channel: 'presse', type: 'Article presse', date: new Date(2024, 4, 15), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'La Fondation ENSM r\u00e9v\u00e8le sa m\u00e9thode', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2024, 3, 10), reach: 25000, excerpt: 'Mer & Marine'},
+            {title: 'L\'ENSM: nouvelle vague', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2024, 2, 22), reach: 15000, excerpt: 'Jeune Marine'},
+            // 2023 Press
+            {title: 'L\'intelligence artificielle & le maritime', axis: 'techno', channel: 'presse', type: 'Article presse', date: new Date(2023, 11, 14), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'Colomban Monnier \u00e9lu pr\u00e9sident de la Fondation ENSM', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2023, 8, 19), reach: 20000, excerpt: 'Le Marin'},
+            {title: 'Un oc\u00e9an de bienveillance', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2023, 8, 11), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'Appel aux Jeunes du Maritime', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2023, 3, 12), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'Ocean degradation stripes', axis: 'enviro', channel: 'presse', type: 'Article presse', date: new Date(2023, 1, 24), reach: 15000, excerpt: 'Jeune Marine'},
+        ];
+
+        // Add real conferences and press with proper fields
+        conferences.forEach(c => {
+            pubs.push({
+                id: pubs.length,
+                title: c.title, axis: c.axis, channel: c.channel, type: c.type,
+                tier: getPubTier(c.channel),
+                date: c.date, year: c.date.getFullYear(),
+                reach: c.reach, excerpt: c.excerpt
+            });
+        });
+        press.forEach(p => {
+            pubs.push({
+                id: pubs.length,
+                title: p.title, axis: p.axis, channel: p.channel, type: p.type,
+                tier: getPubTier(p.channel),
+                date: p.date, year: p.date.getFullYear(),
+                reach: p.reach, excerpt: p.excerpt
+            });
+        });
+
+        // ── GENERATED: Social media posts (LinkedIn, Instagram, YouTube) ──
+        const socialSubjects = [
             // LinkedIn - techno
             { title: "L'IA dans le maritime : hype ou revolution ?", axis: 'techno', channel: 'linkedin', type: 'Analyse' },
             { title: 'Les cables sous-marins, arteres du monde digital', axis: 'techno', channel: 'linkedin', type: 'Carte' },
@@ -459,36 +533,6 @@
             { title: 'Visite du CMA CGM Jacques Saade', axis: 'techno', channel: 'youtube', type: 'Video' },
             { title: 'Hissez Mots : "Tribord"', axis: 'socio', channel: 'youtube', type: 'Video' },
             { title: '24h a bord d\'un porte-conteneurs', axis: 'socio', channel: 'youtube', type: 'Video' },
-            // Presse (media - highlighted)
-            { title: 'Jeune Marine : l\'officier connecte', axis: 'techno', channel: 'presse', type: 'Article presse' },
-            { title: 'Marine & Oceans : transition techno du maritime', axis: 'techno', channel: 'presse', type: 'Article presse' },
-            { title: 'Le Monde : la France et ses 11M km2 de mer', axis: 'socio', channel: 'presse', type: 'Article presse' },
-            { title: 'TF1 : quotidien des marins marchands', axis: 'socio', channel: 'presse', type: 'Article presse' },
-            { title: 'Mer & Marine : innovations digitales shipping', axis: 'techno', channel: 'presse', type: 'Article presse' },
-            { title: 'La ZEE francaise, un empire invisible', axis: 'socio', channel: 'presse', type: 'Article presse' },
-            { title: 'Conflits : geopolitique des mers', axis: 'socio', channel: 'presse', type: 'Article presse' },
-            { title: 'Ouest-France : le renouveau de la marine a voile', axis: 'enviro', channel: 'presse', type: 'Article presse' },
-            { title: 'Les Echos : economie bleue, secteur d\'avenir', axis: 'socio', channel: 'presse', type: 'Article presse' },
-            { title: 'Jeune Marine : decarbonation et futur du shipping', axis: 'enviro', channel: 'presse', type: 'Article presse' },
-            { title: 'Marine & Oceans : souverainete maritime francaise', axis: 'socio', channel: 'presse', type: 'Article presse' },
-            // Conferences
-            { title: 'Euromaritime 2020 : modele eco des compagnies de service public', axis: 'socio', channel: 'conference', type: 'Conference' },
-            { title: 'Euromaritime 2022 : digitalisation du shipping', axis: 'techno', channel: 'conference', type: 'Conference' },
-            { title: 'Euromaritime 2024 : decarbonation et regulation', axis: 'enviro', channel: 'conference', type: 'Conference' },
-            { title: 'Academie de Marine : potentiel strategique du maritime de proximite', axis: 'socio', channel: 'conference', type: 'Conference' },
-            { title: 'Academie de Marine : ZEE et souverainete', axis: 'socio', channel: 'conference', type: 'Conference' },
-            { title: 'Propeller Club Marseille : Introduction to digitalization', axis: 'techno', channel: 'conference', type: 'Conference' },
-            { title: 'Propeller Club Le Havre : Introduction to decarbonation', axis: 'enviro', channel: 'conference', type: 'Conference' },
-            { title: 'Race for Water : propulsion velique et decarbonation', axis: 'enviro', channel: 'conference', type: 'Conference' },
-            { title: 'Digital Ship Athens : electronic logbooks', axis: 'techno', channel: 'conference', type: 'Conference' },
-            { title: 'Digital Ship Hamburg : maritime AI applications', axis: 'techno', channel: 'conference', type: 'Conference' },
-            { title: 'Universite de Rennes : decarbonation du maritime', axis: 'enviro', channel: 'conference', type: 'Conference' },
-            { title: 'AG Federation Merite Maritime : avenir du maritime', axis: 'socio', channel: 'conference', type: 'Conference' },
-            { title: 'Cyberdefense maritime : le prochain front', axis: 'techno', channel: 'conference', type: 'Conference' },
-            { title: 'Le sauvetage en mer a l\'ere du digital', axis: 'techno', channel: 'conference', type: 'Conference' },
-            { title: 'CMA CGM : innovation day keynote', axis: 'techno', channel: 'conference', type: 'Conference' },
-            { title: 'Assises de l\'economie de la mer : panel decarbonation', axis: 'enviro', channel: 'conference', type: 'Conference' },
-            { title: 'Sea Tech Week Brest : capteurs et IoT maritime', axis: 'techno', channel: 'conference', type: 'Conference' },
         ];
 
         // Seeded pseudo-random for reproducibility
@@ -504,7 +548,7 @@
             else count = Math.floor(rand() * 14) + 10;
 
             for (let i = 0; i < count; i++) {
-                const template = subjects[Math.floor(rand() * subjects.length)];
+                const template = socialSubjects[Math.floor(rand() * socialSubjects.length)];
                 const month = Math.floor(rand() * 12);
                 const day = Math.floor(rand() * 28) + 1;
                 const reach = year <= 2019
@@ -868,6 +912,20 @@
     });
 
     // =============================================
+    // STAR DRAWING HELPER
+    // =============================================
+    function drawStar(ctx, cx, cy, outerR, innerR, points) {
+        ctx.beginPath();
+        for (let i = 0; i < points * 2; i++) {
+            const r = i % 2 === 0 ? outerR : innerR;
+            const angle = (i * Math.PI / points) - Math.PI / 2;
+            if (i === 0) ctx.moveTo(cx + r * Math.cos(angle), cy + r * Math.sin(angle));
+            else ctx.lineTo(cx + r * Math.cos(angle), cy + r * Math.sin(angle));
+        }
+        ctx.closePath();
+    }
+
+    // =============================================
     // RENDER
     // =============================================
     function render() {
@@ -1000,8 +1058,11 @@
 
             ctx.globalAlpha = ap.opacity * extraAlpha;
 
-            // === MEDIA PUBLICATIONS: special glow + ring ===
+            // === MEDIA PUBLICATIONS: large star with glow + ring ===
             if (isMedia) {
+                const outerR = displaySize * 1.4;
+                const innerR = outerR * 0.45;
+
                 // Outer glow aura (pulsing)
                 const pulseSize = displaySize * (3.5 + Math.sin(time * 1.2 + i) * 0.5);
                 const glow = ctx.createRadialGradient(ap.x, ap.y, displaySize * 0.5, ap.x, ap.y, pulseSize);
@@ -1013,34 +1074,22 @@
                 ctx.arc(ap.x, ap.y, pulseSize, 0, Math.PI * 2);
                 ctx.fill();
 
-                // Bright core dot
+                // Bright core star
                 ctx.fillStyle = (isHovered || isHighlighted) ? '#ffffff' : lightColor;
-                ctx.beginPath();
-                ctx.arc(ap.x, ap.y, displaySize, 0, Math.PI * 2);
+                drawStar(ctx, ap.x, ap.y, outerR, innerR, 5);
                 ctx.fill();
 
-                // Ring around media dots
+                // Ring around media stars
                 ctx.strokeStyle = isHovered ? '#ffffff' : 'rgba(255,255,255,0.45)';
                 ctx.lineWidth = isHovered ? 2 : 1.2;
-                ctx.beginPath();
-                ctx.arc(ap.x, ap.y, displaySize + 3, 0, Math.PI * 2);
+                drawStar(ctx, ap.x, ap.y, outerR + 3, innerR + 1.5, 5);
                 ctx.stroke();
 
-                // Diamond icon in center for large enough dots
-                if (displaySize > 5) {
-                    ctx.fillStyle = isHovered ? color : 'rgba(255,255,255,0.7)';
-                    const d = displaySize * 0.35;
-                    ctx.beginPath();
-                    ctx.moveTo(ap.x, ap.y - d);
-                    ctx.lineTo(ap.x + d, ap.y);
-                    ctx.lineTo(ap.x, ap.y + d);
-                    ctx.lineTo(ap.x - d, ap.y);
-                    ctx.closePath();
-                    ctx.fill();
-                }
-
             } else if (isConf) {
-                // Conference: normal dot with subtle glow
+                // Conference: medium star with subtle glow
+                const outerR = displaySize * 1.2;
+                const innerR = outerR * 0.45;
+
                 if (isHovered || isHighlighted || displaySize > 4) {
                     const glowSize = displaySize * (isHovered ? 3.5 : 2.2);
                     const glow = ctx.createRadialGradient(ap.x, ap.y, 0, ap.x, ap.y, glowSize);
@@ -1053,17 +1102,17 @@
                 }
 
                 ctx.fillStyle = (isHovered || isHighlighted) ? lightColor : color;
-                ctx.beginPath();
-                ctx.arc(ap.x, ap.y, displaySize, 0, Math.PI * 2);
+                drawStar(ctx, ap.x, ap.y, outerR, innerR, 5);
                 ctx.fill();
 
             } else {
-                // Social: small, subtle dot
+                // Social: small, subtle star
+                const outerR = displaySize * 1.0;
+                const innerR = outerR * 0.45;
                 const muted = color;
                 ctx.fillStyle = (isHovered || isHighlighted) ? lightColor : muted;
                 ctx.globalAlpha = ap.opacity * extraAlpha * (isHovered ? 1 : 0.6);
-                ctx.beginPath();
-                ctx.arc(ap.x, ap.y, displaySize, 0, Math.PI * 2);
+                drawStar(ctx, ap.x, ap.y, outerR, innerR, 5);
                 ctx.fill();
                 ctx.globalAlpha = ap.opacity * extraAlpha;
             }
@@ -1097,15 +1146,15 @@
             const tNorm = (new Date(y, 6, 1).getTime() - timelineStart) / timeRange; // mid-year
             const x = marginLeft + tNorm * usableW;
             if (y === currentYear) {
-                ctx.globalAlpha = 0.7;
+                ctx.globalAlpha = 0.95;
                 ctx.fillStyle = '#ffffff';
                 ctx.font = '700 10px Poppins';
             } else if (y < currentYear) {
-                ctx.globalAlpha = 0.35;
+                ctx.globalAlpha = 0.85;
                 ctx.fillStyle = '#ffffff';
                 ctx.font = '500 9px Poppins';
             } else {
-                ctx.globalAlpha = 0.18;
+                ctx.globalAlpha = 0.5;
                 ctx.fillStyle = '#ffffff';
                 ctx.font = '500 9px Poppins';
             }

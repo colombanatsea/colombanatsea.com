@@ -367,10 +367,8 @@
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setClearColor(COLORS.bg, 1);
-    // Three.js r155+ uses physically-correct lighting by default,
-    // which makes legacy intensity values (designed for the old model) appear black.
-    // Re-enable legacy light behaviour so the original intensity values work.
-    renderer.useLegacyLights = true;
+    // Three.js r160 uses physically-correct lighting by default.
+    // Light intensities below are calibrated for physically-correct mode (candelas).
     container.appendChild(renderer.domElement);
 
     const raycaster = new THREE.Raycaster();
@@ -508,17 +506,17 @@
     // =============================================
     // LIGHTING
     // =============================================
-    scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+    scene.add(new THREE.AmbientLight(0xffffff, 3));
 
-    const pointLight1 = new THREE.PointLight(COLORS.techno, 1.8, 30);
+    const pointLight1 = new THREE.PointLight(COLORS.techno, 800, 50);
     pointLight1.position.set(-8, 5, 5);
     scene.add(pointLight1);
 
-    const pointLight2 = new THREE.PointLight(COLORS.enviro, 1.2, 30);
+    const pointLight2 = new THREE.PointLight(COLORS.enviro, 600, 50);
     pointLight2.position.set(8, -3, -5);
     scene.add(pointLight2);
 
-    const pointLight3 = new THREE.PointLight(COLORS.socio, 1.0, 30);
+    const pointLight3 = new THREE.PointLight(COLORS.socio, 500, 50);
     pointLight3.position.set(0, -8, 8);
     scene.add(pointLight3);
 
@@ -786,9 +784,9 @@
         const mat = new THREE.MeshPhongMaterial({
             map: globeTextures[axis],
             transparent: true,
-            opacity: 0.22,
+            opacity: 0.35,
             emissive: new THREE.Color(COLORS[axis]),
-            emissiveIntensity: 0.15,
+            emissiveIntensity: 0.6,
             shininess: 60,
             depthWrite: false
         });
@@ -854,7 +852,7 @@
             transparent: true,
             opacity: 0.9,
             emissive: sphereColor,
-            emissiveIntensity: 0.35,
+            emissiveIntensity: 0.7,
             shininess: 80
         });
         const sphere = new THREE.Mesh(geometry, material);
@@ -1250,7 +1248,7 @@
                 sphere.scale.lerp(new THREE.Vector3(targetScale, targetScale, targetScale), 0.1);
 
                 // Emissive pulse
-                sphere.material.emissiveIntensity = 0.35 + Math.sin(elapsed * 1.8 + i) * 0.2;
+                sphere.material.emissiveIntensity = 0.7 + Math.sin(elapsed * 1.8 + i) * 0.25;
 
                 // Dimming
                 const targetOpacity = isDimmed ? 0.3 : 0.9;
