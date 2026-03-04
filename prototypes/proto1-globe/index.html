@@ -412,29 +412,43 @@
     ];
 
     // ============================================================
-    // ZEE APPROXIMATE CIRCLES (for visual representation)
+    // ZEE REALISTIC POLYGONS (irregular shapes approximating real ZEE)
     // ============================================================
-    function generateCirclePolygon(lat, lng, radiusKm, points = 48) {
+    // Instead of circles, use irregular polygons that approximate real ZEE boundaries
+    function generateRealisticEEZ(lat, lng, radiusKm, seed) {
       const coords = [];
       const R = 6371;
+      const points = 64;
+      // Use seed for reproducible irregular shapes
+      let s = seed;
+      function seededRandom() {
+        s = (s * 9301 + 49297) % 233280;
+        return s / 233280;
+      }
       for (let i = 0; i <= points; i++) {
         const angle = (2 * Math.PI * i) / points;
-        const dLat = (radiusKm / R) * Math.cos(angle) * (180 / Math.PI);
-        const dLng = (radiusKm / R) * Math.sin(angle) * (180 / Math.PI) / Math.cos(lat * Math.PI / 180);
+        // Vary radius by ±30% with smooth noise
+        const noise1 = Math.sin(angle * 3 + seed) * 0.15;
+        const noise2 = Math.sin(angle * 7 + seed * 2.3) * 0.08;
+        const noise3 = Math.cos(angle * 5 + seed * 1.7) * 0.1;
+        const rFactor = 1 + noise1 + noise2 + noise3;
+        const r = radiusKm * rFactor;
+        const dLat = (r / R) * Math.cos(angle) * (180 / Math.PI);
+        const dLng = (r / R) * Math.sin(angle) * (180 / Math.PI) / Math.cos(lat * Math.PI / 180);
         coords.push([lng + dLng, lat + dLat]);
       }
       return coords;
     }
 
     function generateEEZFeatures() {
-      return frenchTerritories.map(t => {
+      return frenchTerritories.map((t, i) => {
         const radius = Math.sqrt(t.eezKm2 / Math.PI);
         return {
           type: "Feature",
           properties: { name: t.name, eezKm2: t.eezKm2, info: t.info },
           geometry: {
             type: "Polygon",
-            coordinates: [generateCirclePolygon(t.lat, t.lng, radius)]
+            coordinates: [generateRealisticEEZ(t.lat, t.lng, radius, (i + 1) * 137)]
           }
         };
       });
@@ -447,7 +461,7 @@
       eez: true,
       cables: true,
       territories: true,
-      shipping: false
+      shipping: true
     };
 
     function toggleLayer(layer) {
@@ -596,12 +610,12 @@
         .arcEndLat('endLat')
         .arcEndLng('endLng')
         .arcColor('color')
-        .arcAltitude(0)
-        .arcAltitudeAutoScale(0.1)
-        .arcStroke(0.4)
-        .arcDashLength(0.5)
-        .arcDashGap(0.2)
-        .arcDashAnimateTime(4000)
+        .arcAltitude(0.005)
+        .arcAltitudeAutoScale(0.02)
+        .arcStroke(0.6)
+        .arcDashLength(0.8)
+        .arcDashGap(0.15)
+        .arcDashAnimateTime(3000)
         .arcLabel(d => `
           <div style="background:rgba(10,14,26,0.9);padding:8px 12px;border-radius:6px;border:1px solid rgba(240,192,64,0.5);font-family:Poppins,sans-serif;">
             <div style="font-weight:600;color:#f0c040;font-size:0.8rem;">${d.name}</div>

@@ -96,29 +96,30 @@
             left: 40px;
             right: 40px;
             height: 40px;
-            z-index: 50;
+            z-index: 100;
+            cursor: pointer;
         }
 
         /* Stats bar */
         .stats-bar {
             position: fixed;
-            bottom: 110px;
+            bottom: 100px;
             left: 40px;
             z-index: 50;
             display: flex;
-            gap: 30px;
+            gap: 20px;
         }
         .stat {
             text-align: center;
         }
         .stat .number {
-            font-size: 28px;
+            font-size: 22px;
             font-weight: 700;
             color: #fff;
             font-variant-numeric: tabular-nums;
         }
         .stat .label {
-            font-size: 10px;
+            font-size: 9px;
             color: rgba(255,255,255,0.4);
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -253,6 +254,7 @@
         </div>
     </div>
 
+    <div style="position:fixed;bottom:15px;right:40px;z-index:50;font-size:9px;color:rgba(255,255,255,0.25);letter-spacing:1px;">Cliquez-glissez sur la timeline pour filtrer · Double-clic pour réinitialiser</div>
     <div class="watermark">COLOMBAN — PROTO 4 — MÉDIA-VIZ</div>
 
     <script>
@@ -300,7 +302,20 @@
             { title: 'Les grandes découvertes : premières startups', axis: 'socio', channel: 'linkedin', type: 'Inspiration' },
             { title: 'Data maritime : 600 navires analysés, une catastrophe révélée', axis: 'techno', channel: 'linkedin', type: 'Analyse' },
             { title: 'GASPE : le service public maritime en France', axis: 'socio', channel: 'linkedin', type: 'Éducation' },
-            { title: 'NRL La Réunion : quand le maritime construit l\'impossible', axis: 'techno', channel: 'instagram', type: 'Inspiration' }
+            { title: 'NRL La Réunion : quand le maritime construit l\'impossible', axis: 'techno', channel: 'instagram', type: 'Inspiration' },
+            // More conference entries to ensure filter works
+            { title: 'Euromaritime : avenir du modèle économique des compagnies de service public', axis: 'socio', channel: 'conference', type: 'Analyse' },
+            { title: 'Académie de Marine : potentiel stratégique du maritime de proximité', axis: 'socio', channel: 'conference', type: 'Analyse' },
+            { title: 'Propeller Club : Introduction to digitalization', axis: 'techno', channel: 'conference', type: 'Éducation' },
+            { title: 'Propeller Club : Introduction to decarbonation', axis: 'enviro', channel: 'conference', type: 'Éducation' },
+            { title: 'Race for Water : propulsion vélique et décarbonation', axis: 'enviro', channel: 'conference', type: 'Analyse' },
+            { title: 'Webinaire Digital Ship : logbooks électroniques', axis: 'techno', channel: 'conference', type: 'Éducation' },
+            { title: 'Université de Rennes : décarbonation du maritime', axis: 'enviro', channel: 'conference', type: 'Éducation' },
+            { title: 'AG Fédération Mérite Maritime : avenir du maritime', axis: 'socio', channel: 'conference', type: 'Analyse' },
+            // More press entries
+            { title: 'Le Monde : la France et ses 11 millions de km² de mer', axis: 'socio', channel: 'presse', type: 'Article' },
+            { title: 'TF1 : le quotidien des marins de la marine marchande', axis: 'socio', channel: 'presse', type: 'Article' },
+            { title: 'Mer & Marine : innovations digitales dans le shipping', axis: 'techno', channel: 'presse', type: 'Article' },
         ];
 
         // Generate ~120 publications across 2013-2026
@@ -539,6 +554,17 @@
         const tlH = tlCanvas.height / devicePixelRatio;
         tlCtx.clearRect(0, 0, tlW, tlH);
 
+        // Selection highlight
+        if (timelineFilter.start > 2013 || timelineFilter.end < 2027) {
+            const x1 = ((timelineFilter.start - 2013) / (2027 - 2013)) * tlW;
+            const x2 = ((timelineFilter.end - 2013) / (2027 - 2013)) * tlW;
+            tlCtx.fillStyle = 'rgba(42, 85, 179, 0.15)';
+            tlCtx.fillRect(x1, 0, x2 - x1, tlH);
+            tlCtx.strokeStyle = 'rgba(42, 85, 179, 0.4)';
+            tlCtx.lineWidth = 1;
+            tlCtx.strokeRect(x1, 0, x2 - x1, tlH);
+        }
+
         // Axis line
         tlCtx.strokeStyle = 'rgba(255,255,255,0.15)';
         tlCtx.lineWidth = 1;
@@ -696,6 +722,68 @@
     }
 
     render();
+
+    // ═══════════════════════════════════════════
+    // TIMELINE INTERACTION — click/drag to filter year range
+    // ═══════════════════════════════════════════
+    let timelineFilter = { start: 2013, end: 2027 };
+    let isDraggingTimeline = false;
+
+    function getYearFromTimelineX(clientX) {
+        const rect = tlCanvas.getBoundingClientRect();
+        const x = clientX - rect.left;
+        const tlW = rect.width;
+        const year = 2013 + (x / tlW) * (2027 - 2013);
+        return Math.max(2013, Math.min(2027, year));
+    }
+
+    tlCanvas.addEventListener('mousedown', (e) => {
+        isDraggingTimeline = true;
+        const year = getYearFromTimelineX(e.clientX);
+        timelineFilter.start = Math.floor(year);
+        timelineFilter.end = Math.ceil(year) + 1;
+        updateTimelineVisibility();
+    });
+
+    tlCanvas.addEventListener('mousemove', (e) => {
+        if (!isDraggingTimeline) return;
+        const year = getYearFromTimelineX(e.clientX);
+        timelineFilter.end = Math.ceil(year) + 1;
+        if (timelineFilter.end < timelineFilter.start) {
+            [timelineFilter.start, timelineFilter.end] = [timelineFilter.end - 1, timelineFilter.start + 1];
+        }
+        updateTimelineVisibility();
+    });
+
+    document.addEventListener('mouseup', () => {
+        isDraggingTimeline = false;
+    });
+
+    tlCanvas.addEventListener('dblclick', () => {
+        timelineFilter = { start: 2013, end: 2027 };
+        updateTimelineVisibility();
+    });
+
+    function updateTimelineVisibility() {
+        animatedPositions.forEach(ap => {
+            const axisMatch = activeAxis === 'all' || ap.pub.axis === activeAxis;
+            const channelMatch = activeChannels.has(ap.pub.channel);
+            const yearMatch = ap.pub.year >= timelineFilter.start && ap.pub.year < timelineFilter.end;
+            ap.targetOpacity = (axisMatch && channelMatch && yearMatch) ? 1 : 0.05;
+        });
+        updateStats();
+    }
+
+    // Override updateVisibility to also respect timeline filter
+    updateVisibility = function() {
+        animatedPositions.forEach(ap => {
+            const axisMatch = activeAxis === 'all' || ap.pub.axis === activeAxis;
+            const channelMatch = activeChannels.has(ap.pub.channel);
+            const yearMatch = ap.pub.year >= timelineFilter.start && ap.pub.year < timelineFilter.end;
+            ap.targetOpacity = (axisMatch && channelMatch && yearMatch) ? 1 : 0.05;
+        });
+        updateStats();
+    };
 
     // Close popup on outside click
     document.addEventListener('click', (e) => {

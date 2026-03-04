@@ -310,9 +310,10 @@
         enviro:  '#00bf63',
         socio:   '#b32a55',
         bg:      '#0d1117',
-        grid:    'rgba(232, 220, 200, 0.04)',
-        coast:   'rgba(232, 220, 200, 0.12)',
-        sea:     'rgba(42, 85, 179, 0.03)'
+        grid:    'rgba(232, 220, 200, 0.06)',
+        coast:   'rgba(232, 220, 200, 0.35)',
+        coastFill: 'rgba(232, 220, 200, 0.06)',
+        sea:     'rgba(42, 85, 179, 0.04)'
     };
 
     // Phase 1: Sillage unique
@@ -443,21 +444,56 @@
         }
     }
 
+    // Place names for geographic context
+    const placeNames = [
+        { name: 'FRANCE', lon: 2.5, lat: 47, size: 12, opacity: 0.2 },
+        { name: 'ESPAGNE', lon: -3.5, lat: 40, size: 10, opacity: 0.12 },
+        { name: 'ITALIE', lon: 12, lat: 42, size: 10, opacity: 0.12 },
+        { name: 'ROYAUME-UNI', lon: -2, lat: 54, size: 9, opacity: 0.12 },
+        { name: 'IRLANDE', lon: -8, lat: 53.3, size: 9, opacity: 0.15 },
+        { name: 'AFRIQUE', lon: 15, lat: 5, size: 14, opacity: 0.1 },
+        { name: 'ANGOLA', lon: 17, lat: -12, size: 10, opacity: 0.15 },
+        { name: 'CHINE', lon: 110, lat: 35, size: 12, opacity: 0.12 },
+        { name: 'INDE', lon: 80, lat: 20, size: 11, opacity: 0.1 },
+        { name: 'MADAGASCAR', lon: 47, lat: -20, size: 9, opacity: 0.12 },
+        { name: 'Océan Atlantique', lon: -25, lat: 25, size: 11, opacity: 0.08, italic: true },
+        { name: 'Océan Indien', lon: 65, lat: -10, size: 11, opacity: 0.08, italic: true },
+        { name: 'Mer Méditerranée', lon: 18, lat: 36, size: 9, opacity: 0.08, italic: true },
+        { name: 'La Réunion', lon: 55.5, lat: -22.5, size: 8, opacity: 0.15 },
+        { name: 'BRETAGNE', lon: -3.5, lat: 48.2, size: 8, opacity: 0.15 },
+        { name: 'Marseille', lon: 5.5, lat: 42.5, size: 8, opacity: 0.12 },
+        { name: 'NAMIBIE', lon: 18, lat: -22, size: 9, opacity: 0.1 },
+    ];
+
     function drawCoastlines() {
         coastlines.forEach(coast => {
             ctx.beginPath();
             ctx.strokeStyle = COLORS.coast;
-            ctx.lineWidth = 1;
+            ctx.lineWidth = 1.5;
             coast.forEach((point, i) => {
                 const p = project(point[0], point[1]);
                 if (i === 0) ctx.moveTo(p.x, p.y);
                 else ctx.lineTo(p.x, p.y);
             });
+            ctx.closePath();
             ctx.stroke();
 
-            // Subtle fill
-            ctx.fillStyle = 'rgba(232, 220, 200, 0.02)';
+            // Visible land fill
+            ctx.fillStyle = COLORS.coastFill;
             ctx.fill();
+        });
+
+        // Draw place names for geographic context
+        placeNames.forEach(place => {
+            const p = project(place.lon, place.lat);
+            if (p.x < -100 || p.x > W + 100 || p.y < -50 || p.y > H + 50) return;
+            ctx.globalAlpha = place.opacity;
+            ctx.fillStyle = COLORS.sillage;
+            const fontStyle = place.italic ? 'italic ' : '';
+            ctx.font = `${fontStyle}${place.size}px "Source Serif 4", serif`;
+            ctx.textAlign = 'center';
+            ctx.fillText(place.name, p.x, p.y);
+            ctx.globalAlpha = 1;
         });
     }
 
@@ -546,11 +582,16 @@
             ctx.arc(p.x, p.y, dotSize + 3, 0, Math.PI * 2);
             ctx.stroke();
 
-            // Label
-            ctx.fillStyle = 'rgba(232, 220, 200, 0.7)';
-            ctx.font = '10px Poppins';
-            ctx.textAlign = 'center';
-            ctx.fillText(wp.label, p.x, p.y - dotSize - 10);
+            // Label — only show if this is the latest waypoint at this approximate location
+            // to avoid overlapping labels when returning to same place
+            const isDuplicate = sillageWaypoints.slice(i + 1, Math.min(drawnPoints + 1, totalPoints))
+                .some(other => Math.abs(other.lon - wp.lon) < 2 && Math.abs(other.lat - wp.lat) < 2);
+            if (!isDuplicate || wp.isFounder || wp.isDecisive) {
+                ctx.fillStyle = 'rgba(232, 220, 200, 0.7)';
+                ctx.font = wp.isFounder || wp.isDecisive ? 'bold 11px Poppins' : '10px Poppins';
+                ctx.textAlign = 'center';
+                ctx.fillText(wp.label, p.x, p.y - dotSize - 10);
+            }
         }
     }
 
