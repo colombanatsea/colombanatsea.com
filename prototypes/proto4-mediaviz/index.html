@@ -323,6 +323,10 @@
                 <div class="number" id="stat-media">0</div>
                 <div class="label">articles presse</div>
             </div>
+            <div class="stat">
+                <div class="number" id="stat-reach">0</div>
+                <div class="label">audience cumulée</div>
+            </div>
         </div>
     </div>
 
@@ -784,6 +788,23 @@
 
         const mediaCount = visible.filter(ap => ap.pub.tier === 'media').length;
         document.getElementById('stat-media').textContent = mediaCount;
+
+        // Cumulative reach of all publications that have appeared so far
+        const timelineStart = new Date(YEAR_MIN, 0, 1).getTime();
+        const timelineEnd = new Date(YEAR_MAX + 1, 0, 1).getTime();
+        const timeRange = timelineEnd - timelineStart;
+        let cumulativeReach = 0;
+        for (const ap of animatedPositions) {
+            const pubTimeNorm = (ap.pub.date.getTime() - timelineStart) / timeRange;
+            if (scrollProgress >= pubTimeNorm - 0.002) {
+                cumulativeReach += ap.pub.reach;
+            }
+        }
+        document.getElementById('stat-reach').textContent = cumulativeReach > 1000000
+            ? (cumulativeReach / 1000000).toFixed(1) + 'M'
+            : cumulativeReach > 1000
+                ? Math.floor(cumulativeReach / 1000) + 'K'
+                : cumulativeReach;
     }
 
     // =============================================

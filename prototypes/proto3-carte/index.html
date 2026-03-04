@@ -218,19 +218,19 @@
                 <div class="dot"></div>
             </div>
             <div class="phase-dot" id="phase-fondateur">
-                <span class="label">Moment fondateur</span>
+                <span class="label">MOMENT FONDATEUR</span>
                 <div class="dot"></div>
             </div>
             <div class="phase-dot" id="phase-choix">
-                <span class="label">Choix décisif</span>
+                <span class="label">CHOIX DÉCISIF</span>
                 <div class="dot"></div>
             </div>
             <div class="phase-dot" id="phase-entrepreneuriat">
-                <span class="label">Entrepreneuriat</span>
+                <span class="label">ENTREPRENEURIAT</span>
                 <div class="dot"></div>
             </div>
-            <div class="phase-dot" id="phase-reseau">
-                <span class="label">Réseau</span>
+            <div class="phase-dot" id="phase-annecy">
+                <span class="label">Annecy — Réseau</span>
                 <div class="dot"></div>
             </div>
         </div>
@@ -305,105 +305,102 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     // WAYPOINTS DATA
     // ═══════════════════════════════════════════
     const sillageWaypoints = [
-        { id: 1, year: 2000, name: 'Bretagne & Irlande', label: 'Enfance',
-          lon: -4.5, lat: 48.4, detail: 'Traversées en bateau entre Bretagne et Irlande. Naissance de la vocation maritime.', phase: 'enfance' },
-        { id: 2, year: 2010, name: 'ENSM Marseille', label: 'ENMM',
-          lon: 5.37, lat: 43.30, detail: 'Entrée à l\'École Nationale Supérieure Maritime. Nul en maths mais accroché.', phase: 'formation' },
-        { id: 3, year: 2010, name: 'Jeanne Marie', label: 'Jeanne Marie',
-          lon: 103.85, lat: 1.29, detail: 'Embarquement sur le navire Jeanne Marie.',
-          phase: 'navigation',
-          routePoints: [ [51.5, 25.3], [151.2, -33.9] ] },
-        { id: 4, year: 2011, name: 'Queen Aida', label: 'Queen Aida',
-          lon: 15.2, lat: 37.5, detail: 'Yachting en Méditerranée. Escale en Sicile.', phase: 'navigation' },
-        { id: 5, year: 2011, name: 'Queen Aida', label: 'Queen Aida',
-          lon: 15.97, lat: 43.51, detail: 'Yachting en Méditerranée. Le capitaine lui offre un poste pour l\'été.', phase: 'navigation' },
-        { id: 6, year: 2012, name: 'Bourbon Ailette', label: 'Ailette',
-          lon: 9.15, lat: 42.15, detail: 'Navire de service Bourbon. Premières responsabilités.', phase: 'navigation' },
-        { id: 7, year: 2013, name: 'Normandie', label: 'Normandie',
-          lon: -2.0, lat: 49.8, detail: 'Navire à passagers Normandie. Chargement/déchargement rapide, exercices d\'abandon grande échelle.', phase: 'navigation' },
-        { id: 8, year: 2013, name: 'Marseille — Bourbon HQ', label: 'MOMENT FONDATEUR',
-          lon: 5.37, lat: 43.30,
-          detail: 'C\'est à Marseille en 2013 que naît la conviction fondatrice : technologie et environnement sont indissociables dans la transformation du maritime.',
-          phase: 'fondateur', isFounder: true },
-        { id: 9, year: 2014, name: 'Bourbon Ungundja', label: 'Ungundja',
-          lon: 12.3, lat: -8.8, detail: 'Retour en mer avec humilité. Opérations IMR.', phase: 'navigation' },
-        { id: 10, year: 2015, name: 'Bourbon Evolution 807', label: 'Evolution 807',
-          lon: 121, lat: 31, detail: 'Suivi de construction neuve, FMEA, JDPO. Transit Chine.', phase: 'navigation' },
-        { id: 11, year: 2015, name: 'Bourbon Explorer 509', label: 'Explorer 509',
-          lon: 12.3, lat: -8.8, detail: 'Opérations offshore en Angola.', phase: 'navigation' },
-        { id: 12, year: 2015, name: 'Bourbon Evolution 801', label: 'Evolution 801',
-          lon: 14.5, lat: -22.9, detail: 'Transit en Namibie.', phase: 'navigation' },
-        { id: 13, year: 2016, name: 'Bourbon Vissolela', label: 'Vissolela',
-          lon: 12.3, lat: -8.8, detail: '2nd Mate / JDPO / Safety Officer.', phase: 'navigation' },
-        { id: 14, year: 2015, name: 'Bourbon Argonaute', label: 'Argonaute',
-          lon: -4.49, lat: 48.39, detail: 'Pose câble hydrolienne Sabella (EMR). Missions Marine Nationale dans le Fromveur.', phase: 'navigation' },
-        { id: 15, year: 2017, name: 'Zourite — La Réunion', label: 'CHOIX DÉCISIF',
-          lon: 55.53, lat: -21.11, detail: 'Barge NRL Zourite. 4800t de levage. Dernier embarquement. Le choix délibéré de quitter la mer pour un impact plus global.',
-          phase: 'choix', isDecisive: true },
-        { id: 16, year: 2018, name: 'Paris', label: 'Entrepreneuriat',
-          lon: 2.35, lat: 48.86, detail: 'Lancement de l\'aventure entrepreneuriale depuis Paris.', phase: 'entrepreneuriat' },
+        // ENFANCE phase (double speed, back-and-forth Ireland<->Bretagne)
+        { id: 1, year: 2000, label: 'Enfance', lon: -4.5, lat: 48.4,
+          phase: 'enfance', detail: 'Traversées entre Bretagne et Irlande.',
+          enfanceLoop: true, loopTarget: { lon: -8, lat: 53.3 } },
+
+        // FORMATION
+        { id: 2, year: 2010, label: 'ENMM', lon: 5.37, lat: 43.30,
+          phase: 'formation', detail: 'Entrée à l\'École Nationale de la Marine Marchande.' },
+
+        // Jeanne Marie: Singapore → Qatar → Sydney
+        { id: 3, year: 2010, label: 'Jeanne Marie', lon: 103.85, lat: 1.29,
+          phase: 'navigation', detail: 'Singapour.',
+          routePoints: [[51.5, 25.3], [151.2, -33.9]] },
+
+        // Queen Aida: Monaco → Sicily → Croatia
+        { id: 4, year: 2011, label: 'Queen Aida', lon: 7.42, lat: 43.73,
+          phase: 'navigation', detail: 'Monaco.' },
+        { id: 5, year: 2011, label: 'Queen Aida', lon: 15.2, lat: 37.5,
+          phase: 'navigation', detail: 'Sicile.' },
+        { id: 6, year: 2011, label: 'Queen Aida', lon: 15.97, lat: 43.51,
+          phase: 'navigation', detail: 'Croatie.' },
+
+        // Ailette in Corsica
+        { id: 7, year: 2012, label: 'Ailette', lon: 9.15, lat: 42.15,
+          phase: 'navigation', detail: 'Navire de service Bourbon. Corse.' },
+
+        // Argonaute in Brest
+        { id: 8, year: 2012, label: 'Argonaute', lon: -4.49, lat: 48.39,
+          phase: 'navigation', detail: 'Pose câble hydrolienne Sabella. Brest.' },
+
+        // Normandie (ex Brittany Ferries)
+        { id: 9, year: 2013, label: 'Normandie', lon: -2.0, lat: 49.8,
+          phase: 'navigation', detail: 'Navire à passagers Normandie.' },
+
+        // MOMENT FONDATEUR
+        { id: 10, year: 2013, label: 'Découverte de la donnée', lon: 5.37, lat: 43.30,
+          phase: 'fondateur', isFounder: true,
+          detail: 'Confrontation aux données maritimes de ~600 navires Bourbon. Alliance avec Arnaud Dianoux → Opsealog.',
+          sidebarLabel: 'MOMENT FONDATEUR' },
+
+        // Back to navigation
+        { id: 11, year: 2014, label: 'Ungundja', lon: 12.3, lat: -8.8,
+          phase: 'navigation', detail: 'Angola. Opérations IMR.' },
+
+        { id: 12, year: 2015, label: 'Evolution 807', lon: 121, lat: 31,
+          phase: 'navigation', detail: 'Chine. Suivi de construction neuve.' },
+
+        { id: 13, year: 2015, label: 'Explorer 509', lon: 12.3, lat: -8.8,
+          phase: 'navigation', detail: 'Angola.' },
+
+        { id: 14, year: 2015, label: 'Evolution 801', lon: 14.5, lat: -22.9,
+          phase: 'navigation', detail: 'Namibie.' },
+
+        // Directly to Réunion
+        { id: 15, year: 2017, label: 'Zourite', lon: 55.53, lat: -21.11,
+          phase: 'choix', isDecisive: true,
+          detail: 'Barge NRL Zourite. 4800t. Dernier embarquement. Choix de quitter la mer.',
+          sidebarLabel: 'CHOIX DÉCISIF' },
+
+        // Paris - Entrepreneuriat
+        { id: 16, year: 2018, label: 'Entrepreneuriat', lon: 2.35, lat: 48.86,
+          phase: 'entrepreneuriat', detail: 'Lancement entrepreneurial.',
+          sidebarLabel: 'ENTREPRENEURIAT' },
+
+        // 2020 Canada trip
+        { id: 17, year: 2020, label: 'Entrepreneuriat', lon: -73.57, lat: 45.50,
+          phase: 'entrepreneuriat', detail: 'Montréal.' },
+        { id: 18, year: 2020, label: 'Entrepreneuriat', lon: -68.52, lat: 48.45,
+          phase: 'entrepreneuriat', detail: 'Rimouski.' },
+        { id: 19, year: 2020, label: 'Entrepreneuriat', lon: -64.48, lat: 48.83,
+          phase: 'entrepreneuriat', detail: 'Gaspé.' },
+        { id: 20, year: 2020, label: 'Entrepreneuriat', lon: -64.77, lat: 46.09,
+          phase: 'entrepreneuriat', detail: 'Moncton.' },
+        { id: 21, year: 2020, label: 'Entrepreneuriat', lon: 2.35, lat: 48.86,
+          phase: 'entrepreneuriat', detail: 'Retour Paris.' },
+
+        // Arrive Annecy
+        { id: 22, year: 2021, label: 'Annecy', lon: 6.13, lat: 45.90,
+          phase: 'annecy', detail: 'Installation à Annecy. Port d\'attache.' },
     ];
 
-    const annecyHub = { lon: 6.13, lat: 45.90, name: 'Annecy', label: 'Port d\'attache' };
-
+    // ═══════════════════════════════════════════
+    // RÉSEAU THREADS (from Annecy)
+    // ═══════════════════════════════════════════
     const reseauThreads = [
-        { color: COLORS.techno, destination: { lon: 5.37, lat: 43.30 }, label: 'Opsealog', role: 'Stratégie → PM → Innovation', since: '2021', axis: 'Technologique' },
-        { color: COLORS.techno, destination: { lon: 6.13, lat: 45.90 }, label: 'VAIATA Dynamics', role: 'Co-fondateur', since: '—', axis: 'Technologique', isLocal: true },
-        { color: COLORS.enviro, destination: { lon: 0.10, lat: 49.49 }, label: 'ENSM Le Havre', role: 'Enseignant Écologie & DD', since: 'Nov 2023', axis: 'Environnementale' },
-        { color: '#00bf63', destination: { lon: 0.10, lat: 49.49 }, label: 'Fondation ENSM', role: 'Président', since: 'Jul 2023', axis: 'Enviro + Socio', secondColor: COLORS.socio },
-        { color: COLORS.socio, destination: { lon: -1.55, lat: 47.22 }, label: 'GASPE', role: 'Délégué Général', since: 'Oct 2025', axis: 'Socioculturelle' },
-        { color: COLORS.socio, destination: { lon: 2.35, lat: 48.86 }, label: 'HYDROS Alumni', role: 'CA', since: '2023', axis: 'Socioculturelle' },
-        { color: COLORS.socio, destination: { lon: 2.35, lat: 48.86 }, label: 'Jeune Marine', role: 'Auteur', since: 'Fév 2023', axis: 'Socioculturelle' },
-        { color: COLORS.socio, destination: { lon: 2.35, lat: 48.86 }, label: 'Marine & Océans', role: 'Auteur', since: 'Sep 2024', axis: 'Socioculturelle' },
-        { color: COLORS.socio, destination: { lon: 6.13, lat: 45.90 }, label: 'COESPC', role: 'Bénévole', since: 'Jun 2025', axis: 'Socioculturelle', isLocal: true }
+        { year: 2021, label: 'Opsealog', lon: 5.37, lat: 43.30, color: COLORS.techno, disappearsYear: 2026 },
+        { year: 2022, label: 'Fondation ENSM', lon: 0.10, lat: 49.49, color: COLORS.enviro },
+        { year: 2023, label: 'Enseignant DD ENSM', lon: 0.10, lat: 49.49, color: COLORS.enviro },
+        { year: 2023, label: 'Propeller Club', lon: 5.37, lat: 43.30, color: COLORS.socio },
+        { year: 2023, label: 'HYDROS Alumni', lon: 6.13, lat: 45.90, color: COLORS.socio },
+        { year: 2025, label: 'VAIATA Dynamics', lon: 6.13, lat: 45.90, color: COLORS.techno },
+        { year: 2025, label: 'COESPC', lon: 6.13, lat: 45.90, color: COLORS.socio },
+        { year: 2026, label: 'GASPE', lon: -1.55, lat: 47.22, color: COLORS.socio },
     ];
 
-    // ═══════════════════════════════════════════
-    // PLACE NAMES (for geographic context)
-    // ═══════════════════════════════════════════
-    const placeNames = [
-        // Countries and continents
-        { name: 'FRANCE', lon: 2.5, lat: 47, size: 13, opacity: 0.22 },
-        { name: 'ESPAGNE', lon: -3.5, lat: 40, size: 11, opacity: 0.15 },
-        { name: 'ITALIE', lon: 12, lat: 42.5, size: 11, opacity: 0.15 },
-        { name: 'GRÈCE', lon: 23, lat: 39, size: 9, opacity: 0.12 },
-        { name: 'ROYAUME-UNI', lon: -2, lat: 54, size: 9, opacity: 0.15 },
-        { name: 'IRLANDE', lon: -8, lat: 53.3, size: 9, opacity: 0.18 },
-        { name: 'ALLEMAGNE', lon: 10, lat: 51, size: 10, opacity: 0.12 },
-        { name: 'TURQUIE', lon: 33, lat: 39, size: 10, opacity: 0.12 },
-        { name: 'ANGOLA', lon: 17, lat: -12, size: 11, opacity: 0.18 },
-        { name: 'NAMIBIE', lon: 18, lat: -22, size: 10, opacity: 0.12 },
-        { name: 'AFRIQUE DU SUD', lon: 25, lat: -30, size: 9, opacity: 0.1 },
-        { name: 'MOZAMBIQUE', lon: 35, lat: -18, size: 9, opacity: 0.1 },
-        { name: 'CHINE', lon: 115, lat: 35, size: 13, opacity: 0.15 },
-        { name: 'INDE', lon: 80, lat: 20, size: 12, opacity: 0.12 },
-        { name: 'ARABIE', lon: 45, lat: 23, size: 10, opacity: 0.1 },
-        { name: 'AUSTRALIE', lon: 135, lat: -27, size: 12, opacity: 0.12 },
-        { name: 'BRÉSIL', lon: -50, lat: -15, size: 12, opacity: 0.1 },
-        // Oceans and seas
-        { name: 'Océan Atlantique', lon: -30, lat: 20, size: 14, opacity: 0.08, italic: true },
-        { name: 'Atlantique Sud', lon: -15, lat: -20, size: 11, opacity: 0.06, italic: true },
-        { name: 'Océan Indien', lon: 70, lat: -15, size: 14, opacity: 0.08, italic: true },
-        { name: 'Océan Pacifique', lon: 150, lat: 0, size: 14, opacity: 0.07, italic: true },
-        { name: 'Mer Méditerranée', lon: 18, lat: 36, size: 10, opacity: 0.08, italic: true },
-        { name: 'Mer du Nord', lon: 3, lat: 57, size: 8, opacity: 0.06, italic: true },
-        { name: 'Golfe de Guinée', lon: 2, lat: 1, size: 8, opacity: 0.06, italic: true },
-        { name: 'Mer de Chine', lon: 115, lat: 18, size: 9, opacity: 0.06, italic: true },
-        { name: 'Mer Rouge', lon: 38, lat: 20, size: 8, opacity: 0.06, italic: true },
-        // Key cities
-        { name: 'Bretagne', lon: -3.5, lat: 48.6, size: 9, opacity: 0.18 },
-        { name: 'Marseille', lon: 5.8, lat: 42.5, size: 9, opacity: 0.15 },
-        { name: 'Brest', lon: -5, lat: 48.8, size: 8, opacity: 0.12 },
-        { name: 'Le Havre', lon: 0.3, lat: 50.1, size: 8, opacity: 0.1 },
-        { name: 'Annecy', lon: 6.4, lat: 46.4, size: 8, opacity: 0.1 },
-        { name: 'Paris', lon: 2.6, lat: 49.2, size: 9, opacity: 0.12 },
-        { name: 'Luanda', lon: 13.2, lat: -9.2, size: 8, opacity: 0.12 },
-        { name: 'La Réunion', lon: 55.5, lat: -22.5, size: 9, opacity: 0.18 },
-        { name: 'Singapour', lon: 104, lat: 0, size: 8, opacity: 0.12 },
-        { name: 'Qatar', lon: 51.5, lat: 26.5, size: 8, opacity: 0.1 },
-        { name: 'Sicile', lon: 15, lat: 38.5, size: 8, opacity: 0.1 },
-        { name: 'Madagascar', lon: 47, lat: -19, size: 10, opacity: 0.12, italic: true },
-    ];
+    const annecyHub = { lon: 6.13, lat: 45.90 };
 
     // ═══════════════════════════════════════════
     // CANVAS SETUP
@@ -447,7 +444,6 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     function drawGrid() {
         ctx.strokeStyle = COLORS.grid;
         ctx.lineWidth = 0.5;
-
         for (let lon = -180; lon <= 180; lon += 10) {
             ctx.beginPath();
             const p1 = project(lon, -80);
@@ -465,7 +461,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             ctx.stroke();
         }
 
-        // Equator — slightly more visible
+        // Equator
         ctx.strokeStyle = 'rgba(100, 140, 180, 0.15)';
         ctx.lineWidth = 0.8;
         ctx.beginPath();
@@ -475,7 +471,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         ctx.lineTo(eq2.x, eq2.y);
         ctx.stroke();
 
-        // Coordinate labels at edges
+        // Coordinate labels
         ctx.fillStyle = 'rgba(100, 140, 180, 0.12)';
         ctx.font = '8px "Source Serif 4", serif';
         ctx.textAlign = 'center';
@@ -495,7 +491,6 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     }
 
     function drawCoastlines() {
-        // Draw real coastline polygons from Natural Earth data
         ctx.fillStyle = COLORS.coastFill;
         ctx.strokeStyle = COLORS.coast;
         ctx.lineWidth = 1.2;
@@ -504,7 +499,6 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             const poly = LAND_POLYGONS[p];
             if (poly.length < 3) continue;
 
-            // Quick bounding-box cull: skip polygons entirely off-screen
             let minLon = 999, maxLon = -999, minLat = 999, maxLat = -999;
             for (let i = 0; i < poly.length; i++) {
                 const lon = poly[i][0], lat = poly[i][1];
@@ -528,32 +522,17 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             ctx.fill();
             ctx.stroke();
         }
-
-        // Draw place names
-        placeNames.forEach(place => {
-            const p = project(place.lon, place.lat);
-            if (p.x < -200 || p.x > W + 200 || p.y < -100 || p.y > H + 100) return;
-            ctx.globalAlpha = place.opacity;
-            ctx.fillStyle = COLORS.sillage;
-            const fontStyle = place.italic ? 'italic ' : '';
-            ctx.font = `${fontStyle}${place.size}px "Source Serif 4", serif`;
-            ctx.textAlign = 'center';
-            ctx.fillText(place.name, p.x, p.y);
-            ctx.globalAlpha = 1;
-        });
+        // No place name labels
     }
 
     // ═══════════════════════════════════════════
-    // SILLAGE (route) DRAWING with smart labels
+    // SILLAGE (route) DRAWING
     // ═══════════════════════════════════════════
-    // Build a flat array of all route nodes (waypoints + intermediate routePoints)
-    // Each node: { lon, lat, waypointIndex (or -1 for intermediate), isIntermediate }
+    // Build route nodes (waypoints + intermediate routePoints)
     function buildRouteNodes() {
         const nodes = [];
         for (let i = 0; i < sillageWaypoints.length; i++) {
             const wp = sillageWaypoints[i];
-            // If this waypoint has routePoints, they come AFTER the waypoint itself
-            // (the route goes: prev waypoint -> this waypoint -> routePoint1 -> routePoint2 -> next waypoint)
             nodes.push({ lon: wp.lon, lat: wp.lat, waypointIndex: i, isIntermediate: false });
             if (wp.routePoints) {
                 for (const rp of wp.routePoints) {
@@ -565,13 +544,44 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     }
     const routeNodes = buildRouteNodes();
 
-    function drawSillage(progress) {
-        const totalPoints = sillageWaypoints.length;
+    // Enfance animation: back-and-forth between Bretagne and Ireland
+    // Returns array of {lon, lat} points for the enfance phase
+    function getEnfanceTrailPoints(progress) {
+        // progress 0-1 within enfance phase
+        // 10 years (2000-2009), each year = one crossing
+        const wp = sillageWaypoints[0];
+        const target = wp.loopTarget;
+        const totalCrossings = 10; // 2000-2009
+        const crossingProgress = progress * totalCrossings;
+        const points = [];
+
+        for (let c = 0; c <= Math.min(crossingProgress, totalCrossings); c++) {
+            const t = Math.min(1, crossingProgress - c);
+            if (c % 2 === 0) {
+                // Bretagne -> Ireland
+                points.push({
+                    lon: wp.lon + (target.lon - wp.lon) * t,
+                    lat: wp.lat + (target.lat - wp.lat) * t
+                });
+            } else {
+                // Ireland -> Bretagne
+                points.push({
+                    lon: target.lon + (wp.lon - target.lon) * t,
+                    lat: target.lat + (wp.lat - target.lat) * t
+                });
+            }
+        }
+        return points;
+    }
+
+    function drawSillage(progress, trailFadeAlpha) {
         const totalNodes = routeNodes.length;
         const drawnNodes = Math.floor(progress * totalNodes);
         const partialProgress = (progress * totalNodes) - drawnNodes;
 
-        if (drawnNodes < 1) return;
+        if (drawnNodes < 1 && progress < 0.01) return;
+
+        const globalAlpha = trailFadeAlpha !== undefined ? trailFadeAlpha : 1;
 
         // Helper: draw curved segments through route nodes
         function drawRoutePath(maxNode, partial, isPartial) {
@@ -594,9 +604,9 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             }
         }
 
-        // Draw dashed wake trail behind the main route
+        // Draw dashed wake trail
         ctx.beginPath();
-        ctx.strokeStyle = 'rgba(212, 164, 74, 0.2)';
+        ctx.strokeStyle = 'rgba(212, 164, 74, ' + (0.2 * globalAlpha) + ')';
         ctx.lineWidth = 1;
         ctx.setLineDash([4, 8]);
         drawRoutePath(Math.min(drawnNodes, totalNodes - 1), 0, false);
@@ -607,12 +617,12 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         ctx.beginPath();
         ctx.strokeStyle = COLORS.sillage;
         ctx.lineWidth = 2.5;
-        ctx.globalAlpha = 0.8;
+        ctx.globalAlpha = 0.8 * globalAlpha;
         drawRoutePath(Math.min(drawnNodes, totalNodes - 1), partialProgress, drawnNodes < totalNodes);
         ctx.stroke();
         ctx.globalAlpha = 1;
 
-        // Determine which waypoints are visible based on drawn route nodes
+        // Determine visible waypoints
         let visibleWaypointCount = 0;
         for (let i = 0; i <= Math.min(drawnNodes, totalNodes - 1); i++) {
             if (!routeNodes[i].isIntermediate) {
@@ -620,67 +630,53 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             }
         }
 
-        // ── Smart label management ──
-        // Only show labels for the current waypoint and at most 1-2 recent ones.
-        // Older labels fade out so they don't accumulate on screen.
-        // Exception: founder and decisive moments show when they are the most recent special waypoint.
+        // Smart label management: only show current waypoint label, previous fades
         const visibleCount = visibleWaypointCount;
-        const labelOpacity = new Array(visibleCount).fill(0);
-        const currentIdx = visibleCount - 1; // most recent waypoint
-
-        for (let i = 0; i < visibleCount; i++) {
-            const age = currentIdx - i; // how many waypoints ago
-            if (age === 0) {
-                labelOpacity[i] = 1.0; // current waypoint: full opacity
-            } else if (age === 1) {
-                labelOpacity[i] = 0.5; // previous waypoint: half opacity
-            } else if (age === 2) {
-                labelOpacity[i] = 0.2; // two ago: faint
-            } else {
-                labelOpacity[i] = 0; // older: hidden
-            }
-            // Special waypoints (founder/decisive) stay visible a bit longer but still fade
-            if (sillageWaypoints[i].isFounder || sillageWaypoints[i].isDecisive) {
-                if (age <= 4) {
-                    labelOpacity[i] = Math.max(labelOpacity[i], Math.max(0, 0.6 - age * 0.12));
-                }
-            }
-        }
+        const currentIdx = visibleCount - 1;
 
         // Draw waypoint dots and labels
         for (let i = 0; i < visibleCount; i++) {
             const wp = sillageWaypoints[i];
             const p = project(wp.lon, wp.lat);
 
+            const age = currentIdx - i;
+            let labelAlpha = 0;
+            if (age === 0) labelAlpha = 1.0;
+            else if (age === 1) labelAlpha = 0.4;
+            else labelAlpha = 0;
+
+            // Special waypoints fade a bit slower
+            if (wp.isFounder || wp.isDecisive) {
+                if (age <= 3) labelAlpha = Math.max(labelAlpha, Math.max(0, 0.6 - age * 0.15));
+            }
+
+            labelAlpha *= globalAlpha;
+
             let dotSize = 4;
             let dotColor = COLORS.sillage;
             let glowSize = 0;
 
             if (wp.isFounder) {
-                dotSize = 8;
-                dotColor = COLORS.enviro;
-                glowSize = 25;
+                dotSize = 8; dotColor = COLORS.enviro; glowSize = 25;
             } else if (wp.isDecisive) {
-                dotSize = 9;
-                dotColor = '#ff6b6b';
-                glowSize = 30;
+                dotSize = 9; dotColor = '#ff6b6b'; glowSize = 30;
             }
 
             // Glow for special waypoints
-            if (glowSize > 0) {
+            if (glowSize > 0 && globalAlpha > 0.1) {
                 const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, glowSize);
                 gradient.addColorStop(0, dotColor + '50');
                 gradient.addColorStop(0.5, dotColor + '20');
                 gradient.addColorStop(1, 'transparent');
                 ctx.fillStyle = gradient;
+                ctx.globalAlpha = globalAlpha;
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, glowSize, 0, Math.PI * 2);
                 ctx.fill();
 
-                // Pulsing ring for special waypoints
                 const pulsePhase = (Date.now() / 1000) % 2;
                 const pulseRadius = glowSize + pulsePhase * 10;
-                const pulseAlpha = Math.max(0, 0.3 - pulsePhase * 0.15);
+                const pulseAlpha = Math.max(0, 0.3 - pulsePhase * 0.15) * globalAlpha;
                 ctx.strokeStyle = dotColor;
                 ctx.globalAlpha = pulseAlpha;
                 ctx.lineWidth = 1;
@@ -692,6 +688,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
 
             // Dot
             ctx.fillStyle = dotColor;
+            ctx.globalAlpha = globalAlpha;
             ctx.beginPath();
             ctx.arc(p.x, p.y, dotSize, 0, Math.PI * 2);
             ctx.fill();
@@ -699,17 +696,16 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             // Outer ring
             ctx.strokeStyle = dotColor;
             ctx.lineWidth = 1;
-            ctx.globalAlpha = 0.5;
+            ctx.globalAlpha = 0.5 * globalAlpha;
             ctx.beginPath();
             ctx.arc(p.x, p.y, dotSize + 3, 0, Math.PI * 2);
             ctx.stroke();
             ctx.globalAlpha = 1;
 
-            // Label — with fade based on recency
-            if (labelOpacity[i] > 0.01) {
+            // Label
+            if (labelAlpha > 0.01) {
                 const isSpecial = wp.isFounder || wp.isDecisive;
-                const alpha = labelOpacity[i];
-                ctx.globalAlpha = alpha;
+                ctx.globalAlpha = labelAlpha;
                 const labelColor = wp.isFounder ? COLORS.enviro : (wp.isDecisive ? '#ff6b6b' : 'rgba(255, 255, 255, 0.7)');
 
                 ctx.fillStyle = labelColor;
@@ -717,24 +713,79 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
                 ctx.textAlign = 'center';
                 ctx.fillText(wp.label, p.x, p.y - dotSize - 12);
 
-                // Year below label for special waypoints
                 if (isSpecial) {
                     ctx.font = '9px "Source Serif 4", serif';
                     ctx.fillStyle = labelColor;
-                    ctx.globalAlpha = alpha * 0.5;
+                    ctx.globalAlpha = labelAlpha * 0.5;
                     ctx.fillText(wp.year, p.x, p.y - dotSize - 1);
                 }
                 ctx.globalAlpha = 1;
             }
         }
 
-        // Draw small dots for intermediate route points (Qatar, Australia, etc.)
+        // Draw enfance back-and-forth trail
+        if (visibleCount >= 1 && sillageWaypoints[0].enfanceLoop) {
+            const enfanceWp = sillageWaypoints[0];
+            const target = enfanceWp.loopTarget;
+            // enfance progress: how far through the enfance phase we are
+            // enfance is first waypoint only, so it's a fraction of total route
+            const enfanceFraction = 1 / totalNodes;
+            const enfanceProg = Math.min(1, progress / enfanceFraction);
+            const trailPoints = getEnfanceTrailPoints(enfanceProg);
+
+            if (trailPoints.length > 0) {
+                // Draw the back-and-forth line
+                ctx.beginPath();
+                ctx.strokeStyle = COLORS.sillage;
+                ctx.lineWidth = 1.8;
+                ctx.globalAlpha = 0.5 * globalAlpha;
+                ctx.setLineDash([3, 5]);
+
+                // Alternate between start and target
+                const startP = project(enfanceWp.lon, enfanceWp.lat);
+                const endP = project(target.lon, target.lat);
+                const crossings = Math.floor(enfanceProg * 10);
+                for (let c = 0; c <= crossings; c++) {
+                    const from = (c % 2 === 0) ? startP : endP;
+                    const to = (c % 2 === 0) ? endP : startP;
+                    const t = (c < crossings) ? 1 : Math.min(1, (enfanceProg * 10 - c));
+                    if (t <= 0) break;
+
+                    ctx.beginPath();
+                    const cpX = (from.x + to.x) / 2;
+                    const cpY = Math.min(from.y, to.y) - Math.abs(to.x - from.x) * 0.15;
+                    ctx.moveTo(from.x, from.y);
+                    if (t >= 1) {
+                        ctx.quadraticCurveTo(cpX, cpY, to.x, to.y);
+                    } else {
+                        const ix = (1-t)*(1-t)*from.x + 2*(1-t)*t*cpX + t*t*to.x;
+                        const iy = (1-t)*(1-t)*from.y + 2*(1-t)*t*cpY + t*t*to.y;
+                        ctx.quadraticCurveTo(cpX, cpY, ix, iy);
+                    }
+                    ctx.stroke();
+                }
+                ctx.setLineDash([]);
+                ctx.globalAlpha = 1;
+
+                // Ireland dot
+                if (enfanceProg > 0.05) {
+                    ctx.fillStyle = COLORS.sillage;
+                    ctx.globalAlpha = 0.6 * globalAlpha;
+                    ctx.beginPath();
+                    ctx.arc(endP.x, endP.y, 3.5, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.globalAlpha = 1;
+                }
+            }
+        }
+
+        // Draw small dots for intermediate route points
         for (let i = 0; i <= Math.min(drawnNodes, totalNodes - 1); i++) {
             const node = routeNodes[i];
             if (!node.isIntermediate) continue;
             const p = project(node.lon, node.lat);
             ctx.fillStyle = COLORS.sillage;
-            ctx.globalAlpha = 0.4;
+            ctx.globalAlpha = 0.4 * globalAlpha;
             ctx.beginPath();
             ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2);
             ctx.fill();
@@ -745,10 +796,9 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     // ═══════════════════════════════════════════
     // RÉSEAU (network) DRAWING
     // ═══════════════════════════════════════════
-    // Seeded random for consistent thread curves
     let threadSeeds = reseauThreads.map((_, i) => (i * 137.508 + 42) % 100 - 50);
 
-    function drawReseau(progress, time) {
+    function drawReseau(progress, time, currentYear) {
         if (progress <= 0) return;
 
         const hub = project(annecyHub.lon, annecyHub.lat);
@@ -777,7 +827,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         ctx.fillStyle = 'rgba(255, 255, 255, 0.45)';
         ctx.fillText('Port d\'attache', hub.x, hub.y + 22);
 
-        // Draw threads
+        // Draw threads appearing in sequence
         const threadsToShow = Math.ceil(progress * reseauThreads.length);
 
         for (let i = 0; i < threadsToShow; i++) {
@@ -785,8 +835,16 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             const threadProgress = Math.min(1, (progress * reseauThreads.length - i));
             if (threadProgress <= 0) continue;
 
-            const dest = project(thread.destination.lon, thread.destination.lat);
-            const isLocal = thread.isLocal;
+            // Check if this thread should disappear
+            let threadAlpha = 1;
+            if (thread.disappearsYear && currentYear >= thread.disappearsYear) {
+                // Fade out over the last portion of scroll
+                threadAlpha = Math.max(0, 1 - (currentYear - thread.disappearsYear) * 2);
+            }
+            if (threadAlpha <= 0) continue;
+
+            const dest = project(thread.lon, thread.lat);
+            const isLocal = (thread.lon === annecyHub.lon && thread.lat === annecyHub.lat);
 
             if (!isLocal) {
                 const seed = threadSeeds[i];
@@ -796,7 +854,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
                 ctx.beginPath();
                 ctx.strokeStyle = thread.color;
                 ctx.lineWidth = 2;
-                ctx.globalAlpha = 0.6 * threadProgress;
+                ctx.globalAlpha = 0.6 * threadProgress * threadAlpha;
                 ctx.setLineDash([6, 4]);
 
                 const steps = 50;
@@ -818,7 +876,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
                     const px = (1-particleT)*(1-particleT)*hub.x + 2*(1-particleT)*particleT*cpX + particleT*particleT*dest.x;
                     const py = (1-particleT)*(1-particleT)*hub.y + 2*(1-particleT)*particleT*cpY + particleT*particleT*dest.y;
                     ctx.fillStyle = thread.color;
-                    ctx.globalAlpha = 0.8;
+                    ctx.globalAlpha = 0.8 * threadAlpha;
                     ctx.beginPath();
                     ctx.arc(px, py, 3, 0, Math.PI * 2);
                     ctx.fill();
@@ -828,7 +886,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
 
             // Destination dot and label
             if (threadProgress > 0.5) {
-                const dotAlpha = (threadProgress - 0.5) * 2;
+                const dotAlpha = (threadProgress - 0.5) * 2 * threadAlpha;
                 ctx.globalAlpha = dotAlpha;
 
                 const offsetX = isLocal ? (i * 4 - 2) : 0;
@@ -848,7 +906,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
 
                 ctx.font = '9px "Source Serif 4"';
                 ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
-                ctx.fillText(thread.role, labelX, labelY + 14);
+                ctx.fillText(thread.year, labelX, labelY + 14);
 
                 ctx.globalAlpha = 1;
             }
@@ -876,7 +934,6 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         if (!isDragging) return;
         const dx = e.clientX - dragStartX;
         const dy = e.clientY - dragStartY;
-        // Convert pixel delta to lon/lat delta based on current zoom
         const lonPerPx = 120 / (W * mapZoom);
         const latPerPx = 120 / (W * mapZoom) * (180 / Math.PI);
         dragOffsetLon = dragStartOffsetLon - dx * lonPerPx;
@@ -890,7 +947,6 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         }
     });
 
-    // Gradually decay drag offset so scroll animation resumes smoothly
     function decayDragOffset() {
         if (!isDragging) {
             dragOffsetLon *= 0.95;
@@ -912,39 +968,138 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         return Math.max(0, Math.min(1, scrollTop / maxScroll));
     }
 
-    function updatePhaseIndicator(progress) {
-        const phases = ['enfance', 'formation', 'navigation', 'fondateur', 'choix', 'entrepreneuriat', 'reseau'];
-        let activePhase;
+    // Phase mapping from waypoint phase field
+    function getPhaseFromProgress(progress) {
+        // Map scroll progress to the current waypoint's phase
+        const sillageEnd = 0.65;
+        const reseauStart = 0.70;
 
-        if (progress < 0.06) activePhase = 'enfance';
-        else if (progress < 0.10) activePhase = 'formation';
-        else if (progress < 0.32) activePhase = 'navigation';
-        else if (progress < 0.40) activePhase = 'fondateur';
-        else if (progress < 0.58) activePhase = 'choix';
-        else if (progress < 0.70) activePhase = 'entrepreneuriat';
-        else activePhase = 'reseau';
+        if (progress >= reseauStart) return 'annecy';
+
+        // Determine which waypoint we're at
+        const sillProg = Math.min(1, progress / sillageEnd);
+        const totalNodes = routeNodes.length;
+        const nodeIdx = Math.min(totalNodes - 1, Math.floor(sillProg * totalNodes));
+
+        // Find the waypoint for this node
+        let wpIdx = 0;
+        for (let i = 0; i <= nodeIdx; i++) {
+            if (!routeNodes[i].isIntermediate) wpIdx = routeNodes[i].waypointIndex;
+        }
+
+        const wp = sillageWaypoints[wpIdx];
+        return wp.phase;
+    }
+
+    function updatePhaseIndicator(progress) {
+        const phases = ['enfance', 'formation', 'navigation', 'fondateur', 'choix', 'entrepreneuriat', 'annecy'];
+        const currentPhase = getPhaseFromProgress(progress);
 
         phases.forEach(p => {
             const el = document.getElementById('phase-' + p);
-            el.classList.toggle('active', p === activePhase);
+            if (el) el.classList.toggle('active', p === currentPhase);
         });
+
+        // Update sidebar label text from sidebarLabel or phase default
+        const phaseLabels = {
+            enfance: 'Enfance',
+            formation: 'Formation',
+            navigation: 'Navigation',
+            fondateur: 'MOMENT FONDATEUR',
+            choix: 'CHOIX DÉCISIF',
+            entrepreneuriat: 'ENTREPRENEURIAT',
+            annecy: 'Annecy — Réseau'
+        };
+
+        // Check if current waypoint has a sidebarLabel override
+        const sillageEnd = 0.65;
+        const sillProg = Math.min(1, progress / sillageEnd);
+        const totalNodes = routeNodes.length;
+        const nodeIdx = Math.min(totalNodes - 1, Math.floor(sillProg * totalNodes));
+        let wpIdx = 0;
+        for (let i = 0; i <= nodeIdx; i++) {
+            if (!routeNodes[i].isIntermediate) wpIdx = routeNodes[i].waypointIndex;
+        }
+        const wp = sillageWaypoints[wpIdx];
+
+        // Update the active label text if there's a sidebarLabel
+        if (wp && wp.sidebarLabel) {
+            const activeEl = document.getElementById('phase-' + currentPhase);
+            if (activeEl) {
+                const labelSpan = activeEl.querySelector('.label');
+                if (labelSpan) labelSpan.textContent = wp.sidebarLabel;
+            }
+        } else {
+            // Reset to default label
+            phases.forEach(p => {
+                const el = document.getElementById('phase-' + p);
+                if (el) {
+                    const labelSpan = el.querySelector('.label');
+                    if (labelSpan && phaseLabels[p]) labelSpan.textContent = phaseLabels[p];
+                }
+            });
+        }
+    }
+
+    function computeYear(progress) {
+        // Enfance phase: double speed means it takes half the scroll.
+        // Enfance = first waypoint out of 22, but at double speed it covers years 2000-2009
+        // Then formation at 2010, navigation 2010-2017, etc.
+        // After sillage ends, réseau phase goes 2021-2026
+
+        const sillageEnd = 0.65;
+        const reseauStart = 0.70;
+
+        if (progress < sillageEnd) {
+            // Map sillage progress to waypoint index, then to year
+            const sillProg = progress / sillageEnd;
+            const totalNodes = routeNodes.length;
+            const nodeIdx = Math.min(totalNodes - 1, Math.floor(sillProg * totalNodes));
+            let wpIdx = 0;
+            for (let i = 0; i <= nodeIdx; i++) {
+                if (!routeNodes[i].isIntermediate) wpIdx = routeNodes[i].waypointIndex;
+            }
+            const wp = sillageWaypoints[wpIdx];
+            const nextWp = sillageWaypoints[Math.min(wpIdx + 1, sillageWaypoints.length - 1)];
+
+            // Interpolate year between current and next waypoint
+            const wpNodeStart = routeNodes.findIndex(n => n.waypointIndex === wpIdx && !n.isIntermediate);
+            const wpNodeEnd = wpIdx < sillageWaypoints.length - 1
+                ? routeNodes.findIndex(n => n.waypointIndex === wpIdx + 1 && !n.isIntermediate)
+                : totalNodes;
+            const localProg = wpNodeEnd > wpNodeStart
+                ? (sillProg * totalNodes - wpNodeStart) / (wpNodeEnd - wpNodeStart)
+                : 0;
+
+            // For enfance, interpolate between 2000 and 2009
+            if (wp.phase === 'enfance') {
+                return Math.floor(2000 + Math.min(1, localProg) * 9);
+            }
+
+            return Math.floor(wp.year + Math.min(1, Math.max(0, localProg)) * (nextWp.year - wp.year));
+        } else if (progress < reseauStart) {
+            // Transition zone: hold at 2021
+            return 2021;
+        } else {
+            // Réseau: 2021 → 2026
+            const reseauProg = (progress - reseauStart) / (1 - reseauStart);
+            return Math.floor(2021 + reseauProg * 5);
+        }
     }
 
     function updateYear(progress) {
-        let year;
-        if (progress < 0.06) year = Math.floor(1991 + progress / 0.06 * 19);
-        else if (progress < 0.58) year = Math.floor(2010 + (progress - 0.06) / 0.52 * 7);
-        else if (progress < 0.70) year = Math.floor(2017 + (progress - 0.58) / 0.12 * 2);
-        else year = Math.floor(2019 + (progress - 0.70) / 0.30 * 7);
+        const year = computeYear(progress);
         document.getElementById('year-display').textContent = year;
 
-        if (year === 2013 && progress > 0.25 && progress < 0.38) {
+        const phase = getPhaseFromProgress(progress);
+        if (phase === 'fondateur') {
             document.getElementById('year-display').style.color = 'rgba(0, 191, 99, 0.25)';
-        } else if (year === 2017 && progress > 0.52 && progress < 0.62) {
+        } else if (phase === 'choix') {
             document.getElementById('year-display').style.color = 'rgba(255, 107, 107, 0.2)';
         } else {
             document.getElementById('year-display').style.color = 'rgba(255, 255, 255, 0.1)';
         }
+        return year;
     }
 
     function render() {
@@ -958,49 +1113,81 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         ctx.fillStyle = COLORS.bg;
         ctx.fillRect(0, 0, W, H);
 
-        // Adjust map view based on progress
-        // With 16 waypoints + Paris, sillage runs 0-68%, then zoom to France/Annecy
-        if (scrollProgress < 0.30) {
-            // Phase 1: Atlantic & Mediterranean (enfance through fondateur)
-            mapCenter.lon = 0 + scrollProgress * 15;
-            mapCenter.lat = 20 + scrollProgress * 5;
+        // ── ZOOM BEHAVIOR ──
+        // Zoom stays constant during voyage (enfance through choix)
+        // After La Réunion (Zourite), zoom onto France for entrepreneuriat/Annecy
+        // Keep zoom on France during network threads
+
+        const sillageEnd = 0.65;
+        const reseauStart = 0.70;
+
+        // Find Zourite (id 15) index to know when we pass La Réunion
+        // Zourite is waypoint index 14 (0-based), which is roughly at ~58% of sillage
+        const zouriteNodeIdx = routeNodes.findIndex(n => n.waypointIndex === 14 && !n.isIntermediate);
+        const zouriteFraction = zouriteNodeIdx / routeNodes.length * sillageEnd;
+
+        // Sillage progress for determining current position
+        const sillProg = Math.min(1, scrollProgress / sillageEnd);
+        const totalNodes = routeNodes.length;
+        const currentNodeIdx = Math.min(totalNodes - 1, Math.floor(sillProg * totalNodes));
+
+        // Find current waypoint for camera tracking
+        let currentWpIdx = 0;
+        for (let i = 0; i <= currentNodeIdx; i++) {
+            if (!routeNodes[i].isIntermediate) currentWpIdx = routeNodes[i].waypointIndex;
+        }
+
+        if (scrollProgress < zouriteFraction) {
+            // Voyage phase: constant zoom, camera follows the route
+            // Pan to keep current waypoint roughly centered
+            const wp = sillageWaypoints[currentWpIdx];
+
+            // Smooth camera: blend toward current waypoint position
+            // Start centered on Atlantic, then follow the route
+            if (scrollProgress < 0.03) {
+                mapCenter.lon = -2;
+                mapCenter.lat = 48;
+            } else {
+                // Smoothly track current waypoint
+                const targetLon = wp.lon;
+                const targetLat = wp.lat;
+                mapCenter.lon += (targetLon - mapCenter.lon) * 0.08;
+                mapCenter.lat += (targetLat - mapCenter.lat) * 0.08;
+            }
             mapZoom = 0.38;
-        } else if (scrollProgress < 0.45) {
-            // Phase 2: Pan east toward China/Australia (Evolution 807, Jeanne Marie route)
-            const t = (scrollProgress - 0.30) / 0.15;
-            mapCenter.lon = 4.5 + t * 60;
-            mapCenter.lat = 22.5 + t * 10;
-            mapZoom = 0.38;
-        } else if (scrollProgress < 0.58) {
-            // Phase 3: Back west through Angola, Brest, then to La Réunion
-            const t = (scrollProgress - 0.45) / 0.13;
+
+        } else if (scrollProgress < sillageEnd) {
+            // After Zourite: transition to France zoom for entrepreneuriat
+            const t = (scrollProgress - zouriteFraction) / (sillageEnd - zouriteFraction);
             const eased = t * t * (3 - 2 * t);
-            // From far east (~64, 32) to Indian Ocean view centered on Réunion area (~40, -5)
-            mapCenter.lon = 64.5 + eased * (40 - 64.5);
-            mapCenter.lat = 32.5 + eased * (-5 - 32.5);
-            mapZoom = 0.38;
-        } else if (scrollProgress < 0.68) {
-            // Phase 4: After La Réunion — zoom into France for Paris/Entrepreneuriat
-            const t = (scrollProgress - 0.58) / 0.10;
-            const eased = t * t * (3 - 2 * t); // smoothstep
-            // From Indian Ocean view (40, -5) to France overview (2.5, 46.5)
-            mapCenter.lon = 40 + eased * (2.5 - 40);
-            mapCenter.lat = -5 + eased * (46.5 - (-5));
-            mapZoom = 0.38 + eased * 1.2;
-        } else if (scrollProgress < 0.76) {
-            // Phase 5: Hold on France (Paris) then transition to Annecy network
-            const t = (scrollProgress - 0.68) / 0.08;
-            const eased = t * t * (3 - 2 * t);
-            mapCenter.lon = 2.5 + eased * (6.13 - 2.5);
-            mapCenter.lat = 46.5 + eased * (45.9 - 46.5);
-            mapZoom = 1.58 + eased * 0.8;
+
+            // Current position during this phase
+            const wp = sillageWaypoints[currentWpIdx];
+            const startLon = wp.lon;
+            const startLat = wp.lat;
+
+            // Target: France center
+            const franceLon = 2.5;
+            const franceLat = 46.5;
+            const franceZoom = 1.6;
+
+            mapCenter.lon += ((franceLon + (1 - eased) * (startLon - franceLon)) - mapCenter.lon) * 0.1;
+            mapCenter.lat += ((franceLat + (1 - eased) * (startLat - franceLat)) - mapCenter.lat) * 0.1;
+            mapZoom = 0.38 + eased * (franceZoom - 0.38);
+
+        } else if (scrollProgress < reseauStart) {
+            // Hold on France during transition
+            mapCenter.lon += (2.5 - mapCenter.lon) * 0.1;
+            mapCenter.lat += (46.5 - mapCenter.lat) * 0.1;
+            mapZoom = 1.6;
+
         } else {
-            // Phase 6: Zoom into Annecy / Réseau
-            const t = Math.min(1, (scrollProgress - 0.76) / 0.12);
-            const eased = t * t * (3 - 2 * t); // smoothstep
-            mapCenter.lon = 6.13;
-            mapCenter.lat = 45.9;
-            mapZoom = 2.38;
+            // Réseau phase: zoom on France centered on Annecy area
+            const t = Math.min(1, (scrollProgress - reseauStart) / 0.1);
+            const eased = t * t * (3 - 2 * t);
+            mapCenter.lon += ((4.5 + eased * (6.13 - 4.5)) - mapCenter.lon) * 0.08;
+            mapCenter.lat += ((46.5 + eased * (45.9 - 46.5)) - mapCenter.lat) * 0.08;
+            mapZoom = 1.6 + eased * 0.8;
         }
 
         // Apply drag offset
@@ -1011,19 +1198,30 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         drawGrid();
         drawCoastlines();
 
-        // Phase 1: Sillage (0-70% scroll — includes Paris waypoint)
-        const sillageProgress = Math.min(1, scrollProgress / 0.70);
-        drawSillage(sillageProgress);
+        // ── SILLAGE DRAWING ──
+        // Enfance phase at DOUBLE SPEED: the first waypoint's scroll range is halved
+        // We handle this by giving enfance half the normal scroll allocation
+        const sillageProgress = Math.min(1, scrollProgress / sillageEnd);
 
-        // Phase 2: Réseau (72-100% scroll)
-        const reseauProgress = scrollProgress > 0.72 ? (scrollProgress - 0.72) / 0.28 : 0;
-        drawReseau(reseauProgress, time);
+        // After reaching Annecy (last waypoint), fade out the golden trail
+        let trailFadeAlpha = 1;
+        if (scrollProgress > sillageEnd) {
+            const fadeProgress = (scrollProgress - sillageEnd) / (reseauStart - sillageEnd);
+            trailFadeAlpha = Math.max(0, 1 - fadeProgress);
+        }
+
+        drawSillage(sillageProgress, trailFadeAlpha);
+
+        // ── RÉSEAU DRAWING ──
+        const reseauProgress = scrollProgress > reseauStart ? (scrollProgress - reseauStart) / (1 - reseauStart) : 0;
+        const currentYear = computeYear(scrollProgress);
+        drawReseau(reseauProgress, time, currentYear);
 
         // UI updates
         updatePhaseIndicator(scrollProgress);
         updateYear(scrollProgress);
 
-        document.getElementById('legend').classList.toggle('visible', scrollProgress > 0.75);
+        document.getElementById('legend').classList.toggle('visible', scrollProgress > 0.72);
         document.getElementById('scroll-hint').style.opacity = scrollProgress < 0.05 ? '1' : '0';
     }
 
@@ -1039,7 +1237,8 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         const mouseY = e.clientY;
         let found = false;
 
-        const sillageProgressTT = Math.min(1, scrollProgress / 0.70);
+        const sillageEnd = 0.65;
+        const sillageProgressTT = Math.min(1, scrollProgress / sillageEnd);
         const drawnNodesForTooltip = Math.floor(sillageProgressTT * routeNodes.length);
         let visibleWaypoints = 0;
         for (let n = 0; n < Math.min(drawnNodesForTooltip, routeNodes.length); n++) {
@@ -1052,7 +1251,6 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             const dist = Math.hypot(mouseX - p.x, mouseY - p.y);
 
             if (dist < 20) {
-                // Position tooltip, keep on screen
                 let tx = mouseX + 20;
                 let ty = mouseY - 10;
                 if (tx + 320 > W) tx = mouseX - 340;
@@ -1061,10 +1259,10 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
                 tooltip.style.display = 'block';
                 tooltip.style.left = tx + 'px';
                 tooltip.style.top = ty + 'px';
-                document.getElementById('tooltip-title').textContent = wp.name;
+                document.getElementById('tooltip-title').textContent = wp.label;
                 document.getElementById('tooltip-date').textContent = wp.year;
                 document.getElementById('tooltip-desc').innerHTML = wp.detail +
-                    (wp.isFounder ? '<div class="founder-badge">Moment Fondateur — Naissance d\'Opsealog</div>' : '') +
+                    (wp.isFounder ? '<div class="founder-badge">Moment Fondateur</div>' : '') +
                     (wp.isDecisive ? '<div class="founder-badge" style="background:rgba(255,107,107,0.2);border-color:rgba(255,107,107,0.3);color:#ff6b6b;">Choix Décisif</div>' : '');
                 found = true;
                 canvas.style.cursor = 'pointer';
@@ -1072,13 +1270,13 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             }
         }
 
-        if (!found && scrollProgress > 0.72) {
-            const reseauProg = (scrollProgress - 0.72) / 0.28;
+        if (!found && scrollProgress > 0.70) {
+            const reseauProg = (scrollProgress - 0.70) / 0.30;
             const visibleThreads = Math.ceil(reseauProg * reseauThreads.length);
 
             for (let i = 0; i < visibleThreads; i++) {
                 const thread = reseauThreads[i];
-                const p = project(thread.destination.lon, thread.destination.lat);
+                const p = project(thread.lon, thread.lat);
                 const dist = Math.hypot(mouseX - p.x, mouseY - p.y);
 
                 if (dist < 20) {
@@ -1090,8 +1288,8 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
                     tooltip.style.left = tx + 'px';
                     tooltip.style.top = ty + 'px';
                     document.getElementById('tooltip-title').textContent = thread.label;
-                    document.getElementById('tooltip-date').textContent = 'Depuis ' + thread.since;
-                    document.getElementById('tooltip-desc').textContent = thread.role + ' — ' + thread.axis;
+                    document.getElementById('tooltip-date').textContent = 'Depuis ' + thread.year;
+                    document.getElementById('tooltip-desc').textContent = thread.color === COLORS.techno ? 'Technologique' : (thread.color === COLORS.enviro ? 'Environnementale' : 'Socioculturelle');
                     found = true;
                     canvas.style.cursor = 'pointer';
                     break;
