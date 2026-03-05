@@ -97,17 +97,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
-  <!-- ═══ GLOBE INTERACTIF ═══ -->
+  <!-- ═══ ARCHIPEL FRANCE ═══ -->
   <section class="globe-section section" id="globe">
     <div class="container">
       <div class="globe-section__header stagger">
         <p class="mono text-bleu">Archipel France</p>
         <h2>La France, puissance<br/>maritime invisible</h2>
-        <p class="subtitle">2e ZEE mondiale. 11 millions de km2. 37 etats frontaliers maritimes. Un potentiel strategique inexploite.</p>
+        <p class="subtitle">2e ZEE mondiale. 11 millions de km&sup2;. 37 etats frontaliers maritimes. Un potentiel strategique inexploite.</p>
+        <p class="globe-section__note">Explorez le globe interactif en haut de page.</p>
       </div>
-    </div>
-    <div class="globe-section__canvas">
-      <Globe />
     </div>
   </section>
 
@@ -420,23 +418,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     margin-right: auto;
   }
 
-  .globe-section__canvas {
-    width: 100%;
-    height: 70vh;
-    min-height: 500px;
-    position: relative;
-    background: radial-gradient(ellipse at center, #0d1220 0%, #080b14 100%);
-    border-radius: 24px;
-    overflow: hidden;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
-  .globe-section__placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+  .globe-section__note {
+    margin-top: var(--space-md);
+    font-size: 0.85rem;
+    color: var(--gris-400);
+    font-style: italic;
   }
 
   /* ═══ MATRICE SECTION ═══ */
@@ -670,7 +656,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       gap: var(--space-md);
     }
 
-    .globe-section__canvas,
     .matrice-section__canvas {
       height: 50vh;
       border-radius: 16px;
