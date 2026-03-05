@@ -45,7 +45,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <nav class="nav" id="nav">
     <div class="nav__inner container">
       <a href={`${base}/`} class="nav__logo" aria-label="Colomban at Sea — Accueil">
-        <svg class="nav__knot" viewBox="0 0 200 200" width="28" height="28"><path d="M 48 166 C 54 144, 64 118, 78 100 C 92 82, 108 60, 130 48 C 150 37, 168 48, 168 72 C 168 96, 152 114, 130 106" stroke="#2A55B3" stroke-width="18" fill="none" stroke-linecap="round"/><path d="M 34 76 C 40 90, 54 108, 70 124 C 86 140, 96 150, 112 146 C 128 142, 136 124, 140 106 C 144 88, 142 68, 138 56" stroke="#00BF63" stroke-width="18" fill="none" stroke-linecap="round"/><path d="M 108 60 C 120 48, 136 40, 150 40 C 164 40, 172 54, 170 74 C 168 94, 154 110, 136 106" stroke="#2A55B3" stroke-width="18" fill="none" stroke-linecap="round"/><rect x="155" y="28" width="11" height="11" rx="2" transform="rotate(45 160.5 33.5)" fill="#00BF63"/></svg>
+        <img class="nav__knot" src={`${base}/colomban-logo-original.svg`} alt="Colomban" width="32" height="32" />
         <span class="nav__logo-text">Colomban<span class="nav__logo-accent"> at sea</span></span>
       </a>
 
@@ -72,7 +72,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="container footer__inner">
       <div class="footer__brand">
         <div class="footer__logo-row">
-          <svg class="nav__knot" viewBox="0 0 200 200" width="28" height="28"><path d="M 48 166 C 54 144, 64 118, 78 100 C 92 82, 108 60, 130 48 C 150 37, 168 48, 168 72 C 168 96, 152 114, 130 106" stroke="#2A55B3" stroke-width="18" fill="none" stroke-linecap="round"/><path d="M 34 76 C 40 90, 54 108, 70 124 C 86 140, 96 150, 112 146 C 128 142, 136 124, 140 106 C 144 88, 142 68, 138 56" stroke="#00BF63" stroke-width="18" fill="none" stroke-linecap="round"/><path d="M 108 60 C 120 48, 136 40, 150 40 C 164 40, 172 54, 170 74 C 168 94, 154 110, 136 106" stroke="#2A55B3" stroke-width="18" fill="none" stroke-linecap="round"/><rect x="155" y="28" width="11" height="11" rx="2" transform="rotate(45 160.5 33.5)" fill="#00BF63"/></svg>
+          <img class="nav__knot" src={`${base}/colomban-logo-normal.svg`} alt="Colomban" width="32" height="32" />
           <span class="nav__logo-text">Colomban<span class="nav__logo-accent"> at sea</span></span>
         </div>
         <p class="footer__tagline subtitle">"Une nation libre regarde la mer."</p>

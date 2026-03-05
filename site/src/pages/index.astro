@@ -6,7 +6,7 @@ import Matrice from '../components/Matrice.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<BaseLayout title="Colomban at Sea — Construire le monde maritime de demain">
+<BaseLayout title="Colomban - Océanocratie 🔵">
 
   <!-- ═══ HERO ═══ -->
   <section class="hero" id="hero">
@@ -177,7 +177,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <section class="cta-social section-dark section" id="cta">
     <div class="container">
       <div class="cta-social__inner stagger">
-        <h2>Suivez la construction du<br/>maritime de demain</h2>
+        <h2>Construisez votre<br/>vision maritime</h2>
         <p class="subtitle">Rejoignez la conversation sur les reseaux sociaux.</p>
         <div class="cta-social__links">
           <a href="https://www.linkedin.com/in/colombanatsea/" target="_blank" rel="noopener" class="cta-social__link">
@@ -209,7 +209,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           <p class="mono text-bleu">A venir — Noel 2026</p>
           <h2>Oceanocratie</h2>
           <p class="oceanocratie__subtitle">Une nation libre regarde la mer.</p>
-          <p class="subtitle">Le livre qui pose les fondations d'une nouvelle politique maritime francaise.</p>
+          <p class="subtitle">Un livre pour explorer le potentiel maritime fran&ccedil;ais.</p>
           <a href="https://oceanocratie.fr" target="_blank" rel="noopener" class="btn btn-outline">Decouvrir le projet</a>
         </div>
         <div class="oceanocratie__visual">
@@ -425,6 +425,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   .hero.hero--fullmap .hero__explore-map {
     bottom: 2rem;
     right: 2rem;
+    z-index: 20;
   }
 
   .hero.hero--fullmap .hero__globe-bg :global(#total-counter),
