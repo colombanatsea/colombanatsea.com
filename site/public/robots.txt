@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://colombanatsea.github.io/colombanatsea.com/sitemap.xml

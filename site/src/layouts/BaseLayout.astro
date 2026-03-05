@@ -24,6 +24,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <meta name="description" content={description} />
   <title>{title}</title>
 
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href={`https://colombanatsea.github.io${base}${Astro.url.pathname}`} />
+
   <!-- Sitemap -->
   <link rel="sitemap" href={`${base}/sitemap.xml`} />
 
@@ -36,28 +43,40 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Colomban Monnier",
-    "jobTitle": "Leader d'opinion maritime, Délégué Général du GASPE",
+    "name": "Colomban",
+    "alternateName": "Colomban Monnier",
+    "jobTitle": "Delegue General du GASPE",
     "url": "https://colombanatsea.com",
-    "description": "Le quartier général digital de la triple transition maritime",
+    "description": "Le quartier general digital de la triple transition maritime",
+    "image": `https://colombanatsea.github.io${base}/og-image.svg`,
     "sameAs": [
       "https://www.linkedin.com/in/colombanatsea/",
       "https://www.instagram.com/colombanatsea/",
       "https://www.youtube.com/@Colombanatsea",
       "https://www.tiktok.com/@colombanatsea"
     ],
-    "knowsAbout": ["Maritime", "Décarbonation", "Digitalisation", "Intelligence Artificielle", "Transition maritime"]
+    "knowsAbout": ["Maritime", "Decarbonation", "Digitalisation", "Intelligence Artificielle", "Transition maritime"],
+    "affiliation": [
+      { "@type": "Organization", "name": "GASPE" },
+      { "@type": "Organization", "name": "VAIATA Dynamics" },
+      { "@type": "Organization", "name": "Fondation ENSM" }
+    ]
   })} />
 
-  <!-- Fonts -->
+  <!-- Fonts — non-blocking -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap"
     rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
   />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  </noscript>
 
-  <!-- Favicon (placeholder — will be the knot) -->
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
 
   <!-- Open Graph -->
@@ -65,7 +84,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content={lang === "fr" ? "fr_FR" : "en_US"} />
+  <meta property="og:url" content={`https://colombanatsea.github.io${base}${Astro.url.pathname}`} />
   <meta property="og:image" content={`https://colombanatsea.github.io${base}/og-image.svg`} />
+  <meta property="og:site_name" content="Colomban at Sea" />
   <meta name="twitter:image" content={`https://colombanatsea.github.io${base}/og-image.svg`} />
 </head>
 <body>
@@ -116,14 +137,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         </div>
         <div class="footer__col">
           <h4>Suivre</h4>
-          <a href="https://www.linkedin.com/in/colombanatsea/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.instagram.com/colombanatsea/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.youtube.com/@Colombanatsea" target="_blank" rel="noopener">YouTube</a>
-          <a href="https://www.tiktok.com/@colombanatsea" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.linkedin.com/in/colombanatsea/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.instagram.com/colombanatsea/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.youtube.com/@Colombanatsea" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://www.tiktok.com/@colombanatsea" target="_blank" rel="noopener noreferrer">TikTok</a>
         </div>
         <div class="footer__col">
           <h4>Liens</h4>
-          <a href="https://aperitifsdelamer.com" target="_blank" rel="noopener">Aperitifs de la Mer</a>
+          <a href="https://aperitifsdelamer.com" target="_blank" rel="noopener noreferrer">Aperitifs de la Mer</a>
           <a href={`${base}/mentions-legales`}>Mentions l&eacute;gales</a>
           <a href={`${base}/politique-confidentialite`}>Politique de confidentialit&eacute;</a>
         </div>
@@ -178,6 +199,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
       links?.classList.toggle('open');
+    });
+
+    // Close mobile nav when a link is clicked
+    links?.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle?.setAttribute('aria-expanded', 'false');
+      });
     });
 
     // Navbar background on scroll
@@ -414,6 +443,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
       .nav__links.open {
         transform: translateY(0);
+      }
+
+      .nav__links a {
+        color: var(--gris-500);
+      }
+
+      .nav__links a:hover {
+        color: var(--noir);
       }
 
       .footer__links {
