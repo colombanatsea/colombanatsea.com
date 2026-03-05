@@ -10,13 +10,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   <!-- ═══ HERO ═══ -->
   <section class="hero" id="hero">
-    <div class="hero__bg">
-      <canvas id="hero-canvas"></canvas>
+    <div class="hero__globe-bg">
+      <Globe />
     </div>
+    <div class="hero__overlay"></div>
     <div class="hero__content container stagger">
       <p class="hero__kicker mono text-bleu">colombanatsea.com</p>
-      <h1 class="hero__title">Construire le monde<br/>maritime de <span class="text-bleu">demain</span></h1>
-      <p class="hero__subtitle subtitle">La triple transition du maritime — technologique, environnementale, socioculturelle — portee par une conviction : une nation libre regarde la mer.</p>
+      <h1 class="hero__title">Oceanocratie</h1>
+      <p class="hero__vision">Une nation libre regarde la mer.</p>
+      <p class="hero__subtitle subtitle">La triple transition du maritime — technologique, environnementale, socioculturelle.</p>
       <div class="hero__cta">
         <a href="#vision" class="btn btn-primary">Decouvrir la vision</a>
         <a href={`${base}/a-propos`} class="btn btn-outline">Qui est Colomban</a>
@@ -126,7 +128,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <!-- ═══ BANDEAU LOGOS ═══ -->
   <section class="logos section" id="logos">
     <div class="container">
-      <p class="logos__title mono text-muted">Ils font confiance — ou collaborent</p>
+      <p class="logos__title mono text-muted">Collaboration, Mentions, prises de Positions</p>
       <div class="logos__track">
         <div class="logos__slide">
           <!-- Placeholder logos — will be replaced with real images -->
@@ -227,23 +229,38 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     align-items: center;
     overflow: hidden;
     padding-top: var(--nav-height);
+    background: #080b14;
   }
 
-  .hero__bg {
+  .hero__globe-bg {
     position: absolute;
     inset: 0;
     z-index: 0;
   }
 
-  #hero-canvas {
+  .hero__globe-bg :global(.globe-wrapper),
+  .hero__globe-bg :global(#globe-container) {
     width: 100%;
     height: 100%;
-    opacity: 0.15;
+  }
+
+  .hero__globe-bg :global(#total-counter),
+  .hero__globe-bg :global(#legend),
+  .hero__globe-bg :global(#globe-loading) {
+    display: none;
+  }
+
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(135deg, rgba(8,11,20,0.7) 0%, rgba(8,11,20,0.3) 50%, rgba(8,11,20,0.5) 100%);
+    pointer-events: none;
   }
 
   .hero__content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     max-width: 720px;
   }
 
@@ -252,12 +269,24 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 
   .hero__title {
+    margin-bottom: var(--space-sm);
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--blanc);
+    letter-spacing: -0.02em;
+  }
+
+  .hero__vision {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: rgba(255,255,255,0.7);
     margin-bottom: var(--space-lg);
   }
 
   .hero__subtitle {
     margin-bottom: var(--space-xl);
     max-width: 560px;
+    color: var(--gris-400);
   }
 
   .hero__cta {
@@ -650,63 +679,3 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 </style>
 
-<script>
-  // Hero canvas — subtle animated mesh background
-  const canvas = document.getElementById('hero-canvas') as HTMLCanvasElement;
-  if (canvas) {
-    const ctx = canvas.getContext('2d');
-    if (ctx) {
-      const resize = () => {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
-      };
-      resize();
-      window.addEventListener('resize', resize);
-
-      const points: { x: number; y: number; vx: number; vy: number }[] = [];
-      const COUNT = 40;
-
-      for (let i = 0; i < COUNT; i++) {
-        points.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.3,
-          vy: (Math.random() - 0.5) * 0.3,
-        });
-      }
-
-      function draw() {
-        if (!ctx) return;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.strokeStyle = 'rgba(42, 85, 179, 0.12)';
-        ctx.lineWidth = 0.5;
-
-        for (let i = 0; i < points.length; i++) {
-          const p = points[i];
-          p.x += p.vx;
-          p.y += p.vy;
-          if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-          if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-
-          for (let j = i + 1; j < points.length; j++) {
-            const q = points[j];
-            const dx = p.x - q.x;
-            const dy = p.y - q.y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 180) {
-              ctx.globalAlpha = 1 - dist / 180;
-              ctx.beginPath();
-              ctx.moveTo(p.x, p.y);
-              ctx.lineTo(q.x, q.y);
-              ctx.stroke();
-            }
-          }
-        }
-
-        requestAnimationFrame(draw);
-      }
-
-      draw();
-    }
-  }
-</script>
