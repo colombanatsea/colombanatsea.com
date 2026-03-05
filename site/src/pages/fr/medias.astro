@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
@@ -9,7 +9,7 @@ const medias = [
 ];
 ---
 
-<BaseLayout title="Medias & Presse — Colomban at Sea" description="28+ articles et mentions presse — Le Monde, TF1, Conflits, Marine & Océans. Kit média téléchargeable.">
+<BaseLayout lang="fr" frSlug="medias" title="Medias & Presse — Colomban at Sea" description="28+ articles et mentions presse — Le Monde, TF1, Conflits, Marine & Océans. Kit média téléchargeable.">
   <section class="page-hero section-dark">
     <div class="container stagger">
       <p class="mono text-bleu">Medias & Presse</p>
@@ -29,16 +29,20 @@ const medias = [
     </div>
   </section>
 
-  <!-- Articles timeline placeholder -->
+  <!-- Articles timeline -->
   <section class="section-dark section">
     <div class="container">
       <div class="mediaviz-header stagger">
         <p class="mono text-bleu">Visualisation interactive</p>
         <h2>Timeline mediatique</h2>
-        <p class="subtitle" style="color: var(--gris-400);">La constellation des prises de parole de 2013 a aujourd'hui — en cours de developpement.</p>
+        <p class="subtitle" style="color: var(--gris-400);">La constellation des prises de parole de 2013 a aujourd'hui.</p>
       </div>
       <div class="mediaviz-canvas">
         <iframe src={`${base}/viz/mediaviz.html`} class="mediaviz-iframe" title="Timeline mediatique"></iframe>
+        <div class="mediaviz-scroll-hint">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="mono">Scrollez dans la visualisation</span>
+        </div>
       </div>
     </div>
   </section>
@@ -143,6 +147,7 @@ const medias = [
     height: 80vh;
     border-radius: 16px;
     overflow: hidden;
+    position: relative;
   }
 
   .mediaviz-iframe {
@@ -150,6 +155,35 @@ const medias = [
     height: 100%;
     border: none;
     display: block;
+  }
+
+  .mediaviz-scroll-hint {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.65rem;
+    pointer-events: none;
+    animation: mediaviz-fade 3s ease-in-out infinite;
+  }
+
+  .mediaviz-scroll-hint svg {
+    animation: mediaviz-bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes mediaviz-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+  }
+
+  @keyframes mediaviz-fade {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
   }
 
   .kit-media .mono { margin-bottom: var(--space-sm); }

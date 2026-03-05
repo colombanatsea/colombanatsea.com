@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Globe from '../../components/Globe.astro';
+import Matrice from '../../components/Matrice.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="Colomban - Oceanocratie" lang="en" frSlug="" description="Oceanocratie — The digital headquarters of the triple maritime transition. Led by Colomban, merchant navy officer turned maritime transformation leader.">
+
+<!-- ▸ HERO ────────────────────────── -->
+<section class="hero section-dark">
+  <Globe />
+  <div class="hero__overlay">
+    <div class="container hero__content">
+      <p class="mono text-accent">The maritime in the blood since 1991</p>
+      <h1 class="hero__title">Building tomorrow's <br/>maritime world<span class="dot-accent">.</span></h1>
+      <p class="subtitle hero__sub">Oceanocratie — A free nation looks to the sea.</p>
+      <div class="hero__actions">
+        <a href="#vision" class="btn btn-primary">Discover the vision</a>
+        <a href={`${base}/en/about`} class="btn btn-outline-light">About Colomban</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▸ STATS ───────────────────────── -->
+<section class="section-light stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card stagger">
+        <span class="stat-card__number">11M</span>
+        <span class="stat-card__label">km&sup2; of EEZ</span>
+      </div>
+      <div class="stat-card stagger">
+        <span class="stat-card__number">2nd</span>
+        <span class="stat-card__label">maritime domain worldwide</span>
+      </div>
+      <div class="stat-card stagger">
+        <span class="stat-card__number">97%</span>
+        <span class="stat-card__label">of digital data via submarine cables</span>
+      </div>
+      <div class="stat-card stagger">
+        <span class="stat-card__number">37</span>
+        <span class="stat-card__label">maritime border states</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▸ TRIPLE TRANSITION ──────────── -->
+<section id="vision" class="section-dark triple">
+  <div class="container">
+    <p class="mono text-accent stagger">The triple maritime transition</p>
+    <h2 class="stagger">Three revolutions, one cause<span class="dot-accent">.</span></h2>
+    <div class="triple__grid">
+      <div class="triple__card stagger">
+        <div class="triple__dot" style="background: var(--bleu);"></div>
+        <h3>Technological</h3>
+        <p>Moving the maritime sector into the digital age, with AI as a critical technological leap. No digitization: straight to digitalization.</p>
+      </div>
+      <div class="triple__card stagger">
+        <div class="triple__dot" style="background: var(--vert);"></div>
+        <h3>Environmental</h3>
+        <p>Integrating the maritime sector into a sustainable society. Climate is only one of 9 planetary boundaries. A holistic approach.</p>
+      </div>
+      <div class="triple__card stagger">
+        <div class="triple__dot" style="background: var(--rose);"></div>
+        <h3>Sociocultural</h3>
+        <p>Transforming minds within AND beyond maritime. Seafarers must be actors. Putting the sea back at the center of national attention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▸ ARCHIPEL FRANCE ─────────────── -->
+<section class="section-accent archipel">
+  <div class="container">
+    <p class="mono stagger" style="color: rgba(255,255,255,0.6);">Archipelago France</p>
+    <h2 class="stagger" style="color: #fff;">A free nation <br/>looks to the sea<span class="dot-accent" style="color: var(--vert);">.</span></h2>
+    <p class="subtitle stagger" style="color: rgba(255,255,255,0.75); max-width: 640px;">
+      France has the world's 2nd largest maritime domain: 11 million km&sup2; across all oceans.
+      37 maritime border states. And yet, we turn our back to the sea.
+      MERitorious vs TERritorial — time to choose.
+    </p>
+  </div>
+</section>
+
+<!-- ▸ MATRICE ─────────────────────── -->
+<section class="section-dark matrice-section">
+  <div class="container">
+    <p class="mono text-accent stagger">Network of engagements</p>
+    <h2 class="stagger">An ecosystem at the service of maritime<span class="dot-accent">.</span></h2>
+  </div>
+  <Matrice />
+</section>
+
+<!-- ▸ LOGOS ────────────────────────── -->
+<section class="section-light logos-section">
+  <div class="container">
+    <p class="mono text-accent stagger" style="text-align:center; color: var(--bleu);">They trust Colomban</p>
+    <div class="logos-grid stagger">
+      <span class="logo-placeholder">GASPE</span>
+      <span class="logo-placeholder">VAIATA Dynamics</span>
+      <span class="logo-placeholder">ENSM</span>
+      <span class="logo-placeholder">Fondation ENSM</span>
+      <span class="logo-placeholder">Propeller Club</span>
+      <span class="logo-placeholder">Academie de Marine</span>
+    </div>
+  </div>
+</section>
+
+<!-- ▸ TEMOIGNAGES ─────────────────── -->
+<section class="section-dark temoignages">
+  <div class="container">
+    <p class="mono text-accent stagger">Testimonials</p>
+    <h2 class="stagger">What they say<span class="dot-accent">.</span></h2>
+    <div class="temoignages__grid">
+      <blockquote class="temoignage stagger">
+        <p>"Colomban is one of those rare profiles who combines field legitimacy and strategic vision for the maritime transition."</p>
+        <cite>— Maritime industry leader</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ▸ CTA SOCIAL ──────────────────── -->
+<section class="section-light cta-social">
+  <div class="container" style="text-align:center;">
+    <p class="mono text-accent stagger" style="color: var(--bleu);">Follow the journey</p>
+    <h2 class="stagger">Join the conversation<span class="dot-accent">.</span></h2>
+    <div class="cta-social__links stagger">
+      <a href="https://www.linkedin.com/in/colombanatsea/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">LinkedIn</a>
+      <a href="https://www.instagram.com/colombanatsea/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Instagram</a>
+      <a href="https://www.youtube.com/@Colombanatsea" target="_blank" rel="noopener noreferrer" class="btn btn-outline">YouTube</a>
+    </div>
+  </div>
+</section>
+
+<!-- ▸ OCEANOCRATIE TEASER ──────────── -->
+<section class="section-dark oceanocratie-teaser">
+  <div class="container" style="text-align:center;">
+    <p class="mono text-accent stagger">Coming Christmas 2026</p>
+    <h2 class="stagger" style="font-size: clamp(2rem, 5vw, 3.5rem);">Oceanocratie<span class="dot-accent">.</span></h2>
+    <p class="subtitle stagger" style="font-style: italic; color: var(--gris-400);">A free nation looks to the sea.</p>
+    <a href="https://oceanocratie.fr" target="_blank" rel="noopener noreferrer" class="btn btn-primary stagger" style="margin-top: 1.5rem;">Discover the book</a>
+  </div>
+</section>
+
+</BaseLayout>
