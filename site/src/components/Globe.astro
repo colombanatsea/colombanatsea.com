@@ -1,7 +1,7 @@
 ---
 /**
- * Globe 3D interactif — ZEE, câbles sous-marins, routes maritimes
- * Adapté depuis prototypes/proto1-globe/index-satellite-clean.html
+ * Globe 3D interactif — ZEE, routes maritimes
+ * Three.js bundled via npm (no CDN dependency)
  */
 ---
 
@@ -12,11 +12,6 @@
         <div class="label">Surface totale ZEE</div>
         <div class="value">11 691 000</div>
         <div class="unit">km&sup2;</div>
-      </div>
-      <div class="stat-item" data-stat="cables" style="margin-top:10px;">
-        <div class="label">C&acirc;bles sous-marins</div>
-        <div class="value" style="color:#00b4b4;">708</div>
-        <div class="unit">c&acirc;bles actifs (Telegeography)</div>
       </div>
       <div class="stat-item" data-stat="traffic" style="margin-top:10px;">
         <div class="label">Navires de commerce</div>
@@ -30,10 +25,6 @@
         <div class="swatch zee"></div>
         <span class="legend-label">Zone &Eacute;conomique Exclusive fran&ccedil;aise</span>
       </div>
-      <div class="legend-item" data-layer="cables">
-        <div class="swatch cables"></div>
-        <span class="legend-label">C&acirc;bles sous-marins (Telegeography)</span>
-      </div>
       <div class="legend-item" data-layer="traffic">
         <div class="swatch traffic"></div>
         <span class="legend-label">Principales routes maritimes</span>
@@ -45,11 +36,6 @@
       <div class="zone-area"></div>
       <div class="zone-detail"></div>
     </div>
-  </div>
-
-  <div id="globe-loading">
-    <div class="spinner"></div>
-    <div class="load-text">Chargement du globe...</div>
   </div>
 </div>
 
@@ -191,7 +177,6 @@
   }
 
   .swatch.zee { border: 1px solid rgba(0,200,200,0.5); background: rgba(0,180,180,0.35); }
-  .swatch.cables { border: 1px solid rgba(0,180,180,0.5); background: rgba(0,180,180,0.30); }
   .swatch.traffic { border: 1px solid rgba(255,100,50,0.5); background: rgba(255,100,50,0.30); }
 
   .legend-label {
@@ -201,63 +186,15 @@
     color: rgba(255,255,255,0.5);
   }
 
-  #globe-loading {
-    position: absolute;
-    inset: 0;
-    z-index: 999;
-    background: radial-gradient(ellipse at center, #0d1220 0%, #080b14 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 16px;
-    transition: opacity 0.8s ease;
-    border-radius: inherit;
-  }
-
-  #globe-loading.fade-out { opacity: 0; pointer-events: none; }
-
-  .spinner {
-    width: 40px;
-    height: 40px;
-    border: 2px solid rgba(0,212,212,0.15);
-    border-top-color: #00d4d4;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-  }
-
-  .load-text {
-    font-family: var(--font-heading);
-    font-weight: 300;
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.4);
-  }
-
-  @keyframes spin { to { transform: rotate(360deg); } }
-
   @media (max-width: 768px) {
     #total-counter { bottom: 16px; right: 16px; }
     #legend { bottom: 16px; left: 16px; }
   }
 </style>
 
-<script is:inline type="module">
-  // Dismiss loading overlay after timeout regardless of success
-  setTimeout(() => {
-    const el = document.getElementById('globe-loading');
-    if (el) { el.classList.add('fade-out'); setTimeout(() => el.remove(), 900); }
-  }, 8000);
-
-  let THREE, OrbitControls;
-  try {
-    THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
-    ({ OrbitControls } = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js'));
-  } catch(e) {
-    console.warn('Globe: Three.js failed to load', e);
-    const el = document.getElementById('globe-loading');
-    if (el) { el.classList.add('fade-out'); setTimeout(() => el.remove(), 900); }
-    throw e;
-  }
+<script>
+  import * as THREE from 'three';
+  import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
   const ZEE_ZONES = [
     { name: 'Metropole', detail: 'Atlantique + Mediterranee', lat: 46, lng: -3, area: 350000 },
@@ -296,15 +233,15 @@
   const ZONE_SEGMENTS = 64;
   const EARTH_RADIUS_KM = 6371;
 
-  function areaToAngularRadius(areaKm2) {
+  function areaToAngularRadius(areaKm2: number) {
     return Math.sqrt(areaKm2 / Math.PI) / EARTH_RADIUS_KM;
   }
 
-  const container = document.getElementById('globe-container');
-  const tooltip = document.getElementById('globe-tooltip');
-  const tooltipName = tooltip.querySelector('.zone-name');
-  const tooltipArea = tooltip.querySelector('.zone-area');
-  const tooltipDetail = tooltip.querySelector('.zone-detail');
+  const container = document.getElementById('globe-container')!;
+  const tooltip = document.getElementById('globe-tooltip')!;
+  const tooltipName = tooltip.querySelector('.zone-name')!;
+  const tooltipArea = tooltip.querySelector('.zone-area')!;
+  const tooltipDetail = tooltip.querySelector('.zone-detail')!;
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.01, 100);
@@ -334,36 +271,18 @@
   backLight.position.set(-3, -2, -5);
   scene.add(backLight);
 
-  // Globe
-  const textureLoader = new THREE.TextureLoader();
+  // Globe — dark procedural sphere (no texture download)
   const globeGeo = new THREE.SphereGeometry(GLOBE_RADIUS, 96, 96);
-  const globeMat = new THREE.MeshPhongMaterial({ color: 0xffffff, shininess: 25, bumpScale: 0.015 });
+  const globeMat = new THREE.MeshPhongMaterial({ color: 0x0f1d30, shininess: 25 });
   const globe = new THREE.Mesh(globeGeo, globeMat);
   scene.add(globe);
 
-  let loadedCount = 0;
-  function checkLoaded() {
-    loadedCount++;
-    if (loadedCount >= 2) {
-      const el = document.getElementById('globe-loading');
-      if (el) { el.classList.add('fade-out'); setTimeout(() => el.remove(), 900); }
-    }
-  }
+  // Wireframe overlay for landmass feel
+  const wireGeo = new THREE.SphereGeometry(GLOBE_RADIUS * 1.001, 48, 48);
+  const wireMat = new THREE.MeshBasicMaterial({ color: 0x1a3050, wireframe: true, transparent: true, opacity: 0.12 });
+  scene.add(new THREE.Mesh(wireGeo, wireMat));
 
-  textureLoader.load('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg', (t) => {
-    t.colorSpace = THREE.SRGBColorSpace;
-    globeMat.map = t;
-    globeMat.needsUpdate = true;
-    checkLoaded();
-  }, undefined, () => { globeMat.color.set(0x0f1d30); checkLoaded(); });
-
-  textureLoader.load('https://unpkg.com/three-globe/example/img/earth-topology.png', (t) => {
-    globeMat.bumpMap = t;
-    globeMat.needsUpdate = true;
-    checkLoaded();
-  }, undefined, () => checkLoaded());
-
-  // Atmosphere
+  // Atmosphere glow
   const atmoVS = `varying vec3 vNormal; void main() { vNormal = normalize(normalMatrix * normal); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`;
   const atmoFS = `varying vec3 vNormal; void main() { float i = pow(0.65 - dot(vNormal, vec3(0,0,1)), 3.0); gl_FragColor = vec4(0.15,0.55,0.7,1) * i * 0.7; }`;
   scene.add(new THREE.Mesh(
@@ -372,22 +291,22 @@
   ));
 
   // ZEE Zones
-  const zoneMeshes = [];
+  const zoneMeshes: THREE.Mesh[] = [];
   const zoneGroup = new THREE.Group();
   scene.add(zoneGroup);
 
-  function latLonToVec3(lat, lon, r) {
+  function latLonToVec3(lat: number, lon: number, r: number) {
     const phi = (90 - lat) * Math.PI / 180;
     const theta = -lon * Math.PI / 180;
     return new THREE.Vector3(r * Math.sin(phi) * Math.cos(theta), r * Math.cos(phi), r * Math.sin(phi) * Math.sin(theta));
   }
 
-  function createZoneDisc(zone) {
+  function createZoneDisc(zone: typeof ZEE_ZONES[0]) {
     const angR = Math.min(areaToAngularRadius(zone.area), 0.35);
     const cPhi = (90 - zone.lat) * Math.PI / 180;
     const cTheta = -zone.lng * Math.PI / 180;
-    const verts = [];
-    const idxs = [];
+    const verts: number[] = [];
+    const idxs: number[] = [];
     const cx = ZEE_HEIGHT * Math.sin(cPhi) * Math.cos(cTheta);
     const cy = ZEE_HEIGHT * Math.cos(cPhi);
     const cz = ZEE_HEIGHT * Math.sin(cPhi) * Math.sin(cTheta);
@@ -414,7 +333,7 @@
     zoneGroup.add(mesh);
     zoneMeshes.push(mesh);
 
-    const bPts = [];
+    const bPts: THREE.Vector3[] = [];
     for (let i = 0; i <= ZONE_SEGMENTS; i++) {
       const idx = (i + 1) * 3;
       if (idx + 2 < verts.length) bPts.push(new THREE.Vector3(verts[idx] * 1.0005, verts[idx+1] * 1.0005, verts[idx+2] * 1.0005));
@@ -446,55 +365,11 @@
   starGeo.setAttribute('position', new THREE.Float32BufferAttribute(starPos, 3));
   scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xaabbdd, size: 0.04, transparent: true, opacity: 0.6, sizeAttenuation: true, depthWrite: false })));
 
-  // Anti-meridian cable splitting
-  function splitCableCoords(coords) {
-    const segments = []; let current = [];
-    for (let i = 0; i < coords.length; i++) {
-      const lon = coords[i][0], lat = coords[i][1];
-      if (isNaN(lat) || isNaN(lon)) continue;
-      if (current.length > 0) {
-        const prevLon = current[current.length - 1][0];
-        if (Math.abs(lon - prevLon) > 90) {
-          if (current.length >= 2) segments.push(current);
-          current = [[lon, lat]]; continue;
-        }
-      }
-      current.push([lon, lat]);
-    }
-    if (current.length >= 2) segments.push(current);
-    return segments;
-  }
-
-  // Cables
-  const cableGroup = new THREE.Group();
-  scene.add(cableGroup);
-  fetch('https://www.submarinecablemap.com/api/v3/cable/cable-geo.json')
-    .then(r => r.json())
-    .then(gj => {
-      if (!gj || !gj.features) return;
-      for (const f of gj.features) {
-        const g = f.geometry;
-        if (!g) continue;
-        const col = (f.properties && f.properties.color) ? new THREE.Color(f.properties.color) : new THREE.Color(0x00b4b4);
-        const sets = g.type === 'MultiLineString' ? g.coordinates : [g.coordinates];
-        for (const coords of sets) {
-          const segs = splitCableCoords(coords);
-          for (const seg of segs) {
-            const pts = seg.map(c => latLonToVec3(c[1], c[0], GLOBE_RADIUS + 0.005));
-            if (pts.length < 2) continue;
-            const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: col, transparent: true, opacity: 0.35, depthWrite: false }));
-            line.renderOrder = 3;
-            cableGroup.add(line);
-          }
-        }
-      }
-    }).catch(() => {});
-
-  // Traffic
+  // Traffic (shipping lanes)
   const trafficGroup = new THREE.Group();
   scene.add(trafficGroup);
   for (const lane of SHIPPING_LANES) {
-    const pts = [];
+    const pts: THREE.Vector3[] = [];
     for (let w = 0; w < lane.waypoints.length - 1; w++) {
       const [lat0, lon0] = lane.waypoints[w], [lat1, lon1] = lane.waypoints[w+1];
       const steps = 12;
@@ -514,14 +389,13 @@
   }
 
   // Layer toggles
-  const layerVis = { zee: true, cables: true, traffic: true };
+  const layerVis: Record<string, boolean> = { zee: true, traffic: true };
   document.querySelectorAll('#legend .legend-item[data-layer]').forEach(item => {
     item.addEventListener('click', () => {
-      const l = item.dataset.layer;
+      const l = (item as HTMLElement).dataset.layer!;
       layerVis[l] = !layerVis[l];
       item.classList.toggle('disabled', !layerVis[l]);
       if (l === 'zee') zoneGroup.visible = layerVis.zee;
-      else if (l === 'cables') cableGroup.visible = layerVis.cables;
       else if (l === 'traffic') trafficGroup.visible = layerVis.traffic;
       const statEl = document.querySelector(`#total-counter .stat-item[data-stat="${l}"]`);
       if (statEl) statEl.classList.toggle('hidden', !layerVis[l]);
@@ -531,7 +405,7 @@
   // Raycasting
   const raycaster = new THREE.Raycaster();
   const mouse = new THREE.Vector2(-999, -999);
-  let hoveredZone = null;
+  let hoveredZone: typeof ZEE_ZONES[0] | null = null;
   let isInteracting = false;
 
   container.addEventListener('pointermove', (e) => {
@@ -545,31 +419,37 @@
   container.addEventListener('pointerdown', () => { isInteracting = true; controls.autoRotate = false; });
   container.addEventListener('pointerup', () => {
     isInteracting = false;
-    clearTimeout(window._globeResumeTimer);
-    window._globeResumeTimer = setTimeout(() => { if (!isInteracting) controls.autoRotate = true; }, 3000);
+    clearTimeout((window as any)._globeResumeTimer);
+    (window as any)._globeResumeTimer = setTimeout(() => { if (!isInteracting) controls.autoRotate = true; }, 3000);
   });
 
-  function formatArea(km2) {
+  function formatArea(km2: number) {
     return km2 >= 1000000 ? (km2/1000000).toFixed(1).replace('.', ',') + ' M km\u00B2' : km2.toLocaleString('fr-FR') + ' km\u00B2';
   }
 
-  function highlightZone(zone) {
+  function highlightZone(zone: typeof ZEE_ZONES[0]) {
     for (const o of zoneObjects) {
       if (o.mesh.userData.zone === zone) {
-        o.mesh.material.opacity = 0.45; o.mesh.material.color.set(0x00e8e8);
-        o.borderLine.material.opacity = 0.9; o.borderLine.material.color.set(0x00ffff);
-        o.dot.material.opacity = 1; o.dot.scale.set(1.5,1.5,1.5);
+        (o.mesh.material as THREE.MeshBasicMaterial).opacity = 0.45;
+        (o.mesh.material as THREE.MeshBasicMaterial).color.set(0x00e8e8);
+        (o.borderLine.material as THREE.LineBasicMaterial).opacity = 0.9;
+        (o.borderLine.material as THREE.LineBasicMaterial).color.set(0x00ffff);
+        (o.dot.material as THREE.MeshBasicMaterial).opacity = 1;
+        o.dot.scale.set(1.5,1.5,1.5);
         break;
       }
     }
   }
 
-  function resetZone(zone) {
+  function resetZone(zone: typeof ZEE_ZONES[0]) {
     for (const o of zoneObjects) {
       if (o.mesh.userData.zone === zone) {
-        o.mesh.material.opacity = 0.22; o.mesh.material.color.set(0x00b4b4);
-        o.borderLine.material.opacity = 0.55; o.borderLine.material.color.set(0x00e0e0);
-        o.dot.material.opacity = 0.7; o.dot.scale.set(1,1,1);
+        (o.mesh.material as THREE.MeshBasicMaterial).opacity = 0.22;
+        (o.mesh.material as THREE.MeshBasicMaterial).color.set(0x00b4b4);
+        (o.borderLine.material as THREE.LineBasicMaterial).opacity = 0.55;
+        (o.borderLine.material as THREE.LineBasicMaterial).color.set(0x00e0e0);
+        (o.dot.material as THREE.MeshBasicMaterial).opacity = 0.7;
+        o.dot.scale.set(1,1,1);
         break;
       }
     }
@@ -584,7 +464,7 @@
     if (fc % 2 === 0) {
       const pulse = 0.18 + Math.sin(fc * 0.015) * 0.04;
       for (const o of zoneObjects) {
-        if (o.mesh.userData.zone !== hoveredZone) o.mesh.material.opacity = pulse;
+        if (o.mesh.userData.zone !== hoveredZone) (o.mesh.material as THREE.MeshBasicMaterial).opacity = pulse;
       }
     }
 

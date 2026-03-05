@@ -1,7 +1,7 @@
 ---
 /**
  * Matrice Triple Transition — Réseau 3D organique
- * Adapté depuis prototypes/proto2-matrice/index.html
+ * Three.js bundled via npm (no CDN dependency)
  */
 ---
 
@@ -24,11 +24,6 @@
     </div>
 
     <div class="matrice-tooltip" id="matrice-tooltip"></div>
-  </div>
-
-  <div id="matrice-loading">
-    <div class="m-spinner"></div>
-    <div class="m-load-text">Chargement de la matrice...</div>
   </div>
 </div>
 
@@ -169,62 +164,15 @@
   }
 
   .matrice-tooltip.show { opacity: 1; }
-
-  #matrice-loading {
-    position: absolute;
-    inset: 0;
-    z-index: 999;
-    background: rgba(26,26,46,0.95);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 16px;
-    transition: opacity 0.8s ease;
-    border-radius: inherit;
-  }
-
-  #matrice-loading.fade-out { opacity: 0; pointer-events: none; }
-
-  .m-spinner {
-    width: 36px; height: 36px;
-    border: 2px solid rgba(42,85,179,0.2);
-    border-top-color: #2a55b3;
-    border-radius: 50%;
-    animation: m-spin 1s linear infinite;
-  }
-
-  .m-load-text {
-    font-family: var(--font-heading);
-    font-weight: 300;
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.4);
-  }
-
-  @keyframes m-spin { to { transform: rotate(360deg); } }
 </style>
 
-<script is:inline type="module">
-  // Dismiss loading overlay after timeout regardless
-  setTimeout(() => {
-    const el = document.getElementById('matrice-loading');
-    if (el) { el.classList.add('fade-out'); setTimeout(() => el.remove(), 800); }
-  }, 8000);
-
-  let THREE, OrbitControls;
-  try {
-    THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
-    ({ OrbitControls } = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js'));
-  } catch(e) {
-    console.warn('Matrice: Three.js failed to load', e);
-    const el = document.getElementById('matrice-loading');
-    if (el) { el.classList.add('fade-out'); setTimeout(() => el.remove(), 800); }
-    throw e;
-  }
+<script>
+  import * as THREE from 'three';
+  import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
   const BG = 0x1a1a2e;
   const COLORS = { techno: 0x2a55b3, enviro: 0x00bf63, socio: 0xb32a55, purple: 0x8b2fc6 };
-  const AXIS_HEX = { Technologique: '#2a55b3', Environnementale: '#00bf63', Socioculturelle: '#b32a55' };
+  const AXIS_HEX: Record<string, string> = { Technologique: '#2a55b3', Environnementale: '#00bf63', Socioculturelle: '#b32a55' };
 
   const engagements = [
     { id:0, name:'Opsealog', role:'Conception initiale, maritime data analytics', axes:['Technologique','Environnementale'], size:1.1, pos:[3,2.5,1.5], desc:'Plateforme de data analytics pour optimiser la performance et la consommation energetique des navires.' },
@@ -248,7 +196,7 @@
     [10,4],[10,1],[10,6],[10,7],[11,7],[11,0],[12,4],[12,7],[13,12]
   ];
 
-  function primaryColor(eng) {
+  function primaryColor(eng: typeof engagements[0]) {
     const a = eng.axes;
     if (a.includes('Socioculturelle') && a.includes('Environnementale')) return COLORS.purple;
     if (a.includes('Technologique') && a.includes('Environnementale')) return 0x1590a0;
@@ -257,9 +205,9 @@
     return COLORS.socio;
   }
 
-  const container = document.getElementById('matrice-canvas-container');
-  const tooltip = document.getElementById('matrice-tooltip');
-  const panel = document.getElementById('matrice-detail');
+  const container = document.getElementById('matrice-canvas-container')!;
+  const tooltip = document.getElementById('matrice-tooltip')!;
+  const panel = document.getElementById('matrice-detail')!;
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'high-performance' });
   renderer.setSize(container.clientWidth, container.clientHeight);
@@ -285,10 +233,10 @@
   controls.enablePan = false;
   controls.enableZoom = false;
 
-  let interTimer = null;
+  let interTimer: ReturnType<typeof setTimeout> | null = null;
   function pauseRotate() {
     controls.autoRotate = false;
-    clearTimeout(interTimer);
+    if (interTimer) clearTimeout(interTimer);
     interTimer = setTimeout(() => { controls.autoRotate = true; }, 3000);
   }
   controls.addEventListener('start', pauseRotate);
@@ -299,17 +247,17 @@
   scene.add(dL);
 
   // Axis planes
-  [[COLORS.techno,[0,0,0]], [COLORS.enviro,[Math.PI/2,0,0]], [COLORS.socio,[0,Math.PI/2,0]]].forEach(([c,r]) => {
+  ([[COLORS.techno,[0,0,0]], [COLORS.enviro,[Math.PI/2,0,0]], [COLORS.socio,[0,Math.PI/2,0]]] as [number, number[]][]).forEach(([c,r]) => {
     const m = new THREE.Mesh(new THREE.PlaneGeometry(14,14), new THREE.MeshBasicMaterial({ color:c, transparent:true, opacity:0.06, side:THREE.DoubleSide, depthWrite:false }));
-    m.rotation.set(...r);
+    m.rotation.set(r[0], r[1], r[2]);
     scene.add(m);
   });
 
   const sphereGroup = new THREE.Group();
   scene.add(sphereGroup);
-  const sphereMeshes = [];
-  const labelEls = [];
-  const labelContainer = document.getElementById('matrice-labels');
+  const sphereMeshes: THREE.Mesh[] = [];
+  const labelEls: HTMLElement[] = [];
+  const labelContainer = document.getElementById('matrice-labels')!;
 
   engagements.forEach(eng => {
     const r = eng.size * 0.42;
@@ -335,7 +283,7 @@
     ring.lookAt(camera.position);
     mesh.add(ring);
 
-    const target = new THREE.Vector3(...eng.pos);
+    const target = new THREE.Vector3(...(eng.pos as [number, number, number]));
     mesh.position.set((Math.random()-0.5)*40, (Math.random()-0.5)*40, (Math.random()-0.5)*40);
     mesh.userData = { target, eng, radius:r, ring, core, originalOpacity:baseOp };
 
@@ -351,7 +299,7 @@
   });
 
   // Connection lines + traveling particles
-  const lineMeshes = [];
+  const lineMeshes: THREE.Line[] = [];
   connections.forEach(([a,b]) => {
     const geo = new THREE.BufferGeometry();
     geo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(6), 3));
@@ -362,7 +310,7 @@
     lineMeshes.push(line);
   });
 
-  const travelParticles = [];
+  const travelParticles: THREE.Mesh[] = [];
   const tpGeo = new THREE.SphereGeometry(0.04, 6, 6);
   connections.forEach(([a,b]) => {
     const ghosted = engagements[a].ghosted || engagements[b].ghosted;
@@ -384,7 +332,7 @@
   // Raycaster
   const raycaster = new THREE.Raycaster();
   const pointer = new THREE.Vector2(-999, -999);
-  let hovered = null;
+  let hovered: THREE.Mesh | null = null;
 
   renderer.domElement.addEventListener('pointermove', e => {
     const rect = container.getBoundingClientRect();
@@ -399,12 +347,12 @@
     else if (panel.classList.contains('open')) panel.classList.remove('open');
   });
 
-  document.getElementById('matrice-close').addEventListener('click', () => panel.classList.remove('open'));
+  document.getElementById('matrice-close')!.addEventListener('click', () => panel.classList.remove('open'));
 
-  function openPanel(eng) {
-    document.getElementById('matrice-panel-name').textContent = eng.name;
-    document.getElementById('matrice-panel-role').textContent = eng.role;
-    const ac = document.getElementById('matrice-panel-axes');
+  function openPanel(eng: typeof engagements[0]) {
+    document.getElementById('matrice-panel-name')!.textContent = eng.name;
+    document.getElementById('matrice-panel-role')!.textContent = eng.role;
+    const ac = document.getElementById('matrice-panel-axes')!;
     ac.innerHTML = '';
     eng.axes.forEach(a => {
       const s = document.createElement('span');
@@ -413,7 +361,7 @@
       s.style.color = AXIS_HEX[a];
       ac.appendChild(s);
     });
-    document.getElementById('matrice-panel-desc').textContent = eng.desc;
+    document.getElementById('matrice-panel-desc')!.textContent = eng.desc;
     panel.classList.add('open');
   }
 
@@ -428,18 +376,12 @@
   const startTime = performance.now();
   let introComplete = false;
 
-  // Hide loading
-  setTimeout(() => {
-    const el = document.getElementById('matrice-loading');
-    if (el) { el.classList.add('fade-out'); setTimeout(() => el.remove(), 800); }
-  }, 500);
-
   function animate() {
     requestAnimationFrame(animate);
     const dt = clock.getDelta();
     const elapsed = clock.getElapsedTime();
 
-    // Intro
+    // Intro animation
     if (!introComplete) {
       const progress = Math.min((performance.now() - startTime) / 2000, 1);
       const ease = 1 - Math.pow(1 - progress, 3);
@@ -463,9 +405,9 @@
     lineMeshes.forEach(l => {
       const pA = sphereMeshes[l.userData.idA].position;
       const pB = sphereMeshes[l.userData.idB].position;
-      const a = l.geometry.attributes.position;
-      a.array[0]=pA.x; a.array[1]=pA.y; a.array[2]=pA.z;
-      a.array[3]=pB.x; a.array[4]=pB.y; a.array[5]=pB.z;
+      const a = l.geometry.attributes.position as THREE.BufferAttribute;
+      (a.array as Float32Array)[0]=pA.x; (a.array as Float32Array)[1]=pA.y; (a.array as Float32Array)[2]=pA.z;
+      (a.array as Float32Array)[3]=pB.x; (a.array as Float32Array)[4]=pB.y; (a.array as Float32Array)[5]=pB.z;
       a.needsUpdate = true;
     });
 
@@ -474,22 +416,22 @@
       const u = p.userData;
       u.t = (u.t + dt * u.speed) % 1;
       p.position.lerpVectors(sphereMeshes[u.idA].position, sphereMeshes[u.idB].position, u.t);
-      p.material.opacity = u.baseOpacity * (0.5 + (1 - Math.abs(u.t - 0.5) * 2) * 0.5);
+      (p.material as THREE.MeshBasicMaterial).opacity = u.baseOpacity * (0.5 + (1 - Math.abs(u.t - 0.5) * 2) * 0.5);
     });
 
     // Hover
     raycaster.setFromCamera(pointer, camera);
     const hits = raycaster.intersectObjects(sphereMeshes, false);
     if (hovered) {
-      hovered.material.opacity = hovered.userData.originalOpacity;
+      (hovered.material as THREE.MeshPhongMaterial).opacity = hovered.userData.originalOpacity;
       hovered.userData.ring.material.opacity = 0;
       hovered = null;
       tooltip.classList.remove('show');
       document.body.style.cursor = 'default';
     }
     if (hits.length > 0) {
-      hovered = hits[0].object;
-      hovered.material.opacity = Math.min(hovered.userData.originalOpacity + 0.25, 0.6);
+      hovered = hits[0].object as THREE.Mesh;
+      (hovered.material as THREE.MeshPhongMaterial).opacity = Math.min(hovered.userData.originalOpacity + 0.25, 0.6);
       hovered.userData.ring.material.opacity = 0.15;
       tooltip.textContent = hovered.userData.eng.name;
       tooltip.classList.add('show');
