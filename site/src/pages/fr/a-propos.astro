@@ -1,12 +1,15 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Noeud from '../../components/Noeud.astro';
+import NoeudDivider from '../../components/NoeudDivider.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout lang="fr" frSlug="a-propos" title="A propos — Colomban at Sea" description="Le parcours de Colomban : du pont des navires à la triple transition maritime. Officier de marine marchande, entrepreneur, enseignant et leader d'opinion.">
-  <section class="page-hero section-dark page-hero--carte">
-    <div class="container stagger">
+  <section class="page-hero section-dark page-hero--carte noeud-watermark-container">
+    <div class="container stagger" style="position: relative; z-index: 1;">
+      <Noeud size={48} animate={true} class="hero-noeud" />
       <p class="mono" style="color: var(--blanc);">A propos</p>
       <h1>Le maritime dans le sang<br/>depuis <span class="text-bleu">1991</span></h1>
       <p class="subtitle">D'un sillage unique de marin a un reseau d'engagements convergents pour transformer le maritime.</p>
@@ -36,6 +39,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       </div>
     </div>
   </section>
+
+  <NoeudDivider />
 
   <!-- Vision -->
   <section class="section-dark section" id="vision-detail">
@@ -155,6 +160,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .hero-noeud {
+    margin-bottom: var(--space-md);
   }
 
   .page-hero .mono {

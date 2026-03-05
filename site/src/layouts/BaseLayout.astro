@@ -35,6 +35,10 @@ const altPath = getLocalizedPath(altLang, frSlug);
   <!-- Security -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://unpkg.com data:; connect-src 'self' https://unpkg.com;" />
+
+  <!-- Preload critical hero asset (LCP) -->
+  <link rel="preload" href="https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg" as="image" crossorigin />
 
   <!-- Canonical & hreflang -->
   <link rel="canonical" href={`https://colombanatsea.github.io${Astro.url.pathname}`} />
@@ -103,7 +107,8 @@ const altPath = getLocalizedPath(altLang, frSlug);
   <meta name="twitter:image" content={`https://colombanatsea.github.io${base}/og-image.jpg`} />
 </head>
 <body>
-  <nav class="nav" id="nav">
+  <a href="#main-content" class="skip-to-content">{lang === 'fr' ? 'Aller au contenu' : 'Skip to content'}</a>
+  <nav class="nav" id="nav" aria-label={lang === 'fr' ? 'Navigation principale' : 'Main navigation'}>
     <div class="nav__inner container">
       <a href={`${base}/`} class="nav__logo" aria-label="Colomban at Sea — Accueil">
         <img class="nav__knot nav__knot--dark" src={`${base}/colomban-logo-normal.svg`} alt="Colomban" width="32" height="32" />
@@ -127,11 +132,11 @@ const altPath = getLocalizedPath(altLang, frSlug);
     </div>
   </nav>
 
-  <main>
+  <main id="main-content">
     <slot />
   </main>
 
-  <footer class="footer section-dark">
+  <footer class="footer section-dark" role="contentinfo">
     <div class="container footer__inner">
       <div class="footer__brand">
         <div class="footer__logo-row">
