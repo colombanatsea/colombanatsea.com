@@ -237,22 +237,27 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   const heroOverlay = hero?.querySelector('.hero__overlay') as HTMLElement | null;
   const heroGlobe = hero?.querySelector('.hero__globe-bg') as HTMLElement | null;
 
+  let heroRafPending = false;
   function handleHeroScroll() {
-    if (!hero || !heroContent) return;
-    const heroH = hero.offsetHeight;
-    const scrollY = window.scrollY;
-    // Only apply dezoom while in the hero section
-    if (scrollY < heroH) {
-      const progress = scrollY / heroH; // 0 → 1
-      const scale = 1 - progress * 0.25; // 1 → 0.75
-      const opacity = 1 - progress * 1.5; // fade out content faster
-      if (heroGlobe) heroGlobe.style.transform = `scale(${scale})`;
-      if (heroContent) heroContent.style.opacity = String(Math.max(0, opacity));
-      if (heroOverlay) heroOverlay.style.opacity = String(Math.max(0.15, 1 - progress));
-    } else {
-      if (heroGlobe) heroGlobe.style.transform = '';
-      if (heroContent) heroContent.style.opacity = '0';
-    }
+    if (heroRafPending) return;
+    heroRafPending = true;
+    requestAnimationFrame(() => {
+      heroRafPending = false;
+      if (!hero || !heroContent) return;
+      const heroH = hero.offsetHeight;
+      const scrollY = window.scrollY;
+      if (scrollY < heroH) {
+        const progress = scrollY / heroH;
+        const scale = 1 - progress * 0.25;
+        const opacity = 1 - progress * 1.5;
+        if (heroGlobe) heroGlobe.style.transform = `scale(${scale})`;
+        if (heroContent) heroContent.style.opacity = String(Math.max(0, opacity));
+        if (heroOverlay) heroOverlay.style.opacity = String(Math.max(0.15, 1 - progress));
+      } else {
+        if (heroGlobe) heroGlobe.style.transform = '';
+        if (heroContent) heroContent.style.opacity = '0';
+      }
+    });
   }
 
   window.addEventListener('scroll', handleHeroScroll, { passive: true });
@@ -803,6 +808,22 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   /* ═══ MOBILE ═══ */
   @media (max-width: 768px) {
+    .hero__globe-bg {
+      display: none;
+    }
+
+    .hero {
+      background: radial-gradient(ellipse at 30% 40%, #1a3a6e 0%, #0d1428 50%, #080b14 100%);
+    }
+
+    .hero__explore-map {
+      display: none;
+    }
+
+    .hero__content {
+      padding: 0 var(--space-md);
+    }
+
     .stats__grid {
       grid-template-columns: repeat(2, 1fr);
     }

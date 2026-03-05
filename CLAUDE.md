@@ -5,9 +5,9 @@
 - **3D** : Three.js (npm) + earcut (polygon triangulation)
 - **Hébergement** : GitHub Pages (`colombanatsea.github.io/colombanatsea.com/`)
 - **Base URL** : `/colombanatsea.com/`
-- **i18n** : Astro built-in (`prefixDefaultLocale: true`), locales FR/EN
+- **i18n** : Astro built-in (`prefixDefaultLocale: true`, `redirectToDefaultLocale: false`), locales FR/EN
   - Traductions : `site/src/i18n/translations.ts` (UI strings) + `site/src/i18n/utils.ts`
-  - Routes : `/fr/` (defaut), `/en/` — redirect racine `/` → `/fr/`
+  - Routes : `/fr/` (defaut), `/en/` — redirect racine `/` → `/fr/` (meta refresh + JS instant)
   - Pages FR : `site/src/pages/fr/` (8 pages)
   - Pages EN : `site/src/pages/en/` (7 pages)
   - hreflang bidirectionnel sur toutes les pages + sitemap xhtml:link
@@ -46,10 +46,11 @@
 - **Ligne gradient haut** : `linear-gradient(90deg, --bleu, --vert)` — 3px, `border-top` du body
 - **Point coloré fin de titre** : `.` vert sur fond sombre, `.` bleu sur fond clair
 - **3 fonds** : Noir Doux (#1A1A2E), Blanc (#FAFAFA), Bleu (#2A55B3)
+- **Dividers** : `divider.svg` du repo `colombanatsea/logos`, 64px, 18% opacité
 
 ### Indicateurs de scroll
 - Pattern reutilise : `.scroll-hint` + `.scroll-hint__line` avec animation `scroll-pulse`
-- Utilise sur : homepage hero, a-propos hero, mediaviz timeline
+- Utilise sur : homepage hero, mediaviz timeline
 - Mobile : visible, meme style
 
 ## Composants 3D
@@ -62,6 +63,7 @@
 - Légende interactive, toggle par layer, tooltip hover ZEE
 - Zoom 1.3x–5x, auto-rotation 0.08, atmosphère shader
 - **Progressive loading** : early exit si hidden (mobile), qualite reduite tablettes (48 seg, pixelRatio 1, pas bump map, pas antialias), WebGL context loss handler
+- **Mobile** : Globe entièrement masqué dans le hero (`display: none`), remplacé par gradient radial subtle. Bouton "Explorer la carte" masqué. Fallback CSS circle + stats si affiché hors hero.
 
 ### Matrice (`Matrice.astro`)
 - Réseau 3D organique : sphères = engagements, lignes = connexions, particules voyageuses
@@ -69,24 +71,38 @@
 - Panneau détail s'ouvre automatiquement au hover (pas au clic)
 - Axes de couleur : Technologique (#2A55B3), Environnementale (#00BF63), Socioculturelle (#B32A55)
 - **Lazy loading** : IntersectionObserver (below fold), early exit mobile, qualite reduite, context loss handler
+- **UX** : Curseur `grab`/`grabbing`, hint animé "Cliquer-glisser pour explorer" qui disparaît à la première interaction
+- **Mobile** : Fallback liste 3 axes (pas de Three.js)
 
-## Pages
+## Visualisations iframe
 
-### Visualisations iframe
-- **Carte marine parcours** : `viz/carte.html` — Canvas 2D scroll-driven, scrollbar masquee
-- **Media-viz timeline** : `viz/mediaviz.html` — Canvas 2D scroll-driven, scrollbar masquee, indicateur scroll anime
+### Carte marine parcours (`viz/carte.html`)
+- Canvas 2D scroll-driven, scrollbar masquée
+- **Background** : `#1A1A2E` (= `--noir-doux`, unifié avec le hero de a-propos)
+- **Scroll piloté par le parent** : la page a-propos envoie `postMessage({ type: 'setProgress', progress })` à l'iframe. L'iframe écoute et utilise `externalProgress` au lieu de son propre scroll interne. Section parent = 800vh sticky.
+- **Titre** : `top: 80px` pour passer sous la navbar du parent
+- **Mobile** : phase-indicator compact (right 12px), compass réduit, tooltip 220px max, watermark masqué
+
+### Media-viz timeline (`viz/mediaviz.html`)
+- Canvas 2D scroll-driven, scrollbar masquée, indicateur scroll animé
 
 ## Pages (routes : /fr/ et /en/)
 
 ### Homepage (`/fr/`, `/en/`)
-- Hero plein écran : globe en arrière-plan, overlay léger (55%/15%/35%), dezoom au scroll
-- Bouton "Explorer la carte" → mode plein écran avec légende + stats (Escape pour fermer)
+- Hero plein écran : globe en arrière-plan (desktop), gradient radial (mobile), overlay léger, dezoom au scroll (rAF-throttled)
+- Bouton "Explorer la carte" → mode plein écran avec légende + stats (Escape pour fermer) — masqué mobile
 - Nav : texte blanc par défaut, bascule noir au scroll (`nav--scrolled`)
-- Sections : Stats → Triple Transition → Archipel France → Matrice → Logos → Témoignages → CTA Social → Océanocratie
+- Sections : Stats → Divider → Triple Transition → Divider → Archipel France → Matrice → Logos → Témoignages → CTA Social → Océanocratie
+
+### A propos (`/a-propos`)
+- Hero sombre sans scroll-hint (la carte a le sien)
+- Carte marine : section 800vh avec iframe sticky 100vh, mask-image fade en haut (12%)
+- Scroll parent contrôle l'animation de la carte via postMessage (rAF-throttled)
+- Sections : Moment fondateur → Divider → Vision → Valeurs → Colomban → Bibliographie
 
 ### Engagements (`/engagements`)
-- Hero sombre + Matrice 3D en header (50vh)
-- Grille 3 colonnes : GASPE, VAIATA, Opsealog, Fondation ENSM, ENSM, FNMM, HYDROS Alumni, Propeller Club, Apéritifs de la Mer, Académie de Marine, COESPC
+- Hero sombre + Matrice 3D en header (55vh, mask-image top/bottom fade)
+- Grille 3→2→1 colonnes (responsive) : GASPE, VAIATA, Opsealog, Fondation ENSM, ENSM, FNMM, HYDROS Alumni, Propeller Club, Apéritifs de la Mer, Académie de Marine, COESPC
 - Tuile "Et plus à venir..." (dashed, cachée mobile)
 
 ### Contact (`/contact`)
@@ -94,14 +110,20 @@
 - Liens : LinkedIn (~16 000 abonnés), Instagram (@colombanatsea)
 
 ### Medias (`/medias`)
-- Carte marine parcours : Canvas 2D scroll-driven, waypoints chronologiques
-- Media-viz constellation : Canvas 2D scroll-driven, 3 rangees (tech/enviro/socio), filtres
-- Kit media : 4 cartes telechargement (bio .txt, chiffres-cles .txt, contact .vcf, photos HD mailto)
+- Media-viz constellation : Canvas 2D scroll-driven, 3 rangées (tech/enviro/socio), filtres
+- Kit media : 4 cartes téléchargement (bio .txt, chiffres-clés .txt, contact .vcf, photos HD mailto)
 
 ### Prises de parole (`/prises-de-parole`)
-- Conferences & interventions (tableau chronologique, liens externes)
+- Conférences & interventions (tableau chronologique, liens externes)
 - Podcasts
-- Series YouTube (Hissez Mots, Marine Marchande 101)
+- Séries YouTube (Hissez Mots, Marine Marchande 101)
+
+## Performance
+- **Scroll handlers** : tous throttlés via `requestAnimationFrame` (hero dezoom, carte progress)
+- **3D mobile** : Globe et Matrice ne chargent pas Three.js sur mobile (early exit si `offsetWidth === 0`)
+- **Fonts** : Google Fonts non-bloquantes (`media="print" onload="this.media='all'"` + `display=swap`)
+- **Lazy loading** : Matrice via IntersectionObserver, Globe preloaded (hero)
+- **Bundles** : Three.js ~78KB gzip (Globe), OrbitControls ~121KB gzip, Matrice ~4KB gzip
 
 ## SEO
 - Canonical URLs : `<link rel="canonical">`
@@ -111,13 +133,13 @@
 - Open Graph complet : og:url, og:site_name, og:image, twitter:card + twitter:image
 - Meta descriptions sur toutes les pages
 
-## Securite
+## Sécurité
 - `X-Content-Type-Options: nosniff` (meta)
 - `referrer: strict-origin-when-cross-origin` (meta)
 - `rel="noopener noreferrer"` sur tous les liens externes
 - Fonts non-bloquantes (`media="print" onload`)
 
-## Sites associes
+## Sites associés
 - **oceanocratie.fr** : Landing page standalone (`oceanocratie.fr/index.html`), waitlist email localStorage
 - **aperitifsdelamer.com** : Lien dans le footer
 
