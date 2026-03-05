@@ -1,15 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Noeud from '../../components/Noeud.astro';
-import NoeudDivider from '../../components/NoeudDivider.astro';
-
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout lang="fr" frSlug="a-propos" title="A propos — Colomban at Sea" description="Le parcours de Colomban : du pont des navires à la triple transition maritime. Officier de marine marchande, entrepreneur, enseignant et leader d'opinion.">
-  <section class="page-hero section-dark page-hero--carte noeud-watermark-container">
+  <section class="page-hero section-dark page-hero--carte">
     <div class="container stagger" style="position: relative; z-index: 1;">
-      <Noeud size={48} animate={true} class="hero-noeud" />
       <p class="mono" style="color: var(--blanc);">A propos</p>
       <h1>Le maritime dans le sang<br/>depuis <span class="text-bleu">1991</span></h1>
       <p class="subtitle">D'un sillage unique de marin a un reseau d'engagements convergents pour transformer le maritime.</p>
@@ -20,10 +16,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
-  <!-- Carte marine parcours — flows directly from dark hero -->
+  <!-- Carte marine parcours — scroll-driven, parent controls iframe progress -->
   <section class="carte-section" id="carte">
-    <div class="carte-iframe-wrap">
-      <iframe src={`${base}/viz/carte.html`} class="carte-iframe" title="Carte marine du parcours de Colomban"></iframe>
+    <div class="carte-sticky">
+      <iframe id="carte-iframe" src={`${base}/viz/carte.html`} class="carte-iframe" title="Carte marine du parcours de Colomban"></iframe>
     </div>
   </section>
 
@@ -40,7 +36,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
-  <NoeudDivider />
+  <div class="divider-wrap">
+    <img src={`${base}/images/divider.svg`} alt="" class="divider-img" />
+  </div>
 
   <!-- Vision -->
   <section class="section-dark section" id="vision-detail">
@@ -162,10 +160,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     justify-content: center;
   }
 
-  .hero-noeud {
-    margin-bottom: var(--space-md);
-  }
-
   .page-hero .mono {
     margin-bottom: var(--space-sm);
   }
@@ -201,14 +195,16 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 
   .carte-section {
-    padding: 0;
-    background: #0a0e1a; /* Match carte.html background */
+    position: relative;
+    height: 800vh;
+    background: #0a0e1a;
   }
 
-  .carte-iframe-wrap {
+  .carte-sticky {
+    position: sticky;
+    top: 0;
     width: 100%;
     height: 100vh;
-    position: relative;
   }
 
   .carte-iframe {
@@ -216,6 +212,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     height: 100%;
     border: none;
     display: block;
+  }
+
+  .divider-wrap {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-lg) 0;
+  }
+
+  .divider-img {
+    width: 120px;
+    height: auto;
+    opacity: 0.35;
   }
 
   .about-block {
@@ -369,8 +377,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       min-height: 50vh;
     }
 
-    .carte-iframe-wrap {
-      height: 70vh;
+    .carte-section {
+      height: 500vh;
     }
 
     .about-values {
@@ -382,3 +390,28 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     }
   }
 </style>
+
+<script>
+  const carteSection = document.getElementById('carte');
+  const carteIframe = document.getElementById('carte-iframe') as HTMLIFrameElement;
+
+  function sendCarteProgress() {
+    if (!carteSection || !carteIframe?.contentWindow) return;
+
+    const rect = carteSection.getBoundingClientRect();
+    const sectionHeight = carteSection.offsetHeight - window.innerHeight;
+
+    // progress = 0 when top of section hits top of viewport
+    // progress = 1 when bottom of section minus viewport height
+    const scrolled = -rect.top;
+    const progress = Math.max(0, Math.min(1, scrolled / sectionHeight));
+
+    carteIframe.contentWindow.postMessage({ type: 'setProgress', progress }, '*');
+  }
+
+  window.addEventListener('scroll', sendCarteProgress, { passive: true });
+  // Send initial progress once iframe is loaded
+  carteIframe?.addEventListener('load', () => {
+    sendCarteProgress();
+  });
+</script>

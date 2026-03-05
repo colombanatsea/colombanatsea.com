@@ -282,38 +282,4 @@ h2::after {
   background: var(--gris-400);
 }
 
-/* ── Noeud clip-path ── */
-/* Usage: clip-path: url(#noeud-clip) or apply class */
-.clip-noeud {
-  clip-path: ellipse(42% 42% at 50% 50%);
-  /* TODO: replace with exact noeud path when finalized */
-}
-
-/* Noeud watermark background — apply to section containers */
-.noeud-watermark-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.noeud-watermark-container::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -5%;
-  transform: translateY(-50%);
-  width: 500px;
-  height: 500px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'%3E%3Cpath d='M38 50 C38 30,30 18,50 18 C70 18,62 30,62 50' stroke='%232A55B3' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M62 50 C62 70,70 82,50 82 C30 82,38 70,38 50' stroke='%232A55B3' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M44 44 C48 52,52 58,56 56' stroke='%2300BF63' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M56 44 C52 48,48 52,44 56' stroke='%232A55B3' stroke-width='4' stroke-linecap='round'/%3E%3Crect x='72' y='14' width='6' height='6' rx='1' fill='%2300BF63' transform='rotate(45,75,17)'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.03;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Light section variant — slightly more visible */
-.section-light .noeud-watermark-container::before,
-.noeud-watermark-container--light::before {
-  opacity: 0.04;
-}
 

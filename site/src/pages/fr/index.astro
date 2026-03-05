@@ -2,7 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Globe from '../../components/Globe.astro';
 import Matrice from '../../components/Matrice.astro';
-import NoeudDivider from '../../components/NoeudDivider.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
@@ -60,10 +59,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
-  <NoeudDivider />
+  <div class="divider-wrap">
+    <img src={`${base}/images/divider.svg`} alt="" class="divider-img" />
+  </div>
 
   <!-- ═══ VISION / TRIPLE TRANSITION ═══ -->
-  <section class="vision section-dark section noeud-watermark-container" id="vision">
+  <section class="vision section-dark section" id="vision">
     <div class="container" style="position: relative; z-index: 1;">
       <div class="vision__header stagger">
         <p class="mono text-bleu">La triple transition</p>
@@ -105,7 +106,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
-  <NoeudDivider />
+  <div class="divider-wrap">
+    <img src={`${base}/images/divider.svg`} alt="" class="divider-img" />
+  </div>
 
   <!-- ═══ ARCHIPEL FRANCE ═══ -->
   <section class="globe-section section" id="globe">
@@ -307,6 +310,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 </script>
 
 <style>
+  .divider-wrap {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-lg) 0;
+  }
+
+  .divider-img {
+    width: 120px;
+    height: auto;
+    opacity: 0.35;
+  }
+
   /* ═══ HERO ═══ */
   .hero {
     position: relative;
