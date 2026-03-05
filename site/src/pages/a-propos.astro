@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CarteTimeline from '../components/CarteTimeline.astro';
 ---
 
-<BaseLayout title="A propos — Colomban at Sea">
+<BaseLayout title="A propos — Colomban at Sea" description="Le parcours de Colomban : du pont des navires à la triple transition maritime. Officier de marine marchande, entrepreneur, enseignant et leader d'opinion.">
   <section class="page-hero section-dark">
     <div class="container stagger">
       <p class="mono" style="color: var(--blanc);">A propos</p>
@@ -78,6 +78,43 @@ import CarteTimeline from '../components/CarteTimeline.astro';
           <li>Ancre a Annecy-le-Vieux</li>
           <li>Co-fondateur de 5 entreprises</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bibliographie -->
+  <section class="section-dark section" id="bibliographie">
+    <div class="container">
+      <div class="about-block stagger">
+        <p class="mono text-bleu">Bibliographie</p>
+        <h2>Les lectures qui m'ont fa&ccedil;onn&eacute;</h2>
+        <ul class="biblio-list">
+          <li>
+            <strong>L'Homme et la Mer</strong> — <span class="biblio-author">Cyrille P. Coutansais</span>
+            <p>La relation fondamentale entre l'humanit&eacute; et l'oc&eacute;an, de l'Antiquit&eacute; &agrave; nos jours.</p>
+          </li>
+          <li>
+            <strong>Atlas des mers et oc&eacute;ans</strong> — <span class="biblio-author">Andr&eacute; Louchet</span>
+            <p>G&eacute;opolitique maritime, enjeux strat&eacute;giques et &eacute;conomiques des espaces oc&eacute;aniques.</p>
+          </li>
+          <li>
+            <strong>La Mer est l'avenir de la Terre</strong> — <span class="biblio-author">Paul Music</span>
+            <p>Pourquoi le maritime est la cl&eacute; de la transition &eacute;cologique et &eacute;conomique.</p>
+          </li>
+          <li>
+            <strong>Le d&eacute;fi de la Marine Marchande fran&ccedil;aise</strong> — <span class="biblio-author">IFM</span>
+            <p>Analyse du d&eacute;clin et des perspectives de renaissance de la flotte commerciale fran&ccedil;aise.</p>
+          </li>
+          <li>
+            <strong>Le Cygne Noir</strong> — <span class="biblio-author">Nassim Nicholas Taleb</span>
+            <p>L'impact disproportionn&eacute; des &eacute;v&eacute;nements impr&eacute;visibles — une le&ccedil;on pour la gestion des risques maritimes.</p>
+          </li>
+          <li>
+            <strong>Thinking, Fast and Slow</strong> — <span class="biblio-author">Daniel Kahneman</span>
+            <p>Les biais cognitifs qui fa&ccedil;onnent nos d&eacute;cisions — essentiels pour comprendre la r&eacute;sistance au changement.</p>
+          </li>
+        </ul>
+        <p class="biblio-note">Liste non exhaustive — mise &agrave; jour r&eacute;guli&egrave;rement.</p>
       </div>
     </div>
   </section>
@@ -184,6 +221,55 @@ import CarteTimeline from '../components/CarteTimeline.astro';
     height: 6px;
     background: var(--bleu);
     border-radius: 50%;
+  }
+
+  .biblio-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .biblio-list li {
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .biblio-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 6px;
+    height: 6px;
+    background: var(--bleu);
+    border-radius: 50%;
+  }
+
+  .biblio-list strong {
+    color: var(--blanc);
+    display: block;
+    margin-bottom: 0.15rem;
+  }
+
+  .biblio-author {
+    font-size: 0.85rem;
+    color: var(--gris-400);
+    font-style: italic;
+  }
+
+  .biblio-list p {
+    font-size: 0.85rem;
+    color: var(--gris-400);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+
+  .biblio-note {
+    margin-top: var(--space-lg);
+    font-size: 0.8rem;
+    color: var(--gris-400);
+    font-style: italic;
   }
 
   @media (max-width: 768px) {

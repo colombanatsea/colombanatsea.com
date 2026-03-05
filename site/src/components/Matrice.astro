@@ -6,6 +6,32 @@
 ---
 
 <div class="matrice-wrapper">
+  <div class="matrice-fallback" id="matrice-fallback">
+    <div class="matrice-fallback__axis matrice-fallback__axis--tech">
+      <h4>Technologique</h4>
+      <ul>
+        <li>VAIATA Dynamics</li>
+        <li>Opsealog</li>
+        <li>Advisory boards</li>
+      </ul>
+    </div>
+    <div class="matrice-fallback__axis matrice-fallback__axis--enviro">
+      <h4>Environnementale</h4>
+      <ul>
+        <li>Fondation ENSM</li>
+        <li>Enseignant DD</li>
+      </ul>
+    </div>
+    <div class="matrice-fallback__axis matrice-fallback__axis--socio">
+      <h4>Socioculturelle</h4>
+      <ul>
+        <li>GASPE</li>
+        <li>HYDROS Alumni</li>
+        <li>Propeller Club</li>
+        <li>Ap&eacute;ritifs de la Mer</li>
+      </ul>
+    </div>
+  </div>
   <div id="matrice-canvas-container">
     <div id="matrice-labels"></div>
 
@@ -166,6 +192,55 @@
   }
 
   .matrice-tooltip.show { opacity: 1; }
+
+  /* Mobile fallback */
+  .matrice-fallback {
+    display: none;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .matrice-fallback__axis {
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.03);
+  }
+
+  .matrice-fallback__axis h4 {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .matrice-fallback__axis--tech h4 { color: #2a55b3; }
+  .matrice-fallback__axis--enviro h4 { color: #00bf63; }
+  .matrice-fallback__axis--socio h4 { color: #b32a55; }
+
+  .matrice-fallback__axis ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .matrice-fallback__axis li {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.6);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.03);
+  }
+
+  @media (max-width: 768px) {
+    .matrice-fallback { display: flex; }
+    #matrice-canvas-container { display: none !important; }
+  }
 </style>
 
 <script>

@@ -7,6 +7,14 @@
 ---
 
 <div class="globe-wrapper">
+  <div id="globe-fallback" class="globe-fallback">
+    <div class="globe-fallback__circle"></div>
+    <div class="globe-fallback__stats">
+      <div class="globe-fallback__stat"><span>11 691 000</span> km&sup2; de ZEE</div>
+      <div class="globe-fallback__stat"><span>708</span> c&acirc;bles sous-marins</div>
+      <div class="globe-fallback__stat"><span>2&egrave;me</span> ZEE mondiale</div>
+    </div>
+  </div>
   <div id="globe-container">
     <div id="total-counter">
       <div class="stat-item" data-stat="zee">
@@ -236,9 +244,56 @@
 
   @keyframes spin { to { transform: rotate(360deg); } }
 
+  /* Mobile fallback */
+  .globe-fallback {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .globe-fallback__circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #1a3a6e 0%, #0a1628 70%);
+    border: 2px solid rgba(42, 85, 179, 0.3);
+    box-shadow: 0 0 40px rgba(42, 85, 179, 0.15), inset 0 0 30px rgba(0, 180, 180, 0.05);
+    animation: globe-pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes globe-pulse {
+    0%, 100% { box-shadow: 0 0 40px rgba(42, 85, 179, 0.15); }
+    50% { box-shadow: 0 0 60px rgba(42, 85, 179, 0.3); }
+  }
+
+  .globe-fallback__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .globe-fallback__stat {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .globe-fallback__stat span {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #00b4b4;
+  }
+
   @media (max-width: 768px) {
     #total-counter { bottom: 16px; right: 16px; }
     #legend { bottom: 16px; left: 16px; }
+    .globe-fallback { display: flex; }
+    #globe-container { display: none !important; }
   }
 </style>
 
