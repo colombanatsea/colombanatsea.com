@@ -1030,7 +1030,21 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     let scrollProgress = 0;
     const startTime = Date.now();
 
+    // External scroll control via postMessage (when embedded as iframe)
+    let externalMode = false;
+    let externalProgress = 0;
+    window.addEventListener('message', (e) => {
+        if (e.data && e.data.type === 'setProgress') {
+            externalMode = true;
+            externalProgress = e.data.progress;
+            // Hide internal scroll UI in external mode
+            document.querySelector('.scroll-container').style.height = '100vh';
+            document.querySelector('.scroll-container').style.overflow = 'hidden';
+        }
+    });
+
     function getScrollProgress() {
+        if (externalMode) return externalProgress;
         const scrollTop = window.scrollY;
         const maxScroll = document.querySelector('.scroll-container').scrollHeight - window.innerHeight;
         return Math.max(0, Math.min(1, scrollTop / maxScroll));
