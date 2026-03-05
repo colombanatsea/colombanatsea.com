@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import MediaViz from '../components/MediaViz.astro';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const medias = [
   'Le Monde', 'TF1', 'Conflits', 'Marine & Oceans', 'Jeune Marine',
   'Mer & Marine', 'Le Marin',
@@ -55,13 +57,14 @@ const medias = [
           </div>
           <div class="kit-media__item">
             <h4>Photos HD</h4>
-            <p>Portraits, conferences, maritime — disponibles sur demande.</p>
+            <p>Portraits, conferences, maritime — disponibles sur demande &agrave; <a href="mailto:hello@colombanatsea.com">hello@colombanatsea.com</a></p>
           </div>
           <div class="kit-media__item">
             <h4>Chiffres cles</h4>
             <p>Le maritime dans le sang depuis 1991. 5 entreprises co-fondees. 28+ articles presse. 3.6M vues LinkedIn/an.</p>
           </div>
         </div>
+        <a href={`${base}/kit-media/bio-colomban.txt`} download class="btn btn-outline kit-media__download">T&eacute;l&eacute;charger la bio compl&egrave;te (.txt)</a>
       </div>
     </div>
   </section>
@@ -134,6 +137,10 @@ const medias = [
     font-size: 0.9rem;
     color: var(--gris-500);
     line-height: 1.6;
+  }
+
+  .kit-media__download {
+    margin-top: var(--space-lg);
   }
 
   @media (max-width: 768px) {
