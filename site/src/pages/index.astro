@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Globe from '../components/Globe.astro';
+import Matrice from '../components/Matrice.astro';
 ---
 
 <BaseLayout title="Colomban at Sea — Construire le monde maritime de demain">
@@ -100,11 +102,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="subtitle">2e ZEE mondiale. 11 millions de km2. 37 etats frontaliers maritimes. Un potentiel strategique inexploite.</p>
       </div>
     </div>
-    <div class="globe-section__canvas" id="globe-container">
-      <!-- Globe 3D will be loaded here -->
-      <div class="globe-section__placeholder">
-        <p class="mono text-muted">Globe interactif — chargement...</p>
-      </div>
+    <div class="globe-section__canvas">
+      <Globe />
     </div>
   </section>
 
@@ -117,11 +116,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="subtitle">Chaque engagement de Colomban s'inscrit dans un ou plusieurs axes de la triple transition maritime.</p>
       </div>
     </div>
-    <div class="matrice-section__canvas" id="matrice-container">
-      <!-- Matrice 3D will be loaded here -->
-      <div class="matrice-section__placeholder">
-        <p class="mono text-muted">Matrice 3D — chargement...</p>
-      </div>
+    <div class="matrice-section__canvas">
+      <Matrice />
     </div>
   </section>
 
