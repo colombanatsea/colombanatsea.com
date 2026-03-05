@@ -1,5 +1,18 @@
 ---
 // Root redirect to default locale /fr/
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-return Astro.redirect(`${base}/fr/`);
 ---
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content={`0;url=${base}/fr/`} />
+    <link rel="canonical" href={`${base}/fr/`} />
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    <script define:vars={{ url: `${base}/fr/` }}>
+      window.location.replace(url);
+    </script>
+  </body>
+</html>

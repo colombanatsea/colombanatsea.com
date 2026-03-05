@@ -50,6 +50,14 @@
     </div>
 
     <div class="matrice-tooltip" id="matrice-tooltip"></div>
+
+    <div class="matrice-grab-hint" id="matrice-grab-hint">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 11V6a2 2 0 0 0-4 0v1M14 10V4a2 2 0 0 0-4 0v6M10 10.5V5a2 2 0 0 0-4 0v9"/>
+        <path d="M18 11a2 2 0 0 1 4 0v5a8 8 0 0 1-8 8h-2c-2.5 0-4.5-1-6.2-2.8L2 17"/>
+      </svg>
+      <span>Cliquer-glisser pour explorer</span>
+    </div>
   </div>
 </div>
 
@@ -65,6 +73,11 @@
     height: 100%;
     position: relative;
     overflow: hidden;
+    cursor: grab;
+  }
+
+  #matrice-canvas-container:active {
+    cursor: grabbing;
   }
 
   #matrice-canvas-container canvas { display: block; }
@@ -237,6 +250,38 @@
     background: rgba(255,255,255,0.03);
   }
 
+  .matrice-grab-hint {
+    position: absolute;
+    bottom: 24px; right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.7rem;
+    font-family: var(--font-heading);
+    letter-spacing: 0.03em;
+    pointer-events: none;
+    animation: grab-hint-pulse 3s ease-in-out infinite;
+    transition: opacity 0.6s ease;
+  }
+
+  .matrice-grab-hint.hidden { opacity: 0; }
+
+  .matrice-grab-hint svg {
+    opacity: 0.5;
+    animation: grab-hint-sway 2.5s ease-in-out infinite;
+  }
+
+  @keyframes grab-hint-pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes grab-hint-sway {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+  }
+
   @media (max-width: 768px) {
     .matrice-fallback { display: flex; }
     #matrice-canvas-container { display: none; }
@@ -338,10 +383,12 @@
   controls.enableZoom = false;
 
   let interTimer: ReturnType<typeof setTimeout> | null = null;
+  const grabHint = document.getElementById('matrice-grab-hint');
   function pauseRotate() {
     controls.autoRotate = false;
     if (interTimer) clearTimeout(interTimer);
     interTimer = setTimeout(() => { controls.autoRotate = true; }, 3000);
+    if (grabHint) grabHint.classList.add('hidden');
   }
   controls.addEventListener('start', pauseRotate);
 
