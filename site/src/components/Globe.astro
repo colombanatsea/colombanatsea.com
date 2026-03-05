@@ -293,7 +293,7 @@
     #total-counter { bottom: 16px; right: 16px; }
     #legend { bottom: 16px; left: 16px; }
     .globe-fallback { display: flex; }
-    #globe-container { display: none !important; }
+    #globe-container { display: none; }
   }
 </style>
 
@@ -305,6 +305,18 @@
   import CABLE_GEOJSON from '../data/cables.json';
   import SHIPPING_LANES from '../data/shipping-lanes.json';
 
+  // ── EARLY EXIT IF HIDDEN (mobile CSS fallback) ──
+  const container = document.getElementById('globe-container');
+  if (!container || !container.offsetWidth) {
+    // Mobile fallback is active — skip Three.js init entirely
+    // This prevents texture downloads and GPU allocation on mobile
+  } else {
+  // ── QUALITY SETTINGS ──
+  const isMobile = window.innerWidth <= 1024;
+  const SPHERE_SEG = isMobile ? 48 : 96;
+  const PX_RATIO = isMobile ? 1 : Math.min(window.devicePixelRatio, 2);
+  const USE_AA = !isMobile;
+
   // ── CONFIG ──
   const GLOBE_RADIUS = 1.0;
   const ZEE_HEIGHT = 1.003;
@@ -313,7 +325,6 @@
   const AUTO_ROTATE_SPEED = 0.08;
 
   // ── SCENE ──
-  const container = document.getElementById('globe-container')!;
   const tooltip = document.getElementById('globe-tooltip')!;
   const tooltipName = tooltip.querySelector('.zone-name')!;
   const tooltipArea = tooltip.querySelector('.zone-area')!;
@@ -323,12 +334,20 @@
   const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.01, 100);
   camera.position.set(0, 0.4, 2.8);
 
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'high-performance' });
+  const renderer = new THREE.WebGLRenderer({ antialias: USE_AA, alpha: false, powerPreference: 'high-performance' });
   renderer.setSize(container.clientWidth, container.clientHeight);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setPixelRatio(PX_RATIO);
   renderer.setClearColor(0x080b14, 1);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   container.appendChild(renderer.domElement);
+
+  // ── WEBGL CONTEXT LOSS HANDLING ──
+  renderer.domElement.addEventListener('webglcontextlost', (e) => {
+    e.preventDefault();
+    const fallback = document.getElementById('globe-fallback');
+    if (fallback) fallback.style.display = 'flex';
+    container.style.display = 'none';
+  });
 
   // ── CONTROLS ──
   const controls = new OrbitControls(camera, renderer.domElement);
@@ -354,7 +373,7 @@
 
   // ── GLOBE (satellite texture) ──
   const textureLoader = new THREE.TextureLoader();
-  const globeGeo = new THREE.SphereGeometry(GLOBE_RADIUS, 96, 96);
+  const globeGeo = new THREE.SphereGeometry(GLOBE_RADIUS, SPHERE_SEG, SPHERE_SEG);
   const globeMat = new THREE.MeshPhongMaterial({ color: 0xffffff, shininess: 25, bumpScale: 0.015 });
   const globe = new THREE.Mesh(globeGeo, globeMat);
   scene.add(globe);
@@ -387,17 +406,21 @@
     checkLoaded();
   });
 
-  textureLoader.load('https://unpkg.com/three-globe/example/img/earth-topology.png', (t) => {
-    globeMat.bumpMap = t;
-    globeMat.needsUpdate = true;
-    checkLoaded();
-  }, undefined, () => checkLoaded());
+  if (!isMobile) {
+    textureLoader.load('https://unpkg.com/three-globe/example/img/earth-topology.png', (t) => {
+      globeMat.bumpMap = t;
+      globeMat.needsUpdate = true;
+      checkLoaded();
+    }, undefined, () => checkLoaded());
+  } else {
+    checkLoaded(); // Skip bump map on mobile/tablet
+  }
 
   // ── ATMOSPHERE ──
   const atmoVS = `varying vec3 vNormal; void main() { vNormal = normalize(normalMatrix * normal); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`;
   const atmoFS = `varying vec3 vNormal; void main() { float i = pow(0.65 - dot(vNormal, vec3(0,0,1)), 3.0); gl_FragColor = vec4(0.15,0.55,0.7,1) * i * 0.7; }`;
   scene.add(new THREE.Mesh(
-    new THREE.SphereGeometry(GLOBE_RADIUS * 1.12, 64, 64),
+    new THREE.SphereGeometry(GLOBE_RADIUS * 1.12, isMobile ? 32 : 64, isMobile ? 32 : 64),
     new THREE.ShaderMaterial({ vertexShader: atmoVS, fragmentShader: atmoFS, blending: THREE.AdditiveBlending, side: THREE.BackSide, transparent: true, depthWrite: false })
   ));
 
@@ -800,4 +823,5 @@
   ro.observe(container);
 
   animate();
+  } // end of else (container visible)
 </script>

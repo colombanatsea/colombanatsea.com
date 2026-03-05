@@ -1,27 +1,24 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<BaseLayout title="A propos — Colomban at Sea" description="Le parcours de Colomban : du pont des navires à la triple transition maritime. Officier de marine marchande, entrepreneur, enseignant et leader d'opinion.">
-  <section class="page-hero section-dark">
+<BaseLayout lang="fr" frSlug="a-propos" title="A propos — Colomban at Sea" description="Le parcours de Colomban : du pont des navires à la triple transition maritime. Officier de marine marchande, entrepreneur, enseignant et leader d'opinion.">
+  <section class="page-hero section-dark page-hero--carte">
     <div class="container stagger">
       <p class="mono" style="color: var(--blanc);">A propos</p>
       <h1>Le maritime dans le sang<br/>depuis <span class="text-bleu">1991</span></h1>
       <p class="subtitle">D'un sillage unique de marin a un reseau d'engagements convergents pour transformer le maritime.</p>
     </div>
+    <div class="scroll-hint">
+      <span class="mono" style="color: var(--gris-400); font-size: 0.65rem;">Scroll</span>
+      <div class="scroll-hint__line"></div>
+    </div>
   </section>
 
-  <!-- Carte marine parcours -->
+  <!-- Carte marine parcours — flows directly from dark hero -->
   <section class="carte-section" id="carte">
-    <div class="container">
-      <div class="carte-header stagger">
-        <p class="mono text-bleu">Le parcours</p>
-        <h2>D'un sillage de marin a un reseau d'engagements</h2>
-        <p class="subtitle">Scrollez pour naviguer dans le parcours de Colomban.</p>
-      </div>
-    </div>
     <div class="carte-iframe-wrap">
       <iframe src={`${base}/viz/carte.html`} class="carte-iframe" title="Carte marine du parcours de Colomban"></iframe>
     </div>
@@ -150,6 +147,16 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-2xl);
   }
 
+  .page-hero--carte {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .page-hero .mono {
     margin-bottom: var(--space-sm);
   }
@@ -160,16 +167,33 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: var(--gris-400);
   }
 
-  .carte-header {
-    text-align: center;
-    margin-bottom: var(--space-xl);
+  /* Scroll indicator */
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
   }
 
-  .carte-header .mono { margin-bottom: var(--space-sm); }
-  .carte-header .subtitle { margin-top: var(--space-md); max-width: 500px; margin-left: auto; margin-right: auto; }
+  .scroll-hint__line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, var(--gris-400), transparent);
+    animation: scroll-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scroll-pulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.2); }
+  }
 
   .carte-section {
     padding: 0;
+    background: #0a0e1a; /* Match carte.html background */
   }
 
   .carte-iframe-wrap {
@@ -332,6 +356,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 
   @media (max-width: 768px) {
+    .page-hero--carte {
+      min-height: 50vh;
+    }
+
+    .carte-iframe-wrap {
+      height: 70vh;
+    }
+
     .about-values {
       grid-template-columns: 1fr;
     }

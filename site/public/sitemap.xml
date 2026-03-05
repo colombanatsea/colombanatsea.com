@@ -1,42 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- FR pages -->
   <url>
-    <loc>https://colombanatsea.github.io/colombanatsea.com/</loc>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://colombanatsea.github.io/colombanatsea.com/a-propos/</loc>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/fr/a-propos/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/a-propos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/about/" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://colombanatsea.github.io/colombanatsea.com/engagements/</loc>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/fr/engagements/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/engagements/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/engagements/" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://colombanatsea.github.io/colombanatsea.com/prises-de-parole/</loc>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/fr/prises-de-parole/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/prises-de-parole/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/speaking/" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://colombanatsea.github.io/colombanatsea.com/medias/</loc>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/fr/medias/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/medias/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/media/" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://colombanatsea.github.io/colombanatsea.com/contact/</loc>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/fr/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/contact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/contact/" />
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://colombanatsea.github.io/colombanatsea.com/mentions-legales/</loc>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/fr/mentions-legales/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/mentions-legales/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/legal-notice/" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://colombanatsea.github.io/colombanatsea.com/politique-confidentialite/</loc>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/fr/politique-confidentialite/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/politique-confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/privacy-policy/" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- EN pages -->
+  <url>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/a-propos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/about/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/en/engagements/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/engagements/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/engagements/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/en/speaking/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/prises-de-parole/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/speaking/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/en/media/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/medias/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/media/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/en/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/contact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/contact/" />
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/en/legal-notice/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/mentions-legales/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/legal-notice/" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/en/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/politique-confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/privacy-policy/" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

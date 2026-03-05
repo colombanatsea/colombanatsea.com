@@ -5,6 +5,12 @@
 - **3D** : Three.js (npm) + earcut (polygon triangulation)
 - **Hébergement** : GitHub Pages (`colombanatsea.github.io/colombanatsea.com/`)
 - **Base URL** : `/colombanatsea.com/`
+- **i18n** : Astro built-in (`prefixDefaultLocale: true`), locales FR/EN
+  - Traductions : `site/src/i18n/translations.ts` (UI strings) + `site/src/i18n/utils.ts`
+  - Routes : `/fr/` (defaut), `/en/` — redirect racine `/` → `/fr/`
+  - Pages FR : `site/src/pages/fr/` (8 pages)
+  - Pages EN : `site/src/pages/en/` (7 pages)
+  - hreflang bidirectionnel sur toutes les pages + sitemap xhtml:link
 
 ## Charte Graphique (source : `colombanatsea/brands`)
 
@@ -41,6 +47,11 @@
 - **Point coloré fin de titre** : `.` vert sur fond sombre, `.` bleu sur fond clair
 - **3 fonds** : Noir Doux (#1A1A2E), Blanc (#FAFAFA), Bleu (#2A55B3)
 
+### Indicateurs de scroll
+- Pattern reutilise : `.scroll-hint` + `.scroll-hint__line` avec animation `scroll-pulse`
+- Utilise sur : homepage hero, a-propos hero, mediaviz timeline
+- Mobile : visible, meme style
+
 ## Composants 3D
 
 ### Globe (`Globe.astro`)
@@ -50,16 +61,24 @@
 - Routes maritimes : 3 niveaux (major/middle/minor) — `src/data/shipping-lanes.json` (53KB)
 - Légende interactive, toggle par layer, tooltip hover ZEE
 - Zoom 1.3x–5x, auto-rotation 0.08, atmosphère shader
+- **Progressive loading** : early exit si hidden (mobile), qualite reduite tablettes (48 seg, pixelRatio 1, pas bump map, pas antialias), WebGL context loss handler
 
 ### Matrice (`Matrice.astro`)
 - Réseau 3D organique : sphères = engagements, lignes = connexions, particules voyageuses
 - Labels positionnés à droite des sphères (calcul screen-space du rayon)
 - Panneau détail s'ouvre automatiquement au hover (pas au clic)
 - Axes de couleur : Technologique (#2A55B3), Environnementale (#00BF63), Socioculturelle (#B32A55)
+- **Lazy loading** : IntersectionObserver (below fold), early exit mobile, qualite reduite, context loss handler
 
 ## Pages
 
-### Homepage (`/`)
+### Visualisations iframe
+- **Carte marine parcours** : `viz/carte.html` — Canvas 2D scroll-driven, scrollbar masquee
+- **Media-viz timeline** : `viz/mediaviz.html` — Canvas 2D scroll-driven, scrollbar masquee, indicateur scroll anime
+
+## Pages (routes : /fr/ et /en/)
+
+### Homepage (`/fr/`, `/en/`)
 - Hero plein écran : globe en arrière-plan, overlay léger (55%/15%/35%), dezoom au scroll
 - Bouton "Explorer la carte" → mode plein écran avec légende + stats (Escape pour fermer)
 - Nav : texte blanc par défaut, bascule noir au scroll (`nav--scrolled`)
@@ -73,6 +92,34 @@
 ### Contact (`/contact`)
 - Sous-titre : "La meilleure façon de me contacter : rejoignez-moi sur les réseaux sociaux et envoyez-moi un message directement."
 - Liens : LinkedIn (~16 000 abonnés), Instagram (@colombanatsea)
+
+### Medias (`/medias`)
+- Carte marine parcours : Canvas 2D scroll-driven, waypoints chronologiques
+- Media-viz constellation : Canvas 2D scroll-driven, 3 rangees (tech/enviro/socio), filtres
+- Kit media : 4 cartes telechargement (bio .txt, chiffres-cles .txt, contact .vcf, photos HD mailto)
+
+### Prises de parole (`/prises-de-parole`)
+- Conferences & interventions (tableau chronologique, liens externes)
+- Podcasts
+- Series YouTube (Hissez Mots, Marine Marchande 101)
+
+## SEO
+- Canonical URLs : `<link rel="canonical">`
+- Sitemap XML : `site/public/sitemap.xml` (8 pages, changefreq + priority)
+- Robots.txt : `site/public/robots.txt`
+- JSON-LD Person : affiliations (GASPE, VAIATA, Fondation ENSM), knowsAbout, alternateName
+- Open Graph complet : og:url, og:site_name, og:image, twitter:card + twitter:image
+- Meta descriptions sur toutes les pages
+
+## Securite
+- `X-Content-Type-Options: nosniff` (meta)
+- `referrer: strict-origin-when-cross-origin` (meta)
+- `rel="noopener noreferrer"` sur tous les liens externes
+- Fonts non-bloquantes (`media="print" onload`)
+
+## Sites associes
+- **oceanocratie.fr** : Landing page standalone (`oceanocratie.fr/index.html`), waitlist email localStorage
+- **aperitifsdelamer.com** : Lien dans le footer
 
 ## Contact
 - Email : hello@colombanatsea.com

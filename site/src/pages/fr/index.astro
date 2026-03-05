@@ -1,0 +1,815 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Globe from '../../components/Globe.astro';
+import Matrice from '../../components/Matrice.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="Colomban - Oceanocratie" lang="fr" frSlug="" description="Oceanocratie — Le quartier general digital de la triple transition maritime. Porte par Colomban, officier de marine marchande devenu figure de la transformation du maritime.">
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero__globe-bg">
+      <Globe />
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content container stagger">
+      <p class="hero__kicker mono">colombanatsea.com</p>
+      <h1 class="hero__title">Oceanocratie</h1>
+      <p class="hero__vision">Une nation libre regarde la mer.</p>
+      <div class="hero__cta">
+        <a href="#vision" class="btn btn-primary">Decouvrir la vision</a>
+        <a href={`${base}/a-propos`} class="btn btn-outline hero__btn-outline">Qui est Colomban</a>
+      </div>
+    </div>
+    <button class="hero__explore-map" id="hero-explore-map" aria-label="Explorer la carte en plein ecran">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" />
+      </svg>
+      <span class="mono">Explorer la carte</span>
+    </button>
+    <div class="hero__scroll-hint">
+      <span class="mono text-muted">Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══ CHIFFRES CLES ═══ -->
+  <section class="stats section" id="stats">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stats__item stagger">
+          <span class="stats__number" data-target="1991">1991</span>
+          <span class="stats__label">Le maritime dans le sang</span>
+        </div>
+        <div class="stats__item stagger">
+          <span class="stats__number" data-target="5">5</span>
+          <span class="stats__label">Entreprises co-fondees</span>
+        </div>
+        <div class="stats__item stagger">
+          <span class="stats__number">3.6M</span>
+          <span class="stats__label">Vues LinkedIn / an</span>
+        </div>
+        <div class="stats__item stagger">
+          <span class="stats__number">28+</span>
+          <span class="stats__label">Articles presse</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VISION / TRIPLE TRANSITION ═══ -->
+  <section class="vision section-dark section" id="vision">
+    <div class="container">
+      <div class="vision__header stagger">
+        <p class="mono text-bleu">La triple transition</p>
+        <h2>Trois revolutions,<br/>une seule cause</h2>
+        <p class="subtitle">Les revolutions environnementale et digitale du maritime sont avant tout une revolution culturelle.</p>
+      </div>
+
+      <div class="vision__axes">
+        <div class="vision__axis" data-axis="techno">
+          <div class="vision__axis-icon" style="--axis-color: var(--bleu);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3>Technologique</h3>
+          <p>Le maritime ne doit pas passer par la numerisation : il doit entrer immediatement dans l'ere de la digitalisation.</p>
+        </div>
+
+        <div class="vision__axis" data-axis="enviro">
+          <div class="vision__axis-icon" style="--axis-color: var(--vert);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M12 22c5-3 8-7 8-12 0-3-2.5-5-5-5-1.5 0-2.5.5-3 1.5C11.5 5.5 10.5 5 9 5c-2.5 0-5 2-5 5 0 5 3 9 8 12z"/>
+            </svg>
+          </div>
+          <h3>Environnementale</h3>
+          <p>Il est plus efficient de suivre 4 donnees bien ciblees en sachant ce qu'on veut en faire, que de suivre des millions de donnees sans objectif.</p>
+        </div>
+
+        <div class="vision__axis" data-axis="socio">
+          <div class="vision__axis-icon" style="--axis-color: var(--rose);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Socioculturelle</h3>
+          <p>La transition du maritime en oubliant l'aspect social, c'est de la plaisance particuliere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ARCHIPEL FRANCE ═══ -->
+  <section class="globe-section section" id="globe">
+    <div class="container">
+      <div class="globe-section__header stagger">
+        <p class="mono text-bleu">Archipel France</p>
+        <h2>La France, puissance<br/>maritime invisible</h2>
+        <p class="subtitle">2e ZEE mondiale. 11 millions de km&sup2;. 37 etats frontaliers maritimes. Un potentiel strategique inexploite.</p>
+        <p class="globe-section__note">Explorez le globe interactif en haut de page.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MATRICE ENGAGEMENTS ═══ -->
+  <section class="matrice-section section-dark section" id="matrice">
+    <div class="container">
+      <div class="matrice-section__header stagger">
+        <p class="mono text-bleu">Les engagements</p>
+        <h2>Des engagements au service<br/>d'une cause unique</h2>
+      </div>
+    </div>
+    <div class="matrice-section__canvas">
+      <Matrice />
+    </div>
+  </section>
+
+  <!-- ═══ BANDEAU LOGOS ═══ -->
+  <section class="logos section" id="logos">
+    <div class="container">
+      <p class="logos__title mono text-muted">Collaboration, Mentions, prises de Positions</p>
+      <div class="logos__track">
+        <div class="logos__slide">
+          <!-- Placeholder logos — will be replaced with real images -->
+          <span class="logos__item">GASPE</span>
+          <span class="logos__item">Fondation ENSM</span>
+          <span class="logos__item">VAIATA Dynamics</span>
+          <span class="logos__item">Propeller Club</span>
+          <span class="logos__item">HYDROS Alumni</span>
+          <span class="logos__item">Le Monde</span>
+          <span class="logos__item">TF1</span>
+          <span class="logos__item">Marine & Oceans</span>
+          <span class="logos__item">Euromaritime</span>
+          <span class="logos__item">ENSM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TEMOIGNAGES ═══ -->
+  <section class="testimonials section" id="temoignages">
+    <div class="container">
+      <div class="testimonials__header stagger">
+        <h2>La confiance, c'est bien<br/>Les temoignages, c'est mieux</h2>
+      </div>
+      <div class="testimonials__grid">
+        <blockquote class="testimonial">
+          <p>"Temoignage a venir — collecte en cours aupres des partenaires et collaborateurs."</p>
+          <cite>— Nom, Fonction</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"Temoignage a venir — collecte en cours aupres des partenaires et collaborateurs."</p>
+          <cite>— Nom, Fonction</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"Temoignage a venir — collecte en cours aupres des partenaires et collaborateurs."</p>
+          <cite>— Nom, Fonction</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA RESEAUX SOCIAUX ═══ -->
+  <section class="cta-social section-dark section" id="cta">
+    <div class="container">
+      <div class="cta-social__inner stagger">
+        <h2>Construisez votre<br/>vision maritime</h2>
+        <p class="subtitle">Rejoignez la conversation sur les reseaux sociaux.</p>
+        <div class="cta-social__links">
+          <a href="https://www.linkedin.com/in/colombanatsea/" target="_blank" rel="noopener noreferrer" class="cta-social__link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.instagram.com/colombanatsea/" target="_blank" rel="noopener noreferrer" class="cta-social__link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.youtube.com/@Colombanatsea" target="_blank" rel="noopener noreferrer" class="cta-social__link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span>YouTube</span>
+          </a>
+          <a href="https://www.tiktok.com/@colombanatsea" target="_blank" rel="noopener noreferrer" class="cta-social__link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            <span>TikTok</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ OCEANOCRATIE TEASER ═══ -->
+  <section class="oceanocratie section" id="oceanocratie">
+    <div class="container">
+      <div class="oceanocratie__inner">
+        <div class="oceanocratie__text stagger">
+          <p class="mono text-bleu">A venir — Noel 2026</p>
+          <h2>Oceanocratie</h2>
+          <p class="oceanocratie__subtitle">Une nation libre regarde la mer.</p>
+          <p class="subtitle">Un livre pour explorer le potentiel maritime fran&ccedil;ais.</p>
+          <a href="https://oceanocratie.fr" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Decouvrir le projet</a>
+        </div>
+        <div class="oceanocratie__visual">
+          <div class="oceanocratie__book">
+            <span class="mono">OCEANOCRATIE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  // Hero scroll = dezoom (scale down globe + overlay instead of scrolling away)
+  const hero = document.getElementById('hero');
+  const heroContent = hero?.querySelector('.hero__content') as HTMLElement | null;
+  const heroOverlay = hero?.querySelector('.hero__overlay') as HTMLElement | null;
+  const heroGlobe = hero?.querySelector('.hero__globe-bg') as HTMLElement | null;
+
+  function handleHeroScroll() {
+    if (!hero || !heroContent) return;
+    const heroH = hero.offsetHeight;
+    const scrollY = window.scrollY;
+    // Only apply dezoom while in the hero section
+    if (scrollY < heroH) {
+      const progress = scrollY / heroH; // 0 → 1
+      const scale = 1 - progress * 0.25; // 1 → 0.75
+      const opacity = 1 - progress * 1.5; // fade out content faster
+      if (heroGlobe) heroGlobe.style.transform = `scale(${scale})`;
+      if (heroContent) heroContent.style.opacity = String(Math.max(0, opacity));
+      if (heroOverlay) heroOverlay.style.opacity = String(Math.max(0.15, 1 - progress));
+    } else {
+      if (heroGlobe) heroGlobe.style.transform = '';
+      if (heroContent) heroContent.style.opacity = '0';
+    }
+  }
+
+  window.addEventListener('scroll', handleHeroScroll, { passive: true });
+
+  // Block wheel events on the globe when NOT in fullmap (so page scrolls normally)
+  const globeContainer = hero?.querySelector('.hero__globe-bg');
+  globeContainer?.addEventListener('wheel', (e) => {
+    if (!hero?.classList.contains('hero--fullmap')) {
+      // Let the event propagate to the page for normal scrolling
+      // by removing the globe canvas's ability to capture it
+    }
+  }, { passive: true });
+
+  // Disable globe zoom in hero mode via a MutationObserver on the class
+  function setGlobeZoom(enabled: boolean) {
+    const canvas = hero?.querySelector('canvas');
+    if (canvas) {
+      canvas.style.pointerEvents = enabled ? 'auto' : 'none';
+    }
+    // Also re-enable pointer events on the container for drag rotation only in fullmap
+    const container = hero?.querySelector('#globe-container') as HTMLElement | null;
+    if (container) {
+      container.style.pointerEvents = enabled ? 'auto' : 'none';
+    }
+  }
+
+  // Start with zoom disabled (hero mode)
+  setTimeout(() => setGlobeZoom(false), 100);
+
+  // Fullmap toggle
+  const exploreBtn = document.getElementById('hero-explore-map');
+  exploreBtn?.addEventListener('click', () => {
+    hero?.classList.toggle('hero--fullmap');
+    const isFullmap = hero?.classList.contains('hero--fullmap');
+    if (exploreBtn) {
+      const label = exploreBtn.querySelector('.mono');
+      if (label) label.textContent = isFullmap ? 'Fermer la carte' : 'Explorer la carte';
+    }
+    // Prevent body scroll in fullmap
+    document.body.style.overflow = isFullmap ? 'hidden' : '';
+    // Enable/disable globe interaction
+    setGlobeZoom(!!isFullmap);
+  });
+
+  // Close fullmap on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && hero?.classList.contains('hero--fullmap')) {
+      hero.classList.remove('hero--fullmap');
+      document.body.style.overflow = '';
+      const label = exploreBtn?.querySelector('.mono');
+      if (label) label.textContent = 'Explorer la carte';
+      setGlobeZoom(false);
+    }
+  });
+</script>
+
+<style>
+  /* ═══ HERO ═══ */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: var(--nav-height);
+    background: #080b14;
+  }
+
+  .hero__globe-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero__globe-bg :global(.globe-wrapper),
+  .hero__globe-bg :global(#globe-container) {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero__globe-bg :global(#total-counter),
+  .hero__globe-bg :global(#legend),
+  .hero__globe-bg :global(#globe-loading) {
+    display: none;
+  }
+
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(135deg, rgba(8,11,20,0.35) 0%, rgba(8,11,20,0.08) 50%, rgba(8,11,20,0.20) 100%);
+    pointer-events: none;
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+  }
+
+  .hero__kicker {
+    margin-bottom: var(--space-md);
+    color: #fff;
+  }
+
+  .hero__title {
+    margin-bottom: var(--space-sm);
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--blanc);
+    letter-spacing: -0.02em;
+  }
+
+  .hero__vision {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: rgba(255,255,255,0.7);
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero__subtitle {
+    margin-bottom: var(--space-xl);
+    max-width: 560px;
+    color: var(--gris-400);
+  }
+
+  .hero__cta {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  .hero__scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1;
+  }
+
+  .hero__scroll-line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, var(--gris-300), transparent);
+    animation: scroll-pulse 2s ease-in-out infinite;
+  }
+
+  .hero__btn-outline {
+    color: #fff !important;
+    border-color: rgba(255,255,255,0.4) !important;
+  }
+
+  .hero__btn-outline:hover {
+    border-color: #fff !important;
+    background: rgba(255,255,255,0.08) !important;
+  }
+
+  .hero__explore-map {
+    position: absolute;
+    bottom: 5rem;
+    right: 2rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 24px;
+    padding: 0.5rem 1rem;
+    color: rgba(255,255,255,0.7);
+    cursor: pointer;
+    transition: all var(--duration-normal);
+    backdrop-filter: blur(8px);
+  }
+
+  .hero__explore-map .mono {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+  }
+
+  .hero__explore-map:hover {
+    background: rgba(255,255,255,0.14);
+    border-color: rgba(255,255,255,0.4);
+    color: #fff;
+  }
+
+  .hero.hero--fullmap {
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .hero.hero--fullmap .hero__overlay,
+  .hero.hero--fullmap .hero__content,
+  .hero.hero--fullmap .hero__scroll-hint {
+    display: none;
+  }
+
+  .hero.hero--fullmap .hero__explore-map {
+    top: calc(var(--nav-height) + 1rem);
+    bottom: auto;
+    right: 2rem;
+    z-index: 20;
+  }
+
+  .hero.hero--fullmap .hero__globe-bg :global(#total-counter),
+  .hero.hero--fullmap .hero__globe-bg :global(#legend) {
+    display: block !important;
+  }
+
+  @keyframes scroll-pulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.2); }
+  }
+
+  /* ═══ STATS ═══ */
+  .stats__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .stats__number {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--bleu);
+  }
+
+  .stats__label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--gris-500);
+    margin-top: 0.25rem;
+  }
+
+  /* ═══ VISION ═══ */
+  .vision__header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .vision__header .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .vision__header .subtitle {
+    margin-top: var(--space-md);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--gris-400);
+  }
+
+  .vision__axes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .vision__axis {
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .vision__axis:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-4px);
+  }
+
+  .vision__axis-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--axis-color);
+    margin-bottom: var(--space-lg);
+  }
+
+  .vision__axis h3 {
+    color: var(--blanc);
+    margin-bottom: var(--space-md);
+  }
+
+  .vision__axis p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--gris-400);
+  }
+
+  /* ═══ GLOBE SECTION ═══ */
+  .globe-section__header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .globe-section__header .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .globe-section__header .subtitle {
+    margin-top: var(--space-md);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .globe-section__note {
+    margin-top: var(--space-md);
+    font-size: 0.85rem;
+    color: var(--gris-400);
+    font-style: italic;
+  }
+
+  /* ═══ MATRICE SECTION ═══ */
+  .matrice-section__header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .matrice-section__header .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .matrice-section__header .subtitle {
+    margin-top: var(--space-md);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--gris-400);
+  }
+
+  .matrice-section__canvas {
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    position: relative;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.02) 0%, transparent 100%);
+    border-radius: 24px;
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .matrice-section__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  /* ═══ LOGOS ═══ */
+  .logos {
+    padding: var(--space-xl) 0;
+    border-top: 1px solid var(--gris-200);
+    border-bottom: 1px solid var(--gris-200);
+  }
+
+  .logos__title {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+  }
+
+  .logos__track {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .logos__slide {
+    display: flex;
+    gap: var(--space-2xl);
+    animation: logo-scroll 30s linear infinite;
+    width: max-content;
+  }
+
+  .logos__item {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--gris-300);
+    white-space: nowrap;
+    padding: var(--space-md) 0;
+  }
+
+  @keyframes logo-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ═══ TESTIMONIALS ═══ */
+  .testimonials__header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .testimonial {
+    padding: var(--space-xl);
+    border-radius: 16px;
+    border: 1px solid var(--gris-200);
+    background: white;
+  }
+
+  .testimonial p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--gris-500);
+    margin-bottom: var(--space-md);
+    font-style: italic;
+  }
+
+  .testimonial cite {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--noir);
+  }
+
+  /* ═══ CTA SOCIAL ═══ */
+  .cta-social__inner {
+    text-align: center;
+  }
+
+  .cta-social__inner .subtitle {
+    margin-top: var(--space-md);
+    color: var(--gris-400);
+  }
+
+  .cta-social__links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+  }
+
+  .cta-social__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gris-300);
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all var(--duration-normal);
+    padding: var(--space-lg);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .cta-social__link:hover {
+    color: var(--blanc);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+  }
+
+  /* ═══ OCEANOCRATIE ═══ */
+  .oceanocratie__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+
+  .oceanocratie__text .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .oceanocratie__subtitle {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--gris-500);
+    margin-top: var(--space-sm);
+  }
+
+  .oceanocratie__text .subtitle {
+    margin: var(--space-md) 0 var(--space-xl);
+  }
+
+  .oceanocratie__visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .oceanocratie__book {
+    width: 220px;
+    height: 300px;
+    background: linear-gradient(135deg, var(--bleu-dark), var(--bleu));
+    border-radius: 4px 16px 16px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 8px 8px 32px rgba(42, 85, 179, 0.3), -2px 0 8px rgba(0, 0, 0, 0.2);
+    transform: perspective(800px) rotateY(-8deg);
+    transition: transform var(--duration-normal) var(--ease-out);
+  }
+
+  .oceanocratie__book:hover {
+    transform: perspective(800px) rotateY(-2deg);
+  }
+
+  .oceanocratie__book .mono {
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+  }
+
+  /* ═══ MOBILE ═══ */
+  @media (max-width: 768px) {
+    .stats__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vision__axes {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonials__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .oceanocratie__inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .cta-social__links {
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+
+    .matrice-section__canvas {
+      height: 50vh;
+      border-radius: 16px;
+      margin: 0 var(--space-md);
+    }
+  }
+</style>
+

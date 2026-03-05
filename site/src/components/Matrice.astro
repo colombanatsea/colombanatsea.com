@@ -239,7 +239,7 @@
 
   @media (max-width: 768px) {
     .matrice-fallback { display: flex; }
-    #matrice-canvas-container { display: none !important; }
+    #matrice-canvas-container { display: none; }
   }
 </style>
 
@@ -282,16 +282,43 @@
     return COLORS.socio;
   }
 
-  const container = document.getElementById('matrice-canvas-container')!;
+  // ── EARLY EXIT IF HIDDEN (mobile CSS fallback) ──
+  const container = document.getElementById('matrice-canvas-container');
+  if (!container || !container.offsetWidth) {
+    // Mobile fallback is active — skip Three.js init entirely
+  } else {
+
+  // ── LAZY INIT: wait until visible (Matrice is below the fold) ──
+  await new Promise<void>(resolve => {
+    const rect = container.getBoundingClientRect();
+    if (rect.top < window.innerHeight + 200) { resolve(); return; }
+    const io = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) { io.disconnect(); resolve(); }
+    }, { rootMargin: '200px' });
+    io.observe(container);
+  });
+
+  // ── QUALITY SETTINGS ──
+  const isMobile = window.innerWidth <= 1024;
+  const PX_RATIO = isMobile ? 1 : Math.min(window.devicePixelRatio, 1.5);
+
   const tooltip = document.getElementById('matrice-tooltip')!;
   const panel = document.getElementById('matrice-detail')!;
 
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'high-performance' });
+  const renderer = new THREE.WebGLRenderer({ antialias: !isMobile, alpha: false, powerPreference: 'high-performance' });
   renderer.setSize(container.clientWidth, container.clientHeight);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+  renderer.setPixelRatio(PX_RATIO);
   renderer.setClearColor(BG, 1);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   container.appendChild(renderer.domElement);
+
+  // ── WEBGL CONTEXT LOSS HANDLING ──
+  renderer.domElement.addEventListener('webglcontextlost', (e) => {
+    e.preventDefault();
+    const fallback = document.querySelector('.matrice-fallback') as HTMLElement;
+    if (fallback) fallback.style.display = 'flex';
+    container.style.display = 'none';
+  });
 
   const scene = new THREE.Scene();
   scene.fog = new THREE.FogExp2(BG, 0.025);
@@ -558,4 +585,5 @@
   ro.observe(container);
 
   animate();
+  } // end of else (container visible)
 </script>

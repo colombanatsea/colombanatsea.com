@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout lang="en" frSlug="prises-de-parole" title="Speaking — Colomban at Sea" description="Conferences, podcasts and talks by Colomban on maritime transitions.">
+
+<section class="section-dark hero-inner">
+  <div class="container">
+    <p class="mono text-accent">Speaking</p>
+    <h1>Conferences, podcasts <br/>&amp; interventions<span class="dot-accent">.</span></h1>
+    <p class="subtitle">Colomban regularly speaks on maritime transitions: digital, environmental and sociocultural.</p>
+  </div>
+</section>
+
+<section class="section-light">
+  <div class="container page-content">
+    <h2>Conferences &amp; Talks<span class="dot-accent">.</span></h2>
+    <p>Full list of speaking engagements available on the <a href={`${base}/fr/prises-de-parole`}>French version</a> of this page.</p>
+
+    <h2>YouTube Series<span class="dot-accent">.</span></h2>
+    <h3>Hissez Mots</h3>
+    <p>A series exploring maritime expressions and their origins.</p>
+    <h3>Marine Marchande 101</h3>
+    <p>Introduction to the merchant navy: roles, vessels, daily life at sea.</p>
+  </div>
+</section>
+
+</BaseLayout>
