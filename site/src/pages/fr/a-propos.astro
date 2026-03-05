@@ -156,17 +156,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     justify-content: center;
   }
 
-  .page-hero--carte::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30%;
-    background: linear-gradient(to bottom, var(--noir-doux), #0a0e1a);
-    pointer-events: none;
-  }
-
   .page-hero .mono {
     margin-bottom: var(--space-sm);
   }
@@ -180,7 +169,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   .carte-section {
     position: relative;
     height: 800vh;
-    background: #0a0e1a;
+    background: var(--noir-doux);
   }
 
   .carte-sticky {
@@ -380,18 +369,19 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   const carteSection = document.getElementById('carte');
   const carteIframe = document.getElementById('carte-iframe') as HTMLIFrameElement;
 
+  let carteRafPending = false;
   function sendCarteProgress() {
-    if (!carteSection || !carteIframe?.contentWindow) return;
-
-    const rect = carteSection.getBoundingClientRect();
-    const sectionHeight = carteSection.offsetHeight - window.innerHeight;
-
-    // progress = 0 when top of section hits top of viewport
-    // progress = 1 when bottom of section minus viewport height
-    const scrolled = -rect.top;
-    const progress = Math.max(0, Math.min(1, scrolled / sectionHeight));
-
-    carteIframe.contentWindow.postMessage({ type: 'setProgress', progress }, '*');
+    if (carteRafPending) return;
+    carteRafPending = true;
+    requestAnimationFrame(() => {
+      carteRafPending = false;
+      if (!carteSection || !carteIframe?.contentWindow) return;
+      const rect = carteSection.getBoundingClientRect();
+      const sectionHeight = carteSection.offsetHeight - window.innerHeight;
+      const scrolled = -rect.top;
+      const progress = Math.max(0, Math.min(1, scrolled / sectionHeight));
+      carteIframe.contentWindow.postMessage({ type: 'setProgress', progress }, '*');
+    });
   }
 
   window.addEventListener('scroll', sendCarteProgress, { passive: true });

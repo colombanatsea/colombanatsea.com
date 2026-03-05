@@ -11,7 +11,7 @@
         html, body { scrollbar-width: none; -ms-overflow-style: none; }
         html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
         body {
-            background: #0a0e1a;
+            background: #1A1A2E;
             color: #ffffff;
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
@@ -195,6 +195,20 @@
             letter-spacing: 2px;
             text-transform: uppercase;
         }
+        @media (max-width: 768px) {
+            .title-overlay { top: 70px; left: 16px; }
+            .title-overlay h1 { font-size: 18px; }
+            .title-overlay .subtitle { font-size: 12px; }
+            .phase-indicator { right: 12px; gap: 12px; }
+            .phase-dot .label { font-size: 9px; letter-spacing: 0.5px; }
+            .compass { width: 48px; height: 48px; bottom: 16px; right: 16px; }
+            .year-display { font-size: 48px; bottom: 20px; left: 16px; }
+            .legend { gap: 12px; bottom: 16px; }
+            .legend-item { font-size: 9px; }
+            .scroll-hint { font-size: 10px; }
+            .watermark { display: none; }
+            .waypoint-tooltip { max-width: 220px; padding: 14px; }
+        }
     </style>
 </head>
 <body>
@@ -301,7 +315,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         techno:  '#2a55b3',
         enviro:  '#00bf63',
         socio:   '#b32a55',
-        bg:      '#0a0e1a',
+        bg:      '#1A1A2E',
         grid:    'rgba(100, 140, 180, 0.08)',
         coast:   'rgba(140, 170, 210, 0.4)',
         coastFill: 'rgba(30, 45, 70, 0.35)',
