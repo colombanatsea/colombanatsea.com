@@ -326,9 +326,9 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         // Queen Aida: Monaco → Sicily → Croatia
         { id: 4, year: 2011, label: 'Queen Aida', lon: 7.42, lat: 43.73,
           phase: 'navigation', detail: 'Monaco.' },
-        { id: 5, year: 2011, label: 'Queen Aida', lon: 15.2, lat: 37.5,
+        { id: 5, year: 2011, label: '', lon: 15.2, lat: 37.5,
           phase: 'navigation', detail: 'Sicile.' },
-        { id: 6, year: 2011, label: 'Queen Aida', lon: 15.97, lat: 43.51,
+        { id: 6, year: 2011, label: '', lon: 15.97, lat: 43.51,
           phase: 'navigation', detail: 'Croatie.' },
 
         // Ailette in Corsica
@@ -376,13 +376,13 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         // 2020 Canada trip
         { id: 17, year: 2020, label: 'Entrepreneuriat', lon: -73.57, lat: 45.50,
           phase: 'entrepreneuriat', detail: 'Montréal.' },
-        { id: 18, year: 2020, label: 'Entrepreneuriat', lon: -68.52, lat: 48.45,
+        { id: 18, year: 2020, label: '', lon: -68.52, lat: 48.45,
           phase: 'entrepreneuriat', detail: 'Rimouski.' },
-        { id: 19, year: 2020, label: 'Entrepreneuriat', lon: -64.48, lat: 48.83,
+        { id: 19, year: 2020, label: '', lon: -64.48, lat: 48.83,
           phase: 'entrepreneuriat', detail: 'Gaspé.' },
-        { id: 20, year: 2020, label: 'Entrepreneuriat', lon: -64.77, lat: 46.09,
+        { id: 20, year: 2020, label: '', lon: -64.77, lat: 46.09,
           phase: 'entrepreneuriat', detail: 'Moncton.' },
-        { id: 21, year: 2020, label: 'Entrepreneuriat', lon: 2.35, lat: 48.86,
+        { id: 21, year: 2020, label: '', lon: 2.35, lat: 48.86,
           phase: 'entrepreneuriat', detail: 'Retour Paris.' },
 
         // Arrive Annecy
@@ -400,6 +400,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         { year: 2023, label: 'Propeller Club', lon: 5.37, lat: 43.30, color: COLORS.socio },
         { year: 2023, label: 'Conférences', lon: 6.13, lat: 45.90, color: COLORS.enviro },
         { year: 2023, label: 'HYDROS Alumni', lon: 6.13, lat: 45.90, color: COLORS.socio },
+        { year: 2024, label: 'Féd. Nat. Mérite Maritime', lon: 6.13, lat: 45.90, color: COLORS.socio },
         { year: 2025, label: 'VAIATA Dynamics', lon: 6.13, lat: 45.90, color: COLORS.techno },
         { year: 2025, label: 'CŒSPC', lon: 6.13, lat: 45.90, color: COLORS.socio },
         { year: 2026, label: 'GASPE', lon: -1.55, lat: 47.22, color: COLORS.socio },
@@ -964,9 +965,12 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
                     const labelY = dest.y + 4 + offsetY;
                     ctx.fillText(thread.label, labelX, labelY);
 
-                    ctx.font = '9px "Source Serif 4"';
-                    ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
-                    ctx.fillText(thread.year, labelX, labelY + 11);
+                    const noDateLabels = ['Fondation ENSM','ENSM','Opsealog','Propeller Club','GASPE','Académie de Marine'];
+                    if (!noDateLabels.includes(thread.label)) {
+                        ctx.font = '9px "Source Serif 4"';
+                        ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+                        ctx.fillText(thread.year, labelX, labelY + 11);
+                    }
                 }
 
                 ctx.globalAlpha = 1;
