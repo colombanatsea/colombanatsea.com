@@ -242,8 +242,22 @@
 </style>
 
 <script is:inline type="module">
-  const THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
-  const { OrbitControls } = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js');
+  // Dismiss loading overlay after timeout regardless of success
+  setTimeout(() => {
+    const el = document.getElementById('globe-loading');
+    if (el) { el.classList.add('fade-out'); setTimeout(() => el.remove(), 900); }
+  }, 8000);
+
+  let THREE, OrbitControls;
+  try {
+    THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
+    ({ OrbitControls } = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js'));
+  } catch(e) {
+    console.warn('Globe: Three.js failed to load', e);
+    const el = document.getElementById('globe-loading');
+    if (el) { el.classList.add('fade-out'); setTimeout(() => el.remove(), 900); }
+    throw e;
+  }
 
   const ZEE_ZONES = [
     { name: 'Metropole', detail: 'Atlantique + Mediterranee', lat: 46, lng: -3, area: 350000 },
