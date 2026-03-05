@@ -2,7 +2,7 @@
 ## "Le quartier général digital de la triple transition maritime"
 
 **Date de création** : 4 mars 2026
-**Dernière mise à jour** : 4 mars 2026
+**Dernière mise à jour** : 5 mars 2026
 **Domaine principal** : colombanatsea.com
 **Domaines associés** : oceanocratie.fr, oceanocratie.com, aperitifsdelamer.com
 
@@ -338,10 +338,11 @@ Kit téléchargeable pour journalistes :
 
 Le bleu roi est définitif — Colomban s'habille toujours ainsi.
 
-### 7.2 Typographie
+### 7.2 Typographie — VALIDÉ
 - **Titres** : Poppins Bold (moderne, sans-serif, startup/tech)
-- **Corps** : À proposer — un duo Poppins + serif pour garder la crédibilité éditoriale
-- Piste : Poppins + Lora, ou Poppins + Source Serif Pro, ou Poppins + Merriweather
+- **Corps** : Inter (sans-serif, lisible, neutre)
+- **Monospace** : JetBrains Mono ("at sea", labels techniques)
+- Duo Poppins + Inter validé par Colomban le 5 mars 2026.
 
 ### 7.3 Logo — Le Noeud
 Le logo est un **noeud** (PAS une ancre). Symbolique :
@@ -686,13 +687,13 @@ Auto-entreprise (micro-entreprise) — mentions légales en nom propre.
 ### 12.2 Décisions en attente
 - [ ] Stack technique finale (après consultation spec Palantiri)
 - [ ] Hébergement choisi
-- [ ] Duo typographique final (Poppins + ?)
+- [x] Duo typographique final → **Poppins + Inter + JetBrains Mono** (validé 5 mars 2026)
 - [ ] Brand statement / slogan final (tester plusieurs versions)
 - [ ] Niveau de détail de la bibliographie
-- [ ] Contenu exact de la page "Engagements"
-- [ ] Design précis des visualisations interactives (matrice, carte, média-viz)
-- [ ] Évolution exacte du logo noeud
-- [ ] Hero section : animation vs vidéo vs statique
+- [x] Contenu page "Engagements" → fiches en place, liens vers vrais sites ajoutés (5 mars 2026)
+- [x] Visualisations interactives → Globe, Matrice, Carte sillage, Média-viz tous implémentés en Niveau 3 (4-5 mars 2026)
+- [ ] Évolution logo noeud → design system complet (clip-paths, watermarks, animation tressage) — concepts visuels à proposer pour validation
+- [x] Hero section → Globe 3D en arrière-plan validé, opacité overlay réduite (5 mars 2026)
 
 ---
 
@@ -727,18 +728,47 @@ Auto-entreprise (micro-entreprise) — mentions légales en nom propre.
 
 ---
 
-## 14. PROCHAINES ÉTAPES
+## 14. ÉTAT D'AVANCEMENT (5 mars 2026)
 
-1. **Consulter la spec Palantiri** → définir l'intégration CMS et l'architecture technique
-2. **Choisir la stack technique** (Next.js/Astro/SvelteKit + hébergement)
-3. **Concevoir le design system** à partir du noeud
-4. **Prototyper les visualisations interactives** (matrice triple transition, carte Archipel France)
-5. **Définir le duo typographique final**
-6. **Tester les variantes de brand statement**
-7. **Maquetter l'architecture des pages** (wireframes)
-8. **Développer la V1**
-9. **Développer oceanocratie.fr** (landing page livre)
-10. **Itérer sur les éléments V2** (média-viz, timeline, bandeau social, globe)
+### 14.1 Implémenté
+- [x] Stack : Astro 5.x SSG + Three.js + earcut — hébergé GitHub Pages
+- [x] Globe 3D : ZEE réelles (18 polygones GeoJSON), câbles sous-marins (708 features TeleGeography), routes maritimes, heatmap densité, légende interactive, toggle layers, tooltip
+- [x] Matrice 3D : réseau organique Three.js, sphères = engagements, lignes = connexions, particules voyageuses, panneau détail au hover
+- [x] Carte marine parcours : Canvas 2D, données Natural Earth 110m, scroll-driven, waypoints chronologiques, concept "du sillage au réseau"
+- [x] Média-viz constellation : Canvas 2D, scroll-driven, 3 rangées (tech/enviro/socio), filtres par type/axe
+- [x] Homepage : hero globe, stats, triple transition, Archipel France, matrice, logos, témoignages, CTA social, teaser Océanocratie
+- [x] Pages : Accueil, À propos, Engagements, Prises de parole, Médias, Contact, Mentions légales
+- [x] Design system : palette, typo Poppins + Inter + JetBrains Mono, logo noeud SVG (light/dark), ligne gradient, point coloré
+- [x] Nav responsive avec bascule dark/light au scroll
+- [x] Déploiement GitHub Pages fonctionnel
+
+### 14.2 Manque pour V1 complète
+| # | Élément | Priorité |
+|---|---------|----------|
+| 1 | **Version anglaise (EN)** — bilingue FR/EN | Haute |
+| 2 | **Kit média téléchargeable** (bio, photos HD, logo) | Haute |
+| 3 | **Bandeau teaser Océanocratie** renvoyant vers oceanocratie.fr | Haute |
+| 4 | **SEO complet** : schema markup (Person, Article, Event), sitemap XML, meta descriptions optimisées | Haute |
+| 5 | **Fallbacks mobile 2D** pour Globe et Matrice 3D | Haute |
+| 6 | **Landing page oceanocratie.fr** (livre, liste d'attente email) | Moyenne |
+| 7 | **Séries YouTube intégrées** (Hissez Mots, Marine Marchande 101) dans prises-de-parole | Moyenne |
+| 8 | **Bibliographie** (lectures formatrices) dans À propos | Moyenne |
+| 9 | **Données réelles dans média-viz** (remplacer les templates par les vraies publications Notion) | Moyenne |
+| 10 | **Citations/punchlines rotatives** dans le footer | Basse |
+| 11 | **Analytics privacy-friendly** (Plausible/Umami) | Basse |
+| 12 | **Politique de confidentialité** page | Basse |
+| 13 | **Lien vers aperitifsdelamer.com** dans le footer | Basse |
+| 14 | **Design system noeud complet** : clip-paths, watermarks, animation tressage — concepts à valider | Basse |
+
+### 14.3 Prochaines étapes
+1. **Proposer concepts visuels design system noeud** pour validation par Colomban
+2. **Version anglaise** — structure i18n + traduction des pages
+3. **Kit média** — page + ZIP téléchargeable
+4. **SEO** — schema markup, sitemap, meta descriptions
+5. **Fallbacks mobile 2D** — versions simplifiées des visualisations 3D
+6. **Consulter spec Palantiri** → intégration CMS custom, multi-sites
+7. **Landing page oceanocratie.fr**
+8. **Bandeau social unifié** (V2, lié à Palantiri)
 
 ---
 
