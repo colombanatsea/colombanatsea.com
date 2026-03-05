@@ -461,11 +461,95 @@
       return indices;
     }
 
+    // Split a polygon ring at the antimeridian (±180° longitude).
+    // Returns an array of rings, each fully on one side of the antimeridian.
+    function splitRingAtAntimeridian(ring) {
+      // Check if this ring crosses the antimeridian
+      let crosses = false;
+      for (let i = 1; i < ring.length; i++) {
+        const lonDiff = ring[i][0] - ring[i - 1][0];
+        if (Math.abs(lonDiff) > 180) {
+          crosses = true;
+          break;
+        }
+      }
+      if (!crosses) return [ring];
+
+      // Normalize longitudes: shift everything so the ring doesn't wrap.
+      // Find the median longitude, then shift to keep all points within 360° range.
+      const lons = ring.map(p => p[0]);
+      // If most points are positive and some negative (or vice versa), shift the minority
+      const posCount = lons.filter(l => l > 0).length;
+      const negCount = lons.filter(l => l < 0).length;
+
+      // Create two sub-rings: one for lon > 0 side, one for lon < 0 side
+      const westRing = []; // negative longitudes
+      const eastRing = []; // positive longitudes
+
+      for (let i = 0; i < ring.length; i++) {
+        const curr = ring[i];
+        const next = ring[(i + 1) % ring.length];
+        const lonDiff = next[0] - curr[0];
+
+        if (Math.abs(lonDiff) > 180) {
+          // This segment crosses the antimeridian - interpolate the crossing point
+          const lon1 = curr[0];
+          const lat1 = curr[1];
+          const lon2 = next[0];
+          const lat2 = next[1];
+
+          // Adjust lon2 to be continuous with lon1
+          let adjLon2 = lon2;
+          if (lon2 - lon1 > 180) adjLon2 -= 360;
+          else if (lon1 - lon2 > 180) adjLon2 += 360;
+
+          // Interpolate latitude at the antimeridian
+          const crossLon = lon1 > 0 ? 180 : -180;
+          const t = (crossLon - lon1) / (adjLon2 - lon1);
+          const crossLat = lat1 + t * (lat2 - lat1);
+
+          if (curr[0] > 0) {
+            eastRing.push(curr);
+            eastRing.push([180, crossLat]);
+            westRing.push([-180, crossLat]);
+          } else {
+            westRing.push(curr);
+            westRing.push([-180, crossLat]);
+            eastRing.push([180, crossLat]);
+          }
+        } else {
+          if (curr[0] >= 0) {
+            eastRing.push(curr);
+          } else {
+            westRing.push(curr);
+          }
+        }
+      }
+
+      const result = [];
+      if (eastRing.length >= 3) result.push(eastRing);
+      if (westRing.length >= 3) result.push(westRing);
+      return result.length > 0 ? result : [ring];
+    }
+
     function createZeePolygon(coords, properties) {
       // coords is an array of [lon, lat] rings; first ring is outer boundary
       const outerRing = coords[0];
       if (!outerRing || outerRing.length < 3) return null;
 
+      // Split at antimeridian if needed
+      const subRings = splitRingAtAntimeridian(outerRing);
+      const results = [];
+
+      for (const subRing of subRings) {
+        const result = createZeeSingleRing(subRing, properties);
+        if (result) results.push(result);
+      }
+
+      return results.length > 0 ? results[0] : null;
+    }
+
+    function createZeeSingleRing(outerRing, properties) {
       // Simplify if too many vertices (keep every Nth point to stay under ~500 pts)
       let ring = outerRing;
       const MAX_PTS = 500;
@@ -578,6 +662,7 @@
         for (const coords of polygonCoords) {
           const result = createZeePolygon(coords, props);
           if (result) {
+            // createZeePolygon may produce multiple sub-polygons from antimeridian splits
             zoneObjects.push(result);
             polyCount++;
           }
@@ -745,6 +830,55 @@
     scene.add(cableGroup);
     const CABLE_RADIUS = GLOBE_RADIUS + 0.005;
 
+    // Split cable coordinates at antimeridian crossings and large longitude gaps.
+    // Returns an array of coordinate arrays, each safe to render as a single line.
+    function splitCableCoords(coords) {
+      const segments = [];
+      let current = [];
+
+      for (let i = 0; i < coords.length; i++) {
+        const lon = coords[i][0];
+        const lat = coords[i][1];
+        if (isNaN(lat) || isNaN(lon)) continue;
+
+        if (current.length > 0) {
+          const prevLon = current[current.length - 1][0];
+          const lonDiff = Math.abs(lon - prevLon);
+
+          // If longitude jump > 90°, this segment crosses the antimeridian or wraps
+          if (lonDiff > 90) {
+            // Interpolate the crossing point at ±180
+            const prevCoord = current[current.length - 1];
+            const lon1 = prevCoord[0];
+            const lat1 = prevCoord[1];
+            let lon2 = lon;
+            const lat2 = lat;
+
+            // Unwrap lon2 to be continuous with lon1
+            if (lon2 - lon1 > 180) lon2 -= 360;
+            else if (lon1 - lon2 > 180) lon2 += 360;
+
+            const crossLon = lon1 > 0 ? 180 : -180;
+            const t = (lon2 - lon1) !== 0 ? (crossLon - lon1) / (lon2 - lon1) : 0.5;
+            const crossLat = lat1 + t * (lat2 - lat1);
+
+            // End current segment at the crossing
+            current.push([crossLon, crossLat]);
+            if (current.length >= 2) segments.push(current);
+
+            // Start new segment from the other side of the antimeridian
+            current = [[-crossLon, crossLat], [lon, lat]];
+            continue;
+          }
+        }
+
+        current.push([lon, lat]);
+      }
+
+      if (current.length >= 2) segments.push(current);
+      return segments;
+    }
+
     function buildCableLine(coords, color) {
       const points = [];
       for (let i = 0; i < coords.length; i++) {
@@ -795,11 +929,15 @@
         }
 
         for (const coords of coordSets) {
-          const line = buildCableLine(coords, cableColor);
-          if (line) {
-            line.renderOrder = 3;
-            cableGroup.add(line);
-            lineCount++;
+          // Split at antimeridian crossings before building lines
+          const splitSegments = splitCableCoords(coords);
+          for (const segCoords of splitSegments) {
+            const line = buildCableLine(segCoords, cableColor);
+            if (line) {
+              line.renderOrder = 3;
+              cableGroup.add(line);
+              lineCount++;
+            }
           }
         }
       }
@@ -968,7 +1106,7 @@
         particleColors[particleIdx * 3 + 1] = g;
         particleColors[particleIdx * 3 + 2] = b;
 
-        particleSizes[particleIdx] = 0.003 + densityFactor * 0.002;
+        particleSizes[particleIdx] = 0.02 + densityFactor * 0.015;
 
         // Store animation state
         particleState.push({
@@ -1015,8 +1153,8 @@
         vColor = color;
         vAlpha = alpha;
         vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
-        gl_PointSize = size * (200.0 / -mvPosition.z);
-        gl_PointSize = max(gl_PointSize, 1.0);
+        gl_PointSize = size * (300.0 / -mvPosition.z);
+        gl_PointSize = clamp(gl_PointSize, 1.5, 12.0);
         gl_Position = projectionMatrix * mvPosition;
       }
     `;
@@ -1085,7 +1223,7 @@
     densityImg.src = GMTDS_WMS_URL;
 
     function getDensityAt(lat, lon) {
-      if (!densityData) return 1.0;
+      if (!densityData) return 0.8; // Fallback: good visibility even without density tile
       // Map lat/lon to pixel coordinates
       // Image: BBOX=-90,-180,90,180 => x: lon, y: lat (flipped)
       const u = ((lon + 180) / 360) * densityWidth;
@@ -1164,10 +1302,11 @@
         positions[i * 3 + 2] = v.z;
 
         // Smooth fade in/out using sine pulse
-        const fadeBase = 0.4 + 0.6 * Math.sin(state.phase + time * 0.001) * 0.5 + 0.5;
-        // Modulate by GMTDS density if available
+        const pulse = Math.sin(state.phase + time * 0.001) * 0.5 + 0.5; // 0..1
+        const fadeBase = 0.5 + 0.5 * pulse;
+        // Modulate by GMTDS density if available; use generous fallback
         const locDensity = getDensityAt(finalLat, finalLon);
-        alphas[i] = fadeBase * Math.max(0.15, locDensity);
+        alphas[i] = fadeBase * Math.max(0.35, locDensity);
       }
 
       trafficParticleGeo.attributes.position.needsUpdate = true;

@@ -559,69 +559,20 @@
     // =============================================
     // SCALE REACH TO HIT PER-YEAR TARGETS
     // =============================================
-    // Known data (total views for that year ONLY, not cumulative):
-    //   2024: 2,700,000 total views
-    //   2025: 3,600,000 total views
-    //
-    // Approach:
-    // 1. Count positions (publications) per year.
-    // 2. Compute "audience per position" for known years:
-    //      ratio_2024 = 2,700,000 / count_2024
-    //      ratio_2025 = 3,600,000 / count_2025
-    // 3. Growth factor x = ratio_2025 / ratio_2024
-    // 4. Extrapolate ratio for other years using factor x:
-    //      ratio_2023 = ratio_2024 / x
-    //      ratio_2026 = ratio_2025 * x
-    //      Earlier years: ratio_year = ratio_2023 / (x ^ (2023 - year))
-    // 5. Each year's total = ratio_year * count_year.
-    //    Distribute proportionally across positions using original reach values.
+    // Simple "views per position" approach (each publication = 1 position).
+    // Every publication in the same year gets the same reach value.
+    // Years before 2022 get 0 views per position.
     (function scaleReachValues() {
-        // Group publications by year
-        const byYear = {};
+        const viewsPerPosition = {
+            2022: 2000,
+            2023: 4000,
+            2024: 6800,
+            2025: 8000,
+            2026: 8000,
+        };
+
         publications.forEach(p => {
-            if (!byYear[p.year]) byYear[p.year] = [];
-            byYear[p.year].push(p);
-        });
-
-        const count2024 = (byYear[2024] || []).length;
-        const count2025 = (byYear[2025] || []).length;
-
-        // Audience-per-position for the two known years
-        const ratio2024 = 2700000 / count2024;
-        const ratio2025 = 3600000 / count2025;
-
-        // Year-over-year growth factor for the per-position ratio
-        const x = ratio2025 / ratio2024;
-
-        // Compute ratio for every year present in the data
-        const years = Object.keys(byYear).map(Number).sort((a, b) => a - b);
-        const ratioByYear = {};
-        years.forEach(year => {
-            if (year === 2024) {
-                ratioByYear[year] = ratio2024;
-            } else if (year === 2025) {
-                ratioByYear[year] = ratio2025;
-            } else if (year > 2025) {
-                // Future: grow forward from 2025
-                ratioByYear[year] = ratio2025 * Math.pow(x, year - 2025);
-            } else {
-                // Past: shrink backward from 2024
-                ratioByYear[year] = ratio2024 / Math.pow(x, 2024 - year);
-            }
-        });
-
-        // Scale each year's publications proportionally
-        years.forEach(year => {
-            const pubs = byYear[year];
-            if (!pubs || pubs.length === 0) return;
-
-            const yearTotal = ratioByYear[year] * pubs.length;
-            const rawSum = pubs.reduce((s, p) => s + p.reach, 0);
-
-            if (rawSum > 0) {
-                const scale = yearTotal / rawSum;
-                pubs.forEach(p => { p.reach = Math.round(p.reach * scale); });
-            }
+            p.reach = viewsPerPosition[p.year] || 0;
         });
     })();
 

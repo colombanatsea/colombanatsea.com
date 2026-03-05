@@ -11,8 +11,8 @@ body{
   background:#0a0e1a;
   color:#fff;
   font-family:'Poppins',sans-serif;
-  overflow:hidden;
-  height:100vh;
+  overflow:auto;
+  height:400vh;
   touch-action:none;
 }
 canvas{display:block;position:fixed;top:0;left:0;z-index:1}
@@ -165,8 +165,8 @@ canvas{display:block;position:fixed;top:0;left:0;z-index:1}
 <div id="loader"><span>Chargement de la matrice...</span></div>
 
 <div class="ui header">
-  <h1>Triple Transition Maritime</h1>
-  <p>Reseau 3D des engagements</p>
+  <h1>Construire le monde maritime de demain</h1>
+  <p>Des engagements au service d'une cause unique</p>
 </div>
 
 <div class="ui legend">
@@ -209,13 +209,13 @@ const AXIS_HEX = {
 const engagements = [
   { id:0,  name:'Opsealog',              role:'Co-fondateur, maritime data analytics',
     axes:['Technologique','Environnementale'], size:1.1,
-    pos:[3.5, 2, -1],
+    pos:[3, 2.5, 1.5],
     desc:'Plateforme de data analytics pour optimiser la performance et la consommation energetique des navires.' },
   { id:1,  name:'Fondation ENSM',        role:'President, formation maritime',
     axes:['Socioculturelle'], size:0.9,
     pos:[-2, -2.5, 2],
     desc:'Presidence de la fondation de l\'Ecole Nationale Superieure Maritime, soutien a la formation des futurs officiers.' },
-  { id:2,  name:'ENSM Enseignant',       role:'Enseignant developpement durable',
+  { id:2,  name:'ENSM',                  role:'Enseignant developpement durable',
     axes:['Environnementale'], size:0.8,
     pos:[1, 3, 2.5],
     desc:'Enseignement du developpement durable et de la transition ecologique au sein de l\'ENSM.' },
@@ -231,43 +231,29 @@ const engagements = [
     axes:['Technologique'], size:1.0,
     pos:[4, -1, 1.5],
     desc:'Startup developpant des solutions de propulsion velique pour la decarbonation du transport maritime.' },
-  { id:6,  name:'COESPC',                role:'Conseil d\'orientation',
-    axes:['Socioculturelle'], size:0.7,
-    pos:[-3.5, 0, -1],
-    desc:'Conseil d\'orientation de l\'enseignement superieur des personnels de la Compagnie.' },
-  { id:7,  name:'GASPE',                 role:'Delegue general, service public maritime',
+  { id:6,  name:'GASPE',                 role:'Delegue general, service public maritime',
     axes:['Socioculturelle'], size:0.85,
     pos:[-2.5, 1.5, -2.5],
     desc:'Groupement des Administrations du Service Public en mer, promotion du service public maritime.' },
-  { id:8,  name:'Aperitifs de la Mer',   role:'Co-fondateur, evenementiel',
+  { id:7,  name:'Aperitifs de la Mer',   role:'Co-fondateur, evenementiel',
     axes:['Socioculturelle'], size:0.75,
     pos:[-1, -1, -3.5],
     desc:'Evenements de networking informels reunissant les acteurs de l\'economie maritime.' },
-  { id:9,  name:'HydroContest by ENSM',  role:'Media maritime',
-    axes:['Technologique','Environnementale'], size:0.85,
-    pos:[2, 2.5, -2.5],
-    desc:'Competition technologique etudiante autour de la propulsion et de l\'efficacite energetique navale.' },
-  { id:10, name:'Academie de Marine',    role:'Membre',
+  { id:8,  name:'Academie de Marine',    role:'Membre',
     axes:['Socioculturelle'], size:0.8,
     pos:[-4, 2, 0.5],
     desc:'Institution seculaire de reflexion et de prospective sur les enjeux maritimes.' },
-  { id:11, name:'Colomban at Sea',       role:'Plateforme editoriale',
-    axes:['Technologique','Environnementale','Socioculturelle'], size:1.3,
-    pos:[0, 0, 0],
-    desc:'Plateforme editoriale explorant les transitions du monde maritime : technologique, environnementale et socioculturelle.' },
 ];
 
 // Connections between related engagements
 const connections = [
-  [0,5],[0,9],[0,11],   // tech cluster
-  [2,9],[2,11],          // enviro teaching
-  [5,9],                 // tech+enviro
-  [1,2],[1,4],[1,7],     // ENSM cluster
-  [3,8],[3,7],           // socio networking
+  [0,5],                 // tech: Opsealog-VAIATA
+  [0,2],                 // Opsealog-ENSM (enviro)
+  [1,2],[1,4],[1,6],     // ENSM cluster
+  [3,7],[3,6],           // socio networking
   [4,1],                 // alumni-fondation
-  [6,7],[6,10],          // institutional
-  [8,11],[7,11],[10,11], // all connect to CaS
-  [1,11],[5,11],[3,11],
+  [6,8],                 // institutional: GASPE-Academie
+  [5,2],                 // tech-enviro: VAIATA-ENSM
 ];
 
 // ─── RENDERER ───
@@ -552,6 +538,12 @@ window.addEventListener('resize', () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
+// ─── SCROLL ROTATION ───
+let scrollRotation = 0;
+window.addEventListener('scroll', () => {
+  scrollRotation = window.scrollY * 0.002;
+});
+
 // ─── INTRO ANIMATION STATE ───
 let introProgress = 0;
 const introDuration = 2.0; // seconds
@@ -656,6 +648,9 @@ function animate() {
       lbl.style.top = y + 'px';
     }
   });
+
+  // Apply scroll-based rotation to sphereGroup
+  sphereGroup.rotation.y = scrollRotation;
 
   controls.update();
   renderer.render(scene, camera);

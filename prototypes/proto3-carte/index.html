@@ -201,7 +201,7 @@
 
         <div class="title-overlay">
             <h1>Du sillage au réseau</h1>
-            <div class="subtitle">Le parcours maritime de Colomban</div>
+            <div class="subtitle">La navigation de Colomban</div>
         </div>
 
         <div class="phase-indicator">
@@ -306,7 +306,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     // ═══════════════════════════════════════════
     const sillageWaypoints = [
         // ENFANCE phase (double speed, back-and-forth Ireland<->Bretagne)
-        { id: 1, year: 2000, label: 'Enfance', lon: -4.5, lat: 48.4,
+        { id: 1, year: 1991, label: 'Enfance', lon: -4.5, lat: 48.4,
           phase: 'enfance', detail: 'Traversées entre Bretagne et Irlande.',
           enfanceLoop: true, loopTarget: { lon: -8, lat: 53.3 } },
 
@@ -391,9 +391,10 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     // ═══════════════════════════════════════════
     const reseauThreads = [
         { year: 2021, label: 'Opsealog', lon: 5.37, lat: 43.30, color: COLORS.techno, disappearsYear: 2026 },
-        { year: 2022, label: 'Fondation ENSM', lon: 0.10, lat: 49.49, color: COLORS.enviro },
+        { year: 2022, label: 'Fondation ENSM', lon: 0.10, lat: 49.49, color: COLORS.socio },
         { year: 2023, label: 'ENSM', lon: 0.10, lat: 49.49, color: COLORS.enviro },
         { year: 2023, label: 'Propeller Club', lon: 5.37, lat: 43.30, color: COLORS.socio },
+        { year: 2023, label: 'Conférences', lon: 6.13, lat: 45.90, color: COLORS.enviro },
         { year: 2023, label: 'HYDROS Alumni', lon: 6.13, lat: 45.90, color: COLORS.socio },
         { year: 2025, label: 'VAIATA Dynamics', lon: 6.13, lat: 45.90, color: COLORS.techno },
         { year: 2025, label: 'CŒSPC', lon: 6.13, lat: 45.90, color: COLORS.socio },
@@ -1127,9 +1128,9 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
                 ? (sillProg * totalNodes - wpNodeStart) / (wpNodeEnd - wpNodeStart)
                 : 0;
 
-            // For enfance, interpolate between 2000 and 2009
+            // For enfance, interpolate between 1991 and 2009
             if (wp.phase === 'enfance') {
-                return Math.floor(2000 + Math.min(1, localProg) * 9);
+                return Math.floor(1991 + Math.min(1, localProg) * 18);
             }
 
             return Math.floor(wp.year + Math.min(1, Math.max(0, localProg)) * (nextWp.year - wp.year));
