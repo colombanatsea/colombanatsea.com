@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import MediaViz from '../components/MediaViz.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
@@ -39,7 +38,7 @@ const medias = [
         <p class="subtitle" style="color: var(--gris-400);">La constellation des prises de parole de 2013 a aujourd'hui — en cours de developpement.</p>
       </div>
       <div class="mediaviz-canvas">
-        <MediaViz />
+        <iframe src={`${base}/viz/mediaviz.html`} class="mediaviz-iframe" loading="lazy" title="Timeline mediatique"></iframe>
       </div>
     </div>
   </section>
@@ -109,9 +108,16 @@ const medias = [
 
   .mediaviz-canvas {
     width: 100%;
-    height: 500px;
+    height: 100vh;
     border-radius: 16px;
     overflow: hidden;
+  }
+
+  .mediaviz-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
   }
 
   .kit-media h2 { margin-bottom: var(--space-sm); }
