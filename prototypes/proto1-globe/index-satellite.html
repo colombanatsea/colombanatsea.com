@@ -587,8 +587,8 @@
       return { mesh, borderLine };
     }
 
-    // Process features asynchronously in batches to avoid freezing
-    async function processEEZGeoJSON(geojson) {
+    // Process pre-simplified EEZ features
+    function processEEZGeoJSON(geojson) {
       if (!geojson || !geojson.features) return;
 
       const allPolygons = [];
@@ -610,27 +610,21 @@
 
       console.log(`EEZ: processing ${allPolygons.length} polygons...`);
 
-      // Process one polygon at a time, yielding after each to keep globe responsive
-      // Tolerance 0.15° ~ 17km — good detail for a globe view
-      const TOL = 0.15;
-      for (let i = 0; i < allPolygons.length; i++) {
-        const { coords, props } = allPolygons[i];
+      // Data is pre-simplified — process all polygons directly
+      for (const { coords, props } of allPolygons) {
         const outer = coords[0];
         if (!outer || outer.length < 3) continue;
 
-        const normOuter = simplifyRing(normalizeLon(outer), TOL);
+        const normOuter = normalizeLon(outer);
         const holes = [];
         for (let h = 1; h < coords.length; h++) {
           if (coords[h] && coords[h].length >= 3) {
-            holes.push(simplifyRing(normalizeLon(coords[h]), TOL * 2));
+            holes.push(normalizeLon(coords[h]));
           }
         }
 
         const result = createZeeMesh(normOuter, holes, props);
         if (result) zoneObjects.push(result);
-
-        // Yield to main thread after each polygon
-        if (i % 2 === 0) await new Promise(r => setTimeout(r, 0));
       }
       console.log(`EEZ: loaded ${zoneObjects.length} polygons`);
     }
@@ -645,8 +639,8 @@
       });
     }
 
-    // Fetch French EEZ
-    const EEZ_URL = "https://geo.vliz.be/geoserver/MarineRegions/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=MarineRegions:eez&outputFormat=application/json&CQL_FILTER=sovereign1=%27France%27&maxFeatures=50";
+    // Fetch pre-simplified French EEZ (static file, ~8KB)
+    const EEZ_URL = "data/france_eez_simplified.geojson";
 
     Promise.all([
       fetch(EEZ_URL).then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); }),
