@@ -83,6 +83,19 @@
       margin-top: 2px;
     }
 
+    #total-counter .stat-item {
+      transition: opacity 0.35s ease, max-height 0.35s ease;
+      overflow: hidden;
+      max-height: 80px;
+      opacity: 1;
+    }
+
+    #total-counter .stat-item.hidden {
+      opacity: 0;
+      max-height: 0;
+      margin-top: 0 !important;
+    }
+
     /* Tooltip */
     #tooltip {
       position: absolute;
@@ -233,9 +246,21 @@
     <div id="header-overlay"></div>
 
     <div id="total-counter">
-      <div class="label">Surface totale ZEE</div>
-      <div class="value">11 691 000</div>
-      <div class="unit">km&#178;</div>
+      <div class="stat-item" data-stat="zee">
+        <div class="label">Surface totale ZEE</div>
+        <div class="value">11 691 000</div>
+        <div class="unit">km&#178;</div>
+      </div>
+      <div class="stat-item" data-stat="cables" style="margin-top:14px;">
+        <div class="label">C&acirc;bles sous-marins</div>
+        <div class="value" style="color:#00b4b4;">708</div>
+        <div class="unit">c&acirc;bles actifs (Telegeography)</div>
+      </div>
+      <div class="stat-item" data-stat="traffic" style="margin-top:14px;">
+        <div class="label">Navires de commerce</div>
+        <div class="value" style="color:#ff8c50;">105 000</div>
+        <div class="unit">navires dans le monde (CNUCED 2024)</div>
+      </div>
     </div>
 
     <div id="legend">
@@ -249,7 +274,7 @@
       </div>
       <div class="legend-item" data-layer="traffic">
         <div class="swatch traffic"></div>
-        <span class="legend-label">Densit&eacute; du trafic maritime</span>
+        <span class="legend-label">Principales routes maritimes</span>
       </div>
     </div>
 
@@ -816,9 +841,9 @@
 
     const LANE_RADIUS = GLOBE_RADIUS + 0.003;
     const LANE_STYLES = {
-      1: { color: 0xff6432, opacity: 0.55, linewidth: 1 },  // Major
-      2: { color: 0xff6432, opacity: 0.35, linewidth: 1 },  // Middle
-      3: { color: 0xff6432, opacity: 0.18, linewidth: 1 }   // Minor
+      1: { color: 0xff8c50, opacity: 0.90, linewidth: 1 },  // Major
+      2: { color: 0xff7040, opacity: 0.60, linewidth: 1 },  // Middle
+      3: { color: 0xff6432, opacity: 0.32, linewidth: 1 }   // Minor
     };
 
     SHIPPING_LANES.features.forEach(function(feat) {
@@ -861,6 +886,12 @@
           cableGroup.visible = layerVisibility.cables;
         } else if (layer === 'traffic') {
           trafficGroup.visible = layerVisibility.traffic;
+        }
+
+        // Toggle corresponding stat counter
+        const statEl = document.querySelector(`#total-counter .stat-item[data-stat="${layer}"]`);
+        if (statEl) {
+          statEl.classList.toggle('hidden', !layerVisibility[layer]);
         }
       });
     });
