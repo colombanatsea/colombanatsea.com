@@ -265,6 +265,8 @@
     <div class="load-text">Chargement du globe...</div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/earcut@2.2.4/dist/earcut.min.js"></script>
+
   <script type="importmap">
   {
     "imports": {
@@ -449,321 +451,74 @@
     scene.add(zoneGroup);
     const zoneObjects = [];
 
-    // Earcut: robust 2D polygon triangulation (minified, from https://github.com/mapbox/earcut)
-    // Supports holes, handles concave polygons correctly
-    function earcut(data, holeIndices, dim) {
-      dim = dim || 2;
-      const hasHoles = holeIndices && holeIndices.length;
-      const outerLen = hasHoles ? holeIndices[0] * dim : data.length;
-      let outerNode = linkedList(data, 0, outerLen, dim, true);
-      const triangles = [];
-      if (!outerNode || outerNode.next === outerNode.prev) return triangles;
-      if (hasHoles) outerNode = eliminateHoles(data, holeIndices, outerNode, dim);
-      let minX, minY, maxX, maxY, invSize;
-      if (data.length > 80 * dim) {
-        minX = maxX = data[0]; minY = maxY = data[1];
-        for (let i = dim; i < outerLen; i += dim) {
-          const x = data[i], y = data[i + 1];
-          if (x < minX) minX = x; if (y < minY) minY = y;
-          if (x > maxX) maxX = x; if (y > maxY) maxY = y;
-        }
-        invSize = Math.max(maxX - minX, maxY - minY);
-        invSize = invSize !== 0 ? 32767 / invSize : 0;
-      }
-      earcutLinked(outerNode, triangles, dim, minX, minY, invSize, 0);
-      return triangles;
-    }
-    function linkedList(data, start, end, dim, cw) {
-      let last;
-      if (cw === (signedArea(data, start, end, dim) > 0)) {
-        for (let i = start; i < end; i += dim) last = insertNode(i, data[i], data[i + 1], last);
-      } else {
-        for (let i = end - dim; i >= start; i -= dim) last = insertNode(i, data[i], data[i + 1], last);
-      }
-      if (last && equals(last, last.next)) { removeNode(last); last = last.next; }
-      if (!last) return null;
-      last.next.prev = last; last.prev.next = last;
-      return last.next;
-    }
-    function filterPoints(start, end) {
-      if (!start) return start;
-      if (!end) end = start;
-      let p = start, again;
-      do {
-        again = false;
-        if (!p.steiner && (equals(p, p.next) || area(p.prev, p, p.next) === 0)) {
-          removeNode(p); p = end = p.prev; if (p === p.next) break;
-          again = true;
-        } else { p = p.next; }
-      } while (again || p !== end);
-      return end;
-    }
-    function earcutLinked(ear, triangles, dim, minX, minY, invSize, pass) {
-      if (!ear) return;
-      if (!pass && invSize) indexCurve(ear, minX, minY, invSize);
-      let stop = ear, prev, next;
-      while (ear.prev !== ear.next) {
-        prev = ear.prev; next = ear.next;
-        if (invSize ? isEarHashed(ear, minX, minY, invSize) : isEar(ear)) {
-          triangles.push(prev.i / dim | 0, ear.i / dim | 0, next.i / dim | 0);
-          removeNode(ear); ear = next.next; stop = next.next; continue;
-        }
-        ear = next;
-        if (ear === stop) {
-          if (!pass) earcutLinked(filterPoints(ear), triangles, dim, minX, minY, invSize, 1);
-          else if (pass === 1) { ear = cureLocalIntersections(filterPoints(ear), triangles, dim); earcutLinked(ear, triangles, dim, minX, minY, invSize, 2); }
-          else if (pass === 2) splitEarcut(ear, triangles, dim, minX, minY, invSize);
-          break;
-        }
-      }
-    }
-    function isEar(ear) {
-      const a = ear.prev, b = ear, c = ear.next;
-      if (area(a, b, c) >= 0) return false;
-      const ax = a.x, bx = b.x, cx = c.x, ay = a.y, by = b.y, cy = c.y;
-      const x0 = ax < bx ? (ax < cx ? ax : cx) : (bx < cx ? bx : cx);
-      const y0 = ay < by ? (ay < cy ? ay : cy) : (by < cy ? by : cy);
-      const x1 = ax > bx ? (ax > cx ? ax : cx) : (bx > cx ? bx : cx);
-      const y1 = ay > by ? (ay > cy ? ay : cy) : (by > cy ? by : cy);
-      let p = c.next;
-      while (p !== a) {
-        if (p.x >= x0 && p.x <= x1 && p.y >= y0 && p.y <= y1 &&
-            pointInTriangle(ax, ay, bx, by, cx, cy, p.x, p.y) &&
-            area(p.prev, p, p.next) >= 0) return false;
-        p = p.next;
-      }
-      return true;
-    }
-    function isEarHashed(ear, minX, minY, invSize) {
-      const a = ear.prev, b = ear, c = ear.next;
-      if (area(a, b, c) >= 0) return false;
-      const ax = a.x, bx = b.x, cx = c.x, ay = a.y, by = b.y, cy = c.y;
-      const x0 = ax < bx ? (ax < cx ? ax : cx) : (bx < cx ? bx : cx);
-      const y0 = ay < by ? (ay < cy ? ay : cy) : (by < cy ? by : cy);
-      const x1 = ax > bx ? (ax > cx ? ax : cx) : (bx > cx ? bx : cx);
-      const y1 = ay > by ? (ay > cy ? ay : cy) : (by > cy ? by : cy);
-      const minZ = zOrder(x0, y0, minX, minY, invSize);
-      const maxZ = zOrder(x1, y1, minX, minY, invSize);
-      let p = ear.prevZ, n = ear.nextZ;
-      while (p && p.z >= minZ && n && n.z <= maxZ) {
-        if (p.x >= x0 && p.x <= x1 && p.y >= y0 && p.y <= y1 && p !== a && p !== c &&
-            pointInTriangle(ax, ay, bx, by, cx, cy, p.x, p.y) && area(p.prev, p, p.next) >= 0) return false;
-        p = p.prevZ;
-        if (n.x >= x0 && n.x <= x1 && n.y >= y0 && n.y <= y1 && n !== a && n !== c &&
-            pointInTriangle(ax, ay, bx, by, cx, cy, n.x, n.y) && area(n.prev, n, n.next) >= 0) return false;
-        n = n.nextZ;
-      }
-      while (p && p.z >= minZ) {
-        if (p.x >= x0 && p.x <= x1 && p.y >= y0 && p.y <= y1 && p !== a && p !== c &&
-            pointInTriangle(ax, ay, bx, by, cx, cy, p.x, p.y) && area(p.prev, p, p.next) >= 0) return false;
-        p = p.prevZ;
-      }
-      while (n && n.z <= maxZ) {
-        if (n.x >= x0 && n.x <= x1 && n.y >= y0 && n.y <= y1 && n !== a && n !== c &&
-            pointInTriangle(ax, ay, bx, by, cx, cy, n.x, n.y) && area(n.prev, n, n.next) >= 0) return false;
-        n = n.nextZ;
-      }
-      return true;
-    }
-    function cureLocalIntersections(start, triangles, dim) {
-      let p = start;
-      do {
-        const a = p.prev, b = p.next.next;
-        if (!equals(a, b) && intersects(a, p, p.next, b) && locallyInside(a, b) && locallyInside(b, a)) {
-          triangles.push(a.i / dim | 0, p.i / dim | 0, b.i / dim | 0);
-          removeNode(p); removeNode(p.next);
-          p = start = b;
-        }
-        p = p.next;
-      } while (p !== start);
-      return filterPoints(p);
-    }
-    function splitEarcut(start, triangles, dim, minX, minY, invSize) {
-      let a = start;
-      do {
-        let b = a.next.next;
-        while (b !== a.prev) {
-          if (a.i !== b.i && isValidDiagonal(a, b)) {
-            let c = splitPolygon(a, b);
-            a = filterPoints(a, a.next); c = filterPoints(c, c.next);
-            earcutLinked(a, triangles, dim, minX, minY, invSize, 0);
-            earcutLinked(c, triangles, dim, minX, minY, invSize, 0);
-            return;
-          }
-          b = b.next;
-        }
-        a = a.next;
-      } while (a !== start);
-    }
-    function eliminateHoles(data, holeIndices, outerNode, dim) {
-      const queue = [];
-      for (let i = 0, len = holeIndices.length; i < len; i++) {
-        const start = holeIndices[i] * dim;
-        const end = i < len - 1 ? holeIndices[i + 1] * dim : data.length;
-        const list = linkedList(data, start, end, dim, false);
-        if (list === list.next) list.steiner = true;
-        queue.push(getLeftmost(list));
-      }
-      queue.sort((a, b) => a.x - b.x);
-      for (let i = 0; i < queue.length; i++) {
-        outerNode = eliminateHole(queue[i], outerNode);
-      }
-      return outerNode;
-    }
-    function eliminateHole(hole, outerNode) {
-      const bridge = findHoleBridge(hole, outerNode);
-      if (!bridge) return outerNode;
-      const bridgeReverse = splitPolygon(bridge, hole);
-      filterPoints(bridgeReverse, bridgeReverse.next);
-      return filterPoints(bridge, bridge.next);
-    }
-    function findHoleBridge(hole, outerNode) {
-      let p = outerNode, hx = hole.x, hy = hole.y, qx = -Infinity, m;
-      do {
-        if (hy <= p.y && hy >= p.next.y && p.next.y !== p.y) {
-          const x = p.x + (hy - p.y) / (p.next.y - p.y) * (p.next.x - p.x);
-          if (x <= hx && x > qx) { qx = x; m = p.x < p.next.x ? p : p.next; if (x === hx) return m; }
-        }
-        p = p.next;
-      } while (p !== outerNode);
-      if (!m) return null;
-      const stop = m; let tanMin = Infinity;
-      p = m;
-      do {
-        if (hx >= p.x && p.x >= m.x && hx !== p.x &&
-            pointInTriangle(hy < m.y ? hx : qx, hy, m.x, m.y, hy >= m.y ? hx : qx, hy, p.x, p.y)) {
-          const tan = Math.abs(hy - p.y) / (hx - p.x);
-          if (locallyInside(p, hole) && (tan < tanMin || (tan === tanMin && (p.x > m.x || sectorContainsSector(m, p))))) { m = p; tanMin = tan; }
-        }
-        p = p.next;
-      } while (p !== stop);
-      return m;
-    }
-    function sectorContainsSector(m, p) { return area(m.prev, m, p.prev) < 0 && area(p.next, m, m.next) < 0; }
-    function indexCurve(start, minX, minY, invSize) {
-      let p = start;
-      do { if (p.z === 0) p.z = zOrder(p.x, p.y, minX, minY, invSize); p.prevZ = p.prev; p.nextZ = p.next; p = p.next; } while (p !== start);
-      p.prevZ.nextZ = null; p.prevZ = null; sortLinked(p);
-    }
-    function sortLinked(list) {
-      let inSize = 1, numMerges, p, q, e, tail, pSize, qSize;
-      do {
-        p = list; list = null; tail = null; numMerges = 0;
-        while (p) {
-          numMerges++; q = p; pSize = 0;
-          for (let i = 0; i < inSize; i++) { pSize++; q = q.nextZ; if (!q) break; }
-          qSize = inSize;
-          while (pSize > 0 || (qSize > 0 && q)) {
-            if (pSize !== 0 && (qSize === 0 || !q || p.z <= q.z)) { e = p; p = p.nextZ; pSize--; }
-            else { e = q; q = q.nextZ; qSize--; }
-            if (tail) tail.nextZ = e; else list = e;
-            e.prevZ = tail; tail = e;
-          }
-          p = q;
-        }
-        tail.nextZ = null; inSize *= 2;
-      } while (numMerges > 1);
-      return list;
-    }
-    function zOrder(x, y, minX, minY, invSize) {
-      x = ((x - minX) * invSize) | 0; y = ((y - minY) * invSize) | 0;
-      x = (x | (x << 8)) & 0x00FF00FF; x = (x | (x << 4)) & 0x0F0F0F0F; x = (x | (x << 2)) & 0x33333333; x = (x | (x << 1)) & 0x55555555;
-      y = (y | (y << 8)) & 0x00FF00FF; y = (y | (y << 4)) & 0x0F0F0F0F; y = (y | (y << 2)) & 0x33333333; y = (y | (y << 1)) & 0x55555555;
-      return x | (y << 1);
-    }
-    function getLeftmost(start) { let p = start, leftmost = start; do { if (p.x < leftmost.x || (p.x === leftmost.x && p.y < leftmost.y)) leftmost = p; p = p.next; } while (p !== start); return leftmost; }
-    function pointInTriangle(ax, ay, bx, by, cx, cy, px, py) { return (cx - px) * (ay - py) >= (ax - px) * (cy - py) && (ax - px) * (by - py) >= (bx - px) * (ay - py) && (bx - px) * (cy - py) >= (cx - px) * (by - py); }
-    function isValidDiagonal(a, b) { return a.next.i !== b.i && a.prev.i !== b.i && !intersectsPolygon(a, b) && (locallyInside(a, b) && locallyInside(b, a) && middleInside(a, b) && (area(a.prev, a, b.prev) || area(a, b.prev, b)) || equals(a, b) && area(a.prev, a, a.next) > 0 && area(b.prev, b, b.next) > 0); }
-    function area(p, q, r) { return (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y); }
-    function equals(p1, p2) { return p1.x === p2.x && p1.y === p2.y; }
-    function intersects(p1, q1, p2, q2) { const o1 = sign(area(p1, q1, p2)), o2 = sign(area(p1, q1, q2)), o3 = sign(area(p2, q2, p1)), o4 = sign(area(p2, q2, q1)); if (o1 !== o2 && o3 !== o4) return true; if (o1 === 0 && onSegment(p1, p2, q1)) return true; if (o2 === 0 && onSegment(p1, q2, q1)) return true; if (o3 === 0 && onSegment(p2, p1, q2)) return true; if (o4 === 0 && onSegment(p2, q1, q2)) return true; return false; }
-    function onSegment(p, q, r) { return q.x <= Math.max(p.x, r.x) && q.x >= Math.min(p.x, r.x) && q.y <= Math.max(p.y, r.y) && q.y >= Math.min(p.y, r.y); }
-    function sign(num) { return num > 0 ? 1 : num < 0 ? -1 : 0; }
-    function intersectsPolygon(a, b) { let p = a; do { if (p.i !== a.i && p.next.i !== a.i && p.i !== b.i && p.next.i !== b.i && intersects(p, p.next, a, b)) return true; p = p.next; } while (p !== a); return false; }
-    function locallyInside(a, b) { return area(a.prev, a, a.next) < 0 ? area(a, b, a.next) >= 0 && area(a, a.prev, b) >= 0 : area(a, b, a.prev) < 0 || area(a, a.next, b) < 0; }
-    function middleInside(a, b) { let p = a, inside = false; const px = (a.x + b.x) / 2, py = (a.y + b.y) / 2; do { if ((p.y > py) !== (p.next.y > py) && p.next.y !== p.y && (px < (p.next.x - p.x) * (py - p.y) / (p.next.y - p.y) + p.x)) inside = !inside; p = p.next; } while (p !== a); return inside; }
-    function splitPolygon(a, b) { const a2 = createNode(a.i, a.x, a.y), b2 = createNode(b.i, b.x, b.y), an = a.next, bp = b.prev; a.next = b; b.prev = a; a2.next = an; an.prev = a2; b2.next = a2; a2.prev = b2; bp.next = b2; b2.prev = bp; return b2; }
-    function insertNode(i, x, y, last) { const p = createNode(i, x, y); if (!last) { p.prev = p; p.next = p; } else { p.next = last.next; p.prev = last; last.next.prev = p; last.next = p; } return p; }
-    function removeNode(p) { p.next.prev = p.prev; p.prev.next = p.next; if (p.prevZ) p.prevZ.nextZ = p.nextZ; if (p.nextZ) p.nextZ.prevZ = p.prevZ; }
-    function createNode(i, x, y) { return { i, x, y, prev: null, next: null, z: 0, prevZ: null, nextZ: null, steiner: false }; }
-    function signedArea(data, start, end, dim) { let sum = 0; for (let i = start, j = end - dim; i < end; i += dim) { sum += (data[j] - data[i]) * (data[i + 1] + data[j + 1]); j = i; } return sum; }
-
-    // ── Normalize longitude for antimeridian handling ──
+    // Normalize longitude for antimeridian handling
     function normalizeLon(ring) {
-      // Detect if this ring crosses the antimeridian by checking for large lon jumps
       let maxJump = 0;
       for (let i = 1; i < ring.length; i++) {
         maxJump = Math.max(maxJump, Math.abs(ring[i][0] - ring[i - 1][0]));
       }
-      if (maxJump <= 180) return ring; // No crossing
-
-      // Normalize: shift negative longitudes by +360 so the ring is continuous
-      const shifted = ring.map(p => {
-        const lon = p[0] < 0 ? p[0] + 360 : p[0];
-        return [lon, p[1]];
-      });
-      return shifted;
+      if (maxJump <= 180) return ring;
+      return ring.map(p => [p[0] < 0 ? p[0] + 360 : p[0], p[1]]);
     }
 
-    function createZeePolygon(coordsArray, properties) {
-      // coordsArray: array of rings [outerRing, hole1, hole2, ...]
-      // Each ring is array of [lon, lat]
-      const outerRing = coordsArray[0];
-      if (!outerRing || outerRing.length < 3) return [];
-
-      const normalizedOuter = normalizeLon(outerRing);
-
-      // Simplify: Douglas-Peucker-like reduction for very large polygons
-      const simplified = simplifyRing(normalizedOuter, 400);
-
-      // Build flat 2D array for earcut (lon, lat)
-      const flatCoords = [];
-      for (const pt of simplified) {
-        flatCoords.push(pt[0], pt[1]);
+    // Simplify ring: uniform sampling
+    function simplifyRing(ring, maxPts) {
+      if (ring.length <= maxPts) return ring;
+      const step = Math.ceil(ring.length / maxPts);
+      const result = [];
+      for (let i = 0; i < ring.length; i += step) result.push(ring[i]);
+      if (result.length >= 2) {
+        const f = result[0], l = result[result.length - 1];
+        if (f[0] !== l[0] || f[1] !== l[1]) result.push(result[0]);
       }
+      return result.length >= 3 ? result : ring;
+    }
 
-      // Handle holes
+    function createZeeMesh(outerPts, holePtsArray, properties) {
+      // Build flat array for earcut
+      const flat = [];
+      for (const pt of outerPts) flat.push(pt[0], pt[1]);
+
       const holeIndices = [];
-      for (let h = 1; h < coordsArray.length; h++) {
-        const hole = coordsArray[h];
-        if (!hole || hole.length < 3) continue;
-        const normHole = normalizeLon(hole);
-        const simpHole = simplifyRing(normHole, 100);
-        holeIndices.push(flatCoords.length / 2);
-        for (const pt of simpHole) {
-          flatCoords.push(pt[0], pt[1]);
+      if (holePtsArray) {
+        for (const hole of holePtsArray) {
+          if (hole.length < 3) continue;
+          holeIndices.push(flat.length / 2);
+          for (const pt of hole) flat.push(pt[0], pt[1]);
         }
       }
 
-      // Triangulate with earcut
-      const triIndices = earcut(flatCoords, holeIndices.length > 0 ? holeIndices : null, 2);
-      if (triIndices.length === 0) return [];
+      let triIndices;
+      try {
+        triIndices = earcut(flat, holeIndices.length > 0 ? holeIndices : null, 2);
+      } catch (e) {
+        console.warn('Earcut failed for', properties.geoname || 'unknown', e);
+        return null;
+      }
+      if (!triIndices || triIndices.length === 0) return null;
 
-      // Build 3D vertices on globe
-      const vertCount = flatCoords.length / 2;
-      const vertices3D = new Float32Array(vertCount * 3);
+      // Build 3D vertices
+      const vertCount = flat.length / 2;
+      const verts = new Float32Array(vertCount * 3);
       for (let i = 0; i < vertCount; i++) {
-        let lon = flatCoords[i * 2];
-        const lat = flatCoords[i * 2 + 1];
-        // Un-normalize longitude back to [-180, 180] for correct 3D placement
+        let lon = flat[i * 2];
         if (lon > 180) lon -= 360;
+        const lat = flat[i * 2 + 1];
         const v = latLonToVec3(lat, lon, ZEE_HEIGHT);
-        vertices3D[i * 3] = v.x;
-        vertices3D[i * 3 + 1] = v.y;
-        vertices3D[i * 3 + 2] = v.z;
+        verts[i * 3] = v.x;
+        verts[i * 3 + 1] = v.y;
+        verts[i * 3 + 2] = v.z;
       }
 
-      const geometry = new THREE.BufferGeometry();
-      geometry.setAttribute('position', new THREE.BufferAttribute(vertices3D, 3));
-      geometry.setIndex(triIndices);
-      geometry.computeVertexNormals();
+      const geo = new THREE.BufferGeometry();
+      geo.setAttribute('position', new THREE.BufferAttribute(verts, 3));
+      geo.setIndex(triIndices);
+      geo.computeVertexNormals();
 
-      const fillMaterial = new THREE.MeshBasicMaterial({
+      const mesh = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({
         color: 0x00b4b4, transparent: true, opacity: 0.22,
         side: THREE.DoubleSide, depthWrite: false
-      });
-
-      const mesh = new THREE.Mesh(geometry, fillMaterial);
+      }));
       mesh.userData = {
         isZEE: true,
         zone: {
@@ -776,107 +531,87 @@
       zoneGroup.add(mesh);
       zoneMeshes.push(mesh);
 
-      // Border line from outer ring only
-      const borderPoints = [];
-      for (const pt of simplified) {
-        let lon = pt[0];
-        if (lon > 180) lon -= 360;
-        const v = latLonToVec3(pt[1], lon, ZEE_HEIGHT * 1.0005);
-        borderPoints.push(v);
+      // Border
+      const borderPts = [];
+      for (const pt of outerPts) {
+        let lon = pt[0]; if (lon > 180) lon -= 360;
+        borderPts.push(latLonToVec3(pt[1], lon, ZEE_HEIGHT * 1.0005));
       }
-      // Close the border loop
-      if (borderPoints.length > 2) {
-        borderPoints.push(borderPoints[0].clone());
-      }
+      if (borderPts.length > 2) borderPts.push(borderPts[0].clone());
 
       let borderLine = null;
-      if (borderPoints.length >= 2) {
-        const borderGeo = new THREE.BufferGeometry().setFromPoints(borderPoints);
-        const borderMaterial = new THREE.LineBasicMaterial({
-          color: 0x00e0e0, transparent: true, opacity: 0.55, linewidth: 1
-        });
-        borderLine = new THREE.Line(borderGeo, borderMaterial);
+      if (borderPts.length >= 2) {
+        const bGeo = new THREE.BufferGeometry().setFromPoints(borderPts);
+        borderLine = new THREE.Line(bGeo, new THREE.LineBasicMaterial({
+          color: 0x00e0e0, transparent: true, opacity: 0.55
+        }));
         borderLine.renderOrder = 2;
         zoneGroup.add(borderLine);
       }
 
-      return [{ mesh, borderLine }];
+      return { mesh, borderLine };
     }
 
-    // Simplify a ring: keep every Nth point but always preserve angular "corners"
-    function simplifyRing(ring, maxPoints) {
-      if (ring.length <= maxPoints) return ring;
-      const step = Math.ceil(ring.length / maxPoints);
-      const result = [];
-      for (let i = 0; i < ring.length; i++) {
-        if (i % step === 0) {
-          result.push(ring[i]);
-        } else if (i > 0 && i < ring.length - 1) {
-          // Keep points with significant direction change
-          const prev = ring[i - 1];
-          const curr = ring[i];
-          const next = ring[i + 1];
-          const dx1 = curr[0] - prev[0], dy1 = curr[1] - prev[1];
-          const dx2 = next[0] - curr[0], dy2 = next[1] - curr[1];
-          const cross = Math.abs(dx1 * dy2 - dy1 * dx2);
-          if (cross > 0.5) result.push(ring[i]); // Keep sharp corners
-        }
-      }
-      // Ensure ring is closed
-      if (result.length > 0 && (result[0][0] !== result[result.length - 1][0] || result[0][1] !== result[result.length - 1][1])) {
-        result.push(result[0]);
-      }
-      return result.length >= 3 ? result : ring;
-    }
+    // Process features asynchronously in batches to avoid freezing
+    async function processEEZGeoJSON(geojson) {
+      if (!geojson || !geojson.features) return;
 
-    function processEEZGeoJSON(geojson) {
-      if (!geojson || !geojson.features) {
-        console.warn('EEZ GeoJSON: invalid data');
-        return;
-      }
-
-      let polyCount = 0;
+      const allPolygons = [];
       for (const feature of geojson.features) {
         const geom = feature.geometry;
         const props = feature.properties || {};
         if (!geom) continue;
 
-        const polygonCoords = [];
-        if (geom.type === 'Polygon') {
-          polygonCoords.push(geom.coordinates);
-        } else if (geom.type === 'MultiPolygon') {
-          for (const poly of geom.coordinates) {
-            polygonCoords.push(poly);
-          }
+        const coordsList = [];
+        if (geom.type === 'Polygon') coordsList.push(geom.coordinates);
+        else if (geom.type === 'MultiPolygon') {
+          for (const poly of geom.coordinates) coordsList.push(poly);
         }
 
-        for (const coords of polygonCoords) {
-          const results = createZeePolygon(coords, props);
-          for (const result of results) {
-            zoneObjects.push(result);
-            polyCount++;
-          }
+        for (const coords of coordsList) {
+          allPolygons.push({ coords, props });
         }
       }
-      console.log(`EEZ: loaded ${polyCount} polygons from ${geojson.features.length} features`);
+
+      console.log(`EEZ: processing ${allPolygons.length} polygons...`);
+
+      // Process in small batches with yielding
+      const BATCH = 3;
+      for (let i = 0; i < allPolygons.length; i += BATCH) {
+        const batch = allPolygons.slice(i, i + BATCH);
+        for (const { coords, props } of batch) {
+          const outer = coords[0];
+          if (!outer || outer.length < 3) continue;
+
+          const normOuter = simplifyRing(normalizeLon(outer), 300);
+          const holes = [];
+          for (let h = 1; h < coords.length; h++) {
+            if (coords[h] && coords[h].length >= 3) {
+              holes.push(simplifyRing(normalizeLon(coords[h]), 80));
+            }
+          }
+
+          const result = createZeeMesh(normOuter, holes, props);
+          if (result) zoneObjects.push(result);
+        }
+        // Yield to main thread
+        await new Promise(r => setTimeout(r, 0));
+      }
+      console.log(`EEZ: loaded ${zoneObjects.length} polygons`);
     }
 
-    // Fetch real French EEZ polygons from marineregions.org
+    // Fetch French EEZ
     const EEZ_URL = "https://geo.vliz.be/geoserver/MarineRegions/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=MarineRegions:eez&outputFormat=application/json&CQL_FILTER=sovereign1=%27France%27&maxFeatures=50";
 
     fetch(EEZ_URL)
-      .then(res => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        return res.json();
-      })
+      .then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
       .then(geojson => processEEZGeoJSON(geojson))
       .catch(err => {
         console.warn('EEZ fetch failed:', err);
-        console.log('Loading fallback EEZ disc approximations...');
         loadFallbackZEE();
       });
 
-    // Fallback: disc approximation if GeoJSON fetch fails
+    // Fallback: disc approximation
     function loadFallbackZEE() {
       const EARTH_RADIUS_KM = 6371;
       const ZONE_SEGMENTS = 64;
@@ -937,20 +672,17 @@
         }
 
         const indices = [];
-        for (let i = 1; i <= ZONE_SEGMENTS; i++) {
-          indices.push(0, i, i + 1);
-        }
+        for (let i = 1; i <= ZONE_SEGMENTS; i++) indices.push(0, i, i + 1);
 
         const geometry = new THREE.BufferGeometry();
         geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
         geometry.setIndex(indices);
         geometry.computeVertexNormals();
 
-        const fillMaterial = new THREE.MeshBasicMaterial({
+        const mesh = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({
           color: 0x00b4b4, transparent: true, opacity: 0.22,
           side: THREE.DoubleSide, depthWrite: false
-        });
-        const mesh = new THREE.Mesh(geometry, fillMaterial);
+        }));
         mesh.userData = { zone, isZEE: true };
         mesh.renderOrder = 1;
         zoneGroup.add(mesh);
@@ -966,13 +698,11 @@
           }
         }
         const borderGeo = new THREE.BufferGeometry().setFromPoints(borderPoints);
-        const borderMaterial = new THREE.LineBasicMaterial({
+        const borderLine = new THREE.Line(borderGeo, new THREE.LineBasicMaterial({
           color: 0x00e0e0, transparent: true, opacity: 0.55
-        });
-        const borderLine = new THREE.Line(borderGeo, borderMaterial);
+        }));
         borderLine.renderOrder = 2;
         zoneGroup.add(borderLine);
-
         zoneObjects.push({ mesh, borderLine });
       }
     }
