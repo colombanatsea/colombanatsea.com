@@ -174,7 +174,6 @@ canvas{display:block;position:fixed;top:0;left:0;z-index:1}
   <div class="legend-item"><div class="legend-dot" style="background:#2a55b3"></div>Technologique</div>
   <div class="legend-item"><div class="legend-dot" style="background:#00bf63"></div>Environnementale</div>
   <div class="legend-item"><div class="legend-dot" style="background:#b32a55"></div>Socioculturelle</div>
-  <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(135deg,#b32a55,#00bf63)"></div>Socio + Enviro</div>
 </div>
 
 <div id="label-container"></div>
@@ -455,6 +454,33 @@ connections.forEach(([idA, idB]) => {
   lineMeshes.push(line);
 });
 
+// ─── TRAVELING PARTICLES ON LINKS ───
+const PARTICLES_PER_LINK = 2;
+const travelParticles = [];
+const travelParticleGeo = new THREE.SphereGeometry(0.04, 6, 6);
+
+connections.forEach(([idA, idB], ci) => {
+  const isGhostedLink = (engagements[idA].ghosted || engagements[idB].ghosted);
+  for (let p = 0; p < PARTICLES_PER_LINK; p++) {
+    const color = primaryColor(engagements[idA]);
+    const mat = new THREE.MeshBasicMaterial({
+      color: 0xffffff,
+      transparent: true,
+      opacity: isGhostedLink ? 0.15 : 0.5,
+      depthWrite: false,
+    });
+    const mesh = new THREE.Mesh(travelParticleGeo, mat);
+    mesh.userData = {
+      idA, idB,
+      t: p / PARTICLES_PER_LINK,
+      speed: 0.15 + Math.random() * 0.1,
+      baseOpacity: isGhostedLink ? 0.15 : 0.5,
+    };
+    sphereGroup.add(mesh);
+    travelParticles.push(mesh);
+  }
+});
+
 // ─── BACKGROUND DUST PARTICLES ───
 const dustCount = 300;
 const dustGeo = new THREE.BufferGeometry();
@@ -577,6 +603,18 @@ function animate() {
     attr.array[0] = posA.x; attr.array[1] = posA.y; attr.array[2] = posA.z;
     attr.array[3] = posB.x; attr.array[4] = posB.y; attr.array[5] = posB.z;
     attr.needsUpdate = true;
+  });
+
+  // Update traveling particles
+  travelParticles.forEach(p => {
+    const ud = p.userData;
+    ud.t = (ud.t + dt * ud.speed) % 1;
+    const posA = sphereMeshes[ud.idA].position;
+    const posB = sphereMeshes[ud.idB].position;
+    p.position.lerpVectors(posA, posB, ud.t);
+    // Pulse brightness near midpoint
+    const pulse = 1 - Math.abs(ud.t - 0.5) * 2;
+    p.material.opacity = ud.baseOpacity * (0.5 + pulse * 0.5);
   });
 
   // Raycasting for hover
