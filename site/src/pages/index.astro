@@ -15,15 +15,21 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
     <div class="hero__overlay"></div>
     <div class="hero__content container stagger">
-      <p class="hero__kicker mono text-bleu">colombanatsea.com</p>
+      <p class="hero__kicker mono">colombanatsea.com</p>
       <h1 class="hero__title">Oceanocratie</h1>
       <p class="hero__vision">Une nation libre regarde la mer.</p>
       <p class="hero__subtitle subtitle">La triple transition du maritime — technologique, environnementale, socioculturelle.</p>
       <div class="hero__cta">
         <a href="#vision" class="btn btn-primary">Decouvrir la vision</a>
-        <a href={`${base}/a-propos`} class="btn btn-outline">Qui est Colomban</a>
+        <a href={`${base}/a-propos`} class="btn btn-outline hero__btn-outline">Qui est Colomban</a>
       </div>
     </div>
+    <button class="hero__explore-map" id="hero-explore-map" aria-label="Explorer la carte en plein ecran">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" />
+      </svg>
+      <span class="mono">Explorer la carte</span>
+    </button>
     <div class="hero__scroll-hint">
       <span class="mono text-muted">Scroll</span>
       <div class="hero__scroll-line"></div>
@@ -115,7 +121,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="matrice-section__header stagger">
         <p class="mono text-bleu">Les engagements</p>
         <h2>Des engagements au service<br/>d'une cause unique</h2>
-        <p class="subtitle">Chaque engagement de Colomban s'inscrit dans un ou plusieurs axes de la triple transition maritime.</p>
       </div>
     </div>
     <div class="matrice-section__canvas">
@@ -218,6 +223,57 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 </BaseLayout>
 
+<script>
+  // Hero scroll = dezoom (scale down globe + overlay instead of scrolling away)
+  const hero = document.getElementById('hero');
+  const heroContent = hero?.querySelector('.hero__content') as HTMLElement | null;
+  const heroOverlay = hero?.querySelector('.hero__overlay') as HTMLElement | null;
+  const heroGlobe = hero?.querySelector('.hero__globe-bg') as HTMLElement | null;
+
+  function handleHeroScroll() {
+    if (!hero || !heroContent) return;
+    const heroH = hero.offsetHeight;
+    const scrollY = window.scrollY;
+    // Only apply dezoom while in the hero section
+    if (scrollY < heroH) {
+      const progress = scrollY / heroH; // 0 → 1
+      const scale = 1 - progress * 0.25; // 1 → 0.75
+      const opacity = 1 - progress * 1.5; // fade out content faster
+      if (heroGlobe) heroGlobe.style.transform = `scale(${scale})`;
+      if (heroContent) heroContent.style.opacity = String(Math.max(0, opacity));
+      if (heroOverlay) heroOverlay.style.opacity = String(Math.max(0.15, 1 - progress));
+    } else {
+      if (heroGlobe) heroGlobe.style.transform = '';
+      if (heroContent) heroContent.style.opacity = '0';
+    }
+  }
+
+  window.addEventListener('scroll', handleHeroScroll, { passive: true });
+
+  // Fullmap toggle
+  const exploreBtn = document.getElementById('hero-explore-map');
+  exploreBtn?.addEventListener('click', () => {
+    hero?.classList.toggle('hero--fullmap');
+    const isFullmap = hero?.classList.contains('hero--fullmap');
+    if (exploreBtn) {
+      const label = exploreBtn.querySelector('.mono');
+      if (label) label.textContent = isFullmap ? 'Fermer la carte' : 'Explorer la carte';
+    }
+    // Prevent body scroll in fullmap
+    document.body.style.overflow = isFullmap ? 'hidden' : '';
+  });
+
+  // Close fullmap on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && hero?.classList.contains('hero--fullmap')) {
+      hero.classList.remove('hero--fullmap');
+      document.body.style.overflow = '';
+      const label = exploreBtn?.querySelector('.mono');
+      if (label) label.textContent = 'Explorer la carte';
+    }
+  });
+</script>
+
 <style>
   /* ═══ HERO ═══ */
   .hero {
@@ -252,7 +308,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(135deg, rgba(8,11,20,0.7) 0%, rgba(8,11,20,0.3) 50%, rgba(8,11,20,0.5) 100%);
+    background: linear-gradient(135deg, rgba(8,11,20,0.55) 0%, rgba(8,11,20,0.15) 50%, rgba(8,11,20,0.35) 100%);
     pointer-events: none;
   }
 
@@ -264,6 +320,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   .hero__kicker {
     margin-bottom: var(--space-md);
+    color: #fff;
   }
 
   .hero__title {
@@ -310,6 +367,69 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     height: 48px;
     background: linear-gradient(to bottom, var(--gris-300), transparent);
     animation: scroll-pulse 2s ease-in-out infinite;
+  }
+
+  .hero__btn-outline {
+    color: #fff !important;
+    border-color: rgba(255,255,255,0.4) !important;
+  }
+
+  .hero__btn-outline:hover {
+    border-color: #fff !important;
+    background: rgba(255,255,255,0.08) !important;
+  }
+
+  .hero__explore-map {
+    position: absolute;
+    bottom: 5rem;
+    right: 2rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 24px;
+    padding: 0.5rem 1rem;
+    color: rgba(255,255,255,0.7);
+    cursor: pointer;
+    transition: all var(--duration-normal);
+    backdrop-filter: blur(8px);
+  }
+
+  .hero__explore-map .mono {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+  }
+
+  .hero__explore-map:hover {
+    background: rgba(255,255,255,0.14);
+    border-color: rgba(255,255,255,0.4);
+    color: #fff;
+  }
+
+  .hero.hero--fullmap {
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .hero.hero--fullmap .hero__overlay,
+  .hero.hero--fullmap .hero__content,
+  .hero.hero--fullmap .hero__scroll-hint {
+    display: none;
+  }
+
+  .hero.hero--fullmap .hero__explore-map {
+    bottom: 2rem;
+    right: 2rem;
+  }
+
+  .hero.hero--fullmap .hero__globe-bg :global(#total-counter),
+  .hero.hero--fullmap .hero__globe-bg :global(#legend) {
+    display: block !important;
   }
 
   @keyframes scroll-pulse {
