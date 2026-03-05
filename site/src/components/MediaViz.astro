@@ -1,35 +1,74 @@
 ---
 /**
- * MediaViz — Constellation médiatique interactive
- * Adapté depuis prototypes/proto4-mediaviz/index.html
+ * MediaViz — Constellation mediatique interactive
+ * Adapte depuis prototypes/proto4-mediaviz/index.html
+ * Fonctionne dans un conteneur (pas pleine page) — toutes les pubs visibles, filtrage par axe/canal
  */
 ---
 
-<div class="mediaviz-wrapper">
-  <div id="mediaviz-container">
-    <canvas id="mediaviz-canvas"></canvas>
+<div class="mediaviz-wrapper" id="mediaviz-wrapper">
+  <canvas id="mediaviz-canvas"></canvas>
 
-    <div class="mv-axis-filter" id="mv-axis-filter">
+  <!-- Top bar: title + filters + stats -->
+  <div class="mv-top-bar">
+    <div class="mv-title">Prises de position<span>2013 -- 2026</span></div>
+    <div class="mv-filters" id="mv-filters">
       <button class="mv-filter-btn active" data-axis="all">Tous</button>
       <button class="mv-filter-btn" data-axis="techno">Techno</button>
       <button class="mv-filter-btn" data-axis="enviro">Enviro</button>
       <button class="mv-filter-btn" data-axis="socio">Socio</button>
+      <div class="mv-filter-sep"></div>
+      <button class="mv-channel-btn active" data-channel="all">Tous</button>
+      <button class="mv-channel-btn active" data-channel="linkedin">LinkedIn</button>
+      <button class="mv-channel-btn active" data-channel="instagram">Instagram</button>
+      <button class="mv-channel-btn active" data-channel="youtube">YouTube</button>
+      <button class="mv-channel-btn active" data-channel="presse">Presse</button>
+      <button class="mv-channel-btn active" data-channel="conference">Conference</button>
     </div>
-
-    <div class="mv-stats" id="mv-stats">
+    <div class="mv-stats">
       <div class="mv-stat">
-        <span class="mv-stat-number" id="mv-stat-total">0</span>
-        <span class="mv-stat-label">Publications</span>
+        <div class="mv-stat-number" id="mv-stat-total">0</div>
+        <div class="mv-stat-label">publications visibles</div>
       </div>
       <div class="mv-stat">
-        <span class="mv-stat-number" id="mv-stat-reach">0</span>
-        <span class="mv-stat-label">Portée</span>
+        <div class="mv-stat-number" id="mv-stat-media">0</div>
+        <div class="mv-stat-label">articles presse</div>
+      </div>
+      <div class="mv-stat">
+        <div class="mv-stat-number" id="mv-stat-reach">0</div>
+        <div class="mv-stat-label">audience cumulee</div>
       </div>
     </div>
+  </div>
 
-    <div class="mv-timeline" id="mv-timeline"></div>
+  <!-- Bottom timeline -->
+  <div class="mv-timeline-bar">
+    <div class="mv-year-labels" id="mv-year-labels"></div>
+  </div>
 
-    <div class="mv-tooltip" id="mv-tooltip"></div>
+  <!-- Legend -->
+  <div class="mv-legend">
+    <div class="mv-legend-item"><div class="mv-legend-dot" style="width:8px;height:8px;background:#2a55b3;"></div> <span style="color:rgba(255,255,255,0.7)">Technologique</span></div>
+    <div class="mv-legend-item"><div class="mv-legend-dot" style="width:8px;height:8px;background:#00bf63;"></div> <span style="color:rgba(255,255,255,0.7)">Environnementale</span></div>
+    <div class="mv-legend-item"><div class="mv-legend-dot" style="width:8px;height:8px;background:#b32a55;"></div> <span style="color:rgba(255,255,255,0.7)">Socioculturelle</span></div>
+    <div style="width:1px;height:14px;background:rgba(255,255,255,0.15);margin:0 4px;"></div>
+    <div class="mv-legend-item"><div class="mv-legend-dot" style="width:10px;height:10px;background:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.6);border-radius:50%;"></div> Presse</div>
+    <div class="mv-legend-item"><div class="mv-legend-dot" style="width:7px;height:7px;background:rgba(255,255,255,0.45);"></div> Conf</div>
+    <div class="mv-legend-item"><div class="mv-legend-dot" style="width:4px;height:4px;background:rgba(255,255,255,0.3);"></div> Social</div>
+  </div>
+
+  <!-- Detail popup -->
+  <div class="mv-detail-popup" id="mv-detail-popup">
+    <div style="display:flex;align-items:center;">
+      <div class="mv-pub-type" id="mv-popup-type"></div>
+      <div class="mv-pub-tier" id="mv-popup-tier"></div>
+    </div>
+    <h3 id="mv-popup-title"></h3>
+    <div class="mv-popup-channel" id="mv-popup-channel"></div>
+    <div class="mv-popup-excerpt" id="mv-popup-excerpt"></div>
+    <div class="mv-popup-metrics">
+      <span><strong id="mv-popup-date">--</strong></span>
+    </div>
   </div>
 </div>
 
@@ -38,311 +77,869 @@
     position: relative;
     width: 100%;
     height: 100%;
-  }
-
-  #mediaviz-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
     overflow: hidden;
-    background: #0a0e1a;
-    border-radius: 24px;
+    background: #0d1117;
+    border-radius: 16px;
+    user-select: none;
   }
 
   #mediaviz-canvas {
     display: block;
+    position: absolute;
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
   }
 
-  .mv-axis-filter {
+  /* ── Top bar ── */
+  .mv-top-bar {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 10;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
     display: flex;
-    gap: 6px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background: rgba(13,17,23,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    gap: 12px;
+    flex-wrap: wrap;
   }
-
-  .mv-filter-btn {
-    padding: 5px 12px;
-    border: 1px solid rgba(255,255,255,0.15);
-    background: rgba(255,255,255,0.05);
-    color: rgba(255,255,255,0.6);
-    border-radius: 20px;
-    cursor: pointer;
-    font-family: var(--font-heading);
-    font-size: 10px;
-    font-weight: 600;
-    transition: all 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .mv-filter-btn.active { color: #fff; background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); }
-  .mv-filter-btn[data-axis="techno"].active { background: rgba(42,85,179,0.3); border-color: #2a55b3; color: #6b9fff; }
-  .mv-filter-btn[data-axis="enviro"].active { background: rgba(0,191,99,0.2); border-color: #00bf63; color: #4dff99; }
-  .mv-filter-btn[data-axis="socio"].active { background: rgba(179,42,85,0.3); border-color: #b32a55; color: #ff6b99; }
-
-  .mv-stats {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 10;
-    display: flex;
-    gap: 24px;
-  }
-
-  .mv-stat { text-align: center; }
-
-  .mv-stat-number {
-    display: block;
-    font-family: var(--font-heading);
+  .mv-title {
+    font-family: var(--font-heading), 'Poppins', sans-serif;
+    font-size: 13px;
     font-weight: 700;
-    font-size: 1.3rem;
+    white-space: nowrap;
+    letter-spacing: -0.3px;
     color: #fff;
   }
+  .mv-title span {
+    font-family: var(--font-body), 'Inter', serif;
+    font-size: 11px;
+    font-style: italic;
+    color: rgba(255,255,255,0.35);
+    margin-left: 8px;
+    font-weight: 400;
+  }
 
-  .mv-stat-label {
-    font-family: var(--font-heading);
-    font-size: 0.6rem;
+  /* ── Filters ── */
+  .mv-filters {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  .mv-filter-sep {
+    width: 1px;
+    height: 16px;
+    background: rgba(255,255,255,0.12);
+    margin: 0 4px;
+  }
+  .mv-filter-btn {
+    padding: 3px 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: transparent;
     color: rgba(255,255,255,0.4);
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: var(--font-heading), 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    transition: all 0.25s;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    white-space: nowrap;
+  }
+  .mv-filter-btn:hover { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.2); }
+  .mv-filter-btn.active { color: #fff; }
+  .mv-filter-btn[data-axis="all"].active { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.25); }
+  .mv-filter-btn[data-axis="techno"].active { background: rgba(42,85,179,0.25); border-color: #2a55b3; color: #6b9fff; }
+  .mv-filter-btn[data-axis="enviro"].active { background: rgba(0,191,99,0.15); border-color: #00bf63; color: #4dff99; }
+  .mv-filter-btn[data-axis="socio"].active { background: rgba(179,42,85,0.25); border-color: #b32a55; color: #ff6b99; }
+
+  .mv-channel-btn {
+    padding: 3px 8px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: transparent;
+    color: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: var(--font-heading), 'Poppins', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    transition: all 0.25s;
+    white-space: nowrap;
+  }
+  .mv-channel-btn:hover { color: rgba(255,255,255,0.6); }
+  .mv-channel-btn.active { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); }
+
+  /* ── Stats ── */
+  .mv-stats {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .mv-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+  .mv-stat-number {
+    font-family: var(--font-heading), 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    font-variant-numeric: tabular-nums;
+  }
+  .mv-stat-label {
+    font-family: var(--font-heading), 'Poppins', sans-serif;
+    font-size: 8px;
+    color: rgba(255,255,255,0.85);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  /* ── Bottom timeline ── */
+  .mv-timeline-bar {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(13,17,23,0.9);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 6px 16px 10px;
+  }
+  .mv-year-labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2px;
+  }
+  .mv-year-labels :global(.mv-year-label) {
+    font-family: var(--font-mono), 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    min-width: 28px;
+  }
+
+  /* ── Legend ── */
+  .mv-legend {
+    position: absolute;
+    bottom: 32px;
+    right: 16px;
+    z-index: 101;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-family: var(--font-heading), 'Poppins', sans-serif;
+    font-size: 8px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .mv-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .mv-legend-dot {
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  /* ── Detail popup ── */
+  .mv-detail-popup {
+    position: absolute;
+    z-index: 200;
+    background: rgba(13, 17, 23, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 14px;
+    max-width: 280px;
+    display: none;
+    pointer-events: auto;
+    transition: opacity 0.2s;
+    color: #fff;
+  }
+  .mv-pub-type {
+    font-family: var(--font-heading), 'Poppins', sans-serif;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+  }
+  .mv-pub-tier {
+    display: inline-block;
+    font-family: var(--font-heading), 'Poppins', sans-serif;
+    font-size: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    padding: 1px 6px;
+    border-radius: 6px;
+    margin-left: 6px;
+    font-weight: 600;
   }
+  .mv-pub-tier.media { background: rgba(212,168,87,0.25); color: #d4a857; }
+  .mv-pub-tier.conference { background: rgba(155,89,182,0.2); color: #b97fd4; }
+  .mv-pub-tier.social { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.4); }
 
-  .mv-timeline {
-    position: absolute;
-    bottom: 16px;
-    left: 20px;
-    right: 20px;
-    height: 30px;
-    z-index: 10;
-    pointer-events: none;
+  .mv-detail-popup h3 {
+    font-family: var(--font-heading), 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 3px;
+    line-height: 1.35;
+    color: #fff;
   }
-
-  .mv-tooltip {
-    position: fixed;
-    padding: 6px 14px;
-    background: rgba(10,14,26,0.92);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 8px;
-    font-size: 0.7rem;
-    font-family: var(--font-heading);
-    color: rgba(255,255,255,0.85);
-    pointer-events: none;
-    z-index: 300;
-    opacity: 0;
-    transition: opacity 0.15s;
-    white-space: nowrap;
-    max-width: 280px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .mv-popup-channel {
+    font-family: var(--font-heading), 'Poppins', sans-serif;
+    font-size: 10px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 6px;
   }
-
-  .mv-tooltip.show { opacity: 1; }
+  .mv-popup-excerpt {
+    font-family: var(--font-body), 'Inter', serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 8px;
+  }
+  .mv-popup-metrics {
+    display: flex;
+    gap: 12px;
+    font-family: var(--font-heading), 'Poppins', sans-serif;
+    font-size: 10px;
+    color: rgba(255,255,255,0.35);
+  }
+  .mv-popup-metrics strong { color: rgba(255,255,255,0.7); }
 
   @media (max-width: 768px) {
-    .mv-axis-filter { top: 12px; right: 12px; gap: 4px; }
-    .mv-filter-btn { padding: 4px 8px; font-size: 9px; }
-    .mv-stats { top: 12px; left: 12px; gap: 16px; }
-    .mv-stat-number { font-size: 1rem; }
+    .mv-top-bar { padding: 6px 10px; gap: 8px; }
+    .mv-title { font-size: 11px; }
+    .mv-filters { gap: 3px; }
+    .mv-filter-btn { padding: 2px 7px; font-size: 9px; }
+    .mv-channel-btn { padding: 2px 6px; font-size: 8px; }
+    .mv-stats { gap: 8px; }
+    .mv-stat-number { font-size: 12px; }
+    .mv-stat-label { font-size: 7px; }
+    .mv-legend { display: none; }
   }
 </style>
 
-<script is:inline type="module">
-  const COLORS = { techno: '#2a55b3', enviro: '#00bf63', socio: '#b32a55' };
+<script is:inline>
+(function() {
+    // =============================================
+    // COLORS & CHANNELS
+    // =============================================
+    const COLORS = {
+        techno: '#2a55b3',
+        enviro: '#00bf63',
+        socio:  '#b32a55',
+        technoLight: '#6b9fff',
+        enviroLight: '#4dff99',
+        socioLight:  '#ff6b99'
+    };
 
-  const subjects = [
-    { title: 'Décarbonation du shipping : où en est-on vraiment ?', axis: 'enviro' },
-    { title: "L'IA dans le maritime : hype ou révolution ?", axis: 'techno' },
-    { title: 'Archipel France : 11 millions de km² oubliés', axis: 'socio' },
-    { title: 'CII, EEXI, EU MRV : le marin face à la réglementation', axis: 'enviro' },
-    { title: 'Les câbles sous-marins, artères du monde digital', axis: 'techno' },
-    { title: 'Hissez Mots : vocabulaire maritime', axis: 'socio' },
-    { title: 'Le maritime dans la culture française', axis: 'socio' },
-    { title: 'Comment devenir officier de marine marchande', axis: 'socio' },
-    { title: 'La ZEE française, un empire invisible', axis: 'socio' },
-    { title: 'Cyberdéfense maritime : le prochain front', axis: 'techno' },
-    { title: 'EMR : les hydroliennes ont-elles un avenir ?', axis: 'enviro' },
-    { title: 'La transition technologique du maritime', axis: 'techno' },
-    { title: 'Géopolitique des mers', axis: 'socio' },
-    { title: 'Le sauvetage en mer à l\'ère du digital', axis: 'techno' },
-    { title: 'Limites planétaires : au-delà du climat', axis: 'enviro' },
-    { title: 'Les grandes découvertes : premières startups', axis: 'socio' },
-    { title: 'Data maritime : une catastrophe révélée', axis: 'techno' },
-    { title: 'GASPE : le service public maritime', axis: 'socio' },
-    { title: 'La propulsion vélique, un vent nouveau', axis: 'enviro' },
-    { title: 'NRL La Réunion : construire l\'impossible', axis: 'techno' }
-  ];
+    const CHANNELS = {
+        linkedin:   { label: 'LinkedIn', color: '#0077b5' },
+        instagram:  { label: 'Instagram', color: '#e4405f' },
+        youtube:    { label: 'YouTube', color: '#ff0000' },
+        presse:     { label: 'Presse', color: '#d4a857' },
+        conference: { label: 'Conference', color: '#9b59b6' }
+    };
 
-  function generatePubs() {
-    const pubs = [];
-    for (let year = 2013; year <= 2026; year++) {
-      let count;
-      if (year <= 2017) count = Math.floor(Math.random() * 3) + 1;
-      else if (year <= 2020) count = Math.floor(Math.random() * 5) + 3;
-      else if (year <= 2023) count = Math.floor(Math.random() * 10) + 8;
-      else count = Math.floor(Math.random() * 15) + 12;
-      for (let i = 0; i < count; i++) {
-        const t = subjects[Math.floor(Math.random() * subjects.length)];
-        const reach = year <= 2020 ? Math.floor(Math.random() * 5000) + 500 : Math.floor(Math.random() * 50000) + 2000;
-        pubs.push({ title: t.title, axis: t.axis, year, reach, date: new Date(year, Math.floor(Math.random()*12), Math.floor(Math.random()*28)+1) });
-      }
+    function getPubTier(channel) {
+        if (channel === 'presse') return 'media';
+        if (channel === 'conference') return 'conference';
+        return 'social';
     }
-    return pubs.sort((a,b) => a.date - b.date);
-  }
 
-  const pubs = generatePubs();
-  const container = document.getElementById('mediaviz-container');
-  const canvas = document.getElementById('mediaviz-canvas');
-  const ctx = canvas.getContext('2d');
-  const tooltip = document.getElementById('mv-tooltip');
+    const YEAR_MIN = 2013;
+    const YEAR_MAX = 2026;
 
-  let W, H, positions = [], activeAxis = 'all', hoveredPub = null;
-  const mousePos = { x: -999, y: -999 };
-  const startTime = Date.now();
+    // =============================================
+    // DATA GENERATION
+    // =============================================
+    function generatePublications() {
+        const pubs = [];
 
-  function resize() {
-    const rect = container.getBoundingClientRect();
-    W = rect.width; H = rect.height;
-    canvas.width = W * Math.min(devicePixelRatio, 2);
-    canvas.height = H * Math.min(devicePixelRatio, 2);
-    canvas.style.width = W + 'px';
-    canvas.style.height = H + 'px';
-    ctx.setTransform(1,0,0,1,0,0);
-    ctx.scale(Math.min(devicePixelRatio,2), Math.min(devicePixelRatio,2));
-    layout();
-  }
+        // -- REAL DATA: Conferences/Interventions (9 entries) --
+        const conferences = [
+            {title: 'Euromaritime 2026 \u2014 Avenir du mod\u00e8le \u00e9conomique des compagnies de service public maritime', axis: 'socio', channel: 'conference', type: 'Conference', date: new Date(2026, 1, 3), reach: 5000, excerpt: 'Intervention sur l\'avenir du mod\u00e8le \u00e9conomique des compagnies de service public maritime.'},
+            {title: 'Acad\u00e9mie de Marine \u2014 Potentiel strat\u00e9gique du maritime de proximit\u00e9', axis: 'socio', channel: 'conference', type: 'Conference', date: new Date(2026, 1, 18), reach: 8000, excerpt: 'Pr\u00e9sentation du potentiel strat\u00e9gique du maritime de proximit\u00e9.'},
+            {title: 'Propeller Club International \u2014 Introduction to digitalization & decarbonation', axis: 'techno', channel: 'conference', type: 'Conference', date: new Date(2025, 9, 14), reach: 6000, excerpt: '2 keynotes sur la digitalisation et la d\u00e9carbonation.'},
+            {title: 'Emission Shipping Conference (NABU + Sciences Po)', axis: 'enviro', channel: 'conference', type: 'Conference', date: new Date(2025, 8, 30), reach: 4000, excerpt: 'Participation \u00e0 la conf\u00e9rence sur les \u00e9missions du shipping.'},
+            {title: 'Conf\u00e9rence Race for Water \u2014 Propulsion v\u00e9lique et d\u00e9carbonation', axis: 'enviro', channel: 'conference', type: 'Conference', date: new Date(2025, 4, 13), reach: 5000, excerpt: 'La propulsion v\u00e9lique : un vent nouveau pour d\u00e9carboner le transport maritime.'},
+            {title: 'AG F\u00e9d\u00e9ration Nationale du M\u00e9rite Maritime \u2014 Avenir du maritime', axis: 'socio', channel: 'conference', type: 'Conference', date: new Date(2025, 4, 16), reach: 3000, excerpt: 'Intervention sur l\'avenir du maritime.'},
+            {title: 'Euromaritime 2024 \u2014 Comment relever les d\u00e9fis des exigences IMO 2030/2050', axis: 'enviro', channel: 'conference', type: 'Conference', date: new Date(2024, 0, 31), reach: 8000, excerpt: 'Panel sur les d\u00e9fis r\u00e9glementaires IMO.'},
+            {title: 'Universit\u00e9 de Rennes 1 \u2014 D\u00e9carbonation du maritime', axis: 'enviro', channel: 'conference', type: 'Conference', date: new Date(2024, 4, 24), reach: 4000, excerpt: 'Conf\u00e9rence sur la d\u00e9carbonation du transport maritime.'},
+            {title: 'Webinaire Digital Ship \u2014 Using Electronic Logbooks to Improve Efficiency', axis: 'techno', channel: 'conference', type: 'Conference', date: new Date(2023, 5, 22), reach: 6000, excerpt: 'Webinaire sur les logbooks \u00e9lectroniques et l\'efficacit\u00e9 op\u00e9rationnelle.'},
+        ];
 
-  function layout() {
-    const tStart = new Date(2013,0,1).getTime(), tEnd = new Date(2027,0,1).getTime(), tRange = tEnd - tStart;
-    const mL = 30, mR = 30, mT = 60, mB = 50;
-    const uW = W - mL - mR, uH = H - mT - mB;
-    positions = pubs.map(p => {
-      const x = mL + ((p.date.getTime() - tStart) / tRange) * uW;
-      let yBase;
-      if (p.axis === 'techno') yBase = mT + uH * 0.2;
-      else if (p.axis === 'enviro') yBase = mT + uH * 0.5;
-      else yBase = mT + uH * 0.8;
-      const y = yBase + (Math.random() - 0.5) * uH * 0.25;
-      const size = Math.max(2.5, Math.min(10, Math.sqrt(p.reach) / 35));
-      return { pub: p, x, y, size, opacity: 1, targetOpacity: 1 };
-    });
-  }
+        // -- REAL DATA: Press articles (32 entries) --
+        const press = [
+            {title: 'Maritime: la grande mise \u00e0 jour des comp\u00e9tences', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2026, 2, 2), reach: 15000, excerpt: 'HydroContest by ENSM'},
+            {title: 'La donn\u00e9e maritime comme boussole environnementale', axis: 'enviro', channel: 'presse', type: 'Article presse', date: new Date(2026, 2, 2), reach: 15000, excerpt: 'HydroContest by ENSM'},
+            {title: 'Propulsion v\u00e9lique: quand l\'art de la navigation est r\u00e9invent\u00e9', axis: 'enviro', channel: 'presse', type: 'Article presse', date: new Date(2026, 0, 13), reach: 15000, excerpt: 'HydroContest by ENSM'},
+            {title: 'M\u00e9diterran\u00e9e centrale: quand le d\u00e9litement du droit international transforme le sauvetage maritime', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 11, 20), reach: 80000, excerpt: 'Le Monde'},
+            {title: 'E-carburants: l\'Europe face au d\u00e9fi de la souverainet\u00e9 \u00e9nerg\u00e9tique', axis: 'enviro', channel: 'presse', type: 'Article presse', date: new Date(2025, 11, 8), reach: 15000, excerpt: 'HydroContest by ENSM'},
+            {title: 'Le GASPE nomme Colomban Monnier d\u00e9l\u00e9gu\u00e9 g\u00e9n\u00e9ral', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 9, 31), reach: 25000, excerpt: 'Mer & Marine'},
+            {title: 'Le GASPE nomme Colomban Monnier D\u00e9l\u00e9gu\u00e9 G\u00e9n\u00e9ral et affirme son engagement', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 9, 25), reach: 20000, excerpt: 'Jeune Marine'},
+            {title: 'La bande des 24 milles marins, une art\u00e8re \u00e9conomique et sociale m\u00e9connue', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 9, 1), reach: 18000, excerpt: 'Marine & Oc\u00e9ans N288'},
+            {title: 'L\'Irlande: nouvelle puissance maritime', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 9, 1), reach: 18000, excerpt: 'Marine & Oc\u00e9ans N288'},
+            {title: 'Les armateurs de navires de service public recrutent Colomban Monnier', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 9, 17), reach: 20000, excerpt: 'Le Marin'},
+            {title: 'L\'archipel fran\u00e7ais dans l\'oc\u00e9an Indien', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 9, 13), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'Les opportunit\u00e9s d\'impact dans l\'engagement associatif maritime', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 6, 15), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'Ukraine, la marine de commerce \u00e0 l\'\u00e9preuve de la guerre', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 6, 1), reach: 18000, excerpt: 'Marine & Oc\u00e9ans N287'},
+            {title: 'La France, terrienne appel\u00e9e par le large', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 5, 14), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'Pour une gouvernance de l\'oc\u00e9an paritaire et inclusive', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 5, 5), reach: 20000, excerpt: 'Vert'},
+            {title: 'Les Ap\u00e9ritifs de la mer rassemblent les marins et remettent l\'humain au centre', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 4, 6), reach: 20000, excerpt: 'Le Marin'},
+            {title: 'Drones marins: la nouvelle donne', axis: 'techno', channel: 'presse', type: 'Article presse', date: new Date(2025, 4, 3), reach: 18000, excerpt: 'Conflits'},
+            {title: 'La mer, une chance pour la France!', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2025, 3, 1), reach: 18000, excerpt: 'Marine & Oc\u00e9ans N286'},
+            {title: 'Ce d\u00e9versement d\'eaux us\u00e9es par un navire de croisi\u00e8re est-il r\u00e9el?', axis: 'enviro', channel: 'presse', type: 'Article presse', date: new Date(2025, 2, 27), reach: 150000, excerpt: 'TF1'},
+            {title: 'Oc\u00e9ans: autoroutes digitales strat\u00e9giques', axis: 'techno', channel: 'presse', type: 'Article presse', date: new Date(2025, 2, 5), reach: 18000, excerpt: 'Conflits'},
+            {title: 'Les \u00e9quipages promotionnels ENSM', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2024, 11, 23), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'La vague sc\u00e9l\u00e9rate du num\u00e9rique dans le maritime', axis: 'techno', channel: 'presse', type: 'Article presse', date: new Date(2024, 9, 22), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'De la conqu\u00eate \u00e0 la connaissance de l\'Oc\u00e9an', axis: 'enviro', channel: 'presse', type: 'Article presse', date: new Date(2024, 8, 1), reach: 18000, excerpt: 'Marine & Oc\u00e9ans N284'},
+            {title: 'Les Ap\u00e9ritifs de la Mer ouvrent leur site Internet', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2024, 4, 30), reach: 12000, excerpt: 'Jeune Marine'},
+            {title: 'EU ETS vs FuelEU', axis: 'enviro', channel: 'presse', type: 'Article presse', date: new Date(2024, 4, 15), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'La Fondation ENSM r\u00e9v\u00e8le sa m\u00e9thode', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2024, 3, 10), reach: 25000, excerpt: 'Mer & Marine'},
+            {title: 'L\'ENSM: nouvelle vague', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2024, 2, 22), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'L\'intelligence artificielle & le maritime', axis: 'techno', channel: 'presse', type: 'Article presse', date: new Date(2023, 11, 14), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'Colomban Monnier \u00e9lu pr\u00e9sident de la Fondation ENSM', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2023, 8, 19), reach: 20000, excerpt: 'Le Marin'},
+            {title: 'Un oc\u00e9an de bienveillance', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2023, 8, 11), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'Appel aux Jeunes du Maritime', axis: 'socio', channel: 'presse', type: 'Article presse', date: new Date(2023, 3, 12), reach: 15000, excerpt: 'Jeune Marine'},
+            {title: 'Ocean degradation stripes', axis: 'enviro', channel: 'presse', type: 'Article presse', date: new Date(2023, 1, 24), reach: 15000, excerpt: 'Jeune Marine'},
+        ];
 
-  resize();
-  const ro = new ResizeObserver(resize);
-  ro.observe(container);
+        // Add real conferences and press
+        conferences.forEach(function(c) {
+            pubs.push({
+                id: pubs.length,
+                title: c.title, axis: c.axis, channel: c.channel, type: c.type,
+                tier: getPubTier(c.channel),
+                date: c.date, year: c.date.getFullYear(),
+                reach: c.reach, excerpt: c.excerpt
+            });
+        });
+        press.forEach(function(p) {
+            pubs.push({
+                id: pubs.length,
+                title: p.title, axis: p.axis, channel: p.channel, type: p.type,
+                tier: getPubTier(p.channel),
+                date: p.date, year: p.date.getFullYear(),
+                reach: p.reach, excerpt: p.excerpt
+            });
+        });
 
-  // Filters
-  document.querySelectorAll('#mv-axis-filter .mv-filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('#mv-axis-filter .mv-filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeAxis = btn.dataset.axis;
-      positions.forEach(ap => { ap.targetOpacity = (activeAxis === 'all' || ap.pub.axis === activeAxis) ? 1 : 0.05; });
-      updateStats();
-    });
-  });
+        // -- GENERATED: Social media posts (LinkedIn, Instagram, YouTube) --
+        var socialSubjects = [
+            { title: "L'IA dans le maritime : hype ou revolution ?", axis: 'techno', channel: 'linkedin', type: 'Analyse' },
+            { title: 'Les cables sous-marins, arteres du monde digital', axis: 'techno', channel: 'linkedin', type: 'Carte' },
+            { title: 'Data maritime : 600 navires analyses', axis: 'techno', channel: 'linkedin', type: 'Analyse' },
+            { title: 'Logbooks electroniques : la fin du papier a bord', axis: 'techno', channel: 'linkedin', type: 'Analyse' },
+            { title: 'Navires autonomes : fantasme ou realite 2030 ?', axis: 'techno', channel: 'linkedin', type: 'Analyse' },
+            { title: 'IoT maritime : chaque capteur raconte une histoire', axis: 'techno', channel: 'linkedin', type: 'Education' },
+            { title: 'Decarbonation du shipping : ou en est-on ?', axis: 'enviro', channel: 'linkedin', type: 'Analyse' },
+            { title: 'CII, EEXI, EU MRV : le marin face a la reglementation', axis: 'enviro', channel: 'linkedin', type: 'Education' },
+            { title: 'EMR : les hydroliennes ont-elles un avenir ?', axis: 'enviro', channel: 'linkedin', type: 'Analyse' },
+            { title: 'Limites planetaires : au-dela du climat', axis: 'enviro', channel: 'linkedin', type: 'Education' },
+            { title: 'Propulsion velique : retour vers le futur', axis: 'enviro', channel: 'linkedin', type: 'Analyse' },
+            { title: 'Scrubbers vs. LNG : faux debat ?', axis: 'enviro', channel: 'linkedin', type: 'Analyse' },
+            { title: 'Archipel France : 11M de km2 oublies', axis: 'socio', channel: 'linkedin', type: 'Appel' },
+            { title: 'Les grandes decouvertes : premieres startups', axis: 'socio', channel: 'linkedin', type: 'Inspiration' },
+            { title: 'GASPE : le service public maritime en France', axis: 'socio', channel: 'linkedin', type: 'Education' },
+            { title: 'Oceans : 3e employeur mondial ignore', axis: 'socio', channel: 'linkedin', type: 'Analyse' },
+            { title: 'La mer nourrit, transporte, connecte : qui le sait ?', axis: 'socio', channel: 'linkedin', type: 'Appel' },
+            { title: 'Le maritime dans la culture francaise', axis: 'socio', channel: 'instagram', type: 'Inspiration' },
+            { title: 'Petit Bateau, JPG et le marin', axis: 'socio', channel: 'instagram', type: 'Inspiration' },
+            { title: 'NRL La Reunion : construire l\'impossible', axis: 'techno', channel: 'instagram', type: 'Inspiration' },
+            { title: 'Infographie : 1 objet sur 2 a pris la mer', axis: 'socio', channel: 'instagram', type: 'Education' },
+            { title: 'Biodiversite abyssale : l\'inconnu sous nos pieds', axis: 'enviro', channel: 'instagram', type: 'Inspiration' },
+            { title: 'Hissez Mots : "Amarrer"', axis: 'socio', channel: 'youtube', type: 'Video' },
+            { title: 'Comment devenir officier de marine marchande', axis: 'socio', channel: 'youtube', type: 'Education' },
+            { title: 'Visite du CMA CGM Jacques Saade', axis: 'techno', channel: 'youtube', type: 'Video' },
+            { title: 'Hissez Mots : "Tribord"', axis: 'socio', channel: 'youtube', type: 'Video' },
+            { title: '24h a bord d\'un porte-conteneurs', axis: 'socio', channel: 'youtube', type: 'Video' },
+        ];
 
-  function updateStats() {
-    const vis = positions.filter(a => a.targetOpacity > 0.5);
-    document.getElementById('mv-stat-total').textContent = vis.length;
-    const reach = vis.reduce((s,a) => s + a.pub.reach, 0);
-    document.getElementById('mv-stat-reach').textContent = reach > 1e6 ? (reach/1e6).toFixed(1)+'M' : reach > 1e3 ? Math.floor(reach/1e3)+'K' : reach;
-  }
-  updateStats();
+        // Seeded pseudo-random for reproducibility
+        var seed = 42;
+        function rand() { seed = (seed * 16807 + 0) % 2147483647; return (seed - 1) / 2147483646; }
 
-  // Mouse
-  container.addEventListener('pointermove', e => {
-    const r = container.getBoundingClientRect();
-    mousePos.x = e.clientX - r.left;
-    mousePos.y = e.clientY - r.top;
-    tooltip.style.left = (e.clientX + 14) + 'px';
-    tooltip.style.top = (e.clientY - 10) + 'px';
-  });
-  container.addEventListener('pointerleave', () => { mousePos.x = -999; mousePos.y = -999; });
+        for (var year = YEAR_MIN; year <= YEAR_MAX; year++) {
+            var count;
+            if (year <= 2015) count = Math.floor(rand() * 2) + 1;
+            else if (year <= 2018) count = Math.floor(rand() * 4) + 2;
+            else if (year <= 2020) count = Math.floor(rand() * 6) + 4;
+            else if (year <= 2023) count = Math.floor(rand() * 10) + 7;
+            else count = Math.floor(rand() * 14) + 10;
 
-  function render() {
-    requestAnimationFrame(render);
-    const time = (Date.now() - startTime) / 1000;
-    ctx.fillStyle = '#0a0e1a';
-    ctx.fillRect(0, 0, W, H);
+            for (var i = 0; i < count; i++) {
+                var template = socialSubjects[Math.floor(rand() * socialSubjects.length)];
+                var month = Math.floor(rand() * 12);
+                var day = Math.floor(rand() * 28) + 1;
+                var reach = year <= 2019
+                    ? Math.floor(rand() * 5000) + 300
+                    : Math.floor(rand() * 50000) + 2000;
 
-    hoveredPub = null;
-
-    // Connections
-    ctx.globalAlpha = 0.06;
-    for (let i = 0; i < positions.length; i++) {
-      const a = positions[i];
-      if (a.opacity < 0.3) continue;
-      for (let j = i+1; j < Math.min(i+4, positions.length); j++) {
-        const b = positions[j];
-        if (b.opacity < 0.3 || a.pub.axis !== b.pub.axis) continue;
-        const d = Math.hypot(a.x-b.x, a.y-b.y);
-        if (d < 60) {
-          ctx.strokeStyle = COLORS[a.pub.axis];
-          ctx.lineWidth = 0.5;
-          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+                pubs.push({
+                    id: pubs.length,
+                    title: template.title,
+                    axis: template.axis,
+                    channel: template.channel,
+                    type: template.type,
+                    tier: getPubTier(template.channel),
+                    date: new Date(year, month, day),
+                    year: year,
+                    reach: reach,
+                    excerpt: 'Analyse et reflexion sur les enjeux maritimes contemporains.'
+                });
+            }
         }
-      }
-    }
-    ctx.globalAlpha = 1;
 
-    // Dots
-    positions.forEach((ap, i) => {
-      ap.opacity += (ap.targetOpacity - ap.opacity) * 0.08;
-      if (ap.opacity < 0.02) return;
-      const d = Math.hypot(mousePos.x - ap.x, mousePos.y - ap.y);
-      const isH = d < ap.size + 6 && ap.opacity > 0.5;
-      if (isH) hoveredPub = ap;
-      const sz = ap.size * (1 + Math.sin(time*0.8+i*0.3)*0.08) * (isH ? 1.4 : 1);
-      ctx.globalAlpha = ap.opacity;
-      if (sz > 4 || isH) {
-        const g = ctx.createRadialGradient(ap.x,ap.y,0,ap.x,ap.y,sz*3);
-        g.addColorStop(0, COLORS[ap.pub.axis]+'30');
-        g.addColorStop(1, 'transparent');
-        ctx.fillStyle = g;
-        ctx.beginPath(); ctx.arc(ap.x,ap.y,sz*3,0,Math.PI*2); ctx.fill();
-      }
-      ctx.fillStyle = COLORS[ap.pub.axis];
-      ctx.beginPath(); ctx.arc(ap.x,ap.y,sz,0,Math.PI*2); ctx.fill();
-      ctx.globalAlpha = 1;
+        return pubs.sort(function(a, b) { return a.date - b.date; });
+    }
+
+    var publications = generatePublications();
+
+    // =============================================
+    // SCALE REACH TO HIT PER-YEAR TARGETS
+    // =============================================
+    (function scaleReachValues() {
+        var viewsPerPosition = {
+            2022: 2000,
+            2023: 4000,
+            2024: 6800,
+            2025: 8000,
+            2026: 8000,
+        };
+        publications.forEach(function(p) {
+            p.reach = viewsPerPosition[p.year] || 0;
+        });
+    })();
+
+    // =============================================
+    // CANVAS SETUP
+    // =============================================
+    var wrapper = document.getElementById('mediaviz-wrapper');
+    var canvas = document.getElementById('mediaviz-canvas');
+    var ctx = canvas.getContext('2d');
+    var W, H;
+
+    function resize() {
+        var rect = wrapper.getBoundingClientRect();
+        W = rect.width;
+        H = rect.height;
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = W * dpr;
+        canvas.height = H * dpr;
+        canvas.style.width = W + 'px';
+        canvas.style.height = H + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        layoutPublications();
+        updateVisibility();
+    }
+
+    // =============================================
+    // STATE
+    // =============================================
+    var activeAxis = 'all';
+    var activeChannels = new Set(['linkedin', 'instagram', 'youtube', 'presse', 'conference']);
+    var hoveredPub = null;
+    var hoveredPubIdx = -1;
+    var animatedPositions = [];
+    var startTime = Date.now();
+    var mousePos = { x: -9999, y: -9999 };
+
+    // =============================================
+    // LAYOUT
+    // =============================================
+    function layoutPublications() {
+        var marginLeft = 60;
+        var marginRight = 30;
+        var marginTop = 58;
+        var marginBottom = 50;
+
+        var usableW = W - marginLeft - marginRight;
+        var usableH = H - marginTop - marginBottom;
+
+        var timelineStart = new Date(YEAR_MIN, 0, 1).getTime();
+        var timelineEnd = new Date(YEAR_MAX + 1, 0, 1).getTime();
+        var timeRange = timelineEnd - timelineStart;
+
+        // Seeded random for consistent positions
+        var seed = 7;
+        function rand() { seed = (seed * 16807 + 0) % 2147483647; return (seed - 1) / 2147483646; }
+
+        animatedPositions = publications.map(function(pub, i) {
+            var tNorm = (pub.date.getTime() - timelineStart) / timeRange;
+            var x = marginLeft + tNorm * usableW;
+
+            var yCenter = marginTop + usableH * 0.5;
+            var jitterRange = usableH * 0.42;
+            var yJitter = (rand() - 0.5) * 2 * jitterRange;
+            var y = yCenter + yJitter;
+
+            var size;
+            if (pub.tier === 'media') {
+                size = Math.max(4, Math.min(8, Math.sqrt(pub.reach) / 35));
+            } else if (pub.tier === 'conference') {
+                size = Math.max(3.5, Math.min(7, Math.sqrt(pub.reach) / 40));
+            } else {
+                size = Math.max(2, Math.min(4.5, Math.sqrt(pub.reach) / 55));
+            }
+
+            return {
+                pub: pub, x: x, y: y,
+                baseX: x, baseY: y,
+                size: size,
+                opacity: 1,
+                targetOpacity: 1,
+                _highlight: false
+            };
+        });
+    }
+
+    // =============================================
+    // FILTER LOGIC (no scroll — all visible by default)
+    // =============================================
+    function isVisible(ap) {
+        var axisMatch = activeAxis === 'all' || ap.pub.axis === activeAxis;
+        var channelMatch = activeChannels.has(ap.pub.channel);
+        return axisMatch && channelMatch;
+    }
+
+    function updateVisibility() {
+        animatedPositions.forEach(function(ap) {
+            ap.targetOpacity = isVisible(ap) ? 1 : 0.03;
+        });
+        updateStats();
+    }
+
+    function updateStats() {
+        var visible = animatedPositions.filter(function(ap) { return ap.targetOpacity > 0.5; });
+        var totalEl = document.getElementById('mv-stat-total');
+        if (totalEl) totalEl.textContent = visible.length;
+
+        var mediaCount = visible.filter(function(ap) { return ap.pub.tier === 'media'; }).length;
+        var mediaEl = document.getElementById('mv-stat-media');
+        if (mediaEl) mediaEl.textContent = mediaCount;
+
+        var cumulativeReach = 0;
+        visible.forEach(function(ap) { cumulativeReach += ap.pub.reach; });
+        var reachEl = document.getElementById('mv-stat-reach');
+        if (reachEl) {
+            reachEl.textContent = cumulativeReach > 1000000
+                ? (cumulativeReach / 1000000).toFixed(1) + 'M'
+                : cumulativeReach > 1000
+                    ? Math.floor(cumulativeReach / 1000) + 'K'
+                    : cumulativeReach;
+        }
+    }
+
+    // =============================================
+    // AXIS FILTER BUTTONS
+    // =============================================
+    document.querySelectorAll('#mediaviz-wrapper .mv-filter-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('#mediaviz-wrapper .mv-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            activeAxis = btn.dataset.axis;
+            updateVisibility();
+        });
     });
 
-    // Tooltip
-    if (hoveredPub) {
-      tooltip.textContent = hoveredPub.pub.title + ' — ' + hoveredPub.pub.year;
-      tooltip.classList.add('show');
-      container.style.cursor = 'pointer';
-    } else {
-      tooltip.classList.remove('show');
-      container.style.cursor = 'default';
+    // =============================================
+    // CHANNEL FILTER BUTTONS
+    // =============================================
+    var ALL_CHANNELS = ['linkedin', 'instagram', 'youtube', 'presse', 'conference'];
+
+    document.querySelectorAll('#mediaviz-wrapper .mv-channel-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var channel = btn.dataset.channel;
+            if (channel === 'all') {
+                var allActive = activeChannels.size === ALL_CHANNELS.length;
+                if (allActive) {
+                    activeChannels.clear();
+                    document.querySelectorAll('#mediaviz-wrapper .mv-channel-btn').forEach(function(b) { b.classList.remove('active'); });
+                } else {
+                    activeChannels = new Set(ALL_CHANNELS);
+                    document.querySelectorAll('#mediaviz-wrapper .mv-channel-btn').forEach(function(b) { b.classList.add('active'); });
+                }
+            } else {
+                if (activeChannels.has(channel)) {
+                    activeChannels.delete(channel);
+                    btn.classList.remove('active');
+                } else {
+                    activeChannels.add(channel);
+                    btn.classList.add('active');
+                }
+                var allBtn = document.querySelector('#mediaviz-wrapper .mv-channel-btn[data-channel="all"]');
+                if (activeChannels.size === ALL_CHANNELS.length) {
+                    allBtn.classList.add('active');
+                } else {
+                    allBtn.classList.remove('active');
+                }
+            }
+            updateVisibility();
+        });
+    });
+
+    // =============================================
+    // YEAR LABELS
+    // =============================================
+    function buildYearLabels() {
+        var container = document.getElementById('mv-year-labels');
+        if (!container) return;
+        container.innerHTML = '';
+        for (var y = YEAR_MIN; y <= YEAR_MAX; y++) {
+            var lbl = document.createElement('div');
+            lbl.className = 'mv-year-label';
+            lbl.textContent = y;
+            lbl.dataset.year = y;
+            container.appendChild(lbl);
+        }
+    }
+    buildYearLabels();
+
+    // =============================================
+    // MOUSE ON CANVAS
+    // =============================================
+    canvas.addEventListener('mousemove', function(e) {
+        mousePos.x = e.clientX;
+        mousePos.y = e.clientY;
+    });
+
+    canvas.addEventListener('mouseleave', function() {
+        mousePos.x = -9999;
+        mousePos.y = -9999;
+    });
+
+    canvas.addEventListener('click', function() {
+        if (hoveredPub) {
+            var popup = document.getElementById('mv-detail-popup');
+            var wrapperRect = wrapper.getBoundingClientRect();
+            var popupX = Math.min(mousePos.x - wrapperRect.left + 16, W - 300);
+            var popupY = Math.min(mousePos.y - wrapperRect.top - 16, H - 200);
+            popup.style.display = 'block';
+            popup.style.left = popupX + 'px';
+            popup.style.top = popupY + 'px';
+
+            var typeEl = document.getElementById('mv-popup-type');
+            typeEl.textContent = hoveredPub.type;
+            typeEl.style.color = COLORS[hoveredPub.axis];
+
+            var tierEl = document.getElementById('mv-popup-tier');
+            tierEl.textContent = hoveredPub.tier === 'media' ? 'PRESSE' : hoveredPub.tier === 'conference' ? 'CONF' : 'SOCIAL';
+            tierEl.className = 'mv-pub-tier ' + hoveredPub.tier;
+
+            document.getElementById('mv-popup-title').textContent = hoveredPub.title;
+            document.getElementById('mv-popup-channel').textContent = CHANNELS[hoveredPub.channel].label + ' \u00B7 ' + hoveredPub.date.toLocaleDateString('fr-FR');
+            document.getElementById('mv-popup-excerpt').textContent = hoveredPub.excerpt;
+            document.getElementById('mv-popup-date').textContent = hoveredPub.date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long' });
+        } else {
+            document.getElementById('mv-detail-popup').style.display = 'none';
+        }
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.mv-detail-popup') && !e.target.closest('#mediaviz-canvas')) {
+            var popup = document.getElementById('mv-detail-popup');
+            if (popup) popup.style.display = 'none';
+        }
+    });
+
+    // =============================================
+    // RENDER
+    // =============================================
+    function render() {
+        requestAnimationFrame(render);
+        var time = (Date.now() - startTime) / 1000;
+
+        ctx.fillStyle = '#0d1117';
+        ctx.fillRect(0, 0, W, H);
+
+        var marginTop = 58;
+        var marginBottom = 50;
+        var marginLeft = 60;
+        var marginRight = 30;
+        var usableH = H - marginTop - marginBottom;
+        var usableW = W - marginLeft - marginRight;
+
+        // Draw year grid lines
+        var timelineStart = new Date(YEAR_MIN, 0, 1).getTime();
+        var timelineEnd = new Date(YEAR_MAX + 1, 0, 1).getTime();
+        var timeRange = timelineEnd - timelineStart;
+        ctx.globalAlpha = 0.1;
+        ctx.strokeStyle = 'rgba(255,255,255,0.5)';
+        ctx.lineWidth = 0.5;
+        for (var y = YEAR_MIN; y <= YEAR_MAX; y++) {
+            var tNorm = (new Date(y, 0, 1).getTime() - timelineStart) / timeRange;
+            var gx = marginLeft + tNorm * usableW;
+            ctx.beginPath();
+            ctx.moveTo(gx, marginTop);
+            ctx.lineTo(gx, marginTop + usableH);
+            ctx.stroke();
+        }
+        ctx.globalAlpha = 1;
+
+        // Hovered pub detection
+        hoveredPub = null;
+        hoveredPubIdx = -1;
+
+        // Convert mouse coords to canvas-local coords
+        var wrapperRect = wrapper.getBoundingClientRect();
+        var localMouseX = mousePos.x - wrapperRect.left;
+        var localMouseY = mousePos.y - wrapperRect.top;
+
+        for (var idx = animatedPositions.length - 1; idx >= 0; idx--) {
+            var ap = animatedPositions[idx];
+            if (ap.opacity < 0.3) continue;
+            var dist = Math.hypot(localMouseX - ap.x, localMouseY - ap.y);
+            var hitRadius = ap.size + (ap.pub.tier === 'media' ? 8 : 5);
+            if (dist < hitRadius) {
+                hoveredPub = ap.pub;
+                hoveredPubIdx = idx;
+                break;
+            }
+        }
+
+        // Draw connections between nearby same-axis publications
+        ctx.globalAlpha = 0.05;
+        for (var ci = 0; ci < animatedPositions.length; ci++) {
+            var a = animatedPositions[ci];
+            if (a.opacity < 0.3) continue;
+            for (var cj = ci + 1; cj < Math.min(ci + 8, animatedPositions.length); cj++) {
+                var b = animatedPositions[cj];
+                if (b.opacity < 0.3 || a.pub.axis !== b.pub.axis) continue;
+                var cdist = Math.hypot(a.x - b.x, a.y - b.y);
+                if (cdist < 50) {
+                    ctx.strokeStyle = COLORS[a.pub.axis];
+                    ctx.lineWidth = 0.4;
+                    ctx.beginPath();
+                    ctx.moveTo(a.x, a.y);
+                    ctx.lineTo(b.x, b.y);
+                    ctx.stroke();
+                }
+            }
+        }
+        ctx.globalAlpha = 1;
+
+        // Highlight connections for hovered pub
+        if (hoveredPubIdx >= 0) {
+            var hp = animatedPositions[hoveredPubIdx];
+            ctx.globalAlpha = 0.2;
+            animatedPositions.forEach(function(ap, i) {
+                if (i === hoveredPubIdx || ap.opacity < 0.3) return;
+                if (ap.pub.axis !== hp.pub.axis) return;
+                var hdist = Math.hypot(hp.x - ap.x, hp.y - ap.y);
+                if (hdist < 120) {
+                    ctx.strokeStyle = COLORS[hp.pub.axis + 'Light'] || COLORS[hp.pub.axis];
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    ctx.moveTo(hp.x, hp.y);
+                    ctx.lineTo(ap.x, ap.y);
+                    ctx.stroke();
+                    ap._highlight = true;
+                }
+            });
+            ctx.globalAlpha = 1;
+        }
+
+        // Draw publications
+        animatedPositions.forEach(function(ap, i) {
+            // Smooth opacity transition
+            ap.opacity += (ap.targetOpacity - ap.opacity) * 0.12;
+            if (ap.opacity < 0.02) { ap._highlight = false; return; }
+
+            var color = COLORS[ap.pub.axis];
+            var lightColor = COLORS[ap.pub.axis + 'Light'];
+
+            var isHovered = (i === hoveredPubIdx);
+            var isHighlighted = ap._highlight;
+            ap._highlight = false;
+
+            var isMedia = ap.pub.tier === 'media';
+            var isConf = ap.pub.tier === 'conference';
+
+            var scaleFactor = isHovered ? 1.4 : isHighlighted ? 1.15 : 1;
+            var displaySize = ap.size * scaleFactor;
+
+            ctx.globalAlpha = ap.opacity;
+
+            if (isMedia) {
+                var r = displaySize * 0.9;
+                ctx.fillStyle = isHovered ? lightColor : color;
+                ctx.beginPath();
+                ctx.arc(ap.x, ap.y, r, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.strokeStyle = isHovered ? '#ffffff' : 'rgba(255,255,255,0.6)';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            } else if (isConf) {
+                var rc = displaySize * 0.9;
+                ctx.fillStyle = isHovered ? lightColor : color;
+                ctx.beginPath();
+                ctx.arc(ap.x, ap.y, rc, 0, Math.PI * 2);
+                ctx.fill();
+            } else {
+                var rs = Math.max(1.5, displaySize * 0.55);
+                ctx.fillStyle = isHovered ? lightColor : color;
+                ctx.globalAlpha = ap.opacity * (isHovered ? 0.9 : 0.5);
+                ctx.beginPath();
+                ctx.arc(ap.x, ap.y, rs, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.globalAlpha = ap.opacity;
+            }
+
+            // Label on hover
+            if (isHovered && ap.opacity > 0.5) {
+                ctx.globalAlpha = 1;
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '600 10px Poppins, sans-serif';
+                ctx.textAlign = 'center';
+                var labelText = ap.pub.title.length > 45 ? ap.pub.title.substring(0, 45) + '...' : ap.pub.title;
+                ctx.fillText(labelText, ap.x, ap.y - displaySize - 14);
+
+                ctx.fillStyle = 'rgba(255,255,255,0.4)';
+                ctx.font = '9px Poppins, sans-serif';
+                var tierLabel = isMedia ? ' PRESSE' : isConf ? ' CONF' : '';
+                ctx.fillText(CHANNELS[ap.pub.channel].label + ' \u00B7 ' + ap.pub.year + tierLabel, ap.x, ap.y - displaySize - 4);
+
+                canvas.style.cursor = 'pointer';
+            }
+
+            ctx.globalAlpha = 1;
+        });
+
+        if (!hoveredPub) canvas.style.cursor = 'default';
     }
 
-    // Timeline
-    ctx.globalAlpha = 0.3;
-    ctx.strokeStyle = 'rgba(255,255,255,0.15)';
-    ctx.lineWidth = 1;
-    ctx.beginPath(); ctx.moveTo(30, H-35); ctx.lineTo(W-30, H-35); ctx.stroke();
-    for (let y = 2013; y <= 2026; y++) {
-      const x = 30 + ((y-2013)/(2027-2013)) * (W-60);
-      ctx.fillStyle = 'rgba(255,255,255,0.35)';
-      ctx.font = '9px Poppins, sans-serif';
-      ctx.textAlign = 'center';
-      ctx.fillText(y, x, H-20);
-    }
+    // =============================================
+    // INIT
+    // =============================================
+    resize();
+    updateStats();
 
-    // Axis labels
-    ctx.font = '600 9px Poppins, sans-serif';
-    ctx.textAlign = 'left';
-    const mT = 60, uH = H - mT - 50;
-    ctx.fillStyle = COLORS.techno; ctx.fillText('TECHNO', 6, mT + uH*0.2);
-    ctx.fillStyle = COLORS.enviro; ctx.fillText('ENVIRO', 6, mT + uH*0.5);
-    ctx.fillStyle = COLORS.socio; ctx.fillText('SOCIO', 6, mT + uH*0.8);
-    ctx.globalAlpha = 1;
-  }
+    var ro = new ResizeObserver(function() {
+        resize();
+        buildYearLabels();
+    });
+    ro.observe(wrapper);
 
-  render();
+    render();
+
+    // Keyboard shortcut: Escape to close popup
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            var popup = document.getElementById('mv-detail-popup');
+            if (popup) popup.style.display = 'none';
+        }
+    });
+})();
 </script>

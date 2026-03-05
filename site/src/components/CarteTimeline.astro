@@ -6,8 +6,8 @@
  */
 ---
 
-<div class="carte-wrapper">
-  <div id="carte-container">
+<div class="carte-scroll" id="carte-scroll">
+  <div class="carte-sticky" id="carte-container">
     <canvas id="carte-canvas"></canvas>
 
     <div class="carte-title">
@@ -32,8 +32,8 @@
       <div class="carte-legend-item"><div class="carte-legend-line" style="background:#b32a55;"></div>Socio</div>
     </div>
 
-    <div class="carte-controls">
-      <input type="range" id="carte-slider" min="0" max="100" value="0" class="carte-slider" />
+    <div class="carte-progress-bar">
+      <div class="carte-progress-fill" id="carte-progress-fill"></div>
     </div>
 
     <div class="carte-tooltip" id="carte-tooltip">
@@ -45,15 +45,18 @@
 </div>
 
 <style>
-  .carte-wrapper { position: relative; width: 100%; height: 100%; }
-
-  #carte-container {
-    width: 100%;
-    height: 100%;
+  .carte-scroll {
     position: relative;
+    height: 500vh;
+  }
+
+  .carte-sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
     background: #0d1117;
-    border-radius: 24px;
     cursor: default;
   }
 
@@ -161,33 +164,24 @@
 
   .carte-legend-line { width: 16px; height: 2px; border-radius: 1px; }
 
-  .carte-controls {
+  .carte-progress-bar {
     position: absolute;
     bottom: 16px;
     left: 24px;
     right: 24px;
     z-index: 10;
-  }
-
-  .carte-slider {
-    width: 100%;
-    -webkit-appearance: none;
-    appearance: none;
     height: 3px;
     background: rgba(232,220,200,0.15);
     border-radius: 2px;
-    outline: none;
-    cursor: pointer;
+    pointer-events: none;
   }
 
-  .carte-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: #e8dcc8;
-    cursor: pointer;
-    box-shadow: 0 0 8px rgba(232,220,200,0.4);
+  .carte-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: rgba(232,220,200,0.5);
+    border-radius: 2px;
+    transition: width 0.1s linear;
   }
 
   .carte-tooltip {
@@ -250,10 +244,11 @@
     [[-17,15],[-16,13],[-15,11],[-8,5],[0,5],[5,4],[10,4],[10,2],[9,-1],[9,-4],[12,-6],[12,-10],[13,-13],[12,-17],[15,-22],[17,-25],[18,-29],[20,-33],[25,-34],[28,-33],[30,-30],[32,-28],[33,-25],[35,-22],[40,-15],[42,-12],[44,-12],[48,-10],[50,-6],[50,0],[48,5],[44,10],[43,12],[42,15],[35,20],[33,30],[32,33],[35,33]]
   ];
 
+  const scrollWrap = document.getElementById('carte-scroll');
   const container = document.getElementById('carte-container');
   const canvas = document.getElementById('carte-canvas');
   const ctx = canvas.getContext('2d');
-  const slider = document.getElementById('carte-slider');
+  const progressFill = document.getElementById('carte-progress-fill');
   const tooltip = document.getElementById('carte-tooltip');
 
   let W, H, mapCenter = {lon:0, lat:46}, mapZoom = 2.5;
@@ -349,7 +344,16 @@
   }
 
   let progress = 0;
-  slider.addEventListener('input', () => { progress = slider.value / 100; });
+  function updateProgress() {
+    const rect = scrollWrap.getBoundingClientRect();
+    const scrollRange = scrollWrap.offsetHeight - window.innerHeight;
+    if (scrollRange <= 0) { progress = 0; return; }
+    const scrolled = -rect.top;
+    progress = Math.max(0, Math.min(1, scrolled / scrollRange));
+    progressFill.style.width = (progress * 100) + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
 
   // Hover
   const mousePos = {x:-999,y:-999};
