@@ -47,23 +47,55 @@ const medias = [
   <section class="section">
     <div class="container">
       <div class="kit-media stagger">
-        <h2>Kit media</h2>
-        <p class="subtitle">Tout ce dont vous avez besoin pour parler de Colomban.</p>
+        <p class="mono text-bleu">Kit media</p>
+        <h2>Tout pour parler<br/>de Colomban</h2>
+        <p class="subtitle">Bio, chiffres cles, contact — telechargez ce dont vous avez besoin.</p>
         <div class="kit-media__items">
           <div class="kit-media__item">
-            <h4>Bio courte</h4>
-            <p>Colomban, officier de la Marine Marchande, entrepreneur et figure de la triple transition maritime — technologique, environnementale et socioculturelle. Delegue General du GASPE, cofondateur de VAIATA Dynamics, president de la Fondation ENSM.</p>
+            <div class="kit-media__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h4>Bio complete</h4>
+            <p>Bio courte et longue, parcours, engagements actuels et chiffres cles.</p>
+            <a href={`${base}/kit-media/bio-colomban.txt`} download class="kit-media__link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              bio-colomban.txt
+            </a>
           </div>
           <div class="kit-media__item">
-            <h4>Photos HD</h4>
-            <p>Portraits, conferences, maritime — disponibles sur demande &agrave; <a href="mailto:hello@colombanatsea.com">hello@colombanatsea.com</a></p>
-          </div>
-          <div class="kit-media__item">
+            <div class="kit-media__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            </div>
             <h4>Chiffres cles</h4>
-            <p>Le maritime dans le sang depuis 1991. 5 entreprises co-fondees. 28+ articles presse. 3.6M vues LinkedIn/an.</p>
+            <p>Statistiques, parcours, influence et donnees France maritime.</p>
+            <a href={`${base}/kit-media/chiffres-cles.txt`} download class="kit-media__link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              chiffres-cles.txt
+            </a>
+          </div>
+          <div class="kit-media__item">
+            <div class="kit-media__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h4>Fiche contact</h4>
+            <p>VCard importable directement dans votre carnet d'adresses.</p>
+            <a href={`${base}/kit-media/colomban.vcf`} download class="kit-media__link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              colomban.vcf
+            </a>
+          </div>
+          <div class="kit-media__item kit-media__item--photos">
+            <div class="kit-media__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+            <h4>Photos HD</h4>
+            <p>Portraits, conferences, maritime — disponibles sur demande.</p>
+            <a href="mailto:hello@colombanatsea.com?subject=Demande%20photos%20HD%20-%20Kit%20Media" class="kit-media__link kit-media__link--email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              hello@colombanatsea.com
+            </a>
           </div>
         </div>
-        <a href={`${base}/kit-media/bio-colomban.txt`} download class="btn btn-outline kit-media__download">T&eacute;l&eacute;charger la bio compl&egrave;te (.txt)</a>
       </div>
     </div>
   </section>
@@ -120,33 +152,82 @@ const medias = [
     display: block;
   }
 
+  .kit-media .mono { margin-bottom: var(--space-sm); }
   .kit-media h2 { margin-bottom: var(--space-sm); }
-  .kit-media > .subtitle { margin-bottom: var(--space-xl); }
+  .kit-media > .subtitle { margin-bottom: var(--space-xl); color: var(--gris-500); }
 
   .kit-media__items {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
   }
 
   .kit-media__item {
-    padding: var(--space-lg);
+    padding: var(--space-xl);
     border: 1px solid var(--gris-200);
     border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    transition: all var(--duration-normal);
+  }
+
+  .kit-media__item:hover {
+    border-color: var(--bleu);
+    box-shadow: 0 4px 24px rgba(42, 85, 179, 0.08);
+  }
+
+  .kit-media__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--gris-100);
+    color: var(--bleu);
+    margin-bottom: var(--space-md);
   }
 
   .kit-media__item h4 {
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-xs, 0.5rem);
   }
 
   .kit-media__item p {
     font-size: 0.9rem;
     color: var(--gris-500);
     line-height: 1.6;
+    flex: 1;
   }
 
-  .kit-media__download {
-    margin-top: var(--space-lg);
+  .kit-media__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: var(--space-md);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--bleu);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--bleu);
+    border-radius: 8px;
+    transition: all var(--duration-fast);
+    width: fit-content;
+  }
+
+  .kit-media__link:hover {
+    background: var(--bleu);
+    color: white;
+  }
+
+  .kit-media__link--email {
+    border-color: var(--gris-200);
+    color: var(--gris-500);
+  }
+
+  .kit-media__link--email:hover {
+    background: var(--gris-100);
+    color: var(--noir);
+    border-color: var(--gris-400);
   }
 
   @media (max-width: 768px) {
