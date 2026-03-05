@@ -59,10 +59,12 @@
     white-space: nowrap;
     pointer-events: none;
     text-shadow: 0 0 6px rgba(10,14,26,1), 0 0 12px rgba(10,14,26,1);
-    transform: translate(8px, -50%);
+    transform: translate(0, -50%);
     font-weight: 400;
     letter-spacing: 0.02em;
     font-family: var(--font-heading);
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
   .matrice-legend {
@@ -440,24 +442,30 @@
       pauseRotate();
     }
 
-    // Labels
-    sphereMeshes.forEach((m, i) => {
-      const v = m.position.clone().project(camera);
-      const lbl = labelEls[i];
-      if (v.z > 1) { lbl.style.opacity = '0'; return; }
+    // Labels — only show after intro completes, positioned near each sphere
+    if (introComplete) {
       const rect = container.getBoundingClientRect();
-      lbl.style.opacity = engagements[i].ghosted ? '0.35' : '0.7';
-      // Offset label to the right of the sphere's screen position
-      const sx = (v.x * 0.5 + 0.5) * rect.width;
-      const sy = (-v.y * 0.5 + 0.5) * rect.height;
-      // Compute approximate screen radius of the sphere
-      const r = m.userData.radius;
-      const dist = camera.position.distanceTo(m.position);
       const fov = camera.fov * Math.PI / 180;
-      const screenR = (r / (2 * dist * Math.tan(fov / 2))) * rect.height;
-      lbl.style.left = (sx + screenR + 2) + 'px';
-      lbl.style.top = sy + 'px';
-    });
+      sphereMeshes.forEach((m, i) => {
+        const v = m.position.clone().project(camera);
+        const lbl = labelEls[i];
+        if (v.z > 1) { lbl.style.opacity = '0'; return; }
+        const sx = (v.x * 0.5 + 0.5) * rect.width;
+        const sy = (-v.y * 0.5 + 0.5) * rect.height;
+        const r = m.userData.radius;
+        const dist = camera.position.distanceTo(m.position);
+        const screenR = (r / (2 * dist * Math.tan(fov / 2))) * rect.height;
+        // Position label to the right of the sphere, offset by its screen radius
+        lbl.style.left = (sx + screenR + 6) + 'px';
+        lbl.style.top = sy + 'px';
+        // Hide labels that are off-screen
+        if (sx < -50 || sx > rect.width + 50 || sy < -20 || sy > rect.height + 20) {
+          lbl.style.opacity = '0';
+        } else {
+          lbl.style.opacity = engagements[i].ghosted ? '0.35' : '0.7';
+        }
+      });
+    }
 
     controls.update();
     renderer.render(scene, camera);
