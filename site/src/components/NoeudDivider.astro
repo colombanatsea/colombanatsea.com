@@ -1,0 +1,43 @@
+---
+/**
+ * NoeudDivider — Section separator using the noeud motif
+ * Small centered noeud with gradient lines extending left/right
+ */
+import Noeud from './Noeud.astro';
+---
+
+<div class="noeud-divider">
+  <div class="noeud-divider__line noeud-divider__line--left"></div>
+  <Noeud size={28} variant="mono" />
+  <div class="noeud-divider__line noeud-divider__line--right"></div>
+</div>
+
+<style>
+  .noeud-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: var(--space-lg, 2rem) 0;
+    color: var(--gris-300, #C0C0D0);
+  }
+
+  .noeud-divider__line {
+    height: 1px;
+    width: 80px;
+    max-width: 15vw;
+  }
+
+  .noeud-divider__line--left {
+    background: linear-gradient(to right, transparent, var(--bleu, #2A55B3));
+  }
+
+  .noeud-divider__line--right {
+    background: linear-gradient(to left, transparent, var(--vert, #00BF63));
+  }
+
+  /* Dark section variant */
+  :global(.section-dark) .noeud-divider {
+    color: var(--gris-500, #555570);
+  }
+</style>

@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Globe from '../../components/Globe.astro';
 import Matrice from '../../components/Matrice.astro';
+import NoeudDivider from '../../components/NoeudDivider.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
@@ -59,9 +60,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
+  <NoeudDivider />
+
   <!-- ═══ VISION / TRIPLE TRANSITION ═══ -->
-  <section class="vision section-dark section" id="vision">
-    <div class="container">
+  <section class="vision section-dark section noeud-watermark-container" id="vision">
+    <div class="container" style="position: relative; z-index: 1;">
       <div class="vision__header stagger">
         <p class="mono text-bleu">La triple transition</p>
         <h2>Trois revolutions,<br/>une seule cause</h2>
@@ -101,6 +104,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       </div>
     </div>
   </section>
+
+  <NoeudDivider />
 
   <!-- ═══ ARCHIPEL FRANCE ═══ -->
   <section class="globe-section section" id="globe">
