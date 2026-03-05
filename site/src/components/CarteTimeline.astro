@@ -219,7 +219,7 @@
 
 <script is:inline>
 (function() {
-  const COLORS = { sillage: '#e8dcc8', techno: '#2a55b3', enviro: '#00bf63', socio: '#b32a55', bg: '#0d1117', grid: 'rgba(232,220,200,0.04)', coast: 'rgba(232,220,200,0.12)' };
+  const COLORS = { sillage: '#e8dcc8', techno: '#2a55b3', enviro: '#00bf63', socio: '#b32a55', bg: '#0d1117', grid: 'rgba(232,220,200,0.06)', coast: 'rgba(232,220,200,0.25)' };
 
   const sillageWP = [
     { year:2000, name:'Bretagne & Irlande', label:'Enfance', lon:-4.5, lat:48.4, detail:'Traversées en bateau. Naissance de la vocation.', phase:'enfance' },
@@ -256,7 +256,7 @@
   const slider = document.getElementById('carte-slider');
   const tooltip = document.getElementById('carte-tooltip');
 
-  let W, H, mapCenter = {lon:15, lat:25}, mapZoom = 1;
+  let W, H, mapCenter = {lon:0, lat:46}, mapZoom = 2.5;
 
   function resize() {
     W = container.clientWidth; H = container.clientHeight;
@@ -288,14 +288,14 @@
       ctx.beginPath(); ctx.strokeStyle = COLORS.coast; ctx.lineWidth = 1;
       c.forEach((p,i) => { const pt = project(p[0],p[1]); i===0 ? ctx.moveTo(pt.x,pt.y) : ctx.lineTo(pt.x,pt.y); });
       ctx.stroke();
-      ctx.fillStyle = 'rgba(232,220,200,0.02)'; ctx.fill();
+      ctx.fillStyle = 'rgba(232,220,200,0.06)'; ctx.fill();
     });
   }
 
   function drawSillage(prog) {
     const total = sillageWP.length, drawn = Math.floor(prog * total), partial = prog * total - drawn;
     if (drawn < 1) return;
-    ctx.beginPath(); ctx.strokeStyle = COLORS.sillage; ctx.lineWidth = 2; ctx.globalAlpha = 0.7;
+    ctx.beginPath(); ctx.strokeStyle = COLORS.sillage; ctx.lineWidth = 2.5; ctx.globalAlpha = 0.8;
     for (let i = 0; i <= Math.min(drawn, total-1); i++) {
       const p = project(sillageWP[i].lon, sillageWP[i].lat);
       if (i===0) { ctx.moveTo(p.x,p.y); continue; }
@@ -308,12 +308,12 @@
 
     for (let i = 0; i < Math.min(drawn+1, total); i++) {
       const wp = sillageWP[i], p = project(wp.lon, wp.lat);
-      let sz = 3, col = COLORS.sillage;
-      if (wp.isFounder) { sz = 5; col = COLORS.enviro; }
-      if (wp.isDecisive) { sz = 6; col = '#ff6b6b'; }
-      if (sz > 3) { const g = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,15); g.addColorStop(0,col+'40'); g.addColorStop(1,'transparent'); ctx.fillStyle=g; ctx.beginPath(); ctx.arc(p.x,p.y,15,0,Math.PI*2); ctx.fill(); }
+      let sz = 5, col = COLORS.sillage;
+      if (wp.isFounder) { sz = 8; col = COLORS.enviro; }
+      if (wp.isDecisive) { sz = 9; col = '#ff6b6b'; }
+      if (sz > 5) { const g = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,25); g.addColorStop(0,col+'50'); g.addColorStop(1,'transparent'); ctx.fillStyle=g; ctx.beginPath(); ctx.arc(p.x,p.y,25,0,Math.PI*2); ctx.fill(); }
       ctx.fillStyle = col; ctx.beginPath(); ctx.arc(p.x,p.y,sz,0,Math.PI*2); ctx.fill();
-      ctx.fillStyle = 'rgba(232,220,200,0.6)'; ctx.font = '9px Poppins,sans-serif'; ctx.textAlign = 'center'; ctx.fillText(wp.label, p.x, p.y-sz-8);
+      ctx.fillStyle = 'rgba(232,220,200,0.85)'; ctx.font = '600 11px Poppins,sans-serif'; ctx.textAlign = 'center'; ctx.fillText(wp.label, p.x, p.y-sz-10);
     }
   }
 
@@ -322,8 +322,8 @@
     const hub = project(annecyHub.lon, annecyHub.lat);
     const g = ctx.createRadialGradient(hub.x,hub.y,0,hub.x,hub.y,20); g.addColorStop(0,'rgba(232,220,200,0.3)'); g.addColorStop(1,'transparent');
     ctx.fillStyle = g; ctx.beginPath(); ctx.arc(hub.x,hub.y,20,0,Math.PI*2); ctx.fill();
-    ctx.fillStyle = '#e8dcc8'; ctx.beginPath(); ctx.arc(hub.x,hub.y,4,0,Math.PI*2); ctx.fill();
-    ctx.fillStyle = 'rgba(232,220,200,0.7)'; ctx.font = '600 10px Poppins,sans-serif'; ctx.textAlign = 'center'; ctx.fillText('ANNECY',hub.x,hub.y-12);
+    ctx.fillStyle = '#e8dcc8'; ctx.beginPath(); ctx.arc(hub.x,hub.y,6,0,Math.PI*2); ctx.fill();
+    ctx.fillStyle = 'rgba(232,220,200,0.9)'; ctx.font = '700 12px Poppins,sans-serif'; ctx.textAlign = 'center'; ctx.fillText('ANNECY',hub.x,hub.y-16);
 
     const show = Math.ceil(prog * reseauThreads.length);
     for (let i = 0; i < show; i++) {
@@ -341,8 +341,8 @@
 
       if (tp > 0.5) {
         ctx.globalAlpha = (tp-0.5)*2;
-        ctx.fillStyle = t.color; ctx.beginPath(); ctx.arc(d.x,d.y,3,0,Math.PI*2); ctx.fill();
-        ctx.font = '600 9px Poppins,sans-serif'; ctx.textAlign = 'left'; ctx.fillText(t.label, d.x+8, d.y+3);
+        ctx.fillStyle = t.color; ctx.beginPath(); ctx.arc(d.x,d.y,5,0,Math.PI*2); ctx.fill();
+        ctx.font = '600 11px Poppins,sans-serif'; ctx.textAlign = 'left'; ctx.fillText(t.label, d.x+10, d.y+4);
         ctx.globalAlpha = 1;
       }
     }
@@ -366,8 +366,18 @@
     const time = (Date.now()-startTime)/1000;
     ctx.fillStyle = COLORS.bg; ctx.fillRect(0,0,W,H);
 
-    if (progress < 0.6) { mapCenter.lon = 15+progress*20; mapCenter.lat = 25; mapZoom = 1+progress*0.3; }
-    else { const t=(progress-0.6)/0.4; mapCenter.lon = 27-t*20; mapCenter.lat = 25+t*20; mapZoom = 1.3+t*1.5; }
+    if (progress < 0.1) {
+      mapCenter.lon = -2; mapCenter.lat = 48; mapZoom = 4;
+    } else if (progress < 0.4) {
+      const t = (progress - 0.1) / 0.3;
+      mapCenter.lon = -2 + t * 7; mapCenter.lat = 48 - t * 8; mapZoom = 4 - t * 1.5;
+    } else if (progress < 0.6) {
+      const t = (progress - 0.4) / 0.2;
+      mapCenter.lon = 5 + t * 20; mapCenter.lat = 40 - t * 25; mapZoom = 2.5 - t * 0.8;
+    } else {
+      const t = (progress - 0.6) / 0.4;
+      mapCenter.lon = 25 - t * 21; mapCenter.lat = 15 + t * 31; mapZoom = 1.7 + t * 2;
+    }
 
     drawGrid(); drawCoast();
     drawSillage(Math.min(1, progress/0.6));

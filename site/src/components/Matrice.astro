@@ -270,6 +270,7 @@
   controls.minDistance = 5;
   controls.maxDistance = 25;
   controls.enablePan = false;
+  controls.enableZoom = false;
 
   let interTimer = null;
   function pauseRotate() {
@@ -373,8 +374,9 @@
   let hovered = null;
 
   renderer.domElement.addEventListener('pointermove', e => {
-    pointer.x = (e.clientX / window.innerWidth) * 2 - 1;
-    pointer.y = -(e.clientY / window.innerHeight) * 2 + 1;
+    const rect = container.getBoundingClientRect();
+    pointer.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+    pointer.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
     tooltip.style.left = (e.clientX + 14) + 'px';
     tooltip.style.top = (e.clientY - 10) + 'px';
   });
@@ -402,6 +404,12 @@
     panel.classList.add('open');
   }
 
+  // Scroll-driven rotation
+  let scrollRotation = 0;
+  container.addEventListener('wheel', (e) => {
+    scrollRotation += e.deltaY * 0.002;
+  }, { passive: true });
+
   // Animation
   const clock = new THREE.Clock();
   const startTime = performance.now();
@@ -428,6 +436,9 @@
         sphereMeshes.forEach(m => m.position.copy(m.userData.target));
       }
     }
+
+    // Scroll rotation
+    sphereGroup.rotation.y += (scrollRotation - sphereGroup.rotation.y) * 0.1;
 
     // Breathing
     sphereMeshes.forEach((m, i) => {

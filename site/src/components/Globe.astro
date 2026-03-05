@@ -8,23 +8,35 @@
 <div class="globe-wrapper">
   <div id="globe-container">
     <div id="total-counter">
-      <div class="label">Surface totale ZEE</div>
-      <div class="value">11 691 000</div>
-      <div class="unit">km&sup2;</div>
+      <div class="stat-item" data-stat="zee">
+        <div class="label">Surface totale ZEE</div>
+        <div class="value">11 691 000</div>
+        <div class="unit">km&sup2;</div>
+      </div>
+      <div class="stat-item" data-stat="cables" style="margin-top:10px;">
+        <div class="label">C&acirc;bles sous-marins</div>
+        <div class="value" style="color:#00b4b4;">708</div>
+        <div class="unit">c&acirc;bles actifs (Telegeography)</div>
+      </div>
+      <div class="stat-item" data-stat="traffic" style="margin-top:10px;">
+        <div class="label">Navires de commerce</div>
+        <div class="value" style="color:#ff8c50;">105 000</div>
+        <div class="unit">navires dans le monde (CNUCED 2024)</div>
+      </div>
     </div>
 
     <div id="legend">
       <div class="legend-item" data-layer="zee">
         <div class="swatch zee"></div>
-        <span class="legend-label">Zone &Eacute;conomique Exclusive</span>
+        <span class="legend-label">Zone &Eacute;conomique Exclusive fran&ccedil;aise</span>
       </div>
       <div class="legend-item" data-layer="cables">
         <div class="swatch cables"></div>
-        <span class="legend-label">C&acirc;bles sous-marins</span>
+        <span class="legend-label">C&acirc;bles sous-marins (Telegeography)</span>
       </div>
       <div class="legend-item" data-layer="traffic">
         <div class="swatch traffic"></div>
-        <span class="legend-label">Trafic maritime</span>
+        <span class="legend-label">Principales routes maritimes</span>
       </div>
     </div>
 
@@ -94,6 +106,19 @@
     font-size: 0.8rem;
     color: rgba(255,255,255,0.5);
     margin-top: 2px;
+  }
+
+  #total-counter .stat-item {
+    transition: opacity 0.35s ease, max-height 0.35s ease;
+    overflow: hidden;
+    max-height: 80px;
+    opacity: 1;
+  }
+
+  #total-counter .stat-item.hidden {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0 !important;
   }
 
   #globe-tooltip {
@@ -216,18 +241,9 @@
   }
 </style>
 
-<script is:inline type="importmap">
-{
-  "imports": {
-    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
-  }
-}
-</script>
-
 <script is:inline type="module">
-  import * as THREE from 'three';
-  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+  const THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
+  const { OrbitControls } = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js');
 
   const ZEE_ZONES = [
     { name: 'Metropole', detail: 'Atlantique + Mediterranee', lat: 46, lng: -3, area: 350000 },
@@ -416,6 +432,25 @@
   starGeo.setAttribute('position', new THREE.Float32BufferAttribute(starPos, 3));
   scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xaabbdd, size: 0.04, transparent: true, opacity: 0.6, sizeAttenuation: true, depthWrite: false })));
 
+  // Anti-meridian cable splitting
+  function splitCableCoords(coords) {
+    const segments = []; let current = [];
+    for (let i = 0; i < coords.length; i++) {
+      const lon = coords[i][0], lat = coords[i][1];
+      if (isNaN(lat) || isNaN(lon)) continue;
+      if (current.length > 0) {
+        const prevLon = current[current.length - 1][0];
+        if (Math.abs(lon - prevLon) > 90) {
+          if (current.length >= 2) segments.push(current);
+          current = [[lon, lat]]; continue;
+        }
+      }
+      current.push([lon, lat]);
+    }
+    if (current.length >= 2) segments.push(current);
+    return segments;
+  }
+
   // Cables
   const cableGroup = new THREE.Group();
   scene.add(cableGroup);
@@ -429,11 +464,14 @@
         const col = (f.properties && f.properties.color) ? new THREE.Color(f.properties.color) : new THREE.Color(0x00b4b4);
         const sets = g.type === 'MultiLineString' ? g.coordinates : [g.coordinates];
         for (const coords of sets) {
-          const pts = coords.map(c => latLonToVec3(c[1], c[0], GLOBE_RADIUS + 0.02));
-          if (pts.length < 2) continue;
-          const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: col, transparent: true, opacity: 0.3, depthWrite: false }));
-          line.renderOrder = 3;
-          cableGroup.add(line);
+          const segs = splitCableCoords(coords);
+          for (const seg of segs) {
+            const pts = seg.map(c => latLonToVec3(c[1], c[0], GLOBE_RADIUS + 0.005));
+            if (pts.length < 2) continue;
+            const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: col, transparent: true, opacity: 0.35, depthWrite: false }));
+            line.renderOrder = 3;
+            cableGroup.add(line);
+          }
         }
       }
     }).catch(() => {});
@@ -471,6 +509,8 @@
       if (l === 'zee') zoneGroup.visible = layerVis.zee;
       else if (l === 'cables') cableGroup.visible = layerVis.cables;
       else if (l === 'traffic') trafficGroup.visible = layerVis.traffic;
+      const statEl = document.querySelector(`#total-counter .stat-item[data-stat="${l}"]`);
+      if (statEl) statEl.classList.toggle('hidden', !layerVis[l]);
     });
   });
 
