@@ -68,6 +68,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  /* Brand signature gradient top line */
+  border-top: 3px solid;
+  border-image: linear-gradient(90deg, var(--bleu), var(--vert)) 1;
 }
 
 img, video, svg {
