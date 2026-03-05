@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Globe from '../components/Globe.astro';
 import Matrice from '../components/Matrice.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="Colomban at Sea — Construire le monde maritime de demain">
@@ -17,7 +19,7 @@ import Matrice from '../components/Matrice.astro';
       <p class="hero__subtitle subtitle">La triple transition du maritime — technologique, environnementale, socioculturelle — portee par une conviction : une nation libre regarde la mer.</p>
       <div class="hero__cta">
         <a href="#vision" class="btn btn-primary">Decouvrir la vision</a>
-        <a href="/a-propos" class="btn btn-outline">Qui est Colomban</a>
+        <a href={`${base}/a-propos`} class="btn btn-outline">Qui est Colomban</a>
       </div>
     </div>
     <div class="hero__scroll-hint">

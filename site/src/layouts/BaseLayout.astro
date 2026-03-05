@@ -12,6 +12,8 @@ const {
   description = "Le quartier general digital de la triple transition maritime, porte par Colomban.",
   lang = "fr",
 } = Astro.props;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <!DOCTYPE html>
@@ -31,7 +33,7 @@ const {
   />
 
   <!-- Favicon (placeholder — will be the knot) -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
 
   <!-- Open Graph -->
   <meta property="og:title" content={title} />
@@ -42,7 +44,7 @@ const {
 <body>
   <nav class="nav" id="nav">
     <div class="nav__inner container">
-      <a href="/" class="nav__logo" aria-label="Colomban at Sea — Accueil">
+      <a href={`${base}/`} class="nav__logo" aria-label="Colomban at Sea — Accueil">
         <span class="nav__logo-text">Colomban<span class="nav__logo-accent"> at sea</span></span>
       </a>
 
@@ -51,12 +53,12 @@ const {
       </button>
 
       <ul class="nav__links" id="nav-links">
-        <li><a href="/#vision">Vision</a></li>
-        <li><a href="/a-propos">A propos</a></li>
-        <li><a href="/engagements">Engagements</a></li>
-        <li><a href="/prises-de-parole">Prises de parole</a></li>
-        <li><a href="/medias">Medias</a></li>
-        <li><a href="/contact" class="btn btn-primary btn-sm">Contact</a></li>
+        <li><a href={`${base}/#vision`}>Vision</a></li>
+        <li><a href={`${base}/a-propos`}>A propos</a></li>
+        <li><a href={`${base}/engagements`}>Engagements</a></li>
+        <li><a href={`${base}/prises-de-parole`}>Prises de parole</a></li>
+        <li><a href={`${base}/medias`}>Medias</a></li>
+        <li><a href={`${base}/contact`} class="btn btn-primary btn-sm">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -75,10 +77,10 @@ const {
       <div class="footer__links">
         <div class="footer__col">
           <h4>Navigation</h4>
-          <a href="/a-propos">A propos</a>
-          <a href="/engagements">Engagements</a>
-          <a href="/prises-de-parole">Prises de parole</a>
-          <a href="/medias">Medias</a>
+          <a href={`${base}/a-propos`}>A propos</a>
+          <a href={`${base}/engagements`}>Engagements</a>
+          <a href={`${base}/prises-de-parole`}>Prises de parole</a>
+          <a href={`${base}/medias`}>Medias</a>
         </div>
         <div class="footer__col">
           <h4>Suivre</h4>
@@ -90,7 +92,7 @@ const {
         <div class="footer__col">
           <h4>Liens</h4>
           <a href="https://aperitifsdelamer.com" target="_blank" rel="noopener">Aperitifs de la Mer</a>
-          <a href="/mentions-legales">Mentions legales</a>
+          <a href={`${base}/mentions-legales`}>Mentions legales</a>
         </div>
       </div>
 
