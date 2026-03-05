@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CarteTimeline from '../components/CarteTimeline.astro';
 ---
 
 <BaseLayout title="A propos — Colomban at Sea">
@@ -8,6 +9,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <p class="mono text-bleu">A propos</p>
       <h1>Le maritime dans le sang<br/>depuis <span class="text-bleu">1991</span></h1>
       <p class="subtitle">D'un sillage unique de marin a un reseau d'engagements convergents pour transformer le maritime.</p>
+    </div>
+  </section>
+
+  <!-- Carte marine parcours -->
+  <section class="section" id="carte">
+    <div class="container">
+      <div class="carte-header stagger">
+        <p class="mono text-bleu">Le parcours</p>
+        <h2>D'un sillage de marin a un reseau d'engagements</h2>
+        <p class="subtitle">Glissez le curseur pour naviguer dans le parcours de Colomban.</p>
+      </div>
+    </div>
+    <div class="carte-canvas-container">
+      <CarteTimeline />
     </div>
   </section>
 
@@ -81,6 +96,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-top: var(--space-md);
     max-width: 600px;
     color: var(--gris-400);
+  }
+
+  .carte-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .carte-header .mono { margin-bottom: var(--space-sm); }
+  .carte-header .subtitle { margin-top: var(--space-md); max-width: 500px; margin-left: auto; margin-right: auto; }
+
+  .carte-canvas-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 500px;
+    border-radius: 24px;
+    overflow: hidden;
+    padding: 0 var(--space-lg);
+  }
+
+  @media (max-width: 768px) {
+    .carte-canvas-container { height: 350px; padding: 0 var(--space-md); }
   }
 
   .about-block {
