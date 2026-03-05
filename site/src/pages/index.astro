@@ -18,7 +18,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <p class="hero__kicker mono">colombanatsea.com</p>
       <h1 class="hero__title">Oceanocratie</h1>
       <p class="hero__vision">Une nation libre regarde la mer.</p>
-      <p class="hero__subtitle subtitle">La triple transition du maritime — technologique, environnementale, socioculturelle.</p>
       <div class="hero__cta">
         <a href="#vision" class="btn btn-primary">Decouvrir la vision</a>
         <a href={`${base}/a-propos`} class="btn btn-outline hero__btn-outline">Qui est Colomban</a>
@@ -250,6 +249,31 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   window.addEventListener('scroll', handleHeroScroll, { passive: true });
 
+  // Block wheel events on the globe when NOT in fullmap (so page scrolls normally)
+  const globeContainer = hero?.querySelector('.hero__globe-bg');
+  globeContainer?.addEventListener('wheel', (e) => {
+    if (!hero?.classList.contains('hero--fullmap')) {
+      // Let the event propagate to the page for normal scrolling
+      // by removing the globe canvas's ability to capture it
+    }
+  }, { passive: true });
+
+  // Disable globe zoom in hero mode via a MutationObserver on the class
+  function setGlobeZoom(enabled: boolean) {
+    const canvas = hero?.querySelector('canvas');
+    if (canvas) {
+      canvas.style.pointerEvents = enabled ? 'auto' : 'none';
+    }
+    // Also re-enable pointer events on the container for drag rotation only in fullmap
+    const container = hero?.querySelector('#globe-container') as HTMLElement | null;
+    if (container) {
+      container.style.pointerEvents = enabled ? 'auto' : 'none';
+    }
+  }
+
+  // Start with zoom disabled (hero mode)
+  setTimeout(() => setGlobeZoom(false), 100);
+
   // Fullmap toggle
   const exploreBtn = document.getElementById('hero-explore-map');
   exploreBtn?.addEventListener('click', () => {
@@ -261,6 +285,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     }
     // Prevent body scroll in fullmap
     document.body.style.overflow = isFullmap ? 'hidden' : '';
+    // Enable/disable globe interaction
+    setGlobeZoom(!!isFullmap);
   });
 
   // Close fullmap on Escape
@@ -270,6 +296,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       document.body.style.overflow = '';
       const label = exploreBtn?.querySelector('.mono');
       if (label) label.textContent = 'Explorer la carte';
+      setGlobeZoom(false);
     }
   });
 </script>
@@ -423,7 +450,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 
   .hero.hero--fullmap .hero__explore-map {
-    bottom: 2rem;
+    top: calc(var(--nav-height) + 1rem);
+    bottom: auto;
     right: 2rem;
     z-index: 20;
   }
