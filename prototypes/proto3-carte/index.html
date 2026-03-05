@@ -316,20 +316,20 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
 
         // FORMATION
         { id: 2, year: 2010, label: 'ENMM', lon: 5.37, lat: 43.30,
-          phase: 'formation', detail: 'Entrée à l\'École Nationale de la Marine Marchande.' },
+          phase: 'formation', detail: 'Entrée à l\'École Nationale de la Marine Marchande.', noTooltip: true },
 
         // Jeanne Marie: Singapore → Qatar → Sydney
         { id: 3, year: 2010, label: 'Jeanne Marie', lon: 103.85, lat: 1.29,
-          phase: 'navigation', detail: 'Singapour.',
+          phase: 'navigation', detail: 'Transport de GPL. Singapour.',
           routePoints: [[51.5, 25.3], [151.2, -33.9]] },
 
         // Queen Aida: Monaco → Sicily → Croatia
         { id: 4, year: 2011, label: 'Queen Aida', lon: 7.42, lat: 43.73,
-          phase: 'navigation', detail: 'Monaco.' },
+          phase: 'navigation', detail: 'Mégayacht. Monaco.' },
         { id: 5, year: 2011, label: '', lon: 15.2, lat: 37.5,
-          phase: 'navigation', detail: 'Sicile.' },
+          phase: 'navigation', detail: '', noTooltip: true },
         { id: 6, year: 2011, label: '', lon: 15.97, lat: 43.51,
-          phase: 'navigation', detail: 'Croatie.' },
+          phase: 'navigation', detail: '', noTooltip: true },
 
         // Ailette in Corsica
         { id: 7, year: 2012, label: 'Ailette', lon: 9.15, lat: 42.15,
@@ -337,35 +337,35 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
 
         // Argonaute in Brest
         { id: 8, year: 2012, label: 'Argonaute', lon: -4.49, lat: 48.39,
-          phase: 'navigation', detail: 'Pose câble hydrolienne Sabella. Brest.' },
+          phase: 'navigation', detail: 'Service Marine Nationale et EMR. Brest.' },
 
         // Normandie (ex Brittany Ferries)
         { id: 9, year: 2013, label: 'Normandie', lon: -2.0, lat: 49.8,
-          phase: 'navigation', detail: 'Navire à passagers Normandie.' },
+          phase: 'navigation', detail: 'Navire à passagers. France - Angleterre.' },
 
         // MOMENT FONDATEUR
-        { id: 10, year: 2013, label: 'Découverte de la donnée', lon: 5.37, lat: 43.30,
+        { id: 10, year: 2013, label: 'Bourbon - Intrapreneuriat', lon: 5.37, lat: 43.30,
           phase: 'fondateur', isFounder: true,
-          detail: 'Confrontation aux données maritimes de ~600 navires Bourbon. Alliance avec Arnaud Dianoux → Opsealog.',
+          detail: 'Agrégation des données environnementales de la flotte Bourbon. Conception du projet qui deviendra Opsealog.',
           sidebarLabel: 'MOMENT FONDATEUR' },
 
         // Back to navigation
         { id: 11, year: 2014, label: 'Ungundja', lon: 12.3, lat: -8.8,
           phase: 'navigation2', detail: 'Angola. Opérations IMR.' },
 
-        { id: 12, year: 2015, label: 'Evolution 807', lon: 121, lat: 31,
-          phase: 'navigation2', detail: 'Chine. Suivi de construction neuve.' },
+        { id: 12, year: 2015, label: 'Bourbon Evolution 807', lon: 121, lat: 31,
+          phase: 'navigation2', detail: 'Suivi de construction neuve. Chine.' },
 
         { id: 13, year: 2015, label: 'Explorer 509', lon: 12.3, lat: -8.8,
-          phase: 'navigation2', detail: 'Angola.' },
+          phase: 'navigation2', detail: 'Approvisionnement offshore. Angola.' },
 
         { id: 14, year: 2015, label: 'Evolution 801', lon: 14.5, lat: -22.9,
-          phase: 'navigation2', detail: 'Namibie.' },
+          phase: 'navigation2', detail: 'Arrêt technique. Namibie.' },
 
         // Directly to Réunion
         { id: 15, year: 2017, label: 'Zourite', lon: 55.53, lat: -21.11,
           phase: 'choix', isDecisive: true,
-          detail: 'Barge NRL Zourite. 4800t. Dernier embarquement. Choix de quitter la mer.',
+          detail: 'Méga-construction. Dernier embarquement : je décide de prendre du recul pour mieux transformer le maritime.',
           sidebarLabel: 'CHOIX DÉCISIF' },
 
         // Paris - Entrepreneuriat
@@ -1311,12 +1311,12 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             if (!routeNodes[n].isIntermediate) visibleWaypoints = routeNodes[n].waypointIndex + 1;
         }
 
-        for (let i = 0; i < visibleWaypoints; i++) {
+        for (let i = visibleWaypoints - 1; i >= 0; i--) {
             const wp = sillageWaypoints[i];
             const p = project(wp.lon, wp.lat);
             const dist = Math.hypot(mouseX - p.x, mouseY - p.y);
 
-            if (dist < 20) {
+            if (dist < 20 && !wp.noTooltip) {
                 let tx = mouseX + 20;
                 let ty = mouseY - 10;
                 if (tx + 320 > W) tx = mouseX - 340;
