@@ -63,6 +63,30 @@ import CarteTimeline from '../components/CarteTimeline.astro';
     </div>
   </section>
 
+  <!-- Valeurs -->
+  <section class="section" id="valeurs">
+    <div class="container">
+      <div class="about-block stagger">
+        <p class="mono text-bleu">Les valeurs</p>
+        <h2>Ce qui guide chaque engagement</h2>
+        <div class="valeurs-grid">
+          <div class="valeur-card">
+            <h3>Confiance</h3>
+            <p>Le monde maritime se construit sur la confiance. Les armateurs confiaient leur avenir au capitaine sans nouvelles pendant des mois. Cette tradition de confiance guide chaque engagement.</p>
+          </div>
+          <div class="valeur-card">
+            <h3>Innovation</h3>
+            <p>L'esprit pionnier des grandes d&eacute;couvertes — les premi&egrave;res startups et lev&eacute;es de fonds de l'histoire. Innover avec conscience et frugalit&eacute;, pas de technosolutionnisme.</p>
+          </div>
+          <div class="valeur-card">
+            <h3>Durabilit&eacute;</h3>
+            <p>Approche holistique des limites plan&eacute;taires. Le climat n'est qu'une des 9 limites. Le maritime doit int&eacute;grer la soci&eacute;t&eacute; durable dans toutes ses dimensions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Personnel -->
   <section class="section" id="personnel">
     <div class="container">
@@ -272,8 +296,43 @@ import CarteTimeline from '../components/CarteTimeline.astro';
     font-style: italic;
   }
 
+  .valeurs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .valeur-card {
+    padding: var(--space-lg);
+    border: 1px solid var(--gris-200);
+    border-radius: 16px;
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .valeur-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  }
+
+  .valeur-card h3 {
+    color: var(--bleu);
+    margin-bottom: var(--space-sm);
+    font-size: 1.1rem;
+  }
+
+  .valeur-card p {
+    font-size: 0.9rem;
+    color: var(--gris-500);
+    line-height: 1.6;
+  }
+
   @media (max-width: 768px) {
     .about-values {
+      grid-template-columns: 1fr;
+    }
+
+    .valeurs-grid {
       grid-template-columns: 1fr;
     }
   }

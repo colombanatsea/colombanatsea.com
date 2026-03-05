@@ -149,6 +149,16 @@ h4 { font-size: clamp(1rem, 2vw, 1.25rem); }
 .text-vert { color: var(--vert); }
 .text-muted { color: var(--gris-400); }
 
+/* Colored dot at end of h2 titles — brand signature */
+h2::after {
+  content: '.';
+  color: var(--bleu);
+}
+
+.section-dark h2::after {
+  color: var(--vert);
+}
+
 /* ── Buttons ── */
 .btn {
   display: inline-flex;
@@ -202,17 +212,23 @@ h4 { font-size: clamp(1rem, 2vw, 1.25rem); }
   animation: fade-up var(--duration-slow) var(--ease-out) both;
 }
 
-/* Stagger children */
+/* Stagger children — triggered by IntersectionObserver */
 .stagger > * {
   opacity: 0;
-  animation: fade-up var(--duration-slow) var(--ease-out) both;
+  transform: translateY(24px);
+  transition: opacity var(--duration-slow) var(--ease-out), transform var(--duration-slow) var(--ease-out);
 }
 
-.stagger > *:nth-child(1) { animation-delay: 0ms; }
-.stagger > *:nth-child(2) { animation-delay: 100ms; }
-.stagger > *:nth-child(3) { animation-delay: 200ms; }
-.stagger > *:nth-child(4) { animation-delay: 300ms; }
-.stagger > *:nth-child(5) { animation-delay: 400ms; }
+.stagger.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger.is-visible > *:nth-child(1) { transition-delay: 0ms; }
+.stagger.is-visible > *:nth-child(2) { transition-delay: 100ms; }
+.stagger.is-visible > *:nth-child(3) { transition-delay: 200ms; }
+.stagger.is-visible > *:nth-child(4) { transition-delay: 300ms; }
+.stagger.is-visible > *:nth-child(5) { transition-delay: 400ms; }
 
 /* ── Selection ── */
 ::selection {

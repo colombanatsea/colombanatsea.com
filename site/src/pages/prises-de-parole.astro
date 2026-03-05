@@ -2,15 +2,15 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const conferences = [
-  { date: '03/02/2026', event: 'Euromaritime 2026', sujet: 'Avenir du modele economique des compagnies de service public maritime' },
-  { date: '18/02/2026', event: 'Academie de Marine', sujet: 'Potentiel strategique du maritime de proximite' },
-  { date: '14/10/2025', event: 'Conference internationale Propeller Club', sujet: 'Introduction to digitalization + Introduction to decarbonation (2 keynotes)' },
-  { date: '30/09/2025', event: 'Emission Shipping Conference (NABU + Sciences Po)', sujet: 'Participation' },
-  { date: '13/05/2025', event: 'Conference Race for Water', sujet: 'La propulsion velique : un vent nouveau pour decarboner le transport maritime mondial' },
-  { date: '16/05/2025', event: 'AG Federation Nationale du Merite Maritime', sujet: 'Avenir du maritime' },
-  { date: '31/01/2024', event: 'Euromaritime 24', sujet: 'Comment relever les defis des exigences IMO de 2030 et 2050 ?' },
-  { date: '24/05/2024', event: 'Universite de Rennes 1', sujet: 'Decarbonation du maritime' },
-  { date: '22/06/2023', event: 'Webinaire Digital Ship', sujet: 'Using Electronic Logbooks to Improve Efficiency' },
+  { date: '03/02/2026', event: 'Euromaritime 2026', sujet: 'Avenir du modele economique des compagnies de service public maritime', url: null },
+  { date: '18/02/2026', event: 'Academie de Marine', sujet: 'Potentiel strategique du maritime de proximite', url: null },
+  { date: '14/10/2025', event: 'Conference internationale Propeller Club', sujet: 'Introduction to digitalization + Introduction to decarbonation (2 keynotes)', url: null },
+  { date: '30/09/2025', event: 'Emission Shipping Conference (NABU + Sciences Po)', sujet: 'Participation', url: null },
+  { date: '13/05/2025', event: 'Conference Race for Water', sujet: 'La propulsion velique : un vent nouveau pour decarboner le transport maritime mondial', url: null },
+  { date: '16/05/2025', event: 'AG Federation Nationale du Merite Maritime', sujet: 'Avenir du maritime', url: null },
+  { date: '31/01/2024', event: 'Euromaritime 24', sujet: 'Comment relever les defis des exigences IMO de 2030 et 2050 ?', url: 'https://www.euromaritime.fr/fr/comment-relever-les-defis-des-exigences-imo-de-2030-et-2050/' },
+  { date: '24/05/2024', event: 'Universite de Rennes 1', sujet: 'Decarbonation du maritime', url: 'https://jeunemarine.fr/2024/06/conference-decarbonation-du-maritime-24-mai-2024-a-luniversite-de-rennes-1/' },
+  { date: '22/06/2023', event: 'Webinaire Digital Ship', sujet: 'Using Electronic Logbooks to Improve Efficiency', url: 'https://opsealog.com/using-electronic-logbooks-to-improve-efficiency/' },
 ];
 
 const podcasts = [
@@ -37,7 +37,7 @@ const podcasts = [
           <article class="talk">
             <span class="talk__date mono">{c.date}</span>
             <div class="talk__content">
-              <h3>{c.event}</h3>
+              <h3>{c.url ? <a href={c.url} target="_blank" rel="noopener">{c.event} &#8599;</a> : c.event}</h3>
               <p>{c.sujet}</p>
             </div>
           </article>
