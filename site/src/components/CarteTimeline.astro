@@ -17,9 +17,10 @@
 
     <div class="carte-phase-dots" id="carte-phases">
       <div class="carte-phase active" data-phase="enfance"><span class="carte-phase-dot"></span><span class="carte-phase-label">Enfance</span></div>
+      <div class="carte-phase" data-phase="formation"><span class="carte-phase-dot"></span><span class="carte-phase-label">Formation</span></div>
       <div class="carte-phase" data-phase="navigation"><span class="carte-phase-dot"></span><span class="carte-phase-label">Navigation</span></div>
-      <div class="carte-phase" data-phase="fondateur"><span class="carte-phase-dot"></span><span class="carte-phase-label">Fondateur</span></div>
-      <div class="carte-phase" data-phase="choix"><span class="carte-phase-dot"></span><span class="carte-phase-label">Choix</span></div>
+      <div class="carte-phase" data-phase="fondateur"><span class="carte-phase-dot"></span><span class="carte-phase-label">Moment fondateur</span></div>
+      <div class="carte-phase" data-phase="choix"><span class="carte-phase-dot"></span><span class="carte-phase-label">Choix décisif</span></div>
       <div class="carte-phase" data-phase="reseau"><span class="carte-phase-dot"></span><span class="carte-phase-label">Réseau</span></div>
     </div>
 
@@ -31,6 +32,22 @@
       <div class="carte-legend-item"><div class="carte-legend-line" style="background:#00bf63;"></div>Enviro</div>
       <div class="carte-legend-item"><div class="carte-legend-line" style="background:#b32a55;"></div>Socio</div>
     </div>
+
+    <!-- Compass rose -->
+    <svg class="carte-compass" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="48" stroke="rgba(232,220,200,0.3)" stroke-width="0.5"/>
+      <circle cx="50" cy="50" r="35" stroke="rgba(232,220,200,0.15)" stroke-width="0.5"/>
+      <path d="M50 5 L53 45 L50 40 L47 45 Z" fill="rgba(232,220,200,0.4)"/>
+      <path d="M50 95 L53 55 L50 60 L47 55 Z" fill="rgba(232,220,200,0.15)"/>
+      <path d="M5 50 L45 47 L40 50 L45 53 Z" fill="rgba(232,220,200,0.15)"/>
+      <path d="M95 50 L55 47 L60 50 L55 53 Z" fill="rgba(232,220,200,0.15)"/>
+      <text x="50" y="3" text-anchor="middle" font-size="5" fill="rgba(232,220,200,0.5)" font-family="Poppins">N</text>
+      <text x="50" y="100" text-anchor="middle" font-size="5" fill="rgba(232,220,200,0.3)" font-family="Poppins">S</text>
+      <text x="1" y="52" font-size="5" fill="rgba(232,220,200,0.3)" font-family="Poppins">O</text>
+      <text x="95" y="52" font-size="5" fill="rgba(232,220,200,0.3)" font-family="Poppins">E</text>
+    </svg>
+
+    <div class="carte-scroll-hint" id="carte-scroll-hint">&darr; Scrollez pour naviguer &darr;</div>
 
     <div class="carte-progress-bar">
       <div class="carte-progress-fill" id="carte-progress-fill"></div>
@@ -164,6 +181,37 @@
 
   .carte-legend-line { width: 16px; height: 2px; border-radius: 1px; }
 
+  .carte-compass {
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    opacity: 0.4;
+  }
+
+  .carte-scroll-hint {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-family: var(--font-heading);
+    font-size: 11px;
+    color: rgba(232,220,200,0.3);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: carte-pulse 2s ease-in-out infinite;
+    transition: opacity 0.5s;
+    pointer-events: none;
+  }
+
+  @keyframes carte-pulse {
+    0%, 100% { opacity: 0.3; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 0.6; transform: translateX(-50%) translateY(5px); }
+  }
+
   .carte-progress-bar {
     position: absolute;
     bottom: 16px;
@@ -204,6 +252,19 @@
   .carte-tooltip-date { font-size: 11px; color: rgba(232,220,200,0.5); margin: 2px 0 6px; }
   .carte-tooltip-desc { font-size: 11px; line-height: 1.5; color: rgba(232,220,200,0.7); }
 
+  .carte-badge {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .carte-badge-founder { background: rgba(0,191,99,0.2); border: 1px solid rgba(0,191,99,0.3); color: #4dff99; }
+  .carte-badge-decisive { background: rgba(255,107,107,0.2); border: 1px solid rgba(255,107,107,0.3); color: #ff6b6b; }
+
   @media (max-width: 768px) {
     .carte-phase-dots { gap: 5px; }
     .carte-phase-label { font-size: 8px; }
@@ -231,17 +292,32 @@
 
   const annecyHub = { lon:6.13, lat:45.90 };
   const reseauThreads = [
-    { color:COLORS.techno, dest:{lon:5.37,lat:43.30}, label:'Opsealog', role:'Innovation' },
-    { color:COLORS.enviro, dest:{lon:0.10,lat:49.49}, label:'ENSM', role:'Enseignant DD' },
-    { color:COLORS.socio, dest:{lon:-1.55,lat:47.22}, label:'GASPE', role:'DG' },
-    { color:COLORS.socio, dest:{lon:2.35,lat:48.86}, label:'HYDROS / Presse', role:'Auteur' },
+    { color:COLORS.techno, dest:{lon:5.37,lat:43.30}, label:'Opsealog', role:'Strategie > PM > Innovation', axis:'Technologique' },
+    { color:COLORS.techno, dest:{lon:6.13,lat:45.90}, label:'VAIATA Dynamics', role:'Co-fondateur', axis:'Technologique', isLocal:true },
+    { color:COLORS.enviro, dest:{lon:0.10,lat:49.49}, label:'ENSM Le Havre', role:'Enseignant Ecologie & DD', axis:'Environnementale' },
+    { color:'#00bf63', dest:{lon:0.10,lat:49.49}, label:'Fondation ENSM', role:'President', axis:'Enviro + Socio' },
+    { color:COLORS.socio, dest:{lon:-1.55,lat:47.22}, label:'GASPE', role:'Delegue General', axis:'Socioculturelle' },
+    { color:COLORS.socio, dest:{lon:2.35,lat:48.86}, label:'HYDROS Alumni', role:'CA', axis:'Socioculturelle' },
+    { color:COLORS.socio, dest:{lon:2.35,lat:48.86}, label:'Jeune Marine', role:'Auteur', axis:'Socioculturelle' },
+    { color:COLORS.socio, dest:{lon:2.35,lat:48.86}, label:'Marine & Oceans', role:'Auteur', axis:'Socioculturelle' },
+    { color:COLORS.socio, dest:{lon:6.13,lat:45.90}, label:'COESPC', role:'Benevole', axis:'Socioculturelle', isLocal:true },
   ];
 
   const coastlines = [
+    // Western Europe / Mediterranean
     [[-10,36],[-9,38],[-9,40],[-8,42],[-4,43],[-2,43.5],[0,43],[3,43],[5,43.5],[7,43.7],[9,44],[11,44],[13,44],[14,42],[15,41],[16,40],[18,40],[20,39],[23,38],[26,39],[28,41],[30,41],[32,36],[35,33],[30,31],[25,31],[10,35],[0,35],[-6,35],[-10,36]],
+    // British Isles
     [[-6,50],[-5,51],[-4,52],[-4,54],[-3,55],[-5,57],[-3,58],[-2,57],[0,53],[1,52],[0,51],[-1,50.5],[-4,50],[-6,50]],
+    // Ireland
     [[-10,51.5],[-10,53],[-9,54],[-7,55],[-6,54],[-6,52.5],[-8,51.5],[-10,51.5]],
-    [[-17,15],[-16,13],[-15,11],[-8,5],[0,5],[5,4],[10,4],[10,2],[9,-1],[9,-4],[12,-6],[12,-10],[13,-13],[12,-17],[15,-22],[17,-25],[18,-29],[20,-33],[25,-34],[28,-33],[30,-30],[32,-28],[33,-25],[35,-22],[40,-15],[42,-12],[44,-12],[48,-10],[50,-6],[50,0],[48,5],[44,10],[43,12],[42,15],[35,20],[33,30],[32,33],[35,33]]
+    // Africa west
+    [[-17,15],[-16,13],[-15,11],[-8,5],[0,5],[5,4],[10,4],[10,2],[9,-1],[9,-4],[12,-6],[12,-10],[13,-13],[12,-17],[15,-22],[17,-25],[18,-29],[20,-33],[25,-34],[28,-33],[30,-30],[32,-28],[33,-25],[35,-22],[40,-15],[42,-12],[44,-12],[48,-10],[50,-6],[50,0],[48,5],[44,10],[43,12],[42,15],[35,20],[33,30],[32,33],[35,33]],
+    // Madagascar
+    [[44,-13],[49,-16],[50,-22],[47,-25],[44,-23],[43,-18],[44,-13]],
+    // India simplified
+    [[68,23],[72,18],[77,8],[80,10],[83,15],[87,22],[90,22],[90,20],[88,15],[82,8],[78,8],[75,12],[72,20],[68,23]],
+    // China coast simplified
+    [[105,22],[108,21],[110,20],[115,22],[118,24],[121,28],[122,30],[121,31],[119,34],[118,36],[120,38],[122,40],[125,40]]
   ];
 
   const scrollWrap = document.getElementById('carte-scroll');
@@ -325,19 +401,28 @@
       const t = reseauThreads[i], tp = Math.min(1, prog * reseauThreads.length - i);
       if (tp <= 0) continue;
       const d = project(t.dest.lon, t.dest.lat);
-      const cpX = (hub.x+d.x)/2, cpY = (hub.y+d.y)/2 - 20;
-      ctx.beginPath(); ctx.strokeStyle = t.color; ctx.lineWidth = 1.5; ctx.globalAlpha = 0.5*tp; ctx.setLineDash([5,3]);
-      const steps = 40, max = Math.floor(steps*tp);
-      for (let s = 0; s <= max; s++) { const u=s/steps; const x=(1-u)*(1-u)*hub.x+2*(1-u)*u*cpX+u*u*d.x; const y=(1-u)*(1-u)*hub.y+2*(1-u)*u*cpY+u*u*d.y; s===0?ctx.moveTo(x,y):ctx.lineTo(x,y); }
-      ctx.stroke(); ctx.setLineDash([]); ctx.globalAlpha = 1;
+      const isLocal = t.isLocal;
 
-      const pt = ((time*0.3+i*0.7)%2)/2;
-      if (pt<=tp) { const px=(1-pt)*(1-pt)*hub.x+2*(1-pt)*pt*cpX+pt*pt*d.x, py=(1-pt)*(1-pt)*hub.y+2*(1-pt)*pt*cpY+pt*pt*d.y; ctx.fillStyle=t.color; ctx.globalAlpha=0.7; ctx.beginPath(); ctx.arc(px,py,2,0,Math.PI*2); ctx.fill(); ctx.globalAlpha=1; }
+      if (!isLocal) {
+        const cpX = (hub.x+d.x)/2, cpY = (hub.y+d.y)/2 - 20;
+        ctx.beginPath(); ctx.strokeStyle = t.color; ctx.lineWidth = 1.5; ctx.globalAlpha = 0.5*tp; ctx.setLineDash([5,3]);
+        const steps = 40, max = Math.floor(steps*tp);
+        for (let s = 0; s <= max; s++) { const u=s/steps; const x=(1-u)*(1-u)*hub.x+2*(1-u)*u*cpX+u*u*d.x; const y=(1-u)*(1-u)*hub.y+2*(1-u)*u*cpY+u*u*d.y; s===0?ctx.moveTo(x,y):ctx.lineTo(x,y); }
+        ctx.stroke(); ctx.setLineDash([]); ctx.globalAlpha = 1;
+
+        const pt = ((time*0.3+i*0.7)%2)/2;
+        if (pt<=tp) { const px=(1-pt)*(1-pt)*hub.x+2*(1-pt)*pt*cpX+pt*pt*d.x, py=(1-pt)*(1-pt)*hub.y+2*(1-pt)*pt*cpY+pt*pt*d.y; ctx.fillStyle=t.color; ctx.globalAlpha=0.7; ctx.beginPath(); ctx.arc(px,py,2,0,Math.PI*2); ctx.fill(); ctx.globalAlpha=1; }
+      }
 
       if (tp > 0.5) {
         ctx.globalAlpha = (tp-0.5)*2;
-        ctx.fillStyle = t.color; ctx.beginPath(); ctx.arc(d.x,d.y,5,0,Math.PI*2); ctx.fill();
-        ctx.font = '600 11px Poppins,sans-serif'; ctx.textAlign = 'left'; ctx.fillText(t.label, d.x+10, d.y+4);
+        const dotX = d.x + (isLocal ? (i * 4 - 2) : 0);
+        const dotY = d.y + (isLocal ? 15 + i * 12 : 0);
+        ctx.fillStyle = t.color; ctx.beginPath(); ctx.arc(dotX, dotY, 4, 0, Math.PI*2); ctx.fill();
+        const labelX = dotX + (isLocal ? 8 : 10);
+        const labelY = dotY + (isLocal ? 4 : 4);
+        ctx.font = '600 10px Poppins,sans-serif'; ctx.textAlign = 'left'; ctx.fillText(t.label, labelX, labelY);
+        ctx.font = '9px "Source Serif 4",serif'; ctx.fillStyle = 'rgba(232,220,200,0.4)'; ctx.fillText(t.role, labelX, labelY + 13);
         ctx.globalAlpha = 1;
       }
     }
@@ -387,13 +472,18 @@
     drawSillage(Math.min(1, progress/0.6));
     drawReseau(progress > 0.6 ? (progress-0.6)/0.4 : 0, time);
 
-    // Phase indicator
+    // Phase indicator (6 phases like prototype)
     let phase = 'enfance';
-    if (progress > 0.08) phase = 'navigation';
+    if (progress > 0.08) phase = 'formation';
+    if (progress > 0.15) phase = 'navigation';
     if (progress > 0.35) phase = 'fondateur';
     if (progress > 0.55) phase = 'choix';
     if (progress > 0.65) phase = 'reseau';
     document.querySelectorAll('#carte-phases .carte-phase').forEach(el => el.classList.toggle('active', el.dataset.phase === phase));
+
+    // Hide scroll hint after scrolling
+    var scrollHint = document.getElementById('carte-scroll-hint');
+    if (scrollHint) scrollHint.style.opacity = progress < 0.05 ? '1' : '0';
 
     let year;
     if (progress < 0.08) year = Math.floor(1991 + progress/0.08*19);
@@ -414,8 +504,28 @@
         tooltip.style.left = (p.x+16)+'px'; tooltip.style.top = (p.y-10)+'px';
         document.getElementById('carte-tooltip-name').textContent = wp.name;
         document.getElementById('carte-tooltip-date').textContent = wp.year;
-        document.getElementById('carte-tooltip-desc').textContent = wp.detail;
+        var descHtml = wp.detail;
+        if (wp.isFounder) descHtml += '<div class="carte-badge carte-badge-founder">Moment Fondateur</div>';
+        if (wp.isDecisive) descHtml += '<div class="carte-badge carte-badge-decisive">Choix Decisif</div>';
+        document.getElementById('carte-tooltip-desc').innerHTML = descHtml;
         found = true; break;
+      }
+    }
+    // Check reseau threads
+    if (!found && progress > 0.6) {
+      const rp = (progress - 0.6) / 0.4;
+      const visThreads = Math.ceil(rp * reseauThreads.length);
+      for (let i = 0; i < visThreads; i++) {
+        const t = reseauThreads[i];
+        const p = project(t.dest.lon, t.dest.lat);
+        if (Math.hypot(mousePos.x-p.x, mousePos.y-p.y) < 18) {
+          tooltip.classList.add('visible');
+          tooltip.style.left = (p.x+16)+'px'; tooltip.style.top = (p.y-10)+'px';
+          document.getElementById('carte-tooltip-name').textContent = t.label;
+          document.getElementById('carte-tooltip-date').textContent = t.axis || '';
+          document.getElementById('carte-tooltip-desc').textContent = t.role;
+          found = true; break;
+        }
       }
     }
     if (!found) tooltip.classList.remove('visible');
