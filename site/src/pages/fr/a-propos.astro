@@ -10,10 +10,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <h1>Le maritime dans le sang<br/>depuis <span class="text-bleu">1991</span></h1>
       <p class="subtitle">D'un sillage unique de marin a un reseau d'engagements convergents pour transformer le maritime.</p>
     </div>
-    <div class="scroll-hint">
-      <span class="mono" style="color: var(--gris-400); font-size: 0.65rem;">Scroll</span>
-      <div class="scroll-hint__line"></div>
-    </div>
   </section>
 
   <!-- Carte marine parcours — scroll-driven, parent controls iframe progress -->
@@ -170,30 +166,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: var(--gris-400);
   }
 
-  /* Scroll indicator */
-  .scroll-hint {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .scroll-hint__line {
-    width: 1px;
-    height: 48px;
-    background: linear-gradient(to bottom, var(--gris-400), transparent);
-    animation: scroll-pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes scroll-pulse {
-    0%, 100% { opacity: 0.3; transform: scaleY(1); }
-    50% { opacity: 1; transform: scaleY(1.2); }
-  }
-
   .carte-section {
     position: relative;
     height: 800vh;
@@ -204,7 +176,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     position: sticky;
     top: 0;
     width: 100%;
-    height: 85vh;
+    height: 100vh;
   }
 
   .carte-iframe {
