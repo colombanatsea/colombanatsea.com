@@ -1,0 +1,565 @@
+---
+/**
+ * Globe 3D interactif — ZEE, câbles sous-marins, routes maritimes
+ * Adapté depuis prototypes/proto1-globe/index-satellite-clean.html
+ */
+---
+
+<div class="globe-wrapper">
+  <div id="globe-container">
+    <div id="total-counter">
+      <div class="label">Surface totale ZEE</div>
+      <div class="value">11 691 000</div>
+      <div class="unit">km&sup2;</div>
+    </div>
+
+    <div id="legend">
+      <div class="legend-item" data-layer="zee">
+        <div class="swatch zee"></div>
+        <span class="legend-label">Zone &Eacute;conomique Exclusive</span>
+      </div>
+      <div class="legend-item" data-layer="cables">
+        <div class="swatch cables"></div>
+        <span class="legend-label">C&acirc;bles sous-marins</span>
+      </div>
+      <div class="legend-item" data-layer="traffic">
+        <div class="swatch traffic"></div>
+        <span class="legend-label">Trafic maritime</span>
+      </div>
+    </div>
+
+    <div id="globe-tooltip">
+      <div class="zone-name"></div>
+      <div class="zone-area"></div>
+      <div class="zone-detail"></div>
+    </div>
+  </div>
+
+  <div id="globe-loading">
+    <div class="spinner"></div>
+    <div class="load-text">Chargement du globe...</div>
+  </div>
+</div>
+
+<style>
+  .globe-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  #globe-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: grab;
+  }
+
+  #globe-container:active { cursor: grabbing; }
+
+  #globe-container canvas { display: block; }
+
+  #total-counter {
+    position: absolute;
+    bottom: 24px;
+    right: 28px;
+    z-index: 10;
+    pointer-events: none;
+    text-align: right;
+  }
+
+  #total-counter .label {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  #total-counter .value {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    color: #00d4d4;
+    text-shadow: 0 0 30px rgba(0, 212, 212, 0.4);
+    line-height: 1.1;
+  }
+
+  #total-counter .unit {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: 2px;
+  }
+
+  #globe-tooltip {
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    background: rgba(10, 14, 30, 0.92);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 200, 200, 0.35);
+    border-radius: 10px;
+    padding: 14px 20px;
+    min-width: 180px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  }
+
+  #globe-tooltip.visible { opacity: 1; }
+
+  #globe-tooltip .zone-name {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  #globe-tooltip .zone-area {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #00d4d4;
+  }
+
+  #globe-tooltip .zone-detail {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: 4px;
+  }
+
+  #legend {
+    position: absolute;
+    bottom: 24px;
+    left: 28px;
+    z-index: 10;
+    pointer-events: auto;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.25s ease;
+  }
+
+  .legend-item:hover { opacity: 0.85; }
+  .legend-item.disabled { opacity: 0.35; }
+  .legend-item.disabled .legend-label { text-decoration: line-through; }
+
+  .swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  .swatch.zee { border: 1px solid rgba(0,200,200,0.5); background: rgba(0,180,180,0.35); }
+  .swatch.cables { border: 1px solid rgba(0,180,180,0.5); background: rgba(0,180,180,0.30); }
+  .swatch.traffic { border: 1px solid rgba(255,100,50,0.5); background: rgba(255,100,50,0.30); }
+
+  .legend-label {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.5);
+  }
+
+  #globe-loading {
+    position: absolute;
+    inset: 0;
+    z-index: 999;
+    background: radial-gradient(ellipse at center, #0d1220 0%, #080b14 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    transition: opacity 0.8s ease;
+    border-radius: inherit;
+  }
+
+  #globe-loading.fade-out { opacity: 0; pointer-events: none; }
+
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(0,212,212,0.15);
+    border-top-color: #00d4d4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  .load-text {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  @media (max-width: 768px) {
+    #total-counter { bottom: 16px; right: 16px; }
+    #legend { bottom: 16px; left: 16px; }
+  }
+</style>
+
+<script is:inline type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script is:inline type="module">
+  import * as THREE from 'three';
+  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+  const ZEE_ZONES = [
+    { name: 'Metropole', detail: 'Atlantique + Mediterranee', lat: 46, lng: -3, area: 350000 },
+    { name: 'Guyane', detail: 'Amerique du Sud', lat: 5, lng: -52, area: 130000 },
+    { name: 'Martinique', detail: 'Antilles', lat: 14.6, lng: -61, area: 50000 },
+    { name: 'Guadeloupe', detail: 'Antilles', lat: 16.2, lng: -61.5, area: 90000 },
+    { name: 'La Reunion', detail: 'Ocean Indien', lat: -21, lng: 55.5, area: 315000 },
+    { name: 'Mayotte', detail: 'Ocean Indien', lat: -12.8, lng: 45.2, area: 74000 },
+    { name: 'Nouvelle-Caledonie', detail: 'Ocean Pacifique', lat: -21, lng: 165, area: 1740000 },
+    { name: 'Polynesie francaise', detail: 'Ocean Pacifique', lat: -17, lng: -149, area: 4800000 },
+    { name: 'Wallis-et-Futuna', detail: 'Ocean Pacifique', lat: -13.3, lng: -176.2, area: 260000 },
+    { name: 'Kerguelen', detail: 'TAAF — Ocean Indien austral', lat: -49.5, lng: 69.5, area: 570000 },
+    { name: 'Crozet', detail: 'TAAF — Ocean Indien austral', lat: -46, lng: 51, area: 570000 },
+    { name: 'Saint-Pierre-et-Miquelon', detail: 'Atlantique Nord', lat: 46.8, lng: -56.2, area: 12000 },
+    { name: 'Saint-Martin / Saint-Barthelemy', detail: 'Antilles', lat: 18, lng: -63, area: 10000 },
+    { name: 'Clipperton', detail: 'Ocean Pacifique', lat: 10.3, lng: -109.2, area: 440000 },
+    { name: 'Amsterdam / Saint-Paul', detail: 'TAAF — Ocean Indien austral', lat: -37.8, lng: 77.5, area: 500000 },
+    { name: 'Iles Eparses', detail: 'Glorieuses, Juan de Nova, Europa, Bassas da India', lat: -15, lng: 43, area: 640000 }
+  ];
+
+  const SHIPPING_LANES = [
+    { name: 'Strait of Malacca', waypoints: [[1.2,103.8],[2.5,101.5],[4.0,99.5],[5.5,97.0],[6.5,95.0]] },
+    { name: 'Suez Canal corridor', waypoints: [[31.3,32.3],[30.0,32.6],[27.5,34.0],[24.0,36.5],[20.0,38.5],[15.0,42.0],[12.5,43.5],[12.0,45.0],[10.0,51.0],[8.0,55.0],[6.0,60.0]] },
+    { name: 'English Channel / North Sea', waypoints: [[48.5,-5.5],[49.5,-3.0],[50.0,-1.5],[50.8,0.5],[51.5,1.5],[52.5,3.0],[54.0,5.0],[56.0,6.0],[58.0,5.0]] },
+    { name: 'Panama Canal corridor', waypoints: [[9.0,-79.5],[9.3,-80.0],[9.5,-81.0],[10.0,-82.0],[10.5,-84.0],[10.0,-86.0],[9.0,-89.0]] },
+    { name: 'Strait of Hormuz', waypoints: [[25.0,56.5],[26.0,56.3],[26.5,56.5],[27.0,56.0],[26.5,55.0],[25.5,54.5],[24.5,54.0]] },
+    { name: 'Cape of Good Hope route', waypoints: [[-6.0,60.0],[-10.0,52.0],[-15.0,45.0],[-20.0,40.0],[-28.0,35.0],[-34.0,26.0],[-35.5,20.0],[-34.0,17.0],[-30.0,14.0],[-20.0,8.0],[-10.0,2.0],[0.0,-2.0],[5.0,-5.0]] },
+    { name: 'South China Sea lanes', waypoints: [[1.2,103.8],[4.0,107.0],[8.0,110.0],[12.0,113.0],[16.0,115.0],[20.0,117.0],[22.3,114.2]] },
+    { name: 'Mediterranean east-west', waypoints: [[36.0,-5.5],[36.5,-2.0],[37.0,1.0],[37.5,5.0],[37.0,10.0],[36.0,13.0],[35.5,16.0],[35.0,20.0],[35.0,24.0],[34.5,28.0],[33.0,30.0],[31.5,32.0]] },
+    { name: 'Atlantic crossing EU-NA', waypoints: [[40.5,-74.0],[40.0,-65.0],[42.0,-55.0],[45.0,-40.0],[48.0,-25.0],[49.0,-12.0],[49.5,-5.5]] },
+    { name: 'Japan - China lanes', waypoints: [[35.5,139.8],[34.0,135.0],[33.5,132.0],[33.0,129.0],[31.5,126.0],[30.0,123.0],[31.2,121.5]] }
+  ];
+
+  const GLOBE_RADIUS = 1.0;
+  const ZEE_HEIGHT = 1.003;
+  const ZONE_SEGMENTS = 64;
+  const EARTH_RADIUS_KM = 6371;
+
+  function areaToAngularRadius(areaKm2) {
+    return Math.sqrt(areaKm2 / Math.PI) / EARTH_RADIUS_KM;
+  }
+
+  const container = document.getElementById('globe-container');
+  const tooltip = document.getElementById('globe-tooltip');
+  const tooltipName = tooltip.querySelector('.zone-name');
+  const tooltipArea = tooltip.querySelector('.zone-area');
+  const tooltipDetail = tooltip.querySelector('.zone-detail');
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.01, 100);
+  camera.position.set(0, 0.4, 2.8);
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'high-performance' });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setClearColor(0x080b14, 1);
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  container.appendChild(renderer.domElement);
+
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.06;
+  controls.rotateSpeed = 0.5;
+  controls.enableZoom = false;
+  controls.enablePan = false;
+  controls.autoRotate = true;
+  controls.autoRotateSpeed = 0.08;
+
+  scene.add(new THREE.AmbientLight(0x666666, 1.5));
+  const dirLight = new THREE.DirectionalLight(0xffffff, 1.0);
+  dirLight.position.set(5, 3, 5);
+  scene.add(dirLight);
+  const backLight = new THREE.DirectionalLight(0x334455, 0.4);
+  backLight.position.set(-3, -2, -5);
+  scene.add(backLight);
+
+  // Globe
+  const textureLoader = new THREE.TextureLoader();
+  const globeGeo = new THREE.SphereGeometry(GLOBE_RADIUS, 96, 96);
+  const globeMat = new THREE.MeshPhongMaterial({ color: 0xffffff, shininess: 25, bumpScale: 0.015 });
+  const globe = new THREE.Mesh(globeGeo, globeMat);
+  scene.add(globe);
+
+  let loadedCount = 0;
+  function checkLoaded() {
+    loadedCount++;
+    if (loadedCount >= 2) {
+      const el = document.getElementById('globe-loading');
+      if (el) { el.classList.add('fade-out'); setTimeout(() => el.remove(), 900); }
+    }
+  }
+
+  textureLoader.load('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg', (t) => {
+    t.colorSpace = THREE.SRGBColorSpace;
+    globeMat.map = t;
+    globeMat.needsUpdate = true;
+    checkLoaded();
+  }, undefined, () => { globeMat.color.set(0x0f1d30); checkLoaded(); });
+
+  textureLoader.load('https://unpkg.com/three-globe/example/img/earth-topology.png', (t) => {
+    globeMat.bumpMap = t;
+    globeMat.needsUpdate = true;
+    checkLoaded();
+  }, undefined, () => checkLoaded());
+
+  // Atmosphere
+  const atmoVS = `varying vec3 vNormal; void main() { vNormal = normalize(normalMatrix * normal); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`;
+  const atmoFS = `varying vec3 vNormal; void main() { float i = pow(0.65 - dot(vNormal, vec3(0,0,1)), 3.0); gl_FragColor = vec4(0.15,0.55,0.7,1) * i * 0.7; }`;
+  scene.add(new THREE.Mesh(
+    new THREE.SphereGeometry(GLOBE_RADIUS * 1.12, 64, 64),
+    new THREE.ShaderMaterial({ vertexShader: atmoVS, fragmentShader: atmoFS, blending: THREE.AdditiveBlending, side: THREE.BackSide, transparent: true, depthWrite: false })
+  ));
+
+  // ZEE Zones
+  const zoneMeshes = [];
+  const zoneGroup = new THREE.Group();
+  scene.add(zoneGroup);
+
+  function latLonToVec3(lat, lon, r) {
+    const phi = (90 - lat) * Math.PI / 180;
+    const theta = -lon * Math.PI / 180;
+    return new THREE.Vector3(r * Math.sin(phi) * Math.cos(theta), r * Math.cos(phi), r * Math.sin(phi) * Math.sin(theta));
+  }
+
+  function createZoneDisc(zone) {
+    const angR = Math.min(areaToAngularRadius(zone.area), 0.35);
+    const cPhi = (90 - zone.lat) * Math.PI / 180;
+    const cTheta = -zone.lng * Math.PI / 180;
+    const verts = [];
+    const idxs = [];
+    const cx = ZEE_HEIGHT * Math.sin(cPhi) * Math.cos(cTheta);
+    const cy = ZEE_HEIGHT * Math.cos(cPhi);
+    const cz = ZEE_HEIGHT * Math.sin(cPhi) * Math.sin(cTheta);
+    verts.push(cx, cy, cz);
+
+    for (let i = 0; i <= ZONE_SEGMENTS; i++) {
+      const b = (i / ZONE_SEGMENTS) * Math.PI * 2;
+      const lat1 = zone.lat * Math.PI / 180, lon1 = zone.lng * Math.PI / 180;
+      const lat2 = Math.asin(Math.sin(lat1) * Math.cos(angR) + Math.cos(lat1) * Math.sin(angR) * Math.cos(b));
+      const lon2 = lon1 + Math.atan2(Math.sin(b) * Math.sin(angR) * Math.cos(lat1), Math.cos(angR) - Math.sin(lat1) * Math.sin(lat2));
+      const phi = Math.PI / 2 - lat2, theta = -lon2;
+      verts.push(ZEE_HEIGHT * Math.sin(phi) * Math.cos(theta), ZEE_HEIGHT * Math.cos(phi), ZEE_HEIGHT * Math.sin(phi) * Math.sin(theta));
+      if (i > 0) idxs.push(0, i, i + 1);
+    }
+
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
+    geo.setIndex(idxs);
+    geo.computeVertexNormals();
+
+    const mesh = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ color: 0x00b4b4, transparent: true, opacity: 0.22, side: THREE.DoubleSide, depthWrite: false }));
+    mesh.userData = { zone, isZEE: true };
+    mesh.renderOrder = 1;
+    zoneGroup.add(mesh);
+    zoneMeshes.push(mesh);
+
+    const bPts = [];
+    for (let i = 0; i <= ZONE_SEGMENTS; i++) {
+      const idx = (i + 1) * 3;
+      if (idx + 2 < verts.length) bPts.push(new THREE.Vector3(verts[idx] * 1.0005, verts[idx+1] * 1.0005, verts[idx+2] * 1.0005));
+    }
+    const border = new THREE.Line(new THREE.BufferGeometry().setFromPoints(bPts), new THREE.LineBasicMaterial({ color: 0x00e0e0, transparent: true, opacity: 0.55 }));
+    border.renderOrder = 2;
+    zoneGroup.add(border);
+
+    const dot = new THREE.Mesh(new THREE.SphereGeometry(0.006, 8, 8), new THREE.MeshBasicMaterial({ color: 0x00ffff, transparent: true, opacity: 0.7 }));
+    dot.position.set(cx * 1.005, cy * 1.005, cz * 1.005);
+    zoneGroup.add(dot);
+
+    return { mesh, borderLine: border, dot };
+  }
+
+  const zoneObjects = ZEE_ZONES.map(z => createZoneDisc(z));
+
+  // Starfield
+  const starPos = new Float32Array(2000 * 3);
+  for (let i = 0; i < 2000; i++) {
+    const r = 15 + Math.random() * 35;
+    const t = Math.random() * Math.PI * 2;
+    const p = Math.acos(2 * Math.random() - 1);
+    starPos[i*3] = r * Math.sin(p) * Math.cos(t);
+    starPos[i*3+1] = r * Math.sin(p) * Math.sin(t);
+    starPos[i*3+2] = r * Math.cos(p);
+  }
+  const starGeo = new THREE.BufferGeometry();
+  starGeo.setAttribute('position', new THREE.Float32BufferAttribute(starPos, 3));
+  scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xaabbdd, size: 0.04, transparent: true, opacity: 0.6, sizeAttenuation: true, depthWrite: false })));
+
+  // Cables
+  const cableGroup = new THREE.Group();
+  scene.add(cableGroup);
+  fetch('https://www.submarinecablemap.com/api/v3/cable/cable-geo.json')
+    .then(r => r.json())
+    .then(gj => {
+      if (!gj || !gj.features) return;
+      for (const f of gj.features) {
+        const g = f.geometry;
+        if (!g) continue;
+        const col = (f.properties && f.properties.color) ? new THREE.Color(f.properties.color) : new THREE.Color(0x00b4b4);
+        const sets = g.type === 'MultiLineString' ? g.coordinates : [g.coordinates];
+        for (const coords of sets) {
+          const pts = coords.map(c => latLonToVec3(c[1], c[0], GLOBE_RADIUS + 0.02));
+          if (pts.length < 2) continue;
+          const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: col, transparent: true, opacity: 0.3, depthWrite: false }));
+          line.renderOrder = 3;
+          cableGroup.add(line);
+        }
+      }
+    }).catch(() => {});
+
+  // Traffic
+  const trafficGroup = new THREE.Group();
+  scene.add(trafficGroup);
+  for (const lane of SHIPPING_LANES) {
+    const pts = [];
+    for (let w = 0; w < lane.waypoints.length - 1; w++) {
+      const [lat0, lon0] = lane.waypoints[w], [lat1, lon1] = lane.waypoints[w+1];
+      const steps = 12;
+      for (let s = 0; s <= (w < lane.waypoints.length - 2 ? steps - 1 : steps); s++) {
+        const t = s / steps;
+        pts.push(latLonToVec3(lat0 + (lat1-lat0)*t, lon0 + (lon1-lon0)*t, GLOBE_RADIUS + 0.012));
+      }
+    }
+    if (pts.length < 2) continue;
+    const curve = new THREE.CatmullRomCurve3(pts, false, 'centripetal', 0.5);
+    const tube = new THREE.Mesh(new THREE.TubeGeometry(curve, pts.length*2, 0.008, 6, false), new THREE.MeshBasicMaterial({ color: 0xff6432, transparent: true, opacity: 0.15, depthWrite: false, side: THREE.DoubleSide }));
+    tube.renderOrder = 4;
+    trafficGroup.add(tube);
+    const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: 0xff8040, transparent: true, opacity: 0.22, depthWrite: false }));
+    line.renderOrder = 5;
+    trafficGroup.add(line);
+  }
+
+  // Layer toggles
+  const layerVis = { zee: true, cables: true, traffic: true };
+  document.querySelectorAll('#legend .legend-item[data-layer]').forEach(item => {
+    item.addEventListener('click', () => {
+      const l = item.dataset.layer;
+      layerVis[l] = !layerVis[l];
+      item.classList.toggle('disabled', !layerVis[l]);
+      if (l === 'zee') zoneGroup.visible = layerVis.zee;
+      else if (l === 'cables') cableGroup.visible = layerVis.cables;
+      else if (l === 'traffic') trafficGroup.visible = layerVis.traffic;
+    });
+  });
+
+  // Raycasting
+  const raycaster = new THREE.Raycaster();
+  const mouse = new THREE.Vector2(-999, -999);
+  let hoveredZone = null;
+  let isInteracting = false;
+
+  container.addEventListener('pointermove', (e) => {
+    const rect = container.getBoundingClientRect();
+    mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+    mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+    tooltip.style.left = (e.clientX + 18) + 'px';
+    tooltip.style.top = (e.clientY - 10) + 'px';
+  });
+
+  container.addEventListener('pointerdown', () => { isInteracting = true; controls.autoRotate = false; });
+  container.addEventListener('pointerup', () => {
+    isInteracting = false;
+    clearTimeout(window._globeResumeTimer);
+    window._globeResumeTimer = setTimeout(() => { if (!isInteracting) controls.autoRotate = true; }, 3000);
+  });
+
+  function formatArea(km2) {
+    return km2 >= 1000000 ? (km2/1000000).toFixed(1).replace('.', ',') + ' M km\u00B2' : km2.toLocaleString('fr-FR') + ' km\u00B2';
+  }
+
+  function highlightZone(zone) {
+    for (const o of zoneObjects) {
+      if (o.mesh.userData.zone === zone) {
+        o.mesh.material.opacity = 0.45; o.mesh.material.color.set(0x00e8e8);
+        o.borderLine.material.opacity = 0.9; o.borderLine.material.color.set(0x00ffff);
+        o.dot.material.opacity = 1; o.dot.scale.set(1.5,1.5,1.5);
+        break;
+      }
+    }
+  }
+
+  function resetZone(zone) {
+    for (const o of zoneObjects) {
+      if (o.mesh.userData.zone === zone) {
+        o.mesh.material.opacity = 0.22; o.mesh.material.color.set(0x00b4b4);
+        o.borderLine.material.opacity = 0.55; o.borderLine.material.color.set(0x00e0e0);
+        o.dot.material.opacity = 0.7; o.dot.scale.set(1,1,1);
+        break;
+      }
+    }
+  }
+
+  let fc = 0;
+  function animate() {
+    requestAnimationFrame(animate);
+    fc++;
+    controls.update();
+
+    if (fc % 2 === 0) {
+      const pulse = 0.18 + Math.sin(fc * 0.015) * 0.04;
+      for (const o of zoneObjects) {
+        if (o.mesh.userData.zone !== hoveredZone) o.mesh.material.opacity = pulse;
+      }
+    }
+
+    raycaster.setFromCamera(mouse, camera);
+    const hits = raycaster.intersectObjects(zoneMeshes);
+    if (hits.length > 0) {
+      const z = hits[0].object.userData.zone;
+      if (hoveredZone !== z) { if (hoveredZone) resetZone(hoveredZone); hoveredZone = z; highlightZone(z); }
+      tooltipName.textContent = z.name;
+      tooltipArea.textContent = formatArea(z.area);
+      tooltipDetail.textContent = z.detail;
+      tooltip.classList.add('visible');
+      container.style.cursor = 'pointer';
+    } else {
+      if (hoveredZone) { resetZone(hoveredZone); hoveredZone = null; }
+      tooltip.classList.remove('visible');
+      container.style.cursor = isInteracting ? 'grabbing' : 'grab';
+    }
+
+    renderer.render(scene, camera);
+  }
+
+  const ro = new ResizeObserver(() => {
+    const w = container.clientWidth, h = container.clientHeight;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+  });
+  ro.observe(container);
+
+  animate();
+</script>
