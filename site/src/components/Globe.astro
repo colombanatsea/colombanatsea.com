@@ -554,6 +554,21 @@
     3: { color: 0xff6432, opacity: 0.32 }
   };
 
+  // Great-circle interpolation: fill gaps between distant consecutive points
+  // so lines follow the globe surface instead of cutting through the interior
+  function interpolateGreatCircle(lat1: number, lon1: number, lat2: number, lon2: number, r: number, maxGapDeg: number): THREE.Vector3[] {
+    const dLat = lat2 - lat1, dLon = lon2 - lon1;
+    const gap = Math.sqrt(dLat * dLat + dLon * dLon);
+    if (gap <= maxGapDeg) return [latLonToVec3(lat2, lon2, r)];
+    const steps = Math.ceil(gap / maxGapDeg);
+    const pts: THREE.Vector3[] = [];
+    for (let s = 1; s <= steps; s++) {
+      const t = s / steps;
+      pts.push(latLonToVec3(lat1 + dLat * t, lon1 + dLon * t, r));
+    }
+    return pts;
+  }
+
   (SHIPPING_LANES as any).features.forEach((feat: any) => {
     const style = LANE_STYLES[feat.properties.t as number];
     if (!style) return;
@@ -563,7 +578,13 @@
       for (let i = 0; i < line.length; i++) {
         const lon = line[i][0], lat = line[i][1];
         if (isNaN(lat) || isNaN(lon)) continue;
-        points.push(latLonToVec3(lat, lon, LANE_RADIUS));
+        if (points.length === 0) {
+          points.push(latLonToVec3(lat, lon, LANE_RADIUS));
+        } else {
+          const prevLon = line[i - 1][0], prevLat = line[i - 1][1];
+          const interp = interpolateGreatCircle(prevLat, prevLon, lat, lon, LANE_RADIUS, 5);
+          points.push(...interp);
+        }
       }
       if (points.length >= 2) {
         trafficGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), mat));
