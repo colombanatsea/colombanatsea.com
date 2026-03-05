@@ -688,7 +688,7 @@ Auto-entreprise (micro-entreprise) — mentions légales en nom propre.
 - [ ] Stack technique finale (après consultation spec Palantiri)
 - [ ] Hébergement choisi
 - [x] Duo typographique final → **Poppins + Inter + JetBrains Mono** (validé 5 mars 2026)
-- [ ] Brand statement / slogan final (tester plusieurs versions)
+- [x] Brand statement / slogan final → **"Océanocratie — Une nation libre regarde la mer"** (validé 5 mars 2026)
 - [ ] Niveau de détail de la bibliographie
 - [x] Contenu page "Engagements" → fiches en place, liens vers vrais sites ajoutés (5 mars 2026)
 - [x] Visualisations interactives → Globe, Matrice, Carte sillage, Média-viz tous implémentés en Niveau 3 (4-5 mars 2026)
