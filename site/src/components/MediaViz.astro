@@ -41,6 +41,9 @@
     </div>
   </div>
 
+  <!-- Density bar -->
+  <div class="mv-density-bar" id="mv-density-bar"></div>
+
   <!-- Bottom timeline -->
   <div class="mv-timeline-bar">
     <div class="mv-year-labels" id="mv-year-labels"></div>
@@ -78,7 +81,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: #0d1117;
+    background: #0a0e1a;
     border-radius: 16px;
     user-select: none;
   }
@@ -200,6 +203,20 @@
     color: rgba(255,255,255,0.85);
     text-transform: uppercase;
     letter-spacing: 0.8px;
+  }
+
+  /* ── Density bar ── */
+  .mv-density-bar {
+    position: absolute;
+    bottom: 30px; left: 16px; right: 16px;
+    z-index: 100;
+    height: 4px;
+    display: flex;
+    gap: 1px;
+  }
+  .mv-density-bar :global(.mv-density-seg) {
+    flex: 1;
+    border-radius: 2px;
   }
 
   /* ── Bottom timeline ── */
@@ -580,10 +597,14 @@
             var tNorm = (pub.date.getTime() - timelineStart) / timeRange;
             var x = marginLeft + tNorm * usableW;
 
-            var yCenter = marginTop + usableH * 0.5;
-            var jitterRange = usableH * 0.42;
-            var yJitter = (rand() - 0.5) * 2 * jitterRange;
-            var y = yCenter + yJitter;
+            // Vertical position grouped by axis (like prototype)
+            var yBase;
+            if (pub.axis === 'techno') yBase = marginTop + usableH * 0.2;
+            else if (pub.axis === 'enviro') yBase = marginTop + usableH * 0.5;
+            else yBase = marginTop + usableH * 0.8;
+
+            var yJitter = (rand() - 0.5) * usableH * 0.25;
+            var y = yBase + yJitter;
 
             var size;
             if (pub.tier === 'media') {
@@ -708,6 +729,30 @@
     buildYearLabels();
 
     // =============================================
+    // DENSITY BAR (like prototype)
+    // =============================================
+    function buildDensityBar() {
+        var bar = document.getElementById('mv-density-bar');
+        if (!bar) return;
+        bar.innerHTML = '';
+        var years = YEAR_MAX + 1 - YEAR_MIN;
+        var segments = years * 4; // quarterly
+        for (var i = 0; i < segments; i++) {
+            var startDate = new Date(YEAR_MIN + Math.floor(i / 4), (i % 4) * 3, 1);
+            var endDate = new Date(YEAR_MIN + Math.floor((i + 1) / 4), ((i + 1) % 4) * 3, 1);
+            var count = publications.filter(function(p) {
+                return p.date >= startDate && p.date < endDate;
+            }).length;
+            var seg = document.createElement('div');
+            seg.className = 'mv-density-seg';
+            var intensity = Math.min(1, count / 8);
+            seg.style.background = 'rgba(255, 255, 255, ' + (intensity * 0.4) + ')';
+            bar.appendChild(seg);
+        }
+    }
+    buildDensityBar();
+
+    // =============================================
     // MOUSE ON CANVAS
     // =============================================
     canvas.addEventListener('mousemove', function(e) {
@@ -761,7 +806,7 @@
         requestAnimationFrame(render);
         var time = (Date.now() - startTime) / 1000;
 
-        ctx.fillStyle = '#0d1117';
+        ctx.fillStyle = '#0a0e1a';
         ctx.fillRect(0, 0, W, H);
 
         var marginTop = 58;
@@ -770,6 +815,17 @@
         var marginRight = 30;
         var usableH = H - marginTop - marginBottom;
         var usableW = W - marginLeft - marginRight;
+
+        // Background gradient zones for axes (like prototype)
+        if (activeAxis === 'all') {
+            var grad1 = ctx.createLinearGradient(0, marginTop, 0, marginTop + usableH);
+            grad1.addColorStop(0, 'rgba(42, 85, 179, 0.04)');
+            grad1.addColorStop(0.4, 'rgba(0, 191, 99, 0.03)');
+            grad1.addColorStop(0.8, 'rgba(179, 42, 85, 0.04)');
+            grad1.addColorStop(1, 'transparent');
+            ctx.fillStyle = grad1;
+            ctx.fillRect(0, 0, W, H);
+        }
 
         // Draw year grid lines
         var timelineStart = new Date(YEAR_MIN, 0, 1).getTime();
@@ -867,10 +923,24 @@
             var isMedia = ap.pub.tier === 'media';
             var isConf = ap.pub.tier === 'conference';
 
-            var scaleFactor = isHovered ? 1.4 : isHighlighted ? 1.15 : 1;
+            // Breathing animation (like prototype)
+            var breathe = Math.sin(time * 0.8 + i * 0.3) * 0.3;
+            var scaleFactor = (1 + breathe * 0.1) * (isHovered ? 1.4 : isHighlighted ? 1.15 : 1);
             var displaySize = ap.size * scaleFactor;
 
             ctx.globalAlpha = ap.opacity;
+
+            // Glow effect for larger dots or hovered (like prototype)
+            if ((ap.size > 4 || isHovered) && (isMedia || isConf || isHovered)) {
+                var glowRadius = displaySize * 3;
+                var glow = ctx.createRadialGradient(ap.x, ap.y, 0, ap.x, ap.y, glowRadius);
+                glow.addColorStop(0, color + '40');
+                glow.addColorStop(1, 'transparent');
+                ctx.fillStyle = glow;
+                ctx.beginPath();
+                ctx.arc(ap.x, ap.y, glowRadius, 0, Math.PI * 2);
+                ctx.fill();
+            }
 
             if (isMedia) {
                 var r = displaySize * 0.9;
@@ -918,6 +988,18 @@
         });
 
         if (!hoveredPub) canvas.style.cursor = 'default';
+
+        // Draw axis labels on left (like prototype)
+        ctx.globalAlpha = 0.3;
+        ctx.font = '600 9px Poppins, sans-serif';
+        ctx.textAlign = 'left';
+        ctx.fillStyle = COLORS.techno;
+        ctx.fillText('TECHNOLOGIQUE', 8, marginTop + usableH * 0.2);
+        ctx.fillStyle = COLORS.enviro;
+        ctx.fillText('ENVIRONNEMENTALE', 8, marginTop + usableH * 0.5);
+        ctx.fillStyle = COLORS.socio;
+        ctx.fillText('SOCIOCULTURELLE', 8, marginTop + usableH * 0.8);
+        ctx.globalAlpha = 1;
     }
 
     // =============================================
