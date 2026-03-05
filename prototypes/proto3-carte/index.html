@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proto 3 — Du Sillage au Réseau · Carte Marine Parcours</title>
+    <title>Proto 3 — Du Sillage au Rayonnement · Carte Marine Parcours</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -200,7 +200,7 @@
         <div class="parchment-overlay"></div>
 
         <div class="title-overlay">
-            <h1>Du sillage au réseau</h1>
+            <h1>Du sillage au rayonnement</h1>
             <div class="subtitle">La navigation de Colomban</div>
         </div>
 
@@ -219,6 +219,10 @@
             </div>
             <div class="phase-dot" id="phase-fondateur">
                 <span class="label">MOMENT FONDATEUR</span>
+                <div class="dot"></div>
+            </div>
+            <div class="phase-dot" id="phase-navigation2">
+                <span class="label">Navigation</span>
                 <div class="dot"></div>
             </div>
             <div class="phase-dot" id="phase-choix">
@@ -347,16 +351,16 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
 
         // Back to navigation
         { id: 11, year: 2014, label: 'Ungundja', lon: 12.3, lat: -8.8,
-          phase: 'navigation', detail: 'Angola. Opérations IMR.' },
+          phase: 'navigation2', detail: 'Angola. Opérations IMR.' },
 
         { id: 12, year: 2015, label: 'Evolution 807', lon: 121, lat: 31,
-          phase: 'navigation', detail: 'Chine. Suivi de construction neuve.' },
+          phase: 'navigation2', detail: 'Chine. Suivi de construction neuve.' },
 
         { id: 13, year: 2015, label: 'Explorer 509', lon: 12.3, lat: -8.8,
-          phase: 'navigation', detail: 'Angola.' },
+          phase: 'navigation2', detail: 'Angola.' },
 
         { id: 14, year: 2015, label: 'Evolution 801', lon: 14.5, lat: -22.9,
-          phase: 'navigation', detail: 'Namibie.' },
+          phase: 'navigation2', detail: 'Namibie.' },
 
         // Directly to Réunion
         { id: 15, year: 2017, label: 'Zourite', lon: 55.53, lat: -21.11,
@@ -1049,7 +1053,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     }
 
     function updatePhaseIndicator(progress) {
-        const phases = ['enfance', 'formation', 'navigation', 'fondateur', 'choix', 'entrepreneuriat', 'annecy'];
+        const phases = ['enfance', 'formation', 'navigation', 'fondateur', 'navigation2', 'choix', 'entrepreneuriat', 'annecy'];
         const currentPhase = getPhaseFromProgress(progress);
 
         phases.forEach(p => {
@@ -1063,6 +1067,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
             formation: 'Formation',
             navigation: 'Navigation',
             fondateur: 'MOMENT FONDATEUR',
+            navigation2: 'Navigation',
             choix: 'CHOIX DÉCISIF',
             entrepreneuriat: 'ENTREPRENEURIAT',
             annecy: 'RAYONNEMENT'

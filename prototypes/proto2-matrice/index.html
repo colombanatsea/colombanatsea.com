@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Proto 2 — Matrice Triple Transition Maritime</title>
+<link rel="preload" href="https://unpkg.com/three@0.152.0/build/three.module.js" as="script" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -173,6 +174,7 @@ canvas{display:block;position:fixed;top:0;left:0;z-index:1}
   <div class="legend-item"><div class="legend-dot" style="background:#2a55b3"></div>Technologique</div>
   <div class="legend-item"><div class="legend-dot" style="background:#00bf63"></div>Environnementale</div>
   <div class="legend-item"><div class="legend-dot" style="background:#b32a55"></div>Socioculturelle</div>
+  <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(135deg,#b32a55,#00bf63)"></div>Socio + Enviro</div>
 </div>
 
 <div id="label-container"></div>
@@ -197,6 +199,7 @@ const COLORS = {
   techno: 0x2a55b3,
   enviro: 0x00bf63,
   socio:  0xb32a55,
+  purple: 0x8b2fc6,
   teal:   0x00d4d4,
 };
 const AXIS_HEX = {
@@ -207,59 +210,91 @@ const AXIS_HEX = {
 
 // ─── DATA ───
 const engagements = [
-  { id:0,  name:'Opsealog',              role:'Co-fondateur, maritime data analytics',
+  { id:0,  name:'Opsealog',              role:'Conception initiale, maritime data analytics',
     axes:['Technologique','Environnementale'], size:1.1,
     pos:[3, 2.5, 1.5],
-    desc:'Plateforme de data analytics pour optimiser la performance et la consommation energetique des navires.' },
-  { id:1,  name:'Fondation ENSM',        role:'President, formation maritime',
-    axes:['Socioculturelle'], size:0.9,
+    desc:'Plateforme de data analytics pour optimiser la performance et la consommation \u00e9nerg\u00e9tique des navires.' },
+  { id:1,  name:'Fondation ENSM',        role:'Pr\u00e9sident du conseil, rayonnement de l\'ENSM',
+    axes:['Socioculturelle','Environnementale'], size:0.9,
     pos:[-2, -2.5, 2],
-    desc:'Presidence de la fondation de l\'Ecole Nationale Superieure Maritime, soutien a la formation des futurs officiers.' },
-  { id:2,  name:'ENSM',                  role:'Enseignant developpement durable',
+    desc:'Pr\u00e9sidence de la Fondation de l\'\u00c9cole Nationale Sup\u00e9rieure Maritime, qui forme les futurs officiers et ing\u00e9nieurs maritimes.' },
+  { id:2,  name:'ENSM',                  role:'Enseignant d\u00e9veloppement durable',
     axes:['Environnementale'], size:0.8,
     pos:[1, 3, 2.5],
-    desc:'Enseignement du developpement durable et de la transition ecologique au sein de l\'ENSM.' },
+    desc:'Enseignement du d\u00e9veloppement durable et de la transition \u00e9cologique au sein de l\'ENSM.' },
   { id:3,  name:'Propeller Club',        role:'Membre actif, networking maritime',
     axes:['Socioculturelle'], size:0.7,
     pos:[-3, -1, -2],
-    desc:'Reseau international de professionnels du secteur maritime et portuaire.' },
-  { id:4,  name:'HYDROS Alumni',         role:'Reseau alumni',
+    desc:'R\u00e9seau international de professionnels du secteur maritime et portuaire.' },
+  { id:4,  name:'HYDROS Alumni',         role:'Membre du bureau, R\u00e9seau Alumni',
     axes:['Socioculturelle'], size:0.65,
     pos:[-1.5, -3, 1],
-    desc:'Animation du reseau des anciens eleves de la filiere hydrographique.' },
-  { id:5,  name:'VAIATA Dynamics',       role:'Co-fondateur, propulsion velique',
+    desc:'Animation du r\u00e9seau des \u00e9l\u00e8ves et anciens \u00e9l\u00e8ves de l\'ENSM.' },
+  { id:5,  name:'VAIATA Dynamics',       role:'Cofondateur, Intelligence artificielle',
     axes:['Technologique'], size:1.0,
     pos:[4, -1, 1.5],
-    desc:'Startup developpant des solutions de propulsion velique pour la decarbonation du transport maritime.' },
-  { id:6,  name:'GASPE',                 role:'Delegue general, service public maritime',
+    desc:'D\u00e9veloppement de l\'IA au service des grandes causes du maritime (sauvegarde de la vie humaine en mer, intelligence sectorielle, cybers\u00e9curit\u00e9).' },
+  { id:6,  name:'GASPE',                 role:'D\u00e9l\u00e9gu\u00e9 g\u00e9n\u00e9ral, service public maritime',
     axes:['Socioculturelle'], size:0.85,
     pos:[-2.5, 1.5, -2.5],
-    desc:'Groupement des Administrations du Service Public en mer, promotion du service public maritime.' },
-  { id:7,  name:'Aperitifs de la Mer',   role:'Co-fondateur, evenementiel',
+    desc:'Groupement des Armateurs de Service Public Maritime et de Passages d\'Eau, d\u00e9fense du service public maritime.' },
+  { id:7,  name:'Ap\u00e9ritifs de la Mer',   role:'Ambassadeur, \u00e9v\u00e8nementiel',
     axes:['Socioculturelle'], size:0.75,
     pos:[-1, -1, -3.5],
-    desc:'Evenements de networking informels reunissant les acteurs de l\'economie maritime.' },
-  { id:8,  name:'Academie de Marine',    role:'Membre',
+    desc:'\u00c9v\u00e8nements de networking informels r\u00e9unissant les acteurs de l\'\u00e9conomie maritime.' },
+  { id:8,  name:'Acad\u00e9mie de Marine',    role:'Auditeur',
     axes:['Socioculturelle'], size:0.8,
     pos:[-4, 2, 0.5],
-    desc:'Institution seculaire de reflexion et de prospective sur les enjeux maritimes.' },
+    desc:'Institution s\u00e9culaire de r\u00e9flexion et de prospective sur les enjeux maritimes.' },
+  { id:9,  name:'Conf\u00e9rences',           role:'Intervenant, sensibilisation maritime',
+    axes:['Environnementale'], size:0.7,
+    pos:[2, 3.5, -1],
+    desc:'Interventions et conf\u00e9rences sur les transitions du monde maritime.' },
+  { id:10, name:'F\u00e9d\u00e9ration Nationale du M\u00e9rite Maritime', role:'Membre, reconnaissance maritime',
+    axes:['Socioculturelle'], size:0.75,
+    pos:[-3.5, -2.5, -1],
+    desc:'F\u00e9d\u00e9ration valorisant les m\u00e9rites et contributions au monde maritime.' },
+  { id:11, name:'Aventure entrepreneuriale', role:'Cofondateur, aventures entrepreneuriales',
+    axes:['Technologique'], size:0.55, ghosted:true,
+    pos:[1.5, -0.5, -2],
+    desc:'Cr\u00e9ation d\'entreprises dans le secteur maritime, de la sant\u00e9 et de l\'achat responsable.' },
+  { id:12, name:'Aventure entrepreneuriale', role:'Cofondateur, aventures entrepreneuriales',
+    axes:['Technologique'], size:0.55, ghosted:true,
+    pos:[-0.5, -2.5, -2.5],
+    desc:'Cr\u00e9ation d\'entreprises dans le secteur maritime, de la sant\u00e9 et de l\'achat responsable.' },
+  { id:13, name:'Aventure entrepreneuriale', role:'Cofondateur, aventures entrepreneuriales',
+    axes:['Technologique'], size:0.55, ghosted:true,
+    pos:[-1, -3.5, -3.5],
+    desc:'Cr\u00e9ation d\'entreprises dans le secteur maritime, de la sant\u00e9 et de l\'achat responsable.' },
 ];
 
-// Connections between related engagements
+// ─── CONNECTIONS ───
 const connections = [
-  [0,5],                 // tech: Opsealog-VAIATA
-  [0,2],                 // Opsealog-ENSM (enviro)
-  [1,2],[1,4],[1,6],     // ENSM cluster
-  [3,7],[3,6],           // socio networking
-  [4,1],                 // alumni-fondation
-  [6,8],                 // institutional: GASPE-Academie
-  [5,2],                 // tech-enviro: VAIATA-ENSM
+  [6, 8],   // GASPE <-> Académie de Marine
+  [9, 2],   // Conférences <-> ENSM
+  [9, 3],   // Conférences <-> Propeller Club
+  [9, 0],   // Conférences <-> Opsealog
+  [9, 5],   // Conférences <-> VAIATA
+  [7, 4],   // Apéritifs <-> HYDROS Alumni
+  [7, 2],   // Apéritifs <-> ENSM
+  [7, 0],   // Apéritifs <-> Opsealog
+  [5, 6],   // VAIATA <-> GASPE
+  [5, 8],   // VAIATA <-> Académie de Marine
+  [10, 4],  // Fédération <-> HYDROS Alumni
+  [10, 1],  // Fédération <-> Fondation ENSM
+  [10, 6],  // Fédération <-> GASPE
+  [10, 7],  // Fédération <-> Apéritifs
+  [11, 7],  // Aventure 1 <-> Apéritifs
+  [11, 0],  // Aventure 1 <-> Opsealog
+  [12, 4],  // Aventure 2 <-> HYDROS Alumni
+  [12, 7],  // Aventure 2 <-> Apéritifs
+  [13, 12], // Aventure 3 <-> Aventure 2
 ];
 
 // ─── RENDERER ───
-const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'high-performance' });
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 renderer.setClearColor(BG, 1);
 renderer.useLegacyLights = true;
 renderer.toneMapping = THREE.NoToneMapping;
@@ -294,43 +329,46 @@ function pauseAutoRotate() {
 controls.addEventListener('start', pauseAutoRotate);
 
 // ─── LIGHTS ───
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
-scene.add(ambientLight);
+scene.add(new THREE.AmbientLight(0xffffff, 0.4));
 
 const dirLight = new THREE.DirectionalLight(0xffffff, 0.6);
 dirLight.position.set(5, 5, 5);
 scene.add(dirLight);
 
 const pointLight = new THREE.PointLight(COLORS.teal, 0.3, 30);
-pointLight.position.set(0, 0, 0);
 scene.add(pointLight);
 
 // ─── AXIS PLANES ───
 function createAxisPlane(color, rotation) {
   const geo = new THREE.PlaneGeometry(14, 14);
   const mat = new THREE.MeshBasicMaterial({
-    color,
-    transparent: true,
-    opacity: 0.06,
-    side: THREE.DoubleSide,
-    depthWrite: false,
+    color, transparent: true, opacity: 0.06,
+    side: THREE.DoubleSide, depthWrite: false,
   });
   const mesh = new THREE.Mesh(geo, mat);
   mesh.rotation.set(...rotation);
   scene.add(mesh);
-  return mesh;
 }
-createAxisPlane(COLORS.techno, [0, 0, 0]);                    // XY plane
-createAxisPlane(COLORS.enviro, [Math.PI / 2, 0, 0]);          // XZ plane
-createAxisPlane(COLORS.socio,  [0, Math.PI / 2, 0]);          // YZ plane
+createAxisPlane(COLORS.techno, [0, 0, 0]);
+createAxisPlane(COLORS.enviro, [Math.PI / 2, 0, 0]);
+createAxisPlane(COLORS.socio,  [0, Math.PI / 2, 0]);
 
 // ─── HELPER: primary color for engagement ───
 function primaryColor(eng) {
-  if (eng.axes.includes('Technologique') && eng.axes.includes('Environnementale') && eng.axes.includes('Socioculturelle')) return COLORS.teal;
-  if (eng.axes.includes('Technologique') && eng.axes.includes('Environnementale')) return 0x1590a0;
-  if (eng.axes.includes('Technologique')) return COLORS.techno;
-  if (eng.axes.includes('Environnementale')) return COLORS.enviro;
+  const axes = eng.axes;
+  if (axes.includes('Socioculturelle') && axes.includes('Environnementale')) return COLORS.purple;
+  if (axes.includes('Technologique') && axes.includes('Environnementale')) return 0x1590a0;
+  if (axes.includes('Technologique')) return COLORS.techno;
+  if (axes.includes('Environnementale')) return COLORS.enviro;
   return COLORS.socio;
+}
+
+// ─── SHARED GEOMETRIES (perf) ───
+const sphereGeoCache = {};
+function getSphereGeo(radius, detail) {
+  const key = `${radius.toFixed(3)}_${detail}`;
+  if (!sphereGeoCache[key]) sphereGeoCache[key] = new THREE.SphereGeometry(radius, detail, detail);
+  return sphereGeoCache[key];
 }
 
 // ─── SPHERE CREATION ───
@@ -342,42 +380,35 @@ const sphereData = [];
 const labelEls = [];
 const labelContainer = document.getElementById('label-container');
 
-engagements.forEach((eng, i) => {
+engagements.forEach((eng) => {
   const radius = eng.size * 0.42;
   const color = primaryColor(eng);
+  const isGhosted = eng.ghosted === true;
+  const baseOpacity = isGhosted ? 0.10 : 0.35;
+  const coreOpacity = isGhosted ? 0.25 : 0.8;
 
   // Outer glass sphere
-  const geo = new THREE.SphereGeometry(radius, 32, 32);
+  const geo = getSphereGeo(radius, 24);
   const mat = new THREE.MeshPhongMaterial({
-    color,
-    transparent: true,
-    opacity: 0.35,
-    shininess: 120,
-    specular: 0x444444,
-    depthWrite: false,
+    color, transparent: true, opacity: baseOpacity,
+    shininess: 120, specular: 0x444444, depthWrite: false,
   });
   const mesh = new THREE.Mesh(geo, mat);
 
   // Inner solid core
-  const coreGeo = new THREE.SphereGeometry(radius * 0.45, 16, 16);
+  const coreGeo = getSphereGeo(radius * 0.45, 12);
   const coreMat = new THREE.MeshPhongMaterial({
-    color,
-    emissive: color,
-    emissiveIntensity: 0.25,
-    transparent: true,
-    opacity: 0.8,
+    color, emissive: color, emissiveIntensity: isGhosted ? 0.1 : 0.25,
+    transparent: true, opacity: coreOpacity,
   });
   const core = new THREE.Mesh(coreGeo, coreMat);
   mesh.add(core);
 
   // Glow ring
-  const ringGeo = new THREE.RingGeometry(radius * 1.1, radius * 1.35, 32);
+  const ringGeo = new THREE.RingGeometry(radius * 1.1, radius * 1.35, 24);
   const ringMat = new THREE.MeshBasicMaterial({
-    color,
-    transparent: true,
-    opacity: 0.0,
-    side: THREE.DoubleSide,
-    depthWrite: false,
+    color, transparent: true, opacity: 0.0,
+    side: THREE.DoubleSide, depthWrite: false,
   });
   const ring = new THREE.Mesh(ringGeo, ringMat);
   ring.lookAt(camera.position);
@@ -390,7 +421,7 @@ engagements.forEach((eng, i) => {
     (Math.random() - 0.5) * 40,
     (Math.random() - 0.5) * 40
   );
-  mesh.userData = { target, eng, radius, ring, core, originalOpacity: 0.35 };
+  mesh.userData = { target, eng, radius, ring, core, originalOpacity: baseOpacity };
 
   sphereGroup.add(mesh);
   sphereMeshes.push(mesh);
@@ -400,65 +431,29 @@ engagements.forEach((eng, i) => {
   const lbl = document.createElement('div');
   lbl.className = 'label';
   lbl.textContent = eng.name;
+  if (isGhosted) lbl.style.opacity = '0.35';
   labelContainer.appendChild(lbl);
   labelEls.push(lbl);
 });
 
-// ─── CONNECTIONS (rope-like CatmullRom curves) ───
-const connectionMeshes = [];
-
-connections.forEach(([a, b]) => {
-  const pA = new THREE.Vector3(...engagements[a].pos);
-  const pB = new THREE.Vector3(...engagements[b].pos);
-  const mid = new THREE.Vector3().lerpVectors(pA, pB, 0.5);
-  // Add organic offset to midpoint
-  mid.x += (Math.random() - 0.5) * 1.2;
-  mid.y += (Math.random() - 0.5) * 1.2;
-  mid.z += (Math.random() - 0.5) * 1.2;
-
-  const curve = new THREE.CatmullRomCurve3([pA, mid, pB]);
-  const points = curve.getPoints(40);
-  const geo = new THREE.BufferGeometry().setFromPoints(points);
+// ─── CONNECTION LINES ───
+const lineMeshes = [];
+connections.forEach(([idA, idB]) => {
+  const geo = new THREE.BufferGeometry();
+  const positions = new Float32Array(6);
+  geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  const isGhostedLink = (engagements[idA].ghosted || engagements[idB].ghosted);
   const mat = new THREE.LineBasicMaterial({
     color: 0xffffff,
     transparent: true,
-    opacity: 0.08,
+    opacity: isGhostedLink ? 0.06 : 0.12,
+    depthWrite: false,
   });
   const line = new THREE.Line(geo, mat);
-  line.userData = { a, b, curve };
-  scene.add(line);
-  connectionMeshes.push(line);
+  line.userData = { idA, idB };
+  sphereGroup.add(line);
+  lineMeshes.push(line);
 });
-
-// ─── PARTICLES ALONG CONNECTIONS ───
-const particleCount = connections.length * 3;
-const particleGeo = new THREE.BufferGeometry();
-const particlePositions = new Float32Array(particleCount * 3);
-const particleSizes = new Float32Array(particleCount);
-const particleMeta = []; // { curveIndex, t, speed }
-
-for (let i = 0; i < particleCount; i++) {
-  const ci = i % connections.length;
-  particleMeta.push({
-    curveIndex: ci,
-    t: Math.random(),
-    speed: 0.002 + Math.random() * 0.004,
-  });
-  particleSizes[i] = 2 + Math.random() * 2;
-}
-particleGeo.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
-particleGeo.setAttribute('size', new THREE.BufferAttribute(particleSizes, 1));
-
-const particleMat = new THREE.PointsMaterial({
-  color: COLORS.teal,
-  size: 0.06,
-  transparent: true,
-  opacity: 0.5,
-  sizeAttenuation: true,
-  depthWrite: false,
-});
-const particles = new THREE.Points(particleGeo, particleMat);
-scene.add(particles);
 
 // ─── BACKGROUND DUST PARTICLES ───
 const dustCount = 300;
@@ -471,12 +466,8 @@ for (let i = 0; i < dustCount; i++) {
 }
 dustGeo.setAttribute('position', new THREE.BufferAttribute(dustPos, 3));
 const dustMat = new THREE.PointsMaterial({
-  color: 0xffffff,
-  size: 0.03,
-  transparent: true,
-  opacity: 0.2,
-  sizeAttenuation: true,
-  depthWrite: false,
+  color: 0xffffff, size: 0.03, transparent: true,
+  opacity: 0.2, sizeAttenuation: true, depthWrite: false,
 });
 scene.add(new THREE.Points(dustGeo, dustMat));
 
@@ -524,11 +515,8 @@ function closePanel() {
   panel.classList.remove('open');
 }
 
-// Close panel on background click
-renderer.domElement.addEventListener('click', (e) => {
-  if (!hoveredSphere && panel.classList.contains('open')) {
-    closePanel();
-  }
+renderer.domElement.addEventListener('click', () => {
+  if (!hoveredSphere && panel.classList.contains('open')) closePanel();
 });
 
 // ─── RESIZE ───
@@ -542,12 +530,12 @@ window.addEventListener('resize', () => {
 let scrollRotation = 0;
 window.addEventListener('scroll', () => {
   scrollRotation = window.scrollY * 0.002;
-});
+}, { passive: true });
 
 // ─── INTRO ANIMATION STATE ───
 let introProgress = 0;
-const introDuration = 2.0; // seconds
-let startTime = performance.now();
+const introDuration = 2.0;
+const startTime = performance.now();
 let introComplete = false;
 
 // ─── ANIMATION LOOP ───
@@ -561,14 +549,13 @@ function animate() {
   // Intro fly-in
   if (!introComplete) {
     introProgress = Math.min((performance.now() - startTime) / (introDuration * 1000), 1);
-    const ease = 1 - Math.pow(1 - introProgress, 3); // easeOutCubic
+    const ease = 1 - Math.pow(1 - introProgress, 3);
     sphereMeshes.forEach(mesh => {
       mesh.position.lerpVectors(mesh.position, mesh.userData.target, ease * 0.08 + 0.02);
     });
     if (introProgress >= 1) {
       introComplete = true;
       sphereMeshes.forEach(mesh => mesh.position.copy(mesh.userData.target));
-      // Hide loader
       const loader = document.getElementById('loader');
       loader.style.opacity = '0';
       setTimeout(() => loader.style.display = 'none', 800);
@@ -579,29 +566,23 @@ function animate() {
   sphereMeshes.forEach((mesh, i) => {
     const breath = 1 + Math.sin(elapsed * 1.2 + i * 0.7) * 0.04;
     mesh.scale.setScalar(breath);
-    // Keep glow ring facing camera
     mesh.userData.ring.quaternion.copy(camera.quaternion);
   });
 
-  // Particle flow along connections
-  const posArr = particles.geometry.attributes.position.array;
-  for (let i = 0; i < particleCount; i++) {
-    const meta = particleMeta[i];
-    meta.t += meta.speed;
-    if (meta.t > 1) meta.t -= 1;
-    const curve = connectionMeshes[meta.curveIndex].userData.curve;
-    const pt = curve.getPointAt(meta.t);
-    posArr[i * 3]     = pt.x;
-    posArr[i * 3 + 1] = pt.y;
-    posArr[i * 3 + 2] = pt.z;
-  }
-  particles.geometry.attributes.position.needsUpdate = true;
+  // Update connection line positions
+  lineMeshes.forEach(line => {
+    const posA = sphereMeshes[line.userData.idA].position;
+    const posB = sphereMeshes[line.userData.idB].position;
+    const attr = line.geometry.attributes.position;
+    attr.array[0] = posA.x; attr.array[1] = posA.y; attr.array[2] = posA.z;
+    attr.array[3] = posB.x; attr.array[4] = posB.y; attr.array[5] = posB.z;
+    attr.needsUpdate = true;
+  });
 
   // Raycasting for hover
   raycaster.setFromCamera(pointer, camera);
   const intersects = raycaster.intersectObjects(sphereMeshes, false);
 
-  // Reset previous hover
   if (hoveredSphere) {
     const ud = hoveredSphere.userData;
     hoveredSphere.material.opacity = ud.originalOpacity;
@@ -615,23 +596,11 @@ function animate() {
   if (intersects.length > 0) {
     hoveredSphere = intersects[0].object;
     const ud = hoveredSphere.userData;
-    hoveredSphere.material.opacity = 0.6;
+    hoveredSphere.material.opacity = Math.min(ud.originalOpacity + 0.25, 0.6);
     ud.ring.material.opacity = 0.15;
-    // Tooltip
     tooltip.textContent = ud.eng.name;
     tooltip.classList.add('show');
     document.body.style.cursor = 'pointer';
-    // Highlight connected lines
-    connectionMeshes.forEach(line => {
-      const la = line.userData.a, lb = line.userData.b;
-      if (la === ud.eng.id || lb === ud.eng.id) {
-        line.material.opacity = 0.3;
-      } else {
-        line.material.opacity = 0.08;
-      }
-    });
-  } else {
-    connectionMeshes.forEach(line => { line.material.opacity = 0.08; });
   }
 
   // Update CSS labels
@@ -643,13 +612,12 @@ function animate() {
     if (v.z > 1) {
       lbl.style.opacity = '0';
     } else {
-      lbl.style.opacity = '0.7';
+      lbl.style.opacity = engagements[i].ghosted ? '0.35' : '0.7';
       lbl.style.left = x + 'px';
       lbl.style.top = y + 'px';
     }
   });
 
-  // Apply scroll-based rotation to sphereGroup
   sphereGroup.rotation.y = scrollRotation;
 
   controls.update();
@@ -657,7 +625,6 @@ function animate() {
 }
 
 // ─── KICK OFF ───
-// Hide loader after a moment even if everything loaded
 setTimeout(() => {
   const loader = document.getElementById('loader');
   if (loader.style.opacity !== '0') {
