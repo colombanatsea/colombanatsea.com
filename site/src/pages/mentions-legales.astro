@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Mentions l&eacute;gales — Colomban at Sea">
+  <section class="page-hero section-dark">
+    <div class="container stagger">
+      <p class="mono text-bleu">Informations l&eacute;gales</p>
+      <h1>Mentions l&eacute;gales</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container mentions">
+      <h2>&Eacute;diteur du site</h2>
+      <p>Le site <strong>colombanatsea.com</strong> est &eacute;dit&eacute; par Colomban.</p>
+      <p>Contact : <a href="mailto:hello@colombanatsea.com">hello@colombanatsea.com</a></p>
+
+      <h2>H&eacute;bergement</h2>
+      <p>Ce site est h&eacute;berg&eacute; par <strong>GitHub Pages</strong> (GitHub, Inc. — San Francisco, CA, USA).</p>
+
+      <h2>Propri&eacute;t&eacute; intellectuelle</h2>
+      <p>L'ensemble du contenu de ce site (textes, images, vid&eacute;os, logos, ic&ocirc;nes, graphismes) est la propri&eacute;t&eacute; exclusive de Colomban, sauf mention contraire. Toute reproduction, distribution, modification ou utilisation de ce contenu sans autorisation pr&eacute;alable est interdite.</p>
+
+      <h2>Donn&eacute;es personnelles</h2>
+      <p>Ce site ne collecte aucune donn&eacute;e personnelle. Aucun cookie de tra&ccedil;age, aucun outil d'analytics tiers n'est utilis&eacute;.</p>
+
+      <h2>Cr&eacute;dits</h2>
+      <p>Textures globe : NASA Blue Marble (domaine public).<br/>
+      Donn&eacute;es ZEE : Flanders Marine Institute (VLIZ).<br/>
+      Donn&eacute;es c&acirc;bles sous-marins : TeleGeography.<br/>
+      Typographies : Poppins, Inter, JetBrains Mono (Google Fonts, licences libres).</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .mentions {
+    max-width: 720px;
+  }
+
+  .mentions h2 {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-sm);
+    font-size: 1.25rem;
+  }
+
+  .mentions h2:first-child {
+    margin-top: 0;
+  }
+
+  .mentions p {
+    margin-bottom: var(--space-md);
+    color: var(--gris-500);
+    line-height: 1.8;
+  }
+</style>
