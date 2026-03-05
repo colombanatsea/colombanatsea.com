@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const medias = [
+  'Le Monde', 'TF1', 'Conflits', 'Marine & Oceans', 'Jeune Marine',
+  'Mer & Marine', 'Le Marin',
+];
+---
+
+<BaseLayout title="Medias & Presse — Colomban at Sea">
+  <section class="page-hero section-dark">
+    <div class="container stagger">
+      <p class="mono text-bleu">Medias & Presse</p>
+      <h1>28+ articles et<br/><span class="text-bleu">mentions presse</span></h1>
+      <p class="subtitle">Une expertise reconnue et validee par les medias — au-dela du seul monde maritime.</p>
+    </div>
+  </section>
+
+  <!-- Medias logos -->
+  <section class="section">
+    <div class="container">
+      <div class="media-logos">
+        {medias.map((m) => (
+          <span class="media-logo">{m}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Articles timeline placeholder -->
+  <section class="section-dark section">
+    <div class="container">
+      <div class="mediaviz-header stagger">
+        <p class="mono text-bleu">Visualisation interactive</p>
+        <h2>Timeline mediatique</h2>
+        <p class="subtitle" style="color: var(--gris-400);">La constellation des prises de parole de 2013 a aujourd'hui — en cours de developpement.</p>
+      </div>
+      <div class="mediaviz-placeholder">
+        <p class="mono text-muted">Media-viz interactive — a venir (Proto 4)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kit media -->
+  <section class="section">
+    <div class="container">
+      <div class="kit-media stagger">
+        <h2>Kit media</h2>
+        <p class="subtitle">Tout ce dont vous avez besoin pour parler de Colomban.</p>
+        <div class="kit-media__items">
+          <div class="kit-media__item">
+            <h4>Bio courte</h4>
+            <p>Colomban, officier de la Marine Marchande, entrepreneur et figure de la triple transition maritime — technologique, environnementale et socioculturelle. Delegue General du GASPE, cofondateur de VAIATA Dynamics, president de la Fondation ENSM.</p>
+          </div>
+          <div class="kit-media__item">
+            <h4>Photos HD</h4>
+            <p>Portraits, conferences, maritime — disponibles sur demande.</p>
+          </div>
+          <div class="kit-media__item">
+            <h4>Chiffres cles</h4>
+            <p>Le maritime dans le sang depuis 1991. 5 entreprises co-fondees. 28+ articles presse. 3.6M vues LinkedIn/an.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-2xl);
+  }
+  .page-hero .mono { margin-bottom: var(--space-sm); }
+  .page-hero .subtitle { margin-top: var(--space-md); max-width: 600px; color: var(--gris-400); }
+
+  .media-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    justify-content: center;
+  }
+
+  .media-logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--gris-300);
+    padding: var(--space-md) var(--space-lg);
+    border: 1px solid var(--gris-200);
+    border-radius: 12px;
+    transition: all var(--duration-normal);
+  }
+
+  .media-logo:hover {
+    color: var(--noir);
+    border-color: var(--bleu);
+  }
+
+  .mediaviz-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .mediaviz-header .mono { margin-bottom: var(--space-sm); }
+
+  .mediaviz-placeholder {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+  }
+
+  .kit-media h2 { margin-bottom: var(--space-sm); }
+  .kit-media > .subtitle { margin-bottom: var(--space-xl); }
+
+  .kit-media__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .kit-media__item {
+    padding: var(--space-lg);
+    border: 1px solid var(--gris-200);
+    border-radius: 16px;
+  }
+
+  .kit-media__item h4 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-media__item p {
+    font-size: 0.9rem;
+    color: var(--gris-500);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .kit-media__items { grid-template-columns: 1fr; }
+  }
+</style>

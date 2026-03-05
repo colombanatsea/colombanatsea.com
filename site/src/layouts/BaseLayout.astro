@@ -1,0 +1,297 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  lang?: string;
+}
+
+const {
+  title,
+  description = "Le quartier general digital de la triple transition maritime, porte par Colomban.",
+  lang = "fr",
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Favicon (placeholder — will be the knot) -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content={lang === "fr" ? "fr_FR" : "en_US"} />
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="/" class="nav__logo" aria-label="Colomban at Sea — Accueil">
+        <span class="nav__logo-text">Colomban<span class="nav__logo-accent"> at sea</span></span>
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/#vision">Vision</a></li>
+        <li><a href="/a-propos">A propos</a></li>
+        <li><a href="/engagements">Engagements</a></li>
+        <li><a href="/prises-de-parole">Prises de parole</a></li>
+        <li><a href="/medias">Medias</a></li>
+        <li><a href="/contact" class="btn btn-primary btn-sm">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="footer section-dark">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="nav__logo-text">Colomban<span class="nav__logo-accent"> at sea</span></span>
+        <p class="footer__tagline subtitle">"Une nation libre regarde la mer."</p>
+      </div>
+
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <a href="/a-propos">A propos</a>
+          <a href="/engagements">Engagements</a>
+          <a href="/prises-de-parole">Prises de parole</a>
+          <a href="/medias">Medias</a>
+        </div>
+        <div class="footer__col">
+          <h4>Suivre</h4>
+          <a href="https://www.linkedin.com/in/colombanatsea/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/colombanatsea/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.youtube.com/@Colombanatsea" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.tiktok.com/@colombanatsea" target="_blank" rel="noopener">TikTok</a>
+        </div>
+        <div class="footer__col">
+          <h4>Liens</h4>
+          <a href="https://aperitifsdelamer.com" target="_blank" rel="noopener">Aperitifs de la Mer</a>
+          <a href="/mentions-legales">Mentions legales</a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="mono text-muted">&copy; {new Date().getFullYear()} Colomban — colombanatsea.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    const nav = document.getElementById('nav');
+
+    toggle?.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      links?.classList.toggle('open');
+    });
+
+    // Navbar background on scroll
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      nav?.classList.toggle('nav--scrolled', scrollY > 40);
+      lastScroll = scrollY;
+    }, { passive: true });
+  </script>
+
+  <style>
+    /* ── Navigation ── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: var(--nav-height);
+      transition: background var(--duration-normal), box-shadow var(--duration-normal);
+    }
+
+    .nav--scrolled {
+      background: rgba(250, 250, 250, 0.92);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav__logo-text {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--noir);
+      letter-spacing: -0.02em;
+    }
+
+    .nav__logo-accent {
+      font-weight: 400;
+      color: var(--bleu);
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav__links a {
+      font-family: var(--font-heading);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gris-500);
+      transition: color var(--duration-fast);
+    }
+
+    .nav__links a:hover {
+      color: var(--noir);
+    }
+
+    .nav__links .btn-sm {
+      font-size: 0.8rem;
+      padding: 0.5rem 1.25rem;
+    }
+
+    /* Mobile toggle */
+    .nav__toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+    }
+
+    .nav__toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--noir);
+      border-radius: 2px;
+      transition: all var(--duration-normal);
+    }
+
+    /* ── Footer ── */
+    .footer {
+      padding: var(--space-2xl) 0 var(--space-lg);
+    }
+
+    .footer__inner {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xl);
+    }
+
+    .footer__brand .nav__logo-text {
+      color: var(--blanc);
+    }
+
+    .footer__tagline {
+      margin-top: var(--space-sm);
+      font-style: italic;
+      color: var(--gris-400);
+    }
+
+    .footer__links {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xl);
+    }
+
+    .footer__col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer__col h4 {
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gris-400);
+      margin-bottom: 0.5rem;
+    }
+
+    .footer__col a {
+      font-size: 0.9rem;
+      color: var(--gris-300);
+    }
+
+    .footer__col a:hover {
+      color: var(--blanc);
+    }
+
+    .footer__bottom {
+      padding-top: var(--space-lg);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .nav__toggle {
+        display: flex;
+      }
+
+      .nav__links {
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgba(250, 250, 250, 0.98);
+        backdrop-filter: blur(20px);
+        padding: var(--space-lg);
+        gap: var(--space-md);
+        transform: translateY(-120%);
+        transition: transform var(--duration-normal) var(--ease-out);
+      }
+
+      .nav__links.open {
+        transform: translateY(0);
+      }
+
+      .footer__links {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+      }
+    }
+  </style>
+</body>
+</html>

@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const engagements = [
+  { name: 'GASPE', role: 'Delegue general', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Groupement des Armateurs de Service Public Maritime et de Passages d\'Eau — defense du service public maritime.' },
+  { name: 'VAIATA Dynamics', role: 'Cofondateur', axes: ['Technologique'], color: 'var(--bleu)', desc: 'Intelligence artificielle au service des grandes causes du maritime.' },
+  { name: 'Fondation ENSM', role: 'President du conseil de gestion', axes: ['Socioculturelle', 'Environnementale'], color: 'var(--vert)', desc: 'Fondation de l\'Ecole Nationale Superieure Maritime, formation des futurs officiers et ingenieurs.' },
+  { name: 'ENSM', role: 'Enseignant developpement durable', axes: ['Environnementale'], color: 'var(--vert)', desc: 'Enseignement de l\'ecologie et du developpement durable au sein de l\'ENSM.' },
+  { name: 'HYDROS Alumni', role: 'Membre du bureau', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Animation du reseau des anciens eleves de l\'ENSM.' },
+  { name: 'Propeller Club', role: 'Membre actif', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Reseau international de professionnels du secteur maritime et portuaire.' },
+  { name: 'Aperitifs de la Mer', role: 'Ambassadeur', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Evenements de networking reunissant les acteurs de l\'economie maritime.' },
+  { name: 'Academie de Marine', role: 'Auditeur', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Institution seculaire de reflexion et de prospective sur les enjeux maritimes.' },
+  { name: 'COESPC', role: 'Bureau', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Engagement local a Annecy-le-Vieux.' },
+];
+---
+
+<BaseLayout title="Engagements — Colomban at Sea">
+  <section class="page-hero section-dark">
+    <div class="container stagger">
+      <p class="mono text-bleu">Engagements</p>
+      <h1>Des engagements au service<br/>d'une <span class="text-bleu">cause unique</span></h1>
+      <p class="subtitle">Chaque engagement s'inscrit dans la triple transition maritime — technologique, environnementale, socioculturelle.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="engagements-grid">
+        {engagements.map((e) => (
+          <article class="engagement-card">
+            <div class="engagement-card__accent" style={`background: ${e.color}`}></div>
+            <div class="engagement-card__content">
+              <h3>{e.name}</h3>
+              <p class="engagement-card__role">{e.role}</p>
+              <p class="engagement-card__desc">{e.desc}</p>
+              <div class="engagement-card__axes">
+                {e.axes.map((a) => (
+                  <span class={`axis-tag axis-tag--${a.toLowerCase()}`}>{a}</span>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-2xl);
+  }
+
+  .page-hero .mono { margin-bottom: var(--space-sm); }
+  .page-hero .subtitle { margin-top: var(--space-md); max-width: 600px; color: var(--gris-400); }
+
+  .engagements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .engagement-card {
+    position: relative;
+    border: 1px solid var(--gris-200);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all var(--duration-normal) var(--ease-out);
+    background: white;
+  }
+
+  .engagement-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  }
+
+  .engagement-card__accent {
+    height: 4px;
+  }
+
+  .engagement-card__content {
+    padding: var(--space-lg);
+  }
+
+  .engagement-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .engagement-card__role {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: var(--gris-400);
+    margin-bottom: var(--space-md);
+  }
+
+  .engagement-card__desc {
+    font-size: 0.9rem;
+    color: var(--gris-500);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+  }
+
+  .engagement-card__axes {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .axis-tag {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
+    border: 1px solid;
+  }
+
+  .axis-tag--technologique { color: var(--bleu); border-color: var(--bleu); }
+  .axis-tag--environnementale { color: var(--vert); border-color: var(--vert); }
+  .axis-tag--socioculturelle { color: var(--rose); border-color: var(--rose); }
+
+  @media (max-width: 768px) {
+    .engagements-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
