@@ -387,19 +387,57 @@
     } catch (e) { return null; }
     if (!triIndices || triIndices.length === 0) return null;
 
-    const vertCount = flat.length / 2;
-    const verts = new Float32Array(vertCount * 3);
-    for (let i = 0; i < vertCount; i++) {
-      let lon = flat[i * 2];
-      if (lon > 180) lon -= 360;
-      const lat = flat[i * 2 + 1];
-      const v = latLonToVec3(lat, lon, ZEE_HEIGHT);
-      verts[i * 3] = v.x; verts[i * 3 + 1] = v.y; verts[i * 3 + 2] = v.z;
+    // Subdivide large triangles so they follow the globe curvature
+    // instead of cutting through the sphere interior
+    const MAX_ARC_DEG = 3; // max degrees between vertices
+    function subdivideTriangles(indices: number[], flatCoords: number[]): { positions: Float32Array; indices: number[] } {
+      const outVerts: number[] = [];
+      const outIdx: number[] = [];
+      const vertMap = new Map<string, number>();
+
+      function addVert(lo: number, la: number): number {
+        const key = lo.toFixed(4) + ',' + la.toFixed(4);
+        if (vertMap.has(key)) return vertMap.get(key)!;
+        let lon2 = lo; if (lon2 > 180) lon2 -= 360;
+        const v = latLonToVec3(la, lon2, ZEE_HEIGHT);
+        const idx = outVerts.length / 3;
+        outVerts.push(v.x, v.y, v.z);
+        vertMap.set(key, idx);
+        return idx;
+      }
+
+      function subdivideTri(a: [number, number], b: [number, number], c: [number, number], depth: number) {
+        const dAB = Math.sqrt((a[0]-b[0])**2 + (a[1]-b[1])**2);
+        const dBC = Math.sqrt((b[0]-c[0])**2 + (b[1]-c[1])**2);
+        const dCA = Math.sqrt((c[0]-a[0])**2 + (c[1]-a[1])**2);
+        const maxEdge = Math.max(dAB, dBC, dCA);
+        if (maxEdge <= MAX_ARC_DEG || depth > 5) {
+          outIdx.push(addVert(a[0], a[1]), addVert(b[0], b[1]), addVert(c[0], c[1]));
+          return;
+        }
+        const mAB: [number, number] = [(a[0]+b[0])/2, (a[1]+b[1])/2];
+        const mBC: [number, number] = [(b[0]+c[0])/2, (b[1]+c[1])/2];
+        const mCA: [number, number] = [(c[0]+a[0])/2, (c[1]+a[1])/2];
+        subdivideTri(a, mAB, mCA, depth+1);
+        subdivideTri(mAB, b, mBC, depth+1);
+        subdivideTri(mCA, mBC, c, depth+1);
+        subdivideTri(mAB, mBC, mCA, depth+1);
+      }
+
+      for (let i = 0; i < indices.length; i += 3) {
+        const iA = indices[i], iB = indices[i+1], iC = indices[i+2];
+        const a: [number, number] = [flatCoords[iA*2], flatCoords[iA*2+1]];
+        const b: [number, number] = [flatCoords[iB*2], flatCoords[iB*2+1]];
+        const c: [number, number] = [flatCoords[iC*2], flatCoords[iC*2+1]];
+        subdivideTri(a, b, c, 0);
+      }
+      return { positions: new Float32Array(outVerts), indices: outIdx };
     }
 
+    const subdiv = subdivideTriangles(triIndices, flat);
     const geo = new THREE.BufferGeometry();
-    geo.setAttribute('position', new THREE.BufferAttribute(verts, 3));
-    geo.setIndex(triIndices);
+    geo.setAttribute('position', new THREE.BufferAttribute(subdiv.positions, 3));
+    geo.setIndex(subdiv.indices);
     geo.computeVertexNormals();
 
     const mesh = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({
