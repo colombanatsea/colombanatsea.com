@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const conferences = [
+  { date: '03/02/2026', event: 'Euromaritime 2026', sujet: 'Avenir du modele economique des compagnies de service public maritime' },
+  { date: '18/02/2026', event: 'Academie de Marine', sujet: 'Potentiel strategique du maritime de proximite' },
+  { date: '14/10/2025', event: 'Conference internationale Propeller Club', sujet: 'Introduction to digitalization + Introduction to decarbonation (2 keynotes)' },
+  { date: '30/09/2025', event: 'Emission Shipping Conference (NABU + Sciences Po)', sujet: 'Participation' },
+  { date: '13/05/2025', event: 'Conference Race for Water', sujet: 'La propulsion velique : un vent nouveau pour decarboner le transport maritime mondial' },
+  { date: '16/05/2025', event: 'AG Federation Nationale du Merite Maritime', sujet: 'Avenir du maritime' },
+  { date: '31/01/2024', event: 'Euromaritime 24', sujet: 'Comment relever les defis des exigences IMO de 2030 et 2050 ?' },
+  { date: '24/05/2024', event: 'Universite de Rennes 1', sujet: 'Decarbonation du maritime' },
+  { date: '22/06/2023', event: 'Webinaire Digital Ship', sujet: 'Using Electronic Logbooks to Improve Efficiency' },
+];
+
+const podcasts = [
+  { date: '12/04/2024', name: 'Maritime with a French Accent', url: 'https://open.spotify.com/show/5E3ocGL6KsCvBnSodhrtNm' },
+  { date: '22/01/2024', name: 'Dans l\'Ombre de la Reussite — "Marin, Pere, Entrepreneur"', url: 'https://podcasts.apple.com/cm/podcast/1-colomban-monnier-marin-p%C3%A8re-entrepreneur/id1719953495?i=1000642464121' },
+];
+---
+
+<BaseLayout title="Prises de parole — Colomban at Sea">
+  <section class="page-hero section-dark">
+    <div class="container stagger">
+      <p class="mono text-bleu">Prises de parole</p>
+      <h1>Conferences, podcasts<br/>et <span class="text-bleu">interventions</span></h1>
+      <p class="subtitle">Colomban intervient regulierement sur les transitions du monde maritime.</p>
+    </div>
+  </section>
+
+  <!-- Conferences -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Conferences & interventions</h2>
+      <div class="talks-list">
+        {conferences.map((c) => (
+          <article class="talk">
+            <span class="talk__date mono">{c.date}</span>
+            <div class="talk__content">
+              <h3>{c.event}</h3>
+              <p>{c.sujet}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Podcasts -->
+  <section class="section-dark section">
+    <div class="container">
+      <h2 class="section-title">Podcasts</h2>
+      <div class="talks-list">
+        {podcasts.map((p) => (
+          <article class="talk talk--dark">
+            <span class="talk__date mono">{p.date}</span>
+            <div class="talk__content">
+              <h3><a href={p.url} target="_blank" rel="noopener">{p.name}</a></h3>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- YouTube -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Series YouTube</h2>
+      <div class="youtube-grid">
+        <div class="youtube-card">
+          <h3>Hissez Mots</h3>
+          <p>Vocabulaire maritime passe dans le langage courant — l'axe socioculturel en action.</p>
+          <a href="https://www.youtube.com/@Colombanatsea" target="_blank" rel="noopener" class="btn btn-outline">Voir sur YouTube</a>
+        </div>
+        <div class="youtube-card">
+          <h3>Marine Marchande 101</h3>
+          <p>Comment devenir marin, le metier, les voies d'acces — decouvrir la marine marchande.</p>
+          <a href="https://www.youtube.com/@Colombanatsea" target="_blank" rel="noopener" class="btn btn-outline">Voir sur YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-2xl);
+  }
+  .page-hero .mono { margin-bottom: var(--space-sm); }
+  .page-hero .subtitle { margin-top: var(--space-md); max-width: 600px; color: var(--gris-400); }
+
+  .section-title {
+    margin-bottom: var(--space-xl);
+  }
+
+  .talks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .talk {
+    display: flex;
+    gap: var(--space-xl);
+    padding: var(--space-lg) 0;
+    border-bottom: 1px solid var(--gris-200);
+    align-items: flex-start;
+  }
+
+  .talk--dark {
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .talk__date {
+    flex-shrink: 0;
+    width: 120px;
+    color: var(--bleu);
+    font-size: 0.8rem;
+    padding-top: 0.15rem;
+  }
+
+  .talk h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .talk--dark h3 { color: var(--blanc); }
+
+  .talk p {
+    font-size: 0.9rem;
+    color: var(--gris-500);
+  }
+
+  .talk--dark p { color: var(--gris-400); }
+
+  .youtube-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .youtube-card {
+    padding: var(--space-xl);
+    border: 1px solid var(--gris-200);
+    border-radius: 16px;
+  }
+
+  .youtube-card h3 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .youtube-card p {
+    font-size: 0.9rem;
+    color: var(--gris-500);
+    margin-bottom: var(--space-lg);
+  }
+
+  @media (max-width: 768px) {
+    .talk {
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    .talk__date { width: auto; }
+    .youtube-grid { grid-template-columns: 1fr; }
+  }
+</style>

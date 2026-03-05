@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="A propos — Colomban at Sea">
+  <section class="page-hero section-dark">
+    <div class="container stagger">
+      <p class="mono text-bleu">A propos</p>
+      <h1>Le maritime dans le sang<br/>depuis <span class="text-bleu">1991</span></h1>
+      <p class="subtitle">D'un sillage unique de marin a un reseau d'engagements convergents pour transformer le maritime.</p>
+    </div>
+  </section>
+
+  <!-- Moment fondateur -->
+  <section class="section" id="parcours">
+    <div class="container">
+      <div class="about-block stagger">
+        <p class="mono text-bleu">Le moment fondateur — Marseille, 2013</p>
+        <h2>Le choc des donnees</h2>
+        <p>En 2013, sans embarquement, Colomban rejoint Bourbon a terre pour agreger les donnees environnementales des navires. C'est le choc fondateur : les donnees sont d'une qualite catastrophique, recuperees mensuellement sur papier, sans aucune fiabilite.</p>
+        <p>Le gap technologique est abyssal — le maritime accuse des decennies de retard digital. En parallele, l'impact environnemental est massif et invisible : sans donnees fiables, impossible de mesurer, donc impossible d'ameliorer.</p>
+        <p class="highlight"><strong>C'est a Marseille en 2013 que nait la conviction que la technologie (donnee) et l'environnement (impact) sont indissociables dans la transformation du maritime.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision -->
+  <section class="section-dark section" id="vision-detail">
+    <div class="container">
+      <div class="about-block stagger">
+        <p class="mono text-bleu">La vision</p>
+        <h2>La triple transition maritime</h2>
+        <div class="about-values">
+          <div class="about-value">
+            <h3 class="text-bleu">Technologique</h3>
+            <p>Comme le continent africain n'est pas passe par la telephonie fixe, le maritime ne doit pas passer par la numerisation : il doit entrer immediatement dans l'ere de la digitalisation.</p>
+          </div>
+          <div class="about-value">
+            <h3 class="text-vert">Environnementale</h3>
+            <p>Il est plus efficient de suivre 4 donnees bien ciblees en sachant ce qu'on veut en faire, que depenser de l'energie pour suivre des millions de donnees sans objectif.</p>
+          </div>
+          <div class="about-value">
+            <h3 class="text-rose">Socioculturelle</h3>
+            <p>La transition du maritime en oubliant l'aspect social, c'est de la plaisance particuliere.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Personnel -->
+  <section class="section" id="personnel">
+    <div class="container">
+      <div class="about-block stagger">
+        <p class="mono text-bleu">Colomban</p>
+        <h2>Quelques reperes</h2>
+        <ul class="about-facts">
+          <li>Papa de 3 enfants</li>
+          <li>Enfance en Irlande, en bateau — c'est la que nait la vocation</li>
+          <li>Officier de la Marine Marchande, diplome de l'ENSM</li>
+          <li>Nul en maths mais accroche</li>
+          <li>Passionne de cartographie — les cartes sont un vecteur de message politique</li>
+          <li>Ancre a Annecy-le-Vieux</li>
+          <li>Co-fondateur de 5 entreprises</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-2xl);
+  }
+
+  .page-hero .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-hero .subtitle {
+    margin-top: var(--space-md);
+    max-width: 600px;
+    color: var(--gris-400);
+  }
+
+  .about-block {
+    max-width: 720px;
+  }
+
+  .about-block .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .about-block h2 {
+    margin-bottom: var(--space-lg);
+  }
+
+  .about-block p {
+    margin-bottom: var(--space-md);
+    color: var(--gris-500);
+  }
+
+  .highlight {
+    padding: var(--space-lg);
+    border-left: 3px solid var(--bleu);
+    background: var(--gris-100);
+    border-radius: 0 8px 8px 0;
+    color: var(--noir) !important;
+  }
+
+  .about-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    margin-top: var(--space-lg);
+  }
+
+  .about-value h3 {
+    margin-bottom: var(--space-sm);
+    font-size: 1.1rem;
+  }
+
+  .about-value p {
+    font-size: 0.9rem;
+    color: var(--gris-400);
+  }
+
+  .about-facts {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .about-facts li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--gris-500);
+  }
+
+  .about-facts li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 6px;
+    height: 6px;
+    background: var(--bleu);
+    border-radius: 50%;
+  }
+
+  @media (max-width: 768px) {
+    .about-values {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
