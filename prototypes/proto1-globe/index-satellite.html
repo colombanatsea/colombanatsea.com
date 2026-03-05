@@ -266,6 +266,7 @@
   </div>
 
   <script defer src="https://cdn.jsdelivr.net/npm/earcut@2.2.4/dist/earcut.min.js"></script>
+  <script defer src="data/cables.js"></script>
 
   <script type="importmap">
   {
@@ -766,9 +767,10 @@
         if (!geom) continue;
 
         let cableColor;
-        if (feature.properties && feature.properties.color) {
+        const colorVal = feature.properties && (feature.properties.color || feature.properties.c);
+        if (colorVal) {
           try {
-            cableColor = new THREE.Color(feature.properties.color);
+            cableColor = new THREE.Color(colorVal);
           } catch(e) {
             cableColor = new THREE.Color(0x00b4b4);
           }
@@ -801,18 +803,12 @@
       console.log(`Submarine cables: loaded ${lineCount} line segments`);
     }
 
-    // Fetch submarine cables from Telegeography
-    const CABLE_URL = 'https://www.submarinecablemap.com/api/v3/cable/cable-geo.json';
-
-    fetch(CABLE_URL)
-      .then(res => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        return res.json();
-      })
-      .then(geojson => processCableGeoJSON(geojson))
-      .catch(err => {
-        console.warn('Cable fetch failed:', err);
-      });
+    // Submarine cables loaded from data/cables.js (inline, avoids CORS)
+    if (typeof CABLE_GEOJSON !== 'undefined') {
+      processCableGeoJSON(CABLE_GEOJSON);
+    } else {
+      console.warn('Cable data not loaded — check data/cables.js');
+    }
 
     // ====================================================
     // MARITIME TRAFFIC -- Density overlay only
