@@ -37,7 +37,7 @@ const podcasts = [
           <article class="talk">
             <span class="talk__date mono">{c.date}</span>
             <div class="talk__content">
-              <h3>{c.url ? <a href={c.url} target="_blank" rel="noopener">{c.event} &#8599;</a> : c.event}</h3>
+              <h3>{c.url ? <a href={c.url} target="_blank" rel="noopener noreferrer">{c.event} &#8599;</a> : c.event}</h3>
               <p>{c.sujet}</p>
             </div>
           </article>
@@ -55,7 +55,7 @@ const podcasts = [
           <article class="talk talk--dark">
             <span class="talk__date mono">{p.date}</span>
             <div class="talk__content">
-              <h3><a href={p.url} target="_blank" rel="noopener">{p.name}</a></h3>
+              <h3><a href={p.url} target="_blank" rel="noopener noreferrer">{p.name}</a></h3>
             </div>
           </article>
         ))}
@@ -71,12 +71,12 @@ const podcasts = [
         <div class="youtube-card">
           <h3>Hissez Mots</h3>
           <p>Vocabulaire maritime passe dans le langage courant — l'axe socioculturel en action.</p>
-          <a href="https://www.youtube.com/@Colombanatsea" target="_blank" rel="noopener" class="btn btn-outline">Voir sur YouTube</a>
+          <a href="https://www.youtube.com/@Colombanatsea" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Voir sur YouTube</a>
         </div>
         <div class="youtube-card">
           <h3>Marine Marchande 101</h3>
           <p>Comment devenir marin, le metier, les voies d'acces — decouvrir la marine marchande.</p>
-          <a href="https://www.youtube.com/@Colombanatsea" target="_blank" rel="noopener" class="btn btn-outline">Voir sur YouTube</a>
+          <a href="https://www.youtube.com/@Colombanatsea" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Voir sur YouTube</a>
         </div>
       </div>
     </div>
