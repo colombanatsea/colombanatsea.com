@@ -288,7 +288,7 @@
     // Mobile fallback is active — skip Three.js init entirely
   } else {
 
-  // ── LAZY INIT: wait until visible (Matrice is below the fold) ──
+  // ── LAZY INIT: wait until visible (skip if already in viewport) ──
   await new Promise<void>(resolve => {
     const rect = container.getBoundingClientRect();
     if (rect.top < window.innerHeight + 200) { resolve(); return; }
