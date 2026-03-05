@@ -1,11 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Matrice from '../components/Matrice.astro';
 
 const engagements = [
   { name: 'GASPE', role: 'Delegue general', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Groupement des Armateurs de Service Public Maritime et de Passages d\'Eau — defense du service public maritime.' },
   { name: 'VAIATA Dynamics', role: 'Cofondateur', axes: ['Technologique'], color: 'var(--bleu)', desc: 'Intelligence artificielle au service des grandes causes du maritime.' },
+  { name: 'Opsealog', role: 'Conception initiale', axes: ['Technologique', 'Environnementale'], color: 'var(--bleu)', desc: 'Plateforme de data analytics pour optimiser la performance et la consommation energetique des navires.' },
   { name: 'Fondation ENSM', role: 'President du conseil de gestion', axes: ['Socioculturelle', 'Environnementale'], color: 'var(--vert)', desc: 'Fondation de l\'Ecole Nationale Superieure Maritime, formation des futurs officiers et ingenieurs.' },
   { name: 'ENSM', role: 'Enseignant developpement durable', axes: ['Environnementale'], color: 'var(--vert)', desc: 'Enseignement de l\'ecologie et du developpement durable au sein de l\'ENSM.' },
+  { name: 'Fed. Nationale du Merite Maritime', role: 'Membre', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Federation valorisant les contributions au monde maritime.' },
   { name: 'HYDROS Alumni', role: 'Membre du bureau', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Animation du reseau des anciens eleves de l\'ENSM.' },
   { name: 'Propeller Club', role: 'Membre actif', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Reseau international de professionnels du secteur maritime et portuaire.' },
   { name: 'Aperitifs de la Mer', role: 'Ambassadeur', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Evenements de networking reunissant les acteurs de l\'economie maritime.' },
@@ -20,6 +23,9 @@ const engagements = [
       <p class="mono text-bleu">Engagements</p>
       <h1>Des engagements au service<br/>d'une <span class="text-bleu">cause unique</span></h1>
       <p class="subtitle">Chaque engagement s'inscrit dans la triple transition maritime — technologique, environnementale, socioculturelle.</p>
+    </div>
+    <div class="hero-matrice">
+      <Matrice />
     </div>
   </section>
 
@@ -41,6 +47,13 @@ const engagements = [
             </div>
           </article>
         ))}
+        <article class="engagement-card engagement-card--coming">
+          <div class="engagement-card__accent" style="background: var(--gris-300)"></div>
+          <div class="engagement-card__content engagement-card__coming-inner">
+            <h3>Et plus &agrave; venir&hellip;</h3>
+            <p class="engagement-card__desc">De nouveaux engagements sont en preparation.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -48,15 +61,25 @@ const engagements = [
 
 <style>
   .page-hero {
-    padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-2xl);
+    padding: calc(var(--nav-height) + var(--space-3xl)) 0 0;
   }
 
   .page-hero .mono { margin-bottom: var(--space-sm); }
   .page-hero .subtitle { margin-top: var(--space-md); max-width: 600px; color: var(--gris-400); }
 
+  .hero-matrice {
+    width: 100%;
+    height: 50vh;
+    min-height: 350px;
+    margin-top: var(--space-xl);
+    position: relative;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.02) 0%, transparent 100%);
+    overflow: hidden;
+  }
+
   .engagements-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
   }
 
@@ -120,9 +143,53 @@ const engagements = [
   .axis-tag--environnementale { color: var(--vert); border-color: var(--vert); }
   .axis-tag--socioculturelle { color: var(--rose); border-color: var(--rose); }
 
+  .engagement-card--coming {
+    border-style: dashed;
+    border-color: var(--gris-300);
+    background: transparent;
+  }
+
+  .engagement-card--coming:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .engagement-card__coming-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 120px;
+  }
+
+  .engagement-card--coming h3 {
+    color: var(--gris-400);
+    font-style: italic;
+  }
+
+  .engagement-card--coming .engagement-card__desc {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .engagements-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   @media (max-width: 768px) {
     .engagements-grid {
       grid-template-columns: 1fr;
+    }
+
+    .hero-matrice {
+      height: 40vh;
+      min-height: 280px;
+    }
+
+    .engagement-card--coming {
+      display: none;
     }
   }
 </style>
