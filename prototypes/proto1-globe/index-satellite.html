@@ -558,7 +558,7 @@
         isZEE: true,
         zone: {
           name: properties.geoname || properties.territory1 || 'ZEE France',
-          detail: properties.sovereign1 || 'France',
+          detail: properties.detail || properties.sovereign1 || 'France',
           area: properties.area_km2 || 0
         }
       };
@@ -649,104 +649,7 @@
       .then(([geojson]) => processEEZGeoJSON(geojson))
       .catch(err => {
         console.warn('EEZ fetch failed:', err);
-        loadFallbackZEE();
       });
-
-    // Fallback: disc approximation
-    function loadFallbackZEE() {
-      const EARTH_RADIUS_KM = 6371;
-      const ZONE_SEGMENTS = 64;
-      const ZEE_ZONES = [
-        { name: 'Metropole', detail: 'Atlantique + Mediterranee', lat: 46, lng: -3, area: 350000 },
-        { name: 'Guyane', detail: 'Amerique du Sud', lat: 5, lng: -52, area: 130000 },
-        { name: 'Martinique', detail: 'Antilles', lat: 14.6, lng: -61, area: 50000 },
-        { name: 'Guadeloupe', detail: 'Antilles', lat: 16.2, lng: -61.5, area: 90000 },
-        { name: 'La Reunion', detail: 'Ocean Indien', lat: -21, lng: 55.5, area: 315000 },
-        { name: 'Mayotte', detail: 'Ocean Indien', lat: -12.8, lng: 45.2, area: 74000 },
-        { name: 'Nouvelle-Caledonie', detail: 'Ocean Pacifique', lat: -21, lng: 165, area: 1740000 },
-        { name: 'Polynesie francaise', detail: 'Ocean Pacifique', lat: -17, lng: -149, area: 4800000 },
-        { name: 'Wallis-et-Futuna', detail: 'Ocean Pacifique', lat: -13.3, lng: -176.2, area: 260000 },
-        { name: 'Kerguelen', detail: 'TAAF -- Ocean Indien austral', lat: -49.5, lng: 69.5, area: 570000 },
-        { name: 'Crozet', detail: 'TAAF -- Ocean Indien austral', lat: -46, lng: 51, area: 570000 },
-        { name: 'Saint-Pierre-et-Miquelon', detail: 'Atlantique Nord', lat: 46.8, lng: -56.2, area: 12000 },
-        { name: 'Saint-Martin / Saint-Barthelemy', detail: 'Antilles', lat: 18, lng: -63, area: 10000 },
-        { name: 'Clipperton', detail: 'Ocean Pacifique', lat: 10.3, lng: -109.2, area: 440000 },
-        { name: 'Amsterdam / Saint-Paul', detail: 'TAAF -- Ocean Indien austral', lat: -37.8, lng: 77.5, area: 500000 },
-        { name: 'Iles Eparses', detail: 'Glorieuses, Juan de Nova, Europa, Bassas da India', lat: -15, lng: 43, area: 640000 }
-      ];
-
-      function areaToAngularRadius(areaKm2) {
-        return Math.sqrt(areaKm2 / Math.PI) / EARTH_RADIUS_KM;
-      }
-
-      for (const zone of ZEE_ZONES) {
-        const angularRadius = areaToAngularRadius(zone.area);
-        const displayRadius = Math.min(angularRadius, 0.35);
-        const centerPhi = (90 - zone.lat) * Math.PI / 180;
-        const centerTheta = -zone.lng * Math.PI / 180;
-
-        const vertices = [];
-        const cx = ZEE_HEIGHT * Math.sin(centerPhi) * Math.cos(centerTheta);
-        const cy = ZEE_HEIGHT * Math.cos(centerPhi);
-        const cz = ZEE_HEIGHT * Math.sin(centerPhi) * Math.sin(centerTheta);
-        vertices.push(cx, cy, cz);
-
-        for (let i = 0; i <= ZONE_SEGMENTS; i++) {
-          const bearing = (i / ZONE_SEGMENTS) * Math.PI * 2;
-          const lat1 = zone.lat * Math.PI / 180;
-          const lon1 = zone.lng * Math.PI / 180;
-          const lat2 = Math.asin(
-            Math.sin(lat1) * Math.cos(displayRadius) +
-            Math.cos(lat1) * Math.sin(displayRadius) * Math.cos(bearing)
-          );
-          const lon2 = lon1 + Math.atan2(
-            Math.sin(bearing) * Math.sin(displayRadius) * Math.cos(lat1),
-            Math.cos(displayRadius) - Math.sin(lat1) * Math.sin(lat2)
-          );
-          const phi = (Math.PI / 2) - lat2;
-          const theta = -lon2;
-          vertices.push(
-            ZEE_HEIGHT * Math.sin(phi) * Math.cos(theta),
-            ZEE_HEIGHT * Math.cos(phi),
-            ZEE_HEIGHT * Math.sin(phi) * Math.sin(theta)
-          );
-        }
-
-        const indices = [];
-        for (let i = 1; i <= ZONE_SEGMENTS; i++) indices.push(0, i, i + 1);
-
-        const geometry = new THREE.BufferGeometry();
-        geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
-        geometry.setIndex(indices);
-        geometry.computeVertexNormals();
-
-        const mesh = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({
-          color: 0x00b4b4, transparent: true, opacity: 0.22,
-          side: THREE.DoubleSide, depthWrite: false
-        }));
-        mesh.userData = { zone, isZEE: true };
-        mesh.renderOrder = 1;
-        zoneGroup.add(mesh);
-        zoneMeshes.push(mesh);
-
-        const borderPoints = [];
-        for (let i = 1; i <= ZONE_SEGMENTS + 1; i++) {
-          const idx = i * 3;
-          if (idx + 2 < vertices.length) {
-            borderPoints.push(new THREE.Vector3(
-              vertices[idx] * 1.0005, vertices[idx + 1] * 1.0005, vertices[idx + 2] * 1.0005
-            ));
-          }
-        }
-        const borderGeo = new THREE.BufferGeometry().setFromPoints(borderPoints);
-        const borderLine = new THREE.Line(borderGeo, new THREE.LineBasicMaterial({
-          color: 0x00e0e0, transparent: true, opacity: 0.55
-        }));
-        borderLine.renderOrder = 2;
-        zoneGroup.add(borderLine);
-        zoneObjects.push({ mesh, borderLine });
-      }
-    }
 
     // ====================================================
     // STARFIELD
