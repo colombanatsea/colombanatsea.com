@@ -1048,6 +1048,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     let externalMode = false;
     let externalProgress = 0;
     window.addEventListener('message', (e) => {
+        if (e.origin !== window.location.origin) return;
         if (e.data && e.data.type === 'setProgress') {
             externalMode = true;
             externalProgress = e.data.progress;

@@ -138,10 +138,19 @@
 - Meta descriptions sur toutes les pages
 
 ## Sécurité
+- **CSP** : `Content-Security-Policy` via meta http-equiv — `default-src 'self'`, `script-src 'self' 'unsafe-inline'`, `frame-src 'self'`, fonts Google, images unpkg
 - `X-Content-Type-Options: nosniff` (meta)
 - `referrer: strict-origin-when-cross-origin` (meta)
 - `rel="noopener noreferrer"` sur tous les liens externes
+- **postMessage** : carte.html valide `e.origin !== window.location.origin` avant d'accepter les messages
 - Fonts non-bloquantes (`media="print" onload`)
+- **innerHTML** : utilisé uniquement avec des données statiques hardcodées (waypoints carte), jamais avec du user input
+
+### Vecteurs potentiels à surveiller
+- **Dépendance CDN** : `unpkg.com` pour la texture Globe (earth-blue-marble.jpg). Si unpkg tombe ou est compromis, le globe montre un fond sombre (fallback gracieux). Envisager de self-host la texture à terme.
+- **Google Fonts** : chargé en async non-bloquant. Si Google Fonts tombe, les polices système prennent le relais (`display=swap`). Pas de SRI possible sur les fonts dynamiques.
+- **Pas de formulaire** : aucun champ de saisie utilisateur sur le site, donc pas de XSS via input, pas de CSRF, pas de SQL injection.
+- **GitHub Pages** : HTTPS forcé, pas de serveur custom, pas de backend. La surface d'attaque est minimale (SSG pur).
 
 ## Sites associés
 - **oceanocratie.fr** : Landing page standalone (`oceanocratie.fr/index.html`), waitlist email localStorage

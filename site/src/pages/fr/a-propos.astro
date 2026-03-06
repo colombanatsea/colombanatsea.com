@@ -12,6 +12,30 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
+  <!-- Chiffres personnels -->
+  <section class="stats-bar section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stats-grid__item stagger">
+          <span class="stats-grid__number">1991</span>
+          <span class="stats-grid__label">Le maritime dans le sang</span>
+        </div>
+        <div class="stats-grid__item stagger">
+          <span class="stats-grid__number">5</span>
+          <span class="stats-grid__label">Aventures entrepreneuriales</span>
+        </div>
+        <div class="stats-grid__item stagger">
+          <span class="stats-grid__number">3.6M</span>
+          <span class="stats-grid__label">Vues LinkedIn / an</span>
+        </div>
+        <div class="stats-grid__item stagger">
+          <span class="stats-grid__number">28+</span>
+          <span class="stats-grid__label">Articles presse</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Carte marine parcours — scroll-driven, parent controls iframe progress -->
   <section class="carte-section" id="carte">
     <div class="carte-sticky">
@@ -45,15 +69,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div class="about-values">
           <div class="about-value">
             <h3 class="text-bleu">Technologique</h3>
-            <p>Comme le continent africain n'est pas passe par la telephonie fixe, le maritime ne doit pas passer par la numerisation : il doit entrer immediatement dans l'ere de la digitalisation.</p>
+            <p>Le maritime ne doit pas passer par la num&eacute;risation&nbsp;: il doit entrer imm&eacute;diatement dans l'&egrave;re de la digitalisation. 90% de la population mondiale a la 4G, mais 70% de la flotte mondiale utilise encore des journaux de bord papiers.</p>
           </div>
           <div class="about-value">
             <h3 class="text-vert">Environnementale</h3>
-            <p>Il est plus efficient de suivre 4 donnees bien ciblees en sachant ce qu'on veut en faire, que depenser de l'energie pour suivre des millions de donnees sans objectif.</p>
+            <p>Le transport maritime est responsable de 3% des &eacute;missions mondiales de GES. Mais il &eacute;met aussi des vibrations sonores, transporte des mati&egrave;res invasives et contribue &agrave; l'introduction de nouvelles entit&eacute;s chimiques. Il y a 9 limites plan&eacute;taires &agrave; pr&eacute;server.</p>
           </div>
           <div class="about-value">
             <h3 class="text-rose">Socioculturelle</h3>
-            <p>La transition du maritime en oubliant l'aspect social, c'est de la plaisance particuliere.</p>
+            <p>Les acteurs du monde maritime doivent s'approprier les grands enjeux du XXI<sup>e</sup> si&egrave;cle. En s'appuyant sur les valeurs du maritime, ils doivent contribuer &agrave; trouver des solutions et faire d&eacute;couvrir leur monde de temps long et d'esprit d'&eacute;quipage. La transition du maritime en oubliant l'aspect social, c'est de la plaisance particuli&egrave;re.</p>
           </div>
         </div>
       </div>
@@ -97,7 +121,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           <li>Nul en maths mais accroche</li>
           <li>Passionne de cartographie — les cartes sont un vecteur de message politique</li>
           <li>Ancre a Annecy-le-Vieux</li>
-          <li>Co-fondateur de 5 entreprises</li>
+          <li>5 aventures entrepreneuriales</li>
         </ul>
       </div>
     </div>
@@ -164,6 +188,28 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     margin-top: var(--space-md);
     max-width: 600px;
     color: var(--gris-400);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .stats-grid__number {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--bleu);
+  }
+
+  .stats-grid__label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--gris-500);
+    margin-top: 0.25rem;
   }
 
   .carte-section {
@@ -349,6 +395,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   @media (max-width: 768px) {
     .page-hero--carte {
       min-height: 50vh;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .carte-section {
