@@ -24,6 +24,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   </div>
 </section>
 
+<!-- ▸ TABARLY QUOTE ───────────────── -->
+<section class="section-dark" style="text-align: center; padding: var(--space-2xl) 0;">
+  <div class="container">
+    <blockquote class="stagger" style="max-width: 800px; margin: 0 auto var(--space-xl);">
+      <p style="font-family: var(--font-heading); font-weight: 300; font-size: clamp(1.3rem, 3vw, 2rem); color: var(--blanc); line-height: 1.5;">&ldquo;The sea is what the French have behind them when they look at the beach.&rdquo;</p>
+      <cite style="display: block; margin-top: var(--space-md); font-family: var(--font-mono); font-size: 0.85rem; font-style: normal; color: var(--bleu); letter-spacing: 0.05em;">&Eacute;ric Tabarly</cite>
+    </blockquote>
+    <p class="stagger" style="max-width: 600px; margin: 0 auto; font-size: 1rem; line-height: 1.8; color: var(--gris-400);">We are destined to become a maritime power.<br/>And we fight with all our strength to escape this inevitable fate.</p>
+  </div>
+</section>
+
 <!-- ▸ STATS ───────────────────────── -->
 <section class="section-light stats-bar">
   <div class="container">
@@ -33,42 +44,16 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <span class="stat-card__label">km&sup2; of EEZ</span>
       </div>
       <div class="stat-card stagger">
-        <span class="stat-card__number">2nd</span>
-        <span class="stat-card__label">maritime domain worldwide</span>
-      </div>
-      <div class="stat-card stagger">
-        <span class="stat-card__number">97%</span>
-        <span class="stat-card__label">of digital data via submarine cables</span>
-      </div>
-      <div class="stat-card stagger">
         <span class="stat-card__number">37</span>
-        <span class="stat-card__label">maritime border states</span>
+        <span class="stat-card__label"><a href={`${base}/en/sources`} style="color: inherit; text-decoration: underline; text-decoration-color: var(--gris-200); text-underline-offset: 2px;">States and territories</a> as maritime neighbors</span>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ▸ TRIPLE TRANSITION ──────────── -->
-<section id="vision" class="section-dark triple">
-  <div class="container">
-    <p class="mono text-accent stagger">The triple maritime transition</p>
-    <h2 class="stagger">Two transitions, one revolution<span class="dot-accent">.</span></h2>
-    <p class="subtitle stagger" style="color: var(--gris-400); max-width: 600px;">The environmental and digital transitions in maritime are above all a cultural revolution.</p>
-    <div class="triple__grid">
-      <div class="triple__card stagger">
-        <div class="triple__dot" style="background: var(--bleu);"></div>
-        <h3>Technological</h3>
-        <p>Maritime must not go through digitization: it must leap straight into digitalization. 90% of the world has 4G, but 70% of the global fleet still uses paper logbooks.</p>
+      <div class="stat-card stagger">
+        <span class="stat-card__number">4</span>
+        <span class="stat-card__label">oceans: Atlantic, Pacific, Indian, Southern</span>
       </div>
-      <div class="triple__card stagger">
-        <div class="triple__dot" style="background: var(--vert);"></div>
-        <h3>Environmental</h3>
-        <p>Maritime transport accounts for 3% of global greenhouse gas emissions. But it also emits underwater noise, carries invasive species, and introduces new chemical entities into ecosystems. There are 9 planetary boundaries to preserve.</p>
-      </div>
-      <div class="triple__card stagger">
-        <div class="triple__dot" style="background: var(--rose);"></div>
-        <h3>Sociocultural</h3>
-        <p>Maritime stakeholders, starting with seafarers, must take ownership of the major challenges of the 21st century. Drawing on maritime values of long-term thinking and crew spirit, they must actively drive solutions. Maritime transition without the social dimension is just recreational boating.</p>
+      <div class="stat-card stagger">
+        <span class="stat-card__number">6</span>
+        <span class="stat-card__label">continents — only country in the world</span>
       </div>
     </div>
   </div>
@@ -78,12 +63,101 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <section class="section-accent archipel">
   <div class="container">
     <p class="mono stagger" style="color: rgba(255,255,255,0.6);">Archipelago France</p>
-    <h2 class="stagger" style="color: #fff;">A free nation <br/>looks to the sea<span class="dot-accent" style="color: var(--vert);">.</span></h2>
+    <h2 class="stagger" style="color: #fff;">France is not a hexagon.<br/>It is an archipelago<span class="dot-accent" style="color: var(--vert);">.</span></h2>
     <p class="subtitle stagger" style="color: rgba(255,255,255,0.75); max-width: 640px;">
-      France has the world's 2nd largest maritime domain: 11 million km&sup2; across all oceans.
-      37 maritime border states. And yet, we turn our back to the sea.
-      MERitorious vs TERritorial — time to choose.
+      We remain confined to our narrow hexagonal TERRitory, while our MARitory makes France a transversal global power. A strategic potential that cuts across every challenge of the century.
     </p>
+  </div>
+</section>
+
+<!-- ▸ EVERYTHING GOES THROUGH THE SEA ── -->
+<section class="section-dark" style="padding: var(--space-2xl) 0;">
+  <div class="container">
+    <p class="mono text-accent stagger" style="text-align: center;">The invisible infrastructure</p>
+    <h2 class="stagger" style="text-align: center;">Everything goes through the sea<span class="dot-accent">.</span></h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2xl); margin-top: var(--space-2xl); align-items: start;">
+      <div class="stagger">
+        <p style="font-family: var(--font-heading); font-weight: 300; font-size: 1.1rem; line-height: 1.7; color: rgba(255,255,255,0.85); margin-bottom: var(--space-lg);">What you consumed this morning arrived by sea. The message you are reading travels through a cable on the ocean floor. The energy that will power your children will be born from waves and sea wind.</p>
+        <p style="font-size: 0.95rem; line-height: 1.8; color: var(--gris-400);">The maritime sector is not an industry. It is the circulatory system of our society. Without ships, without ports, without submarine cables, the economy seizes up, communications go dark, sovereignty fades.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg);">
+        <div class="stagger" style="padding: var(--space-lg); border-radius: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+          <span style="display: block; font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; color: var(--bleu); margin-bottom: 0.25rem;">&euro;595bn</span>
+          <span style="display: block; font-size: 0.8rem; line-height: 1.5; color: var(--gris-400);">of French goods exports transit by sea</span>
+        </div>
+        <div class="stagger" style="padding: var(--space-lg); border-radius: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+          <span style="display: block; font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; color: var(--bleu); margin-bottom: 0.25rem;">98%</span>
+          <span style="display: block; font-size: 0.8rem; line-height: 1.5; color: var(--gris-400);">of intercontinental telecoms via submarine cables</span>
+        </div>
+        <div class="stagger" style="padding: var(--space-lg); border-radius: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+          <span style="display: block; font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; color: var(--bleu); margin-bottom: 0.25rem;">45 GW</span>
+          <span style="display: block; font-size: 0.8rem; line-height: 1.5; color: var(--gris-400);">offshore wind target by 2050 — 30% of French electricity</span>
+        </div>
+        <div class="stagger" style="padding: var(--space-lg); border-radius: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+          <span style="display: block; font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; color: var(--bleu); margin-bottom: 0.25rem;">25,000</span>
+          <span style="display: block; font-size: 0.8rem; line-height: 1.5; color: var(--gris-400);">marine molecules described — tomorrow's pharmacy</span>
+        </div>
+      </div>
+    </div>
+    <p class="stagger" style="text-align: center; margin-top: var(--space-xl); font-size: 0.8rem; color: var(--gris-400);">All figures are referenced on the <a href={`${base}/en/sources`} style="color: var(--bleu); text-decoration: underline; text-underline-offset: 2px;">Sources & Data</a> page.</p>
+  </div>
+</section>
+
+<!-- ▸ OCEANOCRATIE MANIFESTO ──────── -->
+<section id="vision" class="section-light" style="padding: var(--space-2xl) 0;">
+  <div class="container">
+    <p class="mono text-accent stagger" style="text-align: center; color: var(--bleu);">Oceanocratie</p>
+    <h2 class="stagger" style="text-align: center;">A free nation<br/>looks to the sea<span class="dot-accent">.</span></h2>
+    <p class="subtitle stagger" style="text-align: center; max-width: 640px; margin: var(--space-md) auto var(--space-2xl);">Thalassocracy built power on domination of the seas. Oceanocratie builds society's resilience on a conscious relationship with the ocean. Not power <em>over</em>, but power <em>with</em>.</p>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-xl);">
+      <div class="stagger" style="text-align: center; padding: var(--space-xl) var(--space-lg); border-radius: 16px; border: 1px solid var(--gris-200);">
+        <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 16px; background: rgba(42,85,179,0.06); color: var(--bleu); margin-bottom: var(--space-lg);">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </div>
+        <h3>Curiosity against withdrawal</h3>
+        <p style="font-size: 0.9rem; line-height: 1.7; color: var(--gris-500);">The sea is the school of freedom. Not the comfortable freedom of staying home, but the demanding freedom of departure. The sailor who returns to port is no longer the one who left. It is the ultimate journey: daring to discover, questioning one's own frame of reference, opening up to the Other.</p>
+      </div>
+      <div class="stagger" style="text-align: center; padding: var(--space-xl) var(--space-lg); border-radius: 16px; border: 1px solid var(--gris-200);">
+        <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 16px; background: rgba(0,191,99,0.06); color: var(--vert); margin-bottom: var(--space-lg);">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22c5-3 8-7 8-12 0-3-2.5-5-5-5-1.5 0-2.5.5-3 1.5C11.5 5.5 10.5 5 9 5c-2.5 0-5 2-5 5 0 5 3 9 8 12z"/></svg>
+        </div>
+        <h3>Humility before the untameable</h3>
+        <p style="font-size: 0.9rem; line-height: 1.7; color: var(--gris-500);">We plough the land, fence it, own it. The ocean cannot be fenced or owned. It reminds us that we are not the masters. This is a lesson in humility that the land no longer teaches: understanding that we are part of nature, not above it.</p>
+      </div>
+      <div class="stagger" style="text-align: center; padding: var(--space-xl) var(--space-lg); border-radius: 16px; border: 1px solid var(--gris-200);">
+        <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 16px; background: rgba(179,42,85,0.06); color: var(--rose); margin-bottom: var(--space-lg);">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>A hand reached across borders</h3>
+        <p style="font-size: 0.9rem; line-height: 1.7; color: var(--gris-500);">At sea, maritime law mandates rescue — regardless of nationality. No border holds far from shore. The ocean is humanity's largest shared space: 37 maritime neighbors for France, 37 outstretched hands. The sea connects more than it separates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▸ TRIPLE TRANSITION ──────────── -->
+<section class="section-dark triple">
+  <div class="container">
+    <p class="mono text-accent stagger">The triple maritime evolution</p>
+    <h2 class="stagger">Three simultaneous shocks,<br/>three promises<span class="dot-accent">.</span></h2>
+    <p class="subtitle stagger" style="color: var(--gris-400); max-width: 600px;">The maritime world faces three unprecedented transformations. These are not threats — they are levers for a more resilient society.</p>
+    <div class="triple__grid">
+      <div class="triple__card stagger">
+        <div class="triple__dot" style="background: var(--bleu);"></div>
+        <h3>Technological revolution</h3>
+        <p>90% of the world has 4G, but 70% of the global fleet still uses paper logbooks. Maritime must leap straight into digitalization.</p>
+      </div>
+      <div class="triple__card stagger">
+        <div class="triple__dot" style="background: var(--vert);"></div>
+        <h3>Ecological transition</h3>
+        <p>Decarbonization, sail, hydrogen, floating wind. Maritime carries the promise of clean energy — 45 GW of offshore renewables by 2050 — and transport 7 times less carbon-intensive than road. 9 planetary boundaries to preserve.</p>
+      </div>
+      <div class="triple__card stagger">
+        <div class="triple__dot" style="background: var(--rose);"></div>
+        <h3>Sociocultural recomposition</h3>
+        <p>Maritime stakeholders must take ownership of the 21st century's challenges. Drawing on maritime values — long-term thinking, crew spirit, courage — they must actively share their world. Maritime transition without the social dimension is just recreational boating.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -91,7 +165,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <section class="section-dark matrice-section">
   <div class="container">
     <p class="mono text-accent stagger">Network of engagements</p>
-    <h2 class="stagger">An ecosystem at the service of maritime<span class="dot-accent">.</span></h2>
+    <h2 class="stagger">I don't theorize.<br/>I act<span class="dot-accent">.</span></h2>
   </div>
   <Matrice />
 </section>
