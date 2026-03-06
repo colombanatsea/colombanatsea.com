@@ -24,6 +24,7 @@ export const ui = {
     'footer.links': 'Liens',
     'footer.legal': 'Mentions legales',
     'footer.privacy': 'Politique de confidentialite',
+    'footer.sources': 'Sources & donnees',
     'footer.tagline': 'Une nation libre regarde la mer.',
 
     // Common
@@ -46,6 +47,7 @@ export const ui = {
     'footer.links': 'Links',
     'footer.legal': 'Legal Notice',
     'footer.privacy': 'Privacy Policy',
+    'footer.sources': 'Sources & Data',
     'footer.tagline': 'A free nation looks to the sea.',
 
     // Common
@@ -66,6 +68,7 @@ export const routes = {
     'contact': 'contact',
     'mentions-legales': 'mentions-legales',
     'politique-confidentialite': 'politique-confidentialite',
+    'sources': 'sources',
   },
   en: {
     '': '',
@@ -76,5 +79,6 @@ export const routes = {
     'contact': 'contact',
     'mentions-legales': 'legal-notice',
     'politique-confidentialite': 'privacy-policy',
+    'sources': 'sources',
   },
 } as const;
