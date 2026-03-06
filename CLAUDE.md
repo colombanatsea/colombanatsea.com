@@ -8,8 +8,8 @@
 - **i18n** : Astro built-in (`prefixDefaultLocale: true`, `redirectToDefaultLocale: false`), locales FR/EN
   - Traductions : `site/src/i18n/translations.ts` (UI strings) + `site/src/i18n/utils.ts`
   - Routes : `/fr/` (defaut), `/en/` — redirect racine `/` → `/fr/` (meta refresh + JS instant)
-  - Pages FR : `site/src/pages/fr/` (8 pages)
-  - Pages EN : `site/src/pages/en/` (7 pages)
+  - Pages FR : `site/src/pages/fr/` (9 pages)
+  - Pages EN : `site/src/pages/en/` (8 pages)
   - hreflang bidirectionnel sur toutes les pages + sitemap xhtml:link
 
 ## Charte Graphique (source : `colombanatsea/brands`)
@@ -94,6 +94,7 @@
 - Bouton "Explorer la carte" → mode plein écran avec légende + stats (Escape pour fermer) — masqué mobile
 - Nav : texte blanc par défaut, bascule noir au scroll (`nav--scrolled`)
 - Stats : chiffres maritimes (ZEE, câbles, frontières, émissions GES) — pas de stats personnelles
+- Chiffre clé frontières maritimes : **37 États et territoires** (30 États souverains + 7 territoires avec ZEE propre) — détail sur la page Sources
 - Triple transition : "Deux transitions, une révolution" — tech (4G vs papier), enviro (9 limites planétaires), socio (appropriation par les marins)
 - Le MERitoire français : grille 6 cartes (ZEE, frontières, communications, commerce, énergie EMR, culture) — concept TERRitoire vs MERitoire
 - Sections : Stats → Divider → Triple Transition → Divider → MERitoire → Matrice → Logos → Témoignages → CTA Social → Océanocratie
@@ -121,6 +122,13 @@
 - Conférences & interventions (tableau chronologique, liens externes)
 - Podcasts
 - Séries YouTube (Hissez Mots, Marine Marchande 101)
+
+### Sources & données (`/sources`)
+- Page de transparence référençant toutes les sources des chiffres utilisés sur le site
+- Tableau des 37 États et territoires voisins maritimes de la France (30 souverains + 7 territoires)
+- Tableaux : espace maritime, économie maritime, télécoms sous-marines, EMR, recherche, données du globe 3D
+- Lien dans le footer (colonne "Liens")
+- Sources : SHOM, VLIZ, Douanes françaises, Cluster Maritime, PPE3, France Renouvelables, ITU, TeleGeography
 
 ## Performance
 - **Scroll handlers** : tous throttlés via `requestAnimationFrame` (hero dezoom, carte progress)
