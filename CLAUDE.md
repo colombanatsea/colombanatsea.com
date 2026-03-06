@@ -93,11 +93,14 @@
 - Globe en arrière-plan (desktop), gradient radial (mobile), overlay léger, dezoom au scroll (rAF-throttled)
 - Bouton "Explorer la carte" → mode plein écran avec légende + stats (Escape pour fermer) — masqué mobile
 - Nav : texte blanc par défaut, bascule noir au scroll (`nav--scrolled`)
-- Stats : chiffres maritimes (ZEE, câbles, frontières, émissions GES) — pas de stats personnelles
-- Chiffre clé frontières maritimes : **37 États et territoires** (30 États souverains + 7 territoires avec ZEE propre) — détail sur la page Sources
-- Triple transition : "Deux transitions, une révolution" — tech (4G vs papier), enviro (9 limites planétaires), socio (appropriation par les marins)
+- Citation Tabarly : "La mer, c'est ce que les Français ont dans le dos quand ils regardent la plage" + écho Colomban
+- Stats : chiffres géographiques (11M km² ZEE, 37 États et territoires, 4 océans, 6 continents) — lien vers Sources
 - Le MERitoire français : grille 6 cartes (ZEE, frontières, communications, commerce, énergie EMR, culture) — concept TERRitoire vs MERitoire
-- Sections : Stats → Divider → Triple Transition → Divider → MERitoire → Matrice → Logos → Témoignages → CTA Social → Océanocratie
+- "Tout passe par la mer" : diagnostic positif — exports 595 Md€, 98% télécoms, 45 GW EMR 2050, 25 000 molécules marines — layout 2 colonnes (texte + 4 facts)
+- Manifeste Océanocratie : "Une nation libre regarde la mer" — 3 piliers (curiosité/humilité/fraternité), distinction thalassocratie vs océanocratie
+- Triple évolution : "Trois chocs, trois promesses" — techno (digitalisation), écolo (décarbonation + EMR), socio (appropriation + valeurs)
+- Engagements : "Je ne théorise pas. J'agis." — Matrice 3D
+- Sections : Hero → Tabarly → Stats → Divider → MERitoire → Divider → Tout passe par la mer → Divider → Manifeste → Divider → Triple évolution → Matrice → Logos → Témoignages → CTA Social → Océanocratie livre
 
 ### A propos (`/a-propos`)
 - Hero sombre sans scroll-hint (la carte a le sien)
