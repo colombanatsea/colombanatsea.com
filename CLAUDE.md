@@ -89,10 +89,14 @@
 ## Pages (routes : /fr/ et /en/)
 
 ### Homepage (`/fr/`, `/en/`)
-- Hero plein écran : globe en arrière-plan (desktop), gradient radial (mobile), overlay léger, dezoom au scroll (rAF-throttled)
+- Hero plein écran : titre "Océanocratie", baseline "Une nation libre regarde la mer." (non-italic, Poppins 300)
+- Globe en arrière-plan (desktop), gradient radial (mobile), overlay léger, dezoom au scroll (rAF-throttled)
 - Bouton "Explorer la carte" → mode plein écran avec légende + stats (Escape pour fermer) — masqué mobile
 - Nav : texte blanc par défaut, bascule noir au scroll (`nav--scrolled`)
-- Sections : Stats → Divider → Triple Transition → Divider → Archipel France → Matrice → Logos → Témoignages → CTA Social → Océanocratie
+- Stats : chiffres maritimes (ZEE, câbles, frontières, émissions GES) — pas de stats personnelles
+- Triple transition : "Deux transitions, une révolution" — tech (4G vs papier), enviro (9 limites planétaires), socio (appropriation par les marins)
+- Le MERitoire français : grille 6 cartes (ZEE, frontières, communications, commerce, énergie EMR, culture) — concept TERRitoire vs MERitoire
+- Sections : Stats → Divider → Triple Transition → Divider → MERitoire → Matrice → Logos → Témoignages → CTA Social → Océanocratie
 
 ### A propos (`/a-propos`)
 - Hero sombre sans scroll-hint (la carte a le sien)
