@@ -117,6 +117,52 @@
 - Ajout indicateur de scroll anime en bas de la visualisation mediaviz
 - SVG chevron + texte "Scrollez dans la visualisation" avec animation bounce/fade
 
+---
+
+# HANDOFF — Session 8 mars 2026
+
+## Actions realisees cette session
+
+### 1. Refonte complete ocean 3D oceanocratie.fr
+- **Remplacement Three.js par raymarching WebGL pur** — zero dependance externe
+  - Technique basee sur "Seascape" de TDM (Shadertoy, 840K+ vues)
+  - Heightmap tracing (binary search), ocean infini sans mesh
+  - `sea_octave()` custom : cretes tranchantes realistes
+  - 5 octaves avec rotation matricielle, Fresnel, SSS, double speculaire
+  - Tone mapping ACES, vignette, grain film
+
+### 2. Ajustements visuels demandes
+- **Vagues unidirectionnelles** : les deux composantes d'onde vont dans le meme sens (+x, +z) au lieu de directions opposees
+- **Vitesse reduite** : `SEA_SPEED` de 0.8 a 0.35 pour un mouvement plus lent et cinematique
+- **Etoiles visibles et scintillantes** : coordonnees spheriques stables (3 couches : brillantes, moyennes avec twinkle, faibles avec shimmer), positions fixes dans le ciel
+- **Lune amelioree** : disque plus lumineux, triple halo atmospherique (tight + medium + wide)
+
+### 3. Gouttelettes d'eau sur l'ecran
+- Canvas 2D overlay avec gouttes proceduelles (max 6 simultanees)
+- Effet de refraction (gradient radial, highlight blanc, anneau surface)
+- Physique : gravite, wobble sinusoidal, trainee
+- Spawn stochastique (toutes les 120-320 frames)
+- Desactive sur mobile (performance)
+
+### 4. Securite renforcee oceanocratie.fr
+- **CSP** : `default-src 'self'`, `script-src 'self' 'unsafe-inline'`, `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`, `font-src https://fonts.gstatic.com`, `img-src 'self' data:`, `connect-src 'self'`, `frame-src 'none'`, `object-src 'none'`, `base-uri 'self'`, `form-action 'self'`
+- **Permissions-Policy** : geolocation, microphone, camera, payment, usb, magnetometer, gyroscope, accelerometer disabled
+- **X-Content-Type-Options** : nosniff
+- **Referrer** : strict-origin-when-cross-origin
+
+### 5. Performance et compatibilite mobile
+- DPR cap 1.5 (shader WebGL) / 2 (droplets canvas)
+- 3 octaves geometrie / 5 fragment (shader LOD)
+- Mobile : fallback CSS (pas de WebGL, pas de droplets, pas de spray)
+- Aucun CDN, aucun framework — HTML standalone ~1400 lignes
+
+### 6. Documentation
+- CLAUDE.md mis a jour : specs oceanocratie.fr (raymarching, droplets, securite, perf)
+- HANDOFF.md mis a jour avec cette session
+
+## Fichiers modifies
+- `oceanocratie.fr/index.html` — refonte complete ocean + droplets + securite
+
 ## Action requise
 - **Sauvegarder la photo OG** en tant que `site/public/og-image.jpg` (1200x630px recommande, ou crop de la photo portrait fournie)
 - **Initialiser le repo** `oceanocratie.fr` sur GitHub et y pousser le `index.html`
