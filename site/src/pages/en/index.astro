@@ -8,218 +8,1202 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 <BaseLayout title="Colomban - Oceanocratie" lang="en" frSlug="" description="Oceanocratie — The digital headquarters of the triple maritime transition. Led by Colomban, merchant navy officer turned maritime transformation leader.">
 
-<!-- ▸ HERO ────────────────────────── -->
-<section class="hero section-dark">
-  <Globe />
-  <div class="hero__overlay">
-    <div class="container hero__content">
-      <p class="mono text-accent">colombanatsea.com</p>
-      <h1 class="hero__title">Oceanocratie<span class="dot-accent">.</span></h1>
-      <p class="subtitle hero__sub">A free nation looks to the sea.</p>
-      <div class="hero__actions">
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero__globe-bg">
+      <Globe />
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content container stagger">
+      <p class="hero__kicker mono">colombanatsea.com</p>
+      <h1 class="hero__title">Oceanocratie</h1>
+      <p class="hero__vision">A free nation looks to the sea.</p>
+      <div class="hero__cta">
         <a href="#vision" class="btn btn-primary">Discover the vision</a>
-        <a href={`${base}/en/about`} class="btn btn-outline-light">About Colomban</a>
+        <a href={`${base}/en/about`} class="btn btn-outline hero__btn-outline">About Colomban</a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ▸ TABARLY QUOTE ───────────────── -->
-<section class="section-dark" style="text-align: center; padding: var(--space-2xl) 0;">
-  <div class="container">
-    <blockquote class="stagger" style="max-width: 800px; margin: 0 auto var(--space-xl);">
-      <p style="font-family: var(--font-heading); font-weight: 300; font-size: clamp(1.3rem, 3vw, 2rem); color: var(--blanc); line-height: 1.5;">&ldquo;The sea is what the French have behind them when they look at the beach.&rdquo;</p>
-      <cite style="display: block; margin-top: var(--space-md); font-family: var(--font-mono); font-size: 0.85rem; font-style: normal; color: var(--bleu); letter-spacing: 0.05em;">&Eacute;ric Tabarly</cite>
-    </blockquote>
-    <p class="stagger" style="max-width: 600px; margin: 0 auto; font-size: 1rem; line-height: 1.8; color: var(--gris-400);">We are destined to become a maritime power.<br/>And we fight with all our strength to escape this inevitable fate.</p>
-  </div>
-</section>
-
-<!-- ▸ STATS ───────────────────────── -->
-<section class="section-light stats-bar">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-card stagger">
-        <span class="stat-card__number">11M</span>
-        <span class="stat-card__label">km&sup2; of EEZ</span>
-      </div>
-      <div class="stat-card stagger">
-        <span class="stat-card__number">37</span>
-        <span class="stat-card__label"><a href={`${base}/en/sources`} style="color: inherit; text-decoration: underline; text-decoration-color: var(--gris-200); text-underline-offset: 2px;">States and territories</a> as maritime neighbors</span>
-      </div>
-      <div class="stat-card stagger">
-        <span class="stat-card__number">4</span>
-        <span class="stat-card__label">oceans: Atlantic, Pacific, Indian, Southern</span>
-      </div>
-      <div class="stat-card stagger">
-        <span class="stat-card__number">6</span>
-        <span class="stat-card__label">continents — only country in the world</span>
-      </div>
+    <button class="hero__explore-map" id="hero-explore-map" aria-label="Explore the full-screen map">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" />
+      </svg>
+      <span class="mono">Explore the map</span>
+    </button>
+    <div class="hero__scroll-hint">
+      <span class="mono text-muted">Scroll</span>
+      <div class="hero__scroll-line"></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ▸ ARCHIPEL FRANCE ─────────────── -->
-<section class="section-accent archipel">
-  <div class="container">
-    <p class="mono stagger" style="color: rgba(255,255,255,0.6);">Archipelago France</p>
-    <h2 class="stagger" style="color: #fff;">France is not a hexagon.<br/>It is an archipelago<span class="dot-accent" style="color: var(--vert);">.</span></h2>
-    <p class="subtitle stagger" style="color: rgba(255,255,255,0.75); max-width: 640px;">
-      We remain confined to our narrow hexagonal TERRitory, while our MARitory makes France a transversal global power. A strategic potential that cuts across every challenge of the century.
-    </p>
-  </div>
-</section>
-
-<!-- ▸ EVERYTHING GOES THROUGH THE SEA ── -->
-<section class="section-dark" style="padding: var(--space-2xl) 0;">
-  <div class="container">
-    <p class="mono text-accent stagger" style="text-align: center;">The invisible infrastructure</p>
-    <h2 class="stagger" style="text-align: center;">Everything goes through the sea<span class="dot-accent">.</span></h2>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2xl); margin-top: var(--space-2xl); align-items: start;">
-      <div class="stagger">
-        <p style="font-family: var(--font-heading); font-weight: 300; font-size: 1.1rem; line-height: 1.7; color: rgba(255,255,255,0.85); margin-bottom: var(--space-lg);">What you consumed this morning arrived by sea. The message you are reading travels through a cable on the ocean floor. The energy that will power your children will be born from waves and sea wind.</p>
-        <p style="font-size: 0.95rem; line-height: 1.8; color: var(--gris-400);">The maritime sector is not an industry. It is the circulatory system of our society. Without ships, without ports, without submarine cables, the economy seizes up, communications go dark, sovereignty fades.</p>
-      </div>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg);">
-        <div class="stagger" style="padding: var(--space-lg); border-radius: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
-          <span style="display: block; font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; color: var(--bleu); margin-bottom: 0.25rem;">&euro;595bn</span>
-          <span style="display: block; font-size: 0.8rem; line-height: 1.5; color: var(--gris-400);">of French goods exports transit by sea</span>
-        </div>
-        <div class="stagger" style="padding: var(--space-lg); border-radius: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
-          <span style="display: block; font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; color: var(--bleu); margin-bottom: 0.25rem;">98%</span>
-          <span style="display: block; font-size: 0.8rem; line-height: 1.5; color: var(--gris-400);">of intercontinental telecoms via submarine cables</span>
-        </div>
-        <div class="stagger" style="padding: var(--space-lg); border-radius: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
-          <span style="display: block; font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; color: var(--bleu); margin-bottom: 0.25rem;">45 GW</span>
-          <span style="display: block; font-size: 0.8rem; line-height: 1.5; color: var(--gris-400);">offshore wind target by 2050 — 30% of French electricity</span>
-        </div>
-        <div class="stagger" style="padding: var(--space-lg); border-radius: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
-          <span style="display: block; font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; color: var(--bleu); margin-bottom: 0.25rem;">25,000</span>
-          <span style="display: block; font-size: 0.8rem; line-height: 1.5; color: var(--gris-400);">marine molecules described — tomorrow's pharmacy</span>
-        </div>
-      </div>
-    </div>
-    <p class="stagger" style="text-align: center; margin-top: var(--space-xl); font-size: 0.8rem; color: var(--gris-400);">All figures are referenced on the <a href={`${base}/en/sources`} style="color: var(--bleu); text-decoration: underline; text-underline-offset: 2px;">Sources & Data</a> page.</p>
-  </div>
-</section>
-
-<!-- ▸ OCEANOCRATIE MANIFESTO ──────── -->
-<section id="vision" class="section-light" style="padding: var(--space-2xl) 0;">
-  <div class="container">
-    <p class="mono text-accent stagger" style="text-align: center; color: var(--bleu);">Oceanocratie</p>
-    <h2 class="stagger" style="text-align: center;">A free nation<br/>looks to the sea<span class="dot-accent">.</span></h2>
-    <p class="subtitle stagger" style="text-align: center; max-width: 640px; margin: var(--space-md) auto var(--space-2xl);">Thalassocracy built power on domination of the seas. Oceanocratie builds society's resilience on a conscious relationship with the ocean. Not power <em>over</em>, but power <em>with</em>.</p>
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-xl);">
-      <div class="stagger" style="text-align: center; padding: var(--space-xl) var(--space-lg); border-radius: 16px; border: 1px solid var(--gris-200);">
-        <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 16px; background: rgba(42,85,179,0.06); color: var(--bleu); margin-bottom: var(--space-lg);">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-        </div>
-        <h3>Curiosity against withdrawal</h3>
-        <p style="font-size: 0.9rem; line-height: 1.7; color: var(--gris-500);">The sea is the school of freedom. Not the comfortable freedom of staying home, but the demanding freedom of departure. The sailor who returns to port is no longer the one who left. It is the ultimate journey: daring to discover, questioning one's own frame of reference, opening up to the Other.</p>
-      </div>
-      <div class="stagger" style="text-align: center; padding: var(--space-xl) var(--space-lg); border-radius: 16px; border: 1px solid var(--gris-200);">
-        <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 16px; background: rgba(0,191,99,0.06); color: var(--vert); margin-bottom: var(--space-lg);">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22c5-3 8-7 8-12 0-3-2.5-5-5-5-1.5 0-2.5.5-3 1.5C11.5 5.5 10.5 5 9 5c-2.5 0-5 2-5 5 0 5 3 9 8 12z"/></svg>
-        </div>
-        <h3>Humility before the untameable</h3>
-        <p style="font-size: 0.9rem; line-height: 1.7; color: var(--gris-500);">We plough the land, fence it, own it. The ocean cannot be fenced or owned. It reminds us that we are not the masters. This is a lesson in humility that the land no longer teaches: understanding that we are part of nature, not above it.</p>
-      </div>
-      <div class="stagger" style="text-align: center; padding: var(--space-xl) var(--space-lg); border-radius: 16px; border: 1px solid var(--gris-200);">
-        <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 16px; background: rgba(179,42,85,0.06); color: var(--rose); margin-bottom: var(--space-lg);">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3>A hand reached across borders</h3>
-        <p style="font-size: 0.9rem; line-height: 1.7; color: var(--gris-500);">At sea, maritime law mandates rescue — regardless of nationality. No border holds far from shore. The ocean is humanity's largest shared space: 37 maritime neighbors for France, 37 outstretched hands. The sea connects more than it separates.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ▸ TRIPLE TRANSITION ──────────── -->
-<section class="section-dark triple">
-  <div class="container">
-    <p class="mono text-accent stagger">The triple maritime evolution</p>
-    <h2 class="stagger">Three simultaneous shocks,<br/>three promises<span class="dot-accent">.</span></h2>
-    <p class="subtitle stagger" style="color: var(--gris-400); max-width: 600px;">The maritime world faces three unprecedented transformations. These are not threats — they are levers for a more resilient society.</p>
-    <div class="triple__grid">
-      <div class="triple__card stagger">
-        <div class="triple__dot" style="background: var(--bleu);"></div>
-        <h3>Technological revolution</h3>
-        <p>90% of the world has 4G, but 70% of the global fleet still uses paper logbooks. Maritime must leap straight into digitalization.</p>
-      </div>
-      <div class="triple__card stagger">
-        <div class="triple__dot" style="background: var(--vert);"></div>
-        <h3>Ecological transition</h3>
-        <p>Decarbonization, sail, hydrogen, floating wind. Maritime carries the promise of clean energy — 45 GW of offshore renewables by 2050 — and transport 7 times less carbon-intensive than road. 9 planetary boundaries to preserve.</p>
-      </div>
-      <div class="triple__card stagger">
-        <div class="triple__dot" style="background: var(--rose);"></div>
-        <h3>Sociocultural recomposition</h3>
-        <p>Maritime stakeholders must take ownership of the 21st century's challenges. Drawing on maritime values — long-term thinking, crew spirit, courage — they must actively share their world. Maritime transition without the social dimension is just recreational boating.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ▸ MATRICE ─────────────────────── -->
-<section class="section-dark matrice-section">
-  <div class="container">
-    <p class="mono text-accent stagger">Network of engagements</p>
-    <h2 class="stagger">I don't theorize.<br/>I act<span class="dot-accent">.</span></h2>
-  </div>
-  <Matrice />
-</section>
-
-<!-- ▸ LOGOS ────────────────────────── -->
-<section class="section-light logos-section">
-  <div class="container">
-    <p class="mono text-accent stagger" style="text-align:center; color: var(--bleu);">They trust Colomban</p>
-    <div class="logos-grid stagger">
-      <span class="logo-placeholder">GASPE</span>
-      <span class="logo-placeholder">VAIATA Dynamics</span>
-      <span class="logo-placeholder">ENSM</span>
-      <span class="logo-placeholder">Fondation ENSM</span>
-      <span class="logo-placeholder">Propeller Club</span>
-      <span class="logo-placeholder">Academie de Marine</span>
-    </div>
-  </div>
-</section>
-
-<!-- ▸ TEMOIGNAGES ─────────────────── -->
-<section class="section-dark temoignages">
-  <div class="container">
-    <p class="mono text-accent stagger">Testimonials</p>
-    <h2 class="stagger">What they say<span class="dot-accent">.</span></h2>
-    <div class="temoignages__grid">
-      <blockquote class="temoignage stagger">
-        <p>"Colomban is one of those rare profiles who combines field legitimacy and strategic vision for the maritime transition."</p>
-        <cite>— Maritime industry leader</cite>
+  <!-- ═══ TABARLY QUOTE ═══ -->
+  <section class="tabarly section-dark section" id="tabarly">
+    <div class="container">
+      <blockquote class="tabarly__quote stagger">
+        <p>&ldquo;The sea is what the French have behind them when they look at the beach.&rdquo;</p>
+        <cite>&Eacute;ric Tabarly</cite>
       </blockquote>
+      <p class="tabarly__echo stagger">We are destined to become a maritime power.<br/>And we fight with all our strength to escape this inevitable fate.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ▸ CTA SOCIAL ──────────────────── -->
-<section class="section-light cta-social">
-  <div class="container" style="text-align:center;">
-    <p class="mono text-accent stagger" style="color: var(--bleu);">Follow the journey</p>
-    <h2 class="stagger">Join the conversation<span class="dot-accent">.</span></h2>
-    <div class="cta-social__links stagger">
-      <a href="https://www.linkedin.com/in/colombanatsea/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">LinkedIn</a>
-      <a href="https://www.instagram.com/colombanatsea/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Instagram</a>
-      <a href="https://www.youtube.com/@Colombanatsea" target="_blank" rel="noopener noreferrer" class="btn btn-outline">YouTube</a>
+  <!-- ═══ STATS ═══ -->
+  <section class="stats section" id="stats">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stats__item stagger">
+          <span class="stats__number">11M</span>
+          <span class="stats__label">km&sup2; of EEZ</span>
+        </div>
+        <div class="stats__item stagger">
+          <span class="stats__number">37</span>
+          <span class="stats__label"><a href={`${base}/en/sources`} class="stats__source-link">States and territories</a> as maritime neighbors</span>
+        </div>
+        <div class="stats__item stagger">
+          <span class="stats__number">4</span>
+          <span class="stats__label">oceans: Atlantic, Pacific, Indian, Southern</span>
+        </div>
+        <div class="stats__item stagger">
+          <span class="stats__number">6</span>
+          <span class="stats__label">continents — only country in the world</span>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ▸ OCEANOCRATIE TEASER ──────────── -->
-<section class="section-dark oceanocratie-teaser">
-  <div class="container" style="text-align:center;">
-    <p class="mono text-accent stagger">Coming Christmas 2026</p>
-    <h2 class="stagger" style="font-size: clamp(2rem, 5vw, 3.5rem);">Oceanocratie<span class="dot-accent">.</span></h2>
-    <p class="subtitle stagger" style="font-style: italic; color: var(--gris-400);">A free nation looks to the sea.</p>
-    <a href="https://oceanocratie.fr" target="_blank" rel="noopener noreferrer" class="btn btn-primary stagger" style="margin-top: 1.5rem;">Discover the book</a>
+  <div class="divider-wrap">
+    <img src={`${base}/images/divider.svg`} alt="" class="divider-img" />
   </div>
-</section>
+
+  <!-- ═══ ARCHIPELAGO FRANCE ═══ -->
+  <section class="archipel section" id="globe">
+    <div class="container">
+      <div class="archipel__header stagger">
+        <p class="mono text-bleu">The French MARitory</p>
+        <h2>France is not a hexagon.<br/>It is an archipelago.</h2>
+        <p class="subtitle">We remain confined to our narrow hexagonal TERRitory, while our MARitory makes France a transversal global power. A strategic potential that cuts across every challenge of the century.</p>
+      </div>
+
+      <div class="archipel__grid">
+        <div class="archipel__card stagger">
+          <span class="archipel__number">2<sup>nd</sup></span>
+          <span class="archipel__title">World's EEZ</span>
+          <span class="archipel__desc">11 million km&sup2; of maritime space, across all the world's oceans</span>
+        </div>
+        <div class="archipel__card stagger">
+          <span class="archipel__number">37</span>
+          <span class="archipel__title">Maritime borders</span>
+          <span class="archipel__desc">A unique diplomatic interface: 37 States and territories as neighbors, no other country in the world</span>
+        </div>
+        <div class="archipel__card stagger">
+          <span class="archipel__number">97%</span>
+          <span class="archipel__title">Communications</span>
+          <span class="archipel__desc">Of global digital data transits through submarine cables — digital sovereignty</span>
+        </div>
+        <div class="archipel__card stagger">
+          <span class="archipel__number">80%</span>
+          <span class="archipel__title">World trade</span>
+          <span class="archipel__desc">Of global goods are transported by sea — economic interface</span>
+        </div>
+        <div class="archipel__card stagger">
+          <span class="archipel__number">MRE</span>
+          <span class="archipel__title">Energy</span>
+          <span class="archipel__desc">Offshore wind, tidal, ocean thermal energy: a considerable energy potential</span>
+        </div>
+        <div class="archipel__card stagger">
+          <span class="archipel__number">DNA</span>
+          <span class="archipel__title">Culture</span>
+          <span class="archipel__desc">From Petit Bateau to Jean-Paul Gaultier, from Kickers to Ulysse Nardin: maritime is anchored in our identity, without us embracing it</span>
+        </div>
+      </div>
+
+      <p class="archipel__note">Explore the interactive globe at the top of the page to visualize the French MARitory.</p>
+    </div>
+  </section>
+
+  <div class="divider-wrap">
+    <img src={`${base}/images/divider.svg`} alt="" class="divider-img" />
+  </div>
+
+  <!-- ═══ EVERYTHING GOES THROUGH THE SEA ═══ -->
+  <section class="seamer section-dark section" id="seamer">
+    <div class="container">
+      <div class="seamer__header stagger">
+        <p class="mono text-bleu">The invisible infrastructure</p>
+        <h2>Everything goes through the sea</h2>
+      </div>
+      <div class="seamer__content">
+        <div class="seamer__text stagger">
+          <p class="seamer__lead">What you consumed this morning arrived by sea. The message you are reading travels through a cable on the ocean floor. The energy that will power your children will be born from waves and sea wind.</p>
+          <p>The maritime sector is not an industry. It is the circulatory system of our society. Without ships, without ports, without submarine cables, the economy seizes up, communications go dark, sovereignty fades.</p>
+        </div>
+        <div class="seamer__facts">
+          <div class="seamer__fact stagger">
+            <span class="seamer__fact-number">&euro;595bn</span>
+            <span class="seamer__fact-label">of French goods exports transit by sea</span>
+          </div>
+          <div class="seamer__fact stagger">
+            <span class="seamer__fact-number">98%</span>
+            <span class="seamer__fact-label">of intercontinental telecoms via submarine cables</span>
+          </div>
+          <div class="seamer__fact stagger">
+            <span class="seamer__fact-number">45 GW</span>
+            <span class="seamer__fact-label">offshore wind target by 2050 — 30% of French electricity</span>
+          </div>
+          <div class="seamer__fact stagger">
+            <span class="seamer__fact-number">25,000</span>
+            <span class="seamer__fact-label">marine molecules described — tomorrow's pharmacy</span>
+          </div>
+        </div>
+      </div>
+      <p class="seamer__source stagger">All figures are referenced on the <a href={`${base}/en/sources`}>Sources & Data</a> page.</p>
+    </div>
+  </section>
+
+  <div class="divider-wrap">
+    <img src={`${base}/images/divider.svg`} alt="" class="divider-img" />
+  </div>
+
+  <!-- ═══ OCEANOCRATIE MANIFESTO ═══ -->
+  <section class="manifeste section" id="vision">
+    <div class="container">
+      <div class="manifeste__header stagger">
+        <p class="mono text-bleu">Oceanocratie</p>
+        <h2>A free nation<br/>looks to the sea</h2>
+        <p class="subtitle">Thalassocracy built power on domination of the seas. Oceanocratie builds society's resilience on a conscious relationship with the ocean. Not power <em>over</em>, but power <em>with</em>.</p>
+      </div>
+
+      <div class="manifeste__pillars">
+        <div class="manifeste__pillar stagger">
+          <div class="manifeste__pillar-icon" style="--pillar-color: var(--bleu);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+          </div>
+          <h3>Curiosity against withdrawal</h3>
+          <p>The sea is the school of freedom. Not the comfortable freedom of staying home, but the demanding freedom of departure. The sailor who returns to port is no longer the one who left. It is the ultimate journey: daring to discover, questioning one's own frame of reference, opening up to the Other.</p>
+        </div>
+
+        <div class="manifeste__pillar stagger">
+          <div class="manifeste__pillar-icon" style="--pillar-color: var(--vert);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M12 22c5-3 8-7 8-12 0-3-2.5-5-5-5-1.5 0-2.5.5-3 1.5C11.5 5.5 10.5 5 9 5c-2.5 0-5 2-5 5 0 5 3 9 8 12z"/>
+            </svg>
+          </div>
+          <h3>Humility before the untameable</h3>
+          <p>We plough the land, fence it, own it. The ocean cannot be fenced or owned. It reminds us that we are not the masters. This is a lesson in humility that the land no longer teaches: understanding that we are part of nature, not above it.</p>
+        </div>
+
+        <div class="manifeste__pillar stagger">
+          <div class="manifeste__pillar-icon" style="--pillar-color: var(--rose);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>A hand reached across borders</h3>
+          <p>At sea, maritime law mandates rescue — regardless of nationality. No border holds far from shore. The ocean is humanity's largest shared space: 37 maritime neighbors for France, 37 outstretched hands. The sea connects more than it separates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-wrap">
+    <img src={`${base}/images/divider.svg`} alt="" class="divider-img" />
+  </div>
+
+  <!-- ═══ TRIPLE EVOLUTION ═══ -->
+  <section class="vision section-dark section" id="evolution">
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="vision__header stagger">
+        <p class="mono text-bleu">The triple maritime evolution</p>
+        <h2>Three simultaneous shocks,<br/>three promises</h2>
+        <p class="subtitle">The maritime world faces three unprecedented transformations. These are not threats — they are levers for a more resilient society.</p>
+      </div>
+
+      <div class="vision__axes">
+        <div class="vision__axis" data-axis="techno">
+          <div class="vision__axis-icon" style="--axis-color: var(--bleu);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3>Technological revolution</h3>
+          <p>90% of the world has 4G, but 70% of the global fleet still uses paper logbooks. Maritime must leap straight into digitalization.</p>
+        </div>
+
+        <div class="vision__axis" data-axis="enviro">
+          <div class="vision__axis-icon" style="--axis-color: var(--vert);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M12 22c5-3 8-7 8-12 0-3-2.5-5-5-5-1.5 0-2.5.5-3 1.5C11.5 5.5 10.5 5 9 5c-2.5 0-5 2-5 5 0 5 3 9 8 12z"/>
+            </svg>
+          </div>
+          <h3>Ecological transition</h3>
+          <p>Decarbonization, sail, hydrogen, floating wind. Maritime carries the promise of clean energy — 45 GW of offshore renewables by 2050 — and transport 7 times less carbon-intensive than road. 9 planetary boundaries to preserve.</p>
+        </div>
+
+        <div class="vision__axis" data-axis="socio">
+          <div class="vision__axis-icon" style="--axis-color: var(--rose);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Sociocultural recomposition</h3>
+          <p>Maritime stakeholders must take ownership of the 21st century's challenges. Drawing on maritime values — long-term thinking, crew spirit, courage — they must actively share their world. Maritime transition without the social dimension is just recreational boating.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MATRICE ENGAGEMENTS ═══ -->
+  <section class="matrice-section section-dark section" id="matrice">
+    <div class="container">
+      <div class="matrice-section__header stagger">
+        <p class="mono text-bleu">Engagements</p>
+        <h2>I don't theorize.<br/>I act.</h2>
+      </div>
+    </div>
+    <div class="matrice-section__canvas">
+      <Matrice />
+    </div>
+  </section>
+
+  <!-- ═══ LOGOS ═══ -->
+  <section class="logos section" id="logos">
+    <div class="container">
+      <p class="logos__title mono text-muted">Collaborations, Mentions, Positions</p>
+      <div class="logos__track">
+        <div class="logos__slide">
+          <span class="logos__item">GASPE</span>
+          <span class="logos__item">Fondation ENSM</span>
+          <span class="logos__item">VAIATA Dynamics</span>
+          <span class="logos__item">Propeller Club</span>
+          <span class="logos__item">HYDROS Alumni</span>
+          <span class="logos__item">Le Monde</span>
+          <span class="logos__item">TF1</span>
+          <span class="logos__item">Marine & Oceans</span>
+          <span class="logos__item">Euromaritime</span>
+          <span class="logos__item">ENSM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section class="testimonials section" id="temoignages">
+    <div class="container">
+      <div class="testimonials__header stagger">
+        <h2>Trust is good.<br/>Testimonials are better.</h2>
+      </div>
+      <div class="testimonials__grid">
+        <blockquote class="testimonial">
+          <p>"Testimonial coming — currently collecting from partners and collaborators."</p>
+          <cite>— Name, Role</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"Testimonial coming — currently collecting from partners and collaborators."</p>
+          <cite>— Name, Role</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"Testimonial coming — currently collecting from partners and collaborators."</p>
+          <cite>— Name, Role</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA SOCIAL ═══ -->
+  <section class="cta-social section-dark section" id="cta">
+    <div class="container">
+      <div class="cta-social__inner stagger">
+        <h2>Share our maritime<br/>vision of the world</h2>
+        <p class="subtitle">Join the conversation on social media.</p>
+        <div class="cta-social__links">
+          <a href="https://www.linkedin.com/in/colombanatsea/" target="_blank" rel="noopener noreferrer" class="cta-social__link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.instagram.com/colombanatsea/" target="_blank" rel="noopener noreferrer" class="cta-social__link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.youtube.com/@Colombanatsea" target="_blank" rel="noopener noreferrer" class="cta-social__link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span>YouTube</span>
+          </a>
+          <a href="https://www.tiktok.com/@colombanatsea" target="_blank" rel="noopener noreferrer" class="cta-social__link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            <span>TikTok</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ OCEANOCRATIE TEASER ═══ -->
+  <section class="oceanocratie section" id="oceanocratie">
+    <div class="container">
+      <div class="oceanocratie__inner">
+        <div class="oceanocratie__text stagger">
+          <p class="mono text-bleu">Coming — Christmas 2026</p>
+          <h2>Oceanocratie</h2>
+          <p class="oceanocratie__subtitle">A free nation looks to the sea.</p>
+          <p class="subtitle">A book to explore France's maritime potential.</p>
+          <a href="https://oceanocratie.fr" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Discover the project</a>
+        </div>
+        <div class="oceanocratie__visual">
+          <div class="oceanocratie__book">
+            <span class="mono">OCEANOCRATIE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </BaseLayout>
+
+<script>
+  // Hero scroll = dezoom (scale down globe + overlay instead of scrolling away)
+  const hero = document.getElementById('hero');
+  const heroContent = hero?.querySelector('.hero__content') as HTMLElement | null;
+  const heroOverlay = hero?.querySelector('.hero__overlay') as HTMLElement | null;
+  const heroGlobe = hero?.querySelector('.hero__globe-bg') as HTMLElement | null;
+
+  let heroRafPending = false;
+  function handleHeroScroll() {
+    if (heroRafPending) return;
+    heroRafPending = true;
+    requestAnimationFrame(() => {
+      heroRafPending = false;
+      if (!hero || !heroContent) return;
+      const heroH = hero.offsetHeight;
+      const scrollY = window.scrollY;
+      if (scrollY < heroH) {
+        const progress = scrollY / heroH;
+        const scale = 1 - progress * 0.25;
+        const opacity = 1 - progress * 1.5;
+        if (heroGlobe) heroGlobe.style.transform = `scale(${scale})`;
+        if (heroContent) heroContent.style.opacity = String(Math.max(0, opacity));
+        if (heroOverlay) heroOverlay.style.opacity = String(Math.max(0.15, 1 - progress));
+      } else {
+        if (heroGlobe) heroGlobe.style.transform = '';
+        if (heroContent) heroContent.style.opacity = '0';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', handleHeroScroll, { passive: true });
+
+  // Block wheel events on the globe when NOT in fullmap (so page scrolls normally)
+  const globeContainer = hero?.querySelector('.hero__globe-bg');
+  globeContainer?.addEventListener('wheel', (e) => {
+    if (!hero?.classList.contains('hero--fullmap')) {
+      // Let the event propagate to the page for normal scrolling
+    }
+  }, { passive: true });
+
+  // Disable globe zoom in hero mode via a MutationObserver on the class
+  function setGlobeZoom(enabled: boolean) {
+    const canvas = hero?.querySelector('canvas');
+    if (canvas) {
+      canvas.style.pointerEvents = enabled ? 'auto' : 'none';
+    }
+    const container = hero?.querySelector('#globe-container') as HTMLElement | null;
+    if (container) {
+      container.style.pointerEvents = enabled ? 'auto' : 'none';
+    }
+  }
+
+  // Start with zoom disabled (hero mode)
+  setTimeout(() => setGlobeZoom(false), 100);
+
+  // Fullmap toggle
+  const exploreBtn = document.getElementById('hero-explore-map');
+  exploreBtn?.addEventListener('click', () => {
+    hero?.classList.toggle('hero--fullmap');
+    const isFullmap = hero?.classList.contains('hero--fullmap');
+    if (exploreBtn) {
+      const label = exploreBtn.querySelector('.mono');
+      if (label) label.textContent = isFullmap ? 'Close the map' : 'Explore the map';
+    }
+    document.body.style.overflow = isFullmap ? 'hidden' : '';
+    setGlobeZoom(!!isFullmap);
+  });
+
+  // Close fullmap on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && hero?.classList.contains('hero--fullmap')) {
+      hero.classList.remove('hero--fullmap');
+      document.body.style.overflow = '';
+      const label = exploreBtn?.querySelector('.mono');
+      if (label) label.textContent = 'Explore the map';
+      setGlobeZoom(false);
+    }
+  });
+</script>
+
+<style>
+  .divider-wrap {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-md) 0;
+  }
+
+  .divider-img {
+    width: 64px;
+    height: auto;
+    opacity: 0.18;
+  }
+
+  /* ═══ HERO ═══ */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: var(--nav-height);
+    background: #080b14;
+  }
+
+  .hero__globe-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero__globe-bg :global(.globe-wrapper),
+  .hero__globe-bg :global(#globe-container) {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero__globe-bg :global(#total-counter),
+  .hero__globe-bg :global(#legend),
+  .hero__globe-bg :global(#globe-loading) {
+    display: none;
+  }
+
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(135deg, rgba(8,11,20,0.35) 0%, rgba(8,11,20,0.08) 50%, rgba(8,11,20,0.20) 100%);
+    pointer-events: none;
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+  }
+
+  .hero__kicker {
+    margin-bottom: var(--space-md);
+    color: #fff;
+  }
+
+  .hero__title {
+    margin-bottom: var(--space-sm);
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--blanc);
+    letter-spacing: -0.02em;
+  }
+
+  .hero__vision {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: rgba(255,255,255,0.7);
+    margin-bottom: var(--space-lg);
+    letter-spacing: 0.02em;
+  }
+
+  .hero__cta {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  .hero__scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1;
+  }
+
+  .hero__scroll-line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, var(--gris-300), transparent);
+    animation: scroll-pulse 2s ease-in-out infinite;
+  }
+
+  .hero__btn-outline {
+    color: #fff !important;
+    border-color: rgba(255,255,255,0.4) !important;
+  }
+
+  .hero__btn-outline:hover {
+    border-color: #fff !important;
+    background: rgba(255,255,255,0.08) !important;
+  }
+
+  .hero__explore-map {
+    position: absolute;
+    bottom: 5rem;
+    right: 2rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 24px;
+    padding: 0.5rem 1rem;
+    color: rgba(255,255,255,0.7);
+    cursor: pointer;
+    transition: all var(--duration-normal);
+    backdrop-filter: blur(8px);
+  }
+
+  .hero__explore-map .mono {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+  }
+
+  .hero__explore-map:hover {
+    background: rgba(255,255,255,0.14);
+    border-color: rgba(255,255,255,0.4);
+    color: #fff;
+  }
+
+  .hero.hero--fullmap {
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .hero.hero--fullmap .hero__overlay,
+  .hero.hero--fullmap .hero__content,
+  .hero.hero--fullmap .hero__scroll-hint {
+    display: none;
+  }
+
+  .hero.hero--fullmap .hero__explore-map {
+    top: calc(var(--nav-height) + 1rem);
+    bottom: auto;
+    right: 2rem;
+    z-index: 20;
+  }
+
+  .hero.hero--fullmap .hero__globe-bg :global(#total-counter),
+  .hero.hero--fullmap .hero__globe-bg :global(#legend) {
+    display: block !important;
+  }
+
+  @keyframes scroll-pulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.2); }
+  }
+
+  /* ═══ TABARLY ═══ */
+  .tabarly {
+    text-align: center;
+    padding: var(--space-2xl) 0;
+  }
+
+  .tabarly__quote {
+    max-width: 800px;
+    margin: 0 auto var(--space-xl);
+  }
+
+  .tabarly__quote p {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    color: var(--blanc);
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+
+  .tabarly__quote cite {
+    display: block;
+    margin-top: var(--space-md);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-style: normal;
+    color: var(--bleu);
+    letter-spacing: 0.05em;
+  }
+
+  .tabarly__echo {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--gris-400);
+  }
+
+  /* ═══ STATS ═══ */
+  .stats__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .stats__number {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--bleu);
+  }
+
+  .stats__label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--gris-500);
+    margin-top: 0.25rem;
+  }
+
+  .stats__source-link {
+    color: var(--gris-500);
+    text-decoration: underline;
+    text-decoration-color: var(--gris-200);
+    text-underline-offset: 2px;
+  }
+
+  .stats__source-link:hover {
+    color: var(--bleu);
+    text-decoration-color: var(--bleu);
+  }
+
+  /* ═══ VISION / TRIPLE EVOLUTION ═══ */
+  .vision__header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .vision__header .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .vision__header .subtitle {
+    margin-top: var(--space-md);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--gris-400);
+  }
+
+  .vision__axes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .vision__axis {
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .vision__axis:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-4px);
+  }
+
+  .vision__axis-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--axis-color);
+    margin-bottom: var(--space-lg);
+  }
+
+  .vision__axis h3 {
+    color: var(--blanc);
+    margin-bottom: var(--space-md);
+  }
+
+  .vision__axis p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--gris-400);
+  }
+
+  /* ═══ ARCHIPEL SECTION ═══ */
+  .archipel__header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .archipel__header .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .archipel__header .subtitle {
+    margin-top: var(--space-md);
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .archipel__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .archipel__card {
+    padding: var(--space-xl) var(--space-lg);
+    border-radius: 16px;
+    border: 1px solid var(--gris-200);
+    text-align: center;
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .archipel__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  }
+
+  .archipel__number {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    color: var(--bleu);
+    margin-bottom: 0.25rem;
+  }
+
+  .archipel__title {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--noir);
+    margin-bottom: var(--space-sm);
+  }
+
+  .archipel__desc {
+    display: block;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--gris-500);
+  }
+
+  .archipel__note {
+    text-align: center;
+    margin-top: var(--space-xl);
+    font-size: 0.85rem;
+    color: var(--gris-400);
+    font-style: italic;
+  }
+
+  /* ═══ EVERYTHING GOES THROUGH THE SEA ═══ */
+  .seamer__header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .seamer__header .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .seamer__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  .seamer__lead {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: var(--space-lg);
+  }
+
+  .seamer__text p:last-child {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--gris-400);
+  }
+
+  .seamer__facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+
+  .seamer__fact {
+    padding: var(--space-lg);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .seamer__fact-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--bleu);
+    margin-bottom: 0.25rem;
+  }
+
+  .seamer__fact-label {
+    display: block;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--gris-400);
+  }
+
+  .seamer__source {
+    text-align: center;
+    margin-top: var(--space-xl);
+    font-size: 0.8rem;
+    color: var(--gris-400);
+  }
+
+  .seamer__source a {
+    color: var(--bleu);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* ═══ MANIFESTE ═══ */
+  .manifeste__header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .manifeste__header .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .manifeste__header .subtitle {
+    margin-top: var(--space-md);
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .manifeste__pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .manifeste__pillar {
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg);
+    border-radius: 16px;
+    border: 1px solid var(--gris-200);
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .manifeste__pillar:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  }
+
+  .manifeste__pillar-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: rgba(42, 85, 179, 0.06);
+    color: var(--pillar-color);
+    margin-bottom: var(--space-lg);
+  }
+
+  .manifeste__pillar h3 {
+    margin-bottom: var(--space-md);
+    font-size: 1.1rem;
+  }
+
+  .manifeste__pillar p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--gris-500);
+  }
+
+  /* ═══ MATRICE SECTION ═══ */
+  .matrice-section__header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .matrice-section__header .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .matrice-section__canvas {
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    position: relative;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.02) 0%, transparent 100%);
+    border-radius: 24px;
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* ═══ LOGOS ═══ */
+  .logos {
+    padding: var(--space-xl) 0;
+    border-top: 1px solid var(--gris-200);
+    border-bottom: 1px solid var(--gris-200);
+  }
+
+  .logos__title {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+  }
+
+  .logos__track {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .logos__slide {
+    display: flex;
+    gap: var(--space-2xl);
+    animation: logo-scroll 30s linear infinite;
+    width: max-content;
+  }
+
+  .logos__item {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--gris-300);
+    white-space: nowrap;
+    padding: var(--space-md) 0;
+  }
+
+  @keyframes logo-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ═══ TESTIMONIALS ═══ */
+  .testimonials__header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .testimonial {
+    padding: var(--space-xl);
+    border-radius: 16px;
+    border: 1px solid var(--gris-200);
+    background: white;
+  }
+
+  .testimonial p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--gris-500);
+    margin-bottom: var(--space-md);
+    font-style: italic;
+  }
+
+  .testimonial cite {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--noir);
+  }
+
+  /* ═══ CTA SOCIAL ═══ */
+  .cta-social__inner {
+    text-align: center;
+  }
+
+  .cta-social__inner .subtitle {
+    margin-top: var(--space-md);
+    color: var(--gris-400);
+  }
+
+  .cta-social__links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+  }
+
+  .cta-social__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gris-300);
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all var(--duration-normal);
+    padding: var(--space-lg);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .cta-social__link:hover {
+    color: var(--blanc);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+  }
+
+  /* ═══ OCEANOCRATIE ═══ */
+  .oceanocratie__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+
+  .oceanocratie__text .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .oceanocratie__subtitle {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--gris-500);
+    margin-top: var(--space-sm);
+  }
+
+  .oceanocratie__text .subtitle {
+    margin: var(--space-md) 0 var(--space-xl);
+  }
+
+  .oceanocratie__visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .oceanocratie__book {
+    width: 220px;
+    height: 300px;
+    background: linear-gradient(135deg, var(--bleu-dark), var(--bleu));
+    border-radius: 4px 16px 16px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 8px 8px 32px rgba(42, 85, 179, 0.3), -2px 0 8px rgba(0, 0, 0, 0.2);
+    transform: perspective(800px) rotateY(-8deg);
+    transition: transform var(--duration-normal) var(--ease-out);
+  }
+
+  .oceanocratie__book:hover {
+    transform: perspective(800px) rotateY(-2deg);
+  }
+
+  .oceanocratie__book .mono {
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+  }
+
+  /* ═══ MOBILE ═══ */
+  @media (max-width: 768px) {
+    .hero__globe-bg {
+      display: none;
+    }
+
+    .hero {
+      background: radial-gradient(ellipse at 30% 40%, #1a3a6e 0%, #0d1428 50%, #080b14 100%);
+    }
+
+    .hero__explore-map {
+      display: none;
+    }
+
+    .hero__content {
+      padding: 0 var(--space-md);
+    }
+
+    .tabarly__quote p {
+      font-size: 1.2rem;
+    }
+
+    .stats__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vision__axes {
+      grid-template-columns: 1fr;
+    }
+
+    .archipel__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seamer__content {
+      grid-template-columns: 1fr;
+    }
+
+    .seamer__facts {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .manifeste__pillars {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonials__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .oceanocratie__inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .cta-social__links {
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+
+    .matrice-section__canvas {
+      height: 50vh;
+      border-radius: 16px;
+      margin: 0 var(--space-md);
+    }
+  }
+</style>
