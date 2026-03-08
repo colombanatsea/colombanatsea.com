@@ -8,31 +8,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="container stagger" style="position: relative; z-index: 1;">
       <p class="mono" style="color: var(--blanc);">A propos</p>
       <h1>Le maritime dans le sang<br/>depuis <span class="text-bleu">1991</span></h1>
-      <p class="subtitle">D'un sillage unique de marin a un reseau d'engagements convergents pour transformer le maritime.</p>
-    </div>
-  </section>
-
-  <!-- Chiffres personnels -->
-  <section class="stats-bar section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stats-grid__item stagger">
-          <span class="stats-grid__number">1991</span>
-          <span class="stats-grid__label">Le maritime dans le sang</span>
-        </div>
-        <div class="stats-grid__item stagger">
-          <span class="stats-grid__number">5</span>
-          <span class="stats-grid__label">Aventures entrepreneuriales</span>
-        </div>
-        <div class="stats-grid__item stagger">
-          <span class="stats-grid__number">3.6M</span>
-          <span class="stats-grid__label">Vues LinkedIn / an</span>
-        </div>
-        <div class="stats-grid__item stagger">
-          <span class="stats-grid__number">28+</span>
-          <span class="stats-grid__label">Articles presse</span>
-        </div>
-      </div>
+      <p class="subtitle">Du pont des navires a un r&eacute;seau d'engagements convergents pour construire le maritime de demain.</p>
     </div>
   </section>
 
@@ -48,37 +24,60 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="container">
       <div class="about-block stagger">
         <p class="mono text-bleu">Le moment fondateur — Marseille, 2013</p>
-        <h2>Le choc des donnees</h2>
-        <p>En 2013, sans embarquement, Colomban rejoint Bourbon a terre pour agreger les donnees environnementales des navires. C'est le choc fondateur : les donnees sont d'une qualite catastrophique, recuperees mensuellement sur papier, sans aucune fiabilite.</p>
-        <p>Le gap technologique est abyssal — le maritime accuse des decennies de retard digital. En parallele, l'impact environnemental est massif et invisible : sans donnees fiables, impossible de mesurer, donc impossible d'ameliorer.</p>
-        <p class="highlight"><strong>C'est a Marseille en 2013 que nait la conviction que la technologie (donnee) et l'environnement (impact) sont indissociables dans la transformation du maritime.</strong></p>
+        <h2>Double prise de conscience</h2>
+        <p>En 2013, sans embarquement, Colomban rejoint Bourbon a terre pour agr&eacute;ger les donn&eacute;es environnementales des navires et constituer le rapport annuel aux actionnaires. C'est le choc fondateur&nbsp;: les donn&eacute;es sont d'une qualit&eacute; catastrophique, r&eacute;cup&eacute;r&eacute;es mensuellement sur papier ou tableur, sans aucune fiabilit&eacute;.</p>
+        <p>Le gap technologique est abyssal — le maritime accuse des d&eacute;cennies de retard digital. En parall&egrave;le, l'impact environnemental est massif et invisible&nbsp;: sans donn&eacute;es fiables, impossible de mesurer, donc impossible d'am&eacute;liorer.</p>
+        <p class="highlight"><strong>C'est a Marseille en 2013 que nait la conviction que la technologie (rendre la connaissance actionnable) et l'environnement (r&eacute;duire les impacts) sont indissociables dans la transformation du maritime.</strong></p>
       </div>
     </div>
   </section>
 
-  <div class="divider-wrap">
+  <div class="divider-wrap divider-wrap--overlap">
     <img src={`${base}/images/divider.svg`} alt="" class="divider-img" />
   </div>
 
-  <!-- Vision -->
+  <!-- Vision — La triple évolution -->
   <section class="section-dark section" id="vision-detail">
-    <div class="container">
-      <div class="about-block stagger">
-        <p class="mono text-bleu">La vision</p>
-        <h2>La triple transition maritime</h2>
-        <div class="about-values">
-          <div class="about-value">
-            <h3 class="text-bleu">Technologique</h3>
-            <p>Le maritime ne doit pas passer par la num&eacute;risation&nbsp;: il doit entrer imm&eacute;diatement dans l'&egrave;re de la digitalisation. 90% de la population mondiale a la 4G, mais 70% de la flotte mondiale utilise encore des journaux de bord papiers.</p>
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="vision__header stagger">
+        <p class="mono text-bleu">La triple &eacute;volution</p>
+        <h2>Deux transitions,<br/>une r&eacute;volution</h2>
+        <p class="subtitle">Le monde maritime affronte trois transformations sans pr&eacute;c&eacute;dent. Ce ne sont pas des menaces&nbsp;: ce sont des opportunit&eacute;s pour une soci&eacute;t&eacute; plus durable.</p>
+      </div>
+
+      <div class="vision__personal stagger">
+        <p>Depuis le choc de 2013 &agrave; Marseille, ces trois transformations sont devenues le fil conducteur de chacun de mes engagements. J'ai vu des officiers naviguer avec des outils des ann&eacute;es 80, des armateurs d&eacute;couvrir l'ampleur de leur empreinte environnementale, des marins exclus des d&eacute;bats qui fa&ccedil;onnent leur propre avenir. Ces trois r&eacute;alit&eacute;s ne sont pas des probl&egrave;mes isol&eacute;s&nbsp;: elles forment un syst&egrave;me. C'est en les abordant ensemble — technologie, environnement, soci&eacute;t&eacute; — que le maritime peut devenir un levier de transformation pour le monde.</p>
+      </div>
+
+      <div class="vision__axes">
+        <div class="vision__axis stagger" data-axis="techno">
+          <div class="vision__axis-icon" style="--axis-color: var(--bleu);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
           </div>
-          <div class="about-value">
-            <h3 class="text-vert">Environnementale</h3>
-            <p>Le transport maritime est responsable de 3% des &eacute;missions mondiales de GES. Mais il &eacute;met aussi des vibrations sonores, transporte des mati&egrave;res invasives et contribue &agrave; l'introduction de nouvelles entit&eacute;s chimiques. Il y a 9 limites plan&eacute;taires &agrave; pr&eacute;server.</p>
+          <h3>Transition technologique</h3>
+          <p>90% de la population mondiale a la 4G, mais 70% de la flotte mondiale utilise encore des journaux de bord papiers. Le maritime ne doit pas passer par la num&eacute;risation&nbsp;: il doit entrer imm&eacute;diatement dans une &egrave;re digitale, post web.</p>
+        </div>
+
+        <div class="vision__axis stagger" data-axis="enviro">
+          <div class="vision__axis-icon" style="--axis-color: var(--vert);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M12 22c5-3 8-7 8-12 0-3-2.5-5-5-5-1.5 0-2.5.5-3 1.5C11.5 5.5 10.5 5 9 5c-2.5 0-5 2-5 5 0 5 3 9 8 12z"/>
+            </svg>
           </div>
-          <div class="about-value">
-            <h3 class="text-rose">Socioculturelle</h3>
-            <p>Les acteurs du monde maritime doivent s'approprier les grands enjeux du XXI<sup>e</sup> si&egrave;cle. En s'appuyant sur les valeurs du maritime, ils doivent contribuer &agrave; trouver des solutions et faire d&eacute;couvrir leur monde de temps long et d'esprit d'&eacute;quipage. La transition du maritime en oubliant l'aspect social, c'est de la plaisance particuli&egrave;re.</p>
+          <h3>Transition &eacute;cologique</h3>
+          <p>D&eacute;carbonation, voile, hydrog&egrave;ne, &eacute;olien flottant. Le maritime porte la promesse d'une &eacute;nergie propre — 45 GW d'EMR en 2050 en France — et d'un transport 7 fois moins carbon&eacute; que la route. Si l'enjeu imm&eacute;diat mis en avant est souvent la d&eacute;carbonation, n'oublions pas qu'il y a 9 limites plan&eacute;taires &agrave; pr&eacute;server et que le maritime a sa part dans chacune.</p>
+        </div>
+
+        <div class="vision__axis stagger" data-axis="socio">
+          <div class="vision__axis-icon" style="--axis-color: var(--rose);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
           </div>
+          <h3>R&eacute;volution socioculturelle</h3>
+          <p>Les transitions du maritime en oubliant l'aspect social, les marins, c'est de la plaisance. Les acteurs du monde maritime doivent s'approprier les grands enjeux du XXI<sup>e</sup> si&egrave;cle. En s'appuyant sur les valeurs du maritime — temps long, esprit d'&eacute;quipage, esprit pionnier, humilit&eacute; — ils doivent contribuer activement autant &agrave; transformer leur monde qu'&agrave; le faire d&eacute;couvrir pour inspirer la soci&eacute;t&eacute;.</p>
         </div>
       </div>
     </div>
@@ -92,8 +91,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <h2>Ce qui guide chaque engagement</h2>
         <div class="valeurs-grid">
           <div class="valeur-card">
-            <h3>Confiance</h3>
-            <p>Le monde maritime se construit sur la confiance. Les armateurs confiaient leur avenir au capitaine sans nouvelles pendant des mois. Cette tradition de confiance guide chaque engagement.</p>
+            <h3>Temps long</h3>
+            <p>Le maritime enseigne la patience et la vision &agrave; long terme. Planifier, se projeter dans l'avenir — le temps de la mer n'est pas celui de l'imm&eacute;diatet&eacute;.</p>
+          </div>
+          <div class="valeur-card">
+            <h3>Confiance &amp; esprit d'&eacute;quipage</h3>
+            <p>Les armateurs confiaient leur avenir au capitaine sans nouvelles pendant des mois. En mer, la force du collectif et l'interd&eacute;pendance de l'&eacute;quipage sont vitales. Cette tradition guide chaque engagement.</p>
           </div>
           <div class="valeur-card">
             <h3>Innovation</h3>
@@ -102,6 +105,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           <div class="valeur-card">
             <h3>Durabilit&eacute;</h3>
             <p>Approche holistique des limites plan&eacute;taires. Le climat n'est qu'une des 9 limites. Le maritime doit int&eacute;grer la soci&eacute;t&eacute; durable dans toutes ses dimensions.</p>
+          </div>
+          <div class="valeur-card">
+            <h3>Humilit&eacute;</h3>
+            <p>Face aux &eacute;l&eacute;ments qu'on ne ma&icirc;trise pas, aux connaissances qu'on ne peut acqu&eacute;rir en exhaustivit&eacute;, aux d&eacute;couvertes qu'on n'arr&ecirc;te jamais de faire en mer. Rien n'est acquis en mer.</p>
           </div>
         </div>
       </div>
@@ -117,11 +124,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <ul class="about-facts">
           <li>Papa de 3 enfants</li>
           <li>Enfance en Irlande, en bateau — c'est la que nait la vocation</li>
+          <li>Trace sa route malgr&eacute; les difficult&eacute;s en math&eacute;matiques</li>
           <li>Officier de la Marine Marchande, diplome de l'ENSM</li>
-          <li>Nul en maths mais accroche</li>
-          <li>Passionne de cartographie — les cartes sont un vecteur de message politique</li>
-          <li>Ancre a Annecy-le-Vieux</li>
           <li>5 aventures entrepreneuriales</li>
+          <li>Passionn&eacute; de cartographie — les cartes sont un vecteur de r&eacute;cit puissant</li>
+          <li>Ancr&eacute; a Annecy-le-Vieux</li>
         </ul>
       </div>
     </div>
@@ -132,34 +139,105 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="container">
       <div class="about-block stagger">
         <p class="mono text-bleu">Bibliographie</p>
-        <h2>Les lectures qui m'ont fa&ccedil;onn&eacute;</h2>
-        <ul class="biblio-list">
+        <h2>Quelques lectures d&eacute;cisives</h2>
+        <ul class="biblio-list" id="biblio-list">
           <li>
-            <strong>L'Homme et la Mer</strong> — <span class="biblio-author">Cyrille P. Coutansais</span>
-            <p>La relation fondamentale entre l'humanit&eacute; et l'oc&eacute;an, de l'Antiquit&eacute; &agrave; nos jours.</p>
+            <strong>La Mer, ses valeurs</strong> — <span class="biblio-author">Chantal Reynier (dir.), Groupe Mer et Valeurs</span>
+            <p>Exploration des valeurs transmises par la mer et le monde maritime.</p>
           </li>
           <li>
-            <strong>Atlas des mers et oc&eacute;ans</strong> — <span class="biblio-author">Andr&eacute; Louchet</span>
-            <p>G&eacute;opolitique maritime, enjeux strat&eacute;giques et &eacute;conomiques des espaces oc&eacute;aniques.</p>
+            <strong>Le Vieil Homme et la Mer</strong> — <span class="biblio-author">Ernest Hemingway</span>
+            <p>Le combat d'un p&ecirc;cheur cubain contre un marlin g&eacute;ant, parabole de la pers&eacute;v&eacute;rance humaine.</p>
           </li>
           <li>
-            <strong>La Mer est l'avenir de la Terre</strong> — <span class="biblio-author">Paul Music</span>
-            <p>Pourquoi le maritime est la cl&eacute; de la transition &eacute;cologique et &eacute;conomique.</p>
+            <strong>Navires de l'espoir</strong> — <span class="biblio-author">Don Stephen</span>
+            <p>L'aventure des navires hospitaliers au service des plus d&eacute;munis.</p>
           </li>
           <li>
-            <strong>Le d&eacute;fi de la Marine Marchande fran&ccedil;aise</strong> — <span class="biblio-author">IFM</span>
-            <p>Analyse du d&eacute;clin et des perspectives de renaissance de la flotte commerciale fran&ccedil;aise.</p>
+            <strong>Algocratie</strong> — <span class="biblio-author">Arthur Grimonpont</span>
+            <p>Comment les algorithmes fa&ccedil;onnent nos soci&eacute;t&eacute;s et menacent nos libert&eacute;s.</p>
           </li>
           <li>
-            <strong>Le Cygne Noir</strong> — <span class="biblio-author">Nassim Nicholas Taleb</span>
-            <p>L'impact disproportionn&eacute; des &eacute;v&eacute;nements impr&eacute;visibles — une le&ccedil;on pour la gestion des risques maritimes.</p>
+            <strong>Tentative d'&eacute;puisement de l'avenir du futur</strong> — <span class="biblio-author">Rafi Haladjian</span>
+            <p>R&eacute;flexion sur la promesse technologique et ses limites face &agrave; l'avenir.</p>
           </li>
           <li>
-            <strong>Thinking, Fast and Slow</strong> — <span class="biblio-author">Daniel Kahneman</span>
-            <p>Les biais cognitifs qui fa&ccedil;onnent nos d&eacute;cisions — essentiels pour comprendre la r&eacute;sistance au changement.</p>
+            <strong>L'Obsolescence de l'homme</strong> — <span class="biblio-author">G&uuml;nther Anders</span>
+            <p>L'homme d&eacute;pass&eacute; par ses propres cr&eacute;ations techniques.</p>
+          </li>
+          <li>
+            <strong>Le R&ocirc;le social de l'officier</strong> — <span class="biblio-author">Mar&eacute;chal Lyautey</span>
+            <p>Le devoir de l'officier envers la soci&eacute;t&eacute;, au-del&agrave; du commandement militaire.</p>
+          </li>
+          <li>
+            <strong>Le Ph&eacute;nom&egrave;ne humain</strong> — <span class="biblio-author">Pierre Teilhard de Chardin</span>
+            <p>Vision de l'&eacute;volution humaine vers une conscience collective plan&eacute;taire.</p>
           </li>
         </ul>
-        <p class="biblio-note">Liste non exhaustive — mise &agrave; jour r&eacute;guli&egrave;rement.</p>
+        <ul class="biblio-list biblio-list--hidden" id="biblio-list-more">
+          <li>
+            <strong>La Convivialit&eacute;</strong> — <span class="biblio-author">Ivan Illich</span>
+            <p>Critique de la soci&eacute;t&eacute; industrielle et plaidoyer pour des outils au service de l'homme.</p>
+          </li>
+          <li>
+            <strong>Voyage dans l'Anthropoc&egrave;ne</strong> — <span class="biblio-author">Claude Lorius</span>
+            <p>T&eacute;moignage du glaciologue pionnier sur le changement climatique.</p>
+          </li>
+          <li>
+            <strong>C'est &ccedil;a le marketing</strong> — <span class="biblio-author">Seth Godin</span>
+            <p>Le marketing comme acte g&eacute;n&eacute;reux de changement au service des autres.</p>
+          </li>
+          <li>
+            <strong>Les Tr&egrave;s Riches Heures de l'humanit&eacute;</strong> — <span class="biblio-author">Stefan Zweig</span>
+            <p>Quatorze moments d&eacute;cisifs qui ont chang&eacute; le cours de l'histoire.</p>
+          </li>
+          <li>
+            <strong>N'aie pas peur</strong> — <span class="biblio-author">Cyrille Argenti</span>
+            <p>M&eacute;ditation sur la foi, le courage et la confiance face &agrave; l'inconnu.</p>
+          </li>
+          <li>
+            <strong>How Google Works</strong> — <span class="biblio-author">Eric Schmidt, Jonathan Rosenberg</span>
+            <p>Les principes de management et d'innovation qui ont b&acirc;ti Google.</p>
+          </li>
+          <li>
+            <strong>Healthy Business</strong> — <span class="biblio-author">Jean-Charles Samuelian-Werve</span>
+            <p>Construire une entreprise saine, performante et align&eacute;e avec ses valeurs.</p>
+          </li>
+          <li>
+            <strong>J'ai toujours v&eacute;cu demain</strong> — <span class="biblio-author">Paul-&Eacute;mile Victor</span>
+            <p>M&eacute;moires de l'explorateur polaire, pionnier des exp&eacute;ditions fran&ccedil;aises en Arctique et Antarctique.</p>
+          </li>
+          <li>
+            <strong>Pourquoi le nord est-il en haut&nbsp;?</strong> — <span class="biblio-author">Mick Ashworth</span>
+            <p>Comment les conventions cartographiques fa&ccedil;onnent notre vision du monde.</p>
+          </li>
+          <li>
+            <strong>Propaganda</strong> — <span class="biblio-author">Edward Bernays</span>
+            <p>Les m&eacute;canismes de la manipulation des masses et de la fabrique du consentement.</p>
+          </li>
+          <li>
+            <strong>Le Pouvoir du moment pr&eacute;sent</strong> — <span class="biblio-author">Eckhart Tolle</span>
+            <p>Guide vers l'&eacute;veil spirituel par la pleine conscience du moment pr&eacute;sent.</p>
+          </li>
+          <li>
+            <strong>L'&Acirc;ge des low tech</strong> — <span class="biblio-author">Philippe Bihouix</span>
+            <p>Pour une civilisation techniquement soutenable, contre le solutionnisme technologique.</p>
+          </li>
+          <li>
+            <strong>Du mensonge &agrave; la violence</strong> — <span class="biblio-author">Hannah Arendt</span>
+            <p>R&eacute;flexions sur la politique, le mensonge institutionnel et ses cons&eacute;quences.</p>
+          </li>
+          <li>
+            <strong>Une br&egrave;ve histoire de l'avenir</strong> — <span class="biblio-author">Jacques Attali</span>
+            <p>Prospective sur les cinquante prochaines ann&eacute;es de l'humanit&eacute;.</p>
+          </li>
+          <li>
+            <strong>La Grande Transformation</strong> — <span class="biblio-author">Karl Polanyi</span>
+            <p>Analyse de l'&eacute;mergence de l'&eacute;conomie de march&eacute; et de ses cons&eacute;quences sociales.</p>
+          </li>
+        </ul>
+        <button class="biblio-toggle" id="biblio-toggle" type="button">Voir plus</button>
+        <p class="biblio-authors">Autres grands auteurs&nbsp;: Edgar Morin, St&eacute;phane Hessel, J.R.R. Tolkien, Robert Louis Stevenson.</p>
       </div>
     </div>
   </section>
@@ -188,28 +266,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     margin-top: var(--space-md);
     max-width: 600px;
     color: var(--gris-400);
-  }
-
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-lg);
-    text-align: center;
-  }
-
-  .stats-grid__number {
-    display: block;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: var(--bleu);
-  }
-
-  .stats-grid__label {
-    display: block;
-    font-size: 0.875rem;
-    color: var(--gris-500);
-    margin-top: 0.25rem;
   }
 
   .carte-section {
@@ -271,20 +327,77 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: var(--noir) !important;
   }
 
-  .about-values {
+  /* Triple évolution — vision axes */
+  .vision__header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .vision__header .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .vision__header .subtitle {
+    margin-top: var(--space-md);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--gris-400);
+  }
+
+  .vision__personal {
+    max-width: 680px;
+    margin: 0 auto var(--space-2xl);
+    text-align: center;
+  }
+
+  .vision__personal p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--gris-400);
+    font-style: italic;
+  }
+
+  .vision__axes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-xl);
-    margin-top: var(--space-lg);
+    gap: var(--space-lg);
   }
 
-  .about-value h3 {
-    margin-bottom: var(--space-sm);
-    font-size: 1.1rem;
+  .vision__axis {
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: all var(--duration-normal) var(--ease-out);
   }
 
-  .about-value p {
+  .vision__axis:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-4px);
+  }
+
+  .vision__axis-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--axis-color) 15%, transparent);
+    color: var(--axis-color);
+    margin-bottom: var(--space-md);
+  }
+
+  .vision__axis h3 {
+    color: var(--blanc);
+    margin-bottom: var(--space-md);
+  }
+
+  .vision__axis p {
     font-size: 0.9rem;
+    line-height: 1.7;
     color: var(--gris-400);
   }
 
@@ -354,9 +467,36 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     line-height: 1.5;
   }
 
-  .biblio-note {
+  .biblio-list--hidden {
+    display: none;
+  }
+
+  .biblio-list--hidden.biblio-list--visible {
+    display: flex;
+  }
+
+  .biblio-toggle {
+    display: inline-block;
     margin-top: var(--space-lg);
-    font-size: 0.8rem;
+    padding: 0.5rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--gris-400);
+    border-radius: 8px;
+    color: var(--gris-400);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .biblio-toggle:hover {
+    border-color: var(--blanc);
+    color: var(--blanc);
+  }
+
+  .biblio-authors {
+    margin-top: var(--space-lg);
+    font-size: 0.85rem;
     color: var(--gris-400);
     font-style: italic;
   }
@@ -366,6 +506,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
     margin-top: var(--space-lg);
+  }
+
+  .valeurs-grid .valeur-card:nth-child(4),
+  .valeurs-grid .valeur-card:nth-child(5) {
+    max-width: 100%;
   }
 
   .valeur-card {
@@ -392,20 +537,33 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     line-height: 1.6;
   }
 
+  /* Divider chevauchant entre sections sombre/clair */
+  .divider-wrap--overlap {
+    position: relative;
+    z-index: 2;
+    margin-top: -32px;
+    margin-bottom: -32px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .divider-wrap--overlap .divider-img {
+    width: 64px;
+    height: auto;
+    opacity: 0.25;
+  }
+
   @media (max-width: 768px) {
     .page-hero--carte {
       min-height: 50vh;
-    }
-
-    .stats-grid {
-      grid-template-columns: repeat(2, 1fr);
     }
 
     .carte-section {
       height: 500vh;
     }
 
-    .about-values {
+    .vision__axes {
       grid-template-columns: 1fr;
     }
 
@@ -439,4 +597,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   carteIframe?.addEventListener('load', () => {
     sendCarteProgress();
   });
+
+  // Biblio toggle
+  const biblioToggle = document.getElementById('biblio-toggle');
+  const biblioMore = document.getElementById('biblio-list-more');
+  if (biblioToggle && biblioMore) {
+    biblioToggle.addEventListener('click', () => {
+      const isVisible = biblioMore.classList.toggle('biblio-list--visible');
+      biblioToggle.textContent = isVisible ? 'Voir moins' : 'Voir plus';
+    });
+  }
 </script>

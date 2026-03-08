@@ -102,7 +102,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
-  <div class="divider-wrap">
+  <div class="divider-wrap divider-wrap--overlap">
     <img src={`${base}/images/divider.svg`} alt="" class="divider-img" />
   </div>
 
@@ -141,7 +141,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
-  <div class="divider-wrap">
+  <div class="divider-wrap divider-wrap--overlap">
     <img src={`${base}/images/divider.svg`} alt="" class="divider-img" />
   </div>
 
@@ -188,7 +188,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
-  <div class="divider-wrap">
+  <div class="divider-wrap divider-wrap--overlap">
     <img src={`${base}/images/divider.svg`} alt="" class="divider-img" />
   </div>
 
@@ -456,6 +456,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     width: 40px;
     height: auto;
     opacity: 0.10;
+  }
+
+  .divider-wrap--overlap {
+    position: relative;
+    z-index: 2;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    padding: 0;
+  }
+
+  .divider-wrap--overlap .divider-img {
+    opacity: 0.20;
   }
 
   /* ═══ HERO ═══ */

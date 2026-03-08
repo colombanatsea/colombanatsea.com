@@ -1,37 +1,610 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<BaseLayout lang="en" frSlug="a-propos" title="About — Colomban at Sea" description="Colomban's journey: from ship bridges to the triple maritime transition. Merchant navy officer, entrepreneur, lecturer and thought leader.">
+<BaseLayout lang="en" frSlug="a-propos" title="About — Colomban at Sea" description="Colomban's journey: from ship bridges to the triple maritime evolution. Merchant navy officer, entrepreneur, lecturer and thought leader.">
+  <section class="page-hero section-dark page-hero--carte">
+    <div class="container stagger" style="position: relative; z-index: 1;">
+      <p class="mono" style="color: var(--blanc);">About</p>
+      <h1>The maritime in the blood<br/>since <span class="text-bleu">1991</span></h1>
+      <p class="subtitle">From ship bridges to a network of converging commitments to build tomorrow's maritime world.</p>
+    </div>
+  </section>
 
-<section class="section-dark hero-inner">
-  <div class="container">
-    <p class="mono text-accent">About</p>
-    <h1>From ship bridges <br/>to maritime transformation<span class="dot-accent">.</span></h1>
-    <p class="subtitle">Merchant navy officer, entrepreneur, lecturer. The maritime in the blood since 1991.</p>
+  <!-- Carte marine parcours — scroll-driven, parent controls iframe progress -->
+  <section class="carte-section" id="carte">
+    <div class="carte-sticky">
+      <iframe id="carte-iframe" src={`${base}/viz/carte.html`} class="carte-iframe" title="Marine chart of Colomban's journey"></iframe>
+    </div>
+  </section>
+
+  <!-- Founding moment -->
+  <section class="section" id="parcours">
+    <div class="container">
+      <div class="about-block stagger">
+        <p class="mono text-bleu">The founding moment — Marseille, 2013</p>
+        <h2>A double awakening</h2>
+        <p>In 2013, between sea assignments, Colomban joined Bourbon onshore to aggregate the environmental data from ships and produce the annual report for shareholders. It was a founding shock: the data was catastrophically poor, collected monthly on paper or spreadsheets, with no reliability whatsoever.</p>
+        <p>The technological gap was abyssal — the maritime industry was decades behind digitally. Meanwhile, the environmental impact was massive and invisible: without reliable data, impossible to measure, therefore impossible to improve.</p>
+        <p class="highlight"><strong>It was in Marseille in 2013 that the conviction was born: technology (making knowledge actionable) and the environment (reducing impacts) are inseparable in the transformation of the maritime world.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-wrap divider-wrap--overlap">
+    <img src={`${base}/images/divider.svg`} alt="" class="divider-img" />
   </div>
-</section>
 
-<section class="section-light">
-  <div class="container page-content">
-    <h2>Journey<span class="dot-accent">.</span></h2>
+  <!-- Vision — The triple evolution -->
+  <section class="section-dark section" id="vision-detail">
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="vision__header stagger">
+        <p class="mono text-bleu">The triple evolution</p>
+        <h2>Two transitions,<br/>one revolution</h2>
+        <p class="subtitle">The maritime world faces three unprecedented transformations. These are not threats: they are opportunities for a more sustainable society.</p>
+      </div>
 
-    <h3>Phase 1 — Childhood & Training</h3>
-    <p>Born between Brittany and Ireland, growing up crossing the sea by boat. Entered the ENSM (National Maritime Academy) in Marseille in 2010.</p>
+      <div class="vision__personal stagger">
+        <p>Since the shock of 2013 in Marseille, these three transformations have become the guiding thread of every one of my commitments. I have seen officers navigating with 1980s tools, shipowners discovering the extent of their environmental footprint, seafarers excluded from the debates shaping their own future. These three realities are not isolated problems: they form a system. It is by addressing them together — technology, environment, society — that the maritime world can become a lever for global transformation.</p>
+      </div>
 
-    <h3>Phase 2 — Navigation (2010-2017)</h3>
-    <p>From cadet to Second Mate at 25. Construction vessels, submarine cable laying (Sabella hydrotidal EMR), French Navy missions, worldwide navigation: Angola, China, Namibia, Mediterranean, English Channel.</p>
-    <p><strong>Founding moment (2013):</strong> At Bourbon in Marseille, first confrontation with the abyssal technological gap in maritime data. Monthly paper-based data collection for ~600 vessels. This is where the founding conviction was born: technology and environment are inseparable in the maritime transformation.</p>
+      <div class="vision__axes">
+        <div class="vision__axis stagger" data-axis="techno">
+          <div class="vision__axis-icon" style="--axis-color: var(--bleu);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3>Technological transition</h3>
+          <p>90% of the world's population has 4G, but 70% of the global fleet still uses paper logbooks. The maritime industry must not go through digitisation: it must enter a digital era immediately, post web.</p>
+        </div>
 
-    <h3>Phase 3 — Entrepreneurship & Impact (2017-present)</h3>
-    <p>Deliberate choice to leave the sea for a more global impact. Co-founder of VAIATA Dynamics (AI for maritime), General Delegate of GASPE (public maritime service), President of Fondation ENSM, lecturer in sustainable development.</p>
+        <div class="vision__axis stagger" data-axis="enviro">
+          <div class="vision__axis-icon" style="--axis-color: var(--vert);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M12 22c5-3 8-7 8-12 0-3-2.5-5-5-5-1.5 0-2.5.5-3 1.5C11.5 5.5 10.5 5 9 5c-2.5 0-5 2-5 5 0 5 3 9 8 12z"/>
+            </svg>
+          </div>
+          <h3>Ecological transition</h3>
+          <p>Decarbonisation, sail, hydrogen, floating wind. Maritime holds the promise of clean energy — 45 GW of marine renewable energy by 2050 in France — and transport 7 times less carbon-intensive than road. While the immediate focus is often decarbonisation, let us not forget there are 9 planetary boundaries to preserve, and maritime has its part in each.</p>
+        </div>
 
-    <h2>Bibliography<span class="dot-accent">.</span></h2>
-    <p>Formative readings that shaped the vision: from maritime strategy to planetary boundaries, from digital transformation to geopolitics of the sea.</p>
-    <p><em>Full bibliography coming soon.</em></p>
-  </div>
-</section>
+        <div class="vision__axis stagger" data-axis="socio">
+          <div class="vision__axis-icon" style="--axis-color: var(--rose);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Sociocultural revolution</h3>
+          <p>Maritime transitions that forget the social dimension — the seafarers — are mere yachting. Maritime stakeholders must embrace the great challenges of the 21st century. Drawing on maritime values — long-term thinking, crew spirit, pioneer spirit, humility — they must actively contribute both to transforming their world and to revealing it, to inspire society.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Values -->
+  <section class="section" id="valeurs">
+    <div class="container">
+      <div class="about-block stagger">
+        <p class="mono text-bleu">Values</p>
+        <h2>What guides every commitment</h2>
+        <div class="valeurs-grid">
+          <div class="valeur-card">
+            <h3>Long-term thinking</h3>
+            <p>The maritime world teaches patience and long-term vision. Planning, projecting into the future — the rhythm of the sea is not that of immediacy.</p>
+          </div>
+          <div class="valeur-card">
+            <h3>Trust &amp; crew spirit</h3>
+            <p>Shipowners entrusted their future to the captain with no news for months. At sea, the strength of the collective and the interdependence of the crew are vital. This tradition guides every commitment.</p>
+          </div>
+          <div class="valeur-card">
+            <h3>Innovation</h3>
+            <p>The pioneer spirit of the great discoveries — the first startups and fundraisings in history. Innovating with conscience and frugality, not techno-solutionism.</p>
+          </div>
+          <div class="valeur-card">
+            <h3>Sustainability</h3>
+            <p>A holistic approach to planetary boundaries. Climate is only one of 9 boundaries. The maritime world must integrate sustainable society in all its dimensions.</p>
+          </div>
+          <div class="valeur-card">
+            <h3>Humility</h3>
+            <p>Facing elements we cannot control, knowledge we cannot fully acquire, discoveries we never stop making at sea. Nothing is ever taken for granted at sea.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Personal -->
+  <section class="section" id="personnel">
+    <div class="container">
+      <div class="about-block stagger">
+        <p class="mono text-bleu">Colomban</p>
+        <h2>A few milestones</h2>
+        <ul class="about-facts">
+          <li>Father of 3 children</li>
+          <li>Childhood in Ireland, on boats — where the vocation was born</li>
+          <li>Charted his course despite struggles with mathematics</li>
+          <li>Merchant Navy Officer, graduate of ENSM</li>
+          <li>5 entrepreneurial ventures</li>
+          <li>Passionate about cartography — maps are a powerful storytelling medium</li>
+          <li>Based in Annecy-le-Vieux</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bibliography -->
+  <section class="section-dark section" id="bibliographie">
+    <div class="container">
+      <div class="about-block stagger">
+        <p class="mono text-bleu">Bibliography</p>
+        <h2>A few decisive reads</h2>
+        <ul class="biblio-list" id="biblio-list">
+          <li>
+            <strong>La Mer, ses valeurs</strong> — <span class="biblio-author">Chantal Reynier (ed.), Groupe Mer et Valeurs</span>
+            <p>An exploration of the values transmitted by the sea and the maritime world.</p>
+          </li>
+          <li>
+            <strong>The Old Man and the Sea</strong> — <span class="biblio-author">Ernest Hemingway</span>
+            <p>A Cuban fisherman's battle against a giant marlin — a parable of human perseverance.</p>
+          </li>
+          <li>
+            <strong>Navires de l'espoir</strong> — <span class="biblio-author">Don Stephen</span>
+            <p>The adventure of hospital ships serving those most in need.</p>
+          </li>
+          <li>
+            <strong>Algocratie</strong> — <span class="biblio-author">Arthur Grimonpont</span>
+            <p>How algorithms shape our societies and threaten our freedoms.</p>
+          </li>
+          <li>
+            <strong>Tentative d'&eacute;puisement de l'avenir du futur</strong> — <span class="biblio-author">Rafi Haladjian</span>
+            <p>A reflection on the technological promise and its limits when facing the future.</p>
+          </li>
+          <li>
+            <strong>The Obsolescence of Man</strong> — <span class="biblio-author">G&uuml;nther Anders</span>
+            <p>Humanity outpaced by its own technical creations.</p>
+          </li>
+          <li>
+            <strong>Le R&ocirc;le social de l'officier</strong> — <span class="biblio-author">Marshal Lyautey</span>
+            <p>The officer's duty to society, beyond military command.</p>
+          </li>
+          <li>
+            <strong>The Phenomenon of Man</strong> — <span class="biblio-author">Pierre Teilhard de Chardin</span>
+            <p>A vision of human evolution towards a collective planetary consciousness.</p>
+          </li>
+        </ul>
+        <ul class="biblio-list biblio-list--hidden" id="biblio-list-more">
+          <li>
+            <strong>Tools for Conviviality</strong> — <span class="biblio-author">Ivan Illich</span>
+            <p>A critique of industrial society and a plea for tools that serve humanity.</p>
+          </li>
+          <li>
+            <strong>Voyage dans l'Anthropoc&egrave;ne</strong> — <span class="biblio-author">Claude Lorius</span>
+            <p>Testimony from the pioneering glaciologist on climate change.</p>
+          </li>
+          <li>
+            <strong>This Is Marketing</strong> — <span class="biblio-author">Seth Godin</span>
+            <p>Marketing as a generous act of change in service of others.</p>
+          </li>
+          <li>
+            <strong>Decisive Moments in History</strong> — <span class="biblio-author">Stefan Zweig</span>
+            <p>Fourteen decisive moments that changed the course of history.</p>
+          </li>
+          <li>
+            <strong>N'aie pas peur</strong> — <span class="biblio-author">Cyrille Argenti</span>
+            <p>A meditation on faith, courage and trust in the face of the unknown.</p>
+          </li>
+          <li>
+            <strong>How Google Works</strong> — <span class="biblio-author">Eric Schmidt, Jonathan Rosenberg</span>
+            <p>The management and innovation principles that built Google.</p>
+          </li>
+          <li>
+            <strong>Healthy Business</strong> — <span class="biblio-author">Jean-Charles Samuelian-Werve</span>
+            <p>Building a healthy, high-performing company aligned with its values.</p>
+          </li>
+          <li>
+            <strong>J'ai toujours v&eacute;cu demain</strong> — <span class="biblio-author">Paul-&Eacute;mile Victor</span>
+            <p>Memoirs of the polar explorer, pioneer of French expeditions in the Arctic and Antarctic.</p>
+          </li>
+          <li>
+            <strong>Why North Is Up</strong> — <span class="biblio-author">Mick Ashworth</span>
+            <p>How cartographic conventions shape our vision of the world.</p>
+          </li>
+          <li>
+            <strong>Propaganda</strong> — <span class="biblio-author">Edward Bernays</span>
+            <p>The mechanisms of mass manipulation and the engineering of consent.</p>
+          </li>
+          <li>
+            <strong>The Power of Now</strong> — <span class="biblio-author">Eckhart Tolle</span>
+            <p>A guide to spiritual awakening through mindful presence in the moment.</p>
+          </li>
+          <li>
+            <strong>The Age of Low Tech</strong> — <span class="biblio-author">Philippe Bihouix</span>
+            <p>Towards a technically sustainable civilisation, against technological solutionism.</p>
+          </li>
+          <li>
+            <strong>Crises of the Republic</strong> — <span class="biblio-author">Hannah Arendt</span>
+            <p>Reflections on politics, institutional lying and its consequences.</p>
+          </li>
+          <li>
+            <strong>A Brief History of the Future</strong> — <span class="biblio-author">Jacques Attali</span>
+            <p>A forecast of the next fifty years of humanity.</p>
+          </li>
+          <li>
+            <strong>The Great Transformation</strong> — <span class="biblio-author">Karl Polanyi</span>
+            <p>An analysis of the rise of market economy and its social consequences.</p>
+          </li>
+        </ul>
+        <button class="biblio-toggle" id="biblio-toggle" type="button">See more</button>
+        <p class="biblio-authors">Other great authors: Edgar Morin, St&eacute;phane Hessel, J.R.R. Tolkien, Robert Louis Stevenson.</p>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .page-hero {
+    padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-2xl);
+  }
+
+  .page-hero--carte {
+    padding-bottom: var(--space-3xl);
+    margin-bottom: 0;
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .page-hero .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-hero .subtitle {
+    margin-top: var(--space-md);
+    max-width: 600px;
+    color: var(--gris-400);
+  }
+
+  .carte-section {
+    position: relative;
+    height: 800vh;
+    background: var(--noir-doux);
+  }
+
+  .carte-sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 100%);
+  }
+
+  .carte-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+
+  .divider-wrap {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-md) 0;
+  }
+
+  .divider-img {
+    width: 64px;
+    height: auto;
+    opacity: 0.18;
+  }
+
+  .about-block {
+    max-width: 720px;
+  }
+
+  .about-block .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .about-block h2 {
+    margin-bottom: var(--space-lg);
+  }
+
+  .about-block p {
+    margin-bottom: var(--space-md);
+    color: var(--gris-500);
+  }
+
+  .highlight {
+    padding: var(--space-lg);
+    border-left: 3px solid var(--bleu);
+    background: var(--gris-100);
+    border-radius: 0 8px 8px 0;
+    color: var(--noir) !important;
+  }
+
+  /* Triple evolution — vision axes */
+  .vision__header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .vision__header .mono {
+    margin-bottom: var(--space-sm);
+  }
+
+  .vision__header .subtitle {
+    margin-top: var(--space-md);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--gris-400);
+  }
+
+  .vision__personal {
+    max-width: 680px;
+    margin: 0 auto var(--space-2xl);
+    text-align: center;
+  }
+
+  .vision__personal p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--gris-400);
+    font-style: italic;
+  }
+
+  .vision__axes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .vision__axis {
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .vision__axis:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-4px);
+  }
+
+  .vision__axis-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--axis-color) 15%, transparent);
+    color: var(--axis-color);
+    margin-bottom: var(--space-md);
+  }
+
+  .vision__axis h3 {
+    color: var(--blanc);
+    margin-bottom: var(--space-md);
+  }
+
+  .vision__axis p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--gris-400);
+  }
+
+  .about-facts {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .about-facts li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--gris-500);
+  }
+
+  .about-facts li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 6px;
+    height: 6px;
+    background: var(--bleu);
+    border-radius: 50%;
+  }
+
+  .biblio-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .biblio-list li {
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .biblio-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 6px;
+    height: 6px;
+    background: var(--bleu);
+    border-radius: 50%;
+  }
+
+  .biblio-list strong {
+    color: var(--blanc);
+    display: block;
+    margin-bottom: 0.15rem;
+  }
+
+  .biblio-author {
+    font-size: 0.85rem;
+    color: var(--gris-400);
+    font-style: italic;
+  }
+
+  .biblio-list p {
+    font-size: 0.85rem;
+    color: var(--gris-400);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+
+  .biblio-list--hidden {
+    display: none;
+  }
+
+  .biblio-list--hidden.biblio-list--visible {
+    display: flex;
+  }
+
+  .biblio-toggle {
+    display: inline-block;
+    margin-top: var(--space-lg);
+    padding: 0.5rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--gris-400);
+    border-radius: 8px;
+    color: var(--gris-400);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .biblio-toggle:hover {
+    border-color: var(--blanc);
+    color: var(--blanc);
+  }
+
+  .biblio-authors {
+    margin-top: var(--space-lg);
+    font-size: 0.85rem;
+    color: var(--gris-400);
+    font-style: italic;
+  }
+
+  .valeurs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .valeurs-grid .valeur-card:nth-child(4),
+  .valeurs-grid .valeur-card:nth-child(5) {
+    max-width: 100%;
+  }
+
+  .valeur-card {
+    padding: var(--space-lg);
+    border: 1px solid var(--gris-200);
+    border-radius: 16px;
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .valeur-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  }
+
+  .valeur-card h3 {
+    color: var(--bleu);
+    margin-bottom: var(--space-sm);
+    font-size: 1.1rem;
+  }
+
+  .valeur-card p {
+    font-size: 0.9rem;
+    color: var(--gris-500);
+    line-height: 1.6;
+  }
+
+  /* Divider chevauchant entre sections sombre/clair */
+  .divider-wrap--overlap {
+    position: relative;
+    z-index: 2;
+    margin-top: -32px;
+    margin-bottom: -32px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .divider-wrap--overlap .divider-img {
+    width: 64px;
+    height: auto;
+    opacity: 0.25;
+  }
+
+  @media (max-width: 768px) {
+    .page-hero--carte {
+      min-height: 50vh;
+    }
+
+    .carte-section {
+      height: 500vh;
+    }
+
+    .vision__axes {
+      grid-template-columns: 1fr;
+    }
+
+    .valeurs-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  const carteSection = document.getElementById('carte');
+  const carteIframe = document.getElementById('carte-iframe') as HTMLIFrameElement;
+
+  let carteRafPending = false;
+  function sendCarteProgress() {
+    if (carteRafPending) return;
+    carteRafPending = true;
+    requestAnimationFrame(() => {
+      carteRafPending = false;
+      if (!carteSection || !carteIframe?.contentWindow) return;
+      const rect = carteSection.getBoundingClientRect();
+      const sectionHeight = carteSection.offsetHeight - window.innerHeight;
+      const scrolled = -rect.top;
+      const progress = Math.max(0, Math.min(1, scrolled / sectionHeight));
+      carteIframe.contentWindow.postMessage({ type: 'setProgress', progress }, '*');
+    });
+  }
+
+  window.addEventListener('scroll', sendCarteProgress, { passive: true });
+  // Send initial progress once iframe is loaded
+  carteIframe?.addEventListener('load', () => {
+    sendCarteProgress();
+  });
+
+  // Biblio toggle
+  const biblioToggle = document.getElementById('biblio-toggle');
+  const biblioMore = document.getElementById('biblio-list-more');
+  if (biblioToggle && biblioMore) {
+    biblioToggle.addEventListener('click', () => {
+      const isVisible = biblioMore.classList.toggle('biblio-list--visible');
+      biblioToggle.textContent = isVisible ? 'See less' : 'See more';
+    });
+  }
+</script>
