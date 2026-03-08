@@ -4,16 +4,16 @@ import Matrice from '../../components/Matrice.astro';
 
 const engagements = [
   { name: 'GASPE', role: 'Delegue general', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Groupement des Armateurs de Service Public Maritime et de Passages d\'Eau — defense du service public maritime.', url: 'https://www.gaspe.fr/' },
-  { name: 'VAIATA Dynamics', role: 'Cofondateur', axes: ['Technologique'], color: 'var(--bleu)', desc: 'Intelligence artificielle au service des grandes causes du maritime : sauvetage en mer et cyberdefense.', url: 'https://www.vaiata.com/' },
-  { name: 'Opsealog', role: 'Conception initiale', axes: ['Technologique', 'Environnementale'], color: 'var(--bleu)', desc: 'Plateforme de data analytics pour optimiser la performance et la consommation energetique des navires.', url: 'https://opsealog.com/' },
-  { name: 'Fondation ENSM', role: 'President du conseil de gestion', axes: ['Socioculturelle', 'Environnementale'], color: 'var(--vert)', desc: 'Fondation de l\'Ecole Nationale Superieure Maritime, formation des futurs officiers et ingenieurs.', url: 'https://www.fondation-ensm.fr/' },
+  { name: 'VAIATA Dynamics', role: 'Cofondateur', axes: ['Technologique'], color: 'var(--bleu)', desc: 'Intelligence artificielle au service des grandes causes du maritime : sauvetage en mer et cyberdefense.', url: 'https://vaiata-dynamics.com/fr/' },
+  { name: 'Opsealog', role: 'Conception initiale & ex-responsable du pole innovation', axes: ['Technologique', 'Environnementale'], color: 'var(--bleu)', desc: 'Plateforme de data analytics pour optimiser la performance et la consommation energetique des navires.', url: 'https://opsealog.com/' },
+  { name: 'Fondation ENSM', role: 'President du conseil de gestion', axes: ['Socioculturelle', 'Environnementale'], color: 'var(--vert)', desc: 'Fondation de l\'Ecole Nationale Superieure Maritime, formation des futurs officiers de marine marchande et ingenieurs maritimes.', url: 'https://www.supmaritime.fr/fondation-ensm-don/' },
   { name: 'ENSM', role: 'Enseignant developpement durable', axes: ['Environnementale'], color: 'var(--vert)', desc: 'Enseignement de l\'ecologie et du developpement durable au sein de l\'ENSM.', url: 'https://www.supmaritime.fr/' },
-  { name: 'Fed. Nationale du Merite Maritime', role: 'Membre', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Federation valorisant les contributions au monde maritime.', url: 'https://www.fnmm.fr/' },
-  { name: 'HYDROS Alumni', role: 'Membre du bureau', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Animation du reseau des anciens eleves de l\'ENSM.', url: 'https://hydros-alumni.fr/' },
-  { name: 'Propeller Club', role: 'Membre actif', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Reseau international de professionnels du secteur maritime et portuaire.', url: 'https://www.propellerclub.fr/' },
-  { name: 'Aperitifs de la Mer', role: 'Ambassadeur', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Evenements de networking reunissant les acteurs de l\'economie maritime.', url: 'https://aperitifsdelamer.com/' },
-  { name: 'Academie de Marine', role: 'Auditeur', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Institution seculaire de reflexion et de prospective sur les enjeux maritimes.', url: 'https://www.academiedemarine.com/' },
-  { name: 'COESPC', role: 'Bureau', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Engagement local a Annecy-le-Vieux.', url: null },
+  { name: 'Fed. Nationale du Merite Maritime', role: 'Membre', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Federation valorisant les contributions au monde maritime.', url: 'https://www.meritemaritime-fnmm.com/' },
+  { name: 'HYDROS Alumni', role: 'Secretaire general adjoint', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Animation du reseau des etudiants et anciens etudiants de l\'ENSM.', url: 'https://www.hydros-alumni.org/' },
+  { name: 'Propeller Club', role: 'Membre actif', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Reseau international de professionnels du secteur maritime et portuaire.', url: 'https://propellerclub.us/' },
+  { name: 'Aperitifs de la Mer', role: 'Ambassadeur', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Evenements de networking et de reflexion reunissant les acteurs de l\'economie maritime.', url: 'https://aperitifsdelamer.com/' },
+  { name: 'Academie de Marine', role: 'Auditeur', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Institution seculaire de reflexion et de prospective sur les enjeux maritimes.', url: 'https://www.academiedemarine.fr/' },
+  { name: 'COESPC', role: 'Membre du bureau', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Engagement local a Annecy-le-Vieux : organisation de la fete villageoise annuelle, a vocation caritative.', url: 'https://coespc.org/' },
 ];
 ---
 
@@ -21,8 +21,8 @@ const engagements = [
   <section class="page-hero section-dark">
     <div class="container stagger hero-text">
       <p class="mono text-bleu">Engagements</p>
-      <h1>Des engagements multiples<br/>avec un <span class="text-bleu">unique cap</span></h1>
-      <p class="subtitle">Chaque engagement s'inscrit dans la triple transition maritime — technologique, environnementale, socioculturelle.</p>
+      <h1>Des engagements multiples<br/>avec un <span class="text-bleu">cap unique</span></h1>
+      <p class="subtitle">Chaque engagement s'inscrit dans la triple transformation maritime — technologique, environnementale, socioculturelle.</p>
     </div>
     <div class="hero-matrice">
       <Matrice />
