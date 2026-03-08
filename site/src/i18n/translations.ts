@@ -1,5 +1,5 @@
 export const languages = {
-  fr: 'Francais',
+  fr: 'Français',
   en: 'English',
 } as const;
 
@@ -15,21 +15,21 @@ export const ui = {
     'nav.about': 'A propos',
     'nav.engagements': 'Engagements',
     'nav.speaking': 'Prises de parole',
-    'nav.media': 'Medias',
+    'nav.media': 'Médias',
     'nav.contact': 'Contact',
 
     // Footer
     'footer.navigation': 'Navigation',
     'footer.follow': 'Suivre',
     'footer.links': 'Liens',
-    'footer.legal': 'Mentions legales',
-    'footer.privacy': 'Politique de confidentialite',
-    'footer.sources': 'Sources & donnees',
+    'footer.legal': 'Mentions légales',
+    'footer.privacy': 'Politique de confidentialité',
+    'footer.sources': 'Sources & données',
     'footer.tagline': 'Une nation libre regarde la mer.',
 
     // Common
     'common.readMore': 'En savoir plus',
-    'common.download': 'Telecharger',
+    'common.download': 'Télécharger',
     'common.contact': 'Contact',
   },
   en: {
