@@ -45,10 +45,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <p class="subtitle">The maritime world faces three unprecedented transformations. These are not threats: they are opportunities for a more sustainable society.</p>
       </div>
 
-      <div class="vision__personal stagger">
-        <p>Since the shock of 2013 in Marseille, these three transformations have become the guiding thread of every one of his commitments. He has seen officers navigating with 1980s tools, shipowners discovering the extent of their environmental footprint, seafarers excluded from the debates shaping their own future. These three realities are not isolated problems: they form a system. It is by addressing them together — technology, environment, society — that the maritime world can become a lever for global transformation.</p>
-      </div>
-
       <div class="vision__axes">
         <div class="vision__axis stagger" data-axis="techno">
           <div class="vision__axis-icon" style="--axis-color: var(--bleu);">
@@ -83,6 +79,20 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
+  <!-- Personal conviction -->
+  <section class="section" id="conviction">
+    <div class="container">
+      <div class="conviction stagger">
+        <div class="conviction__text">
+          <p>Since the shock of 2013 in Marseille, these three transformations have become the guiding thread of every one of his commitments. Colomban sailed on ships that had no internet on board in the 2010s, watched shipowners discover the extent of their environmental footprint, seen seafarers excluded from the debates shaping their own future. These three realities are not isolated problems: they form a system. It is by addressing them together — technology, environment, society — that the maritime world can become a lever for global transformation.</p>
+        </div>
+        <div class="conviction__photo">
+          <img src={`${base}/images/colomban-conviction.jpg`} alt="Colomban" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Values -->
   <section class="section" id="valeurs">
     <div class="container">
@@ -91,22 +101,37 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <h2>What guides every commitment</h2>
         <div class="valeurs-grid">
           <div class="valeur-card">
+            <div class="valeur-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
             <h3>Long-term thinking</h3>
             <p>The maritime world teaches patience and long-term vision. Planning, projecting into the future — the rhythm of the sea is not that of immediacy.</p>
           </div>
           <div class="valeur-card">
+            <div class="valeur-card__icon valeur-card__icon--rose">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
             <h3>Trust &amp; crew spirit</h3>
             <p>Shipowners entrusted their future to the captain with no news for months. At sea, the strength of the collective and the interdependence of the crew are vital. This tradition guides every commitment.</p>
           </div>
           <div class="valeur-card">
+            <div class="valeur-card__icon valeur-card__icon--vert">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
             <h3>Innovation</h3>
             <p>The pioneer spirit of the great discoveries — the first startups and fundraisings in history. Innovating with conscience and frugality, not techno-solutionism.</p>
           </div>
           <div class="valeur-card">
+            <div class="valeur-card__icon valeur-card__icon--vert">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5-3 8-7 8-12 0-3-2.5-5-5-5-1.5 0-2.5.5-3 1.5C11.5 5.5 10.5 5 9 5c-2.5 0-5 2-5 5 0 5 3 9 8 12z"/></svg>
+            </div>
             <h3>Sustainability</h3>
             <p>A holistic approach to planetary boundaries. Climate is only one of 9 boundaries. The maritime world must integrate sustainable society in all its dimensions.</p>
           </div>
           <div class="valeur-card">
+            <div class="valeur-card__icon valeur-card__icon--rose">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
             <h3>Humility</h3>
             <p>Facing elements we cannot control, knowledge we cannot fully acquire, discoveries we never stop making at sea. Nothing is ever taken for granted at sea.</p>
           </div>
@@ -118,18 +143,23 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <!-- Personal -->
   <section class="section" id="personnel">
     <div class="container">
-      <div class="about-block stagger">
-        <p class="mono text-bleu">Colomban</p>
-        <h2>A few milestones</h2>
-        <ul class="about-facts">
-          <li>Father of 3 children</li>
-          <li>Childhood in Ireland, on boats — where the vocation was born</li>
-          <li>Charted his course despite struggles with mathematics</li>
-          <li>Merchant Navy Officer, graduate of ENSM</li>
-          <li>5 entrepreneurial ventures</li>
-          <li>Passionate about cartography — maps are a powerful storytelling medium</li>
-          <li>Based in Annecy-le-Vieux</li>
-        </ul>
+      <div class="personnel-row stagger">
+        <div class="about-block">
+          <p class="mono text-bleu">Colomban</p>
+          <h2>A few milestones</h2>
+          <ul class="about-facts">
+            <li>Father of 3 children</li>
+            <li>Childhood in Ireland, on boats — where the vocation was born</li>
+            <li>Charted his course despite struggles with mathematics</li>
+            <li>Merchant Navy Officer, graduate of ENSM</li>
+            <li>5 entrepreneurial ventures</li>
+            <li>Passionate about cartography — maps are a powerful storytelling medium</li>
+            <li>Based in Annecy-le-Vieux</li>
+          </ul>
+        </div>
+        <div class="personnel-photo">
+          <img src={`${base}/images/colomban-portrait.jpg`} alt="Colomban" loading="lazy" />
+        </div>
       </div>
     </div>
   </section>
@@ -501,6 +531,69 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     font-style: italic;
   }
 
+  /* Conviction section — text + photo */
+  .conviction {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+    max-width: 960px;
+  }
+
+  .conviction__text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--gris-500);
+    font-style: italic;
+  }
+
+  .conviction__photo {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+  }
+
+  .conviction__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  .conviction__photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    border: 1px solid var(--gris-200);
+    pointer-events: none;
+  }
+
+  /* Personnel section — milestones + photo */
+  .personnel-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  .personnel-photo {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    margin-top: var(--space-xl);
+  }
+
+  .personnel-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  /* Values tiles — redesigned */
   .valeurs-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -514,10 +607,23 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 
   .valeur-card {
-    padding: var(--space-lg);
-    border: 1px solid var(--gris-200);
+    padding: var(--space-xl) var(--space-lg);
+    background: var(--gris-100);
     border-radius: 16px;
+    border: none;
     transition: all var(--duration-normal) var(--ease-out);
+    position: relative;
+  }
+
+  .valeur-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--bleu);
+    border-radius: 16px 16px 0 0;
   }
 
   .valeur-card:hover {
@@ -525,16 +631,38 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
   }
 
-  .valeur-card h3 {
+  .valeur-card__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--bleu) 12%, transparent);
     color: var(--bleu);
+    margin-bottom: var(--space-md);
+  }
+
+  .valeur-card__icon--rose {
+    background: color-mix(in srgb, var(--rose) 12%, transparent);
+    color: var(--rose);
+  }
+
+  .valeur-card__icon--vert {
+    background: color-mix(in srgb, var(--vert) 12%, transparent);
+    color: var(--vert);
+  }
+
+  .valeur-card h3 {
+    color: var(--noir);
     margin-bottom: var(--space-sm);
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .valeur-card p {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: var(--gris-500);
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   /* Divider chevauchant entre sections sombre/clair */
@@ -569,6 +697,24 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
     .valeurs-grid {
       grid-template-columns: 1fr;
+    }
+
+    .conviction {
+      grid-template-columns: 1fr;
+    }
+
+    .conviction__photo {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    .personnel-row {
+      grid-template-columns: 1fr;
+    }
+
+    .personnel-photo {
+      max-width: 280px;
+      margin-top: var(--space-md);
     }
   }
 </style>
