@@ -176,6 +176,7 @@ const altPath = getLocalizedPath(altLang, frSlug);
 
       <div class="footer__bottom">
         <p class="mono text-muted">&copy; {new Date().getFullYear()} Colomban — colombanatsea.com</p>
+        <p class="footer__cyber mono"><a href="https://vaiata-dynamics.com/fr/cyber/" target="_blank" rel="noopener noreferrer">Prot&eacute;g&eacute; par VAIATA Cyber</a></p>
       </div>
     </div>
   </footer>
@@ -452,6 +453,20 @@ const altPath = getLocalizedPath(altLang, frSlug);
     .footer__bottom {
       padding-top: var(--space-lg);
       border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .footer__cyber {
+      margin-top: var(--space-sm);
+      font-size: 0.65rem;
+    }
+
+    .footer__cyber a {
+      color: var(--gris-400);
+      transition: color var(--duration-fast);
+    }
+
+    .footer__cyber a:hover {
+      color: var(--vert);
     }
 
     /* ── Mobile ── */
