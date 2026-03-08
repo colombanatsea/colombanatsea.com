@@ -645,7 +645,17 @@
 
       for (const coords of coordSets) {
         for (const seg of splitCableCoords(coords)) {
-          const pts = seg.map(c => latLonToVec3(c[1], c[0], CABLE_RADIUS));
+          const pts: THREE.Vector3[] = [];
+          for (let i = 0; i < seg.length; i++) {
+            const lon = seg[i][0], lat = seg[i][1];
+            if (pts.length === 0) {
+              pts.push(latLonToVec3(lat, lon, CABLE_RADIUS));
+            } else {
+              const prevLon = seg[i - 1][0], prevLat = seg[i - 1][1];
+              const interp = interpolateGreatCircle(prevLat, prevLon, lat, lon, CABLE_RADIUS, 5);
+              pts.push(...interp);
+            }
+          }
           if (pts.length < 2) continue;
           const line = new THREE.Line(
             new THREE.BufferGeometry().setFromPoints(pts),
