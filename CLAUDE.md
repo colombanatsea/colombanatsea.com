@@ -64,7 +64,7 @@
 - Légende interactive, toggle par layer, tooltip hover ZEE
 - Zoom 1.3x–5x, auto-rotation 0.08, atmosphère shader
 - **Progressive loading** : early exit si hidden (mobile), qualite reduite tablettes (48 seg, pixelRatio 1, pas bump map, pas antialias), WebGL context loss handler
-- **Mobile** : Fallback CSS circle + stats (ZEE 11.6M km², 708 câbles, 2ème ZEE mondiale). Sur la homepage, le globe fallback apparaît sous le hero content (position relative, hauteur 220px).
+- **Mobile** : Fallback CSS circle + stats (ZEE 11.6M km², 708 câbles, 2ème ZEE mondiale). Sur la homepage, le globe fallback apparaît sous le hero content (position relative, hauteur auto avec padding). Cercle `flex-shrink: 0` pour éviter le squish.
 
 ### Matrice (`Matrice.astro`)
 - Réseau 3D organique : sphères = engagements, lignes = connexions, particules voyageuses
@@ -118,8 +118,9 @@
 - **Liens externes** : gaspe.fr, vaiata-dynamics.com/fr/, opsealog.com, supmaritime.fr, meritemaritime-fnmm.com, hydros-alumni.org, propellerclub.us, aperitifsdelamer.com, academiedemarine.fr, coespc.org
 
 ### Contact (`/contact`)
-- Sous-titre : "La meilleure façon de me contacter : rejoignez-moi sur les réseaux sociaux et envoyez-moi un message directement."
+- Sous-titre : "La meilleure façon de contacter Colomban : rejoignez-le sur les réseaux sociaux et envoyez-lui un message directement."
 - Liens : LinkedIn (~16 000 abonnés), Instagram (@colombanatsea)
+- **3e personne** : Tout le site parle de Colomban à la 3e personne du singulier (pas de "je", "me", "mon")
 
 ### Medias (`/medias`, `/media`)
 - Media-viz constellation : Canvas 2D scroll-driven, 3 rangées (tech/enviro/socio), filtres
@@ -184,7 +185,13 @@
 - L'URL `oceanocratie.fr` reste inchangée (nom de domaine)
 
 ## Sites associés
-- **oceanocratie.fr** : Landing page standalone (`oceanocratie.fr/index.html`), waitlist email localStorage
+- **oceanocratie.fr** : Landing page standalone immersive (`oceanocratie.fr/index.html`)
+  - **3D Ocean** : Three.js shader ocean plein écran (vagues procédurales multi-couches, Fresnel, foam, shimmer, starfield, brouillard)
+  - **Scroll-driven** : la caméra monte et s'incline au scroll, effet de balancement du navire
+  - **Mobile** : fallback CSS avec vagues animées (pas de Three.js), layout responsive
+  - **Waitlist** : formulaire email + localStorage (en attente de backend)
+  - **Sections** : Hero + livre flottant → Stats → Citation Tabarly → 3 axes (glass card) → Auteur → Footer
+  - **Three.js via importmap** : `unpkg.com/three@0.160.0` (pas de bundler, standalone)
 - **aperitifsdelamer.com** : Lien dans le footer
 - **vaiata-dynamics.com/fr/cyber/** : Protection cyber, lien footer
 
