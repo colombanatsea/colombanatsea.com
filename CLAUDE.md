@@ -175,9 +175,10 @@
 
 ### Vecteurs potentiels à surveiller
 - **Google Fonts** : chargé en async non-bloquant. Si Google Fonts tombe, les polices système prennent le relais (`display=swap`). Pas de SRI possible sur les fonts dynamiques.
-- **Pas de formulaire** : aucun champ de saisie utilisateur sur le site, donc pas de XSS via input, pas de CSRF, pas de SQL injection.
+- **Pas de formulaire côté colombanatsea.com** : aucun champ de saisie utilisateur, donc pas de XSS via input, pas de CSRF, pas de SQL injection.
+- **oceanocratie.fr — waitlist** : formulaire email stocké en localStorage uniquement (pas de backend). L'input est traité par `FormData` sans `innerHTML` — pas de XSS. CSP bloque `frame-src 'none'` et `object-src 'none'` (anti-clickjacking, anti-plugin).
 - **GitHub Pages** : HTTPS forcé, pas de serveur custom, pas de backend. La surface d'attaque est minimale (SSG pur).
-- **unsafe-inline** : nécessaire pour les scripts inline Astro et les styles scoped. Acceptable car aucun user input n'est rendu.
+- **unsafe-inline** : nécessaire pour les scripts inline Astro/standalone et les styles scoped. Acceptable car aucun user input n'est rendu dans le DOM.
 
 ## Traduction EN
 - Le concept s'écrit "Oceanocraty" en anglais (pas "Océanocratie" ou "Oceanocratie")
@@ -186,12 +187,22 @@
 
 ## Sites associés
 - **oceanocratie.fr** : Landing page standalone immersive (`oceanocratie.fr/index.html`)
-  - **3D Ocean** : Three.js shader ocean plein écran (vagues procédurales multi-couches, Fresnel, foam, shimmer, starfield, brouillard)
-  - **Scroll-driven** : la caméra monte et s'incline au scroll, effet de balancement du navire
-  - **Mobile** : fallback CSS avec vagues animées (pas de Three.js), layout responsive
+  - **3D Ocean** : Raymarched ocean plein écran (fragment shader pur WebGL, basé sur "Seascape" de TDM/Shadertoy)
+    - Heightmap tracing (binary search), pas de mesh — ocean infini
+    - `sea_octave()` custom : crêtes tranchantes, creux réalistes (ni sinus ni Perlin)
+    - 5 octaves avec rotation matricielle anti-aliasing (`octave_m = mat2(1.6, 1.2, -1.2, 1.6)`)
+    - Vagues unidirectionnelles, vitesse réduite (`SEA_SPEED 0.35`)
+    - Fresnel cubique, SSS (subsurface scattering), double spéculaire (moon path + halo)
+    - Mousse procédurale sur les crêtes, grain film, tone mapping ACES, vignette
+  - **Ciel nocturne** : étoiles procédurales en coordonnées sphériques (3 couches, scintillement animé), lune avec disque + triple halo atmosphérique
+  - **Gouttelettes** : Canvas 2D overlay — gouttes d'eau qui glissent sur l'écran (refraction, traînée, wobble), max 6 simultanées, spawn stochastique
+  - **Spray** : particules CSS-only (30 particules, animation keyframe)
+  - **Mobile** : fallback CSS avec vagues animées (pas de WebGL, pas de droplets, pas de spray), layout responsive
   - **Waitlist** : formulaire email + localStorage (en attente de backend)
   - **Sections** : Hero + livre flottant → Stats → Citation Tabarly → 3 axes (glass card) → Auteur → Footer
-  - **Three.js via importmap** : `unpkg.com/three@0.160.0` (pas de bundler, standalone)
+  - **Sécurité** : CSP strict (default-src 'self', frame-src 'none', object-src 'none'), Permissions-Policy (geolocation, microphone, camera, payment, usb, magnetometer, gyroscope, accelerometer disabled), X-Content-Type-Options nosniff, referrer strict-origin-when-cross-origin, rel="noopener noreferrer" sur tous les liens externes
+  - **Performance** : DPR cap 1.5 (shader) / 2 (droplets), 3 octaves géométrie / 5 fragment, aucune dépendance externe (pas de Three.js), fonts Google non-bloquantes
+  - **Zero dépendance** : HTML standalone, aucun CDN, aucun framework — WebGL natif + Canvas 2D
 - **aperitifsdelamer.com** : Lien dans le footer
 - **vaiata-dynamics.com/fr/cyber/** : Protection cyber, lien footer
 
