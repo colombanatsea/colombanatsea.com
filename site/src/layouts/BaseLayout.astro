@@ -35,10 +35,8 @@ const altPath = getLocalizedPath(altLang, frSlug);
   <!-- Security -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://unpkg.com data:; connect-src 'self' https://unpkg.com; frame-src 'self';" />
-
-  <!-- Preload critical hero asset (LCP) -->
-  <link rel="preload" href="https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg" as="image" crossorigin />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'self';" />
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=()" />
 
   <!-- Canonical & hreflang -->
   <link rel="canonical" href={`https://colombanatsea.github.io${Astro.url.pathname}`} />
@@ -70,12 +68,18 @@ const altPath = getLocalizedPath(altLang, frSlug);
       "https://www.youtube.com/@Colombanatsea",
       "https://www.tiktok.com/@colombanatsea"
     ],
-    "knowsAbout": ["Maritime", "Decarbonation", "Digitalisation", "Intelligence Artificielle", "Transition maritime"],
+    "knowsAbout": ["Maritime", "Decarbonation", "Digitalisation", "Intelligence Artificielle", "Transition maritime", "Marine Marchande", "EMR", "Energies Marines Renouvelables", "Oceanocratie", "ZEE", "Service public maritime"],
     "affiliation": [
-      { "@type": "Organization", "name": "GASPE" },
-      { "@type": "Organization", "name": "VAIATA Dynamics" },
-      { "@type": "Organization", "name": "Fondation ENSM" }
-    ]
+      { "@type": "Organization", "name": "GASPE", "url": "https://www.gaspe.fr/" },
+      { "@type": "Organization", "name": "VAIATA Dynamics", "url": "https://vaiata-dynamics.com/fr/" },
+      { "@type": "Organization", "name": "Fondation ENSM", "url": "https://www.supmaritime.fr/fondation-ensm-don/" },
+      { "@type": "Organization", "name": "ENSM", "url": "https://www.supmaritime.fr/" },
+      { "@type": "Organization", "name": "HYDROS Alumni", "url": "https://www.hydros-alumni.org/" },
+      { "@type": "Organization", "name": "Propeller Club", "url": "https://propellerclub.us/" },
+      { "@type": "Organization", "name": "Academie de Marine", "url": "https://www.academiedemarine.fr/" },
+      { "@type": "Organization", "name": "Federation Nationale du Merite Maritime", "url": "https://www.meritemaritime-fnmm.com/" }
+    ],
+    "alumniOf": { "@type": "EducationalOrganization", "name": "Ecole Nationale Superieure Maritime (ENSM)", "url": "https://www.supmaritime.fr/" }
   })} />
 
   <!-- Fonts — non-blocking -->
@@ -200,7 +204,7 @@ const altPath = getLocalizedPath(altLang, frSlug);
       "Le maritime dans le sang depuis 1991.",
       "La transition du maritime en oubliant l\u2019aspect social, c\u2019est de la plaisance particuli\u00e8re.",
       "Une nation libre regarde la mer.",
-      "Comme le continent africain n\u2019est pas pass\u00e9 par la t\u00e9l\u00e9phonie fixe, le maritime ne doit pas passer par la num\u00e9risation\u00a0: il doit entrer imm\u00e9diatement dans l\u2019\u00e8re de la digitalisation.",
+      "Comme le continent africain n\u2019est pas pass\u00e9 par la t\u00e9l\u00e9phonie fixe, le maritime ne doit pas passer par la num\u00e9risation\u00a0: il doit entrer imm\u00e9diatement dans l\u2019\u00e8re digitale post-web.",
       "Les r\u00e9volutions environnementale et digitale du maritime sont avant tout une r\u00e9volution culturelle.",
       "Il est plus efficient de suivre 4 donn\u00e9es bien cibl\u00e9es en sachant ce qu\u2019on veut en faire, que d\u00e9penser de l\u2019\u00e9nergie pour suivre des millions de donn\u00e9es sans objectif."
     ];

@@ -392,8 +392,8 @@
   }
   controls.addEventListener('start', pauseRotate);
 
-  scene.add(new THREE.AmbientLight(0xffffff, 0.4));
-  const dL = new THREE.DirectionalLight(0xffffff, 0.6);
+  scene.add(new THREE.AmbientLight(0xffffff, 0.6));
+  const dL = new THREE.DirectionalLight(0xffffff, 0.8);
   dL.position.set(5, 5, 5);
   scene.add(dL);
 
@@ -414,16 +414,16 @@
     const r = eng.size * 0.42;
     const c = primaryColor(eng);
     const ghosted = eng.ghosted === true;
-    const baseOp = ghosted ? 0.10 : 0.35;
+    const baseOp = ghosted ? 0.15 : 0.55;
 
     const mesh = new THREE.Mesh(
       new THREE.SphereGeometry(r, 24, 24),
-      new THREE.MeshPhongMaterial({ color:c, transparent:true, opacity:baseOp, shininess:120, specular:0x444444, depthWrite:false })
+      new THREE.MeshPhongMaterial({ color:c, transparent:true, opacity:baseOp, shininess:140, specular:0x666666, depthWrite:false })
     );
 
     const core = new THREE.Mesh(
       new THREE.SphereGeometry(r*0.45, 12, 12),
-      new THREE.MeshPhongMaterial({ color:c, emissive:c, emissiveIntensity:ghosted?0.1:0.25, transparent:true, opacity:ghosted?0.25:0.8 })
+      new THREE.MeshPhongMaterial({ color:c, emissive:c, emissiveIntensity:ghosted?0.15:0.5, transparent:true, opacity:ghosted?0.3:0.9 })
     );
     mesh.add(core);
 

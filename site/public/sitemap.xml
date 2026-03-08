@@ -58,6 +58,13 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/fr/sources/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/sources/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/sources/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
   <!-- EN pages -->
   <url>
@@ -115,5 +122,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/privacy-policy/" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://colombanatsea.github.io/colombanatsea.com/en/sources/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colombanatsea.github.io/colombanatsea.com/fr/sources/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colombanatsea.github.io/colombanatsea.com/en/sources/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
