@@ -42,44 +42,16 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <p>&ldquo;The sea is what the French have behind them when they look at the beach.&rdquo;</p>
         <cite>&Eacute;ric Tabarly</cite>
       </blockquote>
-      <p class="tabarly__echo stagger">We are destined to become a maritime power.<br/>And we fight with all our strength to escape this inevitable fate.</p>
+      <p class="tabarly__echo stagger">France destined to be a maritime nation.<br/>And we fight with all our strength to escape this fate — for a long time now.</p>
     </div>
   </section>
 
-  <!-- ═══ STATS ═══ -->
-  <section class="stats section" id="stats">
-    <div class="container">
-      <div class="stats__grid">
-        <div class="stats__item stagger">
-          <span class="stats__number">11M</span>
-          <span class="stats__label">km&sup2; of EEZ</span>
-        </div>
-        <div class="stats__item stagger">
-          <span class="stats__number">37</span>
-          <span class="stats__label"><a href={`${base}/en/sources`} class="stats__source-link">States and territories</a> as maritime neighbors</span>
-        </div>
-        <div class="stats__item stagger">
-          <span class="stats__number">4</span>
-          <span class="stats__label">oceans: Atlantic, Pacific, Indian, Southern</span>
-        </div>
-        <div class="stats__item stagger">
-          <span class="stats__number">6</span>
-          <span class="stats__label">continents — only country in the world</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider-wrap">
-    <img src={`${base}/images/divider.svg`} alt="" class="divider-img" />
-  </div>
-
-  <!-- ═══ ARCHIPELAGO FRANCE ═══ -->
+  <!-- ═══ THE FRENCH MARITORY ═══ -->
   <section class="archipel section" id="globe">
     <div class="container">
       <div class="archipel__header stagger">
         <p class="mono text-bleu">The French MARitory</p>
-        <h2>France is not a hexagon.<br/>It is an archipelago.</h2>
+        <h2>France is not a hexagon<br/>It is an archipelago</h2>
         <p class="subtitle">We remain confined to our narrow hexagonal TERRitory, while our MARitory makes France a transversal global power. A strategic potential that cuts across every challenge of the century.</p>
       </div>
 
@@ -92,7 +64,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div class="archipel__card stagger">
           <span class="archipel__number">37</span>
           <span class="archipel__title">Maritime borders</span>
-          <span class="archipel__desc">A unique diplomatic interface: 37 States and territories as neighbors, no other country in the world</span>
+          <span class="archipel__desc">A unique diplomatic interface: <a href={`${base}/en/sources`} style="color: inherit; text-decoration: underline; text-decoration-color: var(--gris-200); text-underline-offset: 2px;">37 States and territories</a> as neighbors, no other country in the world</span>
+        </div>
+        <div class="archipel__card stagger">
+          <span class="archipel__number">4</span>
+          <span class="archipel__title">Oceans</span>
+          <span class="archipel__desc">Atlantic, Pacific, Indian, Southern — a presence across all oceans</span>
+        </div>
+        <div class="archipel__card stagger">
+          <span class="archipel__number">5</span>
+          <span class="archipel__title">Continents</span>
+          <span class="archipel__desc">Europe, Americas, Africa, Oceania, Antarctica — <a href={`${base}/en/sources`} style="color: inherit; text-decoration: underline; text-decoration-color: var(--gris-200); text-underline-offset: 2px;">only country in the world</a></span>
         </div>
         <div class="archipel__card stagger">
           <span class="archipel__number">97%</span>
@@ -116,7 +98,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         </div>
       </div>
 
-      <p class="archipel__note">Explore the interactive globe at the top of the page to visualize the French MARitory.</p>
+      <p class="archipel__note">Explore the <a href="#" id="explore-zee-link" style="color: var(--bleu); text-decoration: underline; text-underline-offset: 2px;">interactive globe</a> to visualize the French MARitory.</p>
     </div>
   </section>
 
@@ -134,7 +116,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="seamer__content">
         <div class="seamer__text stagger">
           <p class="seamer__lead">What you consumed this morning arrived by sea. The message you are reading travels through a cable on the ocean floor. The energy that will power your children will be born from waves and sea wind.</p>
-          <p>The maritime sector is not an industry. It is the circulatory system of our society. Without ships, without ports, without submarine cables, the economy seizes up, communications go dark, sovereignty fades.</p>
+          <p>The maritime sector is not an ordinary industry. It is the pulse of our society. Without ships, without ports, without submarine cables, the economy seizes up, communications go dark, sovereignty fades.</p>
         </div>
         <div class="seamer__facts">
           <div class="seamer__fact stagger">
@@ -180,7 +162,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             </svg>
           </div>
           <h3>Curiosity against withdrawal</h3>
-          <p>The sea is the school of freedom. Not the comfortable freedom of staying home, but the demanding freedom of departure. The sailor who returns to port is no longer the one who left. It is the ultimate journey: daring to discover, questioning one's own frame of reference, opening up to the Other.</p>
+          <p>The sea is the school of freedom. Not the comfortable freedom of staying home, but the demanding freedom to experiment, to think beyond time, to live in the present. It is the ultimate journey: daring to discover, questioning one's own frame of reference, opening up to the Other.</p>
         </div>
 
         <div class="manifeste__pillar stagger">
@@ -190,7 +172,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             </svg>
           </div>
           <h3>Humility before the untameable</h3>
-          <p>We plough the land, fence it, own it. The ocean cannot be fenced or owned. It reminds us that we are not the masters. This is a lesson in humility that the land no longer teaches: understanding that we are part of nature, not above it.</p>
+          <p>We plough the land, fence it, own it, master it. The ocean cannot be fenced or owned. It reminds us that we are not the masters. This is a lesson in humility that the land only teaches in extreme places: understanding that we are part of nature, not above it.</p>
         </div>
 
         <div class="manifeste__pillar stagger">
@@ -199,8 +181,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
             </svg>
           </div>
-          <h3>A hand reached across borders</h3>
-          <p>At sea, maritime law mandates rescue — regardless of nationality. No border holds far from shore. The ocean is humanity's largest shared space: 37 maritime neighbors for France, 37 outstretched hands. The sea connects more than it separates.</p>
+          <h3>A hand reached beyond the horizon</h3>
+          <p>At sea, maritime law mandates rescue — regardless of nationality, culture, color, or religion. No border holds far from shore. The ocean is humanity's largest shared space: 37 maritime neighbors for France, 37 outstretched hands. The sea connects far more than it separates.</p>
         </div>
       </div>
     </div>
@@ -215,8 +197,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="container" style="position: relative; z-index: 1;">
       <div class="vision__header stagger">
         <p class="mono text-bleu">The triple maritime evolution</p>
-        <h2>Three simultaneous shocks,<br/>three promises</h2>
-        <p class="subtitle">The maritime world faces three unprecedented transformations. These are not threats — they are levers for a more resilient society.</p>
+        <h2>Two transitions,<br/>one revolution</h2>
+        <p class="subtitle">The maritime world faces three unprecedented transformations. These are not threats — they are opportunities for a more sustainable society.</p>
       </div>
 
       <div class="vision__axes">
@@ -226,8 +208,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
             </svg>
           </div>
-          <h3>Technological revolution</h3>
-          <p>90% of the world has 4G, but 70% of the global fleet still uses paper logbooks. Maritime must leap straight into digitalization.</p>
+          <h3>Technological transition</h3>
+          <p>90% of the world has 4G, but 70% of the global fleet still uses paper logbooks. Maritime must not merely digitize — it must leap straight into a post-web digital era.</p>
         </div>
 
         <div class="vision__axis" data-axis="enviro">
@@ -237,7 +219,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             </svg>
           </div>
           <h3>Ecological transition</h3>
-          <p>Decarbonization, sail, hydrogen, floating wind. Maritime carries the promise of clean energy — 45 GW of offshore renewables by 2050 — and transport 7 times less carbon-intensive than road. 9 planetary boundaries to preserve.</p>
+          <p>Decarbonization, sail, hydrogen, floating wind. Maritime carries the promise of clean energy — 45 GW of offshore renewables by 2050 in France — and transport 7 times less carbon-intensive than road. While decarbonization is often the immediate focus, let us not forget there are 9 planetary boundaries to preserve, and maritime plays a role in each.</p>
         </div>
 
         <div class="vision__axis" data-axis="socio">
@@ -246,8 +228,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
             </svg>
           </div>
-          <h3>Sociocultural recomposition</h3>
-          <p>Maritime stakeholders must take ownership of the 21st century's challenges. Drawing on maritime values — long-term thinking, crew spirit, courage — they must actively share their world. Maritime transition without the social dimension is just recreational boating.</p>
+          <h3>Sociocultural revolution</h3>
+          <p>Maritime transition without the social dimension — without the seafarers — is just recreational boating. Maritime stakeholders must take ownership of the 21st century's challenges. Drawing on maritime values — long-term thinking, crew spirit, pioneering spirit, humility — they must actively transform their world and share it to inspire society.</p>
         </div>
       </div>
     </div>
@@ -258,7 +240,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="container">
       <div class="matrice-section__header stagger">
         <p class="mono text-bleu">Engagements</p>
-        <h2>I don't theorize.<br/>I act.</h2>
+        <h2>3 engagement axes<br/>One single heading</h2>
       </div>
     </div>
     <div class="matrice-section__canvas">
@@ -291,7 +273,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <section class="testimonials section" id="temoignages">
     <div class="container">
       <div class="testimonials__header stagger">
-        <h2>Trust is good.<br/>Testimonials are better.</h2>
+        <h2>Trust is good<br/>Testimonials are better</h2>
       </div>
       <div class="testimonials__grid">
         <blockquote class="testimonial">
@@ -438,19 +420,41 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       setGlobeZoom(false);
     }
   });
+
+  // ZEE-only globe link
+  const zeeLink = document.getElementById('explore-zee-link');
+  zeeLink?.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => {
+      if (!hero?.classList.contains('hero--fullmap')) {
+        exploreBtn?.click();
+      }
+      document.querySelectorAll('#legend .legend-item[data-layer]').forEach(item => {
+        const layer = (item as HTMLElement).dataset.layer;
+        if (layer === 'cables' || layer === 'traffic') {
+          if (!item.classList.contains('disabled')) {
+            (item as HTMLElement).click();
+          }
+        }
+      });
+    }, 600);
+  });
 </script>
 
 <style>
   .divider-wrap {
     display: flex;
     justify-content: center;
-    padding: var(--space-md) 0;
+    padding: 0;
+    margin: calc(-1 * var(--space-sm)) 0;
+    pointer-events: none;
   }
 
   .divider-img {
-    width: 64px;
+    width: 40px;
     height: auto;
-    opacity: 0.18;
+    opacity: 0.10;
   }
 
   /* ═══ HERO ═══ */
@@ -650,41 +654,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: var(--gris-400);
   }
 
-  /* ═══ STATS ═══ */
-  .stats__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-lg);
-    text-align: center;
-  }
-
-  .stats__number {
-    display: block;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: var(--bleu);
-  }
-
-  .stats__label {
-    display: block;
-    font-size: 0.875rem;
-    color: var(--gris-500);
-    margin-top: 0.25rem;
-  }
-
-  .stats__source-link {
-    color: var(--gris-500);
-    text-decoration: underline;
-    text-decoration-color: var(--gris-200);
-    text-underline-offset: 2px;
-  }
-
-  .stats__source-link:hover {
-    color: var(--bleu);
-    text-decoration-color: var(--bleu);
-  }
-
   /* ═══ VISION / TRIPLE EVOLUTION ═══ */
   .vision__header {
     text-align: center;
@@ -765,7 +734,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   .archipel__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-lg);
   }
 
@@ -1162,9 +1131,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       font-size: 1.2rem;
     }
 
-    .stats__grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+
 
     .vision__axes {
       grid-template-columns: 1fr;
