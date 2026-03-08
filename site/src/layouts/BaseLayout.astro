@@ -12,7 +12,7 @@ interface Props {
 
 const {
   title,
-  description = "Le quartier general digital de la triple transition maritime, porte par Colomban.",
+  description = "Le quartier général digital de la triple transition maritime, porté par Colomban.",
   lang = "fr",
   frSlug = "",
 } = Astro.props;
@@ -58,9 +58,9 @@ const altPath = getLocalizedPath(altLang, frSlug);
     "@type": "Person",
     "name": "Colomban",
     "alternateName": "Colomban Monnier",
-    "jobTitle": "Delegue General du GASPE",
+    "jobTitle": "Délégué général du GASPE",
     "url": "https://colombanatsea.com",
-    "description": "Le quartier general digital de la triple transition maritime",
+    "description": "Le quartier général digital de la triple transition maritime",
     "image": `https://colombanatsea.github.io${base}/og-image.jpg`,
     "sameAs": [
       "https://www.linkedin.com/in/colombanatsea/",
@@ -76,10 +76,10 @@ const altPath = getLocalizedPath(altLang, frSlug);
       { "@type": "Organization", "name": "ENSM", "url": "https://www.supmaritime.fr/" },
       { "@type": "Organization", "name": "HYDROS Alumni", "url": "https://www.hydros-alumni.org/" },
       { "@type": "Organization", "name": "Propeller Club", "url": "https://propellerclub.us/" },
-      { "@type": "Organization", "name": "Academie de Marine", "url": "https://www.academiedemarine.fr/" },
+      { "@type": "Organization", "name": "Académie de Marine", "url": "https://www.academiedemarine.fr/" },
       { "@type": "Organization", "name": "Federation Nationale du Merite Maritime", "url": "https://www.meritemaritime-fnmm.com/" }
     ],
-    "alumniOf": { "@type": "EducationalOrganization", "name": "Ecole Nationale Superieure Maritime (ENSM)", "url": "https://www.supmaritime.fr/" }
+    "alumniOf": { "@type": "EducationalOrganization", "name": "Ecole Nationale Supérieure Maritime (ENSM)", "url": "https://www.supmaritime.fr/" }
   })} />
 
   <!-- Fonts — non-blocking -->
@@ -131,7 +131,7 @@ const altPath = getLocalizedPath(altLang, frSlug);
         <li><a href={getLocalizedPath(lang, 'prises-de-parole')}>{t('nav.speaking')}</a></li>
         <li><a href={getLocalizedPath(lang, 'medias')}>{t('nav.media')}</a></li>
         <li><a href={getLocalizedPath(lang, 'contact')} class="btn btn-primary btn-sm">{t('nav.contact')}</a></li>
-        <li><a href={altPath} class="nav__lang" aria-label={`Switch to ${altLang === 'en' ? 'English' : 'Francais'}`}>{altLang.toUpperCase()}</a></li>
+        <li><a href={altPath} class="nav__lang" aria-label={`Switch to ${altLang === 'en' ? 'English' : 'Français'}`}>{altLang.toUpperCase()}</a></li>
       </ul>
     </div>
   </nav>
@@ -167,7 +167,7 @@ const altPath = getLocalizedPath(altLang, frSlug);
         </div>
         <div class="footer__col">
           <h4>{t('footer.links')}</h4>
-          <a href="https://aperitifsdelamer.com" target="_blank" rel="noopener noreferrer">Aperitifs de la Mer</a>
+          <a href="https://aperitifsdelamer.com" target="_blank" rel="noopener noreferrer">Apéritifs de la Mer</a>
           <a href={getLocalizedPath(lang, 'mentions-legales')}>{t('footer.legal')}</a>
           <a href={getLocalizedPath(lang, 'politique-confidentialite')}>{t('footer.privacy')}</a>
           <a href={getLocalizedPath(lang, 'sources')}>{t('footer.sources')}</a>
