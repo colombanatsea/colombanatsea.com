@@ -42,44 +42,16 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <p>&laquo;&nbsp;La mer, c'est ce que les Fran&ccedil;ais ont dans le dos quand ils regardent la plage.&nbsp;&raquo;</p>
         <cite>&Eacute;ric Tabarly</cite>
       </blockquote>
-      <p class="tabarly__echo stagger">Nous sommes condamn&eacute;s &agrave; devenir une puissance maritime.<br/>Et nous luttons de toute notre force pour nous y soustraire.</p>
+      <p class="tabarly__echo stagger">La France destin&eacute;e &agrave; &ecirc;tre une nation maritime.<br/>Et nous luttons de toute notre force pour nous y soustraire — depuis longtemps.</p>
     </div>
   </section>
 
-  <!-- ═══ CHIFFRES CLÉS ═══ -->
-  <section class="stats section" id="stats">
-    <div class="container">
-      <div class="stats__grid">
-        <div class="stats__item stagger">
-          <span class="stats__number">11M</span>
-          <span class="stats__label">km&sup2; de ZEE fran&ccedil;aise</span>
-        </div>
-        <div class="stats__item stagger">
-          <span class="stats__number">37</span>
-          <span class="stats__label">&Eacute;tats et territoires <a href={`${base}/sources`} class="stats__source-link">voisins par la mer</a></span>
-        </div>
-        <div class="stats__item stagger">
-          <span class="stats__number">4</span>
-          <span class="stats__label">oc&eacute;ans : Atlantique, Pacifique, Indien, Antarctique</span>
-        </div>
-        <div class="stats__item stagger">
-          <span class="stats__number">6</span>
-          <span class="stats__label">continents — seul pays au monde</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider-wrap">
-    <img src={`${base}/images/divider.svg`} alt="" class="divider-img" />
-  </div>
-
-  <!-- ═══ ARCHIPEL FRANCE ═══ -->
+  <!-- ═══ LE MERITOIRE FRANÇAIS ═══ -->
   <section class="archipel section" id="globe">
     <div class="container">
       <div class="archipel__header stagger">
         <p class="mono text-bleu">Le MERitoire fran&ccedil;ais</p>
-        <h2>La France n'est pas un hexagone.<br/>C'est un archipel.</h2>
+        <h2>La France n'est pas un hexagone<br/>C'est un archipel</h2>
         <p class="subtitle">Nous restons repli&eacute;s sur notre TERRitoire hexagonal &eacute;triqu&eacute;, alors que notre MERitoire fait de la France une puissance mondiale transversale. Un potentiel strat&eacute;gique qui traverse tous les enjeux du si&egrave;cle.</p>
       </div>
 
@@ -92,7 +64,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div class="archipel__card stagger">
           <span class="archipel__number">37</span>
           <span class="archipel__title">Fronti&egrave;res maritimes</span>
-          <span class="archipel__desc">Une interface diplomatique unique&nbsp;: 37 &Eacute;tats et territoires voisins, aucun autre pays au monde</span>
+          <span class="archipel__desc">Une interface diplomatique unique&nbsp;: <a href={`${base}/sources`} style="color: inherit; text-decoration: underline; text-decoration-color: var(--gris-200); text-underline-offset: 2px;">37 &Eacute;tats et territoires</a> voisins, aucun autre pays au monde</span>
+        </div>
+        <div class="archipel__card stagger">
+          <span class="archipel__number">4</span>
+          <span class="archipel__title">Oc&eacute;ans</span>
+          <span class="archipel__desc">Atlantique, Pacifique, Indien, Antarctique — une pr&eacute;sence sur tous les oc&eacute;ans</span>
+        </div>
+        <div class="archipel__card stagger">
+          <span class="archipel__number">5</span>
+          <span class="archipel__title">Continents</span>
+          <span class="archipel__desc">Europe, Am&eacute;riques, Afrique, Oc&eacute;anie, Antarctique — <a href={`${base}/sources`} style="color: inherit; text-decoration: underline; text-decoration-color: var(--gris-200); text-underline-offset: 2px;">seul pays au monde</a></span>
         </div>
         <div class="archipel__card stagger">
           <span class="archipel__number">97%</span>
@@ -116,7 +98,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         </div>
       </div>
 
-      <p class="archipel__note">Explorez le globe interactif en haut de page pour visualiser le MERitoire fran&ccedil;ais.</p>
+      <p class="archipel__note">Explorez le <a href="#" id="explore-zee-link" style="color: var(--bleu); text-decoration: underline; text-underline-offset: 2px;">globe interactif</a> pour visualiser le MERitoire fran&ccedil;ais.</p>
     </div>
   </section>
 
@@ -134,7 +116,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="seamer__content">
         <div class="seamer__text stagger">
           <p class="seamer__lead">Ce que vous consommez ce matin est arriv&eacute; par la mer. Ce message que vous lisez transite par un c&acirc;ble au fond de l'oc&eacute;an. L'&eacute;nergie qui alimentera vos enfants na&icirc;tra des vagues et du vent marin.</p>
-          <p>Le maritime n'est pas un secteur. C'est le syst&egrave;me circulatoire de notre soci&eacute;t&eacute;. Sans navires, sans ports, sans c&acirc;bles sous-marins, l'&eacute;conomie se grippe, les communications s'&eacute;teignent, la souverainet&eacute; s'efface.</p>
+          <p>Le maritime n'est pas un secteur industriel commun. Il est le pouls de notre soci&eacute;t&eacute;. Sans navires, sans ports, sans c&acirc;bles sous-marins, l'&eacute;conomie se grippe, les communications s'&eacute;teignent, la souverainet&eacute; s'efface.</p>
         </div>
         <div class="seamer__facts">
           <div class="seamer__fact stagger">
@@ -180,7 +162,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             </svg>
           </div>
           <h3>La curiosit&eacute; contre le repli</h3>
-          <p>La mer est l'&eacute;cole de la libert&eacute;. Non pas la libert&eacute; confortable de rester chez soi, mais la libert&eacute; exigeante de partir. Le marin qui revient au port n'est plus celui qui est parti. C'est le voyage initiatique par excellence&nbsp;: oser d&eacute;couvrir, remettre en question son propre r&eacute;f&eacute;rentiel, s'ouvrir &agrave; l'Autre.</p>
+          <p>La mer est l'&eacute;cole de la libert&eacute;. Non pas la libert&eacute; confortable de rester chez soi, mais la libert&eacute; exigeante d'exp&eacute;rimenter, de penser hors du temps, de vivre le pr&eacute;sent. C'est le voyage initiatique par excellence&nbsp;: oser d&eacute;couvrir, remettre en question son propre r&eacute;f&eacute;rentiel, s'ouvrir &agrave; l'Autre.</p>
         </div>
 
         <div class="manifeste__pillar stagger">
@@ -190,7 +172,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             </svg>
           </div>
           <h3>L'humilit&eacute; face &agrave; l'indomptable</h3>
-          <p>On laboure la terre, on la cl&ocirc;ture, on la poss&egrave;de. L'oc&eacute;an ne se laisse ni cl&ocirc;turer ni poss&eacute;der. Il rappelle &agrave; l'Homme qu'il n'est pas le ma&icirc;tre. C'est une le&ccedil;on d'humilit&eacute; que la terre ne donne plus&nbsp;: comprendre que nous faisons partie de la nature, pas que nous sommes au-dessus.</p>
+          <p>On laboure la terre, on la cl&ocirc;ture, on la poss&egrave;de, on la ma&icirc;trise. L'oc&eacute;an ne se laisse ni cl&ocirc;turer ni poss&eacute;der. Il rappelle &agrave; l'Homme qu'il n'est pas le ma&icirc;tre. C'est une le&ccedil;on d'humilit&eacute; que la terre ne donne plus qu'en des endroits extr&ecirc;mes&nbsp;: comprendre que nous faisons partie de la nature, pas que nous sommes au-dessus.</p>
         </div>
 
         <div class="manifeste__pillar stagger">
@@ -199,8 +181,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
             </svg>
           </div>
-          <h3>La main tendue par-dessus les fronti&egrave;res</h3>
-          <p>En mer, le droit maritime oblige au sauvetage — quelle que soit la nationalit&eacute;. Aucune fronti&egrave;re ne r&eacute;siste bien loin du rivage. L'oc&eacute;an est le plus grand espace commun de l'humanit&eacute;&nbsp;: 37 voisins maritimes pour la France, 37 mains tendues. La mer relie plus qu'elle ne s&eacute;pare.</p>
+          <h3>La main tendue par-del&agrave; l'horizon</h3>
+          <p>En mer, le droit maritime oblige au sauvetage — quelle que soit la nationalit&eacute;, la culture, la couleur ou la religion. Aucune fronti&egrave;re ne r&eacute;siste bien loin du rivage. L'oc&eacute;an est le plus grand espace commun de l'humanit&eacute;&nbsp;: 37 voisins maritimes pour la France, 37 mains tendues. La mer relie bien plus qu'elle ne s&eacute;pare.</p>
         </div>
       </div>
     </div>
@@ -215,8 +197,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="container" style="position: relative; z-index: 1;">
       <div class="vision__header stagger">
         <p class="mono text-bleu">La triple &eacute;volution</p>
-        <h2>Trois chocs simultan&eacute;s,<br/>trois promesses</h2>
-        <p class="subtitle">Le monde maritime affronte trois transformations sans pr&eacute;c&eacute;dent. Ce ne sont pas des menaces&nbsp;: ce sont des leviers pour une soci&eacute;t&eacute; plus r&eacute;siliente.</p>
+        <h2>Deux transitions,<br/>une r&eacute;volution</h2>
+        <p class="subtitle">Le monde maritime affronte trois transformations sans pr&eacute;c&eacute;dent. Ce ne sont pas des menaces&nbsp;: ce sont des opportunit&eacute;s pour une soci&eacute;t&eacute; plus durable.</p>
       </div>
 
       <div class="vision__axes">
@@ -226,8 +208,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
             </svg>
           </div>
-          <h3>R&eacute;volution technologique</h3>
-          <p>90% de la population mondiale a la 4G, mais 70% de la flotte mondiale utilise encore des journaux de bord papiers. Le maritime ne doit pas passer par la num&eacute;risation&nbsp;: il doit entrer imm&eacute;diatement dans l'&egrave;re de la digitalisation.</p>
+          <h3>Transition technologique</h3>
+          <p>90% de la population mondiale a la 4G, mais 70% de la flotte mondiale utilise encore des journaux de bord papiers. Le maritime ne doit pas passer par la num&eacute;risation&nbsp;: il doit entrer imm&eacute;diatement dans une &egrave;re digitale, post web.</p>
         </div>
 
         <div class="vision__axis" data-axis="enviro">
@@ -237,7 +219,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             </svg>
           </div>
           <h3>Transition &eacute;cologique</h3>
-          <p>D&eacute;carbonation, voile, hydrog&egrave;ne, &eacute;olien flottant. Le maritime porte la promesse d'une &eacute;nergie propre — 45 GW d'EMR en 2050 — et d'un transport 7 fois moins carbon&eacute; que la route. Il y a 9 limites plan&eacute;taires &agrave; pr&eacute;server.</p>
+          <p>D&eacute;carbonation, voile, hydrog&egrave;ne, &eacute;olien flottant. Le maritime porte la promesse d'une &eacute;nergie propre — 45 GW d'EMR en 2050 en France — et d'un transport 7 fois moins carbon&eacute; que la route. Si l'enjeu imm&eacute;diat mis en avant est souvent la d&eacute;carbonation, n'oublions pas qu'il y a 9 limites plan&eacute;taires &agrave; pr&eacute;server et que le maritime a sa part dans chacune.</p>
         </div>
 
         <div class="vision__axis" data-axis="socio">
@@ -246,8 +228,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
             </svg>
           </div>
-          <h3>Recomposition socioculturelle</h3>
-          <p>Les acteurs du monde maritime doivent s'approprier les grands enjeux du XXI<sup>e</sup> si&egrave;cle. En s'appuyant sur les valeurs du maritime — temps long, esprit d'&eacute;quipage, courage — ils doivent contribuer activement &agrave; faire d&eacute;couvrir leur monde. La transition du maritime en oubliant l'aspect social, c'est de la plaisance particuli&egrave;re.</p>
+          <h3>R&eacute;volution socioculturelle</h3>
+          <p>Les transitions du maritime en oubliant l'aspect social, les marins, c'est de la plaisance. Les acteurs du monde maritime doivent s'approprier les grands enjeux du XXI<sup>e</sup> si&egrave;cle. En s'appuyant sur les valeurs du maritime — temps long, esprit d'&eacute;quipage, esprit pionnier, humilit&eacute; — ils doivent contribuer activement autant &agrave; transformer leur monde qu'&agrave; le faire d&eacute;couvrir pour inspirer la soci&eacute;t&eacute;.</p>
         </div>
       </div>
     </div>
@@ -258,7 +240,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="container">
       <div class="matrice-section__header stagger">
         <p class="mono text-bleu">Les engagements</p>
-        <h2>Je ne th&eacute;orise pas.<br/>J'agis.</h2>
+        <h2>3 axes d'engagement<br/>Un cap unique</h2>
       </div>
     </div>
     <div class="matrice-section__canvas">
@@ -291,7 +273,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <section class="testimonials section" id="temoignages">
     <div class="container">
       <div class="testimonials__header stagger">
-        <h2>La confiance, c'est bien.<br/>Les t&eacute;moignages, c'est mieux.</h2>
+        <h2>La confiance, c'est bien<br/>Les t&eacute;moignages, c'est mieux</h2>
       </div>
       <div class="testimonials__grid">
         <blockquote class="testimonial">
@@ -438,19 +420,42 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       setGlobeZoom(false);
     }
   });
+
+  // ZEE-only globe link
+  const zeeLink = document.getElementById('explore-zee-link');
+  zeeLink?.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => {
+      if (!hero?.classList.contains('hero--fullmap')) {
+        exploreBtn?.click();
+      }
+      // Disable cables and traffic layers, keep only ZEE
+      document.querySelectorAll('#legend .legend-item[data-layer]').forEach(item => {
+        const layer = (item as HTMLElement).dataset.layer;
+        if (layer === 'cables' || layer === 'traffic') {
+          if (!item.classList.contains('disabled')) {
+            (item as HTMLElement).click();
+          }
+        }
+      });
+    }, 600);
+  });
 </script>
 
 <style>
   .divider-wrap {
     display: flex;
     justify-content: center;
-    padding: var(--space-md) 0;
+    padding: 0;
+    margin: calc(-1 * var(--space-sm)) 0;
+    pointer-events: none;
   }
 
   .divider-img {
-    width: 64px;
+    width: 40px;
     height: auto;
-    opacity: 0.18;
+    opacity: 0.10;
   }
 
   /* ═══ HERO ═══ */
@@ -650,41 +655,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: var(--gris-400);
   }
 
-  /* ═══ STATS ═══ */
-  .stats__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-lg);
-    text-align: center;
-  }
-
-  .stats__number {
-    display: block;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: var(--bleu);
-  }
-
-  .stats__label {
-    display: block;
-    font-size: 0.875rem;
-    color: var(--gris-500);
-    margin-top: 0.25rem;
-  }
-
-  .stats__source-link {
-    color: var(--gris-500);
-    text-decoration: underline;
-    text-decoration-color: var(--gris-200);
-    text-underline-offset: 2px;
-  }
-
-  .stats__source-link:hover {
-    color: var(--bleu);
-    text-decoration-color: var(--bleu);
-  }
-
   /* ═══ VISION / TRIPLE ÉVOLUTION ═══ */
   .vision__header {
     text-align: center;
@@ -765,7 +735,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   .archipel__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-lg);
   }
 
@@ -1160,10 +1130,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
     .tabarly__quote p {
       font-size: 1.2rem;
-    }
-
-    .stats__grid {
-      grid-template-columns: repeat(2, 1fr);
     }
 
     .vision__axes {

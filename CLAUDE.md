@@ -94,13 +94,12 @@
 - Bouton "Explorer la carte" → mode plein écran avec légende + stats (Escape pour fermer) — masqué mobile
 - Nav : texte blanc par défaut, bascule noir au scroll (`nav--scrolled`)
 - Citation Tabarly : "La mer, c'est ce que les Français ont dans le dos quand ils regardent la plage" + écho Colomban
-- Stats : chiffres géographiques (11M km² ZEE, 37 États et territoires, 4 océans, 6 continents) — lien vers Sources
-- Le MERitoire français : grille 6 cartes (ZEE, frontières, communications, commerce, énergie EMR, culture) — concept TERRitoire vs MERitoire
+- Le MERitoire français : grille 8 cartes (ZEE, 37 frontières, 4 océans, 5 continents, communications, commerce, énergie EMR, culture) — concept TERRitoire vs MERitoire, lien vers globe ZEE-only
 - "Tout passe par la mer" : diagnostic positif — exports 595 Md€, 98% télécoms, 45 GW EMR 2050, 25 000 molécules marines — layout 2 colonnes (texte + 4 facts)
 - Manifeste Océanocratie : "Une nation libre regarde la mer" — 3 piliers (curiosité/humilité/fraternité), distinction thalassocratie vs océanocratie
-- Triple évolution : "Trois chocs, trois promesses" — techno (digitalisation), écolo (décarbonation + EMR), socio (appropriation + valeurs)
-- Engagements : "Je ne théorise pas. J'agis." — Matrice 3D
-- Sections : Hero → Tabarly → Stats → Divider → MERitoire → Divider → Tout passe par la mer → Divider → Manifeste → Divider → Triple évolution → Matrice → Logos → Témoignages → CTA Social → Océanocratie livre
+- Triple évolution : "Deux transitions, une révolution" — techno (transition digitale post-web), écolo (décarbonation + EMR + 9 limites planétaires), socio (révolution socioculturelle + valeurs)
+- Engagements : "3 axes d'engagement. Un cap unique" — Matrice 3D
+- Sections : Hero → Tabarly → Divider → MERitoire → Divider → Tout passe par la mer → Divider → Manifeste → Divider → Triple évolution → Matrice → Logos → Témoignages → CTA Social → Océanocratie livre
 
 ### A propos (`/a-propos`)
 - Hero sombre sans scroll-hint (la carte a le sien)
@@ -129,7 +128,7 @@
 ### Sources & données (`/sources`)
 - Page de transparence référençant toutes les sources des chiffres utilisés sur le site
 - Tableau des 37 États et territoires voisins maritimes de la France (30 souverains + 7 territoires)
-- Tableaux : espace maritime, économie maritime, télécoms sous-marines, EMR, recherche, données du globe 3D
+- Tableaux : espace maritime (5 continents, 4 océans avec détail), présence par océan, présence par continent, économie maritime, télécoms sous-marines, EMR, recherche, données du globe 3D
 - Lien dans le footer (colonne "Liens")
 - Sources : SHOM, VLIZ, Douanes françaises, Cluster Maritime, PPE3, France Renouvelables, ITU, TeleGeography
 
