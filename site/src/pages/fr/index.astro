@@ -42,7 +42,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <p>&laquo;&nbsp;La mer, c'est ce que les Fran&ccedil;ais ont dans le dos quand ils regardent la plage.&nbsp;&raquo;</p>
         <cite>&Eacute;ric Tabarly</cite>
       </blockquote>
-      <p class="tabarly__echo stagger">La France destin&eacute;e &agrave; &ecirc;tre une nation maritime.<br/>Et nous luttons de toute notre force pour nous y soustraire — depuis longtemps.</p>
+      <p class="tabarly__echo stagger">La France est destin&eacute;e &agrave; &ecirc;tre une nation maritime.<br/>Et nous luttons de toute notre force pour nous y soustraire — depuis longtemps.</p>
     </div>
   </section>
 
@@ -277,16 +277,52 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       </div>
       <div class="testimonials__grid">
         <blockquote class="testimonial">
-          <p>"T&eacute;moignage &agrave; venir — collecte en cours aupr&egrave;s des partenaires et collaborateurs."</p>
-          <cite>— Nom, Fonction</cite>
+          <img src="/colombanatsea.com/assets/testimonials/simon-bernard.jpg" alt="Simon Bernard" class="testimonial__photo" width="64" height="64" loading="lazy" />
+          <p>"J'ai rencontr&eacute; Colomban dans mes premi&egrave;res ann&eacute;es d'&eacute;tudes de Marine Marchande et suivi ses diff&eacute;rents projets avec attention&nbsp;: amateur inconditionnel de la mer, il aime mettre ses id&eacute;es innovantes au service de l'industrie maritime. &Eacute;tant moi-m&ecirc;me porteur de projet, j'ai pu constater son professionnalisme, sa capacit&eacute; &agrave; &ecirc;tre moteur et &agrave; profiter de la technologie sans jamais oublier l'humain."</p>
+          <cite>— Simon Bernard</cite>
+          <span class="testimonial__role">Cofondateur — Plastic Odyssey</span>
         </blockquote>
         <blockquote class="testimonial">
-          <p>"T&eacute;moignage &agrave; venir — collecte en cours aupr&egrave;s des partenaires et collaborateurs."</p>
-          <cite>— Nom, Fonction</cite>
+          <img src="/colombanatsea.com/assets/testimonials/bastien-arcas.jpg" alt="Bastien Arcas" class="testimonial__photo" width="64" height="64" loading="lazy" />
+          <p>"Colomban est une locomotive qui entra&icirc;ne plusieurs wagons essentiels &agrave; notre communaut&eacute;&nbsp;: la Fondation ENSM, Hydros, et l'Ap&eacute;ritif de la mer."</p>
+          <cite>— Bastien Arcas</cite>
+          <span class="testimonial__role">Directeur adjoint — GTT Fleet Performance</span>
         </blockquote>
         <blockquote class="testimonial">
-          <p>"T&eacute;moignage &agrave; venir — collecte en cours aupr&egrave;s des partenaires et collaborateurs."</p>
-          <cite>— Nom, Fonction</cite>
+          <img src="/colombanatsea.com/assets/testimonials/stanislas-oriot.jpg" alt="Stanislas Oriot" class="testimonial__photo" width="64" height="64" loading="lazy" />
+          <p>"What an energy! It is sometimes intimidating to have such a guy around because it seems his energy is 200% above mine and his days are 40 hours long."</p>
+          <cite>— Stanislas Oriot</cite>
+          <span class="testimonial__role">Senior Maritime Analyst — Opsealog</span>
+        </blockquote>
+        <blockquote class="testimonial">
+          <img src="/colombanatsea.com/assets/testimonials/khalil-bouzidi.jpg" alt="Khalil Bouzidi" class="testimonial__photo" width="64" height="64" loading="lazy" />
+          <p>"Amazing guy! One of the best ethical growth hackers that I have met! Customer-centric, attentive to detail, a massive asset for Rempleo!"</p>
+          <cite>— Khalil Bouzidi</cite>
+          <span class="testimonial__role">Fondateur — Rempleo</span>
+        </blockquote>
+        <blockquote class="testimonial">
+          <img src="/colombanatsea.com/assets/testimonials/anthony-garcia.jpg" alt="Anthony Garcia" class="testimonial__photo" width="64" height="64" loading="lazy" />
+          <p>"As long as I have known Colomban, he has always had a strong taste for adventure and innovation."</p>
+          <cite>— Anthony Garcia</cite>
+          <span class="testimonial__role">COO — Jifmar</span>
+        </blockquote>
+        <blockquote class="testimonial">
+          <img src="/colombanatsea.com/assets/testimonials/rodolphe-bouchet.jpg" alt="Rodolphe Bouchet" class="testimonial__photo" width="64" height="64" loading="lazy" />
+          <p>"Dynamic and professional, Colomban knows how to boost business development."</p>
+          <cite>— Rodolphe Bouchet</cite>
+          <span class="testimonial__role">CEO — Bourbon Marine &amp; Logistics</span>
+        </blockquote>
+        <blockquote class="testimonial">
+          <img src="/colombanatsea.com/assets/testimonials/andrea-mancuso.jpg" alt="Andrea Mancuso" class="testimonial__photo" width="64" height="64" loading="lazy" />
+          <p>"I had the privilege and pleasure to work with Colomban on a CMMS for the maritime industry."</p>
+          <cite>— Andrea Mancuso</cite>
+          <span class="testimonial__role">Senior Software Engineer</span>
+        </blockquote>
+        <blockquote class="testimonial">
+          <img src="/colombanatsea.com/assets/testimonials/matthias-du-verle.jpg" alt="Matthias du Verle" class="testimonial__photo" width="64" height="64" loading="lazy" />
+          <p>"I have known Colomban since the time he was a promising cadet officer."</p>
+          <cite>— Matthias du Verle</cite>
+          <span class="testimonial__role">Cofondateur — Wolfgang</span>
         </blockquote>
       </div>
     </div>
@@ -1011,6 +1047,16 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     border-radius: 16px;
     border: 1px solid var(--gris-200);
     background: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial__photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: var(--space-md);
   }
 
   .testimonial p {
@@ -1019,6 +1065,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: var(--gris-500);
     margin-bottom: var(--space-md);
     font-style: italic;
+    flex: 1;
   }
 
   .testimonial cite {
@@ -1027,6 +1074,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     font-weight: 600;
     font-style: normal;
     color: var(--noir);
+    display: block;
+  }
+
+  .testimonial__role {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--gris-400);
+    margin-top: 0.25rem;
+    display: block;
   }
 
   /* ═══ CTA SOCIAL ═══ */
