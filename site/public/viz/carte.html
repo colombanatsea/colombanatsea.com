@@ -431,12 +431,13 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     // ═══════════════════════════════════════════
     const canvas = document.getElementById('map-canvas');
     const ctx = canvas.getContext('2d');
-    let W, H, DPR;
+    let W, H, DPR, isMobile;
 
     function resize() {
         DPR = window.devicePixelRatio || 1;
         W = window.innerWidth;
         H = window.innerHeight;
+        isMobile = W <= 768;
         canvas.width = W * DPR;
         canvas.height = H * DPR;
         canvas.style.width = W + 'px';
@@ -733,9 +734,9 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
                 const labelColor = wp.isFounder ? COLORS.enviro : (wp.isDecisive ? '#ff6b6b' : 'rgba(255, 255, 255, 0.7)');
 
                 ctx.fillStyle = labelColor;
-                ctx.font = isSpecial ? 'bold 12px Poppins' : '10px Poppins';
+                ctx.font = isSpecial ? (isMobile ? 'bold 10px Poppins' : 'bold 12px Poppins') : (isMobile ? '8px Poppins' : '10px Poppins');
                 ctx.textAlign = 'center';
-                ctx.fillText(wp.label, p.x, p.y - dotSize - 12);
+                ctx.fillText(wp.label, p.x, p.y - dotSize - (isMobile ? 8 : 12));
 
                 if (isSpecial) {
                     ctx.font = '9px "Source Serif 4", serif';
@@ -947,24 +948,28 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
                     }
                 }
 
+                const labelFont = isMobile ? '600 8px Poppins' : '600 10px Poppins';
+                const smallFont = isMobile ? '7px "Source Serif 4"' : '9px "Source Serif 4"';
+                const mSpacing = isMobile ? 11 : 14;
+
                 if (isLocal) {
                     // Local threads: stack vertically next to Annecy label
-                    const offsetX = 45;
-                    const offsetY = 10 + stackIndex * 14;
+                    const offsetX = isMobile ? 35 : 45;
+                    const offsetY = 10 + stackIndex * mSpacing;
 
                     ctx.fillStyle = thread.color;
                     ctx.beginPath();
-                    ctx.arc(hub.x + offsetX - 6, hub.y + offsetY, 3, 0, Math.PI * 2);
+                    ctx.arc(hub.x + offsetX - 6, hub.y + offsetY, isMobile ? 2 : 3, 0, Math.PI * 2);
                     ctx.fill();
 
                     ctx.fillStyle = thread.color;
-                    ctx.font = '600 10px Poppins';
+                    ctx.font = labelFont;
                     ctx.textAlign = 'left';
                     ctx.fillText(thread.label, hub.x + offsetX, hub.y + offsetY + 4);
 
                 } else {
                     // Remote threads: stack labels vertically at destination
-                    const labelSpacing = 14;
+                    const labelSpacing = mSpacing;
                     const offsetY = stackIndex * labelSpacing;
 
                     // Only draw destination dot for the first visible thread in the group
@@ -976,17 +981,17 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
                     }
 
                     ctx.fillStyle = thread.color;
-                    ctx.font = '600 10px Poppins';
+                    ctx.font = labelFont;
                     ctx.textAlign = 'left';
-                    const labelX = dest.x + 10;
+                    const labelX = dest.x + (isMobile ? 7 : 10);
                     const labelY = dest.y + 4 + offsetY;
                     ctx.fillText(thread.label, labelX, labelY);
 
                     const noDateLabels = ['Fondation ENSM','ENSM','Opsealog','Propeller Club','GASPE','Académie de Marine'];
                     if (!noDateLabels.includes(thread.label)) {
-                        ctx.font = '9px "Source Serif 4"';
+                        ctx.font = smallFont;
                         ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
-                        ctx.fillText(thread.year, labelX, labelY + 11);
+                        ctx.fillText(thread.year, labelX, labelY + (isMobile ? 9 : 11));
                     }
                 }
 

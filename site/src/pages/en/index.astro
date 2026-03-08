@@ -6,7 +6,7 @@ import Matrice from '../../components/Matrice.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<BaseLayout title="Colomban - Oceanocratie" lang="en" frSlug="" description="Oceanocratie — The digital headquarters of the triple maritime transition. Led by Colomban, merchant navy officer turned maritime transformation leader.">
+<BaseLayout title="Colomban - Oceanocraty" lang="en" frSlug="" description="Oceanocraty — The digital headquarters of the triple maritime transition. Led by Colomban, merchant navy officer turned maritime transformation leader.">
 
   <!-- ═══ HERO ═══ -->
   <section class="hero" id="hero">
@@ -16,7 +16,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="hero__overlay"></div>
     <div class="hero__content container stagger">
       <p class="hero__kicker mono">colombanatsea.com</p>
-      <h1 class="hero__title">Oceanocratie</h1>
+      <h1 class="hero__title">Oceanocraty</h1>
       <p class="hero__vision">A free nation looks to the sea.</p>
       <div class="hero__cta">
         <a href="#vision" class="btn btn-primary">Discover the vision</a>
@@ -149,9 +149,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <section class="manifeste section" id="vision">
     <div class="container">
       <div class="manifeste__header stagger">
-        <p class="mono text-bleu">Oceanocratie</p>
+        <p class="mono text-bleu">Oceanocraty</p>
         <h2>A free nation<br/>looks to the sea</h2>
-        <p class="subtitle">Thalassocracy built power on domination of the seas. Oceanocratie builds society's resilience on a conscious relationship with the ocean. Not power <em>over</em>, but power <em>with</em>.</p>
+        <p class="subtitle">Thalassocracy built power on domination of the seas. Oceanocraty builds society's resilience on a conscious relationship with the ocean. Not power <em>over</em>, but power <em>with</em>.</p>
       </div>
 
       <div class="manifeste__pillars">
@@ -326,14 +326,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="oceanocratie__inner">
         <div class="oceanocratie__text stagger">
           <p class="mono text-bleu">Coming — Christmas 2026</p>
-          <h2>Oceanocratie</h2>
+          <h2>Oceanocraty</h2>
           <p class="oceanocratie__subtitle">A free nation looks to the sea.</p>
           <p class="subtitle">A book to explore France's maritime potential.</p>
           <a href="https://oceanocratie.fr" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Discover the project</a>
         </div>
         <div class="oceanocratie__visual">
           <div class="oceanocratie__book">
-            <span class="mono">OCEANOCRATIE</span>
+            <span class="mono">OCEANOCRATY</span>
           </div>
         </div>
       </div>
@@ -1123,12 +1123,20 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   /* ═══ MOBILE ═══ */
   @media (max-width: 768px) {
-    .hero__globe-bg {
-      display: none;
-    }
-
     .hero {
       background: radial-gradient(ellipse at 30% 40%, #1a3a6e 0%, #0d1428 50%, #080b14 100%);
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero__globe-bg {
+      position: relative;
+      inset: auto;
+      width: 100%;
+      height: 220px;
+      flex-shrink: 0;
+      margin-top: var(--space-md);
+      opacity: 0.8;
     }
 
     .hero__explore-map {

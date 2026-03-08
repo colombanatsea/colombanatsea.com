@@ -9,7 +9,7 @@
   - Traductions : `site/src/i18n/translations.ts` (UI strings) + `site/src/i18n/utils.ts`
   - Routes : `/fr/` (defaut), `/en/` — redirect racine `/` → `/fr/` (meta refresh + JS instant)
   - Pages FR : `site/src/pages/fr/` (9 pages)
-  - Pages EN : `site/src/pages/en/` (8 pages)
+  - Pages EN : `site/src/pages/en/` (9 pages : index, about, engagements, speaking, media, contact, legal-notice, privacy-policy, sources)
   - hreflang bidirectionnel sur toutes les pages + sitemap xhtml:link
 
 ## Charte Graphique (source : `colombanatsea/brands`)
@@ -56,23 +56,25 @@
 ## Composants 3D
 
 ### Globe (`Globe.astro`)
-- Texture satellite earth-blue-marble.jpg (unpkg CDN, fallback sombre)
+- Texture satellite earth-blue-marble.jpg (self-hosted dans `public/assets/textures/`)
+- Bump map earth-topology.png (self-hosted, desktop uniquement)
 - ZEE France : 18 polygones GeoJSON réels (earcut triangulation) — `src/data/eez.json`
 - Câbles sous-marins : 708 features Telegeography — `src/data/cables.json` (229KB)
 - Routes maritimes : 3 niveaux (major/middle/minor) — `src/data/shipping-lanes.json` (53KB)
 - Légende interactive, toggle par layer, tooltip hover ZEE
 - Zoom 1.3x–5x, auto-rotation 0.08, atmosphère shader
 - **Progressive loading** : early exit si hidden (mobile), qualite reduite tablettes (48 seg, pixelRatio 1, pas bump map, pas antialias), WebGL context loss handler
-- **Mobile** : Globe entièrement masqué dans le hero (`display: none`), remplacé par gradient radial subtle. Bouton "Explorer la carte" masqué. Fallback CSS circle + stats si affiché hors hero.
+- **Mobile** : Fallback CSS circle + stats (ZEE 11.6M km², 708 câbles, 2ème ZEE mondiale). Sur la homepage, le globe fallback apparaît sous le hero content (position relative, hauteur 220px).
 
 ### Matrice (`Matrice.astro`)
 - Réseau 3D organique : sphères = engagements, lignes = connexions, particules voyageuses
 - Labels positionnés à droite des sphères (calcul screen-space du rayon)
 - Panneau détail s'ouvre automatiquement au hover (pas au clic)
 - Axes de couleur : Technologique (#2A55B3), Environnementale (#00BF63), Socioculturelle (#B32A55)
+- **Sphères lumineuses** : baseOpacity 0.55, emissiveIntensity 0.5, core opacity 0.9, ambient light 0.6, directional light 0.8
 - **Lazy loading** : IntersectionObserver (below fold), early exit mobile, qualite reduite, context loss handler
 - **UX** : Curseur `grab`/`grabbing`, hint animé "Cliquer-glisser pour explorer" qui disparaît à la première interaction
-- **Mobile** : Fallback liste 3 axes (pas de Three.js)
+- **Mobile** : Fallback liste 3 axes (pas de Three.js), texte hero avec z-index pour éviter le chevauchement
 
 ## Visualisations iframe
 
@@ -81,7 +83,7 @@
 - **Background** : `#1A1A2E` (= `--noir-doux`, unifié avec le hero de a-propos)
 - **Scroll piloté par le parent** : la page a-propos envoie `postMessage({ type: 'setProgress', progress })` à l'iframe. L'iframe écoute et utilise `externalProgress` au lieu de son propre scroll interne. Section parent = 800vh sticky.
 - **Titre** : `top: 80px` pour passer sous la navbar du parent
-- **Mobile** : phase-indicator compact (right 12px), compass réduit, tooltip 220px max, watermark masqué
+- **Mobile** : phase-indicator compact (right 12px), compass réduit, tooltip 220px max, watermark masqué, labels réduits (8px au lieu de 10px), espacement labels réduit (11px au lieu de 14px) pour éviter les chevauchements
 
 ### Media-viz timeline (`viz/mediaviz.html`)
 - Canvas 2D scroll-driven, scrollbar masquée, indicateur scroll animé
@@ -89,41 +91,44 @@
 ## Pages (routes : /fr/ et /en/)
 
 ### Homepage (`/fr/`, `/en/`)
-- Hero plein écran : titre "Océanocratie", baseline "Une nation libre regarde la mer." (non-italic, Poppins 300)
-- Globe en arrière-plan (desktop), gradient radial (mobile), overlay léger, dezoom au scroll (rAF-throttled)
+- Hero plein écran : titre "Océanocratie" (FR) / "Oceanocraty" (EN), baseline "Une nation libre regarde la mer." (non-italic, Poppins 300)
+- Globe en arrière-plan (desktop), fallback circle+stats en dessous du content (mobile), overlay léger, dezoom au scroll (rAF-throttled)
 - Bouton "Explorer la carte" → mode plein écran avec légende + stats (Escape pour fermer) — masqué mobile
 - Nav : texte blanc par défaut, bascule noir au scroll (`nav--scrolled`)
 - Citation Tabarly : "La mer, c'est ce que les Français ont dans le dos quand ils regardent la plage" + écho Colomban
 - Le MERitoire français : grille 8 cartes (ZEE, 37 frontières, 4 océans, 5 continents, communications, commerce, énergie EMR, culture) — concept TERRitoire vs MERitoire, lien vers globe ZEE-only
 - "Tout passe par la mer" : diagnostic positif — exports 595 Md€, 98% télécoms, 45 GW EMR 2050, 25 000 molécules marines — layout 2 colonnes (texte + 4 facts)
-- Manifeste Océanocratie : "Une nation libre regarde la mer" — 3 piliers (curiosité/humilité/fraternité), distinction thalassocratie vs océanocratie
+- Manifeste Océanocratie/Oceanocraty : "Une nation libre regarde la mer" — 3 piliers (curiosité/humilité/fraternité), distinction thalassocratie vs océanocratie
 - Triple évolution : "Deux transitions, une révolution" — techno (transition digitale post-web), écolo (décarbonation + EMR + 9 limites planétaires), socio (révolution socioculturelle + valeurs)
 - Engagements : "3 axes d'engagement. Un cap unique" — Matrice 3D
 - Sections : Hero → Tabarly → Divider → MERitoire → Divider → Tout passe par la mer → Divider → Manifeste → Divider → Triple évolution → Matrice → Logos → Témoignages → CTA Social → Océanocratie livre
 
-### A propos (`/a-propos`)
+### A propos (`/a-propos`, `/about`)
 - Hero sombre sans scroll-hint (la carte a le sien)
 - Carte marine : section 800vh avec iframe sticky 100vh, mask-image fade en haut (12%)
 - Scroll parent contrôle l'animation de la carte via postMessage (rAF-throttled)
 - Sections : Moment fondateur → Divider → Vision → Valeurs → Colomban → Bibliographie
+- **Bibliographie** : 23 ouvrages (8 visibles, 15 en "Voir plus"), dont N'aie pas peur (Argenti, foi orthodoxe), Le Pouvoir du moment présent (Tolle)
 
 ### Engagements (`/engagements`)
-- Hero sombre + Matrice 3D en header (55vh, mask-image top/bottom fade)
-- Grille 3→2→1 colonnes (responsive) : GASPE, VAIATA, Opsealog, Fondation ENSM, ENSM, FNMM, HYDROS Alumni, Propeller Club, Apéritifs de la Mer, Académie de Marine, COESPC
+- Hero sombre avec "Des engagements multiples avec un cap unique" + "triple transformation maritime"
+- Matrice 3D en header (55vh, mask-image top/bottom fade), fallback mobile sans chevauchement
+- Grille 3→2→1 colonnes (responsive) : GASPE, VAIATA Dynamics, Opsealog, Fondation ENSM, ENSM, FNMM, HYDROS Alumni, Propeller Club, Apéritifs de la Mer, Académie de Marine, COESPC
 - Tuile "Et plus à venir..." (dashed, cachée mobile)
+- **Liens externes** : gaspe.fr, vaiata-dynamics.com/fr/, opsealog.com, supmaritime.fr, meritemaritime-fnmm.com, hydros-alumni.org, propellerclub.us, aperitifsdelamer.com, academiedemarine.fr, coespc.org
 
 ### Contact (`/contact`)
 - Sous-titre : "La meilleure façon de me contacter : rejoignez-moi sur les réseaux sociaux et envoyez-moi un message directement."
 - Liens : LinkedIn (~16 000 abonnés), Instagram (@colombanatsea)
 
-### Medias (`/medias`)
+### Medias (`/medias`, `/media`)
 - Media-viz constellation : Canvas 2D scroll-driven, 3 rangées (tech/enviro/socio), filtres
 - Kit media : 4 cartes téléchargement (bio .txt, chiffres-clés .txt, contact .vcf, photos HD mailto)
 
-### Prises de parole (`/prises-de-parole`)
-- Conférences & interventions (tableau chronologique, liens externes)
-- Podcasts
-- Séries YouTube (Hissez Mots, Marine Marchande 101)
+### Prises de parole (`/prises-de-parole`, `/speaking`)
+- Conférences & interventions (tableau chronologique, liens externes vers euromaritime.fr, lemarin.ouest-france.fr, nabu.de, raceforwater.org)
+- Podcasts (Maritime with a French Accent — lien Spotify épisode)
+- Séries YouTube : Hissez Mot(s) ! (playlist), Marine Marchande 101 (playlist)
 
 ### Sources & données (`/sources`)
 - Page de transparence référençant toutes les sources des chiffres utilisés sur le site
@@ -132,39 +137,56 @@
 - Lien dans le footer (colonne "Liens")
 - Sources : SHOM, VLIZ, Douanes françaises, Cluster Maritime, PPE3, France Renouvelables, ITU, TeleGeography
 
+### Page 404
+- `public/404.html` (GitHub Pages custom 404)
+- Thème maritime : rose des vents SVG, particules flottantes
+- Titre "Terre inconnue" + liens bilingues (retour au port FR/EN)
+- Coordonnées Brest (48°23'N, 004°29'W)
+
 ## Performance
 - **Scroll handlers** : tous throttlés via `requestAnimationFrame` (hero dezoom, carte progress)
 - **3D mobile** : Globe et Matrice ne chargent pas Three.js sur mobile (early exit si `offsetWidth === 0`)
 - **Fonts** : Google Fonts non-bloquantes (`media="print" onload="this.media='all'"` + `display=swap`)
 - **Lazy loading** : Matrice via IntersectionObserver, Globe preloaded (hero)
 - **Bundles** : Three.js ~78KB gzip (Globe), OrbitControls ~121KB gzip, Matrice ~4KB gzip
+- **Textures self-hosted** : earth-blue-marble.jpg (1.4MB) + earth-topology.png (370KB) dans `public/assets/textures/`
 
 ## SEO
 - Canonical URLs : `<link rel="canonical">`
-- Sitemap XML : `site/public/sitemap.xml` (8 pages, changefreq + priority)
+- Sitemap XML : `site/public/sitemap.xml` (20 URLs FR+EN, changefreq + priority, xhtml:link hreflang)
 - Robots.txt : `site/public/robots.txt`
-- JSON-LD Person : affiliations (GASPE, VAIATA, Fondation ENSM), knowsAbout, alternateName
+- JSON-LD Person : 8 affiliations avec URLs, knowsAbout étendu (11 termes), alumniOf ENSM, sameAs (LinkedIn, Instagram, YouTube, TikTok)
 - Open Graph complet : og:url, og:site_name, og:image, twitter:card + twitter:image
 - Meta descriptions sur toutes les pages
+- **LLM optimization** : `public/llms.txt` — fichier structuré décrivant le site, les concepts clés, les engagements et les pages pour les LLM
 
 ## Sécurité
-- **CSP** : `Content-Security-Policy` via meta http-equiv — `default-src 'self'`, `script-src 'self' 'unsafe-inline'`, `frame-src 'self'`, fonts Google, images unpkg
+- **CSP** : `Content-Security-Policy` via meta http-equiv — `default-src 'self'`, `script-src 'self' 'unsafe-inline'`, `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`, `font-src https://fonts.gstatic.com`, `img-src 'self' data:`, `frame-src 'self'`
+- **Permissions-Policy** : `geolocation=(), microphone=(), camera=(), payment=(), usb=()`
 - `X-Content-Type-Options: nosniff` (meta)
 - `referrer: strict-origin-when-cross-origin` (meta)
 - `rel="noopener noreferrer"` sur tous les liens externes
 - **postMessage** : carte.html valide `e.origin !== window.location.origin` avant d'accepter les messages
 - Fonts non-bloquantes (`media="print" onload`)
 - **innerHTML** : utilisé uniquement avec des données statiques hardcodées (waypoints carte), jamais avec du user input
+- **Textures self-hosted** : plus de dépendance CDN externe (unpkg.com supprimé)
+- **Footer** : lien "Protégé par VAIATA Cyber" (vaiata-dynamics.com/fr/cyber/)
 
 ### Vecteurs potentiels à surveiller
-- **Dépendance CDN** : `unpkg.com` pour la texture Globe (earth-blue-marble.jpg). Si unpkg tombe ou est compromis, le globe montre un fond sombre (fallback gracieux). Envisager de self-host la texture à terme.
 - **Google Fonts** : chargé en async non-bloquant. Si Google Fonts tombe, les polices système prennent le relais (`display=swap`). Pas de SRI possible sur les fonts dynamiques.
 - **Pas de formulaire** : aucun champ de saisie utilisateur sur le site, donc pas de XSS via input, pas de CSRF, pas de SQL injection.
 - **GitHub Pages** : HTTPS forcé, pas de serveur custom, pas de backend. La surface d'attaque est minimale (SSG pur).
+- **unsafe-inline** : nécessaire pour les scripts inline Astro et les styles scoped. Acceptable car aucun user input n'est rendu.
+
+## Traduction EN
+- Le concept s'écrit "Oceanocraty" en anglais (pas "Océanocratie" ou "Oceanocratie")
+- Les classes CSS restent `.oceanocratie__*` (noms internes)
+- L'URL `oceanocratie.fr` reste inchangée (nom de domaine)
 
 ## Sites associés
 - **oceanocratie.fr** : Landing page standalone (`oceanocratie.fr/index.html`), waitlist email localStorage
 - **aperitifsdelamer.com** : Lien dans le footer
+- **vaiata-dynamics.com/fr/cyber/** : Protection cyber, lien footer
 
 ## Contact
 - Email : hello@colombanatsea.com

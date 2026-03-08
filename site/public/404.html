@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terre inconnue — Colomban at Sea</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #1A1A2E;
+      color: #FAFAFA;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 2rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Compass rose background */
+    .compass {
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      opacity: 0.04;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 520px;
+    }
+
+    .code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      color: #2A55B3;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    h1 span {
+      color: #00BF63;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      font-weight: 300;
+      color: #9D9DAF;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      display: inline-block;
+      padding: 0.65rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2A55B3, #1a3a7a);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(42, 85, 179, 0.3);
+    }
+
+    .btn-outline {
+      border: 1px solid #9D9DAF;
+      color: #9D9DAF;
+    }
+
+    .btn-outline:hover {
+      border-color: #FAFAFA;
+      color: #FAFAFA;
+    }
+
+    .coordinates {
+      margin-top: 3rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: rgba(157, 157, 175, 0.4);
+      letter-spacing: 0.1em;
+    }
+
+    /* Floating particles (ocean feel) */
+    .particle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: rgba(42, 85, 179, 0.3);
+      border-radius: 50%;
+      animation: drift linear infinite;
+    }
+
+    @keyframes drift {
+      0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-10vh) translateX(30px); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Compass rose SVG -->
+  <svg class="compass" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="95" stroke="#FAFAFA" stroke-width="0.5"/>
+    <circle cx="100" cy="100" r="70" stroke="#FAFAFA" stroke-width="0.3"/>
+    <path d="M100 10 L106 90 L100 80 L94 90 Z" fill="#FAFAFA"/>
+    <path d="M100 190 L106 110 L100 120 L94 110 Z" fill="#FAFAFA" opacity="0.4"/>
+    <path d="M10 100 L90 94 L80 100 L90 106 Z" fill="#FAFAFA" opacity="0.4"/>
+    <path d="M190 100 L110 94 L120 100 L110 106 Z" fill="#FAFAFA" opacity="0.4"/>
+    <text x="100" y="7" text-anchor="middle" font-size="8" fill="#FAFAFA" font-family="Poppins">N</text>
+    <text x="100" y="198" text-anchor="middle" font-size="8" fill="#FAFAFA" font-family="Poppins" opacity="0.4">S</text>
+  </svg>
+
+  <div class="content">
+    <p class="code">404 — POSITION INCONNUE</p>
+    <h1>Terre inconnue<span>.</span></h1>
+    <p class="subtitle">Cette page n'existe pas ou a change de cap. Comme en mer, il suffit parfois de corriger la route.</p>
+    <div class="links">
+      <a href="/colombanatsea.com/fr/" class="btn-primary">Retour au port</a>
+      <a href="/colombanatsea.com/en/" class="btn-outline">Back to port</a>
+    </div>
+    <p class="coordinates">48&deg;23'N &middot; 004&deg;29'W &mdash; colombanatsea.com</p>
+  </div>
+
+  <script>
+    // Create floating particles
+    for (let i = 0; i < 15; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.animationDuration = (8 + Math.random() * 12) + 's';
+      p.style.animationDelay = Math.random() * 10 + 's';
+      p.style.width = p.style.height = (1 + Math.random() * 2) + 'px';
+      document.body.appendChild(p);
+    }
+  </script>
+</body>
+</html>
