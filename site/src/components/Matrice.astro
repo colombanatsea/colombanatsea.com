@@ -290,9 +290,6 @@
 </style>
 
 <script>
-  import * as THREE from 'three';
-  import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-
   const BG = 0x1a1a2e;
   const COLORS = { techno: 0x2a55b3, enviro: 0x00bf63, socio: 0xb32a55, purple: 0x8b2fc6 };
   const AXIS_HEX: Record<string, string> = { Technologique: '#2a55b3', Environnementale: '#00bf63', Socioculturelle: '#b32a55' };
@@ -331,9 +328,7 @@
 
   // ── EARLY EXIT IF HIDDEN (mobile CSS fallback) ──
   const container = document.getElementById('matrice-canvas-container');
-  if (!container || !container.offsetWidth) {
-    // Mobile fallback is active — skip Three.js init entirely
-  } else {
+  if (container && container.offsetWidth) {
 
   // ── LAZY INIT: wait until visible (skip if already in viewport) ──
   await new Promise<void>(resolve => {
@@ -344,6 +339,12 @@
     }, { rootMargin: '200px' });
     io.observe(container);
   });
+
+  // Dynamic imports — only download Three.js when actually needed
+  const [{ default: THREE }, { OrbitControls }] = await Promise.all([
+    import('three'),
+    import('three/examples/jsm/controls/OrbitControls.js'),
+  ]);
 
   // ── QUALITY SETTINGS ──
   const isMobile = window.innerWidth <= 1024;
