@@ -57,10 +57,17 @@
     <div class="load-text">Chargement du globe...</div>
   </div>
 
-  <button id="globe-download-btn" class="globe-download-btn" aria-label="Télécharger la visualisation">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-    <span class="mono">Télécharger</span>
-  </button>
+  <div class="globe-download-wrap" id="globe-download-wrap">
+    <button id="globe-download-btn" class="globe-download-btn" aria-label="Télécharger la visualisation">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <span class="mono">Télécharger</span>
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="globe-download-menu" id="globe-download-menu">
+      <button class="globe-download-option" id="dl-png"><span class="mono">PNG</span> — image fixe</button>
+      <button class="globe-download-option" id="dl-gif"><span class="mono">GIF</span> — rotation animée</button>
+    </div>
+  </div>
 </div>
 
 <style>
@@ -282,12 +289,16 @@
     letter-spacing: 0.02em;
   }
 
-  .globe-download-btn {
+  .globe-download-wrap {
     display: none;
     position: absolute;
     top: calc(var(--nav-height, 64px) + 4.5rem);
     right: 2rem;
     z-index: 15;
+  }
+
+  .globe-download-btn {
+    display: flex;
     align-items: center;
     gap: 0.5rem;
     background: rgba(255,255,255,0.08);
@@ -306,6 +317,46 @@
     background: rgba(255,255,255,0.14);
     border-color: rgba(255,255,255,0.4);
     color: #fff;
+  }
+
+  .globe-download-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    background: rgba(15,15,30,0.92);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+    min-width: 180px;
+  }
+
+  .globe-download-wrap.open .globe-download-menu {
+    display: block;
+  }
+
+  .globe-download-option {
+    display: block;
+    width: 100%;
+    padding: 0.55rem 0.9rem;
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.7rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-family: inherit;
+  }
+
+  .globe-download-option:hover {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+  }
+
+  .globe-download-option + .globe-download-option {
+    border-top: 1px solid rgba(255,255,255,0.08);
   }
 
   @media (max-width: 768px) {
@@ -854,21 +905,26 @@
   animate();
 
   // ── DOWNLOAD HANDLER ──
+  const dlWrap = document.getElementById('globe-download-wrap');
   const dlBtn = document.getElementById('globe-download-btn');
-  if (dlBtn) {
-    dlBtn.addEventListener('click', () => {
-      // Force a clean render
+  const dlPng = document.getElementById('dl-png');
+  const dlGif = document.getElementById('dl-gif');
+
+  if (dlBtn && dlWrap) {
+    dlBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dlWrap.classList.toggle('open');
+    });
+    document.addEventListener('click', () => dlWrap.classList.remove('open'));
+
+    function captureFrame() {
       renderer.render(scene, camera);
       const srcCanvas = renderer.domElement;
-
-      // Create offscreen canvas with watermark
       const offscreen = document.createElement('canvas');
       offscreen.width = srcCanvas.width;
       offscreen.height = srcCanvas.height;
       const octx = offscreen.getContext('2d')!;
       octx.drawImage(srcCanvas, 0, 0);
-
-      // Watermark
       const scale = srcCanvas.width / container.clientWidth;
       const fontSize = Math.round(12 * scale);
       octx.font = `400 ${fontSize}px Poppins, sans-serif`;
@@ -876,13 +932,235 @@
       octx.textAlign = 'right';
       octx.textBaseline = 'bottom';
       octx.fillText('Conçu par Colomban 🔵', offscreen.width - 20 * scale, offscreen.height - 16 * scale);
+      return offscreen;
+    }
 
-      // Download
+    // PNG download
+    dlPng?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dlWrap.classList.remove('open');
       const link = document.createElement('a');
       link.download = 'globe-colomban.png';
-      link.href = offscreen.toDataURL('image/png');
+      link.href = captureFrame().toDataURL('image/png');
       link.click();
     });
+
+    // GIF download — capture frames during a full rotation
+    dlGif?.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      dlWrap.classList.remove('open');
+
+      // Show progress
+      const origText = dlBtn.querySelector('.mono')!;
+      const origLabel = origText.textContent;
+      origText.textContent = 'Capture 0%...';
+      dlBtn.style.pointerEvents = 'none';
+
+      // Pause auto-rotate, save current state
+      const savedAutoRotate = controls.autoRotate;
+      const savedRotateSpeed = controls.autoRotateSpeed;
+      controls.autoRotate = false;
+
+      // Capture at reduced resolution for reasonable file size
+      const captureW = 480;
+      const captureH = Math.round(captureW * container.clientHeight / container.clientWidth);
+      const totalFrames = 36; // 36 frames = 10° per frame
+      const frames: HTMLCanvasElement[] = [];
+
+      // Save camera position and rotate manually
+      const startAzimuth = controls.getAzimuthalAngle();
+
+      for (let i = 0; i < totalFrames; i++) {
+        // Rotate globe by setting azimuthal angle
+        const angle = startAzimuth + (i / totalFrames) * Math.PI * 2;
+        const polar = controls.getPolarAngle();
+        const dist = camera.position.length();
+        camera.position.x = dist * Math.sin(polar) * Math.sin(angle);
+        camera.position.z = dist * Math.sin(polar) * Math.cos(angle);
+        camera.position.y = dist * Math.cos(polar);
+        camera.lookAt(0, 0, 0);
+        controls.update();
+
+        renderer.render(scene, camera);
+
+        // Capture at reduced resolution
+        const frame = document.createElement('canvas');
+        frame.width = captureW;
+        frame.height = captureH;
+        const fctx = frame.getContext('2d')!;
+        fctx.drawImage(renderer.domElement, 0, 0, captureW, captureH);
+
+        // Watermark on last frame area
+        const fScale = captureW / container.clientWidth;
+        const fSize = Math.max(9, Math.round(12 * fScale));
+        fctx.font = `400 ${fSize}px Poppins, sans-serif`;
+        fctx.fillStyle = 'rgba(255,255,255,0.45)';
+        fctx.textAlign = 'right';
+        fctx.textBaseline = 'bottom';
+        fctx.fillText('Conçu par Colomban 🔵', captureW - 8, captureH - 6);
+
+        frames.push(frame);
+        origText.textContent = `Capture ${Math.round((i + 1) / totalFrames * 100)}%...`;
+
+        // Yield to keep UI responsive
+        await new Promise(r => setTimeout(r, 0));
+      }
+
+      // Restore camera
+      const restoreAngle = startAzimuth;
+      const polarR = controls.getPolarAngle();
+      const distR = camera.position.length();
+      camera.position.x = distR * Math.sin(polarR) * Math.sin(restoreAngle);
+      camera.position.z = distR * Math.sin(polarR) * Math.cos(restoreAngle);
+      camera.position.y = distR * Math.cos(polarR);
+      camera.lookAt(0, 0, 0);
+      controls.autoRotate = savedAutoRotate;
+      controls.autoRotateSpeed = savedRotateSpeed;
+
+      origText.textContent = 'Encodage GIF...';
+
+      // Encode GIF using simple encoder
+      await new Promise(r => setTimeout(r, 50));
+      const gifBlob = await encodeGif(frames, captureW, captureH, 80);
+
+      const link = document.createElement('a');
+      link.download = 'globe-colomban.gif';
+      link.href = URL.createObjectURL(gifBlob);
+      link.click();
+      URL.revokeObjectURL(link.href);
+
+      origText.textContent = origLabel;
+      dlBtn.style.pointerEvents = '';
+    });
+  }
+
+  // ── MINIMAL GIF ENCODER (no dependencies) ──
+  async function encodeGif(frames: HTMLCanvasElement[], w: number, h: number, delay: number): Promise<Blob> {
+    const buf: number[] = [];
+    // GIF89a header
+    buf.push(0x47, 0x49, 0x46, 0x38, 0x39, 0x61);
+    // Logical screen descriptor
+    buf.push(w & 0xff, (w >> 8) & 0xff, h & 0xff, (h >> 8) & 0xff);
+    buf.push(0x70, 0x00, 0x00); // no GCT, 8-bit color
+
+    // Netscape extension for looping
+    buf.push(0x21, 0xff, 0x0b);
+    const ns = 'NETSCAPE2.0';
+    for (let i = 0; i < 11; i++) buf.push(ns.charCodeAt(i));
+    buf.push(0x03, 0x01, 0x00, 0x00, 0x00); // loop forever
+
+    for (const frame of frames) {
+      const ctx = frame.getContext('2d')!;
+      const imgData = ctx.getImageData(0, 0, w, h);
+      const pixels = imgData.data;
+
+      // Build color palette using median cut (simplified: uniform 6x6x6 cube)
+      const palette: number[] = [];
+      const colorCount = 128; // 7 bits
+      for (let i = 0; i < colorCount; i++) {
+        const r = Math.round((i % 6) * 51);
+        const g = Math.round((Math.floor(i / 6) % 6) * 51);
+        const b = Math.round((Math.floor(i / 36) % 6) * 51);
+        palette.push(r, g, b);
+      }
+      // Pad to 128 colors
+      while (palette.length < colorCount * 3) palette.push(0, 0, 0);
+
+      // Map pixels to palette indices
+      const indices = new Uint8Array(w * h);
+      for (let p = 0; p < w * h; p++) {
+        const r = pixels[p * 4], g = pixels[p * 4 + 1], b = pixels[p * 4 + 2];
+        const ri = Math.min(5, Math.round(r / 51));
+        const gi = Math.min(5, Math.round(g / 51));
+        const bi = Math.min(5, Math.round(b / 51));
+        indices[p] = ri + gi * 6 + bi * 36;
+      }
+
+      // Graphic control extension
+      buf.push(0x21, 0xf9, 0x04, 0x00);
+      buf.push(delay & 0xff, (delay >> 8) & 0xff); // delay in 1/100ths sec
+      buf.push(0x00, 0x00); // no transparent color
+
+      // Image descriptor
+      buf.push(0x2c, 0x00, 0x00, 0x00, 0x00); // left, top = 0
+      buf.push(w & 0xff, (w >> 8) & 0xff, h & 0xff, (h >> 8) & 0xff);
+      buf.push(0x86); // local color table, 7 bits (128 colors)
+
+      // Local color table
+      for (let i = 0; i < colorCount * 3; i++) buf.push(palette[i]);
+
+      // LZW compress
+      const minCodeSize = 7;
+      buf.push(minCodeSize);
+      const lzwData = lzwEncode(indices, minCodeSize);
+
+      // Write sub-blocks
+      let offset = 0;
+      while (offset < lzwData.length) {
+        const chunkSize = Math.min(255, lzwData.length - offset);
+        buf.push(chunkSize);
+        for (let i = 0; i < chunkSize; i++) buf.push(lzwData[offset + i]);
+        offset += chunkSize;
+      }
+      buf.push(0x00); // block terminator
+    }
+
+    buf.push(0x3b); // GIF trailer
+    return new Blob([new Uint8Array(buf)], { type: 'image/gif' });
+  }
+
+  function lzwEncode(indices: Uint8Array, minCodeSize: number): number[] {
+    const clearCode = 1 << minCodeSize;
+    const eoiCode = clearCode + 1;
+    let codeSize = minCodeSize + 1;
+    let nextCode = eoiCode + 1;
+    const maxCode = 4096;
+
+    // Initialize dictionary
+    let dict = new Map<string, number>();
+    for (let i = 0; i < clearCode; i++) dict.set(String(i), i);
+
+    const output: number[] = [];
+    let bitBuf = 0;
+    let bitCount = 0;
+
+    function writeBits(code: number, size: number) {
+      bitBuf |= code << bitCount;
+      bitCount += size;
+      while (bitCount >= 8) {
+        output.push(bitBuf & 0xff);
+        bitBuf >>= 8;
+        bitCount -= 8;
+      }
+    }
+
+    writeBits(clearCode, codeSize);
+
+    let current = String(indices[0]);
+    for (let i = 1; i < indices.length; i++) {
+      const next = current + ',' + indices[i];
+      if (dict.has(next)) {
+        current = next;
+      } else {
+        writeBits(dict.get(current)!, codeSize);
+        if (nextCode < maxCode) {
+          dict.set(next, nextCode++);
+          if (nextCode > (1 << codeSize) && codeSize < 12) codeSize++;
+        } else {
+          writeBits(clearCode, codeSize);
+          dict = new Map<string, number>();
+          for (let j = 0; j < clearCode; j++) dict.set(String(j), j);
+          nextCode = eoiCode + 1;
+          codeSize = minCodeSize + 1;
+        }
+        current = String(indices[i]);
+      }
+    }
+    writeBits(dict.get(current)!, codeSize);
+    writeBits(eoiCode, codeSize);
+
+    if (bitCount > 0) output.push(bitBuf & 0xff);
+    return output;
   }
 
   } // end of else (container visible)
