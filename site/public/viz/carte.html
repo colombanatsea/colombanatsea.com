@@ -1369,7 +1369,7 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
         }
 
         if (!found && scrollProgress > 0.70) {
-            const reseauProg = (scrollProgress - 0.70) / 0.30;
+            const reseauProg = (scrollProgress - 0.70) / (1 - 0.70);
             const visibleThreads = Math.ceil(reseauProg * reseauThreads.length);
 
             for (let i = 0; i < visibleThreads; i++) {
