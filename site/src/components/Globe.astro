@@ -961,10 +961,10 @@
       const savedRotateSpeed = controls.autoRotateSpeed;
       controls.autoRotate = false;
 
-      // Capture at reduced resolution for reasonable file size
-      const captureW = 480;
+      // Capture at good resolution for quality
+      const captureW = 640;
       const captureH = Math.round(captureW * container.clientHeight / container.clientWidth);
-      const totalFrames = 36; // 36 frames = 10° per frame
+      const totalFrames = 48; // 48 frames for smoother rotation
       const frames: HTMLCanvasElement[] = [];
 
       // Save camera position and rotate manually
@@ -1021,7 +1021,7 @@
 
       // Encode GIF using simple encoder
       await new Promise(r => setTimeout(r, 50));
-      const gifBlob = await encodeGif(frames, captureW, captureH, 80);
+      const gifBlob = await encodeGif(frames, captureW, captureH, 60);
 
       const link = document.createElement('a');
       link.download = 'globe-colomban.gif';
@@ -1034,7 +1034,75 @@
     });
   }
 
-  // ── MINIMAL GIF ENCODER (no dependencies) ──
+  // ── GIF ENCODER with median-cut quantization + Floyd-Steinberg dithering ──
+
+  // Median-cut color quantization to 256 colors
+  function medianCut(pixels: Uint8ClampedArray, pixelCount: number, maxColors: number): number[][] {
+    // Sample pixels (max 50k for performance)
+    const sampleStep = Math.max(1, Math.floor(pixelCount / 50000));
+    const colors: number[][] = [];
+    for (let i = 0; i < pixelCount; i += sampleStep) {
+      colors.push([pixels[i * 4], pixels[i * 4 + 1], pixels[i * 4 + 2]]);
+    }
+
+    type Box = { colors: number[][]; rMin: number; rMax: number; gMin: number; gMax: number; bMin: number; bMax: number };
+
+    function makeBox(cols: number[][]): Box {
+      let rMin = 255, rMax = 0, gMin = 255, gMax = 0, bMin = 255, bMax = 0;
+      for (const c of cols) {
+        if (c[0] < rMin) rMin = c[0]; if (c[0] > rMax) rMax = c[0];
+        if (c[1] < gMin) gMin = c[1]; if (c[1] > gMax) gMax = c[1];
+        if (c[2] < bMin) bMin = c[2]; if (c[2] > bMax) bMax = c[2];
+      }
+      return { colors: cols, rMin, rMax, gMin, gMax, bMin, bMax };
+    }
+
+    function splitBox(box: Box): [Box, Box] {
+      const rRange = box.rMax - box.rMin;
+      const gRange = box.gMax - box.gMin;
+      const bRange = box.bMax - box.bMin;
+      const channel = rRange >= gRange && rRange >= bRange ? 0 : gRange >= bRange ? 1 : 2;
+      box.colors.sort((a, b) => a[channel] - b[channel]);
+      const mid = Math.floor(box.colors.length / 2);
+      return [makeBox(box.colors.slice(0, mid)), makeBox(box.colors.slice(mid))];
+    }
+
+    let boxes: Box[] = [makeBox(colors)];
+    while (boxes.length < maxColors) {
+      // Find largest box by volume * population
+      let bestIdx = 0, bestScore = 0;
+      for (let i = 0; i < boxes.length; i++) {
+        const b = boxes[i];
+        if (b.colors.length < 2) continue;
+        const vol = (b.rMax - b.rMin + 1) * (b.gMax - b.gMin + 1) * (b.bMax - b.bMin + 1);
+        const score = vol * b.colors.length;
+        if (score > bestScore) { bestScore = score; bestIdx = i; }
+      }
+      if (bestScore === 0) break;
+      const [a, b] = splitBox(boxes[bestIdx]);
+      boxes.splice(bestIdx, 1, a, b);
+    }
+
+    // Average each box to get palette color
+    return boxes.map(box => {
+      let rSum = 0, gSum = 0, bSum = 0;
+      for (const c of box.colors) { rSum += c[0]; gSum += c[1]; bSum += c[2]; }
+      const n = box.colors.length;
+      return [Math.round(rSum / n), Math.round(gSum / n), Math.round(bSum / n)];
+    });
+  }
+
+  // Find nearest palette color
+  function nearestColor(r: number, g: number, b: number, palette: number[][]): number {
+    let bestIdx = 0, bestDist = Infinity;
+    for (let i = 0; i < palette.length; i++) {
+      const dr = r - palette[i][0], dg = g - palette[i][1], db = b - palette[i][2];
+      const dist = dr * dr + dg * dg + db * db;
+      if (dist < bestDist) { bestDist = dist; bestIdx = i; }
+    }
+    return bestIdx;
+  }
+
   async function encodeGif(frames: HTMLCanvasElement[], w: number, h: number, delay: number): Promise<Blob> {
     const buf: number[] = [];
     // GIF89a header
@@ -1054,43 +1122,70 @@
       const imgData = ctx.getImageData(0, 0, w, h);
       const pixels = imgData.data;
 
-      // Build color palette using median cut (simplified: uniform 6x6x6 cube)
-      const palette: number[] = [];
-      const colorCount = 128; // 7 bits
-      for (let i = 0; i < colorCount; i++) {
-        const r = Math.round((i % 6) * 51);
-        const g = Math.round((Math.floor(i / 6) % 6) * 51);
-        const b = Math.round((Math.floor(i / 36) % 6) * 51);
-        palette.push(r, g, b);
-      }
-      // Pad to 128 colors
-      while (palette.length < colorCount * 3) palette.push(0, 0, 0);
+      // Build adaptive 256-color palette via median cut
+      const palette = medianCut(pixels, w * h, 256);
+      while (palette.length < 256) palette.push([0, 0, 0]); // pad to 256
 
-      // Map pixels to palette indices
+      // Floyd-Steinberg dithering + index mapping
       const indices = new Uint8Array(w * h);
-      for (let p = 0; p < w * h; p++) {
-        const r = pixels[p * 4], g = pixels[p * 4 + 1], b = pixels[p * 4 + 2];
-        const ri = Math.min(5, Math.round(r / 51));
-        const gi = Math.min(5, Math.round(g / 51));
-        const bi = Math.min(5, Math.round(b / 51));
-        indices[p] = ri + gi * 6 + bi * 36;
+      const errR = new Float32Array(w * h);
+      const errG = new Float32Array(w * h);
+      const errB = new Float32Array(w * h);
+
+      // Initialize error buffer with pixel values
+      for (let i = 0; i < w * h; i++) {
+        errR[i] = pixels[i * 4];
+        errG[i] = pixels[i * 4 + 1];
+        errB[i] = pixels[i * 4 + 2];
+      }
+
+      for (let y = 0; y < h; y++) {
+        for (let x = 0; x < w; x++) {
+          const idx = y * w + x;
+          const cr = Math.max(0, Math.min(255, Math.round(errR[idx])));
+          const cg = Math.max(0, Math.min(255, Math.round(errG[idx])));
+          const cb = Math.max(0, Math.min(255, Math.round(errB[idx])));
+
+          const pi = nearestColor(cr, cg, cb, palette);
+          indices[idx] = pi;
+
+          const eR = cr - palette[pi][0];
+          const eG = cg - palette[pi][1];
+          const eB = cb - palette[pi][2];
+
+          // Distribute error to neighbors
+          if (x + 1 < w) {
+            errR[idx + 1] += eR * 7 / 16; errG[idx + 1] += eG * 7 / 16; errB[idx + 1] += eB * 7 / 16;
+          }
+          if (y + 1 < h) {
+            if (x > 0) {
+              errR[idx + w - 1] += eR * 3 / 16; errG[idx + w - 1] += eG * 3 / 16; errB[idx + w - 1] += eB * 3 / 16;
+            }
+            errR[idx + w] += eR * 5 / 16; errG[idx + w] += eG * 5 / 16; errB[idx + w] += eB * 5 / 16;
+            if (x + 1 < w) {
+              errR[idx + w + 1] += eR * 1 / 16; errG[idx + w + 1] += eG * 1 / 16; errB[idx + w + 1] += eB * 1 / 16;
+            }
+          }
+        }
       }
 
       // Graphic control extension
       buf.push(0x21, 0xf9, 0x04, 0x00);
-      buf.push(delay & 0xff, (delay >> 8) & 0xff); // delay in 1/100ths sec
-      buf.push(0x00, 0x00); // no transparent color
+      buf.push(delay & 0xff, (delay >> 8) & 0xff);
+      buf.push(0x00, 0x00);
 
       // Image descriptor
-      buf.push(0x2c, 0x00, 0x00, 0x00, 0x00); // left, top = 0
+      buf.push(0x2c, 0x00, 0x00, 0x00, 0x00);
       buf.push(w & 0xff, (w >> 8) & 0xff, h & 0xff, (h >> 8) & 0xff);
-      buf.push(0x86); // local color table, 7 bits (128 colors)
+      buf.push(0x87); // local color table, 8 bits (256 colors)
 
       // Local color table
-      for (let i = 0; i < colorCount * 3; i++) buf.push(palette[i]);
+      for (let i = 0; i < 256; i++) {
+        buf.push(palette[i][0], palette[i][1], palette[i][2]);
+      }
 
       // LZW compress
-      const minCodeSize = 7;
+      const minCodeSize = 8;
       buf.push(minCodeSize);
       const lzwData = lzwEncode(indices, minCodeSize);
 
