@@ -261,6 +261,15 @@ const altPath = getLocalizedPath(altLang, frSlug);
       });
     });
 
+    // Close mobile nav on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && links?.classList.contains('open')) {
+        links.classList.remove('open');
+        toggle?.setAttribute('aria-expanded', 'false');
+        toggle?.focus();
+      }
+    });
+
     // Navbar background on scroll
     let lastScroll = 0;
     window.addEventListener('scroll', () => {
