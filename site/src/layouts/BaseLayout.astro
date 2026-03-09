@@ -37,7 +37,7 @@ const altPath = getLocalizedPath(altLang, frSlug);
   <!-- Security -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'self'; object-src 'none';" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com; frame-src 'self'; object-src 'none';" />
   <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=()" />
 
   <!-- Canonical & hreflang -->
@@ -111,6 +111,15 @@ const altPath = getLocalizedPath(altLang, frSlug);
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Colomban at Sea" />
   <meta name="twitter:image" content={`https://colombanatsea.github.io${base}/og-image.jpg`} />
+
+  <!-- Google Analytics 4 — Replace G-XXXXXXXXXX with your GA4 Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 <body>
   <a href="#main-content" class="skip-to-content">{lang === 'fr' ? 'Aller au contenu' : 'Skip to content'}</a>
