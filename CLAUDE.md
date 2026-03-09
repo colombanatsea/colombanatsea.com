@@ -87,6 +87,9 @@
 
 ### Media-viz timeline (`viz/mediaviz.html`)
 - Canvas 2D scroll-driven, scrollbar masquée, indicateur scroll animé
+- Timeline : 01/05/2022 — 09/03/2026, 34 articles presse avec titres réels
+- Popup affiche outlet (ex: "Jeune Marine") au lieu du type, avec lien vers l'article
+- Couleurs par sujet : rose (culture/traditions/métier), vert (transition/biosphère), bleu (tech/dev perso)
 
 ## Pages (routes : /fr/ et /en/)
 
@@ -124,7 +127,7 @@
 
 ### Medias (`/medias`, `/media`)
 - Media-viz constellation : Canvas 2D scroll-driven, 3 rangées (tech/enviro/socio), filtres
-- Kit media : 4 cartes téléchargement (bio .txt, chiffres-clés .txt, contact .vcf, photos HD mailto)
+- Kit media : 3 cartes téléchargement (bio .txt, chiffres-clés .txt, photos HD mailto)
 
 ### Prises de parole (`/prises-de-parole`, `/speaking`)
 - Conférences & interventions (tableau chronologique, liens externes vers euromaritime.fr, lemarin.ouest-france.fr, nabu.de, raceforwater.org)
@@ -134,7 +137,7 @@
 ### Sources & données (`/sources`)
 - Page de transparence référençant toutes les sources des chiffres utilisés sur le site
 - Tableau des 37 États et territoires voisins maritimes de la France (30 souverains + 7 territoires)
-- Tableaux : espace maritime (5 continents, 4 océans avec détail), présence par océan, présence par continent, économie maritime, télécoms sous-marines, EMR, recherche, données du globe 3D
+- Tableaux : espace maritime (5 continents, 4 océans avec détail), présence par océan, présence par continent, économie maritime, télécoms sous-marines, câbles sous-marins (25 câbles avec points d'atterrissage), EMR, recherche, données du globe 3D
 - Lien dans le footer (colonne "Liens")
 - Sources : SHOM, VLIZ, Douanes françaises, Cluster Maritime, PPE3, France Renouvelables, ITU, TeleGeography
 
@@ -162,7 +165,7 @@
 - **LLM optimization** : `public/llms.txt` — fichier structuré décrivant le site, les concepts clés, les engagements et les pages pour les LLM
 
 ## Sécurité
-- **CSP** : `Content-Security-Policy` via meta http-equiv — `default-src 'self'`, `script-src 'self' 'unsafe-inline'`, `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`, `font-src https://fonts.gstatic.com`, `img-src 'self' data:`, `frame-src 'self'`
+- **CSP** : `Content-Security-Policy` via meta http-equiv — `default-src 'self'`, `script-src 'self' 'unsafe-inline'`, `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`, `font-src https://fonts.gstatic.com`, `img-src 'self' data:`, `frame-src 'self'`, `object-src 'none'`
 - **Permissions-Policy** : `geolocation=(), microphone=(), camera=(), payment=(), usb=()`
 - `X-Content-Type-Options: nosniff` (meta)
 - `referrer: strict-origin-when-cross-origin` (meta)
@@ -195,12 +198,13 @@
     - Fresnel cubique, SSS (subsurface scattering), double spéculaire (moon path + halo)
     - Mousse procédurale sur les crêtes, grain film, tone mapping ACES, vignette
   - **Ciel nocturne** : étoiles procédurales en coordonnées sphériques (3 couches, scintillement animé), lune avec disque + triple halo atmosphérique
-  - **Gouttelettes** : Canvas 2D overlay — gouttes d'eau qui glissent sur l'écran (refraction, traînée, wobble), max 6 simultanées, spawn stochastique
+  - **Gouttelettes** : Canvas 2D overlay — effet pare-brise (gouttes qui atterrissent puis glissent sur le verre avec traînées humides), max 12 simultanées, spawn stochastique
   - **Spray** : particules CSS-only (30 particules, animation keyframe)
   - **Mobile** : fallback CSS avec vagues animées (pas de WebGL, pas de droplets, pas de spray), layout responsive
-  - **Waitlist** : formulaire email + localStorage (en attente de backend)
-  - **Sections** : Hero + livre flottant → Stats → Citation Tabarly → 3 axes (glass card) → Auteur → Footer
-  - **Sécurité** : CSP strict (default-src 'self', frame-src 'none', object-src 'none'), Permissions-Policy (geolocation, microphone, camera, payment, usb, magnetometer, gyroscope, accelerometer disabled), X-Content-Type-Options nosniff, referrer strict-origin-when-cross-origin, rel="noopener noreferrer" sur tous les liens externes
+  - **Waitlist** : formulaire email avec support Google Sheets (via Apps Script) + fallback localStorage
+  - **Sections** : Hero + livre flottant → Stats → Citation Tabarly → 3 axes (Vaincre la cécité maritime, Bâtir l'archipel France, Le laboratoire du futur) → Appel Océanocratie → Auteur → Footer
+  - **Sécurité** : CSP strict (default-src 'self', connect-src 'self' + Google Script, frame-src 'none', object-src 'none'), Permissions-Policy (geolocation, microphone, camera, payment, usb, magnetometer, gyroscope, accelerometer disabled), X-Content-Type-Options nosniff, referrer strict-origin-when-cross-origin, rel="noopener noreferrer" sur tous les liens externes
+  - **SEO** : robots.txt, sitemap.xml, meta description, OG complet, Twitter card
   - **Performance** : DPR cap 1.5 (shader) / 2 (droplets), 3 octaves géométrie / 5 fragment, aucune dépendance externe (pas de Three.js), fonts Google non-bloquantes
   - **Zero dépendance** : HTML standalone, aucun CDN, aucun framework — WebGL natif + Canvas 2D
 - **aperitifsdelamer.com** : Lien dans le footer
