@@ -94,14 +94,14 @@
 ## Pages (routes : /fr/ et /en/)
 
 ### Homepage (`/fr/`, `/en/`)
-- Hero plein écran : titre "Océanocratie" (FR) / "Oceanocraty" (EN), baseline "Une nation libre regarde la mer." (non-italic, Poppins 300)
+- Hero plein écran : titre "Océanocratie" (FR) / "Oceanocracy" (EN), baseline "Une nation libre regarde la mer." (non-italic, Poppins 300)
 - Globe en arrière-plan (desktop), fallback circle+stats en dessous du content (mobile), overlay léger, dezoom au scroll (rAF-throttled)
 - Bouton "Explorer la carte" → mode plein écran avec légende + stats (Escape pour fermer) — masqué mobile
 - Nav : texte blanc par défaut, bascule noir au scroll (`nav--scrolled`)
 - Citation Tabarly : "La mer, c'est ce que les Français ont dans le dos quand ils regardent la plage" + écho Colomban
 - Le MERitoire français : grille 8 cartes (ZEE, 37 frontières, 4 océans, 5 continents, 595 Md€ exports, 50+ câbles, 45 GW éolien, ADN culture) — concept TERRitoire vs MERitoire, lien vers globe ZEE-only
 - "Tout passe par la mer" : diagnostic positif — 97% données mondiales câbles, 80% commerce maritime, EMR potentiel, 25 000 molécules marines — layout 2 colonnes (texte + 4 facts)
-- Manifeste Océanocratie/Oceanocraty : "Une nation libre regarde la mer" — 3 piliers (curiosité/humilité/fraternité), distinction thalassocratie vs océanocratie
+- Manifeste Océanocratie/Oceanocracy : "Une nation libre regarde la mer" — 3 piliers (curiosité/humilité/fraternité), distinction thalassocratie vs océanocratie
 - Triple évolution : "Deux transitions, une révolution" — techno (transition digitale post-web), écolo (décarbonation + EMR + 9 limites planétaires), socio (révolution socioculturelle + valeurs)
 - Engagements : "3 axes d'engagement. Un cap unique" — Matrice 3D
 - Sections : Hero → Tabarly → Divider → MERitoire → Divider → Tout passe par la mer → Divider → Manifeste → Divider → Triple évolution → Matrice → Logos → Témoignages → CTA Social → Océanocratie livre
@@ -184,7 +184,7 @@
 - **unsafe-inline** : nécessaire pour les scripts inline Astro/standalone et les styles scoped. Acceptable car aucun user input n'est rendu dans le DOM.
 
 ## Traduction EN
-- Le concept s'écrit "Oceanocraty" en anglais (pas "Océanocratie" ou "Oceanocratie")
+- Le concept s'écrit "Oceanocracy" en anglais (pas "Océanocratie" ou "Oceanocratie")
 - Les classes CSS restent `.oceanocratie__*` (noms internes)
 - L'URL `oceanocratie.fr` reste inchangée (nom de domaine)
 

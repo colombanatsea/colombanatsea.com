@@ -9,11 +9,7 @@
 <div class="globe-wrapper">
   <div id="globe-fallback" class="globe-fallback">
     <div class="globe-fallback__circle"></div>
-    <div class="globe-fallback__stats">
-      <div class="globe-fallback__stat"><span>11 691 000</span> km&sup2; de ZEE</div>
-      <div class="globe-fallback__stat"><span>708</span> c&acirc;bles sous-marins</div>
-      <div class="globe-fallback__stat"><span>2&egrave;me</span> ZEE mondiale</div>
-    </div>
+    <p class="globe-fallback__hint">Ouvrez sur un &eacute;cran plus grand pour explorer le globe interactif</p>
   </div>
   <div id="globe-container">
     <div id="total-counter">
@@ -60,6 +56,11 @@
     <div class="spinner"></div>
     <div class="load-text">Chargement du globe...</div>
   </div>
+
+  <button id="globe-download-btn" class="globe-download-btn" aria-label="Télécharger la visualisation">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    <span class="mono">Télécharger</span>
+  </button>
 </div>
 
 <style>
@@ -271,23 +272,40 @@
     50% { box-shadow: 0 0 60px rgba(42, 85, 179, 0.3); }
   }
 
-  .globe-fallback__stats {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    text-align: center;
-  }
-
-  .globe-fallback__stat {
+  .globe-fallback__hint {
     font-family: var(--font-heading);
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.6);
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    max-width: 220px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
   }
 
-  .globe-fallback__stat span {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #00b4b4;
+  .globe-download-btn {
+    display: none;
+    position: absolute;
+    top: 24px;
+    left: 28px;
+    z-index: 15;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 0.4rem 0.9rem;
+    color: rgba(255,255,255,0.6);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    backdrop-filter: blur(8px);
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+  }
+
+  .globe-download-btn:hover {
+    background: rgba(255,255,255,0.14);
+    border-color: rgba(255,255,255,0.4);
+    color: #fff;
   }
 
   @media (max-width: 768px) {
@@ -834,5 +852,38 @@
   ro.observe(container);
 
   animate();
+
+  // ── DOWNLOAD HANDLER ──
+  const dlBtn = document.getElementById('globe-download-btn');
+  if (dlBtn) {
+    dlBtn.addEventListener('click', () => {
+      // Force a clean render
+      renderer.render(scene, camera);
+      const srcCanvas = renderer.domElement;
+
+      // Create offscreen canvas with watermark
+      const offscreen = document.createElement('canvas');
+      offscreen.width = srcCanvas.width;
+      offscreen.height = srcCanvas.height;
+      const octx = offscreen.getContext('2d')!;
+      octx.drawImage(srcCanvas, 0, 0);
+
+      // Watermark
+      const scale = srcCanvas.width / container.clientWidth;
+      const fontSize = Math.round(12 * scale);
+      octx.font = `400 ${fontSize}px Poppins, sans-serif`;
+      octx.fillStyle = 'rgba(255,255,255,0.45)';
+      octx.textAlign = 'right';
+      octx.textBaseline = 'bottom';
+      octx.fillText('Conçu par Colomban 🔵', offscreen.width - 20 * scale, offscreen.height - 16 * scale);
+
+      // Download
+      const link = document.createElement('a');
+      link.download = 'globe-colomban.png';
+      link.href = offscreen.toDataURL('image/png');
+      link.click();
+    });
+  }
+
   } // end of else (container visible)
 </script>

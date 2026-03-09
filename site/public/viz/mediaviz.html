@@ -40,7 +40,11 @@
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255,255,255,0.06);
             gap: 12px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
         }
+        .top-bar::-webkit-scrollbar { display: none; }
         .top-bar .title {
             font-size: 13px;
             font-weight: 700;
@@ -113,6 +117,7 @@
             gap: 14px;
             align-items: center;
             white-space: nowrap;
+            flex-shrink: 0;
         }
         .stat {
             display: flex;
