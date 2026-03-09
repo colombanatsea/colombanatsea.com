@@ -2,42 +2,252 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const medias = [
+  'Le Monde', 'TF1', 'Conflits', 'Marine & Oceans', 'Jeune Marine',
+  'Mer & Marine', 'Le Marin',
+];
 ---
 
 <BaseLayout lang="en" frSlug="medias" title="Media & Press — Colomban at Sea" description="30+ press articles and mentions — Le Monde, TF1, Conflits, Marine & Oceans. Downloadable media kit.">
+  <section class="page-hero section-dark">
+    <div class="container stagger">
+      <p class="mono text-bleu">Media &amp; Press</p>
+      <h1>30+ articles and<br/><span class="text-bleu">press mentions</span></h1>
+      <p class="subtitle">Expertise serving the maritime world — and beyond.</p>
+    </div>
+  </section>
 
-<section class="section-dark hero-inner">
-  <div class="container">
-    <p class="mono text-accent">Media</p>
-    <h1>Press coverage <br/>&amp; media kit<span class="dot-accent">.</span></h1>
-    <p class="subtitle">30+ articles and mentions in major French media.</p>
-  </div>
-</section>
-
-<section class="section-light">
-  <div class="container page-content">
-    <h2>Media Kit<span class="dot-accent">.</span></h2>
-    <div class="kit-grid">
-      <div class="kit-card stagger">
-        <h3>Full Bio</h3>
-        <p>Complete biography for press use.</p>
-        <a href={`${base}/kit-media/bio-colomban.txt`} download class="btn btn-outline" style="margin-top: 1rem;">Download .txt</a>
-      </div>
-      <div class="kit-card stagger">
-        <h3>Key Figures</h3>
-        <p>Career milestones, metrics and impact numbers.</p>
-        <a href={`${base}/kit-media/chiffres-cles.txt`} download class="btn btn-outline" style="margin-top: 1rem;">Download .txt</a>
-      </div>
-      <div class="kit-card stagger">
-        <h3>HD Photos</h3>
-        <p>Professional portraits for editorial use.</p>
-        <a href="mailto:hello@colombanatsea.com?subject=HD%20Photos%20Request" class="btn btn-outline" style="margin-top: 1rem;">Request by email</a>
+  <!-- Medias logos -->
+  <section class="section">
+    <div class="container">
+      <div class="media-logos">
+        {medias.map((m) => (
+          <span class="media-logo">{m}</span>
+        ))}
       </div>
     </div>
+  </section>
 
-    <h2>Press Coverage<span class="dot-accent">.</span></h2>
-    <p>For the full press coverage timeline, see the <a href={`${base}/fr/medias`}>French version</a> of this page.</p>
-  </div>
-</section>
+  <!-- Articles timeline -->
+  <section class="section-dark section">
+    <div class="container">
+      <div class="mediaviz-header stagger">
+        <p class="mono text-bleu">Interactive visualization</p>
+        <h2>Media Timeline</h2>
+        <p class="subtitle" style="color: var(--gris-400);">Constellation of Colomban's public positions from 2022 to today.</p>
+      </div>
+      <div class="mediaviz-canvas">
+        <iframe src={`${base}/viz/mediaviz.html`} class="mediaviz-iframe" title="Media timeline"></iframe>
+        <div class="mediaviz-scroll-hint">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="mono">Scroll through the visualization</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Kit media -->
+  <section class="section">
+    <div class="container">
+      <div class="kit-media stagger">
+        <p class="mono text-bleu">Media Kit</p>
+        <h2>Everything to write<br/>about Colomban</h2>
+        <p class="subtitle">Bio, key figures, contact — download what you need.</p>
+        <div class="kit-media__items">
+          <div class="kit-media__item">
+            <div class="kit-media__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h4>Full Bio</h4>
+            <p>Short and long bio, career path, current engagements and key figures.</p>
+            <a href={`${base}/kit-media/bio-colomban-en.txt`} download class="kit-media__link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              bio-colomban-en.txt
+            </a>
+          </div>
+          <div class="kit-media__item">
+            <div class="kit-media__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            </div>
+            <h4>Key Figures</h4>
+            <p>Statistics, career path, influence and French maritime data.</p>
+            <a href={`${base}/kit-media/key-figures-en.txt`} download class="kit-media__link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              key-figures-en.txt
+            </a>
+          </div>
+          <div class="kit-media__item kit-media__item--photos">
+            <div class="kit-media__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+            <h4>HD Photos</h4>
+            <p>Portraits, conferences, maritime — available on request.</p>
+            <a href="mailto:hello@colombanatsea.com?subject=HD%20Photos%20Request%20-%20Media%20Kit" class="kit-media__link kit-media__link--email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              hello@colombanatsea.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .media-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    justify-content: center;
+  }
+
+  .media-logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--gris-300);
+    padding: var(--space-md) var(--space-lg);
+    border: 1px solid var(--gris-200);
+    border-radius: 12px;
+    transition: all var(--duration-normal);
+  }
+
+  .media-logo:hover {
+    color: var(--noir);
+    border-color: var(--bleu);
+  }
+
+  .mediaviz-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .mediaviz-header .mono { margin-bottom: var(--space-sm); }
+
+  .mediaviz-canvas {
+    width: 100%;
+    height: 80vh;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .mediaviz-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+
+  .mediaviz-scroll-hint {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.65rem;
+    pointer-events: none;
+    animation: mediaviz-fade 3s ease-in-out infinite;
+  }
+
+  .mediaviz-scroll-hint svg {
+    animation: mediaviz-bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes mediaviz-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+  }
+
+  @keyframes mediaviz-fade {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+
+  .kit-media .mono { margin-bottom: var(--space-sm); }
+  .kit-media h2 { margin-bottom: var(--space-sm); }
+  .kit-media > .subtitle { margin-bottom: var(--space-xl); color: var(--gris-500); }
+
+  .kit-media__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .kit-media__item {
+    padding: var(--space-xl);
+    border: 1px solid var(--gris-200);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    transition: all var(--duration-normal);
+  }
+
+  .kit-media__item:hover {
+    border-color: var(--bleu);
+    box-shadow: 0 4px 24px rgba(42, 85, 179, 0.08);
+  }
+
+  .kit-media__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--gris-100);
+    color: var(--bleu);
+    margin-bottom: var(--space-md);
+  }
+
+  .kit-media__item h4 {
+    margin-bottom: var(--space-xs, 0.5rem);
+  }
+
+  .kit-media__item p {
+    font-size: 0.9rem;
+    color: var(--gris-500);
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .kit-media__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: var(--space-md);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--bleu);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--bleu);
+    border-radius: 8px;
+    transition: all var(--duration-fast);
+    width: fit-content;
+  }
+
+  .kit-media__link:hover {
+    background: var(--bleu);
+    color: white;
+  }
+
+  .kit-media__link--email {
+    border-color: var(--gris-200);
+    color: var(--gris-500);
+  }
+
+  .kit-media__link--email:hover {
+    background: var(--gris-100);
+    color: var(--noir);
+    border-color: var(--gris-400);
+  }
+
+  @media (max-width: 768px) {
+    .kit-media__items { grid-template-columns: 1fr; }
+  }
+</style>

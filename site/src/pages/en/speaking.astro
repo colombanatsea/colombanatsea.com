@@ -2,29 +2,162 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const conferences = [
+  { date: '03/02/2026', event: 'Euromaritime 2026', subject: 'Future of the economic model of public maritime service companies', url: 'https://www.euromaritime.fr/fr/programme-2026/' },
+  { date: '18/02/2026', event: 'Académie de Marine', subject: 'Strategic potential of short-sea maritime', url: null },
+  { date: '14/10/2025', event: 'Propeller Club International Conference', subject: 'Introduction to digitalization + Introduction to decarbonation (2 keynotes)', url: 'https://lemarin.ouest-france.fr/shipping/lyon-accueille-le-rendez-vous-annuel-des-propeller-clubs-du-monde-entier-83be782c-a8d8-11f0-a84e-0a4f72002724' },
+  { date: '30/09/2025', event: 'Emission Shipping Conference (NABU + Sciences Po)', subject: 'Participation', url: 'https://en.nabu.de/topics/traffic/eca/index.html' },
+  { date: '13/05/2025', event: 'Race for Water Conference', subject: 'Wind propulsion: a new wind to decarbonize global shipping', url: 'https://www.raceforwater.org/fr/nouvelle-odyssee-2025-2027/mission-posidonie-9-mai-au-10-juin-2025/' },
+  { date: '16/05/2025', event: 'Nat. Federation of Maritime Merit Annual Assembly', subject: 'Future of the maritime world', url: 'https://lemarin.ouest-france.fr/shipping/federation-nationale-du-merite-maritime-pres-de-3-000-adherents-un-nombre-stable-depuis-cinq-ans-32d39efc-3276-11f0-b184-9fce0c190a12' },
+  { date: '31/01/2024', event: 'Euromaritime 24', subject: 'How to meet IMO 2030 and 2050 requirements?', url: 'https://www.euromaritime.fr/fr/comment-relever-les-defis-des-exigences-imo-de-2030-et-2050/' },
+  { date: '24/05/2024', event: 'University of Rennes 1', subject: 'Maritime decarbonation', url: 'https://jeunemarine.fr/2024/06/conference-decarbonation-du-maritime-24-mai-2024-a-luniversite-de-rennes-1/' },
+  { date: '22/06/2023', event: 'Digital Ship Webinar', subject: 'Using Electronic Logbooks to Improve Efficiency', url: 'https://opsealog.com/using-electronic-logbooks-to-improve-efficiency/' },
+];
+
+const podcasts = [
+  { date: '12/04/2024', name: 'Maritime with a French Accent', url: 'https://open.spotify.com/episode/7DDvMQZAArCw1YILNRMJWq?si=XujA0FFETDqk7u-bWichVg' },
+  { date: '22/01/2024', name: 'Dans l\'Ombre de la Réussite — "Marin, Père, Entrepreneur"', url: 'https://podcasts.apple.com/cm/podcast/1-colomban-monnier-marin-p%C3%A8re-entrepreneur/id1719953495?i=1000642464121' },
+];
 ---
 
 <BaseLayout lang="en" frSlug="prises-de-parole" title="Speaking — Colomban at Sea" description="Conferences, podcasts and talks by Colomban on maritime transitions.">
+  <section class="page-hero section-dark">
+    <div class="container stagger">
+      <p class="mono text-bleu">Speaking</p>
+      <h1>Conferences, podcasts<br/>and <span class="text-bleu">interventions</span></h1>
+      <p class="subtitle">Colomban regularly speaks on maritime transitions: digital, environmental and sociocultural.</p>
+    </div>
+  </section>
 
-<section class="section-dark hero-inner">
-  <div class="container">
-    <p class="mono text-accent">Speaking</p>
-    <h1>Conferences, podcasts <br/>&amp; interventions<span class="dot-accent">.</span></h1>
-    <p class="subtitle">Colomban regularly speaks on maritime transitions: digital, environmental and sociocultural.</p>
-  </div>
-</section>
+  <!-- Conferences -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Conferences &amp; Talks</h2>
+      <div class="talks-list">
+        {conferences.map((c) => (
+          <article class="talk">
+            <span class="talk__date mono">{c.date}</span>
+            <div class="talk__content">
+              <h3>{c.url ? <a href={c.url} target="_blank" rel="noopener noreferrer">{c.event} &#8599;</a> : c.event}</h3>
+              <p>{c.subject}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
 
-<section class="section-light">
-  <div class="container page-content">
-    <h2>Conferences &amp; Talks<span class="dot-accent">.</span></h2>
-    <p>Full list of speaking engagements available on the <a href={`${base}/fr/prises-de-parole`}>French version</a> of this page.</p>
+  <!-- Podcasts -->
+  <section class="section-dark section">
+    <div class="container">
+      <h2 class="section-title">Podcasts</h2>
+      <div class="talks-list">
+        {podcasts.map((p) => (
+          <article class="talk talk--dark">
+            <span class="talk__date mono">{p.date}</span>
+            <div class="talk__content">
+              <h3><a href={p.url} target="_blank" rel="noopener noreferrer">{p.name}</a></h3>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
 
-    <h2>YouTube Series<span class="dot-accent">.</span></h2>
-    <h3>Hissez Mots</h3>
-    <p>A series exploring maritime expressions and their origins.</p>
-    <h3>Marine Marchande 101</h3>
-    <p>Introduction to the merchant navy: roles, vessels, daily life at sea.</p>
-  </div>
-</section>
-
+  <!-- YouTube -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">YouTube Series</h2>
+      <div class="youtube-grid">
+        <div class="youtube-card">
+          <h3>Hissez Mot(s) !</h3>
+          <p>Maritime vocabulary that entered everyday language — the sociocultural axis in action.</p>
+          <a href="https://youtube.com/playlist?list=PLah76O4uFZ_hnrelQBKp0KXqvkamQ6-4s&si=D-PnhOQNY_m7rsit" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Watch on YouTube</a>
+        </div>
+        <div class="youtube-card">
+          <h3>Marine Marchande 101</h3>
+          <p>How to become a seafarer, the profession, career paths — discovering the merchant navy.</p>
+          <a href="https://youtube.com/playlist?list=PLah76O4uFZ_iuqJ5ljVCfYcqjOTBLXnGZ&si=WzwD4i5pzQI4PH4s" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Watch on YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .section-title {
+    margin-bottom: var(--space-xl);
+  }
+
+  .talks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .talk {
+    display: flex;
+    gap: var(--space-xl);
+    padding: var(--space-lg) 0;
+    border-bottom: 1px solid var(--gris-200);
+    align-items: flex-start;
+  }
+
+  .talk--dark {
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .talk__date {
+    flex-shrink: 0;
+    width: 120px;
+    color: var(--bleu);
+    font-size: 0.8rem;
+    padding-top: 0.15rem;
+  }
+
+  .talk h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .talk--dark h3 { color: var(--blanc); }
+
+  .talk p {
+    font-size: 0.9rem;
+    color: var(--gris-500);
+  }
+
+  .talk--dark p { color: var(--gris-400); }
+
+  .youtube-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .youtube-card {
+    padding: var(--space-xl);
+    border: 1px solid var(--gris-200);
+    border-radius: 16px;
+  }
+
+  .youtube-card h3 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .youtube-card p {
+    font-size: 0.9rem;
+    color: var(--gris-500);
+    margin-bottom: var(--space-lg);
+  }
+
+  @media (max-width: 768px) {
+    .talk {
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    .talk__date { width: auto; }
+    .youtube-grid { grid-template-columns: 1fr; }
+  }
+</style>
