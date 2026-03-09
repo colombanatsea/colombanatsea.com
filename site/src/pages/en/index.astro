@@ -240,7 +240,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="container">
       <div class="matrice-section__header stagger">
         <p class="mono text-bleu">Engagements</p>
-        <h2>3 engagement axes<br/>One single heading</h2>
+        <h2>3 engagement axes for Colomban<br/>One single heading</h2>
       </div>
     </div>
     <div class="matrice-section__canvas">
@@ -484,6 +484,16 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         }
       });
     }, 600);
+  });
+
+  // Track outbound social link clicks as conversions
+  document.querySelectorAll('.cta-social__link').forEach(link => {
+    link.addEventListener('click', () => {
+      if (typeof gtag === 'function') {
+        const platform = new URL(link.href).hostname.replace('www.', '').split('.')[0];
+        gtag('event', 'click', { event_category: 'outbound', event_label: platform, transport_type: 'beacon' });
+      }
+    });
   });
 </script>
 
@@ -1222,21 +1232,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 
   .oceanocratie__book-accent {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 6px;
-    height: 6px;
-    background: var(--vert);
-    border-radius: 50%;
-    box-shadow: 0 0 8px rgba(0,191,99,0.5);
+    display: none;
   }
 
   .oceanocratie__book-title {
     color: white;
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.7rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
   }
