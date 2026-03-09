@@ -2,13 +2,6 @@
    Colomban at Sea — Design System
    ═══════════════════════════════════════════════ */
 
-/* ── Self-hosted fonts (no Google Fonts roundtrip) ── */
-@import '@fontsource/poppins/400.css';
-@import '@fontsource/poppins/600.css';
-@import '@fontsource/poppins/700.css';
-@import '@fontsource-variable/inter/index.css';
-@import '@fontsource/jetbrains-mono/400.css';
-
 /* ── CSS Custom Properties ── */
 :root {
   /* Palette */
@@ -30,7 +23,7 @@
 
   /* Typography */
   --font-heading: 'Poppins', sans-serif;
-  --font-body: 'Inter Variable', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Spacing scale */
