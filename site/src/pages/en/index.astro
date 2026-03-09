@@ -124,8 +124,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             <span class="seamer__fact-label">of French goods exports transit by sea</span>
           </div>
           <div class="seamer__fact stagger">
-            <span class="seamer__fact-number">98%</span>
-            <span class="seamer__fact-label">of intercontinental telecoms via submarine cables</span>
+            <span class="seamer__fact-number">50+</span>
+            <span class="seamer__fact-label">submarine cables — <a href={`${base}/en/sources#cables-sous-marins`} style="color: var(--bleu); text-decoration: underline; text-underline-offset: 2px;">most connected country in Europe</a></span>
           </div>
           <div class="seamer__fact stagger">
             <span class="seamer__fact-number">45 GW</span>
@@ -369,7 +369,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         </div>
         <div class="oceanocratie__visual">
           <div class="oceanocratie__book">
-            <span class="mono">OCEANOCRATY</span>
+            <span class="oceanocratie__book-title">OCEANOCRATIE</span>
+            <span class="oceanocratie__book-line"></span>
+            <span class="oceanocratie__book-author mono">Colomban</span>
           </div>
         </div>
       </div>
@@ -1036,9 +1038,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 
   .testimonials__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
+    columns: 3;
+    column-gap: var(--space-lg);
   }
 
   .testimonial {
@@ -1048,6 +1049,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     background: white;
     display: flex;
     flex-direction: column;
+    break-inside: avoid;
+    margin-bottom: var(--space-lg);
   }
 
   .testimonial__photo {
@@ -1153,28 +1156,63 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 
   .oceanocratie__book {
-    width: 220px;
-    height: 300px;
-    background: linear-gradient(135deg, var(--bleu-dark), var(--bleu));
-    border-radius: 4px 16px 16px 4px;
+    width: 180px;
+    height: 260px;
+    background: linear-gradient(160deg, #1a3a7a, var(--bleu));
+    border-radius: 3px 12px 12px 3px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 8px 8px 32px rgba(42, 85, 179, 0.3), -2px 0 8px rgba(0, 0, 0, 0.2);
-    transform: perspective(800px) rotateY(-8deg);
-    transition: transform var(--duration-normal) var(--ease-out);
+    gap: 0.5rem;
+    box-shadow: 8px 8px 40px rgba(42, 85, 179, 0.4), -3px 0 12px rgba(0, 0, 0, 0.4), 0 0 80px rgba(42, 85, 179, 0.15), inset -2px 0 4px rgba(255,255,255,0.05);
+    transform: perspective(800px) rotateY(-8deg) rotateX(2deg);
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    animation: book-float 5s ease-in-out infinite;
+    position: relative;
+  }
+
+  .oceanocratie__book::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+    border-radius: 3px 0 0 3px;
   }
 
   .oceanocratie__book:hover {
-    transform: perspective(800px) rotateY(-2deg);
+    transform: perspective(800px) rotateY(-2deg) rotateX(1deg);
+    animation-play-state: paused;
   }
 
-  .oceanocratie__book .mono {
+  @keyframes book-float {
+    0%, 100% { transform: perspective(800px) rotateY(-8deg) rotateX(2deg) translateY(0); }
+    50% { transform: perspective(800px) rotateY(-6deg) rotateX(1deg) translateY(-8px); }
+  }
+
+  .oceanocratie__book-title {
     color: white;
-    font-size: 0.9rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.85rem;
     letter-spacing: 0.15em;
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
+    text-transform: uppercase;
+  }
+
+  .oceanocratie__book-line {
+    width: 30px;
+    height: 1px;
+    background: rgba(255,255,255,0.3);
+  }
+
+  .oceanocratie__book-author {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
 
   /* ═══ MOBILE ═══ */
@@ -1230,7 +1268,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     }
 
     .testimonials__grid {
-      grid-template-columns: 1fr;
+      columns: 1;
     }
 
     .oceanocratie__inner {

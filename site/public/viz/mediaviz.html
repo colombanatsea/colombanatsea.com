@@ -303,7 +303,7 @@
 
     <!-- Top bar: title + filters + stats -->
     <div class="top-bar">
-        <div class="title">Prises de position<span>2013 -- 2026</span></div>
+        <div class="title">Prises de position<span>2022 — 2026</span></div>
         <div class="filters">
             <button class="filter-btn active" data-axis="all">Tous</button>
             <button class="filter-btn" data-axis="techno">Techno</button>
@@ -355,16 +355,10 @@
 
     <!-- Detail popup -->
     <div class="detail-popup" id="detail-popup">
-        <div style="display:flex;align-items:center;">
-            <div class="pub-type" id="popup-type"></div>
-            <div class="pub-tier" id="popup-tier"></div>
-        </div>
         <h3 id="popup-title"></h3>
         <div class="channel" id="popup-channel"></div>
         <div class="excerpt" id="popup-excerpt"></div>
-        <div class="metrics">
-            <span><strong id="popup-date">--</strong></span>
-        </div>
+        <a id="popup-link" href="#" target="_blank" rel="noopener noreferrer" style="display:none;font-size:11px;font-weight:600;color:#6b9fff;text-decoration:none;margin-top:6px;display:inline-block;">Lire l'article &rarr;</a>
     </div>
 
     <div class="watermark">COLOMBAN -- PRISES DE POSITION -- SCROLL-VIZ</div>
@@ -424,21 +418,21 @@
             {title:'adlm 11/2022',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2022,9,25),reach:2000,url:null,starMedia:false},
             {title:'Publication du 16/12/2022',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2022,11,16),reach:2000,url:null,starMedia:false},
             {title:'Meet50',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2023,0,27),reach:3000,url:null,starMedia:false},
-            {title:'Ocean degradation stripes',axis:'enviro',channel:'presse',type:'Article presse',date:new Date(2023,1,24),reach:3000,url:'https://jeunemarine.fr/2023/02/ocean-degradation-stripes/',starMedia:true},
+            {title:'Ocean degradation stripes',axis:'enviro',channel:'presse',type:'Article presse',date:new Date(2023,1,24),reach:3000,url:'https://jeunemarine.fr/2023/02/ocean-degradation-stripes/',starMedia:true,outlet:'Jeune Marine'},
             {title:'5 ans de Rempleo',axis:'socio',channel:'instagram',type:'Inspiration',date:new Date(2023,2,14),reach:3000,url:null,starMedia:false},
             {title:'5 ans de Rempleo',axis:'socio',channel:'instagram',type:'Inspiration',date:new Date(2023,2,21),reach:3000,url:null,starMedia:false},
             {title:'Climate q&a : l’ia au service du climat',axis:'enviro',channel:'linkedin',type:'Analyse',date:new Date(2023,3,10),reach:3000,url:null,starMedia:false},
-            {title:'Appel aux jeunes du maritime',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2023,3,12),reach:3000,url:'https://jeunemarine.fr/2023/04/appel-aux-jeunes-du-maritime/',starMedia:true},
+            {title:'Appel aux Jeunes du Maritime',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2023,3,12),reach:3000,url:'https://jeunemarine.fr/2023/04/appel-aux-jeunes-du-maritime/',starMedia:true,outlet:'Jeune Marine'},
             {title:'FuelEU',axis:'enviro',channel:'linkedin',type:'Analyse',date:new Date(2023,3,20),reach:3000,url:'https://www.linkedin.com/feed/update/urn:li:activity:7054701215787433984',starMedia:false},
             {title:'Story Rempleo',axis:'socio',channel:'linkedin',type:'Inspiration',date:new Date(2023,4,19),reach:3000,url:null,starMedia:false},
             {title:'Partenariat SNSM',axis:'enviro',channel:'linkedin',type:'Analyse',date:new Date(2023,4,31),reach:3000,url:null,starMedia:false},
             {title:'Journée mondiale de l\'océan 2023',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2023,5,8),reach:3000,url:null,starMedia:false},
             {title:'Science & Vie sur les cités Maritimes',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2023,5,14),reach:3000,url:null,starMedia:false},
             {title:'Plastic Odyssey',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2023,6,7),reach:3000,url:null,starMedia:false},
-            {title:'Publication du 11/09/2023',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2023,8,11),reach:3000,url:'https://jeunemarine.fr/2023/09/un-ocean-de-bienveillance/',starMedia:false},
-            {title:'L’océan atlantique : géopolitique d’un océan',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2023,8,19),reach:3000,url:null,starMedia:false},
-            {title:'Comment conforter le maritime pour fidéliser les compétences -  Assises de la LinkedIn',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2023,10,22),reach:3000,url:null,starMedia:true},
-            {title:'Intelligence artificielle & maritime',axis:'techno',channel:'presse',type:'Article presse',date:new Date(2023,11,14),reach:3000,url:'https://jeunemarine.fr/2023/12/intelligence-artificielle-maritime/',starMedia:true},
+            {title:'Un océan de bienveillance',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2023,8,11),reach:3000,url:'https://jeunemarine.fr/2023/09/un-ocean-de-bienveillance/',starMedia:true,outlet:'Jeune Marine'},
+            {title:'Colomban Monnier élu président de la Fondation ENSM',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2023,8,19),reach:3000,url:'https://lemarin.ouest-france.fr/',starMedia:true,outlet:'Le Marin'},
+            {title:'Comment conforter le maritime pour fidéliser les compétences',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2023,9,22),reach:3000,url:null,starMedia:true,outlet:'Assises'},
+            {title:'L’intelligence artificielle & le maritime',axis:'techno',channel:'presse',type:'Article presse',date:new Date(2023,11,14),reach:3000,url:'https://jeunemarine.fr/2023/12/intelligence-artificielle-maritime/',starMedia:true,outlet:'Jeune Marine'},
             {title:'Quelle place pour l\'hydrogène dans le maritime durable de demain ?',axis:'enviro',channel:'linkedin',type:'Analyse',date:new Date(2023,11,15),reach:3000,url:null,starMedia:false},
             {title:'Beaucoup de gens pensent que les marins sont des pirates',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2023,11,20),reach:3000,url:null,starMedia:false},
             {title:'Jour de l’éducation 2024',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2024,0,24),reach:6000,url:null,starMedia:false},
@@ -785,7 +779,7 @@
             {title:'Publication du 06/12/2024',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2024,11,6),reach:6000,url:null,starMedia:false},
             {title:'Publication du 07/12/2024',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2024,11,7),reach:6000,url:null,starMedia:false},
             {title:'Publication du 07/12/2024',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2024,11,7),reach:6000,url:'https://marine-oceans.com/economie/de-la-conquete-a-la-connaissance-de-locean-par-colomban-monnier/',starMedia:false},
-            {title:'LinkedIn',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2024,11,8),reach:6000,url:null,starMedia:true},
+            {title:'Les équipages promotionnels ENSM',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2024,11,23),reach:6000,url:'https://jeunemarine.fr/',starMedia:true,outlet:'Jeune Marine'},
             {title:'Publication du 09/12/2024',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2024,11,9),reach:6000,url:null,starMedia:false},
             {title:'Publication du 10/12/2024',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2024,11,10),reach:6000,url:null,starMedia:false},
             {title:'Publication du 10/12/2024',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2024,11,10),reach:6000,url:'https://youtube.com/shorts/i6pi',starMedia:false},
@@ -902,7 +896,7 @@
             {title:'Publication du 20/03/2025',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2025,2,20),reach:8000,url:null,starMedia:false},
             {title:'Publication du 21/03/2025',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2025,2,21),reach:8000,url:null,starMedia:false},
             {title:'Publication du 21/03/2025',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2025,2,21),reach:8000,url:'https://youtube.com/shorts/Bp7A8iid3Sc',starMedia:false},
-            {title:'L’IA dans le maritime : éviter de boire la tasse',axis:'techno',channel:'presse',type:'Article presse',date:new Date(2025,2,22),reach:8000,url:null,starMedia:true},
+            {title:'L’IA dans le maritime : éviter de boire la tasse',axis:'techno',channel:'presse',type:'Article presse',date:new Date(2025,2,22),reach:8000,url:null,starMedia:true,outlet:'Marine & Océans'},
             {title:'Jour des forêts - 2025 Lithosphère',axis:'enviro',channel:'linkedin',type:'Analyse',date:new Date(2025,2,24),reach:8000,url:null,starMedia:false},
             {title:'Publication du 25/03/2025',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2025,2,25),reach:8000,url:'https://youtube.com/shorts/V6Ru',starMedia:false},
             {title:'Publication du 25/03/2025',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2025,2,25),reach:8000,url:null,starMedia:false},
@@ -1106,7 +1100,7 @@
             {title:'Publication du 30/09/2025',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2025,8,30),reach:8000,url:null,starMedia:false},
             {title:'Publication du 01/10/2025',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2025,9,1),reach:8000,url:null,starMedia:false},
             {title:'Publication du 01/10/2025',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2025,9,1),reach:8000,url:null,starMedia:false},
-            {title:'La bande des 24 milles marins, une artère économique et sociale méconnue de la France maritime - Géoéconomie',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2025,9,1),reach:8000,url:null,starMedia:true},
+            {title:'La bande des 24 milles marins',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2025,9,1),reach:8000,url:null,starMedia:true,outlet:'Marine & Océans N288'},
             {title:'Plus de data vs plus de valeur',axis:'techno',channel:'linkedin',type:'Analyse',date:new Date(2025,9,2),reach:8000,url:null,starMedia:false},
             {title:'Publication du 03/10/2025',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2025,9,3),reach:8000,url:null,starMedia:false},
             {title:'Publication du 06/10/2025',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2025,9,6),reach:8000,url:null,starMedia:false},
@@ -1278,6 +1272,32 @@
             {title:'Publication du 07/03/2026',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2026,2,7),reach:9000,url:null,starMedia:false},
             {title:'L’hélice - Siggi',axis:'socio',channel:'linkedin',type:'Analyse',date:new Date(2026,2,9),reach:9000,url:null,starMedia:false},
             {title:'#54 - Pavoiser',axis:'enviro',channel:'youtube',type:'Video',date:new Date(2026,2,10),reach:9000,url:'https://youtube.com/shorts/jx1cnN1x628',starMedia:false},
+            // === ADDED PRESS ARTICLES ===
+            {title:'L’ENSM: nouvelle vague',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2024,2,22),reach:6000,url:'https://jeunemarine.fr/',starMedia:true,outlet:'Jeune Marine'},
+            {title:'La Fondation ENSM révèle sa méthode',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2024,3,10),reach:6000,url:'https://meretmarine.com/',starMedia:true,outlet:'Mer & Marine'},
+            {title:'EU ETS vs FuelEU',axis:'enviro',channel:'presse',type:'Article presse',date:new Date(2024,4,15),reach:6000,url:'https://jeunemarine.fr/',starMedia:true,outlet:'Jeune Marine'},
+            {title:'Les Apéritifs de la Mer ouvrent leur site Internet',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2024,4,30),reach:6000,url:'https://jeunemarine.fr/',starMedia:true,outlet:'Jeune Marine'},
+            {title:'De la conquête à la connaissance de l’Océan',axis:'enviro',channel:'presse',type:'Article presse',date:new Date(2024,8,1),reach:6000,url:null,starMedia:true,outlet:'Marine & Océans N284'},
+            {title:'La vague scélérate du numérique dans le maritime',axis:'techno',channel:'presse',type:'Article presse',date:new Date(2024,9,22),reach:6000,url:'https://jeunemarine.fr/',starMedia:true,outlet:'Jeune Marine'},
+            {title:'Océans : autoroutes digitales stratégiques',axis:'techno',channel:'presse',type:'Article presse',date:new Date(2025,2,5),reach:8000,url:'https://revueconflits.com/',starMedia:true,outlet:'Conflits'},
+            {title:'Ce déversement d’eaux usées par un navire de croisière est-il réel ?',axis:'enviro',channel:'presse',type:'Article presse',date:new Date(2025,2,27),reach:8000,url:'https://tf1info.fr/',starMedia:true,outlet:'TF1'},
+            {title:'La mer, une chance pour la France !',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2025,3,1),reach:8000,url:null,starMedia:true,outlet:'Marine & Océans N286'},
+            {title:'Drones marins : la nouvelle donne',axis:'techno',channel:'presse',type:'Article presse',date:new Date(2025,4,3),reach:8000,url:'https://revueconflits.com/',starMedia:true,outlet:'Conflits'},
+            {title:'Les Apéritifs de la mer rassemblent les marins',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2025,4,6),reach:8000,url:'https://lemarin.ouest-france.fr/',starMedia:true,outlet:'Le Marin'},
+            {title:'Pour une gouvernance de l’océan paritaire et inclusive',axis:'enviro',channel:'presse',type:'Article presse',date:new Date(2025,5,5),reach:8000,url:'https://vert.eco/',starMedia:true,outlet:'Vert'},
+            {title:'La France, terrienne appelée par le large',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2025,5,14),reach:8000,url:'https://jeunemarine.fr/',starMedia:true,outlet:'Jeune Marine'},
+            {title:'Ukraine, la marine de commerce à l’épreuve de la guerre',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2025,6,1),reach:8000,url:null,starMedia:true,outlet:'Marine & Océans N287'},
+            {title:'Les opportunités d’impact dans l’engagement associatif maritime',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2025,6,15),reach:8000,url:'https://jeunemarine.fr/',starMedia:true,outlet:'Jeune Marine'},
+            {title:'L’Irlande : nouvelle puissance maritime',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2025,9,1),reach:8000,url:null,starMedia:true,outlet:'Marine & Océans N288'},
+            {title:'L’archipel français dans l’océan Indien',axis:'enviro',channel:'presse',type:'Article presse',date:new Date(2025,9,13),reach:8000,url:'https://jeunemarine.fr/',starMedia:true,outlet:'Jeune Marine'},
+            {title:'Les armateurs de navires de service public recrutent Colomban Monnier',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2025,9,17),reach:8000,url:'https://lemarin.ouest-france.fr/',starMedia:true,outlet:'Le Marin'},
+            {title:'Le GASPE nomme Colomban Monnier délégué général',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2025,9,25),reach:8000,url:'https://jeunemarine.fr/',starMedia:true,outlet:'Jeune Marine'},
+            {title:'Le GASPE nomme Colomban Monnier délégué général',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2025,9,31),reach:8000,url:'https://meretmarine.com/',starMedia:true,outlet:'Mer & Marine'},
+            {title:'E-carburants : l’Europe face au défi de la souveraineté énergétique',axis:'enviro',channel:'presse',type:'Article presse',date:new Date(2025,11,8),reach:8000,url:'https://hydrocontest.fr/',starMedia:true,outlet:'HydroContest by ENSM'},
+            {title:'Méditerranée centrale : délitement du droit international',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2025,11,20),reach:8000,url:'https://lemonde.fr/',starMedia:true,outlet:'Le Monde'},
+            {title:'Propulsion vélique : quand l’art de la navigation est réinventé',axis:'techno',channel:'presse',type:'Article presse',date:new Date(2026,0,13),reach:9000,url:'https://hydrocontest.fr/',starMedia:true,outlet:'HydroContest by ENSM'},
+            {title:'Maritime : la grande mise à jour des compétences',axis:'socio',channel:'presse',type:'Article presse',date:new Date(2026,2,2),reach:9000,url:'https://hydrocontest.fr/',starMedia:true,outlet:'HydroContest by ENSM'},
+            {title:'La donnée maritime comme boussole environnementale',axis:'enviro',channel:'presse',type:'Article presse',date:new Date(2026,2,2),reach:9000,url:'https://hydrocontest.fr/',starMedia:true,outlet:'HydroContest by ENSM'},
     ];
 
     const publications = rawPubs.map(function(p, i) {
@@ -1292,7 +1312,8 @@
             year: p.date.getFullYear(),
             reach: p.reach,
             url: p.url || null,
-            starMedia: p.starMedia || false
+            starMedia: p.starMedia || false,
+            outlet: p.outlet || null
         };
     }).sort(function(a, b) { return a.date - b.date; });
 
@@ -1356,8 +1377,8 @@
         const usableW = W - marginLeft - marginRight;
         const usableH = H - marginTop - marginBottom;
 
-        const timelineStart = new Date(YEAR_MIN, 0, 1).getTime();
-        const timelineEnd = new Date(YEAR_MAX + 1, 0, 1).getTime();
+        const timelineStart = new Date(2022, 4, 1).getTime();
+        const timelineEnd = new Date(2026, 2, 9).getTime();
         const timeRange = timelineEnd - timelineStart;
 
         // Seeded random for consistent positions
@@ -1446,8 +1467,8 @@
         const axisMatch = activeAxis === 'all' || ap.pub.axis === activeAxis;
         const channelMatch = activeChannels.has(ap.pub.channel);
         // Progressive reveal: use date fractional position
-        const pubTimeNorm = (ap.pub.date.getTime() - new Date(YEAR_MIN, 0, 1).getTime()) /
-                            (new Date(YEAR_MAX + 1, 0, 1).getTime() - new Date(YEAR_MIN, 0, 1).getTime());
+        const pubTimeNorm = (ap.pub.date.getTime() - new Date(2022, 4, 1).getTime()) /
+                            (new Date(2026, 2, 9).getTime() - new Date(2022, 4, 1).getTime());
         const yearMatch = scrollProgress >= pubTimeNorm - 0.002; // slight lead for smoothness
         return axisMatch && channelMatch && yearMatch;
     }
@@ -1473,8 +1494,8 @@
         document.getElementById('stat-media').textContent = mediaCount;
 
         // Cumulative reach of all publications that have appeared so far
-        const timelineStart = new Date(YEAR_MIN, 0, 1).getTime();
-        const timelineEnd = new Date(YEAR_MAX + 1, 0, 1).getTime();
+        const timelineStart = new Date(2022, 4, 1).getTime();
+        const timelineEnd = new Date(2026, 2, 9).getTime();
         const timeRange = timelineEnd - timelineStart;
         let cumulativeReach = 0;
         for (const ap of animatedPositions) {
@@ -1573,17 +1594,24 @@
             popup.style.display = 'block';
             popup.style.left = Math.min(mousePos.x + 16, W - 300) + 'px';
             popup.style.top = Math.min(mousePos.y - 16, H - 200) + 'px';
-            document.getElementById('popup-type').textContent = hoveredPub.type;
-            document.getElementById('popup-type').style.color = COLORS[hoveredPub.axis];
-
-            const tierEl = document.getElementById('popup-tier');
-            tierEl.textContent = hoveredPub.tier === 'media' ? 'PRESSE' : hoveredPub.tier === 'conference' ? 'CONF' : 'SOCIAL';
-            tierEl.className = 'pub-tier ' + hoveredPub.tier;
 
             document.getElementById('popup-title').textContent = hoveredPub.title;
-            document.getElementById('popup-channel').textContent = CHANNELS[hoveredPub.channel].label + ' \u00B7 ' + hoveredPub.date.toLocaleDateString('fr-FR');
-            document.getElementById('popup-excerpt').textContent = hoveredPub.excerpt;
-            document.getElementById('popup-date').textContent = hoveredPub.date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long' });
+            document.getElementById('popup-title').style.color = COLORS[hoveredPub.axis + 'Light'] || '#fff';
+
+            // Show outlet name for presse, channel label for others
+            const channelDisplay = hoveredPub.outlet || CHANNELS[hoveredPub.channel].label;
+            document.getElementById('popup-channel').textContent = channelDisplay + ' \u00B7 ' + hoveredPub.date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
+
+            document.getElementById('popup-excerpt').textContent = '';
+
+            const linkEl = document.getElementById('popup-link');
+            if (hoveredPub.url) {
+                linkEl.href = hoveredPub.url;
+                linkEl.style.display = 'inline-block';
+                linkEl.textContent = 'Lire l\u2019article \u2192';
+            } else {
+                linkEl.style.display = 'none';
+            }
         } else {
             document.getElementById('detail-popup').style.display = 'none';
         }
@@ -1613,8 +1641,8 @@
         const usableW = W - marginLeft - marginRight;
 
         // Draw year grid lines
-        const timelineStart = new Date(YEAR_MIN, 0, 1).getTime();
-        const timelineEnd = new Date(YEAR_MAX + 1, 0, 1).getTime();
+        const timelineStart = new Date(2022, 4, 1).getTime();
+        const timelineEnd = new Date(2026, 2, 9).getTime();
         const timeRange = timelineEnd - timelineStart;
         ctx.globalAlpha = 0.1;
         ctx.strokeStyle = 'rgba(255,255,255,0.5)';
@@ -1768,8 +1796,8 @@
 
                 ctx.fillStyle = 'rgba(255,255,255,0.4)';
                 ctx.font = '9px Poppins';
-                const tierLabel = isMedia ? ' PRESSE' : isConf ? ' CONF' : '';
-                ctx.fillText(CHANNELS[ap.pub.channel].label + ' \u00B7 ' + ap.pub.year + tierLabel, ap.x, ap.y - displaySize - 4);
+                const channelDisplay = ap.pub.outlet || CHANNELS[ap.pub.channel].label;
+                ctx.fillText(channelDisplay + ' \u00B7 ' + ap.pub.year, ap.x, ap.y - displaySize - 4);
 
                 canvas.style.cursor = 'pointer';
             }
