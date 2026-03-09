@@ -54,15 +54,17 @@ const altPath = getLocalizedPath(altLang, frSlug);
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
 
-  <!-- JSON-LD Person Schema -->
+  <!-- JSON-LD Person Schema (language-conditional) -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Colomban",
     "alternateName": "Colomban Monnier",
-    "jobTitle": "Délégué général du GASPE",
+    "jobTitle": lang === "fr" ? "Délégué général du GASPE" : "General Delegate of GASPE",
     "url": "https://colombanatsea.com",
-    "description": "Le quartier général digital de la triple transition maritime",
+    "description": lang === "fr"
+      ? "Le quartier général digital de la triple transition maritime"
+      : "The digital headquarters of the triple maritime transition",
     "image": `https://colombanatsea.com${base}/og-image.jpg`,
     "sameAs": [
       "https://www.linkedin.com/in/colombanatsea/",
@@ -70,18 +72,20 @@ const altPath = getLocalizedPath(altLang, frSlug);
       "https://www.youtube.com/@Colombanatsea",
       "https://www.tiktok.com/@colombanatsea"
     ],
-    "knowsAbout": ["Maritime", "Décarbonation", "Digitalisation", "Intelligence Artificielle", "Transition maritime", "Marine Marchande", "EMR", "Énergies Marines Renouvelables", "Océanocratie", "ZEE", "Service public maritime"],
+    "knowsAbout": lang === "fr"
+      ? ["Maritime", "Décarbonation", "Digitalisation", "Intelligence Artificielle", "Transition maritime", "Marine Marchande", "EMR", "Énergies Marines Renouvelables", "Océanocratie", "ZEE", "Service public maritime"]
+      : ["Maritime", "Decarbonisation", "Digitalisation", "Artificial Intelligence", "Maritime Transition", "Merchant Navy", "MRE", "Marine Renewable Energy", "Oceanocracy", "EEZ", "Maritime Public Service"],
     "affiliation": [
       { "@type": "Organization", "name": "GASPE", "url": "https://www.gaspe.fr/" },
       { "@type": "Organization", "name": "VAIATA Dynamics", "url": "https://vaiata-dynamics.com/fr/" },
-      { "@type": "Organization", "name": "Fondation ENSM", "url": "https://www.supmaritime.fr/fondation-ensm-don/" },
+      { "@type": "Organization", "name": lang === "fr" ? "Fondation ENSM" : "ENSM Foundation", "url": "https://www.supmaritime.fr/fondation-ensm-don/" },
       { "@type": "Organization", "name": "ENSM", "url": "https://www.supmaritime.fr/" },
       { "@type": "Organization", "name": "HYDROS Alumni", "url": "https://www.hydros-alumni.org/" },
       { "@type": "Organization", "name": "Propeller Club", "url": "https://propellerclub.us/" },
-      { "@type": "Organization", "name": "Académie de Marine", "url": "https://www.academiedemarine.fr/" },
-      { "@type": "Organization", "name": "Fédération Nationale du Mérite Maritime", "url": "https://www.meritemaritime-fnmm.com/" }
+      { "@type": "Organization", "name": lang === "fr" ? "Académie de Marine" : "French Naval Academy", "url": "https://www.academiedemarine.fr/" },
+      { "@type": "Organization", "name": lang === "fr" ? "Fédération Nationale du Mérite Maritime" : "National Federation of Maritime Merit", "url": "https://www.meritemaritime-fnmm.com/" }
     ],
-    "alumniOf": { "@type": "EducationalOrganization", "name": "École Nationale Supérieure Maritime (ENSM)", "url": "https://www.supmaritime.fr/" }
+    "alumniOf": { "@type": "EducationalOrganization", "name": lang === "fr" ? "École Nationale Supérieure Maritime (ENSM)" : "French National Maritime Academy (ENSM)", "url": "https://www.supmaritime.fr/" }
   })} />
 
   <!-- Fonts — non-blocking -->
