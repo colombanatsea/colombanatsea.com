@@ -290,9 +290,6 @@
 </style>
 
 <script>
-  import * as THREE from 'three';
-  import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-
   const BG = 0x1a1a2e;
   const COLORS = { techno: 0x2a55b3, enviro: 0x00bf63, socio: 0xb32a55, purple: 0x8b2fc6 };
   const AXIS_HEX: Record<string, string> = { Technologique: '#2a55b3', Environnementale: '#00bf63', Socioculturelle: '#b32a55' };
@@ -344,6 +341,12 @@
     }, { rootMargin: '200px' });
     io.observe(container);
   });
+
+  // ── DYNAMIC IMPORTS (only loaded when matrice becomes visible) ──
+  const [THREE, { OrbitControls }] = await Promise.all([
+    import('three'),
+    import('three/examples/jsm/controls/OrbitControls.js'),
+  ]);
 
   // ── QUALITY SETTINGS ──
   const isMobile = window.innerWidth <= 1024;
