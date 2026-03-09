@@ -447,7 +447,7 @@
   // ── GLOBE (satellite texture) ──
   const textureLoader = new THREE.TextureLoader();
   const globeGeo = new THREE.SphereGeometry(GLOBE_RADIUS, SPHERE_SEG, SPHERE_SEG);
-  const globeMat = new THREE.MeshPhongMaterial({ color: 0xffffff, shininess: 25, bumpScale: 0.015 });
+  const globeMat = new THREE.MeshPhongMaterial({ color: 0x0a1e3d, emissive: new THREE.Color(0x040c1a), emissiveIntensity: 0.4, shininess: 25, bumpScale: 0.015 });
   const globe = new THREE.Mesh(globeGeo, globeMat);
   scene.add(globe);
 
@@ -469,6 +469,9 @@
   textureLoader.load(import.meta.env.BASE_URL + 'assets/textures/earth-blue-marble.jpg', (t) => {
     t.colorSpace = THREE.SRGBColorSpace;
     globeMat.map = t;
+    globeMat.color.set(0xffffff);
+    globeMat.emissive = new THREE.Color(0x000000);
+    globeMat.emissiveIntensity = 0;
     globeMat.needsUpdate = true;
     checkLoaded();
   }, undefined, () => {
