@@ -41,7 +41,7 @@ const altPath = getLocalizedPath(altLang, frSlug);
   <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=()" />
 
   <!-- Canonical & hreflang -->
-  <link rel="canonical" href={`https://colombanatsea.github.io${Astro.url.pathname}`} />
+  <link rel="canonical" href={`https://colombanatsea.com${Astro.url.pathname}`} />
   <link rel="alternate" hreflang="fr" href={hrefLangs.fr} />
   <link rel="alternate" hreflang="en" href={hrefLangs.en} />
   <link rel="alternate" hreflang="x-default" href={hrefLangs.fr} />
@@ -63,14 +63,14 @@ const altPath = getLocalizedPath(altLang, frSlug);
     "jobTitle": "Délégué général du GASPE",
     "url": "https://colombanatsea.com",
     "description": "Le quartier général digital de la triple transition maritime",
-    "image": `https://colombanatsea.github.io${base}/og-image.jpg`,
+    "image": `https://colombanatsea.com${base}/og-image.jpg`,
     "sameAs": [
       "https://www.linkedin.com/in/colombanatsea/",
       "https://www.instagram.com/colombanatsea/",
       "https://www.youtube.com/@Colombanatsea",
       "https://www.tiktok.com/@colombanatsea"
     ],
-    "knowsAbout": ["Maritime", "Decarbonation", "Digitalisation", "Intelligence Artificielle", "Transition maritime", "Marine Marchande", "EMR", "Energies Marines Renouvelables", "Oceanocratie", "ZEE", "Service public maritime"],
+    "knowsAbout": ["Maritime", "Décarbonation", "Digitalisation", "Intelligence Artificielle", "Transition maritime", "Marine Marchande", "EMR", "Énergies Marines Renouvelables", "Océanocratie", "ZEE", "Service public maritime"],
     "affiliation": [
       { "@type": "Organization", "name": "GASPE", "url": "https://www.gaspe.fr/" },
       { "@type": "Organization", "name": "VAIATA Dynamics", "url": "https://vaiata-dynamics.com/fr/" },
@@ -79,9 +79,9 @@ const altPath = getLocalizedPath(altLang, frSlug);
       { "@type": "Organization", "name": "HYDROS Alumni", "url": "https://www.hydros-alumni.org/" },
       { "@type": "Organization", "name": "Propeller Club", "url": "https://propellerclub.us/" },
       { "@type": "Organization", "name": "Académie de Marine", "url": "https://www.academiedemarine.fr/" },
-      { "@type": "Organization", "name": "Federation Nationale du Merite Maritime", "url": "https://www.meritemaritime-fnmm.com/" }
+      { "@type": "Organization", "name": "Fédération Nationale du Mérite Maritime", "url": "https://www.meritemaritime-fnmm.com/" }
     ],
-    "alumniOf": { "@type": "EducationalOrganization", "name": "Ecole Nationale Supérieure Maritime (ENSM)", "url": "https://www.supmaritime.fr/" }
+    "alumniOf": { "@type": "EducationalOrganization", "name": "École Nationale Supérieure Maritime (ENSM)", "url": "https://www.supmaritime.fr/" }
   })} />
 
   <!-- Fonts — non-blocking -->
@@ -105,12 +105,12 @@ const altPath = getLocalizedPath(altLang, frSlug);
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content={lang === "fr" ? "fr_FR" : "en_US"} />
-  <meta property="og:url" content={`https://colombanatsea.github.io${Astro.url.pathname}`} />
-  <meta property="og:image" content={`https://colombanatsea.github.io${base}/og-image.jpg`} />
+  <meta property="og:url" content={`https://colombanatsea.com${Astro.url.pathname}`} />
+  <meta property="og:image" content={`https://colombanatsea.com${base}/og-image.jpg`} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Colomban at Sea" />
-  <meta name="twitter:image" content={`https://colombanatsea.github.io${base}/og-image.jpg`} />
+  <meta name="twitter:image" content={`https://colombanatsea.com${base}/og-image.jpg`} />
 
   <!-- Google Analytics 4 — Replace G-TXLCN886Z6 with your GA4 Measurement ID -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TXLCN886Z6"></script>
