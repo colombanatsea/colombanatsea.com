@@ -496,7 +496,7 @@
     // Tooltip on waypoints
     let found = false;
     const sp = Math.min(1, progress/0.6);
-    const vis = Math.floor(sp * sillageWP.length);
+    const vis = Math.min(Math.floor(sp * sillageWP.length) + 1, sillageWP.length);
     for (let i = 0; i < vis; i++) {
       const wp = sillageWP[i], p = project(wp.lon, wp.lat);
       if (Math.hypot(mousePos.x-p.x, mousePos.y-p.y) < 15) {

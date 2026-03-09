@@ -99,8 +99,8 @@
 - Bouton "Explorer la carte" → mode plein écran avec légende + stats (Escape pour fermer) — masqué mobile
 - Nav : texte blanc par défaut, bascule noir au scroll (`nav--scrolled`)
 - Citation Tabarly : "La mer, c'est ce que les Français ont dans le dos quand ils regardent la plage" + écho Colomban
-- Le MERitoire français : grille 8 cartes (ZEE, 37 frontières, 4 océans, 5 continents, communications, commerce, énergie EMR, culture) — concept TERRitoire vs MERitoire, lien vers globe ZEE-only
-- "Tout passe par la mer" : diagnostic positif — exports 595 Md€, 98% télécoms, 45 GW EMR 2050, 25 000 molécules marines — layout 2 colonnes (texte + 4 facts)
+- Le MERitoire français : grille 8 cartes (ZEE, 37 frontières, 4 océans, 5 continents, 595 Md€ exports, 50+ câbles, 45 GW éolien, ADN culture) — concept TERRitoire vs MERitoire, lien vers globe ZEE-only
+- "Tout passe par la mer" : diagnostic positif — 97% données mondiales câbles, 80% commerce maritime, EMR potentiel, 25 000 molécules marines — layout 2 colonnes (texte + 4 facts)
 - Manifeste Océanocratie/Oceanocraty : "Une nation libre regarde la mer" — 3 piliers (curiosité/humilité/fraternité), distinction thalassocratie vs océanocratie
 - Triple évolution : "Deux transitions, une révolution" — techno (transition digitale post-web), écolo (décarbonation + EMR + 9 limites planétaires), socio (révolution socioculturelle + valeurs)
 - Engagements : "3 axes d'engagement. Un cap unique" — Matrice 3D
@@ -198,11 +198,12 @@
     - Fresnel cubique, SSS (subsurface scattering), double spéculaire (moon path + halo)
     - Mousse procédurale sur les crêtes, grain film, tone mapping ACES, vignette
   - **Ciel nocturne** : étoiles procédurales en coordonnées sphériques (3 couches, scintillement animé), lune avec disque + triple halo atmosphérique
-  - **Gouttelettes** : Canvas 2D overlay — effet pare-brise (gouttes qui atterrissent puis glissent sur le verre avec traînées humides), max 12 simultanées, spawn stochastique
+  - **Gouttelettes** : Canvas 2D overlay — gouttes qui tombent du haut de l'écran jusqu'en bas avec traînées humides, max 8 simultanées, spawn stochastique (spawn zone 0-30% haut écran)
   - **Spray** : particules CSS-only (30 particules, animation keyframe)
   - **Mobile** : fallback CSS avec vagues animées (pas de WebGL, pas de droplets, pas de spray), layout responsive
   - **Waitlist** : formulaire email avec support Google Sheets (via Apps Script) + fallback localStorage
-  - **Sections** : Hero + livre flottant → Stats → Citation Tabarly → 3 axes (Vaincre la cécité maritime, Bâtir l'archipel France, Le laboratoire du futur) → Appel Océanocratie → Auteur → Footer
+  - **Sections** : Hero + livre flottant → Stats (97%, 80%, EMR) → Tout passe par la mer (595 Md€, 50+, 45 GW) → Citation Tabarly → 3 transformations → 3 axes → Carte archipel France → Témoignages → Auteur → Footer
+  - **OG** : titre "Oceanocratie — Colomban", og-image.png (raster 1200x630)
   - **Sécurité** : CSP strict (default-src 'self', connect-src 'self' + Google Script, frame-src 'none', object-src 'none'), Permissions-Policy (geolocation, microphone, camera, payment, usb, magnetometer, gyroscope, accelerometer disabled), X-Content-Type-Options nosniff, referrer strict-origin-when-cross-origin, rel="noopener noreferrer" sur tous les liens externes
   - **SEO** : robots.txt, sitemap.xml, meta description, OG complet, Twitter card
   - **Performance** : DPR cap 1.5 (shader) / 2 (droplets), 3 octaves géométrie / 5 fragment, aucune dépendance externe (pas de Three.js), fonts Google non-bloquantes

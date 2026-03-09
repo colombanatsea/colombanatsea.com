@@ -166,3 +166,59 @@
 ## Action requise
 - **Sauvegarder la photo OG** en tant que `site/public/og-image.jpg` (1200x630px recommande, ou crop de la photo portrait fournie)
 - **Initialiser le repo** `oceanocratie.fr` sur GitHub et y pousser le `index.html`
+
+---
+
+# HANDOFF — Session 9 mars 2026
+
+## Actions realisees cette session
+
+### 1. Echange KPI entre sections (colombanatsea.com + oceanocratie.fr)
+- **Section "MERitoire"** (archipel cards) : 97%/80%/EMR remplaces par 595 Md€/50+/45 GW (chiffres France)
+- **Section "Tout passe par la mer"** (seamer facts) : 595 Md€/50+/45 GW remplaces par 97%/80%/EMR (chiffres mondiaux)
+- Meme echange sur les pages EN correspondantes
+- Meme echange sur oceanocratie.fr (stats ↔ sea-pillars)
+
+### 2. Matrice 3D
+- **Suppression** de la section "Matrice 3D" avec cube CSS sur oceanocratie.fr (section et styles CSS)
+- **Mise a jour** des 3 noeuds "Aventure entrepreneuriale" dans Matrice.astro : description changee de "secteur maritime" a "secteurs du maritime, de la sante et de l'achat ethique"
+
+### 3. Carte du sillage au rayonnement — hover
+- Fix du hover sur les waypoints : le tooltip apparait des qu'un point est visible, et non plus seulement quand le trait l'atteint
+- `vis` calcule avec `Math.floor(...) + 1` au lieu de `Math.floor(...)` seul
+
+### 4. Open Graph / Preview social
+- **colombanatsea.com** : titre "Colomban — Oceanocratie", description detaillant la vision maritime
+- **oceanocratie.fr** : titre "Oceanocratie — Colomban", description "La France collectionne les atouts maritimes mais tourne le dos a la mer..."
+- **Conversion OG image** : oceanocratie.fr og-image.svg converti en og-image.png (meilleure compatibilite reseaux sociaux)
+- Mise a jour og:image, twitter:image et JSON-LD pour pointer vers og-image.png
+
+### 5. Gouttelettes oceanocratie.fr
+- Les gouttes tombent desormais jusqu'en bas de l'ecran et disparaissent au-dela
+- Suppression de l'arret aleatoire par tension de surface (plus de `stopped` state)
+- Zone de spawn repositionnee en haut de l'ecran (0-30% au lieu de 0-50%)
+
+### 6. Page engagements EN — refonte complete
+- Structure HTML alignee sur la version FR (meme layout hero + Matrice + grille cartes)
+- Ajout des axes (Technological, Environmental, Sociocultural) avec tags colores
+- Ajout liens externes sur les noms d'engagement
+- Card "And more to come..." avec meme structure que la version FR
+
+### 7. Verifications
+- **Doubles points** : aucun double point trouve dans les titres des deux sites
+- **Traductions EN** : verifiees et corrigees (engagements page refaite)
+- **SEO** : meta descriptions, JSON-LD, sitemap, robots.txt, canonical URLs, hreflang — tout OK
+- **Sources** : pages sources bien formatees et completes sur les deux sites
+- **Coherence des chiffres** : 97%, 80%, 595 Md€, 50+, 45 GW, 11M km², 37 frontières — coherents entre les deux sites
+
+## Fichiers modifies
+- `colombanatsea.com/site/src/pages/fr/index.astro` — swap KPI, OG meta
+- `colombanatsea.com/site/src/pages/en/index.astro` — swap KPI, OG meta
+- `colombanatsea.com/site/src/pages/en/engagements.astro` — refonte complete
+- `colombanatsea.com/site/src/components/Matrice.astro` — desc Aventure entrepreneuriale
+- `colombanatsea.com/site/src/components/CarteTimeline.astro` — fix hover waypoints
+- `oceanocratie.fr/index.html` — swap KPI, suppression Matrice 3D, OG meta, droplets fix
+- `oceanocratie.fr/og-image.png` — conversion depuis SVG
+
+## Fichiers crees
+- `oceanocratie.fr/og-image.png` — OG image raster pour compatibilite reseaux sociaux
