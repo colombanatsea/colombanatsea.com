@@ -147,7 +147,7 @@ const altPath = getLocalizedPath(altLang, frSlug);
           <img class="nav__knot" src={`${base}/colomban-logo-normal.svg`} alt="Colomban" width="32" height="32" />
           <span class="nav__logo-text">Colomban<span class="nav__logo-accent"> at sea</span></span>
         </div>
-        <p class="footer__tagline subtitle">Une nation libre regarde la mer.</p>
+        <p class="footer__tagline subtitle">{t('footer.tagline')}</p>
       </div>
 
       <div class="footer__links">
@@ -180,7 +180,7 @@ const altPath = getLocalizedPath(altLang, frSlug);
 
       <div class="footer__bottom">
         <p class="mono text-muted">&copy; {new Date().getFullYear()} Colomban — colombanatsea.com</p>
-        <p class="footer__cyber mono"><a href="https://vaiata-dynamics.com/fr/cyber/" target="_blank" rel="noopener noreferrer">Prot&eacute;g&eacute; par VAIATA Cyber</a></p>
+        <p class="footer__cyber mono"><a href="https://vaiata-dynamics.com/fr/cyber/" target="_blank" rel="noopener noreferrer">{lang === 'fr' ? 'Protégé par VAIATA Cyber' : 'Protected by VAIATA Cyber'}</a></p>
       </div>
     </div>
   </footer>
@@ -199,15 +199,27 @@ const altPath = getLocalizedPath(altLang, frSlug);
   </script>
 
   <script>
-    // Rotating footer citations
-    const quotes = [
-      "Le maritime dans le sang depuis 1991.",
-      "La transition du maritime en oubliant l\u2019aspect social, c\u2019est de la plaisance particuli\u00e8re.",
-      "Une nation libre regarde la mer.",
-      "Comme le continent africain n\u2019est pas pass\u00e9 par la t\u00e9l\u00e9phonie fixe, le maritime ne doit pas passer par la num\u00e9risation\u00a0: il doit entrer imm\u00e9diatement dans l\u2019\u00e8re digitale post-web.",
-      "Les transitions environnementale et technologique du maritime sont avant tout une r\u00e9volution culturelle.",
-      "Il est plus efficient de suivre 4 donn\u00e9es bien cibl\u00e9es en sachant ce qu\u2019on veut en faire, que d\u00e9penser de l\u2019\u00e9nergie pour suivre des millions de donn\u00e9es sans objectif."
-    ];
+    // Rotating footer citations — language-aware
+    const quotesMap: Record<string, string[]> = {
+      fr: [
+        "Le maritime dans le sang depuis 1991.",
+        "La transition du maritime en oubliant l\u2019aspect social, c\u2019est de la plaisance particuli\u00e8re.",
+        "Une nation libre regarde la mer.",
+        "Comme le continent africain n\u2019est pas pass\u00e9 par la t\u00e9l\u00e9phonie fixe, le maritime ne doit pas passer par la num\u00e9risation\u00a0: il doit entrer imm\u00e9diatement dans l\u2019\u00e8re digitale post-web.",
+        "Les transitions environnementale et technologique du maritime sont avant tout une r\u00e9volution culturelle.",
+        "Il est plus efficient de suivre 4 donn\u00e9es bien cibl\u00e9es en sachant ce qu\u2019on veut en faire, que d\u00e9penser de l\u2019\u00e9nergie pour suivre des millions de donn\u00e9es sans objectif."
+      ],
+      en: [
+        "Maritime in the blood since 1991.",
+        "The maritime transition without its social dimension is just recreational boating.",
+        "A free nation looks to the sea.",
+        "Just as Africa leapfrogged landline telephony, the maritime industry must skip digitisation and enter the post-web digital era directly.",
+        "The environmental and technological transitions of the maritime world are, above all, a cultural revolution.",
+        "It is more efficient to track 4 well-targeted data points knowing what to do with them, than to spend energy tracking millions of data points without purpose."
+      ]
+    };
+    const pageLang = document.documentElement.lang || 'fr';
+    const quotes = quotesMap[pageLang] || quotesMap.fr;
     const quoteEl = document.getElementById('footer-quote');
     if (quoteEl) {
       quoteEl.textContent = quotes[Math.floor(Math.random() * quotes.length)];

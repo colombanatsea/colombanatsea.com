@@ -187,6 +187,21 @@ h2::after {
   color: var(--vert);
 }
 
+/* ── Page Hero (inner pages) ── */
+.page-hero {
+  padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-2xl);
+}
+
+.page-hero .mono {
+  margin-bottom: var(--space-sm);
+}
+
+.page-hero .subtitle {
+  margin-top: var(--space-md);
+  max-width: 600px;
+  color: var(--gris-400);
+}
+
 /* ── Buttons ── */
 .btn {
   display: inline-flex;
