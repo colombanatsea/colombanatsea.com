@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://colombanatsea.github.io',
-  base: '/colombanatsea.com',
+  site: 'https://colombanatsea.com',
+  base: '/',
   i18n: {
     defaultLocale: 'fr',
     locales: ['fr', 'en'],
