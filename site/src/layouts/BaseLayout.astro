@@ -8,6 +8,7 @@ interface Props {
   description?: string;
   lang?: Lang;
   frSlug?: string; // FR route slug for hreflang mapping (e.g. 'a-propos', '' for home)
+  navLight?: boolean; // Force light nav (for pages with light backgrounds from the top)
 }
 
 const {
@@ -15,6 +16,7 @@ const {
   description = "Le quartier général digital de la triple transition maritime, porté par Colomban.",
   lang = "fr",
   frSlug = "",
+  navLight = false,
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -112,7 +114,7 @@ const altPath = getLocalizedPath(altLang, frSlug);
 </head>
 <body>
   <a href="#main-content" class="skip-to-content">{lang === 'fr' ? 'Aller au contenu' : 'Skip to content'}</a>
-  <nav class="nav" id="nav" aria-label={lang === 'fr' ? 'Navigation principale' : 'Main navigation'}>
+  <nav class={`nav${navLight ? ' nav--scrolled' : ''}`} id="nav" aria-label={lang === 'fr' ? 'Navigation principale' : 'Main navigation'}>
     <div class="nav__inner container">
       <a href={`${base}/`} class="nav__logo" aria-label="Colomban at Sea — Accueil">
         <img class="nav__knot nav__knot--dark" src={`${base}/colomban-logo-normal.svg`} alt="Colomban" width="32" height="32" />
