@@ -25,11 +25,10 @@ export function getAlternateLang(lang: Lang): Lang {
 }
 
 export function getHrefLangUrls(frSlug: string): { fr: string; en: string } {
-  const site = 'https://colombanatsea.github.io';
-  const base = '/colombanatsea.com';
+  const site = 'https://colombanatsea.com';
   const enSlug = routes.en[frSlug as keyof typeof routes.en] ?? frSlug;
   return {
-    fr: `${site}${base}/fr/${frSlug}`,
-    en: `${site}${base}/en/${enSlug}`,
+    fr: `${site}/fr/${frSlug}`,
+    en: `${site}/en/${enSlug}`,
   };
 }

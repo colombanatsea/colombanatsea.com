@@ -3,8 +3,8 @@
 ## Stack
 - **Framework** : Astro 5.x (SSG) — `site/`
 - **3D** : Three.js (npm) + earcut (polygon triangulation)
-- **Hébergement** : GitHub Pages (`colombanatsea.github.io/colombanatsea.com/`)
-- **Base URL** : `/colombanatsea.com/`
+- **Hébergement** : GitHub Pages (custom domain `colombanatsea.com`)
+- **Base URL** : `/`
 - **i18n** : Astro built-in (`prefixDefaultLocale: true`, `redirectToDefaultLocale: false`), locales FR/EN
   - Traductions : `site/src/i18n/translations.ts` (UI strings) + `site/src/i18n/utils.ts`
   - Routes : `/fr/` (defaut), `/en/` — redirect racine `/` → `/fr/` (meta refresh + JS instant)
