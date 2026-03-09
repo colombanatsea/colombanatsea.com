@@ -440,6 +440,9 @@
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
 
+  // Auto-show tooltip tracking
+  var lastVisCount = 0, autoShowIdx = -1, autoShowTimer = 0;
+
   // Hover
   const mousePos = {x:-999,y:-999};
   container.addEventListener('pointermove', e => {
@@ -493,10 +496,19 @@
 
     document.getElementById('carte-legend').classList.toggle('visible', progress > 0.65);
 
-    // Tooltip on waypoints
+    // Tooltip on waypoints — auto-show when new point appears + hover
     let found = false;
     const sp = Math.min(1, progress/0.6);
     const vis = Math.min(Math.floor(sp * sillageWP.length) + 1, sillageWP.length);
+
+    // Auto-show tooltip for the latest visible waypoint
+    if (vis !== lastVisCount && vis > 0 && vis <= sillageWP.length) {
+      lastVisCount = vis;
+      autoShowIdx = vis - 1;
+      autoShowTimer = Date.now();
+    }
+
+    // Check mouse hover first
     for (let i = 0; i < vis; i++) {
       const wp = sillageWP[i], p = project(wp.lon, wp.lat);
       if (Math.hypot(mousePos.x-p.x, mousePos.y-p.y) < 15) {
@@ -508,10 +520,10 @@
         if (wp.isFounder) descHtml += '<div class="carte-badge carte-badge-founder">Moment Fondateur</div>';
         if (wp.isDecisive) descHtml += '<div class="carte-badge carte-badge-decisive">Choix Decisif</div>';
         document.getElementById('carte-tooltip-desc').innerHTML = descHtml;
-        found = true; break;
+        found = true; autoShowIdx = -1; break;
       }
     }
-    // Check reseau threads
+    // Check reseau threads hover
     if (!found && progress > 0.6) {
       const rp = (progress - 0.6) / 0.4;
       const visThreads = Math.ceil(rp * reseauThreads.length);
@@ -524,9 +536,22 @@
           document.getElementById('carte-tooltip-name').textContent = t.label;
           document.getElementById('carte-tooltip-date').textContent = t.axis || '';
           document.getElementById('carte-tooltip-desc').textContent = t.role;
-          found = true; break;
+          found = true; autoShowIdx = -1; break;
         }
       }
+    }
+    // Auto-show for latest waypoint (3s duration)
+    if (!found && autoShowIdx >= 0 && autoShowIdx < sillageWP.length && (Date.now() - autoShowTimer) < 3000) {
+      const wp = sillageWP[autoShowIdx], p = project(wp.lon, wp.lat);
+      tooltip.classList.add('visible');
+      tooltip.style.left = (p.x+16)+'px'; tooltip.style.top = (p.y-10)+'px';
+      document.getElementById('carte-tooltip-name').textContent = wp.name;
+      document.getElementById('carte-tooltip-date').textContent = wp.year;
+      var autoDescHtml = wp.detail;
+      if (wp.isFounder) autoDescHtml += '<div class="carte-badge carte-badge-founder">Moment Fondateur</div>';
+      if (wp.isDecisive) autoDescHtml += '<div class="carte-badge carte-badge-decisive">Choix Decisif</div>';
+      document.getElementById('carte-tooltip-desc').innerHTML = autoDescHtml;
+      found = true;
     }
     if (!found) tooltip.classList.remove('visible');
   }

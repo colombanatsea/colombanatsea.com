@@ -16,7 +16,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="hero__overlay"></div>
     <div class="hero__content container stagger">
       <p class="hero__kicker mono">colombanatsea.com</p>
-      <h1 class="hero__title">Oceanocraty</h1>
+      <h1 class="hero__title">Oceanocracy</h1>
       <p class="hero__vision">A free nation looks to the sea.</p>
       <div class="hero__cta">
         <a href="#vision" class="btn btn-primary">Discover the vision</a>
@@ -149,9 +149,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <section class="manifeste section" id="vision">
     <div class="container">
       <div class="manifeste__header stagger">
-        <p class="mono text-bleu">Oceanocraty</p>
+        <p class="mono text-bleu">Oceanocracy</p>
         <h2>A free nation<br/>looks to the sea</h2>
-        <p class="subtitle">Thalassocracy built power on domination of the seas. Oceanocraty builds society's resilience on a conscious relationship with the ocean. Not power <em>over</em>, but power <em>with</em>.</p>
+        <p class="subtitle">Thalassocracy built power on domination of the seas. Oceanocracy builds society's resilience on a conscious relationship with the ocean. Not power <em>over</em>, but power <em>with</em>.</p>
       </div>
 
       <div class="manifeste__pillars">
@@ -362,7 +362,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="oceanocratie__inner">
         <div class="oceanocratie__text stagger">
           <p class="mono text-bleu">Coming — Christmas 2026</p>
-          <h2>Oceanocraty</h2>
+          <h2>Oceanocracy</h2>
           <p class="oceanocratie__subtitle">A free nation looks to the sea.</p>
           <p class="subtitle">A book to explore France's maritime potential.</p>
           <a href="https://oceanocratie.fr" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Discover the project</a>
@@ -659,6 +659,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   .hero.hero--fullmap .hero__globe-bg :global(#total-counter),
   .hero.hero--fullmap .hero__globe-bg :global(#legend) {
     display: block !important;
+  }
+
+  .hero.hero--fullmap .hero__globe-bg :global(.globe-download-btn) {
+    display: flex !important;
   }
 
   @keyframes scroll-pulse {
@@ -1051,6 +1055,22 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     flex-direction: column;
     break-inside: avoid;
     margin-bottom: var(--space-lg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .testimonial::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+    opacity: 0.07;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'%3E%3Cpath d='M50 10C25 10 10 30 10 50C10 70 25 90 50 90C75 90 90 70 90 50C90 30 75 10 50 10ZM50 25C65 25 75 35 75 50C75 65 65 75 50 75C35 75 25 65 25 50C25 35 35 25 50 25Z' stroke='%232A55B3' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M38 50C38 30 30 18 50 18C70 18 62 30 62 50' stroke='%232A55B3' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M62 50C62 70 70 82 50 82C30 82 38 70 38 50' stroke='%232A55B3' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M44 44C48 52 52 58 56 56' stroke='%2300BF63' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M56 44C52 48 48 52 44 56' stroke='%232A55B3' stroke-width='7' stroke-linecap='round'/%3E%3Crect x='72' y='14' width='6' height='6' rx='1' fill='%2300BF63' transform='rotate(45 75 17)'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
   }
 
   .testimonial__photo {
