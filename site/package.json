@@ -12,9 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fontsource-variable/inter": "^5.2.8",
-    "@fontsource/jetbrains-mono": "^5.2.8",
-    "@fontsource/poppins": "^5.2.7",
     "astro": "^5.18.0",
     "earcut": "^3.0.2",
     "three": "^0.160.0"

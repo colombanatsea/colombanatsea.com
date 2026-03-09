@@ -369,19 +369,19 @@
 </style>
 
 <script>
+  import * as THREE from 'three';
+  import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+  import earcut from 'earcut';
+  import EEZ_GEOJSON from '../data/eez.json';
+  import CABLE_GEOJSON from '../data/cables.json';
+  import SHIPPING_LANES from '../data/shipping-lanes.json';
+
   // ── EARLY EXIT IF HIDDEN (mobile CSS fallback) ──
   const container = document.getElementById('globe-container');
-  if (container && container.offsetWidth) {
-
-  // Dynamic imports — only download Three.js + data when actually needed
-  const [{ default: THREE }, { OrbitControls }, { default: earcut }, EEZ_GEOJSON, CABLE_GEOJSON, SHIPPING_LANES] = await Promise.all([
-    import('three'),
-    import('three/examples/jsm/controls/OrbitControls.js'),
-    import('earcut'),
-    import('../data/eez.json'),
-    import('../data/cables.json'),
-    import('../data/shipping-lanes.json'),
-  ]);
+  if (!container || !container.offsetWidth) {
+    // Mobile fallback is active — skip Three.js init entirely
+    // This prevents texture downloads and GPU allocation on mobile
+  } else {
   // ── QUALITY SETTINGS ──
   const isMobile = window.innerWidth <= 1024;
   const SPHERE_SEG = isMobile ? 48 : 96;
