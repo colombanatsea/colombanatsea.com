@@ -69,6 +69,7 @@ export const routes = {
     'mentions-legales': 'mentions-legales',
     'politique-confidentialite': 'politique-confidentialite',
     'sources': 'sources',
+    'carte': 'carte',
   },
   en: {
     '': '',
@@ -80,5 +81,6 @@ export const routes = {
     'mentions-legales': 'legal-notice',
     'politique-confidentialite': 'privacy-policy',
     'sources': 'sources',
+    'carte': 'map',
   },
 } as const;

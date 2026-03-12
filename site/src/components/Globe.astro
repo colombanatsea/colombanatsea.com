@@ -47,6 +47,7 @@
 
     <div id="globe-tooltip">
       <div class="zone-name"></div>
+      <div class="zone-category"></div>
       <div class="zone-area"></div>
       <div class="zone-detail"></div>
     </div>
@@ -168,6 +169,16 @@
     font-style: italic;
     font-size: 0.85rem;
     color: #00d4d4;
+  }
+
+  #globe-tooltip .zone-category {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: rgba(0, 212, 212, 0.7);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
   }
 
   #globe-tooltip .zone-detail {
@@ -400,6 +411,7 @@
   // ── SCENE ──
   const tooltip = document.getElementById('globe-tooltip')!;
   const tooltipName = tooltip.querySelector('.zone-name')!;
+  const tooltipCategory = tooltip.querySelector('.zone-category')!;
   const tooltipArea = tooltip.querySelector('.zone-area')!;
   const tooltipDetail = tooltip.querySelector('.zone-detail')!;
 
@@ -598,6 +610,7 @@
       isZEE: true,
       zone: {
         name: properties.geoname || properties.territory1 || 'ZEE France',
+        category: properties.category || '',
         detail: properties.detail || properties.sovereign1 || 'France',
         area: properties.area_km2 || 0
       }
@@ -884,6 +897,8 @@
       const z = hits[0].object.userData.zone;
       if (hoveredZone !== z) { if (hoveredZone) resetZone(hoveredZone); hoveredZone = z; highlightZone(z); }
       tooltipName.textContent = z.name;
+      tooltipCategory.textContent = z.category || '';
+      (tooltipCategory as HTMLElement).style.display = z.category ? 'block' : 'none';
       tooltipArea.textContent = formatArea(z.area);
       tooltipDetail.textContent = z.detail;
       tooltip.classList.add('visible');
