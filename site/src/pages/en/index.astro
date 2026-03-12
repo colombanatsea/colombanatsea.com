@@ -23,12 +23,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <a href={`${base}/en/about`} class="btn btn-outline hero__btn-outline">About Colomban</a>
       </div>
     </div>
-    <button class="hero__explore-map" id="hero-explore-map" aria-label="Explore the full-screen map">
+    <a href={`${base}/en/map`} class="hero__explore-map" id="hero-explore-map" aria-label="Explore the full-screen map">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" />
       </svg>
       <span class="mono">Explore the map</span>
-    </button>
+    </a>
     <div class="hero__scroll-hint">
       <span class="mono text-muted">Scroll</span>
       <div class="hero__scroll-line"></div>
@@ -43,6 +43,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <cite>&Eacute;ric Tabarly</cite>
       </blockquote>
       <p class="tabarly__echo stagger">France is destined to be a maritime nation.<br/>And we fight with all our strength to escape this fate — for a long time now.</p>
+      <p class="tabarly__echo tabarly__echo--subtle stagger">France must now think in terms of Oceanocracy: a nation that draws its strength from a conscious relationship with the ocean.</p>
     </div>
   </section>
 
@@ -52,7 +53,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="archipel__header stagger">
         <p class="mono text-bleu">The French MARitory</p>
         <h2>France is not a hexagon<br/>It is an archipelago</h2>
-        <p class="subtitle">We remain confined to our narrow hexagonal TERRitory, while our MARitory makes France a global nation. A strategic potential that cuts across every challenge of the century.</p>
+        <p class="subtitle">We remain confined to our narrow hexagonal TERRitory, while our MARitory makes France a global nation. A strategic potential that cuts across every challenge of the century. Thalassocracy looked at the sea to conquer it. Oceanocracy looks at it to learn from it.</p>
       </div>
 
       <div class="archipel__grid">
@@ -116,7 +117,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="seamer__content">
         <div class="seamer__text stagger">
           <p class="seamer__lead">What you consumed this morning arrived by sea. The message you are reading travels through a cable on the ocean floor. The energy that will power your children will be born from waves and sea wind.</p>
-          <p>The maritime sector is not an ordinary industry. It is the pulse of our society. Without ships, without ports, without submarine cables, the economy seizes up, communications go dark, sovereignty fades.</p>
+          <p>The maritime sector is not an ordinary industry. It is the pulse of our society. Without ships, without ports, without submarine cables, the economy seizes up, communications go dark, sovereignty fades. This is what sets Oceanocracy apart from thalassocracy: not controlling this infrastructure, but understanding how deeply our society depends on it — and taking care of it.</p>
         </div>
         <div class="seamer__facts">
           <div class="seamer__fact stagger" id="fact-97-donnees">
@@ -444,7 +445,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   // Fullmap toggle
   const exploreBtn = document.getElementById('hero-explore-map');
-  exploreBtn?.addEventListener('click', () => {
+  exploreBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
     hero?.classList.toggle('hero--fullmap');
     const isFullmap = hero?.classList.contains('hero--fullmap');
     if (exploreBtn) {
@@ -639,6 +641,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     cursor: pointer;
     transition: all var(--duration-normal);
     backdrop-filter: blur(8px);
+    text-decoration: none;
   }
 
   .hero__explore-map .mono {
@@ -723,6 +726,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     font-size: 1rem;
     line-height: 1.8;
     color: var(--gris-400);
+  }
+
+  .tabarly__echo--subtle {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--gris-400);
+    opacity: 0.75;
   }
 
   /* ═══ VISION / TRIPLE EVOLUTION ═══ */
