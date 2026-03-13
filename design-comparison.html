@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System — Avant / Après</title>
+
+  <!-- Current fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* Current palette */
+      --bleu: #2A55B3;
+      --bleu-light: #3a6fd4;
+      --bleu-dark: #1e3f85;
+      --rose: #B32A55;
+      --vert: #00BF63;
+      --noir: #0F0F0F;
+      --noir-doux: #1A1A2E;
+      --blanc: #FAFAFA;
+      --gris-100: #F0F0F5;
+      --gris-200: #E0E0EA;
+      --gris-300: #C0C0D0;
+      --gris-400: #8888A0;
+      --gris-500: #555570;
+
+      /* NEW palette */
+      --new-blue-500: #2A55B3;
+      --new-blue-700: #1e428f;
+      --new-blue-100: #e8eef8;
+      --new-blue-50: #f5f8fd;
+      --new-green-600: #2E8B6A;
+      --new-green-700: #1F6B4F;
+      --new-cranberry: #B32A55;
+      --new-surface: #F7F7FA;
+      --new-border: #E4E4EA;
+      --new-muted: #5C5C6E;
+      --new-bg: #0F0F0F;
+
+      /* Dark mode new */
+      --new-dark-primary: #5B8FE8;
+      --new-dark-secondary: #5BBFA0;
+      --new-dark-accent: #D86A8E;
+      --new-dark-surface: #222232;
+      --new-dark-bg: #0F0F0F;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f0f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ── LAYOUT ── */
+    .comparison-header {
+      background: var(--noir-doux);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      border-top: 3px solid var(--bleu);
+    }
+    .comparison-header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .comparison-header p {
+      color: var(--gris-400);
+      font-size: 0.95rem;
+    }
+
+    .section-label {
+      text-align: center;
+      padding: 2.5rem 1rem 1rem;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--bleu);
+    }
+    .section-label span {
+      background: var(--new-blue-100);
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+    }
+
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto 3rem;
+      padding: 0 2rem;
+    }
+
+    .panel {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    .panel-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.6rem 1.5rem;
+      font-weight: 500;
+    }
+    .panel-label.before {
+      background: var(--gris-200);
+      color: var(--gris-500);
+    }
+    .panel-label.after {
+      background: var(--new-blue-500);
+      color: white;
+    }
+
+    /* ═══════════════════════════════════════ */
+    /*  CURRENT (BEFORE) STYLES               */
+    /* ═══════════════════════════════════════ */
+
+    /* Hero */
+    .cur-hero {
+      background: #080b14;
+      padding: 4rem 2.5rem;
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cur-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(42,85,179,0.15) 0%, transparent 70%);
+    }
+    .cur-hero * { position: relative; z-index: 1; }
+    .cur-hero .kicker {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.875rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .cur-hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 4rem;
+      color: var(--blanc);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .cur-hero .vision {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 1.3rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+    .cur-hero .cta-row {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .cur-btn-primary {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: 8px;
+      border: none;
+      background: var(--bleu);
+      color: white;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+    }
+    .cur-btn-outline {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: 8px;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      background: transparent;
+      color: #fff;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+    }
+
+    /* Quote */
+    .cur-quote {
+      background: var(--noir-doux);
+      padding: 4rem 2.5rem;
+      text-align: center;
+    }
+    .cur-quote blockquote p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 1.6rem;
+      color: var(--blanc);
+      line-height: 1.5;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .cur-quote cite {
+      display: block;
+      margin-top: 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      font-style: normal;
+      color: var(--bleu);
+      letter-spacing: 0.05em;
+    }
+    .cur-quote .echo {
+      max-width: 500px;
+      margin: 2rem auto 0;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--gris-400);
+    }
+
+    /* Section light */
+    .cur-section-light {
+      background: var(--blanc);
+      padding: 4rem 2.5rem;
+    }
+    .cur-section-light .section-head {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .cur-section-light .mono-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.875rem;
+      color: var(--bleu);
+      margin-bottom: 0.5rem;
+    }
+    .cur-section-light h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--noir);
+      line-height: 1.2;
+    }
+    .cur-section-light h2::after {
+      content: '.';
+      color: var(--bleu);
+    }
+    .cur-section-light .subtitle {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: var(--gris-500);
+      max-width: 600px;
+      margin: 0.75rem auto 0;
+      line-height: 1.6;
+    }
+
+    /* Cards grid */
+    .cur-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .cur-card {
+      padding: 2rem 1.5rem;
+      border-radius: 16px;
+      border: 1px solid var(--gris-200);
+      text-align: center;
+      background: white;
+    }
+    .cur-card .number {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--bleu);
+    }
+    .cur-card .label {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--noir);
+      margin: 0.25rem 0 0.5rem;
+    }
+    .cur-card .desc {
+      font-size: 0.8rem;
+      line-height: 1.6;
+      color: var(--gris-500);
+    }
+
+    /* Facts dark */
+    .cur-section-dark {
+      background: var(--noir-doux);
+      padding: 4rem 2.5rem;
+      color: var(--blanc);
+    }
+    .cur-section-dark .section-head {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .cur-section-dark .mono-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.875rem;
+      color: var(--bleu);
+      margin-bottom: 0.5rem;
+    }
+    .cur-section-dark h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--blanc);
+      line-height: 1.2;
+    }
+    .cur-section-dark h2::after {
+      content: '.';
+      color: var(--vert);
+    }
+    .cur-section-dark .subtitle {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: var(--gris-400);
+      max-width: 600px;
+      margin: 0.75rem auto 0;
+    }
+
+    .cur-facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .cur-fact {
+      padding: 1.5rem;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .cur-fact .num {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--bleu);
+    }
+    .cur-fact .lbl {
+      font-size: 0.75rem;
+      color: var(--gris-400);
+      margin-top: 0.25rem;
+      line-height: 1.5;
+    }
+
+    /* Pillars */
+    .cur-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .cur-pillar {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border-radius: 16px;
+      border: 1px solid var(--gris-200);
+      background: white;
+    }
+    .cur-pillar .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: rgba(42,85,179,0.06);
+      margin-bottom: 1.25rem;
+      font-size: 1.5rem;
+    }
+    .cur-pillar h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--noir);
+      margin-bottom: 0.75rem;
+    }
+    .cur-pillar p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: var(--gris-500);
+    }
+
+    /* Testimonial */
+    .cur-testimonial {
+      padding: 2rem;
+      border-radius: 16px;
+      border: 1px solid var(--gris-200);
+      background: white;
+    }
+    .cur-testimonial p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--gris-500);
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    .cur-testimonial .author {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: var(--noir);
+    }
+    .cur-testimonial .role {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--gris-400);
+      margin-top: 0.15rem;
+    }
+
+    /* ═══════════════════════════════════════ */
+    /*  NEW DESIGN SYSTEM (AFTER) STYLES      */
+    /* ═══════════════════════════════════════ */
+
+    /* Hero */
+    .new-hero {
+      background: var(--new-dark-bg);
+      padding: 4rem 2.5rem;
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .new-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(42,85,179,0.12) 0%, transparent 70%);
+    }
+    .new-hero * { position: relative; z-index: 1; }
+    .new-hero .kicker {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.06em;
+    }
+    .new-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      font-size: 3.8rem;
+      color: #fff;
+      letter-spacing: -0.01em;
+      line-height: 1.08;
+    }
+    .new-hero .vision {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.35rem;
+      color: var(--new-dark-primary);
+      margin-top: 0.75rem;
+      letter-spacing: 0.01em;
+    }
+    .new-hero .cta-row {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+    .new-btn-primary {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.8rem 2rem;
+      border-radius: 8px;
+      border: none;
+      background: var(--new-blue-500);
+      color: white;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+    }
+    .new-btn-secondary {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.8rem 2rem;
+      border-radius: 8px;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      background: transparent;
+      color: rgba(255,255,255,0.8);
+      cursor: pointer;
+      letter-spacing: 0.02em;
+    }
+
+    /* Quote */
+    .new-quote {
+      background: var(--new-dark-surface);
+      padding: 4rem 2.5rem;
+    }
+    .new-quote-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .new-quote blockquote {
+      border-left: 2px solid var(--new-blue-500);
+      padding-left: 1.5rem;
+    }
+    .new-quote blockquote p {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.5;
+    }
+    .new-quote cite {
+      display: block;
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.8rem;
+      font-style: normal;
+      color: var(--new-dark-primary);
+      letter-spacing: 0.04em;
+    }
+    .new-quote .echo {
+      max-width: 500px;
+      margin: 2rem auto 0;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--new-muted);
+      text-align: center;
+    }
+
+    /* Section light */
+    .new-section-light {
+      background: #fff;
+      padding: 4rem 2.5rem;
+    }
+    .new-section-light .section-head {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .new-section-light .mono-tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--new-blue-500);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .new-section-light h2 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      font-size: 2rem;
+      color: var(--new-blue-700);
+      line-height: 1.25;
+    }
+    .new-section-light .subtitle {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: var(--new-muted);
+      max-width: 600px;
+      margin: 0.75rem auto 0;
+      line-height: 1.7;
+    }
+
+    /* Cards grid new */
+    .new-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .new-card {
+      padding: 2rem 1.5rem;
+      border-radius: 12px;
+      border: 1px solid var(--new-border);
+      text-align: left;
+      background: var(--new-surface);
+      border-left: 2px solid var(--new-blue-500);
+    }
+    .new-card .number {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      font-size: 2rem;
+      color: var(--new-blue-700);
+    }
+    .new-card .label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--noir);
+      margin: 0.25rem 0 0.5rem;
+    }
+    .new-card .desc {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.8rem;
+      line-height: 1.6;
+      color: var(--new-muted);
+    }
+
+    /* Facts dark new */
+    .new-section-dark {
+      background: var(--new-dark-surface);
+      padding: 4rem 2.5rem;
+      color: #fff;
+    }
+    .new-section-dark .section-head {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .new-section-dark .mono-tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--new-dark-primary);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .new-section-dark h2 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      font-size: 2rem;
+      color: #fff;
+      line-height: 1.25;
+    }
+    .new-section-dark .subtitle {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.5);
+      max-width: 600px;
+      margin: 0.75rem auto 0;
+    }
+
+    .new-facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .new-fact {
+      padding: 1.5rem;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-left: 2px solid var(--new-dark-primary);
+    }
+    .new-fact .num {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: var(--new-dark-primary);
+    }
+    .new-fact .lbl {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 0.25rem;
+      line-height: 1.5;
+    }
+
+    /* Pillars new */
+    .new-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .new-pillar {
+      text-align: left;
+      padding: 2.5rem 1.5rem;
+      border-radius: 12px;
+      border: 1px solid var(--new-border);
+      background: var(--new-surface);
+      border-top: 2px solid var(--new-blue-500);
+      position: relative;
+    }
+    .new-pillar[data-color="green"] {
+      border-top-color: var(--new-green-600);
+    }
+    .new-pillar[data-color="cranberry"] {
+      border-top-color: var(--new-cranberry);
+    }
+    .new-pillar .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--new-blue-100);
+      margin-bottom: 1.25rem;
+      font-size: 1.3rem;
+      color: var(--new-blue-500);
+    }
+    .new-pillar[data-color="green"] .icon {
+      background: rgba(46,139,106,0.1);
+      color: var(--new-green-600);
+    }
+    .new-pillar[data-color="cranberry"] .icon {
+      background: rgba(179,42,85,0.08);
+      color: var(--new-cranberry);
+    }
+    .new-pillar h3 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      font-size: 1.15rem;
+      color: var(--new-blue-700);
+      margin-bottom: 0.75rem;
+    }
+    .new-pillar[data-color="green"] h3 { color: var(--new-green-700); }
+    .new-pillar[data-color="cranberry"] h3 { color: var(--new-cranberry); }
+    .new-pillar p {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: var(--new-muted);
+    }
+
+    /* Testimonial new */
+    .new-testimonial {
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid var(--new-border);
+      background: var(--new-surface);
+      border-left: 2px solid var(--new-blue-500);
+    }
+    .new-testimonial p {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--new-muted);
+      margin-bottom: 1.25rem;
+    }
+    .new-testimonial .author {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--noir);
+    }
+    .new-testimonial .role {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--new-muted);
+      margin-top: 0.15rem;
+      letter-spacing: 0.03em;
+    }
+
+    /* Navigation comparison */
+    .cur-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 0.75rem 2rem;
+      background: rgba(250,250,250,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .cur-nav .logo-text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--noir);
+    }
+    .cur-nav .logo-accent {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      color: var(--bleu);
+      letter-spacing: 0.15em;
+      text-transform: lowercase;
+      margin-left: 0.25rem;
+    }
+    .cur-nav .links {
+      display: flex;
+      gap: 1.5rem;
+      margin-left: auto;
+    }
+    .cur-nav .links a {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 0.875rem;
+      color: var(--gris-500);
+      text-decoration: none;
+    }
+
+    .new-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 0.75rem 2rem;
+      background: #fff;
+      border-bottom: 1px solid var(--new-border);
+    }
+    .new-nav .logo-text {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      font-size: 1.15rem;
+      color: var(--new-blue-700);
+    }
+    .new-nav .logo-accent {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.55rem;
+      color: var(--new-green-600);
+      letter-spacing: 0.12em;
+      text-transform: lowercase;
+      margin-left: 0.35rem;
+    }
+    .new-nav .links {
+      display: flex;
+      gap: 1.5rem;
+      margin-left: auto;
+    }
+    .new-nav .links a {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 500;
+      font-size: 0.875rem;
+      color: var(--new-muted);
+      text-decoration: none;
+    }
+
+    /* Divider */
+    .new-divider {
+      display: flex;
+      justify-content: center;
+      padding: 1.5rem 0;
+    }
+    .new-divider-line {
+      width: 2px;
+      height: 32px;
+      background: var(--new-blue-500);
+      opacity: 0.2;
+      border-radius: 1px;
+    }
+
+    /* Badge comparison */
+    .badges { display: flex; gap: 0.5rem; margin-top: 1rem; }
+    .cur-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      background: rgba(42,85,179,0.1);
+      color: var(--bleu);
+    }
+    .new-badge {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+    .new-badge.maritime {
+      background: var(--new-blue-100);
+      color: var(--new-blue-700);
+    }
+    .new-badge.durab {
+      background: rgba(46,139,106,0.1);
+      color: var(--new-green-700);
+    }
+    .new-badge.accent {
+      background: rgba(179,42,85,0.08);
+      color: var(--new-cranberry);
+    }
+
+    /* Summary table */
+    .summary {
+      max-width: 1000px;
+      margin: 0 auto 4rem;
+      padding: 0 2rem;
+    }
+    .summary table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .summary th {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--bleu);
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-bottom: 2px solid var(--bleu);
+    }
+    .summary td {
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--gris-200);
+      vertical-align: top;
+    }
+    .summary .prop { font-weight: 600; color: var(--noir); }
+    .summary .old { color: var(--gris-500); }
+    .summary .new { color: var(--new-blue-700); font-weight: 500; }
+    .summary .arrow { color: var(--gris-300); text-align: center; }
+
+    @media (max-width: 900px) {
+      .pair { grid-template-columns: 1fr; }
+      .cur-cards, .new-cards, .cur-pillars, .new-pillars { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="comparison-header">
+    <h1>Design System v1.0 — Avant / Apres</h1>
+    <p>Comparaison visuelle appliquee aux sections de colombanatsea.com</p>
+  </div>
+
+  <!-- ═══ SUMMARY TABLE ═══ -->
+  <div class="section-label"><span>Resume des changements</span></div>
+  <div class="summary">
+    <table>
+      <thead>
+        <tr>
+          <th>Propriete</th>
+          <th>Avant</th>
+          <th></th>
+          <th>Apres (Design System v1.0)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prop">Display / Titres</td>
+          <td class="old">Poppins 700</td>
+          <td class="arrow">&rarr;</td>
+          <td class="new">DM Serif Display 400</td>
+        </tr>
+        <tr>
+          <td class="prop">Corps</td>
+          <td class="old">Inter 400</td>
+          <td class="arrow">&rarr;</td>
+          <td class="new">Source Sans 3 (300–600)</td>
+        </tr>
+        <tr>
+          <td class="prop">Mono</td>
+          <td class="old">JetBrains Mono</td>
+          <td class="arrow">&rarr;</td>
+          <td class="new">IBM Plex Mono</td>
+        </tr>
+        <tr>
+          <td class="prop">Echelle typo</td>
+          <td class="old">clamp() libre</td>
+          <td class="arrow">&rarr;</td>
+          <td class="new">Major Third (1.250)</td>
+        </tr>
+        <tr>
+          <td class="prop">Vert en texte</td>
+          <td class="old">#00BF63 (ratio 2.8:1 FAIL)</td>
+          <td class="arrow">&rarr;</td>
+          <td class="new">#2E8B6A Sea Green 600 (4.8:1 AA)</td>
+        </tr>
+        <tr>
+          <td class="prop">Fond clair</td>
+          <td class="old">#FAFAFA</td>
+          <td class="arrow">&rarr;</td>
+          <td class="new">#FFF + #F7F7FA surfaces</td>
+        </tr>
+        <tr>
+          <td class="prop">Fond sombre</td>
+          <td class="old">#1A1A2E</td>
+          <td class="arrow">&rarr;</td>
+          <td class="new">#222232 (surfaces) + #0F0F0F (bg)</td>
+        </tr>
+        <tr>
+          <td class="prop">Titres light</td>
+          <td class="old">#0F0F0F + point bleu (.)</td>
+          <td class="arrow">&rarr;</td>
+          <td class="new">#1e428f Blue 700 (pas de point)</td>
+        </tr>
+        <tr>
+          <td class="prop">Cartes</td>
+          <td class="old">Centre, border gris, 16px radius</td>
+          <td class="arrow">&rarr;</td>
+          <td class="new">Aligne gauche, blue line, 12px radius, fond surface</td>
+        </tr>
+        <tr>
+          <td class="prop">Citations</td>
+          <td class="old">Centre, Poppins 300 light</td>
+          <td class="arrow">&rarr;</td>
+          <td class="new">Blue line gauche, DM Serif italic</td>
+        </tr>
+        <tr>
+          <td class="prop">Signature</td>
+          <td class="old">Gradient top 3px bleu→vert</td>
+          <td class="arrow">&rarr;</td>
+          <td class="new">Blue Line verticale 2px (separateurs, cartes, citations)</td>
+        </tr>
+        <tr>
+          <td class="prop">Voix</td>
+          <td class="old">Moderne, geometrique, tech</td>
+          <td class="arrow">&rarr;</td>
+          <td class="new">Confiant pas fort, heritage + moderne</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══ 01 NAVIGATION ═══ -->
+  <div class="section-label"><span>01 — Navigation</span></div>
+  <div class="pair">
+    <div class="panel">
+      <div class="panel-label before">Avant</div>
+      <div class="cur-nav">
+        <span>
+          <span class="logo-text">Colomban</span>
+          <span class="logo-accent">at sea</span>
+        </span>
+        <div class="links">
+          <a href="#">Vision</a>
+          <a href="#">A propos</a>
+          <a href="#">Engagements</a>
+          <a href="#">Medias</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-label after">Apres</div>
+      <div class="new-nav">
+        <span>
+          <span class="logo-text">Colomban</span>
+          <span class="logo-accent">at sea</span>
+        </span>
+        <div class="links">
+          <a href="#">Vision</a>
+          <a href="#">A propos</a>
+          <a href="#">Engagements</a>
+          <a href="#">Medias</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 02 HERO ═══ -->
+  <div class="section-label"><span>02 — Hero</span></div>
+  <div class="pair">
+    <div class="panel">
+      <div class="panel-label before">Avant</div>
+      <div class="cur-hero">
+        <div class="kicker">colombanatsea.com</div>
+        <h1>Oceanocratie</h1>
+        <div class="vision">Une nation libre regarde la mer.</div>
+        <div class="cta-row">
+          <button class="cur-btn-primary">Decouvrir la vision</button>
+          <button class="cur-btn-outline">Qui est Colomban</button>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-label after">Apres</div>
+      <div class="new-hero">
+        <div class="kicker">colombanatsea.com</div>
+        <h1>Oceanocratie</h1>
+        <div class="vision">Une nation libre regarde la mer.</div>
+        <div class="cta-row">
+          <button class="new-btn-primary">Decouvrir la vision</button>
+          <button class="new-btn-secondary">Qui est Colomban</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 03 CITATION ═══ -->
+  <div class="section-label"><span>03 — Citation Tabarly</span></div>
+  <div class="pair">
+    <div class="panel">
+      <div class="panel-label before">Avant</div>
+      <div class="cur-quote">
+        <blockquote>
+          <p>&laquo; La mer, c'est ce que les Francais ont dans le dos quand ils regardent la plage. &raquo;</p>
+          <cite>Eric Tabarly</cite>
+        </blockquote>
+        <div class="echo">La France est destinee a etre une nation maritime. Et nous luttons de toute notre force pour nous y soustraire — depuis longtemps.</div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-label after">Apres</div>
+      <div class="new-quote">
+        <div class="new-quote-inner">
+          <blockquote>
+            <p>La mer, c'est ce que les Francais ont dans le dos quand ils regardent la plage.</p>
+          </blockquote>
+          <cite>Eric Tabarly</cite>
+        </div>
+        <div class="echo">La France est destinee a etre une nation maritime. Et nous luttons de toute notre force pour nous y soustraire — depuis longtemps.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 04 SECTION CLAIRE — MERITOIRE ═══ -->
+  <div class="section-label"><span>04 — MERitoire (section claire + cartes)</span></div>
+  <div class="pair">
+    <div class="panel">
+      <div class="panel-label before">Avant</div>
+      <div class="cur-section-light">
+        <div class="section-head">
+          <div class="mono-tag">Le MERitoire francais</div>
+          <h2>La France n'est pas un hexagone<br/>C'est un archipel</h2>
+          <div class="subtitle">Nous restons replies sur notre TERRitoire hexagonal etrique, alors que notre MERitoire fait de la France une nation globale.</div>
+        </div>
+        <div class="cur-cards">
+          <div class="cur-card">
+            <div class="number">2<sup>e</sup></div>
+            <div class="label">ZEE mondiale</div>
+            <div class="desc">11,6 millions de km2 d'espace maritime</div>
+          </div>
+          <div class="cur-card">
+            <div class="number">37</div>
+            <div class="label">Frontieres maritimes</div>
+            <div class="desc">Avec des Etats et territoires voisins</div>
+          </div>
+          <div class="cur-card">
+            <div class="number">4</div>
+            <div class="label">Oceans</div>
+            <div class="desc">Atlantique, Pacifique, Indien, Austral</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-label after">Apres</div>
+      <div class="new-section-light">
+        <div class="section-head">
+          <div class="mono-tag">Le MERitoire francais</div>
+          <h2>La France n'est pas un hexagone<br/>C'est un archipel</h2>
+          <div class="subtitle">Nous restons replies sur notre TERRitoire hexagonal etrique, alors que notre MERitoire fait de la France une nation globale.</div>
+        </div>
+        <div class="new-cards">
+          <div class="new-card">
+            <div class="number">2<sup>e</sup></div>
+            <div class="label">ZEE mondiale</div>
+            <div class="desc">11,6 millions de km2 d'espace maritime</div>
+          </div>
+          <div class="new-card">
+            <div class="number">37</div>
+            <div class="label">Frontieres maritimes</div>
+            <div class="desc">Avec des Etats et territoires voisins</div>
+          </div>
+          <div class="new-card">
+            <div class="number">4</div>
+            <div class="label">Oceans</div>
+            <div class="desc">Atlantique, Pacifique, Indien, Austral</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 05 SECTION SOMBRE — TOUT PASSE PAR LA MER ═══ -->
+  <div class="section-label"><span>05 — Tout passe par la mer (section sombre + faits)</span></div>
+  <div class="pair">
+    <div class="panel">
+      <div class="panel-label before">Avant</div>
+      <div class="cur-section-dark">
+        <div class="section-head">
+          <div class="mono-tag">L'invisible infrastructure</div>
+          <h2>Tout passe par la mer</h2>
+        </div>
+        <div class="cur-facts">
+          <div class="cur-fact">
+            <div class="num">97%</div>
+            <div class="lbl">des donnees numeriques mondiales transitent par des cables sous-marins</div>
+          </div>
+          <div class="cur-fact">
+            <div class="num">80%</div>
+            <div class="lbl">des marchandises mondiales sont transportees par voie maritime</div>
+          </div>
+          <div class="cur-fact">
+            <div class="num">EMR</div>
+            <div class="lbl">eolien offshore, hydrolien, energie thermique des mers</div>
+          </div>
+          <div class="cur-fact">
+            <div class="num">25 000</div>
+            <div class="lbl">molecules marines decrites — la pharmacie de demain</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-label after">Apres</div>
+      <div class="new-section-dark">
+        <div class="section-head">
+          <div class="mono-tag">L'invisible infrastructure</div>
+          <h2>Tout passe par la mer</h2>
+        </div>
+        <div class="new-facts">
+          <div class="new-fact">
+            <div class="num">97%</div>
+            <div class="lbl">des donnees numeriques mondiales transitent par des cables sous-marins</div>
+          </div>
+          <div class="new-fact">
+            <div class="num">80%</div>
+            <div class="lbl">des marchandises mondiales sont transportees par voie maritime</div>
+          </div>
+          <div class="new-fact">
+            <div class="num">EMR</div>
+            <div class="lbl">eolien offshore, hydrolien, energie thermique des mers</div>
+          </div>
+          <div class="new-fact">
+            <div class="num">25 000</div>
+            <div class="lbl">molecules marines decrites — la pharmacie de demain</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 06 MANIFESTE — PILIERS ═══ -->
+  <div class="section-label"><span>06 — Manifeste (3 piliers)</span></div>
+  <div class="pair">
+    <div class="panel">
+      <div class="panel-label before">Avant</div>
+      <div class="cur-section-light">
+        <div class="section-head">
+          <div class="mono-tag">Oceanocratie</div>
+          <h2>Une nation libre<br/>regarde la mer</h2>
+          <div class="subtitle">La thalassocratie fondait la puissance sur la domination des mers. L'Oceanocratie fonde la resilience de la societe sur sa relation consciente a l'ocean.</div>
+        </div>
+        <div class="cur-pillars">
+          <div class="cur-pillar">
+            <div class="icon" style="color: var(--bleu);">&#9878;</div>
+            <h3>Curiosite</h3>
+            <p>Explorer, comprendre, relier les savoirs. Ne jamais cesser d'apprendre de l'ocean et des marins.</p>
+          </div>
+          <div class="cur-pillar">
+            <div class="icon" style="color: var(--vert);">&#9775;</div>
+            <h3>Humilite</h3>
+            <p>La mer rappelle notre fragilite. L'humilite n'est pas faiblesse mais lucidite face aux elements.</p>
+          </div>
+          <div class="cur-pillar">
+            <div class="icon" style="color: var(--rose);">&#9829;</div>
+            <h3>Fraternite</h3>
+            <p>L'esprit d'equipage. On ne survit pas seul en mer. La solidarite est un reflexe, pas un choix.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-label after">Apres</div>
+      <div class="new-section-light">
+        <div class="section-head">
+          <div class="mono-tag">Oceanocratie</div>
+          <h2>Une nation libre<br/>regarde la mer</h2>
+          <div class="subtitle">La thalassocratie fondait la puissance sur la domination des mers. L'Oceanocratie fonde la resilience de la societe sur sa relation consciente a l'ocean.</div>
+        </div>
+        <div class="new-pillars">
+          <div class="new-pillar">
+            <div class="icon">&#9878;</div>
+            <h3>Curiosite</h3>
+            <p>Explorer, comprendre, relier les savoirs. Ne jamais cesser d'apprendre de l'ocean et des marins.</p>
+          </div>
+          <div class="new-pillar" data-color="green">
+            <div class="icon">&#9775;</div>
+            <h3>Humilite</h3>
+            <p>La mer rappelle notre fragilite. L'humilite n'est pas faiblesse mais lucidite face aux elements.</p>
+          </div>
+          <div class="new-pillar" data-color="cranberry">
+            <div class="icon">&#9829;</div>
+            <h3>Fraternite</h3>
+            <p>L'esprit d'equipage. On ne survit pas seul en mer. La solidarite est un reflexe, pas un choix.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 07 TEMOIGNAGE ═══ -->
+  <div class="section-label"><span>07 — Temoignage + badges</span></div>
+  <div class="pair">
+    <div class="panel">
+      <div class="panel-label before">Avant</div>
+      <div class="cur-section-light" style="padding: 2.5rem;">
+        <div class="cur-testimonial">
+          <p>&laquo; Colomban a cette capacite rare de rendre les enjeux maritimes accessibles a tous. &raquo;</p>
+          <div class="author">Amiral Christophe Prazuck</div>
+          <div class="role">Ancien Chef d'etat-major de la Marine nationale</div>
+        </div>
+        <div class="badges">
+          <span class="cur-badge">Maritime</span>
+          <span class="cur-badge">Durabilite</span>
+          <span class="cur-badge">Engagement</span>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-label after">Apres</div>
+      <div class="new-section-light" style="padding: 2.5rem;">
+        <div class="new-testimonial">
+          <p>Colomban a cette capacite rare de rendre les enjeux maritimes accessibles a tous.</p>
+          <div class="author">Amiral Christophe Prazuck</div>
+          <div class="role">Ancien Chef d'etat-major de la Marine nationale</div>
+        </div>
+        <div class="badges">
+          <span class="new-badge maritime">Maritime</span>
+          <span class="new-badge durab">Durabilite</span>
+          <span class="new-badge accent">Engagement</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 08 SECTION SOMBRE — TRIPLE EVOLUTION ═══ -->
+  <div class="section-label"><span>08 — Triple evolution (section sombre + axes)</span></div>
+  <div class="pair">
+    <div class="panel">
+      <div class="panel-label before">Avant</div>
+      <div class="cur-section-dark">
+        <div class="section-head">
+          <div class="mono-tag">La triple evolution</div>
+          <h2>Deux transitions,<br/>une revolution</h2>
+          <div class="subtitle" style="color: var(--gris-400);">Le monde maritime affronte trois transformations sans precedent.</div>
+        </div>
+        <div class="cur-pillars">
+          <div class="cur-pillar" style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06);">
+            <div class="icon" style="background: rgba(255,255,255,0.05); color: var(--bleu);">&#9874;</div>
+            <h3 style="color: var(--blanc);">Transition technologique</h3>
+            <p style="color: var(--gris-400);">Le maritime doit entrer dans une ere digitale, post web.</p>
+          </div>
+          <div class="cur-pillar" style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06);">
+            <div class="icon" style="background: rgba(255,255,255,0.05); color: var(--vert);">&#9752;</div>
+            <h3 style="color: var(--blanc);">Transition ecologique</h3>
+            <p style="color: var(--gris-400);">Decarbonation, voile, hydrogene, eolien flottant.</p>
+          </div>
+          <div class="cur-pillar" style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06);">
+            <div class="icon" style="background: rgba(255,255,255,0.05); color: var(--rose);">&#9823;</div>
+            <h3 style="color: var(--blanc);">Revolution socioculturelle</h3>
+            <p style="color: var(--gris-400);">S'appuyer sur les valeurs du maritime pour transformer la societe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-label after">Apres</div>
+      <div class="new-section-dark">
+        <div class="section-head">
+          <div class="mono-tag">La triple evolution</div>
+          <h2>Deux transitions,<br/>une revolution</h2>
+          <div class="subtitle">Le monde maritime affronte trois transformations sans precedent.</div>
+        </div>
+        <div class="new-pillars">
+          <div class="new-pillar" style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06); border-top: 2px solid var(--new-dark-primary);">
+            <div class="icon" style="background: rgba(91,143,232,0.1); color: var(--new-dark-primary);">&#9874;</div>
+            <h3 style="color: #fff;">Transition technologique</h3>
+            <p style="color: rgba(255,255,255,0.5);">Le maritime doit entrer dans une ere digitale, post web.</p>
+          </div>
+          <div class="new-pillar" data-color="green" style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06); border-top: 2px solid var(--new-dark-secondary);">
+            <div class="icon" style="background: rgba(91,191,160,0.1); color: var(--new-dark-secondary);">&#9752;</div>
+            <h3 style="color: #fff;">Transition ecologique</h3>
+            <p style="color: rgba(255,255,255,0.5);">Decarbonation, voile, hydrogene, eolien flottant.</p>
+          </div>
+          <div class="new-pillar" data-color="cranberry" style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06); border-top: 2px solid var(--new-dark-accent);">
+            <div class="icon" style="background: rgba(216,106,142,0.1); color: var(--new-dark-accent);">&#9823;</div>
+            <h3 style="color: #fff;">Revolution socioculturelle</h3>
+            <p style="color: rgba(255,255,255,0.5);">S'appuyer sur les valeurs du maritime pour transformer la societe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="text-align: center; padding: 3rem; color: var(--gris-400); font-size: 0.8rem; font-family: 'IBM Plex Mono', monospace;">
+    Design System v1.0 — colombanatsea.com — Comparaison generee automatiquement
+  </div>
+
+</body>
+</html>
