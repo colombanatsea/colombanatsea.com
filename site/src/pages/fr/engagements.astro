@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Matrice from '../../components/Matrice.astro';
 
 const engagements = [
-  { name: 'GASPE', role: 'Délégué général', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Groupement des Armateurs de Service Public Maritime et de Passages d\'Eau — défense du service public maritime.', url: 'https://www.gaspe.fr/' },
+  { name: 'GASPE', role: 'Délégué général', axes: ['Socioculturelle'], color: 'var(--rose)', desc: 'Groupement des Armateurs de Service Public Maritime et de Passages d\'Eau — ddéfense du <a href="https://armateurscotiers.fr/transport-maritime-cotier/armateurs-en-france.html" target="_blank" rel="noopener noreferrer">service public maritime</a>.', url: 'https://www.gaspe.fr/' },
   { name: 'VAIATA Dynamics', role: 'Cofondateur', axes: ['Technologique'], color: 'var(--bleu)', desc: 'Intelligence artificielle au service des grandes causes du maritime : sauvetage en mer et cyberdéfense.', url: 'https://vaiata-dynamics.com/fr/' },
   { name: 'Opsealog', role: 'Conception initiale & ex-responsable du pôle innovation', axes: ['Technologique', 'Environnementale'], color: 'var(--bleu)', desc: 'Plateforme de data analytics pour optimiser la performance et la consommation énergétique des navires.', url: 'https://opsealog.com/' },
   { name: 'Fondation ENSM', role: 'Président du conseil de gestion', axes: ['Socioculturelle', 'Environnementale'], color: 'var(--vert)', desc: 'Fondation de l\'École Nationale Supérieure Maritime, formation des futurs officiers de marine marchande et ingénieurs maritimes.', url: 'https://www.supmaritime.fr/fondation-ensm-don/' },
@@ -38,7 +38,7 @@ const engagements = [
             <div class="engagement-card__content">
               <h3>{e.url ? <a href={e.url} target="_blank" rel="noopener noreferrer" class="engagement-card__link">{e.name}</a> : e.name}</h3>
               <p class="engagement-card__role">{e.role}</p>
-              <p class="engagement-card__desc">{e.desc}</p>
+              <p class="engagement-card__desc" set:html={e.desc}></p>
               <div class="engagement-card__axes">
                 {e.axes.map((a) => (
                   <span class={`axis-tag axis-tag--${a.toLowerCase()}`}>{a}</span>
