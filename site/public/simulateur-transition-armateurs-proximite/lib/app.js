@@ -1,3 +1,5 @@
+const {useState, useEffect, useCallback, useMemo} = React;
+const {BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis} = Recharts;
 const T = "#1B9AAA",
   D = "#1E2D3D",
   AC = "#E8634A",
@@ -129,37 +131,15 @@ const TECHS = [{
   cat: "Efficacité",
   adv: true
 }, {
-  id: "voile",
-  l: "Voile rigide",
-  gL: .03,
-  gM: .12,
-  gH: .20,
-  ox: 30,
-  retro: "4-8 sem.",
-  n: "Régime vent",
-  cat: "Vélique",
-  adv: true
-}, {
-  id: "rotor",
-  l: "Rotor Flettner",
-  gL: .02,
-  gM: .04,
-  gH: .08,
-  ox: 25,
-  retro: "4-8 sem.",
-  n: "Vent traversier",
-  cat: "Vélique",
-  adv: true
-}, {
   id: "routage",
-  l: "Routage météo",
-  gL: .02,
-  gM: .04,
-  gH: .06,
-  ox: 10,
-  retro: "Immédiat",
-  n: "Traversées > 2h",
-  cat: "Opérationnel",
+  l: "Routage marée/courant",
+  gL: .08,
+  gM: .15,
+  gH: .20,
+  ox: 5,
+  retro: "1-2 mois",
+  n: "Bacs de Seine : −17%",
+  cat: "Efficacité",
   adv: true
 }];
 const VT = [{
@@ -1679,7 +1659,7 @@ function App() {
   if (ld) return /*#__PURE__*/React.createElement("div", {
     className: "flex items-center justify-center h-screen",
     style: {
-      fontFamily: "'DM Sans',sans-serif"
+      fontFamily: "-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
@@ -1688,14 +1668,11 @@ function App() {
   }, "Chargement..."));
   if (step === 0 || !proj) return /*#__PURE__*/React.createElement("div", {
     style: {
-      fontFamily: "'DM Sans',sans-serif",
+      fontFamily: "-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif",
       minHeight: "100vh",
       background: "linear-gradient(135deg," + D + ",#2a3f52)"
     }
-  }, /*#__PURE__*/React.createElement("link", {
-    href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap",
-    rel: "stylesheet"
-  }), /*#__PURE__*/React.createElement("div", {
+  }, "", /*#__PURE__*/React.createElement("div", {
     className: "max-w-lg mx-auto px-4 py-10"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-center mb-6"
@@ -2000,14 +1977,11 @@ function App() {
   }, "✨ Générer mon premier scénario"))))));
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      fontFamily: "'DM Sans',sans-serif",
+      fontFamily: "-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif",
       minHeight: "100vh",
       background: "#f5f7f9"
     }
-  }, /*#__PURE__*/React.createElement("link", {
-    href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap",
-    rel: "stylesheet"
-  }), /*#__PURE__*/React.createElement("div", {
+  }, "", /*#__PURE__*/React.createElement("div", {
     className: "flex items-center justify-between px-3 py-2",
     style: {
       backgroundColor: D,
