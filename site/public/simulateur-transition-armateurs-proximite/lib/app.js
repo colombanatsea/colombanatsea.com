@@ -38,7 +38,7 @@ const DEF_FUELS = [{
   co2: 3.206,
   price: 750,
   pGr: 3,
-  note: "R\u00e9f\u00e9rence proximit\u00e9"
+  note: "Référence proximité"
 }, {
   id: "b30",
   l: "B30 (blend 30%)",
@@ -65,25 +65,25 @@ const DEF_FUELS = [{
   note: "Drop-in sans modif"
 }, {
   id: "elec",
-  l: "\u00c9lectricit\u00e9 batteries",
-  cat: "Z\u00e9ro \u00e9mission",
+  l: "Électricité batteries",
+  cat: "Zéro émission",
   co2: 0,
   price: 150,
   pGr: 2,
-  note: "\u20ac/MWh",
+  note: "€/MWh",
   unit: "MWh"
 }, {
   id: "h2",
-  l: "Hydrog\u00e8ne vert",
+  l: "Hydrogène vert",
   cat: "e-fuel",
   co2: 0,
   price: 6000,
   pGr: -2,
-  note: "Exp\u00e9rimental",
+  note: "Expérimental",
   adv: true
 }, {
   id: "emeth",
-  l: "e-M\u00e9thanol",
+  l: "e-Méthanol",
   cat: "e-fuel",
   co2: 0.010,
   price: 1800,
@@ -92,12 +92,12 @@ const DEF_FUELS = [{
   adv: true
 }, {
   id: "ops",
-  l: "OPS (\u00e9lect. quai)",
-  cat: "Z\u00e9ro quai",
+  l: "OPS (élect. quai)",
+  cat: "Zéro quai",
   co2: 0,
   price: 120,
   pGr: 2,
-  note: "\u00c0 quai",
+  note: "À quai",
   unit: "MWh",
   adv: true
 }, {
@@ -121,64 +121,64 @@ const DEF_FUELS = [{
 }];
 const TECHS = [{
   id: "helice",
-  l: "H\u00e9lice optimis\u00e9e",
+  l: "Hélice optimisée",
   gL: .03,
   gM: .05,
   gH: .08,
   ox: 5,
   retro: "2-4 sem.",
   n: "Tous profils",
-  cat: "Efficacit\u00e9"
+  cat: "Efficacité"
 }, {
   id: "antifouling",
-  l: "Antifouling avanc\u00e9",
+  l: "Antifouling avancé",
   gL: .02,
   gM: .03,
   gH: .05,
   ox: 20,
   retro: "1-2 sem.",
   n: "Renouvelable",
-  cat: "Efficacit\u00e9"
+  cat: "Efficacité"
 }, {
   id: "slowsteam",
-  l: "R\u00e9duction vitesse",
+  l: "Réduction vitesse",
   gL: .10,
   gM: .15,
   gH: .25,
   ox: 0,
-  retro: "Imm\u00e9diat",
+  retro: "Immédiat",
   n: "Impact temps",
-  cat: "Op\u00e9rationnel"
+  cat: "Opérationnel"
 }, {
   id: "hybride",
-  l: "Hybridation diesel-\u00e9lect.",
+  l: "Hybridation diesel-élect.",
   gL: .15,
   gM: .25,
   gH: .35,
   ox: 40,
   retro: "3-6 mois",
   n: "Charge variable",
-  cat: "\u00c9lectrification"
+  cat: "Électrification"
 }, {
   id: "fullelec",
-  l: "\u00c9lectrification compl\u00e8te",
+  l: "Électrification complète",
   gL: .90,
   gM: .95,
   gH: 1.0,
   ox: 30,
   retro: "6-12 mois",
-  n: "Z\u00e9ro \u00e9mission directe",
-  cat: "\u00c9lectrification"
+  n: "Zéro émission directe",
+  cat: "Électrification"
 }, {
   id: "bulbe",
-  l: "Bulbe d'\u00e9trave",
+  l: "Bulbe d'étrave",
   gL: .03,
   gM: .07,
   gH: .12,
   ox: 0,
   retro: "3-6 sem.",
-  n: "> 12 n\u0153uds",
-  cat: "Efficacit\u00e9",
+  n: "> 12 nœuds",
+  cat: "Efficacité",
   adv: true
 }, {
   id: "voile",
@@ -188,8 +188,8 @@ const TECHS = [{
   gH: .20,
   ox: 30,
   retro: "4-8 sem.",
-  n: "R\u00e9gime vent",
-  cat: "V\u00e9lique",
+  n: "Régime vent",
+  cat: "Vélique",
   adv: true
 }, {
   id: "rotor",
@@ -200,18 +200,18 @@ const TECHS = [{
   ox: 25,
   retro: "4-8 sem.",
   n: "Vent traversier",
-  cat: "V\u00e9lique",
+  cat: "Vélique",
   adv: true
 }, {
   id: "routage",
-  l: "Routage m\u00e9t\u00e9o",
+  l: "Routage météo",
   gL: .02,
   gM: .04,
   gH: .06,
   ox: 10,
-  retro: "Imm\u00e9diat",
-  n: "Travers\u00e9es > 2h",
-  cat: "Op\u00e9rationnel",
+  retro: "Immédiat",
+  n: "Traversées > 2h",
+  cat: "Opérationnel",
   adv: true
 }];
 const VT = [{
@@ -434,7 +434,7 @@ const VT = [{
   }
 }, {
   id: "fluvial",
-  l: "Croisi\u00e8re fluviale",
+  l: "Croisière fluviale",
   adv: true,
   d: {
     loa: 40,
@@ -627,10 +627,10 @@ const VT = [{
 }];
 const AIDES = [{
   id: "ademe",
-  nom: "ADEME \u2014 D\u00e9carbonation transports",
+  nom: "ADEME — Décarbonation transports",
   taux: "30-50%",
-  plf: "2 M\u20ac",
-  cond: "Navire FR, CO\u2082 -30%",
+  plf: "2 M€",
+  cond: "Navire FR, CO₂ -30%",
   cal: "AAP annuel",
   del: "4-6 mois",
   cum: ["fv", "reg", "bpi"]
@@ -639,16 +639,16 @@ const AIDES = [{
   nom: "Fonds vert",
   taux: "20-40%",
   plf: "Variable",
-  cond: "Soutien collectivit\u00e9",
+  cond: "Soutien collectivité",
   cal: "Permanent",
   del: "2-4 mois",
   cum: ["ademe", "reg"]
 }, {
   id: "reg",
-  nom: "Aides r\u00e9gionales",
+  nom: "Aides régionales",
   taux: "10-30%",
   plf: "Variable",
-  cond: "Exploitation en r\u00e9gion",
+  cond: "Exploitation en région",
   cal: "Variable",
   del: "3-6 mois",
   cum: ["ademe", "fv", "feder", "bpi"]
@@ -656,8 +656,8 @@ const AIDES = [{
   id: "feder",
   nom: "FEDER maritime",
   taux: "20-40%",
-  plf: "5 M\u20ac",
-  cond: "Zone \u00e9ligible",
+  plf: "5 M€",
+  cond: "Zone éligible",
   cal: "2021-2027",
   del: "6-12 mois",
   cum: ["reg"]
@@ -665,8 +665,8 @@ const AIDES = [{
   id: "cef",
   nom: "CEF Transport (UE)",
   taux: "30-50%",
-  plf: "10 M\u20ac",
-  cond: "R\u00e9seau RTE-T",
+  plf: "10 M€",
+  cond: "Réseau RTE-T",
   cal: "Bisannuel",
   del: "12-18 mois",
   cum: []
@@ -681,9 +681,9 @@ const AIDES = [{
   cum: ["ademe", "bpi"]
 }, {
   id: "bpi",
-  nom: "Pr\u00eat vert Bpifrance",
+  nom: "Prêt vert Bpifrance",
   taux: "2-3%",
-  plf: "5 M\u20ac",
+  plf: "5 M€",
   cond: "PME/ETI",
   cal: "Permanent",
   del: "1-3 mois",
@@ -693,7 +693,7 @@ const AIDES = [{
   nom: "Garantie BEI",
   taux: "50-80%",
   plf: "Variable",
-  cond: "Projet > 5 M\u20ac",
+  cond: "Projet > 5 M€",
   cal: "Permanent",
   del: "6-12 mois",
   cum: ["cef"]
@@ -701,17 +701,17 @@ const AIDES = [{
   id: "suram",
   nom: "Suramortissement fiscal",
   taux: "40%",
-  plf: "\u2014",
+  plf: "—",
   cond: "Navire propre",
   cal: "Si actif",
-  del: "Imm\u00e9diat",
+  del: "Immédiat",
   cum: ["ademe", "reg", "fv", "bpi"]
 }];
 const ECO = [{
-  cat: "\u2693 Chantiers",
+  cat: "⚓ Chantiers",
   items: [{
     n: "OCEA",
-    s: "Alu, \u00e9lectrique, hybride",
+    s: "Alu, électrique, hybride",
     u: "ocea.fr"
   }, {
     n: "Piriou",
@@ -723,15 +723,15 @@ const ECO = [{
     u: "socarenam.fr"
   }, {
     n: "Damen",
-    s: "Ferries \u00e9lectriques",
+    s: "Ferries électriques",
     u: "damen.com"
   }, {
-    n: "Merr\u00e9",
+    n: "Merré",
     s: "Dragues, pontons, barges",
     u: "merre.fr"
   }]
 }, {
-  cat: "\ud83d\udd0b Batteries & propulsion",
+  cat: "🔋 Batteries & propulsion",
   items: [{
     n: "Forsee Power",
     s: "Batteries maritimes",
@@ -754,26 +754,26 @@ const ECO = [{
     u: "volvopenta.com"
   }]
 }, {
-  cat: "\ud83d\udcb0 Financeurs",
+  cat: "💰 Financeurs",
   items: [{
     n: "NEOT e-Motion",
     s: "BaaS/RaaS maritime",
     u: "neotcapital.com"
   }, {
     n: "Bpifrance",
-    s: "Pr\u00eats verts",
+    s: "Prêts verts",
     u: "bpifrance.fr"
   }, {
     n: "Mirova",
     s: "Impact investing",
     u: "mirova.com"
   }, {
-    n: "Caisse des D\u00e9p\u00f4ts",
+    n: "Caisse des Dépôts",
     s: "Transition",
     u: "caissedesdepots.fr"
   }]
 }, {
-  cat: "\ud83c\udfdb Institutions",
+  cat: "🏛 Institutions",
   items: [{
     n: "ADEME",
     s: "AAP maritime",
@@ -787,12 +787,12 @@ const ECO = [{
     s: "Classification batteries NR 320/547",
     u: "bureauveritas.com"
   }, {
-    n: "OPCO Mobilit\u00e9s",
+    n: "OPCO Mobilités",
     s: "Formation STCW",
     u: "opcomobilites.fr"
   }]
 }, {
-  cat: "\ud83d\udcdd Bureaux d'\u00e9tudes",
+  cat: "📝 Bureaux d'études",
   items: [{
     n: "Mauric",
     s: "Architecture navale, pilotines",
@@ -803,7 +803,7 @@ const ECO = [{
     u: "stirlingdesign.fr"
   }, {
     n: "Coprexma",
-    s: "Ing\u00e9nierie maritime",
+    s: "Ingénierie maritime",
     u: "coprexma.com"
   }, {
     n: "LMG Marin",
@@ -815,12 +815,12 @@ const RISKS = [{
   l: "Non-renouvellement DSP (crit. enviro.)",
   p: 3,
   i: 5,
-  c: "Strat\u00e9gique"
+  c: "Stratégique"
 }, {
-  l: "Pression r\u00e9putationnelle",
+  l: "Pression réputationnelle",
   p: 4,
   i: 3,
-  c: "Strat\u00e9gique"
+  c: "Stratégique"
 }, {
   l: "Effondrement VR navire fossile",
   p: 3,
@@ -832,17 +832,17 @@ const RISKS = [{
   i: 3,
   c: "Financier"
 }, {
-  l: "Extension r\u00e9glementation < 5000 GT",
+  l: "Extension réglementation < 5000 GT",
   p: 2,
   i: 4,
-  c: "R\u00e9glementaire"
+  c: "Réglementaire"
 }, {
   l: "Sous-performance technologique (70%)",
   p: 3,
   i: 3,
   c: "Technique"
 }, {
-  l: "D\u00e9gradation batteries acc\u00e9l\u00e9r\u00e9e",
+  l: "Dégradation batteries accélérée",
   p: 3,
   i: 3,
   c: "Technique"
@@ -852,12 +852,12 @@ const RISKS = [{
   i: 4,
   c: "Technique"
 }, {
-  l: "Indisponibilit\u00e9 r\u00e9seau ENEDIS",
+  l: "Indisponibilité réseau ENEDIS",
   p: 3,
   i: 4,
-  c: "Op\u00e9rationnel"
+  c: "Opérationnel"
 }, {
-  l: "D\u00e9passement budget chantier",
+  l: "Dépassement budget chantier",
   p: 3,
   i: 3,
   c: "Construction"
@@ -868,7 +868,7 @@ const RISKS = [{
   c: "Construction"
 }];
 const DSCR_GRID = [{
-  profil: "DSP longue (\u2265 8 ans), TRL 9",
+  profil: "DSP longue (≥ 8 ans), TRL 9",
   dscr: "1,10x",
   ltv: "90-100%",
   dur: "15 ans"
@@ -888,26 +888,26 @@ const DSCR_GRID = [{
   ltv: "50-65%",
   dur: "5-7 ans"
 }, {
-  profil: "Technologie TRL \u2264 7",
+  profil: "Technologie TRL ≤ 7",
   dscr: "1,40x+",
   ltv: "50-60%",
   dur: "5-7 ans"
 }];
 const FIN_MODES = [{
   mode: "Acquisition directe",
-  actif: "Coque + \u00e9nergie",
+  actif: "Coque + énergie",
   bilan: "Au bilan",
   rv: "Armateur"
 }, {
-  mode: "Cr\u00e9dit-bail naval",
+  mode: "Crédit-bail naval",
   actif: "Coque",
   bilan: "Hors bilan*",
-  rv: "Cr\u00e9dit-bailleur"
+  rv: "Crédit-bailleur"
 }, {
-  mode: "Affr\u00e8tement coque nue",
+  mode: "Affrètement coque nue",
   actif: "Navire complet",
-  bilan: "Loyer op\u00e9rationnel",
-  rv: "Propri\u00e9taire"
+  bilan: "Loyer opérationnel",
+  rv: "Propriétaire"
 }, {
   mode: "Location batteries (BaaS)",
   actif: "Batteries",
@@ -921,88 +921,88 @@ const FIN_MODES = [{
 }, {
   mode: "Recharge en service (CaaS)",
   actif: "Infra recharge",
-  bilan: "Co\u00fbt au kWh",
-  rv: "Op\u00e9rateur infra"
+  bilan: "Coût au kWh",
+  rv: "Opérateur infra"
 }];
 const SURETES = [{
-  s: "Hypoth\u00e8que maritime",
+  s: "Hypothèque maritime",
   desc: "Porte sur le navire (coque + accessoires). Art. L.5114-2 C. transports."
 }, {
   s: "Nantissement DSP",
-  desc: "Cession des cr\u00e9ances futures de la compensation DSP."
+  desc: "Cession des créances futures de la compensation DSP."
 }, {
   s: "Cession Dailly",
-  desc: "Cession de cr\u00e9ances professionnelles (recettes billetterie/charter)."
+  desc: "Cession de créances professionnelles (recettes billetterie/charter)."
 }, {
-  s: "Accord inter-cr\u00e9anciers",
-  desc: "R\u00e8gle la priorit\u00e9 entre pr\u00eateur coque et investisseur batteries."
+  s: "Accord inter-créanciers",
+  desc: "Règle la priorité entre prêteur coque et investisseur batteries."
 }, {
   s: "Garantie de bonne fin",
   desc: "Garantie bancaire couvrant le risque construction (chantier naval)."
 }, {
-  s: "S\u00e9gr\u00e9gation juridique batteries",
-  desc: "Batteries amovibles = bien distinct hors hypoth\u00e8que. N\u00e9cessite accord pr\u00e9alable."
+  s: "Ségrégation juridique batteries",
+  desc: "Batteries amovibles = bien distinct hors hypothèque. Nécessite accord préalable."
 }];
 const INFRA_SHARE = [{
   item: "Bornes de recharge",
-  arm: "\u2713",
-  port: "\u2713",
-  coll: "\u2713",
+  arm: "✓",
+  port: "✓",
+  coll: "✓",
   inv: "CaaS"
 }, {
   item: "Raccordement ENEDIS",
-  arm: "\u2717",
-  port: "\u2713",
-  coll: "\u2713",
-  inv: "\u2717"
+  arm: "✗",
+  port: "✓",
+  coll: "✓",
+  inv: "✗"
 }, {
-  item: "Renforcement r\u00e9seau",
-  arm: "\u2717",
-  port: "\u2717",
-  coll: "\u2713",
-  inv: "\u2717"
+  item: "Renforcement réseau",
+  arm: "✗",
+  port: "✗",
+  coll: "✓",
+  inv: "✗"
 }, {
-  item: "Stockage H\u2082",
-  arm: "\u2713",
-  port: "\u2713",
-  coll: "\u2713",
-  inv: "\u2713"
+  item: "Stockage H₂",
+  arm: "✓",
+  port: "✓",
+  coll: "✓",
+  inv: "✓"
 }, {
-  item: "Pontons / rampes adapt\u00e9s",
-  arm: "\u2717",
-  port: "\u2713",
-  coll: "\u2713",
-  inv: "\u2717"
+  item: "Pontons / rampes adaptés",
+  arm: "✗",
+  port: "✓",
+  coll: "✓",
+  inv: "✗"
 }];
 const RETEX = [{
   nom: "E-ferry Ellen (DK)",
-  desc: "Ferry 100% \u00e9lectrique, 22 NM, 4,3 MWh, Ærø\u2013Fynshav. En service depuis 2019.",
-  impact: "R\u00e9duction 100% \u00e9missions directes, 2 200 tCO\u2082/an \u00e9vit\u00e9es."
+  desc: "Ferry 100% électrique, 22 NM, 4,3 MWh, Ærø–Fynshav. En service depuis 2019.",
+  impact: "Réduction 100% émissions directes, 2 200 tCO₂/an évitées."
 }, {
   nom: "Ampere (NO)",
-  desc: "Premier ferry \u00e9lectrique mondial, Lavik\u2013Oppedal, 2015. 1 MWh, 34 voitures.",
-  impact: "Pionniers : a prouv\u00e9 la viabilit\u00e9 technico-\u00e9conomique."
+  desc: "Premier ferry électrique mondial, Lavik–Oppedal, 2015. 1 MWh, 34 voitures.",
+  impact: "Pionniers : a prouvé la viabilité technico-économique."
 }, {
   nom: "Maguelonne (FR)",
-  desc: "Pilotine S\u00e8te, retrofit 100% \u00e9lectrique par SOPER/MGH. 2022.",
-  impact: "Premi\u00e8re pilotine \u00e9lectrique fran\u00e7aise."
+  desc: "Pilotine Sète, retrofit 100% électrique par SOPER/MGH. 2022.",
+  impact: "Première pilotine électrique française."
 }, {
   nom: "LAMELEC (FR)",
-  desc: "Navire de lamanage 100% \u00e9lectrique OCEA/VEBRAT, Loire. En construction.",
-  impact: "Premier lamaneur \u00e9lectrique fran\u00e7ais. Bpifrance + CMA CGM PULSE."
+  desc: "Navire de lamanage 100% électrique OCEA/VEBRAT, Loire. En construction.",
+  impact: "Premier lamaneur électrique français. Bpifrance + CMA CGM PULSE."
 }, {
   nom: "Ginny Louise (UK)",
-  desc: "CTV retrofit \u00e9lectrique Volvo Penta IPS, Mercurio. Annonc\u00e9 2024.",
-  impact: "Premier CTV 100% \u00e9lectrique au monde."
+  desc: "CTV retrofit électrique Volvo Penta IPS, Mercurio. Annoncé 2024.",
+  impact: "Premier CTV 100% électrique au monde."
 }, {
   nom: "HyDrOMer (FR)",
-  desc: "Drague Piriou + pile \u00e0 combustible H\u2082, R\u00e9gion Occitanie.",
-  impact: "R\u00e9duction 20% consommation diesel. D\u00e9monstrateur H\u2082 portuaire."
+  desc: "Drague Piriou + pile à combustible H₂, Région Occitanie.",
+  impact: "Réduction 20% consommation diesel. Démonstrateur H₂ portuaire."
 }];
 const fmt = (n, d = 0) => typeof n === "number" ? n.toLocaleString("fr-FR", {
   maximumFractionDigits: d
-}) : "\u2014";
-const fK = n => fmt(Math.round(n)) + " k\u20ac";
+}) : "—";
+const fK = n => fmt(Math.round(n)) + " k€";
 const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const emT = () => ({
   name: "",
@@ -1038,7 +1038,7 @@ const defP = () => ({
   },
   trajs: [{
     ...emT(),
-    name: "Trajectoire de r\u00e9f\u00e9rence",
+    name: "Trajectoire de référence",
     fuelMix: {
       mdo: 100
     }
@@ -1296,7 +1296,7 @@ function genDossier(proj, res) {
   const vt = VT.find(x => x.id === v.type);
   const bd = dimBatt(v);
   let t = "============================================================\n  DOSSIER COMPLET - SIMULATEUR TRANSITION ENERGETIQUE GASPE\n  " + proj.name + "\n  " + new Date().toLocaleDateString("fr-FR") + "\n============================================================\n\n";
-  t += "1. NAVIRE : " + (v.name || "(non nomm\u00e9)") + " (" + vt?.l + ")\n   LOA " + v.loa + "m | " + v.gt + " GT | " + v.pP + " kW | " + v.spd + " nds | " + v.rD + " rot/j\n   Profil de charge : Transit " + (v.pTr || 60) + "% / Man\u0153uvre " + (v.pMa || 20) + "% / Quai " + (v.pQu || 20) + "%\n   DSP " + v.dspR + " ans | Recettes " + fK(v.rev) + "/an\n\n";
+  t += "1. NAVIRE : " + (v.name || "(non nommé)") + " (" + vt?.l + ")\n   LOA " + v.loa + "m | " + v.gt + " GT | " + v.pP + " kW | " + v.spd + " nds | " + v.rD + " rot/j\n   Profil de charge : Transit " + (v.pTr || 60) + "% / Manœuvre " + (v.pMa || 20) + "% / Quai " + (v.pQu || 20) + "%\n   DSP " + v.dspR + " ans | Recettes " + fK(v.rev) + "/an\n\n";
   t += "2. PARAMETRES : " + p.sy + "-" + (p.sy + p.dur) + " | Actu. " + p.disc + "% | Cont. " + p.cont + "% | Fuel +" + p.fpG + "%/an\n\n";
   t += "3. TRAJECTOIRES\n";
   res.forEach((r, i) => {
@@ -1307,7 +1307,7 @@ function genDossier(proj, res) {
       t += "      dCCV " + fK(d) + " | dCO2 " + fmt(Math.round(-dC)) + "t" + (dC > 0 ? " | CMA " + fmt(Math.round(d * 1000 / dC)) + " EUR/tCO2" : "") + "\n";
     }
   });
-  t += "\n4. BATTERIES : " + bd.kWh + " kWh (" + bd.constraint + ") | Chargeur " + bd.chargePower + " kW | Est. " + fK(bd.costBatt + bd.costCharger + bd.gridConnect) + "\n   DoD/travers\u00e9e : " + bd.dod + "% | Cycles \u00e9quiv./an : " + bd.eqCyclesAn + " | Dur\u00e9e vie pack : " + bd.lifeYrs + " ans\n";
+  t += "\n4. BATTERIES : " + bd.kWh + " kWh (" + bd.constraint + ") | Chargeur " + bd.chargePower + " kW | Est. " + fK(bd.costBatt + bd.costCharger + bd.gridConnect) + "\n   DoD/traversée : " + bd.dod + "% | Cycles équiv./an : " + bd.eqCyclesAn + " | Durée vie pack : " + bd.lifeYrs + " ans\n";
   t += "\n5. FINANCEMENT\n";
   res.slice(1).filter(r => r.totI > 0).forEach(r => {
     const ann = v.rev - v.opex - (r.base.yrs[1]?.en || 0) - v.crew - v.ins;
@@ -1579,7 +1579,7 @@ function App() {
       try {
         const p = JSON.parse(await f.text());
         p.id = Date.now().toString(36) + Math.random().toString(36).slice(2);
-        p.name += " (import\u00e9)";
+        p.name += " (importé)";
         svP(p);
         setProj(p);
         setStep(1);
@@ -1623,43 +1623,43 @@ function App() {
   }, [proj]);
   const tabs = [{
     l: "Navire",
-    i: "\ud83d\udea2"
+    i: "🚢"
   }, {
-    l: "R\u00e9f.",
-    i: "\ud83d\udcda"
+    l: "Réf.",
+    i: "📚"
   }, {
     l: "Trajectoires",
-    i: "\ud83d\udd00"
+    i: "🔀"
   }, {
     l: "Batteries",
-    i: "\ud83d\udd0b"
+    i: "🔋"
   }, {
     l: "CCV",
-    i: "\ud83d\udcca"
+    i: "📊"
   }, {
     l: "Finance",
-    i: "\ud83d\udcb0"
+    i: "💰"
   }, {
     l: "Aides",
-    i: "\ud83c\udfdb"
+    i: "🏛"
   }, {
     l: "DSP & AO",
-    i: "\ud83d\udcdc"
+    i: "📜"
   }, {
     l: "Risques",
-    i: "\u26a0"
+    i: "⚠"
   }, {
     l: "Flotte",
-    i: "\u2693"
+    i: "⚓"
   }, {
-    l: "\u00c9cosyst.",
-    i: "\ud83c\udf10"
+    l: "Écosyst.",
+    i: "🌐"
   }, {
     l: "Suivi",
-    i: "\ud83d\udcc8"
+    i: "📈"
   }, {
     l: "Dossier",
-    i: "\ud83d\udcc4"
+    i: "📄"
   }];
   const Prev = ({
     to
@@ -1670,7 +1670,7 @@ function App() {
       color: T,
       border: "2px solid " + T
     }
-  }, "\u2190");
+  }, "←");
   const Next = ({
     to,
     l
@@ -1680,7 +1680,7 @@ function App() {
     style: {
       backgroundColor: T
     }
-  }, l + " \u2192");
+  }, l + " →");
   if (ld) return /*#__PURE__*/React.createElement("div", {
     className: "flex items-center justify-center h-screen",
     style: {
@@ -1715,12 +1715,12 @@ function App() {
       fontFamily: "'DM Serif Display',serif",
       color: "white"
     }
-  }, "Simulateur de Transition \\u00c9nerg\\u00e9tique"), /*#__PURE__*/React.createElement("p", {
+  }, "Simulateur de Transition Énergétique"), /*#__PURE__*/React.createElement("p", {
     className: "text-sm mb-4",
     style: {
       color: "#9ab"
     }
-  }, "Flottes Maritimes de Proximit\\u00e9 \\u2014 Mod\\u00e8le CCV"), /*#__PURE__*/React.createElement("div", {
+  }, "Flottes Maritimes de Proximité — Modèle CCV"), /*#__PURE__*/React.createElement("div", {
     className: "text-left rounded-xl p-4 mb-6",
     style: {
       background: "rgba(255,255,255,0.06)"
@@ -1730,23 +1730,23 @@ function App() {
     style: {
       color: "#9ab"
     }
-  }, "Le transport maritime de proximit\\u00e9 a des besoins sp\\u00e9cifiques\\u00a0: ", /*#__PURE__*/React.createElement("b", {
+  }, "Le transport maritime de proximité a des besoins spécifiques : ", /*#__PURE__*/React.createElement("b", {
     style: {
       color: "white"
     }
-  }, "cyclage intensif"), " (jusqu'\\u00e0 100 rotations/jour), ", /*#__PURE__*/React.createElement("b", {
+  }, "cyclage intensif"), " (jusqu'à 100 rotations/jour), ", /*#__PURE__*/React.createElement("b", {
     style: {
       color: "white"
     }
-  }, "infrastructure \\u00e0 terre d\\u00e9terminante"), ", ", /*#__PURE__*/React.createElement("b", {
+  }, "infrastructure à terre déterminante"), ", ", /*#__PURE__*/React.createElement("b", {
     style: {
       color: "white"
     }
-  }, "DSP et continuit\\u00e9 territoriale"), ", et ", /*#__PURE__*/React.createElement("b", {
+  }, "DSP et continuité territoriale"), ", et ", /*#__PURE__*/React.createElement("b", {
     style: {
       color: "white"
     }
-  }, "PME comme structure dominante"), ". Ce simulateur calcule le Co\\u00fbt de Cycle de Vie complet et produit les dossiers pour vos financeurs et autorit\\u00e9s d\\u00e9l\\u00e9gantes."))), /*#__PURE__*/React.createElement("div", {
+  }, "PME comme structure dominante"), ". Ce simulateur calcule le Coût de Cycle de Vie complet et produit les dossiers pour vos financeurs et autorités délégantes."))), /*#__PURE__*/React.createElement("div", {
     className: "space-y-3 mb-6"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: newP,
@@ -1759,7 +1759,7 @@ function App() {
     className: "font-bold"
   }, "+ Nouveau projet"), /*#__PURE__*/React.createElement("div", {
     className: "text-xs opacity-80"
-  }, "13 volets \\u2014 de la fiche navire au dossier complet")), /*#__PURE__*/React.createElement("button", {
+  }, "13 volets — de la fiche navire au dossier complet")), /*#__PURE__*/React.createElement("button", {
     onClick: () => {
       setWizStep(1);
     },
@@ -1770,9 +1770,9 @@ function App() {
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: "font-bold"
-  }, "\\ud83e\\uddd9 Mode guid\\u00e9 PME"), /*#__PURE__*/React.createElement("div", {
+  }, "🧙 Mode guidé PME"), /*#__PURE__*/React.createElement("div", {
     className: "text-xs opacity-80"
-  }, "5 questions \\u2192 premier sc\\u00e9nario auto-g\\u00e9n\\u00e9r\\u00e9")), /*#__PURE__*/React.createElement("button", {
+  }, "5 questions → premier scénario auto-généré")), /*#__PURE__*/React.createElement("button", {
     onClick: impP,
     className: "w-full rounded-xl p-4 text-left border-2 border-dashed",
     style: {
@@ -1781,21 +1781,21 @@ function App() {
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: "font-bold"
-  }, "\\ud83d\\udcc2 Importer JSON"))), /*#__PURE__*/React.createElement("div", {
+  }, "📂 Importer JSON"))), /*#__PURE__*/React.createElement("div", {
     className: "flex items-center justify-between mb-4 px-1"
   }, /*#__PURE__*/React.createElement("span", {
     className: "text-xs",
     style: {
       color: "#9ab"
     }
-  }, "Segments \\u00e9tendus"), /*#__PURE__*/React.createElement("button", {
+  }, "Segments étendus"), /*#__PURE__*/React.createElement("button", {
     onClick: () => setShowAdv(!showAdv),
     className: "text-xs px-3 py-1 rounded-full",
     style: {
       background: showAdv ? T : "rgba(255,255,255,0.1)",
       color: "white"
     }
-  }, showAdv ? "\u2713 Activ\u00e9" : "Activer")), prs.length > 0 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+  }, showAdv ? "✓ Activé" : "Activer")), prs.length > 0 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "text-xs font-bold tracking-widest mb-2",
     style: {
       color: "#9ab"
@@ -1814,7 +1814,7 @@ function App() {
     style: {
       color: "#9ab"
     }
-  }, VT.find(x => x.id === p.vt)?.l, " ", p.vn && "\u2014 " + p.vn)), /*#__PURE__*/React.createElement("button", {
+  }, VT.find(x => x.id === p.vt)?.l, " ", p.vn && "— " + p.vn)), /*#__PURE__*/React.createElement("button", {
     onClick: e => {
       e.stopPropagation();
       {
@@ -1826,12 +1826,12 @@ function App() {
     style: {
       color: "#f87171"
     }
-  }, "\\u2715")))), /*#__PURE__*/React.createElement("p", {
+  }, "✕")))), /*#__PURE__*/React.createElement("p", {
     className: "text-center text-xs mt-8",
     style: {
       color: "#567"
     }
-  }, "GASPE \\u2014 Outil ouvert \\u00e0 tous les armateurs de proximit\\u00e9"), wizStep > 0 && /*#__PURE__*/React.createElement("div", {
+  }, "GASPE — Outil ouvert à tous les armateurs de proximité"), wizStep > 0 && /*#__PURE__*/React.createElement("div", {
     className: "fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4"
   }, /*#__PURE__*/React.createElement("div", {
     className: "bg-white rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto"
@@ -1842,12 +1842,12 @@ function App() {
     style: {
       color: PU
     }
-  }, "\\ud83e\\uddd9 Mode guid\\u00e9 \\u2014 \\u00c9tape ", wizStep, "/5"), /*#__PURE__*/React.createElement("button", {
+  }, "🧙 Mode guidé — Étape ", wizStep, "/5"), /*#__PURE__*/React.createElement("button", {
     onClick: () => setWizStep(0),
     style: {
       color: "#999"
     }
-  }, "\\u2715")), wizStep === 1 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+  }, "✕")), wizStep === 1 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
     className: "text-sm mb-3"
   }, "Quel type de navire exploitez-vous ?"), VT.filter(t => !t.adv).map(t => /*#__PURE__*/React.createElement("button", {
     key: t.id,
@@ -1873,7 +1873,7 @@ function App() {
       name: e.target.value
     })),
     className: "w-full border rounded-lg px-3 py-2 text-sm mb-3",
-    placeholder: "Ex: Le Pellerin, Liaison Brest-Ouessan\\u2026"
+    placeholder: "Ex: Le Pellerin, Liaison Brest-Ouessan…"
   }), /*#__PURE__*/React.createElement("button", {
     onClick: () => setWizStep(3),
     className: "px-4 py-2 rounded-lg text-white text-sm font-bold",
@@ -1882,7 +1882,7 @@ function App() {
     }
   }, "Suivant")), wizStep === 3 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
     className: "text-sm mb-3"
-  }, "Quelle ambition de d\\u00e9carbonation ?"), [["bio", "Biocarburants drop-in (faible invest., gain CO\u2082 mod\u00e9r\u00e9)"], ["hybride", "Hybridation (invest. mod\u00e9r\u00e9, gain 25-35%)"], ["fullelec", "100% \u00e9lectrique (invest. fort, z\u00e9ro \u00e9mission)"]].map(([k, l]) => /*#__PURE__*/React.createElement("button", {
+  }, "Quelle ambition de décarbonation ?"), [["bio", "Biocarburants drop-in (faible invest., gain CO₂ modéré)"], ["hybride", "Hybridation (invest. modéré, gain 25-35%)"], ["fullelec", "100% électrique (invest. fort, zéro émission)"]].map(([k, l]) => /*#__PURE__*/React.createElement("button", {
     key: k,
     onClick: () => {
       setWiz(w => ({
@@ -1898,7 +1898,7 @@ function App() {
     }
   }, l))), wizStep === 4 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
     className: "text-sm mb-3"
-  }, "DSP r\\u00e9siduelle ?"), [[15, "Longue (\u2265 8 ans)"], [8, "Moyenne (4-7 ans)"], [3, "Courte (< 4 ans)"], [0, "Pas de DSP"]].map(([v, l]) => /*#__PURE__*/React.createElement("button", {
+  }, "DSP résiduelle ?"), [[15, "Longue (≥ 8 ans)"], [8, "Moyenne (4-7 ans)"], [3, "Courte (< 4 ans)"], [0, "Pas de DSP"]].map(([v, l]) => /*#__PURE__*/React.createElement("button", {
     key: v,
     onClick: () => {
       setWiz(w => ({
@@ -1913,7 +1913,7 @@ function App() {
     }
   }, l))), wizStep === 5 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
     className: "text-sm mb-3"
-  }, "Budget d'investissement ?"), [["petit", "< 500 k\u20ac"], ["moyen", "500 k\u20ac \u2013 2 M\u20ac"], ["grand", "> 2 M\u20ac"]].map(([k, l]) => /*#__PURE__*/React.createElement("button", {
+  }, "Budget d'investissement ?"), [["petit", "< 500 k€"], ["moyen", "500 k€ – 2 M€"], ["grand", "> 2 M€"]].map(([k, l]) => /*#__PURE__*/React.createElement("button", {
     key: k,
     onClick: () => {
       setWiz(w => ({
@@ -2002,7 +2002,7 @@ function App() {
     style: {
       backgroundColor: PU
     }
-  }, "\\u2728 G\\u00e9n\\u00e9rer mon premier sc\\u00e9nario"))))));
+  }, "✨ Générer mon premier scénario"))))));
   return /*#__PURE__*/React.createElement("div", {
     style: {
       fontFamily: "'DM Sans',sans-serif",
@@ -2026,7 +2026,7 @@ function App() {
       setStep(0);
     },
     className: "text-xs opacity-60 shrink-0"
-  }, "\\u2693"), /*#__PURE__*/React.createElement("span", {
+  }, "⚓"), /*#__PURE__*/React.createElement("span", {
     className: "font-bold text-sm truncate"
   }, proj.name)), /*#__PURE__*/React.createElement("div", {
     className: "flex items-center gap-2 shrink-0"
@@ -2035,14 +2035,14 @@ function App() {
     style: {
       color: GR
     }
-  }, "\\u2713"), /*#__PURE__*/React.createElement("button", {
+  }, "✓"), /*#__PURE__*/React.createElement("button", {
     onClick: () => setShowAdv(!showAdv),
     className: "text-xs px-2 py-1 rounded",
     style: {
       backgroundColor: showAdv ? "rgba(27,154,170,0.3)" : "rgba(255,255,255,0.05)",
       color: showAdv ? T : "#888"
     }
-  }, showAdv ? "\u2699\u2606" : "\u2699"), /*#__PURE__*/React.createElement("button", {
+  }, showAdv ? "⚙☆" : "⚙"), /*#__PURE__*/React.createElement("button", {
     onClick: expP,
     className: "text-xs px-2 py-1 rounded",
     style: {
@@ -2070,8 +2070,8 @@ function App() {
     style: {
       color: D
     }
-  }, "\\ud83d\\udea2 Fiche navire"), /*#__PURE__*/React.createElement(Cd, {
-    title: "Identit\\u00e9"
+  }, "🚢 Fiche navire"), /*#__PURE__*/React.createElement(Cd, {
+    title: "Identité"
   }, /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-2 sm:grid-cols-3 gap-2"
   }, /*#__PURE__*/React.createElement(In, {
@@ -2135,7 +2135,7 @@ function App() {
     v: proj.v.pax,
     onChange: v => uV("pax", v)
   }), /*#__PURE__*/React.createElement(In, {
-    l: "V\\u00e9h.",
+    l: "Véh.",
     v: proj.v.veh,
     onChange: v => uV("veh", v)
   }))), /*#__PURE__*/React.createElement(Cd, {
@@ -2151,7 +2151,7 @@ function App() {
     v: proj.v.rD,
     onChange: v => uV("rD", v)
   }), /*#__PURE__*/React.createElement(In, {
-    l: "Dur\\u00e9e trav.",
+    l: "Durée trav.",
     v: proj.v.cDur,
     onChange: v => uV("cDur", v),
     u: "min"
@@ -2177,7 +2177,7 @@ function App() {
     u: "%",
     n: "Pleine puissance (" + proj.v.pP + " kW)"
   }), /*#__PURE__*/React.createElement(In, {
-    l: "% Man\\u0153uvre",
+    l: "% Manœuvre",
     v: proj.v.pMa || 20,
     onChange: v => uV("pMa", v),
     u: "%",
@@ -2195,71 +2195,71 @@ function App() {
       style: {
         color: AC
       }
-    }, "\u26a0", " Total: ", tot, "% (doit ", "\u00ea", "tre 100%)") : null;
+    }, "⚠", " Total: ", tot, "% (doit ", "ê", "tre 100%)") : null;
   })(), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mt-1",
     style: {
       color: "#999"
     }
-  }, "Le profil d\\u00e9termine la consommation r\\u00e9elle : un bac (30% man\\u0153uvre) consomme diff\\u00e9remment d\\u2019un ferry (15% man\\u0153uvre). Facteur de charge calcul\\u00e9 : ", /*#__PURE__*/React.createElement("b", null, ((proj.v.pTr || 60) / 100 + (proj.v.pMa || 20) / 100 * Math.min(proj.v.pPeak / proj.v.pP, 1.5) + (proj.v.pQu || 20) / 100 * (proj.v.pA / proj.v.pP)).toFixed(2)), " (remplace le coefficient 0,85 forfaitaire).")), /*#__PURE__*/React.createElement(Cd, {
-    title: "\\u00c9conomie"
+  }, "Le profil détermine la consommation réelle : un bac (30% manœuvre) consomme différemment d’un ferry (15% manœuvre). Facteur de charge calculé : ", /*#__PURE__*/React.createElement("b", null, ((proj.v.pTr || 60) / 100 + (proj.v.pMa || 20) / 100 * Math.min(proj.v.pPeak / proj.v.pP, 1.5) + (proj.v.pQu || 20) / 100 * (proj.v.pA / proj.v.pP)).toFixed(2)), " (remplace le coefficient 0,85 forfaitaire).")), /*#__PURE__*/React.createElement(Cd, {
+    title: "Économie"
   }, /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-2 sm:grid-cols-3 gap-2"
   }, /*#__PURE__*/React.createElement(In, {
-    l: "Val. march\\u00e9",
+    l: "Val. marché",
     v: proj.v.mktV,
     onChange: v => uV("mktV", v),
-    u: "k\\u20ac"
+    u: "k€"
   }), /*#__PURE__*/React.createElement(In, {
     l: "OPEX/an",
     v: proj.v.opex,
     onChange: v => uV("opex", v),
-    u: "k\\u20ac"
+    u: "k€"
   }), /*#__PURE__*/React.createElement(In, {
-    l: "\\u00c9quipage",
+    l: "Équipage",
     v: proj.v.crew,
     onChange: v => uV("crew", v),
-    u: "k\\u20ac"
+    u: "k€"
   }), /*#__PURE__*/React.createElement(In, {
     l: "Assurance",
     v: proj.v.ins,
     onChange: v => uV("ins", v),
-    u: "k\\u20ac"
+    u: "k€"
   }), /*#__PURE__*/React.createElement(In, {
     l: "Dry-dock",
     v: proj.v.dd,
     onChange: v => uV("dd", v),
-    u: "k\\u20ac"
+    u: "k€"
   }), /*#__PURE__*/React.createElement(In, {
     l: "Recettes",
     v: proj.v.rev,
     onChange: v => uV("rev", v),
-    u: "k\\u20ac"
+    u: "k€"
   }), /*#__PURE__*/React.createElement(In, {
     l: "Dette",
     v: proj.v.debt,
     onChange: v => uV("debt", v),
-    u: "k\\u20ac"
+    u: "k€"
   }), /*#__PURE__*/React.createElement(In, {
     l: "DSP rest.",
     v: proj.v.dspR,
     onChange: v => uV("dspR", v),
     u: "ans"
   }), /*#__PURE__*/React.createElement(In, {
-    l: "Vie r\\u00e9sid.",
+    l: "Vie résid.",
     v: proj.v.lifeR,
     onChange: v => uV("lifeR", v),
     u: "ans"
   }))), /*#__PURE__*/React.createElement(Cd, {
-    title: "Param\\u00e8tres CCV"
+    title: "Paramètres CCV"
   }, /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-3 sm:grid-cols-5 gap-2"
   }, /*#__PURE__*/React.createElement(In, {
-    l: "Ann\\u00e9e",
+    l: "Année",
     v: proj.p.sy,
     onChange: v => uP("sy", v)
   }), /*#__PURE__*/React.createElement(In, {
-    l: "Dur\\u00e9e",
+    l: "Durée",
     v: proj.p.dur,
     onChange: v => uP("dur", v),
     u: "ans"
@@ -2282,19 +2282,19 @@ function App() {
     className: "flex justify-end"
   }, /*#__PURE__*/React.createElement(Next, {
     to: 2,
-    l: "R\\u00e9f\\u00e9rentiel"
+    l: "Référentiel"
   }))), step === 2 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "text-lg font-bold mb-3",
     style: {
       color: D
     }
-  }, "\\ud83d\\udcda R\\u00e9f\\u00e9rentiel \\u00e9ditable"), /*#__PURE__*/React.createElement("p", {
+  }, "📚 Référentiel éditable"), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mb-3",
     style: {
       color: "#999"
     }
-  }, "Ajustez les prix et facteurs d'\\u00e9mission pour votre projet. Les valeurs par d\\u00e9faut sont des moyennes 2025."), /*#__PURE__*/React.createElement(Cd, {
-    title: "Prix des carburants et facteurs CO\\u2082"
+  }, "Ajustez les prix et facteurs d'émission pour votre projet. Les valeurs par défaut sont des moyennes 2025."), /*#__PURE__*/React.createElement(Cd, {
+    title: "Prix des carburants et facteurs CO₂"
   }, DEF_FUELS.filter(f => showAdv || !f.adv).map(f => {
     const ref = proj.ref?.fuels?.find(x => x.id === f.id);
     const p = ref?.price ?? f.price;
@@ -2307,7 +2307,7 @@ function App() {
       }
     }, /*#__PURE__*/React.createElement("span", {
       className: "text-xs font-bold w-32"
-    }, f.l, f.adv ? " \u2606" : ""), /*#__PURE__*/React.createElement("div", {
+    }, f.l, f.adv ? " ☆" : ""), /*#__PURE__*/React.createElement("div", {
       className: "flex items-center gap-1"
     }, /*#__PURE__*/React.createElement("input", {
       type: "number",
@@ -2322,7 +2322,7 @@ function App() {
       style: {
         color: "#999"
       }
-    }, "\\u20ac/", f.unit || "t")), /*#__PURE__*/React.createElement("div", {
+    }, "€/", f.unit || "t")), /*#__PURE__*/React.createElement("div", {
       className: "flex items-center gap-1"
     }, /*#__PURE__*/React.createElement("input", {
       type: "number",
@@ -2338,12 +2338,12 @@ function App() {
       style: {
         color: "#999"
       }
-    }, "tCO\\u2082/t")), (p !== f.price || c !== f.co2) && /*#__PURE__*/React.createElement("span", {
+    }, "tCO₂/t")), (p !== f.price || c !== f.co2) && /*#__PURE__*/React.createElement("span", {
       className: "text-xs",
       style: {
         color: W
       }
-    }, "\\u2022 modifi\\u00e9"));
+    }, "• modifié"));
   }), /*#__PURE__*/React.createElement("button", {
     onClick: () => upd(p => ({
       ...p,
@@ -2359,7 +2359,7 @@ function App() {
     style: {
       border: "1px solid #ddd"
     }
-  }, "R\\u00e9initialiser les valeurs par d\\u00e9faut")), /*#__PURE__*/React.createElement("div", {
+  }, "Réinitialiser les valeurs par défaut")), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
     to: 1
@@ -2371,7 +2371,7 @@ function App() {
     style: {
       color: D
     }
-  }, "\\ud83d\\udd00 Trajectoires"), /*#__PURE__*/React.createElement("div", {
+  }, "🔀 Trajectoires"), /*#__PURE__*/React.createElement("div", {
     className: "flex gap-1 mb-3 overflow-x-auto"
   }, proj.trajs.map((t, i) => /*#__PURE__*/React.createElement("button", {
     key: i,
@@ -2398,11 +2398,11 @@ function App() {
       style: {
         color: D
       }
-    }, "Mix \\u00e9nerg\\u00e9tique de d\\u00e9part (%)"), /*#__PURE__*/React.createElement("div", {
+    }, "Mix énergétique de départ (%)"), /*#__PURE__*/React.createElement("div", {
       className: "grid grid-cols-2 sm:grid-cols-4 gap-2"
     }, DEF_FUELS.filter(f => f.id !== "ops" && (showAdv || !f.adv)).map(f => /*#__PURE__*/React.createElement(In, {
       key: f.id,
-      l: f.l + (f.adv ? " \u2606" : ""),
+      l: f.l + (f.adv ? " ☆" : ""),
       v: mix[f.id] || 0,
       onChange: v => {
         const m = {
@@ -2420,18 +2420,18 @@ function App() {
         style: {
           color: AC
         }
-      }, "\\u26a0 Total: ", tot, "%") : null;
+      }, "⚠ Total: ", tot, "%") : null;
     })(), ti > 0 && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h4", {
       className: "font-bold text-xs mt-3 mb-1",
       style: {
         color: D
       }
-    }, "\\ud83d\\udcc5 \\u00c9volution temporelle du mix ", /*#__PURE__*/React.createElement("span", {
+    }, "📅 Évolution temporelle du mix ", /*#__PURE__*/React.createElement("span", {
       className: "font-normal",
       style: {
         color: "#999"
       }
-    }, "(optionnel \\u2014 paliers par ann\\u00e9e)")), (tj.mixSteps || []).map((ms, si) => /*#__PURE__*/React.createElement("div", {
+    }, "(optionnel — paliers par année)")), (tj.mixSteps || []).map((ms, si) => /*#__PURE__*/React.createElement("div", {
       key: si,
       className: "p-2 rounded mb-2",
       style: {
@@ -2445,13 +2445,13 @@ function App() {
       style: {
         color: T
       }
-    }, "\\u00c0 partir de ", ms.year), /*#__PURE__*/React.createElement("button", {
+    }, "À partir de ", ms.year), /*#__PURE__*/React.createElement("button", {
       onClick: () => uTj(ti, "mixSteps", (tj.mixSteps || []).filter((_, j) => j !== si)),
       className: "text-xs",
       style: {
         color: AC
       }
-    }, "\\u2715")), /*#__PURE__*/React.createElement("div", {
+    }, "✕")), /*#__PURE__*/React.createElement("div", {
       className: "grid grid-cols-2 sm:grid-cols-4 gap-1"
     }, DEF_FUELS.filter(f => f.id !== "ops" && (showAdv || !f.adv)).map(f => /*#__PURE__*/React.createElement("div", {
       key: f.id,
@@ -2488,7 +2488,7 @@ function App() {
         style: {
           color: AC
         }
-      }, "\\u26a0 ", t2, "%") : null;
+      }, "⚠ ", t2, "%") : null;
     })())), /*#__PURE__*/React.createElement("button", {
       onClick: () => {
         const nextY = proj.p.sy + Math.min(((tj.mixSteps || []).length + 1) * 3, proj.p.dur);
@@ -2533,7 +2533,7 @@ function App() {
         }
       }), /*#__PURE__*/React.createElement("span", {
         className: "text-xs font-medium"
-      }, tech.l, tech.adv ? " \u2606" : ""), /*#__PURE__*/React.createElement("span", {
+      }, tech.l, tech.adv ? " ☆" : ""), /*#__PURE__*/React.createElement("span", {
         className: "text-xs",
         style: {
           color: "#999"
@@ -2548,7 +2548,7 @@ function App() {
         style: {
           color: T
         }
-      }, "\\u23f1 ", tech.retro), /*#__PURE__*/React.createElement("input", {
+      }, "⏱ ", tech.retro), /*#__PURE__*/React.createElement("input", {
         type: "number",
         value: cfg.year || proj.p.sy,
         onChange: e => {
@@ -2568,29 +2568,29 @@ function App() {
       style: {
         color: D
       }
-    }, "Investissements (k\\u20ac)"), /*#__PURE__*/React.createElement("div", {
+    }, "Investissements (k€)"), /*#__PURE__*/React.createElement("div", {
       className: "grid grid-cols-2 sm:grid-cols-4 gap-2"
     }, /*#__PURE__*/React.createElement(In, {
       l: "Coque",
       v: tj.iC || 0,
       onChange: v => uTj(ti, "iC", v),
-      u: "k\\u20ac"
+      u: "k€"
     }), /*#__PURE__*/React.createElement(In, {
-      l: "\\u00c9nergie",
+      l: "Énergie",
       v: tj.iE || 0,
       onChange: v => uTj(ti, "iE", v),
-      u: "k\\u20ac",
+      u: "k€",
       n: "Batteries"
     }), /*#__PURE__*/React.createElement(In, {
       l: "Infra terre",
       v: tj.iI || 0,
       onChange: v => uTj(ti, "iI", v),
-      u: "k\\u20ac"
+      u: "k€"
     }), /*#__PURE__*/React.createElement(In, {
-      l: "R\\u00e9seau",
+      l: "Réseau",
       v: tj.gridCost || 0,
       onChange: v => uTj(ti, "gridCost", v),
-      u: "k\\u20ac",
+      u: "k€",
       n: "ENEDIS"
     }))));
   })(), /*#__PURE__*/React.createElement("div", {
@@ -2605,12 +2605,12 @@ function App() {
     style: {
       color: D
     }
-  }, "\\ud83d\\udd0b Batteries"), /*#__PURE__*/React.createElement(Cd, {
+  }, "🔋 Batteries"), /*#__PURE__*/React.createElement(Cd, {
     title: "Dimensionnement"
   }, /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-2 sm:grid-cols-4 gap-3"
   }, /*#__PURE__*/React.createElement(St, {
-    l: "Capacit\\u00e9",
+    l: "Capacité",
     v: batt.kWh + " kWh",
     c: T
   }), /*#__PURE__*/React.createElement(St, {
@@ -2628,20 +2628,20 @@ function App() {
     style: {
       background: LB
     }
-  }, /*#__PURE__*/React.createElement("b", null, "Estimation :"), " Batteries ", fK(batt.costBatt), " + Chargeur ", fK(batt.costCharger), " + R\\u00e9seau ", fK(batt.gridConnect), " = ", /*#__PURE__*/React.createElement("b", null, fK(batt.costBatt + batt.costCharger + batt.gridConnect)))), /*#__PURE__*/React.createElement(Cd, {
-    title: "Mod\\u00e8le de d\\u00e9gradation par cyclage"
+  }, /*#__PURE__*/React.createElement("b", null, "Estimation :"), " Batteries ", fK(batt.costBatt), " + Chargeur ", fK(batt.costCharger), " + Réseau ", fK(batt.gridConnect), " = ", /*#__PURE__*/React.createElement("b", null, fK(batt.costBatt + batt.costCharger + batt.gridConnect)))), /*#__PURE__*/React.createElement(Cd, {
+    title: "Modèle de dégradation par cyclage"
   }, /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-2 sm:grid-cols-4 gap-3"
   }, /*#__PURE__*/React.createElement(St, {
-    l: "DoD par travers\\u00e9e",
+    l: "DoD par traversée",
     v: batt.dod + "%",
     c: batt.dod > 60 ? W : GR
   }), /*#__PURE__*/React.createElement(St, {
-    l: "Cycles \\u00e9quiv./an",
+    l: "Cycles équiv./an",
     v: fmt(batt.eqCyclesAn),
     c: batt.eqCyclesAn > 3000 ? AC : batt.eqCyclesAn > 1500 ? W : GR
   }), /*#__PURE__*/React.createElement(St, {
-    l: "Dur\\u00e9e de vie pack",
+    l: "Durée de vie pack",
     v: batt.lifeYrs + " ans",
     c: batt.lifeYrs < 6 ? AC : batt.lifeYrs < 10 ? W : GR
   }), /*#__PURE__*/React.createElement(St, {
@@ -2653,11 +2653,11 @@ function App() {
     style: {
       color: "#666"
     }
-  }, /*#__PURE__*/React.createElement("p", null, "Le DoD (Depth of Discharge) par travers\\u00e9e est de ", batt.dod, "% de la capacit\\u00e9 install\\u00e9e. Les cycles \\u00e9quivalents int\\u00e8grent ce DoD partiel : ", proj.v.rD, " rot/j \\u00d7 ", proj.v.opD, " j/an \\u00d7 ", batt.dod, "% DoD / 80% = ", fmt(batt.eqCyclesAn), " cycles \\u00e9quivalents/an. ", batt.lifeYrs < 8 ? "Pr\u00e9voir 2 jeux de batteries sur la dur\u00e9e d\u2019analyse." : "Compatible avec un seul jeu sur 10 ans."))), /*#__PURE__*/React.createElement(Cd, {
-    title: "Risques \\u00e9lectrification"
+  }, /*#__PURE__*/React.createElement("p", null, "Le DoD (Depth of Discharge) par traversée est de ", batt.dod, "% de la capacité installée. Les cycles équivalents intègrent ce DoD partiel : ", proj.v.rD, " rot/j × ", proj.v.opD, " j/an × ", batt.dod, "% DoD / 80% = ", fmt(batt.eqCyclesAn), " cycles équivalents/an. ", batt.lifeYrs < 8 ? "Prévoir 2 jeux de batteries sur la durée d’analyse." : "Compatible avec un seul jeu sur 10 ans."))), /*#__PURE__*/React.createElement(Cd, {
+    title: "Risques électrification"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-1"
-  }, /*#__PURE__*/React.createElement("p", null, "\\u2022 ", /*#__PURE__*/React.createElement("b", null, "ENEDIS :"), " \\u00c9tude 3-6 mois + renforcement 12-24 mois. Risque critique."), /*#__PURE__*/React.createElement("p", null, "\\u2022 ", /*#__PURE__*/React.createElement("b", null, "D\\u00e9gradation :"), " ", batt.eqCyclesAn, " cycles/an \\u2192 remplacement tous les ", batt.lifeYrs, " ans (co\\u00fbt ~", fK(batt.costBatt * 0.7), "/remplacement)."), /*#__PURE__*/React.createElement("p", null, "\\u2022 ", /*#__PURE__*/React.createElement("b", null, "Redondance :"), " Diesel secours obligatoire. +100-300 k\\u20ac."), /*#__PURE__*/React.createElement("p", null, "\\u2022 ", /*#__PURE__*/React.createElement("b", null, "Assurance :"), " Surprime +20-40% (emballement thermique)."))), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "ENEDIS :"), " Étude 3-6 mois + renforcement 12-24 mois. Risque critique."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Dégradation :"), " ", batt.eqCyclesAn, " cycles/an → remplacement tous les ", batt.lifeYrs, " ans (coût ~", fK(batt.costBatt * 0.7), "/remplacement)."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Redondance :"), " Diesel secours obligatoire. +100-300 k€."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Assurance :"), " Surprime +20-40% (emballement thermique)."))), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
     to: 3
@@ -2669,12 +2669,12 @@ function App() {
     style: {
       color: D
     }
-  }, "\\ud83d\\udcca R\\u00e9sultats CCV"), /*#__PURE__*/React.createElement("p", {
+  }, "📊 Résultats CCV"), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mb-3",
     style: {
       color: "#999"
     }
-  }, proj.p.sy, "\\u2013", proj.p.sy + proj.p.dur, " | ", proj.p.disc, "% | ", proj.p.cont, "%"), /*#__PURE__*/React.createElement("div", {
+  }, proj.p.sy, "–", proj.p.sy + proj.p.dur, " | ", proj.p.disc, "% | ", proj.p.cont, "%"), /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3"
   }, res.map((r, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
@@ -2695,13 +2695,13 @@ function App() {
     style: {
       color: "#999"
     }
-  }, fmt(Math.round(r.base.co2)), " tCO\\u2082"), i > 0 && /*#__PURE__*/React.createElement("div", {
+  }, fmt(Math.round(r.base.co2)), " tCO₂"), i > 0 && /*#__PURE__*/React.createElement("div", {
     className: "text-xs font-bold",
     style: {
       color: r.base.ccv < res[0].base.ccv ? GR : AC
     }
-  }, r.base.ccv < res[0].base.ccv ? "\u25bc" : "\u25b2", fK(Math.abs(r.base.ccv - res[0].base.ccv)))))), /*#__PURE__*/React.createElement(Cd, {
-    title: "D\\u00e9composition"
+  }, r.base.ccv < res[0].base.ccv ? "▼" : "▲", fK(Math.abs(r.base.ccv - res[0].base.ccv)))))), /*#__PURE__*/React.createElement(Cd, {
+    title: "Décomposition"
   }, /*#__PURE__*/React.createElement(ResponsiveContainer, {
     width: "100%",
     height: 240
@@ -2727,7 +2727,7 @@ function App() {
       fontSize: 9
     }
   }), /*#__PURE__*/React.createElement(Tooltip, {
-    formatter: v => fmt(v) + " k\u20ac"
+    formatter: v => fmt(v) + " k€"
   }), /*#__PURE__*/React.createElement(Legend, {
     wrapperStyle: {
       fontSize: 9
@@ -2744,12 +2744,12 @@ function App() {
     fill: "#64748b"
   }), /*#__PURE__*/React.createElement(Bar, {
     dataKey: "En",
-    name: "\\u00c9nergie",
+    name: "Énergie",
     stackId: "a",
     fill: T
   }), /*#__PURE__*/React.createElement(Bar, {
     dataKey: "Cr",
-    name: "\\u00c9quip.",
+    name: "Équip.",
     stackId: "a",
     fill: PU
   }), /*#__PURE__*/React.createElement(Bar, {
@@ -2759,11 +2759,11 @@ function App() {
     fill: W
   }), /*#__PURE__*/React.createElement(Bar, {
     dataKey: "AT",
-    name: "Arr\\u00eats",
+    name: "Arrêts",
     stackId: "a",
     fill: AC
   })))), /*#__PURE__*/React.createElement(Cd, {
-    title: "\\u00c9carts cumul\\u00e9s"
+    title: "Écarts cumulés"
   }, /*#__PURE__*/React.createElement(ResponsiveContainer, {
     width: "100%",
     height: 200
@@ -2805,7 +2805,7 @@ function App() {
   }))))), /*#__PURE__*/React.createElement(Cd, {
     title: "Stress tests"
   }, /*#__PURE__*/React.createElement(Tbl, {
-    cols: ["Trajectoire", "Base", "D\u00e9grad\u00e9", "Favorable"],
+    cols: ["Trajectoire", "Base", "Dégradé", "Favorable"],
     rows: res.map((r, i) => [/*#__PURE__*/React.createElement("b", {
       style: {
         color: CL[i]
@@ -2813,10 +2813,10 @@ function App() {
     }, r.name.slice(0, 12)), fK(r.base.ccv), fK(r.deg.ccv), fK(r.fav.ccv)]),
     ws: [3, 2, 2, 2]
   })), (proj.v.pax > 0 || proj.v.veh > 0) && /*#__PURE__*/React.createElement(Cd, {
-    title: "Benchmark co\\u00fbt/pax-NM (ou v\\u00e9h-NM)"
+    title: "Benchmark coût/pax-NM (ou véh-NM)"
   }, (() => {
     const u = proj.v.pax > 0 ? proj.v.pax : proj.v.veh;
-    const ul = proj.v.pax > 0 ? "pax" : "v\u00e9h";
+    const ul = proj.v.pax > 0 ? "pax" : "véh";
     const dist = proj.v.cDur / 60 * proj.v.spd;
     const trAn = proj.v.rD * proj.v.opD;
     const paxNmAn = u * 0.65 * trAn * dist;
@@ -2825,8 +2825,8 @@ function App() {
       style: {
         color: "#999"
       }
-    }, "Distance travers\\u00e9e estim\\u00e9e : ", dist.toFixed(1), " NM | ", fmt(trAn), " travers\\u00e9es/an | ", fmt(Math.round(paxNmAn)), " ", ul, "-NM/an"), /*#__PURE__*/React.createElement(Tbl, {
-      cols: ["Trajectoire", "CCV/an", "\u20ac/" + ul + "-NM", "tCO\u2082/M " + ul + "-NM"],
+    }, "Distance traversée estimée : ", dist.toFixed(1), " NM | ", fmt(trAn), " traversées/an | ", fmt(Math.round(paxNmAn)), " ", ul, "-NM/an"), /*#__PURE__*/React.createElement(Tbl, {
+      cols: ["Trajectoire", "CCV/an", "€/" + ul + "-NM", "tCO₂/M " + ul + "-NM"],
       rows: res.map((r, i) => {
         const ccvAn = r.base.ccv / proj.p.dur;
         const cpnm = paxNmAn > 0 ? (ccvAn * 1000 / paxNmAn).toFixed(3) : "—";
@@ -2851,10 +2851,10 @@ function App() {
     style: {
       color: D
     }
-  }, "\\ud83d\\udcb0 Financement"), /*#__PURE__*/React.createElement(Cd, {
+  }, "💰 Financement"), /*#__PURE__*/React.createElement(Cd, {
     title: "Grille DSCR"
   }, /*#__PURE__*/React.createElement(Tbl, {
-    cols: ["Profil", "DSCR", "LTV", "Maturit\u00e9"],
+    cols: ["Profil", "DSCR", "LTV", "Maturité"],
     rows: DSCR_GRID.map(g => [g.profil, g.dscr, g.ltv, g.dur]),
     ws: [5, 2, 2, 2]
   })), res.filter((_, i) => i > 0 && res[i].totI > 0).map(r => {
@@ -2884,14 +2884,14 @@ function App() {
       v: fK(r.totI)
     }), /*#__PURE__*/React.createElement(St, {
       l: "LTV",
-      v: det > 0 ? Math.round(det / v.mktV * 100) + "%" : "\u2014"
+      v: det > 0 ? Math.round(det / v.mktV * 100) + "%" : "—"
     })), /*#__PURE__*/React.createElement("div", {
       className: "grid grid-cols-2 gap-4 text-xs"
     }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("b", {
       style: {
         color: "#999"
       }
-    }, "EMPLOIS"), [["Coque", tj.iC || 0], ["\u00c9nergie", tj.iE || 0], ["Infra", tj.iI || 0], ["R\u00e9seau", tj.gridCost || 0], ["Cont.", r.totI - (tj.iC || 0) - (tj.iE || 0) - (tj.iI || 0) - (tj.gridCost || 0)]].map(([l, v], i) => /*#__PURE__*/React.createElement("div", {
+    }, "EMPLOIS"), [["Coque", tj.iC || 0], ["Énergie", tj.iE || 0], ["Infra", tj.iI || 0], ["Réseau", tj.gridCost || 0], ["Cont.", r.totI - (tj.iC || 0) - (tj.iE || 0) - (tj.iI || 0) - (tj.gridCost || 0)]].map(([l, v], i) => /*#__PURE__*/React.createElement("div", {
       key: i,
       className: "flex justify-between mt-0.5"
     }, /*#__PURE__*/React.createElement("span", null, l), /*#__PURE__*/React.createElement("span", null, fK(v))))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("b", {
@@ -2913,8 +2913,8 @@ function App() {
     style: {
       color: "#999"
     }
-  }, "* Art. L.5114-2 C. transports : batteries int\\u00e9gr\\u00e9es = accessoires du navire.")), /*#__PURE__*/React.createElement(Cd, {
-    title: "S\\u00fbret\\u00e9s et montages juridiques"
+  }, "* Art. L.5114-2 C. transports : batteries intégrées = accessoires du navire.")), /*#__PURE__*/React.createElement(Cd, {
+    title: "Sûretés et montages juridiques"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-1.5"
   }, SURETES.map((s, i) => /*#__PURE__*/React.createElement("p", {
@@ -2931,7 +2931,7 @@ function App() {
     style: {
       color: D
     }
-  }, "\\ud83c\\udfdb Aides publiques"), AIDES.map(a => /*#__PURE__*/React.createElement(Cd, {
+  }, "🏛 Aides publiques"), AIDES.map(a => /*#__PURE__*/React.createElement(Cd, {
     key: a.id
   }, /*#__PURE__*/React.createElement("h4", {
     className: "font-bold text-sm",
@@ -2952,20 +2952,20 @@ function App() {
     style: {
       color: T
     }
-  }, "D\\u00e9lai:"), " ", a.del)), /*#__PURE__*/React.createElement("p", {
+  }, "Délai:"), " ", a.del)), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mt-1"
   }, /*#__PURE__*/React.createElement("b", null, "Conditions:"), " ", a.cond, " | ", /*#__PURE__*/React.createElement("b", null, "Calendrier:"), " ", a.cal), a.cum.length > 0 && /*#__PURE__*/React.createElement("p", {
     className: "text-xs mt-0.5",
     style: {
       color: GR
     }
-  }, "\\u2713 Cumulable: ", a.cum.map(c => AIDES.find(x => x.id === c)?.nom.split("\u2014")[0]).join(", ")))), /*#__PURE__*/React.createElement(Cd, {
-    title: "R\\u00e8gles",
+  }, "✓ Cumulable: ", a.cum.map(c => AIDES.find(x => x.id === c)?.nom.split("—")[0]).join(", ")))), /*#__PURE__*/React.createElement(Cd, {
+    title: "Règles",
     accent: W
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-1"
-  }, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("b", null, "Altmark:"), " 4 crit\\u00e8res pour compensation DSP."), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("b", null, "De minimis:"), " 200k\\u20ac/3 exercices."), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("b", null, "Ant\\u00e9riorit\\u00e9:"), " Demande AVANT travaux."))), /*#__PURE__*/React.createElement(Cd, {
-    title: "\\ud83d\\udcc5 R\\u00e9troplanning indicatif (mois avant d\\u00e9but travaux)"
+  }, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("b", null, "Altmark:"), " 4 critères pour compensation DSP."), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("b", null, "De minimis:"), " 200k€/3 exercices."), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("b", null, "Antériorité:"), " Demande AVANT travaux."))), /*#__PURE__*/React.createElement(Cd, {
+    title: "📅 Rétroplanning indicatif (mois avant début travaux)"
   }, /*#__PURE__*/React.createElement("div", {
     className: "overflow-x-auto"
   }, (() => {
@@ -2980,7 +2980,7 @@ function App() {
       dur: 3,
       c: GR
     }, {
-      a: "R\u00e9gionales",
+      a: "Régionales",
       start: -9,
       dur: 4,
       c: PU
@@ -3061,13 +3061,13 @@ function App() {
         color: AC,
         marginLeft: (0 - minM) / range * 100 + "%"
       }
-    }, "D\\u00e9but travaux"));
+    }, "Début travaux"));
   })()), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mt-2",
     style: {
       color: "#999"
     }
-  }, "M = mois avant travaux. T = mois apr\\u00e8s. D\\u00e9poser les demandes le plus t\\u00f4t possible.")), /*#__PURE__*/React.createElement("div", {
+  }, "M = mois avant travaux. T = mois après. Déposer les demandes le plus tôt possible.")), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
     to: 6
@@ -3079,8 +3079,8 @@ function App() {
     style: {
       color: D
     }
-  }, "\\ud83d\\udcdc DSP, Autorit\\u00e9 d\\u00e9l\\u00e9gante & Pr\\u00e9paration AO"), /*#__PURE__*/React.createElement(Cd, {
-    title: "Surco\\u00fbt imputable"
+  }, "📜 DSP, Autorité délégante & Préparation AO"), /*#__PURE__*/React.createElement(Cd, {
+    title: "Surcoût imputable"
   }, res.slice(1).filter(r => r.totI > 0).map(r => {
     const d = r.base.ccv - res[0].base.ccv;
     const u = proj.v.pax > 0 ? proj.v.pax : proj.v.veh;
@@ -3099,27 +3099,27 @@ function App() {
       style: {
         color: d > 0 ? AC : GR
       }
-    }, fK(d)), " (", fK(d / proj.p.dur), "/an) | CO\\u2082 ", /*#__PURE__*/React.createElement("b", {
+    }, fK(d)), " (", fK(d / proj.p.dur), "/an) | CO₂ ", /*#__PURE__*/React.createElement("b", {
       style: {
         color: GR
       }
-    }, "-", fmt(Math.round(res[0].base.co2 - r.base.co2)), "t"), paxAn > 0 && /*#__PURE__*/React.createElement("span", null, " | ", (d / proj.p.dur * 1000 / paxAn).toFixed(2), "\\u20ac/", proj.v.pax > 0 ? "pax" : "v\u00e9h"));
+    }, "-", fmt(Math.round(res[0].base.co2 - r.base.co2)), "t"), paxAn > 0 && /*#__PURE__*/React.createElement("span", null, " | ", (d / proj.p.dur * 1000 / paxAn).toFixed(2), "€/", proj.v.pax > 0 ? "pax" : "véh"));
   })), /*#__PURE__*/React.createElement(Cd, {
-    title: "Simulation formule de r\\u00e9vision DSP"
+    title: "Simulation formule de révision DSP"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-2"
-  }, /*#__PURE__*/React.createElement("p", null, "Formule actuelle type : ", /*#__PURE__*/React.createElement("code", null, "R = R0 \\u00d7 (a\\u00d7IGP + b\\u00d7IFUEL + c)")), /*#__PURE__*/React.createElement("p", null, "Formule propos\\u00e9e : ", /*#__PURE__*/React.createElement("code", null, "R = R0 \\u00d7 (a\\u00d7IGP + b\\u2019\\u00d7IFUEL + b\\u2019\\u2019\\u00d7IELEC + c)")), /*#__PURE__*/React.createElement("p", {
+  }, /*#__PURE__*/React.createElement("p", null, "Formule actuelle type : ", /*#__PURE__*/React.createElement("code", null, "R = R0 × (a×IGP + b×IFUEL + c)")), /*#__PURE__*/React.createElement("p", null, "Formule proposée : ", /*#__PURE__*/React.createElement("code", null, "R = R0 × (a×IGP + b’×IFUEL + b’’×IELEC + c)")), /*#__PURE__*/React.createElement("p", {
     style: {
       color: W
     }
-  }, "L\\u2019introduction d\\u2019un indice \\u00e9lectricit\\u00e9 (IELEC) dans la formule de r\\u00e9vision est indispensable pour s\\u00e9curiser l\\u2019\\u00e9quilibre \\u00e9conomique post-transition."))), /*#__PURE__*/React.createElement(Cd, {
+  }, "L’introduction d’un indice électricité (IELEC) dans la formule de révision est indispensable pour sécuriser l’équilibre économique post-transition."))), /*#__PURE__*/React.createElement(Cd, {
     title: "Partage investissements infra"
   }, /*#__PURE__*/React.createElement(Tbl, {
-    cols: ["Investissement", "Armateur", "Port", "Collectivit\u00e9", "Investisseur"],
+    cols: ["Investissement", "Armateur", "Port", "Collectivité", "Investisseur"],
     rows: INFRA_SHARE.map(r => [/*#__PURE__*/React.createElement("b", null, r.item), r.arm, r.port, r.coll, r.inv]),
     ws: [4, 1, 1, 2, 1]
   })), /*#__PURE__*/React.createElement(Cd, {
-    title: "\\ud83c\\udfc6 Scoring environnemental AO",
+    title: "🏆 Scoring environnemental AO",
     accent: T
   }, /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-2 sm:grid-cols-5 gap-2 mb-3"
@@ -3136,7 +3136,7 @@ function App() {
     u: "%",
     n: "Part note technique"
   }), /*#__PURE__*/React.createElement(In, {
-    l: "Pond. CO\\u2082",
+    l: "Pond. CO₂",
     v: proj.ao?.wCO2 || 40,
     onChange: v => upd(p => ({
       ...p,
@@ -3146,7 +3146,7 @@ function App() {
       }
     })),
     u: "%",
-    n: "Sous-crit\\u00e8re"
+    n: "Sous-critère"
   }), /*#__PURE__*/React.createElement(In, {
     l: "Pond. NOx/part.",
     v: proj.ao?.wNOx || 20,
@@ -3187,9 +3187,9 @@ function App() {
       style: {
         color: AC
       }
-    }, "\u26a0", " Sous-crit\\u00e8res : ", wt, "% (doit \\u00eatre 100%)") : null;
+    }, "⚠", " Sous-critères : ", wt, "% (doit être 100%)") : null;
   })(), /*#__PURE__*/React.createElement(Tbl, {
-    cols: ["Trajectoire", "CO\u2082", "NOx/Part.", "Bruit", "Renouv.", "Score", "Impact note"],
+    cols: ["Trajectoire", "CO₂", "NOx/Part.", "Bruit", "Renouv.", "Score", "Impact note"],
     rows: res.slice(1).filter(r => r.totI > 0).map(r => {
       const mix = proj.trajs[r.idx].fuelMix || {};
       const hasElec = (mix.elec || 0) + (mix.h2 || 0);
@@ -3220,11 +3220,11 @@ function App() {
     style: {
       color: "#999"
     }
-  }, "NOx/particules : z\\u00e9ro si \\u00e9lectrique pur, r\\u00e9duit si biocarburants. Bruit : supprim\\u00e9 \\u00e0 quai si \\u00e9lectrique.")), /*#__PURE__*/React.createElement(Cd, {
+  }, "NOx/particules : zéro si électrique pur, réduit si biocarburants. Bruit : supprimé à quai si électrique.")), /*#__PURE__*/React.createElement(Cd, {
     title: "Argumentaire"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-1.5"
-  }, /*#__PURE__*/React.createElement("p", null, "1. ", /*#__PURE__*/React.createElement("b", null, "Co\\u00fbt de l\\u2019inaction croissant"), " (risques quantifi\\u00e9s)."), /*#__PURE__*/React.createElement("p", null, "2. ", /*#__PURE__*/React.createElement("b", null, "Infra \\u00e0 terre"), " n\\u00e9cessite partage."), /*#__PURE__*/React.createElement("p", null, "3. ", /*#__PURE__*/React.createElement("b", null, "R\\u00e9vision DSP"), " \\u00e0 adapter (indice composite)."), /*#__PURE__*/React.createElement("p", null, "4. ", /*#__PURE__*/React.createElement("b", null, "Aides mobilisables"), "."), /*#__PURE__*/React.createElement("p", null, "5. ", /*#__PURE__*/React.createElement("b", null, "B\\u00e9n\\u00e9fices mesurables"), " : tCO\\u2082, air, bruit."))), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("p", null, "1. ", /*#__PURE__*/React.createElement("b", null, "Coût de l’inaction croissant"), " (risques quantifiés)."), /*#__PURE__*/React.createElement("p", null, "2. ", /*#__PURE__*/React.createElement("b", null, "Infra à terre"), " nécessite partage."), /*#__PURE__*/React.createElement("p", null, "3. ", /*#__PURE__*/React.createElement("b", null, "Révision DSP"), " à adapter (indice composite)."), /*#__PURE__*/React.createElement("p", null, "4. ", /*#__PURE__*/React.createElement("b", null, "Aides mobilisables"), "."), /*#__PURE__*/React.createElement("p", null, "5. ", /*#__PURE__*/React.createElement("b", null, "Bénéfices mesurables"), " : tCO₂, air, bruit."))), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
     to: 7
@@ -3236,7 +3236,7 @@ function App() {
     style: {
       color: D
     }
-  }, "\\u26a0 Risques"), /*#__PURE__*/React.createElement(Cd, {
+  }, "⚠ Risques"), /*#__PURE__*/React.createElement(Cd, {
     title: "Matrice"
   }, (() => {
     const allR = [...RISKS, ...(proj.customRisks || [])];
@@ -3250,7 +3250,7 @@ function App() {
       ws: [5, 2, 1, 1, 1]
     });
   })()), /*#__PURE__*/React.createElement(Cd, {
-    title: "Ajouter un risque personnalis\\u00e9"
+    title: "Ajouter un risque personnalisé"
   }, /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-2 sm:grid-cols-4 gap-2"
   }, /*#__PURE__*/React.createElement(In, {
@@ -3265,7 +3265,7 @@ function App() {
     })),
     t: "text"
   }), /*#__PURE__*/React.createElement(Se, {
-    l: "Cat\\u00e9gorie",
+    l: "Catégorie",
     v: proj._riskDraft?.c || "Technique",
     onChange: v => setProj(p => ({
       ...p,
@@ -3274,12 +3274,12 @@ function App() {
         c: v
       }
     })),
-    opts: ["Strat\u00e9gique", "Financier", "Op\u00e9rationnel", "Technique", "Construction", "R\u00e9glementaire"].map(c => ({
+    opts: ["Stratégique", "Financier", "Opérationnel", "Technique", "Construction", "Réglementaire"].map(c => ({
       v: c,
       l: c
     }))
   }), /*#__PURE__*/React.createElement(In, {
-    l: "Probabilit\\u00e9 (1-5)",
+    l: "Probabilité (1-5)",
     v: proj._riskDraft?.p || 3,
     onChange: v => setProj(p => ({
       ...p,
@@ -3334,13 +3334,13 @@ function App() {
     style: {
       color: AC
     }
-  }, "\\u2715"))))), /*#__PURE__*/React.createElement(Cd, {
+  }, "✕"))))), /*#__PURE__*/React.createElement(Cd, {
     title: "Radar"
   }, /*#__PURE__*/React.createElement(ResponsiveContainer, {
     width: "100%",
     height: 240
   }, /*#__PURE__*/React.createElement(RadarChart, {
-    data: ["Strat\u00e9gique", "Financier", "Op\u00e9rationnel", "Technique", "Construction", "R\u00e9glementaire"].map(c => {
+    data: ["Stratégique", "Financier", "Opérationnel", "Technique", "Construction", "Réglementaire"].map(c => {
       const allR = [...RISKS, ...(proj.customRisks || [])].filter(r => r.c === c);
       return {
         c,
@@ -3360,11 +3360,11 @@ function App() {
     fill: AC,
     fillOpacity: 0.3
   })))), /*#__PURE__*/React.createElement(Cd, {
-    title: "Co\\u00fbt de l'inaction",
+    title: "Coût de l'inaction",
     accent: AC
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-1"
-  }, /*#__PURE__*/React.createElement("p", null, "\\ud83d\\udd34 ", /*#__PURE__*/React.createElement("b", null, "Non-renouvellement DSP")), /*#__PURE__*/React.createElement("p", null, "\\ud83d\\udfe0 ", /*#__PURE__*/React.createElement("b", null, "VR navire fossile"), " en d\\u00e9clin"), /*#__PURE__*/React.createElement("p", null, "\\ud83d\\udfe1 ", /*#__PURE__*/React.createElement("b", null, "MDO"), " +", proj.p.fpG, "%/an"), /*#__PURE__*/React.createElement("p", null, "\\ud83d\\udfe1 ", /*#__PURE__*/React.createElement("b", null, "R\\u00e9glementation"), " extension < 5000 GT"))), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("p", null, "🔴 ", /*#__PURE__*/React.createElement("b", null, "Non-renouvellement DSP")), /*#__PURE__*/React.createElement("p", null, "🟠 ", /*#__PURE__*/React.createElement("b", null, "VR navire fossile"), " en déclin"), /*#__PURE__*/React.createElement("p", null, "🟡 ", /*#__PURE__*/React.createElement("b", null, "MDO"), " +", proj.p.fpG, "%/an"), /*#__PURE__*/React.createElement("p", null, "🟡 ", /*#__PURE__*/React.createElement("b", null, "Réglementation"), " extension < 5000 GT"))), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
     to: 8
@@ -3376,12 +3376,12 @@ function App() {
     style: {
       color: D
     }
-  }, "\\u2693 Consolidation flotte"), /*#__PURE__*/React.createElement("p", {
+  }, "⚓ Consolidation flotte"), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mb-3",
     style: {
       color: "#999"
     }
-  }, "Agr\\u00e9gez les r\\u00e9sultats de tous vos projets pour une vision flotte."), /*#__PURE__*/React.createElement("button", {
+  }, "Agrégez les résultats de tous vos projets pour une vision flotte."), /*#__PURE__*/React.createElement("button", {
     onClick: loadFleet,
     className: "px-4 py-2 rounded-lg text-xs font-bold text-white mb-3",
     style: {
@@ -3410,23 +3410,23 @@ function App() {
     }, 0);
     const totInv = all.reduce((s, fp) => s + (getBest(fp)?.totI || 0), 0);
     return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Cd, {
-      title: "Synth\\u00e8se flotte"
+      title: "Synthèse flotte"
     }, /*#__PURE__*/React.createElement(Tbl, {
-      cols: ["Navire", "Type", "CCV R\u00e9f.", "CCV Alt.", "Invest.", "\u0394 CO\u2082"],
+      cols: ["Navire", "Type", "CCV Réf.", "CCV Alt.", "Invest.", "Δ CO₂"],
       rows: all.map(fp => {
         const r = fp.res;
         const best = getBest(fp);
-        return [/*#__PURE__*/React.createElement("b", null, fp.name), VT.find(x => x.id === fp.vt)?.l?.slice(0, 10), fK(r[0].base.ccv), best ? fK(best.base.ccv) : "\u2014", best ? fK(best.totI) : "\u2014", best ? /*#__PURE__*/React.createElement("b", {
+        return [/*#__PURE__*/React.createElement("b", null, fp.name), VT.find(x => x.id === fp.vt)?.l?.slice(0, 10), fK(r[0].base.ccv), best ? fK(best.base.ccv) : "—", best ? fK(best.totI) : "—", best ? /*#__PURE__*/React.createElement("b", {
           style: {
             color: GR
           }
-        }, "-", fmt(Math.round(r[0].base.co2 - best.base.co2)), "t") : "\u2014"];
+        }, "-", fmt(Math.round(r[0].base.co2 - best.base.co2)), "t") : "—"];
       }),
       ws: [3, 2, 2, 2, 2, 1]
     }), /*#__PURE__*/React.createElement("div", {
       className: "grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3"
     }, /*#__PURE__*/React.createElement(St, {
-      l: "CCV flotte r\\u00e9f.",
+      l: "CCV flotte réf.",
       v: fK(totRef)
     }), /*#__PURE__*/React.createElement(St, {
       l: "CCV flotte alt.",
@@ -3437,11 +3437,11 @@ function App() {
       v: fK(totInv),
       c: T
     }), /*#__PURE__*/React.createElement(St, {
-      l: "CO\\u2082 \\u00e9vit\\u00e9es",
+      l: "CO₂ évitées",
       v: fmt(Math.round(totCO2Ref - totCO2Best)) + " t",
       c: GR
     }))), /*#__PURE__*/React.createElement(Cd, {
-      title: "\\ud83d\\udcc5 Plan de retrofit pluriannuel"
+      title: "📅 Plan de retrofit pluriannuel"
     }, (() => {
       const minY = Math.min(...all.map(fp => fp.p.p?.sy || 2026));
       const maxY = Math.max(...all.map(fp => (fp.p.p?.sy || 2026) + (fp.p.p?.dur || 10)));
@@ -3509,20 +3509,20 @@ function App() {
       style: {
         color: "#999"
       }
-    }, "Chaque barre repr\\u00e9sente une technologie d\\u00e9ploy\\u00e9e sur un navire.")), /*#__PURE__*/React.createElement(Cd, {
-      title: "\\ud83d\\udcca Benchmark inter-navires (co\\u00fbt/pax-NM ou v\\u00e9h-NM)"
+    }, "Chaque barre représente une technologie déployée sur un navire.")), /*#__PURE__*/React.createElement(Cd, {
+      title: "📊 Benchmark inter-navires (coût/pax-NM ou véh-NM)"
     }, /*#__PURE__*/React.createElement(Tbl, {
-      cols: ["Navire", "Type", "CCV/an", "Unit\u00e9s-NM/an", "Co\u00fbt/unit\u00e9-NM", "tCO\u2082/M unit\u00e9s-NM"],
+      cols: ["Navire", "Type", "CCV/an", "Unités-NM/an", "Coût/unité-NM", "tCO₂/M unités-NM"],
       rows: all.map(fp => {
         const v2 = fp.p.v;
         const best = getBest(fp);
         const ccvAn = (best?.base?.ccv || 0) / (fp.p.p?.dur || 10);
         const u = v2.pax > 0 ? v2.pax : v2.veh;
-        const ul = v2.pax > 0 ? "pax" : "v\u00e9h";
+        const ul = v2.pax > 0 ? "pax" : "véh";
         const dist = (v2.cDur || 10) / 60 * (v2.spd || 8);
         const trAn = (v2.rD || 1) * (v2.opD || 300);
         const uNmAn = u * 0.65 * trAn * dist;
-        return [/*#__PURE__*/React.createElement("b", null, fp.name), VT.find(x => x.id === v2.type)?.l?.slice(0, 8), fK(ccvAn), uNmAn > 0 ? fmt(Math.round(uNmAn)) + " " + ul + "-NM" : "\u2014", uNmAn > 0 ? (ccvAn * 1000 / uNmAn).toFixed(3) + " \u20ac" : "\u2014", uNmAn > 0 ? ((best?.base?.co2 || 0) / (fp.p.p?.dur || 10) / (uNmAn / 1e6)).toFixed(1) : "\u2014"];
+        return [/*#__PURE__*/React.createElement("b", null, fp.name), VT.find(x => x.id === v2.type)?.l?.slice(0, 8), fK(ccvAn), uNmAn > 0 ? fmt(Math.round(uNmAn)) + " " + ul + "-NM" : "—", uNmAn > 0 ? (ccvAn * 1000 / uNmAn).toFixed(3) + " €" : "—", uNmAn > 0 ? ((best?.base?.co2 || 0) / (fp.p.p?.dur || 10) / (uNmAn / 1e6)).toFixed(1) : "—"];
       }),
       ws: [2, 2, 2, 2, 2, 2]
     })));
@@ -3531,30 +3531,30 @@ function App() {
     style: {
       color: "#999"
     }
-  }, "Cr\\u00e9ez plusieurs projets (un par navire) puis revenez ici pour consolider.")), /*#__PURE__*/React.createElement("div", {
+  }, "Créez plusieurs projets (un par navire) puis revenez ici pour consolider.")), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
     to: 9
   }), /*#__PURE__*/React.createElement(Next, {
     to: 11,
-    l: "\\u00c9cosyst\\u00e8me"
+    l: "Écosystème"
   }))), step === 11 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "text-lg font-bold mb-3",
     style: {
       color: D
     }
-  }, "\\ud83c\\udf10 \\u00c9cosyst\\u00e8me & retours d'exp\\u00e9rience"), ECO.map(s => /*#__PURE__*/React.createElement(Cd, {
+  }, "🌐 Écosystème & retours d'expérience"), ECO.map(s => /*#__PURE__*/React.createElement(Cd, {
     key: s.cat,
     title: s.cat
   }, s.items.map((e, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     className: "flex justify-between py-1.5 border-b last:border-0 text-xs"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("b", null, e.n), " \\u2014 ", e.s), /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("b", null, e.n), " — ", e.s), /*#__PURE__*/React.createElement("span", {
     style: {
       color: T
     }
   }, e.u))))), /*#__PURE__*/React.createElement(Cd, {
-    title: "\\ud83d\\udca1 Retours d'exp\\u00e9rience",
+    title: "💡 Retours d'expérience",
     accent: GR
   }, RETEX.map((r, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
@@ -3574,7 +3574,7 @@ function App() {
     style: {
       color: GR
     }
-  }, "\\u2192 ", r.impact)))), /*#__PURE__*/React.createElement("div", {
+  }, "→ ", r.impact)))), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
     to: 10
@@ -3586,18 +3586,18 @@ function App() {
     style: {
       color: D
     }
-  }, "\\ud83d\\udcc8 Suivi de performance"), /*#__PURE__*/React.createElement("p", {
+  }, "📈 Suivi de performance"), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mb-3",
     style: {
       color: "#999"
     }
-  }, "Saisissez vos consommations r\\u00e9elles pour comparer au pr\\u00e9visionnel."), /*#__PURE__*/React.createElement(Cd, {
+  }, "Saisissez vos consommations réelles pour comparer au prévisionnel."), /*#__PURE__*/React.createElement(Cd, {
     title: "Saisie annuelle"
   }, (proj.perf || []).map((pf, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     className: "grid grid-cols-4 gap-2 mb-2"
   }, /*#__PURE__*/React.createElement(In, {
-    l: "Ann\\u00e9e",
+    l: "Année",
     v: pf.year || proj.p.sy + i,
     onChange: v => upd(p => {
       const pfs = [...(p.perf || [])];
@@ -3611,7 +3611,7 @@ function App() {
       };
     })
   }), /*#__PURE__*/React.createElement(In, {
-    l: "Conso r\\u00e9elle",
+    l: "Conso réelle",
     v: pf.fuelReal || 0,
     onChange: v => upd(p => {
       const pfs = [...(p.perf || [])];
@@ -3626,7 +3626,7 @@ function App() {
     }),
     u: "t MDO"
   }), /*#__PURE__*/React.createElement(In, {
-    l: "CO\\u2082 r\\u00e9el",
+    l: "CO₂ réel",
     v: pf.co2Real || 0,
     onChange: v => upd(p => {
       const pfs = [...(p.perf || [])];
@@ -3641,7 +3641,7 @@ function App() {
     }),
     u: "t"
   }), /*#__PURE__*/React.createElement(In, {
-    l: "OPEX r\\u00e9el",
+    l: "OPEX réel",
     v: pf.opexReal || 0,
     onChange: v => upd(p => {
       const pfs = [...(p.perf || [])];
@@ -3654,7 +3654,7 @@ function App() {
         perf: pfs
       };
     }),
-    u: "k\\u20ac"
+    u: "k€"
   }))), /*#__PURE__*/React.createElement("button", {
     onClick: () => upd(p => ({
       ...p,
@@ -3670,34 +3670,34 @@ function App() {
       border: "1px solid " + T,
       color: T
     }
-  }, "+ Ajouter une ann\\u00e9e")), (proj.perf || []).length > 0 && res[0] && /*#__PURE__*/React.createElement(Cd, {
-    title: "Comparaison pr\\u00e9visionnel / r\\u00e9el"
+  }, "+ Ajouter une année")), (proj.perf || []).length > 0 && res[0] && /*#__PURE__*/React.createElement(Cd, {
+    title: "Comparaison prévisionnel / réel"
   }, /*#__PURE__*/React.createElement(Tbl, {
-    cols: ["Ann\u00e9e", "CO\u2082 pr\u00e9vu", "CO\u2082 r\u00e9el", "\u00c9cart", "OPEX pr\u00e9vu", "OPEX r\u00e9el"],
+    cols: ["Année", "CO₂ prévu", "CO₂ réel", "Écart", "OPEX prévu", "OPEX réel"],
     rows: (proj.perf || []).map((pf, i) => {
       const yr = res[0].base.yrs[i];
-      return [pf.year, yr ? fmt(Math.round(yr.co2)) + " t" : "\u2014", fmt(pf.co2Real) + " t", yr ? /*#__PURE__*/React.createElement("b", {
+      return [pf.year, yr ? fmt(Math.round(yr.co2)) + " t" : "—", fmt(pf.co2Real) + " t", yr ? /*#__PURE__*/React.createElement("b", {
         style: {
           color: pf.co2Real <= yr.co2 ? GR : AC
         }
-      }, pf.co2Real <= yr.co2 ? "\u25bc" : "\u25b2", fmt(Math.round(Math.abs(pf.co2Real - yr.co2))), "t") : "\u2014", yr ? fK(yr.ex + yr.en + yr.cr + yr.ins) : "\u2014", fK(pf.opexReal)];
+      }, pf.co2Real <= yr.co2 ? "▼" : "▲", fmt(Math.round(Math.abs(pf.co2Real - yr.co2))), "t") : "—", yr ? fK(yr.ex + yr.en + yr.cr + yr.ins) : "—", fK(pf.opexReal)];
     }),
     ws: [1, 2, 2, 2, 2, 2]
   })), /*#__PURE__*/React.createElement(Cd, {
     title: "Indicateurs ESG"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-1"
-  }, /*#__PURE__*/React.createElement("p", null, "\\u2022 ", /*#__PURE__*/React.createElement("b", null, "tCO\\u2082 \\u00e9vit\\u00e9es (cumul) :"), " ", (proj.perf || []).length > 0 ? fmt(Math.round((proj.perf || []).reduce((s, pf, i) => {
+  }, /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "tCO₂ évitées (cumul) :"), " ", (proj.perf || []).length > 0 ? fmt(Math.round((proj.perf || []).reduce((s, pf, i) => {
     const yr = res[0]?.base.yrs[i];
     return s + (yr ? yr.co2 - pf.co2Real : 0);
-  }, 0))) + " t" : "Saisir les donn\u00e9es r\u00e9elles"), /*#__PURE__*/React.createElement("p", null, "\\u2022 ", /*#__PURE__*/React.createElement("b", null, "Part renouvelable du mix :"), " ", (() => {
+  }, 0))) + " t" : "Saisir les données réelles"), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Part renouvelable du mix :"), " ", (() => {
     const mix = proj.trajs[1]?.fuelMix || {};
     const tot = Object.values(mix).reduce((a, b) => a + b, 0) || 100;
     const ren = (mix.elec || 0) + (mix.h2 || 0) + (mix.hvo || 0) + (mix.fame || 0);
     return tot > 0 ? (ren / tot * 100).toFixed(0) + "%" : "N/A";
-  })()), /*#__PURE__*/React.createElement("p", null, "\\u2022 ", /*#__PURE__*/React.createElement("b", null, "Conformit\\u00e9 taxonomie UE :"), " ", (() => {
+  })()), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Conformité taxonomie UE :"), " ", (() => {
     const mix = proj.trajs[1]?.fuelMix || {};
-    return (mix.elec || 0) + (mix.h2 || 0) > 50 ? "\u2713 \u00c9ligible (> 50% z\u00e9ro \u00e9mission)" : "\u2717 Non \u00e9ligible";
+    return (mix.elec || 0) + (mix.h2 || 0) > 50 ? "✓ Éligible (> 50% zéro émission)" : "✗ Non éligible";
   })()))), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
@@ -3710,16 +3710,16 @@ function App() {
     style: {
       color: D
     }
-  }, "\\ud83d\\udcc4 Dossier complet"), /*#__PURE__*/React.createElement(Cd, {
-    title: "Synth\\u00e8se"
+  }, "📄 Dossier complet"), /*#__PURE__*/React.createElement(Cd, {
+    title: "Synthèse"
   }, /*#__PURE__*/React.createElement(Tbl, {
     cols: ["", ...res.map(r => r.name.slice(0, 10))],
-    rows: [["CCV base", ...res.map(r => fK(r.base.ccv))], ["CCV d\u00e9g.", ...res.map(r => fK(r.deg.ccv))], ["Invest.", ...res.map(r => fK(r.totI))], ["CO\u2082", ...res.map(r => fmt(Math.round(r.base.co2)) + "t")], ["Gain", ...res.map(r => (r.gain.m * 100).toFixed(0) + "%")]],
+    rows: [["CCV base", ...res.map(r => fK(r.base.ccv))], ["CCV dég.", ...res.map(r => fK(r.deg.ccv))], ["Invest.", ...res.map(r => fK(r.totI))], ["CO₂", ...res.map(r => fmt(Math.round(r.base.co2)) + "t")], ["Gain", ...res.map(r => (r.gain.m * 100).toFixed(0) + "%")]],
     ws: [2, ...res.map(() => 2)]
   })), /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-1 sm:grid-cols-2 gap-3"
   }, /*#__PURE__*/React.createElement(Cd, {
-    title: "\\ud83d\\udce5 Exports"
+    title: "📥 Exports"
   }, /*#__PURE__*/React.createElement("div", {
     className: "space-y-2"
   }, /*#__PURE__*/React.createElement("button", {
@@ -3730,35 +3730,35 @@ function App() {
       const bd = dimBatt(v);
       const css = '@page{size:A4;margin:20mm 15mm 25mm 15mm}body{font-family:Arial,sans-serif;font-size:11pt;color:#000;line-height:1.5}h1{font-size:16pt;text-align:center;margin:0}h2{font-size:13pt;color:#1E2D3D;border-bottom:2px solid #1B9AAA;padding-bottom:4px;margin-top:20px}h3{font-size:11pt;color:#1B9AAA;margin-top:14px}table{width:100%;border-collapse:collapse;font-size:9pt;margin:8px 0}th{background:#1E2D3D;color:white;padding:6px 8px;text-align:left}td{padding:5px 8px;border-bottom:1px solid #eee}tr:nth-child(even){background:#EAF4F7}.header{text-align:center;border-bottom:2px solid #1B9AAA;padding-bottom:10px;margin-bottom:20px}.footer{position:fixed;bottom:0;width:100%;text-align:center;font-size:8pt;color:#444;border-top:1px solid #ddd;padding-top:5px}.accent{color:#1B9AAA}.warn{color:#E8634A}.ok{color:#10B981}.sub{font-size:9pt;color:#999}ul{padding-left:20px}li{margin-bottom:4px}@media print{.no-print{display:none}}';
       let h = '<html><head><title>' + esc(proj.name) + ' - Dossier GASPE</title><style>' + css + '</style></head><body>';
-      h += '<div class="header"><div style="font-size:10pt;letter-spacing:3px;color:#1B9AAA;font-weight:bold">GASPE</div><h1>Dossier de Transition \u00c9nerg\u00e9tique</h1><div style="font-size:13pt;color:#1B9AAA;margin-top:5px">' + esc(proj.name) + '</div><div class="sub">G\u00e9n\u00e9r\u00e9 le ' + new Date().toLocaleDateString("fr-FR") + ' \u2014 Simulateur CCV GASPE</div></div>';
-      h += '<h2>1. Navire</h2><table><tr><th>Caract\u00e9ristique</th><th>Valeur</th></tr>';
-      [["Nom", v.name || "(non nomm\u00e9)"], ["Type", vt?.l], ["LOA", v.loa + " m"], ["Jauge", v.gt + " GT"], ["Puissance", v.pP + " kW (pointe " + v.pPeak + " kW)"], ["Vitesse", v.spd + " n\u0153uds"], ["Conso r\u00e9f\u00e9rence", v.fc + " L/h MDO"], ["Profil de charge", "Transit " + (v.pTr || 60) + "% / Man\u0153uvre " + (v.pMa || 20) + "% / Quai " + (v.pQu || 20) + "%"], ["Exploitation", v.opD + " j/an, " + v.rD + " rot/j, " + v.cDur + " min/trav."], ["DSP r\u00e9siduelle", v.dspR + " ans"], ["Valeur march\u00e9", fK(v.mktV)], ["Recettes", fK(v.rev) + "/an"]].forEach(([k, val]) => {
+      h += '<div class="header"><div style="font-size:10pt;letter-spacing:3px;color:#1B9AAA;font-weight:bold">GASPE</div><h1>Dossier de Transition Énergétique</h1><div style="font-size:13pt;color:#1B9AAA;margin-top:5px">' + esc(proj.name) + '</div><div class="sub">Généré le ' + new Date().toLocaleDateString("fr-FR") + ' — Simulateur CCV GASPE</div></div>';
+      h += '<h2>1. Navire</h2><table><tr><th>Caractéristique</th><th>Valeur</th></tr>';
+      [["Nom", v.name || "(non nommé)"], ["Type", vt?.l], ["LOA", v.loa + " m"], ["Jauge", v.gt + " GT"], ["Puissance", v.pP + " kW (pointe " + v.pPeak + " kW)"], ["Vitesse", v.spd + " nœuds"], ["Conso référence", v.fc + " L/h MDO"], ["Profil de charge", "Transit " + (v.pTr || 60) + "% / Manœuvre " + (v.pMa || 20) + "% / Quai " + (v.pQu || 20) + "%"], ["Exploitation", v.opD + " j/an, " + v.rD + " rot/j, " + v.cDur + " min/trav."], ["DSP résiduelle", v.dspR + " ans"], ["Valeur marché", fK(v.mktV)], ["Recettes", fK(v.rev) + "/an"]].forEach(([k, val]) => {
         h += '<tr><td><b>' + k + '</b></td><td>' + val + '</td></tr>';
       });
       h += '</table>';
-      h += '<h2>2. Trajectoires</h2><p class="sub">P\u00e9riode ' + p.sy + '\u2013' + (p.sy + p.dur) + ' | Actualisation ' + p.disc + '% | Contingency ' + p.cont + '%</p>';
-      h += '<table><tr><th>Trajectoire</th><th>CCV base</th><th>CCV d\u00e9grad\u00e9</th><th>CCV favorable</th><th>Invest.</th><th>CO\u2082</th><th>Gain</th></tr>';
+      h += '<h2>2. Trajectoires</h2><p class="sub">Période ' + p.sy + '–' + (p.sy + p.dur) + ' | Actualisation ' + p.disc + '% | Contingency ' + p.cont + '%</p>';
+      h += '<table><tr><th>Trajectoire</th><th>CCV base</th><th>CCV dégradé</th><th>CCV favorable</th><th>Invest.</th><th>CO₂</th><th>Gain</th></tr>';
       res.forEach(r => {
         h += '<tr><td><b>' + r.name + '</b></td><td>' + fK(r.base.ccv) + '</td><td>' + fK(r.deg.ccv) + '</td><td>' + fK(r.fav.ccv) + '</td><td>' + fK(r.totI) + '</td><td>' + fmt(Math.round(r.base.co2)) + ' t</td><td>' + (r.gain.m * 100).toFixed(0) + '%</td></tr>';
       });
       h += '</table>';
       if (res.length > 1) {
-        h += '<h3>\u00c9carts vs r\u00e9f\u00e9rence</h3><ul>';
+        h += '<h3>Écarts vs référence</h3><ul>';
         res.slice(1).forEach(r => {
           const d = r.base.ccv - res[0].base.ccv;
           const dC = res[0].base.co2 - r.base.co2;
-          h += '<li><b>' + r.name + '</b> : \u0394CCV <span class="' + (d > 0 ? "warn" : "ok") + '">' + fK(d) + '</span> | \u0394CO\u2082 ' + fmt(Math.round(-dC)) + ' t' + (dC > 0 ? ' | CMA ' + fmt(Math.round(d * 1000 / dC)) + ' \u20ac/tCO\u2082' : '') + '</li>';
+          h += '<li><b>' + r.name + '</b> : ΔCCV <span class="' + (d > 0 ? "warn" : "ok") + '">' + fK(d) + '</span> | ΔCO₂ ' + fmt(Math.round(-dC)) + ' t' + (dC > 0 ? ' | CMA ' + fmt(Math.round(d * 1000 / dC)) + ' €/tCO₂' : '') + '</li>';
         });
         h += '</ul>';
       }
-      h += '<h2>3. Dimensionnement batteries</h2><p>Capacit\u00e9 : <b>' + bd.kWh + ' kWh</b> (contrainte ' + bd.constraint + ') | Chargeur : <b>' + bd.chargePower + ' kW</b> | Estimation : <b>' + fK(bd.costBatt + bd.costCharger + bd.gridConnect) + '</b></p>';
-      h += '<h2>4. Structuration financi\u00e8re</h2>';
+      h += '<h2>3. Dimensionnement batteries</h2><p>Capacité : <b>' + bd.kWh + ' kWh</b> (contrainte ' + bd.constraint + ') | Chargeur : <b>' + bd.chargePower + ' kW</b> | Estimation : <b>' + fK(bd.costBatt + bd.costCharger + bd.gridConnect) + '</b></p>';
+      h += '<h2>4. Structuration financière</h2>';
       res.slice(1).filter(r => r.totI > 0).forEach(r => {
         const ann = v.rev - v.opex - (r.base.yrs[1]?.en || 0) - v.crew - v.ins;
         const dscr = r.totI > 0 ? ann / (r.totI / p.dur) : 0;
         h += '<h3>' + r.name + '</h3><p>FCF annuel : <b>' + fK(ann) + '</b> | DSCR : <b>' + dscr.toFixed(2) + 'x</b> | Investissement : <b>' + fK(r.totI) + '</b></p>';
       });
-      h += '<h2>5. Aides publiques</h2><table><tr><th>Dispositif</th><th>Taux</th><th>Plafond</th><th>D\u00e9lai</th></tr>';
+      h += '<h2>5. Aides publiques</h2><table><tr><th>Dispositif</th><th>Taux</th><th>Plafond</th><th>Délai</th></tr>';
       AIDES.forEach(a => {
         h += '<tr><td><b>' + a.nom + '</b></td><td>' + a.taux + '</td><td>' + a.plf + '</td><td>' + a.del + '</td></tr>';
       });
@@ -3768,9 +3768,9 @@ function App() {
         h += '<tr><td>' + r.l + '</td><td>' + r.c + '</td><td>' + r.p + '</td><td>' + r.i + '</td><td><b>' + r.p * r.i + '</b></td></tr>';
       });
       h += '</table>';
-      h += '<h2>7. Argumentaire DSP</h2><ul><li>Co\u00fbt de l\u2019inaction croissant</li><li>Infra \u00e0 terre : partage armateur/port/collectivit\u00e9</li><li>Formule de r\u00e9vision DSP \u00e0 adapter (indice IELEC)</li><li>Aides mobilisables</li><li>B\u00e9n\u00e9fices mesurables : tCO\u2082, qualit\u00e9 air, bruit</li></ul>';
-      h += '<div class="footer">GASPE \u2014 Groupement des Armateurs de Services Publics Maritimes de Passages d\u2019Eau<br>Maison de la Mer, Quai de la Fosse, 44000 Nantes \u2013 www.gaspe.fr</div>';
-      h += '<div class="no-print" style="text-align:center;margin:30px"><button onclick="window.print()" style="padding:12px 30px;background:#1B9AAA;color:white;border:none;border-radius:8px;font-size:14px;cursor:pointer">\ud83d\udda8 Imprimer / Enregistrer en PDF</button></div>';
+      h += '<h2>7. Argumentaire DSP</h2><ul><li>Coût de l’inaction croissant</li><li>Infra à terre : partage armateur/port/collectivité</li><li>Formule de révision DSP à adapter (indice IELEC)</li><li>Aides mobilisables</li><li>Bénéfices mesurables : tCO₂, qualité air, bruit</li></ul>';
+      h += '<div class="footer">GASPE — Groupement des Armateurs de Services Publics Maritimes de Passages d’Eau<br>Maison de la Mer, Quai de la Fosse, 44000 Nantes – www.gaspe.fr</div>';
+      h += '<div class="no-print" style="text-align:center;margin:30px"><button onclick="window.print()" style="padding:12px 30px;background:#1B9AAA;color:white;border:none;border-radius:8px;font-size:14px;cursor:pointer">🖨 Imprimer / Enregistrer en PDF</button></div>';
       h += '</body></html>';
       const w = window.open("", "_blank");
       w.document.write(h);
@@ -3780,13 +3780,13 @@ function App() {
     style: {
       backgroundColor: AC
     }
-  }, "\\ud83d\\udcc4 G\\u00e9n\\u00e9rer le dossier PDF chart\\u00e9 GASPE"), /*#__PURE__*/React.createElement("button", {
+  }, "📄 Générer le dossier PDF charté GASPE"), /*#__PURE__*/React.createElement("button", {
     onClick: expP,
     className: "w-full px-3 py-2.5 rounded-lg text-xs font-bold text-white",
     style: {
       backgroundColor: T
     }
-  }, "\\u2193 Projet JSON (r\\u00e9importable)"), /*#__PURE__*/React.createElement("button", {
+  }, "↓ Projet JSON (réimportable)"), /*#__PURE__*/React.createElement("button", {
     onClick: () => {
       const t = genDossier(proj, res);
       const b = new Blob([t], {
@@ -3802,25 +3802,25 @@ function App() {
     style: {
       backgroundColor: D
     }
-  }, "\\ud83d\\udcc4 Dossier TXT"), /*#__PURE__*/React.createElement("button", {
+  }, "📄 Dossier TXT"), /*#__PURE__*/React.createElement("button", {
     onClick: () => {
       navigator.clipboard.writeText(genDossier(proj, res));
-      alert("Copi\u00e9 !");
+      alert("Copié !");
     },
     className: "w-full px-3 py-2.5 rounded-lg text-xs font-bold",
     style: {
       border: "2px solid " + T,
       color: T
     }
-  }, "\\ud83d\\udccb Copier"))), /*#__PURE__*/React.createElement(Cd, {
+  }, "📋 Copier"))), /*#__PURE__*/React.createElement(Cd, {
     title: "Contenu"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-0.5"
-  }, /*#__PURE__*/React.createElement("p", null, "\\u2713 Fiche navire"), /*#__PURE__*/React.createElement("p", null, "\\u2713 R\\u00e9f\\u00e9rentiel (modifiable)"), /*#__PURE__*/React.createElement("p", null, "\\u2713 4 trajectoires \\u00d7 3 cas"), /*#__PURE__*/React.createElement("p", null, "\\u2713 Dimensionnement batteries"), /*#__PURE__*/React.createElement("p", null, "\\u2713 Plan financement + s\\u00fbret\\u00e9s"), /*#__PURE__*/React.createElement("p", null, "\\u2713 9 aides publiques"), /*#__PURE__*/React.createElement("p", null, "\\u2713 11 risques + radar"), /*#__PURE__*/React.createElement("p", null, "\\u2713 Scoring AO DSP"), /*#__PURE__*/React.createElement("p", null, "\\u2713 Consolidation flotte"), /*#__PURE__*/React.createElement("p", null, "\\u2713 Suivi performance + ESG"), /*#__PURE__*/React.createElement("p", null, "\\u2713 6 retours d'exp\\u00e9rience"), /*#__PURE__*/React.createElement("p", null, "\\u2713 Annuaire \\u00e9cosyst\\u00e8me")))), /*#__PURE__*/React.createElement(Cd, {
-    title: "Prochaines \\u00e9tapes"
+  }, /*#__PURE__*/React.createElement("p", null, "✓ Fiche navire"), /*#__PURE__*/React.createElement("p", null, "✓ Référentiel (modifiable)"), /*#__PURE__*/React.createElement("p", null, "✓ 4 trajectoires × 3 cas"), /*#__PURE__*/React.createElement("p", null, "✓ Dimensionnement batteries"), /*#__PURE__*/React.createElement("p", null, "✓ Plan financement + sûretés"), /*#__PURE__*/React.createElement("p", null, "✓ 9 aides publiques"), /*#__PURE__*/React.createElement("p", null, "✓ 11 risques + radar"), /*#__PURE__*/React.createElement("p", null, "✓ Scoring AO DSP"), /*#__PURE__*/React.createElement("p", null, "✓ Consolidation flotte"), /*#__PURE__*/React.createElement("p", null, "✓ Suivi performance + ESG"), /*#__PURE__*/React.createElement("p", null, "✓ 6 retours d'expérience"), /*#__PURE__*/React.createElement("p", null, "✓ Annuaire écosystème")))), /*#__PURE__*/React.createElement(Cd, {
+    title: "Prochaines étapes"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-1"
-  }, /*#__PURE__*/React.createElement("p", null, "1. Affiner avec bureau d'\\u00e9tudes (CFD, dim. batteries)"), /*#__PURE__*/React.createElement("p", null, "2. Lancer raccordement ENEDIS (3-6 mois)"), /*#__PURE__*/React.createElement("p", null, "3. D\\u00e9poser aides AVANT travaux"), /*#__PURE__*/React.createElement("p", null, "4. Contacter investisseur (voir \\u00c9cosyst\\u00e8me)"), /*#__PURE__*/React.createElement("p", null, "5. Argumentaire autorit\\u00e9 d\\u00e9l\\u00e9gante"), /*#__PURE__*/React.createElement("p", null, "6. Consulter chantiers (devis + planning)"))), /*#__PURE__*/React.createElement(Prev, {
+  }, /*#__PURE__*/React.createElement("p", null, "1. Affiner avec bureau d'études (CFD, dim. batteries)"), /*#__PURE__*/React.createElement("p", null, "2. Lancer raccordement ENEDIS (3-6 mois)"), /*#__PURE__*/React.createElement("p", null, "3. Déposer aides AVANT travaux"), /*#__PURE__*/React.createElement("p", null, "4. Contacter investisseur (voir Écosystème)"), /*#__PURE__*/React.createElement("p", null, "5. Argumentaire autorité délégante"), /*#__PURE__*/React.createElement("p", null, "6. Consulter chantiers (devis + planning)"))), /*#__PURE__*/React.createElement(Prev, {
     to: 12
   }))));
 }
