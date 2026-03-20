@@ -1084,130 +1084,164 @@
     });
   }
 
-  // ── VIDEO RECORDING (offscreen renderer + MediaRecorder) ──
+  // ── VIDEO RECORDING (RenderTarget + compositing canvas + MediaRecorder) ──
   async function recordVideo(targetW: number, targetH: number, label: string) {
     dlWrap!.classList.remove('open');
     const origText = dlBtn!.querySelector('.mono')!;
     const origLabel = origText.textContent;
     dlBtn!.style.pointerEvents = 'none';
 
-    // Save camera state
+    // Save state
     const savedAutoRotate = controls.autoRotate;
+    const savedW = container.clientWidth;
+    const savedH = container.clientHeight;
     const savedAzimuth = controls.getAzimuthalAngle();
     const savedPolar = controls.getPolarAngle();
     const savedDist = camera.position.length();
+    const savedPixelRatio = renderer.getPixelRatio();
 
-    // Stop auto-rotate
-    controls.autoRotate = false;
-    if (!spinDone) { spinDone = true; controls.autoRotateSpeed = AUTO_ROTATE_SPEED; }
-    tooltip.classList.remove('visible');
+    function restore() {
+      renderer.setRenderTarget(null);
+      renderer.setSize(savedW, savedH);
+      renderer.setPixelRatio(savedPixelRatio);
+      camera.aspect = savedW / savedH;
+      camera.updateProjectionMatrix();
+      camera.position.x = savedDist * Math.sin(savedPolar) * Math.sin(savedAzimuth);
+      camera.position.z = savedDist * Math.sin(savedPolar) * Math.cos(savedAzimuth);
+      camera.position.y = savedDist * Math.cos(savedPolar);
+      camera.lookAt(0, 0, 0);
+      controls.autoRotate = savedAutoRotate;
+      origText.textContent = origLabel;
+      dlBtn!.style.pointerEvents = '';
+    }
 
-    // Create offscreen renderer at target resolution (don't touch the visible one)
-    const offRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    offRenderer.setSize(targetW, targetH);
-    offRenderer.setPixelRatio(1);
+    try {
+      controls.autoRotate = false;
+      if (!spinDone) { spinDone = true; controls.autoRotateSpeed = AUTO_ROTATE_SPEED; }
+      tooltip.classList.remove('visible');
 
-    // Offscreen camera with target aspect
-    const offCamera = camera.clone() as THREE.PerspectiveCamera;
-    offCamera.aspect = targetW / targetH;
-    offCamera.updateProjectionMatrix();
+      // RenderTarget at target resolution (reuses existing WebGL context)
+      const rt = new THREE.WebGLRenderTarget(targetW, targetH, {
+        format: THREE.RGBAFormat,
+        type: THREE.UnsignedByteType,
+      });
 
-    // Compositing canvas (WebGL frame + 2D watermark)
-    const compCanvas = document.createElement('canvas');
-    compCanvas.width = targetW;
-    compCanvas.height = targetH;
-    const compCtx = compCanvas.getContext('2d')!;
+      // Compositing canvas for MediaRecorder (2D context for watermark)
+      const compCanvas = document.createElement('canvas');
+      compCanvas.width = targetW;
+      compCanvas.height = targetH;
+      const compCtx = compCanvas.getContext('2d')!;
 
-    // Render one frame to stabilize
-    offRenderer.render(scene, offCamera);
-    await new Promise(r => setTimeout(r, 100));
+      // Pixel buffer to read from RenderTarget
+      const pixelBuf = new Uint8Array(targetW * targetH * 4);
 
-    // Setup MediaRecorder on the compositing canvas
-    const stream = compCanvas.captureStream(30);
-    const mimeType = MediaRecorder.isTypeSupported('video/webm;codecs=vp9')
-      ? 'video/webm;codecs=vp9'
-      : 'video/webm;codecs=vp8';
-    const recorder = new MediaRecorder(stream, { mimeType, videoBitsPerSecond: 8_000_000 });
-    const chunks: Blob[] = [];
-    recorder.ondataavailable = (e) => { if (e.data.size > 0) chunks.push(e.data); };
+      // Temporary ImageData for putImageData
+      const imgData = new ImageData(targetW, targetH);
 
-    const recordingDone = new Promise<Blob>((resolve) => {
-      recorder.onstop = () => resolve(new Blob(chunks, { type: mimeType }));
-    });
+      // Adjust camera aspect for target
+      camera.aspect = targetW / targetH;
+      camera.updateProjectionMatrix();
 
-    // Recording parameters: 3 rotations in 18 seconds
-    const ROTATIONS = 3;
-    const DURATION_MS = 18_000;
-    const startTime = performance.now();
+      // Render one frame to stabilize
+      renderer.setRenderTarget(rt);
+      renderer.render(scene, camera);
+      renderer.setRenderTarget(null);
+      await new Promise(r => setTimeout(r, 100));
 
-    origText.textContent = 'Enregistrement 0%...';
-    recorder.start();
+      // Setup MediaRecorder on the compositing canvas
+      const stream = compCanvas.captureStream(30);
+      const mimeType = MediaRecorder.isTypeSupported('video/webm;codecs=vp9')
+        ? 'video/webm;codecs=vp9'
+        : 'video/webm;codecs=vp8';
+      const recorder = new MediaRecorder(stream, { mimeType, videoBitsPerSecond: 8_000_000 });
+      const chunks: Blob[] = [];
+      recorder.ondataavailable = (e) => { if (e.data.size > 0) chunks.push(e.data); };
 
-    // Animate the recording
-    await new Promise<void>((resolve) => {
-      function recordFrame() {
-        const elapsed = performance.now() - startTime;
-        const progress = Math.min(elapsed / DURATION_MS, 1);
+      const recordingDone = new Promise<Blob>((resolve) => {
+        recorder.onstop = () => resolve(new Blob(chunks, { type: mimeType }));
+      });
 
-        // Rotate offscreen camera
-        const angle = savedAzimuth + progress * ROTATIONS * Math.PI * 2;
-        offCamera.position.x = savedDist * Math.sin(savedPolar) * Math.sin(angle);
-        offCamera.position.z = savedDist * Math.sin(savedPolar) * Math.cos(angle);
-        offCamera.position.y = savedDist * Math.cos(savedPolar);
-        offCamera.lookAt(0, 0, 0);
+      const ROTATIONS = 3;
+      const DURATION_MS = 18_000;
+      const startTime = performance.now();
 
-        // ZEE pulse animation
-        const pulse = 0.18 + Math.sin(progress * ROTATIONS * Math.PI * 6) * 0.04;
-        for (const obj of zoneObjects) {
-          (obj.mesh.material as any).opacity = pulse;
+      origText.textContent = 'Enregistrement 0%...';
+      recorder.start();
+
+      await new Promise<void>((resolve) => {
+        function recordFrame() {
+          const elapsed = performance.now() - startTime;
+          const progress = Math.min(elapsed / DURATION_MS, 1);
+
+          // Rotate camera
+          const angle = savedAzimuth + progress * ROTATIONS * Math.PI * 2;
+          camera.position.x = savedDist * Math.sin(savedPolar) * Math.sin(angle);
+          camera.position.z = savedDist * Math.sin(savedPolar) * Math.cos(angle);
+          camera.position.y = savedDist * Math.cos(savedPolar);
+          camera.lookAt(0, 0, 0);
+
+          // ZEE pulse
+          const pulse = 0.18 + Math.sin(progress * ROTATIONS * Math.PI * 6) * 0.04;
+          for (const obj of zoneObjects) {
+            (obj.mesh.material as any).opacity = pulse;
+          }
+
+          // Render to offscreen RenderTarget
+          renderer.setRenderTarget(rt);
+          renderer.render(scene, camera);
+
+          // Read pixels from RenderTarget
+          renderer.readRenderTargetPixels(rt, 0, 0, targetW, targetH, pixelBuf);
+          renderer.setRenderTarget(null);
+
+          // WebGL pixels are bottom-up, flip vertically into ImageData
+          for (let y = 0; y < targetH; y++) {
+            const srcRow = (targetH - 1 - y) * targetW * 4;
+            const dstRow = y * targetW * 4;
+            imgData.data.set(pixelBuf.subarray(srcRow, srcRow + targetW * 4), dstRow);
+          }
+
+          // Composite onto 2D canvas
+          compCtx.putImageData(imgData, 0, 0);
+
+          // Watermark
+          const fontSize = Math.round(targetW * 0.014);
+          compCtx.font = `400 ${fontSize}px Poppins, sans-serif`;
+          compCtx.fillStyle = 'rgba(255,255,255,0.45)';
+          compCtx.textAlign = 'right';
+          compCtx.textBaseline = 'bottom';
+          compCtx.fillText('colombanatsea.com', targetW - 20, targetH - 16);
+
+          origText.textContent = `Enregistrement ${Math.round(progress * 100)}%...`;
+
+          if (progress < 1) {
+            requestAnimationFrame(recordFrame);
+          } else {
+            recorder.stop();
+            resolve();
+          }
         }
+        requestAnimationFrame(recordFrame);
+      });
 
-        // Render 3D to offscreen renderer
-        offRenderer.render(scene, offCamera);
+      origText.textContent = 'Finalisation...';
+      const blob = await recordingDone;
 
-        // Composite: draw WebGL frame then watermark on 2D canvas
-        compCtx.clearRect(0, 0, targetW, targetH);
-        compCtx.drawImage(offRenderer.domElement, 0, 0);
-        const fontSize = Math.round(targetW * 0.014);
-        compCtx.font = `400 ${fontSize}px Poppins, sans-serif`;
-        compCtx.fillStyle = 'rgba(255,255,255,0.45)';
-        compCtx.textAlign = 'right';
-        compCtx.textBaseline = 'bottom';
-        compCtx.fillText('colombanatsea.com', targetW - 20, targetH - 16);
+      // Clean up RenderTarget
+      rt.dispose();
 
-        origText.textContent = `Enregistrement ${Math.round(progress * 100)}%...`;
+      // Download
+      const a = document.createElement('a');
+      a.download = `globe-colomban-${label}.webm`;
+      a.href = URL.createObjectURL(blob);
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 
-        if (progress < 1) {
-          requestAnimationFrame(recordFrame);
-        } else {
-          recorder.stop();
-          resolve();
-        }
-      }
-      requestAnimationFrame(recordFrame);
-    });
-
-    origText.textContent = 'Finalisation...';
-    const blob = await recordingDone;
-
-    // Clean up offscreen renderer
-    offRenderer.dispose();
-
-    // Download
-    const a = document.createElement('a');
-    a.download = `globe-colomban-${label}.webm`;
-    a.href = URL.createObjectURL(blob);
-    a.click();
-    URL.revokeObjectURL(a.href);
-
-    // Restore camera to original position
-    camera.position.x = savedDist * Math.sin(savedPolar) * Math.sin(savedAzimuth);
-    camera.position.z = savedDist * Math.sin(savedPolar) * Math.cos(savedAzimuth);
-    camera.position.y = savedDist * Math.cos(savedPolar);
-    camera.lookAt(0, 0, 0);
-    controls.autoRotate = savedAutoRotate;
-    origText.textContent = origLabel;
-    dlBtn!.style.pointerEvents = '';
+      restore();
+    } catch (err) {
+      console.error('Video recording failed:', err);
+      restore();
+    }
   }
 
   document.getElementById('dl-video-post')?.addEventListener('click', (e) => {
