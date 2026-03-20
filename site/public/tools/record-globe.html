@@ -527,40 +527,51 @@ window.startRecording = async function(format) {
 
   // Frame-by-frame recording using requestAnimationFrame
   let frameIndex = 0;
+  console.log('Starting frame loop, totalFrames:', totalFrames, 'stream tracks:', stream.getVideoTracks().length);
   await new Promise((resolveLoop) => {
     function recordFrame() {
-      if (frameIndex >= totalFrames) {
+      try {
+        if (frameIndex >= totalFrames) {
+          resolveLoop();
+          return;
+        }
+
+        // Rotate camera around globe
+        const progress = frameIndex / totalFrames;
+        const angle = startAzimuth + progress * Math.PI * 2 * ROTATIONS;
+
+        camera.position.x = dist * Math.sin(polar) * Math.sin(angle);
+        camera.position.z = dist * Math.sin(polar) * Math.cos(angle);
+        camera.position.y = dist * Math.cos(polar);
+        camera.lookAt(0, 0, 0);
+
+        // ZEE pulse
+        const pulse = 0.18 + Math.sin(frameIndex * 0.3) * 0.04;
+        zoneGroup.children.forEach(child => {
+          if (child.isMesh && child.material) child.material.opacity = pulse;
+        });
+
+        renderer.render(scene, camera);
+
+        // Request frame capture
+        const track = stream.getVideoTracks()[0];
+        if (track && track.requestFrame) {
+          track.requestFrame();
+        }
+
+        // Update progress
+        const pct = Math.round((frameIndex + 1) / totalFrames * 100);
+        progressFill.style.width = pct + '%';
+        statusEl.textContent = `Enregistrement ${label} — ${pct}%`;
+
+        if (frameIndex === 0) console.log('First frame rendered OK');
+
+        frameIndex++;
+        requestAnimationFrame(recordFrame);
+      } catch(err) {
+        console.error('recordFrame error at frame', frameIndex, err);
         resolveLoop();
-        return;
       }
-
-      // Rotate camera around globe
-      const progress = frameIndex / totalFrames;
-      const angle = startAzimuth + progress * Math.PI * 2 * ROTATIONS;
-
-      camera.position.x = dist * Math.sin(polar) * Math.sin(angle);
-      camera.position.z = dist * Math.sin(polar) * Math.cos(angle);
-      camera.position.y = dist * Math.cos(polar);
-      camera.lookAt(0, 0, 0);
-
-      // ZEE pulse
-      const pulse = 0.18 + Math.sin(frameIndex * 0.3) * 0.04;
-      zoneGroup.children.forEach(child => {
-        if (child.isMesh && child.material) child.material.opacity = pulse;
-      });
-
-      renderer.render(scene, camera);
-
-      // Request frame capture
-      stream.getVideoTracks()[0].requestFrame();
-
-      // Update progress
-      const pct = Math.round((frameIndex + 1) / totalFrames * 100);
-      progressFill.style.width = pct + '%';
-      statusEl.textContent = `Enregistrement ${label} — ${pct}%`;
-
-      frameIndex++;
-      requestAnimationFrame(recordFrame);
     }
     requestAnimationFrame(recordFrame);
   });
