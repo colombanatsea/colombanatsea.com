@@ -1084,51 +1084,46 @@
     });
   }
 
-  // ── VIDEO RECORDING (captureStream + MediaRecorder) ──
+  // ── VIDEO RECORDING (offscreen renderer + MediaRecorder) ──
   async function recordVideo(targetW: number, targetH: number, label: string) {
     dlWrap!.classList.remove('open');
     const origText = dlBtn!.querySelector('.mono')!;
     const origLabel = origText.textContent;
     dlBtn!.style.pointerEvents = 'none';
 
-    // Save state
+    // Save camera state
     const savedAutoRotate = controls.autoRotate;
-    const savedW = container.clientWidth;
-    const savedH = container.clientHeight;
     const savedAzimuth = controls.getAzimuthalAngle();
     const savedPolar = controls.getPolarAngle();
     const savedDist = camera.position.length();
 
-    // Stop auto-rotate, disable damping for precise control
+    // Stop auto-rotate
     controls.autoRotate = false;
     if (!spinDone) { spinDone = true; controls.autoRotateSpeed = AUTO_ROTATE_SPEED; }
-
-    // Hide overlays
-    const legend = document.getElementById('legend')!;
-    const counter = document.getElementById('total-counter')!;
-    const dlWrapEl = document.getElementById('globe-download-wrap')!;
-    legend.style.display = 'none';
-    counter.style.display = 'none';
-    dlWrapEl.style.visibility = 'hidden';
     tooltip.classList.remove('visible');
 
-    // Resize renderer to target
-    renderer.setSize(targetW, targetH);
-    renderer.setPixelRatio(1);
-    camera.aspect = targetW / targetH;
-    camera.updateProjectionMatrix();
+    // Create offscreen renderer at target resolution (don't touch the visible one)
+    const offRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    offRenderer.setSize(targetW, targetH);
+    offRenderer.setPixelRatio(1);
 
-    // Force canvas to exact size via style
-    const canvas = renderer.domElement;
-    canvas.style.width = targetW + 'px';
-    canvas.style.height = targetH + 'px';
+    // Offscreen camera with target aspect
+    const offCamera = camera.clone() as THREE.PerspectiveCamera;
+    offCamera.aspect = targetW / targetH;
+    offCamera.updateProjectionMatrix();
+
+    // Compositing canvas (WebGL frame + 2D watermark)
+    const compCanvas = document.createElement('canvas');
+    compCanvas.width = targetW;
+    compCanvas.height = targetH;
+    const compCtx = compCanvas.getContext('2d')!;
 
     // Render one frame to stabilize
-    renderer.render(scene, camera);
+    offRenderer.render(scene, offCamera);
     await new Promise(r => setTimeout(r, 100));
 
-    // Setup MediaRecorder
-    const stream = canvas.captureStream(30);
+    // Setup MediaRecorder on the compositing canvas
+    const stream = compCanvas.captureStream(30);
     const mimeType = MediaRecorder.isTypeSupported('video/webm;codecs=vp9')
       ? 'video/webm;codecs=vp9'
       : 'video/webm;codecs=vp8';
@@ -1154,12 +1149,12 @@
         const elapsed = performance.now() - startTime;
         const progress = Math.min(elapsed / DURATION_MS, 1);
 
-        // Rotate camera
+        // Rotate offscreen camera
         const angle = savedAzimuth + progress * ROTATIONS * Math.PI * 2;
-        camera.position.x = savedDist * Math.sin(savedPolar) * Math.sin(angle);
-        camera.position.z = savedDist * Math.sin(savedPolar) * Math.cos(angle);
-        camera.position.y = savedDist * Math.cos(savedPolar);
-        camera.lookAt(0, 0, 0);
+        offCamera.position.x = savedDist * Math.sin(savedPolar) * Math.sin(angle);
+        offCamera.position.z = savedDist * Math.sin(savedPolar) * Math.cos(angle);
+        offCamera.position.y = savedDist * Math.cos(savedPolar);
+        offCamera.lookAt(0, 0, 0);
 
         // ZEE pulse animation
         const pulse = 0.18 + Math.sin(progress * ROTATIONS * Math.PI * 6) * 0.04;
@@ -1167,19 +1162,18 @@
           (obj.mesh.material as any).opacity = pulse;
         }
 
-        // Watermark
-        renderer.render(scene, camera);
+        // Render 3D to offscreen renderer
+        offRenderer.render(scene, offCamera);
 
-        // Draw watermark on canvas
-        const ctx2d = canvas.getContext('2d');
-        if (ctx2d) {
-          const fontSize = Math.round(targetW * 0.014);
-          ctx2d.font = `400 ${fontSize}px Poppins, sans-serif`;
-          ctx2d.fillStyle = 'rgba(255,255,255,0.45)';
-          ctx2d.textAlign = 'right';
-          ctx2d.textBaseline = 'bottom';
-          ctx2d.fillText('colombanatsea.com', targetW - 20, targetH - 16);
-        }
+        // Composite: draw WebGL frame then watermark on 2D canvas
+        compCtx.clearRect(0, 0, targetW, targetH);
+        compCtx.drawImage(offRenderer.domElement, 0, 0);
+        const fontSize = Math.round(targetW * 0.014);
+        compCtx.font = `400 ${fontSize}px Poppins, sans-serif`;
+        compCtx.fillStyle = 'rgba(255,255,255,0.45)';
+        compCtx.textAlign = 'right';
+        compCtx.textBaseline = 'bottom';
+        compCtx.fillText('colombanatsea.com', targetW - 20, targetH - 16);
 
         origText.textContent = `Enregistrement ${Math.round(progress * 100)}%...`;
 
@@ -1196,6 +1190,9 @@
     origText.textContent = 'Finalisation...';
     const blob = await recordingDone;
 
+    // Clean up offscreen renderer
+    offRenderer.dispose();
+
     // Download
     const a = document.createElement('a');
     a.download = `globe-colomban-${label}.webm`;
@@ -1203,21 +1200,12 @@
     a.click();
     URL.revokeObjectURL(a.href);
 
-    // Restore everything
-    canvas.style.width = '';
-    canvas.style.height = '';
-    renderer.setSize(savedW, savedH);
-    renderer.setPixelRatio(PX_RATIO);
-    camera.aspect = savedW / savedH;
-    camera.updateProjectionMatrix();
+    // Restore camera to original position
     camera.position.x = savedDist * Math.sin(savedPolar) * Math.sin(savedAzimuth);
     camera.position.z = savedDist * Math.sin(savedPolar) * Math.cos(savedAzimuth);
     camera.position.y = savedDist * Math.cos(savedPolar);
     camera.lookAt(0, 0, 0);
     controls.autoRotate = savedAutoRotate;
-    legend.style.display = '';
-    counter.style.display = '';
-    dlWrapEl.style.visibility = '';
     origText.textContent = origLabel;
     dlBtn!.style.pointerEvents = '';
   }
