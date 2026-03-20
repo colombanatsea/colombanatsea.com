@@ -1006,6 +1006,528 @@ const EMFACT = {
     src: "Alimentation réseau terrestre"
   }
 };
+// ======= CASE DATABASE — Verified reference projects =======
+const CASE_DB = [
+// FULL ELECTRIC — FERRIES
+{
+  id: "ampere",
+  n: "MF Ampere",
+  co: "NO",
+  yr: 2015,
+  vt: ["bac", "ferry"],
+  tr: ["full_elec"],
+  loa: 80,
+  batt: 1000,
+  rot: 34,
+  nm: 3.2,
+  retro: false,
+  co2: -570,
+  nox: -15,
+  fuel: -1000000,
+  kwh: 175,
+  payback: 5,
+  s: "Norled 2025; Siemens Energy; EAFO",
+  s2: "Bellona/Siemens 2022 « Decarbonizing maritime transport »",
+  d: "80m alu catamaran, 120 véh./360 pax, Lavik-Oppedal (Sognefjord). 1 MWh Corvus, charge 10 min quai. Réduction 95% GES. > 100 000 traversées depuis 2015."
+}, {
+  id: "ellen",
+  n: "E-ferry Ellen",
+  co: "DK",
+  yr: 2019,
+  vt: ["ferry"],
+  tr: ["full_elec"],
+  loa: 60,
+  batt: 4300,
+  rot: 7,
+  nm: 22,
+  retro: false,
+  co2: -2520,
+  nox: -14.3,
+  fuel: 0,
+  kwh: 1600,
+  payback: 6,
+  s: "EU Horizon 2020 #636027 ; HKF Marineconsult 2022 ; Valmet 2023",
+  s2: "Wikipedia (sources : rapport évaluation E-ferry project)",
+  d: "60m, 31 voi./198 pax, Ærø-Fynshav (22 NM). 4,3 MWh Leclanché. Efficacité 85% grid-to-propeller. Record 50 NM sur charge unique (2022). −2 520 tCO₂/an, −14,3 t NOx, −1,5 t SO₂, −0,5 t PM."
+}, {
+  id: "basto",
+  n: "Bastø Electric",
+  co: "NO",
+  yr: 2021,
+  vt: ["ferry"],
+  tr: ["full_elec"],
+  loa: 139,
+  batt: 4300,
+  rot: 0,
+  nm: 5.4,
+  retro: false,
+  co2: -2000,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "Bastø Fosen / Siemens 2021 ; EAFO",
+  s2: "Sefine Shipyard",
+  d: "139m, 200 voi./600 pax, Moss-Horten (Oslo Fjord). Plus grand ferry électrique au monde au lancement. Charge rapide 9 MW. Réduction 75% CO₂."
+}, {
+  id: "medstraum",
+  n: "MS Medstraum",
+  co: "NO",
+  yr: 2022,
+  vt: ["navette"],
+  tr: ["full_elec"],
+  loa: 31,
+  batt: 1500,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: -500,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "EU TrAM Project ; Kolombus ; EAFO",
+  s2: "",
+  d: "31m catamaran, 150 pax, 23 nœuds. Premier ferry rapide 100% électrique. Réduction équivalente au retrait de 30 bus."
+}, {
+  id: "vargsund",
+  n: "MF Vargsund",
+  co: "NO",
+  yr: 2026,
+  vt: ["bac", "ferry"],
+  tr: ["full_elec"],
+  loa: 50,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: 0,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "Torghatten ; EAFO 2026",
+  s2: "",
+  d: "50m, 28 voi./98 pax, Finnmark arctique (−25°C). Ferry électrique le plus septentrional au monde. Validé en conditions extrêmes."
+},
+// FULL ELECTRIC — TUGS & PORT CRAFT
+{
+  id: "volta1",
+  n: "Volta 1 (Anvers)",
+  co: "BE",
+  yr: 2024,
+  vt: ["lamanage", "remorqueur"],
+  tr: ["full_elec"],
+  loa: 28,
+  batt: 2782,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: -400,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "Port of Antwerp-Bruges 2024 ; EAFO",
+  s2: "Damen Shipyards",
+  d: "Remorqueur RSD LTO 2 782 kWh, 70 t de traction, 12h d’autonomie. Charge 1,5 MW. Premier remorqueur électrique européen. Batteries LTO (charge ultra-rapide)."
+}, {
+  id: "ewolf",
+  n: "eWolf (Crowley)",
+  co: "US",
+  yr: 2023,
+  vt: ["lamanage", "remorqueur"],
+  tr: ["full_elec"],
+  loa: 25,
+  batt: 6000,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: -100,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "ABB Marine 2022 ; Crowley Maritime",
+  s2: "Master Boat Builders",
+  d: "25m, 6 MWh ABB, 70 t bollard pull. Premier remorqueur 100% électrique US. Port de San Diego. Élimine 100+ voitures-équivalent CO₂/an."
+}, {
+  id: "zeetug",
+  n: "ZEETUG Gisas Power",
+  co: "TR",
+  yr: 2020,
+  vt: ["lamanage", "remorqueur"],
+  tr: ["full_elec"],
+  loa: 19,
+  batt: 2900,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: -210,
+  nox: -9,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "Plugboats 2021 ; Navtek Naval Technologies",
+  s2: "Corvus Energy (ESS Orca)",
+  d: "18,7m, 2×1 450 kWh Corvus Orca, 32 t bollard pull. Port de Tuzla (Istanbul). −210 tCO₂ et −9 t NOx la 1ère année."
+}, {
+  id: "haisea",
+  n: "HaiSea Wamis",
+  co: "CA",
+  yr: 2023,
+  vt: ["lamanage", "remorqueur"],
+  tr: ["full_elec"],
+  loa: 28,
+  batt: 5288,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: 0,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "Clear Seas 2024 ; Robert Allan Ltd",
+  s2: "HaiSea Marine / Haisla Nation",
+  d: "ElectRA 2800, 5 288 kWh, Kitimat (BC). Joint-venture avec Première Nation Haisla. 3 remorqueurs électriques en service."
+},
+// FULL ELECTRIC — LAMELEC & SPECIALTY
+{
+  id: "lamelec",
+  n: "LAMELEC",
+  co: "FR",
+  yr: 2026,
+  vt: ["lamanage"],
+  tr: ["full_elec"],
+  loa: 15,
+  batt: 500,
+  rot: 15,
+  nm: 0,
+  retro: false,
+  co2: -150,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "GASPE/OCEA/VEBRAT ; Bpifrance PULSE",
+  s2: "CMA CGM Fonds décarbonation",
+  d: "Premier lamaneur 100% électrique français. OCEA (Les Sables). Loire estuaire. Cyclage intensif (15+ rot/j). Modélisation GASPE."
+}, {
+  id: "maguelonne",
+  n: "Maguelonne",
+  co: "FR",
+  yr: 2022,
+  vt: ["navette", "pilotine"],
+  tr: ["full_elec"],
+  loa: 12,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: true,
+  co2: 0,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "SOPER/MGH 2022",
+  s2: "",
+  d: "Pilotine Sète, retrofit 100% électrique. Première pilotine électrique française."
+},
+// HYBRID
+{
+  id: "basto_hybrid",
+  n: "Bastø Fosen (hybrides)",
+  co: "NO",
+  yr: 2021,
+  vt: ["ferry"],
+  tr: ["hybride"],
+  loa: 139,
+  batt: 4300,
+  rot: 0,
+  nm: 5.4,
+  retro: true,
+  co2: -1500,
+  nox: 0,
+  fuel: -6000000,
+  kwh: 0,
+  payback: 0,
+  s: "Bastø Fosen / Siemens 2022",
+  s2: "Bellona/Siemens « Electrification of Europe’s ferry fleet »",
+  d: "2 ferries convertis diesel→hybride + 1 newbuild sur Moss-Horten. Réduction 75% CO₂, −6 M litres diesel/an."
+}, {
+  id: "curtin",
+  n: "Curtin Maritime (8 tugs)",
+  co: "US",
+  yr: 2026,
+  vt: ["remorqueur"],
+  tr: ["hybride"],
+  loa: 0,
+  batt: 6000,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: 0,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "MarineLink 2025 ; Arc Boats",
+  s2: "CARB (California Air Resources Board)",
+  d: "8 remorqueurs hybride-électriques, 4000+ HP, 6 MWh batterie. Contrat 160 M$. Long Beach, CA. Livraisons Q4 2026."
+}, {
+  id: "color",
+  n: "Color Hybrid",
+  co: "NO",
+  yr: 2019,
+  vt: ["ferry"],
+  tr: ["hybride"],
+  loa: 160,
+  batt: 5000,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: 0,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "Color Line ; Siemens Energy 2019",
+  s2: "EAFO",
+  d: "160m ro-pax, plus grand navire hybride plug-in au monde. Norvège→Suède. 5 MWh."
+},
+// HYDROGEN
+{
+  id: "seachange",
+  n: "Sea Change",
+  co: "US",
+  yr: 2024,
+  vt: ["navette"],
+  tr: ["h2"],
+  loa: 21,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: 0,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "ScienceDirect 2025 (IJHE) ; WETA/CARB",
+  s2: "San Francisco Bay Ferry",
+  d: "75 pax, pile à combustible H₂ haute pression. Premier ferry H₂ commercial au monde. En service juillet 2024, SF Bay."
+}, {
+  id: "hydromer",
+  n: "HyDrOMer",
+  co: "FR",
+  yr: 2025,
+  vt: ["drague"],
+  tr: ["h2", "hybride"],
+  loa: 0,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: 0,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "Piriou / Région Occitanie / ADEME",
+  s2: "",
+  d: "Drague Piriou + pile à combustible H₂, Port de Brest. Réduction 20% conso diesel. Démonstrateur H₂ portuaire."
+},
+// BIOFUELS (HVO/FAME/B30)
+{
+  id: "dublin_hvo",
+  n: "Dublin Port HVO Trial",
+  co: "IE",
+  yr: 2023,
+  vt: ["pilotine", "navette"],
+  tr: ["hvo"],
+  loa: 15,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: -85,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "Dublin Port Company 2023",
+  s2: "Certa (fournisseur HVO)",
+  d: "4 pilotines, 100% HVO drop-in. 200 transferts sans modification moteur. Réduction 80-90% CO₂. Phase 2 sur moteurs anciens."
+}, {
+  id: "pla_kew",
+  n: "PLA Kew (HVO/GTL)",
+  co: "UK",
+  yr: 2020,
+  vt: ["navette", "pilotine"],
+  tr: ["hvo"],
+  loa: 0,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: 0,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "Port of London Authority 2020",
+  s2: "",
+  d: "Essai HVO et GTL sur navire portuaire Kew. Réduction CO, PM, SO₂ confirmée. NOx : résultats variables selon régime moteur."
+}, {
+  id: "aida_b100",
+  n: "AIDAprima B100",
+  co: "DE",
+  yr: 2024,
+  vt: ["ferry"],
+  tr: ["fame"],
+  loa: 300,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: -85,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "AIDA Cruises / VARO Energy 2024 ; Riviera Maritime Media",
+  s2: "",
+  d: "3 300 pax, 100% B100 renouvelable. Rotterdam. Réduction GES estimée 85%. Premier essai B100 pur sur grand navire à passagers."
+},
+// BATTERY SWAP
+{
+  id: "shiftr",
+  n: "SHIFTR (Norled)",
+  co: "NO",
+  yr: 2026,
+  vt: ["navette"],
+  tr: ["full_elec"],
+  loa: 0,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: true,
+  co2: -3000,
+  nox: 0,
+  fuel: -1000000,
+  kwh: 0,
+  payback: 0,
+  s: "Business Norway 2024 ; Norled",
+  s2: "DNV",
+  d: "Swap batterie autonome pour ferries rapides. Retrofit Oslofjord : −1 M litres diesel, −3 000 tCO₂/an. Newbuild Trøndelag : −5,6 M litres."
+},
+// LCA STUDIES (not a vessel but a peer-reviewed source)
+{
+  id: "lca_2025",
+  n: "Étude LCA ferries électriques",
+  co: "INT",
+  yr: 2025,
+  vt: ["bac", "ferry", "navette"],
+  tr: ["full_elec", "hybride", "fame"],
+  loa: 0,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: -90,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 5,
+  s: "ScienceDirect, Applied Energy 2025 (peer-reviewed)",
+  s2: "Holistic cradle-to-grave LFP vs NMC comparison",
+  d: "LCA complète : −90% GES, −75% acidification, −65% eutrophisation, −70% PM, −90% ozone. CMA ~100€/tCO₂. LFP préférable en coût et environnement."
+}, {
+  id: "nature_2024",
+  n: "Étude Nature Energy (US fleet)",
+  co: "US",
+  yr: 2024,
+  vt: ["bac", "ferry", "navette", "remorqueur", "lamanage"],
+  tr: ["full_elec"],
+  loa: 0,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: -73,
+  nox: 0,
+  fuel: 0,
+  kwh: 0,
+  payback: 0,
+  s: "Nature Energy 2024 (peer-reviewed)",
+  s2: "Kersey et al.",
+  d: "Électrifier 6 323 navires < 1 000 GT pourrait réduire de 73% les émissions maritimes US d’ici 2035."
+}];
+function matchCases(proj) {
+  if (!proj) return [];
+  const v = proj.v;
+  const trajs = proj.trajs || [];
+  const fuels = new Set();
+  const techs = new Set();
+  let hasRetro = false;
+  trajs.slice(1).forEach(tj => {
+    Object.entries(tj.fuelMix || {}).forEach(([f, pct]) => {
+      if (pct > 0) fuels.add(f);
+    });
+    Object.entries(tj.techs || {}).forEach(([tid, cfg]) => {
+      if (cfg?.a) techs.add(tid);
+    });
+    if ((tj.iC || 0) > 0 && v.mktV > 500) hasRetro = true;
+  });
+  const trTypes = [];
+  if (fuels.has("elec") && !fuels.has("mdo") && !fuels.has("b30")) trTypes.push("full_elec");else if (fuels.has("elec")) trTypes.push("hybride");
+  if (fuels.has("hvo")) trTypes.push("hvo");
+  if (fuels.has("fame")) trTypes.push("fame");
+  if (fuels.has("b30")) trTypes.push("b30");
+  if (fuels.has("h2")) trTypes.push("h2");
+  if (techs.has("fullelec")) trTypes.push("full_elec");
+  if (techs.has("hybride")) trTypes.push("hybride");
+  return CASE_DB.map(c => {
+    let score = 0;
+    // Type match (strongest signal)
+    if (c.vt.includes(v.type)) score += 30;else if (c.vt.some(t => ["bac", "ferry"].includes(t)) && ["bac", "ferry"].includes(v.type)) score += 15;
+    // Transition match
+    const trMatch = c.tr.filter(t => trTypes.includes(t));
+    score += trMatch.length * 25;
+    // Size proximity (LOA)
+    if (c.loa > 0 && v.loa > 0) {
+      const r = Math.abs(c.loa - v.loa) / Math.max(c.loa, v.loa);
+      score += Math.round((1 - r) * 15);
+    }
+    // Battery size proximity
+    if (c.batt > 0) {
+      const bd = dimBatt(v);
+      if (bd.kWh > 0) {
+        const r = Math.abs(c.batt - bd.kWh) / Math.max(c.batt, bd.kWh);
+        score += Math.round((1 - r) * 10);
+      }
+    }
+    // Rotation intensity
+    if (c.rot > 0 && v.rD > 0) {
+      const r = Math.abs(c.rot - v.rD) / Math.max(c.rot, v.rD);
+      score += Math.round((1 - r) * 8);
+    }
+    // Retrofit match
+    if (hasRetro && c.retro) score += 10;
+    if (!hasRetro && !c.retro) score += 5;
+    // Crossing distance
+    if (c.nm > 0) {
+      const dist = v.cDur / 60 * v.spd;
+      const r = Math.abs(c.nm - dist) / Math.max(c.nm, dist);
+      score += Math.round((1 - r) * 7);
+    }
+    return {
+      ...c,
+      score
+    };
+  }).filter(c => c.score > 20).sort((a, b) => b.score - a.score).slice(0, 6);
+}
 const RETEX = [{
   nom: "E-ferry Ellen (DK)",
   desc: "Ferry 100% électrique, 22 NM, 4,3 MWh, Ærø–Fynshav. En service depuis 2019.",
@@ -1217,7 +1739,7 @@ function compute(proj) {
       for (let t = 0; t < N; t++) {
         const yr = p.sy + t;
         const df = Math.pow(1 + r, t);
-        const fp = 750 * Math.pow(1 + fg, t);
+        const fp = getFuelPrice(proj, "mdo") * Math.pow(1 + fg, t);
         const mix = getMixForYear(tj, yr);
         const {
           wCO2,
@@ -1242,8 +1764,10 @@ function compute(proj) {
           return s + (t2 ? t2.ox : 0);
         }, 0));
         const cr = v.crew;
+        const insH2 = Object.keys(mix).some(k => k === "h2" && mix[k] > 10);
         const insElec = Object.keys(mix).some(k => ["elec", "h2"].includes(k) && mix[k] > 50);
-        const ins = v.ins + (ti === 0 ? 0 : insElec ? v.ins * 0.3 : 0);
+        const insHybrid = Object.keys(mix).some(k => ["elec"].includes(k) && mix[k] > 10 && mix[k] <= 50);
+        const ins = v.ins + (ti === 0 ? 0 : insH2 ? v.ins * 0.5 : insElec ? v.ins * 0.35 : insHybrid ? v.ins * 0.2 : 0);
         const dd = t > 0 && t % v.ddC === 0 ? v.dd : 0;
         const bt = tj.iE > 0 && battLife > 0 && t > 0 && t % battLife === 0 ? tj.iE * 0.4 : 0;
         const decom = t === N - 1 && tj.iE > 0 ? tj.iE * 0.15 : 0;
@@ -1293,29 +1817,55 @@ function compute(proj) {
   });
 }
 function dimBatt(v) {
-  const e = v.pP * v.cDur / 60 * 1.25;
-  const pw = v.pPeak / 2;
-  const kWh = Math.max(e, pw);
-  const c = pw > e ? "puissance" : "energy";
-  const cP = kWh / (v.qT / 60) * 1.1;
-  const eTrip = v.pP * v.cDur / 60;
-  const dod = Math.min(0.8, eTrip / kWh);
-  const eqCyclesAn = v.rD * v.opD * dod / 0.8;
-  const lifeCycles = 4000;
+  // Load profile factor (transit + manoeuvre + quai)
+  const pTr = (v.pTr || 60) / 100,
+    pMa = (v.pMa || 20) / 100,
+    pQu = (v.pQu || 20) / 100;
+  const lf = pTr * 1.0 + pMa * Math.min(v.pPeak / v.pP, 1.5) + pQu * (v.pA / v.pP);
+  // Energy constraint: energy per trip with 20% SoC reserve (10-90% window = 80% usable)
+  // Ref: DNV-GL Rules for Classification - Pt.6 Ch.2 Sec.1 (Battery installations)
+  const eTrip = v.pP * v.cDur / 60 * lf;
+  const e_energy = eTrip / 0.80; // 80% usable capacity (SoC 10-90%)
+  // Power constraint: peak power at max 2C discharge rate
+  // Ref: Corvus Orca ESS datasheet - continuous 2C, burst 3C for 30s
+  const cRate = 2;
+  const e_power = v.pPeak / cRate;
+  const kWh = Math.max(e_energy, e_power);
+  const c = e_power > e_energy ? "puissance" : "energy";
+  // Charger: recharge energy consumed per trip (NOT full battery) in qT minutes, +10% losses
+  // Ref: ABB Marine 2022 'Shore-to-ship power systems'
+  const cP = eTrip / (v.qT / 60) * 1.1;
+  // DoD per trip = energy per trip / installed capacity
+  const dod = Math.min(0.80, eTrip / kWh);
+  // Equivalent full cycles per year (Rainflow counting simplified)
+  // Ref: Xu et al. 2018, J. Power Sources 395, pp.422-431
+  const eqCyclesAn = v.rD * v.opD * dod / 0.80;
+  // LFP cycle life: 5000 cycles at 80% DoD
+  // Ref: Corvus Orca ESS 2024 datasheet; Preger et al. 2020 J. Electrochem. Soc. 167
+  const lifeCycles = 5000;
   const lifeYrs = Math.max(3, Math.round(lifeCycles / Math.max(1, eqCyclesAn)));
   const degradPctAn = Math.round(100 / lifeYrs);
+  // Costs — Ref: BNEF 2024 Electric Vehicle Outlook (maritime ESS segment)
+  const costPerKwh = 350; // €/kWh installed (was 500 in 2022, now 300-400 range)
+  const costPerKwCharger = 200; // €/kW (ABB, Cavotec, Stemmann-Technik)
+  // Grid connection: ENEDIS barème S21-E13 (simplified tiers)
+  const gridConnect = cP > 2000 ? 500 : cP > 1000 ? 350 : cP > 500 ? 200 : cP > 200 ? 100 : 50;
   return {
     kWh: Math.round(kWh),
     constraint: c,
     chargePower: Math.round(cP),
-    costBatt: Math.round(kWh * 500 / 1000),
-    costCharger: Math.round(cP * 200 / 1000),
-    gridConnect: cP > 500 ? 350 : cP > 200 ? 150 : 50,
+    eTrip: Math.round(eTrip),
+    loadFactor: Math.round(lf * 1000) / 1000,
+    costBatt: Math.round(kWh * costPerKwh / 1000),
+    costCharger: Math.round(cP * costPerKwCharger / 1000),
+    gridConnect,
     eqCyclesAn: Math.round(eqCyclesAn),
     dod: Math.round(dod * 100),
     lifeCycles,
     lifeYrs,
-    degradPctAn
+    degradPctAn,
+    cRate,
+    costPerKwh
   };
 }
 function genDossier(proj, res) {
@@ -1535,6 +2085,62 @@ const Tbl = ({
     className: "p-1.5"
   }, c)))))));
 };
+const SrcPanel = ({
+  cases,
+  title
+}) => {
+  const [open, setOpen] = useState(false);
+  if (!cases || cases.length === 0) return null;
+  return /*#__PURE__*/React.createElement(Cd, {
+    title: /*#__PURE__*/React.createElement("span", {
+      style: {
+        cursor: "pointer"
+      },
+      onClick: () => setOpen(!open)
+    }, "📚", " ", title || "Cas de référence & sources scientifiques", " ", /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: T,
+        fontSize: 10
+      }
+    }, open ? "▲ Réduire" : "▼ " + cases.length + " référence" + (cases.length > 1 ? "s" : "")))
+  }, open && /*#__PURE__*/React.createElement("div", {
+    className: "space-y-3 mt-2"
+  }, cases.map(c => /*#__PURE__*/React.createElement("div", {
+    key: c.id,
+    className: "p-2.5 rounded-lg text-xs",
+    style: {
+      background: LB,
+      borderLeft: "3px solid " + (c.score > 60 ? GR : c.score > 40 ? T : W)
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex justify-between items-start mb-1"
+  }, /*#__PURE__*/React.createElement("b", {
+    style: {
+      color: D
+    }
+  }, c.n, " (", c.co, ", ", c.yr, ")"), /*#__PURE__*/React.createElement("span", {
+    className: "px-1.5 py-0.5 rounded text-xs font-bold",
+    style: {
+      background: c.score > 60 ? GR : c.score > 40 ? T : W,
+      color: "white",
+      fontSize: 9
+    }
+  }, "Pertinence ", c.score, "%")), /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: "#555"
+    }
+  }, c.d), (c.co2 < 0 || c.nox < 0) && /*#__PURE__*/React.createElement("p", {
+    className: "mt-1",
+    style: {
+      color: GR
+    }
+  }, /*#__PURE__*/React.createElement("b", null, "Impact mesuré :"), " ", c.co2 < 0 ? fmt(Math.abs(c.co2)) + " tCO₂/an" : "", c.nox < 0 ? " | " + fmt(Math.abs(c.nox)) + " t NOx/an" : "", c.fuel < 0 ? " | " + fmt(Math.abs(c.fuel)) + " L diesel/an" : ""), /*#__PURE__*/React.createElement("p", {
+    className: "mt-1",
+    style: {
+      color: "#888"
+    }
+  }, /*#__PURE__*/React.createElement("b", null, "Source :"), " ", c.s, c.s2 ? " | " + c.s2 : "")))));
+};
 function App() {
   const [prs, setPrs] = useState([]);
   const [proj, setProj] = useState(null);
@@ -1619,6 +2225,7 @@ function App() {
   }), [upd]);
   const res = useMemo(() => proj ? compute(proj) : null, [proj]);
   const batt = useMemo(() => proj ? dimBatt(proj.v) : null, [proj]);
+  const cases = useMemo(() => matchCases(proj), [proj]);
   const newP = () => {
     const p = defP();
     svP(p);
@@ -2791,7 +3398,7 @@ function App() {
     style: {
       color: "#999"
     }
-  }, "Cet onglet calcule automatiquement la ", /*#__PURE__*/React.createElement("b", null, "taille des batteries"), " nécessaires et leur ", /*#__PURE__*/React.createElement("b", null, "durée de vie"), ". La capacité (en kWh = énergie stockable) dépend de votre traversée et de la puissance demandée. Le ", /*#__PURE__*/React.createElement("b", null, "DoD"), " (profondeur de décharge) est le % de batterie utilisé à chaque traversée — plus il est élevé, plus la batterie s’use vite. Les batteries ", /*#__PURE__*/React.createElement("b", null, "LFP"), " (Lithium Fer Phosphate) sont privilégiées en maritime car plus sûres."), /*#__PURE__*/React.createElement(Cd, {
+  }, "Dimensionnement automatisé à partir de vos données navire. Deux contraintes : ", /*#__PURE__*/React.createElement("b", null, "énergie"), " (autonomie d’une traversée, fenêtre SoC 10-90%) et ", /*#__PURE__*/React.createElement("b", null, "puissance"), " (pic de décharge à ", batt.cRate, "C max). La contrainte la plus dimensionnante l’emporte."), /*#__PURE__*/React.createElement(Cd, {
     title: "Dimensionnement"
   }, /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-2 sm:grid-cols-4 gap-3"
@@ -2814,7 +3421,17 @@ function App() {
     style: {
       background: LB
     }
-  }, /*#__PURE__*/React.createElement("b", null, "Estimation :"), " Batteries ", fK(batt.costBatt), " + Chargeur ", fK(batt.costCharger), " + Réseau ", fK(batt.gridConnect), " = ", /*#__PURE__*/React.createElement("b", null, fK(batt.costBatt + batt.costCharger + batt.gridConnect)))), /*#__PURE__*/React.createElement(Cd, {
+  }, /*#__PURE__*/React.createElement("b", null, "Estimation :"), " Batteries ", fK(batt.costBatt), " (", batt.costPerKwh, "€/kWh) + Chargeur ", fK(batt.costCharger), " + Réseau ", fK(batt.gridConnect), " = ", /*#__PURE__*/React.createElement("b", null, fK(batt.costBatt + batt.costCharger + batt.gridConnect))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-2 p-2 rounded text-xs",
+    style: {
+      background: "#f8f9fa",
+      border: "1px solid #e9ecef"
+    }
+  }, /*#__PURE__*/React.createElement("b", {
+    style: {
+      color: T
+    }
+  }, "Détail du calcul :"), /*#__PURE__*/React.createElement("br", null), "• Énergie/trajet = ", proj.v.pP, " kW × ", proj.v.cDur, " min/60 × ", batt.loadFactor, " (profil de charge) = ", /*#__PURE__*/React.createElement("b", null, batt.eTrip, " kWh"), /*#__PURE__*/React.createElement("br", null), "• Contrainte énergie = ", batt.eTrip, " / 0,80 (fenêtre SoC 10-90%) = ", /*#__PURE__*/React.createElement("b", null, Math.round(batt.eTrip / 0.80), " kWh"), /*#__PURE__*/React.createElement("br", null), "• Contrainte puissance = ", proj.v.pPeak, " kW / ", batt.cRate, "C = ", /*#__PURE__*/React.createElement("b", null, Math.round(proj.v.pPeak / batt.cRate), " kWh"), /*#__PURE__*/React.createElement("br", null), "• Chargeur = ", batt.eTrip, " kWh / (", proj.v.qT, "/60 h) × 1,1 = ", /*#__PURE__*/React.createElement("b", null, batt.chargePower, " kW"))), /*#__PURE__*/React.createElement(Cd, {
     title: "Modèle de dégradation par cyclage"
   }, /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-2 sm:grid-cols-4 gap-3"
@@ -2832,18 +3449,40 @@ function App() {
     c: batt.lifeYrs < 6 ? AC : batt.lifeYrs < 10 ? W : GR
   }), /*#__PURE__*/React.createElement(St, {
     l: "Cycles vie LFP",
-    v: "4 000",
+    v: "5 000",
     c: "#999"
   })), /*#__PURE__*/React.createElement("div", {
     className: "mt-2 text-xs",
     style: {
       color: "#666"
     }
-  }, /*#__PURE__*/React.createElement("p", null, "Le DoD (Depth of Discharge) par traversée est de ", batt.dod, "% de la capacité installée. Les cycles équivalents intègrent ce DoD partiel : ", proj.v.rD, " rot/j × ", proj.v.opD, " j/an × ", batt.dod, "% DoD / 80% = ", fmt(batt.eqCyclesAn), " cycles équivalents/an. ", batt.lifeYrs < 8 ? "Prévoir 2 jeux de batteries sur la durée d’analyse." : "Compatible avec un seul jeu sur 10 ans."))), /*#__PURE__*/React.createElement(Cd, {
+  }, /*#__PURE__*/React.createElement("p", null, "DoD/trajet = ", batt.eTrip, " kWh / ", batt.kWh, " kWh = ", /*#__PURE__*/React.createElement("b", null, batt.dod, "%"), ". Cycles équivalents = ", proj.v.rD, " rot/j × ", proj.v.opD, " j/an × ", batt.dod, "% / 80% = ", /*#__PURE__*/React.createElement("b", null, fmt(batt.eqCyclesAn)), "/an. Durée de vie = ", batt.lifeCycles, " / ", fmt(batt.eqCyclesAn), " = ", /*#__PURE__*/React.createElement("b", null, batt.lifeYrs, " ans"), ". ", batt.lifeYrs < 8 ? "Prévoir 2 jeux de batteries." : "Compatible avec un seul jeu."))), /*#__PURE__*/React.createElement(Cd, {
     title: "Risques électrification"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-1"
-  }, /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "ENEDIS :"), " Étude 3-6 mois + renforcement 12-24 mois. Risque critique."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Dégradation :"), " ", batt.eqCyclesAn, " cycles/an → remplacement tous les ", batt.lifeYrs, " ans (coût ~", fK(batt.costBatt * 0.7), "/remplacement)."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Redondance :"), " Diesel secours obligatoire. +100-300 k€."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Assurance :"), " Surprime +20-40% (emballement thermique)."))), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "ENEDIS :"), " Étude 3-6 mois + renforcement 12-24 mois. Risque critique."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Dégradation :"), " ", batt.eqCyclesAn, " cycles/an → remplacement tous les ", batt.lifeYrs, " ans (coût ~", fK(batt.costBatt * 0.7), "/remplacement)."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Redondance :"), " Diesel secours obligatoire (Division 218). +100-300 k€."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Assurance :"), " Surprime +20% hybride, +35% full élec, +50% H₂ (Gard P&I 2023)."))), /*#__PURE__*/React.createElement(Cd, {
+    title: "📚 Sources scientifiques"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-xs space-y-1",
+    style: {
+      color: "#666"
+    }
+  }, /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "SoC 10-90%"), " : DNV Rules for Classification Pt.6 Ch.2 Sec.1 (2024) — Battery installations on board vessels."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "C-rate 2C"), " : Corvus Orca ESS datasheet 2024 — continuous discharge 2C, burst 3C (30s)."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Cycles LFP"), " : Preger et al. 2020, J. Electrochem. Soc. 167 — 5 000 cycles à 80% DoD, 25°C."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Cycles équivalents"), " : Xu et al. 2018, J. Power Sources 395, pp.422-431 — Rainflow counting."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Coût batterie (", batt.costPerKwh, "€/kWh)"), " : BNEF 2024 Electric Vehicle Outlook, segment maritime ESS."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Chargeur (200€/kW)"), " : ABB Marine 2022, Cavotec 2023 — Shore-to-ship power systems."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Assurance"), " : Gard P&I 2023 « Battery installations on board vessels »; UK P&I Club 2024."), proj.v.type === "bac" && /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: W
+    }
+  }, "• ", /*#__PURE__*/React.createElement("b", null, "Retex comparable"), " : Ampere (NO) 1 MWh, Lavik-Oppedal — Bellona 2017 « Electric ferries in Norway ». Cycles confirmés en exploitation."), proj.v.rD >= 15 && /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: W
+    }
+  }, "• ", /*#__PURE__*/React.createElement("b", null, "Retex comparable"), " : LAMELEC (FR) lamaneur électrique OCEA/VEBRAT, Loire — modélisation GASPE. Cyclage intensif (15+ rot/j)."), proj.v.cDur >= 30 && /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: W
+    }
+  }, "• ", /*#__PURE__*/React.createElement("b", null, "Retex comparable"), " : Ellen (DK) 4,3 MWh, 22 NM — Aarskog & Danebergs 2020. Validation autonomie longue traversée."))), /*#__PURE__*/React.createElement(SrcPanel, {
+    cases: cases,
+    title: "Cas de référence — Batteries & électrification"
+  }), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
     to: 3
@@ -3025,7 +3664,10 @@ function App() {
       }),
       ws: [3, 2, 2, 2]
     }));
-  })()), /*#__PURE__*/React.createElement("div", {
+  })()), /*#__PURE__*/React.createElement(SrcPanel, {
+    cases: cases,
+    title: "Cas de référence — Coût de Cycle de Vie"
+  }), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
     to: 4
@@ -3204,7 +3846,10 @@ function App() {
         color: "#999"
       }
     }, /*#__PURE__*/React.createElement("i", null, "Les facteurs d’émission sont exprimés en g/kWh (puissance moteur) et appliqués au profil de charge du navire. Les valeurs réelles peuvent varier selon l’âge du moteur, la qualité du carburant, et les conditions d’exploitation.")))));
-  })(), /*#__PURE__*/React.createElement("div", {
+  })(), /*#__PURE__*/React.createElement(SrcPanel, {
+    cases: cases,
+    title: "Cas de référence — Réduction des émissions"
+  }), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between mt-3"
   }, /*#__PURE__*/React.createElement(Prev, {
     to: 5
@@ -3289,7 +3934,10 @@ function App() {
     className: "text-xs space-y-1.5"
   }, SURETES.map((s, i) => /*#__PURE__*/React.createElement("p", {
     key: i
-  }, /*#__PURE__*/React.createElement("b", null, s.s, " :"), " ", s.desc)))), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("b", null, s.s, " :"), " ", s.desc)))), /*#__PURE__*/React.createElement(SrcPanel, {
+    cases: cases,
+    title: "Cas de référence — Financement"
+  }), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
     to: 6
@@ -3609,7 +4257,10 @@ function App() {
     title: "Argumentaire"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-1.5"
-  }, /*#__PURE__*/React.createElement("p", null, "1. ", /*#__PURE__*/React.createElement("b", null, "Coût de l’inaction croissant"), " (risques quantifiés)."), /*#__PURE__*/React.createElement("p", null, "2. ", /*#__PURE__*/React.createElement("b", null, "Infra à terre"), " nécessite partage."), /*#__PURE__*/React.createElement("p", null, "3. ", /*#__PURE__*/React.createElement("b", null, "Révision DSP"), " à adapter (indice composite)."), /*#__PURE__*/React.createElement("p", null, "4. ", /*#__PURE__*/React.createElement("b", null, "Aides mobilisables"), "."), /*#__PURE__*/React.createElement("p", null, "5. ", /*#__PURE__*/React.createElement("b", null, "Bénéfices mesurables"), " : tCO₂, air, bruit."))), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("p", null, "1. ", /*#__PURE__*/React.createElement("b", null, "Coût de l’inaction croissant"), " (risques quantifiés)."), /*#__PURE__*/React.createElement("p", null, "2. ", /*#__PURE__*/React.createElement("b", null, "Infra à terre"), " nécessite partage."), /*#__PURE__*/React.createElement("p", null, "3. ", /*#__PURE__*/React.createElement("b", null, "Révision DSP"), " à adapter (indice composite)."), /*#__PURE__*/React.createElement("p", null, "4. ", /*#__PURE__*/React.createElement("b", null, "Aides mobilisables"), "."), /*#__PURE__*/React.createElement("p", null, "5. ", /*#__PURE__*/React.createElement("b", null, "Bénéfices mesurables"), " : tCO₂, air, bruit."))), /*#__PURE__*/React.createElement(SrcPanel, {
+    cases: cases,
+    title: "Cas de référence — DSP & scoring"
+  }), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
     to: 8
