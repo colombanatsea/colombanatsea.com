@@ -462,7 +462,8 @@ function resizeRenderer(w, h) {
 }
 
 window.startRecording = async function(format) {
-  console.log('=== startRecording v4 ===', format);
+  console.log('=== startRecording v5 ===', format);
+  try {
   if (isRecording) return;
   isRecording = true;
 
@@ -592,6 +593,10 @@ window.startRecording = async function(format) {
   isRecording = false;
   btnSquare.disabled = false;
   btnPortrait.disabled = false;
+  } catch(err) {
+    console.error('startRecording ERROR:', err, err.stack);
+    isRecording = false;
+  }
 };
 </script>
 
