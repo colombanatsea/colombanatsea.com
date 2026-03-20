@@ -433,6 +433,7 @@ let fc = 0;
 // ── PREVIEW ANIMATION ──
 function animatePreview() {
   requestAnimationFrame(animatePreview);
+  if (isRecording) return; // Skip preview loop during recording
   fc++;
   controls.update();
   // ZEE pulse
