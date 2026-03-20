@@ -494,8 +494,9 @@ window.startRecording = async function(format) {
   const polar = controls.getPolarAngle();
   const dist = camera.position.length();
 
-  // Disable auto-rotate during recording (we control rotation manually)
+  // Disable controls during recording (we control camera manually)
   controls.autoRotate = false;
+  controls.enabled = false;
 
   // Use canvas.captureStream + MediaRecorder
   const stream = canvas.captureStream(0); // 0 = manual frame capture
@@ -579,6 +580,7 @@ window.startRecording = async function(format) {
   renderer.setPixelRatio(1);
   camera.position.set(2.8, 0.4, 0);
   camera.lookAt(0, 0, 0);
+  controls.enabled = true;
   controls.autoRotate = true;
   controls.autoRotateSpeed = 0.3;
 
