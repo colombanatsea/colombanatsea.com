@@ -902,6 +902,110 @@ const INFRA_SHARE = [{
   coll: "✓",
   inv: "✗"
 }];
+const ADEME_RATES = {
+  // SA.111726 - Investissements protection environnement
+  // [nature][zone][taille] -> taux %
+  navPropre: {
+    "-": {
+      PE: 50,
+      ME: 40,
+      GE: 20
+    }
+  },
+  navEmissionNulle: {
+    "-": {
+      PE: 60,
+      ME: 50,
+      GE: 30
+    }
+  },
+  amelioContrefactuel: {
+    hors: {
+      PE: 50,
+      ME: 40,
+      GE: 30
+    },
+    zoneC: {
+      PE: 55,
+      ME: 45,
+      GE: 35
+    },
+    zoneA: {
+      PE: 65,
+      ME: 55,
+      GE: 45
+    }
+  },
+  amelioSans: {
+    hors: {
+      PE: 25,
+      ME: 20,
+      GE: 15
+    },
+    zoneC: {
+      PE: 27.5,
+      ME: 22.5,
+      GE: 17.5
+    },
+    zoneA: {
+      PE: 32.5,
+      ME: 27.5,
+      GE: 22.5
+    }
+  },
+  etudes: {
+    "-": {
+      PE: 80,
+      ME: 70,
+      GE: 60
+    }
+  }
+};
+// SOx, NOx, PM emission factors (g/kWh) by fuel - Sources: IMO GHG Study 2020, ENTEC 2005, Cooper & Gustafsson 2004
+const EMFACT = {
+  mdo: {
+    sox: 10.3,
+    nox: 9.8,
+    pm: 0.38,
+    src: "IMO MEPC.1/Circ.684, Tier II"
+  },
+  b30: {
+    sox: 7.2,
+    nox: 8.8,
+    pm: 0.32,
+    src: "Bates et al. 2021, 30% FAME blend"
+  },
+  fame: {
+    sox: 0.8,
+    nox: 7.5,
+    pm: 0.18,
+    src: "Jayaram et al. 2011, B100"
+  },
+  hvo: {
+    sox: 0.5,
+    nox: 7.0,
+    pm: 0.12,
+    src: "Sjöblom 2023, HVO marine"
+  },
+  elec: {
+    sox: 0,
+    nox: 0,
+    pm: 0,
+    src: "Zéro émission directe"
+  },
+  h2: {
+    sox: 0,
+    nox: 0,
+    pm: 0,
+    src: "Pile à combustible, zéro émission directe"
+  },
+  ops: {
+    sox: 0,
+    nox: 0,
+    pm: 0,
+    src: "Alimentation réseau terrestre"
+  }
+};
 const RETEX = [{
   nom: "E-ferry Ellen (DK)",
   desc: "Ferry 100% électrique, 22 NM, 4,3 MWh, Ærø–Fynshav. En service depuis 2019.",
@@ -948,6 +1052,8 @@ const defP = () => ({
   v: {
     type: "bac",
     name: "",
+    entSize: "PE",
+    zoneAFR: "hors",
     ...VT[0].d
   },
   p: {
@@ -966,19 +1072,13 @@ const defP = () => ({
   },
   trajs: [{
     ...emT(),
-    name: "Trajectoire de référence",
+    name: "Trajectoire actuelle",
     fuelMix: {
       mdo: 100
     }
   }, {
     ...emT(),
     name: "Alternative 1"
-  }, {
-    ...emT(),
-    name: "Alternative 2"
-  }, {
-    ...emT(),
-    name: "Alternative 3"
   }],
   ao: {
     poidsEnviro: 30
@@ -1611,6 +1711,9 @@ function App() {
   }, {
     l: "CCV",
     i: "📊"
+  }, {
+    l: "RI",
+    i: "📉"
   }, {
     l: "Finance",
     i: "💰"
@@ -2428,7 +2531,7 @@ function App() {
     style: {
       color: "#999"
     }
-  }, "Une ", /*#__PURE__*/React.createElement("b", null, "trajectoire"), " est un scénario de transition. La première (« Référence ») représente la situation actuelle (100% MDO = gazole marin). Les 3 suivantes sont des alternatives que vous configurez : changement de carburant, ajout de technologies, investissements nécessaires. Le ", /*#__PURE__*/React.createElement("b", null, "mix énergétique"), " indique la répartition (en %) entre les carburants. Il peut évoluer dans le temps grâce aux ", /*#__PURE__*/React.createElement("b", null, "paliers de transition"), "."), /*#__PURE__*/React.createElement("div", {
+  }, "La ", /*#__PURE__*/React.createElement("b", null, "trajectoire actuelle"), " représente votre situation fossile. Ajoutez des ", /*#__PURE__*/React.createElement("b", null, "alternatives"), " (max 3) pour comparer les options de transition. Une ", /*#__PURE__*/React.createElement("b", null, "trajectoire"), " est un scénario de transition. La première (« Référence ») représente la situation actuelle (100% MDO = gazole marin). Les 3 suivantes sont des alternatives que vous configurez : changement de carburant, ajout de technologies, investissements nécessaires. Le ", /*#__PURE__*/React.createElement("b", null, "mix énergétique"), " indique la répartition (en %) entre les carburants. Il peut évoluer dans le temps grâce aux ", /*#__PURE__*/React.createElement("b", null, "paliers de transition"), "."), /*#__PURE__*/React.createElement("div", {
     className: "flex gap-1 mb-3 overflow-x-auto"
   }, proj.trajs.map((t, i) => /*#__PURE__*/React.createElement("button", {
     key: i,
@@ -2655,8 +2758,24 @@ function App() {
       n: "ENEDIS",
       h: "Raccordement au réseau électrique : étude ENEDIS/Enedis + travaux de renforcement si nécessaire. ATTENTION : délai 3-6 mois pour l’étude + 12-24 mois pour les travaux. C’est souvent le chemin critique du projet."
     }))));
-  })(), /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-between"
+  })(), proj.trajs.length < 4 && /*#__PURE__*/React.createElement("button", {
+    onClick: () => upd(p => {
+      const ts = [...p.trajs, {
+        ...emT(),
+        name: "Alternative " + p.trajs.length
+      }];
+      return {
+        ...p,
+        trajs: ts
+      };
+    }),
+    className: "w-full mt-3 px-3 py-2 rounded-lg text-xs font-bold",
+    style: {
+      border: "2px dashed " + T,
+      color: T
+    }
+  }, "+ Ajouter une alternative (", proj.trajs.length - 1, "/3)"), /*#__PURE__*/React.createElement("div", {
+    className: "flex justify-between mt-3"
   }, /*#__PURE__*/React.createElement(Prev, {
     to: 2
   }), /*#__PURE__*/React.createElement(Next, {
@@ -2912,8 +3031,187 @@ function App() {
     to: 4
   }), /*#__PURE__*/React.createElement(Next, {
     to: 6,
-    l: "Finance"
+    l: "RI"
   }))), step === 6 && res && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+    className: "text-lg font-bold mb-1",
+    style: {
+      color: D
+    }
+  }, "📉 Réduction de l’Impact"), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs mb-3",
+    style: {
+      color: "#999"
+    }
+  }, "Comparaison des émissions polluantes entre la trajectoire actuelle et vos alternatives. Facteurs : GES (tCO₂), SOx (oxydes de soufre), NOx (oxydes d’azote), PM (particules fines). Sources : IMO GHG Study 2020, ENTEC 2005 (SOx/NOx), Cooper & Gustafsson 2004 (PM), Bates et al. 2021, Sjöblom 2023."), (() => {
+    const v = proj.v;
+    const p2 = proj.p;
+    const N = p2.dur;
+    const hOp = v.opD * (v.rD * v.cDur / 60);
+    const pTr2 = (v.pTr || 60) / 100,
+      pMa2 = (v.pMa || 20) / 100,
+      pQu2 = (v.pQu || 20) / 100;
+    const lf = pTr2 * 1.0 + pMa2 * Math.min(v.pPeak / v.pP, 1.5) + pQu2 * (v.pA / v.pP);
+    const kWhAn = v.pP * hOp * lf;
+    // Build yearly data for each trajectory
+    const pollutants = ["sox", "nox", "pm"];
+    const labels = {
+      sox: "SOx (oxydes de soufre)",
+      nox: "NOx (oxydes d’azote)",
+      pm: "PM (particules fines)"
+    };
+    const units = {
+      sox: "kg/an",
+      nox: "kg/an",
+      pm: "kg/an"
+    };
+    const data = [];
+    for (let t = 0; t < N; t++) {
+      const yr = p2.sy + t;
+      const row = {
+        yr
+      };
+      proj.trajs.forEach((tj, ti) => {
+        const mix = getMixForYear(tj, yr);
+        const mixT = Object.values(mix).reduce((a, b) => a + b, 0) || 100;
+        const at = Object.entries(tj.techs || {}).filter(([, x]) => x?.a);
+        let prd = 1;
+        at.forEach(([tid, cfg]) => {
+          const tech = TECHS.find(x => x.id === tid);
+          if (tech) {
+            const depY = (cfg.year || p2.sy) - p2.sy;
+            if (t >= depY) prd *= 1 - tech.gM;
+          }
+        });
+        const kWhYr = kWhAn * prd;
+        // CO2
+        let co2 = 0;
+        Object.entries(mix).forEach(([fid, pct]) => {
+          const sh = pct / mixT;
+          co2 += sh * (getFuelCO2(proj, fid) / 3.206) * kWhYr / 1000 * v.fc / v.pP * 3.206;
+        });
+        row["co2_" + ti] = Math.round(co2);
+        // SOx, NOx, PM
+        pollutants.forEach(pol => {
+          let val = 0;
+          Object.entries(mix).forEach(([fid, pct]) => {
+            const sh = pct / mixT;
+            const ef = EMFACT[fid] || EMFACT.mdo;
+            val += sh * ef[pol] * kWhYr / 1000;
+          });
+          row[pol + "_" + ti] = Math.round(val * prd);
+        });
+      });
+      data.push(row);
+    }
+    const colors = [D, T, AC, PU];
+    const activeTrajs = proj.trajs.filter((_, i) => i === 0 || Object.keys(proj.trajs[i]?.fuelMix || {}).length > 0);
+    return /*#__PURE__*/React.createElement("div", {
+      className: "space-y-3"
+    }, /*#__PURE__*/React.createElement(Cd, {
+      title: "🌍 GES (tCO₂/an)"
+    }, /*#__PURE__*/React.createElement(ResponsiveContainer, {
+      width: "100%",
+      height: 200
+    }, /*#__PURE__*/React.createElement(LineChart, {
+      data: data
+    }, /*#__PURE__*/React.createElement(CartesianGrid, {
+      strokeDasharray: "3 3"
+    }), /*#__PURE__*/React.createElement(XAxis, {
+      dataKey: "yr",
+      tick: {
+        fontSize: 9
+      }
+    }), /*#__PURE__*/React.createElement(YAxis, {
+      tick: {
+        fontSize: 9
+      }
+    }), /*#__PURE__*/React.createElement(Tooltip, {
+      formatter: v2 => fmt(v2) + " t"
+    }), /*#__PURE__*/React.createElement(Legend, {
+      wrapperStyle: {
+        fontSize: 9
+      }
+    }), proj.trajs.map((tj, ti) => /*#__PURE__*/React.createElement(Line, {
+      key: ti,
+      type: "monotone",
+      dataKey: "co2_" + ti,
+      name: tj.name.slice(0, 15),
+      stroke: colors[ti],
+      strokeWidth: ti === 0 ? 2 : 2,
+      dot: false,
+      strokeDasharray: ti === 0 ? "5 5" : ""
+    }))))), pollutants.map(pol => /*#__PURE__*/React.createElement(Cd, {
+      key: pol,
+      title: labels[pol] + " (" + units[pol] + ")"
+    }, /*#__PURE__*/React.createElement(ResponsiveContainer, {
+      width: "100%",
+      height: 180
+    }, /*#__PURE__*/React.createElement(LineChart, {
+      data: data
+    }, /*#__PURE__*/React.createElement(CartesianGrid, {
+      strokeDasharray: "3 3"
+    }), /*#__PURE__*/React.createElement(XAxis, {
+      dataKey: "yr",
+      tick: {
+        fontSize: 9
+      }
+    }), /*#__PURE__*/React.createElement(YAxis, {
+      tick: {
+        fontSize: 9
+      }
+    }), /*#__PURE__*/React.createElement(Tooltip, {
+      formatter: v2 => fmt(v2) + " kg"
+    }), /*#__PURE__*/React.createElement(Legend, {
+      wrapperStyle: {
+        fontSize: 9
+      }
+    }), proj.trajs.map((tj, ti) => /*#__PURE__*/React.createElement(Line, {
+      key: ti,
+      type: "monotone",
+      dataKey: pol + "_" + ti,
+      name: tj.name.slice(0, 15),
+      stroke: colors[ti],
+      strokeWidth: 2,
+      dot: false,
+      strokeDasharray: ti === 0 ? "5 5" : ""
+    })))))), /*#__PURE__*/React.createElement(Cd, {
+      title: "📚 Sources et hypothèses"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-xs space-y-1.5"
+    }, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("b", {
+      style: {
+        color: T
+      }
+    }, "GES (CO₂)"), " : IMO Fourth GHG Study 2020 (MEPC 75/7/15). Facteur MDO = 3,206 tCO₂/t (MEPC.1/Circ.684). Bio : cycle de vie ADEME Base Carbone."), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("b", {
+      style: {
+        color: T
+      }
+    }, "SOx"), " : ENTEC 2005 (Quantification of emissions from ships), réglement UE 2016/802. MDO 0,10% S max (ECA). Électrification = zéro SOx direct."), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("b", {
+      style: {
+        color: T
+      }
+    }, "NOx"), " : IMO Tier II (MARPOL Annexe VI, règle 13). 9,8 g/kWh MDO 1000 rpm. HVO/FAME : Bates et al. 2021 « Marine fuel decarbonization », Elsevier. Réduction 10-25%."), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("b", {
+      style: {
+        color: T
+      }
+    }, "PM (particules fines)"), " : Cooper & Gustafsson 2004, Agrawal et al. 2008. MDO = 0,38 g/kWh. HVO : Sjöblom 2023 « HVO as marine fuel », SINTEF Ocean. Réduction 60-70%."), /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: W
+      }
+    }, /*#__PURE__*/React.createElement("b", null, "Retex intégrés"), " : Ellen (DK) −2 200 tCO₂/an validé DTU 2021 | Ampere (NO) −95% validé Siemens/Bellona | LAMELEC (FR) modélisation GASPE/OCEA. Ces données recoupent les facteurs théoriques."), /*#__PURE__*/React.createElement("p", {
+      className: "mt-2",
+      style: {
+        color: "#999"
+      }
+    }, /*#__PURE__*/React.createElement("i", null, "Les facteurs d’émission sont exprimés en g/kWh (puissance moteur) et appliqués au profil de charge du navire. Les valeurs réelles peuvent varier selon l’âge du moteur, la qualité du carburant, et les conditions d’exploitation.")))));
+  })(), /*#__PURE__*/React.createElement("div", {
+    className: "flex justify-between mt-3"
+  }, /*#__PURE__*/React.createElement(Prev, {
+    to: 5
+  }), /*#__PURE__*/React.createElement(Next, {
+    to: 7,
+    l: "Finance"
+  }))), step === 7 && res && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "text-lg font-bold mb-3",
     style: {
       color: D
@@ -2994,11 +3292,11 @@ function App() {
   }, /*#__PURE__*/React.createElement("b", null, s.s, " :"), " ", s.desc)))), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
-    to: 5
+    to: 6
   }), /*#__PURE__*/React.createElement(Next, {
-    to: 7,
+    to: 8,
     l: "Aides"
-  }))), step === 7 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+  }))), step === 8 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "text-lg font-bold mb-3",
     style: {
       color: D
@@ -3147,11 +3445,11 @@ function App() {
   }, "M = mois avant travaux. T = mois après. Déposer les demandes le plus tôt possible.")), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
-    to: 6
+    to: 7
   }), /*#__PURE__*/React.createElement(Next, {
-    to: 8,
+    to: 9,
     l: "DSP & AO"
-  }))), step === 8 && res && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+  }))), step === 9 && res && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "text-lg font-bold mb-3",
     style: {
       color: D
@@ -3314,11 +3612,11 @@ function App() {
   }, /*#__PURE__*/React.createElement("p", null, "1. ", /*#__PURE__*/React.createElement("b", null, "Coût de l’inaction croissant"), " (risques quantifiés)."), /*#__PURE__*/React.createElement("p", null, "2. ", /*#__PURE__*/React.createElement("b", null, "Infra à terre"), " nécessite partage."), /*#__PURE__*/React.createElement("p", null, "3. ", /*#__PURE__*/React.createElement("b", null, "Révision DSP"), " à adapter (indice composite)."), /*#__PURE__*/React.createElement("p", null, "4. ", /*#__PURE__*/React.createElement("b", null, "Aides mobilisables"), "."), /*#__PURE__*/React.createElement("p", null, "5. ", /*#__PURE__*/React.createElement("b", null, "Bénéfices mesurables"), " : tCO₂, air, bruit."))), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
-    to: 7
+    to: 8
   }), /*#__PURE__*/React.createElement(Next, {
-    to: 9,
+    to: 10,
     l: "Risques"
-  }))), step === 9 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+  }))), step === 10 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "text-lg font-bold mb-3",
     style: {
       color: D
@@ -3463,11 +3761,11 @@ function App() {
   }, /*#__PURE__*/React.createElement("p", null, "🔴 ", /*#__PURE__*/React.createElement("b", null, "Non-renouvellement DSP")), /*#__PURE__*/React.createElement("p", null, "🟠 ", /*#__PURE__*/React.createElement("b", null, "VR navire fossile"), " en déclin"), /*#__PURE__*/React.createElement("p", null, "🟡 ", /*#__PURE__*/React.createElement("b", null, "MDO"), " +", proj.p.fpG, "%/an"), /*#__PURE__*/React.createElement("p", null, "🟡 ", /*#__PURE__*/React.createElement("b", null, "Réglementation"), " extension < 5000 GT"))), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
-    to: 8
+    to: 9
   }), /*#__PURE__*/React.createElement(Next, {
-    to: 10,
+    to: 11,
     l: "Flotte"
-  }))), step === 10 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+  }))), step === 11 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "text-lg font-bold mb-3",
     style: {
       color: D
@@ -3630,11 +3928,11 @@ function App() {
   }, "Créez plusieurs projets (un par navire) puis revenez ici pour consolider.")), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
-    to: 9
+    to: 10
   }), /*#__PURE__*/React.createElement(Next, {
-    to: 11,
+    to: 12,
     l: "Écosystème"
-  }))), step === 11 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+  }))), step === 12 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "text-lg font-bold mb-3",
     style: {
       color: D
@@ -3673,11 +3971,11 @@ function App() {
   }, "→ ", r.impact)))), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
-    to: 10
+    to: 11
   }), /*#__PURE__*/React.createElement(Next, {
-    to: 12,
+    to: 13,
     l: "Suivi"
-  }))), step === 12 && res && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+  }))), step === 13 && res && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "text-lg font-bold mb-3",
     style: {
       color: D
@@ -3801,11 +4099,11 @@ function App() {
   })()))), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
-    to: 11
+    to: 12
   }), /*#__PURE__*/React.createElement(Next, {
-    to: 13,
+    to: 14,
     l: "Dossier"
-  }))), step === 13 && res && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+  }))), step === 14 && res && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "text-lg font-bold mb-1",
     style: {
       color: D
@@ -3921,7 +4219,7 @@ function App() {
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-1"
   }, /*#__PURE__*/React.createElement("p", null, "1. Affiner avec bureau d'études (CFD, dim. batteries)"), /*#__PURE__*/React.createElement("p", null, "2. Lancer raccordement ENEDIS (3-6 mois)"), /*#__PURE__*/React.createElement("p", null, "3. Déposer aides AVANT travaux"), /*#__PURE__*/React.createElement("p", null, "4. Contacter investisseur (voir Écosystème)"), /*#__PURE__*/React.createElement("p", null, "5. Argumentaire autorité délégante"), /*#__PURE__*/React.createElement("p", null, "6. Consulter chantiers (devis + planning)"))), /*#__PURE__*/React.createElement(Prev, {
-    to: 12
+    to: 13
   })), /*#__PURE__*/React.createElement("div", {
     className: "text-center py-2",
     style: {
