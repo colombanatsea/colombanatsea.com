@@ -460,7 +460,7 @@ function resizeRenderer(w, h) {
 }
 
 window.startRecording = async function(format) {
-  console.log('=== startRecording v7 ===', format);
+  console.log('=== startRecording v8 ===', format);
   try {
   if (isRecording) return;
   isRecording = true;
@@ -470,7 +470,6 @@ window.startRecording = async function(format) {
   btnSquare.disabled = true;
   btnPortrait.disabled = true;
 
-  // Set recording dimensions
   const recordW = 1080;
   const recordH = format === 'square' ? 1080 : 1920;
   const label = format === 'square' ? 'carré' : 'portrait';
@@ -478,46 +477,44 @@ window.startRecording = async function(format) {
   statusEl.textContent = `Préparation de l'enregistrement ${label}...`;
   progressFill.style.width = '0%';
 
-  // Resize for recording
+  console.log('[v8] step 1: resize');
   resizeRenderer(recordW, recordH);
   renderer.setPixelRatio(1);
 
-  // Reset camera to face France
+  console.log('[v8] step 2: reset camera');
   camera.position.set(2.8, 0.4, 0);
   camera.lookAt(0, 0, 0);
   controls.update();
 
-  // Render a frame to ensure the context is valid after resize
+  console.log('[v8] step 3: safety render');
   renderer.render(scene, camera);
-  await new Promise(r => setTimeout(r, 200));
+  await new Promise(r => setTimeout(r, 300));
 
-  // Verify WebGL context is not lost
+  console.log('[v8] step 4: check context');
   const gl = renderer.getContext();
   if (!gl || gl.isContextLost()) {
     throw new Error('WebGL context lost after resize');
   }
 
-  // Record using frame-by-frame capture and MediaRecorder
-  const totalFrames = FPS * ROTATION_DURATION; // 30fps * 18s = 540 frames
+  const totalFrames = FPS * ROTATION_DURATION;
   const startAzimuth = controls.getAzimuthalAngle();
   const polar = controls.getPolarAngle();
   const dist = camera.position.length();
 
-  // Disable controls during recording (we control camera manually)
   controls.autoRotate = false;
   controls.enabled = false;
 
-  // Capture stream directly from WebGL canvas
-  const stream = canvas.captureStream(0); // 0 = manual frame capture
+  console.log('[v8] step 5: captureStream');
+  const stream = canvas.captureStream(0);
 
-  // Try VP9 first for better quality, fallback to VP8
+  console.log('[v8] step 6: MediaRecorder');
   const mimeType = MediaRecorder.isTypeSupported('video/webm;codecs=vp9')
     ? 'video/webm;codecs=vp9'
     : 'video/webm;codecs=vp8';
 
   const recorder = new MediaRecorder(stream, {
     mimeType,
-    videoBitsPerSecond: 8_000_000 // 8 Mbps for high quality
+    videoBitsPerSecond: 8_000_000
   });
 
   const chunks = [];
@@ -527,12 +524,12 @@ window.startRecording = async function(format) {
     recorder.onstop = () => resolve(undefined);
   });
 
+  console.log('[v8] step 7: recorder.start()');
   recorder.start();
   statusEl.textContent = `Enregistrement ${label} en cours...`;
 
-  // Frame-by-frame recording using requestAnimationFrame
+  console.log('[v8] step 8: frame loop, totalFrames:', totalFrames);
   let frameIndex = 0;
-  console.log('Starting frame loop, totalFrames:', totalFrames, 'stream tracks:', stream.getVideoTracks().length);
   await new Promise((resolveLoop) => {
     function recordFrame() {
       try {
@@ -541,7 +538,6 @@ window.startRecording = async function(format) {
           return;
         }
 
-        // Rotate camera around globe
         const progress = frameIndex / totalFrames;
         const angle = startAzimuth + progress * Math.PI * 2 * ROTATIONS;
 
@@ -550,7 +546,6 @@ window.startRecording = async function(format) {
         camera.position.y = dist * Math.cos(polar);
         camera.lookAt(0, 0, 0);
 
-        // ZEE pulse
         const pulse = 0.18 + Math.sin(frameIndex * 0.3) * 0.04;
         zoneGroup.children.forEach(child => {
           if (child.isMesh && child.material) child.material.opacity = pulse;
@@ -558,29 +553,28 @@ window.startRecording = async function(format) {
 
         renderer.render(scene, camera);
 
-        // Request frame capture
         const track = stream.getVideoTracks()[0];
         if (track && track.requestFrame) {
           track.requestFrame();
         }
 
-        // Update progress
         const pct = Math.round((frameIndex + 1) / totalFrames * 100);
         progressFill.style.width = pct + '%';
         statusEl.textContent = `Enregistrement ${label} — ${pct}%`;
 
-        if (frameIndex === 0) console.log('First frame rendered OK');
+        if (frameIndex === 0) console.log('[v8] first frame OK');
 
         frameIndex++;
         requestAnimationFrame(recordFrame);
       } catch(err) {
-        console.error('recordFrame error at frame', frameIndex, err);
+        console.error('[v8] recordFrame error at frame', frameIndex, err);
         resolveLoop();
       }
     }
     requestAnimationFrame(recordFrame);
   });
 
+  console.log('[v8] step 9: stop recorder');
   recorder.stop();
   await recordingDone;
 
@@ -597,7 +591,6 @@ window.startRecording = async function(format) {
   statusEl.textContent = `Téléchargement ${label} terminé ! Vous pouvez exporter l'autre format.`;
   progressFill.style.width = '100%';
 
-  // Restore preview size
   resizeRenderer(currentW, currentH);
   renderer.setPixelRatio(1);
   camera.position.set(2.8, 0.4, 0);
@@ -610,8 +603,13 @@ window.startRecording = async function(format) {
   btnSquare.disabled = false;
   btnPortrait.disabled = false;
   } catch(err) {
-    console.error('startRecording ERROR:', err, err.stack);
+    console.error('[v8] startRecording ERROR:', err, err.stack);
+    statusEl.textContent = `Erreur: ${err.message}`;
     isRecording = false;
+    const btnSquare = document.getElementById('btn-square');
+    const btnPortrait = document.getElementById('btn-portrait');
+    if (btnSquare) btnSquare.disabled = false;
+    if (btnPortrait) btnPortrait.disabled = false;
   }
 };
 </script>
