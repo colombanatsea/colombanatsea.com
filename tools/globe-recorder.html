@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Globe Recorder</title>
+<style>
+  * { margin: 0; padding: 0; }
+  body { background: #080b14; overflow: hidden; }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+<script src="/earcut.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "three": "/three/build/three.module.js",
+    "three/": "/three/"
+  }
+}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+
+// ── Load data ──
+const [EEZ_GEOJSON, CABLE_GEOJSON, SHIPPING_LANES] = await Promise.all([
+  fetch('/data/eez.json').then(r => r.json()),
+  fetch('/data/cables.json').then(r => r.json()),
+  fetch('/data/shipping-lanes.json').then(r => r.json()),
+]);
+
+// ── CONFIG ──
+const GLOBE_RADIUS = 1.0;
+const ZEE_HEIGHT = 1.003;
+const CABLE_RADIUS = GLOBE_RADIUS + 0.005;
+const LANE_RADIUS = GLOBE_RADIUS + 0.003;
+const SPHERE_SEG = 96;
+
+const params = new URLSearchParams(window.location.search);
+const W = parseInt(params.get('w') || '1080');
+const H = parseInt(params.get('h') || '1080');
+
+// ── SCENE ──
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, W / H, 0.01, 100);
+camera.position.set(0, 0.35, 3.1);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, preserveDrawingBuffer: true });
+renderer.setSize(W, H);
+renderer.setPixelRatio(1);
+renderer.setClearColor(0x080b14, 1);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+document.body.appendChild(renderer.domElement);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.06;
+controls.enableZoom = false;
+controls.enablePan = false;
+controls.autoRotate = false;
+
+// ── LIGHTING ──
+scene.add(new THREE.AmbientLight(0x666666, 1.5));
+const dirLight = new THREE.DirectionalLight(0xffffff, 1.0);
+dirLight.position.set(5, 3, 5);
+scene.add(dirLight);
+const backLight = new THREE.DirectionalLight(0x334455, 0.4);
+backLight.position.set(-3, -2, -5);
+scene.add(backLight);
+
+// ── GLOBE ──
+const textureLoader = new THREE.TextureLoader();
+const globeGeo = new THREE.SphereGeometry(GLOBE_RADIUS, SPHERE_SEG, SPHERE_SEG);
+const globeMat = new THREE.MeshPhongMaterial({ color: 0xffffff, shininess: 25, bumpScale: 0.015 });
+const globe = new THREE.Mesh(globeGeo, globeMat);
+scene.add(globe);
+
+await new Promise((resolve) => {
+  let loaded = 0;
+  const check = () => { loaded++; if (loaded >= 2) resolve(); };
+  textureLoader.load('/textures/earth-blue-marble.jpg', (t) => {
+    t.colorSpace = THREE.SRGBColorSpace;
+    globeMat.map = t;
+    globeMat.needsUpdate = true;
+    check();
+  }, undefined, check);
+  textureLoader.load('/textures/earth-topology.png', (t) => {
+    globeMat.bumpMap = t;
+    globeMat.needsUpdate = true;
+    check();
+  }, undefined, check);
+});
+
+// ── ATMOSPHERE ──
+const atmoVS = `varying vec3 vNormal; void main() { vNormal = normalize(normalMatrix * normal); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`;
+const atmoFS = `varying vec3 vNormal; void main() { float i = pow(0.65 - dot(vNormal, vec3(0,0,1)), 3.0); gl_FragColor = vec4(0.15,0.55,0.7,1) * i * 0.7; }`;
+scene.add(new THREE.Mesh(
+  new THREE.SphereGeometry(GLOBE_RADIUS * 1.12, 64, 64),
+  new THREE.ShaderMaterial({ vertexShader: atmoVS, fragmentShader: atmoFS, blending: THREE.AdditiveBlending, side: THREE.BackSide, transparent: true, depthWrite: false })
+));
+
+// ── UTILITY ──
+function latLonToVec3(lat, lon, r) {
+  const phi = (90 - lat) * Math.PI / 180;
+  const theta = -lon * Math.PI / 180;
+  return new THREE.Vector3(r * Math.sin(phi) * Math.cos(theta), r * Math.cos(phi), r * Math.sin(phi) * Math.sin(theta));
+}
+
+function interpolateGreatCircle(lat1, lon1, lat2, lon2, r, maxGapDeg) {
+  const dLat = lat2 - lat1, dLon = lon2 - lon1;
+  const gap = Math.sqrt(dLat * dLat + dLon * dLon);
+  if (gap <= maxGapDeg) return [latLonToVec3(lat2, lon2, r)];
+  const steps = Math.ceil(gap / maxGapDeg);
+  const pts = [];
+  for (let s = 1; s <= steps; s++) {
+    const t = s / steps;
+    pts.push(latLonToVec3(lat1 + dLat * t, lon1 + dLon * t, r));
+  }
+  return pts;
+}
+
+// ── ZEE ZONES ──
+const zoneGroup = new THREE.Group();
+scene.add(zoneGroup);
+
+function normalizeLon(ring) {
+  let maxJump = 0;
+  for (let i = 1; i < ring.length; i++) {
+    maxJump = Math.max(maxJump, Math.abs(ring[i][0] - ring[i - 1][0]));
+  }
+  if (maxJump <= 180) return ring;
+  return ring.map(p => [p[0] < 0 ? p[0] + 360 : p[0], p[1]]);
+}
+
+function createZeeMesh(outerPts, holePtsArray, properties) {
+  const flat = [];
+  for (const pt of outerPts) flat.push(pt[0], pt[1]);
+  const holeIndices = [];
+  if (holePtsArray) {
+    for (const hole of holePtsArray) {
+      if (hole.length < 3) continue;
+      holeIndices.push(flat.length / 2);
+      for (const pt of hole) flat.push(pt[0], pt[1]);
+    }
+  }
+  let triIndices;
+  try { triIndices = earcut(flat, holeIndices.length > 0 ? holeIndices : undefined, 2); }
+  catch { return; }
+  if (!triIndices || triIndices.length === 0) return;
+
+  const MAX_ARC_DEG = 3;
+  const outVerts = [];
+  const outIdx = [];
+  const vertMap = new Map();
+
+  function addVert(lo, la) {
+    const key = lo.toFixed(4) + ',' + la.toFixed(4);
+    if (vertMap.has(key)) return vertMap.get(key);
+    let lon2 = lo; if (lon2 > 180) lon2 -= 360;
+    const v = latLonToVec3(la, lon2, ZEE_HEIGHT);
+    const idx = outVerts.length / 3;
+    outVerts.push(v.x, v.y, v.z);
+    vertMap.set(key, idx);
+    return idx;
+  }
+
+  function subdivideTri(a, b, c, depth) {
+    const dAB = Math.sqrt((a[0]-b[0])**2 + (a[1]-b[1])**2);
+    const dBC = Math.sqrt((b[0]-c[0])**2 + (b[1]-c[1])**2);
+    const dCA = Math.sqrt((c[0]-a[0])**2 + (c[1]-a[1])**2);
+    if (Math.max(dAB, dBC, dCA) <= MAX_ARC_DEG || depth > 5) {
+      outIdx.push(addVert(a[0], a[1]), addVert(b[0], b[1]), addVert(c[0], c[1]));
+      return;
+    }
+    const mAB = [(a[0]+b[0])/2, (a[1]+b[1])/2];
+    const mBC = [(b[0]+c[0])/2, (b[1]+c[1])/2];
+    const mCA = [(c[0]+a[0])/2, (c[1]+a[1])/2];
+    subdivideTri(a, mAB, mCA, depth+1);
+    subdivideTri(mAB, b, mBC, depth+1);
+    subdivideTri(mCA, mBC, c, depth+1);
+    subdivideTri(mAB, mBC, mCA, depth+1);
+  }
+
+  for (let i = 0; i < triIndices.length; i += 3) {
+    const iA = triIndices[i], iB = triIndices[i+1], iC = triIndices[i+2];
+    subdivideTri([flat[iA*2], flat[iA*2+1]], [flat[iB*2], flat[iB*2+1]], [flat[iC*2], flat[iC*2+1]], 0);
+  }
+
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(outVerts), 3));
+  geo.setIndex(outIdx);
+  geo.computeVertexNormals();
+
+  const mesh = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({
+    color: 0x00b4b4, transparent: true, opacity: 0.22, side: THREE.DoubleSide, depthWrite: false
+  }));
+  mesh.renderOrder = 1;
+  zoneGroup.add(mesh);
+
+  const borderPts = [];
+  for (const pt of outerPts) {
+    let lon = pt[0]; if (lon > 180) lon -= 360;
+    borderPts.push(latLonToVec3(pt[1], lon, ZEE_HEIGHT * 1.0005));
+  }
+  if (borderPts.length > 2) borderPts.push(borderPts[0].clone());
+  if (borderPts.length >= 2) {
+    zoneGroup.add(new THREE.Line(
+      new THREE.BufferGeometry().setFromPoints(borderPts),
+      new THREE.LineBasicMaterial({ color: 0x00e0e0, transparent: true, opacity: 0.55 })
+    ));
+  }
+}
+
+(function processEEZ(geojson) {
+  if (!geojson || !geojson.features) return;
+  for (const feature of geojson.features) {
+    const geom = feature.geometry;
+    const props = feature.properties || {};
+    if (!geom) continue;
+    const coordsList = [];
+    if (geom.type === 'Polygon') coordsList.push(geom.coordinates);
+    else if (geom.type === 'MultiPolygon') {
+      for (const poly of geom.coordinates) coordsList.push(poly);
+    }
+    for (const coords of coordsList) {
+      const outer = coords[0];
+      if (!outer || outer.length < 3) continue;
+      createZeeMesh(normalizeLon(outer), coords.slice(1).filter(h => h && h.length >= 3).map(normalizeLon), props);
+    }
+  }
+})(EEZ_GEOJSON);
+
+// ── STARFIELD ──
+const starPos = new Float32Array(2000 * 3);
+for (let i = 0; i < 2000; i++) {
+  const r = 15 + Math.random() * 35;
+  const t = Math.random() * Math.PI * 2;
+  const p = Math.acos(2 * Math.random() - 1);
+  starPos[i*3] = r * Math.sin(p) * Math.cos(t);
+  starPos[i*3+1] = r * Math.sin(p) * Math.sin(t);
+  starPos[i*3+2] = r * Math.cos(p);
+}
+const starGeo = new THREE.BufferGeometry();
+starGeo.setAttribute('position', new THREE.Float32BufferAttribute(starPos, 3));
+scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xaabbdd, size: 0.04, transparent: true, opacity: 0.6, sizeAttenuation: true, depthWrite: false })));
+
+// ── SUBMARINE CABLES ──
+const cableGroup = new THREE.Group();
+scene.add(cableGroup);
+
+function splitCableCoords(coords) {
+  const segments = [];
+  let current = [];
+  for (let i = 0; i < coords.length; i++) {
+    const lon = coords[i][0], lat = coords[i][1];
+    if (isNaN(lat) || isNaN(lon)) continue;
+    if (current.length > 0) {
+      const prevLon = current[current.length - 1][0];
+      if (Math.abs(lon - prevLon) > 90) {
+        const lon1 = current[current.length - 1][0], lat1 = current[current.length - 1][1];
+        let lon2 = lon;
+        if (lon2 - lon1 > 180) lon2 -= 360;
+        else if (lon1 - lon2 > 180) lon2 += 360;
+        const crossLon = lon1 > 0 ? 180 : -180;
+        const t2 = (lon2 - lon1) !== 0 ? (crossLon - lon1) / (lon2 - lon1) : 0.5;
+        const crossLat = lat1 + t2 * (lat - lat1);
+        current.push([crossLon, crossLat]);
+        if (current.length >= 2) segments.push(current);
+        current = [[-crossLon, crossLat], [lon, lat]];
+        continue;
+      }
+    }
+    current.push([lon, lat]);
+  }
+  if (current.length >= 2) segments.push(current);
+  return segments;
+}
+
+(function processCables(geojson) {
+  if (!geojson || !geojson.features) return;
+  for (const feature of geojson.features) {
+    const geom = feature.geometry;
+    if (!geom) continue;
+    const colorVal = feature.properties && feature.properties.c;
+    let cableColor;
+    try { cableColor = new THREE.Color(colorVal || '#00b4b4'); }
+    catch { cableColor = new THREE.Color(0x00b4b4); }
+    const coordSets = [];
+    if (geom.type === 'MultiLineString') coordSets.push(...geom.coordinates);
+    else if (geom.type === 'LineString') coordSets.push(geom.coordinates);
+    for (const coords of coordSets) {
+      for (const seg of splitCableCoords(coords)) {
+        const pts = [];
+        for (let i = 0; i < seg.length; i++) {
+          const lon = seg[i][0], lat = seg[i][1];
+          if (pts.length === 0) { pts.push(latLonToVec3(lat, lon, CABLE_RADIUS)); }
+          else {
+            pts.push(...interpolateGreatCircle(seg[i-1][1], seg[i-1][0], lat, lon, CABLE_RADIUS, 5));
+          }
+        }
+        if (pts.length < 2) continue;
+        cableGroup.add(new THREE.Line(
+          new THREE.BufferGeometry().setFromPoints(pts),
+          new THREE.LineBasicMaterial({ color: cableColor, transparent: true, opacity: 0.35, depthWrite: false })
+        ));
+      }
+    }
+  }
+})(CABLE_GEOJSON);
+
+// ── SHIPPING LANES ──
+const trafficGroup = new THREE.Group();
+scene.add(trafficGroup);
+const LANE_STYLES = { 1: { color: 0xff8c50, opacity: 0.90 }, 2: { color: 0xff7040, opacity: 0.60 }, 3: { color: 0xff6432, opacity: 0.32 } };
+
+SHIPPING_LANES.features.forEach(feat => {
+  const style = LANE_STYLES[feat.properties.t];
+  if (!style) return;
+  const mat = new THREE.LineBasicMaterial({ color: style.color, transparent: true, opacity: style.opacity, depthWrite: false });
+  feat.geometry.coordinates.forEach(line => {
+    const points = [];
+    for (let i = 0; i < line.length; i++) {
+      const lon = line[i][0], lat = line[i][1];
+      if (isNaN(lat) || isNaN(lon)) continue;
+      if (points.length === 0) { points.push(latLonToVec3(lat, lon, LANE_RADIUS)); }
+      else {
+        points.push(...interpolateGreatCircle(line[i-1][1], line[i-1][0], lat, lon, LANE_RADIUS, 5));
+      }
+    }
+    if (points.length >= 2) {
+      trafficGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), mat));
+    }
+  });
+});
+
+// ── Render function for puppeteer ──
+renderer.render(scene, camera);
+
+window.__renderFrame = function(angleRad) {
+  const polar = 1.44;
+  const dist = camera.position.length();
+  camera.position.x = dist * Math.sin(polar) * Math.sin(angleRad);
+  camera.position.z = dist * Math.sin(polar) * Math.cos(angleRad);
+  camera.position.y = dist * Math.cos(polar);
+  camera.lookAt(0, 0, 0);
+
+  const pulse = 0.18 + Math.sin(angleRad * 3) * 0.04;
+  zoneGroup.children.forEach(child => {
+    if (child.isMesh && child.material && child.material.opacity < 0.4) {
+      child.material.opacity = pulse;
+    }
+  });
+
+  renderer.render(scene, camera);
+};
+
+window.__globeReady = true;
+console.log('GLOBE_READY');
+</script>
+</body>
+</html>
