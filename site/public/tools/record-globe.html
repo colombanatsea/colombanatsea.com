@@ -84,7 +84,7 @@
 </script>
 
 <script type="module">
-/* v6 — font error fix */
+/* v7 — fix resizeRenderer destroying WebGL context */
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import earcut from 'earcut';
@@ -454,15 +454,13 @@ animatePreview();
 let isRecording = false;
 
 function resizeRenderer(w, h) {
-  canvas.width = w;
-  canvas.height = h;
-  renderer.setSize(w, h, false);
+  renderer.setSize(w, h);
   camera.aspect = w / h;
   camera.updateProjectionMatrix();
 }
 
 window.startRecording = async function(format) {
-  console.log('=== startRecording v5 ===', format);
+  console.log('=== startRecording v7 ===', format);
   try {
   if (isRecording) return;
   isRecording = true;
@@ -489,8 +487,15 @@ window.startRecording = async function(format) {
   camera.lookAt(0, 0, 0);
   controls.update();
 
-  // Wait for a frame to settle
+  // Render a frame to ensure the context is valid after resize
+  renderer.render(scene, camera);
   await new Promise(r => setTimeout(r, 200));
+
+  // Verify WebGL context is not lost
+  const gl = renderer.getContext();
+  if (!gl || gl.isContextLost()) {
+    throw new Error('WebGL context lost after resize');
+  }
 
   // Record using frame-by-frame capture and MediaRecorder
   const totalFrames = FPS * ROTATION_DURATION; // 30fps * 18s = 540 frames
