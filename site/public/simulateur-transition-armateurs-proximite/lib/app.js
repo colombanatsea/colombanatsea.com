@@ -57,15 +57,6 @@ const DEF_FUELS = [{
   note: "Expérimental",
   adv: true
 }, {
-  id: "emeth",
-  l: "e-Méthanol",
-  cat: "e-fuel",
-  co2: 0.010,
-  price: 1800,
-  pGr: -1,
-  note: "Newbuilds",
-  adv: true
-}, {
   id: "ops",
   l: "OPS (élect. quai)",
   cat: "Zéro quai",
@@ -74,24 +65,6 @@ const DEF_FUELS = [{
   pGr: 2,
   note: "À quai",
   unit: "MWh",
-  adv: true
-}, {
-  id: "vlsfo",
-  l: "VLSFO",
-  cat: "Fossile",
-  co2: 3.151,
-  price: 680,
-  pGr: 3,
-  note: "> 500 GT",
-  adv: true
-}, {
-  id: "gnl",
-  l: "GNL",
-  cat: "Transition",
-  co2: 2.750,
-  price: 600,
-  pGr: 2,
-  note: "Dual-fuel",
   adv: true
 }];
 const TECHS = [{
