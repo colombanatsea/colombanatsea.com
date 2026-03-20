@@ -462,6 +462,7 @@ function resizeRenderer(w, h) {
 }
 
 window.startRecording = async function(format) {
+  console.log('=== startRecording v4 ===', format);
   if (isRecording) return;
   isRecording = true;
 
