@@ -499,14 +499,8 @@ window.startRecording = async function(format) {
   controls.autoRotate = false;
   controls.enabled = false;
 
-  // Create offscreen compositing canvas (WebGL canvas + 2D watermark)
-  const compCanvas = document.createElement('canvas');
-  compCanvas.width = recordW;
-  compCanvas.height = recordH;
-  const compCtx = compCanvas.getContext('2d');
-
-  // Use compositing canvas stream for MediaRecorder
-  const stream = compCanvas.captureStream(0); // 0 = manual frame capture
+  // Capture stream directly from WebGL canvas
+  const stream = canvas.captureStream(0); // 0 = manual frame capture
 
   // Try VP9 first for better quality, fallback to VP8
   const mimeType = MediaRecorder.isTypeSupported('video/webm;codecs=vp9')
@@ -528,43 +522,45 @@ window.startRecording = async function(format) {
   recorder.start();
   statusEl.textContent = `Enregistrement ${label} en cours...`;
 
-  for (let i = 0; i < totalFrames; i++) {
-    // Rotate camera around globe
-    const progress = i / totalFrames;
-    const angle = startAzimuth + progress * Math.PI * 2 * ROTATIONS;
+  // Frame-by-frame recording using requestAnimationFrame
+  let frameIndex = 0;
+  await new Promise((resolveLoop) => {
+    function recordFrame() {
+      if (frameIndex >= totalFrames) {
+        resolveLoop();
+        return;
+      }
 
-    camera.position.x = dist * Math.sin(polar) * Math.sin(angle);
-    camera.position.z = dist * Math.sin(polar) * Math.cos(angle);
-    camera.position.y = dist * Math.cos(polar);
-    camera.lookAt(0, 0, 0);
+      // Rotate camera around globe
+      const progress = frameIndex / totalFrames;
+      const angle = startAzimuth + progress * Math.PI * 2 * ROTATIONS;
 
-    // ZEE pulse
-    const pulse = 0.18 + Math.sin(i * 0.3) * 0.04;
-    zoneGroup.children.forEach(child => {
-      if (child.isMesh && child.material) child.material.opacity = pulse;
-    });
+      camera.position.x = dist * Math.sin(polar) * Math.sin(angle);
+      camera.position.z = dist * Math.sin(polar) * Math.cos(angle);
+      camera.position.y = dist * Math.cos(polar);
+      camera.lookAt(0, 0, 0);
 
-    renderer.render(scene, camera);
+      // ZEE pulse
+      const pulse = 0.18 + Math.sin(frameIndex * 0.3) * 0.04;
+      zoneGroup.children.forEach(child => {
+        if (child.isMesh && child.material) child.material.opacity = pulse;
+      });
 
-    // Composite WebGL frame + watermark onto 2D canvas
-    compCtx.drawImage(canvas, 0, 0);
-    compCtx.font = '400 18px system-ui, sans-serif';
-    compCtx.fillStyle = 'rgba(255,255,255,0.4)';
-    compCtx.textAlign = 'right';
-    compCtx.textBaseline = 'bottom';
-    compCtx.fillText('colombanatsea.com', recordW - 24, recordH - 20);
+      renderer.render(scene, camera);
 
-    // Request frame capture from compositing canvas
-    stream.getVideoTracks()[0].requestFrame();
+      // Request frame capture
+      stream.getVideoTracks()[0].requestFrame();
 
-    // Update progress
-    const pct = Math.round((i + 1) / totalFrames * 100);
-    progressFill.style.width = pct + '%';
-    statusEl.textContent = `Enregistrement ${label} — ${pct}%`;
+      // Update progress
+      const pct = Math.round((frameIndex + 1) / totalFrames * 100);
+      progressFill.style.width = pct + '%';
+      statusEl.textContent = `Enregistrement ${label} — ${pct}%`;
 
-    // Yield to keep UI responsive (every frame at ~33ms intervals)
-    await new Promise(r => setTimeout(r, 1000 / FPS));
-  }
+      frameIndex++;
+      requestAnimationFrame(recordFrame);
+    }
+    requestAnimationFrame(recordFrame);
+  });
 
   recorder.stop();
   await recordingDone;
