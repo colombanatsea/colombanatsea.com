@@ -408,6 +408,13 @@
   const LANE_RADIUS = GLOBE_RADIUS + 0.003;
   const AUTO_ROTATE_SPEED = 0.08;
 
+  // ── INITIAL SPIN (3 full rotations, ease-out) ──
+  const SPIN_ROTATIONS = 3;
+  const SPIN_DURATION = 24; // seconds
+  const SPIN_START_SPEED = 22.5; // high initial autoRotateSpeed (decays quadratically)
+  let spinStartTime = -1;
+  let spinDone = false;
+
   // ── SCENE ──
   const tooltip = document.getElementById('globe-tooltip')!;
   const tooltipName = tooltip.querySelector('.zone-name')!;
@@ -417,7 +424,8 @@
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.01, 100);
-  camera.position.set(0, 0.4, 2.8);
+  // Start facing metropolitan France (lon ≈ 2°E → +X direction in Three.js sphere UV)
+  camera.position.set(2.8, 0.4, 0);
 
   const renderer = new THREE.WebGLRenderer({ antialias: USE_AA, alpha: false, powerPreference: 'high-performance', preserveDrawingBuffer: true });
   renderer.setSize(container.clientWidth, container.clientHeight);
@@ -836,7 +844,12 @@
     if (tooltipRect.bottom > window.innerHeight - 10) tooltip.style.top = (e.clientY - tooltipRect.height - 10) + 'px';
   });
 
-  container.addEventListener('pointerdown', () => { isInteracting = true; controls.autoRotate = false; });
+  container.addEventListener('pointerdown', () => {
+    isInteracting = true;
+    controls.autoRotate = false;
+    // Cancel initial spin on user interaction
+    if (!spinDone) { spinDone = true; controls.autoRotateSpeed = AUTO_ROTATE_SPEED; }
+  });
   container.addEventListener('pointerup', () => {
     isInteracting = false;
     clearTimeout((window as any)._globeResumeTimer);
@@ -881,6 +894,22 @@
   function animate() {
     requestAnimationFrame(animate);
     fc++;
+
+    // ── Initial 3-rotation spin with ease-out ──
+    if (!spinDone && !isInteracting) {
+      const now = performance.now() / 1000;
+      if (spinStartTime < 0) spinStartTime = now;
+      const t = Math.min((now - spinStartTime) / SPIN_DURATION, 1);
+      if (t >= 1) {
+        spinDone = true;
+        controls.autoRotateSpeed = AUTO_ROTATE_SPEED;
+      } else {
+        // Quadratic ease-out: fast start, gentle slowdown
+        const decay = (1 - t) * (1 - t);
+        controls.autoRotateSpeed = (SPIN_START_SPEED - AUTO_ROTATE_SPEED) * decay + AUTO_ROTATE_SPEED;
+      }
+    }
+
     controls.update();
 
     if (fc % 2 === 0) {
