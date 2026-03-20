@@ -1,6 +1,3 @@
-;(function(React,ReactDOM,Recharts){
-var useState=React.useState,useEffect=React.useEffect,useCallback=React.useCallback,useMemo=React.useMemo;
-var BarChart=Recharts.BarChart,Bar=Recharts.Bar,LineChart=Recharts.LineChart,Line=Recharts.Line,XAxis=Recharts.XAxis,YAxis=Recharts.YAxis,CartesianGrid=Recharts.CartesianGrid,Tooltip=Recharts.Tooltip,Legend=Recharts.Legend,ResponsiveContainer=Recharts.ResponsiveContainer,ReferenceLine=Recharts.ReferenceLine,RadarChart=Recharts.RadarChart,Radar=Recharts.Radar,PolarGrid=Recharts.PolarGrid,PolarAngleAxis=Recharts.PolarAngleAxis,PolarRadiusAxis=Recharts.PolarRadiusAxis;
 const T = "#1B9AAA",
   D = "#1E2D3D",
   AC = "#E8634A",
@@ -3946,6 +3943,3 @@ function App() {
     }
   }, "VAIATA Dynamics"))));
 }
-
-window.App=App;
-})(window.React,window.ReactDOM,window.Recharts);
