@@ -28,4 +28,4 @@ build/
 *.key
 credentials.json
 colombanatsea.com/ 
-simulateur-transition-armateurs-proximite/ 
+/simulateur-transition-armateurs-proximite/ 
