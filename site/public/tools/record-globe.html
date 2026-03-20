@@ -499,8 +499,14 @@ window.startRecording = async function(format) {
   controls.autoRotate = false;
   controls.enabled = false;
 
-  // Use canvas.captureStream + MediaRecorder
-  const stream = canvas.captureStream(0); // 0 = manual frame capture
+  // Create offscreen compositing canvas (WebGL canvas + 2D watermark)
+  const compCanvas = document.createElement('canvas');
+  compCanvas.width = recordW;
+  compCanvas.height = recordH;
+  const compCtx = compCanvas.getContext('2d');
+
+  // Use compositing canvas stream for MediaRecorder
+  const stream = compCanvas.captureStream(0); // 0 = manual frame capture
 
   // Try VP9 first for better quality, fallback to VP8
   const mimeType = MediaRecorder.isTypeSupported('video/webm;codecs=vp9')
@@ -540,15 +546,15 @@ window.startRecording = async function(format) {
 
     renderer.render(scene, camera);
 
-    // Add watermark
-    const ctx = canvas.getContext('2d');
-    ctx.font = '400 18px system-ui, sans-serif';
-    ctx.fillStyle = 'rgba(255,255,255,0.4)';
-    ctx.textAlign = 'right';
-    ctx.textBaseline = 'bottom';
-    ctx.fillText('colombanatsea.com', recordW - 24, recordH - 20);
+    // Composite WebGL frame + watermark onto 2D canvas
+    compCtx.drawImage(canvas, 0, 0);
+    compCtx.font = '400 18px system-ui, sans-serif';
+    compCtx.fillStyle = 'rgba(255,255,255,0.4)';
+    compCtx.textAlign = 'right';
+    compCtx.textBaseline = 'bottom';
+    compCtx.fillText('colombanatsea.com', recordW - 24, recordH - 20);
 
-    // Request frame capture
+    // Request frame capture from compositing canvas
     stream.getVideoTracks()[0].requestFrame();
 
     // Update progress
