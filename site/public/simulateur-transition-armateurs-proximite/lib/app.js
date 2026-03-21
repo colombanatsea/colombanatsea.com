@@ -2155,7 +2155,6 @@ function App() {
     type: "bac",
     name: "",
     ambition: "hybride",
-    budget: "moyen",
     dsp: 10
   });
   const [showLex, setShowLex] = useState(false);
@@ -2524,7 +2523,7 @@ function App() {
     style: {
       color: PU
     }
-  }, "🧙 Mode guidé — Étape ", wizStep, "/5"), /*#__PURE__*/React.createElement("button", {
+  }, "🧙 Mode guidé — Étape ", wizStep, "/4"), /*#__PURE__*/React.createElement("button", {
     onClick: () => setWizStep(0),
     style: {
       color: "#999"
@@ -2564,7 +2563,7 @@ function App() {
     }
   }, "Suivant")), wizStep === 3 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
     className: "text-sm mb-3"
-  }, "Quelle ambition de décarbonation ?"), [["bio", "Biocarburants drop-in (faible invest., gain CO₂ modéré)"], ["hybride", "Hybridation (invest. modéré, gain 25-35%)"], ["fullelec", "100% électrique (invest. fort, zéro émission)"]].map(([k, l]) => /*#__PURE__*/React.createElement("button", {
+  }, "Quelle ambition de décarbonation ?"), [["bio", "Biocarburants drop-in (sans modification moteur, gain CO₂ modéré)"], ["hybride", "Hybridation diesel-électrique (gain 25-35%)"], ["fullelec", "100% électrique (zéro émission directe)"]].map(([k, l]) => /*#__PURE__*/React.createElement("button", {
     key: k,
     onClick: () => {
       setWiz(w => ({
@@ -2587,25 +2586,10 @@ function App() {
         ...w,
         dsp: v
       }));
-      setWizStep(5);
     },
     className: "w-full text-left p-3 rounded-lg mb-2 text-sm",
     style: {
       background: wiz.dsp === v ? LB : "#f9f9f9"
-    }
-  }, l))), wizStep === 5 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
-    className: "text-sm mb-3"
-  }, "Budget d'investissement ?"), [["petit", "< 500 k€"], ["moyen", "500 k€ – 2 M€"], ["grand", "> 2 M€"]].map(([k, l]) => /*#__PURE__*/React.createElement("button", {
-    key: k,
-    onClick: () => {
-      setWiz(w => ({
-        ...w,
-        budget: k
-      }));
-    },
-    className: "w-full text-left p-3 rounded-lg mb-2 text-sm",
-    style: {
-      background: wiz.budget === k ? LB : "#f9f9f9"
     }
   }, l)), /*#__PURE__*/React.createElement("button", {
     onClick: () => {
@@ -2620,6 +2604,7 @@ function App() {
         ...d,
         dspR: wiz.dsp
       };
+      const batt = dimBatt(p.v);
       const alt = {
         ...emT(),
         name: "Alternative 1"
@@ -2654,10 +2639,9 @@ function App() {
             year: 2026
           }
         };
-        const b = wiz.budget === "petit" ? 400 : wiz.budget === "moyen" ? 800 : 1500;
-        alt.iE = b;
-        alt.iI = b * 0.3;
-        alt.gridCost = 150;
+        alt.iE = Math.round(batt.costBatt * 0.6);
+        alt.iI = Math.round(batt.costCharger * 0.6);
+        alt.gridCost = Math.round(batt.gridConnect * 0.7);
       } else {
         alt.fuelMix = {
           elec: 100
@@ -2668,10 +2652,9 @@ function App() {
             year: 2028
           }
         };
-        const b = wiz.budget === "petit" ? 800 : wiz.budget === "moyen" ? 1500 : 3000;
-        alt.iE = b;
-        alt.iI = b * 0.3;
-        alt.gridCost = 300;
+        alt.iE = batt.costBatt;
+        alt.iI = batt.costCharger;
+        alt.gridCost = batt.gridConnect;
       }
       p.trajs[1] = alt;
       svP(p);
@@ -2684,7 +2667,7 @@ function App() {
     style: {
       backgroundColor: PU
     }
-  }, "✨ Générer mon premier scénario"))))));
+  }, "✨", " Générer mon premier scénario"))))));
   return /*#__PURE__*/React.createElement("div", {
     style: {
       fontFamily: "'DM Sans',sans-serif",
