@@ -2563,7 +2563,7 @@ function App() {
     }
   }, "Suivant")), wizStep === 3 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
     className: "text-sm mb-3"
-  }, "Quelle ambition de décarbonation ?"), [["bio", "Biocarburants drop-in (sans modification moteur, gain CO₂ modéré)"], ["hybride", "Hybridation diesel-électrique (gain 25-35%)"], ["fullelec", "100% électrique (zéro émission directe)"]].map(([k, l]) => /*#__PURE__*/React.createElement("button", {
+  }, "Quelle ambition de décarbonation ?"), [["opti", "Optimisation technique (même carburant, gains d’efficacité 5-25%)"], ["bio", "Biocarburants drop-in (sans modification moteur, gain CO₂ modéré)"], ["hybride", "Hybridation diesel-électrique (gain 25-35%)"], ["fullelec", "100% électrique (zéro émission directe)"]].map(([k, l]) => /*#__PURE__*/React.createElement("button", {
     key: k,
     onClick: () => {
       setWiz(w => ({
@@ -2609,7 +2609,30 @@ function App() {
         ...emT(),
         name: "Alternative 1"
       };
-      if (wiz.ambition === "bio") {
+      if (wiz.ambition === "opti") {
+        alt.fuelMix = {
+          mdo: 100
+        };
+        alt.techs = {
+          helice: {
+            a: true,
+            year: 2026
+          },
+          antifouling: {
+            a: true,
+            year: 2026
+          }
+        };
+        if (p.v.spd >= 12) alt.techs.bulbe = {
+          a: true,
+          year: 2027
+        };
+        if (["bac"].includes(wiz.type)) alt.techs.routage = {
+          a: true,
+          year: 2026
+        };
+        alt.iC = p.v.spd >= 12 ? 80 : 30;
+      } else if (wiz.ambition === "bio") {
         alt.fuelMix = {
           fame: 100
         };
