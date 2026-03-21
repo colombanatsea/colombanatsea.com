@@ -4875,7 +4875,210 @@ function App() {
     title: "Prochaines étapes"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-1"
-  }, /*#__PURE__*/React.createElement("p", null, "1. Affiner avec bureau d'études (CFD, dim. batteries)"), /*#__PURE__*/React.createElement("p", null, "2. Lancer raccordement ENEDIS (3-6 mois)"), /*#__PURE__*/React.createElement("p", null, "3. Déposer aides AVANT travaux"), /*#__PURE__*/React.createElement("p", null, "4. Contacter investisseur (voir Écosystème)"), /*#__PURE__*/React.createElement("p", null, "5. Argumentaire autorité délégante"), /*#__PURE__*/React.createElement("p", null, "6. Consulter chantiers (devis + planning)"))), /*#__PURE__*/React.createElement(Prev, {
+  }, /*#__PURE__*/React.createElement("p", null, "1. Affiner avec bureau d'études (CFD, dim. batteries)"), /*#__PURE__*/React.createElement("p", null, "2. Lancer raccordement ENEDIS (3-6 mois)"), /*#__PURE__*/React.createElement("p", null, "3. Déposer aides AVANT travaux"), /*#__PURE__*/React.createElement("p", null, "4. Contacter investisseur (voir Écosystème)"), /*#__PURE__*/React.createElement("p", null, "5. Argumentaire autorité délégante"), /*#__PURE__*/React.createElement("p", null, "6. Consulter chantiers (devis + planning)"))), (() => {
+    const v = proj.v;
+    const p = proj.p;
+    const vt = VT.find(x => x.id === v.type);
+    const bd = dimBatt(v);
+    const best = res.length > 1 ? res.slice(1).reduce((b, r) => r.base.ccv < b.base.ccv ? r : b) : null;
+    const co2ref = res[0]?.base?.co2 || 0;
+    const co2alt = best?.base?.co2 || co2ref;
+    const co2saved = Math.round(co2ref - co2alt);
+    const co2an = Math.round(co2saved / p.dur);
+    const ann = v.rev - v.opex - (best?.base?.yrs?.[1]?.en || 0) - v.crew - v.ins;
+    const surCost = best ? Math.round(best.base.ccv - res[0].base.ccv) : 0;
+    return /*#__PURE__*/React.createElement("div", {
+      className: "mt-6 p-4 rounded-xl",
+      style: {
+        background: "linear-gradient(135deg,#1E2D3D 0%,#0F4761 100%)",
+        color: "white"
+      }
+    }, /*#__PURE__*/React.createElement("h2", {
+      className: "text-lg font-bold mb-2"
+    }, "🇫🇷", " Construire mon dossier ADEME 2026 — AAP Décarbonation maritime (70 M€)"), /*#__PURE__*/React.createElement("div", {
+      className: "p-3 rounded-lg mb-4 text-xs",
+      style: {
+        background: "rgba(255,255,255,0.1)",
+        border: "1px solid rgba(255,255,255,0.2)"
+      }
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "font-bold mb-1",
+      style: {
+        color: W
+      }
+    }, "⚠", " Cahier des charges non publié à ce jour (21 mars 2026)"), /*#__PURE__*/React.createElement("p", null, "Catherine Chabaud a annoncé au salon Euromaritime (février 2026) le lancement « d’ici fin mars ». Surveillez :"), /*#__PURE__*/React.createElement("a", {
+      href: "https://agirpourlatransition.ademe.fr/entreprises/aides-financieres/catalogue",
+      target: "_blank",
+      rel: "noopener",
+      className: "inline-block mt-1 px-3 py-1.5 rounded font-bold",
+      style: {
+        background: T,
+        color: "white"
+      }
+    }, "agirpourlatransition.ademe.fr →"), /*#__PURE__*/React.createElement("p", {
+      className: "mt-2"
+    }, "La checklist ci-dessous est établie par croisement de la structure standard ADEME (AAP investissement France 2030, LDACEE SA.111726) avec les spécificités maritimes (feuille de route art. 301 loi Climat, stratégie OMI 2023). ", /*#__PURE__*/React.createElement("b", null, "Elle n’est pas exhaustive"), " et devra être ajustée au cahier des charges officiel.")), /*#__PURE__*/React.createElement("div", {
+      className: "space-y-3"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "p-3 rounded-lg",
+      style: {
+        background: "rgba(255,255,255,0.05)"
+      }
+    }, /*#__PURE__*/React.createElement("h3", {
+      className: "font-bold text-sm mb-2",
+      style: {
+        color: T
+      }
+    }, "VOLET 1 — Pièces administratives"), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs space-y-1 opacity-90"
+    }, ["Acte de candidature signé par le représentant légal", "Kbis < 3 mois + BIS (avis SIREN INSEE)", "RIB de l’entreprise", "Statuts à jour", "Attestation de régularité fiscale (DGFIP) et sociale (URSSAF)", "Déclaration PME/ETI au sens communautaire", "Déclaration de non-entreprise en difficulté", "Déclaration des aides publiques déjà reçues (cumul, minimis)", "Déclaration de non-commencement des travaux avant le dépôt"].map((t, i) => /*#__PURE__*/React.createElement("p", {
+      key: i
+    }, "☐", " ", t)))), /*#__PURE__*/React.createElement("div", {
+      className: "p-3 rounded-lg",
+      style: {
+        background: "rgba(255,255,255,0.05)"
+      }
+    }, /*#__PURE__*/React.createElement("h3", {
+      className: "font-bold text-sm mb-2",
+      style: {
+        color: T
+      }
+    }, "VOLET 2 — Descriptif du projet ", /*#__PURE__*/React.createElement("span", {
+      className: "font-normal text-xs",
+      style: {
+        color: GR
+      }
+    }, "(✓ pré-rempli par le simulateur)")), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs space-y-1"
+    }, /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: GR
+      }
+    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "Fiche de synthèse :"), " ", v.name || "(nommer le navire)", " | ", vt?.l, " | ", v.loa, "m / ", v.gt, " GT | Budget : ", best ? fK(best.totI) : "(configurer trajectoire)", " | Aide demandée : (selon taux)"), /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: GR
+      }
+    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "Description investissement :"), " ", best?.name || "Alternative", " — ", Object.entries(best?.name ? proj.trajs?.[best.idx]?.techs || {} : {}).filter(([, x]) => x?.a).map(([tid]) => TECHS.find(t => t.id === tid)?.l).filter(Boolean).join(", ") || "(sélectionner technologies)"), /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: GR
+      }
+    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "Navire :"), " ", vt?.l, ", ", v.loa, "m, ", v.gt, " GT, ", v.pP, " kW, ", v.rD, " rot/j sur ", v.opD, " j/an"), bd.kWh > 0 && /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: GR
+      }
+    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "Batteries :"), " ", bd.kWh, " kWh (", bd.constraint, "), chargeur ", bd.chargePower, " kW, DoD ", bd.dod, "%"), /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: GR
+      }
+    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "Gains GES quantifiés :"), " ", co2an > 0 ? "−" + fmt(co2an) + " tCO₂/an" : "(configurer trajectoire alternative)", " vs référence fossile (MDO)"), /*#__PURE__*/React.createElement("p", null, "☐", " Résumé exécutif non confidentiel"), /*#__PURE__*/React.createElement("p", null, "☐", " Contexte : Feuille de route décarbonation maritime (art. 301 loi Climat & Résilience) + stratégie OMI révisée 2023"), /*#__PURE__*/React.createElement("p", null, "☐", " Conformité EEDI/EEXI/CII (si applicable)"), /*#__PURE__*/React.createElement("p", null, "☐", " Calendrier prévisionnel avec jalons clés"), /*#__PURE__*/React.createElement("p", null, "☐", " Identification des risques et plan de mitigation (voir onglet Risques)"))), /*#__PURE__*/React.createElement("div", {
+      className: "p-3 rounded-lg",
+      style: {
+        background: "rgba(255,255,255,0.05)"
+      }
+    }, /*#__PURE__*/React.createElement("h3", {
+      className: "font-bold text-sm mb-2",
+      style: {
+        color: T
+      }
+    }, "VOLET 3 — Impact environnemental ", /*#__PURE__*/React.createElement("span", {
+      className: "font-normal text-xs",
+      style: {
+        color: GR
+      }
+    }, "(✓ calculé par le simulateur)")), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs space-y-1"
+    }, /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: GR
+      }
+    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "GES évités :"), " ", co2an > 0 ? fmt(co2an) + " tCO₂eq/an (−" + Math.round((co2ref - co2alt) / co2ref * 100) + "%)" : "(configurer trajectoire)"), /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: GR
+      }
+    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "Qualité air :"), " SOx, NOx, PM (voir onglet RI)"), /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: GR
+      }
+    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "Référence fossile :"), " MDO à ", getFuelPrice(proj, "mdo"), " €/t, ", getFuelCO2(proj, "mdo").toFixed(3), " tCO₂/t"), /*#__PURE__*/React.createElement("p", null, "☐", " Analyse Empreinte Projet EP1 (outil ADEME) si requis"), /*#__PURE__*/React.createElement("p", null, "☐", " Contribution OMI : neutralité 2050, −20% en 2030 vs 2008"), /*#__PURE__*/React.createElement("p", null, "☐", " Conformité DNSH (Do No Significant Harm) — 6 objectifs Taxonomie UE"), /*#__PURE__*/React.createElement("p", null, "☐", " Réplicabilité de la solution (voir cas de référence dans les onglets)"))), /*#__PURE__*/React.createElement("div", {
+      className: "p-3 rounded-lg",
+      style: {
+        background: "rgba(255,255,255,0.05)"
+      }
+    }, /*#__PURE__*/React.createElement("h3", {
+      className: "font-bold text-sm mb-2",
+      style: {
+        color: T
+      }
+    }, "VOLET 4 — Éléments financiers ", /*#__PURE__*/React.createElement("span", {
+      className: "font-normal text-xs",
+      style: {
+        color: GR
+      }
+    }, "(✓ partiellement calculé)")), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs space-y-1"
+    }, /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: GR
+      }
+    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "Budget investissement :"), " ", best ? fK(best.totI) + " (dont cont. " + p.cont + "%)" : "(configurer)"), /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: GR
+      }
+    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "Surcoût décarboné vs fossile :"), " ", surCost !== 0 ? (surCost > 0 ? "+" : "") + fK(surCost) + " sur " + p.dur + " ans" : "(configurer)"), co2saved > 0 && /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: GR
+      }
+    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "CMA :"), " ", fmt(Math.round(Math.abs(surCost) * 1000 / co2saved)), " €/tCO₂eq"), /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: GR
+      }
+    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "FCF annuel estimé :"), " ", fK(ann), " | DSCR : ", best && best.totI > 0 ? (ann / (best.totI / p.dur)).toFixed(2) + "x" : "N/A"), /*#__PURE__*/React.createElement("p", null, "☐", " Liasses fiscales des 3 derniers exercices"), /*#__PURE__*/React.createElement("p", null, "☐", " Business plan / plan d’exploitation sur la durée du projet"), /*#__PURE__*/React.createElement("p", null, "☐", " Plan de financement (emplois/ressources) avec co-financement"), /*#__PURE__*/React.createElement("p", null, "☐", " Démonstration d’incitativité de l’aide (le projet ne se fait pas sans)"), /*#__PURE__*/React.createElement("p", null, "☐", " Plan de trésorerie (capacité à préfinancer entre tranches)"), /*#__PURE__*/React.createElement("p", null, "☐", " Attestation santé financière (expert-comptable ou CAC)"))), /*#__PURE__*/React.createElement("div", {
+      className: "p-3 rounded-lg",
+      style: {
+        background: "rgba(255,255,255,0.05)"
+      }
+    }, /*#__PURE__*/React.createElement("h3", {
+      className: "font-bold text-sm mb-2",
+      style: {
+        color: T
+      }
+    }, "VOLET 5 — Impact économique & filière"), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs space-y-1 opacity-90"
+    }, ["Créations d’emplois directes et indirectes", "Ancrage territorial (chantiers navals, ports, sous-traitants français)", "Contribution à la structuration de la chaîne de valeur maritime française", "Potentiel export / réplicabilité internationale"].map((t, i) => /*#__PURE__*/React.createElement("p", {
+      key: i
+    }, "☐", " ", t)))), /*#__PURE__*/React.createElement("div", {
+      className: "p-3 rounded-lg",
+      style: {
+        background: "rgba(255,255,255,0.05)"
+      }
+    }, /*#__PURE__*/React.createElement("h3", {
+      className: "font-bold text-sm mb-2",
+      style: {
+        color: T
+      }
+    }, "VOLET 6 — Pièces spécifiques maritime"), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs space-y-1 opacity-90"
+    }, ["Certificats du navire : immatriculation, rôle d’équipage, classification", "Conformité réglementaire : Division applicable DGAMPA, société de classification", "Lettres d’intention clients/affréteurs/collectivités DSP (si applicable)", "Accord de consortium (si multi-partenaires)", "Fiche lauréat pré-remplie (résumé publiable ADEME/DGAMPA)", "Indicateurs socle : emploi, CA, brevets, tCO₂eq évitées"].map((t, i) => /*#__PURE__*/React.createElement("p", {
+      key: i
+    }, "☐", " ", t))))), /*#__PURE__*/React.createElement("div", {
+      className: "mt-4 p-3 rounded-lg text-xs",
+      style: {
+        background: "rgba(27,154,170,0.2)",
+        border: "1px solid rgba(27,154,170,0.4)"
+      }
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "font-bold mb-1"
+    }, "Contact GASPE pour accompagnement :"), /*#__PURE__*/React.createElement("p", null, "Le GASPE accompagne ses adhérents dans le montage de leurs dossiers ADEME. Contactez le Délégué Général pour un appui personnalisé sur l’argumentaire environnemental, le dimensionnement technique et le positionnement stratégique du dossier."), /*#__PURE__*/React.createElement("a", {
+      href: "https://gaspe.fr",
+      target: "_blank",
+      rel: "noopener",
+      className: "inline-block mt-1 px-3 py-1 rounded font-bold",
+      style: {
+        background: "white",
+        color: D
+      }
+    }, "gaspe.fr")));
+  })(), /*#__PURE__*/React.createElement(Prev, {
     to: 13
   })), /*#__PURE__*/React.createElement("div", {
     className: "text-center py-2",
