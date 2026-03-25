@@ -1053,7 +1053,12 @@ const LAND_POLYGONS=[[[-59.6,-80.0],[-59.9,-80.5],[-60.2,-81.0],[-62.3,-80.9],[-
     let externalMode = false;
     let externalProgress = 0;
     window.addEventListener('message', (e) => {
-        if (e.origin !== window.location.origin) return;
+        // Accept same-origin or same-hostname (handles www vs non-www)
+        try {
+            var msgHost = new URL(e.origin).hostname.replace(/^www\./, '');
+            var selfHost = window.location.hostname.replace(/^www\./, '');
+            if (msgHost !== selfHost) return;
+        } catch(_) { return; }
         if (e.data && e.data.type === 'setProgress') {
             externalMode = true;
             externalProgress = e.data.progress;
