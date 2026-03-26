@@ -115,7 +115,7 @@ return h("div",{key:label,style:{flex:1,minWidth:190}},
 h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:2}},
 h("span",{style:{fontSize:11,fontWeight:700,color:color}},label),
 h("span",{style:{display:"flex",alignItems:"baseline",gap:4}},
-h("input",{type:"number",value:step<1?val.toFixed(2):val,min:mn,max:mx,step:step,onChange:function(e){hn(set,mn,mx,e.target.value);},style:{width:step<1?72:62,textAlign:"right",fontSize:16,fontWeight:700,color:color,border:"1.5px solid #d1d5db",borderRadius:5,padding:"2px 6px",fontFamily:"inherit",background:"#f8fafb"}}),
+h("input",{type:"number",value:step<1?val.toFixed(2):val,min:mn,max:mx,step:"any",onChange:function(e){hn(set,mn,mx,e.target.value);},style:{width:step<1?72:62,textAlign:"right",fontSize:16,fontWeight:700,color:color,border:"1.5px solid #d1d5db",borderRadius:5,padding:"2px 6px",fontFamily:"inherit",background:"#f8fafb"}}),
 h("span",{style:{fontSize:12,color:"#888"}},unit))),
 h("div",{style:{fontSize:10,color:"#999",marginBottom:2}},sub),
 h("input",{type:"range",min:mn,max:mx,step:step,value:val,onChange:function(e){set(parseFloat(e.target.value));spr("Custom");},style:{width:"100%",accentColor:color,height:6,cursor:"pointer"}}));}
