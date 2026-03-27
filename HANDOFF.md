@@ -222,3 +222,54 @@
 
 ## Fichiers crees
 - `oceanocratie.fr/og-image.png` — OG image raster pour compatibilite reseaux sociaux
+
+---
+
+# HANDOFF — Session 27 mars 2026
+
+## Branche : `perf/globe-lazy-load`
+
+## Probleme
+Le globe Three.js (Globe.astro) initialisait WebGL + chargeait ~628 KB de textures de maniere
+synchrone sur le thread principal, bloquant le LCP et causant des timeouts PageSpeed.
+
+## Actions realisees
+
+### 1. Textures → WebP (−435 KB, −69%)
+- `earth-blue-marble.jpg` (335 KB) → `.webp` (158 KB) — −53%
+- `earth-topology.png` (293 KB) → `.webp` (35 KB) — −88%
+- Originaux supprimes, chemins mis a jour dans Globe.astro
+
+### 2. Testimonial resize (−91 KB, −92%)
+- `luna-menendez.jpg` 800×800 (99 KB) → 160×160 (7.5 KB)
+- Original sauvegarde en `luna-menendez-original.jpg`
+
+### 3. Globe.astro — CSS placeholder + canvas fade-in
+- `#globe-container::before` : radial-gradient `#080b14` (meme fond que le globe)
+- `#globe-container canvas` : `opacity: 0` + `transition: opacity 0.8s`
+- `.globe-ready` : fait disparaitre le placeholder et apparaitre le canvas
+
+### 4. Globe.astro — requestIdleCallback lazy init
+- Tout le bloc `else { ... }` (Three.js init, textures, controls, animation) wrappe
+  dans `async function initGlobe()`
+- Declenchement via `requestIdleCallback` (fallback `setTimeout(200)`)
+- `.globe-ready` ajoute apres chargement des 2 textures OU timeout 6s
+
+### 5. Documentation
+- CLAUDE.md : section Performance ajoutee
+- HANDOFF.md : cette section
+
+## Economie totale : ~526 KB + thread principal libere pour LCP
+
+## Fichiers modifies
+- `site/src/components/Globe.astro` — CSS placeholder, canvas transition, initGlobe wrapper, WebP paths
+- `site/public/assets/textures/earth-blue-marble.webp` — remplacement de .jpg
+- `site/public/assets/textures/earth-topology.webp` — remplacement de .png
+- `site/public/assets/testimonials/luna-menendez.jpg` — redimensionne 160×160
+- `CLAUDE.md` — section performance
+- `HANDOFF.md` — cette session
+
+## A faire (post-merge)
+- Tester PageSpeed Insights apres deploy
+- Verifier le rendu du globe sur Safari (WebP support OK depuis Safari 14)
+- Considerer un `<link rel="preload">` sur earth-blue-marble.webp si LCP globe detecte
