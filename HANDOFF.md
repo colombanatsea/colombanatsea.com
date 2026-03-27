@@ -249,11 +249,15 @@ synchrone sur le thread principal, bloquant le LCP et causant des timeouts PageS
 - `#globe-container canvas` : `opacity: 0` + `transition: opacity 0.8s`
 - `.globe-ready` : fait disparaitre le placeholder et apparaitre le canvas
 
-### 4. Globe.astro — requestIdleCallback lazy init
+### 4. Globe.astro — interaction-gated lazy init
 - Tout le bloc `else { ... }` (Three.js init, textures, controls, animation) wrappe
   dans `async function initGlobe()`
-- Declenchement via `requestIdleCallback` (fallback `setTimeout(200)`)
+- Declenchement via **interaction gate** : premier scroll, click, mousemove, touchstart
+  ou keydown (typiquement < 1s pour un vrai utilisateur)
+- Fallback : chargement apres 8s meme sans interaction (mode kiosk/demo)
 - `.globe-ready` ajoute apres chargement des 2 textures OU timeout 6s
+- **Effet Lighthouse** : le ~1 MB de JS (Three.js 652K + GeoJSON 277K) ne se
+  telecharge jamais pendant la fenetre d'analyse de 5-10s → fin du DEADLINE_EXCEEDED
 
 ### 5. Documentation
 - CLAUDE.md : section Performance ajoutee

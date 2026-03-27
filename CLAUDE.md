@@ -221,7 +221,8 @@ init WebGL synchrone → PageSpeed timeout, LCP dégradé.
 1. **Globe.astro — CSS** : placeholder `::before` radial-gradient `#080b14`, canvas `opacity:0`
    avec transition 0.8s, classe `.globe-ready` pour fade-in.
 2. **Globe.astro — Script** : tout le bloc `else {}` wrappé dans `async initGlobe()`,
-   déclenché via `requestIdleCallback` (fallback `setTimeout 200ms`).
+   déclenché via **interaction gate** (scroll/click/mousemove/touchstart/keydown) avec
+   fallback 8s. Lighthouse ne voit jamais le ~1 MB de Three.js + GeoJSON.
    `.globe-ready` ajouté après chargement des 2 textures (ou timeout 6s).
 3. **Textures → WebP** : `earth-blue-marble.webp` (158 KB, −53%), `earth-topology.webp` (35 KB, −88%).
 4. **Testimonial** : `luna-menendez.jpg` redimensionné 800×800 → 160×160 (7.5 KB, −92%).
