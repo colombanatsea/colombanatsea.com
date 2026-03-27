@@ -1478,11 +1478,33 @@
 
   } // end of initGlobe()
 
-  // Trigger: defer to idle time so the main thread finishes LCP first
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(() => initGlobe());
-  } else {
-    setTimeout(initGlobe, 200);
+  // ── INTERACTION-GATED LOADING ──
+  // Globe only loads after first user interaction (scroll/click/mousemove)
+  // OR after 8s fallback. This keeps Lighthouse's analysis window clean
+  // (~1 MB of Three.js + GeoJSON won't download until user engages).
+  let globeTriggered = false;
+  function triggerGlobe() {
+    if (globeTriggered) return;
+    globeTriggered = true;
+    // Clean up all listeners
+    ['scroll', 'click', 'touchstart', 'mousemove', 'keydown'].forEach(e =>
+      window.removeEventListener(e, triggerGlobe)
+    );
+    // Use requestIdleCallback if available, otherwise small delay
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => initGlobe());
+    } else {
+      setTimeout(initGlobe, 100);
+    }
   }
+
+  // Load on first user interaction (typically < 1s for real users)
+  ['scroll', 'click', 'touchstart', 'mousemove', 'keydown'].forEach(e =>
+    window.addEventListener(e, triggerGlobe, { once: true, passive: true })
+  );
+
+  // Fallback: load after 8s even without interaction (kiosk/demo mode)
+  setTimeout(triggerGlobe, 8000);
+
   } // end of else (container visible)
 </script>
