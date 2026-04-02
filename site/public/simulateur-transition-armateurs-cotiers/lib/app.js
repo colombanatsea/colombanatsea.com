@@ -3500,7 +3500,7 @@ function App() {
     style: {
       color: "#888"
     }
-  }, "Estimation indicative. Le classement final d\xE9pend des autres projets d\xE9pos\xE9s (enveloppe 70 M\u20AC pour ~200 projets candidats, source : Armateurs de France). Les fourchettes ci-dessous situent votre projet par rapport aux ordres de grandeur typiques des op\xE9rateurs de proximit\xE9."), /*#__PURE__*/React.createElement("div", {
+  }, "Estimation indicative. Le classement final d\xE9pend des autres projets d\xE9pos\xE9s (enveloppe 70 M\u20AC pour ~200 projets candidats, source : GASPE). Les fourchettes ci-dessous situent votre projet par rapport aux ordres de grandeur typiques des op\xE9rateurs de proximit\xE9."), /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-4 gap-2 mb-3"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-center p-3 rounded-lg",
@@ -3914,65 +3914,73 @@ function App() {
       background: PU
     }
   }, "\uD83D\uDDA8\uFE0F Exporter pre-dossier PDF (format A4)"))), /*#__PURE__*/React.createElement(Cd, {
-    title: "\u{1F30D} Tous les projets de reference (" + CASE_DB.length + " projets sources)"
+    title: "🌍 Tous les projets de reference (" + CASE_DB.length + " projets sources)"
   }, /*#__PURE__*/React.createElement("p", {
     className: "text-xs mb-3",
     style: {
       color: "#888"
     }
-  }, "Base de donnees complete des projets de decarbonation maritime dans le monde. Classes par pertinence par rapport a votre projet."), CASE_DB.map(c => {
-    const cases = matchCases(proj);
-    const matched = cases.find(x => x.id === c.id);
-    const score = matched?.score || 0;
-    return /*#__PURE__*/React.createElement("div", {
+  }, "Base de donnees de projets de decarbonation maritime. Tries par pertinence par rapport a votre projet."), (() => {
+    const allCases = matchCases(proj);
+    const scored = CASE_DB.map(c => ({
+      ...c,
+      sc: allCases.find(x => x.id === c.id)?.score || 0
+    })).sort((a, b) => b.sc - a.sc);
+    const top = scored.filter(c => c.sc > 15);
+    const rest = scored.filter(c => c.sc <= 15);
+    const renderCard = (c, compact) => /*#__PURE__*/React.createElement("div", {
       key: c.id,
-      className: "p-3 rounded-lg mb-2 text-xs",
+      className: "p-" + (compact ? "2" : "3") + " rounded-lg mb-2 text-xs",
       style: {
         background: "#fafafa",
-        borderLeft: "3px solid " + (score > 60 ? GR : score > 30 ? T : "#ddd")
+        borderLeft: (compact ? "2" : "3") + "px solid " + (c.sc > 60 ? GR : c.sc > 30 ? T : "#ddd")
       }
     }, /*#__PURE__*/React.createElement("div", {
       className: "flex justify-between items-start mb-1"
     }, /*#__PURE__*/React.createElement("span", {
       className: "font-bold",
       style: {
-        color: D
+        color: compact ? "#888" : D
       }
     }, {
-      "NO": "\u{1F1F3}\u{1F1F4}",
-      "DK": "\u{1F1E9}\u{1F1F0}",
-      "FR": "\u{1F1EB}\u{1F1F7}",
-      "BE": "\u{1F1E7}\u{1F1EA}",
-      "US": "\u{1F1FA}\u{1F1F8}",
-      "IE": "\u{1F1EE}\u{1F1EA}",
-      "INT": "\u{1F30D}",
-      "SE": "\u{1F1F8}\u{1F1EA}",
-      "NZ": "\u{1F1F3}\u{1F1FF}",
-      "UY": "\u{1F1FA}\u{1F1FE}",
-      "JP": "\u{1F1EF}\u{1F1F5}",
-      "EU": "\u{1F1EA}\u{1F1FA}"
-    }[c.co] || "\u{1F6A2}", " ", c.n, " (", c.yr, ")"), score > 0 && /*#__PURE__*/React.createElement("span", {
+      "NO": "🇳🇴",
+      "DK": "🇩🇰",
+      "FR": "🇫🇷",
+      "BE": "🇧🇪",
+      "US": "🇺🇸",
+      "IE": "🇮🇪",
+      "INT": "🌍",
+      "SE": "🇸🇪",
+      "NZ": "🇳🇿",
+      "UY": "🇺🇾",
+      "JP": "🇯🇵",
+      "EU": "🇪🇺"
+    }[c.co] || "🚢", " ", c.n, " (", c.yr, ")"), c.sc > 0 && /*#__PURE__*/React.createElement("span", {
       className: "px-1.5 py-0.5 rounded font-bold",
       style: {
-        background: score > 60 ? GR : score > 30 ? T : "#ccc",
+        background: c.sc > 60 ? GR : c.sc > 30 ? T : "#ccc",
         color: "white",
         fontSize: 9
       }
-    }, score, "%")), /*#__PURE__*/React.createElement("p", {
+    }, c.sc, "%")), !compact && /*#__PURE__*/React.createElement("p", {
       style: {
         color: "#555"
       }
-    }, c.d), c.co2 < 0 && /*#__PURE__*/React.createElement("p", {
+    }, c.d), !compact && c.co2 < 0 && /*#__PURE__*/React.createElement("p", {
       className: "mt-1",
       style: {
         color: GR
       }
-    }, "Impact : ", Math.abs(c.co2), " tCO2/an evitees"), /*#__PURE__*/React.createElement("p", {
+    }, "Impact : ", Math.abs(c.co2), " tCO2/an evitees"), !compact && /*#__PURE__*/React.createElement("p", {
       className: "mt-1",
       style: {
         color: "#999"
       }
-    }, "Source : ", c.s), c.url && /*#__PURE__*/React.createElement("a", {
+    }, "Source : ", c.s), compact && /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: "#aaa"
+      }
+    }, c.d.slice(0, 90), "..."), c.url && /*#__PURE__*/React.createElement("a", {
       href: c.url,
       target: "_blank",
       rel: "noopener",
@@ -3980,12 +3988,19 @@ function App() {
         color: T,
         fontSize: 10
       }
-    }, "Voir le projet \\u2192"));
-  }).sort((a, b) => {
-    const sa = matchCases(proj).find(x => x.id === a.key)?.score || 0;
-    const sb = matchCases(proj).find(x => x.id === b.key)?.score || 0;
-    return sb - sa;
-  })), /*#__PURE__*/React.createElement(Cd, {
+    }, "Voir le projet \u2192"));
+    return /*#__PURE__*/React.createElement(React.Fragment, null, top.map(c => renderCard(c, false)), rest.length > 0 && /*#__PURE__*/React.createElement("details", {
+      className: "mt-2"
+    }, /*#__PURE__*/React.createElement("summary", {
+      className: "text-xs font-bold py-2",
+      style: {
+        color: T,
+        cursor: "pointer"
+      }
+    }, "Voir ", rest.length, " autre(s) projet(s)"), /*#__PURE__*/React.createElement("div", {
+      className: "mt-2"
+    }, rest.map(c => renderCard(c, true)))));
+  })()), /*#__PURE__*/React.createElement(Cd, {
     title: "\uD83D\uDCD6 Sources et m\xE9thodologie de calcul"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-2",
