@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulateur AAP ADEME 2026 — GASPE</title>
+  <meta name="description" content="Simulateur GASPE pour le montage de dossiers ADEME décarbonation maritime. 70 M€, deadline 6 juillet 2026.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>⚓</text></svg>">
+  <link rel="stylesheet" href="lib/tailwind.min.css">
+  <style>
+    /* DM Sans fallback — pas de Google Fonts (CSP strict) */
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: local('DM Sans'), local('DMSans-Regular'), local('system-ui');
+    }
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 500;
+      src: local('DM Sans Medium'), local('DMSans-Medium'), local('system-ui');
+    }
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 700;
+      src: local('DM Sans Bold'), local('DMSans-Bold'), local('system-ui');
+    }
+    body { margin: 0; padding: 0; }
+    /* Print styles pour export PDF */
+    @media print {
+      .no-print { display: none !important; }
+      body { font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Bibliothèques — toutes locales, zéro CDN -->
+  <script src="lib/react.min.js"></script>
+  <script src="lib/react-dom.min.js"></script>
+  <script src="lib/prop-types.min.js"></script>
+  <script src="lib/recharts.min.js"></script>
+
+  <!-- Application compilée -->
+  <script src="lib/app.js"></script>
+
+  <script>
+    // Montage React
+    var root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(React.createElement(App));
+  </script>
+</body>
+</html>
