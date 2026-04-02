@@ -3440,7 +3440,7 @@ function App() {
     style: {
       color: "#888"
     }
-  }, "Estimation indicative. Le classement final d\xE9pend des autres projets d\xE9pos\xE9s (enveloppe 70 M\u20AC pour ~200 projets candidats, source : Armateurs de France). Les fourchettes ci-dessous situent votre projet par rapport aux ordres de grandeur typiques des op\xE9rateurs de proximit\xE9."), /*#__PURE__*/React.createElement("div", {
+  }, "Estimation indicative. Le classement final d\xE9pend des autres projets d\xE9pos\xE9s (enveloppe 70 M\u20AC pour ~200 projets candidats, source : CdC ADEME 2026). Les fourchettes ci-dessous situent votre projet par rapport aux ordres de grandeur typiques des op\xE9rateurs de proximit\xE9."), /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-4 gap-2 mb-3"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-center p-3 rounded-lg",
