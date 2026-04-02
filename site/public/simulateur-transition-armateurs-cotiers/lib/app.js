@@ -1969,7 +1969,7 @@ function App() {
       style: {
         color: "#3d6a74"
       }
-    }, "v1.6.0 \xB7 Propuls\xE9 par ", /*#__PURE__*/React.createElement("a", {
+    }, "v1.6.2 \xB7 Propuls\xE9 par ", /*#__PURE__*/React.createElement("a", {
       href: "https://vaiata-dynamics.com/fr/",
       target: "_blank",
       rel: "noopener",
@@ -3721,7 +3721,7 @@ function App() {
       w.document.write('<tr><td>ADEME AAP 2026</td><td>' + fK(aide.aide) + '</td></tr>');
       if (proj.autresAides > 0) w.document.write('<tr><td>' + (proj.autresAidesDetail || 'Autres') + '</td><td>' + fK(proj.autresAides) + '</td></tr>');
       w.document.write('<tr><td><b>Total</b></td><td><b>' + fK(aide.aide + (proj.autresAides || 0)) + '</b></td></tr></table>');
-      w.document.write('<div class="footer">GASPE - Localement ancrees. Socialement engagees.<br>Simulateur AAP ADEME 2026 v1.6.0 - ' + new Date().toLocaleDateString('fr-FR') + '</div>');
+      w.document.write('<div class="footer">GASPE - Localement ancrees. Socialement engagees.<br>Simulateur AAP ADEME 2026 v1.6.2 - ' + new Date().toLocaleDateString('fr-FR') + '</div>');
       w.document.write('</body></html>');
       w.document.close();
       w.print();
@@ -3754,7 +3754,7 @@ function App() {
     style: {
       color: "#ccc"
     }
-  }, "v1.6.0 \xB7 Simulateur AAP ADEME 2026 \xB7 Propuls\xE9 par", " ", /*#__PURE__*/React.createElement("a", {
+  }, "v1.6.2 \xB7 Simulateur AAP ADEME 2026 \xB7 Propuls\xE9 par", " ", /*#__PURE__*/React.createElement("a", {
     href: "https://vaiata-dynamics.com/fr/",
     target: "_blank",
     rel: "noopener",
