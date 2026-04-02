@@ -1813,15 +1813,14 @@ function App() {
       }
     }, /*#__PURE__*/React.createElement("div", {
       className: "flex flex-col items-center justify-center min-h-screen px-4"
-    }, /*#__PURE__*/React.createElement("span", {
+    }, /*#__PURE__*/React.createElement("img", {
+      src: GASPE_LOGO,
+      alt: "GASPE",
       style: {
-        fontSize: 36,
-        fontWeight: 700,
-        letterSpacing: 6,
-        color: "#4dd9e8",
-        textShadow: "0 2px 12px rgba(27,154,170,0.4)"
+        height: 56,
+        mixBlendMode: "screen"
       }
-    }, "GASPE"), /*#__PURE__*/React.createElement("h1", {
+    }), /*#__PURE__*/React.createElement("h1", {
       className: "text-2xl font-bold text-white text-center mb-2"
     }, "Simulateur AAP ADEME 2026"), /*#__PURE__*/React.createElement("p", {
       className: "text-center text-sm mb-1",
@@ -1969,7 +1968,7 @@ function App() {
       style: {
         color: "#3d6a74"
       }
-    }, "v1.6.2 \xB7 Propuls\xE9 par ", /*#__PURE__*/React.createElement("a", {
+    }, "v1.6.0 \xB7 Propuls\xE9 par ", /*#__PURE__*/React.createElement("a", {
       href: "https://vaiata-dynamics.com/fr/",
       target: "_blank",
       rel: "noopener",
@@ -2048,14 +2047,14 @@ function App() {
       color: "white",
       cursor: "pointer"
     }
-  }, "\u2190 Projets"), /*#__PURE__*/React.createElement("span", {
+  }, "\u2190 Projets"), /*#__PURE__*/React.createElement("img", {
+    src: GASPE_LOGO,
+    alt: "GASPE",
     style: {
-      fontSize: 14,
-      fontWeight: 700,
-      letterSpacing: 3,
-      color: "#4dd9e8"
+      height: 22,
+      mixBlendMode: "screen"
     }
-  }, "GASPE"), /*#__PURE__*/React.createElement("input", {
+  }), /*#__PURE__*/React.createElement("input", {
     type: "text",
     value: proj.name || "",
     onChange: e => upd({
@@ -3721,7 +3720,7 @@ function App() {
       w.document.write('<tr><td>ADEME AAP 2026</td><td>' + fK(aide.aide) + '</td></tr>');
       if (proj.autresAides > 0) w.document.write('<tr><td>' + (proj.autresAidesDetail || 'Autres') + '</td><td>' + fK(proj.autresAides) + '</td></tr>');
       w.document.write('<tr><td><b>Total</b></td><td><b>' + fK(aide.aide + (proj.autresAides || 0)) + '</b></td></tr></table>');
-      w.document.write('<div class="footer">GASPE - Localement ancrees. Socialement engagees.<br>Simulateur AAP ADEME 2026 v1.6.2 - ' + new Date().toLocaleDateString('fr-FR') + '</div>');
+      w.document.write('<div class="footer">GASPE - Localement ancrees. Socialement engagees.<br>Simulateur AAP ADEME 2026 v1.6.0 - ' + new Date().toLocaleDateString('fr-FR') + '</div>');
       w.document.write('</body></html>');
       w.document.close();
       w.print();
@@ -3754,7 +3753,7 @@ function App() {
     style: {
       color: "#ccc"
     }
-  }, "v1.6.2 \xB7 Simulateur AAP ADEME 2026 \xB7 Propuls\xE9 par", " ", /*#__PURE__*/React.createElement("a", {
+  }, "v1.6.0 \xB7 Simulateur AAP ADEME 2026 \xB7 Propuls\xE9 par", " ", /*#__PURE__*/React.createElement("a", {
     href: "https://vaiata-dynamics.com/fr/",
     target: "_blank",
     rel: "noopener",
