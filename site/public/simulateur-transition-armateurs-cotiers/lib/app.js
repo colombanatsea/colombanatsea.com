@@ -2750,27 +2750,25 @@ function App() {
   }, "Investissement total estim\xE9 : ", fK(res[1].totI), " (hors contingences)")), (() => {
     const cases = matchCases(proj);
     if (cases.length === 0) return null;
-    return /*#__PURE__*/React.createElement(Cd, {
-      title: "📚 " + cases.length + " projet(s) de référence similaire(s)",
-      accent: T
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-xs mb-2",
-      style: {
-        color: "#888"
-      }
-    }, "Projets sourc\xE9s correspondant \xE0 votre profil (matching dynamique sur type, technologie, taille, distance)."), cases.map(c => /*#__PURE__*/React.createElement("div", {
+    const allScored = CASE_DB.map(c => ({
+      ...c,
+      sc: cases.find(x => x.id === c.id)?.score || 0
+    })).sort((a, b) => b.sc - a.sc);
+    const top = allScored.slice(0, 5);
+    const rest = allScored.slice(5);
+    const renderRef = (c, compact) => /*#__PURE__*/React.createElement("div", {
       key: c.id,
-      className: "p-2 rounded-lg mb-2 text-xs",
+      className: "p-" + (compact ? "2" : "2") + " rounded-lg mb-2 text-xs",
       style: {
-        background: LB,
-        borderLeft: "3px solid " + (c.score > 60 ? GR : c.score > 40 ? T : W)
+        background: compact ? "#f8f8f8" : LB,
+        borderLeft: "3px solid " + (c.sc > 60 ? GR : c.sc > 30 ? T : "#ddd")
       }
     }, /*#__PURE__*/React.createElement("div", {
       className: "flex justify-between items-start mb-1"
     }, /*#__PURE__*/React.createElement("span", {
       className: "font-bold",
       style: {
-        color: D
+        color: compact ? "#888" : D
       }
     }, {
       "NO": "🇳🇴",
@@ -2785,23 +2783,23 @@ function App() {
       "UY": "🇺🇾",
       "JP": "🇯🇵",
       "EU": "🇪🇺"
-    }[c.co] || "🚢", " ", c.n, " (", c.yr, ")"), /*#__PURE__*/React.createElement("span", {
+    }[c.co] || "🚢", " ", c.n, " (", c.yr, ")"), c.sc > 0 && /*#__PURE__*/React.createElement("span", {
       className: "px-1.5 py-0.5 rounded font-bold",
       style: {
-        background: c.score > 60 ? GR : c.score > 40 ? T : W,
+        background: c.sc > 60 ? GR : c.sc > 30 ? T : "#ccc",
         color: "white",
         fontSize: 9
       }
-    }, c.score, "%")), /*#__PURE__*/React.createElement("p", {
+    }, c.sc, "%")), /*#__PURE__*/React.createElement("p", {
       style: {
-        color: "#555"
+        color: compact ? "#aaa" : "#555"
       }
-    }, c.d), c.co2 < 0 && /*#__PURE__*/React.createElement("p", {
+    }, compact ? c.d.slice(0, 90) + "..." : c.d), !compact && c.co2 < 0 && /*#__PURE__*/React.createElement("p", {
       className: "mt-1",
       style: {
         color: GR
       }
-    }, "Impact mesur\xE9 : ", Math.abs(c.co2), " tCO\u2082/an \xE9vit\xE9es"), /*#__PURE__*/React.createElement("p", {
+    }, "Impact : ", Math.abs(c.co2), " tCO\u2082/an evitees"), !compact && /*#__PURE__*/React.createElement("p", {
       className: "mt-1",
       style: {
         color: "#999"
@@ -2814,7 +2812,26 @@ function App() {
       style: {
         color: T
       }
-    }, "Voir le projet \u2192"))));
+    }, "Voir le projet \u2192"));
+    return /*#__PURE__*/React.createElement(Cd, {
+      title: "📚 " + cases.length + " projet(s) similaire(s) sur " + CASE_DB.length + " references",
+      accent: T
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs mb-2",
+      style: {
+        color: "#888"
+      }
+    }, "Matching dynamique sur type, technologie, taille, distance. Tries par pertinence."), top.map(c => renderRef(c, false)), rest.length > 0 && /*#__PURE__*/React.createElement("details", {
+      className: "mt-2"
+    }, /*#__PURE__*/React.createElement("summary", {
+      className: "text-xs font-bold py-2",
+      style: {
+        color: T,
+        cursor: "pointer"
+      }
+    }, "Voir les ", rest.length, " autres projets"), /*#__PURE__*/React.createElement("div", {
+      className: "mt-2"
+    }, rest.map(c => renderRef(c, true)))));
   })(), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between mt-6 mb-6"
   }, /*#__PURE__*/React.createElement("button", {
@@ -3914,93 +3931,6 @@ function App() {
       background: PU
     }
   }, "\uD83D\uDDA8\uFE0F Exporter pre-dossier PDF (format A4)"))), /*#__PURE__*/React.createElement(Cd, {
-    title: "🌍 Tous les projets de reference (" + CASE_DB.length + " projets sources)"
-  }, /*#__PURE__*/React.createElement("p", {
-    className: "text-xs mb-3",
-    style: {
-      color: "#888"
-    }
-  }, "Base de donnees de projets de decarbonation maritime. Tries par pertinence par rapport a votre projet."), (() => {
-    const allCases = matchCases(proj);
-    const scored = CASE_DB.map(c => ({
-      ...c,
-      sc: allCases.find(x => x.id === c.id)?.score || 0
-    })).sort((a, b) => b.sc - a.sc);
-    const top = scored.filter(c => c.sc > 15);
-    const rest = scored.filter(c => c.sc <= 15);
-    const renderCard = (c, compact) => /*#__PURE__*/React.createElement("div", {
-      key: c.id,
-      className: "p-" + (compact ? "2" : "3") + " rounded-lg mb-2 text-xs",
-      style: {
-        background: "#fafafa",
-        borderLeft: (compact ? "2" : "3") + "px solid " + (c.sc > 60 ? GR : c.sc > 30 ? T : "#ddd")
-      }
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex justify-between items-start mb-1"
-    }, /*#__PURE__*/React.createElement("span", {
-      className: "font-bold",
-      style: {
-        color: compact ? "#888" : D
-      }
-    }, {
-      "NO": "🇳🇴",
-      "DK": "🇩🇰",
-      "FR": "🇫🇷",
-      "BE": "🇧🇪",
-      "US": "🇺🇸",
-      "IE": "🇮🇪",
-      "INT": "🌍",
-      "SE": "🇸🇪",
-      "NZ": "🇳🇿",
-      "UY": "🇺🇾",
-      "JP": "🇯🇵",
-      "EU": "🇪🇺"
-    }[c.co] || "🚢", " ", c.n, " (", c.yr, ")"), c.sc > 0 && /*#__PURE__*/React.createElement("span", {
-      className: "px-1.5 py-0.5 rounded font-bold",
-      style: {
-        background: c.sc > 60 ? GR : c.sc > 30 ? T : "#ccc",
-        color: "white",
-        fontSize: 9
-      }
-    }, c.sc, "%")), !compact && /*#__PURE__*/React.createElement("p", {
-      style: {
-        color: "#555"
-      }
-    }, c.d), !compact && c.co2 < 0 && /*#__PURE__*/React.createElement("p", {
-      className: "mt-1",
-      style: {
-        color: GR
-      }
-    }, "Impact : ", Math.abs(c.co2), " tCO2/an evitees"), !compact && /*#__PURE__*/React.createElement("p", {
-      className: "mt-1",
-      style: {
-        color: "#999"
-      }
-    }, "Source : ", c.s), compact && /*#__PURE__*/React.createElement("p", {
-      style: {
-        color: "#aaa"
-      }
-    }, c.d.slice(0, 90), "..."), c.url && /*#__PURE__*/React.createElement("a", {
-      href: c.url,
-      target: "_blank",
-      rel: "noopener",
-      style: {
-        color: T,
-        fontSize: 10
-      }
-    }, "Voir le projet \u2192"));
-    return /*#__PURE__*/React.createElement(React.Fragment, null, top.map(c => renderCard(c, false)), rest.length > 0 && /*#__PURE__*/React.createElement("details", {
-      className: "mt-2"
-    }, /*#__PURE__*/React.createElement("summary", {
-      className: "text-xs font-bold py-2",
-      style: {
-        color: T,
-        cursor: "pointer"
-      }
-    }, "Voir ", rest.length, " autre(s) projet(s)"), /*#__PURE__*/React.createElement("div", {
-      className: "mt-2"
-    }, rest.map(c => renderCard(c, true)))));
-  })()), /*#__PURE__*/React.createElement(Cd, {
     title: "\uD83D\uDCD6 Sources et m\xE9thodologie de calcul"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-2",
