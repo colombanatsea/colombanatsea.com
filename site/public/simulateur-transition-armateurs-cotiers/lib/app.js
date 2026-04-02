@@ -944,6 +944,142 @@ const CASE_DB = [{
   nox: 0,
   s: "Business Norway 2024; Norled; DNV",
   d: "Swap batterie autonome. Retrofit Oslofjord : −1 M litres diesel, −3 000 tCO₂/an."
+}, {
+  id: "candela_p12",
+  n: "Candela P-12 Shuttle",
+  co: "SE",
+  yr: 2024,
+  vt: ["navette"],
+  tr: ["full_elec"],
+  loa: 12,
+  batt: 180,
+  rot: 0,
+  nm: 9,
+  retro: false,
+  co2: -100,
+  nox: 0,
+  s: "Candela Technology 2024; Stockholm SL",
+  d: "Hydroptere electrique 30 pax, 30 nds. 80% moins de consommation vs ferry classique.",
+  url: "https://candela.com/p-12-shuttle/"
+}, {
+  id: "at1_auckland",
+  n: "AT1 (EV Maritime)",
+  co: "NZ",
+  yr: 2025,
+  vt: ["navette"],
+  tr: ["full_elec"],
+  loa: 24,
+  batt: 1075,
+  rot: 0,
+  nm: 10,
+  retro: false,
+  co2: -300,
+  nox: 0,
+  s: "EV Maritime 2025; Auckland Transport",
+  d: "200 pax, 25 nds, coque carbone. 1 075 kWh Freudenberg, 4x Danfoss 300 kW.",
+  url: "https://www.evmaritime.co.nz"
+}, {
+  id: "hull096",
+  n: "Hull 096 (Buquebus/Incat)",
+  co: "UY",
+  yr: 2025,
+  vt: ["ferry"],
+  tr: ["full_elec"],
+  loa: 130,
+  batt: 40000,
+  rot: 0,
+  nm: 30,
+  retro: false,
+  co2: -10000,
+  nox: 0,
+  s: "Incat 2025; IEEE Spectrum jan. 2026",
+  d: "Plus grand navire electrique au monde. 130m, 2 100 pax, 225 veh., 40 MWh, 8 waterjets.",
+  url: "https://spectrum.ieee.org/electric-boat-battery-ship-ferry"
+}, {
+  id: "wsf_hybrid",
+  n: "Washington State Ferries",
+  co: "US",
+  yr: 2025,
+  vt: ["ferry", "bac"],
+  tr: ["hybride"],
+  loa: 100,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: true,
+  co2: -5000,
+  nox: 0,
+  s: "WSDOT 2025; ABB Marine & Ports",
+  d: "Programme 16 ferries hybrides d'ici 2040. Retrofit Jumbo Mark II (160 vehicules). ABB propulsion.",
+  url: "https://wsdot.wa.gov/construction-planning/major-projects/ferry-system-electrification"
+}, {
+  id: "sf_bay",
+  n: "SF Bay Ferry (electrique)",
+  co: "US",
+  yr: 2025,
+  vt: ["navette"],
+  tr: ["full_elec"],
+  loa: 30,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: -500,
+  nox: 0,
+  s: "Wartsila mai 2025; All American Marine",
+  d: "3 ferries rapides full-electriques, 24 nds, 30m. Propulsion Wartsila. Premiers du genre aux USA.",
+  url: "https://www.wartsila.com/media/news/28-05-2025-wartsila-to-supply-the-electric-propulsion-system-for-usa-s-first-battery-electric-zero-emission-high-speed-passenger-ferries-3590753"
+}, {
+  id: "stmalo",
+  n: "Saint-Malo (Brittany Ferries)",
+  co: "FR",
+  yr: 2025,
+  vt: ["ferry"],
+  tr: ["hybride"],
+  loa: 170,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: -2000,
+  nox: 0,
+  s: "Brittany Ferries 2024; Stena RoRo",
+  d: "Hybride GNL/batterie, 1 400 pax. Premier ferry hybride transmanche francais.",
+  url: "https://www.brittany-ferries.fr"
+}, {
+  id: "te_ferries",
+  n: "Etude T&E electrification ferries EU",
+  co: "EU",
+  yr: 2025,
+  vt: ["bac", "ferry", "navette"],
+  tr: ["full_elec", "hybride"],
+  loa: 0,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: 0,
+  nox: 0,
+  s: "Transport & Environment, mars 2026 (peer-reviewed)",
+  d: "20% des ferries EU rentables en electrique des 2025. 52% en 2035. France : 11% eligible.",
+  url: "https://www.transportenvironment.org/articles/full-charge-ahead-investigating-the-potential-to-electrify-europes-ferries"
+}, {
+  id: "lca_2025",
+  n: "LCA ferries electriques",
+  co: "INT",
+  yr: 2025,
+  vt: ["bac", "ferry", "navette"],
+  tr: ["full_elec", "hybride"],
+  loa: 0,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: -90,
+  nox: 0,
+  s: "Applied Energy 2025, ScienceDirect (peer-reviewed)",
+  d: "LCA complete cradle-to-grave : -90% GES, -75% acidification, -70% PM. Cout ~100 euros/tCO2.",
+  url: "https://www.sciencedirect.com/science/article/pii/S0306261925010049"
 }];
 function matchCases(proj) {
   if (!proj) return [];
@@ -1968,7 +2104,7 @@ function App() {
       style: {
         color: "#3d6a74"
       }
-    }, "v1.6.0 \xB7 Propuls\xE9 par ", /*#__PURE__*/React.createElement("a", {
+    }, "v1.7.0 \xB7 Propuls\xE9 par ", /*#__PURE__*/React.createElement("a", {
       href: "https://vaiata-dynamics.com/fr/",
       target: "_blank",
       rel: "noopener",
@@ -2590,7 +2726,12 @@ function App() {
       "BE": "🇧🇪",
       "US": "🇺🇸",
       "IE": "🇮🇪",
-      "INT": "🌍"
+      "INT": "🌍",
+      "SE": "🇸🇪",
+      "NZ": "🇳🇿",
+      "UY": "🇺🇾",
+      "JP": "🇯🇵",
+      "EU": "🇪🇺"
     }[c.co] || "🚢", " ", c.n, " (", c.yr, ")"), /*#__PURE__*/React.createElement("span", {
       className: "px-1.5 py-0.5 rounded font-bold",
       style: {
@@ -2612,7 +2753,15 @@ function App() {
       style: {
         color: "#999"
       }
-    }, "Source : ", c.s))));
+    }, "Source : ", c.s), c.url && /*#__PURE__*/React.createElement("a", {
+      href: c.url,
+      target: "_blank",
+      rel: "noopener",
+      className: "text-xs font-bold",
+      style: {
+        color: T
+      }
+    }, "Voir le projet \u2192"))));
   })(), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between mt-4"
   }, /*#__PURE__*/React.createElement("button", {
@@ -2646,7 +2795,7 @@ function App() {
     }
   }, /*#__PURE__*/React.createElement("span", {
     className: "font-bold"
-  }, "\uD83D\uDCA1 En un mot :"), " le contrefactuel, c'est ce que vous feriez si vous n'aviez PAS cette aide. AdF recommande de preparer une offre et une contre-offre (carbonee vs decarbonee). Identifier un contrefactuel credible double les taux d'aide. Preparez ce dossier en amont : c'est le point le plus chronophage (source : recommandations Armateurs de France).")), /*#__PURE__*/React.createElement(Cd, {
+  }, "\uD83D\uDCA1 En un mot :"), " le contrefactuel, c'est ce que vous feriez si vous n'aviez PAS cette aide. Identifier un contrefactuel credible double les taux d'aide. Preparez ce dossier en amont : c'est le point le plus chronophage (source : CdC ADEME 2026, \xA71.4.1).")), /*#__PURE__*/React.createElement(Cd, {
     title: "Type de sc\xE9nario contrefactuel",
     accent: W
   }, [["maintien", "Maintien du navire existant + entretien", "Scénario c) du CdC. Le plus fréquent pour les TPE/PME. Coûts éligibles = investissement décarboné − VAN entretien/réparation actualisée."], ["newbuild_fossile", "Remplacement par un navire diesel neuf", "Scénario a) du CdC. Coûts éligibles = surcoût du navire décarboné par rapport au navire fossile équivalent."], ["reporté", "Même investissement, mais plus tard", "Scénario b) du CdC. Coûts éligibles = différence entre investissement maintenant et VAN de l'investissement ultérieur."], ["aucun", "Pas de contrefactuel identifiable", "⚠️ Les taux d'aide sont divisés par 2. À éviter si possible."]].map(([id, label, desc]) => /*#__PURE__*/React.createElement("button", {
@@ -3069,7 +3218,18 @@ function App() {
     style: {
       color: "#888"
     }
-  }, "Ventilation des d\xE9penses selon la nomenclature ADEME (Guide de cat\xE9gorisation 2026). Les montants sont en k\u20AC HTR (hors taxes r\xE9cup\xE9rables)."), /*#__PURE__*/React.createElement(Cd, {
+  }, "Ventilation des d\xE9penses selon la nomenclature ADEME (Guide de cat\xE9gorisation 2026). Les montants sont en k\u20AC HTR (hors taxes r\xE9cup\xE9rables)."), batt && batt.kWh > 0 && /*#__PURE__*/React.createElement("div", {
+    className: "p-3 rounded-lg mb-4 text-xs",
+    style: {
+      background: T + "10",
+      border: "1px solid " + T + "30"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "font-bold mb-1",
+    style: {
+      color: T
+    }
+  }, "Estimations automatiques (modifiables)"), /*#__PURE__*/React.createElement("p", null, "Batteries : ~", fK(batt.costBatt), " (source : ", batt.kWh, " kWh x 450 euros/kWh, Corvus 2024)"), /*#__PURE__*/React.createElement("p", null, "Chargeur : ~", fK(batt.costCharger), " (source : ", batt.cP, " kW x 200 euros/kW, ABB Marine 2022)"), /*#__PURE__*/React.createElement("p", null, "Raccordement quai : ~", fK(batt.gridConnect), " (source : estimation GASPE selon puissance)"), /*#__PURE__*/React.createElement("p", null, "Ingenierie (8% equipements) : ~", fK(Math.round((batt.costBatt + batt.costCharger) * 0.08))), /*#__PURE__*/React.createElement("p", null, "Certification (3% equipements) : ~", fK(Math.round((batt.costBatt + batt.costCharger) * 0.03)))), /*#__PURE__*/React.createElement(Cd, {
     title: "Postes de d\xE9penses \xE9ligibles (montants en k\u20AC = milliers d'euros)"
   }, ADEME_EXPENSE_CATS.map((cat, i) => /*#__PURE__*/React.createElement("div", {
     key: cat.id,
@@ -3604,14 +3764,6 @@ function App() {
   }, "Cadre r\xE9glementaire"), /*#__PURE__*/React.createElement("p", null, "\u2022 AAP ADEME 2026 : CdC publi\xE9 le 2 avril 2026, cl\xF4ture 6 juillet 2026"), /*#__PURE__*/React.createElement("p", null, "\u2022 Art. 301, loi n\xB0 2021-1104 (Climat et R\xE9silience)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Strat\xE9gie OMI r\xE9vis\xE9e 2023 (selection par comite : DGAMPA, DGE, DGITM, Direction du Budget, CBCM, ADEME) : neutralit\xE9 2050, \u221220% en 2030"), /*#__PURE__*/React.createElement("p", null, "\u2022 R\xE9gime SA.111726 (LDACEE), SA.111728 (PME), SA.119559 (AFR)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Classification navire : RGEC art. 36 ter (navire propre / \xE9mission nulle)"), /*#__PURE__*/React.createElement("p", null, "\u2022 DNSH : art. 17, r\xE8glement UE 2020/852 (Taxonomie)"))), /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-2 gap-3 mt-4"
   }, /*#__PURE__*/React.createElement("a", {
-    href: "mailto:aap.navires@ademe.fr",
-    className: "inline-block px-4 py-2 rounded-lg text-sm font-bold mb-2",
-    style: {
-      background: AC,
-      color: "white",
-      textDecoration: "none"
-    }
-  }, "\u2709 Contacter l'ADEME pour un crash test pre-depot (recommande)"), /*#__PURE__*/React.createElement("a", {
     href: "https://agirpourlatransition.ademe.fr/entreprises/aides-financieres/catalogue/aap/aides-linvestissement-pour-la-decarbonation-du-transport-et-des-services-maritimes",
     target: "_blank",
     rel: "noopener",
@@ -3621,7 +3773,7 @@ function App() {
       textDecoration: "none"
     }
   }, "\uD83C\uDF10 Plateforme AGIR"), /*#__PURE__*/React.createElement("a", {
-    href: "mailto:aap.navires@ademe.fr",
+    href: "mailto:aap.navires@ademe.fr?cc=colomban@gaspe.fr&subject=Pre-depot%20AAP%20decarbonation%20maritime%20-%20[Nom%20compagnie]%20-%20[Nom%20navire]&body=Bonjour%2C%0A%0ANous%20souhaitons%20solliciter%20un%20echange%20prealable%20concernant%20notre%20projet%20de%20decarbonation%20maritime%20dans%20le%20cadre%20de%20l%27AAP%202026.%0A%0ACompagnie%20%3A%20%0ANavire%20concerne%20%3A%20%0AType%20de%20projet%20%3A%20%0AMontant%20estime%20%3A%20%0A%0ANous%20restons%20a%20votre%20disposition%20pour%20convenir%20d%27un%20creneau.%0A%0ABien%20a%20vous",
     className: "text-center py-3 rounded-xl font-bold text-sm",
     style: {
       border: "2px solid " + T,
@@ -3662,7 +3814,8 @@ function App() {
       const cls = classifyVessel(proj.trajs?.[1]?.fuelMix);
       w.document.write('<html><head><title>Pre-dossier ADEME - ' + (proj.v.name || proj.name) + '</title>');
       w.document.write('<style>@page{size:A4;margin:2cm}body{font-family:system-ui,sans-serif;font-size:11px;color:#1E2D3D;line-height:1.6}h1{font-size:18px;color:#1B9AAA;border-bottom:2px solid #1B9AAA;padding-bottom:8px}h2{font-size:14px;color:#1E2D3D;margin-top:20px;border-bottom:1px solid #ddd;padding-bottom:4px}table{width:100%;border-collapse:collapse;margin:8px 0}td,th{border:1px solid #ddd;padding:6px;text-align:left}th{background:#EAF4F7}.header{text-align:center;margin-bottom:24px}.footer{margin-top:32px;padding-top:12px;border-top:1px solid #ddd;font-size:9px;color:#999;text-align:center}.tag{display:inline-block;padding:2px 8px;border-radius:4px;font-weight:bold;font-size:10px}</style></head><body>');
-      w.document.write('<div class="header"><h1>Pre-dossier AAP ADEME 2026</h1>');
+      w.document.write('<div class="header" style="border-bottom:3px solid #1B9AAA;padding-bottom:16px;margin-bottom:24px">');
+      w.document.write('<div style="display:flex;align-items:center;justify-content:space-between"><div><h1 style="margin:0">Pre-dossier AAP ADEME 2026</h1><p style="margin:4px 0 0;color:#666">Decarbonation du transport et des services maritimes</p></div><div style="text-align:right;color:#1B9AAA;font-weight:bold">GASPE<br><span style="font-size:9px;color:#999">Localement ancrees.<br>Socialement engagees.</span></div></div></div>');
       w.document.write('<p>Decarbonation du transport et des services maritimes</p></div>');
       w.document.write('<h2>1. Fiche de synthese</h2>');
       w.document.write('<table><tr><th>Navire</th><td>' + (proj.v.name || '-') + '</td><th>Type</th><td>' + (vt?.l || '-') + '</td></tr>');
@@ -3720,7 +3873,7 @@ function App() {
       w.document.write('<tr><td>ADEME AAP 2026</td><td>' + fK(aide.aide) + '</td></tr>');
       if (proj.autresAides > 0) w.document.write('<tr><td>' + (proj.autresAidesDetail || 'Autres') + '</td><td>' + fK(proj.autresAides) + '</td></tr>');
       w.document.write('<tr><td><b>Total</b></td><td><b>' + fK(aide.aide + (proj.autresAides || 0)) + '</b></td></tr></table>');
-      w.document.write('<div class="footer">GASPE - Localement ancrees. Socialement engagees.<br>Simulateur AAP ADEME 2026 v1.6.0 - ' + new Date().toLocaleDateString('fr-FR') + '</div>');
+      w.document.write('<div class="footer">GASPE - Localement ancrees. Socialement engagees.<br>Simulateur AAP ADEME 2026 v1.7.0 - ' + new Date().toLocaleDateString('fr-FR') + '</div>');
       w.document.write('</body></html>');
       w.document.close();
       w.print();
@@ -3753,7 +3906,7 @@ function App() {
     style: {
       color: "#ccc"
     }
-  }, "v1.6.0 \xB7 Simulateur AAP ADEME 2026 \xB7 Propuls\xE9 par", " ", /*#__PURE__*/React.createElement("a", {
+  }, "v1.7.0 \xB7 Simulateur AAP ADEME 2026 \xB7 Propuls\xE9 par", " ", /*#__PURE__*/React.createElement("a", {
     href: "https://vaiata-dynamics.com/fr/",
     target: "_blank",
     rel: "noopener",
