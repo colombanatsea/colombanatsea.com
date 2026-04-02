@@ -1963,7 +1963,7 @@ function App() {
       style: {
         color: "#3d6a74"
       }
-    }, "v1.3.0 \xB7 Propuls\xE9 par ", /*#__PURE__*/React.createElement("a", {
+    }, "v1.5.0 \xB7 Propuls\xE9 par ", /*#__PURE__*/React.createElement("a", {
       href: "https://vaiata-dynamics.com/fr/",
       target: "_blank",
       rel: "noopener",
@@ -3711,7 +3711,7 @@ function App() {
     style: {
       color: "#ccc"
     }
-  }, "v1.3.0 \xB7 Simulateur AAP ADEME 2026 \xB7 Propuls\xE9 par", " ", /*#__PURE__*/React.createElement("a", {
+  }, "v1.5.0 \xB7 Simulateur AAP ADEME 2026 \xB7 Propuls\xE9 par", " ", /*#__PURE__*/React.createElement("a", {
     href: "https://vaiata-dynamics.com/fr/",
     target: "_blank",
     rel: "noopener",
