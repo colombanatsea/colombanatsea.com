@@ -5,7 +5,7 @@
  *   et des services maritimes »
  * ============================================================================
  *
- * GASPE — Localement ancrées. Socialement engagées.
+ * GASPE · Localement ancrées. Socialement engagées.
  * Groupement des Armateurs de Services Publics Maritimes de Passages d'Eau
  * Maison de la Mer, Quai de la Fosse, 44000 Nantes
  *
@@ -30,7 +30,7 @@
  *   - Émissions : IMO MEPC.1/Circ.684, ENTEC 2005
  *   - Taux LDACEE : CdC AAP ADEME 2026, Annexe 2 (vérifié le 2 avril 2026)
  *
- * Version : 1.0.0 — 2 avril 2026
+ * Version : 1.0.0 · 2 avril 2026
  * Propulsé par VAIATA Dynamics
  * ============================================================================
  */
@@ -93,7 +93,7 @@ const DEF_FUELS = [{
   co2: 3.206,
   price: 850,
   pGr: 4,
-  note: "Référence — prix post-crise Iran"
+  note: "Référence · prix post-crise Iran"
 }, {
   id: "b30",
   l: "B30 (blend 30% bio)",
@@ -125,7 +125,7 @@ const DEF_FUELS = [{
   co2: 0,
   price: 180,
   pGr: 2,
-  note: "€/MWh — réseau FR",
+  note: "€/MWh · réseau FR",
   unit: "MWh"
 }, {
   id: "h2",
@@ -597,7 +597,7 @@ const EMFACT = {
 
 // --- Taux d'aide ADEME (LDACEE) ---
 // Source: CdC AAP ADEME 2026, Annexe 2, pages 35-36
-// Vérifié le 2 avril 2026 — conforme au régime SA.111726
+// Vérifié le 2 avril 2026 · conforme au régime SA.111726
 const ADEME_RATES = {
   // Thématique 1 : Décarbonation directe des navires
   navPropre: {
@@ -995,7 +995,7 @@ const AAP_PREDEPOT_DEADLINE = new Date("2026-06-22T23:59:00"); // 2 semaines ava
 // --- Formatage ---
 const fmt = (n, d = 0) => typeof n === "number" ? n.toLocaleString("fr-FR", {
   maximumFractionDigits: d
-}) : "—";
+}) : " - ";
 const fK = n => fmt(Math.round(n)) + " k€";
 const fPct = n => (n * 100).toFixed(1) + "%";
 
@@ -1017,14 +1017,14 @@ function getFuelCO2(proj, fid) {
 }
 
 /**
- * dimBatt — Dimensionnement batteries
+ * dimBatt · Dimensionnement batteries
  * Audité scientifiquement (janvier 2026, 22 cas de référence)
  * 
  * Méthode : max(contrainte énergie, contrainte puissance)
  * - Énergie : eTrip / 0.80 (SoC 10-90%, DNV Pt.6 Ch.2 Sec.1)
  * - Puissance : pPeak / 2C (Corvus Orca ESS, décharge continue 2C)
  * - Chargeur : eTrip / (qT/60) × 1.1 (ABB Marine 2022)
- * - Coût : 350 €/kWh installé (BNEF 2024), 200 €/kW chargeur
+ * - Coût : 450 €/kWh installé maritime (Corvus 2024), 200 €/kW chargeur
  * - Cycles : 5000 à 80% DoD (Preger et al. 2020, LFP)
  */
 function dimBatt(v) {
@@ -1065,7 +1065,7 @@ function dimBatt(v) {
 }
 
 /**
- * compute — Moteur CCV (Coût de Cycle de Vie)
+ * compute · Moteur CCV (Coût de Cycle de Vie)
  * ISO 15686-5 adapté maritime
  * 
  * Pour chaque trajectoire : calcule CCV actualisé, émissions CO₂ cumulées,
@@ -1084,7 +1084,10 @@ function compute(proj) {
     pMa = (v.pMa || 20) / 100,
     pQu = (v.pQu || 20) / 100;
   const loadFactor = pTr * 1.0 + pMa * Math.min(v.pPeak / v.pP, 1.5) + pQu * (v.pA / v.pP);
-  const hFuel = v.fc * v.opD * (v.rD * v.cDur / 60) / 1000 * loadFactor;
+  // fc est en L/h, CO₂ en kgCO₂/kg → conversion par densité MDO 0.85 kg/L
+  // Source : ISO 8217:2017, DMB grade, densité typique 0.840-0.890 kg/L
+  const MDO_DENSITY = 0.85; // kg/L
+  const hFuel = v.fc * MDO_DENSITY * v.opD * (v.rD * v.cDur / 60) / 1000 * loadFactor;
   const battLife = dimBatt(v).lifeYrs;
   return trajs.map((tj, ti) => {
     const at = Object.entries(tj.techs || {}).filter(([, x]) => x?.a);
@@ -1115,7 +1118,10 @@ function compute(proj) {
           wCO2 = 1;
           wCost = 1;
         }
-        let prd = 1;
+        // Dégradation moteur fossile : +1.5%/an pour la trajectoire de référence
+        // Source : MAN Energy Solutions 2023, typical SFOC degradation for medium-speed diesels
+        const fossilDeg = ti === 0 ? Math.pow(1.015, t) : 1; // +1.5%/an conso fossile
+        let prd = fossilDeg;
         at.forEach(([tid, cfg]) => {
           const tech = TECHS.find(x => x.id === tid);
           if (tech) {
@@ -1188,7 +1194,7 @@ function compute(proj) {
 }
 
 /**
- * classifyVessel — Classification ADEME du navire
+ * classifyVessel · Classification ADEME du navire
  * Source: CdC p.10 (définitions RGEC art. 36 ter)
  *
  * - "emissionNulle" : 0% émissions CO₂ au tuyau d'échappement
@@ -1205,7 +1211,7 @@ function classifyVessel(fuelMix) {
 }
 
 /**
- * computeAide — Calcul de l'aide ADEME
+ * computeAide · Calcul de l'aide ADEME
  * Source: CdC AAP 2026, Annexe 2 + Guide aides d'État
  *
  * aide = min(surcoût × taux_LDACEE, 6 000 000 €)
@@ -1228,14 +1234,14 @@ function computeAide(proj, surcout) {
     taux = ADEME_RATES.navPropre["-"][size];
     regime = "Navire propre (Section 6.3, SA.111726)";
   } else {
-    // Efficacité énergétique — taux dépend du contrefactuel
+    // Efficacité énergétique · taux dépend du contrefactuel
     const hasContref = proj.contrefactuel?.type && proj.contrefactuel?.type !== "aucun";
     if (hasContref) {
       taux = ADEME_RATES.amelioContrefactuel[zone]?.[size] || 30;
       regime = "Efficacité avec contrefactuel (Section 6.4, SA.111726)";
     } else {
       taux = ADEME_RATES.amelioSans[zone]?.[size] || 15;
-      regime = "Efficacité sans contrefactuel — taux réduit (Section 6.4, SA.111726)";
+      regime = "Efficacité sans contrefactuel · taux réduit (Section 6.4, SA.111726)";
     }
   }
   const aide = Math.min(surcout * taux / 100, 6000, surcout); // plafonné à 6M€ ET au surcoût
@@ -1249,11 +1255,11 @@ function computeAide(proj, surcout) {
 }
 
 /**
- * computeScoring — Simulation de la notation ADEME (100 points)
+ * computeScoring · Simulation de la notation ADEME (100 points)
  * Source: CdC AAP 2026, pp. 27-29
  *
  * Période de référence thématique 1 : 5 ans
- * Le score est indicatif — l'ADEME classe les projets entre eux
+ * Le score est indicatif · l'ADEME classe les projets entre eux
  */
 function computeScoring(proj, res, aide) {
   if (!res || res.length < 2) return null;
@@ -1267,7 +1273,7 @@ function computeScoring(proj, res, aide) {
   const co2Evite = co2Ref - co2Alt; // en tonnes
 
   // 1. Efficacité environnementale (45 pts)
-  // Sous-critère 1 (15 pts) : quantité absolue — on ne peut pas comparer aux autres projets,
+  // Sous-critère 1 (15 pts) : quantité absolue · on ne peut pas comparer aux autres projets,
   // mais on donne une estimation basée sur les ordres de grandeur typiques GASPE
   const typicalMaxCO2 = 5000; // tCO₂ évitées sur 5 ans pour un gros ferry full-elec
   const noteQuantite = Math.min(15, 15 * co2Evite / typicalMaxCO2);
@@ -1288,7 +1294,7 @@ function computeScoring(proj, res, aide) {
     noteAide = Math.min(25, 25 * typicalBest / Math.max(1, ratioEuroParTonne));
   }
 
-  // 3. Qualité technico-économique (30 pts) — estimation qualitative
+  // 3. Qualité technico-économique (30 pts) · estimation qualitative
   let noteTechEco = 0;
   // TRL (max 5 pts)
   const minTRL = Math.min(...Object.entries(proj.trajs?.[1]?.techs || {}).filter(([, x]) => x?.a).map(([tid]) => TECHS.find(t => t.id === tid)?.trl || 7));
@@ -1314,6 +1320,30 @@ function computeScoring(proj, res, aide) {
   };
 }
 
+/**
+ * computeTRI - Taux de Rentabilité Interne (Newton-Raphson)
+ * Exigence CdC p.28 : TRI avant impôts, après toutes aides publiques
+ * Calculé sur les cash-flows différentiels (projet décarboné vs contrefactuel)
+ */
+function computeTRI(cashflows) {
+  if (!cashflows || cashflows.length < 2) return null;
+  let r = 0.10; // estimation initiale 10%
+  for (let iter = 0; iter < 100; iter++) {
+    let npv = 0,
+      dnpv = 0;
+    for (let t = 0; t < cashflows.length; t++) {
+      const df = Math.pow(1 + r, t);
+      npv += cashflows[t] / df;
+      dnpv -= t * cashflows[t] / (df * (1 + r));
+    }
+    if (Math.abs(npv) < 0.01) break;
+    if (Math.abs(dnpv) < 1e-10) break;
+    r = r - npv / dnpv;
+    if (r < -0.5) r = -0.5;
+    if (r > 2) r = 2;
+  }
+  return Math.round(r * 10000) / 100; // en %
+}
 // ============================================================================
 // SECTION 3 : COMPOSANTS UI RÉUTILISABLES
 // ============================================================================
@@ -1479,7 +1509,7 @@ const DeadlineBanner = () => {
       background: urgent ? AC : T,
       color: "white"
     }
-  }, "\u23F1\uFE0F AAP ADEME 2026 \u2014 ", j > 0 ? `J-${j} avant clôture (6 juillet 2026)` : "AAP CLÔTURÉ", jpd > 0 && jpd < j && /*#__PURE__*/React.createElement("span", {
+  }, "\u23F1\uFE0F AAP ADEME 2026 \xB7 ", j > 0 ? `J-${j} avant clôture (6 juillet 2026)` : "AAP CLÔTURÉ", jpd > 0 && jpd < j && /*#__PURE__*/React.createElement("span", {
     className: "ml-3 text-xs font-normal opacity-80"
   }, "| Pr\xE9-d\xE9p\xF4t : J-", jpd));
 };
@@ -1488,31 +1518,38 @@ const DeadlineBanner = () => {
 const STEPS = [{
   n: 1,
   l: "Mon navire",
-  icon: "⚓"
+  icon: "⚓",
+  min: 5
 }, {
   n: 2,
   l: "Mon projet",
-  icon: "🔋"
+  icon: "🔋",
+  min: 8
 }, {
   n: 3,
   l: "Contrefactuel",
-  icon: "⚖️"
+  icon: "⚖️",
+  min: 3
 }, {
   n: 4,
-  l: "Gains environnementaux",
-  icon: "🌿"
+  l: "Gains & DNSH",
+  icon: "🌿",
+  min: 5
 }, {
   n: 5,
-  l: "Budget & dépenses",
-  icon: "💰"
+  l: "Budget",
+  icon: "💰",
+  min: 5
 }, {
   n: 6,
-  l: "Calcul de l'aide",
-  icon: "📊"
+  l: "Aide & scoring",
+  icon: "📊",
+  min: 2
 }, {
   n: 7,
-  l: "Mon dossier",
-  icon: "📄"
+  l: "Dossier",
+  icon: "📄",
+  min: 2
 }];
 const StepBar = ({
   step,
@@ -1537,13 +1574,13 @@ const StepBar = ({
       cursor: locked ? "not-allowed" : "pointer",
       border: active ? "none" : "1px solid " + (done ? GR + "40" : "#e5e7eb")
     }
-  }, /*#__PURE__*/React.createElement("span", null, done ? "✓" : s.icon), /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/React.createElement("span", null, done ? "✓" : s.n), /*#__PURE__*/React.createElement("span", {
     className: "hidden sm:inline"
   }, s.l));
 }));
 
 // ============================================================================
-// SECTION 4 : APPLICATION PRINCIPALE — 7 ÉTAPES GUIDÉES
+// SECTION 4 : APPLICATION PRINCIPALE · 7 ÉTAPES GUIDÉES
 // ============================================================================
 
 /**
@@ -1759,7 +1796,7 @@ function App() {
   };
 
   // ========================
-  // ÉCRAN D'ACCUEIL — Liste des projets
+  // ÉCRAN D'ACCUEIL · Liste des projets
   // ========================
   if (step === 0 || !proj) {
     return /*#__PURE__*/React.createElement("div", {
@@ -1770,14 +1807,15 @@ function App() {
       }
     }, /*#__PURE__*/React.createElement("div", {
       className: "flex flex-col items-center justify-center min-h-screen px-4"
-    }, /*#__PURE__*/React.createElement("img", {
-      src: GASPE_LOGO,
-      alt: "GASPE",
+    }, /*#__PURE__*/React.createElement("span", {
       style: {
-        height: 48,
-        marginBottom: 24
+        fontSize: 36,
+        fontWeight: 700,
+        letterSpacing: 6,
+        color: "#4dd9e8",
+        textShadow: "0 2px 12px rgba(27,154,170,0.4)"
       }
-    }), /*#__PURE__*/React.createElement("h1", {
+    }, "GASPE"), /*#__PURE__*/React.createElement("h1", {
       className: "text-2xl font-bold text-white text-center mb-2"
     }, "Simulateur AAP ADEME 2026"), /*#__PURE__*/React.createElement("p", {
       className: "text-center text-sm mb-1",
@@ -1789,7 +1827,7 @@ function App() {
       style: {
         color: "#7ab8c4"
       }
-    }, "70 M\u20AC \u2014 Cl\xF4ture le 6 juillet 2026 \u2014 J-", joursRestants()), /*#__PURE__*/React.createElement("div", {
+    }, "70 M\u20AC \xB7 Cl\xF4ture le 6 juillet 2026 \xB7 J-", joursRestants()), /*#__PURE__*/React.createElement("div", {
       className: "rounded-2xl p-6 w-full max-w-md",
       style: {
         background: "rgba(255,255,255,0.95)",
@@ -1822,7 +1860,7 @@ function App() {
       style: {
         color: PU
       }
-    }, "Webinaire ADEME \u2014 21 avril 2026"), /*#__PURE__*/React.createElement("div", {
+    }, "Webinaire ADEME \xB7 21 avril 2026"), /*#__PURE__*/React.createElement("div", {
       style: {
         color: "#666"
       }
@@ -1862,7 +1900,26 @@ function App() {
       style: {
         color: "#999"
       }
-    }, pr.vName || VT.find(x => x.id === pr.vType)?.l || "—", " \u2022 ", pr.upd ? new Date(pr.upd).toLocaleDateString("fr-FR") : "")), /*#__PURE__*/React.createElement("button", {
+    }, pr.vName || VT.find(x => x.id === pr.vType)?.l || " - ", " \u2022 ", pr.upd ? new Date(pr.upd).toLocaleDateString("fr-FR") : "")), /*#__PURE__*/React.createElement("button", {
+      onClick: () => {
+        const src = ldProj(pr.id);
+        if (src) {
+          const dup = {
+            ...src,
+            id: Date.now().toString(36) + Math.random().toString(36).slice(2),
+            name: src.name + " (copie)"
+          };
+          svProj(dup);
+          setProjList(ldList());
+        }
+      },
+      className: "text-xs px-2 py-1 rounded",
+      style: {
+        color: T,
+        background: T + "10",
+        cursor: "pointer"
+      }
+    }, "\u29C9"), /*#__PURE__*/React.createElement("button", {
       onClick: () => deleteProj(pr.id),
       className: "text-xs px-2 py-1 rounded",
       style: {
@@ -1887,7 +1944,7 @@ function App() {
       style: {
         color: T
       }
-    }, "Budget min. 300 k\u20AC (PME) \u2014 Aide max 6 M\u20AC"))), /*#__PURE__*/React.createElement("div", {
+    }, "Budget min. 300 k\u20AC (PME) \xB7 Aide max 6 M\u20AC"))), /*#__PURE__*/React.createElement("div", {
       className: "flex items-center gap-2 mt-6"
     }, /*#__PURE__*/React.createElement("img", {
       src: GASPE_A_COULEUR,
@@ -1906,7 +1963,7 @@ function App() {
       style: {
         color: "#3d6a74"
       }
-    }, "v1.1.0 \u2014 Propuls\xE9 par ", /*#__PURE__*/React.createElement("a", {
+    }, "v1.3.0 \xB7 Propuls\xE9 par ", /*#__PURE__*/React.createElement("a", {
       href: "https://vaiata-dynamics.com/fr/",
       target: "_blank",
       rel: "noopener",
@@ -1921,14 +1978,31 @@ function App() {
   // ========================
 
   // Calculs dérivés pour les étapes avancées
+  // Surcoût éligible selon les 4 formules du CdC §1.4.1 (a-d)
   const surcout = (() => {
     if (!res || res.length < 2) return 0;
     const budgetTotal = proj.budget?.reduce((s, b) => s + (b.montant || 0), 0) || 0;
-    if (budgetTotal > 0) return budgetTotal;
-    // Fallback : surcoût = investissement décarboné - investissement contrefactuel
-    const invDecarb = res[1]?.totI || 0;
-    const invContref = proj.contrefactuel?.coutEntretien || 0;
-    return Math.max(0, invDecarb - invContref);
+    const invDecarb = budgetTotal > 0 ? budgetTotal : res[1]?.totI || 0;
+    const disc = proj.p.disc / 100;
+    const dur = proj.p.dur;
+    const ct = proj.contrefactuel?.type;
+    if (ct === "maintien") {
+      // Scénario c) : investissement - VAN(entretien actualisé)
+      const entAn = proj.contrefactuel?.coutEntretien || 0;
+      const vanEntretien = entAn * ((1 - Math.pow(1 + disc, -dur)) / disc);
+      return Math.max(0, invDecarb - vanEntretien);
+    } else if (ct === "newbuild_fossile") {
+      // Scénario a) : investissement décarboné - investissement fossile
+      return Math.max(0, invDecarb - (proj.contrefactuel?.coutNewbuild || 0));
+    } else if (ct === "reporté") {
+      // Scénario b) : investissement - VAN investissement ultérieur
+      const delai = proj.contrefactuel?.delaiReport || 3;
+      const vanReport = invDecarb / Math.pow(1 + disc, delai);
+      return Math.max(0, invDecarb - vanReport);
+    } else {
+      // Pas de contrefactuel : coûts totaux directs (taux divisés par 2)
+      return invDecarb;
+    }
   })();
   const aide = computeAide(proj, surcout);
   const scoring = computeScoring(proj, res, aide.aide);
@@ -1944,7 +2018,7 @@ function App() {
       pMa = (v.pMa || 20) / 100,
       pQu = (v.pQu || 20) / 100;
     const lf = pTr * 1.0 + pMa * Math.min(v.pPeak / v.pP, 1.5) + pQu * (v.pA / v.pP);
-    return v.fc * v.opD * (v.rD * v.cDur / 60) / 1000 * lf;
+    return v.fc * 0.85 * v.opD * (v.rD * v.cDur / 60) / 1000 * lf; // densité MDO 0.85 kg/L
   })();
   return /*#__PURE__*/React.createElement("div", {
     style: {
@@ -1968,13 +2042,14 @@ function App() {
       color: "white",
       cursor: "pointer"
     }
-  }, "\u2190 Projets"), /*#__PURE__*/React.createElement("img", {
-    src: GASPE_LOGO,
-    alt: "GASPE",
+  }, "\u2190 Projets"), /*#__PURE__*/React.createElement("span", {
     style: {
-      height: 20
+      fontSize: 14,
+      fontWeight: 700,
+      letterSpacing: 3,
+      color: "#4dd9e8"
     }
-  }), /*#__PURE__*/React.createElement("input", {
+  }, "GASPE"), /*#__PURE__*/React.createElement("input", {
     type: "text",
     value: proj.name || "",
     onChange: e => upd({
@@ -2000,14 +2075,36 @@ function App() {
     step: step,
     setStep: setStep,
     maxStep: maxStep
-  }), /*#__PURE__*/React.createElement("div", {
+  }), proj && res && res.length >= 2 && step >= 2 && /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-around px-3 py-2 text-xs",
+    style: {
+      background: D + "08",
+      borderBottom: "1px solid #e5e7eb"
+    }
+  }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("span", {
+    className: "font-bold",
+    style: {
+      color: GR
+    }
+  }, "CO\u2082 \xE9vit\xE9"), " ~", fmt(Math.round((res[0].base.co2 - res[1].base.co2) / proj.p.dur)), " t/an"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("span", {
+    className: "font-bold",
+    style: {
+      color: T
+    }
+  }, "Aide"), " ~", fK(aide.aide)), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: scoring?.ratioEuroParTonne > 200 ? AC : "#666"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "font-bold"
+  }, "Ratio"), " ", scoring?.ratioEuroParTonne || "...", " \u20AC/tCO\u2082")), /*#__PURE__*/React.createElement("div", {
     className: "max-w-3xl mx-auto px-3 py-4"
   }, step === 1 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "text-lg font-bold mb-1",
     style: {
       color: D
     }
-  }, "\u2693 \xC9tape 1 \u2014 Mon navire"), /*#__PURE__*/React.createElement("p", {
+  }, "\u2693 \xC9tape 1 \xB7 Mon navire"), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mb-4",
     style: {
       color: "#888"
@@ -2070,7 +2167,7 @@ function App() {
     },
     opts: REGIONS.map(r => ({
       v: r.id,
-      l: r.l + (r.zone === "zoneA" ? " (zone AFR a — taux majorés)" : r.zone === "zoneC" ? " (zone AFR c)" : "")
+      l: r.l + (r.zone === "zoneA" ? " (zone AFR a · taux majorés)" : r.zone === "zoneC" ? " (zone AFR c)" : "")
     })),
     h: "La zone AFR est d\xE9duite automatiquement de votre r\xE9gion. Outre-mer = zone a (taux major\xE9s). Source : D\xE9cret n\xB0 2022-968."
   }))), /*#__PURE__*/React.createElement(Cd, {
@@ -2160,7 +2257,7 @@ function App() {
     onChange: v => uV("pQu", v),
     u: "%"
   }))), batt && (Object.keys(proj.trajs?.[1]?.fuelMix || {}).some(k => ["elec", "h2"].includes(k) && proj.trajs[1].fuelMix[k] > 0) || Object.keys(proj.trajs?.[1]?.techs || {}).some(k => ["hybride", "fullelec", "h2pac"].includes(k) && proj.trajs[1].techs[k]?.a)) && /*#__PURE__*/React.createElement(Cd, {
-    title: "\uD83D\uDCCA Pr\xE9-dimensionnement batteries (automatique \u2014 affich\xE9 car projet \xE9lectrique)",
+    title: "\uD83D\uDCCA Pr\xE9-dimensionnement batteries (automatique \xB7 affich\xE9 car projet \xE9lectrique)",
     accent: T
   }, /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-4 gap-2"
@@ -2185,7 +2282,7 @@ function App() {
     style: {
       color: "#999"
     }
-  }, "Dimensionn\xE9 par contrainte de ", batt.constraint, ". SoC 10-90% (DNV Pt.6 Ch.2). C-rate 2C (Corvus Orca). 350 \u20AC/kWh (BNEF 2024).")), /*#__PURE__*/React.createElement("div", {
+  }, "Dimensionn\xE9 par contrainte de ", batt.constraint, ". SoC 10-90% (DNV Pt.6 Ch.2). C-rate 2C (Corvus Orca). 450 \u20AC/kWh install\xE9 maritime (Corvus 2024, incl. BMS/certif. BV).")), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-end mt-4"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: () => {
@@ -2201,7 +2298,7 @@ function App() {
     style: {
       color: D
     }
-  }, "\uD83D\uDD0B \xC9tape 2 \u2014 Mon projet de d\xE9carbonation"), /*#__PURE__*/React.createElement("p", {
+  }, "\uD83D\uDD0B \xC9tape 2 \xB7 Mon projet de d\xE9carbonation"), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mb-4",
     style: {
       color: "#888"
@@ -2217,10 +2314,10 @@ function App() {
     })),
     opts: [{
       v: 1,
-      l: "Thématique 1 — Décarbonation directe du navire"
+      l: "Thématique 1 · Décarbonation directe du navire"
     }, {
       v: 2,
-      l: "Thématique 2 — Investissement industriel"
+      l: "Thématique 2 · Investissement industriel"
     }]
   })), /*#__PURE__*/React.createElement(Cd, {
     title: "Technologies s\xE9lectionn\xE9es"
@@ -2495,12 +2592,20 @@ function App() {
     style: {
       color: D
     }
-  }, "\u2696\uFE0F \xC9tape 3 \u2014 Sc\xE9nario contrefactuel"), /*#__PURE__*/React.createElement("p", {
-    className: "text-xs mb-4",
+  }, "\u2696\uFE0F \xC9tape 3 \xB7 Sc\xE9nario contrefactuel"), /*#__PURE__*/React.createElement("div", {
+    className: "p-3 rounded-lg mb-4",
     style: {
-      color: "#888"
+      background: W + "15",
+      border: "1px solid " + W + "30"
     }
-  }, "Le contrefactuel est ce que vous feriez SANS l'aide ADEME. Un contrefactuel cr\xE9dible double les taux d'aide. Source : CdC \xA71.4.1, sc\xE9narios a) \xE0 d)."), /*#__PURE__*/React.createElement(Cd, {
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-sm",
+    style: {
+      color: D
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "font-bold"
+  }, "\uD83D\uDCA1 En un mot :"), " le contrefactuel, c'est ce que vous feriez si vous n'aviez PAS cette aide. Identifier un sc\xE9nario cr\xE9dible double les taux d'aide. C'est le levier le plus important de votre dossier.")), /*#__PURE__*/React.createElement(Cd, {
     title: "Type de sc\xE9nario contrefactuel",
     accent: W
   }, [["maintien", "Maintien du navire existant + entretien", "Scénario c) du CdC. Le plus fréquent pour les TPE/PME. Coûts éligibles = investissement décarboné − VAN entretien/réparation actualisée."], ["newbuild_fossile", "Remplacement par un navire diesel neuf", "Scénario a) du CdC. Coûts éligibles = surcoût du navire décarboné par rapport au navire fossile équivalent."], ["reporté", "Même investissement, mais plus tard", "Scénario b) du CdC. Coûts éligibles = différence entre investissement maintenant et VAN de l'investissement ultérieur."], ["aucun", "Pas de contrefactuel identifiable", "⚠️ Les taux d'aide sont divisés par 2. À éviter si possible."]].map(([id, label, desc]) => /*#__PURE__*/React.createElement("button", {
@@ -2531,7 +2636,7 @@ function App() {
     title: "Co\xFBts d'entretien du sc\xE9nario fossile (sur la dur\xE9e du projet)"
   }, /*#__PURE__*/React.createElement(In, {
     l: "Budget entretien / r\xE9paration annuel estim\xE9",
-    v: proj.contrefactuel?.coutEntretien || 0,
+    v: proj.contrefactuel?.coutEntretien || Math.round(proj.v.mktV * 0.03),
     onChange: v => upd(p => ({
       ...p,
       contrefactuel: {
@@ -2540,7 +2645,7 @@ function App() {
       }
     })),
     u: "k\u20AC/an",
-    h: "Co\xFBts d'entretien, r\xE9paration, modernisation que vous auriez engag\xE9s sans le projet.",
+    h: "Estimation par d\xE9faut : 3% de la valeur v\xE9nale/an (RINA 2022, Ship Lifecycle Cost Analysis). Ajustez selon vos donn\xE9es r\xE9elles.",
     n: "Estimation type : " + (proj.v.gt < 200 ? "30-80" : proj.v.gt < 1000 ? "80-200" : "200-500") + " k€/an (source : OPEX benchmarks Clarksons 2024, ajusté proximité). Cliquez pour modifier."
   }), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mt-2",
@@ -2576,7 +2681,7 @@ function App() {
     style: {
       color: GR
     }
-  }, ADEME_RATES.amelioContrefactuel[proj.v.zoneAFR]?.[proj.v.entSize] || "—", "%")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, ADEME_RATES.amelioContrefactuel[proj.v.zoneAFR]?.[proj.v.entSize] || " - ", "%")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "text-xs",
     style: {
       color: "#888"
@@ -2586,7 +2691,7 @@ function App() {
     style: {
       color: AC
     }
-  }, ADEME_RATES.amelioSans[proj.v.zoneAFR]?.[proj.v.entSize] || "—", "%"))), proj.contrefactuel?.type === "aucun" && /*#__PURE__*/React.createElement("div", {
+  }, ADEME_RATES.amelioSans[proj.v.zoneAFR]?.[proj.v.entSize] || " - ", "%"))), proj.contrefactuel?.type === "aucun" && /*#__PURE__*/React.createElement("div", {
     className: "mt-2 p-2 rounded text-xs font-bold",
     style: {
       background: AC + "15",
@@ -2612,12 +2717,20 @@ function App() {
     style: {
       color: D
     }
-  }, "\uD83C\uDF3F \xC9tape 4 \u2014 Gains environnementaux"), /*#__PURE__*/React.createElement("p", {
-    className: "text-xs mb-4",
+  }, "\uD83C\uDF3F \xC9tape 4 \xB7 Gains environnementaux"), /*#__PURE__*/React.createElement("div", {
+    className: "p-3 rounded-lg mb-4",
     style: {
-      color: "#888"
+      background: GR + "15",
+      border: "1px solid " + GR + "30"
     }
-  }, "Grille d'impacts ADEME (Annexe 5) + DNSH (6 objectifs Taxonomie UE). P\xE9riode de r\xE9f\xE9rence : 5 ans."), scoring && /*#__PURE__*/React.createElement(Cd, {
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-sm",
+    style: {
+      color: D
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "font-bold"
+  }, "\uD83D\uDCA1 En un mot :"), " cette \xE9tape mesure les b\xE9n\xE9fices concrets de votre projet pour la plan\xE8te. Les tonnes de CO\u2082 \xE9vit\xE9es et le ratio \u20AC/tCO\u2082 sont les deux chiffres les plus scrut\xE9s par l'instructeur ADEME.")), scoring && /*#__PURE__*/React.createElement(Cd, {
     title: "\uD83D\uDCCA R\xE9sum\xE9 des gains sur 5 ans",
     accent: GR
   }, /*#__PURE__*/React.createElement("div", {
@@ -2702,7 +2815,7 @@ function App() {
       }
     }, "sur 5 ans")));
   })()), /*#__PURE__*/React.createElement(Cd, {
-    title: "DNSH \u2014 Do No Significant Harm (Annexe 1)",
+    title: "DNSH \xB7 Do No Significant Harm (Annexe 1)",
     accent: PU
   }, /*#__PURE__*/React.createElement("p", {
     className: "text-xs mb-3",
@@ -2781,7 +2894,25 @@ function App() {
         dnsh
       };
     })
-  })))), /*#__PURE__*/React.createElement("div", {
+  })))), /*#__PURE__*/React.createElement(Cd, {
+    title: "\uD83C\uDF0D Empreinte Projet ADEME (niveau 1)",
+    accent: T
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-xs mb-2",
+    style: {
+      color: "#555"
+    }
+  }, "Le CdC exige une analyse environnementale de niveau 1 selon la m\xE9thode Empreinte Projet (Annexe 5 du dossier). Les donn\xE9es de ce simulateur alimentent directement cette analyse. Une ACV simplifi\xE9e (niveau 3) sera demand\xE9e lors du suivi d'ex\xE9cution."), /*#__PURE__*/React.createElement("a", {
+    href: "https://base-empreinte.ademe.fr/empreinte-projet",
+    target: "_blank",
+    rel: "noopener",
+    className: "inline-block px-4 py-2 rounded-lg text-sm font-bold",
+    style: {
+      background: T,
+      color: "white",
+      textDecoration: "none"
+    }
+  }, "Acc\xE9der \xE0 l'outil Empreinte Projet ADEME \u2192")), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between mt-4"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: prevStep,
@@ -2796,12 +2927,46 @@ function App() {
     style: {
       background: T
     }
-  }, "Suivant \u2192 Budget & d\xE9penses"))), step === 5 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+  }, "Suivant \u2192 Budget & d\xE9penses"))), step === 5 && (() => {
+    // Auto-mapping budget si vide : étape 2 → nomenclature ADEME
+    const tj1 = proj.trajs?.[1] || {};
+    const budgetVide = !proj.budget?.some(b => b.montant > 0);
+    if (budgetVide && (tj1.iC > 0 || tj1.iE > 0 || tj1.iI > 0 || tj1.gridCost > 0)) {
+      const newBudget = proj.budget?.map(b => {
+        if (b.id === "equip_prop") return {
+          ...b,
+          montant: tj1.iC || 0
+        };
+        if (b.id === "equip_stock") return {
+          ...b,
+          montant: tj1.iE || 0
+        };
+        if (b.id === "infra") return {
+          ...b,
+          montant: (tj1.iI || 0) + (tj1.gridCost || 0)
+        };
+        if (b.id === "ing_ext") return {
+          ...b,
+          montant: Math.round(((tj1.iC || 0) + (tj1.iE || 0) + (tj1.iI || 0) + (tj1.gridCost || 0)) * 0.08)
+        };
+        if (b.id === "certif") return {
+          ...b,
+          montant: Math.round(((tj1.iC || 0) + (tj1.iE || 0)) * 0.03)
+        };
+        return b;
+      }) || [];
+      upd(p => ({
+        ...p,
+        budget: newBudget
+      }));
+    }
+    return null;
+  })() || step === 5 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "text-lg font-bold mb-1",
     style: {
       color: D
     }
-  }, "\uD83D\uDCB0 \xC9tape 5 \u2014 Budget & d\xE9penses"), /*#__PURE__*/React.createElement("p", {
+  }, "\uD83D\uDCB0 \xC9tape 5 \xB7 Budget & d\xE9penses"), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mb-4",
     style: {
       color: "#888"
@@ -2826,7 +2991,7 @@ function App() {
     style: {
       color: "#999"
     }
-  }, cat.poste, " \u2192 ", cat.sub, " \u2014 ", cat.ex)), /*#__PURE__*/React.createElement("div", {
+  }, cat.poste, " \u2192 ", cat.sub, " \xB7 ", cat.ex)), /*#__PURE__*/React.createElement("div", {
     className: "flex items-center gap-1"
   }, /*#__PURE__*/React.createElement("input", {
     type: "number",
@@ -2920,7 +3085,7 @@ function App() {
     style: {
       color: D
     }
-  }, "\uD83D\uDCCA \xC9tape 6 \u2014 Calcul de l'aide & scoring"), /*#__PURE__*/React.createElement("p", {
+  }, "\uD83D\uDCCA \xC9tape 6 \xB7 Calcul de l'aide & scoring"), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mb-4",
     style: {
       color: "#888"
@@ -2977,15 +3142,47 @@ function App() {
     }
   }, /*#__PURE__*/React.createElement("span", {
     className: "font-bold"
-  }, "R\xE9gime : "), aide.regime)), scoring && /*#__PURE__*/React.createElement(Cd, {
-    title: "\uD83C\uDFAF Scoring ADEME simul\xE9 (indicatif)",
+  }, "R\xE9gime : "), aide.regime)), /*#__PURE__*/React.createElement(Cd, {
+    title: "Autres aides publiques sollicit\xE9es ou obtenues",
+    accent: W
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-xs mb-2",
+    style: {
+      color: "#888"
+    }
+  }, "Exigence CdC : lister toutes les aides publiques sur les 3 derni\xE8res ann\xE9es (montants et dispositifs). Le cumul ne doit pas d\xE9passer les plafonds du r\xE9gime d'aide applicable."), /*#__PURE__*/React.createElement(In, {
+    l: "Autres aides publiques sollicit\xE9es pour ce projet",
+    v: proj.autresAides || 0,
+    onChange: v => upd(p => ({
+      ...p,
+      autresAides: v
+    })),
+    u: "k\u20AC",
+    h: "Fonds vert, FEDER, r\xE9gions, BPI, France 2030... Le total (aide ADEME + autres) ne peut pas d\xE9passer le surco\xFBt \xE9ligible."
+  }), /*#__PURE__*/React.createElement(In, {
+    l: "Nom des dispositifs",
+    v: proj.autresAidesDetail || "",
+    t: "text",
+    onChange: v => upd(p => ({
+      ...p,
+      autresAidesDetail: v
+    })),
+    n: "Ex : Fonds vert 150 k\u20AC, R\xE9gion Bretagne 80 k\u20AC"
+  }), aide.aide + (proj.autresAides || 0) > surcout && surcout > 0 && /*#__PURE__*/React.createElement("div", {
+    className: "text-xs p-2 rounded mt-2 font-bold",
+    style: {
+      background: AC + "15",
+      color: AC
+    }
+  }, "Attention : le total des aides (", fK(aide.aide + (proj.autresAides || 0)), ") d\xE9passe le surco\xFBt \xE9ligible (", fK(surcout), ").")), scoring && /*#__PURE__*/React.createElement(Cd, {
+    title: "\uD83C\uDFAF Profil de comp\xE9titivit\xE9 ADEME (indicatif)",
     accent: PU
   }, /*#__PURE__*/React.createElement("p", {
     className: "text-xs mb-3",
     style: {
       color: "#888"
     }
-  }, "Notation indicative bas\xE9e sur les crit\xE8res du CdC. Le classement r\xE9el d\xE9pend des autres projets d\xE9pos\xE9s."), /*#__PURE__*/React.createElement("div", {
+  }, "Estimation indicative. Le classement final d\xE9pend des autres projets d\xE9pos\xE9s (enveloppe 70 M\u20AC pour ~200 projets candidats, source : Armateurs de France). Les fourchettes ci-dessous situent votre projet par rapport aux ordres de grandeur typiques des op\xE9rateurs de proximit\xE9."), /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-4 gap-2 mb-3"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-center p-3 rounded-lg",
@@ -3095,7 +3292,7 @@ function App() {
     style: {
       color: D
     }
-  }, "\uD83D\uDCC4 \xC9tape 7 \u2014 Mon dossier"), /*#__PURE__*/React.createElement("p", {
+  }, "\uD83D\uDCC4 \xC9tape 7 \xB7 Mon dossier"), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mb-4",
     style: {
       color: "#888"
@@ -3107,7 +3304,7 @@ function App() {
     className: "space-y-2 text-sm"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
     className: "font-bold"
-  }, "Navire :"), " ", proj.v.name || "(non nommé)", " \u2014 ", VT.find(x => x.id === proj.v.type)?.l), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
+  }, "Navire :"), " ", proj.v.name || "(non nommé)", " \xB7 ", VT.find(x => x.id === proj.v.type)?.l), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
     className: "font-bold"
   }, "LOA :"), " ", proj.v.loa, "m | ", /*#__PURE__*/React.createElement("span", {
     className: "font-bold"
@@ -3129,7 +3326,7 @@ function App() {
     className: "font-bold"
   }, "Ratio :"), " ", scoring.ratioEuroParTonne, " \u20AC/tCO\u2082"))), /*#__PURE__*/React.createElement(Cd, {
     title: "\u2705 Checklist des pi\xE8ces \xE0 joindre"
-  }, [["Annexe 1 — Présentation projet (pré-dépôt)", true], ["Annexe 2 — Fiche lauréat", false], ["Annexe 3.a — Descriptif détaillé du projet", true], ["Annexe 3.b — Descriptif du porteur", false], ["Annexe 4 — Base de données des coûts", true], ["Annexe 5 — Grille d'impacts + Empreinte projet", true], ["Annexe 6 — Éléments financiers (TRI, plan financement)", false], ["Annexe 7 — Attestation santé financière", false], ["KBIS de moins de 3 mois", false], ["3 dernières liasses fiscales", false], ["Devis / lettres d'intention fournisseurs", false], ["Contrat d'avitaillement ou LOI (si carburant alternatif)", false]].map(([label, auto], i) => /*#__PURE__*/React.createElement("div", {
+  }, [["Annexe 1 · Présentation projet (pré-dépôt)", true], ["Annexe 2 · Fiche lauréat", false], ["Annexe 3.a · Descriptif détaillé du projet", true], ["Annexe 3.b · Descriptif du porteur", false], ["Annexe 4 · Base de données des coûts", true], ["Annexe 5 · Grille d'impacts + Empreinte projet", true], ["Annexe 6 · Éléments financiers (TRI, plan financement)", false], ["Annexe 7 · Attestation santé financière", false], ["KBIS de moins de 3 mois", false], ["3 dernières liasses fiscales", false], ["Devis / lettres d'intention fournisseurs", false], ["Contrat d'avitaillement ou LOI (si carburant alternatif)", false]].map(([label, auto], i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     className: "flex items-center gap-2 text-xs py-1"
   }, /*#__PURE__*/React.createElement("span", null, auto ? "✅" : "⬜"), /*#__PURE__*/React.createElement("span", {
@@ -3181,7 +3378,7 @@ function App() {
       background: LB,
       lineHeight: 1.6
     }
-  }, "Ce projet s'inscrit dans le cadre de l'article 301 de la loi n\xB0 2021-1104 du 22 ao\xFBt 2021 (Climat et R\xE9silience) et de la Feuille de route de d\xE9carbonation de la fili\xE8re maritime fran\xE7aise, pilot\xE9e par la DGAMPA et le CMF. Il contribue directement aux objectifs de la strat\xE9gie OMI r\xE9vis\xE9e de 2023 visant la neutralit\xE9 carbone du transport maritime d'ici 2050, avec un point de contr\xF4le interm\xE9diaire de \u221220% en 2030 par rapport \xE0 2008.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), "Ce projet correspond \xE0 une transition souveraine, ancr\xE9e localement : les prestataires techniques sont fran\xE7ais, le service rendu est un service public visible au quotidien par le contribuable, et les retomb\xE9es \xE9conomiques (emplois, maintenance, exploitation) b\xE9n\xE9ficient directement au territoire. La compagnie est captive en mati\xE8re d'opportunit\xE9s d'avitaillement \u2014 desserte locale depuis un port secondaire non \xE9quip\xE9 en combustible alternatif \u2014 ce qui rend le soutien public d'autant plus d\xE9terminant pour permettre la transition \xE9nerg\xE9tique.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), "Le porteur est membre du GASPE (Groupement des Armateurs de Services Publics Maritimes de Passages d'Eau), qui repr\xE9sente 165 navires et 30 compagnies de transport maritime de proximit\xE9, dont 90% de TPE/PME.")), /*#__PURE__*/React.createElement(Cd, {
+  }, "Ce projet s'inscrit dans le cadre de l'article 301 de la loi n\xB0 2021-1104 du 22 ao\xFBt 2021 (Climat et R\xE9silience) et de la Feuille de route de d\xE9carbonation de la fili\xE8re maritime fran\xE7aise, pilot\xE9e par la DGAMPA et le CMF. Il contribue directement aux objectifs de la strat\xE9gie OMI r\xE9vis\xE9e de 2023 visant la neutralit\xE9 carbone du transport maritime d'ici 2050, avec un point de contr\xF4le interm\xE9diaire de \u221220% en 2030 par rapport \xE0 2008.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), "Ce projet correspond \xE0 une transition souveraine, ancr\xE9e localement : les prestataires techniques sont fran\xE7ais, le service rendu est un service public visible au quotidien par le contribuable, et les retomb\xE9es \xE9conomiques (emplois, maintenance, exploitation) b\xE9n\xE9ficient directement au territoire. La compagnie est captive en mati\xE8re d'opportunit\xE9s d'avitaillement \xB7 desserte locale depuis un port secondaire non \xE9quip\xE9 en combustible alternatif \xB7 ce qui rend le soutien public d'autant plus d\xE9terminant pour permettre la transition \xE9nerg\xE9tique.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), "Le porteur est membre du GASPE (Groupement des Armateurs de Services Publics Maritimes de Passages d'Eau), qui repr\xE9sente 165 navires et 30 compagnies de transport maritime de proximit\xE9, dont 90% de TPE/PME.")), /*#__PURE__*/React.createElement(Cd, {
     title: "\uD83D\uDCD6 Sources et m\xE9thodologie de calcul"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-2",
@@ -3194,22 +3391,27 @@ function App() {
     style: {
       color: D
     }
-  }, "Scoring ADEME (100 points) \u2014 CdC pp. 27-29"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 environnementale (45 pts) : quantit\xE9 CO\u2082e \xE9vit\xE9e sur 5 ans (15 pts, compar\xE9e au meilleur projet, estimation GASPE : max ~5 000 tCO\u2082) + gain relatif en % vs sc\xE9nario de r\xE9f\xE9rence (30 pts, formule : 30 \xD7 (1 \u2212 tCO\u2082_projet / tCO\u2082_ref))"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 des aides publiques (25 pts) : ratio \u20AC aide / tCO\u2082 \xE9vit\xE9e. Si ratio ", ">", " 200 \u20AC/tCO\u2082 \u2192 note de \u22125 (quasi \xE9liminatoire). Sinon : 25 \xD7 meilleur_ratio / ratio_projet"), /*#__PURE__*/React.createElement("p", null, "\u2022 Qualit\xE9 technico-\xE9conomique + r\xE9silience (30 pts) : TRL (5 pts), r\xE9ductions hors-GES (5 pts), montage dossier GASPE (10 pts), localisation FR/EEE (10 pts)"), /*#__PURE__*/React.createElement("p", {
+  }, "Scoring ADEME (100 points) \xB7 CdC pp. 27-29"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 environnementale (45 pts) : quantit\xE9 CO\u2082e \xE9vit\xE9e sur 5 ans (15 pts, compar\xE9e au meilleur projet, estimation GASPE : max ~5 000 tCO\u2082) + gain relatif en % vs sc\xE9nario de r\xE9f\xE9rence (30 pts, formule : 30 \xD7 (1 \u2212 tCO\u2082_projet / tCO\u2082_ref))"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 des aides publiques (25 pts) : ratio \u20AC aide / tCO\u2082 \xE9vit\xE9e. Si ratio ", ">", " 200 \u20AC/tCO\u2082 \u2192 note de \u22125 (quasi \xE9liminatoire). Sinon : 25 \xD7 meilleur_ratio / ratio_projet"), /*#__PURE__*/React.createElement("p", null, "\u2022 Qualit\xE9 technico-\xE9conomique + r\xE9silience (30 pts) : TRL (5 pts), r\xE9ductions hors-GES (5 pts), montage dossier GASPE (10 pts), localisation FR/EEE (10 pts)"), /*#__PURE__*/React.createElement("p", {
     className: "font-bold mt-3",
     style: {
       color: D
     }
-  }, "Taux d'aide LDACEE \u2014 CdC Annexe 2, r\xE9gime SA.111726"), /*#__PURE__*/React.createElement("p", null, "\u2022 Navire \xE9mission nulle (\u226599% z\xE9ro-CO\u2082) : PE 60% / ME 50% / GE 30%"), /*#__PURE__*/React.createElement("p", null, "\u2022 Navire propre (\u226525% z\xE9ro-CO\u2082) : PE 50% / ME 40% / GE 20%"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 avec contrefactuel : PE 50% / ME 40% / GE 30% (hors AFR), +5% zone c, +15% zone a"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 sans contrefactuel : taux divis\xE9s par 2"), /*#__PURE__*/React.createElement("p", null, "\u2022 \xC9tudes/conseil : PE 80% / ME 70% / GE 60%"), /*#__PURE__*/React.createElement("p", {
+  }, "Taux d'aide LDACEE \xB7 CdC Annexe 2, r\xE9gime SA.111726"), /*#__PURE__*/React.createElement("p", null, "\u2022 Navire \xE9mission nulle (\u226599% z\xE9ro-CO\u2082) : PE 60% / ME 50% / GE 30%"), /*#__PURE__*/React.createElement("p", null, "\u2022 Navire propre (\u226525% z\xE9ro-CO\u2082) : PE 50% / ME 40% / GE 20%"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 avec contrefactuel : PE 50% / ME 40% / GE 30% (hors AFR), +5% zone c, +15% zone a"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 sans contrefactuel : taux divis\xE9s par 2"), /*#__PURE__*/React.createElement("p", null, "\u2022 \xC9tudes/conseil : PE 80% / ME 70% / GE 60%"), /*#__PURE__*/React.createElement("p", {
     className: "font-bold mt-3",
     style: {
       color: D
     }
-  }, "Dimensionnement batteries (dimBatt)"), /*#__PURE__*/React.createElement("p", null, "\u2022 \xC9nergie par travers\xE9e = P_propulsion \xD7 dur\xE9e \xD7 facteur de charge / 0.80 (SoC 10-90%, DNV Pt.6 Ch.2 Sec.1)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Contrainte puissance = P_cr\xEAte / 2C (Corvus Orca ESS, d\xE9charge continue 2C max)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Chargeur = E_travers\xE9e / (temps_quai/60) \xD7 1.1 (ABB Marine 2022)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Co\xFBt batteries : 350 \u20AC/kWh install\xE9 (BNEF 2024), chargeur 200 \u20AC/kW"), /*#__PURE__*/React.createElement("p", null, "\u2022 Cycles LFP : 5 000 \xE0 80% DoD (Preger et al. 2020, J. Electrochem. Soc. 167)"), /*#__PURE__*/React.createElement("p", {
+  }, "Dimensionnement batteries (dimBatt)"), /*#__PURE__*/React.createElement("p", null, "\u2022 \xC9nergie par travers\xE9e = P_propulsion \xD7 dur\xE9e \xD7 facteur de charge / 0.80 (SoC 10-90%, DNV Pt.6 Ch.2 Sec.1)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Contrainte puissance = P_cr\xEAte / 2C (Corvus Orca ESS, d\xE9charge continue 2C max)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Chargeur = E_travers\xE9e / (temps_quai/60) \xD7 1.1 (ABB Marine 2022)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Co\xFBt batteries : 450 \u20AC/kWh install\xE9 maritime (Corvus Orca ESS 2024, incl. BMS, refroidissement, certification BV NR 547), chargeur 200 \u20AC/kW"), /*#__PURE__*/React.createElement("p", null, "\u2022 Cycles LFP : 5 000 \xE0 80% DoD (Preger et al. 2020, J. Electrochem. Soc. 167)"), /*#__PURE__*/React.createElement("p", {
     className: "font-bold mt-3",
     style: {
       color: D
     }
   }, "\xC9missions"), /*#__PURE__*/React.createElement("p", null, "\u2022 CO\u2082 : 3,206 kgCO\u2082/kg MDO (IMO MEPC.1/Circ.684)"), /*#__PURE__*/React.createElement("p", null, "\u2022 SOx/NOx/PM : IMO GHG Study 2020, ENTEC 2005"), /*#__PURE__*/React.createElement("p", null, "\u2022 Prix MDO : 850 \u20AC/t (EIA STEO mars 2026, post-crise Iran, Brent ~80-95 $/bbl)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Escalade carburant : 4%/an (risque g\xE9opolitique structurel post-fermeture Ormuz)"), /*#__PURE__*/React.createElement("p", {
+    className: "font-bold mt-3",
+    style: {
+      color: D
+    }
+  }, "Analyse de sensibilit\xE9 (robustesse)"), /*#__PURE__*/React.createElement("p", null, "Les r\xE9sultats CCV sont calcul\xE9s en 3 sc\xE9narios : base (gains technologiques m\xE9dians), d\xE9grad\xE9 (gains r\xE9duits de 30%), favorable (gains maximaux). L'\xE9cart entre les sc\xE9narios mesure l'incertitude du projet. Les param\xE8tres sensibles sont : prix carburant (\xB120%), d\xE9gradation batteries (\xB12 ans sur la dur\xE9e de vie), facteur de charge (\xB110%). La d\xE9gradation du moteur fossile (+1,5%/an, source MAN Energy Solutions 2023) est int\xE9gr\xE9e dans le sc\xE9nario de r\xE9f\xE9rence."), /*#__PURE__*/React.createElement("p", {
     className: "font-bold mt-3",
     style: {
       color: D
@@ -3290,7 +3492,7 @@ function App() {
     style: {
       color: "#ccc"
     }
-  }, "v1.1.0 \u2014 Simulateur AAP ADEME 2026 \u2014 Propuls\xE9 par", " ", /*#__PURE__*/React.createElement("a", {
+  }, "v1.3.0 \xB7 Simulateur AAP ADEME 2026 \xB7 Propuls\xE9 par", " ", /*#__PURE__*/React.createElement("a", {
     href: "https://vaiata-dynamics.com/fr/",
     target: "_blank",
     rel: "noopener",
