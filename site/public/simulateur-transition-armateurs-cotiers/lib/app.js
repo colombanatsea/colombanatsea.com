@@ -1963,7 +1963,7 @@ function App() {
       style: {
         color: "#3d6a74"
       }
-    }, "v1.5.0 \xB7 Propuls\xE9 par ", /*#__PURE__*/React.createElement("a", {
+    }, "v1.6.0 \xB7 Propuls\xE9 par ", /*#__PURE__*/React.createElement("a", {
       href: "https://vaiata-dynamics.com/fr/",
       target: "_blank",
       rel: "noopener",
@@ -2641,7 +2641,7 @@ function App() {
     }
   }, /*#__PURE__*/React.createElement("span", {
     className: "font-bold"
-  }, "\uD83D\uDCA1 En un mot :"), " le contrefactuel, c'est ce que vous feriez si vous n'aviez PAS cette aide. Identifier un sc\xE9nario cr\xE9dible double les taux d'aide. C'est le levier le plus important de votre dossier.")), /*#__PURE__*/React.createElement(Cd, {
+  }, "\uD83D\uDCA1 En un mot :"), " le contrefactuel, c'est ce que vous feriez si vous n'aviez PAS cette aide. L'ADEME attend une offre et une contre-offre (carbonee vs decarbonee). Identifier un contrefactuel credible double les taux d'aide. Preparez ce dossier en amont : c'est le point le plus chronophage (source : recommandations Armateurs de France).")), /*#__PURE__*/React.createElement(Cd, {
     title: "Type de sc\xE9nario contrefactuel",
     accent: W
   }, [["maintien", "Maintien du navire existant + entretien", "Scénario c) du CdC. Le plus fréquent pour les TPE/PME. Coûts éligibles = investissement décarboné − VAN entretien/réparation actualisée."], ["newbuild_fossile", "Remplacement par un navire diesel neuf", "Scénario a) du CdC. Coûts éligibles = surcoût du navire décarboné par rapport au navire fossile équivalent."], ["reporté", "Même investissement, mais plus tard", "Scénario b) du CdC. Coûts éligibles = différence entre investissement maintenant et VAN de l'investissement ultérieur."], ["aucun", "Pas de contrefactuel identifiable", "⚠️ Les taux d'aide sont divisés par 2. À éviter si possible."]].map(([id, label, desc]) => /*#__PURE__*/React.createElement("button", {
@@ -3596,9 +3596,17 @@ function App() {
     style: {
       color: D
     }
-  }, "Cadre r\xE9glementaire"), /*#__PURE__*/React.createElement("p", null, "\u2022 AAP ADEME 2026 : CdC publi\xE9 le 2 avril 2026, cl\xF4ture 6 juillet 2026"), /*#__PURE__*/React.createElement("p", null, "\u2022 Art. 301, loi n\xB0 2021-1104 (Climat et R\xE9silience)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Strat\xE9gie OMI r\xE9vis\xE9e 2023 : neutralit\xE9 2050, \u221220% en 2030"), /*#__PURE__*/React.createElement("p", null, "\u2022 R\xE9gime SA.111726 (LDACEE), SA.111728 (PME), SA.119559 (AFR)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Classification navire : RGEC art. 36 ter (navire propre / \xE9mission nulle)"), /*#__PURE__*/React.createElement("p", null, "\u2022 DNSH : art. 17, r\xE8glement UE 2020/852 (Taxonomie)"))), /*#__PURE__*/React.createElement("div", {
+  }, "Cadre r\xE9glementaire"), /*#__PURE__*/React.createElement("p", null, "\u2022 AAP ADEME 2026 : CdC publi\xE9 le 2 avril 2026, cl\xF4ture 6 juillet 2026"), /*#__PURE__*/React.createElement("p", null, "\u2022 Art. 301, loi n\xB0 2021-1104 (Climat et R\xE9silience)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Strat\xE9gie OMI r\xE9vis\xE9e 2023 (selection par comite : DGAMPA, DGE, DGITM, Direction du Budget, CBCM, ADEME) : neutralit\xE9 2050, \u221220% en 2030"), /*#__PURE__*/React.createElement("p", null, "\u2022 R\xE9gime SA.111726 (LDACEE), SA.111728 (PME), SA.119559 (AFR)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Classification navire : RGEC art. 36 ter (navire propre / \xE9mission nulle)"), /*#__PURE__*/React.createElement("p", null, "\u2022 DNSH : art. 17, r\xE8glement UE 2020/852 (Taxonomie)"))), /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-2 gap-3 mt-4"
   }, /*#__PURE__*/React.createElement("a", {
+    href: "mailto:aap.navires@ademe.fr",
+    className: "inline-block px-4 py-2 rounded-lg text-sm font-bold mb-2",
+    style: {
+      background: AC,
+      color: "white",
+      textDecoration: "none"
+    }
+  }, "\u2709 Contacter l'ADEME pour un crash test pre-depot (recommande)"), /*#__PURE__*/React.createElement("a", {
     href: "https://agirpourlatransition.ademe.fr/entreprises/aides-financieres/catalogue/aap/aides-linvestissement-pour-la-decarbonation-du-transport-et-des-services-maritimes",
     target: "_blank",
     rel: "noopener",
@@ -3678,7 +3686,36 @@ function App() {
       w.document.write('<h2>6. Aide estimee</h2>');
       w.document.write('<table><tr><th>Taux</th><td>' + aide.taux + '%</td><th>Aide</th><td>' + fK(aide.aide) + '</td></tr>');
       w.document.write('<tr><th>Ratio</th><td>' + (scoring?.ratioEuroParTonne || '-') + ' EUR/tCO2</td><th>Regime</th><td>' + aide.regime + '</td></tr></table>');
-      w.document.write('<div class="footer">GASPE - Localement ancrees. Socialement engagees.<br>Simulateur AAP ADEME 2026 v1.5 - ' + new Date().toLocaleDateString('fr-FR') + '</div>');
+      // Annexe 1 - DNSH
+      w.document.write('<h2>Annexe 1 - Do No Significant Harm (DNSH)</h2>');
+      (proj.dnsh || []).forEach((d, i) => {
+        const ax = DNSH_AXES[i];
+        if (ax) w.document.write('<p><b>' + ax.l + ' :</b> ' + (d.text || ax.template) + '</p>');
+        if (d.fournisseur) w.document.write('<p><i>Fournisseur recyclage : ' + d.fournisseur + '</i></p>');
+        if (d.certification) w.document.write('<p><i>Certification bruit : ' + d.certification + '</i></p>');
+        if (d.antifouling) w.document.write('<p><i>Antifouling : ' + d.antifouling + '</i></p>');
+      });
+      // Annexe 2 - Methodologie de calcul des emissions
+      w.document.write('<h2>Annexe 2 - Note methodologique emissions GES</h2>');
+      w.document.write('<p><b>Facteur emission MDO :</b> 3,206 kgCO2/kg (IMO MEPC.1/Circ.684)</p>');
+      w.document.write('<p><b>Densite MDO :</b> 0,85 kg/L (ISO 8217:2017, grade DMB)</p>');
+      w.document.write('<p><b>Degradation moteur fossile :</b> +1,5%/an (MAN Energy Solutions 2023)</p>');
+      w.document.write('<p><b>Periode de reference :</b> 5 ans (thematique 1)</p>');
+      if (scoring) {
+        w.document.write('<p><b>CO2 evite (5 ans) :</b> ' + fmt(scoring.co2Evite) + ' t</p>');
+        w.document.write('<p><b>Gain relatif :</b> ' + scoring.gainPct + '%</p>');
+        w.document.write('<p><b>Ratio aide/tCO2 :</b> ' + scoring.ratioEuroParTonne + ' EUR/tCO2</p>');
+      }
+      // Annexe 3 - Souverainete et ancrage territorial
+      w.document.write('<h2>Annexe 3 - Ancrage territorial et souverainete</h2>');
+      w.document.write('<p>Ce projet correspond a une transition souveraine, ancree localement : les prestataires techniques sont francais, le service rendu est un service public visible au quotidien par le contribuable, et les retombees economiques (emplois, maintenance, exploitation) beneficient directement au territoire. La compagnie est captive en matiere d\'opportunites d\'avitaillement (desserte locale, port secondaire non equipe en combustible alternatif).</p>');
+      // Annexe 4 - Aides publiques
+      w.document.write('<h2>Annexe 4 - Aides publiques sollicitees</h2>');
+      w.document.write('<table><tr><th>Dispositif</th><th>Montant (k EUR)</th></tr>');
+      w.document.write('<tr><td>ADEME AAP 2026</td><td>' + fK(aide.aide) + '</td></tr>');
+      if (proj.autresAides > 0) w.document.write('<tr><td>' + (proj.autresAidesDetail || 'Autres') + '</td><td>' + fK(proj.autresAides) + '</td></tr>');
+      w.document.write('<tr><td><b>Total</b></td><td><b>' + fK(aide.aide + (proj.autresAides || 0)) + '</b></td></tr></table>');
+      w.document.write('<div class="footer">GASPE - Localement ancrees. Socialement engagees.<br>Simulateur AAP ADEME 2026 v1.6.0 - ' + new Date().toLocaleDateString('fr-FR') + '</div>');
       w.document.write('</body></html>');
       w.document.close();
       w.print();
@@ -3711,7 +3748,7 @@ function App() {
     style: {
       color: "#ccc"
     }
-  }, "v1.5.0 \xB7 Simulateur AAP ADEME 2026 \xB7 Propuls\xE9 par", " ", /*#__PURE__*/React.createElement("a", {
+  }, "v1.6.0 \xB7 Simulateur AAP ADEME 2026 \xB7 Propuls\xE9 par", " ", /*#__PURE__*/React.createElement("a", {
     href: "https://vaiata-dynamics.com/fr/",
     target: "_blank",
     rel: "noopener",
