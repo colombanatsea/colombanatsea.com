@@ -78,6 +78,10 @@ const PU = "#7C3AED"; // Purple (wizard, CTA)
 // --- Logos GASPE (base64, extraits en haute résolution) ---
 const GASPE_LOGO = "data:image/png;base64,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";
 
+// --- Symbole A GASPE (footer / branding) ---
+const GASPE_A_COULEUR = "data:image/jpeg;base64,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";
+const GASPE_A_BLANC = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAAAAAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/wAALCAAgACABAREA/8QAGAAAAwEBAAAAAAAAAAAAAAAABQcIAwb/xAAuEAABAwMCAwYGAwAAAAAAAAABAgMEBQYRAAcSITEIEyJRcZEUFRYyQWFigYL/2gAIAQEAAD8AlTXS2rYtzXXGfkW7RZlQYZWG3FspBCVEZxknrjQ24aFU7cqjlOrkJ6DObCVKZeThQBGQfbQzW8KK9OmMRYjSnpD7iWmm0jJWpRwAP2SRq51TqX2f9nqSxJbRIll1tDiEnBffWQXleiUhWP0lI/OllvXR6jvRMp1TsWz6uoRkKaNSlhuK3KaPNPAHCCQDnB/keWp/u+y7is+Qhm5aRKp6l/YpxOUL8+FYyk/0dObsfWH85ul+6Z7WYNJPBG4hyXJUOv8AhJz6qTpzX5uhtK1WA5cEiPVKtSHHGW2REcfLTgPi4cju85SPFn8ddArT3UujdmuVCFYbtJt6DAQlxTlRbMiU6kkgFKB4AM8iMnGRz56VXaL3CvB1r6FumNBZdiPB5+VESQicnGWlJCvtHXODzPljGlhb24t227TEU6h1+dBhIUpSWWVhKQSck9OuuVcWpxaluKKlqOSScknz0Ttu4KtbVR+PoM+RAmcBb71hXCrhPUenIe2tboumtXVKZk3DUpFQkMo7tDj5BUlOc4z5ZJ99f//Z";
+
 // --- Carburants de référence ---
 // Sources: IMO GHG Study 2020, ADEME 2024
 // Prix MDO ajusté post-crise Iran (fermeture Ormuz fév. 2026)
@@ -437,69 +441,113 @@ const VT = [{
     lifeR: 20
   }
 }, {
-  id: "remorqueur",
-  l: "Remorqueur portuaire",
+  id: "fret",
+  l: "Navire de fret côtier (caboteur)",
   d: {
-    loa: 30,
-    gt: 350,
-    pP: 3000,
-    pA: 200,
-    pPeak: 4500,
-    spd: 12,
-    fc: 120,
-    pTr: 15,
-    pMa: 65,
-    pQu: 20,
-    opD: 340,
-    rD: 8,
-    cDur: 30,
-    qT: 60,
-    pax: 0,
-    veh: 0,
-    opex: 600,
-    crew: 500,
-    ins: 90,
-    dd: 200,
-    ddC: 5,
-    mktV: 6000,
-    rev: 2500,
-    debt: 0,
-    dspR: 0,
-    lifeR: 20
-  }
-}, {
-  id: "pilotine",
-  l: "Pilotine",
-  d: {
-    loa: 16,
-    gt: 50,
-    pP: 750,
-    pA: 50,
-    pPeak: 900,
-    spd: 22,
+    loa: 40,
+    gt: 300,
+    pP: 600,
+    pA: 150,
+    pPeak: 800,
+    spd: 9,
     fc: 60,
-    pTr: 60,
-    pMa: 25,
+    pTr: 70,
+    pMa: 15,
     pQu: 15,
-    opD: 340,
-    rD: 10,
-    cDur: 15,
-    qT: 30,
-    pax: 6,
+    opD: 280,
+    rD: 2,
+    cDur: 120,
+    qT: 60,
+    pax: 12,
     veh: 0,
-    opex: 250,
-    crew: 300,
-    ins: 50,
-    dd: 80,
+    opex: 500,
+    crew: 400,
+    ins: 70,
+    dd: 150,
     ddC: 5,
-    mktV: 2000,
-    rev: 1000,
+    mktV: 4000,
+    rev: 1500,
     debt: 0,
     dspR: 0,
-    lifeR: 20
+    lifeR: 25
   }
 }];
 
+// --- Régions françaises → Zone AFR automatique ---
+// Source: Décret n° 2022-968 du 30 juin 2022 relatif aux zones d'aide à finalité régionale
+const REGIONS = [{
+  id: "metropole_standard",
+  l: "Métropole (hors zone AFR)",
+  zone: "hors"
+}, {
+  id: "bretagne",
+  l: "Bretagne",
+  zone: "hors"
+}, {
+  id: "normandie",
+  l: "Normandie",
+  zone: "hors"
+}, {
+  id: "paca",
+  l: "Provence-Alpes-Côte d'Azur",
+  zone: "hors"
+}, {
+  id: "occitanie",
+  l: "Occitanie",
+  zone: "hors"
+}, {
+  id: "nouvelle_aq",
+  l: "Nouvelle-Aquitaine",
+  zone: "hors"
+}, {
+  id: "pays_loire",
+  l: "Pays de la Loire",
+  zone: "hors"
+}, {
+  id: "hauts_france",
+  l: "Hauts-de-France",
+  zone: "hors"
+}, {
+  id: "idf",
+  l: "Île-de-France",
+  zone: "hors"
+}, {
+  id: "corse",
+  l: "Corse",
+  zone: "zoneC"
+}, {
+  id: "nord_pas_calais",
+  l: "Nord (Dunkerque, Boulogne…)",
+  zone: "zoneC"
+}, {
+  id: "guadeloupe",
+  l: "Guadeloupe",
+  zone: "zoneA"
+}, {
+  id: "martinique",
+  l: "Martinique",
+  zone: "zoneA"
+}, {
+  id: "reunion",
+  l: "La Réunion",
+  zone: "zoneA"
+}, {
+  id: "guyane",
+  l: "Guyane",
+  zone: "zoneA"
+}, {
+  id: "mayotte",
+  l: "Mayotte",
+  zone: "zoneA"
+}, {
+  id: "saint_martin",
+  l: "Saint-Martin",
+  zone: "zoneA"
+}, {
+  id: "spm",
+  l: "Saint-Pierre-et-Miquelon",
+  zone: "zoneA"
+}];
 // --- Facteurs d'émission SOx/NOx/PM (g/kWh) ---
 // Sources: IMO MEPC.1/Circ.684, ENTEC 2005, Cooper & Gustafsson 2004
 const EMFACT = {
@@ -733,6 +781,208 @@ const DNSH_AXES = [{
   auto: false,
   template: "La propulsion électrique réduit significativement le bruit sous-marin (< 160 dB re 1 μPa RMS, ref. DNV Silent Class). Antifouling sans biocides toxiques."
 }];
+
+// --- Base de cas de référence sourcés ---
+// Algorithme matchCases() : score de pertinence 0-100% sur 7 critères
+const CASE_DB = [{
+  id: "ampere",
+  n: "MF Ampere",
+  co: "NO",
+  yr: 2015,
+  vt: ["bac", "ferry"],
+  tr: ["full_elec"],
+  loa: 80,
+  batt: 1000,
+  rot: 34,
+  nm: 3.2,
+  retro: false,
+  co2: -570,
+  nox: -15,
+  s: "Norled 2025; Siemens Energy; EAFO",
+  d: "80m alu catamaran, 120 véh./360 pax, Lavik-Oppedal. 1 MWh Corvus. Réduction 95% GES. > 100 000 traversées."
+}, {
+  id: "ellen",
+  n: "E-ferry Ellen",
+  co: "DK",
+  yr: 2019,
+  vt: ["ferry"],
+  tr: ["full_elec"],
+  loa: 60,
+  batt: 4300,
+  rot: 7,
+  nm: 22,
+  retro: false,
+  co2: -2520,
+  nox: -14.3,
+  s: "EU Horizon 2020 #636027; HKF Marineconsult 2022",
+  d: "60m, 31 voi./198 pax, Ærø-Fynshav (22 NM). 4,3 MWh Leclanchè. −2 520 tCO₂/an."
+}, {
+  id: "lamelec",
+  n: "LAMELEC",
+  co: "FR",
+  yr: 2026,
+  vt: ["lamanage"],
+  tr: ["full_elec"],
+  loa: 15,
+  batt: 500,
+  rot: 15,
+  nm: 0,
+  retro: false,
+  co2: -150,
+  nox: 0,
+  s: "GASPE/OCEA/VEBRAT; Bpifrance PULSE; CMA CGM Fonds décarb.",
+  d: "Premier lamaneur 100% électrique français. OCEA (Les Sables). Loire estuaire."
+}, {
+  id: "volta1",
+  n: "Volta 1 (Anvers)",
+  co: "BE",
+  yr: 2024,
+  vt: ["lamanage"],
+  tr: ["full_elec"],
+  loa: 28,
+  batt: 2782,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: -400,
+  nox: 0,
+  s: "Port of Antwerp-Bruges 2024; Damen Shipyards",
+  d: "Remorqueur RSD LTO 2 782 kWh, 70 t traction. Premier remorqueur électrique européen."
+}, {
+  id: "basto_hybrid",
+  n: "Bastø Fosen (hybrides)",
+  co: "NO",
+  yr: 2021,
+  vt: ["ferry"],
+  tr: ["hybride"],
+  loa: 139,
+  batt: 4300,
+  rot: 0,
+  nm: 5.4,
+  retro: true,
+  co2: -1500,
+  nox: 0,
+  s: "Bastø Fosen / Siemens 2022; Bellona",
+  d: "2 ferries diesel→hybride + 1 newbuild, Moss-Horten. −75% CO₂, −6 M litres diesel/an."
+}, {
+  id: "seachange",
+  n: "Sea Change",
+  co: "US",
+  yr: 2024,
+  vt: ["navette"],
+  tr: ["h2"],
+  loa: 21,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: 0,
+  nox: 0,
+  s: "ScienceDirect 2025 (IJHE); WETA/CARB",
+  d: "75 pax, pile H₂ haute pression. Premier ferry H₂ commercial au monde. SF Bay."
+}, {
+  id: "dublin_hvo",
+  n: "Dublin Port HVO Trial",
+  co: "IE",
+  yr: 2023,
+  vt: ["navette", "fret"],
+  tr: ["hvo"],
+  loa: 15,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: -85,
+  nox: 0,
+  s: "Dublin Port Company 2023; Certa",
+  d: "4 pilotines, 100% HVO drop-in. Réduction 80-90% CO₂ sans modification moteur."
+}, {
+  id: "medstraum",
+  n: "MS Medstraum",
+  co: "NO",
+  yr: 2022,
+  vt: ["navette"],
+  tr: ["full_elec"],
+  loa: 31,
+  batt: 1500,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: -500,
+  nox: 0,
+  s: "EU TrAM Project; Kolombus; EAFO",
+  d: "31m catamaran, 150 pax, 23 nœuds. Premier ferry rapide 100% électrique."
+}, {
+  id: "lca_2025",
+  n: "Étude LCA ferries électriques",
+  co: "INT",
+  yr: 2025,
+  vt: ["bac", "ferry", "navette"],
+  tr: ["full_elec", "hybride"],
+  loa: 0,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: false,
+  co2: -90,
+  nox: 0,
+  s: "ScienceDirect, Applied Energy 2025 (peer-reviewed)",
+  d: "LCA complète : −90% GES, −75% acidification, −70% PM. CMA ~100 €/tCO₂. LFP préférable."
+}, {
+  id: "shiftr",
+  n: "SHIFTR (Norled)",
+  co: "NO",
+  yr: 2026,
+  vt: ["navette"],
+  tr: ["full_elec"],
+  loa: 0,
+  batt: 0,
+  rot: 0,
+  nm: 0,
+  retro: true,
+  co2: -3000,
+  nox: 0,
+  s: "Business Norway 2024; Norled; DNV",
+  d: "Swap batterie autonome. Retrofit Oslofjord : −1 M litres diesel, −3 000 tCO₂/an."
+}];
+function matchCases(proj) {
+  if (!proj) return [];
+  const v = proj.v;
+  const fuelMix = proj.trajs?.[1]?.fuelMix || {};
+  const techs = proj.trajs?.[1]?.techs || {};
+  const trTypes = [];
+  if (fuelMix.elec > 50 && !fuelMix.mdo) trTypes.push("full_elec");else if (fuelMix.elec > 0) trTypes.push("hybride");
+  if (fuelMix.hvo > 0) trTypes.push("hvo");
+  if (fuelMix.fame > 0) trTypes.push("fame");
+  if (fuelMix.h2 > 0) trTypes.push("h2");
+  if (techs.fullelec?.a) trTypes.push("full_elec");
+  if (techs.hybride?.a) trTypes.push("hybride");
+  return CASE_DB.map(c => {
+    let score = 0;
+    if (c.vt.includes(v.type)) score += 30;else if (c.vt.some(t => ["bac", "ferry"].includes(t)) && ["bac", "ferry"].includes(v.type)) score += 15;
+    const trMatch = c.tr.filter(t => trTypes.includes(t));
+    score += trMatch.length * 25;
+    if (c.loa > 0 && v.loa > 0) {
+      const r = Math.abs(c.loa - v.loa) / Math.max(c.loa, v.loa);
+      score += Math.round((1 - r) * 15);
+    }
+    if (c.batt > 0) {
+      const bd = dimBatt(v);
+      if (bd.kWh > 0) {
+        const r = Math.abs(c.batt - bd.kWh) / Math.max(c.batt, bd.kWh);
+        score += Math.round((1 - r) * 10);
+      }
+    }
+    if (c.rot > 0 && v.rD > 0) {
+      const r = Math.abs(c.rot - v.rD) / Math.max(c.rot, v.rD);
+      score += Math.round((1 - r) * 8);
+    }
+    return {
+      ...c,
+      score
+    };
+  }).filter(c => c.score > 15).sort((a, b) => b.score - a.score).slice(0, 5);
+}
 
 // --- Deadline de l'AAP ---
 const AAP_DEADLINE = new Date("2026-07-06T23:59:00");
@@ -1364,11 +1614,25 @@ function defProjet() {
   };
 }
 
-// --- Persistance localStorage ---
-const SK = "ademe2026";
-function ldProj() {
+// --- Persistance localStorage multi-projet ---
+const SK_LIST = "ademe2026_list";
+function ldList() {
   try {
-    const r = localStorage.getItem(SK);
+    const r = localStorage.getItem(SK_LIST);
+    return r ? JSON.parse(r) : [];
+  } catch {
+    return [];
+  }
+}
+function svList(list) {
+  try {
+    localStorage.setItem(SK_LIST, JSON.stringify(list));
+  } catch {/* noop */}
+}
+function ldProj(id) {
+  if (!id) return null;
+  try {
+    const r = localStorage.getItem("ademe2026:" + id);
     return r ? JSON.parse(r) : null;
   } catch {
     return null;
@@ -1377,7 +1641,24 @@ function ldProj() {
 function svProj(p) {
   try {
     p.upd = new Date().toISOString();
-    localStorage.setItem(SK, JSON.stringify(p));
+    localStorage.setItem("ademe2026:" + p.id, JSON.stringify(p));
+    const list = ldList();
+    const entry = {
+      id: p.id,
+      name: p.name,
+      upd: p.upd,
+      vType: p.v?.type,
+      vName: p.v?.name
+    };
+    const idx = list.findIndex(x => x.id === p.id);
+    if (idx >= 0) list[idx] = entry;else list.push(entry);
+    svList(list);
+  } catch {/* noop */}
+}
+function rmProj(id) {
+  try {
+    localStorage.removeItem("ademe2026:" + id);
+    svList(ldList().filter(x => x.id !== id));
   } catch {/* noop */}
 }
 
@@ -1386,19 +1667,15 @@ function svProj(p) {
 // ============================================================================
 
 function App() {
+  const [projList, setProjList] = useState([]);
   const [proj, setProj] = useState(null);
   const [step, setStep] = useState(0); // 0 = accueil, 1-7 = étapes
   const [maxStep, setMaxStep] = useState(1);
   const [saved, setSaved] = useState(false);
 
-  // Charger le projet sauvegardé au montage
+  // Charger la liste des projets au montage
   useEffect(() => {
-    const p = ldProj();
-    if (p) {
-      setProj(p);
-      setStep(1);
-      setMaxStep(7);
-    }
+    setProjList(ldList());
   }, []);
 
   // Sauvegarder à chaque modification
@@ -1409,6 +1686,7 @@ function App() {
         ...fn
       };
       svProj(next);
+      setProjList(ldList());
       setSaved(true);
       setTimeout(() => setSaved(false), 1500);
       return next;
@@ -1441,27 +1719,47 @@ function App() {
   };
   const prevStep = () => setStep(Math.max(1, step - 1));
 
+  // --- Ouvrir un projet existant ---
+  const openProj = id => {
+    const p = ldProj(id);
+    if (p) {
+      setProj(p);
+      setStep(1);
+      setMaxStep(7);
+    }
+  };
+
   // --- Nouveau projet ---
   const newProj = () => {
     const p = defProjet();
-    setProj(p);
     svProj(p);
+    setProj(p);
+    setProjList(ldList());
     setStep(1);
     setMaxStep(1);
   };
 
-  // --- Réinitialiser ---
-  const resetProj = () => {
-    if (confirm("Réinitialiser le projet ? Toutes les données seront perdues.")) {
-      localStorage.removeItem(SK);
-      setProj(null);
-      setStep(0);
-      setMaxStep(1);
+  // --- Supprimer un projet ---
+  const deleteProj = id => {
+    if (confirm("Supprimer ce projet ? Cette action est irréversible.")) {
+      rmProj(id);
+      setProjList(ldList());
+      if (proj && proj.id === id) {
+        setProj(null);
+        setStep(0);
+      }
     }
   };
 
+  // --- Retour à la liste ---
+  const backToList = () => {
+    setProj(null);
+    setStep(0);
+    setProjList(ldList());
+  };
+
   // ========================
-  // ÉCRAN D'ACCUEIL
+  // ÉCRAN D'ACCUEIL — Liste des projets
   // ========================
   if (step === 0 || !proj) {
     return /*#__PURE__*/React.createElement("div", {
@@ -1477,7 +1775,8 @@ function App() {
       alt: "GASPE",
       style: {
         height: 48,
-        marginBottom: 24
+        marginBottom: 24,
+        mixBlendMode: "screen"
       }
     }), /*#__PURE__*/React.createElement("h1", {
       className: "text-2xl font-bold text-white text-center mb-2"
@@ -1502,26 +1801,84 @@ function App() {
       style: {
         color: "#555"
       }
-    }, "Construisez votre pr\xE9-dossier ADEME en 7 \xE9tapes guid\xE9es. 30 minutes pour un dossier structur\xE9, chiffr\xE9 et sourc\xE9."), ldProj() && /*#__PURE__*/React.createElement("button", {
-      onClick: () => {
-        setProj(ldProj());
-        setStep(1);
-        setMaxStep(7);
-      },
-      className: "w-full mb-3 py-3 rounded-xl text-sm font-bold",
+    }, "Construisez votre pr\xE9-dossier ADEME en 7 \xE9tapes guid\xE9es. 30 minutes pour un dossier structur\xE9, chiffr\xE9 et sourc\xE9."), /*#__PURE__*/React.createElement("a", {
+      href: "https://www.b2match.com/e/aap-decarbonation-maritime/sign-up",
+      target: "_blank",
+      rel: "noopener",
+      className: "block w-full mb-4 p-3 rounded-xl text-xs",
+      style: {
+        background: PU + "15",
+        border: "1px solid " + PU + "40",
+        textDecoration: "none",
+        color: D
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center gap-2"
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: 18
+      }
+    }, "\uD83D\uDCC5"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "font-bold",
+      style: {
+        color: PU
+      }
+    }, "Webinaire ADEME \u2014 21 avril 2026"), /*#__PURE__*/React.createElement("div", {
+      style: {
+        color: "#666"
+      }
+    }, "P\xF4le Mer Bretagne Atlantique \u2022 Pr\xE9sentation de l'AAP"), /*#__PURE__*/React.createElement("div", {
+      className: "font-bold mt-1",
+      style: {
+        color: PU
+      }
+    }, "\u2192 S'inscrire")))), projList.length > 0 && /*#__PURE__*/React.createElement("div", {
+      className: "mb-4"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs font-bold mb-2",
+      style: {
+        color: D
+      }
+    }, "Mes projets (", projList.length, ")"), projList.sort((a, b) => (b.upd || "").localeCompare(a.upd || "")).map(pr => /*#__PURE__*/React.createElement("div", {
+      key: pr.id,
+      className: "flex items-center gap-2 p-2 rounded-lg mb-1",
+      style: {
+        background: "#f8f9fb",
+        border: "1px solid #e5e7eb"
+      }
+    }, /*#__PURE__*/React.createElement("button", {
+      onClick: () => openProj(pr.id),
+      className: "flex-1 text-left",
+      style: {
+        background: "none",
+        cursor: "pointer"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-sm font-medium",
+      style: {
+        color: D
+      }
+    }, pr.name), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs",
+      style: {
+        color: "#999"
+      }
+    }, pr.vName || VT.find(x => x.id === pr.vType)?.l || "—", " \u2022 ", pr.upd ? new Date(pr.upd).toLocaleDateString("fr-FR") : "")), /*#__PURE__*/React.createElement("button", {
+      onClick: () => deleteProj(pr.id),
+      className: "text-xs px-2 py-1 rounded",
+      style: {
+        color: AC,
+        background: AC + "10",
+        cursor: "pointer"
+      }
+    }, "\u2715")))), /*#__PURE__*/React.createElement("button", {
+      onClick: newProj,
+      className: "w-full py-3 rounded-xl text-sm font-bold mb-4",
       style: {
         background: T,
         color: "white"
       }
-    }, "\u25B6 Reprendre mon projet en cours"), /*#__PURE__*/React.createElement("button", {
-      onClick: newProj,
-      className: "w-full py-3 rounded-xl text-sm font-bold mb-4",
-      style: {
-        background: ldProj() ? "white" : T,
-        color: ldProj() ? D : "white",
-        border: "2px solid " + T
-      }
-    }, ldProj() ? "✨ Nouveau projet" : "✨ Démarrer mon dossier ADEME"), /*#__PURE__*/React.createElement("div", {
+    }, "\u2728 ", projList.length > 0 ? "Nouveau projet" : "Démarrer mon dossier ADEME"), /*#__PURE__*/React.createElement("div", {
       className: "text-xs text-center space-y-1",
       style: {
         color: "#999"
@@ -1531,17 +1888,26 @@ function App() {
       style: {
         color: T
       }
-    }, "Budget min. 300 k\u20AC (PME) \u2014 Aide max 6 M\u20AC"))), /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-center mt-6",
+    }, "Budget min. 300 k\u20AC (PME) \u2014 Aide max 6 M\u20AC"))), /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center gap-2 mt-6"
+    }, /*#__PURE__*/React.createElement("img", {
+      src: GASPE_A_COULEUR,
+      alt: "",
+      style: {
+        height: 24,
+        borderRadius: 4
+      }
+    }), /*#__PURE__*/React.createElement("span", {
+      className: "text-xs",
       style: {
         color: "#5a8a94"
       }
-    }, "Localement ancr\xE9es. Socialement engag\xE9es."), /*#__PURE__*/React.createElement("p", {
+    }, "Localement ancr\xE9es. Socialement engag\xE9es.")), /*#__PURE__*/React.createElement("p", {
       className: "text-xs text-center mt-1",
       style: {
         color: "#3d6a74"
       }
-    }, "v1.0.0 \u2014 Propuls\xE9 par ", /*#__PURE__*/React.createElement("a", {
+    }, "v1.1.0 \u2014 Propuls\xE9 par ", /*#__PURE__*/React.createElement("a", {
       href: "https://vaiata-dynamics.com/fr/",
       target: "_blank",
       rel: "noopener",
@@ -1595,29 +1961,44 @@ function App() {
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: "flex items-center gap-2 min-w-0"
-  }, /*#__PURE__*/React.createElement("img", {
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: backToList,
+    className: "text-xs px-2 py-1 rounded",
+    style: {
+      background: "rgba(255,255,255,0.15)",
+      color: "white",
+      cursor: "pointer"
+    }
+  }, "\u2190 Projets"), /*#__PURE__*/React.createElement("img", {
     src: GASPE_LOGO,
     alt: "GASPE",
     style: {
-      height: 22
+      height: 20,
+      mixBlendMode: "screen"
     }
-  }), /*#__PURE__*/React.createElement("span", {
-    className: "font-bold text-sm truncate"
-  }, proj.name || "Projet ADEME")), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    value: proj.name || "",
+    onChange: e => upd({
+      name: e.target.value
+    }),
+    className: "font-bold text-sm truncate",
+    style: {
+      background: "transparent",
+      color: "white",
+      border: "none",
+      outline: "none",
+      width: "100%",
+      minWidth: 0
+    }
+  })), /*#__PURE__*/React.createElement("div", {
     className: "flex items-center gap-2 shrink-0"
   }, saved && /*#__PURE__*/React.createElement("span", {
     className: "text-xs",
     style: {
       color: GR
     }
-  }, "\u2713 Sauv\xE9"), /*#__PURE__*/React.createElement("button", {
-    onClick: resetProj,
-    className: "text-xs px-2 py-1 rounded",
-    style: {
-      background: "rgba(255,255,255,0.1)",
-      color: "#aaa"
-    }
-  }, "R\xE9initialiser"))), /*#__PURE__*/React.createElement(StepBar, {
+  }, "\u2713 Sauv\xE9"))), /*#__PURE__*/React.createElement(StepBar, {
     step: step,
     setStep: setStep,
     maxStep: maxStep
@@ -1682,20 +2063,18 @@ function App() {
     }],
     h: "Au sens de l'annexe I du r\xE8glement UE 651/2014. Inclut les entreprises partenaires et li\xE9es."
   }), /*#__PURE__*/React.createElement(Se, {
-    l: "Zone d'aide \xE0 finalit\xE9 r\xE9gionale",
-    v: proj.v.zoneAFR,
-    onChange: v => uV("zoneAFR", v),
-    opts: [{
-      v: "hors",
-      l: "Hors zone AFR (métropole standard)"
-    }, {
-      v: "zoneC",
-      l: "Zone AFR c (certains départements métro)"
-    }, {
-      v: "zoneA",
-      l: "Zone AFR a (Outre-mer)"
-    }],
-    h: "D\xE9cret n\xB0 2022-968. Outre-mer = zone a (taux major\xE9s). V\xE9rifier sur la carte AFR."
+    l: "R\xE9gion d'exploitation du navire",
+    v: proj.v.region || "metropole_standard",
+    onChange: v => {
+      const reg = REGIONS.find(r => r.id === v);
+      uV("region", v);
+      uV("zoneAFR", reg?.zone || "hors");
+    },
+    opts: REGIONS.map(r => ({
+      v: r.id,
+      l: r.l + (r.zone === "zoneA" ? " (zone AFR a — taux majorés)" : r.zone === "zoneC" ? " (zone AFR c)" : "")
+    })),
+    h: "La zone AFR est d\xE9duite automatiquement de votre r\xE9gion. Outre-mer = zone a (taux major\xE9s). Source : D\xE9cret n\xB0 2022-968."
   }))), /*#__PURE__*/React.createElement(Cd, {
     title: "Caract\xE9ristiques techniques"
   }, /*#__PURE__*/React.createElement("div", {
@@ -2051,7 +2430,54 @@ function App() {
     style: {
       color: D
     }
-  }, "Investissement total estim\xE9 : ", fK(res[1].totI), " (hors contingences)")), /*#__PURE__*/React.createElement("div", {
+  }, "Investissement total estim\xE9 : ", fK(res[1].totI), " (hors contingences)")), (() => {
+    const cases = matchCases(proj);
+    if (cases.length === 0) return null;
+    return /*#__PURE__*/React.createElement(Cd, {
+      title: "📚 " + cases.length + " projet(s) de référence similaire(s)",
+      accent: T
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-xs mb-2",
+      style: {
+        color: "#888"
+      }
+    }, "Projets sourc\xE9s correspondant \xE0 votre profil (matching dynamique sur type, technologie, taille, distance)."), cases.map(c => /*#__PURE__*/React.createElement("div", {
+      key: c.id,
+      className: "p-2 rounded-lg mb-2 text-xs",
+      style: {
+        background: LB,
+        borderLeft: "3px solid " + (c.score > 60 ? GR : c.score > 40 ? T : W)
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex justify-between items-start mb-1"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "font-bold",
+      style: {
+        color: D
+      }
+    }, c.n, " (", c.co, ", ", c.yr, ")"), /*#__PURE__*/React.createElement("span", {
+      className: "px-1.5 py-0.5 rounded font-bold",
+      style: {
+        background: c.score > 60 ? GR : c.score > 40 ? T : W,
+        color: "white",
+        fontSize: 9
+      }
+    }, c.score, "%")), /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: "#555"
+      }
+    }, c.d), c.co2 < 0 && /*#__PURE__*/React.createElement("p", {
+      className: "mt-1",
+      style: {
+        color: GR
+      }
+    }, "Impact mesur\xE9 : ", Math.abs(c.co2), " tCO\u2082/an \xE9vit\xE9es"), /*#__PURE__*/React.createElement("p", {
+      className: "mt-1",
+      style: {
+        color: "#999"
+      }
+    }, "Source : ", c.s))));
+  })(), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between mt-4"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: prevStep,
@@ -2732,7 +3158,40 @@ function App() {
       background: LB,
       lineHeight: 1.6
     }
-  }, "Ce projet s'inscrit dans le cadre de l'article 301 de la loi n\xB0 2021-1104 du 22 ao\xFBt 2021 (Climat et R\xE9silience) et de la Feuille de route de d\xE9carbonation de la fili\xE8re maritime fran\xE7aise, pilot\xE9e par la DGAMPA et le CMF. Il contribue directement aux objectifs de la strat\xE9gie OMI r\xE9vis\xE9e de 2023 visant la neutralit\xE9 carbone du transport maritime d'ici 2050, avec un point de contr\xF4le interm\xE9diaire de \u221220% en 2030 par rapport \xE0 2008.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), "Le porteur est membre du GASPE (CCN IDCC 3228), branche qui repr\xE9sente 165 navires et 30 compagnies de transport maritime de proximit\xE9, dont 90% de TPE/PME. Le GASPE accompagne ses adh\xE9rents dans la transition \xE9nerg\xE9tique de leur flotte, en coh\xE9rence avec les engagements sociaux et environnementaux de la convention collective.")), /*#__PURE__*/React.createElement("div", {
+  }, "Ce projet s'inscrit dans le cadre de l'article 301 de la loi n\xB0 2021-1104 du 22 ao\xFBt 2021 (Climat et R\xE9silience) et de la Feuille de route de d\xE9carbonation de la fili\xE8re maritime fran\xE7aise, pilot\xE9e par la DGAMPA et le CMF. Il contribue directement aux objectifs de la strat\xE9gie OMI r\xE9vis\xE9e de 2023 visant la neutralit\xE9 carbone du transport maritime d'ici 2050, avec un point de contr\xF4le interm\xE9diaire de \u221220% en 2030 par rapport \xE0 2008.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), "Le porteur est membre du GASPE (CCN IDCC 3228), branche qui repr\xE9sente 165 navires et 30 compagnies de transport maritime de proximit\xE9, dont 90% de TPE/PME. Le GASPE accompagne ses adh\xE9rents dans la transition \xE9nerg\xE9tique de leur flotte, en coh\xE9rence avec les engagements sociaux et environnementaux de la convention collective.")), /*#__PURE__*/React.createElement(Cd, {
+    title: "\uD83D\uDCD6 Sources et m\xE9thodologie de calcul"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-xs space-y-2",
+    style: {
+      color: "#555",
+      lineHeight: 1.6
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "font-bold",
+    style: {
+      color: D
+    }
+  }, "Scoring ADEME (100 points) \u2014 CdC pp. 27-29"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 environnementale (45 pts) : quantit\xE9 CO\u2082e \xE9vit\xE9e sur 5 ans (15 pts, compar\xE9e au meilleur projet, estimation GASPE : max ~5 000 tCO\u2082) + gain relatif en % vs sc\xE9nario de r\xE9f\xE9rence (30 pts, formule : 30 \xD7 (1 \u2212 tCO\u2082_projet / tCO\u2082_ref))"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 des aides publiques (25 pts) : ratio \u20AC aide / tCO\u2082 \xE9vit\xE9e. Si ratio ", ">", " 200 \u20AC/tCO\u2082 \u2192 note de \u22125 (quasi \xE9liminatoire). Sinon : 25 \xD7 meilleur_ratio / ratio_projet"), /*#__PURE__*/React.createElement("p", null, "\u2022 Qualit\xE9 technico-\xE9conomique + r\xE9silience (30 pts) : TRL (5 pts), r\xE9ductions hors-GES (5 pts), montage dossier GASPE (10 pts), localisation FR/EEE (10 pts)"), /*#__PURE__*/React.createElement("p", {
+    className: "font-bold mt-3",
+    style: {
+      color: D
+    }
+  }, "Taux d'aide LDACEE \u2014 CdC Annexe 2, r\xE9gime SA.111726"), /*#__PURE__*/React.createElement("p", null, "\u2022 Navire \xE9mission nulle (\u226599% z\xE9ro-CO\u2082) : PE 60% / ME 50% / GE 30%"), /*#__PURE__*/React.createElement("p", null, "\u2022 Navire propre (\u226525% z\xE9ro-CO\u2082) : PE 50% / ME 40% / GE 20%"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 avec contrefactuel : PE 50% / ME 40% / GE 30% (hors AFR), +5% zone c, +15% zone a"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 sans contrefactuel : taux divis\xE9s par 2"), /*#__PURE__*/React.createElement("p", null, "\u2022 \xC9tudes/conseil : PE 80% / ME 70% / GE 60%"), /*#__PURE__*/React.createElement("p", {
+    className: "font-bold mt-3",
+    style: {
+      color: D
+    }
+  }, "Dimensionnement batteries (dimBatt)"), /*#__PURE__*/React.createElement("p", null, "\u2022 \xC9nergie par travers\xE9e = P_propulsion \xD7 dur\xE9e \xD7 facteur de charge / 0.80 (SoC 10-90%, DNV Pt.6 Ch.2 Sec.1)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Contrainte puissance = P_cr\xEAte / 2C (Corvus Orca ESS, d\xE9charge continue 2C max)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Chargeur = E_travers\xE9e / (temps_quai/60) \xD7 1.1 (ABB Marine 2022)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Co\xFBt batteries : 350 \u20AC/kWh install\xE9 (BNEF 2024), chargeur 200 \u20AC/kW"), /*#__PURE__*/React.createElement("p", null, "\u2022 Cycles LFP : 5 000 \xE0 80% DoD (Preger et al. 2020, J. Electrochem. Soc. 167)"), /*#__PURE__*/React.createElement("p", {
+    className: "font-bold mt-3",
+    style: {
+      color: D
+    }
+  }, "\xC9missions"), /*#__PURE__*/React.createElement("p", null, "\u2022 CO\u2082 : 3,206 kgCO\u2082/kg MDO (IMO MEPC.1/Circ.684)"), /*#__PURE__*/React.createElement("p", null, "\u2022 SOx/NOx/PM : IMO GHG Study 2020, ENTEC 2005"), /*#__PURE__*/React.createElement("p", null, "\u2022 Prix MDO : 850 \u20AC/t (EIA STEO mars 2026, post-crise Iran, Brent ~80-95 $/bbl)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Escalade carburant : 4%/an (risque g\xE9opolitique structurel post-fermeture Ormuz)"), /*#__PURE__*/React.createElement("p", {
+    className: "font-bold mt-3",
+    style: {
+      color: D
+    }
+  }, "Cadre r\xE9glementaire"), /*#__PURE__*/React.createElement("p", null, "\u2022 AAP ADEME 2026 : CdC publi\xE9 le 2 avril 2026, cl\xF4ture 6 juillet 2026"), /*#__PURE__*/React.createElement("p", null, "\u2022 Art. 301, loi n\xB0 2021-1104 (Climat et R\xE9silience)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Strat\xE9gie OMI r\xE9vis\xE9e 2023 : neutralit\xE9 2050, \u221220% en 2030"), /*#__PURE__*/React.createElement("p", null, "\u2022 R\xE9gime SA.111726 (LDACEE), SA.111728 (PME), SA.119559 (AFR)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Classification navire : RGEC art. 36 ter (navire propre / \xE9mission nulle)"), /*#__PURE__*/React.createElement("p", null, "\u2022 DNSH : art. 17, r\xE8glement UE 2020/852 (Taxonomie)"))), /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-2 gap-3 mt-4"
   }, /*#__PURE__*/React.createElement("a", {
     href: "https://agirpourlatransition.ademe.fr/entreprises/aides-financieres/catalogue/aap/aides-linvestissement-pour-la-decarbonation-du-transport-et-des-services-maritimes",
@@ -2789,17 +3248,26 @@ function App() {
     style: {
       borderTop: "1px solid #e5e7eb"
     }
-  }, /*#__PURE__*/React.createElement("p", {
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-center gap-2 mb-1"
+  }, /*#__PURE__*/React.createElement("img", {
+    src: GASPE_A_COULEUR,
+    alt: "",
+    style: {
+      height: 20,
+      borderRadius: 3
+    }
+  }), /*#__PURE__*/React.createElement("p", {
     className: "text-xs",
     style: {
       color: "#bbb"
     }
-  }, "Localement ancr\xE9es. Socialement engag\xE9es."), /*#__PURE__*/React.createElement("p", {
+  }, "Localement ancr\xE9es. Socialement engag\xE9es.")), /*#__PURE__*/React.createElement("p", {
     className: "text-xs mt-1",
     style: {
       color: "#ccc"
     }
-  }, "v1.0.0 \u2014 Simulateur AAP ADEME 2026 \u2014 Propuls\xE9 par", " ", /*#__PURE__*/React.createElement("a", {
+  }, "v1.1.0 \u2014 Simulateur AAP ADEME 2026 \u2014 Propuls\xE9 par", " ", /*#__PURE__*/React.createElement("a", {
     href: "https://vaiata-dynamics.com/fr/",
     target: "_blank",
     rel: "noopener",
