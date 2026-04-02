@@ -1183,7 +1183,16 @@ function dimBatt(v) {
   const e_power = v.pPeak / cRate;
   const kWh = Math.max(e_energy, e_power);
   const c = e_power > e_energy ? "puissance" : "énergie";
-  const cP = eTrip / (v.qT / 60) * 1.1;
+  let cP;
+  if (chargeMode === "overnight") {
+    // Recharge nocturne : 8h pour charger toute la journee
+    const nightHours = 8;
+    const tripsDay = v.rD * 2;
+    cP = eTrip * tripsDay / nightHours * 1.1;
+  } else {
+    // Opportunity : recharge pendant le temps au quai
+    cP = eTrip / (v.qT / 60) * 1.1;
+  }
   const dod = Math.min(0.80, eTrip / kWh);
   const eqCyclesAn = v.rD * v.opD * dod / 0.80;
   const lifeCycles = 5000;
@@ -3761,45 +3770,7 @@ function App() {
       background: LB,
       lineHeight: 1.6
     }
-  }, "Ce projet s'inscrit dans le cadre de l'article 301 de la loi n\xB0 2021-1104 du 22 ao\xFBt 2021 (Climat et R\xE9silience) et de la Feuille de route de d\xE9carbonation de la fili\xE8re maritime fran\xE7aise, pilot\xE9e par la DGAMPA et le CMF. Il contribue directement aux objectifs de la strat\xE9gie OMI r\xE9vis\xE9e de 2023 visant la neutralit\xE9 carbone du transport maritime d'ici 2050, avec un point de contr\xF4le interm\xE9diaire de \u221220% en 2030 par rapport \xE0 2008.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), "Ce projet correspond \xE0 une transition souveraine, ancr\xE9e localement : les prestataires techniques sont fran\xE7ais, le service rendu est un service public visible au quotidien par le contribuable, et les retomb\xE9es \xE9conomiques (emplois, maintenance, exploitation) b\xE9n\xE9ficient directement au territoire. La compagnie est captive en mati\xE8re d'opportunit\xE9s d'avitaillement \xB7 desserte locale depuis un port secondaire non \xE9quip\xE9 en combustible alternatif \xB7 ce qui rend le soutien public d'autant plus d\xE9terminant pour permettre la transition \xE9nerg\xE9tique.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), "Le porteur est membre du GASPE (Groupement des Armateurs de Services Publics Maritimes de Passages d'Eau), qui repr\xE9sente 165 navires et 30 compagnies de transport maritime de proximit\xE9, dont 90% de TPE/PME.")), /*#__PURE__*/React.createElement(Cd, {
-    title: "\uD83D\uDCD6 Sources et m\xE9thodologie de calcul"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "text-xs space-y-2",
-    style: {
-      color: "#555",
-      lineHeight: 1.6
-    }
-  }, /*#__PURE__*/React.createElement("p", {
-    className: "font-bold",
-    style: {
-      color: D
-    }
-  }, "Scoring ADEME (100 points) \xB7 CdC pp. 27-29"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 environnementale (45 pts) : quantit\xE9 CO\u2082e \xE9vit\xE9e sur 5 ans (15 pts, compar\xE9e au meilleur projet, estimation GASPE : max ~5 000 tCO\u2082) + gain relatif en % vs sc\xE9nario de r\xE9f\xE9rence (30 pts, formule : 30 \xD7 (1 \u2212 tCO\u2082_projet / tCO\u2082_ref))"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 des aides publiques (25 pts) : ratio \u20AC aide / tCO\u2082 \xE9vit\xE9e. Si ratio ", ">", " 200 \u20AC/tCO\u2082 \u2192 note de \u22125 . Sinon : 25 \xD7 meilleur_ratio / ratio_projet"), /*#__PURE__*/React.createElement("p", null, "\u2022 Qualit\xE9 technico-\xE9conomique + r\xE9silience (30 pts) : TRL (5 pts), r\xE9ductions hors-GES (5 pts), montage dossier GASPE (10 pts), localisation FR/EEE (10 pts)"), /*#__PURE__*/React.createElement("p", {
-    className: "font-bold mt-3",
-    style: {
-      color: D
-    }
-  }, "Taux d'aide LDACEE \xB7 CdC Annexe 2, r\xE9gime SA.111726"), /*#__PURE__*/React.createElement("p", null, "\u2022 Navire \xE9mission nulle (\u226599% z\xE9ro-CO\u2082) : PE 60% / ME 50% / GE 30%"), /*#__PURE__*/React.createElement("p", null, "\u2022 Navire propre (\u226525% z\xE9ro-CO\u2082) : PE 50% / ME 40% / GE 20%"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 avec contrefactuel : PE 50% / ME 40% / GE 30% (hors AFR), +5% zone c, +15% zone a"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 sans contrefactuel : taux divis\xE9s par 2"), /*#__PURE__*/React.createElement("p", null, "\u2022 \xC9tudes/conseil : PE 80% / ME 70% / GE 60%"), /*#__PURE__*/React.createElement("p", {
-    className: "font-bold mt-3",
-    style: {
-      color: D
-    }
-  }, "Dimensionnement batteries (dimBatt)"), /*#__PURE__*/React.createElement("p", null, "\u2022 \xC9nergie par travers\xE9e = P_propulsion \xD7 dur\xE9e \xD7 facteur de charge / 0.80 (SoC 10-90%, DNV Pt.6 Ch.2 Sec.1)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Contrainte puissance = P_cr\xEAte / 2C (Corvus Orca ESS, d\xE9charge continue 2C max)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Chargeur = E_travers\xE9e / (temps_quai/60) \xD7 1.1 (ABB Marine 2022)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Co\xFBt batteries : 450 \u20AC/kWh install\xE9 maritime (Corvus Orca ESS 2024, incl. BMS, refroidissement, certification BV NR 547), chargeur 200 \u20AC/kW"), /*#__PURE__*/React.createElement("p", null, "\u2022 Cycles LFP : 5 000 \xE0 80% DoD (Preger et al. 2020, J. Electrochem. Soc. 167)"), /*#__PURE__*/React.createElement("p", {
-    className: "font-bold mt-3",
-    style: {
-      color: D
-    }
-  }, "\xC9missions"), /*#__PURE__*/React.createElement("p", null, "\u2022 CO\u2082 : 3,206 kgCO\u2082/kg MDO (IMO MEPC.1/Circ.684)"), /*#__PURE__*/React.createElement("p", null, "\u2022 SOx/NOx/PM : IMO GHG Study 2020, ENTEC 2005"), /*#__PURE__*/React.createElement("p", null, "\u2022 Prix MDO : 850 \u20AC/t (EIA STEO mars 2026, post-crise Iran, Brent ~80-95 $/bbl)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Escalade carburant : 4%/an (risque g\xE9opolitique structurel post-fermeture Ormuz)"), /*#__PURE__*/React.createElement("p", {
-    className: "font-bold mt-3",
-    style: {
-      color: D
-    }
-  }, "Analyse de sensibilit\xE9 (robustesse)"), /*#__PURE__*/React.createElement("p", null, "Les r\xE9sultats CCV sont calcul\xE9s en 3 sc\xE9narios : base (gains technologiques m\xE9dians), d\xE9grad\xE9 (gains r\xE9duits de 30%), favorable (gains maximaux). L'\xE9cart entre les sc\xE9narios mesure l'incertitude du projet. Les param\xE8tres sensibles sont : prix carburant (\xB120%), d\xE9gradation batteries (\xB12 ans sur la dur\xE9e de vie), facteur de charge (\xB110%). La d\xE9gradation du moteur fossile (+1,5%/an, source MAN Energy Solutions 2023) est int\xE9gr\xE9e dans le sc\xE9nario de r\xE9f\xE9rence."), /*#__PURE__*/React.createElement("p", {
-    className: "font-bold mt-3",
-    style: {
-      color: D
-    }
-  }, "Cadre r\xE9glementaire"), /*#__PURE__*/React.createElement("p", null, "\u2022 AAP ADEME 2026 : CdC publi\xE9 le 2 avril 2026, cl\xF4ture 6 juillet 2026"), /*#__PURE__*/React.createElement("p", null, "\u2022 Art. 301, loi n\xB0 2021-1104 (Climat et R\xE9silience)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Strat\xE9gie OMI r\xE9vis\xE9e 2023 (selection par comite : DGAMPA, DGE, DGITM, Direction du Budget, CBCM, ADEME) : neutralit\xE9 2050, \u221220% en 2030"), /*#__PURE__*/React.createElement("p", null, "\u2022 R\xE9gime SA.111726 (LDACEE), SA.111728 (PME), SA.119559 (AFR)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Classification navire : RGEC art. 36 ter (navire propre / \xE9mission nulle)"), /*#__PURE__*/React.createElement("p", null, "\u2022 DNSH : art. 17, r\xE8glement UE 2020/852 (Taxonomie)"))), /*#__PURE__*/React.createElement("div", {
+  }, "Ce projet s'inscrit dans le cadre de l'article 301 de la loi n\xB0 2021-1104 du 22 ao\xFBt 2021 (Climat et R\xE9silience) et de la Feuille de route de d\xE9carbonation de la fili\xE8re maritime fran\xE7aise, pilot\xE9e par la DGAMPA et le CMF. Il contribue directement aux objectifs de la strat\xE9gie OMI r\xE9vis\xE9e de 2023 visant la neutralit\xE9 carbone du transport maritime d'ici 2050, avec un point de contr\xF4le interm\xE9diaire de \u221220% en 2030 par rapport \xE0 2008.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), "Ce projet correspond \xE0 une transition souveraine, ancr\xE9e localement : les prestataires techniques sont fran\xE7ais, le service rendu est un service public visible au quotidien par le contribuable, et les retomb\xE9es \xE9conomiques (emplois, maintenance, exploitation) b\xE9n\xE9ficient directement au territoire. La compagnie est captive en mati\xE8re d'opportunit\xE9s d'avitaillement \xB7 desserte locale depuis un port secondaire non \xE9quip\xE9 en combustible alternatif \xB7 ce qui rend le soutien public d'autant plus d\xE9terminant pour permettre la transition \xE9nerg\xE9tique.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), "Le porteur est membre du GASPE (Groupement des Armateurs de Services Publics Maritimes de Passages d'Eau), qui repr\xE9sente 165 navires et 30 compagnies de transport maritime de proximit\xE9, dont 90% de TPE/PME.")), /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-2 gap-3 mt-4"
   }, /*#__PURE__*/React.createElement("a", {
     href: "https://agirpourlatransition.ademe.fr/entreprises/aides-financieres/catalogue/aap/aides-linvestissement-pour-la-decarbonation-du-transport-et-des-services-maritimes",
@@ -3920,7 +3891,117 @@ function App() {
     style: {
       background: PU
     }
-  }, "\uD83D\uDDA8\uFE0F Exporter pre-dossier PDF (format A4)"))), /*#__PURE__*/React.createElement("div", {
+  }, "\uD83D\uDDA8\uFE0F Exporter pre-dossier PDF (format A4)"))), /*#__PURE__*/React.createElement(Cd, {
+    title: "\u{1F30D} Tous les projets de reference (" + CASE_DB.length + " projets sources)"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-xs mb-3",
+    style: {
+      color: "#888"
+    }
+  }, "Base de donnees complete des projets de decarbonation maritime dans le monde. Classes par pertinence par rapport a votre projet."), CASE_DB.map(c => {
+    const cases = matchCases(proj);
+    const matched = cases.find(x => x.id === c.id);
+    const score = matched?.score || 0;
+    return /*#__PURE__*/React.createElement("div", {
+      key: c.id,
+      className: "p-3 rounded-lg mb-2 text-xs",
+      style: {
+        background: "#fafafa",
+        borderLeft: "3px solid " + (score > 60 ? GR : score > 30 ? T : "#ddd")
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex justify-between items-start mb-1"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "font-bold",
+      style: {
+        color: D
+      }
+    }, {
+      "NO": "\u{1F1F3}\u{1F1F4}",
+      "DK": "\u{1F1E9}\u{1F1F0}",
+      "FR": "\u{1F1EB}\u{1F1F7}",
+      "BE": "\u{1F1E7}\u{1F1EA}",
+      "US": "\u{1F1FA}\u{1F1F8}",
+      "IE": "\u{1F1EE}\u{1F1EA}",
+      "INT": "\u{1F30D}",
+      "SE": "\u{1F1F8}\u{1F1EA}",
+      "NZ": "\u{1F1F3}\u{1F1FF}",
+      "UY": "\u{1F1FA}\u{1F1FE}",
+      "JP": "\u{1F1EF}\u{1F1F5}",
+      "EU": "\u{1F1EA}\u{1F1FA}"
+    }[c.co] || "\u{1F6A2}", " ", c.n, " (", c.yr, ")"), score > 0 && /*#__PURE__*/React.createElement("span", {
+      className: "px-1.5 py-0.5 rounded font-bold",
+      style: {
+        background: score > 60 ? GR : score > 30 ? T : "#ccc",
+        color: "white",
+        fontSize: 9
+      }
+    }, score, "%")), /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: "#555"
+      }
+    }, c.d), c.co2 < 0 && /*#__PURE__*/React.createElement("p", {
+      className: "mt-1",
+      style: {
+        color: GR
+      }
+    }, "Impact : ", Math.abs(c.co2), " tCO2/an evitees"), /*#__PURE__*/React.createElement("p", {
+      className: "mt-1",
+      style: {
+        color: "#999"
+      }
+    }, "Source : ", c.s), c.url && /*#__PURE__*/React.createElement("a", {
+      href: c.url,
+      target: "_blank",
+      rel: "noopener",
+      style: {
+        color: T,
+        fontSize: 10
+      }
+    }, "Voir le projet \\u2192"));
+  }).sort((a, b) => {
+    const sa = matchCases(proj).find(x => x.id === a.key)?.score || 0;
+    const sb = matchCases(proj).find(x => x.id === b.key)?.score || 0;
+    return sb - sa;
+  })), /*#__PURE__*/React.createElement(Cd, {
+    title: "\uD83D\uDCD6 Sources et m\xE9thodologie de calcul"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-xs space-y-2",
+    style: {
+      color: "#555",
+      lineHeight: 1.6
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "font-bold",
+    style: {
+      color: D
+    }
+  }, "Scoring ADEME (100 points) \xB7 CdC pp. 27-29"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 environnementale (45 pts) : quantit\xE9 CO\u2082e \xE9vit\xE9e sur 5 ans (15 pts, compar\xE9e au meilleur projet, estimation GASPE : max ~5 000 tCO\u2082) + gain relatif en % vs sc\xE9nario de r\xE9f\xE9rence (30 pts, formule : 30 \xD7 (1 \u2212 tCO\u2082_projet / tCO\u2082_ref))"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 des aides publiques (25 pts) : ratio \u20AC aide / tCO\u2082 \xE9vit\xE9e. Si ratio ", ">", " 200 \u20AC/tCO\u2082 \u2192 note de \u22125 . Sinon : 25 \xD7 meilleur_ratio / ratio_projet"), /*#__PURE__*/React.createElement("p", null, "\u2022 Qualit\xE9 technico-\xE9conomique + r\xE9silience (30 pts) : TRL (5 pts), r\xE9ductions hors-GES (5 pts), montage dossier GASPE (10 pts), localisation FR/EEE (10 pts)"), /*#__PURE__*/React.createElement("p", {
+    className: "font-bold mt-3",
+    style: {
+      color: D
+    }
+  }, "Taux d'aide LDACEE \xB7 CdC Annexe 2, r\xE9gime SA.111726"), /*#__PURE__*/React.createElement("p", null, "\u2022 Navire \xE9mission nulle (\u226599% z\xE9ro-CO\u2082) : PE 60% / ME 50% / GE 30%"), /*#__PURE__*/React.createElement("p", null, "\u2022 Navire propre (\u226525% z\xE9ro-CO\u2082) : PE 50% / ME 40% / GE 20%"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 avec contrefactuel : PE 50% / ME 40% / GE 30% (hors AFR), +5% zone c, +15% zone a"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 sans contrefactuel : taux divis\xE9s par 2"), /*#__PURE__*/React.createElement("p", null, "\u2022 \xC9tudes/conseil : PE 80% / ME 70% / GE 60%"), /*#__PURE__*/React.createElement("p", {
+    className: "font-bold mt-3",
+    style: {
+      color: D
+    }
+  }, "Dimensionnement batteries (dimBatt)"), /*#__PURE__*/React.createElement("p", null, "\u2022 \xC9nergie par travers\xE9e = P_propulsion \xD7 dur\xE9e \xD7 facteur de charge / 0.80 (SoC 10-90%, DNV Pt.6 Ch.2 Sec.1)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Contrainte puissance = P_cr\xEAte / 2C (Corvus Orca ESS, d\xE9charge continue 2C max)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Chargeur = E_travers\xE9e / (temps_quai/60) \xD7 1.1 (ABB Marine 2022)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Co\xFBt batteries : 450 \u20AC/kWh install\xE9 maritime (Corvus Orca ESS 2024, incl. BMS, refroidissement, certification BV NR 547), chargeur 200 \u20AC/kW"), /*#__PURE__*/React.createElement("p", null, "\u2022 Cycles LFP : 5 000 \xE0 80% DoD (Preger et al. 2020, J. Electrochem. Soc. 167)"), /*#__PURE__*/React.createElement("p", {
+    className: "font-bold mt-3",
+    style: {
+      color: D
+    }
+  }, "\xC9missions"), /*#__PURE__*/React.createElement("p", null, "\u2022 CO\u2082 : 3,206 kgCO\u2082/kg MDO (IMO MEPC.1/Circ.684)"), /*#__PURE__*/React.createElement("p", null, "\u2022 SOx/NOx/PM : IMO GHG Study 2020, ENTEC 2005"), /*#__PURE__*/React.createElement("p", null, "\u2022 Prix MDO : 850 \u20AC/t (EIA STEO mars 2026, post-crise Iran, Brent ~80-95 $/bbl)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Escalade carburant : 4%/an (risque g\xE9opolitique structurel post-fermeture Ormuz)"), /*#__PURE__*/React.createElement("p", {
+    className: "font-bold mt-3",
+    style: {
+      color: D
+    }
+  }, "Analyse de sensibilit\xE9 (robustesse)"), /*#__PURE__*/React.createElement("p", null, "Les r\xE9sultats CCV sont calcul\xE9s en 3 sc\xE9narios : base (gains technologiques m\xE9dians), d\xE9grad\xE9 (gains r\xE9duits de 30%), favorable (gains maximaux). L'\xE9cart entre les sc\xE9narios mesure l'incertitude du projet. Les param\xE8tres sensibles sont : prix carburant (\xB120%), d\xE9gradation batteries (\xB12 ans sur la dur\xE9e de vie), facteur de charge (\xB110%). La d\xE9gradation du moteur fossile (+1,5%/an, source MAN Energy Solutions 2023) est int\xE9gr\xE9e dans le sc\xE9nario de r\xE9f\xE9rence."), /*#__PURE__*/React.createElement("p", {
+    className: "font-bold mt-3",
+    style: {
+      color: D
+    }
+  }, "Cadre r\xE9glementaire"), /*#__PURE__*/React.createElement("p", null, "\u2022 AAP ADEME 2026 : CdC publi\xE9 le 2 avril 2026, cl\xF4ture 6 juillet 2026"), /*#__PURE__*/React.createElement("p", null, "\u2022 Art. 301, loi n\xB0 2021-1104 (Climat et R\xE9silience)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Strat\xE9gie OMI r\xE9vis\xE9e 2023 (selection par comite : DGAMPA, DGE, DGITM, Direction du Budget, CBCM, ADEME) : neutralit\xE9 2050, \u221220% en 2030"), /*#__PURE__*/React.createElement("p", null, "\u2022 R\xE9gime SA.111726 (LDACEE), SA.111728 (PME), SA.119559 (AFR)"), /*#__PURE__*/React.createElement("p", null, "\u2022 Classification navire : RGEC art. 36 ter (navire propre / \xE9mission nulle)"), /*#__PURE__*/React.createElement("p", null, "\u2022 DNSH : art. 17, r\xE8glement UE 2020/852 (Taxonomie)"))), /*#__PURE__*/React.createElement("div", {
     className: "text-center py-4 mt-6",
     style: {
       borderTop: "1px solid #e5e7eb"
