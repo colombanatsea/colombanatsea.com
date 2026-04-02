@@ -15,7 +15,7 @@
  *
  * Cadre réglementaire :
  *   - AAP ouvert le 2 avril 2026, clôture 6 juillet 2026
- *   - Thématique 1 : Décarbonation directe des navires (TRL ≥ 7)
+ *   - Thématique 1 : Décarbonation directe des navires (projet mono-partenaire) (TRL ≥ 7)
  *   - Thématique 2 : Investissements industriels (TRL ≥ 7)
  *   - Régime SA.111726 (LDACEE), SA.111728 (PME), SA.119559 (AFR)
  *   - Mono-partenaire (thématiques 1 et 2)
@@ -2641,7 +2641,7 @@ function App() {
     }
   }, /*#__PURE__*/React.createElement("span", {
     className: "font-bold"
-  }, "\uD83D\uDCA1 En un mot :"), " le contrefactuel, c'est ce que vous feriez si vous n'aviez PAS cette aide. L'ADEME attend une offre et une contre-offre (carbonee vs decarbonee). Identifier un contrefactuel credible double les taux d'aide. Preparez ce dossier en amont : c'est le point le plus chronophage (source : recommandations Armateurs de France).")), /*#__PURE__*/React.createElement(Cd, {
+  }, "\uD83D\uDCA1 En un mot :"), " le contrefactuel, c'est ce que vous feriez si vous n'aviez PAS cette aide. AdF recommande de preparer une offre et une contre-offre (carbonee vs decarbonee). Identifier un contrefactuel credible double les taux d'aide. Preparez ce dossier en amont : c'est le point le plus chronophage (source : recommandations Armateurs de France).")), /*#__PURE__*/React.createElement(Cd, {
     title: "Type de sc\xE9nario contrefactuel",
     accent: W
   }, [["maintien", "Maintien du navire existant + entretien", "Scénario c) du CdC. Le plus fréquent pour les TPE/PME. Coûts éligibles = investissement décarboné − VAN entretien/réparation actualisée."], ["newbuild_fossile", "Remplacement par un navire diesel neuf", "Scénario a) du CdC. Coûts éligibles = surcoût du navire décarboné par rapport au navire fossile équivalent."], ["reporté", "Même investissement, mais plus tard", "Scénario b) du CdC. Coûts éligibles = différence entre investissement maintenant et VAN de l'investissement ultérieur."], ["aucun", "Pas de contrefactuel identifiable", "⚠️ Les taux d'aide sont divisés par 2. À éviter si possible."]].map(([id, label, desc]) => /*#__PURE__*/React.createElement("button", {
