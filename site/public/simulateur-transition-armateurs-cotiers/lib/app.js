@@ -2477,7 +2477,7 @@ function App() {
       color: "#999"
     }
   }, "Dimensionn\xE9 par contrainte de ", batt.constraint, ". SoC 10-90% (DNV Pt.6 Ch.2). C-rate 2C (Corvus Orca). 450 \u20AC/kWh install\xE9 maritime (Corvus 2024, incl. BMS/certif. BV).")), /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-end mt-4"
+    className: "flex justify-end mt-6 mb-6"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: () => {
       setMaxStep(m => Math.max(m, 2));
@@ -2816,7 +2816,7 @@ function App() {
       }
     }, "Voir le projet \u2192"))));
   })(), /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-between mt-4"
+    className: "flex justify-between mt-6 mb-6"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: prevStep,
     className: "px-4 py-2 rounded-xl text-sm",
@@ -2941,7 +2941,7 @@ function App() {
       color: AC
     }
   }, "\u26A0\uFE0F Sans contrefactuel, les taux d'aide sont divis\xE9s par 2. Identifiez un sc\xE9nario de r\xE9f\xE9rence cr\xE9dible.")), /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-between mt-4"
+    className: "flex justify-between mt-6 mb-6"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: prevStep,
     className: "px-4 py-2 rounded-xl text-sm",
@@ -3213,7 +3213,7 @@ function App() {
       textDecoration: "none"
     }
   }, "Acc\xE9der \xE0 l'outil Empreinte Projet ADEME \u2192")), /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-between mt-4"
+    className: "flex justify-between mt-6 mb-6"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: prevStep,
     className: "px-4 py-2 rounded-xl text-sm",
@@ -3384,7 +3384,7 @@ function App() {
       color: "#999"
     }
   }, "Assiette \xE9ligible pour le calcul de l'aide"))), /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-between mt-4"
+    className: "flex justify-between mt-6 mb-6"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: prevStep,
     className: "px-4 py-2 rounded-xl text-sm",
@@ -3678,7 +3678,7 @@ function App() {
       color: "#999"
     }
   }, "Source : 3 scenarios CCV (base, gains -30%, gains max). Degradation moteur fossile +1,5%/an (MAN Energy Solutions 2023).")), /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-between mt-4"
+    className: "flex justify-between mt-6 mb-6"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: prevStep,
     className: "px-4 py-2 rounded-xl text-sm",
@@ -3830,7 +3830,7 @@ function App() {
       textDecoration: "none"
     }
   }, "gaspe.fr")), /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-between mt-6"
+    className: "flex justify-between mt-6 mb-6"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: prevStep,
     className: "px-4 py-2 rounded-xl text-sm",
