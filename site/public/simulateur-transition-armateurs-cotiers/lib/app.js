@@ -1953,7 +1953,7 @@ function App() {
       src: GASPE_LOGO,
       alt: "GASPE",
       style: {
-        height: 56,
+        height: 32,
         mixBlendMode: "screen"
       }
     }), /*#__PURE__*/React.createElement("h1", {
@@ -3175,30 +3175,37 @@ function App() {
       background: T
     }
   }, "Suivant \u2192 Budget & d\xE9penses"))), step === 5 && (() => {
-    // Auto-mapping budget si vide : étape 2 → nomenclature ADEME
+    // Auto-mapping budget si vide : dimBatt + étape 2 → nomenclature ADEME
     const tj1 = proj.trajs?.[1] || {};
+    const bd = batt;
     const budgetVide = !proj.budget?.some(b => b.montant > 0);
-    if (budgetVide && (tj1.iC > 0 || tj1.iE > 0 || tj1.iI > 0 || tj1.gridCost > 0)) {
+    const hasBattData = bd && bd.kWh > 0;
+    const hasInvData = tj1.iC > 0 || tj1.iE > 0 || tj1.iI > 0 || tj1.gridCost > 0;
+    if (budgetVide && (hasBattData || hasInvData)) {
+      const costProp = hasBattData ? bd.costBatt || 0 : tj1.iC || 0;
+      const costStock = hasBattData ? bd.costCharger || 0 : tj1.iE || 0;
+      const costInfra = hasBattData ? bd.gridConnect || 0 : (tj1.iI || 0) + (tj1.gridCost || 0);
+      const totalEquip = costProp + costStock;
       const newBudget = proj.budget?.map(b => {
         if (b.id === "equip_prop") return {
           ...b,
-          montant: tj1.iC || 0
+          montant: costProp
         };
         if (b.id === "equip_stock") return {
           ...b,
-          montant: tj1.iE || 0
+          montant: costStock
         };
         if (b.id === "infra") return {
           ...b,
-          montant: (tj1.iI || 0) + (tj1.gridCost || 0)
+          montant: costInfra
         };
         if (b.id === "ing_ext") return {
           ...b,
-          montant: Math.round(((tj1.iC || 0) + (tj1.iE || 0) + (tj1.iI || 0) + (tj1.gridCost || 0)) * 0.08)
+          montant: Math.round(totalEquip * 0.08)
         };
         if (b.id === "certif") return {
           ...b,
-          montant: Math.round(((tj1.iC || 0) + (tj1.iE || 0)) * 0.03)
+          montant: Math.round(totalEquip * 0.03)
         };
         return b;
       }) || [];
@@ -3440,7 +3447,7 @@ function App() {
     style: {
       color: "#888"
     }
-  }, "Estimation indicative. Le classement final d\xE9pend des autres projets d\xE9pos\xE9s (enveloppe 70 M\u20AC pour ~200 projets candidats, source : CdC ADEME 2026). Les fourchettes ci-dessous situent votre projet par rapport aux ordres de grandeur typiques des op\xE9rateurs de proximit\xE9."), /*#__PURE__*/React.createElement("div", {
+  }, "Estimation indicative. Le classement final d\xE9pend des autres projets d\xE9pos\xE9s (enveloppe 70 M\u20AC pour ~200 projets candidats, source : Armateurs de France). Les fourchettes ci-dessous situent votre projet par rapport aux ordres de grandeur typiques des op\xE9rateurs de proximit\xE9."), /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-4 gap-2 mb-3"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-center p-3 rounded-lg",
@@ -3671,7 +3678,7 @@ function App() {
     className: "font-bold"
   }, "Ratio :"), " ", scoring.ratioEuroParTonne, " \u20AC/tCO\u2082"))), /*#__PURE__*/React.createElement(Cd, {
     title: "\u2705 Checklist des pi\xE8ces \xE0 joindre"
-  }, [["Annexe 1 · Présentation projet (pré-dépôt)", true], ["Annexe 2 · Fiche lauréat", false], ["Annexe 3.a · Descriptif détaillé du projet", true], ["Annexe 3.b · Descriptif du porteur", false], ["Annexe 4 · Base de données des coûts", true], ["Annexe 5 · Grille d'impacts + Empreinte projet", true], ["Annexe 6 · Éléments financiers (TRI, plan financement)", false], ["Annexe 7 · Attestation santé financière", false], ["KBIS de moins de 3 mois", false], ["3 dernières liasses fiscales", false], ["Devis / lettres d'intention fournisseurs", false], ["Contrat d'avitaillement ou LOI (si carburant alternatif)", false]].map(([label, auto], i) => /*#__PURE__*/React.createElement("div", {
+  }, [["Annexe 1 · Presentation projet (pre-depot)", true, null], ["Annexe 2 · Fiche laureat", false, "https://agirpourlatransition.ademe.fr"], ["Annexe 3.a · Descriptif detaille du projet", true, null], ["Annexe 3.b · Descriptif du porteur", false, null], ["Annexe 4 · Base de donnees des couts", true, null], ["Annexe 5 · Grille d'impacts + Empreinte projet", true, "https://base-empreinte.ademe.fr/empreinte-projet"], ["Annexe 6 · Elements financiers (TRI, plan financement)", false, null], ["Annexe 7 · Attestation sante financiere", false, null], ["KBIS de moins de 3 mois", false, "https://www.infogreffe.fr/documents-officiels/demande-kbis.html"], ["3 dernieres liasses fiscales", false, "https://www.impots.gouv.fr/professionnel"], ["Devis / lettres d'intention fournisseurs", false, null], ["Contrat d'avitaillement ou LOI (si carburant alternatif)", false, null]].map(([label, auto, url], i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     className: "flex items-center gap-2 text-xs py-1"
   }, /*#__PURE__*/React.createElement("span", null, auto ? "✅" : "⬜"), /*#__PURE__*/React.createElement("span", {
@@ -3685,7 +3692,16 @@ function App() {
       color: GR,
       fontSize: 9
     }
-  }, "Pr\xE9-rempli")))), /*#__PURE__*/React.createElement(Cd, {
+  }, "Pre-rempli"), url && /*#__PURE__*/React.createElement("a", {
+    href: url,
+    target: "_blank",
+    rel: "noopener",
+    style: {
+      color: T,
+      fontSize: 10,
+      marginLeft: 4
+    }
+  }, "Obtenir \u2192")))), /*#__PURE__*/React.createElement(Cd, {
     title: "\uD83D\uDCC5 Calendrier"
   }, /*#__PURE__*/React.createElement("div", {
     className: "space-y-1 text-xs"
