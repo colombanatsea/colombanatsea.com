@@ -1169,7 +1169,16 @@ function dimBatt(v) {
     pQu = (v.pQu || 20) / 100;
   const lf = pTr * 1.0 + pMa * Math.min(v.pPeak / v.pP, 1.5) + pQu * (v.pA / v.pP);
   const eTrip = v.pP * v.cDur / 60 * lf;
-  const e_energy = eTrip / 0.80;
+  const chargeMode = v.chargeMode || "opportunity";
+  let e_energy;
+  if (chargeMode === "overnight") {
+    // Recharge la nuit uniquement : batterie couvre toute la journee
+    const tripsPerDay = v.rD * 2; // aller-retour
+    e_energy = eTrip * tripsPerDay / 0.80;
+  } else {
+    // Opportunity charging : batterie couvre une traversee
+    e_energy = eTrip / 0.80;
+  }
   const cRate = 2;
   const e_power = v.pPeak / cRate;
   const kWh = Math.max(e_energy, e_power);
@@ -1740,6 +1749,7 @@ function defProjet() {
       name: "",
       entSize: "PE",
       zoneAFR: "hors",
+      chargeMode: "opportunity",
       ...VT[0].d
     },
     p: {
@@ -2349,7 +2359,19 @@ function App() {
     title: "Profil op\xE9rationnel"
   }, /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-3 gap-3"
-  }, /*#__PURE__*/React.createElement(In, {
+  }, /*#__PURE__*/React.createElement(Se, {
+    l: "Mode de recharge batteries",
+    v: proj.v.chargeMode || "opportunity",
+    onChange: v => uV("chargeMode", v),
+    opts: [{
+      v: "opportunity",
+      l: "Recharge au quai entre chaque traversee"
+    }, {
+      v: "overnight",
+      l: "Recharge la nuit uniquement (pas d'infra au quai)"
+    }],
+    h: "Opportunity charging : batterie couvre 1 traversee, recharge rapide au quai (ex: MF Ampere, 1 MWh). Overnight : batterie couvre toute la journee (ex: Bacs de Loire, ~6 MWh). Impact majeur sur le dimensionnement et le budget."
+  }), /*#__PURE__*/React.createElement(In, {
     l: "Jours d'exploitation/an",
     v: proj.v.opD,
     onChange: v => uV("opD", v),
@@ -3537,7 +3559,7 @@ function App() {
     style: {
       color: AC
     }
-  }, "\u26A0\uFE0F ALERTE : Au-dessus de 200 \u20AC/tCO\u2082, le projet re\xE7oit une note de -5 pts (quasi \xE9liminatoire)."))), res && res.length >= 2 && /*#__PURE__*/React.createElement(Cd, {
+  }, "\u26A0\uFE0F ALERTE : Au-dessus de 200 \u20AC/tCO\u2082, le projet re\xE7oit une note de -5 pts ."))), res && res.length >= 2 && /*#__PURE__*/React.createElement(Cd, {
     title: "\uD83D\uDCD0 Analyse de sensibilite (3 scenarios)"
   }, /*#__PURE__*/React.createElement("p", {
     className: "text-xs mb-2",
@@ -3752,7 +3774,7 @@ function App() {
     style: {
       color: D
     }
-  }, "Scoring ADEME (100 points) \xB7 CdC pp. 27-29"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 environnementale (45 pts) : quantit\xE9 CO\u2082e \xE9vit\xE9e sur 5 ans (15 pts, compar\xE9e au meilleur projet, estimation GASPE : max ~5 000 tCO\u2082) + gain relatif en % vs sc\xE9nario de r\xE9f\xE9rence (30 pts, formule : 30 \xD7 (1 \u2212 tCO\u2082_projet / tCO\u2082_ref))"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 des aides publiques (25 pts) : ratio \u20AC aide / tCO\u2082 \xE9vit\xE9e. Si ratio ", ">", " 200 \u20AC/tCO\u2082 \u2192 note de \u22125 (quasi \xE9liminatoire). Sinon : 25 \xD7 meilleur_ratio / ratio_projet"), /*#__PURE__*/React.createElement("p", null, "\u2022 Qualit\xE9 technico-\xE9conomique + r\xE9silience (30 pts) : TRL (5 pts), r\xE9ductions hors-GES (5 pts), montage dossier GASPE (10 pts), localisation FR/EEE (10 pts)"), /*#__PURE__*/React.createElement("p", {
+  }, "Scoring ADEME (100 points) \xB7 CdC pp. 27-29"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 environnementale (45 pts) : quantit\xE9 CO\u2082e \xE9vit\xE9e sur 5 ans (15 pts, compar\xE9e au meilleur projet, estimation GASPE : max ~5 000 tCO\u2082) + gain relatif en % vs sc\xE9nario de r\xE9f\xE9rence (30 pts, formule : 30 \xD7 (1 \u2212 tCO\u2082_projet / tCO\u2082_ref))"), /*#__PURE__*/React.createElement("p", null, "\u2022 Efficacit\xE9 des aides publiques (25 pts) : ratio \u20AC aide / tCO\u2082 \xE9vit\xE9e. Si ratio ", ">", " 200 \u20AC/tCO\u2082 \u2192 note de \u22125 . Sinon : 25 \xD7 meilleur_ratio / ratio_projet"), /*#__PURE__*/React.createElement("p", null, "\u2022 Qualit\xE9 technico-\xE9conomique + r\xE9silience (30 pts) : TRL (5 pts), r\xE9ductions hors-GES (5 pts), montage dossier GASPE (10 pts), localisation FR/EEE (10 pts)"), /*#__PURE__*/React.createElement("p", {
     className: "font-bold mt-3",
     style: {
       color: D
