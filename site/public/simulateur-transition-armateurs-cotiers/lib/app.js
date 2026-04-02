@@ -2406,11 +2406,33 @@ function App() {
     onChange: v => uV("fc", v),
     u: "L/h",
     h: "Consommation horaire en litres de MDO au r\xE9gime de transit nominal."
-  }), /*#__PURE__*/React.createElement(In, {
-    l: "DSP r\xE9siduelle",
+  }), /*#__PURE__*/React.createElement(Se, {
+    l: "Cadre d'exploitation",
+    v: proj.v.serviceType || (proj.v.dspR > 0 ? "dsp" : "prive"),
+    onChange: v => {
+      uV("serviceType", v);
+      if (v === "prive") uV("dspR", 0);
+    },
+    opts: [{
+      v: "dsp",
+      l: "DSP (delegation de service public)"
+    }, {
+      v: "sp",
+      l: "Service public (regie, marche public)"
+    }, {
+      v: "agrement",
+      l: "Agrement ou convention d'exploitation"
+    }, {
+      v: "prive",
+      l: "100% prive (pas de SP/DSP)"
+    }],
+    h: "Le cadre d'exploitation peut influencer l'argumentaire du dossier (captivite tarifaire, obligation de continuite, visibilite pour le contribuable)."
+  }), (proj.v.serviceType || "dsp") !== "prive" && /*#__PURE__*/React.createElement(In, {
+    l: "Duree residuelle du contrat/agrement",
     v: proj.v.dspR,
     onChange: v => uV("dspR", v),
-    u: "ans"
+    u: "ans",
+    h: "Nombre d'annees restantes sur le contrat en cours. Si renouvellement imminent, indiquer 0."
   })), /*#__PURE__*/React.createElement("div", {
     className: "mt-2 grid grid-cols-3 gap-3"
   }, /*#__PURE__*/React.createElement(In, {
