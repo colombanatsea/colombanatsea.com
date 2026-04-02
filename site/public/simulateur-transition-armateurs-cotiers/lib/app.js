@@ -1043,7 +1043,7 @@ function dimBatt(v) {
   const eqCyclesAn = v.rD * v.opD * dod / 0.80;
   const lifeCycles = 5000;
   const lifeYrs = Math.max(3, Math.round(lifeCycles / Math.max(1, eqCyclesAn)));
-  const costPerKwh = 350;
+  const costPerKwh = 450; // €/kWh installé maritime (Corvus Orca 2024, incl. BMS/refroid./certif. BV NR 547)
   const costPerKwCharger = 200;
   const gridConnect = cP > 2000 ? 500 : cP > 1000 ? 350 : cP > 500 ? 200 : cP > 200 ? 100 : 50;
   return {
@@ -2289,11 +2289,13 @@ function App() {
       setMaxStep(m => Math.max(m, 2));
       nextStep();
     },
+    disabled: !proj.v.name,
     className: "px-6 py-2.5 rounded-xl text-white font-bold text-sm",
     style: {
-      background: T
+      background: proj.v.name ? T : "#ccc",
+      cursor: proj.v.name ? "pointer" : "not-allowed"
     }
-  }, "Suivant \u2192 Mon projet de d\xE9carbonation"))), step === 2 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+  }, !proj.v.name ? "Nommez votre navire pour continuer" : "Suivant"))), step === 2 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "text-lg font-bold mb-1",
     style: {
       color: D
@@ -2405,7 +2407,7 @@ function App() {
     type: "range",
     min: 0,
     max: 100,
-    step: 5,
+    step: 1,
     value: proj.trajs?.[1]?.fuelMix?.[fuel.id] || 0,
     onChange: e => upd(p => {
       const mix = {
@@ -2423,12 +2425,38 @@ function App() {
       };
     }),
     className: "flex-1"
-  }), /*#__PURE__*/React.createElement("span", {
-    className: "text-sm font-bold w-12 text-right",
+  }), /*#__PURE__*/React.createElement("input", {
+    type: "number",
+    min: 0,
+    max: 100,
+    step: 1,
+    value: proj.trajs?.[1]?.fuelMix?.[fuel.id] || 0,
+    onChange: e => upd(p => {
+      const mix = {
+        ...p.trajs[1].fuelMix,
+        [fuel.id]: Math.max(0, Math.min(100, parseInt(e.target.value) || 0))
+      };
+      const trajs = [...p.trajs];
+      trajs[1] = {
+        ...trajs[1],
+        fuelMix: mix
+      };
+      return {
+        ...p,
+        trajs
+      };
+    }),
+    className: "w-12 text-center border rounded text-sm font-bold",
     style: {
-      color: T
+      color: T,
+      borderColor: "#ddd"
     }
-  }, proj.trajs?.[1]?.fuelMix?.[fuel.id] || 0, "%"))), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "text-xs",
+    style: {
+      color: "#999"
+    }
+  }, "%"))), /*#__PURE__*/React.createElement("div", {
     className: "text-xs mt-2 p-2 rounded",
     style: {
       background: (() => {
@@ -2550,7 +2578,15 @@ function App() {
       style: {
         color: D
       }
-    }, c.n, " (", c.co, ", ", c.yr, ")"), /*#__PURE__*/React.createElement("span", {
+    }, {
+      "NO": "🇳🇴",
+      "DK": "🇩🇰",
+      "FR": "🇫🇷",
+      "BE": "🇧🇪",
+      "US": "🇺🇸",
+      "IE": "🇮🇪",
+      "INT": "🌍"
+    }[c.co] || "🚢", " ", c.n, " (", c.yr, ")"), /*#__PURE__*/React.createElement("span", {
       className: "px-1.5 py-0.5 rounded font-bold",
       style: {
         background: c.score > 60 ? GR : c.score > 40 ? T : W,
@@ -2892,6 +2928,63 @@ function App() {
       return {
         ...p,
         dnsh
+      };
+    })
+  }), axis.id === "circulaire" && /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    placeholder: "Fournisseur recyclage batteries (ex: SNAM, Eramet...)",
+    className: "w-full text-xs p-2 border rounded mt-1",
+    style: {
+      borderColor: "#ddd"
+    },
+    value: proj.dnsh?.[i]?.fournisseur || "",
+    onChange: e => upd(p => {
+      const d = [...(p.dnsh || [])];
+      d[i] = {
+        ...d[i],
+        fournisseur: e.target.value
+      };
+      return {
+        ...p,
+        dnsh: d
+      };
+    })
+  }), axis.id === "biodiversite" && /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    placeholder: "Certification bruit vis\xE9e (ex: DNV Silent Class, BV NR 614...)",
+    className: "w-full text-xs p-2 border rounded mt-1",
+    style: {
+      borderColor: "#ddd"
+    },
+    value: proj.dnsh?.[i]?.certification || "",
+    onChange: e => upd(p => {
+      const d = [...(p.dnsh || [])];
+      d[i] = {
+        ...d[i],
+        certification: e.target.value
+      };
+      return {
+        ...p,
+        dnsh: d
+      };
+    })
+  }), axis.id === "eau" && /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    placeholder: "Type antifouling (ex: silicone sans biocide, cuivre r\xE9duit...)",
+    className: "w-full text-xs p-2 border rounded mt-1",
+    style: {
+      borderColor: "#ddd"
+    },
+    value: proj.dnsh?.[i]?.antifouling || "",
+    onChange: e => upd(p => {
+      const d = [...(p.dnsh || [])];
+      d[i] = {
+        ...d[i],
+        antifouling: e.target.value
+      };
+      return {
+        ...p,
+        dnsh: d
       };
     })
   })))), /*#__PURE__*/React.createElement(Cd, {
@@ -3272,7 +3365,94 @@ function App() {
     style: {
       color: AC
     }
-  }, "\u26A0\uFE0F ALERTE : Au-dessus de 200 \u20AC/tCO\u2082, le projet re\xE7oit une note de -5 pts (quasi \xE9liminatoire)."))), /*#__PURE__*/React.createElement("div", {
+  }, "\u26A0\uFE0F ALERTE : Au-dessus de 200 \u20AC/tCO\u2082, le projet re\xE7oit une note de -5 pts (quasi \xE9liminatoire)."))), res && res.length >= 2 && /*#__PURE__*/React.createElement(Cd, {
+    title: "\uD83D\uDCD0 Analyse de sensibilite (3 scenarios)"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-xs mb-2",
+    style: {
+      color: "#888"
+    }
+  }, "Robustesse du projet selon les hypotheses (exigence CdC p.28). Les gains technologiques varient de -30% (degrade) a +max (favorable)."), /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-3 gap-3 text-center"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "p-3 rounded-lg",
+    style: {
+      background: AC + "10"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-xs font-bold mb-1",
+    style: {
+      color: AC
+    }
+  }, "Degrade (-30%)"), /*#__PURE__*/React.createElement("div", {
+    className: "text-sm font-bold"
+  }, fK(res[1].deg.ccv)), /*#__PURE__*/React.createElement("div", {
+    className: "text-xs",
+    style: {
+      color: "#999"
+    }
+  }, "CCV"), /*#__PURE__*/React.createElement("div", {
+    className: "text-sm font-bold mt-1"
+  }, fmt(Math.round(res[1].deg.co2)), " t"), /*#__PURE__*/React.createElement("div", {
+    className: "text-xs",
+    style: {
+      color: "#999"
+    }
+  }, "CO2 cumule")), /*#__PURE__*/React.createElement("div", {
+    className: "p-3 rounded-lg",
+    style: {
+      background: T + "10",
+      border: "2px solid " + T
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-xs font-bold mb-1",
+    style: {
+      color: T
+    }
+  }, "Central (base)"), /*#__PURE__*/React.createElement("div", {
+    className: "text-sm font-bold"
+  }, fK(res[1].base.ccv)), /*#__PURE__*/React.createElement("div", {
+    className: "text-xs",
+    style: {
+      color: "#999"
+    }
+  }, "CCV"), /*#__PURE__*/React.createElement("div", {
+    className: "text-sm font-bold mt-1"
+  }, fmt(Math.round(res[1].base.co2)), " t"), /*#__PURE__*/React.createElement("div", {
+    className: "text-xs",
+    style: {
+      color: "#999"
+    }
+  }, "CO2 cumule")), /*#__PURE__*/React.createElement("div", {
+    className: "p-3 rounded-lg",
+    style: {
+      background: GR + "10"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-xs font-bold mb-1",
+    style: {
+      color: GR
+    }
+  }, "Favorable (max)"), /*#__PURE__*/React.createElement("div", {
+    className: "text-sm font-bold"
+  }, fK(res[1].fav.ccv)), /*#__PURE__*/React.createElement("div", {
+    className: "text-xs",
+    style: {
+      color: "#999"
+    }
+  }, "CCV"), /*#__PURE__*/React.createElement("div", {
+    className: "text-sm font-bold mt-1"
+  }, fmt(Math.round(res[1].fav.co2)), " t"), /*#__PURE__*/React.createElement("div", {
+    className: "text-xs",
+    style: {
+      color: "#999"
+    }
+  }, "CO2 cumule"))), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs mt-2",
+    style: {
+      color: "#999"
+    }
+  }, "Source : 3 scenarios CCV (base, gains -30%, gains max). Degradation moteur fossile +1,5%/an (MAN Energy Solutions 2023).")), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between mt-4"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: prevStep,
@@ -3463,12 +3643,51 @@ function App() {
       color: "#888"
     }
   }, "\u2190 Retour"), /*#__PURE__*/React.createElement("button", {
-    onClick: () => window.print(),
+    onClick: () => {
+      const w = window.open('', '_blank');
+      const vt = VT.find(x => x.id === proj.v.type);
+      const cls = classifyVessel(proj.trajs?.[1]?.fuelMix);
+      w.document.write('<html><head><title>Pre-dossier ADEME - ' + (proj.v.name || proj.name) + '</title>');
+      w.document.write('<style>@page{size:A4;margin:2cm}body{font-family:system-ui,sans-serif;font-size:11px;color:#1E2D3D;line-height:1.6}h1{font-size:18px;color:#1B9AAA;border-bottom:2px solid #1B9AAA;padding-bottom:8px}h2{font-size:14px;color:#1E2D3D;margin-top:20px;border-bottom:1px solid #ddd;padding-bottom:4px}table{width:100%;border-collapse:collapse;margin:8px 0}td,th{border:1px solid #ddd;padding:6px;text-align:left}th{background:#EAF4F7}.header{text-align:center;margin-bottom:24px}.footer{margin-top:32px;padding-top:12px;border-top:1px solid #ddd;font-size:9px;color:#999;text-align:center}.tag{display:inline-block;padding:2px 8px;border-radius:4px;font-weight:bold;font-size:10px}</style></head><body>');
+      w.document.write('<div class="header"><h1>Pre-dossier AAP ADEME 2026</h1>');
+      w.document.write('<p>Decarbonation du transport et des services maritimes</p></div>');
+      w.document.write('<h2>1. Fiche de synthese</h2>');
+      w.document.write('<table><tr><th>Navire</th><td>' + (proj.v.name || '-') + '</td><th>Type</th><td>' + (vt?.l || '-') + '</td></tr>');
+      w.document.write('<tr><th>LOA</th><td>' + proj.v.loa + ' m</td><th>GT</th><td>' + proj.v.gt + '</td></tr>');
+      w.document.write('<tr><th>Puissance</th><td>' + proj.v.pP + ' kW</td><th>Classification</th><td>' + (cls === 'emissionNulle' ? 'Emission nulle' : cls === 'propre' ? 'Navire propre' : 'Efficacite amelioree') + '</td></tr>');
+      w.document.write('<tr><th>Taille entreprise</th><td>' + proj.v.entSize + '</td><th>Region</th><td>' + (REGIONS.find(r => r.id === proj.v.region)?.l || '-') + '</td></tr></table>');
+      w.document.write('<h2>2. Projet de decarbonation</h2>');
+      const techList = Object.entries(proj.trajs?.[1]?.techs || {}).filter(([, x]) => x?.a).map(([tid]) => TECHS.find(t => t.id === tid)?.l).join(', ');
+      w.document.write('<p><b>Technologies :</b> ' + (techList || '-') + '</p>');
+      const mixStr = Object.entries(proj.trajs?.[1]?.fuelMix || {}).filter(([, v]) => v > 0).map(([k, v]) => DEF_FUELS.find(f => f.id === k)?.l + ' ' + v + '%').join(', ');
+      w.document.write('<p><b>Mix energetique cible :</b> ' + (mixStr || '-') + '</p>');
+      w.document.write('<h2>3. Scenario contrefactuel</h2>');
+      w.document.write('<p><b>Type :</b> ' + (proj.contrefactuel?.type || '-') + '</p>');
+      w.document.write('<p><b>Surcout eligible :</b> ' + fK(surcout) + '</p>');
+      w.document.write('<h2>4. Gains environnementaux (5 ans)</h2>');
+      if (scoring) {
+        w.document.write('<table><tr><th>CO2 evite</th><td>' + fmt(scoring.co2Evite) + ' t</td><th>Gain relatif</th><td>' + scoring.gainPct + '%</td></tr></table>');
+      }
+      w.document.write('<h2>5. Budget</h2>');
+      w.document.write('<table><tr><th>Poste</th><th>Montant (k EUR)</th></tr>');
+      (proj.budget || []).filter(b => b.montant > 0).forEach(b => {
+        const cat = ADEME_EXPENSE_CATS.find(c => c.id === b.id);
+        w.document.write('<tr><td>' + (cat?.l || b.id) + '</td><td>' + fmt(b.montant) + '</td></tr>');
+      });
+      w.document.write('</table>');
+      w.document.write('<h2>6. Aide estimee</h2>');
+      w.document.write('<table><tr><th>Taux</th><td>' + aide.taux + '%</td><th>Aide</th><td>' + fK(aide.aide) + '</td></tr>');
+      w.document.write('<tr><th>Ratio</th><td>' + (scoring?.ratioEuroParTonne || '-') + ' EUR/tCO2</td><th>Regime</th><td>' + aide.regime + '</td></tr></table>');
+      w.document.write('<div class="footer">GASPE - Localement ancrees. Socialement engagees.<br>Simulateur AAP ADEME 2026 v1.5 - ' + new Date().toLocaleDateString('fr-FR') + '</div>');
+      w.document.write('</body></html>');
+      w.document.close();
+      w.print();
+    },
     className: "px-6 py-2.5 rounded-xl text-white font-bold text-sm",
     style: {
       background: PU
     }
-  }, "\uD83D\uDDA8\uFE0F Imprimer / Exporter PDF"))), /*#__PURE__*/React.createElement("div", {
+  }, "\uD83D\uDDA8\uFE0F Exporter pre-dossier PDF (format A4)"))), /*#__PURE__*/React.createElement("div", {
     className: "text-center py-4 mt-6",
     style: {
       borderTop: "1px solid #e5e7eb"
