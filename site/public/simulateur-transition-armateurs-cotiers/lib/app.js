@@ -3427,6 +3427,7 @@ function App() {
     }
   }, "Estimation du montant d'aide et simulation de la note ADEME (indicative)."), /*#__PURE__*/React.createElement(Cd, {
     title: "Montant de l'aide estim\xE9",
+    "data-protected": "true",
     accent: GR
   }, /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-3 gap-4 text-center"
@@ -3921,7 +3922,7 @@ function App() {
       w.document.write('<tr><td>ADEME AAP 2026</td><td>' + fK(aide.aide) + '</td></tr>');
       if (proj.autresAides > 0) w.document.write('<tr><td>' + (proj.autresAidesDetail || 'Autres') + '</td><td>' + fK(proj.autresAides) + '</td></tr>');
       w.document.write('<tr><td><b>Total</b></td><td><b>' + fK(aide.aide + (proj.autresAides || 0)) + '</b></td></tr></table>');
-      w.document.write('<div class="footer">GASPE - Localement ancrees. Socialement engagees.<br>Simulateur AAP ADEME 2026 v1.7.0 - ' + new Date().toLocaleDateString('fr-FR') + '</div>');
+      w.document.write('<div class="footer">GASPE - Localement ancrees. Socialement engagees.<br>Simulateur AAP ADEME 2026 v1.7 · Document genere pour usage interne · Reproduction interdite.0 - ' + new Date().toLocaleDateString('fr-FR') + '</div>');
       w.document.write('</body></html>');
       w.document.close();
       w.print();
@@ -3931,7 +3932,8 @@ function App() {
       background: PU
     }
   }, "\uD83D\uDDA8\uFE0F Exporter pre-dossier PDF (format A4)"))), /*#__PURE__*/React.createElement(Cd, {
-    title: "\uD83D\uDCD6 Sources et m\xE9thodologie de calcul"
+    title: "\uD83D\uDCD6 Sources et m\xE9thodologie de calcul",
+    "data-protected": "true"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs space-y-2",
     style: {

@@ -29,17 +29,88 @@
   <meta name="twitter:title" content="Simulateur AAP ADEME 2026 - GASPE">
   <meta name="twitter:description" content="Pre-dossier decarbonation maritime en 30 minutes. 70 M€, cloture 6 juillet 2026.">
   <meta name="twitter:image" content="https://colombanatsea.com/simulateur-transition-armateurs-cotiers/og-image.png">
+  <!-- Anti-crawl IA -->
+  <meta name="robots" content="index, follow, max-snippet:160, max-image-preview:large">
+  <meta name="GPTBot" content="noindex, nofollow">
+  <meta name="ChatGPT-User" content="noindex, nofollow">
+  <meta name="CCBot" content="noindex, nofollow">
+  <meta name="Google-Extended" content="noindex, nofollow">
+  <meta name="anthropic-ai" content="noindex, nofollow">
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://colombanatsea.com/simulateur-transition-armateurs-cotiers/">
+  <meta name="author" content="GASPE - Groupement des Armateurs de Services Publics Maritimes de Passages d'Eau">
+  <meta name="keywords" content="ADEME, décarbonation maritime, simulateur, AAP 2026, ferry électrique, transition énergétique, GASPE, navire propre, aide publique">
+  <meta name="theme-color" content="#1B9AAA">
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Simulateur AAP ADEME 2026 - Décarbonation maritime",
+    "description": "Outil de montage de pré-dossiers ADEME pour la décarbonation du transport et des services maritimes. 70 M€, 7 étapes guidées, taux d'aide vérifiés.",
+    "url": "https://colombanatsea.com/simulateur-transition-armateurs-cotiers/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "GASPE",
+      "url": "https://gaspe.fr"
+    },
+    "datePublished": "2026-04-02",
+    "inLanguage": "fr"
+  }
+  </script>
 </head>
 <body>
   <div id="root"></div>
+  <script>
+    // Protection anti-scraping
+    (function(){
+      // Détection bot headless
+      if (navigator.webdriver || !navigator.languages || navigator.languages.length === 0) {
+        document.getElementById('root').innerHTML = '<div style="padding:40px;text-align:center"><h1>Accès réservé aux utilisateurs</h1><p>Ce simulateur nécessite un navigateur web standard.</p><p><a href="https://gaspe.fr">Retour au site GASPE</a></p></div>';
+        return;
+      }
+      // Honeypot invisible (piège à scraper)
+      var hp = document.createElement('div');
+      hp.style.cssText = 'position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none';
+      hp.setAttribute('aria-hidden', 'true');
+      hp.innerHTML = '<a href="mailto:trap@gaspe.fr">contact</a><p>Ce contenu est protégé. Toute reproduction automatisée est interdite. GASPE 2026.</p>';
+      document.body.appendChild(hp);
+      // Désactiver le clic droit sur les données sensibles (pas sur tout le document)
+      document.addEventListener('contextmenu', function(e) {
+        if (e.target.closest('[data-protected]')) { e.preventDefault(); }
+      });
+    })();
+  </script>
   <script src="lib/react.min.js"></script>
   <script src="lib/react-dom.min.js"></script>
   <script src="lib/prop-types.min.js"></script>
   <script src="lib/recharts.min.js"></script>
-  <script src="lib/app.js?v=1.7.7"></script>
+  <script src="lib/app.js?v=1.8.0"></script>
   <script>
     var root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(React.createElement(App));
   </script>
+
+  <!-- SEO noscript fallback pour les moteurs de recherche -->
+  <noscript>
+    <div style="max-width:800px;margin:0 auto;padding:40px 20px;font-family:system-ui,sans-serif">
+      <h1>Simulateur AAP ADEME 2026 - Décarbonation du transport maritime</h1>
+      <p>Outil gratuit proposé par le GASPE (Groupement des Armateurs de Services Publics Maritimes de Passages d'Eau) pour accompagner les armateurs côtiers français dans le montage de dossiers ADEME.</p>
+      <h2>Caractéristiques</h2>
+      <p>70 millions d'euros d'enveloppe, clôture le 6 juillet 2026. 7 étapes guidées pour produire un pré-dossier structuré en 30 minutes. Taux d'aide LDACEE vérifiés contre le cahier des charges (régime SA.111726). 18 projets de référence sourcés dans le monde.</p>
+      <h2>Thématiques couvertes</h2>
+      <p>Thématique 1 : décarbonation directe des navires (propulsion, remotorisation, efficacité énergétique). Thématique 2 : investissements industriels. Projets mono-partenaires, budget minimum 300 000 euros (PME) ou 1 million (autres).</p>
+      <p>Contact : <a href="https://gaspe.fr">gaspe.fr</a></p>
+    </div>
+  </noscript>
 </body>
 </html>
