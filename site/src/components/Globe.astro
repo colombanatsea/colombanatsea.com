@@ -448,7 +448,16 @@
   // Start facing metropolitan France (lon ≈ 2°E → +X direction in Three.js sphere UV)
   camera.position.set(2.8, 0.4, 0);
 
-  const renderer = new THREE.WebGLRenderer({ antialias: USE_AA, alpha: false, powerPreference: 'high-performance', preserveDrawingBuffer: true });
+  let renderer: THREE.WebGLRenderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ antialias: USE_AA, alpha: false, powerPreference: 'high-performance', preserveDrawingBuffer: true });
+  } catch (_) {
+    // WebGL unavailable (disabled by policy, GPU blocklist, etc.) — show CSS fallback
+    const fallback = document.getElementById('globe-fallback');
+    if (fallback) fallback.style.display = 'flex';
+    container.style.display = 'none';
+    return;
+  }
   renderer.setSize(container.clientWidth, container.clientHeight);
   renderer.setPixelRatio(PX_RATIO);
   renderer.setClearColor(0x080b14, 1);
