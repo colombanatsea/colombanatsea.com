@@ -509,7 +509,7 @@
     container!.classList.add('globe-ready');
   }, 6000);
 
-  textureLoader.load(import.meta.env.BASE_URL + 'assets/textures/earth-blue-marble.webp', (t) => {
+  textureLoader.load(import.meta.env.BASE_URL + 'images/globe/earth-blue-marble.webp', (t) => {
     t.colorSpace = THREE.SRGBColorSpace;
     globeMat.map = t;
     globeMat.needsUpdate = true;
@@ -523,7 +523,7 @@
   });
 
   if (!isMobile) {
-    textureLoader.load(import.meta.env.BASE_URL + 'assets/textures/earth-topology.webp', (t) => {
+    textureLoader.load(import.meta.env.BASE_URL + 'images/globe/earth-topology.webp', (t) => {
       globeMat.bumpMap = t;
       globeMat.needsUpdate = true;
       checkLoaded();
