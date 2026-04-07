@@ -56,7 +56,7 @@
 ## Composants 3D
 
 ### Globe (`Globe.astro`)
-- Texture satellite earth-blue-marble.jpg (self-hosted dans `public/assets/textures/`)
+- Texture satellite earth-blue-marble.jpg (self-hosted dans `public/images/globe/`)
 - Bump map earth-topology.png (self-hosted, desktop uniquement)
 - ZEE France : 18 polygones GeoJSON réels (earcut triangulation) — `src/data/eez.json`
 - Câbles sous-marins : 708 features Telegeography — `src/data/cables.json` (229KB)
@@ -153,7 +153,7 @@
 - **Fonts** : Google Fonts non-bloquantes (`media="print" onload="this.media='all'"` + `display=swap`)
 - **Lazy loading** : Matrice via IntersectionObserver, Globe preloaded (hero)
 - **Bundles** : Three.js ~78KB gzip (Globe), OrbitControls ~121KB gzip, Matrice ~4KB gzip
-- **Textures self-hosted** : earth-blue-marble.jpg (1.4MB) + earth-topology.png (370KB) dans `public/assets/textures/`
+- **Textures self-hosted** : earth-blue-marble.jpg (335KB) + earth-topology.png (293KB) dans `public/images/globe/`
 
 ## SEO
 - Canonical URLs : `<link rel="canonical">`
