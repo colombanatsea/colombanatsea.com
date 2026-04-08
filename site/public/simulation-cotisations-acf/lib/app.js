@@ -30,16 +30,16 @@ var BASE=[
 {n:"CAPSTAN Avocats",t:0,c:2910,ccn:0,col:"C",fx:2910,pp:0,tp:"e"},
 {n:"Howden",t:0,c:970,ccn:0,col:"C",fx:970,pp:0,tp:"h"},
 ];
-var LG=[{n:"SPLMNA (44 vedettes)",t:440,c:2910,ccn:1,col:"C",fx:2910,pp:0,tp:"a",lam:1,crew:212,ved:44}];
+var LG=[{n:"SPLMNA (44 vedettes)",t:440,c:2910,ccn:1,col:"A",fx:2910,pp:0,tp:"a",lam:1,crew:212,ved:44}];
 var LS=[
-{n:"Lam. Bayonne",t:30,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"a",lam:1,crew:6,ved:3},
-{n:"Lam. Bordeaux",t:50,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"a",lam:1,crew:36,ved:5},
-{n:"Lam. La Rochelle",t:50,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"a",lam:1,crew:25,ved:5},
-{n:"Lam. Donges",t:80,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"a",lam:1,crew:47,ved:8},
-{n:"Lam. Lorient",t:30,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"a",lam:1,crew:10,ved:3},
-{n:"Lam. Brest",t:40,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"a",lam:1,crew:35,ved:4},
-{n:"Lam. Ouistreham",t:10,c:363,ccn:1,col:"C",fx:363,pp:0,tp:"a",lam:1,crew:8,ved:1},
-{n:"Lam. Rouen-Dieppe",t:150,c:363,ccn:1,col:"C",fx:363,pp:0,tp:"a",lam:1,crew:45,ved:15},
+{n:"Lam. Bayonne",t:30,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"a",lam:1,crew:6,ved:3},
+{n:"Lam. Bordeaux",t:50,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"a",lam:1,crew:36,ved:5},
+{n:"Lam. La Rochelle",t:50,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"a",lam:1,crew:25,ved:5},
+{n:"Lam. Donges",t:80,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"a",lam:1,crew:47,ved:8},
+{n:"Lam. Lorient",t:30,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"a",lam:1,crew:10,ved:3},
+{n:"Lam. Brest",t:40,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"a",lam:1,crew:35,ved:4},
+{n:"Lam. Ouistreham",t:10,c:363,ccn:1,col:"A",fx:363,pp:0,tp:"a",lam:1,crew:8,ved:1},
+{n:"Lam. Rouen-Dieppe",t:150,c:363,ccn:1,col:"A",fx:363,pp:0,tp:"a",lam:1,crew:45,ved:15},
 ];
 
 function mk(b){return[[1000,b],[2000,b*.9],[4000,b*.8],[6000,b*.7],[8000,b*.6],[10000,b*.5]];}
@@ -62,6 +62,7 @@ var PR={
 "S3 Instit. fort":{s:2000,sc:2910,l:2.00,sb:1.00,f:0},
 "S4 Flat social":{s:2000,sc:2910,l:3.08,sb:0,f:500},
 "S5 86/14":{s:2000,sc:2910,l:3.08,sb:0.50,f:0},
+"S6 Iso-social 2024":{s:2000,sc:2910,l:3.08,sb:0,f:970},
 };
 var cBg={A:"#dbeafe",B:"#dcfce7",C:"#f3e8ff"},cFg={A:"#1e40af",B:"#166534",C:"#6b21a8"};
 
@@ -129,7 +130,7 @@ delta?h("div",{style:{fontSize:11,fontWeight:600,color:pos?"#16a34a":"#dc2626"}}
 return h("div",{style:{fontFamily:"system-ui,sans-serif",background:"#f7f8fa",minHeight:"100vh"}},
 // Header
 h("div",{style:{background:"linear-gradient(135deg,#0F4761,#1a6b8a)",color:"#fff",padding:"22px 28px 16px"}},
-h("div",{style:{fontSize:22,fontWeight:700}},"Cotisations ACF \u2014 Simulateur"),
+h("div",{style:{fontSize:22,fontWeight:700}},"Cotisations GASPE \u2014 Simulateur"),
 h("div",{style:{opacity:.75,fontSize:13,marginTop:2}},"3 composantes : Services (fixe) + Lobbying (\u20ac/UMS) + Social CCN 3228 (\u20ac/UMS ou forfait)")),
 
 h("div",{style:{maxWidth:1440,margin:"0 auto",padding:"14px 20px"}},
@@ -240,6 +241,6 @@ h("td",{style:{textAlign:"right",padding:"4px 8px"}},"440"),
 h("td",{style:{textAlign:"right",padding:"4px 8px",color:"#dc2626"}},fm(lN)+" \u20ac (actuel "+fm(lC)+")"))))):null,
 
 // Footer
-h("div",{style:{textAlign:"center",padding:"20px",fontSize:11,color:"#999",marginTop:20}},"GASPE \u2014 Armateurs C\u00f4tiers Fran\u00e7ais (ACF) \u2014 Simulateur de cotisations \u2014 Mars 2026")));}
+h("div",{style:{textAlign:"center",padding:"20px",fontSize:11,color:"#999",marginTop:20}},"GASPE \u2014 Simulateur de cotisations \u2014 Mars 2026")));}
 
 ReactDOM.render(h(App),document.getElementById("r"));
