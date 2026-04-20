@@ -392,10 +392,142 @@ h3.section-title {
   font-size: 1rem; color: #2A55B3; margin-top: 0.5rem;
 }
 
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* COMPOSANTS ENRICHIS                                                     */
+/* ═══════════════════════════════════════════════════════════════════════ */
+
+/* Icon grid */
+.icon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 1.25rem; margin-top: 0.5rem; }
+.icon-tile { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1rem 0.5rem; text-align: center; transition: transform 0.2s ease; }
+.icon-tile:hover { transform: translateY(-2px); }
+.icon-label { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; font-family: inherit; }
+
+/* Buttons */
+.button-row { display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; margin-top: 0.5rem; }
+.button-demo { display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+.btn-primary, .btn-secondary, .btn-tertiary { border: none; cursor: pointer; font-family: inherit; padding: 0.95rem 1.75rem; font-size: 0.95rem; text-decoration: none; display: inline-block; transition: all 0.2s ease; }
+.btn-caption { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.6; }
+
+/* Separators */
+.separator-demo { margin-bottom: 2.5rem; }
+.sep-label { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; margin-bottom: 0.75rem; }
+.sep-simple, .sep-double, .sep-band, .sep-dot { width: 100%; }
+.sep-simple { height: 1px; }
+.sep-double { height: 5px; border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; opacity: 0.4; }
+.sep-band { height: 8px; border-radius: 4px; }
+.sep-dot { display: flex; align-items: center; justify-content: center; }
+.sep-dot::before { content: ''; display: block; width: 10px; height: 10px; border-radius: 50%; }
+.sep-ornament { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+.sep-ornament > span:not(.sep-dot-element) { flex: 1; height: 1px; }
+.sep-dot-element { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+
+/* Effects */
+.effect-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 0.5rem; }
+.effect-demo { display: flex; flex-direction: column; gap: 0.75rem; }
+.effect-label { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; }
+.fx-underline { text-decoration: none; position: relative; display: inline-block; font-weight: 500; padding-bottom: 2px; }
+.fx-underline::after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; transform: scaleX(0); transform-origin: right center; transition: transform 0.4s ease; }
+.fx-underline:hover::after { transform: scaleX(1); transform-origin: left center; }
+.fx-card-lift { padding: 1.5rem 1.25rem; cursor: pointer; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.fx-card-lift:hover { transform: translateY(-3px); }
+.fx-card-eyebrow { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; margin-bottom: 0.5rem; }
+.fx-card-title { font-size: 1.2rem; line-height: 1.3; margin-bottom: 0.5rem; }
+.fx-card-meta { font-size: 0.85rem; opacity: 0.7; }
+.fx-fade { padding: 1.5rem; text-align: center; font-size: 0.9rem; font-style: italic; opacity: 0.75; animation: fadeIn 2.5s ease-in-out infinite alternate; }
+@keyframes fadeIn { from { opacity: 0.3; } to { opacity: 0.95; } }
+
+/* Mockups */
+.mockup-label { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; margin: 2rem 0 0.75rem; font-weight: 600; }
+.mockup-frame { border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08), 0 8px 16px rgba(0,0,0,0.04); margin-bottom: 2rem; background: #fff; max-width: 640px; }
+.browser-bar { display: flex; align-items: center; gap: 0.75rem; background: #E9E9EE; padding: 0.6rem 0.85rem; border-bottom: 1px solid #D9D9DE; }
+.browser-dots { display: inline-flex; gap: 0.35rem; }
+.browser-dots::before, .browser-dots::after { content: ''; width: 10px; height: 10px; border-radius: 50%; background: #D6D6DC; }
+.browser-dots { position: relative; }
+.browser-dots::before { box-shadow: 14px 0 0 #D6D6DC; }
+.browser-url { flex: 1; background: #FFF; border-radius: 6px; padding: 0.3rem 0.75rem; font-family: 'Inter', sans-serif; font-size: 0.72rem; color: #6B6B72; }
+.mockup-screen { min-height: 380px; overflow: hidden; }
+.cal-day { text-align: center; padding: 0.45rem 0; font-size: 0.72rem; cursor: pointer; border-radius: 4px; }
+.cal-day.cal-active { background: #4A7043; color: #fff !important; font-weight: 600; }
+.direction-amiraute .cal-day.cal-active { background: #1B2F4A; color: #F7F2E7 !important; }
+.direction-phare .cal-day.cal-active { background: #A0541F; color: #fff !important; }
+.cal-day.cal-full { text-decoration: line-through; opacity: 0.3; cursor: not-allowed; }
+.time-slot { padding: 0.4rem 0.75rem; border: 1px solid rgba(0,0,0,0.15); border-radius: 4px; font-size: 0.72rem; cursor: pointer; font-weight: 500; }
+.time-slot.active { background: #4A7043; color: #fff; border-color: #4A7043; }
+.direction-amiraute .time-slot { border-color: rgba(27,47,74,0.25); color: #1B2F4A; }
+.direction-amiraute .time-slot.active { background: #1B2F4A; color: #F7F2E7; border-color: #C9A15A; }
+.direction-phare .time-slot { border-color: rgba(30,58,95,0.25); color: #1E3A5F; }
+.direction-phare .time-slot.active { background: #A0541F; color: #fff; border-color: #A0541F; }
+
+/* AMIRAUTÉ */
+.direction-amiraute .btn-primary { background: #1B2F4A; color: #F7F2E7; border: 1px solid #C9A15A; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem; padding: 1rem 2rem; font-family: 'Source Sans 3', sans-serif; }
+.direction-amiraute .btn-primary:hover { background: #C9A15A; color: #1B2F4A; }
+.direction-amiraute .btn-secondary { background: transparent; color: #1B2F4A; border: 1px solid #1B2F4A; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem; padding: 1rem 2rem; }
+.direction-amiraute .btn-secondary:hover { background: #1B2F4A; color: #F7F2E7; }
+.direction-amiraute .btn-tertiary { color: #1B2F4A; font-family: 'Playfair Display', serif; font-style: italic; padding: 0; border: 0; background: transparent; font-size: 1.1rem; }
+.direction-amiraute .btn-tertiary:hover { color: #C9A15A; }
+.direction-amiraute .sep-simple { background: #C9A15A; opacity: 0.6; }
+.direction-amiraute .sep-double { color: #1B2F4A; }
+.direction-amiraute .sep-ornament > span:not(.sep-dot-element) { background: #C9A15A; opacity: 0.4; }
+.direction-amiraute .fx-underline { color: #1B2F4A; font-family: 'Playfair Display', serif; }
+.direction-amiraute .fx-underline::after { background: #C9A15A; }
+.direction-amiraute .fx-card-lift { background: #fff; border: 1px solid rgba(27,47,74,0.15); }
+.direction-amiraute .fx-card-lift:hover { border-color: #C9A15A; box-shadow: 0 8px 24px rgba(27,47,74,0.12); }
+.direction-amiraute .fx-card-eyebrow { color: #C9A15A; }
+.direction-amiraute .fx-card-title { color: #1B2F4A; font-family: 'Playfair Display', serif; }
+.direction-amiraute .fx-fade { background: rgba(27,47,74,0.06); color: #1B2F4A; font-family: 'Playfair Display', serif; }
+
+/* CLAIRIÈRE */
+.direction-clairiere .btn-primary { background: #4A7043; color: #fff; border-radius: 6px; font-weight: 500; box-shadow: 0 1px 3px rgba(74,112,67,0.2); }
+.direction-clairiere .btn-primary:hover { background: #3d5f37; transform: translateY(-1px); box-shadow: 0 4px 10px rgba(74,112,67,0.3); }
+.direction-clairiere .btn-secondary { background: transparent; color: #2A5C82; border: 1.5px solid #2A5C82; border-radius: 6px; font-weight: 500; }
+.direction-clairiere .btn-secondary:hover { background: #2A5C82; color: #fff; }
+.direction-clairiere .btn-tertiary { color: #4A7043; font-family: 'Inter', sans-serif; font-weight: 500; padding: 0.5rem 0; border: 0; background: transparent; }
+.direction-clairiere .btn-tertiary:hover { color: #2A5C82; }
+.direction-clairiere .sep-simple { background: #E8DCC4; }
+.direction-clairiere .sep-band { background: #E8DCC4; }
+.direction-clairiere .sep-ornament > span:not(.sep-dot-element) { background: linear-gradient(to right, transparent, #E8DCC4, transparent); }
+.direction-clairiere .fx-underline { color: #2A5C82; }
+.direction-clairiere .fx-underline::after { background: #4A7043; height: 2px; }
+.direction-clairiere .fx-card-lift { background: #fff; border: 1px solid #E8DCC4; border-radius: 12px; }
+.direction-clairiere .fx-card-lift:hover { border-color: #4A7043; box-shadow: 0 12px 28px rgba(42,92,130,0.12); }
+.direction-clairiere .fx-card-eyebrow { color: #4A7043; font-weight: 600; }
+.direction-clairiere .fx-card-title { color: #2A5C82; font-family: 'Fraunces', serif; font-weight: 600; }
+.direction-clairiere .fx-fade { background: #E8DCC4; color: #2A5C82; border-radius: 12px; }
+
+/* PHARE */
+.direction-phare .btn-primary { background: #A0541F; color: #fff; box-shadow: 0 4px 0 #7A3F14; font-family: 'DM Sans', sans-serif; font-weight: 500; transition: all 0.1s ease; }
+.direction-phare .btn-primary:hover { transform: translateY(2px); box-shadow: 0 2px 0 #7A3F14; }
+.direction-phare .btn-primary:active { transform: translateY(4px); box-shadow: 0 0 0 #7A3F14; }
+.direction-phare .btn-secondary { background: transparent; color: #1E3A5F; border: 2px solid #1E3A5F; font-family: 'DM Sans', sans-serif; font-weight: 500; }
+.direction-phare .btn-secondary:hover { background: #1E3A5F; color: #F5EFE6; }
+.direction-phare .btn-tertiary { color: #A0541F; font-family: 'DM Serif Display', serif; font-style: italic; padding: 0; border: 0; background: transparent; font-size: 1.15rem; }
+.direction-phare .btn-tertiary:hover { color: #1E3A5F; }
+.direction-phare .sep-simple { background: #D67A3A; opacity: 0.5; }
+.direction-phare .sep-dot::before { background: #D67A3A; }
+.direction-phare .sep-ornament > span:not(.sep-dot-element) { background: rgba(168, 62, 62, 0.25); }
+.direction-phare .sep-dot-element { background: #D67A3A; }
+.direction-phare .fx-underline { color: #1E3A5F; font-family: 'DM Serif Display', serif; font-style: italic; }
+.direction-phare .fx-underline::after { background: #D67A3A; height: 2px; }
+.direction-phare .fx-card-lift { background: #fff; border-left: 4px solid #D67A3A; }
+.direction-phare .fx-card-lift:hover { border-left-color: #A83E3E; box-shadow: 0 10px 30px rgba(30,58,95,0.12); }
+.direction-phare .fx-card-eyebrow { color: #A0541F; font-weight: 700; }
+.direction-phare .fx-card-title { color: #1E3A5F; font-family: 'DM Serif Display', serif; font-weight: 400; font-style: italic; }
+.direction-phare .fx-fade { background: rgba(214,122,58,0.08); color: #1E3A5F; font-family: 'DM Serif Display', serif; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-underline::after, .fx-card-lift, .fx-fade { transition: none; animation: none; }
+  .btn-primary, .btn-secondary { transition: none; }
+}
+
+
 @media (max-width: 640px) {
   .spec-grid { grid-template-columns: 1fr; gap: 1rem; }
   .direction { padding: 4rem 1.25rem; }
   .hero-mockup { padding: 2.5rem 1.5rem; }
+  .icon-grid { grid-template-columns: repeat(3, 1fr); }
+  .button-row { flex-direction: column; gap: 1.5rem; }
+  .mockup-frame { max-width: 100%; }
 }
 </style>
 </head>
@@ -542,6 +674,152 @@ h3.section-title {
     </div>
 
     <!-- Refs -->
+
+    <div class="spec-grid">
+      <div class="spec-label">Iconographie</div>
+      <div class="spec-content">
+        <p style="margin-bottom:1.5rem;opacity:0.85;">Icônes en traits fins 1 px, or vieilli, style filaire navigation ancienne. Inspiration : sextant, rose des vents, boussole de marine.</p>
+        <div class="icon-grid">
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#C9A15A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="1.5" fill="#C9A15A"/><path d="M24 6 L26 22 L24 24 L22 22 Z" fill="#C9A15A"/><path d="M24 42 L22 26 L24 24 L26 26 Z"/><path d="M6 24 L22 22 L24 24 L22 26 Z"/><path d="M42 24 L26 26 L24 24 L26 22 Z"/></svg><span class="icon-label">Cap</span></div>
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#C9A15A" stroke-width="1.2" stroke-linecap="round"><path d="M24 8 L24 40 M16 40 Q24 46 32 40 M24 8 L20 14 M24 8 L28 14"/><circle cx="24" cy="20" r="3"/></svg><span class="icon-label">Ancre</span></div>
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#C9A15A" stroke-width="1.2" stroke-linecap="round"><path d="M8 32 Q16 28 24 32 Q32 36 40 32"/><path d="M8 36 Q16 32 24 36 Q32 40 40 36"/><path d="M24 8 L24 32 M24 8 L18 14 M24 8 L30 14"/></svg><span class="icon-label">Voile</span></div>
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#C9A15A" stroke-width="1.2" stroke-linecap="round"><circle cx="24" cy="24" r="16"/><path d="M24 8 L24 40 M8 24 L40 24 M12.7 12.7 L35.3 35.3 M35.3 12.7 L12.7 35.3" stroke-width="0.6"/><circle cx="24" cy="24" r="6"/></svg><span class="icon-label">Sextant</span></div>
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#C9A15A" stroke-width="1.2" stroke-linecap="round"><rect x="10" y="14" width="28" height="20"/><path d="M14 14 L14 34 M20 14 L20 34 M28 14 L28 34 M34 14 L34 34"/><path d="M10 22 L38 22"/></svg><span class="icon-label">Caisson</span></div>
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#C9A15A" stroke-width="1.2" stroke-linecap="round"><path d="M8 28 L24 14 L40 28 L40 40 L8 40 Z"/><path d="M18 40 L18 30 L30 30 L30 40"/><circle cx="24" cy="20" r="1" fill="#C9A15A"/></svg><span class="icon-label">Mémorial</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Boutons</div>
+      <div class="spec-content">
+        <p style="margin-bottom:1.5rem;opacity:0.85;">Boutons rectangulaires, bord fin or vieilli, majuscules espacées. Pas d'arrondi. Transition douce au survol.</p>
+        <div class="button-row">
+          <div class="button-demo"><button class="btn-primary">Reserve a crossing</button><span class="btn-caption">Primaire · Action principale</span></div>
+          <div class="button-demo"><button class="btn-secondary">Learn the story</button><span class="btn-caption">Secondaire · Action alternative</span></div>
+          <div class="button-demo"><a href="#" class="btn-tertiary">View the schedule →</a><span class="btn-caption">Tertiaire · Lien textuel</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Séparateurs</div>
+      <div class="spec-content">
+        <p style="margin-bottom:1.5rem;opacity:0.85;">Trois formes de séparation, selon la gravité de la coupure visuelle.</p>
+        <div class="separator-demo"><div class="sep-label">Filet simple (entre paragraphes)</div><div class="sep-simple"></div></div>
+        <div class="separator-demo"><div class="sep-label">Filet double (entre sections majeures)</div><div class="sep-double"></div></div>
+        <div class="separator-demo"><div class="sep-label">Ornement central (entre chapitres)</div>
+          <div class="sep-ornament"><span></span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#C9A15A" stroke-width="1" stroke-linecap="round"><path d="M12 4 L14 10 L20 12 L14 14 L12 20 L10 14 L4 12 L10 10 Z"/></svg><span></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Effets</div>
+      <div class="spec-content">
+        <p style="margin-bottom:1.5rem;opacity:0.85;">Interactions sobres : pas de mouvements brusques, pas d'ombres colorées. Le survol souligne, ne claque pas.</p>
+        <div class="effect-grid">
+          <div class="effect-demo"><span class="effect-label">Lien actif au survol</span><a href="#" class="fx-underline">Passer l'amarre</a></div>
+          <div class="effect-demo"><span class="effect-label">Carte élevée au survol</span>
+            <div class="fx-card-lift"><div class="fx-card-eyebrow">Archive · 1944</div><div class="fx-card-title">Mulberry B</div><div class="fx-card-meta">Port artificiel</div></div>
+          </div>
+          <div class="effect-demo"><span class="effect-label">Transition de page</span><div class="fx-fade">Fondu enchaîné 400 ms</div></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Maquettes d'écran complètes -->
+    <div class="spec-grid">
+      <div class="spec-label">Maquettes d'écran</div>
+      <div class="spec-content">
+        <p style="margin-bottom:2rem;opacity:0.85;">Trois pages clés du site, chacune dans le style complet de la direction. Navigation, hero, grille tarifaire, storytelling et footer : tout y figure.</p>
+
+        <div class="mockup-label">Écran 1 / 3 · Page d'accueil</div>
+        <div class="mockup-frame">
+          <div class="browser-bar">
+            <span class="browser-dots"></span>
+            <div class="browser-url">neptune-landing.com</div>
+          </div>
+          <div class="mockup-screen" style="background:#F7F2E7;color:#1A1A1A;font-family:'Source Sans 3',sans-serif;">
+            <nav class="m-nav" style="background:#F7F2E7;border-bottom:1px solid rgba(27,47,74,0.12);padding:0.85rem 1.5rem;display:flex;justify-content:space-between;align-items:center;">
+              <div style="font-family:'Playfair Display',serif;font-size:1.15rem;color:#1B2F4A;">Neptune Landing</div>
+              <div style="display:flex;gap:1.5rem;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;color:#1B2F4A;">
+                <span>The Crossing</span><span>History</span><span>Book</span>
+              </div>
+            </nav>
+            <div style="background:#1B2F4A;color:#F7F2E7;padding:3rem 1.5rem;position:relative;">
+              <div style="position:absolute;inset:0.6rem;border:1px solid rgba(201,161,90,0.3);pointer-events:none;"></div>
+              <div style="font-size:0.7rem;letter-spacing:0.18em;color:#C9A15A;margin-bottom:0.8rem;">OPERATION NEPTUNE · ARROMANCHES</div>
+              <div style="font-family:'Playfair Display',serif;font-size:1.8rem;line-height:1.1;max-width:80%;">Experience D-Day from the sea, eighty-two years on.</div>
+              <div style="margin-top:0.9rem;font-size:0.8rem;opacity:0.85;max-width:70%;line-height:1.5;">Board at Cale Neptune. Trace the first Allied wave.</div>
+              <div style="margin-top:1.3rem;display:inline-block;padding:0.55rem 1.3rem;border:1px solid #C9A15A;color:#F7F2E7;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;">Reserve a crossing</div>
+            </div>
+            <div style="padding:1.75rem 1.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;">
+              <div><div style="font-size:0.65rem;color:#C9A15A;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.3rem;">45 min</div><div style="font-family:'Playfair Display',serif;font-size:0.95rem;color:#1B2F4A;">At sea</div></div>
+              <div><div style="font-size:0.65rem;color:#C9A15A;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.3rem;">8 daily</div><div style="font-family:'Playfair Display',serif;font-size:0.95rem;color:#1B2F4A;">Departures</div></div>
+              <div><div style="font-size:0.65rem;color:#C9A15A;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.3rem;">€18</div><div style="font-family:'Playfair Display',serif;font-size:0.95rem;color:#1B2F4A;">From</div></div>
+            </div>
+            <div style="background:#1A1A1A;color:#F7F2E7;padding:1rem 1.5rem;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;display:flex;justify-content:space-between;">
+              <span>NEPTUNE LANDING</span><span style="color:#C9A15A;">ARROMANCHES · 1944—2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mockup-label">Écran 2 / 3 · Tunnel de réservation</div>
+        <div class="mockup-frame">
+          <div class="browser-bar">
+            <span class="browser-dots"></span>
+            <div class="browser-url">neptune-landing.com/book</div>
+          </div>
+          <div class="mockup-screen" style="background:#F7F2E7;color:#1A1A1A;font-family:'Source Sans 3',sans-serif;padding:2rem 1.5rem;">
+            <div style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#C9A15A;margin-bottom:0.5rem;">STEP 1 OF 3</div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.6rem;color:#1B2F4A;margin-bottom:1.3rem;">Choose your crossing</div>
+            <div style="display:grid;grid-template-columns:repeat(7, 1fr);gap:0.3rem;margin-bottom:1.2rem;">
+              <div style="text-align:center;font-size:0.6rem;letter-spacing:0.1em;padding:0.3rem 0;opacity:0.5;">MON</div>
+              <div style="text-align:center;font-size:0.6rem;letter-spacing:0.1em;padding:0.3rem 0;opacity:0.5;">TUE</div>
+              <div style="text-align:center;font-size:0.6rem;letter-spacing:0.1em;padding:0.3rem 0;opacity:0.5;">WED</div>
+              <div style="text-align:center;font-size:0.6rem;letter-spacing:0.1em;padding:0.3rem 0;opacity:0.5;">THU</div>
+              <div style="text-align:center;font-size:0.6rem;letter-spacing:0.1em;padding:0.3rem 0;opacity:0.5;">FRI</div>
+              <div style="text-align:center;font-size:0.6rem;letter-spacing:0.1em;padding:0.3rem 0;opacity:0.5;">SAT</div>
+              <div style="text-align:center;font-size:0.6rem;letter-spacing:0.1em;padding:0.3rem 0;opacity:0.5;">SUN</div>
+              <div class="cal-day">15</div><div class="cal-day">16</div><div class="cal-day cal-active">17</div><div class="cal-day">18</div><div class="cal-day">19</div><div class="cal-day cal-full">20</div><div class="cal-day">21</div>
+            </div>
+            <div style="border-top:1px solid rgba(27,47,74,0.12);padding-top:1rem;">
+              <div style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:#C9A15A;margin-bottom:0.6rem;">Available times · 17 July</div>
+              <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+                <div class="time-slot">10:00</div>
+                <div class="time-slot active">11:00</div>
+                <div class="time-slot">13:00</div>
+                <div class="time-slot">14:00</div>
+                <div class="time-slot">15:00</div>
+              </div>
+            </div>
+            <div style="margin-top:1.3rem;background:#1B2F4A;color:#F7F2E7;padding:0.7rem 1.5rem;text-align:center;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;border:1px solid #C9A15A;">Next : passengers</div>
+          </div>
+        </div>
+
+        <div class="mockup-label">Écran 3 / 3 · Page mémoriel « The Skipper »</div>
+        <div class="mockup-frame">
+          <div class="browser-bar">
+            <span class="browser-dots"></span>
+            <div class="browser-url">neptune-landing.com/skipper</div>
+          </div>
+          <div class="mockup-screen" style="background:#F7F2E7;color:#1A1A1A;font-family:'Source Sans 3',sans-serif;padding:2rem 1.5rem;">
+            <div style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#C9A15A;margin-bottom:0.5rem;">MEET THE CAPTAIN</div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.7rem;color:#1B2F4A;line-height:1.15;margin-bottom:0.4rem;">Captain Nelly.</div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:#5A6470;margin-bottom:1.2rem;">Amphibious craft since 2019.</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+              <div style="aspect-ratio:1/1;background:linear-gradient(135deg,#1B2F4A,#5A6470);"></div>
+              <div style="font-size:0.8rem;line-height:1.65;">Trained at ENSM. Licensed Division 240 captain. Ten years at sea before returning to these waters where her grandfather landed on June 7, 1944.</div>
+            </div>
+            <div style="border-top:1px solid #C9A15A;padding-top:1rem;margin-top:1rem;font-family:'Playfair Display',serif;font-size:0.9rem;font-style:italic;color:#1B2F4A;line-height:1.5;">"Every crossing carries a story. Sometimes it's ours."</div>
+            <div style="margin-top:0.8rem;font-size:0.65rem;color:#5A6470;text-align:right;letter-spacing:0.08em;text-transform:uppercase;">— NELLY</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="spec-grid">
       <div class="spec-label">Références</div>
       <div class="spec-content refs">
@@ -672,6 +950,144 @@ h3.section-title {
       </div>
     </div>
 
+
+    <div class="spec-grid">
+      <div class="spec-label">Iconographie</div>
+      <div class="spec-content">
+        <p style="margin-bottom:1.5rem;opacity:0.85;">Icônes arrondies, style Phosphor ou Lucide, épaisseur 1,8 px. Angles tous arrondis pour renforcer l'accessibilité.</p>
+        <div class="icon-grid">
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#2A5C82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34 Q16 26 24 34 Q32 42 40 34 L40 38 Q32 46 24 38 Q16 30 8 38 Z" fill="#2A5C82" fill-opacity="0.12"/><path d="M12 34 L12 20 M36 34 L36 20"/><path d="M12 20 Q24 10 36 20"/></svg><span class="icon-label">Bateau</span></div>
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#2A5C82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="20" r="8"/><path d="M24 28 L24 40 M18 34 L30 34"/></svg><span class="icon-label">Lieu</span></div>
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#4A7043" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="12" width="32" height="28" rx="3"/><path d="M8 20 L40 20"/><path d="M16 8 L16 16 M32 8 L32 16"/></svg><span class="icon-label">Calendrier</span></div>
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#2A5C82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 24 Q24 12 36 24 Q24 36 12 24 Z"/><circle cx="24" cy="24" r="4" fill="#2A5C82" fill-opacity="0.15"/></svg><span class="icon-label">Découverte</span></div>
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#4A7043" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 36 L14 28 L22 32 L30 22 L38 28 L42 24"/><path d="M6 42 L42 42" stroke-opacity="0.3"/></svg><span class="icon-label">Horizon</span></div>
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#2A5C82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="16"/><path d="M24 14 L24 24 L32 28"/></svg><span class="icon-label">Durée</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Boutons</div>
+      <div class="spec-content">
+        <p style="margin-bottom:1.5rem;opacity:0.85;">Boutons aux coins arrondis 6 px, lift de 1 px au survol, transition 200 ms. Hiérarchie claire du plein au plat.</p>
+        <div class="button-row">
+          <div class="button-demo"><button class="btn-primary">Book your tour →</button><span class="btn-caption">Primaire · Vert mousse, plein</span></div>
+          <div class="button-demo"><button class="btn-secondary">Explore the story</button><span class="btn-caption">Secondaire · Bordure bleue</span></div>
+          <div class="button-demo"><a href="#" class="btn-tertiary">See all dates</a><span class="btn-caption">Tertiaire · Lien avec flèche</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Séparateurs</div>
+      <div class="spec-content">
+        <p style="margin-bottom:1.5rem;opacity:0.85;">Séparations douces, sable et bleu. Jamais de trait dur.</p>
+        <div class="separator-demo"><div class="sep-label">Filet sable (paragraphes)</div><div class="sep-simple"></div></div>
+        <div class="separator-demo"><div class="sep-label">Bande sable (sections)</div><div class="sep-band"></div></div>
+        <div class="separator-demo"><div class="sep-label">Ancre flottante (chapitres)</div>
+          <div class="sep-ornament"><span></span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#4A7043" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="2"/><path d="M12 8 L12 20 M8 20 Q12 23 16 20 M6 14 L18 14"/></svg><span></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Effets</div>
+      <div class="spec-content">
+        <p style="margin-bottom:1.5rem;opacity:0.85;">Micro-animations douces, toujours courtes (150 à 300 ms). Priorité accessibilité : animations désactivables via prefers-reduced-motion.</p>
+        <div class="effect-grid">
+          <div class="effect-demo"><span class="effect-label">Lien au survol (glisse verte)</span><a href="#" class="fx-underline">En savoir plus</a></div>
+          <div class="effect-demo"><span class="effect-label">Carte élevée + ombre</span>
+            <div class="fx-card-lift"><div class="fx-card-eyebrow">Famille · 4 personnes</div><div class="fx-card-title">49 €</div><div class="fx-card-meta">45 min · Toute l'année</div></div>
+          </div>
+          <div class="effect-demo"><span class="effect-label">Fondu à l'apparition (scroll)</span><div class="fx-fade">Scroll-triggered · 400 ms</div></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="spec-grid">
+      <div class="spec-label">Maquettes d'écran</div>
+      <div class="spec-content">
+        <p style="margin-bottom:2rem;opacity:0.85;">Trois pages clés dans le style Clairière : contemporain, lumineux, accessible. L'esthétique d'un site touristique moderne 2026, sans forcer le mémoriel.</p>
+
+        <div class="mockup-label">Écran 1 / 3 · Page d'accueil</div>
+        <div class="mockup-frame">
+          <div class="browser-bar"><span class="browser-dots"></span><div class="browser-url">neptune-landing.com</div></div>
+          <div class="mockup-screen" style="background:#FFFFFF;color:#0F1419;font-family:'Inter',sans-serif;">
+            <nav class="m-nav" style="background:#fff;border-bottom:1px solid rgba(42,92,130,0.08);padding:0.85rem 1.5rem;display:flex;justify-content:space-between;align-items:center;">
+              <div style="font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:#2A5C82;">neptune landing</div>
+              <div style="display:flex;gap:1.5rem;font-size:0.8rem;color:#647685;">
+                <span>the tour</span><span>stories</span><span style="background:#4A7043;color:#fff;padding:0.35rem 0.8rem;border-radius:6px;font-weight:500;">book →</span>
+              </div>
+            </nav>
+            <div style="background:linear-gradient(135deg,#2A5C82,#1a4162);color:#fff;padding:3rem 1.5rem;border-radius:0 0 12px 12px;">
+              <div style="font-size:0.7rem;letter-spacing:0.18em;color:#E8DCC4;margin-bottom:0.8rem;">D-DAY FROM THE SEA</div>
+              <div style="font-family:'Fraunces',serif;font-weight:600;font-size:1.9rem;line-height:1.1;">A quiet crossing, 82 summers later.</div>
+              <div style="margin-top:0.9rem;font-size:0.85rem;opacity:0.88;max-width:75%;line-height:1.5;">45 minutes aboard an amphibious craft. Departs from Arromanches. English, French, German.</div>
+              <div style="margin-top:1.3rem;display:inline-block;padding:0.7rem 1.5rem;background:#4A7043;color:#fff;border-radius:6px;font-size:0.85rem;font-weight:500;">Book your tour →</div>
+            </div>
+            <div style="padding:1.75rem 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+              <div style="background:#E8DCC4;padding:1rem;border-radius:12px;">
+                <div style="font-size:0.65rem;font-weight:600;color:#4A7043;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.3rem;">FAMILY TOUR</div>
+                <div style="font-family:'Fraunces',serif;font-weight:600;font-size:1rem;color:#2A5C82;line-height:1.3;">Mulberry up close</div>
+                <div style="margin-top:0.5rem;font-size:0.75rem;color:#647685;">From €18 · 45 min</div>
+              </div>
+              <div style="background:#E8DCC4;padding:1rem;border-radius:12px;">
+                <div style="font-size:0.65rem;font-weight:600;color:#4A7043;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.3rem;">PRIVATE</div>
+                <div style="font-family:'Fraunces',serif;font-weight:600;font-size:1rem;color:#2A5C82;line-height:1.3;">Skipper storytelling</div>
+                <div style="margin-top:0.5rem;font-size:0.75rem;color:#647685;">From €150 · 90 min</div>
+              </div>
+            </div>
+            <div style="background:#2A5C82;color:#fff;padding:0.8rem 1.5rem;font-size:0.7rem;display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-family:'Fraunces',serif;">neptune landing</span><span style="opacity:0.7;">© 2026 · Arromanches</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mockup-label">Écran 2 / 3 · Tunnel de réservation</div>
+        <div class="mockup-frame">
+          <div class="browser-bar"><span class="browser-dots"></span><div class="browser-url">neptune-landing.com/book</div></div>
+          <div class="mockup-screen" style="background:#FFFFFF;color:#0F1419;font-family:'Inter',sans-serif;padding:1.75rem 1.5rem;">
+            <div style="display:flex;gap:0.5rem;margin-bottom:1rem;">
+              <div style="flex:1;height:3px;background:#4A7043;border-radius:2px;"></div>
+              <div style="flex:1;height:3px;background:#E8DCC4;border-radius:2px;"></div>
+              <div style="flex:1;height:3px;background:#E8DCC4;border-radius:2px;"></div>
+            </div>
+            <div style="font-size:0.72rem;color:#4A7043;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.4rem;">Step 1 of 3</div>
+            <div style="font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:#2A5C82;margin-bottom:1.2rem;">When would you like to sail?</div>
+            <div style="background:#E8DCC4;padding:0.8rem;border-radius:12px;margin-bottom:1rem;">
+              <div style="font-size:0.7rem;color:#647685;margin-bottom:0.5rem;">July 2026</div>
+              <div style="display:grid;grid-template-columns:repeat(7, 1fr);gap:0.2rem;">
+                <div class="cal-day" style="color:#647685;">15</div><div class="cal-day" style="color:#647685;">16</div><div class="cal-day cal-active">17</div><div class="cal-day">18</div><div class="cal-day">19</div><div class="cal-day cal-full">20</div><div class="cal-day">21</div>
+              </div>
+            </div>
+            <div style="font-size:0.7rem;color:#4A7043;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;">Times available</div>
+            <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:1.2rem;">
+              <div class="time-slot">10:00</div>
+              <div class="time-slot active">11:00</div>
+              <div class="time-slot">13:00</div>
+              <div class="time-slot">14:00</div>
+              <div class="time-slot">15:00</div>
+            </div>
+            <div style="background:#4A7043;color:#fff;padding:0.85rem;text-align:center;border-radius:6px;font-size:0.85rem;font-weight:500;">Continue to passengers →</div>
+          </div>
+        </div>
+
+        <div class="mockup-label">Écran 3 / 3 · Page mémoriel « Our Skipper »</div>
+        <div class="mockup-frame">
+          <div class="browser-bar"><span class="browser-dots"></span><div class="browser-url">neptune-landing.com/skipper</div></div>
+          <div class="mockup-screen" style="background:#FFFFFF;color:#0F1419;font-family:'Inter',sans-serif;padding:1.75rem 1.5rem;">
+            <div style="font-size:0.72rem;color:#4A7043;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.4rem;">Meet the captain</div>
+            <div style="font-family:'Fraunces',serif;font-weight:600;font-size:1.8rem;line-height:1.1;color:#2A5C82;">Captain Nelly.</div>
+            <div style="margin-top:1rem;margin-bottom:1.2rem;aspect-ratio:16/9;background:linear-gradient(135deg,#2A5C82 0%,#4A7043 100%);border-radius:12px;"></div>
+            <div style="font-size:0.88rem;line-height:1.65;margin-bottom:1rem;color:#0F1419;">Trained at ENSM. Licensed Division 240 captain. Ten years at sea before returning to these waters where her grandfather landed on June 7, 1944.</div>
+            <div style="background:#E8DCC4;padding:1rem;border-radius:12px;font-family:'Fraunces',serif;font-style:italic;font-size:0.95rem;line-height:1.5;color:#2A5C82;">"Every crossing carries a story. Sometimes it's ours."</div>
+            <div style="margin-top:0.7rem;font-size:0.7rem;color:#647685;text-align:right;">— Nelly</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="spec-grid">
       <div class="spec-label">Références</div>
       <div class="spec-content refs">
@@ -797,6 +1213,142 @@ h3.section-title {
           <div class="mood-tile">
             <div class="mood-tile-label">Lumière d'heure dorée</div>
             Couchers de soleil sur les caissons, marée basse poétique
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="spec-grid">
+      <div class="spec-label">Iconographie</div>
+      <div class="spec-content">
+        <p style="margin-bottom:1.5rem;opacity:0.85;">Icônes légèrement brisées, imperfection contrôlée. Épaisseur variable, comme un trait de pinceau. Évoquent la main, la mémoire, le récit.</p>
+        <div class="icon-grid">
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#A0541F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 20 Q14 12 24 12 Q34 12 34 20 L34 32 Q34 40 24 40 Q14 40 14 32 Z"/><path d="M19 22 Q19 19 24 19 Q29 19 29 22" stroke-width="1.6"/><circle cx="20" cy="25" r="1" fill="#A0541F"/><circle cx="28" cy="25" r="1" fill="#A0541F"/><path d="M20 32 Q24 35 28 32" stroke-width="1.6"/></svg><span class="icon-label">Visage</span></div>
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#1E3A5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 L24 28 M14 16 L34 16 M14 16 L10 40 L38 40 L34 16"/><circle cx="24" cy="10" r="2" fill="#D67A3A"/></svg><span class="icon-label">Phare</span></div>
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#A0541F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14 L38 14 L34 38 L14 38 Z"/><path d="M16 20 L32 20 M16 26 L28 26 M16 32 L30 32" stroke-width="1.4"/></svg><span class="icon-label">Lettre</span></div>
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#1E3A5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 34 Q18 28 24 34 Q30 40 38 34" fill="#D67A3A" fill-opacity="0.2"/><path d="M10 40 Q18 34 24 40 Q30 46 38 40"/><path d="M24 10 L24 32 M24 10 Q20 14 18 18 M24 10 Q28 14 30 18"/></svg><span class="icon-label">Traversée</span></div>
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#A0541F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 24 Q16 16 24 22 Q32 28 40 20"/><circle cx="14" cy="22" r="1.5" fill="#A0541F"/><circle cx="24" cy="24" r="1.5" fill="#A0541F"/><circle cx="34" cy="22" r="1.5" fill="#A0541F"/></svg><span class="icon-label">Récit</span></div>
+          <div class="icon-tile"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#A83E3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 10 Q14 10 12 20 Q10 30 24 40 Q38 30 36 20 Q34 10 24 10 Z" fill="#A83E3E" fill-opacity="0.15"/></svg><span class="icon-label">Mémoire</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Boutons</div>
+      <div class="spec-content">
+        <p style="margin-bottom:1.5rem;opacity:0.85;">Boutons avec ombre portée, effet de profondeur tactile. Le bouton principal semble pouvoir être pressé. Typographie serif pour le corps, accroche émotionnelle.</p>
+        <div class="button-row">
+          <div class="button-demo"><button class="btn-primary">Begin your passage</button><span class="btn-caption">Primaire · Orange foncé, profondeur</span></div>
+          <div class="button-demo"><button class="btn-secondary">Read the stories</button><span class="btn-caption">Secondaire · Bordure chaleureuse</span></div>
+          <div class="button-demo"><a href="#" class="btn-tertiary">Meet the skipper ›</a><span class="btn-caption">Tertiaire · Lien italique</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Séparateurs</div>
+      <div class="spec-content">
+        <p style="margin-bottom:1.5rem;opacity:0.85;">Séparateurs éditoriaux, inspirés de la mise en page magazine. Chaque chapitre a sa ponctuation visuelle.</p>
+        <div class="separator-demo"><div class="sep-label">Filet chaleureux (paragraphes)</div><div class="sep-simple"></div></div>
+        <div class="separator-demo"><div class="sep-label">Point central orange (sections)</div><div class="sep-dot"></div></div>
+        <div class="separator-demo"><div class="sep-label">Triplet narratif (chapitres)</div>
+          <div class="sep-ornament"><span></span><span class="sep-dot-element"></span><span class="sep-dot-element"></span><span class="sep-dot-element"></span><span></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Effets</div>
+      <div class="spec-content">
+        <p style="margin-bottom:1.5rem;opacity:0.85;">Effets tactiles et éditoriaux. La page respire, les éléments chauds interagissent. Grain subtil optionnel sur les photos.</p>
+        <div class="effect-grid">
+          <div class="effect-demo"><span class="effect-label">Lien avec soulignement courbe</span><a href="#" class="fx-underline">Margaret, 74 ans</a></div>
+          <div class="effect-demo"><span class="effect-label">Carte tactile (presse + profondeur)</span>
+            <div class="fx-card-lift"><div class="fx-card-eyebrow">Voices · 01</div><div class="fx-card-title">« Je pensais venir pour une plage. »</div><div class="fx-card-meta">Ohio, USA</div></div>
+          </div>
+          <div class="effect-demo"><span class="effect-label">Révélation au scroll (texte long)</span><div class="fx-fade">Reveal ascendant · 600 ms</div></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="spec-grid">
+      <div class="spec-label">Maquettes d'écran</div>
+      <div class="spec-content">
+        <p style="margin-bottom:2rem;opacity:0.85;">Trois pages clés dans le style Phare : éditorial, incarné, humain. Priorité aux visages, aux voix, à la profondeur narrative.</p>
+
+        <div class="mockup-label">Écran 1 / 3 · Page d'accueil</div>
+        <div class="mockup-frame">
+          <div class="browser-bar"><span class="browser-dots"></span><div class="browser-url">neptune-landing.com</div></div>
+          <div class="mockup-screen" style="background:#F5EFE6;color:#3D3936;font-family:'DM Sans',sans-serif;">
+            <nav class="m-nav" style="background:#F5EFE6;border-bottom:1px solid rgba(30,58,95,0.1);padding:0.85rem 1.5rem;display:flex;justify-content:space-between;align-items:center;">
+              <div style="font-family:'DM Serif Display',serif;font-size:1.3rem;color:#1E3A5F;">Neptune Landing</div>
+              <div style="display:flex;gap:1.3rem;font-size:0.78rem;color:#685F56;">
+                <span>Voices</span><span>The Crossing</span><span style="color:#A0541F;font-weight:700;">Begin ›</span>
+              </div>
+            </nav>
+            <div style="background:#1E3A5F;color:#F5EFE6;padding:3rem 1.5rem;position:relative;overflow:hidden;">
+              <div style="position:absolute;top:0;right:0;width:140px;height:140px;background:radial-gradient(circle,#D67A3A 0%,transparent 70%);opacity:0.4;"></div>
+              <div style="font-size:0.7rem;letter-spacing:0.18em;color:#D67A3A;font-weight:700;margin-bottom:0.8rem;">CROSS THE SILENCE</div>
+              <div style="font-family:'DM Serif Display',serif;font-size:1.9rem;line-height:1.1;max-width:85%;">They came at dawn, under fire. You come at peace, eighty-two years later.</div>
+              <div style="margin-top:0.9rem;font-size:0.85rem;max-width:75%;line-height:1.6;font-family:'DM Sans',sans-serif;opacity:0.9;">Same cale. Same wave. One silence between you.</div>
+              <div style="margin-top:1.3rem;display:inline-block;padding:0.7rem 1.5rem;background:#A0541F;color:#fff;font-size:0.85rem;font-weight:500;box-shadow:0 4px 0 #7A3F14;">Begin your passage</div>
+            </div>
+            <div style="padding:1.75rem 1.5rem;background:#F5EFE6;">
+              <div style="font-size:0.7rem;color:#D67A3A;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:0.6rem;">Voices · 01</div>
+              <div style="background:#fff;padding:1rem;border-left:4px solid #D67A3A;">
+                <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.05rem;color:#1E3A5F;line-height:1.45;">"I thought I was here to see a beach. I leave with my father's voice back in my ears."</div>
+                <div style="margin-top:0.7rem;font-size:0.7rem;color:#685F56;letter-spacing:0.05em;">— Margaret, 74 · Ohio, USA · Daughter of a 1944 veteran</div>
+              </div>
+            </div>
+            <div style="background:#1E3A5F;color:#F5EFE6;padding:0.8rem 1.5rem;font-size:0.7rem;display:flex;justify-content:space-between;">
+              <span style="font-family:'DM Serif Display',serif;">Neptune Landing</span><span style="color:#D67A3A;">Arromanches · Since 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mockup-label">Écran 2 / 3 · Tunnel de réservation</div>
+        <div class="mockup-frame">
+          <div class="browser-bar"><span class="browser-dots"></span><div class="browser-url">neptune-landing.com/book</div></div>
+          <div class="mockup-screen" style="background:#F5EFE6;color:#3D3936;font-family:'DM Sans',sans-serif;padding:2rem 1.5rem;">
+            <div style="font-size:0.7rem;color:#D67A3A;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:0.4rem;">Step 1 of 3 · When</div>
+            <div style="font-family:'DM Serif Display',serif;font-size:1.65rem;color:#1E3A5F;line-height:1.1;margin-bottom:1.3rem;">When do you want to cross?</div>
+            <div style="background:#fff;border-left:4px solid #D67A3A;padding:0.9rem;margin-bottom:1rem;">
+              <div style="font-size:0.7rem;color:#685F56;margin-bottom:0.5rem;letter-spacing:0.05em;">July 2026</div>
+              <div style="display:grid;grid-template-columns:repeat(7, 1fr);gap:0.2rem;">
+                <div class="cal-day" style="color:#685F56;">15</div><div class="cal-day" style="color:#685F56;">16</div><div class="cal-day cal-active">17</div><div class="cal-day">18</div><div class="cal-day">19</div><div class="cal-day cal-full">20</div><div class="cal-day">21</div>
+              </div>
+            </div>
+            <div style="font-size:0.7rem;color:#D67A3A;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:0.5rem;">Times available</div>
+            <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:1.3rem;">
+              <div class="time-slot">10:00</div>
+              <div class="time-slot active">11:00</div>
+              <div class="time-slot">13:00</div>
+              <div class="time-slot">14:00</div>
+              <div class="time-slot">15:00</div>
+            </div>
+            <div style="background:#A0541F;color:#fff;padding:0.9rem;text-align:center;font-weight:500;box-shadow:0 4px 0 #7A3F14;">Continue →</div>
+          </div>
+        </div>
+
+        <div class="mockup-label">Écran 3 / 3 · Page « Voices »</div>
+        <div class="mockup-frame">
+          <div class="browser-bar"><span class="browser-dots"></span><div class="browser-url">neptune-landing.com/voices</div></div>
+          <div class="mockup-screen" style="background:#F5EFE6;color:#3D3936;font-family:'DM Sans',sans-serif;padding:1.75rem 1.5rem;">
+            <div style="font-size:0.7rem;color:#D67A3A;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:0.4rem;">Voices from the crossing</div>
+            <div style="font-family:'DM Serif Display',serif;font-size:1.7rem;color:#1E3A5F;line-height:1.1;margin-bottom:0.3rem;">They crossed.</div>
+            <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1.1rem;color:#A0541F;line-height:1.1;margin-bottom:1.2rem;">These are their stories.</div>
+            <div style="background:#fff;border-left:4px solid #D67A3A;padding:1rem;margin-bottom:0.8rem;">
+              <div style="font-size:0.65rem;color:#A0541F;font-weight:700;letter-spacing:0.12em;margin-bottom:0.3rem;">VOICES · 01</div>
+              <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1rem;color:#1E3A5F;line-height:1.45;">"I thought I was here to see a beach."</div>
+              <div style="margin-top:0.5rem;font-size:0.7rem;color:#685F56;">Margaret, 74 · Ohio</div>
+            </div>
+            <div style="background:#fff;border-left:4px solid #A83E3E;padding:1rem;">
+              <div style="font-size:0.65rem;color:#A83E3E;font-weight:700;letter-spacing:0.12em;margin-bottom:0.3rem;">VOICES · 02</div>
+              <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:1rem;color:#1E3A5F;line-height:1.45;">"My father never told me what he saw here. Now I think I understand why."</div>
+              <div style="margin-top:0.5rem;font-size:0.7rem;color:#685F56;">James, 62 · Winchester</div>
+            </div>
           </div>
         </div>
       </div>
