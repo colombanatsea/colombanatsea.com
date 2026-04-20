@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neptune Landing · Étude de nommage et stratégie de lancement digital</title>
+<meta name="description" content="Trois directions visuelles proposées pour le design system de Neptune Landing. Document préparé pour Nelly, dirigeante du projet.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="author" content="VAIATA Dynamics">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23E03C31'/%3E%3Ctext x='16' y='22' font-family='Arial Black' font-size='18' font-weight='900' fill='white' text-anchor='middle'%3EVD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* Base reset and utilities                                                */
+/* ═══════════════════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px; line-height: 1.6; color: #1a1a1a; background: #ffffff;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; display: block; }
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* Page header                                                             */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.page-header {
+  padding: 5rem 2rem 3rem;
+  text-align: center;
+  border-bottom: 1px solid #e4e4ea;
+  background: #fafafb;
+}
+.page-header .eyebrow {
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #2A55B3; margin-bottom: 1rem;
+}
+.page-header h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 400;
+  line-height: 1.1; color: #0F0F0F; margin-bottom: 1rem;
+}
+.page-header h1 em { color: #2A55B3; font-style: italic; }
+.page-header .subtitle {
+  font-size: 1.1rem; color: #5C5C6E;
+  max-width: 650px; margin: 0 auto 2rem; line-height: 1.5;
+}
+.page-header .meta { font-size: 0.85rem; color: #8a8a95; font-style: italic; }
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* Navigation secondaire                                                   */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.nav-directions {
+  display: flex; justify-content: center; gap: 0;
+  border-bottom: 1px solid #e4e4ea; background: #fff;
+  position: sticky; top: 0; z-index: 10;
+}
+.nav-directions a {
+  padding: 1.25rem 2rem; text-decoration: none; color: #5C5C6E;
+  font-size: 0.9rem; font-weight: 500; letter-spacing: 0.02em;
+  border-bottom: 2px solid transparent; transition: all 0.2s ease;
+}
+.nav-directions a:hover { color: #2A55B3; border-bottom-color: #2A55B3; }
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* Sections : structure générique                                          */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.direction {
+  padding: 6rem 2rem;
+  position: relative;
+}
+.direction .container { max-width: 1100px; margin: 0 auto; }
+.direction-header { margin-bottom: 4rem; padding-bottom: 2.5rem; }
+.direction-label {
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; margin-bottom: 1.25rem;
+}
+.direction-title {
+  font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 400;
+  line-height: 1.1; margin-bottom: 1.25rem;
+}
+.direction-intention {
+  font-style: italic; font-size: 1.25rem; line-height: 1.5;
+  max-width: 650px; padding-left: 1.5rem; border-left: 2px solid currentColor;
+}
+.direction-description {
+  font-size: 1.05rem; line-height: 1.65; max-width: 700px;
+  margin-top: 2rem; opacity: 0.85;
+}
+
+/* Grilles d'affichage */
+.spec-grid {
+  display: grid; grid-template-columns: 240px 1fr; gap: 3rem;
+  margin: 3.5rem 0; padding: 3rem 0;
+  border-top: 1px solid currentColor; opacity: 0.97;
+}
+.spec-label {
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em;
+  text-transform: uppercase; padding-top: 0.25rem;
+}
+.spec-content { font-size: 1rem; line-height: 1.65; }
+
+/* Palette */
+.palette { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; }
+.swatch {
+  padding: 1.5rem 1.25rem; border-radius: 4px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  min-height: 150px;
+}
+.swatch-hex { font-family: 'Inter', monospace; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.25rem; }
+.swatch-name { font-size: 0.8rem; opacity: 0.9; }
+.swatch-role { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; opacity: 0.6; }
+
+/* Type samples */
+.type-sample { margin: 2.5rem 0; padding-bottom: 2rem; }
+.type-sample + .type-sample { border-top: 1px solid rgba(0,0,0,0.08); padding-top: 2rem; }
+.type-display { margin-bottom: 1rem; }
+.type-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+  opacity: 0.6;
+}
+
+/* Hero mockup (aperçu composé) */
+.hero-mockup {
+  padding: 4rem 3rem; border-radius: 8px; margin-top: 2rem;
+  position: relative; overflow: hidden;
+  min-height: 400px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.hero-eyebrow {
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; margin-bottom: 1.25rem;
+}
+.hero-title {
+  font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1;
+  margin-bottom: 1.25rem; max-width: 700px;
+}
+.hero-description {
+  font-size: 1.05rem; line-height: 1.55; max-width: 560px;
+  margin-bottom: 2rem; opacity: 0.85;
+}
+.hero-cta {
+  display: inline-block; padding: 0.9rem 1.75rem;
+  font-size: 0.95rem; font-weight: 500; letter-spacing: 0.02em;
+  text-decoration: none; cursor: pointer; border: none;
+  transition: all 0.2s ease;
+}
+
+/* Card preview */
+.card-preview {
+  padding: 2rem; border-radius: 8px; margin-top: 1.5rem;
+  max-width: 360px;
+}
+.card-label {
+  font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+  margin-bottom: 0.75rem; opacity: 0.7;
+}
+.card-title { font-size: 1.35rem; line-height: 1.25; margin-bottom: 0.75rem; }
+.card-body { font-size: 0.95rem; line-height: 1.55; opacity: 0.85; }
+.card-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 1.5rem; padding-top: 1rem;
+  font-size: 0.85rem;
+}
+
+/* Mood board */
+.mood-board { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.mood-tile {
+  aspect-ratio: 4 / 5; padding: 1.25rem; border-radius: 4px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  font-size: 0.85rem; line-height: 1.4;
+}
+.mood-tile-label { font-weight: 600; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.4rem; opacity: 0.9; }
+
+/* Refs visuelles */
+.refs { margin-top: 2rem; font-size: 0.9rem; line-height: 1.7; opacity: 0.75; }
+.refs strong { display: inline-block; min-width: 100px; opacity: 0.9; }
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* DIRECTION 1 — AMIRAUTÉ                                                  */
+/* Bleu marine amiral, or vieilli, blanc cassé                             */
+/* Playfair Display + Source Sans 3                                        */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.direction-amiraute {
+  background: #F7F2E7;
+  color: #1A1A1A;
+  font-family: 'Source Sans 3', sans-serif;
+}
+.direction-amiraute .direction-label { color: #C9A15A; }
+.direction-amiraute .direction-title,
+.direction-amiraute .type-display,
+.direction-amiraute .hero-title,
+.direction-amiraute .card-title,
+.direction-amiraute h3.section-title {
+  font-family: 'Playfair Display', serif;
+}
+.direction-amiraute .direction-title { color: #1B2F4A; }
+.direction-amiraute .direction-intention { color: #1B2F4A; border-color: #C9A15A; font-family: 'Playfair Display', serif; }
+.direction-amiraute .direction-header { border-bottom: 1px solid #C9A15A; }
+.direction-amiraute .spec-grid { border-color: rgba(27, 47, 74, 0.2); }
+.direction-amiraute .spec-label { color: #C9A15A; }
+h3.section-title {
+  font-size: 1.75rem; margin-bottom: 1.5rem;
+  font-family: inherit; font-weight: 400; line-height: 1.2;
+}
+.direction-amiraute h3.section-title { color: #1B2F4A; }
+
+.direction-amiraute .hero-mockup {
+  background: #1B2F4A; color: #F7F2E7;
+  border: 1px solid #C9A15A;
+}
+.direction-amiraute .hero-mockup::before {
+  content: ''; position: absolute; top: 1rem; left: 1rem; right: 1rem; bottom: 1rem;
+  border: 1px solid rgba(201, 161, 90, 0.3); pointer-events: none;
+}
+.direction-amiraute .hero-eyebrow { color: #C9A15A; }
+.direction-amiraute .hero-title { font-family: 'Playfair Display', serif; font-weight: 400; }
+.direction-amiraute .hero-description { color: rgba(247, 242, 231, 0.85); font-family: 'Source Sans 3', sans-serif; }
+.direction-amiraute .hero-cta {
+  background: transparent; color: #F7F2E7;
+  border: 1px solid #C9A15A; letter-spacing: 0.1em;
+  text-transform: uppercase; font-size: 0.8rem;
+  padding: 1rem 2rem;
+}
+.direction-amiraute .hero-cta:hover { background: #C9A15A; color: #1B2F4A; }
+
+.direction-amiraute .card-preview { background: #fff; border: 1px solid rgba(27, 47, 74, 0.15); }
+.direction-amiraute .card-label { color: #C9A15A; }
+.direction-amiraute .card-title { color: #1B2F4A; font-family: 'Playfair Display', serif; }
+.direction-amiraute .card-footer { border-top: 1px solid rgba(27, 47, 74, 0.1); color: #5A6470; }
+
+.direction-amiraute .mood-tile { background: #1B2F4A; color: #F7F2E7; border: 1px solid #C9A15A; }
+.direction-amiraute .mood-tile:nth-child(2) { background: #5A6470; }
+.direction-amiraute .mood-tile:nth-child(3) { background: #8B2635; }
+.direction-amiraute .mood-tile:nth-child(4) { background: #F7F2E7; color: #1B2F4A; border-color: rgba(27, 47, 74, 0.2); }
+
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* DIRECTION 2 — CLAIRIÈRE                                                 */
+/* Bleu atlantique, sable doux, blanc pur                                  */
+/* Fraunces + Inter                                                        */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.direction-clairiere {
+  background: #FFFFFF;
+  color: #0F1419;
+  font-family: 'Inter', sans-serif;
+}
+.direction-clairiere .direction-label { color: #4A7043; }
+.direction-clairiere .direction-title,
+.direction-clairiere .type-display,
+.direction-clairiere .hero-title,
+.direction-clairiere .card-title,
+.direction-clairiere h3.section-title {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'SOFT' 0, 'WONK' 0;
+}
+.direction-clairiere .direction-title { color: #2A5C82; font-weight: 600; }
+.direction-clairiere .direction-intention { color: #2A5C82; border-color: #4A7043; font-family: 'Fraunces', serif; font-weight: 400; }
+.direction-clairiere .direction-header { border-bottom: 1px solid rgba(42, 92, 130, 0.2); }
+.direction-clairiere .spec-grid { border-color: rgba(42, 92, 130, 0.15); }
+.direction-clairiere .spec-label { color: #4A7043; }
+.direction-clairiere h3.section-title { color: #2A5C82; font-weight: 600; }
+
+.direction-clairiere .hero-mockup {
+  background: linear-gradient(135deg, #2A5C82 0%, #1a4162 100%);
+  color: #ffffff;
+  border-radius: 12px;
+}
+.direction-clairiere .hero-eyebrow { color: #E8DCC4; }
+.direction-clairiere .hero-title { font-family: 'Fraunces', serif; font-weight: 600; }
+.direction-clairiere .hero-description { color: rgba(255, 255, 255, 0.88); }
+.direction-clairiere .hero-cta {
+  background: #4A7043; color: #fff;
+  border-radius: 6px; font-weight: 500;
+}
+.direction-clairiere .hero-cta:hover { background: #3d5f37; transform: translateY(-1px); }
+
+.direction-clairiere .card-preview { background: #E8DCC4; border-radius: 12px; }
+.direction-clairiere .card-label { color: #4A7043; font-weight: 600; }
+.direction-clairiere .card-title { color: #2A5C82; font-weight: 600; }
+.direction-clairiere .card-body { color: #0F1419; }
+.direction-clairiere .card-footer { border-top: 1px solid rgba(42, 92, 130, 0.15); color: #647685; }
+
+.direction-clairiere .mood-tile { border-radius: 12px; }
+.direction-clairiere .mood-tile:nth-child(1) { background: #2A5C82; color: #fff; }
+.direction-clairiere .mood-tile:nth-child(2) { background: #E8DCC4; color: #2A5C82; }
+.direction-clairiere .mood-tile:nth-child(3) { background: #4A7043; color: #fff; }
+.direction-clairiere .mood-tile:nth-child(4) { background: #fff; color: #2A5C82; border: 1px solid #E8DCC4; }
+
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* DIRECTION 3 — PHARE                                                     */
+/* Bleu crépuscule, orange doux, crème                                     */
+/* DM Serif Display + DM Sans                                              */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.direction-phare {
+  background: #F5EFE6;
+  color: #3D3936;
+  font-family: 'DM Sans', sans-serif;
+}
+.direction-phare .direction-label { color: #D67A3A; font-weight: 700; }
+.direction-phare .direction-title,
+.direction-phare .type-display,
+.direction-phare .hero-title,
+.direction-phare .card-title,
+.direction-phare h3.section-title {
+  font-family: 'DM Serif Display', serif;
+}
+.direction-phare .direction-title { color: #1E3A5F; }
+.direction-phare .direction-intention { color: #1E3A5F; border-color: #D67A3A; font-family: 'DM Serif Display', serif; font-size: 1.5rem; }
+.direction-phare .direction-header { border-bottom: 2px solid #D67A3A; }
+.direction-phare .spec-grid { border-color: rgba(30, 58, 95, 0.2); }
+.direction-phare .spec-label { color: #D67A3A; }
+.direction-phare h3.section-title { color: #1E3A5F; }
+
+.direction-phare .hero-mockup {
+  background: #1E3A5F; color: #F5EFE6;
+  position: relative;
+}
+.direction-phare .hero-mockup::after {
+  content: ''; position: absolute; top: 0; right: 0; width: 180px; height: 180px;
+  background: radial-gradient(circle, #D67A3A 0%, transparent 70%);
+  opacity: 0.4;
+}
+.direction-phare .hero-eyebrow { color: #D67A3A; font-weight: 700; }
+.direction-phare .hero-title { font-family: 'DM Serif Display', serif; font-weight: 400; }
+.direction-phare .hero-description { color: rgba(245, 239, 230, 0.92); font-family: 'DM Sans', sans-serif; }
+.direction-phare .hero-cta {
+  background: #A0541F; color: #fff;
+  font-weight: 500; font-size: 1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 0 #7A3F14;
+  transition: all 0.1s ease;
+}
+.direction-phare .hero-cta:hover { transform: translateY(1px); box-shadow: 0 2px 0 #7A3F14; }
+
+.direction-phare .card-preview { background: #fff; border-left: 4px solid #D67A3A; border-radius: 0; }
+.direction-phare .card-label { color: #D67A3A; font-weight: 700; }
+.direction-phare .card-title { color: #1E3A5F; font-family: 'DM Serif Display', serif; font-weight: 400; }
+.direction-phare .card-body { color: #3D3936; font-style: italic; font-size: 1.05rem; }
+.direction-phare .card-footer { border-top: 1px solid rgba(61, 57, 54, 0.15); color: #685F56; }
+
+.direction-phare .mood-tile { background: #1E3A5F; color: #F5EFE6; }
+.direction-phare .mood-tile:nth-child(2) { background: #D67A3A; color: #fff; }
+.direction-phare .mood-tile:nth-child(3) { background: #A83E3E; color: #fff; }
+.direction-phare .mood-tile:nth-child(4) { background: #F5EFE6; color: #1E3A5F; border: 1px solid rgba(30, 58, 95, 0.15); }
+
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* Comparison table                                                        */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.comparison {
+  padding: 6rem 2rem;
+  background: #fff;
+  border-top: 1px solid #e4e4ea;
+}
+.comparison .container { max-width: 1100px; margin: 0 auto; }
+.comparison h2 {
+  font-family: Georgia, serif;
+  font-size: 2.5rem; font-weight: 400;
+  color: #0F0F0F; margin-bottom: 1rem;
+}
+.comparison .lead { font-size: 1.05rem; color: #5C5C6E; max-width: 700px; margin-bottom: 3rem; line-height: 1.6; }
+
+.comparison-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+.comparison-table th, .comparison-table td {
+  padding: 1.25rem 1rem; text-align: left; vertical-align: top;
+  border-bottom: 1px solid #e4e4ea;
+}
+.comparison-table th {
+  background: #2A55B3; color: #fff;
+  font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.comparison-table th:not(:first-child) { text-align: center; }
+.comparison-table td:not(:first-child) { text-align: center; }
+.comparison-table td:first-child { font-weight: 600; color: #2A55B3; }
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* Footer                                                                  */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.page-footer {
+  padding: 3rem 2rem; text-align: center;
+  font-size: 0.85rem; color: #5C5C6E;
+  border-top: 1px solid #e4e4ea; background: #fafafb;
+}
+.page-footer .signature {
+  font-family: Georgia, serif; font-style: italic;
+  font-size: 1rem; color: #2A55B3; margin-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .spec-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .direction { padding: 4rem 1.25rem; }
+  .hero-mockup { padding: 2.5rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- Page header                                                             -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<header class="page-header">
+  <div class="eyebrow">Document complémentaire au dossier de mission</div>
+  <h1>Neptune Landing<br><em>Étude de nommage et stratégie de lancement digital</em></h1>
+  <p class="subtitle">Aperçu interactif des trois directions proposées pour le design system. Chaque direction incarne un positionnement de marque distinct.</p>
+  <p class="meta">Préparé pour Nelly · Dimanche 19 avril 2026</p>
+</header>
+
+<!-- Navigation -->
+<nav class="nav-directions">
+  <a href="#amiraute">Direction 1 · Amirauté</a>
+  <a href="#clairiere">Direction 2 · Clairière</a>
+  <a href="#phare">Direction 3 · Phare</a>
+  <a href="#comparaison">Comparer</a>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- DIRECTION 1 — AMIRAUTÉ                                                   -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<section class="direction direction-amiraute" id="amiraute">
+  <div class="container">
+
+    <div class="direction-header">
+      <div class="direction-label">Direction 01</div>
+      <h2 class="direction-title">Amirauté</h2>
+      <p class="direction-intention">« Pour un visiteur qui entre dans la cathédrale avant de prendre la mer. »</p>
+      <p class="direction-description">Institution, autorité, héritage. Neptune Landing devient une institution mémorielle privée, pas une excursion touristique. Parallèles : Mémorial de Caen, Imperial War Museum, Musée de l'Armée, American Battle Monuments Commission.</p>
+    </div>
+
+    <!-- Palette -->
+    <div class="spec-grid">
+      <div class="spec-label">Palette</div>
+      <div class="spec-content">
+        <div class="palette">
+          <div class="swatch" style="background:#1B2F4A;color:#F7F2E7;">
+            <div class="swatch-role">Primaire</div>
+            <div class="swatch-hex">#1B2F4A</div>
+            <div class="swatch-name">Bleu marine amiral</div>
+          </div>
+          <div class="swatch" style="background:#C9A15A;color:#1B2F4A;">
+            <div class="swatch-role">Accent</div>
+            <div class="swatch-hex">#C9A15A</div>
+            <div class="swatch-name">Or vieilli</div>
+          </div>
+          <div class="swatch" style="background:#F7F2E7;color:#1B2F4A;border:1px solid rgba(27,47,74,0.15);">
+            <div class="swatch-role">Fond</div>
+            <div class="swatch-hex">#F7F2E7</div>
+            <div class="swatch-name">Blanc cassé ivoire</div>
+          </div>
+          <div class="swatch" style="background:#1A1A1A;color:#F7F2E7;">
+            <div class="swatch-role">Texte</div>
+            <div class="swatch-hex">#1A1A1A</div>
+            <div class="swatch-name">Noir anthracite</div>
+          </div>
+          <div class="swatch" style="background:#5A6470;color:#F7F2E7;">
+            <div class="swatch-role">Secondaire</div>
+            <div class="swatch-hex">#5A6470</div>
+            <div class="swatch-name">Gris ardoise</div>
+          </div>
+          <div class="swatch" style="background:#8B2635;color:#F7F2E7;">
+            <div class="swatch-role">Critique</div>
+            <div class="swatch-hex">#8B2635</div>
+            <div class="swatch-name">Bordeaux profond</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Typographie -->
+    <div class="spec-grid">
+      <div class="spec-label">Typographie</div>
+      <div class="spec-content">
+        <div class="type-sample">
+          <div class="type-display" style="font-family:'Playfair Display',serif;font-size:3.5rem;line-height:1.1;color:#1B2F4A;">Neptune Landing</div>
+          <div class="type-meta">Playfair Display · Titres · 400 / 700</div>
+        </div>
+        <div class="type-sample">
+          <div class="type-display" style="font-family:'Playfair Display',serif;font-size:1.75rem;line-height:1.25;color:#1B2F4A;font-style:italic;">Embark at dawn, 82 years after Operation Neptune.</div>
+          <div class="type-meta">Playfair Display italic · Sous-titres · 400 italic</div>
+        </div>
+        <div class="type-sample">
+          <p style="font-family:'Source Sans 3',sans-serif;font-size:1.1rem;line-height:1.65;max-width:620px;">Entre le 6 juin et le 31 octobre 1944, le port artificiel Mulberry B a acheminé plus de 2,5 millions d'hommes, 500 000 véhicules et 4 millions de tonnes de matériel vers les plages de Normandie.</p>
+          <div class="type-meta" style="margin-top:0.75rem;">Source Sans 3 · Corps · 300 / 400 / 600</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero mockup -->
+    <div class="spec-grid">
+      <div class="spec-label">Hero</div>
+      <div class="spec-content">
+        <div class="hero-mockup">
+          <div class="hero-eyebrow">OPERATION NEPTUNE · ARROMANCHES</div>
+          <h3 class="hero-title">Experience D-Day from the sea, eighty-two years on.</h3>
+          <p class="hero-description">Board your amphibious craft at Cale Neptune. Trace the wake of the first Allied wave across Gold Beach.</p>
+          <a href="#" class="hero-cta">Reserve your crossing</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card & mood board -->
+    <div class="spec-grid">
+      <div class="spec-label">Composants</div>
+      <div class="spec-content">
+        <h3 class="section-title" style="font-size:1.25rem;margin-bottom:1rem;">Carte éditoriale</h3>
+        <div class="card-preview">
+          <div class="card-label">CHAPITRE III</div>
+          <h4 class="card-title">The Mulberry Harbour</h4>
+          <p class="card-body">A portable port, engineered in six months, carried across the Channel in sections, assembled off Arromanches.</p>
+          <div class="card-footer">
+            <span>7 min read</span>
+            <span>→</span>
+          </div>
+        </div>
+
+        <h3 class="section-title" style="font-size:1.25rem;margin:2.5rem 0 1rem;">Ambiance photographique</h3>
+        <div class="mood-board">
+          <div class="mood-tile">
+            <div class="mood-tile-label">Archive 1944</div>
+            Noir et blanc haut contraste, grain léger, profondeur historique
+          </div>
+          <div class="mood-tile">
+            <div class="mood-tile-label">Matière minérale</div>
+            Détails de caissons Phoenix, béton, oxydation, textures
+          </div>
+          <div class="mood-tile">
+            <div class="mood-tile-label">Geste solennel</div>
+            Portraits de dos, ciel couvert, figures en contre-jour
+          </div>
+          <div class="mood-tile">
+            <div class="mood-tile-label">Objet institutionnel</div>
+            Décorations, livres, cartes anciennes, traitement muséal
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Refs -->
+    <div class="spec-grid">
+      <div class="spec-label">Références</div>
+      <div class="spec-content refs">
+        <p><strong>Web</strong> Mémorial de Caen, Imperial War Museum (rebrand 2022), Musée de l'Armée (Paris), Royal Museum Greenwich, Normandie pour la Paix.</p>
+        <p style="margin-top:0.75rem;"><strong>Édition</strong> Smithsonian Magazine, Le Monde Hors-série, Historia Magazine, BBC History.</p>
+        <p style="margin-top:0.75rem;"><strong>Risque</strong> Peut sembler trop formel pour une clientèle familiale. À réserver si positionnement premium institutionnel confirmé.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- DIRECTION 2 — CLAIRIÈRE                                                   -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<section class="direction direction-clairiere" id="clairiere">
+  <div class="container">
+
+    <div class="direction-header">
+      <div class="direction-label">Direction 02</div>
+      <h2 class="direction-title">Clairière</h2>
+      <p class="direction-intention">« Pour un visiteur qui traverse une plage baignée de lumière, 82 ans après. »</p>
+      <p class="direction-description">Contemporaine, lumineuse, accessible. Neptune Landing devient une expérience moderne qui honore le passé sans le sacraliser. Parallèles : National Trust UK, Visit Britain, Juno Beach Centre, Louvre-Lens.</p>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Palette</div>
+      <div class="spec-content">
+        <div class="palette">
+          <div class="swatch" style="background:#2A5C82;color:#fff;">
+            <div class="swatch-role">Primaire</div>
+            <div class="swatch-hex">#2A5C82</div>
+            <div class="swatch-name">Bleu atlantique</div>
+          </div>
+          <div class="swatch" style="background:#E8DCC4;color:#2A5C82;">
+            <div class="swatch-role">Secondaire</div>
+            <div class="swatch-hex">#E8DCC4</div>
+            <div class="swatch-name">Sable doux</div>
+          </div>
+          <div class="swatch" style="background:#FFFFFF;color:#2A5C82;border:1px solid #e4e4ea;">
+            <div class="swatch-role">Fond</div>
+            <div class="swatch-hex">#FFFFFF</div>
+            <div class="swatch-name">Blanc pur</div>
+          </div>
+          <div class="swatch" style="background:#4A7043;color:#fff;">
+            <div class="swatch-role">Accent</div>
+            <div class="swatch-hex">#4A7043</div>
+            <div class="swatch-name">Vert mousse</div>
+          </div>
+          <div class="swatch" style="background:#0F1419;color:#fff;">
+            <div class="swatch-role">Texte</div>
+            <div class="swatch-hex">#0F1419</div>
+            <div class="swatch-name">Noir profond</div>
+          </div>
+          <div class="swatch" style="background:#647685;color:#fff;">
+            <div class="swatch-role">Secondaire</div>
+            <div class="swatch-hex">#647685</div>
+            <div class="swatch-name">Gris frais</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Typographie</div>
+      <div class="spec-content">
+        <div class="type-sample">
+          <div class="type-display" style="font-family:'Fraunces',serif;font-size:4rem;line-height:1.1;color:#2A5C82;font-weight:600;">Neptune Landing</div>
+          <div class="type-meta">Fraunces · Titres · 400 / 600 / 700 variable</div>
+        </div>
+        <div class="type-sample">
+          <div class="type-display" style="font-family:'Fraunces',serif;font-size:1.75rem;line-height:1.25;color:#2A5C82;font-weight:400;font-style:italic;">The sea remembers what the land forgets.</div>
+          <div class="type-meta">Fraunces italic · Accroche · 400 italic</div>
+        </div>
+        <div class="type-sample">
+          <p style="font-family:'Inter',sans-serif;font-size:1.125rem;line-height:1.65;max-width:620px;color:#0F1419;">Depart from Arromanches at high tide. Trace the arc of Mulberry B, approach the Phoenix caissons, feel the rise and fall of eighty summers. Forty-five minutes, one perspective.</p>
+          <div class="type-meta" style="margin-top:0.75rem;">Inter · Corps · 300 / 400 / 500 / 600</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Hero</div>
+      <div class="spec-content">
+        <div class="hero-mockup">
+          <div class="hero-eyebrow">D-DAY FROM THE SEA</div>
+          <h3 class="hero-title">A quiet crossing, eighty-two summers later.</h3>
+          <p class="hero-description">A 45-minute memorial tour aboard an amphibious craft. Departs from Cale Neptune, Arromanches. English commentary available.</p>
+          <a href="#" class="hero-cta">Book your tour →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Composants</div>
+      <div class="spec-content">
+        <h3 class="section-title" style="font-size:1.25rem;margin-bottom:1rem;">Carte tourisme</h3>
+        <div class="card-preview">
+          <div class="card-label">FAMILY TOUR</div>
+          <h4 class="card-title">Mulberry Harbour, up close</h4>
+          <p class="card-body">Approach the engineering marvel that changed the course of the war. Kids welcome. Commentary in 4 languages.</p>
+          <div class="card-footer">
+            <span>From €18 · 45 min</span>
+            <span>Book →</span>
+          </div>
+        </div>
+
+        <h3 class="section-title" style="font-size:1.25rem;margin:2.5rem 0 1rem;">Ambiance photographique</h3>
+        <div class="mood-board">
+          <div class="mood-tile">
+            <div class="mood-tile-label">Lumière d'été</div>
+            Ciels clairs, reflets dorés sur la mer, lumière naturelle vivante
+          </div>
+          <div class="mood-tile">
+            <div class="mood-tile-label">Instant simple</div>
+            Main sur la rambarde, vue sur les caissons, plans moyens
+          </div>
+          <div class="mood-tile">
+            <div class="mood-tile-label">Actions douces</div>
+            Famille à bord, geste d'écoute d'audioguide, rire adolescent
+          </div>
+          <div class="mood-tile">
+            <div class="mood-tile-label">Matière naturelle</div>
+            Algues, sable sculpté, vague mousseuse, bois flotté
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Références</div>
+      <div class="spec-content refs">
+        <p><strong>Web</strong> National Trust UK (2017+), Juno Beach Centre (2024), Louvre-Lens, Museum of the Home London, Rijksmuseum (refonte 2021).</p>
+        <p style="margin-top:0.75rem;"><strong>Édition</strong> Kinfolk Magazine, Condé Nast Traveler, Visit Britain éditions.</p>
+        <p style="margin-top:0.75rem;"><strong>Risque</strong> Peut sembler trop générique, proche de beaucoup d'autres offices de tourisme. À sécuriser par une forte direction photo propriétaire.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- DIRECTION 3 — PHARE                                                       -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<section class="direction direction-phare" id="phare">
+  <div class="container">
+
+    <div class="direction-header">
+      <div class="direction-label">Direction 03</div>
+      <h2 class="direction-title">Phare</h2>
+      <p class="direction-intention">« Pour un visiteur qui cherche un visage humain derrière un drapeau. »</p>
+      <p class="direction-description">Chaleureuse, narrative, humaine. Neptune Landing devient une expérience d'histoire incarnée, portée par des visages et des voix. Parallèles : Stories HBO, Magnum Photos éditorial, The Moth Radio Hour, StoryCorps, Normandy Stories.</p>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Palette</div>
+      <div class="spec-content">
+        <div class="palette">
+          <div class="swatch" style="background:#1E3A5F;color:#F5EFE6;">
+            <div class="swatch-role">Primaire</div>
+            <div class="swatch-hex">#1E3A5F</div>
+            <div class="swatch-name">Bleu crépuscule</div>
+          </div>
+          <div class="swatch" style="background:#D67A3A;color:#fff;">
+            <div class="swatch-role">Accent</div>
+            <div class="swatch-hex">#D67A3A</div>
+            <div class="swatch-name">Orange doux</div>
+          </div>
+          <div class="swatch" style="background:#F5EFE6;color:#1E3A5F;border:1px solid rgba(30,58,95,0.15);">
+            <div class="swatch-role">Fond</div>
+            <div class="swatch-hex">#F5EFE6</div>
+            <div class="swatch-name">Crème</div>
+          </div>
+          <div class="swatch" style="background:#A83E3E;color:#fff;">
+            <div class="swatch-role">Ponctuel</div>
+            <div class="swatch-hex">#A83E3E</div>
+            <div class="swatch-name">Rouge profond</div>
+          </div>
+          <div class="swatch" style="background:#3D3936;color:#F5EFE6;">
+            <div class="swatch-role">Texte</div>
+            <div class="swatch-hex">#3D3936</div>
+            <div class="swatch-name">Gris chaleureux</div>
+          </div>
+          <div class="swatch" style="background:#685F56;color:#F5EFE6;">
+            <div class="swatch-role">Secondaire</div>
+            <div class="swatch-hex">#685F56</div>
+            <div class="swatch-name">Gris ardoise</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Typographie</div>
+      <div class="spec-content">
+        <div class="type-sample">
+          <div class="type-display" style="font-family:'DM Serif Display',serif;font-size:4.5rem;line-height:1.05;color:#1E3A5F;">Neptune Landing</div>
+          <div class="type-meta">DM Serif Display · Titres · Regular / Italic</div>
+        </div>
+        <div class="type-sample">
+          <div class="type-display" style="font-family:'DM Serif Display',serif;font-size:1.85rem;line-height:1.2;color:#1E3A5F;font-style:italic;">They came at dawn. You come at peace.</div>
+          <div class="type-meta">DM Serif Display italic · Slogans · Italic</div>
+        </div>
+        <div class="type-sample">
+          <p style="font-family:'DM Sans',sans-serif;font-size:1.15rem;line-height:1.7;max-width:620px;color:#3D3936;">Mon grand-père a débarqué ici le matin du 6 juin 1944. Il n'en a presque jamais parlé. Aujourd'hui, 82 ans plus tard, je prends la même cale. Le silence entre nous s'est rétréci.</p>
+          <div class="type-meta" style="margin-top:0.75rem;">DM Sans · Corps · 300 / 400 / 500 / 700</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Hero</div>
+      <div class="spec-content">
+        <div class="hero-mockup">
+          <div class="hero-eyebrow">CROSS THE SILENCE</div>
+          <h3 class="hero-title">They came at dawn, under fire. You come at peace, eighty-two years later.</h3>
+          <p class="hero-description">Same cale. Same wave. One silence between you. A 45-minute passage to meet the story that made us free.</p>
+          <a href="#" class="hero-cta">Begin your passage</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Composants</div>
+      <div class="spec-content">
+        <h3 class="section-title" style="font-size:1.25rem;margin-bottom:1rem;">Citation incarnée</h3>
+        <div class="card-preview">
+          <div class="card-label">VOICES · 01</div>
+          <h4 class="card-title">Margaret, 74</h4>
+          <p class="card-body">"I thought I was here to see a beach. I leave with my father's voice back in my ears."</p>
+          <div class="card-footer">
+            <span>Daughter of a 1944 veteran</span>
+            <span>Ohio, USA</span>
+          </div>
+        </div>
+
+        <h3 class="section-title" style="font-size:1.25rem;margin:2.5rem 0 1rem;">Ambiance photographique</h3>
+        <div class="mood-board">
+          <div class="mood-tile">
+            <div class="mood-tile-label">Visage qui se souvient</div>
+            Portrait frontal, lumière latérale chaude, grain filmique
+          </div>
+          <div class="mood-tile">
+            <div class="mood-tile-label">Détail narratif</div>
+            Mains qui tiennent une photo d'archive, médaille, carnet
+          </div>
+          <div class="mood-tile">
+            <div class="mood-tile-label">Émotion discrète</div>
+            Regard qui se perd vers la mer, silhouette dans le contre-jour
+          </div>
+          <div class="mood-tile">
+            <div class="mood-tile-label">Lumière d'heure dorée</div>
+            Couchers de soleil sur les caissons, marée basse poétique
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-label">Références</div>
+      <div class="spec-content refs">
+        <p><strong>Web</strong> Stories HBO, National Geographic digital, The Atlantic longform, StoryCorps.org, California Sunday Magazine, Magnum Photos.</p>
+        <p style="margin-top:0.75rem;"><strong>Édition</strong> Time Magazine photo essays, Le Pèlerin, LIFE archives.</p>
+        <p style="margin-top:0.75rem;"><strong>Risque</strong> Peut basculer vers le kitsch mémoriel si la direction photo n'est pas tenue par un photographe pro. À sécuriser en ligne éditoriale écrite.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- Comparaison                                                             -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<section class="comparison" id="comparaison">
+  <div class="container">
+    <h2>Aide au choix</h2>
+    <p class="lead">Les trois directions ne sont pas interchangeables. Elles incarnent trois positionnements de marque distincts. Le choix est autant une décision esthétique qu'une prise de position commerciale.</p>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Critère</th>
+          <th>Amirauté</th>
+          <th>Clairière</th>
+          <th>Phare</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Public cible</td>
+          <td>Descendants premium, institutionnel</td>
+          <td>Tourisme famille contemporain</td>
+          <td>Voyageur émotionnel</td>
+        </tr>
+        <tr>
+          <td>Positionnement prix</td>
+          <td>Premium tendu</td>
+          <td>Moyen tendu</td>
+          <td>Flexible selon récit</td>
+        </tr>
+        <tr>
+          <td>Risque principal</td>
+          <td>Trop sérieux</td>
+          <td>Trop générique</td>
+          <td>Trop kitsch mémoriel</td>
+        </tr>
+        <tr>
+          <td>Effet UNESCO</td>
+          <td>Magnifie</td>
+          <td>Neutre</td>
+          <td>Amplifie</td>
+        </tr>
+        <tr>
+          <td>Durée de vie</td>
+          <td>10+ ans</td>
+          <td>5 à 7 ans</td>
+          <td>7 à 10 ans</td>
+        </tr>
+        <tr>
+          <td>Tonalité commerciale</td>
+          <td>Autoritaire, magistrale</td>
+          <td>Chaleureuse, contemporaine</td>
+          <td>Intime, narrative</td>
+        </tr>
+        <tr>
+          <td>Difficulté de production photo</td>
+          <td>Moyenne (archives + N&B)</td>
+          <td>Faible (stock + briefs simples)</td>
+          <td>Haute (photographe pro nécessaire)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top:2.5rem;font-size:1rem;line-height:1.6;color:#5C5C6E;max-width:700px;">Si tu hésites, regarde une heure d'interview de Bertrand Tavernier sur <em>Laissez-passer</em> et une heure de documentaire Arte sur les vétérans. La voix qui te touche le plus indique la direction juste.</p>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="page-footer">
+  <div>Neptune Landing · Document préparatoire · Avril 2026</div>
+  <div class="signature">VAIATA Dynamics · contact@vaiata-dynamics.com</div>
+</footer>
+
+</body>
+</html>
