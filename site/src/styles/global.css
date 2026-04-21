@@ -205,7 +205,9 @@ h2::after {
 /* ── LinkedIn Feed (homepage section) ── */
 .linkedin-feed {
   background: var(--blanc);
-  padding: var(--space-2xl) 0;
+  /* top padding generous to breathe; bottom small because next section
+     (.oceanocratie .section) already has --space-3xl top padding */
+  padding: var(--space-2xl) 0 var(--space-md);
 }
 
 .linkedin-feed__header {
@@ -237,7 +239,7 @@ h2::after {
 
 @media (max-width: 640px) {
   .linkedin-feed {
-    padding: var(--space-xl) 0;
+    padding: var(--space-xl) 0 var(--space-sm);
   }
   .linkedin-feed__header {
     margin-bottom: var(--space-lg);
