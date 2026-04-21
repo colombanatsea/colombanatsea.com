@@ -27,6 +27,10 @@ export const ui = {
     'footer.sources': 'Sources & données',
     'footer.tagline': 'Une nation libre regarde la mer.',
 
+    // LinkedIn feed
+    'linkedin.title': 'Sur LinkedIn',
+    'linkedin.subtitle': 'Les dernières publications de Colomban',
+
     // Common
     'common.readMore': 'En savoir plus',
     'common.download': 'Télécharger',
@@ -49,6 +53,10 @@ export const ui = {
     'footer.privacy': 'Privacy Policy',
     'footer.sources': 'Sources & Data',
     'footer.tagline': 'A free nation looks to the sea.',
+
+    // LinkedIn feed
+    'linkedin.title': 'On LinkedIn',
+    'linkedin.subtitle': 'Latest posts from Colomban',
 
     // Common
     'common.readMore': 'Read more',
