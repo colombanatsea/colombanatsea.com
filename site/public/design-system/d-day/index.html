@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>D-Day Boat · L'expérience amphibie des plages du Débarquement — Arromanches</title>
+<meta name="description" content="D-Day Boat : embarquez à bord d'un navire amphibie unique pour explorer les plages du Débarquement, les vestiges du port Mulberry d'Arromanches et revivre le 6 juin 1944 depuis la mer.">
+<meta name="keywords" content="D-Day Boat, Arromanches, Débarquement, plages Normandie, port Mulberry, bateau amphibie, tourisme mémoriel, 6 juin 1944, Omaha Beach, visite Normandie">
+<meta name="author" content="Clairière — pour Nelly">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://colombanatsea.com/design-system/d-day/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://colombanatsea.com/design-system/d-day/">
+<meta property="og:title" content="D-Day Boat · L'expérience amphibie des plages du Débarquement">
+<meta property="og:description" content="Embarquez à bord d'un navire amphibie pour explorer les plages du Débarquement et les vestiges du port Mulberry d'Arromanches.">
+<meta property="og:image" content="https://colombanatsea.com/design-system/d-day/images/debarquement-arromanches.jpg">
+<meta property="og:site_name" content="D-Day Boat">
+<meta property="og:locale" content="fr_FR">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="D-Day Boat · L'expérience amphibie des plages du Débarquement">
+<meta name="twitter:description" content="Embarquez à bord d'un navire amphibie pour explorer les plages du Débarquement et les vestiges du port Mulberry.">
+<meta name="twitter:image" content="https://colombanatsea.com/design-system/d-day/images/debarquement-arromanches.jpg">
+
+<!-- Favicon (étoile dorée sur fond bleu — évoque les étoiles des véhicules Alliés) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232A5C82'/%3E%3Cpath d='M16 6l2.5 7.5H26l-6 4.5 2.5 7.5-6.5-4.5-6.5 4.5L12 18l-6-4.5h7.5z' fill='%23E8DCC4'/%3E%3C/svg%3E">
+
+<!-- Fonts (non-blocking) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+
+<!-- JSON-LD : TouristAttraction -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
+  "name": "D-Day Boat",
+  "description": "Expérience amphibie unique pour explorer les plages du Débarquement et les vestiges du port Mulberry depuis la mer et la terre.",
+  "url": "https://colombanatsea.com/design-system/d-day/",
+  "image": "https://colombanatsea.com/design-system/d-day/images/debarquement-arromanches.jpg",
+  "touristType": ["Histoire", "Mémoire", "Famille", "Scolaire"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Arromanches-les-Bains",
+    "addressRegion": "Calvados",
+    "postalCode": "14117",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 49.3397,
+    "longitude": -0.6229
+  },
+  "isAccessibleForFree": false
+}
+</script>
+
+<style>
+/* ───────────────────────────────────────────────────────────── */
+/* Clairière direction — D-Day Boat                              */
+/* Bleu atlantique · Sable doux · Vert ombre · Blanc pur          */
+/* Fraunces (serif) + Inter (sans)                                */
+/* ───────────────────────────────────────────────────────────── */
+:root {
+  --atlantic: #2A5C82;
+  --atlantic-dark: #1a4162;
+  --sable: #E8DCC4;
+  --sable-light: #F5EEDD;
+  --vert: #4A7043;
+  --vert-dark: #3d5f37;
+  --ink: #0F1419;
+  --muted: #647685;
+  --line: rgba(42, 92, 130, 0.15);
+  --radius: 12px;
+}
+
+* , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; display: block; height: auto; }
+a { color: var(--atlantic); text-decoration: none; transition: color 0.2s ease; }
+a:hover { color: var(--vert); }
+
+h1, h2, h3, .serif {
+  font-family: 'Fraunces', Georgia, serif;
+  font-variation-settings: 'SOFT' 0, 'WONK' 0;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--atlantic);
+}
+
+.container { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ─── Skip link (accessibilité) ─── */
+.skip-link {
+  position: absolute; top: -40px; left: 0;
+  background: var(--atlantic); color: #fff;
+  padding: 0.5rem 1rem; z-index: 100;
+  border-radius: 0 0 var(--radius) 0;
+}
+.skip-link:focus { top: 0; color: #fff; }
+
+/* ─── Nav ─── */
+.nav {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 1.5rem; max-width: 1180px; margin: 0 auto;
+}
+.nav__brand {
+  display: flex; align-items: center; gap: 0.6rem;
+  font-family: 'Fraunces', serif; font-weight: 700;
+  font-size: 1.15rem; color: var(--atlantic);
+}
+.nav__brand-mark {
+  width: 28px; height: 28px; border-radius: 6px;
+  background: var(--atlantic);
+  display: grid; place-items: center;
+  color: var(--sable); font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.04em;
+  font-family: 'Inter', sans-serif;
+}
+.nav__links {
+  display: flex; gap: 2rem; list-style: none;
+  font-size: 0.92rem;
+}
+.nav__links a {
+  color: var(--ink); font-weight: 500;
+}
+.nav__links a:hover { color: var(--atlantic); }
+.nav__cta {
+  background: var(--vert); color: #fff;
+  padding: 0.55rem 1.1rem; border-radius: 6px;
+  font-size: 0.88rem; font-weight: 500;
+}
+.nav__cta:hover { background: var(--vert-dark); color: #fff; }
+@media (max-width: 760px) {
+  .nav__links { display: none; }
+}
+
+/* ─── Hero ─── */
+.hero {
+  position: relative;
+  min-height: 82vh;
+  display: flex; align-items: center;
+  overflow: hidden;
+  background: var(--atlantic-dark);
+  color: #fff;
+}
+.hero__bg {
+  position: absolute; inset: 0;
+  background-image: url('images/debarquement-arromanches.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  filter: brightness(0.62) saturate(0.95);
+  z-index: 0;
+}
+.hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(26, 65, 98, 0.72) 0%, rgba(42, 92, 130, 0.45) 55%, rgba(15, 20, 25, 0.55) 100%);
+  z-index: 1;
+}
+.hero__content {
+  position: relative; z-index: 2;
+  padding: 6rem 1.5rem;
+  max-width: 900px; margin: 0 auto;
+}
+.hero__eyebrow {
+  display: inline-block;
+  font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--sable);
+  padding: 0.5rem 0.9rem;
+  border: 1px solid rgba(232, 220, 196, 0.4);
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  color: #fff; font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+.hero h1 em {
+  font-style: italic; color: var(--sable);
+  font-weight: 400;
+}
+.hero__lead {
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 640px;
+  margin-bottom: 2.5rem;
+}
+.hero__ctas {
+  display: flex; flex-wrap: wrap; gap: 1rem;
+}
+.btn {
+  display: inline-block; padding: 0.95rem 1.75rem;
+  font-size: 0.95rem; font-weight: 500;
+  border-radius: 8px; cursor: pointer;
+  border: 1px solid transparent; transition: all 0.2s ease;
+}
+.btn--primary {
+  background: var(--vert); color: #fff;
+}
+.btn--primary:hover {
+  background: var(--vert-dark); color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(74, 112, 67, 0.25);
+}
+.btn--ghost {
+  background: transparent; color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff; border-color: #fff;
+}
+
+/* ─── Section générique ─── */
+section { padding: 6rem 0; }
+@media (max-width: 760px) { section { padding: 4rem 0; } }
+
+.section__eyebrow {
+  font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--vert);
+  margin-bottom: 1rem;
+}
+.section__title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 1.5rem; max-width: 800px;
+}
+.section__title em { font-style: italic; color: var(--vert); font-weight: 400; }
+.section__lead {
+  font-size: 1.15rem; line-height: 1.6;
+  color: var(--muted); max-width: 680px;
+  margin-bottom: 3rem;
+}
+
+/* ─── Bandeau "Pitch" ─── */
+.pitch {
+  background: var(--sable-light);
+  text-align: center;
+}
+.pitch .section__lead {
+  margin-left: auto; margin-right: auto;
+  font-family: 'Fraunces', serif; font-style: italic;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  color: var(--atlantic);
+  line-height: 1.45;
+}
+
+/* ─── Split (image + texte) ─── */
+.split {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: center;
+}
+.split--reverse .split__media { order: 2; }
+.split__media {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 20px 48px -12px rgba(42, 92, 130, 0.28);
+  aspect-ratio: 4 / 3;
+  background: var(--sable);
+}
+.split__media img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.split__body h2 { margin-bottom: 1.5rem; }
+.split__body p { margin-bottom: 1rem; color: var(--ink); }
+.split__body p:last-child { margin-bottom: 0; }
+@media (max-width: 860px) {
+  .split { grid-template-columns: 1fr; gap: 2.5rem; }
+  .split--reverse .split__media { order: 0; }
+}
+
+/* ─── Piliers (3 colonnes) ─── */
+.pillars-wrap { background: var(--atlantic); color: #fff; }
+.pillars-wrap .section__eyebrow { color: var(--sable); }
+.pillars-wrap .section__title { color: #fff; }
+.pillars-wrap .section__title em { color: var(--sable); }
+.pillars-wrap .section__lead { color: rgba(255, 255, 255, 0.8); }
+.pillars {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; margin-top: 2rem;
+}
+.pillar {
+  padding: 2rem;
+  border: 1px solid rgba(232, 220, 196, 0.2);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.04);
+  transition: all 0.3s ease;
+}
+.pillar:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(232, 220, 196, 0.4);
+  transform: translateY(-4px);
+}
+.pillar__num {
+  font-family: 'Fraunces', serif;
+  font-size: 2.5rem; font-weight: 700; font-style: italic;
+  color: var(--sable); line-height: 1;
+  margin-bottom: 1rem;
+}
+.pillar h3 {
+  font-size: 1.35rem; color: #fff;
+  margin-bottom: 0.8rem;
+}
+.pillar p {
+  font-size: 0.98rem; line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+}
+@media (max-width: 860px) {
+  .pillars { grid-template-columns: 1fr; gap: 1.25rem; }
+}
+
+/* ─── Citation historique ─── */
+.quote {
+  background: var(--sable-light);
+  padding: 6rem 1.5rem;
+  text-align: center;
+}
+.quote blockquote {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  font-style: italic; font-weight: 400;
+  color: var(--atlantic);
+  max-width: 820px; margin: 0 auto 1.5rem;
+  line-height: 1.4;
+}
+.quote blockquote::before { content: '« '; color: var(--vert); }
+.quote blockquote::after { content: ' »'; color: var(--vert); }
+.quote cite {
+  font-style: normal; font-size: 0.88rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ─── Parcours (cartes) ─── */
+.routes {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem; margin-top: 2rem;
+}
+.route {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.route:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(42, 92, 130, 0.2);
+  border-color: rgba(74, 112, 67, 0.3);
+}
+.route__media {
+  aspect-ratio: 16 / 9; overflow: hidden;
+  background: var(--sable);
+}
+.route__media img { width: 100%; height: 100%; object-fit: cover; }
+.route__body { padding: 1.75rem; }
+.route__duration {
+  display: inline-block;
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--vert); margin-bottom: 0.5rem;
+}
+.route h3 {
+  font-size: 1.4rem; margin-bottom: 0.6rem;
+}
+.route p {
+  font-size: 0.98rem; color: var(--muted);
+  line-height: 1.55;
+}
+@media (max-width: 760px) {
+  .routes { grid-template-columns: 1fr; }
+}
+
+/* ─── Chiffres-clés ─── */
+.stats {
+  background: var(--atlantic);
+  color: #fff;
+  padding: 4rem 0;
+}
+.stats__grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 2rem; text-align: center;
+}
+.stat__value {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--sable);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.stat__label {
+  font-size: 0.82rem; letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
+}
+@media (max-width: 760px) {
+  .stats__grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 1.5rem; }
+}
+
+/* ─── CTA final ─── */
+.cta-final {
+  background: linear-gradient(135deg, var(--atlantic) 0%, var(--atlantic-dark) 100%);
+  color: #fff; text-align: center;
+  padding: 6rem 1.5rem;
+}
+.cta-final h2 {
+  color: #fff; margin-bottom: 1.25rem;
+}
+.cta-final h2 em { color: var(--sable); font-style: italic; font-weight: 400; }
+.cta-final p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.15rem;
+  max-width: 640px; margin: 0 auto 2.5rem;
+}
+
+/* ─── Footer ─── */
+footer {
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 3rem 1.5rem 2rem;
+  font-size: 0.9rem;
+}
+.footer__inner {
+  max-width: 1180px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 2rem;
+}
+.footer h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--sable); margin-bottom: 1rem;
+}
+.footer ul { list-style: none; }
+.footer li { margin-bottom: 0.5rem; }
+.footer a { color: rgba(255, 255, 255, 0.75); }
+.footer a:hover { color: var(--sable); }
+.footer__brand p {
+  margin-top: 0.8rem;
+  font-size: 0.88rem; line-height: 1.55;
+  max-width: 360px;
+}
+.footer__bottom {
+  max-width: 1180px; margin: 2.5rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.82rem; color: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 760px) {
+  .footer__inner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a href="#" class="nav__brand" aria-label="D-Day Boat - accueil">
+      <span class="nav__brand-mark">D‑D</span>
+      <span>D-Day Boat</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="#experience">L'expérience</a></li>
+      <li><a href="#mulberry">Le port Mulberry</a></li>
+      <li><a href="#parcours">Parcours</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav__cta" href="#contact">Réserver</a>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- HERO -->
+  <header class="hero" role="banner">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <span class="hero__eyebrow">Arromanches · Plages du Débarquement</span>
+      <h1>De la mer <em>à la mémoire.</em><br>Embarquez sur les plages du 6 juin 1944.</h1>
+      <p class="hero__lead">
+        D-Day Boat, c'est l'expérience amphibie qui vous emmène,
+        sans quitter votre siège, des vestiges du port Mulberry
+        aux sables d'Arromanches — là où débarqua le monde libre.
+      </p>
+      <div class="hero__ctas">
+        <a class="btn btn--primary" href="#contact">Réserver une traversée</a>
+        <a class="btn btn--ghost" href="#experience">Découvrir l'expérience</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PITCH -->
+  <section class="pitch" aria-labelledby="pitch-t">
+    <div class="container">
+      <span class="section__eyebrow">Une traversée. Deux éléments. Quatre-vingts ans d'histoire.</span>
+      <h2 class="section__title" id="pitch-t" style="margin-left:auto;margin-right:auto;">
+        Un navire qui roule, <em>une terre qui flotte</em>.
+      </h2>
+      <p class="section__lead">
+        Le D-Day Boat est un bateau amphibie passager : il quitte le quai comme un bateau,
+        traverse la baie d'Arromanches, puis remonte sur la plage pour vous déposer
+        là où, un matin de juin 1944, l'Histoire s'est écrite dans le sable.
+      </p>
+    </div>
+  </section>
+
+  <!-- EXPÉRIENCE -->
+  <section id="experience" aria-labelledby="exp-t">
+    <div class="container">
+      <div class="split">
+        <div class="split__media">
+          <img
+            src="images/navire-amphibie.jpg"
+            alt="Navire à passagers amphibie, conçu pour passer de la mer à la terre"
+            loading="lazy" width="800" height="600">
+        </div>
+        <div class="split__body">
+          <span class="section__eyebrow">L'expérience</span>
+          <h2 class="section__title" id="exp-t">Un seul véhicule. <em>Deux mondes.</em></h2>
+          <p>
+            Imaginez : vous embarquez au port d'Arromanches. Le bateau glisse
+            au large, longe les caissons Phoenix échoués depuis 1944, s'approche
+            des pontons du Mulberry B encore debout. Puis — sans escale —
+            il remonte doucement sur la plage.
+          </p>
+          <p>
+            Pas de transfert, pas de changement de navette. Le D-Day Boat est
+            un <strong>navire à passagers amphibie</strong>, pensé pour la mémoire,
+            le confort et l'émotion. Les commentaires audio, signés historiens
+            locaux, rythment les deux heures de traversée.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MULBERRY -->
+  <section id="mulberry" style="background: var(--sable-light);" aria-labelledby="mul-t">
+    <div class="container">
+      <div class="split split--reverse">
+        <div class="split__media">
+          <img
+            src="images/port-mulberry-arromanches.png"
+            alt="Vestiges du port artificiel Mulberry B au large d'Arromanches-les-Bains"
+            loading="lazy" width="800" height="600">
+        </div>
+        <div class="split__body">
+          <span class="section__eyebrow">Le port Mulberry</span>
+          <h2 class="section__title" id="mul-t">Le chef-d'œuvre <em>englouti</em>.</h2>
+          <p>
+            En 17 jours, les Alliés ont assemblé au large d'Arromanches
+            un port artificiel grand comme celui de Douvres. 115 caissons de béton,
+            10 km de jetées flottantes, 500 000 tonnes de matériel débarquées.
+          </p>
+          <p>
+            Quatre-vingts ans plus tard, les vestiges du <strong>Mulberry B</strong>
+            tiennent toujours. De la mer, ils prennent une autre échelle : ils
+            deviennent immenses, silencieux, cathédrales de béton posées sur
+            l'eau. C'est cela que D-Day Boat vous donne à voir.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITATION -->
+  <section class="quote" aria-label="Citation historique">
+    <blockquote>
+      Ce port artificiel sera un miracle de technique, offrant aux Alliés
+      la clé de la libération du continent.
+    </blockquote>
+    <cite>— Winston Churchill, mai 1944</cite>
+  </section>
+
+  <!-- PILIERS -->
+  <section class="pillars-wrap" aria-labelledby="pil-t">
+    <div class="container">
+      <span class="section__eyebrow">Trois engagements</span>
+      <h2 class="section__title" id="pil-t">Une expérience <em>à hauteur d'Histoire.</em></h2>
+
+      <div class="pillars">
+        <article class="pillar">
+          <div class="pillar__num">01</div>
+          <h3>Mémoire</h3>
+          <p>
+            Chaque traversée est accompagnée d'un commentaire historique validé
+            par le Mémorial de Caen. Témoignages, archives sonores, cartes
+            d'époque — l'Histoire se vit sans la réduire.
+          </p>
+        </article>
+        <article class="pillar">
+          <div class="pillar__num">02</div>
+          <h3>Innovation</h3>
+          <p>
+            Un navire amphibie à passagers, conforme aux normes SOLAS, silencieux,
+            électrique-hybride. La technologie au service de l'émotion — et de
+            l'environnement maritime normand.
+          </p>
+        </article>
+        <article class="pillar">
+          <div class="pillar__num">03</div>
+          <h3>Transmission</h3>
+          <p>
+            Des parcours dédiés aux scolaires, aux vétérans, aux familles.
+            Un partenariat avec les musées du Débarquement pour tisser un récit
+            complet, de Sword Beach à Utah Beach.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARCOURS -->
+  <section id="parcours" aria-labelledby="par-t">
+    <div class="container">
+      <span class="section__eyebrow">Parcours</span>
+      <h2 class="section__title" id="par-t">Deux traversées, <em>un même littoral</em>.</h2>
+      <p class="section__lead">
+        Des circuits de 90 minutes à la demi-journée, adaptés aux familles,
+        aux groupes scolaires et aux visiteurs internationaux.
+      </p>
+
+      <div class="routes">
+        <article class="route">
+          <div class="route__media">
+            <img
+              src="images/debarquement-arromanches.jpg"
+              alt="Plage du Débarquement à Arromanches-les-Bains"
+              loading="lazy" width="800" height="450">
+          </div>
+          <div class="route__body">
+            <span class="route__duration">90 min · Toute l'année</span>
+            <h3>La boucle d'Arromanches</h3>
+            <p>
+              Embarquement au port, tour des vestiges du Mulberry B,
+              remontée sur la plage Gold Beach. Commentaire bilingue FR/EN.
+            </p>
+          </div>
+        </article>
+
+        <article class="route">
+          <div class="route__media">
+            <img
+              src="images/plages-normandie.jpg"
+              alt="Plages normandes du Débarquement vues depuis la mer"
+              loading="lazy" width="800" height="450">
+          </div>
+          <div class="route__body">
+            <span class="route__duration">Demi-journée · Avril à octobre</span>
+            <h3>Gold · Juno · Sword</h3>
+            <p>
+              Trois plages, un même récit. Escales terrestres sur les plages
+              britanniques et canadiennes, accompagnées d'un historien.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHIFFRES -->
+  <section class="stats" aria-label="Chiffres-clés">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stat">
+          <div class="stat__value">115</div>
+          <div class="stat__label">Caissons Phoenix immergés</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">17 j</div>
+          <div class="stat__label">Pour construire le port</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">500 k</div>
+          <div class="stat__label">Tonnes débarquées</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">80 ans</div>
+          <div class="stat__label">Et ils tiennent toujours</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="contact" class="cta-final" aria-labelledby="cta-t">
+    <h2 id="cta-t">Prêt à <em>embarquer ?</em></h2>
+    <p>
+      Réservez dès maintenant votre traversée sur le D-Day Boat.
+      Tarifs groupes, scolaires et familles sur demande.
+    </p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:1rem;">
+      <a class="btn btn--primary" href="mailto:hello@d-day-boat.com">Nous écrire</a>
+      <a class="btn btn--ghost" href="tel:+33231000000">+33 (0)2 31 00 00 00</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <h4>D-Day Boat</h4>
+      <p>
+        L'expérience amphibie des plages du Débarquement.
+        Arromanches-les-Bains, Normandie — France.
+      </p>
+    </div>
+    <div>
+      <h4>Visiter</h4>
+      <ul>
+        <li><a href="#experience">L'expérience</a></li>
+        <li><a href="#mulberry">Le port Mulberry</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:hello@d-day-boat.com">hello@d-day-boat.com</a></li>
+        <li>Arromanches-les-Bains, 14117</li>
+        <li>Calvados, Normandie</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 D-Day Boat · Tous droits réservés</span>
+    <span>Direction visuelle · Clairière</span>
+  </div>
+</footer>
+
+</body>
+</html>
