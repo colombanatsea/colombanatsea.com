@@ -1,6 +1,6 @@
 ---
 /**
- * Matrice Triple Transition — Réseau 3D organique
+ * Matrice Triple Transition – Réseau 3D organique
  * Three.js bundled via npm (no CDN dependency)
  */
 ---
@@ -56,7 +56,7 @@
         <path d="M18 11V6a2 2 0 0 0-4 0v1M14 10V4a2 2 0 0 0-4 0v6M10 10.5V5a2 2 0 0 0-4 0v9"/>
         <path d="M18 11a2 2 0 0 1 4 0v5a8 8 0 0 1-8 8h-2c-2.5 0-4.5-1-6.2-2.8L2 17"/>
       </svg>
-      <span>Cliquer-glisser pour explorer</span>
+      <span>Cliquer-glisser pour naviguer</span>
     </div>
   </div>
 </div>
@@ -329,7 +329,7 @@
   // ── EARLY EXIT IF HIDDEN (mobile CSS fallback) ──
   const container = document.getElementById('matrice-canvas-container');
   if (!container || !container.offsetWidth) {
-    // Mobile fallback is active — skip Three.js init entirely
+    // Mobile fallback is active – skip Three.js init entirely
   } else {
 
   // ── LAZY INIT: wait until visible (skip if already in viewport) ──
@@ -596,7 +596,7 @@
       pauseRotate();
     }
 
-    // Labels — only show after intro completes, positioned near each sphere
+    // Labels – only show after intro completes, positioned near each sphere
     if (introComplete) {
       const rect = container.getBoundingClientRect();
       const fov = camera.fov * Math.PI / 180;
