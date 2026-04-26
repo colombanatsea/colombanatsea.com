@@ -88,7 +88,7 @@ const altPath = getLocalizedPath(altLang, frSlug);
     "alumniOf": { "@type": "EducationalOrganization", "name": lang === "fr" ? "École Nationale Supérieure Maritime (ENSM)" : "French National Maritime Academy (ENSM)", "url": "https://www.supmaritime.fr/" }
   })} />
 
-  <!-- Fonts — non-blocking -->
+  <!-- Fonts – non-blocking -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -116,7 +116,7 @@ const altPath = getLocalizedPath(altLang, frSlug);
   <meta property="og:site_name" content="Colomban at Sea" />
   <meta name="twitter:image" content={`https://colombanatsea.com${base}/og-image.jpg`} />
 
-  <!-- Google Analytics 4 — deferred to after page load for performance -->
+  <!-- Google Analytics 4 – deferred to after page load for performance -->
   <script is:inline>
     window.addEventListener('load', function() {
       var s = document.createElement('script');
@@ -131,14 +131,14 @@ const altPath = getLocalizedPath(altLang, frSlug);
     });
   </script>
 
-  <!-- Elfsight LinkedIn Feed — deferred load -->
+  <!-- Elfsight LinkedIn Feed – deferred load -->
   <script is:inline src="https://elfsightcdn.com/platform.js" async></script>
 </head>
 <body>
   <a href="#main-content" class="skip-to-content">{lang === 'fr' ? 'Aller au contenu' : 'Skip to content'}</a>
   <nav class={`nav${navLight ? ' nav--scrolled' : ''}`} id="nav" aria-label={lang === 'fr' ? 'Navigation principale' : 'Main navigation'}>
     <div class="nav__inner container">
-      <a href={`${base}/`} class="nav__logo" aria-label="Colomban at Sea — Accueil">
+      <a href={`${base}/`} class="nav__logo" aria-label="Colomban at Sea – Accueil">
         <img class="nav__knot nav__knot--dark" src={`${base}/colomban-logo-normal.svg`} alt="Colomban" width="32" height="32" />
         <img class="nav__knot nav__knot--light" src={`${base}/colomban-logo-original.svg`} alt="Colomban" width="32" height="32" />
         <span class="nav__logo-text">Colomban<span class="nav__logo-accent"> at sea</span></span>
@@ -203,7 +203,7 @@ const altPath = getLocalizedPath(altLang, frSlug);
       </div>
 
       <div class="footer__bottom">
-        <p class="mono text-muted">&copy; {new Date().getFullYear()} Colomban — colombanatsea.com</p>
+        <p class="mono text-muted">&copy; {new Date().getFullYear()} Colomban – colombanatsea.com</p>
         <p class="footer__cyber mono"><a href="https://vaiata-dynamics.com/fr/cyber/" target="_blank" rel="noopener noreferrer">{lang === 'fr' ? 'Protégé par VAIATA Cyber' : 'Protected by VAIATA Cyber'}</a></p>
       </div>
     </div>
@@ -223,7 +223,7 @@ const altPath = getLocalizedPath(altLang, frSlug);
   </script>
 
   <script>
-    // Rotating footer citations — language-aware
+    // Rotating footer citations – language-aware
     const quotesMap: Record<string, string[]> = {
       fr: [
         "Le maritime dans le sang depuis 1991.",
