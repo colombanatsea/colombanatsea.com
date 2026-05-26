@@ -1,6 +1,6 @@
 ---
 /**
- * CarteTimeline – "Du sillage au réseau"
+ * CarteTimeline, "Du sillage au réseau"
  * Carte marine animée du parcours de Colomban
  * Adapté depuis prototypes/proto3-carte/index.html
  */
@@ -282,7 +282,7 @@
     { year:2011, name:'Croatie', label:'M/Y Queen Aida', lon:15.97, lat:43.51, detail:'Yachting en Méditerranée.', phase:'navigation' },
     { year:2012, name:'Bretagne', label:'Bourbon Ailette', lon:-3, lat:47.7, detail:'Navire de service Bourbon.', phase:'navigation' },
     { year:2013, name:'Manche', label:'Brittany Ferries', lon:-2, lat:49.8, detail:'Navire à passagers.', phase:'navigation' },
-    { year:2013, name:'Marseille – Bourbon HQ', label:'MOMENT FONDATEUR', lon:5.37, lat:43.30, detail:'Données catastrophiques → naissance Opsealog.', phase:'fondateur', isFounder:true },
+    { year:2013, name:'Marseille, Bourbon HQ', label:'MOMENT FONDATEUR', lon:5.37, lat:43.30, detail:'Données catastrophiques → naissance Opsealog.', phase:'fondateur', isFounder:true },
     { year:2014, name:'Angola', label:'Bourbon Ungundja', lon:12.3, lat:-8.8, detail:'Retour en mer avec humilité.', phase:'navigation' },
     { year:2015, name:'Chine → Namibie', label:'Bourbon Evolution', lon:40, lat:5, detail:'Construction neuve, FMEA, JDPO.', phase:'navigation' },
     { year:2015, name:'Brest / Fromveur', label:'Bourbon Argonaute', lon:-4.49, lat:48.39, detail:'Pose câble hydrolienne Sabella.', phase:'navigation' },
@@ -496,7 +496,7 @@
 
     document.getElementById('carte-legend').classList.toggle('visible', progress > 0.65);
 
-    // Tooltip on waypoints – auto-show when new point appears + hover
+    // Tooltip on waypoints, auto-show when new point appears + hover
     let found = false;
     const sp = Math.min(1, progress/0.6);
     const vis = Math.min(Math.floor(sp * sillageWP.length) + 1, sillageWP.length);

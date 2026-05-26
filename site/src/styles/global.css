@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════
-   Colomban at Sea — Design System
+   Colomban at Sea, Design System
    ═══════════════════════════════════════════════ */
 
 /* ── CSS Custom Properties ── */
@@ -88,7 +88,7 @@ a:hover {
   color: var(--bleu-light);
 }
 
-/* ── Focus visible — a11y ── */
+/* ── Focus visible, a11y ── */
 :focus-visible {
   outline: 2px solid var(--bleu);
   outline-offset: 3px;
@@ -99,7 +99,7 @@ a:hover {
   outline-color: var(--vert);
 }
 
-/* Skip to content — a11y */
+/* Skip to content, a11y */
 .skip-to-content {
   position: absolute;
   top: -40px;
@@ -177,7 +177,7 @@ h4 { font-size: clamp(1rem, 2vw, 1.25rem); }
 .text-vert { color: var(--vert); }
 .text-muted { color: var(--gris-400); }
 
-/* Colored dot at end of h2 titles — brand signature */
+/* Colored dot at end of h2 titles, brand signature */
 h2::after {
   content: '.';
   color: var(--bleu);
@@ -299,7 +299,7 @@ h2::after {
   animation: fade-up var(--duration-slow) var(--ease-out) both;
 }
 
-/* Stagger children — triggered by IntersectionObserver */
+/* Stagger children, triggered by IntersectionObserver */
 .stagger > * {
   opacity: 0;
   transform: translateY(24px);
