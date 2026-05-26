@@ -1,6 +1,6 @@
 ---
 /**
- * Globe 3D interactif – ZEE (GeoJSON), câbles sous-marins, routes maritimes
+ * Globe 3D interactif, ZEE (GeoJSON), câbles sous-marins, routes maritimes
  * Fidèle au prototype prototypes/proto1-globe/index-satellite-cables.html
  * Three.js + earcut bundled via npm (no CDN dependency)
  */
@@ -65,11 +65,11 @@
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </button>
     <div class="globe-download-menu" id="globe-download-menu">
-      <button class="globe-download-option" id="dl-png"><span class="mono">PNG</span> – image fixe</button>
-      <button class="globe-download-option" id="dl-gif"><span class="mono">GIF</span> – rotation animée</button>
+      <button class="globe-download-option" id="dl-png"><span class="mono">PNG</span>, image fixe</button>
+      <button class="globe-download-option" id="dl-gif"><span class="mono">GIF</span>, rotation animée</button>
       <div style="border-top:1px solid rgba(255,255,255,0.08);margin:2px 0;"></div>
-      <button class="globe-download-option" id="dl-video-post"><span class="mono">Vidéo Post</span> – 1080×1080</button>
-      <button class="globe-download-option" id="dl-video-story"><span class="mono">Vidéo Story</span> – 1080×1920</button>
+      <button class="globe-download-option" id="dl-video-post"><span class="mono">Vidéo Post</span>, 1080×1080</button>
+      <button class="globe-download-option" id="dl-video-story"><span class="mono">Vidéo Story</span>, 1080×1920</button>
     </div>
   </div>
 </div>
@@ -89,7 +89,7 @@
     cursor: grab;
   }
 
-  /* Placeholder gradient matching globe background – visible until Three.js canvas paints */
+  /* Placeholder gradient matching globe background, visible until Three.js canvas paints */
   #globe-container::before {
     content: '';
     position: absolute;
@@ -402,7 +402,7 @@
   // ── EARLY EXIT IF HIDDEN (mobile CSS fallback) ──
   const container = document.getElementById('globe-container');
   if (!container || !container.offsetWidth) {
-    // Mobile fallback is active – skip Three.js init entirely
+    // Mobile fallback is active, skip Three.js init entirely
     // This prevents texture downloads and GPU allocation on mobile
   } else {
   // ── LAZY INIT: defer heavy Three.js work until browser is idle ──
@@ -452,7 +452,7 @@
   try {
     renderer = new THREE.WebGLRenderer({ antialias: USE_AA, alpha: false, powerPreference: 'high-performance', preserveDrawingBuffer: true });
   } catch (_) {
-    // WebGL unavailable (disabled by policy, GPU blocklist, etc.) – show CSS fallback
+    // WebGL unavailable (disabled by policy, GPU blocklist, etc.), show CSS fallback
     const fallback = document.getElementById('globe-fallback');
     if (fallback) fallback.style.display = 'flex';
     container.style.display = 'none';
@@ -1024,7 +1024,7 @@
       link.click();
     });
 
-    // GIF download – capture frames during a full rotation
+    // GIF download, capture frames during a full rotation
     dlGif?.addEventListener('click', async (e) => {
       e.stopPropagation();
       dlWrap.classList.remove('open');

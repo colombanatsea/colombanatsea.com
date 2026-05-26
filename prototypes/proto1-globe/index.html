@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZEE de France — Globe Interactif | Colomban at Sea</title>
+  <title>ZEE de France, Globe Interactif | Colomban at Sea</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
@@ -266,7 +266,7 @@
     import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
     // ====================================================
-    // ZEE DATA — French Exclusive Economic Zones
+    // ZEE DATA, French Exclusive Economic Zones
     // ====================================================
     const ZEE_ZONES = [
       {
@@ -325,13 +325,13 @@
       },
       {
         name: 'Kerguelen',
-        detail: 'TAAF — Océan Indien austral',
+        detail: 'TAAF, Océan Indien austral',
         lat: -49.5, lng: 69.5,
         area: 570000
       },
       {
         name: 'Crozet',
-        detail: 'TAAF — Océan Indien austral',
+        detail: 'TAAF, Océan Indien austral',
         lat: -46, lng: 51,
         area: 570000
       },
@@ -355,7 +355,7 @@
       },
       {
         name: 'Amsterdam / Saint-Paul',
-        detail: 'TAAF — Océan Indien austral',
+        detail: 'TAAF, Océan Indien austral',
         lat: -37.8, lng: 77.5,
         area: 500000
       },
@@ -486,7 +486,7 @@
     scene.add(backLight);
 
     // ====================================================
-    // GLOBE — dark ocean sphere
+    // GLOBE, dark ocean sphere
     // ====================================================
     const globeGeometry = new THREE.SphereGeometry(GLOBE_RADIUS, 96, 96);
     const globeMaterial = new THREE.MeshPhongMaterial({
@@ -581,7 +581,7 @@
     scene.add(createContinentOutlines());
 
     // ====================================================
-    // LAND MASSES — simplified filled polygons
+    // LAND MASSES, simplified filled polygons
     // We add subtle filled land as a very dark gray tone
     // by creating a second sphere with slightly different color
     // and masking with the outlines. But since that's complex,
@@ -621,7 +621,7 @@
     scene.add(atmosphere);
 
     // ====================================================
-    // ZEE ZONES — circular patches on the sphere surface
+    // ZEE ZONES, circular patches on the sphere surface
     // ====================================================
     const zoneMeshes = [];  // for raycasting
     const zoneGroup = new THREE.Group();
