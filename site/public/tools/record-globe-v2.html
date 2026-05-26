@@ -5,7 +5,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>Globe — Export Vidéo Instagram</title>
+<title>Globe, Export Vidéo Instagram</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -57,7 +57,7 @@
 <body>
 
 <h1>Export vidéo du Globe</h1>
-<p class="subtitle">3 rotations complètes — ZEE, câbles sous-marins, routes maritimes</p>
+<p class="subtitle">3 rotations complètes, ZEE, câbles sous-marins, routes maritimes</p>
 
 <div class="controls">
   <button id="btn-square" onclick="startRecording('square')">
@@ -87,7 +87,7 @@
 </script>
 
 <script type="module">
-/* v7 — fix resizeRenderer destroying WebGL context */
+/* v7, fix resizeRenderer destroying WebGL context */
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import earcut from 'earcut';
@@ -450,7 +450,7 @@ function animatePreview() {
   renderer.render(scene, camera);
 }
 
-statusEl.textContent = 'Globe prêt — choisissez un format';
+statusEl.textContent = 'Globe prêt, choisissez un format';
 animatePreview();
 
 // ── RECORDING ──
@@ -563,7 +563,7 @@ window.startRecording = async function(format) {
 
         const pct = Math.round((frameIndex + 1) / totalFrames * 100);
         progressFill.style.width = pct + '%';
-        statusEl.textContent = `Enregistrement ${label} — ${pct}%`;
+        statusEl.textContent = `Enregistrement ${label}, ${pct}%`;
 
         if (frameIndex === 0) console.log('[v8] first frame OK');
 

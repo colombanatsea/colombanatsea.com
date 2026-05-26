@@ -555,7 +555,7 @@ const VT = [{
 }];
 const AIDES = [{
   id: "ademe",
-  nom: "ADEME — Décarbonation transports",
+  nom: "ADEME, Décarbonation transports",
   taux: "30-50%",
   plf: "2 M€",
   cond: "Navire FR, CO₂ -30%",
@@ -629,7 +629,7 @@ const AIDES = [{
   id: "suram",
   nom: "Suramortissement fiscal",
   taux: "40%",
-  plf: "—",
+  plf: ",",
   cond: "Navire propre",
   cal: "Si actif",
   del: "Immédiat",
@@ -1006,9 +1006,9 @@ const EMFACT = {
     src: "Alimentation réseau terrestre"
   }
 };
-// ======= CASE DATABASE — Verified reference projects =======
+// ======= CASE DATABASE, Verified reference projects =======
 const CASE_DB = [
-// FULL ELECTRIC — FERRIES
+// FULL ELECTRIC, FERRIES
 {
   id: "ampere",
   n: "MF Ampere",
@@ -1110,7 +1110,7 @@ const CASE_DB = [
   s2: "",
   d: "50m, 28 voi./98 pax, Finnmark arctique (−25°C). Ferry électrique le plus septentrional au monde. Validé en conditions extrêmes."
 },
-// FULL ELECTRIC — TUGS & PORT CRAFT
+// FULL ELECTRIC, TUGS & PORT CRAFT
 {
   id: "volta1",
   n: "Volta 1 (Anvers)",
@@ -1192,7 +1192,7 @@ const CASE_DB = [
   s2: "HaiSea Marine / Haisla Nation",
   d: "ElectRA 2800, 5 288 kWh, Kitimat (BC). Joint-venture avec Première Nation Haisla. 3 remorqueurs électriques en service."
 },
-// FULL ELECTRIC — LAMELEC & SPECIALTY
+// FULL ELECTRIC, LAMELEC & SPECIALTY
 {
   id: "lamelec",
   n: "LAMELEC",
@@ -1530,11 +1530,11 @@ function matchCases(proj) {
 }
 const RETEX = [{
   nom: "E-ferry Ellen (DK)",
-  desc: "Ferry 100% électrique, 22 NM, 4,3 MWh, Ærø–Fynshav. En service depuis 2019.",
+  desc: "Ferry 100% électrique, 22 NM, 4,3 MWh, Ærø,Fynshav. En service depuis 2019.",
   impact: "Réduction 100% émissions directes, 2 200 tCO₂/an évitées."
 }, {
   nom: "Ampere (NO)",
-  desc: "Premier ferry électrique mondial, Lavik–Oppedal, 2015. 1 MWh, 34 voitures.",
+  desc: "Premier ferry électrique mondial, Lavik,Oppedal, 2015. 1 MWh, 34 voitures.",
   impact: "Pionniers : a prouvé la viabilité technico-économique."
 }, {
   nom: "Maguelonne (FR)",
@@ -1555,7 +1555,7 @@ const RETEX = [{
 }];
 const fmt = (n, d = 0) => typeof n === "number" ? n.toLocaleString("fr-FR", {
   maximumFractionDigits: d
-}) : "—";
+}) : ",";
 const fK = n => fmt(Math.round(n)) + " k€";
 const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const emT = () => ({
@@ -1845,7 +1845,7 @@ function dimBatt(v) {
   const lifeCycles = 5000;
   const lifeYrs = Math.max(3, Math.round(lifeCycles / Math.max(1, eqCyclesAn)));
   const degradPctAn = Math.round(100 / lifeYrs);
-  // Costs — Ref: BNEF 2024 Electric Vehicle Outlook (maritime ESS segment)
+  // Costs, Ref: BNEF 2024 Electric Vehicle Outlook (maritime ESS segment)
   const costPerKwh = 350; // €/kWh installed (was 500 in 2022, now 300-400 range)
   const costPerKwCharger = 200; // €/kW (ABB, Cavotec, Stemmann-Technik)
   // Grid connection: ENEDIS barème S21-E13 (simplified tiers)
@@ -2401,7 +2401,7 @@ function App() {
     style: {
       color: "#9ab"
     }
-  }, "Flottes Maritimes de Proximité — Modèle CCV"), /*#__PURE__*/React.createElement("div", {
+  }, "Flottes Maritimes de Proximité, Modèle CCV"), /*#__PURE__*/React.createElement("div", {
     className: "text-left rounded-xl p-4 mb-6",
     style: {
       background: "rgba(255,255,255,0.06)"
@@ -2440,7 +2440,7 @@ function App() {
     className: "font-bold"
   }, "+ Nouveau projet"), /*#__PURE__*/React.createElement("div", {
     className: "text-xs opacity-80"
-  }, "13 volets — de la fiche navire au dossier complet")), /*#__PURE__*/React.createElement("button", {
+  }, "13 volets, de la fiche navire au dossier complet")), /*#__PURE__*/React.createElement("button", {
     onClick: () => {
       setWizStep(1);
     },
@@ -2495,7 +2495,7 @@ function App() {
     style: {
       color: "#9ab"
     }
-  }, VT.find(x => x.id === p.vt)?.l, " ", p.vn && "— " + p.vn)), /*#__PURE__*/React.createElement("button", {
+  }, VT.find(x => x.id === p.vt)?.l, " ", p.vn && ", " + p.vn)), /*#__PURE__*/React.createElement("button", {
     onClick: e => {
       e.stopPropagation();
       {
@@ -2512,7 +2512,7 @@ function App() {
     style: {
       color: "#567"
     }
-  }, "GASPE — Outil ouvert à tous les armateurs de proximité"), wizStep > 0 && /*#__PURE__*/React.createElement("div", {
+  }, "GASPE, Outil ouvert à tous les armateurs de proximité"), wizStep > 0 && /*#__PURE__*/React.createElement("div", {
     className: "fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4"
   }, /*#__PURE__*/React.createElement("div", {
     className: "bg-white rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto"
@@ -2523,7 +2523,7 @@ function App() {
     style: {
       color: PU
     }
-  }, "🧙 Mode guidé — Étape ", wizStep, "/4"), /*#__PURE__*/React.createElement("button", {
+  }, "🧙 Mode guidé, Étape ", wizStep, "/4"), /*#__PURE__*/React.createElement("button", {
     onClick: () => setWizStep(0),
     style: {
       color: "#999"
@@ -2762,7 +2762,7 @@ function App() {
     style: {
       color: D
     }
-  }, "📖 Lexique — tous les termes expliqués"), /*#__PURE__*/React.createElement("button", {
+  }, "📖 Lexique, tous les termes expliqués"), /*#__PURE__*/React.createElement("button", {
     onClick: () => setShowLex(false),
     style: {
       color: "#999"
@@ -3205,7 +3205,7 @@ function App() {
       style: {
         color: "#999"
       }
-    }, "(optionnel — paliers par année)")), (tj.mixSteps || []).map((ms, si) => /*#__PURE__*/React.createElement("div", {
+    }, "(optionnel, paliers par année)")), (tj.mixSteps || []).map((ms, si) => /*#__PURE__*/React.createElement("div", {
       key: si,
       className: "p-2 rounded mb-2",
       style: {
@@ -3473,21 +3473,21 @@ function App() {
     style: {
       color: "#666"
     }
-  }, /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "SoC 10-90%"), " : DNV Rules for Classification Pt.6 Ch.2 Sec.1 (2024) — Battery installations on board vessels."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "C-rate 2C"), " : Corvus Orca ESS datasheet 2024 — continuous discharge 2C, burst 3C (30s)."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Cycles LFP"), " : Preger et al. 2020, J. Electrochem. Soc. 167 — 5 000 cycles à 80% DoD, 25°C."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Cycles équivalents"), " : Xu et al. 2018, J. Power Sources 395, pp.422-431 — Rainflow counting."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Coût batterie (", batt.costPerKwh, "€/kWh)"), " : BNEF 2024 Electric Vehicle Outlook, segment maritime ESS."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Chargeur (200€/kW)"), " : ABB Marine 2022, Cavotec 2023 — Shore-to-ship power systems."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Assurance"), " : Gard P&I 2023 « Battery installations on board vessels »; UK P&I Club 2024."), proj.v.type === "bac" && /*#__PURE__*/React.createElement("p", {
+  }, /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "SoC 10-90%"), " : DNV Rules for Classification Pt.6 Ch.2 Sec.1 (2024), Battery installations on board vessels."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "C-rate 2C"), " : Corvus Orca ESS datasheet 2024, continuous discharge 2C, burst 3C (30s)."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Cycles LFP"), " : Preger et al. 2020, J. Electrochem. Soc. 167, 5 000 cycles à 80% DoD, 25°C."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Cycles équivalents"), " : Xu et al. 2018, J. Power Sources 395, pp.422-431, Rainflow counting."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Coût batterie (", batt.costPerKwh, "€/kWh)"), " : BNEF 2024 Electric Vehicle Outlook, segment maritime ESS."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Chargeur (200€/kW)"), " : ABB Marine 2022, Cavotec 2023, Shore-to-ship power systems."), /*#__PURE__*/React.createElement("p", null, "• ", /*#__PURE__*/React.createElement("b", null, "Assurance"), " : Gard P&I 2023 « Battery installations on board vessels »; UK P&I Club 2024."), proj.v.type === "bac" && /*#__PURE__*/React.createElement("p", {
     style: {
       color: W
     }
-  }, "• ", /*#__PURE__*/React.createElement("b", null, "Retex comparable"), " : Ampere (NO) 1 MWh, Lavik-Oppedal — Bellona 2017 « Electric ferries in Norway ». Cycles confirmés en exploitation."), proj.v.rD >= 15 && /*#__PURE__*/React.createElement("p", {
+  }, "• ", /*#__PURE__*/React.createElement("b", null, "Retex comparable"), " : Ampere (NO) 1 MWh, Lavik-Oppedal, Bellona 2017 « Electric ferries in Norway ». Cycles confirmés en exploitation."), proj.v.rD >= 15 && /*#__PURE__*/React.createElement("p", {
     style: {
       color: W
     }
-  }, "• ", /*#__PURE__*/React.createElement("b", null, "Retex comparable"), " : LAMELEC (FR) lamaneur électrique OCEA/VEBRAT, Loire — modélisation GASPE. Cyclage intensif (15+ rot/j)."), proj.v.cDur >= 30 && /*#__PURE__*/React.createElement("p", {
+  }, "• ", /*#__PURE__*/React.createElement("b", null, "Retex comparable"), " : LAMELEC (FR) lamaneur électrique OCEA/VEBRAT, Loire, modélisation GASPE. Cyclage intensif (15+ rot/j)."), proj.v.cDur >= 30 && /*#__PURE__*/React.createElement("p", {
     style: {
       color: W
     }
-  }, "• ", /*#__PURE__*/React.createElement("b", null, "Retex comparable"), " : Ellen (DK) 4,3 MWh, 22 NM — Aarskog & Danebergs 2020. Validation autonomie longue traversée."))), /*#__PURE__*/React.createElement(SrcPanel, {
+  }, "• ", /*#__PURE__*/React.createElement("b", null, "Retex comparable"), " : Ellen (DK) 4,3 MWh, 22 NM, Aarskog & Danebergs 2020. Validation autonomie longue traversée."))), /*#__PURE__*/React.createElement(SrcPanel, {
     cases: cases,
-    title: "Cas de référence — Batteries & électrification"
+    title: "Cas de référence, Batteries & électrification"
   }), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
@@ -3660,8 +3660,8 @@ function App() {
       cols: ["Trajectoire", "CCV/an", "€/" + ul + "-NM", "tCO₂/M " + ul + "-NM"],
       rows: res.map((r, i) => {
         const ccvAn = r.base.ccv / proj.p.dur;
-        const cpnm = paxNmAn > 0 ? (ccvAn * 1000 / paxNmAn).toFixed(3) : "—";
-        const co2pnm = paxNmAn > 0 ? (r.base.co2 / proj.p.dur / (paxNmAn / 1e6)).toFixed(1) : "—";
+        const cpnm = paxNmAn > 0 ? (ccvAn * 1000 / paxNmAn).toFixed(3) : ",";
+        const co2pnm = paxNmAn > 0 ? (r.base.co2 / proj.p.dur / (paxNmAn / 1e6)).toFixed(1) : ",";
         return [/*#__PURE__*/React.createElement("b", {
           style: {
             color: CL[i]
@@ -3672,7 +3672,7 @@ function App() {
     }));
   })()), /*#__PURE__*/React.createElement(SrcPanel, {
     cases: cases,
-    title: "Cas de référence — Coût de Cycle de Vie"
+    title: "Cas de référence, Coût de Cycle de Vie"
   }), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
@@ -3854,7 +3854,7 @@ function App() {
     }, /*#__PURE__*/React.createElement("i", null, "Les facteurs d’émission sont exprimés en g/kWh (puissance moteur) et appliqués au profil de charge du navire. Les valeurs réelles peuvent varier selon l’âge du moteur, la qualité du carburant, et les conditions d’exploitation.")))));
   })(), /*#__PURE__*/React.createElement(SrcPanel, {
     cases: cases,
-    title: "Cas de référence — Réduction des émissions"
+    title: "Cas de référence, Réduction des émissions"
   }), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between mt-3"
   }, /*#__PURE__*/React.createElement(Prev, {
@@ -3905,7 +3905,7 @@ function App() {
       v: fK(r.totI)
     }), /*#__PURE__*/React.createElement(St, {
       l: "LTV",
-      v: det > 0 ? Math.round(det / v.mktV * 100) + "%" : "—"
+      v: det > 0 ? Math.round(det / v.mktV * 100) + "%" : ","
     })), /*#__PURE__*/React.createElement("div", {
       className: "grid grid-cols-2 gap-4 text-xs"
     }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("b", {
@@ -3942,7 +3942,7 @@ function App() {
     key: i
   }, /*#__PURE__*/React.createElement("b", null, s.s, " :"), " ", s.desc)))), /*#__PURE__*/React.createElement(SrcPanel, {
     cases: cases,
-    title: "Cas de référence — Financement"
+    title: "Cas de référence, Financement"
   }), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
@@ -3988,7 +3988,7 @@ function App() {
     style: {
       color: GR
     }
-  }, "✓ Cumulable: ", a.cum.map(c => AIDES.find(x => x.id === c)?.nom.split("—")[0]).join(", ")))), /*#__PURE__*/React.createElement(Cd, {
+  }, "✓ Cumulable: ", a.cum.map(c => AIDES.find(x => x.id === c)?.nom.split(",")[0]).join(", ")))), /*#__PURE__*/React.createElement(Cd, {
     title: "Règles",
     accent: W
   }, /*#__PURE__*/React.createElement("div", {
@@ -4206,7 +4206,7 @@ function App() {
       }
     })),
     u: "%",
-    h: "Poids du sous-critère bruit à quai. L’électrification supprime le bruit moteur à quai — très apprécié en zone résidentielle et touristique."
+    h: "Poids du sous-critère bruit à quai. L’électrification supprime le bruit moteur à quai, très apprécié en zone résidentielle et touristique."
   }), /*#__PURE__*/React.createElement(In, {
     l: "Pond. renouvelable",
     v: proj.ao?.wRen || 20,
@@ -4265,7 +4265,7 @@ function App() {
     className: "text-xs space-y-1.5"
   }, /*#__PURE__*/React.createElement("p", null, "1. ", /*#__PURE__*/React.createElement("b", null, "Coût de l’inaction croissant"), " (risques quantifiés)."), /*#__PURE__*/React.createElement("p", null, "2. ", /*#__PURE__*/React.createElement("b", null, "Infra à terre"), " nécessite partage."), /*#__PURE__*/React.createElement("p", null, "3. ", /*#__PURE__*/React.createElement("b", null, "Révision DSP"), " à adapter (indice composite)."), /*#__PURE__*/React.createElement("p", null, "4. ", /*#__PURE__*/React.createElement("b", null, "Aides mobilisables"), "."), /*#__PURE__*/React.createElement("p", null, "5. ", /*#__PURE__*/React.createElement("b", null, "Bénéfices mesurables"), " : tCO₂, air, bruit."))), /*#__PURE__*/React.createElement(SrcPanel, {
     cases: cases,
-    title: "Cas de référence — DSP & scoring"
+    title: "Cas de référence, DSP & scoring"
   }), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-between"
   }, /*#__PURE__*/React.createElement(Prev, {
@@ -4467,11 +4467,11 @@ function App() {
       rows: all.map(fp => {
         const r = fp.res;
         const best = getBest(fp);
-        return [/*#__PURE__*/React.createElement("b", null, fp.name), VT.find(x => x.id === fp.vt)?.l?.slice(0, 10), fK(r[0].base.ccv), best ? fK(best.base.ccv) : "—", best ? fK(best.totI) : "—", best ? /*#__PURE__*/React.createElement("b", {
+        return [/*#__PURE__*/React.createElement("b", null, fp.name), VT.find(x => x.id === fp.vt)?.l?.slice(0, 10), fK(r[0].base.ccv), best ? fK(best.base.ccv) : ",", best ? fK(best.totI) : ",", best ? /*#__PURE__*/React.createElement("b", {
           style: {
             color: GR
           }
-        }, "-", fmt(Math.round(r[0].base.co2 - best.base.co2)), "t") : "—"];
+        }, "-", fmt(Math.round(r[0].base.co2 - best.base.co2)), "t") : ","];
       }),
       ws: [3, 2, 2, 2, 2, 1]
     }), /*#__PURE__*/React.createElement("div", {
@@ -4573,7 +4573,7 @@ function App() {
         const dist = (v2.cDur || 10) / 60 * (v2.spd || 8);
         const trAn = (v2.rD || 1) * (v2.opD || 300);
         const uNmAn = u * 0.65 * trAn * dist;
-        return [/*#__PURE__*/React.createElement("b", null, fp.name), VT.find(x => x.id === v2.type)?.l?.slice(0, 8), fK(ccvAn), uNmAn > 0 ? fmt(Math.round(uNmAn)) + " " + ul + "-NM" : "—", uNmAn > 0 ? (ccvAn * 1000 / uNmAn).toFixed(3) + " €" : "—", uNmAn > 0 ? ((best?.base?.co2 || 0) / (fp.p.p?.dur || 10) / (uNmAn / 1e6)).toFixed(1) : "—"];
+        return [/*#__PURE__*/React.createElement("b", null, fp.name), VT.find(x => x.id === v2.type)?.l?.slice(0, 8), fK(ccvAn), uNmAn > 0 ? fmt(Math.round(uNmAn)) + " " + ul + "-NM" : ",", uNmAn > 0 ? (ccvAn * 1000 / uNmAn).toFixed(3) + " €" : ",", uNmAn > 0 ? ((best?.base?.co2 || 0) / (fp.p.p?.dur || 10) / (uNmAn / 1e6)).toFixed(1) : ","];
       }),
       ws: [2, 2, 2, 2, 2, 2]
     })));
@@ -4600,7 +4600,7 @@ function App() {
   }, s.items.map((e, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     className: "flex justify-between py-1.5 border-b last:border-0 text-xs"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("b", null, e.n), " — ", e.s), /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("b", null, e.n), ", ", e.s), /*#__PURE__*/React.createElement("span", {
     style: {
       color: T
     }
@@ -4731,11 +4731,11 @@ function App() {
     cols: ["Année", "CO₂ prévu", "CO₂ réel", "Écart", "OPEX prévu", "OPEX réel"],
     rows: (proj.perf || []).map((pf, i) => {
       const yr = res[0].base.yrs[i];
-      return [pf.year, yr ? fmt(Math.round(yr.co2)) + " t" : "—", fmt(pf.co2Real) + " t", yr ? /*#__PURE__*/React.createElement("b", {
+      return [pf.year, yr ? fmt(Math.round(yr.co2)) + " t" : ",", fmt(pf.co2Real) + " t", yr ? /*#__PURE__*/React.createElement("b", {
         style: {
           color: pf.co2Real <= yr.co2 ? GR : AC
         }
-      }, pf.co2Real <= yr.co2 ? "▼" : "▲", fmt(Math.round(Math.abs(pf.co2Real - yr.co2))), "t") : "—", yr ? fK(yr.ex + yr.en + yr.cr + yr.ins) : "—", fK(pf.opexReal)];
+      }, pf.co2Real <= yr.co2 ? "▼" : "▲", fmt(Math.round(Math.abs(pf.co2Real - yr.co2))), "t") : ",", yr ? fK(yr.ex + yr.en + yr.cr + yr.ins) : ",", fK(pf.opexReal)];
     }),
     ws: [1, 2, 2, 2, 2, 2]
   })), /*#__PURE__*/React.createElement(Cd, {
@@ -4785,13 +4785,13 @@ function App() {
       const bd = dimBatt(v);
       const css = '@page{size:A4;margin:25mm 15mm 30mm 15mm}body{font-family:Arial,sans-serif;font-size:11pt;color:#000;line-height:1.5}h1{font-size:16pt;text-align:center;margin:0}h2{font-size:13pt;color:#1E2D3D;border-bottom:2px solid #1B9AAA;padding-bottom:4px;margin-top:20px;page-break-after:avoid}h3{font-size:11pt;color:#1B9AAA;margin-top:14px}table{width:100%;border-collapse:collapse;font-size:9pt;margin:8px 0;page-break-inside:avoid}th{background:#1E2D3D;color:white;padding:6px 8px;text-align:left}td{padding:5px 8px;border-bottom:1px solid #eee}tr:nth-child(even){background:#EAF4F7}.pdf-header{position:fixed;top:0;left:0;right:0;height:18mm;text-align:center;padding-top:3mm}.pdf-header img{height:12mm}.pdf-footer{position:fixed;bottom:0;left:0;right:0;height:18mm;text-align:center;font-size:8pt;color:#444;border-top:1px solid #ddd;padding-top:3mm}.pdf-footer img{height:12mm;vertical-align:middle;margin-right:8px}.pdf-footer .ft{display:inline-block;vertical-align:middle}.header{text-align:center;border-bottom:2px solid #1B9AAA;padding-bottom:10px;margin-bottom:20px}.accent{color:#1B9AAA}.warn{color:#E8634A}.ok{color:#10B981}.sub{font-size:9pt;color:#999}ul{padding-left:20px}li{margin-bottom:4px}@media print{.no-print{display:none}}';
       let h = '<html><head><title>' + esc(proj.name) + ' - Dossier GASPE</title><style>' + css + '</style></head><body>';
-      h += '<div class="header"><div style="font-size:10pt;letter-spacing:3px;color:#1B9AAA;font-weight:bold">GASPE</div><h1>Dossier de Transition Énergétique</h1><div style="font-size:13pt;color:#1B9AAA;margin-top:5px">' + esc(proj.name) + '</div><div class="sub">Généré le ' + new Date().toLocaleDateString("fr-FR") + ' — Simulateur CCV GASPE</div></div>';
+      h += '<div class="header"><div style="font-size:10pt;letter-spacing:3px;color:#1B9AAA;font-weight:bold">GASPE</div><h1>Dossier de Transition Énergétique</h1><div style="font-size:13pt;color:#1B9AAA;margin-top:5px">' + esc(proj.name) + '</div><div class="sub">Généré le ' + new Date().toLocaleDateString("fr-FR") + ', Simulateur CCV GASPE</div></div>';
       h += '<h2>1. Navire</h2><table><tr><th>Caractéristique</th><th>Valeur</th></tr>';
       [["Nom", v.name || "(non nommé)"], ["Type", vt?.l], ["LOA", v.loa + " m"], ["Jauge", v.gt + " GT"], ["Puissance", v.pP + " kW (pointe " + v.pPeak + " kW)"], ["Vitesse", v.spd + " nœuds"], ["Conso référence", v.fc + " L/h MDO"], ["Profil de charge", "Transit " + (v.pTr || 60) + "% / Manœuvre " + (v.pMa || 20) + "% / Quai " + (v.pQu || 20) + "%"], ["Exploitation", v.opD + " j/an, " + v.rD + " rot/j, " + v.cDur + " min/trav."], ["DSP résiduelle", v.dspR + " ans"], ["Valeur marché", fK(v.mktV)], ["Recettes", fK(v.rev) + "/an"]].forEach(([k, val]) => {
         h += '<tr><td><b>' + k + '</b></td><td>' + val + '</td></tr>';
       });
       h += '</table>';
-      h += '<h2>2. Trajectoires</h2><p class="sub">Période ' + p.sy + '–' + (p.sy + p.dur) + ' | Actualisation ' + p.disc + '% | Contingency ' + p.cont + '%</p>';
+      h += '<h2>2. Trajectoires</h2><p class="sub">Période ' + p.sy + ',' + (p.sy + p.dur) + ' | Actualisation ' + p.disc + '% | Contingency ' + p.cont + '%</p>';
       h += '<table><tr><th>Trajectoire</th><th>CCV base</th><th>CCV dégradé</th><th>CCV favorable</th><th>Invest.</th><th>CO₂</th><th>Gain</th></tr>';
       res.forEach(r => {
         h += '<tr><td><b>' + r.name + '</b></td><td>' + fK(r.base.ccv) + '</td><td>' + fK(r.deg.ccv) + '</td><td>' + fK(r.fav.ccv) + '</td><td>' + fK(r.totI) + '</td><td>' + fmt(Math.round(r.base.co2)) + ' t</td><td>' + (r.gain.m * 100).toFixed(0) + '%</td></tr>';
@@ -4824,7 +4824,7 @@ function App() {
       });
       h += '</table>';
       h += '<h2>7. Argumentaire DSP</h2><ul><li>Coût de l’inaction croissant</li><li>Infra à terre : partage armateur/port/collectivité</li><li>Formule de révision DSP à adapter (indice IELEC)</li><li>Aides mobilisables</li><li>Bénéfices mesurables : tCO₂, qualité air, bruit</li></ul>';
-      h += '<div class="footer">GASPE — Groupement des Armateurs de Services Publics Maritimes de Passages d’Eau<br>Maison de la Mer, Quai de la Fosse, 44000 Nantes – www.gaspe.fr</div>';
+      h += '<div class="footer">GASPE, Groupement des Armateurs de Services Publics Maritimes de Passages d’Eau<br>Maison de la Mer, Quai de la Fosse, 44000 Nantes, www.gaspe.fr</div>';
       h += '<div class="no-print" style="text-align:center;margin:30px"><button onclick="window.print()" style="padding:12px 30px;background:#1B9AAA;color:white;border:none;border-radius:8px;font-size:14px;cursor:pointer">🖨 Imprimer / Enregistrer en PDF</button></div>';
       h += '</body></html>';
       const w = window.open("", "_blank");
@@ -4895,7 +4895,7 @@ function App() {
       }
     }, /*#__PURE__*/React.createElement("h2", {
       className: "text-lg font-bold mb-2"
-    }, "🇫🇷", " Construire mon dossier ADEME 2026 — AAP Décarbonation maritime (70 M€)"), /*#__PURE__*/React.createElement("div", {
+    }, "🇫🇷", " Construire mon dossier ADEME 2026, AAP Décarbonation maritime (70 M€)"), /*#__PURE__*/React.createElement("div", {
       className: "p-3 rounded-lg mb-4 text-xs",
       style: {
         background: "rgba(255,255,255,0.1)",
@@ -4929,7 +4929,7 @@ function App() {
       style: {
         color: T
       }
-    }, "VOLET 1 — Pièces administratives"), /*#__PURE__*/React.createElement("div", {
+    }, "VOLET 1, Pièces administratives"), /*#__PURE__*/React.createElement("div", {
       className: "text-xs space-y-1 opacity-90"
     }, ["Acte de candidature signé par le représentant légal", "Kbis < 3 mois + BIS (avis SIREN INSEE)", "RIB de l’entreprise", "Statuts à jour", "Attestation de régularité fiscale (DGFIP) et sociale (URSSAF)", "Déclaration PME/ETI au sens communautaire", "Déclaration de non-entreprise en difficulté", "Déclaration des aides publiques déjà reçues (cumul, minimis)", "Déclaration de non-commencement des travaux avant le dépôt"].map((t, i) => /*#__PURE__*/React.createElement("p", {
       key: i
@@ -4943,7 +4943,7 @@ function App() {
       style: {
         color: T
       }
-    }, "VOLET 2 — Descriptif du projet ", /*#__PURE__*/React.createElement("span", {
+    }, "VOLET 2, Descriptif du projet ", /*#__PURE__*/React.createElement("span", {
       className: "font-normal text-xs",
       style: {
         color: GR
@@ -4958,7 +4958,7 @@ function App() {
       style: {
         color: GR
       }
-    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "Description investissement :"), " ", best?.name || "Alternative", " — ", Object.entries(best?.name ? proj.trajs?.[best.idx]?.techs || {} : {}).filter(([, x]) => x?.a).map(([tid]) => TECHS.find(t => t.id === tid)?.l).filter(Boolean).join(", ") || "(sélectionner technologies)"), /*#__PURE__*/React.createElement("p", {
+    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "Description investissement :"), " ", best?.name || "Alternative", ", ", Object.entries(best?.name ? proj.trajs?.[best.idx]?.techs || {} : {}).filter(([, x]) => x?.a).map(([tid]) => TECHS.find(t => t.id === tid)?.l).filter(Boolean).join(", ") || "(sélectionner technologies)"), /*#__PURE__*/React.createElement("p", {
       style: {
         color: GR
       }
@@ -4980,7 +4980,7 @@ function App() {
       style: {
         color: T
       }
-    }, "VOLET 3 — Impact environnemental ", /*#__PURE__*/React.createElement("span", {
+    }, "VOLET 3, Impact environnemental ", /*#__PURE__*/React.createElement("span", {
       className: "font-normal text-xs",
       style: {
         color: GR
@@ -4999,7 +4999,7 @@ function App() {
       style: {
         color: GR
       }
-    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "Référence fossile :"), " MDO à ", getFuelPrice(proj, "mdo"), " €/t, ", getFuelCO2(proj, "mdo").toFixed(3), " tCO₂/t"), /*#__PURE__*/React.createElement("p", null, "☐", " Analyse Empreinte Projet EP1 (outil ADEME) si requis"), /*#__PURE__*/React.createElement("p", null, "☐", " Contribution OMI : neutralité 2050, −20% en 2030 vs 2008"), /*#__PURE__*/React.createElement("p", null, "☐", " Conformité DNSH (Do No Significant Harm) — 6 objectifs Taxonomie UE"), /*#__PURE__*/React.createElement("p", null, "☐", " Réplicabilité de la solution (voir cas de référence dans les onglets)"))), /*#__PURE__*/React.createElement("div", {
+    }, "☑", " ", /*#__PURE__*/React.createElement("b", null, "Référence fossile :"), " MDO à ", getFuelPrice(proj, "mdo"), " €/t, ", getFuelCO2(proj, "mdo").toFixed(3), " tCO₂/t"), /*#__PURE__*/React.createElement("p", null, "☐", " Analyse Empreinte Projet EP1 (outil ADEME) si requis"), /*#__PURE__*/React.createElement("p", null, "☐", " Contribution OMI : neutralité 2050, −20% en 2030 vs 2008"), /*#__PURE__*/React.createElement("p", null, "☐", " Conformité DNSH (Do No Significant Harm), 6 objectifs Taxonomie UE"), /*#__PURE__*/React.createElement("p", null, "☐", " Réplicabilité de la solution (voir cas de référence dans les onglets)"))), /*#__PURE__*/React.createElement("div", {
       className: "p-3 rounded-lg",
       style: {
         background: "rgba(255,255,255,0.05)"
@@ -5009,7 +5009,7 @@ function App() {
       style: {
         color: T
       }
-    }, "VOLET 4 — Éléments financiers ", /*#__PURE__*/React.createElement("span", {
+    }, "VOLET 4, Éléments financiers ", /*#__PURE__*/React.createElement("span", {
       className: "font-normal text-xs",
       style: {
         color: GR
@@ -5042,7 +5042,7 @@ function App() {
       style: {
         color: T
       }
-    }, "VOLET 5 — Impact économique & filière"), /*#__PURE__*/React.createElement("div", {
+    }, "VOLET 5, Impact économique & filière"), /*#__PURE__*/React.createElement("div", {
       className: "text-xs space-y-1 opacity-90"
     }, ["Créations d’emplois directes et indirectes", "Ancrage territorial (chantiers navals, ports, sous-traitants français)", "Contribution à la structuration de la chaîne de valeur maritime française", "Potentiel export / réplicabilité internationale"].map((t, i) => /*#__PURE__*/React.createElement("p", {
       key: i
@@ -5056,7 +5056,7 @@ function App() {
       style: {
         color: T
       }
-    }, "VOLET 6 — Pièces spécifiques maritime"), /*#__PURE__*/React.createElement("div", {
+    }, "VOLET 6, Pièces spécifiques maritime"), /*#__PURE__*/React.createElement("div", {
       className: "text-xs space-y-1 opacity-90"
     }, ["Certificats du navire : immatriculation, rôle d’équipage, classification", "Conformité réglementaire : Division applicable DGAMPA, société de classification", "Lettres d’intention clients/affréteurs/collectivités DSP (si applicable)", "Accord de consortium (si multi-partenaires)", "Fiche lauréat pré-remplie (résumé publiable ADEME/DGAMPA)", "Indicateurs socle : emploi, CA, brevets, tCO₂eq évitées"].map((t, i) => /*#__PURE__*/React.createElement("p", {
       key: i
@@ -5091,7 +5091,7 @@ function App() {
     style: {
       color: "#999"
     }
-  }, "v1.7.2 — février 2026 — propulsé par "), /*#__PURE__*/React.createElement("a", {
+  }, "v1.7.2, février 2026, propulsé par "), /*#__PURE__*/React.createElement("a", {
     href: "https://vaiata-dynamics.com/fr/",
     target: "_blank",
     rel: "noopener",

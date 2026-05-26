@@ -1,16 +1,16 @@
-# HANDOFF — Session 5 mars 2026
+# HANDOFF, Session 5 mars 2026
 
 ## Actions realisees cette session
 
 ### 1. Kit media telechargeable (CDC #2)
 - Refactorise la section kit media dans `site/src/pages/fr/medias.astro` : 4 cartes avec icones SVG
-  - Bio complete (.txt) — fichier existant
-  - Chiffres cles (.txt) — **nouveau** `site/public/kit-media/chiffres-cles.txt`
-  - Fiche contact (.vcf) — **nouveau** `site/public/kit-media/colomban.vcf`
+  - Bio complete (.txt), fichier existant
+  - Chiffres cles (.txt), **nouveau** `site/public/kit-media/chiffres-cles.txt`
+  - Fiche contact (.vcf), **nouveau** `site/public/kit-media/colomban.vcf`
   - Photos HD (lien mailto)
 
 ### 2. Landing page oceanocratie.fr (CDC #6)
-- **Nouveau** `oceanocratie.fr/index.html` — page standalone HTML
+- **Nouveau** `oceanocratie.fr/index.html`, page standalone HTML
   - Hero avec visuel livre, sous-titre, formulaire waitlist email
   - Section 3 axes (technologique, environnementale, socioculturelle)
   - Section auteur avec lien retour colombanatsea.com
@@ -64,34 +64,34 @@
 
 | # | Element | Statut |
 |---|---------|--------|
-| 1 | Version anglaise (EN) | **FAIT** — structure i18n + 7 pages EN |
+| 1 | Version anglaise (EN) | **FAIT**, structure i18n + 7 pages EN |
 | 2 | Kit media telechargeable | **FAIT** |
 | 3 | Bandeau teaser Oceanocratie | Existait deja (homepage) |
 | 4 | SEO complet | **FAIT** (schema, sitemap, meta, hreflang) |
-| 5 | Fallbacks mobile / 3D optimise | **FAIT** — progressive loading |
+| 5 | Fallbacks mobile / 3D optimise | **FAIT**, progressive loading |
 | 6 | Landing page oceanocratie.fr | **FAIT** |
 | 7 | Series YouTube integrees | Existait deja (prises-de-parole) |
 | 8 | Bibliographie | Existait deja (a-propos) |
-| 9 | Donnees reelles media-viz | **A FAIRE** — Besoin export Notion |
+| 9 | Donnees reelles media-viz | **A FAIRE**, Besoin export Notion |
 | 10 | Citations rotatives footer | Existait deja |
-| 11 | Analytics privacy-friendly | **A FAIRE** — Decision Plausible vs Umami |
+| 11 | Analytics privacy-friendly | **A FAIRE**, Decision Plausible vs Umami |
 | 12 | Politique de confidentialite | Existait deja |
 | 13 | Lien aperitifsdelamer.com | Existait deja (footer) |
-| 14 | Design system noeud complet | **A FAIRE** — Concepts a proposer |
+| 14 | Design system noeud complet | **A FAIRE**, Concepts a proposer |
 
 ## Fichiers modifies
-- `site/astro.config.mjs` — i18n config
-- `site/src/layouts/BaseLayout.astro` — SEO, securite, fonts, mobile nav, i18n, hreflang, lang switcher
-- `site/src/components/Globe.astro` — progressive loading, quality settings, context loss
-- `site/src/components/Matrice.astro` — lazy loading IO, progressive loading, context loss
-- `site/public/sitemap.xml` — hreflang xhtml, FR+EN URLs
+- `site/astro.config.mjs`, i18n config
+- `site/src/layouts/BaseLayout.astro`, SEO, securite, fonts, mobile nav, i18n, hreflang, lang switcher
+- `site/src/components/Globe.astro`, progressive loading, quality settings, context loss
+- `site/src/components/Matrice.astro`, lazy loading IO, progressive loading, context loss
+- `site/public/sitemap.xml`, hreflang xhtml, FR+EN URLs
 
 ## Fichiers crees
-- `site/src/i18n/translations.ts` — UI strings FR/EN
-- `site/src/i18n/utils.ts` — i18n helpers
-- `site/src/pages/fr/` — 8 pages FR (deplacees depuis racine)
-- `site/src/pages/en/` — 7 pages EN
-- `site/src/pages/index.astro` — redirect vers /fr/
+- `site/src/i18n/translations.ts`, UI strings FR/EN
+- `site/src/i18n/utils.ts`, i18n helpers
+- `site/src/pages/fr/`, 8 pages FR (deplacees depuis racine)
+- `site/src/pages/en/`, 7 pages EN
+- `site/src/pages/index.astro`, redirect vers /fr/
 - `site/public/robots.txt`
 - `site/public/kit-media/chiffres-cles.txt`
 - `site/public/kit-media/colomban.vcf`
@@ -100,31 +100,31 @@
 ### 6. Ajustements visuels UX
 
 #### Scrollbars cachees
-- `viz/carte.html` et `viz/mediaviz.html` : ajout `scrollbar-width: none` + `::-webkit-scrollbar { display: none }` — scrollbar invisible mais scroll fonctionnel
+- `viz/carte.html` et `viz/mediaviz.html` : ajout `scrollbar-width: none` + `::-webkit-scrollbar { display: none }`, scrollbar invisible mais scroll fonctionnel
 
-#### A propos — Transition hero/carte
+#### A propos, Transition hero/carte
 - Suppression du bloc "Le parcours / D'un sillage..." redondant
 - Hero sombre coule directement dans la carte marine (pas de rupture)
 - Ajout indicateur de scroll anime (meme pattern que la homepage)
 - `.carte-section` background match `#0a0e1a` (fond de carte.html)
 - Mobile : hauteur carte reduite a 70vh
 
-#### Engagements — Matrice
+#### Engagements, Matrice
 - Hauteur augmentee a 55vh, margin-top reduit
 - Masque CSS gradient (fade top/bottom) pour transition uniforme hero/matrice/contenu
 
-#### Medias — Timeline
+#### Medias, Timeline
 - Ajout indicateur de scroll anime en bas de la visualisation mediaviz
 - SVG chevron + texte "Scrollez dans la visualisation" avec animation bounce/fade
 
 ---
 
-# HANDOFF — Session 8 mars 2026
+# HANDOFF, Session 8 mars 2026
 
 ## Actions realisees cette session
 
 ### 1. Refonte complete ocean 3D oceanocratie.fr
-- **Remplacement Three.js par raymarching WebGL pur** — zero dependance externe
+- **Remplacement Three.js par raymarching WebGL pur**, zero dependance externe
   - Technique basee sur "Seascape" de TDM (Shadertoy, 840K+ vues)
   - Heightmap tracing (binary search), ocean infini sans mesh
   - `sea_octave()` custom : cretes tranchantes realistes
@@ -154,14 +154,14 @@
 - DPR cap 1.5 (shader WebGL) / 2 (droplets canvas)
 - 3 octaves geometrie / 5 fragment (shader LOD)
 - Mobile : fallback CSS (pas de WebGL, pas de droplets, pas de spray)
-- Aucun CDN, aucun framework — HTML standalone ~1400 lignes
+- Aucun CDN, aucun framework, HTML standalone ~1400 lignes
 
 ### 6. Documentation
 - CLAUDE.md mis a jour : specs oceanocratie.fr (raymarching, droplets, securite, perf)
 - HANDOFF.md mis a jour avec cette session
 
 ## Fichiers modifies
-- `oceanocratie.fr/index.html` — refonte complete ocean + droplets + securite
+- `oceanocratie.fr/index.html`, refonte complete ocean + droplets + securite
 
 ## Action requise
 - **Sauvegarder la photo OG** en tant que `site/public/og-image.jpg` (1200x630px recommande, ou crop de la photo portrait fournie)
@@ -169,7 +169,7 @@
 
 ---
 
-# HANDOFF — Session 9 mars 2026
+# HANDOFF, Session 9 mars 2026
 
 ## Actions realisees cette session
 
@@ -183,13 +183,13 @@
 - **Suppression** de la section "Matrice 3D" avec cube CSS sur oceanocratie.fr (section et styles CSS)
 - **Mise a jour** des 3 noeuds "Aventure entrepreneuriale" dans Matrice.astro : description changee de "secteur maritime" a "secteurs du maritime, de la sante et de l'achat ethique"
 
-### 3. Carte du sillage au rayonnement — hover
+### 3. Carte du sillage au rayonnement, hover
 - Fix du hover sur les waypoints : le tooltip apparait des qu'un point est visible, et non plus seulement quand le trait l'atteint
 - `vis` calcule avec `Math.floor(...) + 1` au lieu de `Math.floor(...)` seul
 
 ### 4. Open Graph / Preview social
-- **colombanatsea.com** : titre "Colomban — Oceanocratie", description detaillant la vision maritime
-- **oceanocratie.fr** : titre "Oceanocratie — Colomban", description "La France collectionne les atouts maritimes mais tourne le dos a la mer..."
+- **colombanatsea.com** : titre "Colomban, Oceanocratie", description detaillant la vision maritime
+- **oceanocratie.fr** : titre "Oceanocratie, Colomban", description "La France collectionne les atouts maritimes mais tourne le dos a la mer..."
 - **Conversion OG image** : oceanocratie.fr og-image.svg converti en og-image.png (meilleure compatibilite reseaux sociaux)
 - Mise a jour og:image, twitter:image et JSON-LD pour pointer vers og-image.png
 
@@ -198,7 +198,7 @@
 - Suppression de l'arret aleatoire par tension de surface (plus de `stopped` state)
 - Zone de spawn repositionnee en haut de l'ecran (0-30% au lieu de 0-50%)
 
-### 6. Page engagements EN — refonte complete
+### 6. Page engagements EN, refonte complete
 - Structure HTML alignee sur la version FR (meme layout hero + Matrice + grille cartes)
 - Ajout des axes (Technological, Environmental, Sociocultural) avec tags colores
 - Ajout liens externes sur les noms d'engagement
@@ -207,25 +207,25 @@
 ### 7. Verifications
 - **Doubles points** : aucun double point trouve dans les titres des deux sites
 - **Traductions EN** : verifiees et corrigees (engagements page refaite)
-- **SEO** : meta descriptions, JSON-LD, sitemap, robots.txt, canonical URLs, hreflang — tout OK
+- **SEO** : meta descriptions, JSON-LD, sitemap, robots.txt, canonical URLs, hreflang, tout OK
 - **Sources** : pages sources bien formatees et completes sur les deux sites
-- **Coherence des chiffres** : 97%, 80%, 595 Md€, 50+, 45 GW, 11M km², 37 frontières — coherents entre les deux sites
+- **Coherence des chiffres** : 97%, 80%, 595 Md€, 50+, 45 GW, 11M km², 37 frontières, coherents entre les deux sites
 
 ## Fichiers modifies
-- `colombanatsea.com/site/src/pages/fr/index.astro` — swap KPI, OG meta
-- `colombanatsea.com/site/src/pages/en/index.astro` — swap KPI, OG meta
-- `colombanatsea.com/site/src/pages/en/engagements.astro` — refonte complete
-- `colombanatsea.com/site/src/components/Matrice.astro` — desc Aventure entrepreneuriale
-- `colombanatsea.com/site/src/components/CarteTimeline.astro` — fix hover waypoints
-- `oceanocratie.fr/index.html` — swap KPI, suppression Matrice 3D, OG meta, droplets fix
-- `oceanocratie.fr/og-image.png` — conversion depuis SVG
+- `colombanatsea.com/site/src/pages/fr/index.astro`, swap KPI, OG meta
+- `colombanatsea.com/site/src/pages/en/index.astro`, swap KPI, OG meta
+- `colombanatsea.com/site/src/pages/en/engagements.astro`, refonte complete
+- `colombanatsea.com/site/src/components/Matrice.astro`, desc Aventure entrepreneuriale
+- `colombanatsea.com/site/src/components/CarteTimeline.astro`, fix hover waypoints
+- `oceanocratie.fr/index.html`, swap KPI, suppression Matrice 3D, OG meta, droplets fix
+- `oceanocratie.fr/og-image.png`, conversion depuis SVG
 
 ## Fichiers crees
-- `oceanocratie.fr/og-image.png` — OG image raster pour compatibilite reseaux sociaux
+- `oceanocratie.fr/og-image.png`, OG image raster pour compatibilite reseaux sociaux
 
 ---
 
-# HANDOFF — Session 27 mars 2026
+# HANDOFF, Session 27 mars 2026
 
 ## Branche : `perf/globe-lazy-load`
 
@@ -236,20 +236,20 @@ synchrone sur le thread principal, bloquant le LCP et causant des timeouts PageS
 ## Actions realisees
 
 ### 1. Textures → WebP (−435 KB, −69%)
-- `earth-blue-marble.jpg` (335 KB) → `.webp` (158 KB) — −53%
-- `earth-topology.png` (293 KB) → `.webp` (35 KB) — −88%
+- `earth-blue-marble.jpg` (335 KB) → `.webp` (158 KB), −53%
+- `earth-topology.png` (293 KB) → `.webp` (35 KB), −88%
 - Originaux supprimes, chemins mis a jour dans Globe.astro
 
 ### 2. Testimonial resize (−91 KB, −92%)
 - `luna-menendez.jpg` 800×800 (99 KB) → 160×160 (7.5 KB)
 - Original sauvegarde en `luna-menendez-original.jpg`
 
-### 3. Globe.astro — CSS placeholder + canvas fade-in
+### 3. Globe.astro, CSS placeholder + canvas fade-in
 - `#globe-container::before` : radial-gradient `#080b14` (meme fond que le globe)
 - `#globe-container canvas` : `opacity: 0` + `transition: opacity 0.8s`
 - `.globe-ready` : fait disparaitre le placeholder et apparaitre le canvas
 
-### 4. Globe.astro — interaction-gated lazy init
+### 4. Globe.astro, interaction-gated lazy init
 - Tout le bloc `else { ... }` (Three.js init, textures, controls, animation) wrappe
   dans `async function initGlobe()`
 - Declenchement via **interaction gate** : premier scroll, click, mousemove, touchstart
@@ -266,12 +266,12 @@ synchrone sur le thread principal, bloquant le LCP et causant des timeouts PageS
 ## Economie totale : ~526 KB + thread principal libere pour LCP
 
 ## Fichiers modifies
-- `site/src/components/Globe.astro` — CSS placeholder, canvas transition, initGlobe wrapper, WebP paths
-- `site/public/assets/textures/earth-blue-marble.webp` — remplacement de .jpg
-- `site/public/assets/textures/earth-topology.webp` — remplacement de .png
-- `site/public/assets/testimonials/luna-menendez.jpg` — redimensionne 160×160
-- `CLAUDE.md` — section performance
-- `HANDOFF.md` — cette session
+- `site/src/components/Globe.astro`, CSS placeholder, canvas transition, initGlobe wrapper, WebP paths
+- `site/public/assets/textures/earth-blue-marble.webp`, remplacement de .jpg
+- `site/public/assets/textures/earth-topology.webp`, remplacement de .png
+- `site/public/assets/testimonials/luna-menendez.jpg`, redimensionne 160×160
+- `CLAUDE.md`, section performance
+- `HANDOFF.md`, cette session
 
 ## A faire (post-merge)
 - Tester PageSpeed Insights apres deploy

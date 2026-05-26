@@ -1,13 +1,13 @@
-# Colomban at Sea — Specifications Techniques
+# Colomban at Sea, Specifications Techniques
 
 ## Stack
-- **Framework** : Astro 5.x (SSG) — `site/`
+- **Framework** : Astro 5.x (SSG), `site/`
 - **3D** : Three.js (npm) + earcut (polygon triangulation)
 - **Hébergement** : GitHub Pages (custom domain `colombanatsea.com`)
 - **Base URL** : `/`
 - **i18n** : Astro built-in (`prefixDefaultLocale: true`, `redirectToDefaultLocale: false`), locales FR/EN
   - Traductions : `site/src/i18n/translations.ts` (UI strings) + `site/src/i18n/utils.ts`
-  - Routes : `/fr/` (defaut), `/en/` — redirect racine `/` → `/fr/` (meta refresh + JS instant)
+  - Routes : `/fr/` (defaut), `/en/`, redirect racine `/` → `/fr/` (meta refresh + JS instant)
   - Pages FR : `site/src/pages/fr/` (9 pages)
   - Pages EN : `site/src/pages/en/` (9 pages : index, about, engagements, speaking, media, contact, legal-notice, privacy-policy, sources)
   - hreflang bidirectionnel sur toutes les pages + sitemap xhtml:link
@@ -27,7 +27,7 @@
 | Gris 200 | `#E4E4EA` | `--gris-200` |
 | Gris 400 | `#9D9DAF` | `--gris-400` |
 | Gris 600 | `#5C5C6E` | `--gris-500` |
-| Gris 800 | `#2E2E3A` | — |
+| Gris 800 | `#2E2E3A` |, |
 
 ### Typographie
 | Police | Graisses | Role |
@@ -36,14 +36,14 @@
 | **Inter** | 300, 400, 500, 600 | Corps de texte, descriptions |
 | **JetBrains Mono** | 400, 500 | Monospace : "at sea", labels techniques, URLs |
 
-### Logo — Noeud entrelacé
+### Logo, Noeud entrelacé
 - SVG 3 layers : ruban bleu complet, ruban vert par-dessus au croisement bas, arc bleu redessiné par-dessus au croisement haut
 - Accent diamant vert en haut à droite
 - Favicon = noeud SVG (viewBox 0 0 200 200)
 - Lockup horizontal : [noeud] | [divider 1.5px] | [Colomban (Poppins 700) + at sea (JetBrains Mono 0.55rem lowercase)]
 
 ### Éléments signature
-- **Ligne gradient haut** : `linear-gradient(90deg, --bleu, --vert)` — 3px, `border-top` du body
+- **Ligne gradient haut** : `linear-gradient(90deg, --bleu, --vert)`, 3px, `border-top` du body
 - **Point coloré fin de titre** : `.` vert sur fond sombre, `.` bleu sur fond clair
 - **3 fonds** : Noir Doux (#1A1A2E), Blanc (#FAFAFA), Bleu (#2A55B3)
 - **Dividers** : `divider.svg` du repo `colombanatsea/logos`, 64px, 18% opacité
@@ -58,11 +58,11 @@
 ### Globe (`Globe.astro`)
 - Texture satellite earth-blue-marble.jpg (self-hosted dans `public/images/globe/`)
 - Bump map earth-topology.png (self-hosted, desktop uniquement)
-- ZEE France : 18 polygones GeoJSON réels (earcut triangulation) — `src/data/eez.json`
-- Câbles sous-marins : 708 features Telegeography — `src/data/cables.json` (229KB)
-- Routes maritimes : 3 niveaux (major/middle/minor) — `src/data/shipping-lanes.json` (53KB)
+- ZEE France : 18 polygones GeoJSON réels (earcut triangulation), `src/data/eez.json`
+- Câbles sous-marins : 708 features Telegeography, `src/data/cables.json` (229KB)
+- Routes maritimes : 3 niveaux (major/middle/minor), `src/data/shipping-lanes.json` (53KB)
 - Légende interactive, toggle par layer, tooltip hover ZEE
-- Zoom 1.3x–5x, auto-rotation 0.08, atmosphère shader
+- Zoom 1.3x,5x, auto-rotation 0.08, atmosphère shader
 - **Progressive loading** : early exit si hidden (mobile), qualite reduite tablettes (48 seg, pixelRatio 1, pas bump map, pas antialias), WebGL context loss handler
 - **Mobile** : Fallback CSS circle + stats (ZEE 11.6M km², 708 câbles, 2ème ZEE mondiale). Sur la homepage, le globe fallback apparaît sous le hero content (position relative, hauteur auto avec padding). Cercle `flex-shrink: 0` pour éviter le squish.
 
@@ -87,7 +87,7 @@
 
 ### Media-viz timeline (`viz/mediaviz.html`)
 - Canvas 2D scroll-driven, scrollbar masquée, indicateur scroll animé
-- Timeline : 01/05/2022 — 09/03/2026, 34 articles presse avec titres réels
+- Timeline : 01/05/2022, 09/03/2026, 34 articles presse avec titres réels
 - Popup affiche outlet (ex: "Jeune Marine") au lieu du type, avec lien vers l'article
 - Couleurs par sujet : rose (culture/traditions/métier), vert (transition/biosphère), bleu (tech/dev perso)
 
@@ -96,14 +96,14 @@
 ### Homepage (`/fr/`, `/en/`)
 - Hero plein écran : titre "Océanocratie" (FR) / "Oceanocracy" (EN), baseline "Une nation libre regarde la mer." (non-italic, Poppins 300)
 - Globe en arrière-plan (desktop), fallback circle+stats en dessous du content (mobile), overlay léger, dezoom au scroll (rAF-throttled)
-- Bouton "Explorer la carte" → mode plein écran avec légende + stats (Escape pour fermer) — masqué mobile
+- Bouton "Explorer la carte" → mode plein écran avec légende + stats (Escape pour fermer), masqué mobile
 - Nav : texte blanc par défaut, bascule noir au scroll (`nav--scrolled`)
 - Citation Tabarly : "La mer, c'est ce que les Français ont dans le dos quand ils regardent la plage" + écho Colomban
-- Le MERitoire français : grille 8 cartes (ZEE, 37 frontières, 4 océans, 5 continents, 595 Md€ exports, 50+ câbles, 45 GW éolien, ADN culture) — concept TERRitoire vs MERitoire, lien vers globe ZEE-only
-- "Tout passe par la mer" : diagnostic positif — 97% données mondiales câbles, 80% commerce maritime, EMR potentiel, 25 000 molécules marines — layout 2 colonnes (texte + 4 facts)
-- Manifeste Océanocratie/Oceanocracy : "Une nation libre regarde la mer" — 3 piliers (curiosité/humilité/fraternité), distinction thalassocratie vs océanocratie
-- Triple évolution : "Deux transitions, une révolution" — techno (transition digitale post-web), écolo (décarbonation + EMR + 9 limites planétaires), socio (révolution socioculturelle + valeurs)
-- Engagements : "3 axes d'engagement. Un cap unique" — Matrice 3D
+- Le MERitoire français : grille 8 cartes (ZEE, 37 frontières, 4 océans, 5 continents, 595 Md€ exports, 50+ câbles, 45 GW éolien, ADN culture), concept TERRitoire vs MERitoire, lien vers globe ZEE-only
+- "Tout passe par la mer" : diagnostic positif, 97% données mondiales câbles, 80% commerce maritime, EMR potentiel, 25 000 molécules marines, layout 2 colonnes (texte + 4 facts)
+- Manifeste Océanocratie/Oceanocracy : "Une nation libre regarde la mer", 3 piliers (curiosité/humilité/fraternité), distinction thalassocratie vs océanocratie
+- Triple évolution : "Deux transitions, une révolution", techno (transition digitale post-web), écolo (décarbonation + EMR + 9 limites planétaires), socio (révolution socioculturelle + valeurs)
+- Engagements : "3 axes d'engagement. Un cap unique", Matrice 3D
 - Sections : Hero → Tabarly → Divider → MERitoire → Divider → Tout passe par la mer → Divider → Manifeste → Divider → Triple évolution → Matrice → Logos → Témoignages → CTA Social → Océanocratie livre
 
 ### A propos (`/a-propos`, `/about`)
@@ -131,7 +131,7 @@
 
 ### Prises de parole (`/prises-de-parole`, `/speaking`)
 - Conférences & interventions (tableau chronologique, liens externes vers euromaritime.fr, lemarin.ouest-france.fr, nabu.de, raceforwater.org)
-- Podcasts (Maritime with a French Accent — lien Spotify épisode)
+- Podcasts (Maritime with a French Accent, lien Spotify épisode)
 - Séries YouTube : Hissez Mot(s) ! (playlist), Marine Marchande 101 (playlist)
 
 ### Sources & données (`/sources`)
@@ -162,10 +162,10 @@
 - JSON-LD Person : 8 affiliations avec URLs, knowsAbout étendu (11 termes), alumniOf ENSM, sameAs (LinkedIn, Instagram, YouTube, TikTok)
 - Open Graph complet : og:url, og:site_name, og:image, twitter:card + twitter:image
 - Meta descriptions sur toutes les pages
-- **LLM optimization** : `public/llms.txt` — fichier structuré décrivant le site, les concepts clés, les engagements et les pages pour les LLM
+- **LLM optimization** : `public/llms.txt`, fichier structuré décrivant le site, les concepts clés, les engagements et les pages pour les LLM
 
 ## Sécurité
-- **CSP** : `Content-Security-Policy` via meta http-equiv — `default-src 'self'`, `script-src 'self' 'unsafe-inline'`, `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`, `font-src https://fonts.gstatic.com`, `img-src 'self' data:`, `frame-src 'self'`, `object-src 'none'`
+- **CSP** : `Content-Security-Policy` via meta http-equiv, `default-src 'self'`, `script-src 'self' 'unsafe-inline'`, `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`, `font-src https://fonts.gstatic.com`, `img-src 'self' data:`, `frame-src 'self'`, `object-src 'none'`
 - **Permissions-Policy** : `geolocation=(), microphone=(), camera=(), payment=(), usb=()`
 - `X-Content-Type-Options: nosniff` (meta)
 - `referrer: strict-origin-when-cross-origin` (meta)
@@ -179,7 +179,7 @@
 ### Vecteurs potentiels à surveiller
 - **Google Fonts** : chargé en async non-bloquant. Si Google Fonts tombe, les polices système prennent le relais (`display=swap`). Pas de SRI possible sur les fonts dynamiques.
 - **Pas de formulaire côté colombanatsea.com** : aucun champ de saisie utilisateur, donc pas de XSS via input, pas de CSRF, pas de SQL injection.
-- **oceanocratie.fr — waitlist** : formulaire email stocké en localStorage uniquement (pas de backend). L'input est traité par `FormData` sans `innerHTML` — pas de XSS. CSP bloque `frame-src 'none'` et `object-src 'none'` (anti-clickjacking, anti-plugin).
+- **oceanocratie.fr, waitlist** : formulaire email stocké en localStorage uniquement (pas de backend). L'input est traité par `FormData` sans `innerHTML`, pas de XSS. CSP bloque `frame-src 'none'` et `object-src 'none'` (anti-clickjacking, anti-plugin).
 - **GitHub Pages** : HTTPS forcé, pas de serveur custom, pas de backend. La surface d'attaque est minimale (SSG pur).
 - **unsafe-inline** : nécessaire pour les scripts inline Astro/standalone et les styles scoped. Acceptable car aucun user input n'est rendu dans le DOM.
 
@@ -191,36 +191,36 @@
 ## Sites associés
 - **oceanocratie.fr** : Landing page standalone immersive (`oceanocratie.fr/index.html`)
   - **3D Ocean** : Raymarched ocean plein écran (fragment shader pur WebGL, basé sur "Seascape" de TDM/Shadertoy)
-    - Heightmap tracing (binary search), pas de mesh — ocean infini
+    - Heightmap tracing (binary search), pas de mesh, ocean infini
     - `sea_octave()` custom : crêtes tranchantes, creux réalistes (ni sinus ni Perlin)
     - 5 octaves avec rotation matricielle anti-aliasing (`octave_m = mat2(1.6, 1.2, -1.2, 1.6)`)
     - Vagues unidirectionnelles, vitesse réduite (`SEA_SPEED 0.35`)
     - Fresnel cubique, SSS (subsurface scattering), double spéculaire (moon path + halo)
     - Mousse procédurale sur les crêtes, grain film, tone mapping ACES, vignette
   - **Ciel nocturne** : étoiles procédurales en coordonnées sphériques (3 couches, scintillement animé), lune avec disque + triple halo atmosphérique
-  - **Gouttelettes** : Canvas 2D overlay — gouttes qui tombent du haut de l'écran jusqu'en bas avec traînées humides, max 8 simultanées, spawn stochastique (spawn zone 0-30% haut écran)
+  - **Gouttelettes** : Canvas 2D overlay, gouttes qui tombent du haut de l'écran jusqu'en bas avec traînées humides, max 8 simultanées, spawn stochastique (spawn zone 0-30% haut écran)
   - **Spray** : particules CSS-only (30 particules, animation keyframe)
   - **Mobile** : fallback CSS avec vagues animées (pas de WebGL, pas de droplets, pas de spray), layout responsive
   - **Waitlist** : formulaire email avec support Google Sheets (via Apps Script) + fallback localStorage
   - **Sections** : Hero + livre flottant → Stats (97%, 80%, EMR) → Tout passe par la mer (595 Md€, 50+, 45 GW) → Citation Tabarly → 3 transformations → 3 axes → Carte archipel France → Témoignages → Auteur → Footer
-  - **OG** : titre "Oceanocratie — Colomban", og-image.png (raster 1200x630)
+  - **OG** : titre "Oceanocratie, Colomban", og-image.png (raster 1200x630)
   - **Sécurité** : CSP strict (default-src 'self', connect-src 'self' + Google Script, frame-src 'none', object-src 'none'), Permissions-Policy (geolocation, microphone, camera, payment, usb, magnetometer, gyroscope, accelerometer disabled), X-Content-Type-Options nosniff, referrer strict-origin-when-cross-origin, rel="noopener noreferrer" sur tous les liens externes
   - **SEO** : robots.txt, sitemap.xml, meta description, OG complet, Twitter card
   - **Performance** : DPR cap 1.5 (shader) / 2 (droplets), 3 octaves géométrie / 5 fragment, aucune dépendance externe (pas de Three.js), fonts Google non-bloquantes
-  - **Zero dépendance** : HTML standalone, aucun CDN, aucun framework — WebGL natif + Canvas 2D
+  - **Zero dépendance** : HTML standalone, aucun CDN, aucun framework, WebGL natif + Canvas 2D
 - **aperitifsdelamer.com** : Lien dans le footer
 - **vaiata-dynamics.com/fr/cyber/** : Protection cyber, lien footer
 
-## Performance — Globe Lazy-Load (branche `perf/globe-lazy-load`)
+## Performance, Globe Lazy-Load (branche `perf/globe-lazy-load`)
 
 ### Problème
 Le globe Three.js bloquait le thread principal au chargement : textures lourdes (628 KB),
 init WebGL synchrone → PageSpeed timeout, LCP dégradé.
 
 ### Modifications
-1. **Globe.astro — CSS** : placeholder `::before` radial-gradient `#080b14`, canvas `opacity:0`
+1. **Globe.astro, CSS** : placeholder `::before` radial-gradient `#080b14`, canvas `opacity:0`
    avec transition 0.8s, classe `.globe-ready` pour fade-in.
-2. **Globe.astro — Script** : tout le bloc `else {}` wrappé dans `async initGlobe()`,
+2. **Globe.astro, Script** : tout le bloc `else {}` wrappé dans `async initGlobe()`,
    déclenché via **interaction gate** (scroll/click/mousemove/touchstart/keydown) avec
    fallback 8s. Lighthouse ne voit jamais le ~1 MB de Three.js + GeoJSON.
    `.globe-ready` ajouté après chargement des 2 textures (ou timeout 6s).
