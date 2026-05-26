@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const conferences = [
+  { date: '26/05/2026', event: 'Studio Jeune Marine', subject: 'Chair of the Fondation ENSM Management Board — three-year review', url: 'https://youtu.be/n6a0eTjwo5o?si=74wNosetO0cMDTuQ' },
   { date: '03/02/2026', event: 'Euromaritime 2026', subject: 'Future of the economic model of public maritime service companies', url: 'https://www.euromaritime.fr/fr/programme-2026/' },
   { date: '18/02/2026', event: 'Académie de Marine', subject: 'Strategic potential of short-sea maritime', url: null },
   { date: '14/10/2025', event: 'Propeller Club International Conference', subject: 'Introduction to digitalization + Introduction to decarbonation (2 keynotes)', url: 'https://lemarin.ouest-france.fr/shipping/lyon-accueille-le-rendez-vous-annuel-des-propeller-clubs-du-monde-entier-83be782c-a8d8-11f0-a84e-0a4f72002724' },
@@ -16,6 +17,7 @@ const conferences = [
 ];
 
 const podcasts = [
+  { date: '13/01/2026', name: 'Chroniques Littorales — France Inter', subject: 'Short-sea maritime service companies', url: 'https://www.radiofrance.fr/franceinter/podcasts/chroniques-littorales/chroniques-littorales-du-mardi-13-janvier-2026-4654691' },
   { date: '12/04/2024', name: 'Maritime with a French Accent', url: 'https://open.spotify.com/episode/7DDvMQZAArCw1YILNRMJWq?si=XujA0FFETDqk7u-bWichVg' },
   { date: '22/01/2024', name: 'Dans l\'Ombre de la Réussite (In the Shadow of Success) – "Sailor, Father, Entrepreneur"', url: 'https://podcasts.apple.com/cm/podcast/1-colomban-monnier-marin-p%C3%A8re-entrepreneur/id1719953495?i=1000642464121' },
 ];
@@ -58,6 +60,7 @@ const podcasts = [
             <span class="talk__date mono">{p.date}</span>
             <div class="talk__content">
               <h3><a href={p.url} target="_blank" rel="noopener noreferrer">{p.name}</a></h3>
+              {p.subject && <p>{p.subject}</p>}
             </div>
           </article>
         ))}
