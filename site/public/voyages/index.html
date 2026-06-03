@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Carte de carrière maritime</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,900&family=Space+Grotesk:wght@400;500;600&family=Space+Mono&display=swap">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- RAIL -->
+  <aside id="rail">
+    <header>
+      <div class="brand">
+        <h1 data-i18n="app_title">Carte de carrière maritime</h1>
+        <button id="tutohelp" type="button" class="tuto-help" aria-label="Aide" title="?">?</button>
+        <select id="lang" aria-label="Language"></select>
+      </div>
+      <div class="sub" data-i18n="app_sub">Reconstituez et imprimez vos embarquements</div>
+    </header>
+
+    <div class="rail-scroll">
+      <div class="section">
+        <div id="dropzone" class="drop">
+          <div class="big" id="dropbig">Glissez ici votre relevé</div>
+          <div class="small" id="dropsmall">PDF, Excel, CSV ou JSON</div>
+          <div class="or" id="dropor">ou</div>
+          <span class="linkbtn" id="exlink">Charger l'exemple</span>
+        </div>
+        <div class="jsonbar">
+          <button class="linkbtn" id="importjson" data-i18n="import_json">Importer</button>
+          <button class="linkbtn" id="exportjson" data-i18n="export_json">Exporter</button>
+          <button class="linkbtn" id="resetex" data-i18n="reset">Réinitialiser</button>
+        </div>
+        <input type="file" id="fileinput" accept=".pdf,.xlsx,.xlsm,.csv,.txt,.json" hidden>
+      </div>
+
+      <div class="section">
+        <div class="lbl" data-i18n="presets">Styles</div>
+        <div id="presetchips" class="chips"></div>
+      </div>
+
+      <details class="adv">
+        <summary data-i18n="theme">Style</summary>
+        <div class="section" style="margin-top:12px">
+          <div class="lbl" data-i18n="theme">Style</div>
+          <div id="themechips" class="chips"></div>
+        </div>
+        <div class="section">
+          <div class="lbl" data-i18n="projection">Projection</div>
+          <div id="projchips" class="chips"></div>
+        </div>
+      </details>
+
+      <div class="section">
+        <div class="lbl" data-i18n="legend">Légende</div>
+        <div id="toggles" class="toggles"></div>
+      </div>
+
+      <div class="section">
+        <div class="lbl" data-i18n="title_label">Titre</div>
+        <div class="field"><input id="titlein" type="text" placeholder="Titre"></div>
+        <div class="field" style="margin-top:7px"><input id="subin" type="text" placeholder="Sous-titre"></div>
+      </div>
+
+      <div class="section">
+        <div class="lbl" data-i18n="edit_vessels">Navires & escales</div>
+        <div id="warnings" class="warnings" hidden></div>
+        <div id="vessels"></div>
+        <button id="btnaddvessel" class="btn block" style="margin-top:6px" data-i18n="add_vessel">Ajouter un navire</button>
+      </div>
+    </div>
+
+    <div id="exportbar">
+      <button class="btn solid" id="btnprint" data-i18n="print">Imprimer</button>
+      <button class="btn" id="btnsvg" data-i18n="export_svg">SVG</button>
+      <button class="btn" id="btnpng" data-i18n="export_png">Image HD</button>
+    </div>
+  </aside>
+
+  <!-- STAGE -->
+  <main id="stage">
+    <div id="poster"></div>
+    <div class="loading"><span data-i18n="loading">Calcul des routes…</span></div>
+    <div class="dragover-global" id="globaldrop" data-i18n="drop_hint">Déposez votre relevé</div>
+  </main>
+</div>
+
+<datalist id="portlist"></datalist>
+
+<!-- vendor self-hostes (CSP script-src 'self') -->
+<script src="./vendor/d3.min.js"></script>
+<script src="./vendor/topojson-client.min.js"></script>
+<script src="./vendor/d3-geo-projection.min.js"></script>
+<!-- moteur client-side (port des fonctions backend) -->
+<script src="./lib/resolve.js"></script>
+<script src="./lib/router.js"></script>
+<script src="./lib/enrich.js"></script>
+<script src="./lib/ingest.js"></script>
+<script src="./lib/tutorial.js"></script>
+<!-- app -->
+<script src="./i18n.js"></script>
+<script src="./render.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>

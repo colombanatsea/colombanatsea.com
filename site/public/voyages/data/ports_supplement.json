@@ -1,0 +1,11 @@
+{
+  "_comment": "Ports majeurs absents de ports.geojson. Coordonnees verifiees. Cles = LOCODE (2 lettres + 3 alnum).",
+  "MAPTM": {"name": "Tanger Med", "locode": "MAPTM", "country": "Morocco", "lat": 35.8847, "lon": -5.4986},
+  "FRSML": {"name": "Saint-Malo", "locode": "FRSML", "country": "France", "lat": 48.6493, "lon": -2.0257},
+  "GBPME": {"name": "Portsmouth (UK)", "locode": "GBPME", "country": "United_kingdom", "lat": 50.8000, "lon": -1.0980},
+  "TFCRO": {"name": "Crozet (Alfred Faure)", "locode": "TFCRO", "country": "TAAF", "lat": -46.4296, "lon": 51.8644},
+  "TFKER": {"name": "Kerguelen (Port-aux-Français)", "locode": "TFKER", "country": "TAAF", "lat": -49.3517, "lon": 70.2197},
+  "TFAMS": {"name": "Amsterdam (Martin-de-Viviès)", "locode": "TFAMS", "country": "TAAF", "lat": -37.8316, "lon": 77.5483},
+  "TFSPL": {"name": "Île Saint-Paul", "locode": "TFSPL", "country": "TAAF", "lat": -38.7197, "lon": 77.5323},
+  "TFTRO": {"name": "Tromelin", "locode": "TFTRO", "country": "TAAF", "lat": -15.8923, "lon": 54.5247}
+}
