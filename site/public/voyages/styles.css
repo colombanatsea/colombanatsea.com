@@ -1,0 +1,130 @@
+/* Carte de carriere maritime — atelier du cartographe d'expedition */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+  --ink:#1a1714; --ink-soft:#6b6258; --line:#e0d8cb; --rail:#f4f0e8;
+  --bg:#efe9df; --accent:#b9472f; --focus:#1f6f8b;
+  --rail-w:340px; --font-ui:'Space Grotesk',system-ui,sans-serif;
+  --font-display:'Fraunces',Georgia,serif; --font-mono:'Space Mono',monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;font-family:var(--font-ui);color:var(--ink);background:var(--bg)}
+button,input,select{font-family:inherit;color:inherit}
+button{cursor:pointer;border:none;background:none}
+
+#app{display:grid;grid-template-columns:var(--rail-w) 1fr;height:100vh;overflow:hidden}
+
+/* ---------- RAIL ---------- */
+#rail{background:var(--rail);border-right:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden}
+#rail header{padding:22px 22px 14px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.brand h1{font-family:var(--font-display);font-weight:900;font-size:23px;line-height:1.02;margin:0;letter-spacing:-.01em}
+.brand .sub{font-size:11px;color:var(--ink-soft);margin-top:6px;letter-spacing:.02em}
+#lang{font-family:var(--font-mono);font-size:11px;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:5px 7px}
+
+.rail-scroll{flex:1;overflow-y:auto;padding:16px 18px 80px}
+.section{margin-bottom:22px}
+
+/* dépliants avancés / détails navire */
+details.adv,details.moredetails{margin-bottom:18px}
+details.adv > summary,details.moredetails > summary{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;cursor:pointer;list-style:none;padding:6px 0;user-select:none}
+details.adv > summary::-webkit-details-marker,details.moredetails > summary::-webkit-details-marker{display:none}
+details.adv > summary::before,details.moredetails > summary::before{content:"▸ ";color:var(--ink-soft)}
+details.adv[open] > summary::before,details.moredetails[open] > summary::before{content:"▾ "}
+details.moredetails{margin:8px 0 2px}
+details.moredetails > summary{font-size:10px;letter-spacing:.06em}
+
+.empty-state{font-size:12.5px;color:var(--ink-soft);line-height:1.5;padding:18px 14px;text-align:center;border:1px dashed var(--line);border-radius:10px;background:#fff}
+.warnings{font-size:11px;color:#7a2018;background:#fef0e7;border:1px solid #e6b8a8;border-radius:8px;padding:8px 10px;margin-bottom:10px;line-height:1.5}
+.warnings b{display:block;margin-bottom:3px;font-size:10px;letter-spacing:.04em;text-transform:uppercase}
+
+/* accessibilité : focus visible homogène */
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:4px}
+.chip:focus-visible,.btn:focus-visible{outline-offset:1px}
+.section > .lbl{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:9px;font-weight:600}
+
+/* segmented chips */
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;transition:.15s}
+.chip:hover{border-color:var(--ink-soft)}
+.chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.toggles{display:flex;gap:6px;flex-wrap:wrap}
+
+/* dropzone */
+.drop{border:1.5px dashed #c9bda9;border-radius:12px;padding:20px 16px;text-align:center;background:#fff;transition:.18s}
+.drop:hover,.drop.over{border-color:var(--accent);background:#fff7f3}
+.drop .big{font-size:13px;font-weight:600;margin-bottom:3px}
+.drop .small{font-size:11px;color:var(--ink-soft)}
+.drop .or{font-size:10px;color:var(--ink-soft);margin:8px 0 6px;letter-spacing:.1em}
+.linkbtn{font-size:12px;color:var(--focus);text-decoration:underline;text-underline-offset:2px;background:none;padding:0}
+.jsonbar{display:flex;gap:14px;justify-content:center;margin-top:9px}
+.jsonbar .linkbtn{font-size:11px}
+
+/* vessels editor */
+.vessel{border:1px solid var(--line);border-radius:10px;background:#fff;margin-bottom:10px;overflow:hidden}
+.vhead{display:flex;align-items:center;gap:9px;padding:10px 11px;cursor:pointer}
+.swatch{width:12px;height:12px;border-radius:3px;flex:none}
+.vgrip{cursor:grab;color:#bcae98;display:grid;place-items:center;flex:none}
+.vgrip:active{cursor:grabbing}
+.vhead .vn{font-weight:600;font-size:13px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vhead .vmeta{font-family:var(--font-mono);font-size:10px;color:var(--ink-soft)}
+.vbody{padding:4px 11px 12px;border-top:1px solid var(--line);display:none}
+.vbody.open{display:block}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:9px 0}
+.field{display:flex;flex-direction:column;gap:3px}
+.field label{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.field input{border:1px solid var(--line);border-radius:6px;padding:6px 7px;font-size:12px;background:#fdfcfa}
+.field input:focus{outline:none;border-color:var(--focus)}
+.field.full{grid-column:1/3}
+
+.calls{margin-top:6px}
+.calls .crow{display:grid;grid-template-columns:14px 1fr 74px 74px auto auto;gap:5px;align-items:center;padding:4px 0;border-top:1px dashed var(--line)}
+.crow input{border:1px solid var(--line);border-radius:5px;padding:5px 6px;font-size:11.5px;background:#fdfcfa;width:100%}
+.crow input[type=date]{font-family:var(--font-mono);font-size:10px}
+.crow.hidden-call{opacity:.42}
+.grip{cursor:grab;color:#bcae98;display:grid;place-items:center}
+.grip:active{cursor:grabbing}
+.crow.dragging{opacity:.5}
+.crow.drop-target{border-top:2px solid var(--accent)}
+.iconbtn{width:26px;height:26px;border-radius:6px;display:grid;place-items:center;color:var(--ink-soft)}
+.iconbtn:hover{background:var(--bg);color:var(--ink)}
+.iconbtn.warn:hover{color:var(--accent)}
+.addcall{margin-top:8px;font-size:11.5px;color:var(--focus);display:inline-flex;align-items:center;gap:5px}
+.row-actions{display:flex;justify-content:space-between;margin-top:10px}
+.btn{font-size:12px;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;font-weight:500;transition:.15s}
+.btn:hover{border-color:var(--ink-soft)}
+.btn.solid{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.danger{color:var(--accent);border-color:#e7c4ba}
+.btn.block{display:block;width:100%;text-align:center}
+
+/* export bar pinned */
+#exportbar{position:absolute;left:0;bottom:0;width:var(--rail-w);background:var(--rail);border-top:1px solid var(--line);border-right:1px solid var(--line);padding:11px 18px;display:flex;gap:7px}
+#exportbar .btn{flex:1;padding:9px 6px;font-size:11.5px}
+
+/* ---------- STAGE ---------- */
+#stage{position:relative;background:repeating-linear-gradient(45deg,#e7e1d6,#e7e1d6 12px,#e9e3d9 12px,#e9e3d9 24px);overflow:hidden;display:grid;place-items:center}
+#poster{position:relative;box-shadow:0 14px 50px rgba(40,30,20,.28);background:#fff}
+#poster svg{display:block}
+#poster g.ports circle[data-vi]{transition:r .1s}
+#poster g.ports circle[data-vi]:hover{stroke-width:3}
+.stat-pill{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.82);backdrop-filter:blur(5px);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:11px;font-family:var(--font-mono);color:var(--ink);display:flex;gap:12px}
+.loading{position:absolute;inset:0;display:none;place-items:center;background:rgba(245,240,232,.6);z-index:5;font-size:13px;color:var(--ink-soft)}
+.loading.on{display:grid}
+
+.dragover-global{position:absolute;inset:0;z-index:20;display:none;place-items:center;background:rgba(185,71,47,.08);border:3px dashed var(--accent);margin:14px;border-radius:18px;font-size:18px;font-family:var(--font-display);color:var(--accent)}
+.dragover-global.on{display:grid}
+
+::-webkit-scrollbar{width:9px}
+::-webkit-scrollbar-thumb{background:#d6ccbb;border-radius:9px}
+
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* PRINT — only the poster, vector crisp */
+@media print{
+  @page{size:auto;margin:8mm}
+  #rail,#exportbar,.stat-pill,.loading,.dragover-global{display:none!important}
+  #app{display:block}
+  #stage{background:#fff;display:block;height:auto}
+  #poster{box-shadow:none}
+}
