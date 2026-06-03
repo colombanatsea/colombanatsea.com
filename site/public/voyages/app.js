@@ -290,6 +290,11 @@ async function boot() {
   applyI18n();
   const saved = loadSaved();
   if (saved && saved.vessels && saved.vessels.length) { setVoyage(saved); await route(); }
-  else await loadExample();
+  else { renderEditor(); renderMap(); } // demarrage vierge : carte du monde nue + editeur vide
+  // mini-tuto premiere visite (skippable), aide reouvrable
+  if (window.VOYAGES && window.VOYAGES.tutorial) {
+    window.VOYAGES.tutorial(t);
+    const help = $("#tutohelp"); if (help) help.onclick = () => window.VOYAGES.tutorial(t, true);
+  }
 }
 boot();
