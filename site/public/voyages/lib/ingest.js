@@ -131,9 +131,13 @@
 
   async function pdfRows(file) {
     if (!g.pdfjsLib) await loadScript("./vendor/pdf.min.js");
-    g.pdfjsLib.GlobalWorkerOptions.workerSrc = "./vendor/pdf.worker.min.js";
+    // Parsing PDF dans le thread principal, sans Web Worker : on charge le module worker
+    // comme script normal. pdf.js detecte globalThis.pdfjsWorker.WorkerMessageHandler et
+    // n'appelle jamais new Worker() -> indifferent a worker-src de la CSP. isEvalSupported
+    // false car la CSP n'autorise pas 'unsafe-eval'.
+    if (!(g.pdfjsWorker && g.pdfjsWorker.WorkerMessageHandler)) await loadScript("./vendor/pdf.worker.min.js");
     const buf = await file.arrayBuffer();
-    const pdf = await g.pdfjsLib.getDocument({ data: buf }).promise;
+    const pdf = await g.pdfjsLib.getDocument({ data: buf, isEvalSupported: false }).promise;
     const rows = [];
     for (let p = 1; p <= pdf.numPages; p++) {
       const page = await pdf.getPage(p);
