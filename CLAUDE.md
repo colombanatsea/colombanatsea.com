@@ -141,6 +141,16 @@
 - Lien dans le footer (colonne "Liens")
 - Sources : SHOM, VLIZ, Douanes françaises, Cluster Maritime, PPE3, France Renouvelables, ITU, TeleGeography
 
+### Carte de carrière maritime (`/carte-carriere`, `/career-map`)
+- Page enveloppe (`fr/carte-carriere.astro`, `en/career-map.astro`) : nav (navLight), iframe plein écran sous la navbar pointant `public/voyages/index.html?lang=fr|en`.
+- **App autonome client-side** sous `public/voyages/` (outil interactif public, 100% navigateur, aucun backend, aucune donnée ne quitte le poste). Mini-app D3/SVG : reconstitue et imprime une carrière maritime depuis un relevé (6 thèmes, 5 projections, 7 langues, export SVG/PNG/print).
+- **Portage des fonctions backend** (l'app de dev `voyages-app/` a un Flask) vers le navigateur : `lib/resolve.js` (résolution de ports, port de `ports.py`), `lib/enrich.js` (legs + temps de mer, port de `server.py enrich`), `lib/router.js` (searoute-js + repli grand-cercle), `lib/ingest.js` (parse relevé PDF/Excel/CSV/JSON, port de `parse_releve.py`).
+- **Vendor self-hosté** (`public/voyages/vendor/`, CSP `script-src 'self'`) : d3, topojson-client, d3-geo-projection (eager) ; searoute.bundle.js, pdf.js, SheetJS (lazy, chargés au 1er routage/dépôt). Voir `vendor/PROVENANCE.md`.
+- **Vue par défaut instantanée** : `voyage-colomban.json` (relevé de Colomban déjà enrichi, legs + temps de mer bakés) ; searoute ne se charge qu'à la 1re édition.
+- Données : `data/ports.json` (3962), `data/aliases.json`, `data/ports_supplement.json`, `data/land-50m.json`.
+- Lien dans le footer (colonne "Navigation"). `noindex` sur l'app iframe, page indexée + sitemap + hreflang.
+- Source canonique publiée = `public/voyages/`. `voyages-app/` (hors repo) reste l'app de dev/référence ; tests dans `voyages-app/test/` (`parity.mjs` vs backend Python, `e2e_carte.mjs` Playwright, `bake_colomban.cjs`).
+
 ### Page 404
 - `public/404.html` (GitHub Pages custom 404)
 - Thème maritime : rose des vents SVG, particules flottantes
