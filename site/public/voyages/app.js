@@ -24,7 +24,7 @@ const PRESETS = [
 /* ---------- render wrapper (delegue au moteur teste) ---------- */
 function renderMap() {
   if (!RENDER) return;
-  state.lbls = { v: t("vessels"), p: t("ports"), m: t("miles"), emb: t("st_emb"), sea: t("st_sea"), port: t("st_port") };
+  state.lbls = { v: t("vessels"), p: t("ports"), m: t("miles"), emb: t("st_emb"), sea: t("st_sea"), port: t("st_port"), more: t("legend_more") };
   state.credits = t("credits");
   state.keyLbls = { ais: t("key_ais"), inf: t("key_inferred") };
   state.portTip = t("port_click");
@@ -37,6 +37,27 @@ function renderMap() {
   enableDrag(svg, "legend", "legendPos");
   enableDrag(svg, "cartouche", "cartouchePos");
   wirePortClicks(svg);
+  updateStageNote();
+}
+
+// Avertissement non bloquant : navires importés mais aucune escale -> la carte ne peut pas tracer de routes.
+function updateStageNote() {
+  const el = $("#stagenote"); if (!el) return;
+  const R = state.routed;
+  const nv = R && R.vessels ? R.vessels.length : 0;
+  const ports = R && R.totals ? R.totals.ports : 0;
+  if (nv > 0 && ports === 0 && !state._noteDismissed) {
+    let msg = t("note_no_calls").replace("{n}", nv);
+    if (state.lastImport && state.lastImport.enmPdf) msg += " " + t("note_enm_pdf");
+    el.innerHTML = "";
+    const p = document.createElement("span"); p.textContent = msg; el.appendChild(p);
+    const c = document.createElement("button"); c.className = "stage-note__x"; c.setAttribute("aria-label", "×"); c.textContent = "×";
+    c.onclick = () => { state._noteDismissed = true; el.hidden = true; };
+    el.appendChild(c);
+    el.hidden = false;
+  } else {
+    el.hidden = true;
+  }
 }
 
 // déplacement d'un élément du poster (légende, cartouche) — écran -> coordonnées poster
@@ -211,7 +232,11 @@ async function ingestFile(file) {
   try {
     const data = await window.VOYAGES.ingest(file);
     if (data && data.error) alert(data.error);
-    else { setVoyage(data); await route(); }
+    else {
+      state.lastImport = { enm: data.source === "enm", enmPdf: data.note === "enm-pdf" };
+      state._noteDismissed = false;
+      setVoyage(data); await route();
+    }
   } catch (e) { alert(e); }
   $(".loading").classList.remove("on");
 }
