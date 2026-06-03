@@ -120,10 +120,31 @@ details.moredetails > summary{font-size:10px;letter-spacing:.06em}
 
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
+/* ---------- bouton aide + mini-tutoriel ---------- */
+.tuto-help{width:22px;height:22px;flex:0 0 auto;border:1px solid var(--line);border-radius:50%;background:var(--bg);color:var(--ink-soft);font-family:var(--font-mono);font-size:12px;font-weight:700;line-height:1;display:inline-flex;align-items:center;justify-content:center}
+.tuto-help:hover{color:var(--accent);border-color:var(--accent)}
+.tuto-ov{position:fixed;inset:0;z-index:1000;background:rgba(26,23,20,.5);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;padding:20px;animation:tuto-fade .2s ease-out}
+.tuto-card{background:var(--rail);border:1px solid var(--line);border-radius:16px;max-width:440px;width:100%;padding:26px 26px 18px;box-shadow:0 18px 50px rgba(26,23,20,.28);border-top:3px solid var(--accent)}
+.tuto-h{font-family:var(--font-display);font-weight:900;font-size:22px;margin:0 0 10px;letter-spacing:-.01em}
+.tuto-b{font-size:14px;line-height:1.6;color:var(--ink-soft);margin:0 0 18px}
+.tuto-dots{display:flex;gap:7px;justify-content:center;margin-bottom:18px}
+.tuto-dot{width:7px;height:7px;border-radius:50%;background:var(--line)}
+.tuto-dot.on{background:var(--accent)}
+.tuto-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.tuto-actions{display:flex;gap:8px}
+.tuto-skip{font-size:12px;color:var(--ink-soft);text-decoration:underline;padding:8px 4px}
+.tuto-skip:hover{color:var(--ink)}
+.tuto-btn{font-size:13px;font-weight:600;background:var(--accent);color:#fff;border-radius:8px;padding:9px 16px}
+.tuto-btn:hover{filter:brightness(1.07)}
+.tuto-btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.tuto-btn:focus-visible,.tuto-skip:focus-visible,.tuto-help:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+@keyframes tuto-fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.tuto-ov{animation:none}}
+
 /* PRINT — only the poster, vector crisp */
 @media print{
   @page{size:auto;margin:8mm}
-  #rail,#exportbar,.stat-pill,.loading,.dragover-global{display:none!important}
+  #rail,#exportbar,.stat-pill,.loading,.dragover-global,.tuto-ov{display:none!important}
   #app{display:block}
   #stage{background:#fff;display:block;height:auto}
   #poster{box-shadow:none}

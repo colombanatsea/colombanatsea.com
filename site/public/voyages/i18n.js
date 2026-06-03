@@ -207,6 +207,20 @@ window.I18N = {
       pt: "Rotas: searoute · Base: Natural Earth · Identidade do navio: AIS (myshiptracking)",
       nl: "Routes: searoute · Kaart: Natural Earth · Scheepsidentiteit: AIS (myshiptracking)",
     },
+    tuto_title: { fr: "Comment ça marche", en: "How it works" },
+    tuto_help: { fr: "Revoir le tutoriel", en: "Show the tutorial again" },
+    tuto_skip: { fr: "Passer", en: "Skip" },
+    tuto_back: { fr: "Retour", en: "Back" },
+    tuto_next: { fr: "Suivant", en: "Next" },
+    tuto_start: { fr: "Commencer", en: "Get started" },
+    tuto_s1_t: { fr: "Bienvenue à bord", en: "Welcome aboard" },
+    tuto_s1_b: { fr: "Cet outil reconstitue et imprime votre carrière maritime : navires, escales et routes maritimes réelles, en une affiche. Tout est calculé sur votre appareil, rien n'est envoyé en ligne.", en: "This tool reconstructs and prints your maritime career: ships, port calls and real sea routes, as a poster. Everything runs on your device, nothing is sent online." },
+    tuto_s2_t: { fr: "1. Vos données", en: "1. Your data" },
+    tuto_s2_b: { fr: "Glissez votre relevé de navigation (PDF, Excel, CSV ou JSON) dans la colonne de gauche, ou cliquez « Charger l'exemple » pour partir d'une carte type.", en: "Drag your sea service record (PDF, Excel, CSV or JSON) into the left column, or click “Load example” to start from a sample map." },
+    tuto_s3_t: { fr: "2. Complétez", en: "2. Complete" },
+    tuto_s3_b: { fr: "Ajoutez ou corrigez les navires et leurs escales. Les routes maritimes se tracent automatiquement entre les ports.", en: "Add or correct ships and their port calls. Sea routes are drawn automatically between ports." },
+    tuto_s4_t: { fr: "3. Style & export", en: "3. Style & export" },
+    tuto_s4_b: { fr: "Choisissez un style et une projection, puis exportez en image HD, en SVG, ou imprimez votre affiche.", en: "Pick a style and a projection, then export as HD image, SVG, or print your poster." },
   };
   for (const key in ADD) for (const lang in window.I18N) if (window.I18N[lang]) window.I18N[lang][key] = ADD[key][lang] || ADD[key].en;
 })();
