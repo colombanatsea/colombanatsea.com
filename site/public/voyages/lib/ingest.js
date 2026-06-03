@@ -158,14 +158,97 @@
     return rows;
   }
 
+  // ---- ENM "Lignes de service" (enm.mes-services.mer.gouv.fr) ----
+  // Format structure : Debut;Fin;Armateur;<immat> - NAVIRE;Genre;Position;Fonction;...
+  // Donne navire + periode d'embarquement, JAMAIS d'escales. On consolide par navire.
+  const DMY = /^(\d{1,2})[-/](\d{1,2})[-/](\d{4})$/;
+  function isoDMY(s) {
+    const m = (s || "").trim().match(DMY);
+    if (!m) return null;
+    const d = mkDate(+m[3], +m[2], +m[1]);
+    return d == null ? null : iso(d);
+  }
+  function titleCase(s) {
+    return (s || "").toLowerCase().replace(/\b([a-zà-ÿ])/g, (c) => c.toUpperCase()).trim();
+  }
+  function shipFromCell(cell) {
+    // "933184 - ZOURITE" / "806560 - NORMANDIE" -> "ZOURITE". Tolere l'absence de tiret.
+    const parts = (cell || "").split(/\s[-–]\s/);
+    return (parts.length > 1 ? parts.slice(1).join(" ") : cell).replace(/\s+/g, " ").trim();
+  }
+
+  function parseEnmCsv(text) {
+    const lines = text.split(/\r?\n/).map((l) => l.replace(/^﻿/, ""));
+    // entete des donnees : une ligne dont les cellules contiennent Debut/Du et Navire
+    let h = -1, cols = null;
+    for (let i = 0; i < lines.length; i++) {
+      const c = lines[i].split(";").map((x) => x.trim());
+      if (c.some((x) => /^d[eé]but$/i.test(x)) && c.some((x) => /navire/i.test(x))) { h = i; cols = c; break; }
+    }
+    if (h < 0) return null;
+    const idx = (re) => cols.findIndex((x) => re.test(x));
+    const iDeb = idx(/^d[eé]but$/i), iFin = idx(/^fin$/i), iArm = idx(/armateur/i),
+          iNav = idx(/navire/i), iFonc = idx(/fonction/i);
+    if (iDeb < 0 || iFin < 0 || iNav < 0) return null;
+
+    // nom du marin (bloc "Nom;Prenom;N marin")
+    let seafarer = "";
+    for (let i = 0; i < h; i++) {
+      const c = lines[i].split(";").map((x) => x.trim());
+      const prev = (lines[i - 1] || "").split(";").map((x) => x.trim());
+      if (prev[0] && /^nom$/i.test(prev[0]) && c[0]) { seafarer = titleCase(c[1] + " " + c[0]); break; }
+    }
+
+    const byShip = new Map();
+    for (let i = h + 1; i < lines.length; i++) {
+      const c = lines[i].split(";").map((x) => x.replace(/\t/g, " ").trim());
+      const emb = isoDMY(c[iDeb]), dis = isoDMY(c[iFin]);
+      if (!emb || !dis) continue; // pas une ligne d'embarquement
+      const ship = shipFromCell(c[iNav]); if (!ship) continue;
+      const role = iFonc >= 0 ? c[iFonc] : "";
+      const armateur = iArm >= 0 ? c[iArm] : "";
+      const key = ship.toLowerCase();
+      let v = byShip.get(key);
+      if (!v) { v = { name: ship, role: role, type: titleCase(armateur), embark: emb, disembark: dis, _days: 0, _periods: 0, calls: [] }; byShip.set(key, v); }
+      if (emb < v.embark) v.embark = emb;
+      if (dis > v.disembark) v.disembark = dis;
+      const dd = parseDays(emb, dis); if (dd != null) v._days += dd;
+      v._periods += 1;
+      if (role && /commandant|capitaine|second|officier|chief|master/i.test(role)) v.role = role; // garde la fonction la plus senior
+    }
+    if (!byShip.size) return null;
+    const vessels = [...byShip.values()].sort((a, b) => (a.embark < b.embark ? 1 : -1)).map((v) => ({
+      name: v.name, role: v.role, type: v.type, embark: v.embark, disembark: v.disembark,
+      embarked_days: v._days, periods: v._periods, calls: [],
+    }));
+    return { seafarer: seafarer, vessels: vessels, source: "enm" };
+  }
+
+  function parseDays(a, b) {
+    const t1 = Date.parse(a + "T00:00:00Z"), t2 = Date.parse(b + "T00:00:00Z");
+    if (Number.isNaN(t1) || Number.isNaN(t2) || t2 < t1) return null;
+    return Math.round((t2 - t1) / 86400000);
+  }
+
+  // marqueurs d'etat civil / en-tete a ne jamais prendre pour un navire
+  const NOISE = /naissance|date d.?[ée]dition|lieu de naissance|adresse|t[ée]l[ée]phone|identification du marin|[ée]tat civil|page\s+\d+\s*\/|nom d.?usage|service de rattachement|lexique|abr[ée]viation/i;
+
   async function ingest(file) {
     const name = (file.name || "").toLowerCase();
     if (name.endsWith(".json")) return JSON.parse(await file.text());
-    let rows;
-    if (name.endsWith(".xlsx") || name.endsWith(".xlsm")) rows = await xlsxRows(file);
-    else if (name.endsWith(".pdf")) rows = await pdfRows(file);
-    else rows = csvOrLines(await file.text());
-    return parseRows(rows, "");
+    if (name.endsWith(".xlsx") || name.endsWith(".xlsm")) return parseRows(await xlsxRows(file), "");
+    if (name.endsWith(".pdf")) {
+      const rows = await pdfRows(file);
+      const isEnm = rows.some((l) => /lignes de service|navire \/ r[oô]le|bilan synth/i.test(l));
+      const out = parseRows(rows.filter((l) => !NOISE.test(l)), "");
+      if (isEnm) out.note = "enm-pdf"; // le PDF ENM est peu fiable : recommander le CSV
+      return out;
+    }
+    // CSV / texte : tenter le format ENM (colonnes), sinon parseur generique
+    const text = await file.text();
+    const enm = parseEnmCsv(text);
+    if (enm) return enm;
+    return parseRows(csvOrLines(text).filter((l) => !NOISE.test(l)), "");
   }
 
   V.findDates = findDates;
@@ -173,6 +256,7 @@
   V.cleanName = cleanName;
   V.parseRows = parseRows;
   V.csvOrLines = csvOrLines;
+  V.parseEnmCsv = parseEnmCsv;
   V.ingest = ingest;
   if (typeof module !== "undefined" && module.exports) module.exports = V;
 })(typeof window !== "undefined" ? window : globalThis);
