@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout
+  lang="fr"
+  frSlug="carte-carriere"
+  navLight={true}
+  title="Carte de carrière maritime | Colomban"
+  description="Carte interactive des embarquements de Colomban Monnier : navires, escales et routes maritimes réelles. Déposez votre propre relevé de navigation pour générer la vôtre."
+>
+  <section class="cc-page">
+    <iframe
+      src={`${base}/voyages/index.html?lang=fr`}
+      class="cc-frame"
+      title="Carte de carrière maritime, application interactive"
+      loading="eager"
+    ></iframe>
+  </section>
+</BaseLayout>
+
+<style>
+  .cc-page {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--blanc);
+    z-index: 1;
+  }
+  .cc-frame {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+</style>

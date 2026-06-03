@@ -34,6 +34,7 @@ Colomban is a French merchant navy officer turned maritime transformation leader
 - /fr/medias, Media appearances
 - /fr/contact, Contact
 - /fr/sources, Sources & data transparency
+- /fr/carte-carriere (EN: /en/career-map), Interactive maritime career map: reconstructs and charts a seafarer's voyages (vessels, port calls, real sea routes) from a navigation record, exportable as a poster. Visitors can drop their own record; all processing runs client-side.
 
 ## Contact
 

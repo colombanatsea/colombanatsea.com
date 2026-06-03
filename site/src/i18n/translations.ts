@@ -16,6 +16,7 @@ export const ui = {
     'nav.engagements': 'Engagements',
     'nav.speaking': 'Prises de parole',
     'nav.media': 'Médias',
+    'nav.career': 'Carte de carrière',
     'nav.contact': 'Contact',
 
     // Footer
@@ -43,6 +44,7 @@ export const ui = {
     'nav.engagements': 'Engagements',
     'nav.speaking': 'Speaking',
     'nav.media': 'Media',
+    'nav.career': 'Career map',
     'nav.contact': 'Contact',
 
     // Footer
@@ -78,6 +80,7 @@ export const routes = {
     'politique-confidentialite': 'politique-confidentialite',
     'sources': 'sources',
     'carte': 'carte',
+    'carte-carriere': 'carte-carriere',
   },
   en: {
     '': '',
@@ -90,5 +93,6 @@ export const routes = {
     'politique-confidentialite': 'privacy-policy',
     'sources': 'sources',
     'carte': 'map',
+    'carte-carriere': 'career-map',
   },
 } as const;
