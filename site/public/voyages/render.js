@@ -140,16 +140,28 @@
       return g;
     }
 
-    function legend(doc, th, R, pos, key) {
+    function legend(doc, th, R, pos, key, H, moreLabel) {
       const dx = (pos && pos.dx) || 0, dy = (pos && pos.dy) || 0;
       const g = mk(doc, "g", { id: "legend", transform: `translate(${dx},${dy})`, style: "cursor:move" });
       const vis = (R.vessels || []).filter((v) => !v.uihidden);
       if (!vis.length) return g;
-      const x = 28, y = 26, pad = 13, rowH = 27, lineLen = 24, textX = pad + lineLen + 9;
-      // largeur dynamique : on estime la largeur du texte pour que rien ne deborde
-      const wName = (s) => (s || "").length * 7.0;        // 12.5px gras
+      const n = vis.length;
+      // mode compact selon le nombre de navires : une carrière (relevé) peut en compter beaucoup,
+      // la légende ne doit jamais déborder du poster ni devenir illisible.
+      const compact = n > 6;
+      const rowH = n > 14 ? 15 : (compact ? 18 : 27);
+      const nameFs = n > 14 ? 9.5 : (compact ? 11 : 12.5);
+      const showMeta = !compact;
+      const x = 28, y = 26, pad = 13, lineLen = compact ? 18 : 24, textX = pad + lineLen + 9;
+      const keyH = key ? 20 : 0;
+      // hauteur disponible -> plafond du nombre de lignes affichées
+      const availH = Math.max(80, (H || 700) - y - 16);
+      const maxRows = Math.max(1, Math.floor((availH - pad * 2 - keyH) / rowH));
+      const overflow = n > maxRows;
+      const shown = overflow ? Math.max(1, maxRows - 1) : n;
+      const wName = (s) => (s || "").length * (nameFs * 0.56);
       const wMeta = (s) => (s || "").length * 5.15;       // 8.6px mono
-      const rows = vis.map((v) => {
+      const rows = vis.slice(0, shown).map((v) => {
         const meta = [];
         if (v.imo) meta.push("IMO " + v.imo);
         if (v.mmsi) meta.push("MMSI " + v.mmsi);
@@ -158,26 +170,31 @@
         if (v.embark) meta.push((v.embark || "") + (v.disembark ? " → " + v.disembark : ""));
         return { v, meta: meta.join("  ·  ") };
       });
+      const moreText = overflow ? (moreLabel || "+{n}").replace("{n}", n - shown) : null;
       let contentW = 90;
-      rows.forEach((r) => { contentW = Math.max(contentW, textX + wName(r.v.name || "—"), textX + wMeta(r.meta)); });
+      rows.forEach((r) => { contentW = Math.max(contentW, textX + wName(r.v.name || "—"), showMeta ? textX + wMeta(r.meta) : 0); });
+      if (moreText) contentW = Math.max(contentW, textX + wName(moreText));
       const boxW = Math.round(Math.min(440, contentW + pad));
-      const keyH = key ? 20 : 0;
-      const boxH = pad * 2 + vis.length * rowH + keyH;
+      const boxH = pad * 2 + (shown + (overflow ? 1 : 0)) * rowH + keyH;
       g.appendChild(mk(doc, "rect", { x, y, width: boxW, height: boxH, rx: 10,
         fill: th.dark ? "rgba(7,22,32,0.62)" : "rgba(255,255,255,0.68)",
         stroke: th.dark ? "rgba(255,255,255,0.14)" : "rgba(0,0,0,0.10)", "stroke-width": 1 }));
       rows.forEach((r, i) => {
-        const ry = y + pad + i * rowH + 11, lx = x + pad;
+        const ry = y + pad + i * rowH + (compact ? 10 : 11), lx = x + pad;
         const col = th.route(r.v.color || "#888", i);
         const ln = mk(doc, "line", { x1: lx, y1: ry - 3, x2: lx + lineLen, y2: ry - 3, stroke: col, "stroke-width": 3, "stroke-linecap": "round" });
         if (r.v.inferred) ln.setAttribute("stroke-dasharray", "5 3");
         g.appendChild(ln);
-        const nm = mk(doc, "text", { x: x + textX, y: ry, "font-size": 12.5, "font-weight": 600, fill: th.title }); nm.textContent = r.v.name || "—"; g.appendChild(nm);
-        const mt = mk(doc, "text", { x: x + textX, y: ry + 12, "font-family": "'Space Mono',monospace", "font-size": 8.6, fill: th.title, opacity: 0.68 }); mt.textContent = r.meta; g.appendChild(mt);
+        const nm = mk(doc, "text", { x: x + textX, y: ry, "font-size": nameFs, "font-weight": 600, fill: th.title }); nm.textContent = r.v.name || "—"; g.appendChild(nm);
+        if (showMeta) { const mt = mk(doc, "text", { x: x + textX, y: ry + 12, "font-family": "'Space Mono',monospace", "font-size": 8.6, fill: th.title, opacity: 0.68 }); mt.textContent = r.meta; g.appendChild(mt); }
       });
+      if (moreText) {
+        const ry = y + pad + shown * rowH + (compact ? 10 : 11);
+        const mt = mk(doc, "text", { x: x + textX, y: ry, "font-size": nameFs, "font-style": "italic", fill: th.title, opacity: 0.7 }); mt.textContent = moreText; g.appendChild(mt);
+      }
       // clé de lecture : trait plein = AIS réel, tireté = reconstruit
       if (key) {
-        const ky = y + pad + vis.length * rowH + 9, kx = x + pad;
+        const ky = y + pad + (shown + (overflow ? 1 : 0)) * rowH + 9, kx = x + pad;
         g.appendChild(mk(doc, "path", { d: `M${kx},${ky}L${kx + 18},${ky}`, stroke: th.title, "stroke-width": 2.4, "stroke-linecap": "round", opacity: 0.85 }));
         const ka = mk(doc, "text", { x: kx + 24, y: ky + 3.5, "font-size": 8.6, fill: th.title, opacity: 0.7 }); ka.textContent = key.ais; g.appendChild(ka);
         const k2 = kx + 24 + (key.ais.length * 5 + 22);
@@ -276,7 +293,7 @@
 
       if (th.vignette) addPath(doc, layer("vignette"), sphere, { fill: "url(#g-vignette)", "pointer-events": "none" });
       if (th.compass) svg.appendChild(compass(doc, W - 74, H - 74, 28, th));
-      if (R && state.showLegend !== false) svg.appendChild(legend(doc, th, R, state.legendPos, state.keyLbls));
+      if (R && state.showLegend !== false) svg.appendChild(legend(doc, th, R, state.legendPos, state.keyLbls, H, state.lbls && state.lbls.more));
       svg.appendChild(cartouche(doc, W, H, th, state, R));
       const cr = credits(doc, W, H, th, state); if (cr) svg.appendChild(cr);
 

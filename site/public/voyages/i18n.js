@@ -221,6 +221,9 @@ window.I18N = {
     tuto_s3_b: { fr: "Ajoutez ou corrigez les navires et leurs escales. Les routes maritimes se tracent automatiquement entre les ports.", en: "Add or correct ships and their port calls. Sea routes are drawn automatically between ports." },
     tuto_s4_t: { fr: "3. Style & export", en: "3. Style & export" },
     tuto_s4_b: { fr: "Choisissez un style et une projection, puis exportez en image HD, en SVG, ou imprimez votre affiche.", en: "Pick a style and a projection, then export as HD image, SVG, or print your poster." },
+    legend_more: { fr: "+{n} autres navires", en: "+{n} more ships" },
+    note_no_calls: { fr: "{n} navire(s) importé(s). Un relevé de lignes de service ne contient pas d'escales : ajoutez les ports de chaque embarquement (colonne de gauche) pour tracer les routes.", en: "{n} ship(s) imported. A sea service record contains no port calls: add the ports of each embarkation (left column) to draw the routes." },
+    note_enm_pdf: { fr: "Pour l'export ENM, le CSV donne un bien meilleur résultat que le PDF.", en: "For the ENM export, the CSV gives a much better result than the PDF." },
   };
   for (const key in ADD) for (const lang in window.I18N) if (window.I18N[lang]) window.I18N[lang][key] = ADD[key][lang] || ADD[key].en;
 })();
