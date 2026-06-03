@@ -269,7 +269,14 @@ const LS_KEY = "voyages-app:voyage";
 function persist() { try { localStorage.setItem(LS_KEY, JSON.stringify(state.voyage)); } catch (e) { } }
 function loadSaved() { try { const s = localStorage.getItem(LS_KEY); return s ? JSON.parse(s) : null; } catch (e) { return null; } }
 function exportJSON() { download(new Blob([JSON.stringify(state.voyage, null, 2)], { type: "application/json" }), "ma-carte-maritime.json"); }
-function resetExample() { try { localStorage.removeItem(LS_KEY); } catch (e) { } state.title = ""; loadExample(); }
+// "Réinitialiser" : retour à l'état vierge (l'exemple reste accessible via "Charger l'exemple")
+function resetExample() {
+  try { localStorage.removeItem(LS_KEY); } catch (e) { }
+  state.title = ""; state.subtitle = ""; $("#titlein").value = ""; $("#subin").value = "";
+  state.lastImport = null; state._noteDismissed = false;
+  state.voyage = { seafarer: "", vessels: [] }; state.routed = null;
+  renderEditor(); renderMap(); showWarnings();
+}
 
 /* ---------- boot ---------- */
 async function boot() {
