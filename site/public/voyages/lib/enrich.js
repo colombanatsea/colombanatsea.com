@@ -58,8 +58,10 @@
         legs.push({ coords: leg.coords, nm: leg.nm, routed: leg.routed, from: vis[i].port, to: vis[i + 1].port });
       }
       // temps de mer : jours embarques / au port / en mer
+      // embarked_days = somme reelle des periodes (relevé ENM consolidé), sinon écart embarquement->débarquement
       const emb = parseDate(v.embark), dis = parseDate(v.disembark);
-      const embarked = (emb != null && dis != null && dis >= emb) ? Math.round((dis - emb) / DAY) : null;
+      const embarked = (v.embarked_days != null) ? v.embarked_days
+        : ((emb != null && dis != null && dis >= emb) ? Math.round((dis - emb) / DAY) : null);
       let port_days = 0;
       for (const c of vis) {
         const a = parseDate(c.arr), d = parseDate(c.dep);
