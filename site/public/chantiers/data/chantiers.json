@@ -1,0 +1,1211 @@
+{
+  "meta": {
+    "titre": "Chantiers navals français",
+    "version": "0.1.0-mvp",
+    "date_maj": "2026-06-07",
+    "note": "Jeu de données élargi. Chantiers majeurs détaillés ; lot complémentaire géolocalisé à la commune (confiance moyenne). Champs vides à compléter, jamais inventés.",
+    "perimetres_ref": {
+      "construction-neuve": "Construction neuve",
+      "reparation-refit": "Réparation / refit",
+      "naval-defense": "Naval / défense",
+      "plaisance": "Plaisance / yachting"
+    },
+    "types_navires_ref": {
+      "paquebot": "Paquebot / croisière",
+      "navire-surface-militaire": "Navire de surface militaire",
+      "sous-marin": "Sous-marin",
+      "patrouilleur-opv": "Patrouilleur / OPV",
+      "peche": "Navire de pêche",
+      "servitude-soutien": "Servitude / soutien",
+      "ferry-ropax": "Ferry / RoPax",
+      "offshore-emr": "Offshore / EMR",
+      "methanier-lng": "Méthanier (LNG)",
+      "catamaran": "Catamaran",
+      "voilier": "Voilier",
+      "motor-yacht": "Motor yacht",
+      "navire-technique": "Navire technique / hydrographie"
+    }
+  },
+  "chantiers": [
+    {
+      "id": "chantiers-atlantique-saint-nazaire",
+      "nom": "Chantiers de l'Atlantique",
+      "groupe": "État français (84,3 %), Naval Group (11,7 %)",
+      "ville": "Saint-Nazaire",
+      "region": "Pays de la Loire",
+      "pays": "France",
+      "lat": 47.2836,
+      "lon": -2.1903,
+      "geo_precision": "site",
+      "fondation": 1862,
+      "superficie_ha": 150,
+      "effectif": 3639,
+      "perimetres": [
+        "construction-neuve",
+        "naval-defense"
+      ],
+      "types_navires": [
+        "paquebot",
+        "navire-surface-militaire",
+        "offshore-emr"
+      ],
+      "description": "Premier chantier de construction neuve français et l'un des plus grands d'Europe. Spécialiste mondial des paquebots de croisière, il construit aussi des navires militaires et des sous-stations électriques offshore pour l'éolien en mer.",
+      "capacites": [
+        {
+          "type": "Forme de construction A/B",
+          "dimensions": "900 m × 70 m",
+          "capacite": null
+        },
+        {
+          "type": "Bassin C",
+          "dimensions": "450 m × 95 m",
+          "capacite": null
+        },
+        {
+          "type": "Forme Joubert",
+          "dimensions": "350 m × 50 m",
+          "capacite": null
+        }
+      ],
+      "historique": [
+        {
+          "annee": "2003",
+          "fait": "Livraison du Queen Mary 2."
+        },
+        {
+          "annee": "2018",
+          "fait": "Entrée de l'État français au capital."
+        },
+        {
+          "annee": "2022",
+          "fait": "Livraison du MSC World Europa (GNL)."
+        }
+      ],
+      "contact": {
+        "adresse": "Avenue Bert, 44600 Saint-Nazaire",
+        "web": "https://chantiers-atlantique.com"
+      },
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Chantiers_de_l%27Atlantique"
+      ],
+      "confiance": "haute"
+    },
+    {
+      "id": "naval-group-lorient",
+      "nom": "Naval Group · Lorient",
+      "groupe": "Naval Group (État 62 %, Thales 35 %)",
+      "ville": "Lorient",
+      "region": "Bretagne",
+      "pays": "France",
+      "lat": 47.7237,
+      "lon": -3.368,
+      "geo_precision": "site",
+      "fondation": 1946,
+      "superficie_ha": null,
+      "effectif": null,
+      "perimetres": [
+        "construction-neuve",
+        "naval-defense"
+      ],
+      "types_navires": [
+        "navire-surface-militaire"
+      ],
+      "description": "Centre d'excellence de Naval Group pour les navires de surface armés. Site de construction des frégates (FREMM, frégates de défense et d'intervention FDI) pour la Marine nationale et l'export.",
+      "capacites": [],
+      "historique": [
+        {
+          "annee": "2012",
+          "fait": "Livraison de la première FREMM Aquitaine."
+        },
+        {
+          "annee": "2024",
+          "fait": "Montée en cadence des frégates FDI."
+        }
+      ],
+      "contact": {
+        "adresse": "Rue de Choiseul, 56100 Lorient",
+        "web": "https://www.naval-group.com"
+      },
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Naval_Group"
+      ],
+      "confiance": "haute"
+    },
+    {
+      "id": "naval-group-cherbourg",
+      "nom": "Naval Group · Cherbourg",
+      "groupe": "Naval Group (État 62 %, Thales 35 %)",
+      "ville": "Cherbourg-en-Cotentin",
+      "region": "Normandie",
+      "pays": "France",
+      "lat": 49.65,
+      "lon": -1.62,
+      "geo_precision": "ville",
+      "fondation": 1946,
+      "superficie_ha": null,
+      "effectif": null,
+      "perimetres": [
+        "construction-neuve",
+        "naval-defense"
+      ],
+      "types_navires": [
+        "sous-marin"
+      ],
+      "description": "Site historique de construction des sous-marins français : sous-marins nucléaires lanceurs d'engins (SNLE) et d'attaque (programme Barracuda / Suffren), ainsi que des sous-marins à l'export.",
+      "capacites": [],
+      "historique": [
+        {
+          "annee": "2020",
+          "fait": "Livraison du Suffren, tête de série Barracuda."
+        },
+        {
+          "annee": "2021",
+          "fait": "Lancement du programme SNLE 3G."
+        }
+      ],
+      "contact": {
+        "adresse": "Rue du Diablotin, 50100 Cherbourg-en-Cotentin",
+        "web": "https://www.naval-group.com"
+      },
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Naval_Group"
+      ],
+      "confiance": "haute"
+    },
+    {
+      "id": "naval-group-brest",
+      "nom": "Naval Group · Brest",
+      "groupe": "Naval Group (État 62 %, Thales 35 %)",
+      "ville": "Brest",
+      "region": "Bretagne",
+      "pays": "France",
+      "lat": 48.364,
+      "lon": -4.494,
+      "geo_precision": "ville",
+      "fondation": 1946,
+      "superficie_ha": null,
+      "effectif": null,
+      "perimetres": [
+        "reparation-refit",
+        "naval-defense"
+      ],
+      "types_navires": [
+        "navire-surface-militaire",
+        "sous-marin"
+      ],
+      "description": "Centre de maintien en condition opérationnelle (MCO) de la flotte de surface et des sous-marins. Arrêts techniques, refontes et entretien des bâtiments de la Marine nationale.",
+      "capacites": [],
+      "historique": [],
+      "contact": {
+        "adresse": "Base navale, 29200 Brest",
+        "web": "https://www.naval-group.com"
+      },
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Naval_Group"
+      ],
+      "confiance": "haute"
+    },
+    {
+      "id": "naval-group-toulon",
+      "nom": "Naval Group · Toulon",
+      "groupe": "Naval Group (État 62 %, Thales 35 %)",
+      "ville": "Toulon",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "pays": "France",
+      "lat": 43.118,
+      "lon": 5.91,
+      "geo_precision": "ville",
+      "fondation": 1946,
+      "superficie_ha": null,
+      "effectif": null,
+      "perimetres": [
+        "reparation-refit",
+        "naval-defense"
+      ],
+      "types_navires": [
+        "navire-surface-militaire"
+      ],
+      "description": "Site de services et de MCO de la flotte méditerranéenne, dont la maintenance du porte-avions Charles de Gaulle et des bâtiments de premier rang.",
+      "capacites": [],
+      "historique": [],
+      "contact": {
+        "adresse": "Base navale, 83000 Toulon",
+        "web": "https://www.naval-group.com"
+      },
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Naval_Group"
+      ],
+      "confiance": "haute"
+    },
+    {
+      "id": "naval-group-nantes-indret",
+      "nom": "Naval Group · Nantes-Indret",
+      "groupe": "Naval Group (État 62 %, Thales 35 %)",
+      "ville": "Indre",
+      "region": "Pays de la Loire",
+      "pays": "France",
+      "lat": 47.196,
+      "lon": -1.636,
+      "geo_precision": "ville",
+      "fondation": 1946,
+      "superficie_ha": null,
+      "effectif": null,
+      "perimetres": [
+        "naval-defense"
+      ],
+      "types_navires": [
+        "sous-marin"
+      ],
+      "description": "Site spécialisé dans la propulsion nucléaire navale et les chaufferies des sous-marins et porte-avions, cœur de la souveraineté propulsive française.",
+      "capacites": [],
+      "historique": [],
+      "contact": {
+        "adresse": "44610 Indre",
+        "web": "https://www.naval-group.com"
+      },
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Naval_Group"
+      ],
+      "confiance": "moyenne"
+    },
+    {
+      "id": "piriou-concarneau",
+      "nom": "Piriou",
+      "groupe": "Famille Piriou, Arkéa Capital",
+      "ville": "Concarneau",
+      "region": "Bretagne",
+      "pays": "France",
+      "lat": 47.873,
+      "lon": -3.918,
+      "geo_precision": "site",
+      "fondation": 1965,
+      "superficie_ha": null,
+      "effectif": 500,
+      "perimetres": [
+        "construction-neuve",
+        "reparation-refit",
+        "naval-defense"
+      ],
+      "types_navires": [
+        "peche",
+        "patrouilleur-opv",
+        "servitude-soutien",
+        "navire-technique"
+      ],
+      "description": "Constructeur breton de navires acier et aluminium jusqu'à 120 m : pêche, servitude, offshore, patrouilleurs et navires polaires. Construction neuve et réparation, défense via la coentreprise Kership avec Naval Group.",
+      "capacites": [],
+      "historique": [
+        {
+          "annee": "2017",
+          "fait": "Livraison du navire polaire L'Astrolabe."
+        },
+        {
+          "annee": "2018",
+          "fait": "Création de Kership avec Naval Group."
+        }
+      ],
+      "contact": {
+        "adresse": "Zone du Moros, 29900 Concarneau",
+        "web": "https://www.piriou.com"
+      },
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Piriou_(entreprise)"
+      ],
+      "confiance": "haute"
+    },
+    {
+      "id": "socarenam-boulogne",
+      "nom": "Socarenam",
+      "groupe": "Indépendant",
+      "ville": "Boulogne-sur-Mer",
+      "region": "Hauts-de-France",
+      "pays": "France",
+      "lat": 50.726,
+      "lon": 1.579,
+      "geo_precision": "ville",
+      "fondation": 1961,
+      "superficie_ha": null,
+      "effectif": 250,
+      "perimetres": [
+        "construction-neuve",
+        "naval-defense"
+      ],
+      "types_navires": [
+        "patrouilleur-opv",
+        "peche",
+        "servitude-soutien",
+        "ferry-ropax"
+      ],
+      "description": "Constructeur des Hauts-de-France implanté à Boulogne-sur-Mer, avec des sites à Calais, Saint-Malo, Étaples et Dunkerque. Patrouilleurs pour les marines française, belge et polonaise, navires de pêche et de servitude.",
+      "capacites": [],
+      "historique": [
+        {
+          "annee": "2017",
+          "fait": "Patrouilleurs pour la marine belge (classe Castor)."
+        }
+      ],
+      "contact": {
+        "adresse": "Boulevard Sainte-Beuve, 62200 Boulogne-sur-Mer",
+        "web": "https://www.socarenam.com"
+      },
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Socarenam"
+      ],
+      "confiance": "haute"
+    },
+    {
+      "id": "cmn-cherbourg",
+      "nom": "Constructions Mécaniques de Normandie (CMN)",
+      "groupe": "CMN Naval / Privinvest",
+      "ville": "Cherbourg-en-Cotentin",
+      "region": "Normandie",
+      "pays": "France",
+      "lat": 49.647,
+      "lon": -1.626,
+      "geo_precision": "site",
+      "fondation": 1946,
+      "superficie_ha": 11,
+      "effectif": 450,
+      "perimetres": [
+        "construction-neuve",
+        "naval-defense",
+        "plaisance"
+      ],
+      "types_navires": [
+        "patrouilleur-opv",
+        "navire-surface-militaire",
+        "motor-yacht"
+      ],
+      "description": "Chantier de Cherbourg fondé par Félix Amiot, spécialiste des patrouilleurs et corvettes rapides à l'export (classes Combattante et Vigilante), des intercepteurs à grande vitesse et des yachts.",
+      "capacites": [
+        {
+          "type": "Surface de production couverte",
+          "dimensions": "48 000 m²",
+          "capacite": null
+        },
+        {
+          "type": "Élévateur de navires (Synchrolift)",
+          "dimensions": null,
+          "capacite": "3 000 t"
+        }
+      ],
+      "historique": [],
+      "contact": {
+        "adresse": "Quai de Normandie, 50100 Cherbourg-en-Cotentin",
+        "web": "https://www.cmn-cherbourg.com"
+      },
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Constructions_m%C3%A9caniques_de_Normandie"
+      ],
+      "confiance": "haute"
+    },
+    {
+      "id": "ocea-les-sables",
+      "nom": "OCEA",
+      "groupe": "Indépendant",
+      "ville": "Les Sables-d'Olonne",
+      "region": "Pays de la Loire",
+      "pays": "France",
+      "lat": 46.496,
+      "lon": -1.795,
+      "geo_precision": "ville",
+      "fondation": 1987,
+      "superficie_ha": null,
+      "effectif": 500,
+      "perimetres": [
+        "construction-neuve",
+        "naval-defense",
+        "plaisance"
+      ],
+      "types_navires": [
+        "patrouilleur-opv",
+        "navire-technique",
+        "motor-yacht",
+        "servitude-soutien"
+      ],
+      "description": "Leader français des navires en aluminium. Quatre sites de production (Les Sables-d'Olonne, Fontenay-le-Comte, La Rochelle, Saint-Nazaire), 95 % du chiffre d'affaires à l'export : patrouilleurs hauturiers, navires de passagers, yachts et navires techniques environnementaux.",
+      "capacites": [],
+      "historique": [
+        {
+          "annee": "2021",
+          "fait": "Livraison du BRP Gabriela Silang (OPV de 84 m), plus grand patrouilleur hauturier aluminium au monde."
+        }
+      ],
+      "contact": {
+        "adresse": "Les Sables-d'Olonne, 85100",
+        "web": "https://www.ocea.fr"
+      },
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Ocea",
+        "https://www.meretmarine.com/fr/construction-navale/ocea-nouvel-actionnaire-et-agrandissement-du-chantier-des-sables-d-olonne"
+      ],
+      "confiance": "haute"
+    },
+    {
+      "id": "beneteau-saint-gilles",
+      "nom": "Groupe Bénéteau",
+      "groupe": "Béri 21 (famille Bénéteau), coté Euronext",
+      "ville": "Saint-Gilles-Croix-de-Vie",
+      "region": "Pays de la Loire",
+      "pays": "France",
+      "lat": 46.697,
+      "lon": -1.946,
+      "geo_precision": "ville",
+      "fondation": 1884,
+      "superficie_ha": null,
+      "effectif": 8130,
+      "perimetres": [
+        "plaisance"
+      ],
+      "types_navires": [
+        "voilier",
+        "motor-yacht",
+        "catamaran"
+      ],
+      "description": "Premier groupe nautique français et l'un des leaders mondiaux de la plaisance. Marques Bénéteau, Jeanneau, Lagoon, Prestige, Monte Carlo Yachts, Four Winns. Voiliers, bateaux à moteur et catamarans.",
+      "capacites": [],
+      "historique": [
+        {
+          "annee": "1884",
+          "fait": "Fondation par Benjamin Bénéteau, construction de bateaux de pêche."
+        }
+      ],
+      "contact": {
+        "adresse": "16 boulevard de la Mer, 85800 Saint-Gilles-Croix-de-Vie",
+        "web": "https://www.beneteau-group.com"
+      },
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Groupe_B%C3%A9n%C3%A9teau"
+      ],
+      "confiance": "haute"
+    },
+    {
+      "id": "fountaine-pajot-aigrefeuille",
+      "nom": "Fountaine Pajot",
+      "groupe": "Indépendant (coté Euronext)",
+      "ville": "Aigrefeuille-d'Aunis",
+      "region": "Nouvelle-Aquitaine",
+      "pays": "France",
+      "lat": 46.124,
+      "lon": -0.932,
+      "geo_precision": "ville",
+      "fondation": 1976,
+      "superficie_ha": null,
+      "effectif": 379,
+      "perimetres": [
+        "plaisance"
+      ],
+      "types_navires": [
+        "catamaran"
+      ],
+      "description": "Spécialiste mondial des catamarans de croisière à voile et à moteur, près de La Rochelle. Propriétaire de Dufour Yachts depuis 2018.",
+      "capacites": [],
+      "historique": [
+        {
+          "annee": "1983",
+          "fait": "Bascule vers la production de catamarans."
+        },
+        {
+          "annee": "2018",
+          "fait": "Acquisition de Dufour Yachts."
+        }
+      ],
+      "contact": {
+        "adresse": "Zone industrielle, 17290 Aigrefeuille-d'Aunis",
+        "web": "https://www.fountaine-pajot.com"
+      },
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Fountaine_Pajot"
+      ],
+      "confiance": "haute"
+    },
+    {
+      "id": "couach-gujan-mestras",
+      "nom": "Chantier Naval Couach",
+      "groupe": "Nepteam",
+      "ville": "Gujan-Mestras",
+      "region": "Nouvelle-Aquitaine",
+      "pays": "France",
+      "lat": 44.636,
+      "lon": -1.068,
+      "geo_precision": "ville",
+      "fondation": 1897,
+      "superficie_ha": null,
+      "effectif": 246,
+      "perimetres": [
+        "plaisance",
+        "naval-defense"
+      ],
+      "types_navires": [
+        "motor-yacht",
+        "servitude-soutien",
+        "patrouilleur-opv"
+      ],
+      "description": "Chantier du bassin d'Arcachon, fondé en 1897. Yachts de luxe à moteur et vedettes de service et de sauvetage, dont des unités pour les forces de l'ordre et le sauvetage en mer.",
+      "capacites": [],
+      "historique": [
+        {
+          "annee": "2012",
+          "fait": "Lancement du premier yacht de 50 m, le Pellegrina."
+        }
+      ],
+      "contact": {
+        "adresse": "Port de Larros, 33470 Gujan-Mestras",
+        "web": "https://www.couach.com"
+      },
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Couach"
+      ],
+      "confiance": "moyenne"
+    },
+    {
+      "id": "cndm-marseille",
+      "nom": "Chantier Naval de Marseille (CNdM)",
+      "groupe": "San Giorgio del Porto / Genova Industrie Navali",
+      "ville": "Marseille",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "pays": "France",
+      "lat": 43.35,
+      "lon": 5.33,
+      "geo_precision": "site",
+      "fondation": 2010,
+      "superficie_ha": null,
+      "effectif": null,
+      "perimetres": [
+        "reparation-refit"
+      ],
+      "types_navires": [
+        "paquebot",
+        "methanier-lng",
+        "ferry-ropax"
+      ],
+      "description": "Centre de réparation et de transformation navale au cœur de la Méditerranée, dans le Grand Port de Marseille. Exploite la forme 10, plus grande cale sèche de Méditerranée.",
+      "capacites": [
+        {
+          "type": "Forme de radoub n°10",
+          "dimensions": "465 m × 85 m",
+          "capacite": "Plus grande de Méditerranée"
+        },
+        {
+          "type": "Forme de radoub n°8",
+          "dimensions": "320 m × 50 m",
+          "capacite": null
+        },
+        {
+          "type": "Forme de radoub n°9",
+          "dimensions": "250 m × 37 m",
+          "capacite": null
+        }
+      ],
+      "historique": [
+        {
+          "annee": "2010",
+          "fait": "Création du chantier par San Giorgio del Porto."
+        },
+        {
+          "annee": "2023",
+          "fait": "Mise en service de la forme 10."
+        }
+      ],
+      "contact": {
+        "adresse": "Bassins de Marseille, 13002 Marseille",
+        "web": "https://cndm.fr"
+      },
+      "sources": [
+        "https://cndm.fr/fr/entreprise",
+        "https://gican.asso.fr/Actualite/162/Communique-Chantier-Naval-de-Marseille"
+      ],
+      "confiance": "haute"
+    },
+    {
+      "id": "damen-brest",
+      "nom": "Damen Shiprepair Brest (ex-Sobrena)",
+      "groupe": "Damen Shipyards Group",
+      "ville": "Brest",
+      "region": "Bretagne",
+      "pays": "France",
+      "lat": 48.37,
+      "lon": -4.47,
+      "geo_precision": "ville",
+      "fondation": 2012,
+      "superficie_ha": null,
+      "effectif": 180,
+      "perimetres": [
+        "reparation-refit"
+      ],
+      "types_navires": [
+        "paquebot",
+        "methanier-lng",
+        "ferry-ropax"
+      ],
+      "description": "Centre d'excellence de la réparation et de l'arrêt technique à Brest, repris de la Sobrena par le groupe Damen. Spécialisé dans les paquebots de croisière et les méthaniers, avec l'une des plus grandes formes de radoub d'Europe.",
+      "capacites": [
+        {
+          "type": "Forme de radoub n°3",
+          "dimensions": "420 m × 80 m",
+          "capacite": null
+        }
+      ],
+      "historique": [
+        {
+          "annee": "2012",
+          "fait": "Reprise de la Sobrena par Damen."
+        }
+      ],
+      "contact": {
+        "adresse": "Port de commerce, 29200 Brest",
+        "web": "https://www.damen.com"
+      },
+      "sources": [
+        "https://www.meretmarine.com/fr/construction-navale/brest-damen-reprend-la-sobrena",
+        "https://www.damen.com/companies/shiprepair/damen-shiprepair-brest"
+      ],
+      "confiance": "moyenne"
+    },
+    {
+      "id": "mb92-la-ciotat",
+      "nom": "MB92 La Ciotat",
+      "groupe": "MB92 Group",
+      "ville": "La Ciotat",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "lat": 43.1748,
+      "lon": 5.6045,
+      "geo_precision": "ville",
+      "fondation": 1992,
+      "perimetres": [
+        "reparation-refit",
+        "plaisance"
+      ],
+      "types_navires": [
+        "motor-yacht"
+      ],
+      "description": "Chantier de référence du refit et de la réparation de méga-yachts de 24 à 180 m (ex-Compositeworks). Exploite la Grande Forme de La Ciotat (200 m × 60 m) et la plateforme de levage 4 000 t.",
+      "capacites": [
+        {
+          "type": "Grande Forme (cale sèche)",
+          "dimensions": "200 m × 60 m",
+          "capacite": null
+        },
+        {
+          "type": "Plateforme de levage",
+          "dimensions": null,
+          "capacite": "4 000 t"
+        }
+      ],
+      "historique": [
+        {
+          "annee": "2018",
+          "fait": "Compositeworks devient MB92 La Ciotat."
+        },
+        {
+          "annee": "2024",
+          "fait": "Concession sur la plateforme 2 000 t."
+        }
+      ],
+      "contact": {
+        "adresse": "Port de La Ciotat, 13600 La Ciotat",
+        "web": "https://mb92.com"
+      },
+      "sources": [
+        "https://mb92.com/shipyards/la-ciotat/",
+        "https://www.laciotat-shipyards.com"
+      ],
+      "confiance": "haute",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    },
+    {
+      "id": "monaco-marine-la-seyne",
+      "nom": "Monaco Marine (La Seyne-sur-Mer)",
+      "groupe": "Monaco Marine",
+      "ville": "La Seyne-sur-Mer",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "lat": 43.101,
+      "lon": 5.883,
+      "geo_precision": "ville",
+      "fondation": null,
+      "perimetres": [
+        "reparation-refit",
+        "plaisance"
+      ],
+      "types_navires": [
+        "motor-yacht"
+      ],
+      "description": "Réseau de chantiers de réparation et d'entretien de yachts du sud de la France (Marseille, La Ciotat, La Seyne-sur-Mer), des unités courantes aux plus grands yachts.",
+      "capacites": [],
+      "historique": [],
+      "contact": {
+        "adresse": "La Seyne-sur-Mer, 83500",
+        "web": "https://www.monacomarine.com"
+      },
+      "sources": [
+        "https://www.monacomarine.com/en"
+      ],
+      "confiance": "moyenne",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    },
+    {
+      "id": "kership-lorient",
+      "nom": "Kership",
+      "groupe": "Coentreprise Piriou et Naval Group",
+      "ville": "Lorient",
+      "region": "Bretagne",
+      "lat": 47.748,
+      "lon": -3.366,
+      "geo_precision": "ville",
+      "fondation": 2013,
+      "perimetres": [
+        "construction-neuve",
+        "naval-defense"
+      ],
+      "types_navires": [
+        "patrouilleur-opv",
+        "servitude-soutien",
+        "navire-surface-militaire"
+      ],
+      "description": "Coentreprise de Piriou et Naval Group créée en 2013, deux sites à Concarneau et Lorient. Navires militaires et gouvernementaux de petite et moyenne taille.",
+      "capacites": [],
+      "historique": [
+        {
+          "annee": "2013",
+          "fait": "Création par Piriou et Naval Group."
+        }
+      ],
+      "contact": {
+        "adresse": "Lorient, 56100",
+        "web": "https://www.kership.com"
+      },
+      "sources": [
+        "https://www.kership.com/"
+      ],
+      "confiance": "haute",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    },
+    {
+      "id": "glehen-douarnenez",
+      "nom": "Chantiers Gléhen",
+      "groupe": "Indépendant",
+      "ville": "Douarnenez",
+      "region": "Bretagne",
+      "lat": 48.0925,
+      "lon": -4.329,
+      "geo_precision": "ville",
+      "fondation": null,
+      "perimetres": [
+        "construction-neuve",
+        "reparation-refit"
+      ],
+      "types_navires": [
+        "peche",
+        "servitude-soutien",
+        "navire-surface-militaire"
+      ],
+      "description": "Chantier breton (Douarnenez et Guilvinec) construisant en acier et aluminium tous types de navires : pêche, passagers, servitude et bâtiments militaires.",
+      "capacites": [],
+      "historique": [],
+      "contact": {
+        "adresse": "Douarnenez, 29100",
+        "web": "https://www.glehen.fr"
+      },
+      "sources": [
+        "https://www.meretmarine.com/fr/construction-navale/glehen-des-investissements-pour-des-commandes-diversifies"
+      ],
+      "confiance": "moyenne",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    },
+    {
+      "id": "chantiers-bernard-lorient",
+      "nom": "Chantiers Navals Bernard",
+      "groupe": "Indépendant",
+      "ville": "Lorient",
+      "region": "Bretagne",
+      "lat": 47.732,
+      "lon": -3.372,
+      "geo_precision": "ville",
+      "fondation": 1969,
+      "perimetres": [
+        "construction-neuve",
+        "reparation-refit"
+      ],
+      "types_navires": [
+        "peche",
+        "servitude-soutien"
+      ],
+      "description": "Chantier de la région de Lorient, institution locale de la construction et de la réparation de navires de pêche et de servitude.",
+      "capacites": [],
+      "historique": [
+        {
+          "annee": "2019",
+          "fait": "Cinquantenaire du chantier."
+        }
+      ],
+      "contact": {
+        "adresse": "Région de Lorient, 56",
+        "web": null
+      },
+      "sources": [
+        "https://www.meretmarine.com/fr/construction-navale/les-chantiers-navals-bernard-ont-encore-du-travail-et-comptent-bien-rebondir"
+      ],
+      "confiance": "moyenne",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    },
+    {
+      "id": "merre-nort-sur-erdre",
+      "nom": "Chantier Merré",
+      "groupe": "Indépendant",
+      "ville": "Nort-sur-Erdre",
+      "region": "Pays de la Loire",
+      "lat": 47.438,
+      "lon": -1.503,
+      "geo_precision": "ville",
+      "fondation": null,
+      "perimetres": [
+        "construction-neuve",
+        "reparation-refit"
+      ],
+      "types_navires": [
+        "peche",
+        "servitude-soutien"
+      ],
+      "description": "Chantier construisant des navires de 12 à 80 m en acier et aluminium : pêche, servitude et navires de travail.",
+      "capacites": [],
+      "historique": [],
+      "contact": {
+        "adresse": "Nort-sur-Erdre, 44390",
+        "web": null
+      },
+      "sources": [
+        "https://fr.linkedin.com/company/seemerre"
+      ],
+      "confiance": "moyenne",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    },
+    {
+      "id": "efinor-allais-paimpol",
+      "nom": "Efinor Allais",
+      "groupe": "Groupe Efinor",
+      "ville": "Paimpol",
+      "region": "Bretagne",
+      "lat": 48.7785,
+      "lon": -3.044,
+      "geo_precision": "ville",
+      "fondation": null,
+      "perimetres": [
+        "construction-neuve"
+      ],
+      "types_navires": [
+        "servitude-soutien",
+        "patrouilleur-opv"
+      ],
+      "description": "Chantier du groupe Efinor spécialisé dans la construction soudée aluminium : crewboats SURFER, navires de travail et de servitude, vedettes et barges.",
+      "capacites": [],
+      "historique": [],
+      "contact": {
+        "adresse": "Paimpol, 22500",
+        "web": "https://www.efinor.com"
+      },
+      "sources": [
+        "https://www.efinor.com/page-entreprise/allais"
+      ],
+      "confiance": "moyenne",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    },
+    {
+      "id": "dufour-la-rochelle",
+      "nom": "Dufour Yachts",
+      "groupe": "Fountaine Pajot",
+      "ville": "Périgny",
+      "region": "Nouvelle-Aquitaine",
+      "lat": 46.162,
+      "lon": -1.108,
+      "geo_precision": "ville",
+      "fondation": 1964,
+      "perimetres": [
+        "plaisance"
+      ],
+      "types_navires": [
+        "voilier"
+      ],
+      "description": "Constructeur de voiliers de croisière près de La Rochelle, deuxième constructeur de plaisance français. Propriété de Fountaine Pajot depuis 2018.",
+      "capacites": [],
+      "historique": [],
+      "contact": {
+        "adresse": "Périgny, 17180",
+        "web": "https://www.dufour-yachts.com"
+      },
+      "sources": [
+        "https://www.inautia.fr/blog/acheter-un-bateau/les-meilleurs-chantiers-francais/"
+      ],
+      "confiance": "moyenne",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    },
+    {
+      "id": "amel-la-rochelle",
+      "nom": "Amel",
+      "groupe": "Indépendant",
+      "ville": "La Rochelle",
+      "region": "Nouvelle-Aquitaine",
+      "lat": 46.148,
+      "lon": -1.153,
+      "geo_precision": "ville",
+      "fondation": 1965,
+      "perimetres": [
+        "plaisance"
+      ],
+      "types_navires": [
+        "voilier"
+      ],
+      "description": "Constructeur de voiliers monocoques de grand voyage à La Rochelle, réputé pour la robustesse et l'autonomie de ses unités.",
+      "capacites": [],
+      "historique": [],
+      "contact": {
+        "adresse": "La Rochelle, 17000",
+        "web": "https://www.amel.fr"
+      },
+      "sources": [
+        "https://www.inautia.fr/blog/acheter-un-bateau/les-meilleurs-chantiers-francais/"
+      ],
+      "confiance": "moyenne",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    },
+    {
+      "id": "outremer-la-grande-motte",
+      "nom": "Outremer Yachting",
+      "groupe": "Grand Large Yachting",
+      "ville": "La Grande-Motte",
+      "region": "Occitanie",
+      "lat": 43.561,
+      "lon": 4.087,
+      "geo_precision": "ville",
+      "fondation": 1984,
+      "perimetres": [
+        "plaisance"
+      ],
+      "types_navires": [
+        "catamaran"
+      ],
+      "description": "Constructeur de catamarans de voyage haut de gamme à La Grande-Motte, réputés pour leurs performances à la voile.",
+      "capacites": [],
+      "historique": [],
+      "contact": {
+        "adresse": "La Grande-Motte, 34280",
+        "web": "https://www.catamaran-outremer.com"
+      },
+      "sources": [
+        "https://www.inautia.fr/blog/acheter-un-bateau/les-meilleurs-chantiers-francais/"
+      ],
+      "confiance": "moyenne",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    },
+    {
+      "id": "privilege-les-sables",
+      "nom": "Privilège Marine",
+      "groupe": "Indépendant",
+      "ville": "Les Sables-d'Olonne",
+      "region": "Pays de la Loire",
+      "lat": 46.501,
+      "lon": -1.783,
+      "geo_precision": "ville",
+      "fondation": 1985,
+      "perimetres": [
+        "plaisance"
+      ],
+      "types_navires": [
+        "catamaran"
+      ],
+      "description": "Constructeur de catamarans de luxe aux Sables-d'Olonne, conceptions sur mesure et finitions artisanales.",
+      "capacites": [],
+      "historique": [],
+      "contact": {
+        "adresse": "Les Sables-d'Olonne, 85100",
+        "web": "https://privilege-marine.com"
+      },
+      "sources": [
+        "https://privilege-marine.com/"
+      ],
+      "confiance": "moyenne",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    },
+    {
+      "id": "allures-cherbourg",
+      "nom": "Allures Yachting",
+      "groupe": "Grand Large Yachting",
+      "ville": "Cherbourg-en-Cotentin",
+      "region": "Normandie",
+      "lat": 49.639,
+      "lon": -1.616,
+      "geo_precision": "ville",
+      "fondation": 2003,
+      "perimetres": [
+        "plaisance"
+      ],
+      "types_navires": [
+        "voilier"
+      ],
+      "description": "Constructeur de voiliers de grand voyage à coque aluminium et dérive intégrale, basé à Cherbourg.",
+      "capacites": [],
+      "historique": [],
+      "contact": {
+        "adresse": "Cherbourg-en-Cotentin, 50100",
+        "web": "https://www.allures.com"
+      },
+      "sources": [
+        "https://www.inautia.fr/blog/acheter-un-bateau/les-meilleurs-chantiers-francais/"
+      ],
+      "confiance": "moyenne",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    },
+    {
+      "id": "cnb-bordeaux",
+      "nom": "CNB (Construction Navale Bordeaux)",
+      "groupe": "Solaris Yachts",
+      "ville": "Bordeaux",
+      "region": "Nouvelle-Aquitaine",
+      "lat": 44.87,
+      "lon": -0.56,
+      "geo_precision": "ville",
+      "fondation": 1987,
+      "perimetres": [
+        "plaisance"
+      ],
+      "types_navires": [
+        "voilier"
+      ],
+      "description": "Constructeur de voiliers de luxe sur mesure à Bordeaux, repris par Solaris Yachts en 2021.",
+      "capacites": [],
+      "historique": [
+        {
+          "annee": "2021",
+          "fait": "Reprise par Solaris Yachts."
+        }
+      ],
+      "contact": {
+        "adresse": "Bordeaux, 33000",
+        "web": "https://www.cnb.fr"
+      },
+      "sources": [
+        "https://www.boatindustry.fr/article/29870/retour-l-annee-2018-chantiers-de-plaisance-entre-rachats-lancements-de-marque"
+      ],
+      "confiance": "moyenne",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    },
+    {
+      "id": "catana-canet",
+      "nom": "Catana Group (Catana, Bali)",
+      "groupe": "Catana Group",
+      "ville": "Canet-en-Roussillon",
+      "region": "Occitanie",
+      "lat": 42.705,
+      "lon": 3.034,
+      "geo_precision": "ville",
+      "fondation": 1984,
+      "perimetres": [
+        "plaisance"
+      ],
+      "types_navires": [
+        "catamaran"
+      ],
+      "description": "Constructeur de catamarans de croisière à Canet-en-Roussillon, marques Catana et Bali, reconnu pour ses performances en mer.",
+      "capacites": [],
+      "historique": [],
+      "contact": {
+        "adresse": "Canet-en-Roussillon, 66140",
+        "web": "https://www.catanagroup.com"
+      },
+      "sources": [
+        "https://www.inautia.fr/blog/acheter-un-bateau/les-meilleurs-chantiers-francais/"
+      ],
+      "confiance": "moyenne",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    },
+    {
+      "id": "multiplast-vannes",
+      "nom": "Multiplast",
+      "groupe": "Carboman Group",
+      "ville": "Vannes",
+      "region": "Bretagne",
+      "lat": 47.658,
+      "lon": -2.76,
+      "geo_precision": "ville",
+      "fondation": 1981,
+      "perimetres": [
+        "plaisance"
+      ],
+      "types_navires": [
+        "voilier"
+      ],
+      "description": "Chantier composite haute performance à Vannes : voiliers de course océanique (IMOCA, maxi-trimarans Ultim) et grandes pièces composites.",
+      "capacites": [],
+      "historique": [],
+      "contact": {
+        "adresse": "Vannes, 56000",
+        "web": "https://www.multiplast.eu"
+      },
+      "sources": [
+        "https://gican.asso.fr/gican/focus-industrie-navale-en-region-bretagne/"
+      ],
+      "confiance": "moyenne",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    },
+    {
+      "id": "cdk-lorient",
+      "nom": "CDK Technologies",
+      "groupe": "Indépendant",
+      "ville": "Lorient",
+      "region": "Bretagne",
+      "lat": 47.725,
+      "lon": -3.362,
+      "geo_precision": "ville",
+      "fondation": 1984,
+      "perimetres": [
+        "plaisance"
+      ],
+      "types_navires": [
+        "voilier"
+      ],
+      "description": "Chantier composite de course au large (Port-la-Forêt et Lorient), constructeur de nombreux IMOCA et multicoques de compétition.",
+      "capacites": [],
+      "historique": [],
+      "contact": {
+        "adresse": "Lorient, 56100",
+        "web": "https://www.cdk-technologies.com"
+      },
+      "sources": [
+        "https://gican.asso.fr/gican/focus-industrie-navale-en-region-bretagne/"
+      ],
+      "confiance": "moyenne",
+      "pays": "France",
+      "superficie_ha": null,
+      "effectif": null
+    }
+  ]
+}
