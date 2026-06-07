@@ -265,15 +265,27 @@
             <div class="d-cap__d">${[k.dimensions, k.capacite].filter(Boolean).join(" · ") || ""}</div>
           </div>`).join("")}</div>` : "";
 
+    const prodHtml = (c.produits && c.produits.length)
+      ? `<div class="d-section"><h3>Produits phares</h3>
+          <ul class="d-list">${c.produits.map((p) =>
+            `<li><span class="k" style="min-width:auto;color:var(--blue)">${p.type || ""}</span><span>${p.details || ""}</span></li>`).join("")}</ul></div>` : "";
+
+    const persHtml = (c.personnes && c.personnes.length)
+      ? `<div class="d-section"><h3>Personnes clés</h3>
+          <ul class="d-list">${c.personnes.map((p) =>
+            `<li><span style="font-weight:600">${p.nom || ""}</span><span style="color:var(--muted)">${p.titre || ""}</span></li>`).join("")}</ul></div>` : "";
+
     const histHtml = (c.historique && c.historique.length)
       ? `<div class="d-section"><h3>Histoire et faits marquants</h3>
           <ul class="d-list">${c.historique.map((h) =>
             `<li><span class="k">${h.annee}</span><span>${h.fait}</span></li>`).join("")}</ul></div>` : "";
 
-    const contactHtml = c.contact
+    const contactHtml = (c.contact && (c.contact.adresse || c.contact.web || c.contact.interlocuteur || c.contact.telephone))
       ? `<div class="d-section"><h3>Contact</h3>
-          <div class="d-fact__v">${c.contact.adresse || ""}</div>
-          ${c.contact.web ? `<a class="d-sources" href="${c.contact.web}" target="_blank" rel="noopener" style="color:var(--accent);font-size:14px;display:inline-block;margin-top:6px">${c.contact.web.replace(/^https?:\/\//, "")}</a>` : ""}
+          ${c.contact.adresse ? `<div class="d-fact__v">${c.contact.adresse}</div>` : ""}
+          ${c.contact.interlocuteur ? `<div class="d-fact__v" style="margin-top:4px">${c.contact.interlocuteur}</div>` : ""}
+          ${c.contact.telephone ? `<div class="d-fact__v" style="margin-top:4px">${c.contact.telephone}</div>` : ""}
+          ${c.contact.web ? `<a href="${c.contact.web}" target="_blank" rel="noopener" style="font-size:14px;display:inline-block;margin-top:6px">${c.contact.web.replace(/^https?:\/\//, "")}</a>` : ""}
         </div>` : "";
 
     $("#drawer-body").innerHTML = `
@@ -293,6 +305,8 @@
       </div>
 
       ${capHtml}
+      ${prodHtml}
+      ${persHtml}
       ${histHtml}
       ${contactHtml}
 
