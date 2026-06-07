@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chantiers navals français · VAIATA Intelligence</title>
+  <meta name="description" content="Carte et annuaire des chantiers navals français : construction neuve, réparation, naval et plaisance. VAIATA Intelligence." />
+  <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="title">
+      <h1>Chantiers navals français</h1>
+      <p class="dek">Cartographie de la construction, de la réparation et de la défense navales en France</p>
+    </div>
+    <div class="viewtoggle" role="tablist" aria-label="Mode d'affichage">
+      <button id="btn-map" class="viewtoggle__btn is-active" role="tab" aria-selected="true">Carte</button>
+      <button id="btn-dir" class="viewtoggle__btn" role="tab" aria-selected="false">Annuaire</button>
+    </div>
+  </header>
+
+  <section class="controls" aria-label="Filtres">
+    <div class="control control--search">
+      <label class="control__label" for="search">Recherche</label>
+      <input id="search" type="search" placeholder="Nom de site, ville ou groupe" autocomplete="off" />
+    </div>
+    <div class="control">
+      <label class="control__label">Périmètre</label>
+      <div id="perim-chips" class="chips"></div>
+    </div>
+    <div class="control">
+      <label class="control__label" for="f-type">Type de navire</label>
+      <select id="f-type"><option value="">Tous types</option></select>
+    </div>
+    <div class="control">
+      <label class="control__label" for="f-region">Localisation</label>
+      <select id="f-region"><option value="">Toutes régions</option></select>
+    </div>
+    <button id="reset" class="reset">Tout effacer</button>
+    <div id="count" class="controls__count"></div>
+  </section>
+
+  <main class="content">
+    <!-- Vue carte : liste + carte -->
+    <div id="view-map" class="view view--map">
+      <aside class="results" id="results" aria-label="Liste des chantiers"></aside>
+      <div class="mapwrap">
+        <div id="map"></div>
+        <div class="legend" id="legend"></div>
+      </div>
+    </div>
+
+    <!-- Vue annuaire : tableau -->
+    <div id="view-dir" class="view view--dir is-hidden">
+      <table class="table">
+        <thead>
+          <tr>
+            <th data-sort="nom">Chantier</th>
+            <th data-sort="ville">Localisation</th>
+            <th data-sort="fondation">Fondé</th>
+            <th>Périmètres</th>
+            <th data-sort="groupe">Groupe</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Panneau fiche -->
+  <div id="drawer" class="drawer" aria-hidden="true">
+    <div class="drawer__backdrop" data-close></div>
+    <article class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="d-nom">
+      <button class="drawer__close" data-close aria-label="Fermer">×</button>
+      <div id="drawer-body"></div>
+    </article>
+  </div>
+
+  <footer class="foot">
+    <span>VAIATA · Intelligence navale &nbsp;·&nbsp; chaque fiche cite ses sources</span>
+    <span class="foot__note">Démonstration · juin 2026</span>
+  </footer>
+
+  <script src="assets/vendor/leaflet/leaflet.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
