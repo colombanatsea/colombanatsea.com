@@ -17,13 +17,14 @@
     <div class="viewtoggle" role="tablist" aria-label="Mode d'affichage">
       <button id="btn-map" class="viewtoggle__btn is-active" role="tab" aria-selected="true">Carte</button>
       <button id="btn-dir" class="viewtoggle__btn" role="tab" aria-selected="false">Annuaire</button>
+      <button id="btn-nav" class="viewtoggle__btn" role="tab" aria-selected="false">Navires</button>
     </div>
   </header>
 
   <section class="controls" aria-label="Filtres">
     <div class="control control--search">
       <label class="control__label" for="search">Recherche</label>
-      <input id="search" type="search" placeholder="Nom de site, ville ou groupe" autocomplete="off" />
+      <input id="search" type="search" placeholder="Chantier, ville, ou nom de navire" autocomplete="off" />
     </div>
     <div class="control">
       <label class="control__label">Périmètre</label>
@@ -65,6 +66,11 @@
         </thead>
         <tbody id="table-body"></tbody>
       </table>
+    </div>
+
+    <!-- Vue navires : recherche par navire -->
+    <div id="view-nav" class="view view--nav is-hidden">
+      <div class="nav-list" id="nav-list"></div>
     </div>
   </main>
 
