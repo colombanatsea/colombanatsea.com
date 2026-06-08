@@ -48,7 +48,10 @@
     // Index plat des navires de référence (recherche par navire).
     state.navires = [];
     state.all.forEach((c) => (c.navires_references || []).forEach((n) => {
-      if (n && (n.nom || n.type)) state.navires.push(Object.assign({ _idx: state.navires.length, _cid: c.id, _cnom: c.nom, _cville: c.ville, _cregion: c.region }, n));
+      if (n && (n.nom || n.type)) {
+        n._idx = state.navires.length; n._cid = c.id; n._cnom = c.nom; n._cville = c.ville; n._cregion = c.region;
+        state.navires.push(n);
+      }
     }));
     // Fond de carte France, servi en local (aucune dépendance externe).
     let geo = null;
@@ -353,8 +356,8 @@
     const refHtml = (c.navires_references && c.navires_references.length)
       ? `<div class="d-section"><h3>Navires de référence</h3>
           <ul class="d-list">${c.navires_references.map((n) => `
-            <li style="flex-direction:column;gap:3px;align-items:flex-start">
-              <span><b>${n.nom || n.type || "Navire"}</b>${n.type && n.nom ? ` <span style="color:var(--muted)">· ${n.type}</span>` : ""}${n.annee ? ` <span style="color:var(--muted)">· ${n.annee}</span>` : ""}</span>
+            <li class="ref-li" ${n._idx != null ? `data-open-vessel="${n._idx}"` : ""} style="flex-direction:column;gap:3px;align-items:flex-start">
+              <span><b>${n.nom || n.type || "Navire"}</b>${n.type && n.nom ? ` <span style="color:var(--muted)">· ${n.type}</span>` : ""}${n.annee ? ` <span style="color:var(--muted)">· ${n.annee}</span>` : ""}${n._idx != null ? ` <span class="ref-go">→</span>` : ""}</span>
               ${refSpecs(n) ? `<span style="color:var(--muted);font-size:13px">${refSpecs(n)}</span>` : ""}
             </li>`).join("")}</ul></div>` : "";
 
@@ -395,6 +398,8 @@
           `<a href="${s}" target="_blank" rel="noopener">${s}</a>`).join("")}</div>
       </div>`;
 
+    $("#drawer-body").querySelectorAll("[data-open-vessel]").forEach((el) =>
+      el.addEventListener("click", () => openVessel(state.navires[+el.dataset.openVessel])));
     $("#drawer").setAttribute("aria-hidden", "false");
     render();
   }
