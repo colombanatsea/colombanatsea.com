@@ -45,6 +45,11 @@
     state.all = data.chantiers;
     state.perimRef = data.meta.perimetres_ref || {};
     state.typesRef = data.meta.types_navires_ref || {};
+    // Index plat des navires de référence (recherche par navire).
+    state.navires = [];
+    state.all.forEach((c) => (c.navires_references || []).forEach((n) => {
+      if (n && (n.nom || n.type)) state.navires.push(Object.assign({ _idx: state.navires.length, _cid: c.id, _cnom: c.nom, _cville: c.ville, _cregion: c.region }, n));
+    }));
     // Fond de carte France, servi en local (aucune dépendance externe).
     let geo = null;
     try {
@@ -61,12 +66,57 @@
     const { q, perims, type, region } = state.filters;
     const nq = norm(q);
     return state.all.filter((c) => {
-      if (nq && !(norm(c.nom).includes(nq) || norm(c.ville).includes(nq) || norm(c.groupe).includes(nq))) return false;
+      if (nq) {
+        const inText = norm(c.nom).includes(nq) || norm(c.ville).includes(nq) || norm(c.groupe).includes(nq);
+        const inNav = (c.navires_references || []).some((n) => norm(n.nom).includes(nq) || norm(n.type).includes(nq) || norm(n.client).includes(nq));
+        if (!inText && !inNav) return false;
+      }
       if (perims.size && !c.perimetres.some((p) => perims.has(p))) return false;
       if (type && !c.types_navires.includes(type)) return false;
       if (region && c.region !== region) return false;
       return true;
     });
+  }
+
+  /* ---------- Navires (recherche par navire) ---------- */
+  const FAMILLES = ["ferry","bac","ropax","ro-ro","car-ferry","passagers","croisiere","paquebot","catamaran","trimaran","voilier","goelette","motoryacht","yacht","chalutier","thonier","ligneur","caseyeur","fileyeur","crevettier","peche","remorqueur","pousseur","peniche","patrouilleur","intercepteur","opv","fregate","corvette","aviso","sous-marin","ravitailleur","baliseur","pilotine","pilote","vedette","methanier","gazier","drague","barge","crewboat","servitude","hydrographique","scientifique","navire-ecole"];
+  const STOP = new Set(["navire","navires","de","du","des","la","le","les","un","une","modele","modeles","gamme","serie","series","reference","references","refit","reparation","bateau","bateaux","unite","unites","classe","type","et","a","au","aux","pour","sur","mesure"]);
+  const famille = (t) => {
+    const n = norm(t);
+    const hit = FAMILLES.find((f) => n.includes(norm(f)));
+    if (hit) return hit;
+    const tok = n.split(/[^a-z0-9]+/).filter((w) => w && !STOP.has(w));
+    return tok[0] || n;
+  };
+
+  function filteredNavires() {
+    const { q, region } = state.filters;
+    const nq = norm(q);
+    return state.navires.filter((n) => {
+      if (region && n._cregion !== region) return false;
+      if (nq && !(norm(n.nom).includes(nq) || norm(n.type).includes(nq) || norm(n.client).includes(nq) || norm(n._cnom).includes(nq))) return false;
+      return true;
+    });
+  }
+
+  function similarVessels(v) {
+    const fam = famille(v.type);
+    const L = v.longueur_m;
+    return state.navires
+      .filter((n) => n._idx !== v._idx && famille(n.type) === fam)
+      .map((n) => ({ n, d: (L && n.longueur_m) ? Math.abs(n.longueur_m - L) : 9999 }))
+      .sort((a, b) => a.d - b.d)
+      .slice(0, 8)
+      .map((x) => x.n);
+  }
+
+  function vesselSpecs(n) {
+    return [
+      n.longueur_m ? n.longueur_m + " m" : null,
+      n.jauge_gt ? n.jauge_gt.toLocaleString("fr-FR") + " GT" : null,
+      n.port_lourd_dwt ? n.port_lourd_dwt.toLocaleString("fr-FR") + " DWT" : null,
+      n.capacite || null, n.energie || null, n.classification || null,
+    ].filter(Boolean).join(" · ");
   }
 
   function sorted(list) {
@@ -122,6 +172,7 @@
     // View toggle
     $("#btn-map").addEventListener("click", () => setView("map"));
     $("#btn-dir").addEventListener("click", () => setView("dir"));
+    if ($("#btn-nav")) $("#btn-nav").addEventListener("click", () => setView("nav"));
 
     // Table sort
     document.querySelectorAll("th[data-sort]").forEach((th) => {
@@ -145,12 +196,13 @@
 
   function setView(v) {
     state.view = v;
-    $("#btn-map").classList.toggle("is-active", v === "map");
-    $("#btn-dir").classList.toggle("is-active", v === "dir");
-    $("#btn-map").setAttribute("aria-selected", v === "map");
-    $("#btn-dir").setAttribute("aria-selected", v === "dir");
+    [["map", "#btn-map"], ["dir", "#btn-dir"], ["nav", "#btn-nav"]].forEach(([k, sel]) => {
+      const b = $(sel); if (!b) return;
+      b.classList.toggle("is-active", v === k); b.setAttribute("aria-selected", v === k);
+    });
     $("#view-map").classList.toggle("is-hidden", v !== "map");
     $("#view-dir").classList.toggle("is-hidden", v !== "dir");
+    $("#view-nav").classList.toggle("is-hidden", v !== "nav");
     if (v === "map" && map) setTimeout(() => map.invalidateSize(), 60);
     render();
   }
@@ -280,6 +332,32 @@
           <ul class="d-list">${c.historique.map((h) =>
             `<li><span class="k">${h.annee}</span><span>${h.fait}</span></li>`).join("")}</ul></div>` : "";
 
+    const carFacts = [
+      ["Matériaux", (c.materiaux && c.materiaux.length) ? c.materiaux.join(", ") : null],
+      ["Classification", (c.classification && c.classification.length) ? c.classification.join(", ") : null],
+      ["Énergies", (c.energies && c.energies.length) ? c.energies.join(", ") : null],
+      ["Taille max.", c.taille_max || null],
+    ].filter(([, v]) => v != null && v !== "");
+    const caracHtml = carFacts.length
+      ? `<div class="d-section"><h3>Caractéristiques techniques</h3>
+          <div class="d-grid">${carFacts.map(([k, v]) =>
+            `<div class="d-fact"><div class="d-fact__k">${k}</div><div class="d-fact__v">${v}</div></div>`).join("")}</div></div>` : "";
+
+    const refSpecs = (n) => [
+      n.longueur_m ? n.longueur_m + " m" : null,
+      n.jauge_gt ? n.jauge_gt.toLocaleString("fr-FR") + " GT" : null,
+      n.port_lourd_dwt ? n.port_lourd_dwt.toLocaleString("fr-FR") + " DWT" : null,
+      n.capacite || null, n.energie || null,
+      n.client ? "pour " + n.client : null, n.classification || null,
+    ].filter(Boolean).join(" · ");
+    const refHtml = (c.navires_references && c.navires_references.length)
+      ? `<div class="d-section"><h3>Navires de référence</h3>
+          <ul class="d-list">${c.navires_references.map((n) => `
+            <li style="flex-direction:column;gap:3px;align-items:flex-start">
+              <span><b>${n.nom || n.type || "Navire"}</b>${n.type && n.nom ? ` <span style="color:var(--muted)">· ${n.type}</span>` : ""}${n.annee ? ` <span style="color:var(--muted)">· ${n.annee}</span>` : ""}</span>
+              ${refSpecs(n) ? `<span style="color:var(--muted);font-size:13px">${refSpecs(n)}</span>` : ""}
+            </li>`).join("")}</ul></div>` : "";
+
     const contactHtml = (c.contact && (c.contact.adresse || c.contact.web || c.contact.interlocuteur || c.contact.telephone))
       ? `<div class="d-section"><h3>Contact</h3>
           ${c.contact.adresse ? `<div class="d-fact__v">${c.contact.adresse}</div>` : ""}
@@ -304,6 +382,8 @@
         <div class="d-types">${c.types_navires.map((t) => `<span class="pill">${typeLabel(t)}</span>`).join("")}</div>
       </div>
 
+      ${caracHtml}
+      ${refHtml}
       ${capHtml}
       ${prodHtml}
       ${persHtml}
@@ -325,8 +405,67 @@
     render();
   }
 
+  /* ---------- Panneau navire ---------- */
+  function openVessel(v) {
+    if (!v) return;
+    const sim = similarVessels(v);
+    const specRows = [
+      ["Type", v.type], ["Année", v.annee],
+      ["Longueur", v.longueur_m ? v.longueur_m + " m" : null],
+      ["Jauge", v.jauge_gt ? v.jauge_gt.toLocaleString("fr-FR") + " GT" : null],
+      ["Port en lourd", v.port_lourd_dwt ? v.port_lourd_dwt.toLocaleString("fr-FR") + " DWT" : null],
+      ["Capacité", v.capacite], ["Énergie", v.energie],
+      ["Armateur", v.client], ["Classification", v.classification],
+    ].filter(([, x]) => x != null && x !== "");
+    $("#drawer-body").innerHTML = `
+      <div class="d-eyebrow">Navire de référence</div>
+      <h2 class="d-nom" id="d-nom">${v.nom || v.type}</h2>
+      <div class="d-loc">${[v.type, v.annee].filter(Boolean).join(" · ")}</div>
+      <div class="d-section"><h3>Caractéristiques</h3>
+        <div class="d-grid">${specRows.map(([k, x]) =>
+          `<div class="d-fact"><div class="d-fact__k">${k}</div><div class="d-fact__v">${x}</div></div>`).join("")}</div></div>
+      <div class="d-section"><h3>Construit par</h3>
+        <button class="ves-yard" data-open-chantier="${v._cid}"><b>${v._cnom}</b><span>${v._cville} · voir la fiche du chantier →</span></button>
+      </div>
+      ${sim.length ? `<div class="d-section"><h3>Navires similaires</h3>
+        <ul class="d-list">${sim.map((s) => `
+          <li style="flex-direction:column;gap:4px;align-items:flex-start">
+            <span><b>${s.nom || s.type}</b>${s.annee ? ` <span style="color:var(--muted)">· ${s.annee}</span>` : ""}</span>
+            ${vesselSpecs(s) ? `<span style="color:var(--muted);font-size:13px">${vesselSpecs(s)}</span>` : ""}
+            <button class="ves-link" data-open-vessel="${s._idx}">${s._cnom} · ${s._cville} →</button>
+          </li>`).join("")}</ul></div>` : ""}
+      ${v.source ? `<div class="d-section"><h3>Source</h3><div class="d-sources"><a href="${v.source}" target="_blank" rel="noopener">${v.source}</a></div></div>` : ""}`;
+    $("#drawer-body").querySelectorAll("[data-open-chantier]").forEach((b) => b.addEventListener("click", () => openDrawer(b.dataset.openChantier)));
+    $("#drawer-body").querySelectorAll("[data-open-vessel]").forEach((b) => b.addEventListener("click", () => openVessel(state.navires[+b.dataset.openVessel])));
+    $("#drawer").setAttribute("aria-hidden", "false");
+  }
+
+  function renderNavires(list) {
+    const el = $("#nav-list");
+    if (!list.length) { el.innerHTML = `<p class="empty">Aucun navire ne correspond à ces critères.</p>`; return; }
+    el.innerHTML = list.map((n) => `
+      <div class="card nav-card" data-vid="${n._idx}">
+        <div class="card__body">
+          <div class="card__nom">${n.nom || n.type}</div>
+          <div class="card__meta">${[n.type, n.annee].filter(Boolean).join(" · ")}</div>
+          ${vesselSpecs(n) ? `<div class="nav-specs">${vesselSpecs(n)}</div>` : ""}
+          <div class="nav-yard">Chantier : <b>${n._cnom}</b> <span>· ${n._cville}</span></div>
+        </div>
+      </div>`).join("");
+    el.querySelectorAll(".nav-card[data-vid]").forEach((card) =>
+      card.addEventListener("click", () => openVessel(state.navires[+card.dataset.vid])));
+  }
+
   /* ---------- Render orchestration ---------- */
   function render() {
+    if (state.view === "nav") {
+      const nl = filteredNavires();
+      $("#count").innerHTML = nl.length === state.navires.length
+        ? `<b>${state.navires.length}</b> navires de référence`
+        : `<b>${nl.length}</b> sur ${state.navires.length} navires`;
+      renderNavires(nl);
+      return;
+    }
     const list = sorted(filtered());
     $("#count").innerHTML = list.length === state.all.length
       ? `<b>${state.all.length}</b> sites recensés`
