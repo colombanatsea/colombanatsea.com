@@ -105,7 +105,7 @@
   }
 
   /* ---------- Navires (recherche par navire) ---------- */
-  const FAMILLES = ["ferry","bac","ropax","ro-ro","car-ferry","passagers","croisiere","paquebot","catamaran","trimaran","voilier","goelette","motoryacht","yacht","chalutier","thonier","ligneur","caseyeur","fileyeur","crevettier","peche","remorqueur","pousseur","peniche","patrouilleur","intercepteur","opv","fregate","corvette","aviso","sous-marin","ravitailleur","baliseur","pilotine","pilote","vedette","methanier","gazier","drague","barge","crewboat","servitude","hydrographique","scientifique","navire-ecole"];
+  const FAMILLES = ["ferry","bac","ropax","ro-ro","car-ferry","passagers","croisiere","paquebot","catamaran","trimaran","voilier","goelette","motoryacht","yacht","chalutier","thonier","ligneur","caseyeur","fileyeur","crevettier","peche","remorqueur","pousseur","peniche","patrouilleur","intercepteur","opv","fpb","osv","crew-boat","supply","fregate","corvette","aviso","sous-marin","ravitailleur","baliseur","pilotine","pilote","vedette","methanier","gazier","drague","barge","crewboat","servitude","hydrographique","scientifique","navire-ecole"];
   // Famille deduite du type ET du nom (le type peut rester generique). "" = inconnue.
   // Correspondance par mot entier : evite que "abaco"/"sarbacane" matchent "bac".
   const FAM_RE = FAMILLES.map((f) => ({ f, re: new RegExp("\\b" + norm(f).replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b") }));
