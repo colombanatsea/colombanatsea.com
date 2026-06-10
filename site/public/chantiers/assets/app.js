@@ -58,6 +58,7 @@
     state.all.forEach((c) => (c.navires_references || []).forEach((n) => {
       if (n && (n.nom || n.type)) {
         n._idx = state.navires.length; n._cid = c.id; n._cnom = c.nom; n._cville = c.ville; n._cregion = c.region;
+        n._cperims = c.perimetres || []; n._ctypes = c.types_navires || [];
         state.navires.push(n);
       }
     }));
@@ -116,10 +117,13 @@
   };
 
   function filteredNavires() {
-    const { q, region } = state.filters;
+    const { q, perims, type, region } = state.filters;
     const nq = norm(q);
     return state.navires.filter((n) => {
       if (region && n._cregion !== region) return false;
+      // Périmètre et type sont des attributs du chantier constructeur : on les applique aussi aux navires.
+      if (perims.size && !n._cperims.some((p) => perims.has(p))) return false;
+      if (type && !n._ctypes.includes(type)) return false;
       if (nq && !(norm(n.nom).includes(nq) || norm(n.type).includes(nq) || norm(n.client).includes(nq) || norm(n._cnom).includes(nq))) return false;
       return true;
     });
