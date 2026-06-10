@@ -11,6 +11,14 @@
   // Ordre de priorité pour la couleur du marqueur (chantier multi-périmètre).
   const PERIM_PRIORITY = ["naval-defense", "construction-neuve", "reparation-refit", "plaisance"];
 
+  // Territoires d'outre-mer : hors emprise de la carte métropole, regroupés dans un index dédié.
+  const OUTREMER_REGIONS = new Set([
+    "Martinique", "Guadeloupe", "La Réunion", "Mayotte", "Guyane",
+    "Polynésie française", "Nouvelle-Calédonie", "Saint-Pierre-et-Miquelon",
+    "Saint-Martin", "Saint-Barthélemy", "Wallis-et-Futuna",
+  ]);
+  const isOutremer = (c) => OUTREMER_REGIONS.has(c.region);
+
   const state = {
     all: [],
     perimRef: {},
@@ -59,6 +67,21 @@
       const gr = await fetch("data/france-regions.geojson", { cache: "force-cache" });
       if (gr.ok) geo = await gr.json();
     } catch (e) { console.warn("Fond de carte indisponible", e); }
+    // Contours d'outre-mer, servis en local (cartouches).
+    state.omPolys = {};
+    try {
+      const or = await fetch("data/outremer.geojson", { cache: "force-cache" });
+      if (or.ok) {
+        const og = await or.json();
+        (og.features || []).forEach((f) => {
+          const terr = f.properties && f.properties.terr;
+          if (!terr) return;
+          const g = f.geometry;
+          const polys = g.type === "Polygon" ? [g.coordinates] : g.coordinates;
+          (state.omPolys[terr] = state.omPolys[terr] || []).push(...polys.map((p) => p[0]));
+        });
+      }
+    } catch (e) { console.warn("Contours outre-mer indisponibles", e); }
     buildControls();
     try { initMap(geo); } catch (e) { console.error("Carte indisponible", e); showMapFallback(); }
     render();
@@ -83,13 +106,13 @@
 
   /* ---------- Navires (recherche par navire) ---------- */
   const FAMILLES = ["ferry","bac","ropax","ro-ro","car-ferry","passagers","croisiere","paquebot","catamaran","trimaran","voilier","goelette","motoryacht","yacht","chalutier","thonier","ligneur","caseyeur","fileyeur","crevettier","peche","remorqueur","pousseur","peniche","patrouilleur","intercepteur","opv","fregate","corvette","aviso","sous-marin","ravitailleur","baliseur","pilotine","pilote","vedette","methanier","gazier","drague","barge","crewboat","servitude","hydrographique","scientifique","navire-ecole"];
-  const STOP = new Set(["navire","navires","de","du","des","la","le","les","un","une","modele","modeles","gamme","serie","series","reference","references","refit","reparation","bateau","bateaux","unite","unites","classe","type","et","a","au","aux","pour","sur","mesure"]);
-  const famille = (t) => {
-    const n = norm(t);
-    const hit = FAMILLES.find((f) => n.includes(norm(f)));
-    if (hit) return hit;
-    const tok = n.split(/[^a-z0-9]+/).filter((w) => w && !STOP.has(w));
-    return tok[0] || n;
+  // Famille deduite du type ET du nom (le type peut rester generique). "" = inconnue.
+  // Correspondance par mot entier : evite que "abaco"/"sarbacane" matchent "bac".
+  const FAM_RE = FAMILLES.map((f) => ({ f, re: new RegExp("\\b" + norm(f).replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b") }));
+  const famille = (v) => {
+    const n = norm((v && v.type) + " " + (v && v.nom));
+    const hit = FAM_RE.find((x) => x.re.test(n));
+    return hit ? hit.f : "";
   };
 
   function filteredNavires() {
@@ -103,10 +126,12 @@
   }
 
   function similarVessels(v) {
-    const fam = famille(v.type);
+    const fam = famille(v);
+    if (!fam) return []; // famille inconnue : ne pas inventer de similaires
+    const base = norm(v.nom).split(" (")[0];
     const L = v.longueur_m;
     return state.navires
-      .filter((n) => n._idx !== v._idx && famille(n.type) === fam)
+      .filter((n) => n._idx !== v._idx && famille(n) === fam && norm(n.nom).split(" (")[0] !== base)
       .map((n) => ({ n, d: (L && n.longueur_m) ? Math.abs(n.longueur_m - L) : 9999 }))
       .sort((a, b) => a.d - b.d)
       .slice(0, 8)
@@ -164,13 +189,28 @@
     // Search
     $("#search").addEventListener("input", (e) => { state.filters.q = e.target.value; render(); });
 
-    // Reset
-    $("#reset").addEventListener("click", () => {
+    // Retour au début : efface filtres, recherche, tri, ferme la fiche,
+    // revient à la carte et la recentre sur la France.
+    function resetAll() {
       state.filters = { q: "", perims: new Set(), type: "", region: "" };
+      state.sort = { key: "nom", dir: 1 };
+      state.activeId = null;
       $("#search").value = ""; selT.value = ""; selR.value = "";
       document.querySelectorAll(".chip.is-on").forEach((c) => c.classList.remove("is-on"));
+      $("#drawer").setAttribute("aria-hidden", "true");
+      setView("map");
+      if (map && state.homeBounds) {
+        try { map.fitBounds(state.homeBounds, { padding: [16, 16] }); } catch (e) { /* noop */ }
+      }
       render();
-    });
+    }
+    $("#reset").addEventListener("click", resetAll);
+    // Le titre fait office de bouton accueil (pattern logo).
+    const home = $("#home");
+    if (home) {
+      home.addEventListener("click", resetAll);
+      home.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); resetAll(); } });
+    }
 
     // View toggle
     $("#btn-map").addEventListener("click", () => setView("map"));
@@ -224,7 +264,7 @@
         style: { fillColor: "#DBE6EF", color: "#A8BCCD", weight: 1, fillOpacity: 1 },
         interactive: false,
       }).addTo(map);
-      try { map.fitBounds(layer.getBounds(), { padding: [16, 16] }); }
+      try { state.homeBounds = layer.getBounds(); map.fitBounds(state.homeBounds, { padding: [16, 16] }); }
       catch (e) { map.setView([46.6, 2.4], 6); }
     } else {
       map.setView([46.6, 2.4], 6);
@@ -239,7 +279,9 @@
     if (!map || !markerLayer) return;
     markerLayer.clearLayers();
     markers.clear();
-    list.forEach((c) => {
+    // Les chantiers d'outre-mer sont hors emprise métropole : ils flotteraient sur fond vide.
+    // On les retire de la carte et on les sert via l'index outre-mer.
+    list.filter((c) => !isOutremer(c)).forEach((c) => {
       const color = PERIM_COLORS[primaryPerim(c)];
       const m = L.circleMarker([c.lat, c.lon], {
         radius: 8, color: "#ffffff", weight: 2, fillColor: color, fillOpacity: 1,
@@ -410,6 +452,33 @@
     render();
   }
 
+  /* ---------- Index outre-mer ---------- */
+  function openOutremer(list) {
+    const om = list.filter(isOutremer);
+    if (!om.length) return;
+    const byReg = {};
+    om.forEach((c) => (byReg[c.region] = byReg[c.region] || []).push(c));
+    const groups = Object.keys(byReg).sort((a, b) => a.localeCompare(b)).map((r) => {
+      const cs = byReg[r].sort((a, b) => a.nom.localeCompare(b.nom));
+      return `<div class="om-group">
+        <p class="om-group__t">${r} <span>· ${cs.length}</span></p>
+        ${cs.map((c) => `<button class="om-card" data-open="${c.id}">
+          <div class="om-card__nom">${c.nom}</div>
+          <div class="om-card__meta">${c.ville}</div>
+          <div class="card__perims">${c.perimetres.map(tag).join("")}</div>
+        </button>`).join("")}
+      </div>`;
+    }).join("");
+    $("#drawer-body").innerHTML = `
+      <div class="d-eyebrow">Hors carte métropole</div>
+      <h2 class="d-nom" id="d-nom">Chantiers d'outre-mer</h2>
+      <div class="d-loc">${om.length} site${om.length > 1 ? "s" : ""} recensé${om.length > 1 ? "s" : ""} dans les territoires ultramarins</div>
+      ${groups}`;
+    $("#drawer-body").querySelectorAll("[data-open]").forEach((el) =>
+      el.addEventListener("click", () => openDrawer(el.dataset.open)));
+    $("#drawer").setAttribute("aria-hidden", "false");
+  }
+
   /* ---------- Panneau navire ---------- */
   function openVessel(v) {
     if (!v) return;
@@ -475,8 +544,67 @@
     $("#count").innerHTML = list.length === state.all.length
       ? `<b>${state.all.length}</b> sites recensés`
       : `<b>${list.length}</b> sur ${state.all.length} sites`;
-    if (state.view === "map") { renderMap(list); renderResults(list); }
+    if (state.view === "map") { renderMap(list); renderResults(list); renderInsets(list); }
     else renderTable(list);
+  }
+
+  /* ---------- Cartouches d'outre-mer (contours locaux) ---------- */
+  // Projette lon/lat dans une boite SVG W×H avec correction cosinus, en preservant l'aspect.
+  function makeProjector(bbox, W, H, pad) {
+    const [lon0, lat0, lon1, lat1] = bbox;
+    const midlat = (lat0 + lat1) / 2;
+    const kx = Math.cos((midlat * Math.PI) / 180) || 1;
+    const geoW = Math.max((lon1 - lon0) * kx, 1e-6);
+    const geoH = Math.max(lat1 - lat0, 1e-6);
+    const s = Math.min((W - 2 * pad) / geoW, (H - 2 * pad) / geoH);
+    const ox = (W - geoW * s) / 2;
+    const oy = (H - geoH * s) / 2;
+    return (lon, lat) => [ox + (lon - lon0) * kx * s, oy + (lat1 - lat) * s];
+  }
+
+  function buildInsetSvg(terr, chantiers) {
+    const W = 132, H = 104, pad = 9;
+    const rings = state.omPolys[terr] || [];
+    // bbox = contours + chantiers (pour que les points soient toujours visibles)
+    let lon0 = 999, lat0 = 999, lon1 = -999, lat1 = -999;
+    const grow = (lo, la) => { lon0 = Math.min(lon0, lo); lat0 = Math.min(lat0, la); lon1 = Math.max(lon1, lo); lat1 = Math.max(lat1, la); };
+    rings.forEach((r) => r.forEach(([lo, la]) => grow(lo, la)));
+    chantiers.forEach((c) => grow(c.lon, c.lat));
+    if (lon0 === 999) return "";
+    // marge geographique
+    const mx = (lon1 - lon0) * 0.08 || 0.05, my = (lat1 - lat0) * 0.08 || 0.05;
+    const proj = makeProjector([lon0 - mx, lat0 - my, lon1 + mx, lat1 + my], W, H, pad);
+    const paths = rings.map((r) => {
+      const d = r.map(([lo, la], i) => (i ? "L" : "M") + proj(lo, la).map((v) => v.toFixed(1)).join(" ")).join(" ");
+      return `<path d="${d}Z" class="om-land"/>`;
+    }).join("");
+    const dots = chantiers.map((c) => {
+      const [x, y] = proj(c.lon, c.lat);
+      const color = PERIM_COLORS[primaryPerim(c)];
+      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" fill="${color}" stroke="#fff" stroke-width="1.5" class="om-dot" data-id="${c.id}"><title>${c.nom}</title></circle>`;
+    }).join("");
+    return `<svg viewBox="0 0 ${W} ${H}" class="om-svg" role="img" aria-label="${terr}">${paths}${dots}</svg>`;
+  }
+
+  function renderInsets(list) {
+    const strip = $("#om-strip"); if (!strip) return;
+    const om = list.filter(isOutremer);
+    if (!om.length) { strip.classList.add("is-hidden"); strip.innerHTML = ""; return; }
+    const byReg = {};
+    om.forEach((c) => (byReg[c.region] = byReg[c.region] || []).push(c));
+    strip.innerHTML = Object.keys(byReg).sort((a, b) => a.localeCompare(b)).map((terr) => {
+      const cs = byReg[terr];
+      return `<figure class="om-inset" data-terr="${terr}">
+        ${buildInsetSvg(terr, cs)}
+        <figcaption><span class="om-inset__t">${terr}</span><span class="om-inset__n">${cs.length}</span></figcaption>
+      </figure>`;
+    }).join("");
+    strip.classList.remove("is-hidden");
+    strip.querySelectorAll(".om-dot[data-id]").forEach((el) =>
+      el.addEventListener("click", (e) => { e.stopPropagation(); openDrawer(el.dataset.id); }));
+    // Clic sur le cartouche (hors point) = index texte du territoire.
+    strip.querySelectorAll(".om-inset").forEach((fig) =>
+      fig.addEventListener("click", () => openOutremer(om.filter((c) => c.region === fig.dataset.terr))));
   }
 
   load().catch((err) => {
