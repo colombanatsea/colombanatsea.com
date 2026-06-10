@@ -42,7 +42,9 @@ a { color: var(--blue); }
   background: var(--bg); border-top: 3px solid var(--blue); border-bottom: 1px solid var(--line);
   box-shadow: 0 1px 0 rgba(0,66,114,0.04);
 }
-.title { flex: 1; min-width: 0; border-left: 3px solid var(--red); padding-left: 15px; }
+.title { flex: 1; min-width: 0; border-left: 3px solid var(--red); padding-left: 15px; cursor: pointer; border-radius: 0 var(--r-sm) var(--r-sm) 0; transition: background 0.12s; }
+.title:hover { background: var(--bg-2); }
+.title:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 .title h1 { font-size: 19px; font-weight: 700; margin: 0; color: var(--blue); letter-spacing: -0.01em; }
 .title .dek { margin: 2px 0 0; font-size: 12.5px; color: var(--muted); font-weight: 400; }
 .title__count { display: none; }
@@ -87,8 +89,8 @@ a { color: var(--blue); }
 .chip.is-on[data-p="naval-defense"]       { background: var(--c-naval); }
 .chip.is-on[data-p="plaisance"]           { background: var(--c-plaisance); }
 
-.reset { margin-left: 4px; background: none; color: var(--muted); border: 0; cursor: pointer; font-size: 12.5px; font-weight: 600; font-family: var(--sans); padding: 8px 4px; }
-.reset:hover { color: var(--red); }
+.reset { margin-left: 4px; background: var(--bg); color: var(--blue); border: 1px solid var(--line-2); border-radius: 999px; cursor: pointer; font-size: 12.5px; font-weight: 600; font-family: var(--sans); padding: 9px 15px; transition: 0.14s; }
+.reset:hover { border-color: var(--red); color: var(--red); }
 
 /* ---------- Views ---------- */
 .content { position: relative; overflow: hidden; }
@@ -123,8 +125,40 @@ a { color: var(--blue); }
 .tag--naval-defense::before      { background: var(--c-naval); }
 .tag--plaisance::before          { background: var(--c-plaisance); }
 
+/* Outre-mer : bande de cartouches (contours locaux) */
+.om-strip {
+  position: absolute; left: 14px; right: 14px; bottom: 14px; z-index: 500;
+  display: flex; gap: 10px; overflow-x: auto; padding: 8px;
+  background: rgba(255,255,255,0.92); border: 1px solid var(--line); border-radius: var(--r);
+  box-shadow: var(--shadow); backdrop-filter: blur(2px);
+}
+.om-inset {
+  flex: 0 0 auto; width: 132px; margin: 0; cursor: pointer;
+  border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--sea);
+  overflow: hidden; transition: border-color 0.12s;
+}
+.om-inset:hover { border-color: var(--blue); }
+.om-svg { display: block; width: 132px; height: 104px; }
+.om-land { fill: var(--land); stroke: var(--coast); stroke-width: 0.8; }
+.om-dot { cursor: pointer; }
+.om-dot:hover { stroke: var(--red); }
+.om-inset figcaption {
+  display: flex; align-items: center; justify-content: space-between; gap: 6px;
+  padding: 5px 8px; background: var(--bg); border-top: 1px solid var(--line);
+}
+.om-inset__t { font-size: 11px; font-weight: 700; color: var(--blue); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.om-inset__n { font-size: 11px; font-weight: 700; color: #fff; background: var(--red); border-radius: 999px; padding: 1px 7px; flex: none; }
+
+.om-group { margin-top: 22px; }
+.om-group__t { font-size: 13px; font-weight: 700; color: var(--blue); margin: 0 0 4px; }
+.om-group__t span { color: var(--muted); font-weight: 600; font-size: 12px; }
+.om-card { display: block; width: 100%; text-align: left; background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--r-sm); padding: 12px 14px; margin-top: 8px; cursor: pointer; font-family: var(--sans); transition: border-color 0.12s; }
+.om-card:hover { border-color: var(--blue); }
+.om-card__nom { font-weight: 700; font-size: 14.5px; color: var(--ink); }
+.om-card__meta { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+
 /* Legend */
-.legend { position: absolute; bottom: 20px; right: 20px; z-index: 500; background: var(--bg); border: 1px solid var(--line); border-radius: var(--r); padding: 13px 16px; box-shadow: var(--shadow); font-size: 12.5px; }
+.legend { position: absolute; top: 18px; right: 18px; z-index: 500; background: var(--bg); border: 1px solid var(--line); border-radius: var(--r); padding: 13px 16px; box-shadow: var(--shadow); font-size: 12.5px; }
 .legend__title { font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 9px; }
 .legend__row { display: flex; align-items: center; gap: 9px; margin: 6px 0; color: var(--ink); }
 .legend__dot { width: 11px; height: 11px; border-radius: 50%; }
