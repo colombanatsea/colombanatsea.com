@@ -10,7 +10,7 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="title">
+    <div class="title" id="home" role="button" tabindex="0" title="Revenir à l'accueil (réinitialise recherche et filtres)">
       <h1>Chantiers navals français</h1>
       <p class="dek">Cartographie de la construction, de la réparation et de la défense navales en France</p>
     </div>
@@ -38,7 +38,7 @@
       <label class="control__label" for="f-region">Localisation</label>
       <select id="f-region"><option value="">Toutes régions</option></select>
     </div>
-    <button id="reset" class="reset">Tout effacer</button>
+    <button id="reset" class="reset" title="Réinitialise recherche, filtres et carte">↺ Réinitialiser</button>
     <div id="count" class="controls__count"></div>
   </section>
 
@@ -49,6 +49,7 @@
       <div class="mapwrap">
         <div id="map"></div>
         <div class="legend" id="legend"></div>
+        <div id="om-strip" class="om-strip is-hidden" aria-label="Chantiers d'outre-mer"></div>
       </div>
     </div>
 
