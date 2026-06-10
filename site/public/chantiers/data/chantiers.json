@@ -411,7 +411,7 @@
           "longueur_m": 333,
           "jauge_gt": 215863,
           "port_lourd_dwt": null,
-          "capacite": "~6 762 passagers, 2 626 cabines, 2 138 équipage",
+          "capacite": "~6 762 passagers, 2 760 cabines, 2 138 equipage",
           "energie": "GNL (dual-fuel) + première pile à combustible SOFC au GNL au monde sur paquebot",
           "client": "MSC Croisières",
           "classification": "Bureau Veritas",
@@ -1807,7 +1807,7 @@
         {
           "nom": "Charles de Gaulle (R91)",
           "type": "porte-avions (référence MCO/ATM, non construit à Toulon)",
-          "annee": "ATM de mi-vie 2017-2018 (mise en cale 8 février 2017, remise à flot 16 mai 2018)",
+          "annee": "ATM 2017-2018 (remise a flot 16 mai 2018) ET/OU IEI 2023 (mai-oct 2023) selon l'evenement vise ; la source citee documente l'IEI 2023, pas l'ATM 2017-2018",
           "longueur_m": 261.5,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -3753,8 +3753,8 @@
           "nom": "De De",
           "type": "Motor-yacht",
           "annee": "2002",
-          "longueur_m": "44",
-          "jauge_gt": "457",
+          "longueur_m": 44,
+          "jauge_gt": 457,
           "port_lourd_dwt": null,
           "capacite": null,
           "energie": "Diesel",
@@ -3976,7 +3976,7 @@
         },
         {
           "nom": "NNS ZHIZOKO (OCEA OSV 115, navire hydrographique de la Marine nigeriane)",
-          "type": "navire",
+          "type": "OSV 115 (Offshore Support Vessel)",
           "annee": "2024",
           "longueur_m": 35,
           "jauge_gt": null,
@@ -3989,7 +3989,7 @@
         },
         {
           "nom": "Le Bato (navette fluviale, 2 unités 2024)",
-          "type": "navire",
+          "type": "navire a passagers",
           "annee": "2024",
           "longueur_m": 20,
           "jauge_gt": null,
@@ -4002,7 +4002,7 @@
         },
         {
           "nom": "Araok II (OCEA Commuter 108)",
-          "type": "navire",
+          "type": "OCEA Commuter 108 (navire a passagers)",
           "annee": "2023",
           "longueur_m": 32.7,
           "jauge_gt": null,
@@ -4015,7 +4015,7 @@
         },
         {
           "nom": "NNS Chalawa (FPB 98 MkI)",
-          "type": "navire",
+          "type": "FPB 98 MkI (patrouilleur OCEA)",
           "annee": "2023",
           "longueur_m": 32,
           "jauge_gt": null,
@@ -4028,7 +4028,7 @@
         },
         {
           "nom": "NNS Zur (FPB 98 MkI)",
-          "type": "navire",
+          "type": "FPB 98 MkI (patrouilleur OCEA)",
           "annee": "2023",
           "longueur_m": 32,
           "jauge_gt": null,
@@ -4054,7 +4054,7 @@
         },
         {
           "nom": "Nordet (DF 37, FPB 100 MkII)",
-          "type": "navire",
+          "type": "FPB 100 MkII (patrouilleur OCEA)",
           "annee": "2022",
           "longueur_m": 32,
           "jauge_gt": null,
@@ -4067,7 +4067,7 @@
         },
         {
           "nom": "NNS Lana (A499, OSV 190 SC-WB)",
-          "type": "navire",
+          "type": "OSV 190 (Offshore Support Vessel)",
           "annee": "2021",
           "longueur_m": 60.1,
           "jauge_gt": null,
@@ -4080,7 +4080,7 @@
         },
         {
           "nom": "Kaladja (DF 34, FPB 100)",
-          "type": "navire",
+          "type": "FPB 100 (patrouilleur OCEA)",
           "annee": "2021",
           "longueur_m": 31,
           "jauge_gt": null,
@@ -4093,7 +4093,7 @@
         },
         {
           "nom": "Sokan (DF 35, FPB 100)",
-          "type": "navire",
+          "type": "FPB 100 (patrouilleur OCEA)",
           "annee": "2021",
           "longueur_m": 31,
           "jauge_gt": null,
@@ -4106,7 +4106,7 @@
         },
         {
           "nom": "Sualouiga (DF 38, FPB 100 MkII)",
-          "type": "navire",
+          "type": "FPB 100 MkII (patrouilleur OCEA)",
           "annee": "2021",
           "longueur_m": 32,
           "jauge_gt": null,
@@ -4119,7 +4119,7 @@
         },
         {
           "nom": "Alizé (DF 39, FPB 100 MkII)",
-          "type": "navire",
+          "type": "FPB 100 MkII (patrouilleur OCEA)",
           "annee": "2021",
           "longueur_m": 32,
           "jauge_gt": null,
@@ -4158,7 +4158,7 @@
         },
         {
           "nom": "BRP Panglao (FPB-2402, FPB 72)",
-          "type": "navire",
+          "type": "FPB 72 (patrouilleur OCEA)",
           "annee": "2018",
           "longueur_m": 24,
           "jauge_gt": null,
@@ -4171,7 +4171,7 @@
         },
         {
           "nom": "BRP Malamawi (FPB-2403, FPB 72)",
-          "type": "navire",
+          "type": "FPB 72 (patrouilleur OCEA)",
           "annee": "2018",
           "longueur_m": 24,
           "jauge_gt": null,
@@ -4184,7 +4184,7 @@
         },
         {
           "nom": "BRP Kalanggaman (FPB-2404, FPB 72)",
-          "type": "navire",
+          "type": "FPB 72 (patrouilleur OCEA)",
           "annee": "2018",
           "longueur_m": 24,
           "jauge_gt": null,
@@ -4210,7 +4210,7 @@
         },
         {
           "nom": "KRI Rigel (933, OSV 190 SC-WB)",
-          "type": "navire",
+          "type": "OSV 190 (Offshore Support Vessel)",
           "annee": "2015",
           "longueur_m": 60,
           "jauge_gt": null,
@@ -4223,7 +4223,7 @@
         },
         {
           "nom": "KRI Spica (934, OSV 190 SC-WB)",
-          "type": "navire",
+          "type": "OSV 190 (Offshore Support Vessel)",
           "annee": "2015",
           "longueur_m": 60,
           "jauge_gt": null,
@@ -4236,7 +4236,7 @@
         },
         {
           "nom": "Elisabet (OCEA Commuter 155)",
-          "type": "navire",
+          "type": "OCEA Commuter 155 (navire a passagers)",
           "annee": "2011",
           "longueur_m": 47,
           "jauge_gt": null,
@@ -4980,7 +4980,7 @@
         {
           "nom": "Samana 59",
           "type": "modele_serie",
-          "annee": "2020",
+          "annee": "2019",
           "longueur_m": 18.21,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -4988,7 +4988,7 @@
           "energie": "Voile (catamaran de croisière) + propulsion auxiliaire diesel",
           "client": "Marché plaisance / charter (architecte Berret-Racoupeau, produit depuis 2017)",
           "classification": "CE Catégorie A",
-          "source": "https://www.catamarans-fountaine-pajot.com/en/sailing-catamarans/catamaran-samana-59/"
+          "source": "https://www.multihulls-world.com/review/catamaran/samana-59-the-real-luxury-space-and-freedom"
         },
         {
           "nom": "MY5 (MY 40)",
@@ -5588,9 +5588,9 @@
           "type": "Yacht à moteur (Couach 3700 Fly)",
           "annee": "2007",
           "longueur_m": 37,
-          "jauge_gt": null,
+          "jauge_gt": 197,
           "port_lourd_dwt": null,
-          "capacite": "12 invités en 5 cabines ; design int. Alberto Pinto",
+          "capacite": "10-12 invités (sources divergent), 4 à 5 cabines ; design int. Alberto Pinto",
           "energie": "Diesel 2 x 2735 ch, 31 noeuds max, 20 noeuds croisière",
           "client": "Armateur privé",
           "classification": null,
@@ -5872,13 +5872,13 @@
           "type": "refit",
           "annee": "2024",
           "longueur_m": 204,
-          "jauge_gt": null,
+          "jauge_gt": 49642,
           "port_lourd_dwt": null,
-          "capacite": "Ferry ro-pax (ancien Cap Finistère de Brittany Ferries, vendu à GNV en 2022) ; 1600 passagers ; importante rénovation, forme 9, arrivé le 15 novembre 2023",
+          "capacite": "Ferry cruiseferry GNV, construit 2003, ~2920 passagers ; drydock + installation EGCS (scrubber) + travaux acier chez CNdM",
           "energie": "Diesel",
           "client": "Grandi Navi Veloci (GNV)",
           "classification": null,
-          "source": "https://www.meretmarine.com/fr/vie-portuaire/marseille-la-reparation-navale-retrouve-des-couleurs"
+          "source": "https://cndm.fr/en/reference/gnv-suprema"
         },
         {
           "nom": "Celebrity Infinity",
@@ -6102,17 +6102,17 @@
           "source": "https://cndm.fr/fr/references"
         },
         {
-          "nom": "GDF Suez Global Energy / Global Energy",
+          "nom": "Global Energy",
           "type": "refit",
-          "annee": "2016",
+          "annee": "2020",
           "longueur_m": null,
-          "jauge_gt": null,
+          "jauge_gt": 48923,
           "port_lourd_dwt": null,
-          "capacite": "Méthaniers : CNdM, certifié cuves GTT, a assuré dès 2016 deux arrêts techniques pour Engie (le méthanier Global Energy et le FSRU GDF Suez Global Energy / Neptune)",
+          "capacite": "Méthanier GNL à membrane (cuves GTT) ; arrêt technique CNdM février 2020",
           "energie": "GNL (méthanier à membrane)",
           "client": "Engie (ex-GDF Suez)",
           "classification": null,
-          "source": "https://www.meretmarine.com/fr/marseille-un-paquebot-en-forme-10"
+          "source": "https://cndm.fr/fr/references"
         },
         {
           "nom": "Saipem 10000",
@@ -6744,12 +6744,12 @@
           "nom": "Geo Celtic",
           "type": "navire_reference",
           "annee": "2015",
-          "longueur_m": 108,
+          "longueur_m": 101,
           "capacite": "navire sismique",
           "energie": "diesel-electrique",
-          "client": "Fugro",
+          "client": "GeofieLD (Louis Dreyfus Armateurs / CGG) ; commande initiale Fugro",
           "classification": null,
-          "source": "https://www.meretmarine.com/fr/dossiers/damen-shiprepair-brest"
+          "source": "https://www.shearwatergeo.com/327/marine-acquisition/seismic-fleet/geo-celtic"
         }
       ],
       "geo_source": "https://www.damen.com/companies/shiprepair/damen-shiprepair-brest"
@@ -7029,14 +7029,14 @@
           "nom": "Logica",
           "type": "construction-neuve (coque construite par Compositeworks à La Ciotat, aujourd'hui MB92 ; aménagement/intérieur par Mondomarine Italie)",
           "annee": "2002",
-          "longueur_m": 27.1,
+          "longueur_m": 27.42,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "8 invités / 4 suites, 3 équipage",
           "energie": "voilier (sloop carbone) + moteur diesel Yanmar 6LY-UTE 325 ch, vitesse max 12 nds, croisière 10 nds",
           "client": null,
           "classification": null,
-          "source": "https://www.boatinternational.com/yachts/the-superyacht-directory/logica--69031"
+          "source": "https://www.equinoxeyachts.com/yacht/logica-yacht-27mt/"
         }
       ],
       "geo_source": "https://api-adresse.data.gouv.fr/search/?q=46+quai+Francois+Mitterrand+La+Ciotat"
@@ -8074,14 +8074,14 @@
           "nom": "Bara An Arvoriz",
           "type": "chalutier de peche acier",
           "annee": "2019",
-          "longueur_m": 24.9,
-          "jauge_gt": null,
+          "longueur_m": 24.95,
+          "jauge_gt": 200,
           "port_lourd_dwt": null,
           "capacite": "Chalutier (architecte Coprexma), largeur 8,30 m, hauteur 3,70 m ; 17e navire commande par l'Armement Bigouden au chantier ; equipage 7 (5 a bord par maree) ; coque acier",
-          "energie": "Diesel",
+          "energie": "Diesel Caterpillar 3512, 600 kW (805 ch), hélice à pas variable sous tuyère",
           "client": "Armement Bigouden",
           "classification": "Bureau Veritas",
-          "source": "https://www.meretmarine.com/fr/peche/armement-bigouden-mise-a-l-eau-du-chalutier-bara-arvoriz-a-douarnenez"
+          "source": "https://www.chantier-glehen.com/fr,bara-an-arvoriz,7,118.html"
         },
         {
           "nom": "Oasis II",
@@ -8172,7 +8172,7 @@
           "energie": null,
           "client": "Compagnie Ligerienne de Transport / Finist'mer (pour Nantes Metropole)",
           "classification": null,
-          "source": "https://fr.wikipedia.org/wiki/Lignes_de_Navibus_-_Loire"
+          "source": "https://www.actu-transport-logistique.fr/journal-de-la-marine-marchande/magazines/mensuels/4815/technique/chantiers-glehen-deux-navibus-pour-nantes-761305.php"
         },
         {
           "nom": "Chantenay",
@@ -8209,7 +8209,7 @@
           "port_lourd_dwt": null,
           "capacite": "Chalutier coque acier / superstructures aluminium de 24 m, premier de la longue série des « Bara » ; ~100 UMS en 1979 (jauge doublée depuis)",
           "energie": "Diesel",
-          "client": "Armement Bigouden",
+          "client": "Armement Bigouden (Le Guilvinec)",
           "classification": null,
           "source": "https://www.meretmarine.com/fr/peche/armement-bigouden-mise-a-l-eau-du-chalutier-bara-arvoriz-a-douarnenez"
         }
@@ -8567,19 +8567,6 @@
           "client": "Sebastien Saiter / Dimitri Delamotte (Trouville-sur-Mer)",
           "classification": null,
           "source": "https://www.youtube.com/watch?v=hPmzU8r7YJ8"
-        },
-        {
-          "nom": "Chalutier 16 m de Trouville",
-          "type": "chalutier",
-          "annee": "2018",
-          "longueur_m": 16,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Chalutier composite, livrable en 2018",
-          "energie": "Diesel",
-          "client": "Armateur de Trouville",
-          "classification": null,
-          "source": "https://www.meretmarine.com/fr/construction-navale/chantiers-bernard-plusieurs-annees-de-visibilite"
         },
         {
           "nom": "Chalutier 13 m d'Erquy (2018)",
@@ -9138,7 +9125,7 @@
           "energie": "Diesel, 2 propulseurs en tuyère ; coque acier, superstructure aluminium",
           "client": "Marine nationale (DGA, groupement BMA+CMN)",
           "classification": "Bureau Veritas",
-          "source": "https://www.merre.fr/en/2018/04/30/tug-seem-12-800-st-aigrette-2/"
+          "source": "https://www.meretmarine.com/fr/content/laigrette-premier-des-nouveaux-remorqueurs-pousseurs-de-la-marine-nationale"
         },
         {
           "nom": "Richelieu",
@@ -9195,15 +9182,15 @@
         {
           "nom": "Barcarin V",
           "type": "navire",
-          "annee": "2014",
-          "longueur_m": null,
-          "jauge_gt": null,
+          "annee": "2011",
+          "longueur_m": 48,
+          "jauge_gt": 498,
           "port_lourd_dwt": null,
-          "capacite": "Bac amphidrome pour la traversée du Rhône (Salin-de-Giraud - Port-Saint-Louis-du-Rhône) ; double sens de chargement, tirant d'eau faible, propulsion 360°",
+          "capacite": "Bac amphidrome, ~43 m coque / 48 m LOA, ~14,3-14,8 m de large, 498 GT, ~36 vehicules ; coque Mécasoud (Saint-Nazaire), superstructures Merré",
           "energie": "Groupes propulseurs indépendants ; double génération électrique",
           "client": "Syndicat Mixte des Traversées du Delta du Rhône (SMTDR)",
           "classification": "Bureau Veritas",
-          "source": "https://www.meretmarine.com/fr/construction-navale/merre-le-nouveau-bac-de-seine-baptise"
+          "source": "https://www.vesselfinder.com/vessels/details/9582740"
         },
         {
           "nom": "Île Dumet",
@@ -9501,13 +9488,13 @@
         {
           "nom": "Navire de recherche STARESO (Calvi)",
           "type": "catamaran de travail océanographique hybride",
-          "annee": "2023",
+          "annee": "2025",
           "longueur_m": 11.98,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Laboratoire flottant multidisciplinaire (bathymétrie, sondes, rosettes, ROV) ; vitesse 15 nœuds (0-6 nœuds en électrique)",
           "energie": "hybride : 2 lignes diesel 230 ch + 2 moteurs électriques, batteries, 10 m² de panneaux solaires",
-          "client": "Station de recherche STARESO (Calvi, Corse)",
+          "client": "Station de recherche STARESO (Calvi) / Universite de Liege",
           "classification": null,
           "source": "https://www.bairdmaritime.com/work-boat-world/research-environment-training/vessel-review-stareso-hybrid-catamaran-to-support-marine-research-in-the-mediterranean-sea"
         },
@@ -10421,10 +10408,10 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Déplacement lège ~18,75-20,75 t ; max 24 t ; gazole 650 L, eau 600 L",
-          "energie": "Diesel 150 ch ; transmission centrale C-Drive",
+          "energie": "Diesel ~110 ch (boat-specs) ; le chantier annonce 150 ch sur la version la plus récente : valeur à dater",
           "client": "Plaisanciers / armateurs privés grand voyage ; European Yacht of the Year 2018",
           "classification": "CE Catégorie A (haute mer)",
-          "source": "https://amel.fr/en/our-yachts/amel-50/"
+          "source": "https://www.boat-specs.com/sailing/sailboats/amel/amel-50"
         },
         {
           "nom": "AMEL 55",
@@ -10447,7 +10434,7 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Déplacement ~33 t (demi-charge) ; tirant d'eau 2,40-2,50 m",
-          "energie": "Diesel Steyr 160 ch (ketch, gréement deux mâts)",
+          "energie": "Diesel 180 ch (ketch) ; gazole 1400 L",
           "client": "Plaisanciers / armateurs privés grand voyage",
           "classification": "CE (bateau de plaisance, conception haute mer)",
           "source": "https://www.boat-specs.com/sailing/sailboats/amel/amel-64"
@@ -11262,7 +11249,7 @@
         {
           "nom": "Privilège Serie 5 / Privilège 510 (premier 50 pieds Privilège Marine)",
           "type": "modele_serie",
-          "annee": "2012",
+          "annee": "2014",
           "longueur_m": 15.24,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -11270,7 +11257,7 @@
           "energie": "Diesel 2 x 55 ch + vélique",
           "client": null,
           "classification": "Marquage CE Catégorie A",
-          "source": "https://www.multihulls-world.com/technical-specifications/privilege-marine/privilege-serie-5"
+          "source": "https://www.denisonyachtsales.com/2015/11/privilege-series-5-catamaran-a-real-privilege-to-sail/"
         },
         {
           "nom": "Privilège 745",
@@ -11380,14 +11367,14 @@
           "nom": "Privilège 465",
           "type": "modele_serie",
           "annee": "1998",
-          "longueur_m": 14.33,
+          "longueur_m": 14.95,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Catamaran de croisière ~47 pieds, LOA 14,33 m ; deviendra le Privilège 495",
           "energie": "Diesel + vélique",
           "client": null,
           "classification": "Marquage CE Catégorie A",
-          "source": "https://sailboatdata.com/builder/privilege-catamarans/"
+          "source": "https://www.multihulls-world.com/technical-specifications/alliaura-marine/privilege-465"
         },
         {
           "nom": "Privilège 42",
@@ -11834,15 +11821,15 @@
         {
           "nom": "Allures 40",
           "type": "voilier",
-          "annee": null,
-          "longueur_m": null,
+          "annee": "2005",
+          "longueur_m": 12.5,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Dériveur intégral aluminium ~12 m, première génération de la gamme 40 pieds (essais presse Allures 40 / Boréal 44)",
           "energie": "Voile (propulsion principale) + diesel auxiliaire",
           "client": "Plaisance grande croisière",
           "classification": "Catégorie CE A (haute mer)",
-          "source": "https://www.scribd.com/document/50931546/28fr-Essai-Allures-40-et-Boreal-44"
+          "source": "https://sailboat.guide/allures/40"
         }
       ],
       "geo_source": "https://nominatim.openstreetmap.org/search?q=Allures+Yachting+rue+de+la+Pyrotechnie+Tourlaville+Cherbourg&format=json"
@@ -12281,480 +12268,6 @@
         }
       ],
       "geo_source": "https://api-adresse.data.gouv.fr/search/?q=162+quai+de+brazza+bordeaux&limit=1"
-    },
-    {
-      "id": "catana-canet",
-      "nom": "Catana Group (Catana, Bali)",
-      "groupe": "Catana Group",
-      "ville": "Canet-en-Roussillon",
-      "region": "Occitanie",
-      "lat": 42.70555,
-      "lon": 3.03612,
-      "geo_precision": "site",
-      "fondation": 1984,
-      "perimetres": [
-        "plaisance"
-      ],
-      "types_navires": [
-        "catamaran"
-      ],
-      "description": "Constructeur de catamarans de croisière à Canet-en-Roussillon, marques Catana et Bali, reconnu pour ses performances en mer.",
-      "capacites": [
-        {
-          "type": "site_construction",
-          "capacite": "Site industriel de Canet-en-Roussillon (Pyrénées-Orientales), ~1500 salariés (groupe), production de plus de 300 catamarans par an toutes marques confondues",
-          "dimensions": null
-        },
-        {
-          "type": "marques",
-          "capacite": "Deux gammes : Catana (catamarans rapides de grande croisière, carbone) et Bali (catamarans de croisière à grands volumes, concept open space)",
-          "dimensions": null
-        },
-        {
-          "type": "Batiment de production actuel (zone technique du Port)",
-          "dimensions": null,
-          "capacite": "~7 500 m2 (la moitie des 15 000 m2 du futur batiment projete)",
-          "source": "https://www.boatindustry.fr/article/49881/canet-en-roussillon-catana-prepare-une-nouvelle-usine-pour-produire-ses-grandes-unites"
-        },
-        {
-          "type": "Taille max de navire (catamarans Catana / Bali construits)",
-          "dimensions": "50-58 pieds",
-          "capacite": "50 a 58 pieds",
-          "source": "https://www.boatindustry.fr/article/49881/canet-en-roussillon-catana-prepare-une-nouvelle-usine-pour-produire-ses-grandes-unites"
-        }
-      ],
-      "historique": [
-        {
-          "annee": "1984",
-          "fait": "Création du chantier Catana à Cogolin (Var) par Jean-Pierre Prade et Thierry Goyard, pour construire des catamarans de croisière performants"
-        },
-        {
-          "annee": "1997",
-          "fait": "Installation du chantier à Canet-en-Roussillon"
-        },
-        {
-          "annee": "2003",
-          "fait": "Reprise du chantier, alors au bord de la faillite, par Olivier Poncin"
-        },
-        {
-          "annee": "2014",
-          "fait": "Création de la marque Bali, complémentaire de Catana ; lancement du premier modèle Bali 4.5 (septembre), suivi du Bali 4.3"
-        },
-        {
-          "annee": "2023",
-          "fait": "Décès d'Olivier Poncin le 14 mai à 68 ans ; son fils Aurélien Poncin prend la direction du groupe"
-        },
-        {
-          "annee": "2024",
-          "fait": "Présentation au Cannes Yachting Festival du Bali 5.8 (58 pieds, environ 18 m), plus grand voilier de l'histoire du chantier de Canet-en-Roussillon"
-        }
-      ],
-      "contact": {
-        "adresse": "Canet-en-Roussillon, 66140",
-        "interlocuteur": null,
-        "telephone": null,
-        "web": "https://www.catanagroup.com"
-      },
-      "sources": [
-        "https://www.inautia.fr/blog/acheter-un-bateau/les-meilleurs-chantiers-francais/",
-        "https://madeinperpignan.com/catana-portrait-dentreprise-du-constructeur-naval-catalan/",
-        "https://www.medinboats.fr/2023/03/14/lhistoire-de-catana-le-chantier-francais-de-renommee-mondiale/",
-        "https://www.ici.fr/infos/economie-social/a-canet-en-roussillon-catana-construit-le-plus-grand-voilier-de-son-histoire-8138291",
-        "https://www.ici.fr/infos/economie-social/canet-en-roussillon-olivier-poncin-le-pdg-du-groupe-catana-meurt-a-l-age-de-68-ans-3914739",
-        "https://www.pappers.fr/entreprise/catana-group-390406320",
-        "https://www.catanagroup.com/",
-        "https://colombanatsea.com/chantiers/data/chantiers.json",
-        "https://www.catanagroup.com/en/",
-        "https://www.bali-catamarans.com/en/catamarans/bali-5-8",
-        "https://catana.com/en/ocean-class/",
-        "https://www.katamarans.com/catana-ocean-class/",
-        "https://www.boat-specs.com/sailing/sailboats/catana/bali-5-4",
-        "https://www.boat-specs.com/sailing/sailboats/catana/bali-4-5",
-        "https://www.boat-specs.com/sailing/sailboats/catana/catana-53",
-        "https://www.multihulls-world.com/technical-specifications/bali-catamarans/bali-46",
-        "https://sailboatdata.com/sailboat/bali-catspace/",
-        "https://www.bali-catamarans.com/en/catamarans",
-        "https://pressmare.it/en/shipyards/catana-catamarans/2024-02-22/catana-group-launches-its-14th-bali-catamarans-model-the-bali-58-76038",
-        "https://skippers.ch/en/news/sailing-ocean/catana-group-40-years-of-catamaran-passion-109422/",
-        "https://www.katamarans.com/product-tag/catana/",
-        "https://www.katamarans.com/product-tag/bali/",
-        "https://www.multihulls-world.com/annuaire/catamaran-trimaran/chantier/bali-catamarans",
-        "https://www.multihulls-world.com/adressbook/catamaran-trimaran/shipyards/catana-sa",
-        "https://sailboatdata.com/builder/bali-catamarans/",
-        "https://www.cruisingworld.com/sailboats/bali-7-flagship/",
-        "https://www.bali-catamarans.com/en/catamarans/bali-5-2",
-        "https://sailboatdata.com/sailboat/catana-50/",
-        "https://www.multihulls-world.com/technical-specifications/catana-sa/catana-59-carbon-infusion",
-        "https://www.boat-specs.com/sailing/sailboats/catana/catana-70",
-        "https://www.cruisingworld.com/boat-review-catana-53/",
-        "https://www.boatindustry.fr/article/49881/canet-en-roussillon-catana-prepare-une-nouvelle-usine-pour-produire-ses-grandes-unites"
-      ],
-      "confiance": "moyenne",
-      "pays": "France",
-      "superficie_ha": null,
-      "effectif": 1500,
-      "produits": [
-        {
-          "type": "Catamaran de croisière de luxe (gamme Catana)",
-          "details": "Catamarans rapides de grande croisière, marque historique Catana"
-        },
-        {
-          "type": "Catamaran de croisière (gamme Bali)",
-          "details": "Marque Bali lancée en 2014 (Bali 4.5 puis 4.3). Bali 5.8 présentée au Cannes Yachting Festival en septembre 2024, plus grand voilier construit par le chantier (58 pieds, environ 18 m), 8e modèle de la gamme Bali, prix unitaire supérieur à 1 million d'euros"
-        }
-      ],
-      "personnes": [
-        {
-          "nom": "Aurélien Poncin",
-          "titre": "Président-directeur général (PDG)"
-        },
-        {
-          "nom": "David Etien",
-          "titre": "Directeur général délégué"
-        },
-        {
-          "nom": "Olivier Poncin",
-          "titre": "Repreneur en 2003 puis PDG, fondateur de la marque Bali, décédé le 14 mai 2023"
-        },
-        {
-          "nom": "Jean-Pierre Prade",
-          "titre": "Cofondateur du chantier Catana (1984)"
-        },
-        {
-          "nom": "Thierry Goyard",
-          "titre": "Cofondateur du chantier Catana (1984)"
-        }
-      ],
-      "materiaux": [
-        "composite",
-        "composite sandwich (mousse / résine vinylester infusée)",
-        "carbone (infusion Advanced Kit Carbon / renfort zones de contrainte)",
-        "Twaron (aramide, renfort anti-choc)",
-        "CompoLite (composite technique partiellement recyclable, intérieurs Ocean Class)"
-      ],
-      "classification": [
-        "CE (catégorie de conception plaisance, marquage CE/RCD) - production de plaisance non classée par société de classification navire de commerce"
-      ],
-      "energies": [
-        "vélique (voile, propulsion principale)",
-        "diesel (moteurs auxiliaires in-bord, 2 x 30 à 80 ch selon modèle)"
-      ],
-      "taille_max": "Plus grande unité construite à Canet-en-Roussillon : Bali 5.8 (~17,4 à 17,65 m hors-tout, déplacement ~33 t). Modèle Catana Ocean Class² dévoilé au Cannes Yachting Festival 2025. Aucune jauge GT publiée (navires de plaisance, jaugés en pieds/longueur, pas en GT commerciale).",
-      "navires_references": [
-        {
-          "nom": "Catana Ocean Class²",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Catana, fast cruiser carbone (next-gen, dévoilé Cannes 2025)",
-          "annee": "2025",
-          "longueur_m": 15.75,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Coque 14,99 m ; intérieurs redessinés Piaton & Bercault ; suite de contrôle Muxen ; construction carbone infusion",
-          "energie": "Vélique + diesel auxiliaire",
-          "client": "Armateurs privés (croisière hauturière)",
-          "classification": "CE plaisance",
-          "source": "https://www.multihulls-world.com/news-catamaran-trimaran/catana-ocean-class-revised-and-optimized"
-        },
-        {
-          "nom": "Bali 5.8",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Bali, navire amiral",
-          "annee": "2024",
-          "longueur_m": 17.65,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "3 à 6 cabines, jusqu'à ~12 personnes ; surface habitable utile ~139,5 m² ; soute gazole ~1200 L",
-          "energie": "Vélique + 2 moteurs diesel (option 2 x 80 ch)",
-          "client": "Armateurs privés / charter",
-          "classification": "CE plaisance",
-          "source": "https://www.multihulls-world.com/news-catamaran-trimaran/bali-58-the-new-flagship-of-the-range"
-        },
-        {
-          "nom": "Bali 7.0",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Bali, navire amiral",
-          "annee": "2026",
-          "longueur_m": 22.53,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Cabines VIP + carré équipage et cabines pour 6 à 8 membres ; bau 10,32 m ; voilure ~280 m² ; déplacement lège ~40 t, en charge ~50 t",
-          "energie": "Vélique + 2 moteurs diesel",
-          "client": "Armateurs privés / charter haut de gamme ; architecture Xavier Faÿ avec Briand Yacht Design et Berco/Piaton",
-          "classification": "CE plaisance",
-          "source": "https://www.cruisingworld.com/sailboats/bali-7-flagship/"
-        },
-        {
-          "nom": "Catana Ocean Class (Ocean Class 50)",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Catana, fast cruiser carbone",
-          "annee": "2023",
-          "longueur_m": 15.75,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Déplacement lège ~12,7 t ; gazole 800 L, eau 800 L ; coque 14,99 m, bau ~7,83 m",
-          "energie": "Vélique + 2 moteurs diesel Yanmar (2 x 45 ou 57 ch)",
-          "client": "Armateurs privés (croisière hauturière)",
-          "classification": "CE plaisance",
-          "source": "https://www.katamarans.com/catana-ocean-class/"
-        },
-        {
-          "nom": "Catana Ocean Class 50",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Catana, fast cruiser carbone",
-          "annee": "2022",
-          "longueur_m": 15.75,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Coque 14,99 m, bau ~7,83 m ; déplacement lège ~12,7 t ; gazole 800 L, eau 800 L",
-          "energie": "Vélique + 2 moteurs diesel Yanmar (2 x 45 ou 57 ch)",
-          "client": "Armateurs privés (croisière hauturière)",
-          "classification": "CE plaisance",
-          "source": "https://www.katamarans.com/catana-ocean-class/"
-        },
-        {
-          "nom": "Bali 5.2",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Bali",
-          "annee": "2022",
-          "longueur_m": 16.02,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "3 à 6 cabines, jusqu'à ~16 couchages ; bau 8,16 m ; gazole ~1200 L, eau ~1320 L ; déplacement lège ~19,15 t",
-          "energie": "Vélique + 2 moteurs diesel Yanmar (2 x 57 à 115 ch)",
-          "client": "Armateurs privés / charter",
-          "classification": "CE plaisance",
-          "source": "https://www.bali-catamarans.com/en/catamarans/bali-5-2"
-        },
-        {
-          "nom": "Bali Catsmart",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Bali, entrée de gamme open space",
-          "annee": "2022",
-          "longueur_m": 11.79,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Modèle le plus compact de la gamme ; bau 6,46 m ; double poste de barre ; concept open space avec porte basculante",
-          "energie": "Vélique + 2 moteurs diesel auxiliaires",
-          "client": "Armateurs privés / charter",
-          "classification": "CE plaisance",
-          "source": "https://www.multihulls-world.com/news-catamaran-trimaran/bali-catsmart-a-new-38-footer-with-twin-helm-stations"
-        },
-        {
-          "nom": "Bali 4.4",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Bali",
-          "annee": "2022",
-          "longueur_m": 13.75,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "3 cabines invités ; bau 7,40 m ; déplacement lège ~12,8 t ; tirant d'eau ~1,26 m",
-          "energie": "Vélique + 2 moteurs diesel Yanmar (2 x 40 à 57 ch)",
-          "client": "Armateurs privés / charter",
-          "classification": "CE plaisance",
-          "source": "https://www.multihulls-world.com/technical-specifications/bali-catamarans/bali-44"
-        },
-        {
-          "nom": "Bali 4.2",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Bali",
-          "annee": "2021",
-          "longueur_m": 12.85,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "3 ou 4 cabines, jusqu'à ~10 personnes ; bau 7,08 m ; tirant d'eau 1,22 m",
-          "energie": "Vélique + 2 moteurs diesel Yanmar (2 x 30 à 45 ch)",
-          "client": "Armateurs privés / charter",
-          "classification": "CE plaisance",
-          "source": "https://www.bali-catamarans.com/en/catamarans/bali-4-2"
-        },
-        {
-          "nom": "Bali 4.6",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Bali",
-          "annee": "2020",
-          "longueur_m": 15.6,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Coque 14,93 m ; déplacement lège ~18 t / max ~24 t (fiche technique) ; gazole et eau ~1000 L chacun ; voilure ~146 m² (max au près ~215 m²)",
-          "energie": "Vélique + 2 moteurs diesel Yanmar (2 x 45 à 57 ch)",
-          "client": "Armateurs privés / charter",
-          "classification": "CE plaisance",
-          "source": "https://sailboatdata.com/sailboat/bali-46/"
-        },
-        {
-          "nom": "Bali Catspace (voile)",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Bali, entrée de gamme open space",
-          "annee": "2020",
-          "longueur_m": 12.33,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Déplacement max ~12,8 t ; bau 6,59 m ; voilure au près ~101 m²",
-          "energie": "Vélique + 2 moteurs diesel (option 2 x 30 ch)",
-          "client": "Armateurs privés / charter ; conception Olivier Poncin, architecture Lasta Design",
-          "classification": "CE plaisance",
-          "source": "https://sailboatdata.com/sailboat/bali-catspace/"
-        },
-        {
-          "nom": "Bali 4.8",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Bali",
-          "annee": "2019",
-          "longueur_m": 14.82,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "4 à 6 cabines, jusqu'à ~12 personnes ; bau 7,88 m ; tirant d'eau 1,35 m ; déplacement max ~22 t",
-          "energie": "Vélique + 2 moteurs diesel (45 à 57 ch)",
-          "client": "Armateurs privés / charter",
-          "classification": "CE plaisance",
-          "source": "https://sailboatdata.com/sailboat/bali-48/"
-        },
-        {
-          "nom": "Bali 5.4",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Bali",
-          "annee": "2018",
-          "longueur_m": 16.2,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Capacité couchage ~12 ; déplacement max ~29,8 t ; bau ~8,74 m ; designer Xavier Faÿ",
-          "energie": "Vélique + 2 moteurs diesel (option 2 x 80 ch)",
-          "client": "Armateurs privés / charter (Multicoque de l'année 2019, 40-50 pieds)",
-          "classification": "CE plaisance",
-          "source": "https://www.boat-specs.com/sailing/sailboats/catana/bali-5-4"
-        },
-        {
-          "nom": "Catana 53",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Catana, fast cruiser carbone",
-          "annee": "2017",
-          "longueur_m": 16.15,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "3 ou 4 cabines ; construction carbon infusion + Twaron Impact ; 2 x 75 ch Volvo",
-          "energie": "Vélique + 2 moteurs diesel auxiliaires",
-          "client": "Armateurs privés (croisière hauturière performante) ; Cruising World Boat of the Year 2019 (multicoque > 50 pieds)",
-          "classification": "CE plaisance",
-          "source": "https://www.cruisingworld.com/boat-review-catana-53/"
-        },
-        {
-          "nom": "Bali 4.1",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Bali",
-          "annee": "2018",
-          "longueur_m": 11.88,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Bau 6,72 m ; tirant d'eau 1,12 m ; premier catamaran à voile entièrement ponté d'un bord à l'autre ; production 2017-2022",
-          "energie": "Vélique + 2 moteurs diesel auxiliaires",
-          "client": "Armateurs privés / charter",
-          "classification": "CE plaisance",
-          "source": "https://www.boat-specs.com/sailing/sailboats/catana/bali-4-1"
-        },
-        {
-          "nom": "Bali 4.3 MY",
-          "type": "Catamaran à moteur (plaisance), gamme Bali, déclinaison motor yacht",
-          "annee": "2019",
-          "longueur_m": 12.96,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Version 100% moteur de la plateforme Bali 4.3, concept open space ; 3 ou 4 cabines",
-          "energie": "2 moteurs diesel in-bord (propulsion principale)",
-          "client": "Armateurs privés / charter",
-          "classification": "CE plaisance",
-          "source": "https://www.boatnews.com/story/30198/with-the-4-3-my-bali-is-launching-into-the-motor-catamaran-market"
-        },
-        {
-          "nom": "Bali 4.0 Lounge",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Bali, modèle de lancement open space",
-          "annee": "2015",
-          "longueur_m": 11.99,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Bau ~6,71 m ; tirant d'eau ~1,12 m ; carré et cockpit réunis par grande porte basculante électrique ; lancé Cannes 2015",
-          "energie": "Vélique + 2 moteurs diesel auxiliaires",
-          "client": "Armateurs privés / charter",
-          "classification": "CE plaisance",
-          "source": "https://www.multihulls-world.com/technical-specifications/bali-catamarans/bali-40"
-        },
-        {
-          "nom": "Catana 70",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Catana, fast cruiser carbone",
-          "annee": "2015",
-          "longueur_m": 20.86,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Bau 9,49 m ; deplacement lege 26,5 t ; 6 cabines / 10 couchages ; design Marc Lombard Yacht Design Group",
-          "energie": "Vélique + 2 moteurs diesel auxiliaires",
-          "client": "Armateurs privés (grande croisière hauturière)",
-          "classification": "CE plaisance",
-          "source": "https://www.boat-specs.com/sailing/sailboats/catana/catana-70"
-        },
-        {
-          "nom": "Bali 4.5",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Bali, premier modèle de la marque",
-          "annee": "2014",
-          "longueur_m": 13.6,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Déplacement lège ~11 t, max ~16,5 t ; bau 7,42 m, tirant d'eau 1,22 m ; 4 cabines ; lancé Cannes 2014",
-          "energie": "Vélique + 2 moteurs diesel (40 à 60 ch)",
-          "client": "Armateurs privés / charter ; architecte Xavier Faÿ, design Olivier Poncin",
-          "classification": "CE plaisance",
-          "source": "https://www.boat-specs.com/sailing/sailboats/catana/bali-4-5"
-        },
-        {
-          "nom": "Bali 4.3",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Bali",
-          "annee": "2018",
-          "longueur_m": 12.7,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Déplacement lège ~10,2 t ; cockpit/carré flush ~30 m² ; gamme Bali lancée 2014, production depuis 2018 ; designer Xavier Faÿ",
-          "energie": "Vélique + 2 moteurs diesel auxiliaires",
-          "client": "Armateurs privés / charter",
-          "classification": "CE plaisance",
-          "source": "https://www.boat-specs.com/sailing/sailboats/catana/bali-4-3"
-        },
-        {
-          "nom": "Catana 59 (Carbon Infusion)",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Catana, fast cruiser carbone",
-          "annee": "2011",
-          "longueur_m": 17.9,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Bau 9,49 m ; déplacement lège ~18,9 t ; dérives carbone, sandwich carbone/Twaron infusé ; 2 x 110 ch ; prix ~1,42 M€",
-          "energie": "Vélique + 2 moteurs diesel auxiliaires (2 x 110 ch)",
-          "client": "Armateurs privés (grande croisière hauturière)",
-          "classification": "CE plaisance",
-          "source": "https://www.multihulls-world.com/technical-specifications/catana-sa/catana-59-carbon-infusion"
-        },
-        {
-          "nom": "Catana 50 (Carbon Infusion)",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Catana, fast cruiser",
-          "annee": "2009",
-          "longueur_m": 15.2,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "LWL 14,84 m ; bau 7,93 m ; déplacement ~13,6 t ; dérives jumelles ; tirant d'eau 1,20 à 2,95 m ; design Christophe Barreau ; production ~2009-2013",
-          "energie": "Vélique + 2 moteurs diesel auxiliaires",
-          "client": "Armateurs privés (grande croisière hauturière)",
-          "classification": "CE plaisance",
-          "source": "https://www.multihulls-world.com/technical-specifications/catana-sa/catana-50-carbon-infusion"
-        },
-        {
-          "nom": "Catana 65",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Catana, fast cruiser",
-          "annee": "2008",
-          "longueur_m": 19.8,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Grande unité de la gamme Catana ; design Christophe Barreau (l'une de ses dernières signatures pour Catana)",
-          "energie": "Vélique + 2 moteurs diesel auxiliaires",
-          "client": "Armateurs privés (grande croisière hauturière)",
-          "classification": "CE plaisance",
-          "source": "https://www.katamarans.com/product-tag/catana/"
-        },
-        {
-          "nom": "Catana 471",
-          "type": "Catamaran de croisière à voile (plaisance), gamme Catana, fast cruiser",
-          "annee": "1997",
-          "longueur_m": 14.4,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "Production ~1997-2003 ; design Barreau/Neuman ; modèle historique du chantier à Canet-en-Roussillon",
-          "energie": "Vélique + 2 moteurs diesel auxiliaires",
-          "client": "Armateurs privés (grande croisière hauturière)",
-          "classification": "CE plaisance",
-          "source": "https://www.katamarans.com/product-tag/catana/"
-        }
-      ],
-      "geo_source": "https://api-adresse.data.gouv.fr/search/?q=avenue+du+capitaine+delestrain+canet+en+roussillon&limit=1"
     },
     {
       "id": "multiplast-vannes",
@@ -13772,7 +13285,7 @@
           "energie": "voile (architecture VPLP, gréement carbone) + moteurs diesel inboard auxiliaires",
           "client": "Jason Carroll (USA), armateur/skipper du MOD70 Argo",
           "classification": "CE Cat A (haute mer)",
-          "source": "https://www.boatinternational.com/yachts/news/second-gunboat-80-yacht"
+          "source": "https://gunboat.com/introducing-gunboat-80-agave/"
         },
         {
           "nom": "Highland Fling XVIII",
@@ -15257,11 +14770,11 @@
           "longueur_m": 14.95,
           "jauge_gt": null,
           "port_lourd_dwt": null,
-          "capacite": "longueur flottaison 13,25 m ; bau 4,49 m ; déplacement 12 500 kg ; lest 4 000 kg ; tirant d'eau 0,95/3,15 m ; gréement cotre ; coque alu 5083 H111 ; 3-4 cabines ; production 2007-2012/2020 ; remplace l'OVNI 455 ; architecte Philippe Briand",
+          "capacite": "longueur flottaison 13,25 m ; bau 4,49 m ; déplacement 13 500 kg ; lest 4 800 kg ; tirant d'eau 0,95/2,81 m ; gréement cotre",
           "energie": "vélique + diesel",
           "client": "plaisance / armateur privé (série)",
           "classification": "CE catégorie A (océan)",
-          "source": "https://www.nauticnews.com/en/nautism/2008/04/22/alubat-ovni-495-2/"
+          "source": "https://www.bateaux.com/plaisance/voiliers/ovni-495-REFmHengscyISo,"
         },
         {
           "nom": "OVNI 365",
@@ -15344,7 +14857,7 @@
         {
           "nom": "CIGALE 14",
           "type": "Voilier monocoque ULDB aluminium (croiseur rapide, gamme CIGALE)",
-          "annee": "1994",
+          "annee": "1997",
           "longueur_m": 14,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -15352,7 +14865,7 @@
           "energie": "vélique + diesel",
           "client": "plaisance / armateur privé (série)",
           "classification": "homologation CE plaisance",
-          "source": "http://finot.com/bateaux/batproduction/alubat/cigale14/cig14.htm"
+          "source": "https://no-frills-sailing.com/dream-yacht-alubat-cigale-14/"
         },
         {
           "nom": "CIGALE 16",
@@ -15891,7 +15404,7 @@
         {
           "nom": "Pogo 36",
           "type": "Voilier de croisière rapide (fast cruiser)",
-          "annee": "2017",
+          "annee": "2016",
           "longueur_m": 10.86,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -15969,7 +15482,7 @@
         {
           "nom": "Pogo 40 / 40S4",
           "type": "Voilier de course Class40 / racer-cruiser",
-          "annee": "2006",
+          "annee": "2005-2021 (Pogo 40 2005, 40S2 2009, 40S3 2014, 40S4 2021)",
           "longueur_m": null,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -15977,7 +15490,7 @@
           "energie": "Vélique + moteur diesel inboard",
           "client": null,
           "classification": "Jauge Class40 (modèles course)",
-          "source": "https://www.pogostructures.com/le-chantier-structures/"
+          "source": "https://www.boat-specs.com/sailing/sailboats/pogo-structures/pogo-40s2"
         },
         {
           "nom": "Pogo 40 (S2 / S3)",
@@ -16548,14 +16061,14 @@
           "nom": "RM 1350",
           "type": "voilier de croisière rapide",
           "annee": "2009",
-          "longueur_m": 13.46,
+          "longueur_m": 13.7,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Habitable ; grand voilier de voyage ; carène à bouchains contreplaqué-époxy ; version biquille tirant d'eau 1,95 m ; flottaison 12,82 m",
           "energie": "Voile + moteur diesel inboard",
           "client": "Plaisanciers",
           "classification": "Catégorie CE",
-          "source": "https://www.bateaux.com/plaisance/voiliers/rm-1350-REFZwBAovMoupg,"
+          "source": "https://sailboatdata.com/sailboat/rm-1350/"
         },
         {
           "nom": "RM 1200",
@@ -17100,8 +16613,8 @@
         {
           "nom": "Pilot Saloon 41",
           "type": "Voilier monocoque de croisiere hauturiere (deck saloon)",
-          "annee": "2005",
-          "longueur_m": 12.95,
+          "annee": "2006",
+          "longueur_m": 12.5,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "LWL 11,00 m; bau 4,04 m; deplacement ~10 000 kg; lest 3 400 kg fonte; tirant d'eau max 2,00 m; SA ~64 m2; greement sloop en tete de mat; moteur Yanmar 54 ch; gasoil 220 L; eau 439 L; carene Berret-Racoupeau; 38 unites produites (2005-2007)",
@@ -17584,19 +17097,6 @@
           "type": "projet_en_cours",
           "annee": null,
           "longueur_m": null,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": null,
-          "energie": null,
-          "client": null,
-          "classification": null,
-          "source": "https://www.chantier-nautique-vendee.fr/construction-de-bateaux/"
-        },
-        {
-          "nom": "Catamaran 42 pieds (construction/achevement sur mesure, en partenariat avec Maintenance Nautique Mobile)",
-          "type": "projet_en_cours",
-          "annee": null,
-          "longueur_m": 12.8,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": null,
@@ -18543,16 +18043,16 @@
         },
         {
           "nom": "Djinn 7 / Djinn 7 Confort",
-          "type": "modèle de série (plaisance voile)",
+          "type": "voilier dériveur intégral (dérive pivotante, gréement sloop), architecte Jacques Fauroux pour la version Confort, lancé en 2002",
           "annee": "2002",
-          "longueur_m": 7.2,
+          "longueur_m": 7.18,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "voilier dériveur lesté transportable, sloop, jusqu'à 5 personnes",
           "energie": "voile (+ moteur d'appoint hors-bord)",
           "client": "marché plaisance voile",
-          "classification": "catégorie de conception CE C",
-          "source": "https://www.b2marine.fr/fr/element/djinn-7-1"
+          "classification": "catégorie de conception CE C5/D6",
+          "source": "https://www.bateaux.com/article/29261/djinn-7-un-deriveur-se-balader-partout"
         },
         {
           "nom": "Cap-Ferret 228 Touring",
@@ -18985,10 +18485,10 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "8 personnes",
-          "energie": "Propulsion par motomarine amovible 80 à 300 ch (essence), vitesse max 50 nœuds",
+          "energie": "Propulsion par motomarine amovible 90 à 300 ch (essence)",
           "client": "Plaisance (grand public)",
           "classification": "CE",
-          "source": "https://sealver.com/waveboat-575-semirigid/"
+          "source": "https://sealver.com/en/waveboat-575-semirigid/"
         },
         {
           "nom": "Wave Boat 525",
@@ -19147,7 +18647,7 @@
           "nom": "Ribwest Pro (gamme Custom 6,5-8 m)",
           "type": "modele",
           "annee": null,
-          "longueur_m": "6,50 a 11 m (gamme complete ; sous-segment custom ~6,5-8 m)",
+          "longueur_m": 6.5011658,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "6 à 16 pers. ; coque renforcée mousse Corecell ; aménagement sur mesure (secours, pêche, guidage, course)",
@@ -20513,14 +20013,14 @@
           "nom": "Atlantique",
           "type": "reference",
           "annee": "1900",
-          "longueur_m": null,
-          "jauge_gt": null,
+          "longueur_m": 148,
+          "jauge_gt": 6478,
           "port_lourd_dwt": null,
           "capacite": "Paquebot cité parmi les navires notables construits par le chantier de La Ciotat.",
           "energie": "vapeur",
-          "client": null,
+          "client": "Compagnie des Messageries Maritimes",
           "classification": null,
-          "source": "https://fr.wikipedia.org/wiki/Chantier_naval_de_La_Ciotat"
+          "source": "https://www.messageries-maritimes.org/atlant.htm"
         }
       ],
       "geo_source": "https://api-adresse.data.gouv.fr/search/?q=quai+francois+mitterrand+La+Ciotat"
@@ -21651,7 +21151,10 @@
         "motor-yacht",
         "navire-technique",
         "navire-surface-militaire",
-        "servitude-soutien"
+        "servitude-soutien",
+        "ferry-ropax",
+        "peche",
+        "offshore-emr"
       ],
       "description": "Chantier de réparation navale exploitant le bassin de radoub de Fort-de-France (inauguré en 1868), assurant entretien, visites de classification et réparations sur navires de la Marine, grands yachts et navires de commerce. Société créée en 2023 (SAS, capital 650 000 euros, NAF 33.15Z).",
       "capacites": [
@@ -21682,6 +21185,32 @@
           "dimensions": null,
           "capacite": "50 t",
           "source": "https://parc-marin-martinique.fr/editorial/les-chantiers-de-construction-et-de-reparation-navale"
+        },
+        {
+          "type": "Forme de radoub / cale sèche",
+          "capacite": "Navires jusqu'à 20 000 tonneaux de jauge brute (GT)",
+          "dimensions": "200 m de long (forme historique de 1868 : 129 m × 34 m × 8 m de profondeur, allongée à 180 m en 1942 puis 200 m en 1950)"
+        },
+        {
+          "type": "Forme de radoub / cale sèche",
+          "capacite": "Navires jusqu'à ~20 000 GT",
+          "dimensions": "200 m de long (radier historique 129 m x 34 m x 8 m de profondeur). Largeur d'entrée 34 m. Porte-bateau (caisson) rénové en 2023."
+        },
+        {
+          "type": "Systèmes de pompage de la forme",
+          "capacite": "Modernisés (budget ~7 M€, Plan de Relance), avec traitement éco-responsable des eaux",
+          "dimensions": null
+        },
+        {
+          "type": "Position stratégique",
+          "capacite": "Seul bassin de réparation navale d'envergure dans un rayon de 1 000 km (l'un des 3 comparables de la Caraïbe avec Trinidad et Curaçao). ~30 navires traités par an.",
+          "dimensions": null
+        },
+        {
+          "type": "Forme de radoub",
+          "dimensions": "200 m de long, 34 m de large, 8 m de profondeur",
+          "capacite": "jusqu'a 20 000 tjb (cargos jusqu'a 12 000 tx, petroliers/mineraliers 20 000 tx)",
+          "source": "https://tdcmartinique-lemag.com/le-bassin-radoub-vieux-de-160-ans-et-toujours-dactualite/"
         }
       ],
       "historique": [],
@@ -21703,7 +21232,17 @@
         "https://en.wikipedia.org/wiki/Le_Champlain",
         "https://www.vesselfinder.com/vessels/details/9439931",
         "https://www.superyachtservicesguide.com/20/24487/martinique-shipyard",
-        "https://pop.culture.gouv.fr/notice/merimee/PA97200038"
+        "https://pop.culture.gouv.fr/notice/merimee/PA97200038",
+        "https://monumentum.fr/monument-historique/pa97200038/fort-de-france-bassin-de-radoub",
+        "https://colombanatsea.com/chantiers/data/chantiers.json",
+        "https://www.actunautique.com/article-grand-carenage-a-fort-de-france-pour-la-fregate-de-surveillance-germinal-122290571.html",
+        "https://www.martinique.port.fr/iso_upload/GPMLM_%20Communique%20de%20presse%20-%20Remise%20en%20fonction%20du%20Bassin%20de%20Radoub_160124_V2.pdf",
+        "https://fr.wikipedia.org/wiki/Classe_Flor%C3%A9al",
+        "https://en.wikipedia.org/wiki/Flor%C3%A9al-class_frigate",
+        "https://www.cruisemapper.com/ships/Le-Champlain-1505",
+        "https://rci.fm/deuxiles/node/5457473",
+        "https://www.vesselfinder.com/vessels/details/9007491",
+        "https://tdcmartinique-lemag.com/le-bassin-radoub-vieux-de-160-ans-et-toujours-dactualite/"
       ],
       "confiance": "haute",
       "materiaux": [
@@ -21775,6 +21314,32 @@
           "client": "United Offshore Support (UOS)",
           "classification": "Navire de support offshore (Offshore Tug/Supply) accueilli pour réactivation après quatre ans d'inactivité. IMO 9439931, construit en 2010, pavillon Antigua-et-Barbuda. Non construit en Martinique.",
           "source": "https://martiniqueshipyard.fr/en/projects/"
+        },
+        {
+          "nom": "FS Germinal (F735, classe Floréal)",
+          "type": "Frégate de surveillance (Marine nationale)",
+          "annee": "carénage janvier-mai 2024",
+          "longueur_m": 93.5,
+          "jauge_gt": null,
+          "port_lourd_dwt": null,
+          "capacite": "déplacement ~2 950 t pleine charge",
+          "energie": "diesel (CODAD, 4 x SEMT Pielstick 6 PA6 L280), 2 lignes d'arbres, hélices à pales orientables",
+          "client": "Forces Armées aux Antilles (FAA) / Marine nationale",
+          "classification": null,
+          "source": "https://www.meretmarine.com/fr/vie-portuaire/apres-trois-ans-de-fermeture-le-bassin-de-radoub-de-fort-de-france-a-repris-du-service"
+        },
+        {
+          "nom": "FS Ventôse (F733, classe Floréal)",
+          "type": "Frégate de surveillance (Marine nationale)",
+          "annee": "carénage vers 2013 (épisode antérieur, source datée de 2014)",
+          "longueur_m": 93.5,
+          "jauge_gt": null,
+          "port_lourd_dwt": null,
+          "capacite": "déplacement ~2 950 t pleine charge",
+          "energie": "diesel (CODAD, 4 x SEMT Pielstick), 2 lignes d'arbres",
+          "client": "Forces Armées aux Antilles (FAA) / Marine nationale",
+          "classification": null,
+          "source": "https://www.actunautique.com/article-grand-carenage-a-fort-de-france-pour-la-fregate-de-surveillance-germinal-122290571.html"
         }
       ],
       "geo_source": "https://nominatim.openstreetmap.org/search?q=Bassin+de+radoub+Fort-de-France&format=json"
@@ -22059,7 +21624,7 @@
           "energie": "Diesel-électrique",
           "client": "Plateforme OCEA dévoilée fin 2018 (OPV 230) ; déclinaison yacht Grand Explorer présentée au Monaco Yacht Show 2023 (design, sans client nommé attesté)",
           "classification": "Bureau Veritas",
-          "source": "https://www.meretmarine.com/fr/construction-navale/ocea-developpe-un-yacht-de-72-metres-sur-la-base-d-un-de-ses-modeles-de"
+          "source": "https://www.ocea-ssm.com/opv-230"
         },
         {
           "nom": "NNS Shiroro (P185)",
@@ -22150,7 +21715,7 @@
           "energie": "Diesel, 30 noeuds",
           "client": "Garde-côtes du Suriname (Suriname) ; 1re livraison du contrat de 3 navires (16 M€), juin 2013, transporté depuis Saint-Nazaire",
           "classification": "Bureau Veritas",
-          "source": "https://www.ocea-ssm.com/june-2013-1st-delivery-coast-guard-republic-suriname-ocea-p201-ocea-fpb-98-mki"
+          "source": "https://shipshub.com/navy/116-1.html"
         },
         {
           "nom": "P101",
@@ -22183,13 +21748,13 @@
           "type": "Vedette à passagers (transport public maritime)",
           "annee": "2010",
           "longueur_m": 30.75,
-          "jauge_gt": null,
+          "jauge_gt": 200,
           "port_lourd_dwt": null,
           "capacite": "295 passagers (piétons uniquement, pas de véhicules) ; largeur 8 m ; liaison Quiberon - Belle-Île en 30 min",
           "energie": "Diesel, 20 noeuds",
           "client": "Compagnie Océane (Quiberon - Belle-Île ; aujourd'hui BreizhGo Océane) ; mis à flot sur le site des anciens chantiers Gamelin",
           "classification": "Bureau Veritas",
-          "source": "https://www.meretmarine.com/fr/construction-navale/ocea-met-a-flot-le-kerdonis-sur-le-site-des-anciens-chantiers-gamelin"
+          "source": "http://courriersdefrance.blogspot.com/2017/11/vedette-kerdonis-compagnie-oceane.html"
         },
         {
           "nom": "OPV 190 Guyana (non nomme)",
@@ -22416,11 +21981,11 @@
           "nom": "Palétuvier",
           "type": "vedette type ECO 50 PB, origine de la gamme pilotines",
           "annee": "2016",
-          "longueur_m": null,
+          "longueur_m": 16.2,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Vedette de servitude/pilotage en aluminium",
-          "energie": "Diesel",
+          "energie": "2 moteurs Caterpillar 650 ch, 22 nœuds en charge",
           "client": "Cameroun",
           "classification": null,
           "source": "https://www.meretmarine.com/fr/construction-navale/ocea-acheve-deux-nouvelles-pilotines-pour-le-guyana"
@@ -23135,11 +22700,11 @@
           "longueur_m": 17.5,
           "jauge_gt": null,
           "port_lourd_dwt": null,
-          "capacite": "128 passagers",
+          "capacite": "123 passagers",
           "energie": "diesel (2 x 450 ch)",
           "client": "GIE Transrade (exploitation RTM, rade de Marseille)",
           "classification": null,
-          "source": "https://www.maritima.info/actualites/vie-des-communes/martigues/8573/navette-planier-derniere-piece-montee-de-chez-gatto.html"
+          "source": "https://www.businews.fr/Une-vedette-neuve-pour-les-navettes-maritimes-RTM_a1804.html"
         },
         {
           "nom": "SNS 216 Notre Dame de Villerase",
@@ -23911,13 +23476,13 @@
         {
           "nom": "Le Vexin",
           "type": "barge-de-travail",
-          "annee": "2016",
+          "annee": null,
           "longueur_m": 9,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Barge de travail/maintenance, 9 x 3,50 m ; grue Marine Guerra M40.90A 3,5 t/m ; conception interne",
           "energie": "2 hors-bord Yamaha 80 cv",
-          "client": "Bouygues (travaux fluviaux)",
+          "client": null,
           "classification": null,
           "source": "https://www.pech-alu-international.com/realisations/le-vexin/"
         },
@@ -24146,11 +23711,11 @@
           "nom": "Mosa Arduenna",
           "type": "chaland-multifonction",
           "annee": null,
-          "longueur_m": 17,
+          "longueur_m": 18.2,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Ponton multifonction, grue marine Effer 8 t/m, propulsion hydraulique (l'une des 3 unités VNF Nancy/Lille/Metz)",
-          "energie": "Diesel marin Perkins Sabre N185C / 185 cv",
+          "energie": "Diesel marin Perkins M190 C",
           "client": "Voies Navigables de France (Nancy)",
           "classification": null,
           "source": "https://www.pech-alu-international.com/realisations/mosa-arduenna-vnv-nancy/"
@@ -24475,11 +24040,11 @@
           "longueur_m": 24,
           "jauge_gt": null,
           "port_lourd_dwt": null,
-          "capacite": "~28 noeuds ; coque aluminium ; surveillance cotiere",
+          "capacite": "jusqu'a ~30-35 noeuds (max), equipage 12, autonomie 2000 nm a 12 noeuds ; coque aluminium",
           "energie": "diesel",
           "client": "Marine nigeriane (Nigerian Navy)",
           "classification": null,
-          "source": "https://en.wikipedia.org/wiki/Ocea_FPB_72"
+          "source": "https://en.wikipedia.org/wiki/FPB_72-class_patrol_boat"
         },
         {
           "nom": "Fouladou",
@@ -25771,6 +25336,28 @@
           "type": "cadence-production",
           "capacite": "Plus de 300 bateaux produits par an (toutes marques, à l'échelle du groupe)",
           "dimensions": null
+        },
+        {
+          "type": "site_construction",
+          "capacite": "Site industriel de Canet-en-Roussillon (Pyrénées-Orientales), ~1500 salariés (groupe), production de plus de 300 catamarans par an toutes marques confondues",
+          "dimensions": null
+        },
+        {
+          "type": "marques",
+          "capacite": "Deux gammes : Catana (catamarans rapides de grande croisière, carbone) et Bali (catamarans de croisière à grands volumes, concept open space)",
+          "dimensions": null
+        },
+        {
+          "type": "Batiment de production actuel (zone technique du Port)",
+          "dimensions": null,
+          "capacite": "~7 500 m2 (la moitie des 15 000 m2 du futur batiment projete)",
+          "source": "https://www.boatindustry.fr/article/49881/canet-en-roussillon-catana-prepare-une-nouvelle-usine-pour-produire-ses-grandes-unites"
+        },
+        {
+          "type": "Taille max de navire (catamarans Catana / Bali construits)",
+          "dimensions": "50-58 pieds",
+          "capacite": "50 a 58 pieds",
+          "source": "https://www.boatindustry.fr/article/49881/canet-en-roussillon-catana-prepare-une-nouvelle-usine-pour-produire-ses-grandes-unites"
         }
       ],
       "historique": [
@@ -25831,7 +25418,27 @@
         "https://sailboatdata.com/sailboat/bali-catspace/",
         "https://www.katamarans.com/product-tag/catana/",
         "https://www.katamarans.com/product-tag/bali/",
-        "https://www.multihulls-world.com/technical-specifications/yot-power-catamarans/yot-41"
+        "https://www.multihulls-world.com/technical-specifications/yot-power-catamarans/yot-41",
+        "https://www.inautia.fr/blog/acheter-un-bateau/les-meilleurs-chantiers-francais/",
+        "https://www.medinboats.fr/2023/03/14/lhistoire-de-catana-le-chantier-francais-de-renommee-mondiale/",
+        "https://www.ici.fr/infos/economie-social/a-canet-en-roussillon-catana-construit-le-plus-grand-voilier-de-son-histoire-8138291",
+        "https://www.ici.fr/infos/economie-social/canet-en-roussillon-olivier-poncin-le-pdg-du-groupe-catana-meurt-a-l-age-de-68-ans-3914739",
+        "https://www.pappers.fr/entreprise/catana-group-390406320",
+        "https://www.catanagroup.com/en/",
+        "https://www.katamarans.com/catana-ocean-class/",
+        "https://www.boat-specs.com/sailing/sailboats/catana/bali-4-5",
+        "https://www.multihulls-world.com/technical-specifications/bali-catamarans/bali-46",
+        "https://pressmare.it/en/shipyards/catana-catamarans/2024-02-22/catana-group-launches-its-14th-bali-catamarans-model-the-bali-58-76038",
+        "https://skippers.ch/en/news/sailing-ocean/catana-group-40-years-of-catamaran-passion-109422/",
+        "https://www.multihulls-world.com/annuaire/catamaran-trimaran/chantier/bali-catamarans",
+        "https://www.multihulls-world.com/adressbook/catamaran-trimaran/shipyards/catana-sa",
+        "https://sailboatdata.com/builder/bali-catamarans/",
+        "https://www.cruisingworld.com/sailboats/bali-7-flagship/",
+        "https://www.bali-catamarans.com/en/catamarans/bali-5-2",
+        "https://sailboatdata.com/sailboat/catana-50/",
+        "https://www.multihulls-world.com/technical-specifications/catana-sa/catana-59-carbon-infusion",
+        "https://www.boat-specs.com/sailing/sailboats/catana/catana-70",
+        "https://www.cruisingworld.com/boat-review-catana-53/"
       ],
       "confiance": "haute",
       "produits": [
@@ -26001,7 +25608,7 @@
         {
           "nom": "Bali Catsmart",
           "type": "Catamaran de plaisance à voile (entrée de gamme/compact, marque Bali)",
-          "annee": "2021",
+          "annee": "2022",
           "longueur_m": 11.78,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -26009,7 +25616,7 @@
           "energie": "voile + 2 moteurs diesel inboard (2x20 à 2x30 ch)",
           "client": "Plaisanciers (architecture Xavier Faÿ, design Olivier Poncin)",
           "classification": null,
-          "source": "https://www.bali-catamarans.com/en/catamarans/bali-catsmart"
+          "source": "https://www.yachtingart.com/2022/04/bali-catsmart-the-first-38-feet-catamaran-by-bali.html"
         },
         {
           "nom": "Bali 4.2",
@@ -26170,7 +25777,7 @@
         {
           "nom": "Catana 50",
           "type": "Catamaran de plaisance a voile (performance/croisiere, marque Catana)",
-          "annee": "2006",
+          "annee": "2008",
           "longueur_m": 15,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -26178,7 +25785,7 @@
           "energie": "voile + 2 moteurs diesel inboard",
           "client": "Plaisanciers / grande croisiere",
           "classification": null,
-          "source": "https://www.katamarans.com/product-tag/catana/"
+          "source": "https://sailboatdata.com/sailboat/catana-50/"
         },
         {
           "nom": "Catana 471 / 521 / 581 (et variantes 472/522/582)",
@@ -26204,6 +25811,110 @@
           "energie": "voile + 2 moteurs diesel inboard",
           "client": "Plaisanciers / croisiere (origines du chantier a Cogolin, Var ; demenagement a Canet-en-Roussillon en 1997)",
           "classification": null,
+          "source": "https://www.katamarans.com/product-tag/catana/"
+        },
+        {
+          "nom": "Catana Ocean Class²",
+          "type": "Catamaran de croisière à voile (plaisance), gamme Catana, fast cruiser carbone (next-gen, dévoilé Cannes 2025)",
+          "annee": "2025",
+          "longueur_m": 15.75,
+          "jauge_gt": null,
+          "port_lourd_dwt": null,
+          "capacite": "Coque 14,99 m ; intérieurs redessinés Piaton & Bercault ; suite de contrôle Muxen ; construction carbone infusion",
+          "energie": "Vélique + diesel auxiliaire",
+          "client": "Armateurs privés (croisière hauturière)",
+          "classification": "CE plaisance",
+          "source": "https://www.multihulls-world.com/news-catamaran-trimaran/catana-ocean-class-revised-and-optimized"
+        },
+        {
+          "nom": "Bali 4.1",
+          "type": "Catamaran de croisière à voile (plaisance), gamme Bali",
+          "annee": "2018",
+          "longueur_m": 11.88,
+          "jauge_gt": null,
+          "port_lourd_dwt": null,
+          "capacite": "Bau 6,72 m ; tirant d'eau 1,12 m ; premier catamaran à voile entièrement ponté d'un bord à l'autre ; production 2017-2022",
+          "energie": "Vélique + 2 moteurs diesel auxiliaires",
+          "client": "Armateurs privés / charter",
+          "classification": "CE plaisance",
+          "source": "https://www.boat-specs.com/sailing/sailboats/catana/bali-4-1"
+        },
+        {
+          "nom": "Bali 4.3 MY",
+          "type": "Catamaran à moteur (plaisance), gamme Bali, déclinaison motor yacht",
+          "annee": "2019",
+          "longueur_m": 12.96,
+          "jauge_gt": null,
+          "port_lourd_dwt": null,
+          "capacite": "Version 100% moteur de la plateforme Bali 4.3, concept open space ; 3 ou 4 cabines",
+          "energie": "2 moteurs diesel in-bord (propulsion principale)",
+          "client": "Armateurs privés / charter",
+          "classification": "CE plaisance",
+          "source": "https://www.boatnews.com/story/30198/with-the-4-3-my-bali-is-launching-into-the-motor-catamaran-market"
+        },
+        {
+          "nom": "Bali 4.0 Lounge",
+          "type": "Catamaran de croisière à voile (plaisance), gamme Bali, modèle de lancement open space",
+          "annee": "2015",
+          "longueur_m": 11.99,
+          "jauge_gt": null,
+          "port_lourd_dwt": null,
+          "capacite": "Bau ~6,71 m ; tirant d'eau ~1,12 m ; carré et cockpit réunis par grande porte basculante électrique ; lancé Cannes 2015",
+          "energie": "Vélique + 2 moteurs diesel auxiliaires",
+          "client": "Armateurs privés / charter",
+          "classification": "CE plaisance",
+          "source": "https://www.multihulls-world.com/technical-specifications/bali-catamarans/bali-40"
+        },
+        {
+          "nom": "Bali 4.5",
+          "type": "Catamaran de croisière à voile (plaisance), gamme Bali, premier modèle de la marque",
+          "annee": "2014",
+          "longueur_m": 13.6,
+          "jauge_gt": null,
+          "port_lourd_dwt": null,
+          "capacite": "Déplacement lège ~11 t, max ~16,5 t ; bau 7,42 m, tirant d'eau 1,22 m ; 4 cabines ; lancé Cannes 2014",
+          "energie": "Vélique + 2 moteurs diesel (40 à 60 ch)",
+          "client": "Armateurs privés / charter ; architecte Xavier Faÿ, design Olivier Poncin",
+          "classification": "CE plaisance",
+          "source": "https://www.boat-specs.com/sailing/sailboats/catana/bali-4-5"
+        },
+        {
+          "nom": "Bali 4.3",
+          "type": "Catamaran de croisière à voile (plaisance), gamme Bali",
+          "annee": "2018",
+          "longueur_m": 12.7,
+          "jauge_gt": null,
+          "port_lourd_dwt": null,
+          "capacite": "Déplacement lège ~10,2 t ; cockpit/carré flush ~30 m² ; gamme Bali lancée 2014, production depuis 2018 ; designer Xavier Faÿ",
+          "energie": "Vélique + 2 moteurs diesel auxiliaires",
+          "client": "Armateurs privés / charter",
+          "classification": "CE plaisance",
+          "source": "https://www.boat-specs.com/sailing/sailboats/catana/bali-4-3"
+        },
+        {
+          "nom": "Catana 65",
+          "type": "Catamaran de croisière à voile (plaisance), gamme Catana, fast cruiser",
+          "annee": "2008",
+          "longueur_m": 19.8,
+          "jauge_gt": null,
+          "port_lourd_dwt": null,
+          "capacite": "Grande unité de la gamme Catana ; design Christophe Barreau (l'une de ses dernières signatures pour Catana)",
+          "energie": "Vélique + 2 moteurs diesel auxiliaires",
+          "client": "Armateurs privés (grande croisière hauturière)",
+          "classification": "CE plaisance",
+          "source": "https://www.katamarans.com/product-tag/catana/"
+        },
+        {
+          "nom": "Catana 471",
+          "type": "Catamaran de croisière à voile (plaisance), gamme Catana, fast cruiser",
+          "annee": "1997",
+          "longueur_m": 14.4,
+          "jauge_gt": null,
+          "port_lourd_dwt": null,
+          "capacite": "Production ~1997-2003 ; design Barreau/Neuman ; modèle historique du chantier à Canet-en-Roussillon",
+          "energie": "Vélique + 2 moteurs diesel auxiliaires",
+          "client": "Armateurs privés (grande croisière hauturière)",
+          "classification": "CE plaisance",
           "source": "https://www.katamarans.com/product-tag/catana/"
         }
       ],
@@ -26558,15 +26269,15 @@
         {
           "nom": "Windelo 50",
           "type": "modèle de série (tête de gamme attestée, hull individuel non nommé publiquement)",
-          "annee": "2020",
+          "annee": "Conception 2019-2020, première coque mise à l'eau février 2021",
           "longueur_m": 15.24,
           "jauge_gt": null,
           "port_lourd_dwt": null,
-          "capacite": "3 cabines (base) ou 4 ; déplacement lège ~11,2 t",
+          "capacite": "Modèle de série Windelo 50, mention spéciale Sustainability European Yacht of the Year 2022",
           "energie": "100% électrique : 2 moteurs 20 kW Beta Marine 48V, batteries lithium 53,8 kWh, solaire ~6 000 W, hydrogénération, génératrice d'appoint",
           "client": null,
           "classification": "Marquage CE (RCD) - catégorie non confirmée publiquement",
-          "source": "https://www.boatnews.com/story/35473/windelo-a-new-brand-of-eco-built-catamarans-in-france"
+          "source": "https://www.windelo-catamaran.com/en/windelo-50-eyoty-special-mentioning/"
         },
         {
           "nom": "Apollo",
@@ -28410,7 +28121,7 @@
         },
         {
           "nom": "Peniche / dock flottant FIN",
-          "type": "navire",
+          "type": "peniche",
           "annee": null,
           "longueur_m": 52,
           "jauge_gt": null,
@@ -29965,7 +29676,7 @@
         },
         {
           "nom": "Franc Bord 5.80",
-          "type": "vedette / barque alu",
+          "type": "workboat / barque de servitude en polyethylene (PEHD)",
           "annee": null,
           "longueur_m": 5.8,
           "jauge_gt": null,
@@ -30412,15 +30123,15 @@
         {
           "nom": "Nautitech 41 Type S",
           "type": "Catamaran de croisière à voile",
-          "annee": "2025",
-          "longueur_m": 12,
+          "annee": "2026",
+          "longueur_m": 12.6,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "version sportive ~41 pieds, renforts fibre de carbone ; déplacement ~9,0 t",
           "energie": "voile (gréement) + diesel auxiliaire",
           "client": "plaisanciers / marché charter",
           "classification": null,
-          "source": "https://www.multihulls-world.com/fiche-technique/nautitech-catamarans/nautitech-41-type-s"
+          "source": "https://www.multihulls-world.com/news-catamaran-trimaran/nautitech-41-type-s-lighter-and-adaptable-over-time"
         },
         {
           "nom": "Nautitech 48 Open",
@@ -30619,16 +30330,16 @@
         },
         {
           "nom": "Nautitech 82",
-          "type": "Catamaran à moteur (superyacht)",
+          "type": "Catamaran de croisiere a voile (superyacht ~25 m)",
           "annee": "1994",
           "longueur_m": 25,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "superyacht à moteur d'environ 25 m, vitesse de pointe ~12 nœuds",
-          "energie": "diesel",
+          "energie": "voile (greement) + 2x130 ch diesel auxiliaire",
           "client": "clientèle yachting",
           "classification": null,
-          "source": "https://www.katamarans.com/product-tag/nautitech/"
+          "source": "https://sailboatdata.com/sailboat/nautitech-82/"
         },
         {
           "nom": "Nautitech 60",
@@ -31341,29 +31052,29 @@
         },
         {
           "nom": "La Vague",
-          "type": "voilier de plaisance / régate (nom attesté, spécifications non documentées)",
+          "type": "cotre à dérive (cutter)",
           "annee": null,
           "longueur_m": null,
-          "jauge_gt": null,
+          "jauge_gt": 32,
           "port_lourd_dwt": null,
           "capacite": null,
           "energie": null,
-          "client": null,
+          "client": "H. Linssen (Antwerp Yacht Club)",
           "classification": null,
-          "source": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/2021/06/04/pinasse-kimata-patrimoine-naval-bassin-arcachon-plaisance-bonnin/"
+          "source": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/category/voilier/"
         },
         {
           "nom": "M'Amie",
-          "type": "voilier de plaisance / régate (nom attesté, spécifications non documentées)",
-          "annee": null,
+          "type": "ketch",
+          "annee": "1913",
           "longueur_m": null,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": null,
           "energie": null,
-          "client": null,
+          "client": "baron de Maynard (La Rochelle)",
           "classification": null,
-          "source": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/2021/06/04/pinasse-kimata-patrimoine-naval-bassin-arcachon-plaisance-bonnin/"
+          "source": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/category/voilier/"
         },
         {
           "nom": "L'Horizon",
@@ -31380,7 +31091,7 @@
         },
         {
           "nom": "Ombre-Blanche",
-          "type": "voilier de plaisance / régate (nom attesté, spécifications non documentées)",
+          "type": "pinasse (bateau traditionnel du Bassin d'Arcachon)",
           "annee": null,
           "longueur_m": null,
           "jauge_gt": null,
@@ -31389,11 +31100,11 @@
           "energie": null,
           "client": null,
           "classification": null,
-          "source": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/2021/06/04/pinasse-kimata-patrimoine-naval-bassin-arcachon-plaisance-bonnin/"
+          "source": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/category/pinasse/"
         },
         {
           "nom": "Miramar II",
-          "type": "voilier de plaisance / régate (nom attesté, spécifications non documentées)",
+          "type": "pinasse de plaisance (sur plans de l'architecte Joseph Guedon), chantier Bonnin",
           "annee": null,
           "longueur_m": null,
           "jauge_gt": null,
@@ -31774,7 +31485,7 @@
       ],
       "navires_references": [
         {
-          "nom": "Pinasse Lacaze (modèle, non un navire nommé)",
+          "nom": "Modèle 'Pinasse' (Constructions Lacaze) - pas un navire individuel",
           "type": "Pinasse de transport de passagers (modèle de série)",
           "annee": null,
           "longueur_m": 11.18,
@@ -31782,9 +31493,9 @@
           "port_lourd_dwt": null,
           "capacite": "12 à 16 passagers",
           "energie": "Moteur in-bord essence/diesel, max 100 CV",
-          "client": null,
+          "client": "Constructions navales Lacaze (Andernos-les-Bains), constructeur",
           "classification": "Catégorie de navigation C et D - NUC (navire à utilisation commerciale)",
-          "source": "https://www.constructions-lacaze.fr/transport-passagers/pinasse/"
+          "source": "https://www.constructions-lacaze.fr/"
         },
         {
           "nom": "Luzen II",
@@ -32406,17 +32117,17 @@
       "taille_max": "Coques aluminium jusqu'à ~50 m de longueur (capacité site de Couëron, orientée yachting/professionnel). Jauge maximale non documentée publiquement.",
       "navires_references": [
         {
-          "nom": null,
+          "nom": "Men Garo",
           "type": "vedette-de-lamanage",
           "annee": "2022",
           "longueur_m": 7.5,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Vedette de lamanage",
-          "energie": "Diesel (gamme Alumarine)",
+          "energie": "Diesel Volvo D7 265 cv + propulseur hydraulique 300 kg",
           "client": "Groupe Boluda, port de Longoni (Mayotte) ; mise a l'eau 21 mars 2022",
           "classification": "Aluminium",
-          "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-une-vedette-scientifique-pour-l-universite-de-corse"
+          "source": "https://www.meretmarine.com/fr/construction-navale/a-bord-de-la-nouvelle-vedette-des-pompiers-du-sdis-22"
         },
         {
           "nom": null,
@@ -33006,8 +32717,8 @@
           "capacite": "2 à 6 cabines (programme à la carte) ; déplacement ~31 t ; motorisation Volvo Penta D4 175 ch",
           "energie": "vélique + diesel in-board",
           "client": "Plaisanciers / grande croisière (modèle de série)",
-          "classification": "RCD CE catégorie A (haute mer)",
-          "source": "https://sailboatdata.com/sailboat/jeanneau-yachts-65/"
+          "classification": "RCD CE cat. A ; architecture coque Philippe Briand, design interieur Andrew Winch, finitions Bureau d'etudes Jeanneau ; construit a Monfalcone (Italie)",
+          "source": "https://en.wikipedia.org/wiki/Jeanneau_Yachts_65"
         },
         {
           "nom": "Jeanneau DB/43 (Day Boat)",
@@ -33110,7 +32821,7 @@
           "capacite": "options 2 à 5 cabines ; carburant 240 L ; eau 640 L ; Boat of the Year 2019 (Cruising World)",
           "energie": "vélique + diesel in-board",
           "client": "Plaisanciers croisière (modèle de série)",
-          "classification": "RCD CE (croisière hauturière) ; architectes Philippe Briand / Piaton / Jeanneau Design",
+          "classification": "RCD CE ; architectes Philippe Briand / Jean-Marc Piaton (PAS Marc Lombard)",
           "source": "https://en.wikipedia.org/wiki/Sun_Odyssey_490"
         },
         {
@@ -33680,7 +33391,7 @@
           "energie": "Diesel",
           "client": "Premier yacht construit par CNB a Bordeaux (sloop 92 pieds), mis a l'eau dans la Garonne en 1989 ; plans German Frers",
           "classification": null,
-          "source": "https://www.charterworld.com/news/lymanmorse-working-refit-sailing-yacht-bristolian-mari-cha-ii"
+          "source": "https://www.charterworld.com/index.html?sub=yacht-charter&charter=sybristolian-5872"
         }
       ],
       "geo_source": "https://nominatim.openstreetmap.org/search?q=162+Quai+de+Brazza+Bordeaux&format=json"
@@ -34195,7 +33906,7 @@
         {
           "nom": "Stellac'h II",
           "type": "construction-neuve",
-          "annee": "2019",
+          "annee": "2018-2019",
           "longueur_m": 10.99,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -34259,14 +33970,14 @@
         },
         {
           "nom": "Saint Louis (puis Den Heliga)",
-          "type": "construction-neuve",
+          "type": "Chalutier cotier en bois",
           "annee": "2002",
           "longueur_m": 9.4,
           "jauge_gt": 9.04,
           "port_lourd_dwt": null,
           "capacite": "Fileyeur en bois (9,40 m) construit en 2002 par le chantier Henaff pour GENOVESE Thierry (immat. d'origine NI 874656, Antibes) ; ulterieurement renomme Den Heliga (chalutier-fileyeur-coquillier)",
           "energie": null,
-          "client": "Thierry Genovese (Antibes)",
+          "client": "Emmanuel Jaouen (Antibes)",
           "classification": null,
           "source": "https://ports.e-monsite.com/medias/files/bateauchantierhenaff.pdf"
         },
@@ -34299,7 +34010,7 @@
         {
           "nom": "Betelgeuse (puis Anne-Sophie Pauline)",
           "type": "construction-neuve",
-          "annee": "1988",
+          "annee": "1986",
           "longueur_m": 15.5,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -34307,7 +34018,7 @@
           "energie": null,
           "client": "Jean Michel Caillard (Le Guilvinec)",
           "classification": null,
-          "source": "https://ports.e-monsite.com/medias/files/bateauchantierhenaff.pdf"
+          "source": "https://www.littoral-manche-atlantique.com/2020/12/anne-sophie-pauline-cn.487836.html"
         },
         {
           "nom": "Porz-Streilhen (ex Ar Peulhvan)",
@@ -34331,7 +34042,7 @@
           "port_lourd_dwt": null,
           "capacite": "Bolincheur en bois (16,50 m) construit en 1985-1986 au chantier Henaff pour LANDREIN Jean Claude (Concarneau, immat. CC 622937)",
           "energie": null,
-          "client": "Jean Claude Landrein (Concarneau)",
+          "client": "Jean Michel Caillard (Concarneau)",
           "classification": null,
           "source": "https://ports.e-monsite.com/medias/files/bateauchantierhenaff.pdf"
         },
@@ -34939,15 +34650,15 @@
         {
           "nom": "Moonspray",
           "type": "refit-restauration",
-          "annee": "1964",
-          "longueur_m": 13,
+          "annee": "1962",
+          "longueur_m": 13.39,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Yawl bermudien (architecte Arthur C. Robb)",
           "energie": "Voile (yawl bermudien)",
           "client": "Expertise complète ; restructuration de la charpente transversale, membrures lamellé-collé en forme ; étanchéité roof et safran",
           "classification": null,
-          "source": "https://www.chantiernavalborg.com/realisations"
+          "source": "https://www.courseaularge.com/28-bateaux-au-depart-de-la-transat-classic-entre-douarnenez-agadir-et-saint-barth.html"
         },
         {
           "nom": "Nagaïna",
@@ -35061,10 +34772,10 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Barquette marseillaise",
-          "energie": "Refit électrique (1re barquette à motorisation 100% électrique du chantier)",
+          "energie": "Remotorisation 100% électrique (barque italienne) ; mention '1re barquette électrique' non sourcée pour Charlinou",
           "client": null,
           "classification": null,
-          "source": "https://madeinmarseille.net/96848-barquette-marseillaise-bateau-moteur-electrique-environnement/"
+          "source": "https://www.chantiernavalborg.com/refit-electrique"
         },
         {
           "nom": "Anna",
@@ -36912,7 +36623,7 @@
           "nom": "Blouin NUC 21' (version commerciale / professionnelle)",
           "type": "modele",
           "annee": null,
-          "longueur_m": 7.1,
+          "longueur_m": 6.3,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": null,
@@ -37007,10 +36718,10 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "8 personnes (selon annonce occasion)",
-          "energie": "hors-bord essence Yamaha 4 temps (jusqu'à 300 ch observé sur le marché de l'occasion)",
+          "energie": "hors-bord essence (motorisation variable selon exemplaire ; ex. Yamaha 4 temps ou Mercury 90)",
           "client": "plaisance / sorties en mer / excursion",
           "classification": null,
-          "source": "https://www.tevea.cc/annonces/offre/1eef469c-4523-6fce-830a-83653512ea33"
+          "source": "https://www.blouin.pf/"
         }
       ],
       "geo_source": "https://www.blouin.pf/"
@@ -37323,7 +37034,7 @@
           "port_lourd_dwt": null,
           "capacite": "28 passagers (plongée / snorkeling)",
           "energie": "Moteurs de faible puissance ; vitesse de croisière 20 nœuds ; power-foils ; tirant d'eau faible",
-          "client": "Valérie Villiers / Bernard Andreani (opérateur plongée)",
+          "client": "Bernard Andreani (président du 1er club d'apnée français)",
           "classification": null,
           "source": "https://www.catamarine.net/temoignages"
         },
@@ -37336,7 +37047,7 @@
           "port_lourd_dwt": null,
           "capacite": "4 cabines doubles + grand salon central (jusqu'à 4 couchages additionnels) ; affrètement (Imagine Yacht Charter) ; poids ~7,5 t",
           "energie": "Diesel, composites légers, power-foils ; ~16 nœuds de moyenne ; consommation env. 5x inférieure au bateau précédent du propriétaire",
-          "client": "José Laborde (fondateur Catamarine), exploité par Imagine Yacht Charter (Aïna Laborde) ; construit à Ducos",
+          "client": "Mariane Vigier (propriétaire), exploité en charter (Imagine Yacht Charter)",
           "classification": null,
           "source": "https://www.catamarine.net/temoignages"
         },
@@ -37676,210 +37387,6 @@
         "bois"
       ],
       "taille_max": "Navires de plaisance et de travail jusqu'a 50 m (superyachts); leve max 440 tonnes (travel lift Cimolai), tirant d'eau max 5 m, largeur max 14 m"
-    },
-    {
-      "id": "bassin-de-radoub-de-fort-de-france-chantier-nava-fort-de-france",
-      "nom": "Bassin de Radoub de Fort-de-France (Chantier Naval de la Martinique)",
-      "groupe": "Chantier Naval de la Martinique (Sud Moteurs Groupe, avec Piriou et Chantiers de l'Atlantique)",
-      "ville": "Fort-de-France",
-      "region": "Martinique",
-      "pays": "France",
-      "lat": 14.6027,
-      "lon": -61.0644,
-      "geo_precision": "site",
-      "fondation": 1868,
-      "superficie_ha": null,
-      "effectif": null,
-      "perimetres": [
-        "reparation-refit"
-      ],
-      "types_navires": [
-        "servitude-soutien",
-        "ferry-ropax",
-        "peche",
-        "offshore-emr"
-      ],
-      "description": "Centre de réparation navale exploitant le bassin de radoub historique de Fort-de-France (construit 1864-1868, classé monument historique 2015, modernisé pour près de 7 M€). Cale sèche de 200 m pouvant accueillir des navires jusqu'à 20 000 tonnes de jauge brute, seul bassin de réparation d'envergure dans un rayon de 1 000 km, exploité depuis novembre 2023 par la société Chantier Naval de la Martinique.",
-      "capacites": [
-        {
-          "type": "Forme de radoub / cale sèche",
-          "capacite": "Navires jusqu'à 20 000 tonneaux de jauge brute (GT)",
-          "dimensions": "200 m de long (forme historique de 1868 : 129 m × 34 m × 8 m de profondeur, allongée à 180 m en 1942 puis 200 m en 1950)"
-        },
-        {
-          "type": "Forme de radoub / cale sèche",
-          "capacite": "Navires jusqu'à ~20 000 GT",
-          "dimensions": "200 m de long (radier historique 129 m x 34 m x 8 m de profondeur). Largeur d'entrée 34 m. Porte-bateau (caisson) rénové en 2023."
-        },
-        {
-          "type": "Systèmes de pompage de la forme",
-          "capacite": "Modernisés (budget ~7 M€, Plan de Relance), avec traitement éco-responsable des eaux",
-          "dimensions": null
-        },
-        {
-          "type": "Position stratégique",
-          "capacite": "Seul bassin de réparation navale d'envergure dans un rayon de 1 000 km (l'un des 3 comparables de la Caraïbe avec Trinidad et Curaçao). ~30 navires traités par an.",
-          "dimensions": null
-        },
-        {
-          "type": "Forme de radoub",
-          "dimensions": "200 m de long, 34 m de large, 8 m de profondeur",
-          "capacite": "jusqu'a 20 000 tjb (cargos jusqu'a 12 000 tx, petroliers/mineraliers 20 000 tx)",
-          "source": "https://tdcmartinique-lemag.com/le-bassin-radoub-vieux-de-160-ans-et-toujours-dactualite/"
-        }
-      ],
-      "historique": [
-        {
-          "annee": "1864-1868",
-          "fait": "Construction du bassin de radoub dans la baie de Fort-de-France pour la Marine impériale ; inauguration en 1868 (129 m × 34 m × 8 m)"
-        },
-        {
-          "annee": "1942",
-          "fait": "Allongement du bassin à 180 mètres"
-        },
-        {
-          "annee": "1950",
-          "fait": "Allongement du bassin à 200 mètres (agrandissements menés entre les années 1940 et 1950)"
-        },
-        {
-          "annee": "2015",
-          "fait": "Classement du bassin de radoub au titre des monuments historiques"
-        },
-        {
-          "annee": "2020-2023",
-          "fait": "Fermeture pendant trois ans pour travaux de modernisation (budget de près de 7 M€ via le Plan de Relance, avec le soutien de la CTM-Collectivité de Martinique et de l'État) : mise à jour des systèmes de pompage, rénovation des infrastructures, technologies éco-responsables de traitement des eaux"
-        },
-        {
-          "annee": "2023",
-          "fait": "Reprise d'exploitation en novembre 2023 par la société Chantier Naval de la Martinique (Chantiers de l'Atlantique, Sud Moteurs, Piriou), nouveau concessionnaire du Grand Port Maritime de la Martinique"
-        }
-      ],
-      "contact": {
-        "adresse": "Bassin de Radoub, Quai Ouest, 97200 Fort-de-France, Martinique",
-        "interlocuteur": "Jérémy Dehondt (Site Manager) ; Samir Ferguene (Site Manager)",
-        "telephone": "+596 696 09 98 92 (J. Dehondt) ; +33 6 86 66 37 87 (S. Ferguene) ; e-mail : contact@martiniqueshipyard.com",
-        "web": "https://martiniqueshipyard.fr"
-      },
-      "sources": [
-        "https://www.meretmarine.com/fr/vie-portuaire/apres-trois-ans-de-fermeture-le-bassin-de-radoub-de-fort-de-france-a-repris-du-service",
-        "https://martiniqueshipyard.fr/en/company/",
-        "https://www.pappers.fr/entreprise/chantier-naval-de-la-martinique-979459898",
-        "https://rci.fm/martinique/infos/Economie/EN-IMAGES-Reparation-navale-le-bassin-de-radoub-de-Fort-de-France-tourne-plein",
-        "https://monumentum.fr/monument-historique/pa97200038/fort-de-france-bassin-de-radoub",
-        "https://www.martinique.port.fr/detail-actualites.aspx?card=8046",
-        "https://colombanatsea.com/chantiers/data/chantiers.json",
-        "https://www.actunautique.com/article-grand-carenage-a-fort-de-france-pour-la-fregate-de-surveillance-germinal-122290571.html",
-        "https://www.martinique.port.fr/iso_upload/GPMLM_%20Communique%20de%20presse%20-%20Remise%20en%20fonction%20du%20Bassin%20de%20Radoub_160124_V2.pdf",
-        "https://fr.wikipedia.org/wiki/Classe_Flor%C3%A9al",
-        "https://en.wikipedia.org/wiki/Flor%C3%A9al-class_frigate",
-        "https://www.cruisemapper.com/ships/Le-Champlain-1505",
-        "https://parc-marin-martinique.fr/editorial/les-chantiers-de-construction-et-de-reparation-navale",
-        "https://la1ere.franceinfo.fr/martinique/fort-france/le-club-med-2-plus-grand-navire-jamais-accueilli-en-arret-technique-en-martinique-1663212.html",
-        "https://rci.fm/deuxiles/node/5457473",
-        "https://en.wikipedia.org/wiki/Club_Med_2",
-        "https://www.vesselfinder.com/vessels/details/9007491",
-        "https://tdcmartinique-lemag.com/le-bassin-radoub-vieux-de-160-ans-et-toujours-dactualite/"
-      ],
-      "confiance": "haute",
-      "produits": [
-        {
-          "type": "Réparation navale et carénage en cale sèche",
-          "details": "Peinture de carène, contrôle des lignes de mouillage, soudure, réfection des organes de navigation, des safrans, des hélices et de la motorisation"
-        },
-        {
-          "type": "Maintenance, visites de classification et réparations",
-          "details": "Sur navires de la Marine Nationale, grands yachts et navires de commerce, armateurs privés et publics (source : site officiel Martinique Shipyard)"
-        }
-      ],
-      "personnes": [
-        {
-          "nom": "Jérémy Dehondt",
-          "titre": "Site Manager (responsable de site)"
-        },
-        {
-          "nom": "Samir Ferguene",
-          "titre": "Site Manager (responsable de site)"
-        }
-      ],
-      "materiaux": [
-        "acier"
-      ],
-      "classification": [
-        "Visites de classification réalisées en cale sèche (class surveys), sociétés de classe non spécifiées pour le site lui-même"
-      ],
-      "energies": [
-        "diesel",
-        "diesel-electrique-hybride"
-      ],
-      "taille_max": "Navires jusqu'à environ 20 000 tonneaux de jauge brute (GT) et 200 m de longueur (cale sèche de 200 m). Forme historique de 1868 : 129 m x 34 m x 8 m de profondeur, allongée à 180 m en 1942 puis 200 m en 1950.",
-      "navires_references": [
-        {
-          "nom": "Club Med 2",
-          "type": "Voilier de croisière (cinq-mâts goélette, propulsion auxiliaire diesel-électrique)",
-          "annee": "arrêt technique janvier 2026 (entrée en cale sèche le 20 janvier 2026)",
-          "longueur_m": 187,
-          "jauge_gt": 14983,
-          "port_lourd_dwt": null,
-          "capacite": "jusqu'à ~386 passagers (170 cabines), équipage ~214 ; 5 mâts, 7 voiles informatisées",
-          "energie": "diesel-électrique (4 diesels-alternateurs alimentant 2 moteurs électriques) + propulsion vélique",
-          "client": "Club Med (Club Med Cruises) ; gestion technique CCS",
-          "classification": null,
-          "source": "https://la1ere.franceinfo.fr/martinique/fort-france/le-club-med-2-plus-grand-navire-jamais-accueilli-en-arret-technique-en-martinique-1663212.html"
-        },
-        {
-          "nom": "Le Champlain",
-          "type": "Navire d'expédition / paquebot de croisière (Ponant Explorers)",
-          "annee": "arrêt technique novembre 2025",
-          "longueur_m": 131,
-          "jauge_gt": 9976,
-          "port_lourd_dwt": null,
-          "capacite": "jusqu'à ~184 passagers, 92 cabines",
-          "energie": "diesel-électrique",
-          "client": "Ponant",
-          "classification": null,
-          "source": "https://rci.fm/martinique/infos/Economie/EN-IMAGES-Reparation-navale-le-bassin-de-radoub-de-Fort-de-France-tourne-plein"
-        },
-        {
-          "nom": "Royal Clipper",
-          "type": "Voilier de croisière (clipper à voiles)",
-          "annee": "arrêt technique planifié décembre 2025",
-          "longueur_m": null,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": null,
-          "energie": "vélique (voiles) + diesel auxiliaire",
-          "client": "Star Clippers",
-          "classification": null,
-          "source": "https://rci.fm/martinique/infos/Economie/EN-IMAGES-Reparation-navale-le-bassin-de-radoub-de-Fort-de-France-tourne-plein"
-        },
-        {
-          "nom": "FS Germinal (F735, classe Floréal)",
-          "type": "Frégate de surveillance (Marine nationale)",
-          "annee": "carénage janvier-mai 2024",
-          "longueur_m": 93.5,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "déplacement ~2 950 t pleine charge",
-          "energie": "diesel (CODAD, 4 x SEMT Pielstick 6 PA6 L280), 2 lignes d'arbres, hélices à pales orientables",
-          "client": "Forces Armées aux Antilles (FAA) / Marine nationale",
-          "classification": null,
-          "source": "https://www.meretmarine.com/fr/vie-portuaire/apres-trois-ans-de-fermeture-le-bassin-de-radoub-de-fort-de-france-a-repris-du-service"
-        },
-        {
-          "nom": "FS Ventôse (F733, classe Floréal)",
-          "type": "Frégate de surveillance (Marine nationale)",
-          "annee": "carénage vers 2013 (épisode antérieur, source datée de 2014)",
-          "longueur_m": 93.5,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "déplacement ~2 950 t pleine charge",
-          "energie": "diesel (CODAD, 4 x SEMT Pielstick), 2 lignes d'arbres",
-          "client": "Forces Armées aux Antilles (FAA) / Marine nationale",
-          "classification": null,
-          "source": "https://www.actunautique.com/article-grand-carenage-a-fort-de-france-pour-la-fregate-de-surveillance-germinal-122290571.html"
-        }
-      ],
-      "geo_source": "https://www.martinique.port.fr/sites-installations_portuaires.aspx"
     },
     {
       "id": "mayotte-marine-service-mamoudzou",
@@ -38736,7 +38243,7 @@
         {
           "nom": "L'Hirondelle",
           "type": "bateau à passagers (réhabilitation intégrale + hybridation)",
-          "annee": "2025",
+          "annee": "2024",
           "longueur_m": 60,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -38744,7 +38251,7 @@
           "energie": "Hybride diesel-électrique : groupes électrogènes + moteurs électriques + batteries lithium-ion ; navigation 100% électrique à la descente du fleuve (refit Enag/Marinelec, approbation RINA)",
           "client": "Compagnie des Bateaux Mouches",
           "classification": null,
-          "source": "https://www.meretmarine.com/fr/construction-navale/hybridation-du-mulet-coureau-et-de-l-hirondelle-enag-et-marinelec-dans-le-meme-bateau-mouche"
+          "source": "https://www.marinelec.com/fr/actualites/hybridation-du-mulet-coureau-et-de-l-hirondelle-enag-et-marinelec-dans-le-meme-bateau-mouche-"
         },
         {
           "nom": "Héméra",
@@ -39169,19 +38676,6 @@
           "client": "Les Canalous / clients privés",
           "classification": null,
           "source": "https://www.lescanalous.com/en/boat/tarpon-37/"
-        },
-        {
-          "nom": "Tarpon 37 / 37 DP",
-          "type": "navire-reference",
-          "annee": "1993",
-          "longueur_m": null,
-          "jauge_gt": null,
-          "port_lourd_dwt": null,
-          "capacite": "7/9 (+1) personnes, 3 cabines + espace de vie, 2 postes de pilotage",
-          "energie": "Diesel (motorisation électrique/HVO disponible en option)",
-          "client": "Les Canalous / clients privés",
-          "classification": "5e catégorie maritime (vedette mixte mer/rivière)",
-          "source": "https://bateau.fr/en/our-models/tarpon-range/"
         },
         {
           "nom": "Triton 1050",
@@ -39893,7 +39387,7 @@
         },
         {
           "nom": "Atlas",
-          "type": "navire",
+          "type": "sloop classique (architecte Guy Ribadeau Dumas)",
           "annee": "2001",
           "longueur_m": 14,
           "jauge_gt": null,
@@ -39922,7 +39416,7 @@
           "type": "navire",
           "annee": "1945 (construction) ; 1996 = restauration Guip",
           "longueur_m": 21.7,
-          "jauge_gt": "57 tonneaux",
+          "jauge_gt": 57,
           "port_lourd_dwt": null,
           "capacite": "gabare/dundée de l'Aulne, Monument historique ; restauration par le Chantier du Guip",
           "energie": "vélique",
@@ -39941,7 +39435,7 @@
           "energie": "vélique",
           "client": "Ville de Brest",
           "classification": null,
-          "source": "https://fr.wikipedia.org/wiki/La_Recouvrance"
+          "source": "https://fr.wikipedia.org/wiki/La_Recouvrance (construite au Guip site Brest)"
         },
         {
           "nom": "Le Grand Norven",
@@ -41211,7 +40705,7 @@
         {
           "nom": "Majesty",
           "type": "navire_reference",
-          "annee": "Ère Gérard Bernard (à partir de 1972), construction neuve bois",
+          "annee": "à partir de 1972",
           "longueur_m": null,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -41224,7 +40718,7 @@
         {
           "nom": "Louis Pauline",
           "type": "navire_reference",
-          "annee": "Ère Gérard Bernard (à partir de 1972), construction neuve bois",
+          "annee": "à partir de 1972",
           "longueur_m": null,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -42218,8 +41712,8 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Day-boat / runabout de plaisance (env. 22,5 pieds, ~6,9 m)",
-          "energie": "100% électrique (batterie)",
-          "client": "Construction propre du chantier (première unité, plan Matteo Costa)",
+          "energie": "100% electrique, coque bois (stratification partielle, teck/vernis)",
+          "client": "Construction propre du chantier (en vente) ; mention 'plan Matteo Costa' non sourcee, a retirer ou a sourcer",
           "classification": null,
           "source": "https://www.ventdouestcm.com/construction-neuve/"
         },
@@ -42299,7 +41793,7 @@
           "energie": null,
           "client": null,
           "classification": null,
-          "source": "https://www.bateaux.com/article/43635/chantier-naval-vent-d-ouest-une-equipe-talentueuse-de-charpentiers-de-marine"
+          "source": "https://www.boatsnews.com/story/43635/chantier-naval-vent-douest-young-marine-carpenters-at-the-service-of-mediterranean-boats"
         },
         {
           "nom": "Marie-Edith (pointu / barquette mediterraneen)",
@@ -42312,7 +41806,7 @@
           "energie": null,
           "client": null,
           "classification": null,
-          "source": "https://www.bateaux.com/article/43635/chantier-naval-vent-d-ouest-une-equipe-talentueuse-de-charpentiers-de-marine"
+          "source": "https://www.boatsnews.com/story/43635/chantier-naval-vent-douest-young-marine-carpenters-at-the-service-of-mediterranean-boats"
         },
         {
           "nom": "Lou Pei Coua (pointu / barquette mediterraneen)",
@@ -42325,7 +41819,7 @@
           "energie": null,
           "client": null,
           "classification": null,
-          "source": "https://www.bateaux.com/article/43635/chantier-naval-vent-d-ouest-une-equipe-talentueuse-de-charpentiers-de-marine"
+          "source": "https://www.boatsnews.com/story/43635/chantier-naval-vent-douest-young-marine-carpenters-at-the-service-of-mediterranean-boats"
         },
         {
           "nom": "Aurore (pointu / barquette mediterraneen)",
@@ -42338,7 +41832,7 @@
           "energie": null,
           "client": null,
           "classification": null,
-          "source": "https://www.bateaux.com/article/43635/chantier-naval-vent-d-ouest-une-equipe-talentueuse-de-charpentiers-de-marine"
+          "source": "https://www.boatsnews.com/story/43635/chantier-naval-vent-douest-young-marine-carpenters-at-the-service-of-mediterranean-boats"
         }
       ],
       "geo_source": "https://www.ventdouestcm.com/"
@@ -42486,15 +41980,15 @@
         {
           "nom": "Albarquel",
           "type": "navire",
-          "annee": "1957 (construit chantier Pedrouicos, Portugal ; entretenu au chantier Despierres)",
-          "longueur_m": 19.7,
+          "annee": "1957 (chantier Pedrouicos, Lisbonne)",
+          "longueur_m": 25,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "~80 tonnes de sel (usage cargo d'origine)",
           "energie": "Vélique (ancien galeo de sal portugais, gréement ketch/aurique)",
           "client": "Albarquel SARL (associés charentais, croisières en Pertuis), entretien chantier Despierres",
           "classification": null,
-          "source": "https://www.facebook.com/DespierresCharpenteMarine/?locale=fr_FR"
+          "source": "https://fr.wikipedia.org/wiki/Albarquel"
         },
         {
           "nom": "Robin des Mers",
@@ -42512,11 +42006,11 @@
         {
           "nom": "Sainte-Anne III",
           "type": "navire",
-          "annee": "1933 (construit chantier Auroux, Arcachon ; restauré au chantier Despierres)",
+          "annee": "1933 (Chantiers Auroux, Arcachon)",
           "longueur_m": 20.4,
           "jauge_gt": null,
           "port_lourd_dwt": null,
-          "capacite": "Yawl de croisiere (voilure max ~165 m2)",
+          "capacite": "Yawl de croisiere (voilure max ~100 m2 au pres)",
           "energie": "Vélique (yawl, ~165 m² de voilure max) avec moteur auxiliaire Volvo Penta MD 47 (80 ch)",
           "client": "Nicolas Chanteloup (propriétaire-skipper)",
           "classification": "Classé Monument historique (28 décembre 2011)",
@@ -42538,7 +42032,7 @@
         {
           "nom": "Girl Joyce",
           "type": "navire",
-          "annee": "1855 (restauré au chantier Despierres)",
+          "annee": "1885 (restaure Despierres 2020)",
           "longueur_m": 14.5,
           "jauge_gt": null,
           "port_lourd_dwt": null,
