@@ -4145,7 +4145,7 @@
         },
         {
           "nom": "BRP Boracay",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2018",
           "longueur_m": 24,
           "jauge_gt": null,
@@ -7444,7 +7444,7 @@
       "navires_references": [
         {
           "nom": "Brugge (M942), chasseur de mines classe City / programme rMCM",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2025 (coque mise à l'eau à Lanester oct. 2023, livraison prévue déc. 2026)",
           "longueur_m": 82.3,
           "jauge_gt": null,
@@ -7483,7 +7483,7 @@
         },
         {
           "nom": "Vlissingen (M840), chasseur de mines classe City / programme rMCM",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "Coque lancée à Lanester le 29 sept. 2023, livraison fév. 2026",
           "longueur_m": 82.3,
           "jauge_gt": null,
@@ -7496,7 +7496,7 @@
         },
         {
           "nom": "Programme rMCM classe City, 12 chasseurs de mines (Oostende, Tournai, Brugge, Liège, Antwerpen, Rochefort, Vlissingen, Scheveningen, IJmuiden, Harlingen, Delfzijl, Schiedam)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2023-2030 (en cours)",
           "longueur_m": 82.3,
           "jauge_gt": null,
@@ -7600,7 +7600,7 @@
         },
         {
           "nom": "Garonne (A605), bâtiment de soutien et d'assistance métropolitain (BSAM) classe Loire",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2019 (livré juil. 2019, admis au service janv. 2020)",
           "longueur_m": 70.3,
           "jauge_gt": null,
@@ -7613,7 +7613,7 @@
         },
         {
           "nom": "Seine (A604), bâtiment de soutien et d'assistance métropolitain (BSAM) classe Loire",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2019 (livré 5 mars 2019, admis au service juil. 2019, 3e BSAM)",
           "longueur_m": 70.3,
           "jauge_gt": null,
@@ -7626,7 +7626,7 @@
         },
         {
           "nom": "Bâtiments de soutien et d'assistance métropolitains (BSAM) classe Loire (Loire, Rhône, Seine, Garonne)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2018-2019",
           "longueur_m": 70.3,
           "jauge_gt": null,
@@ -7639,7 +7639,7 @@
         },
         {
           "nom": "Rhône (A603), bâtiment de soutien et d'assistance métropolitain (BSAM) classe Loire",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2018 (livré 25 juil. 2018, admis au service janv. 2019, basé Brest)",
           "longueur_m": 70.3,
           "jauge_gt": null,
@@ -7652,7 +7652,7 @@
         },
         {
           "nom": "Loire (A602), bâtiment de soutien et d'assistance métropolitain (BSAM) classe Loire (tête de série)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2018 (livré 22 mars 2018, admis au service juil. 2018, basé Toulon)",
           "longueur_m": 70.3,
           "jauge_gt": null,
@@ -7665,7 +7665,7 @@
         },
         {
           "nom": "Dar al Beida, bâtiment hydro-océanographique multi-missions (BHO2M / HOSV 72)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2018 (livré oct./nov. 2018)",
           "longueur_m": 72,
           "jauge_gt": null,
@@ -8999,7 +8999,7 @@
         },
         {
           "nom": "Crabier (RP 10, dernier de série)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2025",
           "longueur_m": 11.95,
           "jauge_gt": null,
@@ -9012,7 +9012,7 @@
         },
         {
           "nom": "La Zélée",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "marché 2024, construction débutée 2026, lancement/essais prévus juillet 2026",
           "longueur_m": 11.9,
           "jauge_gt": null,
@@ -9025,7 +9025,7 @@
         },
         {
           "nom": "Le Tournepierre et La Paille-en-Queue (RP 10)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2024",
           "longueur_m": 11.95,
           "jauge_gt": null,
@@ -9038,7 +9038,7 @@
         },
         {
           "nom": "Prometeo",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "coques construites automne 2023 (achèvement 2026)",
           "longueur_m": 24,
           "jauge_gt": null,
@@ -9116,7 +9116,7 @@
         },
         {
           "nom": "L'Aigrette (RP 10, tête de série)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2018",
           "longueur_m": 11.95,
           "jauge_gt": null,
@@ -9129,7 +9129,7 @@
         },
         {
           "nom": "Richelieu",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2018",
           "longueur_m": 14,
           "jauge_gt": null,
@@ -9142,7 +9142,7 @@
         },
         {
           "nom": "Djebel Tamgout",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2015",
           "longueur_m": 16.6,
           "jauge_gt": null,
@@ -9181,7 +9181,7 @@
         },
         {
           "nom": "Barcarin V",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2011",
           "longueur_m": 48,
           "jauge_gt": 498,
@@ -11703,7 +11703,7 @@
       "navires_references": [
         {
           "nom": "Allures Horizon 47",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2026",
           "longueur_m": 14.25,
           "jauge_gt": null,
@@ -11716,7 +11716,7 @@
         },
         {
           "nom": "Allures 51.9",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2021",
           "longueur_m": 15.57,
           "jauge_gt": null,
@@ -11729,7 +11729,7 @@
         },
         {
           "nom": "Allures 40.9",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2019",
           "longueur_m": 12.65,
           "jauge_gt": null,
@@ -11742,7 +11742,7 @@
         },
         {
           "nom": "Allures 45.9",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2017",
           "longueur_m": 13.7,
           "jauge_gt": null,
@@ -11781,7 +11781,7 @@
         },
         {
           "nom": "Allures 44",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2004",
           "longueur_m": 13.6,
           "jauge_gt": null,
@@ -11794,7 +11794,7 @@
         },
         {
           "nom": "Allures 45",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": null,
           "longueur_m": 13.98,
           "jauge_gt": null,
@@ -12930,7 +12930,7 @@
       "navires_references": [
         {
           "nom": "Macif Santé Prévoyance",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2023",
           "longueur_m": 18.28,
           "jauge_gt": null,
@@ -12943,7 +12943,7 @@
         },
         {
           "nom": "For People",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2023",
           "longueur_m": 18.28,
           "jauge_gt": null,
@@ -12956,7 +12956,7 @@
         },
         {
           "nom": "Mālama (11th Hour Racing Team)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2021",
           "longueur_m": 18.28,
           "jauge_gt": null,
@@ -12969,7 +12969,7 @@
         },
         {
           "nom": "SVR-Lazartigue",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2021",
           "longueur_m": 32,
           "jauge_gt": null,
@@ -12982,7 +12982,7 @@
         },
         {
           "nom": "Maxi Banque Populaire XI",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2021",
           "longueur_m": 32,
           "jauge_gt": null,
@@ -12995,7 +12995,7 @@
         },
         {
           "nom": "Apivia",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2019",
           "longueur_m": 18.28,
           "jauge_gt": null,
@@ -13086,7 +13086,7 @@
         },
         {
           "nom": "Maxi Banque Populaire V",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2008",
           "longueur_m": 40,
           "jauge_gt": null,
@@ -13099,7 +13099,7 @@
         },
         {
           "nom": "Foncia",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2007",
           "longueur_m": 18.28,
           "jauge_gt": null,
@@ -21940,7 +21940,7 @@
         },
         {
           "nom": "Petro Craft (Combi 60-40, 11e et 12e unités de la série Petro Services)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2022",
           "longueur_m": 20,
           "jauge_gt": null,
@@ -21953,7 +21953,7 @@
         },
         {
           "nom": "Petro Craft 1909 et 1910 (Combi 60-40, 9e et 10e unités) - mis à l'eau le 28 oct. 2020 au site OCEA de La Rochelle",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2020",
           "longueur_m": 20,
           "jauge_gt": null,
@@ -21966,7 +21966,7 @@
         },
         {
           "nom": "Crew boats Combi 60-30 (8 premières unités de la série Petro Services, dont Petro Craft 1901-1908)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2019",
           "longueur_m": 20,
           "jauge_gt": null,
@@ -26598,7 +26598,7 @@
       "taille_max": "Assemblage/production jusqu'à 53 pieds (environ 16 m) selon les capacités annoncées du site de Canet-en-Roussillon. Plus grand modèle réellement construit : Seavy 11 (11,7 m). Pas de jauge GT pertinente (unités de plaisance < 24 m, non jaugées). Capacité industrielle annoncée d'environ 20 bateaux/an, jamais atteinte.",
       "navires_references": [
         {
-          "type": "navire",
+          "type": "Inconnu",
           "nom": "Seavy 11",
           "annee": "2022",
           "longueur_m": 11.73,
@@ -27600,7 +27600,7 @@
       "navires_references": [
         {
           "nom": "Saint-Paul II",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2026",
           "longueur_m": 14.95,
           "jauge_gt": null,
@@ -27613,7 +27613,7 @@
         },
         {
           "nom": "Le Relais",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2024",
           "longueur_m": 15.95,
           "jauge_gt": null,
@@ -27639,7 +27639,7 @@
         },
         {
           "nom": "Fludis II",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2022",
           "longueur_m": 120,
           "jauge_gt": null,
@@ -27652,7 +27652,7 @@
         },
         {
           "nom": "Gloire à Dieu",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2020",
           "longueur_m": 15.95,
           "jauge_gt": null,
@@ -27665,7 +27665,7 @@
         },
         {
           "nom": "Glendower",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2019",
           "longueur_m": 16,
           "jauge_gt": null,
@@ -27678,7 +27678,7 @@
         },
         {
           "nom": "Welsh Rock",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2019",
           "longueur_m": 16,
           "jauge_gt": null,
@@ -27691,7 +27691,7 @@
         },
         {
           "nom": "Manureva",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2019",
           "longueur_m": 20,
           "jauge_gt": null,
@@ -27704,7 +27704,7 @@
         },
         {
           "nom": "Le Mercator",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2019",
           "longueur_m": 20,
           "jauge_gt": null,
@@ -27717,7 +27717,7 @@
         },
         {
           "nom": "La Trinité",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2018",
           "longueur_m": 20,
           "jauge_gt": null,
@@ -27730,7 +27730,7 @@
         },
         {
           "nom": "Marmouset III",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2017",
           "longueur_m": 20,
           "jauge_gt": null,
@@ -27743,7 +27743,7 @@
         },
         {
           "nom": "Rose de Cascia",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2017",
           "longueur_m": 20,
           "jauge_gt": null,
@@ -28017,7 +28017,7 @@
       "navires_references": [
         {
           "nom": "Commandant Beinier",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2003",
           "longueur_m": 46.3,
           "jauge_gt": null,
@@ -28043,7 +28043,7 @@
         },
         {
           "nom": "Rollon",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1997",
           "longueur_m": 11.7,
           "jauge_gt": 19.5,
@@ -28056,7 +28056,7 @@
         },
         {
           "nom": "PC21",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": null,
           "longueur_m": 8.41,
           "jauge_gt": null,
@@ -28069,7 +28069,7 @@
         },
         {
           "nom": "RPC",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": null,
           "longueur_m": 14.8,
           "jauge_gt": null,
@@ -28082,7 +28082,7 @@
         },
         {
           "nom": "Duc d'Albe",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": null,
           "longueur_m": 14.95,
           "jauge_gt": null,
@@ -28095,7 +28095,7 @@
         },
         {
           "nom": "Sea Jet",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": null,
           "longueur_m": 6,
           "jauge_gt": 2.35,
@@ -28108,7 +28108,7 @@
         },
         {
           "nom": "La Maison Flottante",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2006",
           "longueur_m": 23,
           "jauge_gt": null,
@@ -28134,7 +28134,7 @@
         },
         {
           "nom": "Le Fleuron",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": null,
           "longueur_m": null,
           "jauge_gt": null,
@@ -29931,7 +29931,7 @@
       "navires_references": [
         {
           "nom": "Maramu (refit)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1986",
           "longueur_m": 12.8,
           "jauge_gt": null,
@@ -30640,7 +30640,7 @@
       "navires_references": [
         {
           "nom": "NÉRÉE II",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2021",
           "longueur_m": null,
           "jauge_gt": null,
@@ -30653,7 +30653,7 @@
         },
         {
           "nom": "BELOUGA II",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2020",
           "longueur_m": 11.9,
           "jauge_gt": 17.69,
@@ -30666,7 +30666,7 @@
         },
         {
           "nom": "Folly Foot",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2020",
           "longueur_m": 8.5,
           "jauge_gt": 2.81,
@@ -30679,7 +30679,7 @@
         },
         {
           "nom": "TE TI TAN",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2005",
           "longueur_m": null,
           "jauge_gt": 18.2,
@@ -30692,7 +30692,7 @@
         },
         {
           "nom": "MEN BRIAL (ex-Oceane Marina)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2002",
           "longueur_m": 11.93,
           "jauge_gt": 17.4,
@@ -30705,7 +30705,7 @@
         },
         {
           "nom": "Battant II",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": null,
           "longueur_m": null,
           "jauge_gt": null,
@@ -31272,7 +31272,7 @@
       "navires_references": [
         {
           "nom": "Botham",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2020",
           "longueur_m": 13,
           "jauge_gt": null,
@@ -31285,7 +31285,7 @@
         },
         {
           "nom": "Bleu 2 Mer (Bleu de Mer 2)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2020",
           "longueur_m": null,
           "jauge_gt": null,
@@ -31311,7 +31311,7 @@
         },
         {
           "nom": "Bleu de Mer",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2014",
           "longueur_m": null,
           "jauge_gt": null,
@@ -31324,7 +31324,7 @@
         },
         {
           "nom": "Bo 28",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2011",
           "longueur_m": 8.5,
           "jauge_gt": null,
@@ -31337,7 +31337,7 @@
         },
         {
           "nom": "La Legeote",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2007",
           "longueur_m": null,
           "jauge_gt": null,
@@ -31350,7 +31350,7 @@
         },
         {
           "nom": "Salicorne (ex Voga Longa, ex Elvire)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1988",
           "longueur_m": 8.6,
           "jauge_gt": null,
@@ -31376,7 +31376,7 @@
         },
         {
           "nom": "Monotypes d'Arcachon",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1980-1990",
           "longueur_m": 4,
           "jauge_gt": null,
@@ -31389,7 +31389,7 @@
         },
         {
           "nom": "Myrtille",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1899",
           "longueur_m": 3.33,
           "jauge_gt": null,
@@ -31402,7 +31402,7 @@
         },
         {
           "nom": "ROLLA III",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1895",
           "longueur_m": null,
           "jauge_gt": null,
@@ -36332,7 +36332,7 @@
       "navires_references": [
         {
           "nom": "Tuaheke (Tuaheke 1)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2024",
           "longueur_m": 19.5,
           "jauge_gt": null,
@@ -36345,7 +36345,7 @@
         },
         {
           "nom": "Vini Vini XI",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2022",
           "longueur_m": null,
           "jauge_gt": null,
@@ -36358,7 +36358,7 @@
         },
         {
           "nom": "Vini Vini 12",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2022",
           "longueur_m": null,
           "jauge_gt": null,
@@ -36371,7 +36371,7 @@
         },
         {
           "nom": "Vini Vini X",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2020",
           "longueur_m": 19.5,
           "jauge_gt": null,
@@ -39335,7 +39335,7 @@
       "navires_references": [
         {
           "nom": "Pen Duick (restauration/refit)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2018",
           "longueur_m": 15.1,
           "jauge_gt": null,
@@ -39348,7 +39348,7 @@
         },
         {
           "nom": "La Vaudoise (restauration)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2015",
           "longueur_m": 21.5,
           "jauge_gt": null,
@@ -39361,7 +39361,7 @@
         },
         {
           "nom": "Biche (restauration)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2012",
           "longueur_m": 21.1,
           "jauge_gt": null,
@@ -39374,7 +39374,7 @@
         },
         {
           "nom": "Enfant des Flots",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2005",
           "longueur_m": 11.33,
           "jauge_gt": 14.8,
@@ -39400,7 +39400,7 @@
         },
         {
           "nom": "Yoles de Bantry (4 unités)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "vers 2000",
           "longueur_m": 11.62,
           "jauge_gt": null,
@@ -39413,7 +39413,7 @@
         },
         {
           "nom": "Notre-Dame de Rumengol (restauration)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1945 (construction) ; 1996 = restauration Guip",
           "longueur_m": 21.7,
           "jauge_gt": 57,
@@ -39426,7 +39426,7 @@
         },
         {
           "nom": "La Recouvrance",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1992",
           "longueur_m": 25,
           "jauge_gt": null,
@@ -39452,7 +39452,7 @@
         },
         {
           "nom": "Crialeïs",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1990",
           "longueur_m": 10.5,
           "jauge_gt": null,
@@ -39465,7 +39465,7 @@
         },
         {
           "nom": "Jean & Jeanne",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1990",
           "longueur_m": 8.1,
           "jauge_gt": null,
@@ -39478,7 +39478,7 @@
         },
         {
           "nom": "Mab er Guip",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1985",
           "longueur_m": 11,
           "jauge_gt": null,
@@ -39491,7 +39491,7 @@
         },
         {
           "nom": "Nicolas Benoît (auj. Ma Préférée) - reconstruction",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1981",
           "longueur_m": null,
           "jauge_gt": null,
@@ -39504,7 +39504,7 @@
         },
         {
           "nom": "Guépards",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "diverses",
           "longueur_m": 5.5,
           "jauge_gt": null,
@@ -39517,7 +39517,7 @@
         },
         {
           "nom": "Belle-Angèle (restauration)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1991",
           "longueur_m": null,
           "jauge_gt": null,
@@ -39530,7 +39530,7 @@
         },
         {
           "nom": "Corbeau des mers (restauration)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1988 (restauration)",
           "longueur_m": null,
           "jauge_gt": null,
@@ -39543,7 +39543,7 @@
         },
         {
           "nom": "La Savoie (restauration)",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "2000",
           "longueur_m": null,
           "jauge_gt": null,
@@ -41979,7 +41979,7 @@
       "navires_references": [
         {
           "nom": "Albarquel",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1957 (chantier Pedrouicos, Lisbonne)",
           "longueur_m": 25,
           "jauge_gt": null,
@@ -41992,7 +41992,7 @@
         },
         {
           "nom": "Robin des Mers",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1951 (restauré au chantier Despierres, relancé juin 2022)",
           "longueur_m": 11.1,
           "jauge_gt": 4.56,
@@ -42005,7 +42005,7 @@
         },
         {
           "nom": "Sainte-Anne III",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1933 (Chantiers Auroux, Arcachon)",
           "longueur_m": 20.4,
           "jauge_gt": null,
@@ -42018,7 +42018,7 @@
         },
         {
           "nom": "Cupidon Fou",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1929 (restauré au chantier Despierres, relancé 2022)",
           "longueur_m": 11.22,
           "jauge_gt": null,
@@ -42031,7 +42031,7 @@
         },
         {
           "nom": "Girl Joyce",
-          "type": "navire",
+          "type": "Inconnu",
           "annee": "1885 (restaure Despierres 2020)",
           "longueur_m": 14.5,
           "jauge_gt": null,
