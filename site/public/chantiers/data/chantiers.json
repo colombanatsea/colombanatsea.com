@@ -482,8 +482,7 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_vehicules": 3,
-          "capacite_fret": "13000 m3",
+          "capacite_fret": "1500 t",
           "operateur": "Marine nationale française",
           "proprietaire": "État français (Marine nationale / DGA)",
           "timeline": [
@@ -611,8 +610,7 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_vehicules": 3,
-          "capacite_fret": "13000 m3",
+          "capacite_fret": "1500 t",
           "operateur": "Marine nationale française",
           "proprietaire": "État français (Marine nationale / DGA)",
           "timeline": [
@@ -5386,7 +5384,8 @@
               "source": "https://islesofscillysteamshipgroup.co.uk/new-vessels/scillonian-4/"
             }
           ],
-          "imo": "1056355"
+          "imo": "1056355",
+          "capacite_fret": "90 t"
         },
         {
           "nom": "Trolley de Prévaux (1er PH)",
@@ -5498,7 +5497,8 @@
               "detail": "Exploitant prevu sur la desserte fret Penzance - iles Scilly.",
               "source": "https://islesofscillysteamshipgroup.co.uk/new-vessels/menawethan/"
             }
-          ]
+          ],
+          "capacite_fret": "207 t"
         },
         {
           "nom": "Hydromer",
@@ -5585,7 +5585,8 @@
               "source": "https://france3-regions.franceinfo.fr/pays-de-la-loire/vendee/ile-d-yeu/l-insula-oya-3-reliant-l-ile-d-yeu-au-continent-de-retour-au-chantier-18-mois-seulement-apres-sa-mise-en-service-3039929.html"
             }
           ],
-          "imo": "9946453"
+          "imo": "9946453",
+          "capacite_fret": "150 t"
         },
         {
           "nom": "Kephrenn et Eneziz",
@@ -5663,7 +5664,8 @@
               "detail": "Livré le 1er août 2024 par PIRIOU à Concarneau. Première traversée transatlantique : départ Concarneau le 13 août, arrivée New York le 3 septembre 2024. Premier des huit navires de la future flotte TOWT.",
               "source": "https://www.armateursdefrance.org/actualite/anemos-towt-inaugure-son-premier-voilier-cargo-au-havre"
             }
-          ]
+          ],
+          "capacite_fret": "1100 t"
         },
         {
           "nom": "Cayor, Walo, Niani",
@@ -5747,7 +5749,8 @@
               "detail": "Voilier-cargo armé par le chocolatier-armateur Grain de Sail (Morlaix), prêt à appareiller depuis Saint-Malo. Pavillon France, IMO 9974656.",
               "source": "https://france3-regions.franceinfo.fr/bretagne/ille-et-vilaine/saint-malo/a-saint-malo-grain-de-sail-ii-un-cargo-pret-a-mettre-les-voiles-2904350.html"
             }
-          ]
+          ],
+          "capacite_fret": "350 t"
         },
         {
           "nom": "Via Alizé",
@@ -5764,7 +5767,6 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_fret": "1200 m3",
           "operateur": "Via Ocean (ex-Armement Saupiquet)",
           "proprietaire": "Groupe Bolton (Italie)",
           "timeline": [
@@ -5806,7 +5808,6 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 59,
           "operateur": "Marine argentine (Armada de la Republica Argentina)",
           "proprietaire": "Etat argentin",
           "timeline": [
@@ -5955,7 +5956,6 @@
             "diesel-electrique",
             "diesel-mdo"
           ],
-          "capacite_pax": 60,
           "operateur": "Marine nationale francaise (pour TAAF / IPEV)",
           "proprietaire": "TAAF (Terres australes et antarctiques francaises)",
           "timeline": [
@@ -5987,7 +5987,8 @@
               "detail": "Admis au service actif le 11 septembre 2017, base a Port des Galets (La Reunion) ; ravitaillement antarctique 5 mois (IPEV/TAAF), surveillance de l'ocean Indien austral 7 mois.",
               "source": "https://www.meretmarine.com/fr/marine-marchande/la-marine-nationale-prepare-l-arrivee-du-patrouilleur-polaire-l-astrolabe"
             }
-          ]
+          ],
+          "capacite_fret": "1400 t"
         },
         {
           "nom": "D'Entrecasteaux (classe D'Entrecasteaux / B2M)",
@@ -6131,8 +6132,7 @@
           "propulsion": [
             "diesel-electrique",
             "diesel-mdo"
-          ],
-          "capacite_fret": "1470 m3"
+          ]
         },
         {
           "nom": "Atlantique (ex-Saint-Antoine Marie II)",
@@ -7276,8 +7276,7 @@
           "source": "https://cmnnaval.com/news/cmn-naval-presents-new-corvette-design-seaguard-96/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 60
+          ]
         },
         {
           "nom": "HSI 32 : 39 commandés Arabie saoudite (dont 21 construits à Cherbourg, 18 assemblés Zamil Offshore), 6 Mozambique, 3 Angola",
@@ -7883,8 +7882,7 @@
           "propulsion": [
             "diesel-electrique",
             "diesel-mdo"
-          ],
-          "capacite_pax": 22
+          ]
         },
         {
           "nom": "Nordet (DF 37, FPB 100 MkII)",
@@ -8396,8 +8394,7 @@
           "propulsion": [
             "diesel-electrique",
             "diesel-mdo"
-          ],
-          "capacite_pax": 60
+          ]
         }
       ],
       "geo_source": "https://fr.mappy.com/plan/Quai-de-la-Cabaude---Port-Olona-85100-Les-Sables-d'Olonne"
@@ -8690,7 +8687,6 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 6,
           "timeline": [
             {
               "annee": "2024",
@@ -8857,7 +8853,6 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 8,
           "timeline": [
             {
               "annee": "2018",
@@ -9097,8 +9092,7 @@
           "source": "https://www.yachtbuyer.com/en/fountaine-pajot/new/power-67",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 14
+          ]
         },
         {
           "nom": "FPY70",
@@ -9245,8 +9239,7 @@
           "propulsion": [
             "hybride",
             "diesel-mdo"
-          ],
-          "capacite_pax": 8
+          ]
         },
         {
           "nom": "Alegria 67",
@@ -10546,7 +10539,6 @@
             "diesel-electrique",
             "diesel-mdo"
           ],
-          "capacite_pax": 702,
           "operateur": "Saipem",
           "proprietaire": "Saipem",
           "timeline": [
@@ -11442,7 +11434,7 @@
           "propulsion": [
             "gnl"
           ],
-          "capacite_fret": "154500 m3",
+          "capacite_fret": "154500 m3 (GNL)",
           "imo": "9320075",
           "operateur": "Gazocean SA (gestion technique) ; affrètement ENGIE",
           "proprietaire": "NYK Armateur SAS (Marseille)",
@@ -11556,7 +11548,7 @@
           "propulsion": [
             "gnl"
           ],
-          "capacite_fret": "138000 m3"
+          "capacite_fret": "138000 m3 (GNL)"
         },
         {
           "nom": "RCC Passion",
@@ -11587,7 +11579,7 @@
             "diesel-electrique",
             "diesel-mdo"
           ],
-          "capacite_fret": "154500 m3"
+          "capacite_fret": "154500 m3 (GNL)"
         },
         {
           "nom": "Deep Energy",
@@ -11695,7 +11687,7 @@
           "propulsion": [
             "gnl"
           ],
-          "capacite_fret": "154500 m3"
+          "capacite_fret": "154500 m3 (GNL)"
         },
         {
           "nom": "Leiv Eiriksson",
@@ -12734,8 +12726,7 @@
           "source": "https://www.kership.com/en/navire/opv-87-ara/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 69
+          ]
         },
         {
           "nom": "ARA Bouchard, patrouilleur hauturier OPV 87 (tête de série, ex-L'Adroit/Gowind)",
@@ -13834,7 +13825,8 @@
               "detail": "Automne 2009 : travaux de modernisation et mise aux normes, allongement de la coque d'un mètre et systèmes de sécurité modernes.",
               "source": "https://fr.wikipedia.org/wiki/Enez_Sun_3"
             }
-          ]
+          ],
+          "capacite_fret": "10 t"
         },
         {
           "nom": "Bara Pemdez",
@@ -14110,8 +14102,7 @@
           "source": "https://www.bairdmaritime.com/work-boat-world/pilotage/vessel-review-avocette-self-righting-pilot-boat-to-operate-in-frances-seine-estuary",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 10
+          ]
         },
         {
           "nom": "Tanaleis II",
@@ -14223,8 +14214,7 @@
           "source": "https://www.meretmarine.com/fr/construction-navale/les-chantiers-bernard-vont-livrer-une-vedette-de-sauvetage-aux-marquises",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 6
+          ]
         },
         {
           "nom": "Perseverance II",
@@ -14415,8 +14405,7 @@
             "velique",
             "hybride",
             "diesel-mdo"
-          ],
-          "capacite_pax": 8
+          ]
         },
         {
           "nom": "Armeria 014",
@@ -15053,7 +15042,6 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 6,
           "capacite_fret": "400 m3",
           "operateur": "Conseil departemental de la Charente-Maritime (CD17)",
           "proprietaire": "Departement de la Charente-Maritime (CD17)",
@@ -15293,8 +15281,7 @@
           "source": "https://www.meretmarine.com/fr/vie-portuaire/efinor-sea-cleaner-un-navire-de-depollution-electrique-pour-le-port-de-marseille-fos",
           "propulsion": [
             "electrique-batterie"
-          ],
-          "capacite_fret": "3 m3"
+          ]
         },
         {
           "nom": "SURFER S200X G2 (série Bourbon)",
@@ -15363,7 +15350,8 @@
               "detail": "DMS, societe fondee en 2005 aux Emirats arabes unis, specialisee dans les services offshore petrole et gaz ; Efinor Allais lui avait deja livre son premier crewboat en 2018.",
               "source": "https://en.wikipedia.org/wiki/DMS_Maritime"
             }
-          ]
+          ],
+          "capacite_fret": "4 t"
         },
         {
           "nom": "Antipol 3",
@@ -15379,8 +15367,7 @@
           "source": "https://www.meretmarine.com/fr/construction-navale/efinor-sea-cleaner-livre-une-unite-de-depollution-a-la-base-navale-de-toulon",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_fret": "750 m3"
+          ]
         },
         {
           "nom": "Navire de recherche STARESO (Calvi)",
@@ -15557,8 +15544,7 @@
           "source": "https://www.meretmarine.com/fr/construction-navale/efinor-et-seacleaners-lancent-le-mobula-8-un-navire-de-depollution",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_fret": "8 m3"
+          ]
         },
         {
           "nom": "2 x Efinor Waste Cleaner 83 (8 m, Polyeco / ile Maurice, post-Wakashio) - construits par Efinor Sea Cleaner",
@@ -15600,7 +15586,8 @@
               "detail": "Modele de reference de la gamme crewboats SURFER : 26,70 m, 4 membres d'equipage + 70 a 92 passagers, fret 3 t, ~28 noeuds. Design type, sans navire individuel nomme ni armateur unique (decline a la commande).",
               "source": "https://en.efinorallais.com/gammes-de-navires/crewboats"
             }
-          ]
+          ],
+          "capacite_fret": "3 t"
         },
         {
           "nom": "SURFER 220",
@@ -15626,7 +15613,8 @@
               "detail": "Modele de reference de la gamme crewboats SURFER : 22,70 m, 3 membres d'equipage + 50 passagers, fret 1,5 a 2 t, ~30 noeuds. Design type, sans navire individuel nomme ni armateur unique.",
               "source": "https://en.efinorallais.com/gammes-de-navires/crewboats"
             }
-          ]
+          ],
+          "capacite_fret": "2 t"
         },
         {
           "nom": "SURFER 190",
@@ -15652,7 +15640,8 @@
               "detail": "Modele de reference de la gamme crewboats SURFER : 19,10 m, 2 membres d'equipage + 30 passagers, fret 4 t, ~30 noeuds. Base technique des SURFER S200X livres a Bourbon Mobility (Gabon, Angola). Design type, sans navire individuel nomme.",
               "source": "https://en.efinorallais.com/gammes-de-navires/crewboats"
             }
-          ]
+          ],
+          "capacite_fret": "4 t"
         },
         {
           "nom": "SURFER 140",
@@ -15678,7 +15667,8 @@
               "detail": "Modele de reference de la gamme crewboats SURFER : 13,60 m, 2 membres d'equipage + 20 passagers, fret 0,75 t, ~25 noeuds. Design type, sans navire individuel nomme ni armateur unique.",
               "source": "https://en.efinorallais.com/gammes-de-navires/crewboats"
             }
-          ]
+          ],
+          "capacite_fret": "75 t"
         },
         {
           "nom": "Spill Cleaner 250",
@@ -16113,7 +16103,6 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 8,
           "timeline": [
             {
               "annee": "2018",
@@ -16791,8 +16780,7 @@
           "source": "https://www.boat-specs.com/sailing/sailboats/amel/amel-60",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 6
+          ]
         },
         {
           "nom": "AMEL 50",
@@ -17227,8 +17215,7 @@
             "velique",
             "hybride",
             "diesel-mdo"
-          ],
-          "capacite_pax": 10
+          ]
         },
         {
           "nom": "Outremer 57 (nouvelle generation)",
@@ -17264,7 +17251,8 @@
             "velique",
             "hybride",
             "diesel-mdo"
-          ]
+          ],
+          "capacite_fret": "4 t"
         },
         {
           "nom": "Outremer 52",
@@ -18849,8 +18837,7 @@
           "source": "https://www.catamarans-lagoon.com/boats/sixty-7",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 16
+          ]
         },
         {
           "nom": "Lagoon Eighty 2",
@@ -19176,7 +19163,6 @@
             "velique",
             "diesel-mdo"
           ],
-          "capacite_pax": 14,
           "timeline": [
             {
               "annee": "1984",
@@ -21332,7 +21318,6 @@
             "electrique-batterie",
             "diesel-mdo"
           ],
-          "capacite_pax": 10,
           "timeline": [
             {
               "annee": "2027",
@@ -24543,8 +24528,7 @@
           "propulsion": [
             "velique",
             "diesel-mdo"
-          ],
-          "capacite_pax": 9
+          ]
         },
         {
           "nom": "ORC 50 (ex-TS5 / TS50)",
@@ -26500,7 +26484,6 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 17,
           "timeline": [
             {
               "annee": "2017",
@@ -26525,8 +26508,7 @@
           "source": "https://www.myboat-arcachon.com/annonce/beacher-v12/33781",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 15
+          ]
         },
         {
           "nom": "Beacher V8 Open",
@@ -26558,8 +26540,7 @@
           "source": "https://hallnautique.fr/?wdk-listing=beacher-v9",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 6
+          ]
         },
         {
           "nom": "Beacher V10 Pic Nic",
@@ -26575,8 +26556,7 @@
           "source": "https://www.beacher-nautique.com/beacher-v10-pic-nic/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 14
+          ]
         },
         {
           "nom": "Beacher V10",
@@ -26592,8 +26572,7 @@
           "source": "https://www.beacher-nautique.com/beacher-v10/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 14
+          ]
         },
         {
           "nom": "Beacher V10 Trawler",
@@ -26769,8 +26748,7 @@
           "source": "https://www.bateaux.com/article/29261/djinn-7-un-deriveur-se-balader-partout",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 5
+          ]
         },
         {
           "nom": "Cap-Ferret 228 Touring",
@@ -27151,8 +27129,7 @@
           "source": "https://sealver.com/waveboat-777/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 10
+          ]
         },
         {
           "nom": "Z-line",
@@ -27184,8 +27161,7 @@
           "source": "https://sealver.com/wb-z6-z-line-z6-hevo/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 7
+          ]
         },
         {
           "nom": "Wave Boat Z6 HYBRIS",
@@ -27201,8 +27177,7 @@
           "source": "https://sealver.com/waveboat-z6-z-line-z6-hybris/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 7
+          ]
         },
         {
           "nom": "Wave Boat Z7 HEVO",
@@ -27218,8 +27193,7 @@
           "source": "https://sealver.com/waveboat-z7-hevoline-jetboat/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 8
+          ]
         },
         {
           "nom": "Wave Boat Z7 HYBRIS",
@@ -27235,8 +27209,7 @@
           "source": "https://sealver.com/waveboat-z7-z-line-z7-hybris/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 8
+          ]
         },
         {
           "nom": "Wave Boat Z8 HEVO",
@@ -27252,8 +27225,7 @@
           "source": "https://www.boatnews.com/story/30197/new-sealver-z-line-range-jet-ski-or-outboard-propulsion",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 10
+          ]
         },
         {
           "nom": "Wave Boat Z8 HYBRIS",
@@ -27269,8 +27241,7 @@
           "source": "https://sealver.com/z8-hybris/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 10
+          ]
         },
         {
           "nom": "Wave Boat 444",
@@ -27286,8 +27257,7 @@
           "source": "https://www.nauticexpo.com/prod/sealver/product-26611-505395.html",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 5
+          ]
         },
         {
           "nom": "Wave Boat 575 Rescue",
@@ -27319,8 +27289,7 @@
           "source": "https://sealver.com/en/waveboat-575-semirigid/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 8
+          ]
         },
         {
           "nom": "Wave Boat 525",
@@ -27336,8 +27305,7 @@
           "source": "https://www.nauticexpo.com/prod/sealver/product-26611-292970.html",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 6
+          ]
         },
         {
           "nom": "Wave Boat 656",
@@ -27353,8 +27321,7 @@
           "source": "https://sealver.com/wb656/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 7
+          ]
         }
       ],
       "geo_source": "https://sealver.com/shipyard/"
@@ -27471,8 +27438,7 @@
           "source": "https://www.ribwest.fr/nos-realisations/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 16
+          ]
         },
         {
           "nom": "Ribwest Pro GT (gamme GT 8-11 m)",
@@ -27552,8 +27518,7 @@
           "source": "https://www.hypenautic.fr/bateaux/ribwest-rs-7/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 12
+          ]
         },
         {
           "nom": "Ribwest Family GT",
@@ -27601,8 +27566,7 @@
           "source": "https://www.ribwest.fr/nos-realisations/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 16
+          ]
         },
         {
           "nom": "Ribwest 8.99 Fishing (Fish 9)",
@@ -27806,8 +27770,7 @@
           "source": "https://www.meretmarine.com/fr/defense/sillinger-livre-de-grands-semi-rigides-rafale-1200-a-la-gendarmerie-nationale",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 25
+          ]
         },
         {
           "nom": "Gamme RAFALE",
@@ -27839,8 +27802,7 @@
           "source": "https://gican.asso.fr/adherents/livraison-du-premier-765-proraid-a-la-marine-nationale/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 16
+          ]
         },
         {
           "nom": "820 ALURAID",
@@ -27856,8 +27818,7 @@
           "source": "https://www.meretmarine.com/fr/construction-navale/820-aluraid-le-nouveau-semi-rigide-de-sillinger-a-flotteur-renforce",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 12
+          ]
         },
         {
           "nom": "670 PRORAID (SDIS 44)",
@@ -28231,8 +28192,7 @@
           "source": "https://aasm50.com/bateaux-aluminium-manche/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 6
+          ]
         },
         {
           "nom": "Barge a fond plat",
@@ -28895,8 +28855,7 @@
           "energie": null,
           "client": "Esso Tankers",
           "classification": null,
-          "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/old-ladies-fondly-remembered-43662",
-          "capacite_fret": "100988 m3"
+          "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/old-ladies-fondly-remembered-43662"
         },
         {
           "nom": "Butagaz",
@@ -29450,7 +29409,7 @@
             "gnl",
             "diesel-mdo"
           ],
-          "capacite_fret": "8500 m3",
+          "capacite_fret": "8500 m3 (GNL)",
           "imo": "9234408",
           "operateur": "Grand Port Maritime de Nantes-Saint-Nazaire (Nantes Saint-Nazaire Port)",
           "proprietaire": "GIE Dragages-Ports",
@@ -30959,8 +30918,7 @@
             "hybride",
             "diesel-electrique",
             "diesel-mdo"
-          ],
-          "capacite_pax": 60
+          ]
         }
       ],
       "geo_source": "https://fr.kompass.com/c/ocea/fr5502001/"
@@ -31152,7 +31110,8 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 40
+          "capacite_pax": 40,
+          "capacite_fret": "5 t"
         },
         {
           "nom": "Petro Craft 1909 et 1910 (Combi 60-40, 9e et 10e unités) - mis à l'eau le 28 oct. 2020 au site OCEA de La Rochelle",
@@ -31169,7 +31128,8 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 40
+          "capacite_pax": 40,
+          "capacite_fret": "5 t"
         },
         {
           "nom": "Crew boats Combi 60-30 (8 premières unités de la série Petro Services, dont Petro Craft 1901-1908)",
@@ -31186,7 +31146,8 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 30
+          "capacite_pax": 30,
+          "capacite_fret": "5 t"
         },
         {
           "nom": "Palétuvier",
@@ -31383,8 +31344,7 @@
           "source": "https://www.snsm.org/actualites/construit-par-la-snsm-le-pourquoi-pas-iii-est-desormais-apte-au-service",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 60
+          ]
         }
       ],
       "geo_source": "https://nominatim.openstreetmap.org/search?q=7+Avenue+Louis+Martin+35400+Saint-Malo&format=json"
@@ -32123,8 +32083,7 @@
           "source": "https://www.meretmarine.com/fr/construction-navale/gatto-specialiste-des-vedettes-en-polyester",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 10
+          ]
         },
         {
           "nom": "Maximus II",
@@ -32973,8 +32932,7 @@
           "source": "https://www.pech-alu-international.com/realisations/vedette-de-surveillance-golf-du-lion/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 8
+          ]
         },
         {
           "nom": "Le Compagnon des Îles",
@@ -33008,7 +32966,8 @@
               "detail": "Exploité sur la liaison de fret véhicules/marchandises Port-Blanc (Baden) - Île aux Moines. Izenah Croisières exploite 9 navires dont 2 barges de transport de marchandises.",
               "source": "https://www.izenah-croisieres.com/transport-de-marchandises"
             }
-          ]
+          ],
+          "capacite_fret": "100 t"
         },
         {
           "nom": "Tuyuyu",
@@ -33079,8 +33038,7 @@
           "source": "https://www.meretmarine.com/fr/content/pechalu-livre-dcns-deux-nouvelles-vedettes-de-soutien-aux-plongeurs",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 12
+          ]
         },
         {
           "nom": "Donator",
@@ -33096,8 +33054,7 @@
           "source": "https://www.meretmarine.com/fr/construction-navale/pech-alu-livre-a-dcns-deux-nouvelles-vedettes-de-soutien-aux-plongeurs",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 12
+          ]
         },
         {
           "nom": "Le Vexin",
@@ -33173,7 +33130,8 @@
           "propulsion": [
             "diesel-electrique",
             "diesel-mdo"
-          ]
+          ],
+          "capacite_fret": "10 t"
         },
         {
           "nom": "Politeïa II",
@@ -33282,8 +33240,7 @@
           "source": "https://www.pech-alu-international.com/realisations/vedette-bathymetrique-aluminium-pour-les-vnf/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 6
+          ]
         },
         {
           "nom": "3 barges/pontons multifonctions VNF (Nancy 'Mosa Arduenna' 17 m, Lille 14 m, Metz 12,50 m)",
@@ -33835,7 +33792,7 @@
           "propulsion": [
             "electrique-batterie"
           ],
-          "capacite_pax": 5
+          "capacite_pax": 3
         },
         {
           "nom": "Serie de 40 FPB 110 MkII (non encore nommees, contrat 22/05/2025)",
@@ -34000,8 +33957,7 @@
           "source": "https://fr.wikipedia.org/wiki/Fouladou_(patrouilleur)",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 35
+          ]
         },
         {
           "nom": "KRI Rigel (933)",
@@ -34197,7 +34153,7 @@
           "propulsion": [
             "electrique-batterie"
           ],
-          "capacite_pax": 5
+          "capacite_pax": 3
         }
       ],
       "geo_source": "https://fr.mappy.com/poi/50ad455a84ae94e00583c338"
@@ -34953,7 +34909,8 @@
             "hybride",
             "diesel-electrique",
             "diesel-mdo"
-          ]
+          ],
+          "capacite_fret": "12 t"
         },
         {
           "nom": "Speed of Hope",
@@ -34970,7 +34927,6 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 10,
           "operateur": "Louis Dreyfus Armateurs (LDA), navire-fille du SOV Wind of Hope (affrete par Orsted)",
           "proprietaire": "Louis Dreyfus Armateurs (LDA)",
           "timeline": [
@@ -35005,7 +34961,6 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 10,
           "operateur": "Louis Dreyfus Armateurs (LDA), navire-fille du SOV Wind of Change (affrete par Orsted)",
           "proprietaire": "Louis Dreyfus Armateurs (LDA)",
           "timeline": [
@@ -35042,7 +34997,8 @@
             "hybride",
             "diesel-electrique",
             "diesel-mdo"
-          ]
+          ],
+          "capacite_fret": "12 t"
         },
         {
           "nom": "DriX H-8",
@@ -35847,8 +35803,7 @@
           "source": "https://yot-power-catamarans.com/models/yot36",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 10
+          ]
         },
         {
           "nom": "Bali 5.2",
@@ -38563,8 +38518,7 @@
           "source": "https://www.normandie-maritime.fr/actualite/manche-industrie-marine-innove-sur-son-dernier-ne--le-chalutier-le-relais/1926",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_fret": "55 m3"
+          ]
         },
         {
           "nom": "Pousseur fluvial (en construction 2023-2024)",
@@ -39055,8 +39009,7 @@
           "source": "https://web.archive.org/web/20220118101955/http://cm-mouquet.com/images/Servitude.pdf",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 4
+          ]
         },
         {
           "nom": "RPC",
@@ -39143,8 +39096,7 @@
           "energie": null,
           "client": "Oeuvres hospitalieres de l'Ordre de Malte",
           "classification": null,
-          "source": "https://web.archive.org/web/20220118112805/http://cm-mouquet.com/images/ERP.pdf",
-          "capacite_pax": 50
+          "source": "https://web.archive.org/web/20220118112805/http://cm-mouquet.com/images/ERP.pdf"
         }
       ]
     },
@@ -44199,8 +44151,7 @@
           "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-une-vedette-scientifique-pour-l-universite-de-corse",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 10
+          ]
         },
         {
           "nom": "Locman",
@@ -44216,7 +44167,8 @@
           "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-mise-a-l-eau-de-la-vedette-des-lamaneurs-lorientais-et-commande-de",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "capacite_fret": "2 t"
         },
         {
           "nom": null,
@@ -44387,7 +44339,8 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 30
+          "capacite_pax": 30,
+          "capacite_fret": "8 t"
         },
         {
           "nom": "San Ghjaseppu",
@@ -44422,7 +44375,8 @@
               "detail": "Assure le ravitaillement (vivres, fret, matériaux) et le transport de passagers vers Girolata, village non accessible par la route ; commandant cité : Laurent Macquet. Navire sous le seuil de tonnage d'attribution d'un numéro IMO (pas d'IMO).",
               "source": "https://www.meretmarine.com/fr/content/alumarine-acheve-un-bateau-fret-et-passagers-pour-la-corse"
             }
-          ]
+          ],
+          "capacite_fret": "7 t"
         },
         {
           "nom": null,
@@ -44628,8 +44582,7 @@
           "source": "https://www.meretmarine.com/fr/construction-navale/bureau-mauric-et-alumarine-un-crew-boat-pour-l-eolien-offshore",
           "propulsion": [
             "autre"
-          ],
-          "capacite_pax": 24
+          ]
         },
         {
           "nom": "SNS 275 La Barcaresienne",
@@ -44705,8 +44658,7 @@
           "energie": null,
           "client": "Navire de service pour parcs éoliens offshore atlantiques (architecte Bureau Mauric, soutien Neopolia, études Hydrocean) ; commande LD Power & Logistics / LD Armateurs pour le parc de Saint-Nazaire",
           "classification": "Coque semi-SWATH à deux flotteurs (transferts personnel jusqu'à 2,5 m de houle), aluminium",
-          "source": "https://www.meretmarine.com/fr/construction-navale/bureau-mauric-et-alumarine-un-crew-boat-pour-l-eolien-offshore",
-          "capacite_pax": 24
+          "source": "https://www.meretmarine.com/fr/construction-navale/bureau-mauric-et-alumarine-un-crew-boat-pour-l-eolien-offshore"
         }
       ],
       "geo_source": "https://nominatim.openstreetmap.org/search?q=20+boulevard+de+l%27Oc%C3%A9an+Cou%C3%ABron&format=json"
@@ -45040,8 +44992,7 @@
           "source": "https://www.jeanneau.com/boats/powerboat/7-cap-camarat-walk-around/652-cap-camarat-12-5wa",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 11
+          ]
         },
         {
           "nom": "Jeanneau Yachts 55",
@@ -46012,8 +45963,7 @@
           "source": "https://www.lagoon-catamaran.de/en/lagoon-models/lagoon-sixty-7-motor-yactht/technical-specifications.html",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 16
+          ]
         },
         {
           "nom": "Excess 15",
@@ -47237,8 +47187,7 @@
           "source": "https://www.actunautique.com/2017/07/ocqueteau-lance-en-avant-premiere-le-tout-nouveau-ostrea-800-outboard.html",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 8
+          ]
         },
         {
           "nom": "Ocqueteau Ostrea 700",
@@ -47270,8 +47219,7 @@
           "source": "https://www.ocqueteau.com/nos-gammes/ostrea/ostrea-600-timonier.html,9,6,76,0,104",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 7
+          ]
         },
         {
           "nom": "Ocqueteau Abaco 800",
@@ -47287,8 +47235,7 @@
           "source": "https://www.ocqueteau.com/nos-gammes/abaco.html,9,77,76,0,0",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 9
+          ]
         },
         {
           "nom": "Ocqueteau Abaco 22 SD",
@@ -47304,8 +47251,7 @@
           "source": "https://www.argusdubateau.fr/bateaux-a-moteurs/ocqueteau/abaco-22-sd",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 7
+          ]
         },
         {
           "nom": "Ocqueteau Abaco 21 Open",
@@ -48033,8 +47979,7 @@
           "source": "https://meta-yachts.com/en/realisations/fleur-australe/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 8
+          ]
         },
         {
           "nom": "Damien II",
@@ -48117,8 +48062,7 @@
             "hybride",
             "diesel-electrique",
             "diesel-mdo"
-          ],
-          "capacite_pax": 6
+          ]
         },
         {
           "nom": "JPB 50",
@@ -49592,8 +49536,7 @@
           "source": "https://mag.hookandnet.com/2025/01/07/2025-01tuaheke/content.html",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_fret": "47 m3"
+          ]
         },
         {
           "nom": "Vini Vini XI",
@@ -49799,8 +49742,7 @@
           "source": "https://www.tevea.cc/annonces/offre/1eef469c-4523-6fce-830a-83653512ea33",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 8
+          ]
         },
         {
           "nom": "Blouin 24 pieds (fond plat, bordé simple)",
@@ -49832,8 +49774,7 @@
           "source": "https://www.blouin.pf/catalogue",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 6
+          ]
         },
         {
           "nom": "Blouin 17' (coque en V)",
@@ -49849,8 +49790,7 @@
           "source": "https://www.blouin.pf/catalogue",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 6
+          ]
         },
         {
           "nom": "Blouin 19' (coque en V)",
@@ -49866,8 +49806,7 @@
           "source": "https://www.blouin.pf/catalogue",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 6
+          ]
         },
         {
           "nom": "Blouin Coque plate 21'",
@@ -49883,8 +49822,7 @@
           "source": "https://www.blouin.pf/catalogue",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 8
+          ]
         },
         {
           "nom": "Blouin Chaloupe 24' (fond plat)",
@@ -49900,8 +49838,7 @@
           "source": "https://www.blouin.pf/catalogue",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 6
+          ]
         },
         {
           "nom": "Blouin Coque plate 28'",
@@ -49917,8 +49854,7 @@
           "source": "https://www.blouin.pf/catalogue",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 19
+          ]
         },
         {
           "nom": "Blouin NUC 21' (version commerciale / professionnelle)",
@@ -49982,8 +49918,7 @@
           "source": "https://www.blouin.pf/catalogue",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 12
+          ]
         },
         {
           "nom": "Blouin Aile de Mouette 28'",
@@ -49999,8 +49934,7 @@
           "source": "https://www.blouin.pf/catalogue",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 12
+          ]
         },
         {
           "nom": "Blouin Aile de Mouette 32'",
@@ -50048,8 +49982,7 @@
           "source": "https://www.blouin.pf/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 8
+          ]
         }
       ],
       "geo_source": "https://www.blouin.pf/"
@@ -50413,8 +50346,7 @@
           "source": "https://en.catamarine.net/kaora-850",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 12
+          ]
         },
         {
           "nom": "KAORA 1000",
@@ -50430,8 +50362,7 @@
           "source": "https://en.catamarine.net/kaora-1000",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 16
+          ]
         },
         {
           "nom": "Catamaran sur mesure 14 m",
@@ -52179,8 +52110,7 @@
           "propulsion": [
             "hybride",
             "diesel-mdo"
-          ],
-          "capacite_pax": 12
+          ]
         },
         {
           "nom": "Rêve de Robinson (habitat flottant PMR)",
@@ -52213,8 +52143,7 @@
           "propulsion": [
             "electrique-batterie",
             "diesel-mdo"
-          ],
-          "capacite_pax": 10
+          ]
         },
         {
           "nom": "Espade 1500 (Fly)",
@@ -52246,8 +52175,7 @@
           "source": "https://bateau.fr/modeles-de-bateaux/bateaux-gamme-tarpon/tarpon-32-2020/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 8
+          ]
         },
         {
           "nom": "Tarpon 49 QP (Quattro Prestige)",
@@ -52263,8 +52191,7 @@
           "source": "https://www.lescanalous.com/en/boat/tarpon-49-qp/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 12
+          ]
         },
         {
           "nom": "Fred 700",
@@ -52312,8 +52239,7 @@
           "source": "https://bateau.fr/modeles-de-bateaux/bateaux-gamme-classic/triton-1050-2/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 8
+          ]
         },
         {
           "nom": "Tarpon 42 / 42 TP (modèle phare, premier lancé)",
@@ -52329,8 +52255,7 @@
           "source": "https://bateau.fr/en/our-models/tarpon-range/tarpon-42/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 12
+          ]
         },
         {
           "nom": "Triton 860 / 860 Fly",
@@ -52362,8 +52287,7 @@
           "source": "https://bateau.fr/en/our-models/peniche-range/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 7
+          ]
         },
         {
           "nom": "Péniche 1020 Flying Bridge",
@@ -52379,8 +52303,7 @@
           "source": "https://bateau.fr/en/our-models/peniche-range/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 5
+          ]
         },
         {
           "nom": "Espade Concept Fly",
@@ -52428,8 +52351,7 @@
           "source": "https://bateau.fr/en/our-models/transport-passengers/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 12
+          ]
         },
         {
           "nom": "Toue (Toue Cabanée)",
@@ -52445,8 +52367,7 @@
           "source": "https://bateau.fr/en/our-models/transport-passengers/toue/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 5
+          ]
         },
         {
           "nom": "Fredaine",
@@ -52462,8 +52383,7 @@
           "source": "https://www.bateau.fr/en/our-models/vintage-habitat-range/fredaine/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 5
+          ]
         },
         {
           "nom": "Triton 1060 Handy (gamme Access PMR)",
@@ -52479,8 +52399,7 @@
           "source": "https://www.bateau.fr/en/our-models/access-range/",
           "propulsion": [
             "diesel-mdo"
-          ],
-          "capacite_pax": 6
+          ]
         },
         {
           "nom": "Espade 1230 Handy (gamme Access PMR)",
@@ -53797,8 +53716,7 @@
           "propulsion": [
             "velique",
             "diesel-mdo"
-          ],
-          "capacite_pax": 4
+          ]
         },
         {
           "nom": "X.O",
@@ -53814,8 +53732,7 @@
           "source": "https://www.chantierdesileaux.com/x-o/",
           "propulsion": [
             "velique"
-          ],
-          "capacite_pax": 4
+          ]
         },
         {
           "nom": "Arcachon 26",
@@ -54125,8 +54042,7 @@
           "source": "https://www.vplp.fr/plaisance/brava-25/",
           "propulsion": [
             "velique"
-          ],
-          "capacite_pax": 4
+          ]
         },
         {
           "nom": "Muscadet",
@@ -56762,7 +56678,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": 2000,
           "capacite": "120 personnes (93 techniciens éoliens + 27 d'équipage)",
-          "capacite_pax": 120,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Diesel-électrique + batterie hybride (SeaQ ESS / Corvus Orca Energy 745 kWh) ; premier navire au monde avec propulseurs azimutaux Kongsberg à entraînement périphérique (Rim-driven) à aimants permanents ; volumes réservés pour conversion future zéro émission",
@@ -56888,7 +56803,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Équipage jusqu'à 100 ; pont et hangar hélico (AW101 ou 2 NH90) ; >60 jours d'autonomie",
-          "capacite_pax": 100,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Propulsion diesel-électrique (2 × MTU 20V 8000 M91L), 22 nœuds ; coque renforcée glace, protection NRBC (gas-citadelle en surpression)",
@@ -56934,7 +56848,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Équipage jusqu'à 100 ; pont/hangar hélico ; >60 jours d'autonomie",
-          "capacite_pax": 100,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Propulsion diesel-électrique (2 × MTU 20V 8000 M91L), 22 nœuds ; coque renforcée glace",
@@ -56973,7 +56886,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Équipage jusqu'à 100 ; pont/hangar hélico ; >60 jours d'autonomie",
-          "capacite_pax": 100,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Propulsion diesel-électrique (2 × MTU 20V 8000 M91L), 22 nœuds ; coque renforcée glace",
@@ -57191,7 +57103,6 @@
           "capacite": "600 t d'aliment ; logement 4-8 personnes ; zones stockage, veterinaire, atelier ; grues et systeme d'alimentation/monitoring Vard",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "600 t aliment",
           "energie": "Plateforme de service, alimentation electrique de bord (non detaillee)",
           "propulsion": [
             "diesel-mdo"
@@ -57229,7 +57140,6 @@
           "capacite": "600 t d'aliment ; logement 8 personnes ; zones stockage, veterinaire, atelier ; grue, systeme de stabilisation, workboat leger",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "600 t aliment",
           "energie": "Plateforme de service, alimentation electrique de bord (non detaillee)",
           "propulsion": [
             "diesel-mdo"
@@ -57428,7 +57338,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Le plus puissant OSV polyvalent de son temps : record de traction au point fixe 477 t ; grue offshore 250 t, deux ROV, moon pool ; accommodation 110 personnes ; surface de pont 1 100 m²",
-          "capacite_pax": 110,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Deux moteurs principaux Rolls-Royce Bergen B32:40V16PCD de 8 000 kW entraînant deux hélices CPP Kongsberg (propulsion diesel-électrique/mécanique)",
@@ -57648,7 +57557,7 @@
           "jauge_gt": 12800,
           "port_lourd_dwt": null,
           "capacite": "Navire d'expédition Polar Class 5 (Cat. A) à étrave inversée X-BOW, design CX104 ; 126 passagers à l'origine (138 après transformation), 112 d'équipage",
-          "capacite_pax": 138,
+          "capacite_pax": 126,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Solution diesel-électrique conçue pour réduire consommation et émissions",
@@ -57724,9 +57633,7 @@
           "jauge_gt": null,
           "port_lourd_dwt": 2300,
           "capacite": "Design ULSTEIN SX222 à TWIN X-STERN ; 126 personnes (91 cabines), pont ouvert 440 m², entrepôt 500 m² ; grue offshore 3D compensée, passerelle walk-to-work ; Maritime Innovation of the Year 2024, finaliste Ship of the Year 2024",
-          "capacite_pax": 126,
           "capacite_vehicules": null,
-          "capacite_fret": "440 m² pont ouvert + 500 m² entrepôt",
           "energie": "Propulsion hybride diesel-électrique à génératrices à vitesse variable + grandes batteries ; prêt au méthanol ; espace réservé pour batteries additionnelles (full électrique futur) ; connexion shore power",
           "propulsion": [
             "hybride",
@@ -57764,9 +57671,7 @@
           "jauge_gt": null,
           "port_lourd_dwt": 2300,
           "capacite": "Sister-ship d'Olympic Boreas ; design ULSTEIN SX222 TWIN X-STERN ; 126 personnes (91 cabines), pont ouvert 440 m², entrepôt 500 m²",
-          "capacite_pax": 126,
           "capacite_vehicules": null,
-          "capacite_fret": "440 m² pont ouvert + 500 m² entrepôt",
           "energie": "Système hybride batteries + génératrices diesel à vitesse variable ; prêt au méthanol ; shore power ; espace pour batteries additionnelles (full électrique)",
           "propulsion": [
             "hybride",
@@ -57811,7 +57716,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Premier des trois CSOV SX222 TWIN X-STERN pour Bernhard Schulte Offshore ; hybride-batterie, prêt au méthanol",
-          "capacite_pax": 132,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Hybride batteries ; prêt au méthanol vert (opérations neutres en carbone)",
@@ -57858,7 +57762,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Deuxième des trois CSOV SX222 TWIN X-STERN pour BSO ; hybride-batterie, prêt au méthanol",
-          "capacite_pax": 132,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Hybride batteries ; prêt au méthanol vert",
@@ -57905,9 +57808,7 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Troisième CSOV SX222 TWIN X-STERN de la série BSO et premier des options déclarées par des investisseurs conseillés par J.P. Morgan ; 132 POB (111 cabines, 90 individuelles) ; pont entrepôt 380 m² + cargo 360 m² ; passerelle walk-to-work compensée, grue 3D 5 t, helideck 8,6 t",
-          "capacite_pax": 132,
           "capacite_vehicules": null,
-          "capacite_fret": "380 m² entrepôt + 360 m² cargo",
           "energie": "Trois moteurs MAN 12V175D-MEV + système hybride batteries ; prêt au méthanol vert (opérations neutres en carbone) ; vitesse max 10 nœuds",
           "propulsion": [
             "hybride",
@@ -57947,7 +57848,6 @@
           "capacite": "Câblier design ST-297 (Skipsteknisk) ; longueur 155,2 m, largeur 31 m ; trois plateaux tournants d'une capacité de 13 500 t ; pose simultanée jusqu'à 4 câbles ; version améliorée du sister-ship Nexans Aurora (2021)",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "13 500 t de câble (3 plateaux tournants)",
           "energie": "Système de propulsion hybride, capable de fonctionner aux mélanges biodiesel pour réduire fortement les émissions",
           "propulsion": [
             "hybride",
@@ -58427,7 +58327,6 @@
           "capacite": "60 véhicules, 250 passagers (équipage compris) ; batteries 8 MWh (parmi les plus grandes de Norvège)",
           "capacite_pax": 250,
           "capacite_vehicules": 60,
-          "capacite_fret": "60 véhicules",
           "energie": "Propulsion batterie-hybride, batteries 8000 kWh, propulseurs azimutaux Brunvoll + contrôle BruCon PTC ; réduction des émissions jusqu'à 90%",
           "propulsion": [
             "electrique-batterie",
@@ -58467,7 +58366,6 @@
           "capacite": "60 véhicules, 250 passagers ; batteries 8 MWh ; quatrième unité (sister-ship) commandée en complément des trois premières, l'un des quatre sert de réserve",
           "capacite_pax": 250,
           "capacite_vehicules": 60,
-          "capacite_fret": "60 véhicules",
           "energie": "Propulsion batterie-hybride, batteries 8000 kWh, propulseurs azimutaux Brunvoll",
           "propulsion": [
             "electrique-batterie",
@@ -58507,7 +58405,6 @@
           "capacite": "Chargement jusqu'à 1000 t de poisson/heure ; production de 16,8 millions de litres d'eau douce/jour ; largeur 23 m",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "~12 000 t (port en lourd été), poisson vivant",
           "energie": "Propulsion diesel (transporteur de poisson vivant)",
           "propulsion": [
             "diesel-mdo"
@@ -58552,7 +58449,6 @@
           "capacite": "Capacité 3250 m³ en trois cuves circulaires ; 6e navire de la série Havtrans",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "3250 m³ poisson vivant",
           "energie": null,
           "propulsion": [
             "diesel-mdo"
@@ -59696,7 +59592,6 @@
           "capacite": "Cale 2000 m³, congélation 100 t/jour, 30 personnes à bord",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "2000 m³ cale",
           "energie": "Hybride diesel-électrique/diesel-mécanique ; batterie 1130 kWh (peak shaving et réserve de chalutage) ; 2 hélices de 3800 mm ; économies 25-40% ; traction au point fixe 85 t à 2,5 nœuds",
           "propulsion": [
             "hybride",
@@ -59892,7 +59787,6 @@
           "capacite": "3 900 m³ de transport vivant ; déplacement 3 623 t",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "3900 m3",
           "energie": "Hybride : 3 x générateurs diesel Yanmar 6EY22ALW (env. 1300 kW chacun) + pack batterie Siemens 600 kW ; propulsion électrique ; réducteur/hélice Finnøy",
           "propulsion": [
             "hybride",
@@ -59979,7 +59873,6 @@
           "capacite": "2 800 m³ (plateforme série Rostein)",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "2800 m3",
           "energie": "Diesel / diesel-électrique (série viviers Rostein, équipement Tier III)",
           "propulsion": [
             "diesel-electrique",
@@ -60172,7 +60065,6 @@
           "capacite": "Vivier 1 200 m³ répartis sur 2 cuves ; équipage 10 personnes",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "1200 m3",
           "energie": "Hybride : propulsion diesel-électrique + batterie ESS (peak shaving) ; forte capacité courant de quai ; réduction NOx ~90% par purification des gaz d'échappement",
           "propulsion": [
             "hybride",
@@ -60219,7 +60111,6 @@
           "capacite": "Vivier 3 000 m³ / 400-450 t de poisson vivant ; 2 cuves à cloisons coulissantes ; refroidissement RSW",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "3000 m3",
           "energie": "Diesel mécanique : moteur principal Yanmar 6EY26W 1 920 kW à 750 tr/min, réducteur/hélice Brunvoll Volda ; auxiliaires 2 x Caterpillar 3512C + 1 Scania DI13",
           "propulsion": [
             "diesel-mdo"
@@ -60257,7 +60148,6 @@
           "capacite": "Vivier 3 000 m³ ; smoltboat dédié ; transport fermé zéro émission (surveillance, nettoyage et traitement de toute l'eau)",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "3000 m3",
           "energie": "Motorisation Yanmar (série Aas Mek/Sølvtrans dite Aurora)",
           "propulsion": [
             "diesel-mdo"
@@ -60701,9 +60591,7 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Capacité de chargement d'environ 700 t ; système de palangre, moonpool de relevage des lignes",
-          "capacite_pax": 33,
           "capacite_vehicules": null,
-          "capacite_fret": "700 t",
           "energie": "Propulsion hybride économe en énergie avec solution batterie de load-shaving et transmission à deux rapports ; design MT1115-L avec soutes additionnelles ouvrant la possibilité de carburants renouvelables type méthanol (réduction CO2 70-80 % visée)",
           "propulsion": [
             "hybride",
@@ -60875,9 +60763,7 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "425 m³ de cuves RSW",
-          "capacite_pax": 11,
           "capacite_vehicules": null,
-          "capacite_fret": "425 m³ RSW",
           "energie": "Système hybride à fréquence variable : moteur principal Yanmar 6EY22AW de 1 370 kW via réducteur Brunvoll Volda, hélice à pas variable (CPP), pack batterie ; projet soutenu par Enova",
           "propulsion": [
             "hybride",
@@ -60921,9 +60807,7 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "425 m³ de cuves RSW",
-          "capacite_pax": 11,
           "capacite_vehicules": null,
-          "capacite_fret": "425 m³ RSW",
           "energie": "Système hybride à fréquence variable identique au Støttfjord (Yanmar 6EY22AW 1 370 kW, CPP Brunvoll Volda, pack batterie ; soutien Enova)",
           "propulsion": [
             "hybride",
@@ -60962,7 +60846,6 @@
           "capacite": "499 m³ de cuves RSW, installation de réfrigération 710 kW",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "499 m³ RSW",
           "energie": "Hybride : moteur principal Caterpillar-MaK 6M20 749 kW, auxiliaire Caterpillar C32, génératrice d'arbre, hélice Kumera Helseth VSD, 2 propulseurs latéraux ZF, pack batterie Corvus Orca Energy 723 kWh",
           "propulsion": [
             "hybride",
@@ -61000,9 +60883,7 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Environ 420 t dans 500 m³ de cuves RSW",
-          "capacite_pax": 10,
           "capacite_vehicules": null,
-          "capacite_fret": "500 m³ RSW (~420 t)",
           "energie": "Diesel : moteur principal Yanmar 6EY26W 1 920 kW à 750 tr/min, réducteur et hélice Brunvoll Volda (non hybride)",
           "propulsion": [
             "diesel-mdo"
@@ -61038,9 +60919,7 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "206 m³ de cale réfrigérée, 90 m³ de soutes",
-          "capacite_pax": 14,
           "capacite_vehicules": null,
-          "capacite_fret": "206 m³ cale réfrigérée",
           "energie": "Diesel (design Seacon SC28)",
           "propulsion": [
             "diesel-mdo"
@@ -62030,9 +61909,7 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "12 personnes ; pont de travail dimensionné pour 40 t d'équipement environnemental/pompage ; grue Palfinger PK50002 (~48 t, portée 20 m)",
-          "capacite_pax": 12,
           "capacite_vehicules": null,
-          "capacite_fret": "40 t de pont",
           "energie": "Tout-électrique sur batteries (pack Corvus fourni via Brunvoll Mar-El), propulseur latéral Sleipner Motor, réducteur Helseth/ZF ; coque renforcée glace pour l'Oslofjord",
           "propulsion": [
             "electrique-batterie"
@@ -62184,7 +62061,6 @@
           "capacite": "1800 m³ de capacité vivier ; équipée pour la délousing thermique",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "1800 m³ vivier",
           "energie": "Diesel (vivier moderne), conception Sawicon",
           "propulsion": [
             "diesel-mdo"
@@ -62281,9 +62157,7 @@
           "jauge_gt": 499,
           "port_lourd_dwt": null,
           "capacite": "7 personnes d'équipage ; pont de travail 215 m² ; traction au point fixe 40 t ; vitesse 13 nœuds",
-          "capacite_pax": 7,
           "capacite_vehicules": null,
-          "capacite_fret": "Pont 215 m²",
           "energie": "Hybride : batterie 1445 kWh (Corvus, livrée par Austevoll Elektro, ~10 h de travail sur une charge), moteur principal Yanmar 6EY22AWS, auxiliaire Caterpillar C32, réducteur/hélice Finnøy, propulseurs latéraux Schottel STT 170 ; équipements de pont électriques",
           "propulsion": [
             "hybride",
@@ -62321,9 +62195,7 @@
           "jauge_gt": null,
           "port_lourd_dwt": 285,
           "capacite": "7 hommes d'équipage ; ~190 m³ de cargaison ; deux grues de pont ; conçu pour le remorquage et le transport de fret lourd ; visibilité timonerie 360°",
-          "capacite_pax": 7,
           "capacite_vehicules": null,
-          "capacite_fret": "~190 m³",
           "energie": "Hybride : pack batterie 1000 kWh (économie ~340 t CO2/an), 2× Scania DI16 90M ; propulsion électrique sur batterie",
           "propulsion": [
             "hybride",
@@ -62538,7 +62410,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Pont de travail ~148 m², treuil 80 t, 2 grues HS.Marine, traction au point fixe > 25 t, hébergement 12 personnes",
-          "capacite_pax": 12,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Hybride diesel-électrique : 2 moteurs électriques ABB de 750 kW, 3 groupes Scania DI13, batterie 2 000 kWh, réseau DC Haf Power Solutions, ligne d'arbre/réducteur Finnøy",
@@ -62649,7 +62520,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "24,8 x 13 m, pont 175 m², treuil de pont 80 t, cabestan 5 t, tow pins, grandes grues, hébergement 5 personnes",
-          "capacite_pax": 5,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": null,
@@ -62678,7 +62548,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Identique au FDA Finn (sister-ship)",
-          "capacite_pax": 5,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": null,
@@ -62861,7 +62730,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "28,9 x 12,6 m, deux grues, hébergement 10 personnes en 8 cabines, opération 24/7",
-          "capacite_pax": 10,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Hybride à batterie : pack 1 051 kWh",
@@ -62900,7 +62768,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Identique au sister-ship (28,9 x 12,6 m, 2 grues, 10 personnes)",
-          "capacite_pax": 10,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Hybride à batterie : pack 1 051 kWh",
@@ -63568,7 +63435,7 @@
           "capacite": "Pont ouvert 200 m² (135 t de charge utile), équipage 6, grues/passerelle/treuils et salle de contrôle ROV; traction au point fixe 20 t; vitesse de service 12 nœuds",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "135 t pont (200 m²)",
+          "capacite_fret": "135 t",
           "energie": "Hybride batterie: deux diesels Nogva 500 kW + deux moteurs électriques 375 kW + batterie Hagal Ocean 1000 kWh; deux hélices à pas variable 1700 mm, deux propulseurs latéraux 180 kW (PMH); opération zéro émission autour des cages",
           "propulsion": [
             "hybride",
@@ -64352,7 +64219,6 @@
           "capacite": "~2000 m3 de cales; senneur/chalutier pelagique",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "~2000 m3",
           "energie": "Diesel; deux moteurs Bergen B32:40 L9P, 4500 kW chacun a 750 tr/min",
           "propulsion": [
             "diesel-mdo"
@@ -64635,7 +64501,6 @@
           "capacite": "290 passagers, 80 voitures, 10 remorques",
           "capacite_pax": 290,
           "capacite_vehicules": 80,
-          "capacite_fret": "10 remorques",
           "energie": "100% électrique sur batteries avec solution de charge rapide ; design LMG 80-DEH2 ; vitesse de service 10 nœuds ; navire conçu pour un éventuel rétrofit hydrogène",
           "propulsion": [
             "electrique-batterie"
@@ -64671,9 +64536,7 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Grue NOV 250 t ; carrousel à câble 4000 t sous le pont ; hébergement 130 personnes",
-          "capacite_pax": 130,
           "capacite_vehicules": null,
-          "capacite_fret": "carrousel câble 4000 t",
           "energie": "Diesel-électrique avec technologie de batteries pour réduire consommation et émissions",
           "propulsion": [
             "diesel-electrique",
@@ -64822,7 +64685,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "8 élèves + 1 enseignant, double poste de conduite ; grue Fassi 3 t, haleurs 800 kg",
-          "capacite_pax": 9,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Système hybride HybridX : moteur diesel 290 ch à 1800 tr/min + moteur électrique 132 kW, batteries refroidies par eau permettant la propulsion électrique par tout temps ; coque composite moulée sous vide",
@@ -64864,7 +64726,6 @@
           "capacite": "Cale 20 m³, surface de travail sur le pont 24 m²",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "cale 20 m³",
           "energie": "Combinaison moteurs diesel + batteries réduisant la consommation de fossile de ~50% et les heures de fonctionnement moteur de 50 à 80% ; deuxième navire de pêche hybride-électrique commercial de Selfa après Karoline",
           "propulsion": [
             "hybride",
@@ -65315,7 +65176,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "USV hydrographique polyvalent de 8 m, 12 nœuds, autonomie de navigation > 400 h, moonpool pour capteurs hydroacoustiques ; système d'autonomie K-MATE",
-          "capacite_pax": 0,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Propulsion diesel-électrique avec contrôle autonome/supervisé (détail moteur non publié)",
@@ -65353,7 +65213,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "USV offshore de 24 m piloté depuis le centre d'opérations à distance (ROC) de Horten, conçu pour opérations sous-marines sans équipage (ROV)",
-          "capacite_pax": 0,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Propulsion électrique / télé-opérée (Massterly ROC), détail énergie non publié",
@@ -66264,7 +66123,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "87 personnes (jusqu'à 120) ; gangway compensé 3D avec ascenseur, grue 3D autonome",
-          "capacite_pax": 87,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Diesel-électrique avec système hybride-batterie (zéro émission par périodes), préparé pour le méthanol vert ; design VARD 4 19",
@@ -66304,7 +66162,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "87 personnes (60 techniciens éolien + jusqu'à 27 équipage) ; gangway compensé 3D SEAONICS avec ascenseur, boat landing réglable",
-          "capacite_pax": 87,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Diesel-électrique préparé pour solutions batterie (opérations hybrides), design VARD 4 19, deuxième de cinq CSOV neufs Vard pour Norwind",
@@ -66343,7 +66200,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "87 personnes ; gangway compensé 3D avec ascenseur, grue 3D autonome, boat landing réglable",
-          "capacite_pax": 87,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Solutions batterie installées pour opérations hybrides, design VARD 4 19, beam 19,5 m",
@@ -66389,9 +66245,7 @@
           "jauge_gt": 9675,
           "port_lourd_dwt": 10800,
           "capacite": "90 personnes ; double carrousel de câbles (pont + sous-pont), capacité totale 8 000 t, pose de 2 câbles simultanément ; DP2",
-          "capacite_pax": 90,
           "capacite_vehicules": null,
-          "capacite_fret": "8 000 t de câbles (double carrousel)",
           "energie": "Hybride avec grande installation batterie, connexion shore supply, moteurs future-fuel ready (e-fuels), fonctionne au biocarburant ; système de management d'énergie avancé réduisant CO2/NOx/SOx",
           "propulsion": [
             "hybride",
@@ -66428,7 +66282,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Jusqu'à 120 personnes ; gangway compensé avec ascenseur, boat landing réglable, systèmes offshore motion-compensated",
-          "capacite_pax": 120,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Hybride diesel-électrique : 4 moteurs MAN methanol-ready + pack batterie Vard, préparé conversion future au méthanol",
@@ -66475,7 +66328,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Jusqu'à 120 personnes ; deuxième CSOV hybride de la série Windward",
-          "capacite_pax": 120,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Hybride-batterie préparé pour le méthanol vert, beam 19,5 m",
@@ -66515,7 +66367,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "60 personnes ; gangway anti-pilonnement intégré avec ascenseur, grue 3D, boat landing CTV, grand entrepôt",
-          "capacite_pax": 60,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Grand système de puissance batterie pour réduire les émissions (opérations hybrides) ; PSV oil & gas reconverti pour le renouvelable",
@@ -66811,7 +66662,6 @@
           "jauge_gt": 7764,
           "port_lourd_dwt": 4410,
           "capacite": "Navire sismique 2D/3D ; après conversion 2016, hébergement de 125 personnels de parcs éoliens offshore",
-          "capacite_pax": 125,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Moteur principal MaK 9M32, 2 x 5 832 bhp (diesel) ; propulsion diesel-électrique",
@@ -67381,7 +67231,6 @@
           "capacite": "Production 45 000 barils/jour, stockage 400 000 barils ; 32 000 t, 117 m de haut",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "Stockage 400 000 barils",
           "energie": "Unité de production pétrolière flottante (combustibles fossiles)",
           "propulsion": [
             "diesel-mdo"
@@ -68602,7 +68451,6 @@
           "capacite": "852 passagers (1 000 prévus initialement), 127 voitures ou 16 PL",
           "capacite_pax": 852,
           "capacite_vehicules": 127,
-          "capacite_fret": "16 PL",
           "energie": "Bipropulsion (dual-fuel) GNL ou MGO bas soufre : 2 x Wärtsilä 34DF 3 000 kW + 2 x Wärtsilä 20DF 920 kW, hélices à pas variable, cuve GNL 147 m³ inox double paroi ; 16,5 nœuds. Premier navire britannique à propulsion bipropulsion GNL/MGO",
           "propulsion": [
             "gnl",
@@ -68662,7 +68510,6 @@
           "capacite": "852 passagers, 127 voitures ou 16 PL",
           "capacite_pax": 852,
           "capacite_vehicules": 127,
-          "capacite_fret": "16 PL",
           "energie": "Bipropulsion (dual-fuel) GNL ou MGO (sister-ship de Glen Sannox) ; ~3 000 t au lancement",
           "propulsion": [
             "gnl",
@@ -69241,7 +69088,6 @@
           "capacite": "Peut immerger pour charger des navires/charges jusqu'à 137 m de long et 12 m de tirant d'eau ; une des plus grandes barges de ce type en Europe",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "charge ≤ 137 m, tirant d'eau ≤ 12 m",
           "energie": "Barge (sans propulsion propre, remorquée)",
           "propulsion": [
             "autre"
@@ -69378,7 +69224,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Beam 10,5 m, tirant d'eau 2,5 m ; bollard pull 17 t ; grues HS.Marine AK79 et AK145 ; 2 équipes de 3",
-          "capacite_pax": 3,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Propulsion diesel-électrique hybride : 2 x Caterpillar C18 conformes IMO Tier III, auxiliaire Caterpillar C12, système batterie hybride 130 kWh pour stockage et exploitation zéro émission ponctuelle ; propulseur d'étrave 170 kW, propulseur arrière 105 kW",
@@ -69426,7 +69271,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Beam 8,35 m, tirant d'eau 2,3 m ; grue avant 72 t + grue 13 t ; 2 équipiers permanents + 2 personnels",
-          "capacite_pax": 4,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Propulsion diesel avec pack batterie hybride permettant d'arrêter les génératrices la nuit ou entre opérations (économie de carburant, réduction CO2 et bruit) : 2 x Doosan 4L126TI de 335 kW, génératrices 120 kW et 20 kW, 2 hélices à pas fixe",
@@ -69476,7 +69320,6 @@
           "capacite": "Longueur enregistrée 23,95 m, beam 7,50 m, creux 4,20 m ; déplacement 310 t ; cale 700 caisses ; équipage 6-8",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "700 caisses",
           "energie": "Diesel-mécanique : Caterpillar C32 (559 kW @ 1800 tr/min), premier C32 Tier III du Royaume-Uni avec système SCR ; réducteur Masson Marine W7400 (9,077:1), hélice 2,5 m sous tuyère ; auxiliaire Hyundai 199 kW + 2 moteurs électriques 45 kW pour relevage au port",
           "propulsion": [
             "diesel-mdo"
@@ -69512,9 +69355,7 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Beam 7,4 m ; 7 membres d'équipage ; gréement pour 11 dragues par bord ; cale ~66 000 lb de coquilles ensachées",
-          "capacite_pax": 7,
           "capacite_vehicules": null,
-          "capacite_fret": "~66 000 lb (~30 t) de coquilles Saint-Jacques",
           "energie": "Diesel-mécanique : Mitsubishi S6R2 entraînant une hélice 2500 mm sous tuyère via réducteur Masson Marine W6400 (7,446:1)",
           "propulsion": [
             "diesel-mdo"
@@ -69552,7 +69393,6 @@
           "capacite": "Beam 9,0 m, tirant d'eau 2,25 m, creux 3,1 m ; capacité de pont 125 t ; 2 grues à flèche articulée HS.Marine",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "125 t (capacité de pont)",
           "energie": "Diesel : 2 x Doosan 4L126CAKH de 373 kW @ 2000 tr/min, réducteurs D-I DMTP6500, 2 hélices Teignbridge, propulseur latéral Kort Propulsion, génératrice Doosan AD136TI",
           "propulsion": [
             "diesel-mdo"
@@ -69709,7 +69549,6 @@
           "capacite": "Longueur enregistrée 21,83 m, beam 7,60 m, creux 4,15 m ; déplacement 310 t ; cale 600 caisses ; gasoil 21 000 L, eau douce 15 000 L ; équipage 6-8 ; vitesse 10,0 nœuds",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "600 caisses",
           "energie": "Diesel-mécanique : Caterpillar C18 (600 hp) IMO Tier III avec SCR/AdBlue ; ligne d'arbre CPP Novga (ex-Heimdal), hélice à pas variable 2,3 m",
           "propulsion": [
             "diesel-mdo"
@@ -69778,7 +69617,6 @@
           "capacite": "Longueur enregistrée 23,95 m, beam 7,80 m, creux moulé 4,20 m ; cale 1150-1180 caisses ; vitesse 10,7 nœuds ; équipage 6-8",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "1150-1180 caisses",
           "energie": "Diesel-mécanique : Caterpillar C32 (750 hp @ 1600-1800 tr/min), réducteur réversible Masson Marine W7400 (9,077:1), hélice à pas fixe Wärtsilä 2,5 m ; auxiliaire Cummins QSL9-M (330 hp) ; propulseur d'étrave 280 hp",
           "propulsion": [
             "diesel-mdo"
@@ -69816,7 +69654,6 @@
           "capacite": "Longueur enregistrée 23,95 m, beam 7,80 m, creux moulé 4,20 m ; cale 1150-1180 caisses ; vitesse 10,7 nœuds",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "1150-1180 caisses",
           "energie": "Diesel-mécanique : Caterpillar C32 (750 hp), réducteur Masson Marine W7400, hélice à pas fixe Wärtsilä 2,5 m ; auxiliaire Cummins QSL9-M ; propulseur d'étrave 280 hp (jumeau de Crystal River)",
           "propulsion": [
             "diesel-mdo"
@@ -70353,7 +70190,6 @@
           "capacite": "Charge utile 26 tonnes ; déplacement 30 tonnes",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "26 t",
           "energie": "Diesel, deux moteurs Cummins (120 ch cumulés)",
           "propulsion": [
             "diesel-mdo"
@@ -70446,7 +70282,6 @@
           "capacite": "Pont de chargement 120 m², charge de pont 60 t ; tirant d'eau 1,7 m ; largeur 8,4 m",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "60 t (charge de pont)",
           "energie": "100% électrique à batteries, 2 moteurs électriques de 210 kW (420 kW total), 2 propulseurs Hydromaster série 3, recharge par conteneur shore-power (unité aussi embarquable pour étendre l'autonomie), vitesse 8 nœuds",
           "propulsion": [
             "electrique-batterie"
@@ -71111,7 +70946,7 @@
           "port_lourd_dwt": null,
           "capacite": "195 passagers ; 34-40 voitures + 4 camions",
           "capacite_pax": 195,
-          "capacite_vehicules": 34,
+          "capacite_vehicules": 40,
           "capacite_fret": null,
           "energie": "2 moteurs diesel Scania AB entraînant des propulseurs azimutaux",
           "propulsion": [
@@ -71471,7 +71306,6 @@
           "capacite": "150 passagers ; 23 voitures ou 2 PL",
           "capacite_pax": 150,
           "capacite_vehicules": 23,
-          "capacite_fret": "2 PL",
           "energie": "Hybride diesel-électrique : 3 × Volvo Penta D13 MG + batteries lithium-ion ; 2 moteurs à aimants permanents 375 kW ; propulsion 2 × Voith ; réduction d'au moins 20% de carburant et de CO2",
           "propulsion": [
             "hybride",
@@ -71517,7 +71351,7 @@
           "port_lourd_dwt": null,
           "capacite": "195 passagers ; 34-40 voitures + 4 camions",
           "capacite_pax": 195,
-          "capacite_vehicules": 34,
+          "capacite_vehicules": 40,
           "capacite_fret": null,
           "energie": "2 moteurs diesel Scania AB entraînant des propulseurs azimutaux",
           "propulsion": [
@@ -71942,7 +71776,6 @@
           "capacite": "Navires FSS de 216 m, deplacement > 39 000 t, les plus grands jamais construits par Navantia ; Methil contribue a la fabrication de blocs/modules dans le cadre Team Resolute (Navantia UK, H&W, BMT), contrat 1,6 Md GBP (jan. 2023). Assemblage final exclusivement a Belfast ; sections avant a Appledore, centrale a Belfast, arriere a Cadix",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "munitions, vivres et approvisionnements pour les porte-avions et escorteurs de la Royal Navy",
           "energie": "propulsion fournie par MAN Energy Solutions (package diesel)",
           "propulsion": [
             "diesel-mdo"
@@ -72592,7 +72425,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Déplacement 640 t ; équipage 43 ; vitesse >35 nœuds ; plateforme hélicoptère AW109",
-          "capacite_pax": 43,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "CODOG : 4 turbines à gaz Vericor TF50A (16 MW) + 2 diesels MTU (2,6 MW), 2 hydrojets Kamewa 125SII",
@@ -72637,7 +72469,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Déplacement 640 t ; équipage 43",
-          "capacite_pax": 43,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "CODOG turbines à gaz + diesels, hydrojets",
@@ -72675,7 +72506,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Déplacement 640 t ; équipage 43",
-          "capacite_pax": 43,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "CODOG turbines à gaz + diesels, hydrojets",
@@ -72713,7 +72543,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Déplacement 640 t ; équipage 43",
-          "capacite_pax": 43,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "CODOG turbines à gaz + diesels, hydrojets",
@@ -72751,7 +72580,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Déplacement 640 t ; équipage 43",
-          "capacite_pax": 43,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "CODOG turbines à gaz + diesels, hydrojets",
@@ -73817,7 +73645,6 @@
           "capacite": "30 passagers + 1 membre d'equipage; charge utile max 3 000 kg",
           "capacite_pax": 30,
           "capacite_vehicules": null,
-          "capacite_fret": "3000 kg charge utile",
           "energie": "100% electrique: 2 moteurs C-Pod 110 kW continu / 160 kW crete, batterie 378 kWh nominal (336 kWh utile), charge DC jusqu'a 300 kW (~45 min 10-85%); hydrofoils retractables en fibre de carbone, vol au-dessus de 18 noeuds",
           "propulsion": [
             "electrique-batterie"
@@ -73905,7 +73732,7 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "6 personnes (5 passagers + 1 pilote)",
-          "capacite_pax": 6,
+          "capacite_pax": 5,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "100% electrique: moteur C-Pod (45/50 kW), batterie 69 kWh (technologie Polestar), vitesse de pointe 27 noeuds, croisiere 22 noeuds, autonomie 57 nm a 22 noeuds; coque fibre de carbone 1 950 kg",
@@ -73943,7 +73770,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "6 personnes",
-          "capacite_pax": 6,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "100% electrique, batterie 69 kWh Polestar 2, C-Pod, hydrofoils; prix de depart ~450 000 USD",
@@ -74776,7 +74602,6 @@
           "capacite": "Pont de travail >1400 m2 ; grue electrique 250 t a regeneration vers batteries ; travaux lourds eolien + subsea avec zero emission nette ; premier du genre",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "pont >1400 m2",
           "energie": "Moteurs dual-fuel methanol vert + packs batteries ; grue electrique regenerative",
           "propulsion": [
             "methanol",
@@ -75300,7 +75125,6 @@
           "capacite": "72 passagers + 7 voitures ou une remorque de 22 t",
           "capacite_pax": 72,
           "capacite_vehicules": 7,
-          "capacite_fret": "1 remorque 22 t",
           "energie": "Hybride batterie-électrique : 2 moteurs SEAM 749 kW, pack batteries 2 940 kW, plateforme e-SEA Drive ; vitesse de service 22 nœuds ; opération 100% électrique zéro CO2 sur la majorité des liaisons",
           "propulsion": [
             "hybride",
@@ -75910,7 +75734,6 @@
           "capacite": "Grue compensée 900 t, système de pose inclinable 650 t, panier de stockage 3 500 t, opérations jusqu'à 4 000 m",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "Panier de stockage 3 500 t",
           "energie": "Navire offshore à propulsion diesel-électrique avec positionnement dynamique, conçu pour faible consommation",
           "propulsion": [
             "diesel-electrique"
@@ -76578,7 +76401,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Equipage 3 (2 officiers, 1 mecanicien) + 18 fantassins amphibies equipes (demi-section)",
-          "capacite_pax": 21,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "2 diesels Scania DSI14 V8 de 625 ch entrainant 2 hydrojets Kamewa FF; 40 noeuds; 240 nq a 20 noeuds; coque aluminium, tirant d'eau 0,8 m",
@@ -76637,7 +76459,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Equipage 3 + demi-section; station d'armes telecommandee Saab Trackfire",
-          "capacite_pax": 21,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "2 diesels de 900 ch + hydrojets; 45 noeuds; ~300 nq d'autonomie; coque aluminium",
@@ -76682,7 +76503,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Equipage + demi-section; armement et navigation GPS renforces",
-          "capacite_pax": 21,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Diesels + hydrojets; coque aluminium",
@@ -77417,7 +77237,6 @@
           "capacite": "1 250 passagers, 240 voitures (ou 260 camions / 9 voitures de train), ligne Helsingør-Helsingborg (~4 km)",
           "capacite_pax": 1250,
           "capacite_vehicules": 240,
-          "capacite_fret": "260 camions ou 9 voitures de train",
           "energie": "Converti en 2018 à la propulsion tout-électrique : batterie Li-ion Corvus 4,16 MWh (57 t), portée à 6,4 MWh en 2022 ; recharge par bras robotisé au quai (~10,5 MW en 6-9 min) ; 2 diesels Wärtsilä-Vasa conservés en secours",
           "propulsion": [
             "electrique-batterie",
@@ -78306,9 +78125,8 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "147-150 passagers et 28-30 vélos ; autonomie ~16 milles nautiques en batterie",
-          "capacite_pax": 147,
+          "capacite_pax": 150,
           "capacite_vehicules": null,
-          "capacite_fret": "28 vélos",
           "energie": "Catamaran à foils, coque carbone (~30% plus légère que l'aluminium) ; deux options : batteries LTO 500 kWh (< 15 milles) ou deux piles à combustible hydrogène de 500 kW (> 15 milles) ; énergie ~50% inférieure à un catamaran conventionnel",
           "propulsion": [
             "electrique-batterie",
@@ -79937,7 +79755,6 @@
           "capacite": "Capacité de levage 80 000 tonnes; largeur 88 m",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "levage 80 000 t",
           "energie": null,
           "propulsion": [
             "autre"
@@ -80327,7 +80144,6 @@
           "capacite": "1 386 passagers, 456 voitures",
           "capacite_pax": 1386,
           "capacite_vehicules": 456,
-          "capacite_fret": "1120 ml",
           "energie": "4 × Wärtsilä, 15 360 kW",
           "propulsion": [
             "diesel-mdo"
@@ -80637,7 +80453,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "3 membres d'équipage + 18 soldats (demi-section) ; 4 mines ou 6 grenades sous-marines",
-          "capacite_pax": 21,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "2 diesels Scania DSI14 V8 (625 ch) entraînant 2 hydrojets Kamewa FF ; 40 nœuds",
@@ -80682,7 +80497,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Variante renforcée, déplacement max 24,5 t ; station d'arme téléopérée Saab Trackfire",
-          "capacite_pax": 21,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "2 moteurs de 900 ch entraînant 2 hydrojets mixed-flow ; >40 nœuds, 300 milles à 38 nœuds",
@@ -80720,7 +80534,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Concept renouvelé : hydrojets à rendement amélioré, ergonomie, système de combat et capteurs Trackfire",
-          "capacite_pax": 21,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Diesel-hydrojets de nouvelle génération à rendement supérieur",
@@ -80782,7 +80595,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "48 unités au total pour la Marine mexicaine",
-          "capacite_pax": 21,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Diesel-hydrojets (configuration CB90)",
@@ -80813,7 +80625,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "19 unités en service, jusqu'à 38 promises",
-          "capacite_pax": 21,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Diesel-hydrojets (configuration CB90)",
@@ -81650,7 +81461,6 @@
           "capacite": "Plus grand navire jamais construit a Oskarshamn",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "39 026 t (port en lourd)",
           "energie": "Diesel (propulsion conventionnelle)",
           "propulsion": [
             "diesel-mdo"
@@ -82314,7 +82124,6 @@
           "capacite": "Roulier RoRo ; transportait 33 chars T-72 lors du detournement de 2008",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "RoRo (33 chars + armement lourd lors de la capture 2008)",
           "energie": "2 moteurs diesel, 17 noeuds",
           "propulsion": [
             "diesel-mdo"
@@ -82453,7 +82262,6 @@
           "capacite": "Plus grand navire construit a Lödöse ; dernier neuf du chantier",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "13 000 t (port en lourd)",
           "energie": "Diesel",
           "propulsion": [
             "diesel-mdo"
@@ -82498,7 +82306,6 @@
           "capacite": "Roulier ; un des trois sister-ships du service Roto Line (mer du Nord) d'OT Rederiet",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "RoRo",
           "energie": "Diesel",
           "propulsion": [
             "diesel-mdo"
@@ -82557,7 +82364,6 @@
           "capacite": "Roulier de la flotte OT-rederierna",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "RoRo",
           "energie": "Diesel",
           "propulsion": [
             "diesel-mdo"
@@ -82862,7 +82668,6 @@
           "capacite": "Ravitailleur offshore, pont de charge ~2 350 t",
           "capacite_pax": null,
           "capacite_vehicules": null,
-          "capacite_fret": "2 350 t (port en lourd d'ete)",
           "energie": "Diesel",
           "propulsion": [
             "diesel-mdo"
@@ -82919,7 +82724,6 @@
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": "Voilier de luxe 62 m, 3-mats barquentine, 14 invites / 6 equipage",
-          "capacite_pax": 14,
           "capacite_vehicules": null,
           "capacite_fret": null,
           "energie": "Velique (3-mats barquentine) + auxiliaire diesel Caterpillar 3516 DITA",

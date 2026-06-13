@@ -215,6 +215,7 @@ a { color: var(--blue); }
 .tl-construction::before { border-color: var(--blue); }
 .tl-proprietaire::before { border-color: var(--teal); }
 .tl-operateur::before { border-color: var(--c-plaisance); }
+.tl-pavillon::before { border-color: var(--teal); }
 .tl-renommage::before, .tl-conversion::before { border-color: var(--red); }
 .tl-year { flex: none; font-variant-numeric: tabular-nums; font-weight: 700; color: var(--blue); font-size: 13px; min-width: 64px; padding-top: 1px; }
 .tl-body { font-size: 14px; line-height: 1.45; }
