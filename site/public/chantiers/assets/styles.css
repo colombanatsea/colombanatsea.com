@@ -280,11 +280,57 @@ a { color: var(--blue); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 880px) {
-  body { overflow: auto; height: auto; }
-  .topbar { flex-wrap: wrap; }
-  .view--map { grid-template-columns: 1fr; }
-  .mapwrap { height: 56vh; }
+  body { overflow: auto; height: auto; min-height: 100vh; }
+  .content { overflow: visible; }
+  .view { height: auto; }
+
+  /* En-tête : titre pleine largeur, bascule de vue en trois parts égales dessous */
+  .topbar { flex-wrap: wrap; gap: 12px; padding: 12px 18px; }
+  .title { flex: 1 1 100%; }
+  .viewtoggle { display: flex; width: 100%; }
+  .viewtoggle__btn { flex: 1; text-align: center; padding: 10px 6px; }
+
+  /* Contrôles : tout en pleine largeur, plus de min-width qui déborde */
+  .controls { padding: 12px 18px; gap: 12px; }
+  .control { flex: 1 1 100%; min-width: 0; }
+  .control--search { flex: 1 1 100%; min-width: 0; }
+  .controls input[type="search"], .controls select { min-width: 0; width: 100%; }
+  .reset { margin-left: 0; }
+  .controls__count { margin-left: 0; align-self: flex-start; }
+
+  /* Carte : carte en premier (hauteur fixe), liste dessous */
+  .view--map { display: flex; flex-direction: column; }
+  .mapwrap { order: -1; height: 56vh; min-height: 320px; }
   #map { position: relative; height: 100%; }
-  .view--nav { grid-template-columns: 1fr; height: auto; overflow: visible; }
-  .facets { border-right: 0; border-bottom: 1px solid var(--line); }
+  .results { border-right: 0; overflow: visible; }
+
+  /* Annuaire : défilement horizontal du tableau */
+  .view--dir { padding: 0 14px 24px; overflow-x: auto; }
+  .table { min-width: 620px; }
+
+  /* Navires : facettes compactes en bandeau, cartes en une colonne */
+  .view--nav { display: flex; flex-direction: column; overflow: visible; }
+  .facets { border-right: 0; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 14px 18px; padding: 14px 18px; }
+  .facets__grp { margin-bottom: 0; flex: 1 1 150px; }
+  .facets .reset { flex: 1 1 100%; }
+  .nav-list { grid-template-columns: 1fr; padding: 14px 18px 28px; }
+
+  /* Cartouches outre-mer : marges réduites */
+  .om-strip { left: 8px; right: 8px; bottom: 8px; padding: 6px; gap: 8px; }
+}
+
+@media (max-width: 560px) {
+  .topbar { padding: 10px 14px; }
+  .title h1 { font-size: 17px; }
+  .title .dek { font-size: 11.5px; }
+  .controls { padding: 10px 14px; }
+  .chip { padding: 9px 12px; }
+  /* Fiche : plein écran, grille en une colonne */
+  .drawer__panel { width: 100vw; padding: 30px 18px 48px; }
+  .d-grid { grid-template-columns: 1fr; gap: 12px 0; }
+  .d-nom { font-size: 22px; }
+  .tl-item { gap: 10px; }
+  .tl-year { min-width: 52px; }
+  .om-inset { width: 108px; }
+  .om-svg { width: 108px; height: 84px; }
 }
