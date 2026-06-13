@@ -45,7 +45,7 @@
     perimRef: {},
     typesRef: {},
     filters: { q: "", perims: new Set(), type: "", region: "", pays: "",
-      navProps: new Set(), navCapType: "", navCapMin: 0, navLenMin: 0, navLenMax: 0 },
+      navProps: new Set(), navCapTypes: new Set(), navCapMin: 0, navLenMin: 0, navLenMax: 0, navPriceMin: 0, navPriceMax: 0 },
     sort: { key: "nom", dir: 1 },
     view: "map",
     activeId: null,
@@ -145,8 +145,43 @@
     return hit ? hit.f : "";
   };
 
+  // Valeur numérique d'une capacité par type (pax / veh / fret).
+  const capVal = (n, t) => t === "pax" ? n.capacite_pax
+    : t === "veh" ? n.capacite_vehicules
+    : (n.capacite_fret != null ? parseInt(String(n.capacite_fret).replace(/[^\d]/g, ""), 10) : null);
+
+  // Estimation du prix en M€ depuis le texte libre prix_acquisition (taux approximatifs, pour le filtre par fourchette).
+  // Renvoie un nombre (M€) ou null si non interprétable.
+  function parsePriceEurM(s) {
+    if (!s) return null;
+    const t = String(s).toLowerCase();
+    const m = t.match(/(\d[\d  .,]*\d|\d)/);
+    if (!m) return null;
+    const idx = m.index, raw = m[1];
+    let num = raw.replace(/[  ]/g, "");
+    if (num.includes(",") && num.includes(".")) num = num.replace(/,/g, "");
+    else if (num.includes(",")) num = num.replace(",", ".");
+    const amount = parseFloat(num);
+    if (isNaN(amount)) return null;
+    // Fenêtre LOCALE autour du montant : on apparie le nombre à sa devise/échelle propres,
+    // sans lire la parenthèse de conversion type « (~323 M USD) ».
+    const before = t.slice(Math.max(0, idx - 8), idx);
+    const after = t.slice(idx + raw.length, idx + raw.length + 16).split("(")[0];
+    const win = before + " " + after;
+    let scale = 1;
+    if (/milliard|billion|\bbn\b|\bmd\b/.test(win)) scale = 1e9;
+    else if (/million|m€|m£|m\$|musd|meur|\bm\b|m\s?(eur|gbp|usd|nok|sek|dkk)/.test(win)) scale = 1e6;
+    let rate = 1; // EUR par défaut (taux approximatifs, pour le tri par fourchette)
+    if (/£|gbp/.test(win)) rate = 1.17;
+    else if (/\$|usd/.test(win)) rate = 0.92;
+    else if (/\bnok\b/.test(win)) rate = 0.085;
+    else if (/\bsek\b/.test(win)) rate = 0.087;
+    else if (/\bdkk\b|\bkr\b/.test(win)) rate = 0.134;
+    return amount * scale * rate / 1e6;
+  }
+
   function filteredNavires() {
-    const { q, perims, type, region, navProps, navCapType, navCapMin, navLenMin, navLenMax } = state.filters;
+    const { q, perims, type, region, navProps, navCapTypes, navCapMin, navLenMin, navLenMax, navPriceMin, navPriceMax } = state.filters;
     const nq = norm(q);
     const pays = state.filters.pays;
     return state.navires.filter((n) => {
@@ -157,11 +192,20 @@
       if (type && !n._ctypes.includes(type)) return false;
       // Propulsion : facette multi-valeurs (le navire doit porter au moins une famille cochée).
       if (navProps.size && !(n.propulsion || []).some((p) => navProps.has(p))) return false;
-      // Capacité : type (pax/véhicules/fret) avec seuil minimum.
-      if (navCapType) {
-        const val = navCapType === "pax" ? n.capacite_pax : navCapType === "veh" ? n.capacite_vehicules : (n.capacite_fret ? parseInt(String(n.capacite_fret).replace(/[^\d]/g, ""), 10) : null);
-        if (val == null || isNaN(val)) return false;
-        if (navCapMin && val < navCapMin) return false;
+      // Capacité : types cumulables (le navire doit porter TOUTES les capacités cochées), seuil min commun.
+      if (navCapTypes.size) {
+        for (const t of navCapTypes) {
+          const val = capVal(n, t);
+          if (val == null || isNaN(val)) return false;
+          if (navCapMin && val < navCapMin) return false;
+        }
+      }
+      // Prix d'acquisition : fourchette en M€ (navire sans prix interprétable exclu si le filtre est actif).
+      if (navPriceMin || navPriceMax) {
+        const eurM = parsePriceEurM(n.prix_acquisition);
+        if (eurM == null) return false;
+        if (navPriceMin && eurM < navPriceMin) return false;
+        if (navPriceMax && eurM > navPriceMax) return false;
       }
       // Taille : longueur hors-tout dans la fourchette.
       if (navLenMin && !(n.longueur_m >= navLenMin)) return false;
@@ -272,17 +316,30 @@
         render();
       });
     }
-    const onNum = (sel, key) => { const el = $(sel); if (el) el.addEventListener("input", () => { state.filters[key] = parseInt(el.value, 10) || 0; render(); }); };
-    const fCapType = $("#f-cap-type");
-    if (fCapType) fCapType.addEventListener("change", () => { state.filters.navCapType = fCapType.value; render(); });
+    const onNum = (sel, key, float) => { const el = $(sel); if (el) el.addEventListener("input", () => { state.filters[key] = (float ? parseFloat(el.value) : parseInt(el.value, 10)) || 0; render(); }); };
+    // Capacité : chips cumulables (passagers + véhicules + fret combinables).
+    const CAP_TYPES = [["pax", "Passagers"], ["veh", "Véhicules"], ["fret", "Fret"]];
+    const fCapTypes = $("#f-cap-types");
+    if (fCapTypes) {
+      fCapTypes.innerHTML = CAP_TYPES.map(([k, l]) => `<button class="cap-chip" data-cap="${k}">${l}</button>`).join("");
+      fCapTypes.addEventListener("click", (e) => {
+        const b = e.target.closest("[data-cap]"); if (!b) return;
+        const k = b.dataset.cap;
+        if (state.filters.navCapTypes.has(k)) { state.filters.navCapTypes.delete(k); b.classList.remove("is-on"); }
+        else { state.filters.navCapTypes.add(k); b.classList.add("is-on"); }
+        render();
+      });
+    }
     onNum("#f-cap-min", "navCapMin");
     onNum("#f-len-min", "navLenMin");
     onNum("#f-len-max", "navLenMax");
+    onNum("#f-price-min", "navPriceMin", true);
+    onNum("#f-price-max", "navPriceMax", true);
     const fNavReset = $("#f-nav-reset");
     if (fNavReset) fNavReset.addEventListener("click", () => {
-      state.filters.navProps = new Set(); state.filters.navCapType = ""; state.filters.navCapMin = 0; state.filters.navLenMin = 0; state.filters.navLenMax = 0;
-      document.querySelectorAll("#f-prop .is-on").forEach((c) => c.classList.remove("is-on"));
-      ["#f-cap-type", "#f-cap-min", "#f-len-min", "#f-len-max"].forEach((s) => { const el = $(s); if (el) el.value = ""; });
+      state.filters.navProps = new Set(); state.filters.navCapTypes = new Set(); state.filters.navCapMin = 0; state.filters.navLenMin = 0; state.filters.navLenMax = 0; state.filters.navPriceMin = 0; state.filters.navPriceMax = 0;
+      document.querySelectorAll("#f-prop .is-on, #f-cap-types .is-on").forEach((c) => c.classList.remove("is-on"));
+      ["#f-cap-min", "#f-len-min", "#f-len-max", "#f-price-min", "#f-price-max"].forEach((s) => { const el = $(s); if (el) el.value = ""; });
       render();
     });
 
@@ -290,12 +347,12 @@
     // revient à la carte et la recentre sur la France.
     function resetAll() {
       state.filters = { q: "", perims: new Set(), type: "", region: "", pays: "",
-        navProps: new Set(), navCapType: "", navCapMin: 0, navLenMin: 0, navLenMax: 0 };
+        navProps: new Set(), navCapTypes: new Set(), navCapMin: 0, navLenMin: 0, navLenMax: 0, navPriceMin: 0, navPriceMax: 0 };
       state.sort = { key: "nom", dir: 1 };
       state.activeId = null;
       $("#search").value = ""; selT.value = ""; selR.value = ""; if ($("#f-pays")) $("#f-pays").value = "";
-      document.querySelectorAll(".chip.is-on, #f-prop .is-on").forEach((c) => c.classList.remove("is-on"));
-      ["#f-cap-type", "#f-cap-min", "#f-len-min", "#f-len-max"].forEach((s) => { const el = $(s); if (el) el.value = ""; });
+      document.querySelectorAll(".chip.is-on, #f-prop .is-on, #f-cap-types .is-on").forEach((c) => c.classList.remove("is-on"));
+      ["#f-cap-min", "#f-len-min", "#f-len-max", "#f-price-min", "#f-price-max"].forEach((s) => { const el = $(s); if (el) el.value = ""; });
       $("#drawer").setAttribute("aria-hidden", "true");
       setView("map");
       if (map && state.homeBounds) {
