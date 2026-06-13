@@ -60,6 +60,10 @@ a { color: var(--blue); }
 .controls__count { font-size: 12.5px; color: var(--muted); margin-left: auto; align-self: center; white-space: nowrap; }
 .controls__count b { color: var(--blue); font-weight: 700; }
 
+/* Repli des filtres (mobile uniquement) : sur desktop le wrapper est transparent */
+.filters-toggle { display: none; }
+.controls__more { display: contents; }
+
 /* ---------- Controls ---------- */
 .controls { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; padding: 13px 30px; background: var(--bg-2); border-bottom: 1px solid var(--line); }
 .control { display: flex; flex-direction: column; gap: 6px; }
@@ -296,7 +300,16 @@ a { color: var(--blue); }
   .control--search { flex: 1 1 100%; min-width: 0; }
   .controls input[type="search"], .controls select { min-width: 0; width: 100%; }
   .reset { margin-left: 0; }
-  .controls__count { margin-left: 0; align-self: flex-start; }
+
+  /* Filtres repliables : bouton + panneau qui se déplie */
+  .filters-toggle { display: inline-flex; align-items: center; gap: 8px; flex: 0 0 auto;
+    background: var(--bg); border: 1px solid var(--line-2); border-radius: var(--r-sm);
+    padding: 10px 16px; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--blue); cursor: pointer; }
+  .filters-toggle__chev { transition: transform 0.18s; font-size: 11px; }
+  .controls:not(.is-collapsed) .filters-toggle__chev { transform: rotate(180deg); }
+  .controls__more { display: flex; flex-direction: column; gap: 12px; width: 100%; }
+  .controls.is-collapsed .controls__more { display: none; }
+  .controls__count { margin-left: auto; align-self: center; order: 2; }
 
   /* Carte : carte en premier (hauteur fixe), liste dessous */
   .view--map { display: flex; flex-direction: column; }

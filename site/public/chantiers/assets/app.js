@@ -249,6 +249,14 @@
     // Search
     $("#search").addEventListener("input", (e) => { state.filters.q = e.target.value; render(); });
 
+    // Repli des filtres (mobile) : le bouton ouvre/ferme le panneau secondaire.
+    const fToggle = $("#filters-toggle");
+    if (fToggle) fToggle.addEventListener("click", () => {
+      const controls = document.querySelector(".controls");
+      const open = controls.classList.toggle("is-collapsed");
+      fToggle.setAttribute("aria-expanded", String(!open));
+    });
+
     // Facettes navires (propulsion / capacité / taille). Seules les familles présentes dans les données sont proposées.
     const presentProps = new Set();
     state.navires.forEach((n) => (n.propulsion || []).forEach((p) => presentProps.add(p)));
