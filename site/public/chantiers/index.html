@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chantiers navals français · VAIATA Intelligence</title>
-  <meta name="description" content="Carte et annuaire des chantiers navals français : construction neuve, réparation, naval et plaisance. VAIATA Intelligence." />
+  <title>Registre naval européen · VAIATA Intelligence</title>
+  <meta name="description" content="Carte et annuaire des chantiers navals d'Europe (France, Norvège, Écosse, Suède) et de leurs navires : propulsion, capacité, opérateurs, propriétaires, timeline. VAIATA Intelligence." />
   <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
   <header class="topbar">
     <div class="title" id="home" role="button" tabindex="0" title="Revenir à l'accueil (réinitialise recherche et filtres)">
-      <h1>Chantiers navals français</h1>
-      <p class="dek">Cartographie de la construction, de la réparation et de la défense navales en France</p>
+      <h1>Registre naval européen</h1>
+      <p class="dek">Chantiers et navires de France, Norvège, Écosse et Suède : construction, réparation, défense, propulsion</p>
     </div>
     <div class="viewtoggle" role="tablist" aria-label="Mode d'affichage">
       <button id="btn-map" class="viewtoggle__btn is-active" role="tab" aria-selected="true">Carte</button>
@@ -29,6 +29,10 @@
     <div class="control">
       <label class="control__label">Périmètre</label>
       <div id="perim-chips" class="chips"></div>
+    </div>
+    <div class="control">
+      <label class="control__label" for="f-pays">Pays</label>
+      <select id="f-pays"><option value="">Tous pays</option></select>
     </div>
     <div class="control">
       <label class="control__label" for="f-type">Type de navire</label>
@@ -69,8 +73,34 @@
       </table>
     </div>
 
-    <!-- Vue navires : recherche par navire -->
+    <!-- Vue navires : recherche par navire + facettes dédiées -->
     <div id="view-nav" class="view view--nav is-hidden">
+      <aside class="facets" aria-label="Filtres navires">
+        <div class="facets__grp">
+          <div class="facets__label">Propulsion</div>
+          <div id="f-prop" class="prop-chips"></div>
+        </div>
+        <div class="facets__grp">
+          <div class="facets__label">Capacité</div>
+          <div class="facets__row">
+            <select id="f-cap-type">
+              <option value="">Toutes</option>
+              <option value="pax">Passagers</option>
+              <option value="veh">Véhicules</option>
+              <option value="fret">Fret</option>
+            </select>
+            <input id="f-cap-min" type="number" min="0" placeholder="min" inputmode="numeric" />
+          </div>
+        </div>
+        <div class="facets__grp">
+          <div class="facets__label">Taille (longueur, m)</div>
+          <div class="facets__row">
+            <input id="f-len-min" type="number" min="0" placeholder="min" inputmode="numeric" />
+            <input id="f-len-max" type="number" min="0" placeholder="max" inputmode="numeric" />
+          </div>
+        </div>
+        <button id="f-nav-reset" class="reset" type="button">↺ Effacer les facettes</button>
+      </aside>
       <div class="nav-list" id="nav-list"></div>
     </div>
   </main>
