@@ -607,11 +607,11 @@
       ["Port en lourd", v.port_lourd_dwt ? v.port_lourd_dwt.toLocaleString("fr-FR") + " DWT" : null],
       ["Capacité", cap || v.capacite], ["Énergie", v.energie], ["Classification", v.classification],
     ].filter(([, x]) => x != null && x !== "");
-    // Exploitation : commanditaire (client), opérateur, propriétaire actuels.
+    // Exploitation : commanditaire (client), opérateur, propriétaire, pavillon actuels.
     const expRows = [
-      ["Commanditaire", v.client], ["Opérateur", v.operateur], ["Propriétaire", v.proprietaire],
+      ["Commanditaire", v.client], ["Opérateur", v.operateur], ["Propriétaire", v.proprietaire], ["Pavillon", v.pavillon],
     ].filter(([, x]) => x != null && x !== "");
-    const ROLE = { construction: "Construction", proprietaire: "Propriétaire", operateur: "Opérateur", renommage: "Renommage", conversion: "Conversion", evenement: "Événement" };
+    const ROLE = { construction: "Construction", proprietaire: "Propriétaire", operateur: "Opérateur", pavillon: "Pavillon", renommage: "Renommage", conversion: "Conversion", evenement: "Événement" };
     const tl = Array.isArray(v.timeline) ? v.timeline.filter((e) => e && e.annee) : [];
     const timelineHtml = tl.length
       ? `<div class="d-section"><h3>Vie du navire</h3>
