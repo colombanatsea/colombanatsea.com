@@ -294,6 +294,14 @@
               "nom": "MSC Croisières",
               "detail": "Livraison attendue novembre 2026, premières croisières en Méditerranée à partir de décembre 2026.",
               "source": "https://www.cruisemapper.com/ships/MSC-World-Asia-2185"
+            },
+            {
+              "annee": "2016",
+              "role": "construction",
+              "nom": "MSC Cruises / STX France (Chantiers de l'Atlantique) - serie World Class (jusqu'a 4 navires)",
+              "detail": "Lettre d'intention signee le 6 avril 2016 pour la serie World Class de paquebots GNL >200 000 GT. Le montant ~4,5 Md EUR couvre l'ensemble de la commande (jusqu'a 4 unites), pas le seul MSC World Asia. Aucun prix unitaire publie pour MSC World Asia.",
+              "prix": "commande globale ~4,5 milliards EUR pour jusqu'a 4 navires (lettre d'intention, montant non ventile par navire)",
+              "source": "https://en.wikipedia.org/wiki/World-class_cruise_ship ; communique MSC https://www.mscpressarea.com/en_GB/press-releases/998/"
             }
           ]
         },
@@ -422,7 +430,13 @@
               "detail": "Entrée en service novembre 2025, croisières de 7 nuits au départ de Fort Lauderdale.",
               "source": "https://www.caribjournal.com/2025/10/24/celebrity-cruises-xcel-xcite/"
             }
-          ]
+          ],
+          "photo": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Celebrity_Xcel_at_Port_Everglades_2025-11-05.jpg",
+            "credit": "Tunestoons",
+            "licence": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Celebrity_Xcel_at_Port_Everglades_2025-11-05.jpg"
+          }
         },
         {
           "nom": "Luminara",
@@ -75490,8 +75504,23 @@
               "nom": "Compagnie du Ponant",
               "detail": "Mise en service par Ponant fin 2021",
               "source": "https://en.wikipedia.org/wiki/Le_Commandant_Charcot"
+            },
+            {
+              "annee": "2017",
+              "role": "construction",
+              "nom": "VARD (Fincantieri) — commande PONANT",
+              "detail": "Commande signee le 18 decembre 2017 pour le premier brise-glace de croisiere hybride electrique a propulsion GNL ; coque a Vard Tulcea (Roumanie), achevement et livraison a Vard Soviknes (Norvege) en aout 2021.",
+              "prix": "contrat conception+construction NOK 2,7 milliards (~323 M USD)",
+              "source": "Wikipedia (citant communique VARD 18/12/2017) ; Ship Technology (Vard wins $322.8m contract) ; Renewable Energy Magazine 18/12/2017"
             }
-          ]
+          ],
+          "prix_acquisition": "NOK 2,7 milliards (~323 M USD) (2017)",
+          "photo": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Le_Commandant_Charcot_during_Operation_Tugaalik_in_June_23%2C_2024_%281%29.jpg/1280px-Le_Commandant_Charcot_during_Operation_Tugaalik_in_June_23%2C_2024_%281%29.jpg",
+            "credit": "U.S. Coast Guard photograph by Cmdr. Krystyn Pecora",
+            "licence": "Domaine public (oeuvre d un agent du gouvernement federal des Etats-Unis)",
+            "source": "https://en.wikipedia.org/wiki/Le_Commandant_Charcot (image d infobox) ; https://commons.wikimedia.org/wiki/File:Le_Commandant_Charcot_during_Operation_Tugaalik_in_June_23,_2024_(1).jpg"
+          }
         },
         {
           "nom": "Viking Polaris",
@@ -76610,7 +76639,8 @@
               "role": "construction",
               "nom": "Vard (coque Vard Tulcea, Roumanie) + armement final Vard Langsten (Tomrefjord)",
               "detail": "Premier des trois Hanseatic; armement final, essais et livraison a Langsten",
-              "source": "marineinsight.com; vard.com/articles"
+              "source": "marineinsight.com; vard.com/articles",
+              "prix": "coût de construction 145 M€ (155 M$)"
             },
             {
               "annee": "2019",
@@ -76626,7 +76656,14 @@
               "detail": "Immatricule a Malte",
               "source": "vesselfinder.com/vessels/details/9817133"
             }
-          ]
+          ],
+          "prix_acquisition": "145 M€ (2019)",
+          "photo": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/9817133_Hanseatic_Nature_2019.jpg/1280px-9817133_Hanseatic_Nature_2019.jpg",
+            "credit": "Cavernia",
+            "licence": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:9817133_Hanseatic_Nature_2019.jpg"
+          }
         },
         {
           "nom": "Hanseatic inspiration",
@@ -114907,8 +114944,31 @@
               "nom": "Caledonian Maritime Assets (CMAL)",
               "detail": "Propriétaire (programme Hybrid Ferries de CMAL)",
               "source": "https://www.cmassets.co.uk/project/hybrid-ferries-project/"
+            },
+            {
+              "annee": "2011",
+              "role": "construction",
+              "nom": "Ferguson Shipbuilders (chantier) / Caledonian Maritime Assets Ltd (CMAL, armateur-propriétaire)",
+              "detail": null,
+              "prix": "coût de construction 10 M£",
+              "source": "https://en.wikipedia.org/wiki/MV_Hallaig"
+            },
+            {
+              "annee": "2011",
+              "role": "evenement",
+              "nom": "Gouvernement écossais — programme Hybrid Ferries (3 navires : Hallaig, Lochinvar, Catriona)",
+              "detail": null,
+              "prix": "investissement public supérieur à 20 M£ pour l'ensemble du programme",
+              "source": "https://www.cmassets.co.uk/project/hybrid-ferries-project/"
             }
-          ]
+          ],
+          "prix_acquisition": "10 M£ (2011)",
+          "photo": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/MV_Hallaig_Approaching_Sconser%2C_9_May_2015.jpg/1280px-MV_Hallaig_Approaching_Sconser%2C_9_May_2015.jpg",
+            "credit": "Mn28 (Wikimedia Commons)",
+            "licence": "CC BY-SA 3.0 (et GFDL 1.2+)",
+            "source": "https://commons.wikimedia.org/wiki/File:MV_Hallaig_Approaching_Sconser,_9_May_2015.jpg"
+          }
         },
         {
           "nom": "MV Lochinvar",
@@ -115052,7 +115112,8 @@
               "role": "evenement",
               "nom": "Essais en mer",
               "detail": "Essais constructeur dès février 2024, essais GNL en septembre 2024, certification finale le 19 novembre 2024",
-              "source": "https://en.wikipedia.org/wiki/MV_Glen_Sannox_(2017)"
+              "source": "https://en.wikipedia.org/wiki/MV_Glen_Sannox_(2017)",
+              "prix": "environ 380 M GBP au total a juin 2024 (plus un pret de 45 M GBP passe en perte)"
             },
             {
               "annee": "2024",
@@ -115067,8 +115128,22 @@
               "nom": "Caledonian MacBrayne (CalMac)",
               "detail": "Premier voyage commercial le 12 janvier 2025, entrée en service le 13 janvier 2025 (initialement Troon–Brodick)",
               "source": "https://en.wikipedia.org/wiki/MV_Glen_Sannox_(2017)"
+            },
+            {
+              "annee": "2015",
+              "role": "construction",
+              "nom": "CMAL (Caledonian Maritime Assets Ltd) / Ferguson Marine Engineering Ltd",
+              "detail": "Contrat design-and-build signe le 16 octobre 2015 pour la paire de ferries Clyde and Hebrides ; livraison alors prevue 2018.",
+              "prix": "contrat de 97 M GBP pour DEUX ferries (Glen Sannox + Glen Rosa), pas de ventilation par navire publiee",
+              "source": "https://en.wikipedia.org/wiki/MV_Glen_Sannox_(2017)"
             }
-          ]
+          ],
+          "photo": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/250120_1259_MV_Glen_Sannox_departing_Brodick.jpg/1280px-250120_1259_MV_Glen_Sannox_departing_Brodick.jpg",
+            "credit": "Dave souza",
+            "licence": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:250120_1259_MV_Glen_Sannox_departing_Brodick.jpg"
+          }
         },
         {
           "nom": "MV Glen Rosa",
@@ -134241,6 +134316,14 @@
               "nom": "ForSea / Öresundslinjen",
               "detail": "Mise à niveau de la batterie de 4 160 kWh à 6 400 kWh (plus grand pack batterie au monde à bord d'un ferry)",
               "source": "https://en.wikipedia.org/wiki/MF_Tycho_Brahe"
+            },
+            {
+              "annee": "2018",
+              "role": "evenement",
+              "nom": "Conversion tout-electrique (batteries ABB, chantier Oresund Dry Docks / Oresundsvarvet) des deux ferries Tycho Brahe + Aurora",
+              "detail": "Montant couvrant la paire Tycho Brahe et Aurora, pas le seul Tycho Brahe ; conversion diesel vers batterie, pas une acquisition.",
+              "prix": "investissement total ~300 M SEK pour les DEUX navires (dont ~120 M SEK, soit ~12 M EUR, de subvention UE INEA)",
+              "source": "https://www.mynewsdesk.com/forsea/pressreleases/forsea-to-upgrade-tycho-brahe-with-the-worlds-largest-battery-pack-extending-the-vessel-lifetime-and-cutting-emissions-3112242"
             }
           ]
         },
@@ -134287,8 +134370,22 @@
               "nom": "ForSea",
               "detail": "Rebranding de la ligne HH Ferries en ForSea",
               "source": "https://maritime-executive.com/corporate/forsea-converts-world-s-largest-battery-ferries-powered-by-abb"
+            },
+            {
+              "annee": "2017",
+              "role": "evenement",
+              "nom": "Conversion batterie-electrique (HH Ferries Group / ABB, chantier Oresundsvarvet / Oresund Dry Docks)",
+              "detail": null,
+              "prix": "investissement total ~300 M SEK (~30 M EUR) pour les DEUX ferries (Tycho Brahe + Aurora af Helsingborg), dont co-financement UE/INEA (Connecting Europe Facility) ~120 M SEK (~13 M EUR) ; budget de retrofit partage, pas un prix d acquisition du seul navire",
+              "source": "https://new.abb.com/news/detail/10434/forsea-formerly-hh-ferries-group-completes-conversion-of-the-worlds-largest-battery-ferries-powered-by-abb ; https://de.wikipedia.org/wiki/Aurora_af_Helsingborg"
             }
-          ]
+          ],
+          "photo": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/20221015_Forsea_Aurora_0002_%2852431359661%29.jpg",
+            "credit": "Johan Wessman / News Oresund",
+            "licence": "CC BY 2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:20221015_Forsea_Aurora_0002_(52431359661).jpg"
+          }
         },
         {
           "nom": "M/F Hamlet",

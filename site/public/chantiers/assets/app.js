@@ -756,12 +756,19 @@
       ["Largeur", v.largeur_m ? v.largeur_m + " m" : null],
       ["Jauge", v.jauge_gt ? v.jauge_gt.toLocaleString("fr-FR") + " GT" : null],
       ["Port en lourd", v.port_lourd_dwt ? v.port_lourd_dwt.toLocaleString("fr-FR") + " DWT" : null],
-      ["Capacité", cap || v.capacite], ["Desserte", v.desserte], ["Énergie", v.energie], ["Classification", v.classification],
+      ["Capacité", cap || v.capacite], ["Desserte", v.desserte], ["Énergie", v.energie],
+      ["Prix d'acquisition", v.prix_acquisition], ["Classification", v.classification],
     ].filter(([, x]) => x != null && x !== "");
     // Exploitation : commanditaire (client), opérateur, propriétaire, pavillon actuels.
     const expRows = [
       ["Commanditaire", v.client], ["Opérateur", v.operateur], ["Propriétaire", v.proprietaire], ["Pavillon", v.pavillon],
     ].filter(([, x]) => x != null && x !== "");
+    // Photo : affichée seulement si l'identité du navire est sûre (source canonique, idéalement IMO). Jamais de photo devinée.
+    const photoHtml = (v.photo && v.photo.url) ? `
+      <figure class="ves-photo">
+        <img src="${v.photo.url}" alt="${v.nom || v.type || "Navire"}" loading="lazy" onerror="this.closest('.ves-photo').remove()" />
+        ${(v.photo.credit || v.photo.licence || v.photo.source) ? `<figcaption>${[v.photo.credit, v.photo.licence].filter(Boolean).join(" · ")}${v.photo.source ? ` <a href="${v.photo.source}" target="_blank" rel="noopener" title="source de l'image">↗</a>` : ""}</figcaption>` : ""}
+      </figure>` : "";
     const ROLE = { construction: "Construction", proprietaire: "Propriétaire", operateur: "Opérateur", pavillon: "Pavillon", renommage: "Renommage", conversion: "Conversion", evenement: "Événement" };
     const tl = Array.isArray(v.timeline) ? v.timeline.filter((e) => e && e.annee) : [];
     const timelineHtml = tl.length
@@ -770,7 +777,7 @@
             <li class="tl-item tl-${e.role || "evenement"}">
               <span class="tl-year">${e.annee}</span>
               <span class="tl-body"><span class="tl-role">${ROLE[e.role] || "Étape"}</span>
-                <b>${e.nom || ""}</b>${e.detail ? ` <span class="tl-detail">${e.detail}</span>` : ""}
+                <b>${e.nom || ""}</b>${e.detail ? ` <span class="tl-detail">${e.detail}</span>` : ""}${e.prix ? ` <span class="tl-prix">${e.prix}</span>` : ""}
                 ${e.source ? ` <a class="tl-src" href="${e.source}" target="_blank" rel="noopener" title="source">↗</a>` : ""}
               </span>
             </li>`).join("")}</ol></div>`
@@ -780,6 +787,7 @@
       <h2 class="d-nom" id="d-nom">${v.nom || v.type}</h2>
       <div class="d-loc">${[v.type, v.annee, v.imo ? "IMO " + v.imo : null].filter(Boolean).join(" · ")}</div>
       ${(v.propulsion && v.propulsion.length) ? `<div class="d-perims" style="margin:14px 0 4px">${propChips(v.propulsion)}</div>` : ""}
+      ${photoHtml}
       <div class="d-section"><h3>Caractéristiques</h3>
         <div class="d-grid">${specRows.map(([k, x]) =>
           `<div class="d-fact"><div class="d-fact__k">${k}</div><div class="d-fact__v">${x}</div></div>`).join("")}</div></div>
