@@ -331,9 +331,22 @@
       `<div class="legend__row"><span class="legend__dot" style="background:${PERIM_COLORS[p]}"></span>${perimLabel(p)}</div>`
     ).join("");
 
-    // Drawer close
+    // Drawer close (sauf si la modale de correction est ouverte par-dessus)
     document.querySelectorAll("[data-close]").forEach((el) => el.addEventListener("click", closeDrawer));
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDrawer(); });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && $("#corr-modal").getAttribute("aria-hidden") !== "false") closeDrawer();
+    });
+
+    // Corrections : bouton d'en-tête (consultation), formulaire (validation), fermeture.
+    const btnCorr = $("#btn-corr");
+    if (btnCorr) btnCorr.addEventListener("click", openCorrList);
+    const corrForm = $("#corr-form");
+    if (corrForm) corrForm.addEventListener("submit", (e) => { e.preventDefault(); submitCorr(); });
+    document.querySelectorAll("[data-corr-close]").forEach((el) => el.addEventListener("click", closeCorrForm));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && $("#corr-modal").getAttribute("aria-hidden") === "false") closeCorrForm();
+    });
+    updateCorrBadge();
   }
 
   function setView(v) {
@@ -550,10 +563,20 @@
       <div class="d-section"><h3>Sources</h3>
         <div class="d-sources">${(c.sources || []).map((s) =>
           `<a href="${s}" target="_blank" rel="noopener">${s}</a>`).join("")}</div>
+      </div>
+
+      <div class="d-section d-corr">
+        <button class="corr-trigger" type="button" data-corr-chantier>✎ Partager une correction</button>
       </div>`;
 
     $("#drawer-body").querySelectorAll("[data-open-vessel]").forEach((el) =>
       el.addEventListener("click", () => openVessel(state.navires[+el.dataset.openVessel])));
+    const ccTrig = $("#drawer-body").querySelector("[data-corr-chantier]");
+    if (ccTrig) ccTrig.addEventListener("click", () => openCorrForm({
+      type: "chantier", cible_nom: c.nom,
+      cible_contexte: [c.ville, c.region, c.pays].filter(Boolean).join(" · "),
+      cid: c.id, vimo: null, vnom: null,
+    }));
     $("#drawer").setAttribute("aria-hidden", "false");
     render();
   }
@@ -562,6 +585,133 @@
     $("#drawer").setAttribute("aria-hidden", "true");
     state.activeId = null;
     render();
+  }
+
+  /* ---------- Corrections (retours utilisateur, stockés sur cet appareil) ---------- */
+  // App 100% statique : les retours sont conservés en localStorage et consultables ici.
+  // Export / copie JSON pour les transmettre et les appliquer ensuite en base.
+  const CORR_KEY = "vaiata-corrections";
+  const esc = (s) => (s == null ? "" : String(s)).replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  function corrLoad() {
+    try { const a = JSON.parse(localStorage.getItem(CORR_KEY) || "[]"); return Array.isArray(a) ? a : []; }
+    catch (e) { return []; }
+  }
+  function corrStore(arr) {
+    try { localStorage.setItem(CORR_KEY, JSON.stringify(arr)); } catch (e) { /* quota / mode privé */ }
+    updateCorrBadge();
+  }
+  function updateCorrBadge() {
+    const b = $("#corr-count"); if (!b) return;
+    const n = corrLoad().length;
+    b.textContent = n;
+    b.classList.toggle("is-hidden", n === 0);
+  }
+
+  let toastTimer = null;
+  function toast(msg) {
+    const el = $("#toast"); if (!el) return;
+    el.textContent = msg; el.classList.add("is-show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.classList.remove("is-show"), 2600);
+  }
+
+  // Ouvre le formulaire pré-rempli avec l'item ciblé (chantier ou navire).
+  function openCorrForm(target) {
+    state.corrTarget = target;
+    const tEl = $("#corr-target");
+    if (tEl) tEl.innerHTML = `<span class="cmodal__tlbl">Sur</span><b>${esc(target.cible_nom)}</b>`
+      + `<span class="cmodal__tmeta">${esc(target.cible_contexte)}</span>`;
+    const txt = $("#corr-text"), src = $("#corr-src");
+    if (txt) txt.value = ""; if (src) src.value = "";
+    $("#corr-modal").setAttribute("aria-hidden", "false");
+    setTimeout(() => { if (txt) txt.focus(); }, 40);
+  }
+  function closeCorrForm() {
+    $("#corr-modal").setAttribute("aria-hidden", "true");
+    state.corrTarget = null;
+  }
+  function submitCorr() {
+    const t = state.corrTarget; if (!t) return;
+    const texte = ($("#corr-text").value || "").trim();
+    if (!texte) { $("#corr-text").focus(); return; }
+    const source = ($("#corr-src").value || "").trim();
+    const arr = corrLoad();
+    arr.unshift({
+      id: "c" + Date.now().toString(36) + Math.round(Math.random() * 1e6).toString(36),
+      ts: new Date().toISOString(),
+      type: t.type, cible_nom: t.cible_nom, cible_contexte: t.cible_contexte,
+      cid: t.cid || null, vimo: t.vimo || null, vnom: t.vnom || null,
+      texte, source,
+    });
+    corrStore(arr);
+    closeCorrForm();
+    toast("Correction enregistrée. Merci.");
+  }
+
+  // Ré-ouvre la fiche ciblée par un retour.
+  function corrOpenTarget(c) {
+    if (c.type === "navire") {
+      let v = null;
+      if (c.vimo) v = state.navires.find((n) => n.imo === c.vimo);
+      if (!v && c.vnom) v = state.navires.find((n) => n._cid === c.cid && (n.nom || "") === c.vnom);
+      if (!v && c.vnom) v = state.navires.find((n) => (n.nom || "") === c.vnom);
+      if (v) { openVessel(v); return; }
+    }
+    if (c.cid && state.all.some((x) => x.id === c.cid)) openDrawer(c.cid);
+  }
+
+  // Vue de consultation : liste des retours, export, copie, suppression.
+  function openCorrList() {
+    const arr = corrLoad();
+    const fmt = (iso) => { try { return new Date(iso).toLocaleString("fr-FR", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" }); } catch (e) { return iso; } };
+    const body = arr.length ? `
+      <div class="corr-toolbar">
+        <button class="cbtn cbtn--ghost" data-corr-export>Exporter (JSON)</button>
+        <button class="cbtn cbtn--ghost" data-corr-copy>Copier</button>
+        <button class="cbtn cbtn--ghost cbtn--danger" data-corr-clear>Tout effacer</button>
+      </div>
+      <ul class="corr-list">${arr.map((c) => `
+        <li class="corr-item" data-id="${esc(c.id)}">
+          <div class="corr-item__head">
+            <button class="corr-item__cible" data-corr-open="${esc(c.id)}">
+              <span class="corr-item__type corr-item__type--${c.type === "navire" ? "navire" : "chantier"}">${c.type === "navire" ? "Navire" : "Chantier"}</span>
+              <b>${esc(c.cible_nom)}</b>
+            </button>
+            <button class="corr-item__del" data-corr-del="${esc(c.id)}" title="Supprimer ce retour" aria-label="Supprimer">×</button>
+          </div>
+          <div class="corr-item__ctx">${esc(c.cible_contexte)}</div>
+          <p class="corr-item__txt">${esc(c.texte)}</p>
+          ${c.source ? `<div class="corr-item__src">Source : ${/^https?:\/\//.test(c.source) ? `<a href="${esc(c.source)}" target="_blank" rel="noopener">${esc(c.source)}</a>` : esc(c.source)}</div>` : ""}
+          <div class="corr-item__ts">${fmt(c.ts)}</div>
+        </li>`).join("")}</ul>`
+      : `<p class="empty" style="padding:24px 0">Aucune correction enregistrée pour l'instant. Ouvrez la fiche d'un chantier ou d'un navire, puis cliquez « Partager une correction ».</p>`;
+    $("#drawer-body").innerHTML = `
+      <div class="d-eyebrow">Retours · cet appareil</div>
+      <h2 class="d-nom" id="d-nom">Mes corrections</h2>
+      <div class="d-loc">${arr.length} retour${arr.length > 1 ? "s" : ""} enregistré${arr.length > 1 ? "s" : ""} localement dans ce navigateur</div>
+      ${body}`;
+    const db = $("#drawer-body");
+    db.querySelectorAll("[data-corr-open]").forEach((b) => b.addEventListener("click", () => { const c = corrLoad().find((x) => x.id === b.dataset.corrOpen); if (c) corrOpenTarget(c); }));
+    db.querySelectorAll("[data-corr-del]").forEach((b) => b.addEventListener("click", () => { corrStore(corrLoad().filter((x) => x.id !== b.dataset.corrDel)); openCorrList(); }));
+    const exp = db.querySelector("[data-corr-export]");
+    if (exp) exp.addEventListener("click", () => {
+      const blob = new Blob([JSON.stringify(corrLoad(), null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url; a.download = "corrections-vaiata-" + new Date().toISOString().slice(0, 10) + ".json";
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+    const cp = db.querySelector("[data-corr-copy]");
+    if (cp) cp.addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText(JSON.stringify(corrLoad(), null, 2)); toast("Corrections copiées dans le presse-papier."); }
+      catch (e) { toast("Copie indisponible. Utilisez l'export JSON."); }
+    });
+    const cl = db.querySelector("[data-corr-clear]");
+    if (cl) cl.addEventListener("click", () => { if (confirm("Effacer définitivement tous les retours enregistrés sur cet appareil ?")) { corrStore([]); openCorrList(); } });
+    $("#drawer").setAttribute("aria-hidden", "false");
   }
 
   /* ---------- Index outre-mer ---------- */
@@ -647,9 +797,18 @@
             ${vesselSpecs(s) ? `<span style="color:var(--muted);font-size:13px">${vesselSpecs(s)}</span>` : ""}
             <button class="ves-link" data-open-vessel="${s._idx}">${s._cnom} · ${s._cville} →</button>
           </li>`).join("")}</ul></div>` : ""}
-      ${v.source ? `<div class="d-section"><h3>Source</h3><div class="d-sources"><a href="${v.source}" target="_blank" rel="noopener">${v.source}</a></div></div>` : ""}`;
+      ${v.source ? `<div class="d-section"><h3>Source</h3><div class="d-sources"><a href="${v.source}" target="_blank" rel="noopener">${v.source}</a></div></div>` : ""}
+      <div class="d-section d-corr">
+        <button class="corr-trigger" type="button" data-corr-vessel>✎ Partager une correction</button>
+      </div>`;
     $("#drawer-body").querySelectorAll("[data-open-chantier]").forEach((b) => b.addEventListener("click", () => openDrawer(b.dataset.openChantier)));
     $("#drawer-body").querySelectorAll("[data-open-vessel]").forEach((b) => b.addEventListener("click", () => openVessel(state.navires[+b.dataset.openVessel])));
+    const cvTrig = $("#drawer-body").querySelector("[data-corr-vessel]");
+    if (cvTrig) cvTrig.addEventListener("click", () => openCorrForm({
+      type: "navire", cible_nom: v.nom || v.type || "Navire",
+      cible_contexte: [v.type, v.annee, "construit par " + v._cnom].filter(Boolean).join(" · "),
+      cid: v._cid, vimo: v.imo || null, vnom: v.nom || null,
+    }));
     $("#drawer").setAttribute("aria-hidden", "false");
   }
 
