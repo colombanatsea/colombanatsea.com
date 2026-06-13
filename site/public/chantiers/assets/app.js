@@ -11,6 +11,27 @@
   // Ordre de priorité pour la couleur du marqueur (chantier multi-périmètre).
   const PERIM_PRIORITY = ["naval-defense", "construction-neuve", "reparation-refit", "plaisance"];
 
+  // Familles de propulsion : libellé + couleur (vert = décarboné, gris = thermique).
+  const PROPULSION = {
+    "hydrogene-h2": { label: "Hydrogène H₂", color: "#0a9e6e" },
+    "ammoniac": { label: "Ammoniac", color: "#1aa3a3" },
+    "methanol": { label: "Méthanol", color: "#2aa1c8" },
+    "electrique-batterie": { label: "Électrique batterie", color: "#16a34a" },
+    "hybride": { label: "Hybride", color: "#5bb35b" },
+    "gnl": { label: "GNL", color: "#7aa0c4" },
+    "velique": { label: "Vélique", color: "#3b82c4" },
+    "diesel-electrique": { label: "Diesel-électrique", color: "#9aa7b4" },
+    "nucleaire": { label: "Nucléaire", color: "#b08968" },
+    "diesel-mdo": { label: "Diesel / MDO", color: "#8a96a3" },
+    "autre": { label: "Autre", color: "#aab4be" },
+  };
+  // Ordre d'affichage des facettes propulsion (du plus décarboné au thermique).
+  const PROPULSION_ORDER = ["hydrogene-h2", "ammoniac", "methanol", "electrique-batterie", "hybride", "gnl", "velique", "diesel-electrique", "nucleaire", "diesel-mdo", "autre"];
+  const propLabel = (p) => (PROPULSION[p] || { label: p }).label;
+  const propColor = (p) => (PROPULSION[p] || { color: "#aab4be" }).color;
+  const propChips = (arr) => (arr || []).map((p) =>
+    `<span class="prop-chip" style="--pc:${propColor(p)}">${propLabel(p)}</span>`).join("");
+
   // Territoires d'outre-mer : hors emprise de la carte métropole, regroupés dans un index dédié.
   const OUTREMER_REGIONS = new Set([
     "Martinique", "Guadeloupe", "La Réunion", "Mayotte", "Guyane",
@@ -23,7 +44,8 @@
     all: [],
     perimRef: {},
     typesRef: {},
-    filters: { q: "", perims: new Set(), type: "", region: "" },
+    filters: { q: "", perims: new Set(), type: "", region: "", pays: "",
+      navProps: new Set(), navCapType: "", navCapMin: 0, navLenMin: 0, navLenMax: 0 },
     sort: { key: "nom", dir: 1 },
     view: "map",
     activeId: null,
@@ -57,7 +79,7 @@
     state.navires = [];
     state.all.forEach((c) => (c.navires_references || []).forEach((n) => {
       if (n && (n.nom || n.type)) {
-        n._idx = state.navires.length; n._cid = c.id; n._cnom = c.nom; n._cville = c.ville; n._cregion = c.region;
+        n._idx = state.navires.length; n._cid = c.id; n._cnom = c.nom; n._cville = c.ville; n._cregion = c.region; n._cpays = c.pays;
         n._cperims = c.perimetres || []; n._ctypes = c.types_navires || [];
         state.navires.push(n);
       }
@@ -83,6 +105,12 @@
         });
       }
     } catch (e) { console.warn("Contours outre-mer indisponibles", e); }
+    // Fond des pays étrangers (registre naval européen), servi en local.
+    state.foreignGeo = null;
+    try {
+      const fr = await fetch("data/foreign-countries.geojson", { cache: "force-cache" });
+      if (fr.ok) state.foreignGeo = await fr.json();
+    } catch (e) { console.warn("Fond pays étrangers indisponible", e); }
     buildControls();
     try { initMap(geo); } catch (e) { console.error("Carte indisponible", e); showMapFallback(); }
     render();
@@ -90,9 +118,10 @@
 
   /* ---------- Filtering / sorting ---------- */
   function filtered() {
-    const { q, perims, type, region } = state.filters;
+    const { q, perims, type, region, pays } = state.filters;
     const nq = norm(q);
     return state.all.filter((c) => {
+      if (pays && c.pays !== pays) return false;
       if (nq) {
         const inText = norm(c.nom).includes(nq) || norm(c.ville).includes(nq) || norm(c.groupe).includes(nq);
         const inNav = (c.navires_references || []).some((n) => norm(n.nom).includes(nq) || norm(n.type).includes(nq) || norm(n.client).includes(nq));
@@ -117,14 +146,27 @@
   };
 
   function filteredNavires() {
-    const { q, perims, type, region } = state.filters;
+    const { q, perims, type, region, navProps, navCapType, navCapMin, navLenMin, navLenMax } = state.filters;
     const nq = norm(q);
+    const pays = state.filters.pays;
     return state.navires.filter((n) => {
+      if (pays && n._cpays !== pays) return false;
       if (region && n._cregion !== region) return false;
       // Périmètre et type sont des attributs du chantier constructeur : on les applique aussi aux navires.
       if (perims.size && !n._cperims.some((p) => perims.has(p))) return false;
       if (type && !n._ctypes.includes(type)) return false;
-      if (nq && !(norm(n.nom).includes(nq) || norm(n.type).includes(nq) || norm(n.client).includes(nq) || norm(n._cnom).includes(nq))) return false;
+      // Propulsion : facette multi-valeurs (le navire doit porter au moins une famille cochée).
+      if (navProps.size && !(n.propulsion || []).some((p) => navProps.has(p))) return false;
+      // Capacité : type (pax/véhicules/fret) avec seuil minimum.
+      if (navCapType) {
+        const val = navCapType === "pax" ? n.capacite_pax : navCapType === "veh" ? n.capacite_vehicules : (n.capacite_fret ? parseInt(String(n.capacite_fret).replace(/[^\d]/g, ""), 10) : null);
+        if (val == null || isNaN(val)) return false;
+        if (navCapMin && val < navCapMin) return false;
+      }
+      // Taille : longueur hors-tout dans la fourchette.
+      if (navLenMin && !(n.longueur_m >= navLenMin)) return false;
+      if (navLenMax && !(n.longueur_m <= navLenMax)) return false;
+      if (nq && !(norm(n.nom).includes(nq) || norm(n.type).includes(nq) || norm(n.client).includes(nq) || norm(n.operateur).includes(nq) || norm(n.proprietaire).includes(nq) || norm(n._cnom).includes(nq))) return false;
       return true;
     });
   }
@@ -184,6 +226,20 @@
       .forEach((t) => selT.add(new Option(typeLabel(t), t)));
     selT.addEventListener("change", () => { state.filters.type = selT.value; render(); });
 
+    // Pays (registre européen)
+    const PAYS_ORDER = ["France", "Norvège", "Écosse", "Suède"];
+    const paysSet = [...new Set(state.all.map((c) => c.pays))];
+    const paysList = PAYS_ORDER.filter((p) => paysSet.includes(p)).concat(paysSet.filter((p) => !PAYS_ORDER.includes(p)));
+    const selP = $("#f-pays");
+    if (selP) {
+      paysList.forEach((p) => selP.add(new Option(p + " (" + state.all.filter((c) => c.pays === p).length + ")", p)));
+      selP.addEventListener("change", () => {
+        state.filters.pays = selP.value;
+        fitToCountry(selP.value);
+        render();
+      });
+    }
+
     // Regions
     const regions = [...new Set(state.all.map((c) => c.region))].sort((a, b) => a.localeCompare(b));
     const selR = $("#f-region");
@@ -193,14 +249,45 @@
     // Search
     $("#search").addEventListener("input", (e) => { state.filters.q = e.target.value; render(); });
 
+    // Facettes navires (propulsion / capacité / taille). Seules les familles présentes dans les données sont proposées.
+    const presentProps = new Set();
+    state.navires.forEach((n) => (n.propulsion || []).forEach((p) => presentProps.add(p)));
+    const fProp = $("#f-prop");
+    if (fProp) {
+      fProp.innerHTML = PROPULSION_ORDER.filter((p) => presentProps.has(p)).map((p) =>
+        `<button class="prop-chip prop-chip--btn" data-prop="${p}" style="--pc:${propColor(p)}">${propLabel(p)}</button>`).join("");
+      fProp.addEventListener("click", (e) => {
+        const b = e.target.closest("[data-prop]"); if (!b) return;
+        const p = b.dataset.prop;
+        if (state.filters.navProps.has(p)) { state.filters.navProps.delete(p); b.classList.remove("is-on"); }
+        else { state.filters.navProps.add(p); b.classList.add("is-on"); }
+        render();
+      });
+    }
+    const onNum = (sel, key) => { const el = $(sel); if (el) el.addEventListener("input", () => { state.filters[key] = parseInt(el.value, 10) || 0; render(); }); };
+    const fCapType = $("#f-cap-type");
+    if (fCapType) fCapType.addEventListener("change", () => { state.filters.navCapType = fCapType.value; render(); });
+    onNum("#f-cap-min", "navCapMin");
+    onNum("#f-len-min", "navLenMin");
+    onNum("#f-len-max", "navLenMax");
+    const fNavReset = $("#f-nav-reset");
+    if (fNavReset) fNavReset.addEventListener("click", () => {
+      state.filters.navProps = new Set(); state.filters.navCapType = ""; state.filters.navCapMin = 0; state.filters.navLenMin = 0; state.filters.navLenMax = 0;
+      document.querySelectorAll("#f-prop .is-on").forEach((c) => c.classList.remove("is-on"));
+      ["#f-cap-type", "#f-cap-min", "#f-len-min", "#f-len-max"].forEach((s) => { const el = $(s); if (el) el.value = ""; });
+      render();
+    });
+
     // Retour au début : efface filtres, recherche, tri, ferme la fiche,
     // revient à la carte et la recentre sur la France.
     function resetAll() {
-      state.filters = { q: "", perims: new Set(), type: "", region: "" };
+      state.filters = { q: "", perims: new Set(), type: "", region: "", pays: "",
+        navProps: new Set(), navCapType: "", navCapMin: 0, navLenMin: 0, navLenMax: 0 };
       state.sort = { key: "nom", dir: 1 };
       state.activeId = null;
-      $("#search").value = ""; selT.value = ""; selR.value = "";
-      document.querySelectorAll(".chip.is-on").forEach((c) => c.classList.remove("is-on"));
+      $("#search").value = ""; selT.value = ""; selR.value = ""; if ($("#f-pays")) $("#f-pays").value = "";
+      document.querySelectorAll(".chip.is-on, #f-prop .is-on").forEach((c) => c.classList.remove("is-on"));
+      ["#f-cap-type", "#f-cap-min", "#f-len-min", "#f-len-max"].forEach((s) => { const el = $(s); if (el) el.value = ""; });
       $("#drawer").setAttribute("aria-hidden", "true");
       setView("map");
       if (map && state.homeBounds) {
@@ -262,21 +349,34 @@
 
   function initMap(geo) {
     if (typeof L === "undefined") { showMapFallback(); return; }
-    map = L.map("map", { zoomControl: true, attributionControl: false, minZoom: 5, maxZoom: 12 });
+    map = L.map("map", { zoomControl: true, attributionControl: false, minZoom: 4, maxZoom: 12 });
+    const landStyle = { fillColor: "#DBE6EF", color: "#A8BCCD", weight: 1, fillOpacity: 1 };
+    let bounds = null;
     if (geo) {
-      const layer = L.geoJSON(geo, {
-        style: { fillColor: "#DBE6EF", color: "#A8BCCD", weight: 1, fillOpacity: 1 },
-        interactive: false,
-      }).addTo(map);
-      try { state.homeBounds = layer.getBounds(); map.fitBounds(state.homeBounds, { padding: [16, 16] }); }
-      catch (e) { map.setView([46.6, 2.4], 6); }
-    } else {
-      map.setView([46.6, 2.4], 6);
+      const layer = L.geoJSON(geo, { style: landStyle, interactive: false }).addTo(map);
+      try { bounds = layer.getBounds(); } catch (e) { /* noop */ }
     }
+    // Fond des pays étrangers (registre européen) : même style, par-dessous les marqueurs.
+    if (state.foreignGeo) {
+      try {
+        const fl = L.geoJSON(state.foreignGeo, { style: landStyle, interactive: false }).addTo(map);
+        bounds = bounds ? bounds.extend(fl.getBounds()) : fl.getBounds();
+      } catch (e) { /* noop */ }
+    }
+    if (bounds && bounds.isValid()) { state.homeBounds = bounds; map.fitBounds(bounds, { padding: [16, 16] }); }
+    else { map.setView([54, 6], 4); }
     markerLayer = L.layerGroup().addTo(map);
     // La grille CSS peut finir sa mise en page après l'init : on recalcule la taille.
     setTimeout(() => map.invalidateSize(), 0);
     requestAnimationFrame(() => map.invalidateSize());
+  }
+
+  // Recentre la carte sur les chantiers d'un pays (hors outre-mer), ou sur l'emprise complète.
+  function fitToCountry(pays) {
+    if (!map) return;
+    if (!pays) { if (state.homeBounds) try { map.fitBounds(state.homeBounds, { padding: [16, 16] }); } catch (e) {} return; }
+    const pts = state.all.filter((c) => c.pays === pays && !isOutremer(c) && c.lat != null).map((c) => [c.lat, c.lon]);
+    if (pts.length) { try { map.fitBounds(L.latLngBounds(pts), { padding: [40, 40], maxZoom: 9 }); } catch (e) {} }
   }
 
   function renderMap(list) {
@@ -487,24 +587,50 @@
   function openVessel(v) {
     if (!v) return;
     const sim = similarVessels(v);
+    const cap = [
+      v.capacite_pax ? v.capacite_pax.toLocaleString("fr-FR") + " passagers" : null,
+      v.capacite_vehicules ? v.capacite_vehicules.toLocaleString("fr-FR") + " véhicules" : null,
+      v.capacite_fret || null,
+    ].filter(Boolean).join(" · ");
     const specRows = [
-      ["Type", v.type], ["Année", v.annee],
+      ["Type", v.type], ["Année", v.annee], ["IMO", v.imo],
       ["Longueur", v.longueur_m ? v.longueur_m + " m" : null],
       ["Jauge", v.jauge_gt ? v.jauge_gt.toLocaleString("fr-FR") + " GT" : null],
       ["Port en lourd", v.port_lourd_dwt ? v.port_lourd_dwt.toLocaleString("fr-FR") + " DWT" : null],
-      ["Capacité", v.capacite], ["Énergie", v.energie],
-      ["Armateur", v.client], ["Classification", v.classification],
+      ["Capacité", cap || v.capacite], ["Énergie", v.energie], ["Classification", v.classification],
     ].filter(([, x]) => x != null && x !== "");
+    // Exploitation : commanditaire (client), opérateur, propriétaire actuels.
+    const expRows = [
+      ["Commanditaire", v.client], ["Opérateur", v.operateur], ["Propriétaire", v.proprietaire],
+    ].filter(([, x]) => x != null && x !== "");
+    const ROLE = { construction: "Construction", proprietaire: "Propriétaire", operateur: "Opérateur", renommage: "Renommage", conversion: "Conversion", evenement: "Événement" };
+    const tl = Array.isArray(v.timeline) ? v.timeline.filter((e) => e && e.annee) : [];
+    const timelineHtml = tl.length
+      ? `<div class="d-section"><h3>Vie du navire</h3>
+          <ol class="tl">${tl.map((e) => `
+            <li class="tl-item tl-${e.role || "evenement"}">
+              <span class="tl-year">${e.annee}</span>
+              <span class="tl-body"><span class="tl-role">${ROLE[e.role] || "Étape"}</span>
+                <b>${e.nom || ""}</b>${e.detail ? ` <span class="tl-detail">${e.detail}</span>` : ""}
+                ${e.source ? ` <a class="tl-src" href="${e.source}" target="_blank" rel="noopener" title="source">↗</a>` : ""}
+              </span>
+            </li>`).join("")}</ol></div>`
+      : "";
     $("#drawer-body").innerHTML = `
       <div class="d-eyebrow">Navire de référence</div>
       <h2 class="d-nom" id="d-nom">${v.nom || v.type}</h2>
-      <div class="d-loc">${[v.type, v.annee].filter(Boolean).join(" · ")}</div>
+      <div class="d-loc">${[v.type, v.annee, v.imo ? "IMO " + v.imo : null].filter(Boolean).join(" · ")}</div>
+      ${(v.propulsion && v.propulsion.length) ? `<div class="d-perims" style="margin:14px 0 4px">${propChips(v.propulsion)}</div>` : ""}
       <div class="d-section"><h3>Caractéristiques</h3>
         <div class="d-grid">${specRows.map(([k, x]) =>
           `<div class="d-fact"><div class="d-fact__k">${k}</div><div class="d-fact__v">${x}</div></div>`).join("")}</div></div>
+      ${expRows.length ? `<div class="d-section"><h3>Exploitation</h3>
+        <div class="d-grid">${expRows.map(([k, x]) =>
+          `<div class="d-fact"><div class="d-fact__k">${k}</div><div class="d-fact__v">${x}</div></div>`).join("")}</div></div>` : ""}
       <div class="d-section"><h3>Construit par</h3>
         <button class="ves-yard" data-open-chantier="${v._cid}"><b>${v._cnom}</b><span>${v._cville} · voir la fiche du chantier →</span></button>
       </div>
+      ${timelineHtml}
       ${sim.length ? `<div class="d-section"><h3>Navires similaires</h3>
         <ul class="d-list">${sim.map((s) => `
           <li style="flex-direction:column;gap:4px;align-items:flex-start">
@@ -526,7 +652,9 @@
         <div class="card__body">
           <div class="card__nom">${n.nom || n.type}</div>
           <div class="card__meta">${[n.type, n.annee].filter(Boolean).join(" · ")}</div>
+          ${(n.propulsion && n.propulsion.length) ? `<div class="nav-props">${propChips(n.propulsion)}</div>` : ""}
           ${vesselSpecs(n) ? `<div class="nav-specs">${vesselSpecs(n)}</div>` : ""}
+          ${n.operateur ? `<div class="nav-op">Opérateur : <b>${n.operateur}</b></div>` : ""}
           <div class="nav-yard">Chantier : <b>${n._cnom}</b> <span>· ${n._cville}</span></div>
         </div>
       </div>`).join("");
