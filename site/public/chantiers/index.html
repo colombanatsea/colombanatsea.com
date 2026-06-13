@@ -19,6 +19,11 @@
       <button id="btn-dir" class="viewtoggle__btn" role="tab" aria-selected="false">Annuaire</button>
       <button id="btn-nav" class="viewtoggle__btn" role="tab" aria-selected="false">Navires</button>
     </div>
+    <button id="btn-corr" class="corrbtn" type="button" title="Mes corrections enregistrées" aria-label="Mes corrections enregistrées">
+      <span class="corrbtn__ic" aria-hidden="true">✎</span>
+      <span class="corrbtn__lbl">Corrections</span>
+      <span id="corr-count" class="corrbtn__badge is-hidden">0</span>
+    </button>
   </header>
 
   <section class="controls is-collapsed" aria-label="Filtres">
@@ -118,6 +123,26 @@
       <div id="drawer-body"></div>
     </article>
   </div>
+
+  <!-- Modale : partager une correction -->
+  <div id="corr-modal" class="cmodal" aria-hidden="true">
+    <div class="cmodal__backdrop" data-corr-close></div>
+    <form class="cmodal__panel" id="corr-form" role="dialog" aria-modal="true" aria-labelledby="corr-title">
+      <button type="button" class="cmodal__close" data-corr-close aria-label="Fermer">×</button>
+      <div class="d-eyebrow">Votre retour</div>
+      <h2 class="cmodal__title" id="corr-title">Partager une correction</h2>
+      <div class="cmodal__target" id="corr-target"></div>
+      <label class="cmodal__lbl" for="corr-text">Correction</label>
+      <textarea id="corr-text" rows="5" required placeholder="Décrivez l'erreur ou l'information à corriger : donnée fausse, navire manquant, capacité, propulsion, opérateur, propriétaire, pavillon…"></textarea>
+      <label class="cmodal__lbl" for="corr-src">Source <span class="cmodal__opt">lien ou référence (recommandé)</span></label>
+      <input id="corr-src" type="text" placeholder="https://… ou référence de la source" autocomplete="off" />
+      <div class="cmodal__actions">
+        <button type="button" class="cbtn cbtn--ghost" data-corr-close>Annuler</button>
+        <button type="submit" class="cbtn cbtn--primary">Valider</button>
+      </div>
+    </form>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <footer class="foot">
     <span>VAIATA · Intelligence navale &nbsp;·&nbsp; chaque fiche cite ses sources</span>
