@@ -21,28 +21,33 @@
     </div>
   </header>
 
-  <section class="controls" aria-label="Filtres">
+  <section class="controls is-collapsed" aria-label="Filtres">
     <div class="control control--search">
       <label class="control__label" for="search">Recherche</label>
       <input id="search" type="search" placeholder="Chantier, ville, ou nom de navire" autocomplete="off" />
     </div>
-    <div class="control">
-      <label class="control__label">Périmètre</label>
-      <div id="perim-chips" class="chips"></div>
+    <button id="filters-toggle" class="filters-toggle" type="button" aria-expanded="false" aria-controls="controls-more">
+      <span>Filtres</span><span class="filters-toggle__chev" aria-hidden="true">▾</span>
+    </button>
+    <div id="controls-more" class="controls__more">
+      <div class="control">
+        <label class="control__label">Périmètre</label>
+        <div id="perim-chips" class="chips"></div>
+      </div>
+      <div class="control">
+        <label class="control__label" for="f-pays">Pays</label>
+        <select id="f-pays"><option value="">Tous pays</option></select>
+      </div>
+      <div class="control">
+        <label class="control__label" for="f-type">Type de navire</label>
+        <select id="f-type"><option value="">Tous types</option></select>
+      </div>
+      <div class="control">
+        <label class="control__label" for="f-region">Localisation</label>
+        <select id="f-region"><option value="">Toutes régions</option></select>
+      </div>
+      <button id="reset" class="reset" title="Réinitialise recherche, filtres et carte">↺ Réinitialiser</button>
     </div>
-    <div class="control">
-      <label class="control__label" for="f-pays">Pays</label>
-      <select id="f-pays"><option value="">Tous pays</option></select>
-    </div>
-    <div class="control">
-      <label class="control__label" for="f-type">Type de navire</label>
-      <select id="f-type"><option value="">Tous types</option></select>
-    </div>
-    <div class="control">
-      <label class="control__label" for="f-region">Localisation</label>
-      <select id="f-region"><option value="">Toutes régions</option></select>
-    </div>
-    <button id="reset" class="reset" title="Réinitialise recherche, filtres et carte">↺ Réinitialiser</button>
     <div id="count" class="controls__count"></div>
   </section>
 
