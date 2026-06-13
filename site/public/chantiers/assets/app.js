@@ -391,9 +391,9 @@
     if (!map || !markerLayer) return;
     markerLayer.clearLayers();
     markers.clear();
-    // Les chantiers d'outre-mer sont hors emprise métropole : ils flotteraient sur fond vide.
-    // On les retire de la carte et on les sert via l'index outre-mer.
-    list.filter((c) => !isOutremer(c)).forEach((c) => {
+    // Outre-mer (hors emprise) et chantiers sans coordonnées : non placés sur la carte
+    // (ils restent dans l'annuaire, la recherche et les navires).
+    list.filter((c) => !isOutremer(c) && c.lat != null && c.lon != null).forEach((c) => {
       const color = PERIM_COLORS[primaryPerim(c)];
       const m = L.circleMarker([c.lat, c.lon], {
         radius: 8, color: "#ffffff", weight: 2, fillColor: color, fillOpacity: 1,
@@ -603,9 +603,10 @@
     const specRows = [
       ["Type", v.type], ["Année", v.annee], ["IMO", v.imo],
       ["Longueur", v.longueur_m ? v.longueur_m + " m" : null],
+      ["Largeur", v.largeur_m ? v.largeur_m + " m" : null],
       ["Jauge", v.jauge_gt ? v.jauge_gt.toLocaleString("fr-FR") + " GT" : null],
       ["Port en lourd", v.port_lourd_dwt ? v.port_lourd_dwt.toLocaleString("fr-FR") + " DWT" : null],
-      ["Capacité", cap || v.capacite], ["Énergie", v.energie], ["Classification", v.classification],
+      ["Capacité", cap || v.capacite], ["Desserte", v.desserte], ["Énergie", v.energie], ["Classification", v.classification],
     ].filter(([, x]) => x != null && x !== "");
     // Exploitation : commanditaire (client), opérateur, propriétaire, pavillon actuels.
     const expRows = [
