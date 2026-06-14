@@ -40,6 +40,26 @@
     if (/\/unit|\bunit[ée]\b/i.test(s) && !/\/unit/i.test(t)) t += "/u.";
     return t.replace(/[,.\s]+$/, "");
   };
+  // Affichage en euros. Le montant sourcé (devise d'origine) reste la vérité (fiche + survol) ;
+  // on affiche une valeur en € pour comparer d'un coup d'œil (≈ si conversion, taux indicatifs).
+  const isEurNative = (s) => /€|\beur\b/i.test(s) && !/£|gbp|\$|\busd\b|\bnok\b|\bsek\b|\bdkk\b|\brmb\b|\bfrf\b/i.test(s);
+  const fmtEurM = (m) => {
+    if (m == null) return "";
+    if (m >= 1000) return (m / 1000).toLocaleString("fr-FR", { maximumFractionDigits: 2 }) + " Md€";
+    if (m >= 1) return m.toLocaleString("fr-FR", { maximumFractionDigits: m < 10 ? 1 : 0 }) + " M€";
+    return Math.round(m * 1000).toLocaleString("fr-FR") + " k€";
+  };
+  // Extrait le premier montant monétaire propre d'une chaîne (sans le commentaire entre parenthèses).
+  const MONEY_ONE = /(\d[\d  .,]*\s*(?:milliards?|millions?|mds?|bn|m|k)?\s*(?:€|£|\$|eur|usd|gbp|nok|sek|dkk|rmb|frf|kr))|(?:€|£|\$|usd|eur|gbp|nok|sek|dkk|rmb|frf)\s*\d[\d  .,]*\s*(?:milliards?|millions?|mds?|bn|m|k)?/i;
+  const extractAmount = (s) => { const m = String(s).match(MONEY_ONE); return m ? m[0].trim() : shortPrice(s); };
+  // Prix affiché en € : exact si déjà en €, sinon conversion approximative préfixée « ≈ ».
+  const priceEur = (s) => {
+    if (!s) return "";
+    const unit = /\/unit|\bunit[ée]\b/i.test(s) ? "/u." : "";
+    if (isEurNative(s)) return extractAmount(s) + unit;
+    const m = parsePriceEurM(s);
+    return m != null ? "≈ " + fmtEurM(m) + unit : shortPrice(s);
+  };
 
   // Territoires d'outre-mer : hors emprise de la carte métropole, regroupés dans un index dédié.
   const OUTREMER_REGIONS = new Set([
@@ -823,7 +843,10 @@
       ["Jauge", v.jauge_gt ? v.jauge_gt.toLocaleString("fr-FR") + " GT" : null],
       ["Port en lourd", v.port_lourd_dwt ? v.port_lourd_dwt.toLocaleString("fr-FR") + " DWT" : null],
       ["Capacité", cap || v.capacite], ["Desserte", v.desserte], ["Énergie", v.energie],
-      ["Prix d'acquisition", v.prix_acquisition], ["Classification", v.classification],
+      ["Prix d'acquisition", v.prix_acquisition
+        ? (isEurNative(v.prix_acquisition) ? v.prix_acquisition : priceEur(v.prix_acquisition) + " (" + v.prix_acquisition + ")")
+        : null],
+      ["Classification", v.classification],
     ].filter(([, x]) => x != null && x !== "");
     // Exploitation : commanditaire (client), opérateur, propriétaire, pavillon actuels.
     const expRows = [
@@ -894,7 +917,7 @@
         <div class="card__body">
           <div class="nav-card__top">
             <div class="card__nom">${n.nom || n.type}</div>
-            ${n.prix_acquisition ? `<div class="nav-prix" title="${String(n.prix_acquisition).replace(/"/g, "&quot;")}">${shortPrice(n.prix_acquisition)}</div>` : ""}
+            ${n.prix_acquisition ? `<div class="nav-prix" title="Prix : ${String(n.prix_acquisition).replace(/"/g, "&quot;")}">${priceEur(n.prix_acquisition)}</div>` : ""}
           </div>
           <div class="card__meta">${[n.type, n.annee].filter(Boolean).join(" · ")}</div>
           ${(n.propulsion && n.propulsion.length) ? `<div class="nav-props">${propChips(n.propulsion)}</div>` : ""}
