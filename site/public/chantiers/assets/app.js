@@ -32,6 +32,15 @@
   const propChips = (arr) => (arr || []).map((p) =>
     `<span class="prop-chip" style="--pc:${propColor(p)}">${propLabel(p)}</span>`).join("");
 
+  // Forme courte du prix pour le badge de tuile (le libellé complet reste en fiche + au survol).
+  // On garde la tête (montant + devise + éventuel « /unité »), on coupe avant le commentaire.
+  const shortPrice = (s) => {
+    if (!s) return "";
+    let t = String(s).split(/ - | – |;|\(d[ée]riv|\(estimation|\(co[uû]t|\(prix|\(contexte/i)[0].trim();
+    if (/\/unit|\bunit[ée]\b/i.test(s) && !/\/unit/i.test(t)) t += "/u.";
+    return t.replace(/[,.\s]+$/, "");
+  };
+
   // Territoires d'outre-mer : hors emprise de la carte métropole, regroupés dans un index dédié.
   const OUTREMER_REGIONS = new Set([
     "Martinique", "Guadeloupe", "La Réunion", "Mayotte", "Guyane",
@@ -885,7 +894,7 @@
         <div class="card__body">
           <div class="nav-card__top">
             <div class="card__nom">${n.nom || n.type}</div>
-            ${n.prix_acquisition ? `<div class="nav-prix" title="Prix d'acquisition">${n.prix_acquisition}</div>` : ""}
+            ${n.prix_acquisition ? `<div class="nav-prix" title="${String(n.prix_acquisition).replace(/"/g, "&quot;")}">${shortPrice(n.prix_acquisition)}</div>` : ""}
           </div>
           <div class="card__meta">${[n.type, n.annee].filter(Boolean).join(" · ")}</div>
           ${(n.propulsion && n.propulsion.length) ? `<div class="nav-props">${propChips(n.propulsion)}</div>` : ""}
