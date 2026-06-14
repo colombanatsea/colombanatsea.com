@@ -883,7 +883,10 @@
     el.innerHTML = list.map((n) => `
       <div class="card nav-card" data-vid="${n._idx}">
         <div class="card__body">
-          <div class="card__nom">${n.nom || n.type}</div>
+          <div class="nav-card__top">
+            <div class="card__nom">${n.nom || n.type}</div>
+            ${n.prix_acquisition ? `<div class="nav-prix" title="Prix d'acquisition">${n.prix_acquisition}</div>` : ""}
+          </div>
           <div class="card__meta">${[n.type, n.annee].filter(Boolean).join(" · ")}</div>
           ${(n.propulsion && n.propulsion.length) ? `<div class="nav-props">${propChips(n.propulsion)}</div>` : ""}
           ${vesselSpecs(n) ? `<div class="nav-specs">${vesselSpecs(n)}</div>` : ""}
