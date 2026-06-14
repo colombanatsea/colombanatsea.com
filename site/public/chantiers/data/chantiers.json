@@ -12797,7 +12797,8 @@
               "role": "construction",
               "nom": "Piriou",
               "detail": "Construit pour Région Bretagne — ligne Le Conquet / Molène-Ouessant",
-              "source": "DSP Région Bretagne 1/1/2023"
+              "source": "DSP Région Bretagne 1/1/2023",
+              "prix": "12,2 millions EUR (2011, total projet)"
             },
             {
               "annee": "2011",
@@ -12812,9 +12813,18 @@
               "nom": "Échéance du contrat",
               "detail": "DSP, navires propriété de la collectivité",
               "source": "DSP Région Bretagne 1/1/2023"
+            },
+            {
+              "annee": "2011",
+              "role": "evenement",
+              "nom": "Fromveur 2",
+              "detail": "Mise à l'eau aux chantiers Piriou rapportée par Mer et Marine ; investissement présenté à ~13 M€ par le Conseil général du Finistère (variante d'arrondi du montant total de 12,2 M€).",
+              "prix": "≈ 13 millions EUR (investissement, arrondi)",
+              "source": "https://www.meretmarine.com/fr/marine-marchande/le-fromveur-2-mis-a-l-eau-aux-chantiers-piriou"
             }
           ],
-          "source": "DSP Région Bretagne 1/1/2023"
+          "source": "DSP Région Bretagne 1/1/2023",
+          "prix_acquisition": "12,2 millions EUR (2011, coût total du projet, financé par le Conseil général du Finistère)"
         },
         {
           "nom": "Cap Sainte Marie",
@@ -17492,9 +17502,18 @@
               "nom": "Armateur prive",
               "detail": "Livre a son proprietaire en 2023. Immatricule en France comme navire de plaisance (ARAOK 2, MMSI 228439800, indicatif FMUY), sans numero IMO ; pavillon parfois indique Malte selon les bases de yachts.",
               "source": "https://www.marinetraffic.com/en/ais/details/ships/shipid:7840847/mmsi:228439800/imo:0/vessel:ARAOK_2"
+            },
+            {
+              "annee": "2024",
+              "role": "evenement",
+              "nom": "Araok II (OCEA Commuter 108)",
+              "detail": "Reference de marche revente serie Commuter 108 : unite Commuter 108 millesime 2007 listee a la vente a 4 500 000 EUR (Viareggio). Fourchette marche occasion serie 3,85-4,5 M EUR. Sert de comparable, pas le prix de l'Araok II elle-meme.",
+              "prix": "4 500 000 EUR (occasion comparable, 2024)",
+              "source": "https://www.bandofboats.com/fr/bateaux-a-vendre/141058"
             }
           ],
-          "capacite_pax": 8
+          "capacite_pax": 8,
+          "prix_acquisition": "Prix de construction neuf non public (yacht custom). Comparable revente série Commuter 108 : 3,85-4,5 M EUR (ex. unité 2007 listee a 4,5 M EUR en 2024)"
         },
         {
           "nom": "NNS Chalawa (FPB 98 MkI)",
@@ -25324,7 +25343,8 @@
               "role": "construction",
               "nom": "Chantiers Gléhen (Douarnenez)",
               "detail": "Transbordeur / navire à passagers d'île pour la liaison Fouras (Pointe de la Fumée) - Île d'Aix.",
-              "source": "https://fr.wikipedia.org/wiki/Chantier_Glehen"
+              "source": "https://fr.wikipedia.org/wiki/Chantier_Glehen",
+              "prix": "≈ 3 500 000 EUR"
             },
             {
               "annee": "2011",
@@ -25332,8 +25352,17 @@
               "nom": "Service maritime de l'île d'Aix (Keolis)",
               "detail": "Exploité dans le cadre du Service maritime de l'île d'Aix (Département de la Charente-Maritime), opéré par Keolis, aux côtés du Pierre Loti. Traversée d'environ 25 min.",
               "source": "https://www.service-maritime-iledaix.com/traversees_fouras_iledaix.php"
+            },
+            {
+              "annee": "2011",
+              "role": "proprietaire",
+              "nom": "Île d'Aix II",
+              "detail": "Armateur/proprietaire : Departement de la Charente-Maritime (liaison Pointe de la Fumee/Fouras - ile d'Aix).",
+              "prix": "≈ 3 500 000 EUR",
+              "source": "https://www.chantier-glehen.com/fr,ile-d-aix-ii,10,78.html"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 3,5 M EUR (cout de construction, 2010-2011)"
         },
         {
           "nom": "Nevez Amzer",
@@ -25356,7 +25385,8 @@
               "role": "construction",
               "nom": "Chantiers Gléhen (Douarnenez)",
               "detail": "Catamaran à passagers panoramique, 24 m, 18 nœuds, 196 passagers. Mis à l'eau le 26 juin 2009 (\"Nevez Amzer\" = \"printemps\" en breton). Port d'attache Nantes.",
-              "source": "https://fr.wikipedia.org/wiki/Nevez_Amzer"
+              "source": "https://fr.wikipedia.org/wiki/Nevez_Amzer",
+              "prix": "1 500 000 EUR"
             },
             {
               "annee": "2009",
@@ -25365,7 +25395,8 @@
               "detail": "Exploité par Finist'mer : liaison Brest - Île Longue à l'année (sauf juillet-août), liaison continent - Île de Sein en juillet-août.",
               "source": "https://fr.wikipedia.org/wiki/Nevez_Amzer"
             }
-          ]
+          ],
+          "prix_acquisition": "1,5 M EUR (cout de construction, 2009)"
         },
         {
           "nom": "Ile de Nantes",
@@ -28482,7 +28513,8 @@
               "role": "construction",
               "nom": "MERRE",
               "detail": "Construit pour Département de Loire-Atlantique (CD44) — ligne Le Pellerin - Couëron",
-              "source": "propriétaire CD44"
+              "source": "propriétaire CD44",
+              "prix": "8 000 000 EUR/unite (derive : ≈ 15,7 M EUR pour 2 sister-ships identiques Île Dumet + Lola ; Wikipedia cite 8 M EUR piece)"
             },
             {
               "annee": "2013",
@@ -28490,8 +28522,17 @@
               "nom": "Bacs de Loire",
               "detail": "Régie / marché public d'exploitation",
               "source": "propriétaire CD44"
+            },
+            {
+              "annee": "2013",
+              "role": "proprietaire",
+              "nom": "Île Dumet",
+              "detail": "Bac de Loire exploite par le Departement de Loire-Atlantique (service public de franchissement de la Loire).",
+              "prix": "8 000 000 EUR",
+              "source": "https://www.meretmarine.com/fr/content/lile-dumet-nouveau-bac-de-loire-fait-ses-essais-en-mer"
             }
-          ]
+          ],
+          "prix_acquisition": "8 M EUR (cout de construction unitaire, 2013) ; total serie 15,7 M EUR pour 2 sister-ships (Île Dumet + Lola)"
         },
         {
           "nom": "Lola",
@@ -28522,7 +28563,8 @@
               "role": "construction",
               "nom": "MERRE",
               "detail": "Construit pour Département de Loire-Atlantique (CD44) — ligne Basse-Indre - Indret",
-              "source": "propriétaire CD44"
+              "source": "propriétaire CD44",
+              "prix": "8 000 000 EUR/unite (derive : ≈ 15,7 M EUR pour 2 sister-ships identiques Lola + Île Dumet ; Wikipedia cite 8 M EUR piece)"
             },
             {
               "annee": "2012",
@@ -28530,8 +28572,17 @@
               "nom": "Bacs de Loire",
               "detail": "Régie / marché public d'exploitation",
               "source": "propriétaire CD44"
+            },
+            {
+              "annee": "2012",
+              "role": "proprietaire",
+              "nom": "Lola",
+              "detail": "Bac de Loire exploite par le Departement de Loire-Atlantique (service public de franchissement de la Loire).",
+              "prix": "8 000 000 EUR",
+              "source": "https://www.meretmarine.com/fr/content/lile-dumet-nouveau-bac-de-loire-fait-ses-essais-en-mer"
             }
-          ]
+          ],
+          "prix_acquisition": "8 M EUR (cout de construction unitaire, 2012) ; total serie 15,7 M EUR pour 2 sister-ships (Lola + Île Dumet)"
         },
         {
           "nom": "Fort Boyard",
@@ -30044,9 +30095,18 @@
               "nom": "Tatihou",
               "detail": "Régie",
               "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            },
+            {
+              "annee": "2021",
+              "role": "construction",
+              "nom": "Tatihou III",
+              "detail": "Marche public du Departement de la Manche pour la construction et livraison d'un navire amphibie de transport de passagers (liaison Saint-Vaast-la-Hougue / ile Tatihou), attribue au chantier Efinor Allais (Cherbourg) ; contrat notifie le 13 decembre 2021. Premiers passagers au printemps 2023.",
+              "prix": "1 107 130 EUR",
+              "source": "https://www.normandie-maritime.fr/actualite/naval---efinor-allais-livre-le-nouveau-navire-amphibie-tatihou-iii/1628"
             }
           ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "1 107 130 EUR (2021, marche public Departement de la Manche, contrat de construction notifie le 13/12/2021)"
         },
         {
           "nom": "Elodie (pilotine P20)",
@@ -46929,6 +46989,14 @@
               "nom": "Cie Navivoile",
               "detail": "Exploite par l'entreprise familiale Navivoile (capitaine Cyril Sintes) pour des croisieres a la voile depuis Canet-en-Roussillon et Port-Vendres le long de la cote catalane.",
               "source": "https://navivoile.com/compagnie-maritime-canet-en-roussillon/"
+            },
+            {
+              "annee": "2020",
+              "role": "evenement",
+              "nom": "Navivoile",
+              "detail": "Pas de prix de construction ni d'acquisition public trouve apres recherche approfondie (presse regionale, sites de l'armateur et offices de tourisme). Seul montant chiffre identifie = une aide regionale L'OCCAL de 16 222 EUR sur un projet de 23 174 EUR pour le remplacement de l'antifouling par du Coppercoat (depense d'entretien post-COVID, ce N'EST PAS le prix du navire). Le catamaran a voile (env. 25 m, jusqu'a 91 passagers) a ete construit en 2008-2018 au Chantier Martinez (Saint-Cyprien) par la famille Sintes.",
+              "prix": "16 222 EUR (aide L'OCCAL, entretien antifouling, hors prix du navire)",
+              "source": "https://www.laregion.fr/A-Canet-en-Roussillon-Navivoile-pour-prendre-le-large-autrement"
             }
           ]
         },
@@ -47379,8 +47447,17 @@
               "nom": "GIE Transrade, pour la RTM",
               "detail": "Exploitee par le GIE Transrade qui assure les lignes maritimes du Vieux-Port de Marseille vers les quartiers sud et nord pour le compte de la RTM.",
               "source": "https://www.marseille.fr/se-deplacer/transports-touristiques/navettes-maritimes"
+            },
+            {
+              "annee": "2016",
+              "role": "construction",
+              "nom": "Pomègues",
+              "detail": "Navette à passagers (123 pax) construite par le Chantier Naval Gatto à Martigues pour le GIE Transrades (Icard Maritime + MSM), exploitée sur les navettes maritimes RTM du Vieux-Port de Marseille. Prix non publié directement, mais l'article precise que la vedette Ratonneau, decrite comme identique au Pomègues, a represente un investissement de 1 M€. Sister-ships reellement identiques => prix unitaire Pomègues ≈ 1 M€.",
+              "prix": "≈ 1 M€ (derive du jumeau identique Ratonneau a 1 M€)",
+              "source": "https://www.businews.fr/Une-vedette-neuve-pour-les-navettes-maritimes-RTM_a1804.html"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 1 M€ (2016, derive : la vedette identique Ratonneau a represente un investissement de 1 M€, meme modele Gatto pour le GIE Transrades / RTM, 123 passagers)"
         },
         {
           "nom": "Ultima Perla",
@@ -48659,7 +48736,8 @@
               "role": "construction",
               "nom": "Pêch'Alu International (Inzinzac-Lochrist)",
               "detail": "Navire à passagers vélique-électrique hybride, coque aluminium / superstructure bois, 16,3 m, 60 passagers. Architecte L2O Naval. Mis à l'eau le 10 juillet 2025 à Saint-Philibert. Premier navire à passagers à propulsion vélique en France.",
-              "source": "https://www.meretmarine.com/fr/construction-navale/le-passeur-des-iles-le-navire-hybride-pass-avel-mis-a-l-eau"
+              "source": "https://www.meretmarine.com/fr/construction-navale/le-passeur-des-iles-le-navire-hybride-pass-avel-mis-a-l-eau",
+              "prix": "env. 1,1 M EUR"
             },
             {
               "annee": "2025",
@@ -48667,8 +48745,17 @@
               "nom": "Le Passeur des Îles",
               "detail": "Mise en service visée août 2025. Navette estivale Locmariaquer - Port-Navalo (entrée du golfe du Morbihan), dessert l'Île aux Moines en basse saison.",
               "source": "https://www.meretmarine.com/fr/marine-marchande/golfe-du-morbihan-la-future-vedette-du-passeur-des-iles-naviguera-a-la-voile"
+            },
+            {
+              "annee": "2025",
+              "role": "evenement",
+              "nom": "Pass'Avel",
+              "detail": "Plan de financement : subvention du Fonds d'Intervention Maritime (FIM) de 350 000 EUR, soit environ un tiers du cout total estime a 1 million EUR ; complement par emprunt bancaire et aide de la Region Bretagne.",
+              "prix": "350 000 EUR (subvention FIM, ~1/3 du total)",
+              "source": "https://www.meretmarine.com/fr/marine-marchande/golfe-du-morbihan-la-future-vedette-du-passeur-des-iles-naviguera-a-la-voile"
             }
-          ]
+          ],
+          "prix_acquisition": "env. 1,1 M EUR (cout final 2025 ; budget initial estime ~1 M EUR depasse). Financement par emprunt bancaire + subventions : FIM 350 000 EUR (un tiers) + Region Bretagne."
         },
         {
           "nom": "Mobula",
@@ -51367,8 +51454,17 @@
               "nom": "Navalu (Bouin)",
               "detail": "Entree generique de catalogue (vedettes a passagers / bacs en aluminium pour services de transport public), et non un navire nomme unique. Aucune unite identifiable a tracer individuellement : voir les unites nommees du meme chantier (Eros III, Navibus H2, La Boheme, Sea Fox, Nep14).",
               "source": "https://www.navalu.fr/navire/navires-passagers-amphibies/"
+            },
+            {
+              "annee": "2025",
+              "role": "construction",
+              "nom": "Navette électrique Gâvres-Port-Louis (Navalu, reference de prix pour la categorie)",
+              "detail": "L'entree i=13 est une categorie generique (vedettes/bacs aluminium), pas un navire unique. Reference de prix marche public la plus precise pour Navalu : navette 100% electrique conçue et construite par Navalu pour Lorient Agglomération pour 1,39 M€ HT (tranche ferme 16 mois + 3 tranches optionnelles maintenance), remplacement du Trait d'Union 2, mise en service prevue fin T1 2027. Donne un ordre de grandeur du prix d'une vedette à passagers Navalu en transport public.",
+              "prix": "1,39 M€ HT (2025)",
+              "source": "https://www.lorient-agglo.bzh/actualites/toutes-les-actualites/actualite/news/lorient-agglomeration-engage-la-construction-dun-navire-100-electrique-pour-la-ligne-maritime-gav/"
             }
-          ]
+          ],
+          "prix_acquisition": "Pas de navire unique nomme ; reference de prix marche public Navalu = 1,39 M€ HT pour une navette à passagers 100% electrique (ligne Gâvres-Port-Louis, Lorient Agglomération, 2025, mise en service T1 2027)"
         }
       ],
       "geo_source": "https://www.navalu.fr/entreprise-construction-navale"
@@ -59289,8 +59385,17 @@
               "nom": "CIM - Constructions Industrielles et Maritimes (Rochefort)",
               "detail": "Catamaran day-charter / a passagers CIM 64 (Ocean Voyager 64), GRP, 19,5 m, agree navire a passagers 60 pax, architectes Mortain & Mavrikios ; mise en production 1999.",
               "source": "yachtworld.com (2000 CIM 64) + multihulls-world.com fiche CIM 64 / Ocean Voyager 64"
+            },
+            {
+              "annee": "2019",
+              "role": "evenement",
+              "nom": "Revente d'occasion",
+              "detail": "CIM 64 / Ocean Voyager 64 de 2000 (19,5 m, 60 passagers, day-charter), basé au Marin (Martinique), mis en vente d'occasion. Prix demandé 450 000 EUR confirmé par plusieurs annonces de courtiers (annonces-marine/Néo Marine, iNautia, YachtWorld, Annonces du Bateau, multihulls-4sale).",
+              "prix": "450 000 EUR",
+              "source": "https://pro.annonces-marine.com/neo-marine/annonce-bateau-143698.html"
             }
-          ]
+          ],
+          "prix_acquisition": "Revente : 450 000 EUR (annonce courtier, unité de 2000 basée au Marin, Martinique, listée ~2019-2020). Prix de construction neuve non public."
         }
       ],
       "geo_source": "https://fr.mappy.com/poi/50ae02fc84ae33b58a18927d"
@@ -61939,7 +62044,8 @@
               "role": "construction",
               "nom": "Alumarine Shipyard (Couëron)",
               "detail": "Vedette à passagers fluviale en aluminium 27,8 m x 5 m, tirant d'eau 0,77 m, propulsion hybride (mode thermique et mode électrique silencieux, ~3 h d'autonomie en électrique), plans DN&T. Capacité 102 passagers en croisière / 60 en formule restaurant.",
-              "source": "https://www.meretmarine.com/fr/content/alumarine-livre-une-vedette-de-28-metres-propulsion-hybride"
+              "source": "https://www.meretmarine.com/fr/content/alumarine-livre-une-vedette-de-28-metres-propulsion-hybride",
+              "prix": "≈ 1 000 000 €"
             },
             {
               "annee": "2015",
@@ -61955,7 +62061,8 @@
               "detail": "Commanditaire, propriétaire et exploitant. Croisières touristiques sur l'Oise (valorisées par la Cité des Bateliers / tourisme de l'Oise).",
               "source": "https://www.citedesbateliers.com/croisiere-sur-l-oise-le-bateau-lescapade-2/"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 1 M€ (2015, coût total de construction)"
         },
         {
           "nom": null,
@@ -71654,7 +71761,8 @@
               "role": "construction",
               "nom": "Chantiers de la Haute-Seine (Villeneuve-le-Roi)",
               "detail": "Bateau-restaurant à passagers de 38 m, premier bateau 100% électrique de Paris pouvant accueillir une centaine de convives, 2 moteurs/propulseurs électriques de 500 ch, ~180 t d'acier (110 t bateau + 70 t ponton). Coque et superstructures acier réalisées par les Chantiers de la Haute-Seine ; architecture navale Gérard Ronzatti (Seine Design). Investissement ~11 M EUR.",
-              "source": "https://chantiers-navals-haute-seine.fr/reference/le-ducasse-sur-seine/"
+              "source": "https://chantiers-navals-haute-seine.fr/reference/le-ducasse-sur-seine/",
+              "prix": "11 M€ (2018, bateau + ponton)"
             },
             {
               "annee": "2018",
@@ -71670,7 +71778,8 @@
               "detail": "Exploité comme expérience de croisière gastronomique sous l'enseigne Ducasse sur Seine (groupe Ducasse Paris).",
               "source": "https://www.ducasse-seine.com/en/cruise-boat-paris"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 11 M€ (2018, investissement total bateau + ponton/dock ; projet Ducasse Paris + Caisse des Dépôts + Citysurfing)"
         },
         {
           "nom": "Barges CEMEX (paire inaugurée 2018)",
@@ -74167,6 +74276,16 @@
           "source": "https://www.chantierdesileaux.com/bois-composites/realisations/",
           "propulsion": [
             "velique"
+          ],
+          "timeline": [
+            {
+              "annee": "2024",
+              "role": "evenement",
+              "nom": "Sarbacane (ANA HITA, occasion)",
+              "detail": "Prix de revente d'occasion affiché par le chantier (avec remorque). Pas de prix de construction neuve publie ; le dayboat Sarbacane est construit a la commande par le Chantier des Ileaux.",
+              "prix": "45 000 EUR (occasion)",
+              "source": "https://www.chantierdesileaux.com/a-vendre-sarbacane-2/"
+            }
           ]
         },
         {
@@ -93495,6 +93614,14 @@
               "nom": "Brødrene Aa (Hyen)",
               "detail": "année exacte non confirmée (~2008, flotte Tide)",
               "source": "braa.no"
+            },
+            {
+              "annee": "2009",
+              "role": "construction",
+              "nom": "Tidebaronen",
+              "detail": "Catamaran rapide à passagers (250 pax, coque sandwich carbone/vinylester), bnr 255, livre le 24 juillet 2009 par Brødrene Aa (Hyen) à Tide Sjø (ligne Lysaker-Nesoddtangen, Oslofjord). Prix unitaire non publie : les fiches techniques (Skipsrevyen, Maritimt Magasin) ne donnent aucune somme contractuelle. Un investissement global d'environ 400 M NOK est cite pour l'ensemble de l'operation Oslofjord (≈ 5 navires de types differents : 3 ferries + 2 catamarans rapides), mais comme ces navires ne sont pas des sister-ships identiques, aucun prix unitaire fiable ne peut en etre derive.",
+              "prix": "non publie (lot global Oslofjord ≈ 400 M NOK pour 5 navires de types differents, non isolable)",
+              "source": "https://www.bt.no/nyheter/okonomi/i/PvPxz/med-tide-til-nesoddtangen"
             }
           ]
         },
@@ -93521,6 +93648,14 @@
               "nom": "Brødrene Aa (Hyen)",
               "detail": "année exacte non confirmée (~2008)",
               "source": "braa.no"
+            },
+            {
+              "annee": "2009",
+              "role": "construction",
+              "nom": "Tidebaronessen",
+              "detail": "Catamaran rapide à passagers (180 pax, sandwich carbone, ~27 m), bnr 254, livre par Brødrene Aa (Hyen) à Tide Sjø en 2009 (mis en service 1er juin 2009 sur Lysaker-Nesoddtangen). Prix unitaire non publie : fiches techniques Skipsrevyen sans somme contractuelle. Meme contexte de lot global Oslofjord (≈ 400 M NOK pour ≈ 5 navires de types differents), non isolable en prix unitaire fiable faute de sister-ships identiques.",
+              "prix": "non publie (lot global Oslofjord ≈ 400 M NOK pour 5 navires de types differents, non isolable)",
+              "source": "https://www.bt.no/nyheter/okonomi/i/PvPxz/med-tide-til-nesoddtangen"
             }
           ]
         },
@@ -93571,8 +93706,17 @@
               "nom": "Brødrene Aa (Hyen)",
               "detail": "année exacte non confirmée",
               "source": "braa.no"
+            },
+            {
+              "annee": "2007",
+              "role": "construction",
+              "nom": "Brødrene Aa (Hyen) pour Stavangerske Lokal AS, bnr 249",
+              "detail": "Troisième et dernier des trois hurtigbåt carbone identiques (trillingbåtene): Fjordkatt (bnr 246), Fjordfart (bnr 248), Fjorddrott (bnr 249), livrés 2007, baptisés ensemble le 12 mai 2007. Maritimt Magasin: « Verdien på hvert enkelt fartøy ligger på rundt 28 millioner kroner » (≈ 28 M NOK par navire). Prix unitaire déjà donné par la source (pas une division d'un total); le contrat des 3 sister-ships identiques équivaut donc à ≈ 84 M NOK. Les plus grands hurtigbåt jamais livrés en fibre de carbone à l'époque. NB: la fiche skipsrevyen mentionne Fjordservice AS comme propriétaire enregistré, au sein du groupe Stavangerske.",
+              "prix": "≈ 28 M NOK/unité",
+              "source": "https://maritimt.com/nb/batomtaler/fjorddrott-042007"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 28 M NOK (2007, prix unitaire publié; série de 3 sister-ships identiques pour Stavangerske Lokal AS, total ≈ 84 M NOK)"
         },
         {
           "nom": "Fjordfart",
@@ -93596,8 +93740,17 @@
               "nom": "Brødrene Aa (Hyen)",
               "detail": "année exacte non confirmée",
               "source": "braa.no"
+            },
+            {
+              "annee": "2007",
+              "role": "construction",
+              "nom": "Brødrene Aa (Hyen) pour Stavangerske Lokal AS, bnr 248",
+              "detail": "Deuxième des trois hurtigbåt carbone identiques (sister-ship du Fjordkatt et du Fjorddrott), bnr 248, entré en service le 15 mars 2007. Maritimt Magasin confirme un prix de 28 M NOK par navire (« price per boat is 28 million kroner », série de 3 pour Stavangerske Lokal AS). Prix unitaire publié directement; contrat des 3 unités identiques ≈ 84 M NOK.",
+              "prix": "≈ 28 M NOK/unité",
+              "source": "https://maritimt.com/nb/batomtaler/fjordkatt-012007"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 28 M NOK (2007, prix unitaire publié; série de 3 sister-ships identiques pour Stavangerske Lokal AS, total ≈ 84 M NOK)"
         },
         {
           "nom": "Fjordkatt",
@@ -93620,9 +93773,11 @@
               "role": "construction",
               "nom": "Brødrene Aa (Hyen)",
               "detail": "année exacte non confirmée",
-              "source": "braa.no"
+              "source": "braa.no",
+              "prix": "≈ 28 M NOK/unité"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 28 M NOK (2007, prix unitaire publié; série de 3 sister-ships identiques pour Stavangerske Lokal AS, total ≈ 84 M NOK)"
         },
         {
           "nom": "Rygerkongen",
@@ -93791,9 +93946,11 @@
               "role": "construction",
               "nom": "Brødrene Aa (Hyen)",
               "detail": "livré à L. Rødne & Sønner (année non confirmée)",
-              "source": "braa.no"
+              "source": "braa.no",
+              "prix": "≈ 20 M NOK"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 20 M NOK (2004, prix de construction)"
         },
         {
           "nom": "Rygerfonn",
@@ -93816,8 +93973,17 @@
               "nom": "Brødrene Aa (Hyen)",
               "detail": "livré à L. Rødne & Sønner (année non confirmée)",
               "source": "braa.no"
+            },
+            {
+              "annee": "2007",
+              "role": "construction",
+              "nom": "Brødrene Aa (coque n°247)",
+              "detail": "Catamaran rapide passagers en fibre de carbone (97 passagers), livré en juin 2007 à L. Rødne & Sønner (Stavanger). Maritimt Magasin: 'verdien på passasjerkatamaranen er på rundt 26 millioner kroner'. 6e bateau carbone livré par Brødrene Aa à Rødne en 4 ans.",
+              "prix": "≈ 26 M NOK",
+              "source": "https://maritimt.com/nb/batomtaler/rygerfonn-052007"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 26 M NOK (2007, valeur du catamaran à la livraison)"
         },
         {
           "nom": "Rygerkatt",
@@ -94065,8 +94231,17 @@
               "nom": "Norges Miljøvernforbund",
               "detail": "Commande pour l'organisation environnementale norvegienne (Green Warriors of Norway) ; navire amiral de l'association.",
               "source": "https://fjellstrand.no/no/prosjekter/nb-1677-miljodronningen/"
+            },
+            {
+              "annee": "2008",
+              "role": "construction",
+              "nom": "Fjellstrand AS (coque n°1677)",
+              "detail": "Catamaran type FlyingCat 35 en aluminium, baptisé le 04/02/2008, plus gros investissement d'une ONG environnementale norvégienne à l'époque. Maritimt Magasin: 'Verdien på Miljødronningen er satt til 50 millioner kroner'. Armateur: Norges Miljøvernforbund (financé par le milliardaire Trond Mohn).",
+              "prix": "50 M NOK",
+              "source": "http://maritimt.com/nb/batomtaler/miljodronningen-032008"
             }
-          ]
+          ],
+          "prix_acquisition": "50 M NOK (coût de construction, 2008)"
         },
         {
           "nom": "Le Châtelet",
@@ -96379,6 +96554,14 @@
               "nom": "Essais piles a combustible (ABB + SINTEF Ocean)",
               "detail": "ABB et SINTEF testent l'integration piles a combustible + batteries pour une ligne haute frequence de ~10 km, en vue de la conversion realisee par Fiskerstrand.",
               "source": "https://new.abb.com/news/detail/18654/abb-sintef-and-fiskerstrand-test-fuel-cells-for-the-worlds-first-conversion-of-a-hydrogen-hybrid-ferry"
+            },
+            {
+              "annee": "2017",
+              "role": "evenement",
+              "nom": "Subvention PILOT-E (financement R&D, pas un prix de navire)",
+              "detail": "Projet HYBRIDship lancé 2017 par Fiskerstrand Holding = première conversion mondiale d'un ferry vers hydrogène hybride (pile à combustible + batteries). AUCUN prix de navire public. Seul montant public: subvention R&D PILOT-E de 70 M NOK (≈ 8,24 M USD) PARTAGÉE entre 5 lauréats (Conseil de la recherche + Innovation Norway + Enova), donc non attribuable au seul navire.",
+              "prix": "n/d (subvention R&D 70 M NOK partagée à 5)",
+              "source": "https://shipandbunker.com/news/emea/262083-zero-emission-propulsion-project-to-see-development-of-hydrogen-powered-ferry"
             }
           ]
         },
@@ -112841,7 +113024,8 @@
               "role": "construction",
               "nom": "Maritime Partner AS, Ålesund (modèle Alusafe CAT 21, premier catamaran à passagers du chantier), 97 pax, coque + pont aluminium, superstructure GRP",
               "detail": "Premier catamaran passagers de Maritime Partner ; baptisé Kåre Johan le 13 juin 2017 (en mémoire du capitaine Kåre Johan Øvstedal)",
-              "source": "facebook.com/maritimepartner"
+              "source": "facebook.com/maritimepartner",
+              "prix": "20 MNOK"
             },
             {
               "annee": "2017",
@@ -112850,7 +113034,8 @@
               "detail": "Navette de randonneurs sur le lac Gjende (Jotunheimen)",
               "source": "gjende.no"
             }
-          ]
+          ],
+          "prix_acquisition": "20 MNOK (2017, construction neuve)"
         },
         {
           "nom": "Geirangerfjord II",
@@ -112911,7 +113096,8 @@
               "role": "construction",
               "nom": "Maritime Partner AS, Ålesund (n° de coque 2120, modèle Alusafe CAT 24 Hybrid ; coque sous-traitée à Alumare, Pologne), livré oct. 2019 ; 25,20 m (23,99 pp) x 11,00 m x 1,50 m ; 225 t GT ; 146 pax ; 12 nœuds service / 19,9 max ; batterie 800 kWh Corvus + 2 Scania DI13",
               "detail": "Catamaran de tourisme silencieux à propulsion électrique",
-              "source": "maritimt.com/brim-11-2019"
+              "source": "maritimt.com/brim-11-2019",
+              "prix": "46 MNOK"
             },
             {
               "annee": "2019",
@@ -112920,7 +113106,8 @@
               "detail": "Tourisme/croisières aurores boréales et whale-watching, Tromsø/Lofoten",
               "source": "maritimt.com/brim-11-2019"
             }
-          ]
+          ],
+          "prix_acquisition": "46 MNOK (2019, construction neuve)"
         },
         {
           "nom": "Bard (rebaptisé Berg)",
@@ -115255,7 +115442,8 @@
               "role": "construction",
               "nom": "Herde Kompositt AS, Hardanger (coques)",
               "detail": "Contrat signe fevrier 2026 pour deux trimarans rapides 100% electriques ; coques construites en composite par Herde Kompositt en Hardanger. 24 m, bau 11 m, 180 passagers, autonomie 100 milles a 20 noeuds. Design Einar Hareide + Wind Naval Architects. Investissement ~200 MNOK",
-              "source": "https://www.rivieramm.com/news-content-hub/brim-explorer-inks-contract-for-battery-powered-passenger-trimaran-duo-87897"
+              "source": "https://www.rivieramm.com/news-content-hub/brim-explorer-inks-contract-for-battery-powered-passenger-trimaran-duo-87897",
+              "prix": "≈ 100 MNOK/unité (derive : ~200 MNOK pour 2 unités identiques)"
             },
             {
               "annee": "2027",
@@ -115271,7 +115459,8 @@
               "detail": "Proprietaire et exploitant ; flotte de tourisme durable (Oslo, Tromso, Lofoten, Bodo), usages safaris baleines et aurores boreales. Concept 'electric by design' de Brim Tech",
               "source": "https://shipandbunker.com/news/emea/355076-norwegian-tourism-firm-brim-explorer-orders-electric-vessels-for-2027-delivery"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 100 MNOK/unité (derive : contrat de ~200 MNOK / ~20 M USD pour 2 trimarans identiques, 2026, livraison 2027)"
         },
         {
           "nom": "Coque Hyke F-15 Shuttle",
@@ -117185,6 +117374,14 @@
               "nom": "Tromsø Mekaniske AS",
               "detail": "Client récurrent du chantier pour l'entretien et le refit de ses ferries dans la région de Troms (Torghatten Nord cité parmi les clients de référence)",
               "source": "https://www.tromsomekaniske.no/"
+            },
+            {
+              "annee": "2022",
+              "role": "evenement",
+              "nom": "Contrat d'EXPLOITATION de lignes (pas un prix de navire)",
+              "detail": "Entrée 'flotte' générique. Torghatten Nord a remporté le contrat d'exploitation des liaisons de Sør-Troms: valeur 1 420 M NOK sur 10 ans (+ option 3 ans), à partir du 01/02/2025, 3 lignes (Refsnes-Flesnes, Stornes-Bjørnerå, Stangnes-Sørrollnes). C'est un contrat de service/route, PAS un prix de construction d'un navire identifiable. NB: Tromsø Mekaniske AS est un chantier de réparation/conversion, pas le constructeur de ces ferries (les neufs électriques Torghatten sont allés à Oma Baatbyggeri).",
+              "prix": "n/d (contrat d'exploitation 1 420 M NOK / 10 ans)",
+              "source": "https://kommunikasjon.ntb.no/pressemelding/17956217/sor-troms-far-elektriske-ferjer-fra-2025"
             }
           ]
         },
@@ -138003,8 +138200,17 @@
               "nom": "Mise en vente par Gordon Brothers",
               "detail": "Mai 2026 : Coastal Workboats Scotland Ltd en redressement (administration) ; le E-LUV 2208 est offert a la vente de gre a gre par Gordon Brothers pour le compte des administrateurs judiciaires.",
               "source": "https://www.globenewswire.com/news-release/2026/05/27/3301646/0/en/gordon-brothers-offering-for-sale-by-private-treaty-a-fully-electric-landing-utility-vessel.html"
+            },
+            {
+              "annee": "2023",
+              "role": "construction",
+              "nom": "Coastal Workboats Scotland (Stornoway) + Damen",
+              "detail": "Premier workboat électrique du Royaume-Uni (LUV 2208 Electric, batteries 2,4 MW). Coût TOTAL du projet ≈ 9 M GBP: subvention publique CMDC3 (Clean Maritime Demonstration Competition Round 3) de 6,2 M GBP + co-financement Damen. Construction lancée fin 2023, essais 2025. NB: le 9 M£ inclut le développement (projet), pas seulement la coque.",
+              "prix": "≈ 9 M GBP (projet)",
+              "source": "https://www.fishfarmingexpert.com/coastal-workboats-ltd-damen-electric-luv/uks-first-electric-workboat-to-be-built-in-stornoway/1604932"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 9 M GBP (coût total du projet, 2023-2024)"
         },
         {
           "nom": "Landing Utility Vessels Damen Hardinxveld (2 unités)",
@@ -148417,7 +148623,8 @@
               "role": "evenement",
               "nom": "Commande Brim Explorer (2 trimarans)",
               "detail": "Brim Explorer signe la commande de deux trimarans rapides 100% electriques (24 m, bau 11 m, 180 passagers, 100 milles a 20 noeuds). Investissement total ~200 MNOK, plus gros de l'histoire de la societe. Annonce fevrier 2026.",
-              "source": "https://www.bairdmaritime.com/passenger/maritime-tourism/brim-explorer-orders-two-battery-powered-trimarans"
+              "source": "https://www.bairdmaritime.com/passenger/maritime-tourism/brim-explorer-orders-two-battery-powered-trimarans",
+              "prix": "40 M NOK (sur le projet 2 navires)"
             },
             {
               "annee": "2027",
@@ -148425,8 +148632,17 @@
               "nom": "Coque par Herde Kompositt (Hardanger)",
               "detail": "Coque composite construite par Herde Kompositt en Hardanger ; armement et integration systeme confies a Horten Shipyards. Livraison printemps 2027.",
               "source": "https://shipandbunker.com/news/emea/355076-norwegian-tourism-firm-brim-explorer-orders-electric-vessels-for-2027-delivery"
+            },
+            {
+              "annee": "2026",
+              "role": "construction",
+              "nom": "Trimaran Brim Explorer #1",
+              "detail": "Brim Explorer signe le contrat de construction de 2 trimarans electriques identiques (24 m, 180 passagers, livraison printemps 2027). Investissement total de l'ordre de 200 M NOK (20 M USD), le plus important de l'histoire de la societe. Coques composites chez Herde Kompositt (Hardanger), armement/integration chez Horten Shipyards. Prix unitaire derive = 200 M NOK / 2 sister-ships.",
+              "prix": "≈ 100 M NOK/unite (derive: contrat total de 200 M NOK / 20 M USD pour 2 trimarans identiques)",
+              "source": "https://www.marinelink.com/news/brim-explorer-orders-two-batterypowered-536089"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 100 M NOK/unite (derive: contrat total de 200 M NOK pour 2 trimarans identiques, dont 40 M NOK de subvention Enova) [2026]"
         },
         {
           "nom": "Trimaran Brim Explorer #2",
@@ -148455,7 +148671,8 @@
               "role": "evenement",
               "nom": "Commande Brim Explorer (2 trimarans)",
               "detail": "Second des deux trimarans rapides 100% electriques commandes par Brim Explorer (24 m, 180 passagers). Coques chez Herde Kompositt, armement Horten Shipyards.",
-              "source": "https://www.marinelink.com/news/brim-explorer-orders-two-batterypowered-536089"
+              "source": "https://www.marinelink.com/news/brim-explorer-orders-two-batterypowered-536089",
+              "prix": "40 M NOK (sur le projet 2 navires)"
             },
             {
               "annee": "2027",
@@ -148463,8 +148680,17 @@
               "nom": "Coque par Herde Kompositt (Hardanger)",
               "detail": "Coque composite Herde Kompositt en Hardanger, finition par Horten Shipyards, livraison printemps 2027.",
               "source": "https://shipandbunker.com/news/emea/355076-norwegian-tourism-firm-brim-explorer-orders-electric-vessels-for-2027-delivery"
+            },
+            {
+              "annee": "2026",
+              "role": "construction",
+              "nom": "Trimaran Brim Explorer #2",
+              "detail": "Second navire du contrat de 2 trimarans electriques identiques commandes par Brim Explorer (24 m, 180 passagers, livraison printemps 2027). Investissement total de l'ordre de 200 M NOK (20 M USD). Coques composites chez Herde Kompositt (Hardanger), armement chez Horten Shipyards. Prix unitaire derive = 200 M NOK / 2 sister-ships.",
+              "prix": "≈ 100 M NOK/unite (derive: contrat total de 200 M NOK / 20 M USD pour 2 trimarans identiques)",
+              "source": "https://www.shifter.no/nyheter/norsk-scaleup-investerer-200-millioner-i-norsk-industri/454850"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 100 M NOK/unite (derive: contrat total de 200 M NOK pour 2 trimarans identiques, dont 40 M NOK de subvention Enova) [2026]"
         },
         {
           "nom": "Hyke F-15 Shuttle (coque)",
@@ -148605,7 +148831,8 @@
               "role": "evenement",
               "nom": "Commande Brim Explorer (2 trimarans)",
               "detail": "Commande de deux trimarans rapides electriques (24 m, 180 passagers, 100 milles a 20 noeuds) par Brim Explorer ; coques Herde Kompositt, armement Horten Shipyards. Annonce fevrier 2026.",
-              "source": "https://www.bairdmaritime.com/passenger/maritime-tourism/brim-explorer-orders-two-battery-powered-trimarans"
+              "source": "https://www.bairdmaritime.com/passenger/maritime-tourism/brim-explorer-orders-two-battery-powered-trimarans",
+              "prix": "40 M NOK (sur le projet 2 navires)"
             },
             {
               "annee": "2027",
@@ -148613,8 +148840,17 @@
               "nom": "Armement et integration systeme par Horten Shipyards",
               "detail": "Finition, armement et integration systeme realises par Horten Shipyards apres construction de la coque par Herde Kompositt. Livraison printemps 2027.",
               "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/brim-explorer-inks-contract-for-battery-powered-passenger-trimaran-duo-87897"
+            },
+            {
+              "annee": "2026",
+              "role": "construction",
+              "nom": "Trimaran Brim Explorer #1 (armement Horten)",
+              "detail": "Meme navire que Herde Kompositt #1 vu sous l'angle de l'armement/integration systeme realise par Horten Shipyards. Contrat total Brim Explorer = 200 M NOK (20 M USD) pour 2 sister-ships identiques (24 m, 180 pax, 2027). Prix unitaire derive = 200 M NOK / 2.",
+              "prix": "≈ 100 M NOK/unite (derive: contrat total de 200 M NOK / 20 M USD pour 2 trimarans identiques)",
+              "source": "https://www.marinelink.com/news/brim-explorer-orders-two-batterypowered-536089"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 100 M NOK/unite (derive: contrat total de 200 M NOK pour 2 trimarans identiques, dont 40 M NOK de subvention Enova) [2026]"
         },
         {
           "nom": "Trimaran Brim Explorer #2 (armement)",
@@ -148643,7 +148879,8 @@
               "role": "evenement",
               "nom": "Commande Brim Explorer (2 trimarans)",
               "detail": "Second trimaran rapide electrique de la commande Brim Explorer (24 m, 180 passagers). Coque Herde Kompositt, armement Horten Shipyards.",
-              "source": "https://www.marinelink.com/news/brim-explorer-orders-two-batterypowered-536089"
+              "source": "https://www.marinelink.com/news/brim-explorer-orders-two-batterypowered-536089",
+              "prix": "40 M NOK (sur le projet 2 navires)"
             },
             {
               "annee": "2027",
@@ -148651,8 +148888,17 @@
               "nom": "Armement et integration systeme par Horten Shipyards",
               "detail": "Finition et integration systeme par Horten Shipyards. Livraison printemps 2027.",
               "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/brim-explorer-inks-contract-for-battery-powered-passenger-trimaran-duo-87897"
+            },
+            {
+              "annee": "2026",
+              "role": "construction",
+              "nom": "Trimaran Brim Explorer #2 (armement Horten)",
+              "detail": "Meme navire que Herde Kompositt #2 vu sous l'angle armement/integration Horten Shipyards. Contrat total Brim Explorer = 200 M NOK (20 M USD) pour 2 sister-ships identiques (24 m, 180 pax, 2027). Prix unitaire derive = 200 M NOK / 2.",
+              "prix": "≈ 100 M NOK/unite (derive: contrat total de 200 M NOK / 20 M USD pour 2 trimarans identiques)",
+              "source": "https://www.shifter.no/nyheter/norsk-scaleup-investerer-200-millioner-i-norsk-industri/454850"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 100 M NOK/unite (derive: contrat total de 200 M NOK pour 2 trimarans identiques, dont 40 M NOK de subvention Enova) [2026]"
         },
         {
           "nom": "Brim Explorer trimaran electrique #1 (sans nom connu)",
@@ -148681,7 +148927,8 @@
               "role": "construction",
               "nom": "Herde Kompositt AS, Hardanger (coque)",
               "detail": "Premiere des deux unites commandees en fevrier 2026 ; coque composite construite par Herde Kompositt. Trimaran rapide 100% electrique, 24 m, bau 11 m, 180 passagers, 100 milles a 20 noeuds. Design Einar Hareide + Wind Naval Architects",
-              "source": "https://www.rivieramm.com/news-content-hub/brim-explorer-inks-contract-for-battery-powered-passenger-trimaran-duo-87897"
+              "source": "https://www.rivieramm.com/news-content-hub/brim-explorer-inks-contract-for-battery-powered-passenger-trimaran-duo-87897",
+              "prix": "≈ 100 M NOK/unite (derive : 200 M NOK pour 2 navires identiques)"
             },
             {
               "annee": "2027",
@@ -148697,7 +148944,8 @@
               "detail": "Proprietaire et exploitant ; flotte de tourisme cotier durable en Norvege",
               "source": "https://shipandbunker.com/news/emea/355076-norwegian-tourism-firm-brim-explorer-orders-electric-vessels-for-2027-delivery"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 100 M NOK/unite (2026) (derive : contrat de 200 M NOK pour 2 trimarans identiques)"
         },
         {
           "nom": "Brim Explorer trimaran electrique #2 (sans nom connu)",
@@ -148726,7 +148974,8 @@
               "role": "construction",
               "nom": "Herde Kompositt AS, Hardanger (coque)",
               "detail": "Seconde des deux unites commandees en fevrier 2026 ; coque composite construite par Herde Kompositt. Trimaran rapide 100% electrique, 24 m, bau 11 m, 180 passagers, 100 milles a 20 noeuds. Design Einar Hareide + Wind Naval Architects",
-              "source": "https://www.rivieramm.com/news-content-hub/brim-explorer-inks-contract-for-battery-powered-passenger-trimaran-duo-87897"
+              "source": "https://www.rivieramm.com/news-content-hub/brim-explorer-inks-contract-for-battery-powered-passenger-trimaran-duo-87897",
+              "prix": "≈ 100 M NOK/unite (derive: contrat total de 200 M NOK / 20 M USD pour 2 trimarans identiques)"
             },
             {
               "annee": "2027",
@@ -148741,8 +148990,17 @@
               "nom": "Brim Explorer",
               "detail": "Proprietaire et exploitant ; usages safaris baleines et croisieres aurores boreales",
               "source": "https://shipandbunker.com/news/emea/355076-norwegian-tourism-firm-brim-explorer-orders-electric-vessels-for-2027-delivery"
+            },
+            {
+              "annee": "2026",
+              "role": "evenement",
+              "nom": "Subvention Enova",
+              "detail": "40 M NOK de soutien Enova pour le programme des deux trimarans, inclus dans le total de 200 M NOK.",
+              "prix": "40 M NOK (sur le projet 2 navires)",
+              "source": "https://www.varden.no/nyheter/naeringsliv/n/zABQrr/grunder-fra-skien-faar-40-millioner-i-stoette"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 100 M NOK/unite (derive: contrat total de 200 M NOK pour 2 trimarans identiques, dont 40 M NOK de subvention Enova) [2026]"
         }
       ],
       "sources": [
@@ -150589,7 +150847,8 @@
               "role": "construction",
               "nom": "Swede Ship Marine AB (chantier de Djupvik, Bohuslan)",
               "detail": "Premier des bacs urbains electriques/diesel de Fredrikstad de la serie, deploye sur Gamlebyen-Cicignon",
-              "source": "f-b.no 'Go'vakker Karen pa vei til Fredrikstad' (mentionne Thora/Maren construits chez Swede Ship Marine)"
+              "source": "f-b.no 'Go'vakker Karen pa vei til Fredrikstad' (mentionne Thora/Maren construits chez Swede Ship Marine)",
+              "prix": "i overkant av 10 millioner NOK (un peu plus de 10 M NOK)"
             },
             {
               "annee": "2013",
@@ -150621,7 +150880,8 @@
               "role": "construction",
               "nom": "Swede Ship Marine AB (chantier de Djupvik, Bohuslan)",
               "detail": "Acheve en juin 2014, sister-ship de Go'vakker Thora",
-              "source": "f-b.no 'Her er Go'vakker Maren'"
+              "source": "f-b.no 'Her er Go'vakker Maren'",
+              "prix": "rundt 12 millioner NOK (cadre de coût d'environ 12 M NOK)"
             },
             {
               "annee": "2014",
@@ -150693,8 +150953,25 @@
               "nom": "Fredrikstad kommune (Byfergene)",
               "detail": "Exploitee sur le reseau de bacs urbains de Fredrikstad (Gamlebyen-Alekilene)",
               "source": "fredrikstad.kommune.no/informasjon-om-byfergene"
+            },
+            {
+              "annee": "2023",
+              "role": "construction",
+              "nom": "Go'vakker Grethe",
+              "detail": "Ferry urbain électrique de Fredrikstad (50 passagers, ~15 m), construit par Swede Ship Marine (coque à Djupvik, Tjørn ; chantier de Fagerfjäll). Mis en service le 3 février 2023. Membre d'une série de byferger Go'vakker (Maren 2014, Thora 2015, Asta 2016, Karen 2021, Grethe 2023). Le coût ~20 M NOK est le budget type des unités ÉLECTRIQUES (Karen puis Grethe), batteries et station de recharge à quai comprises ; non isolé navire seul.",
+              "prix": "≈ 20 millions NOK (budget unité électrique, infrastructure de recharge incluse)",
+              "source": "https://www.f-b.no/go-vakker-karen-pa-vei-til-fredrikstad-ankommer-byen-i-kveld/s/5-59-2213148"
+            },
+            {
+              "annee": "2016",
+              "role": "evenement",
+              "nom": "Go'vakker Asta (sister-ship diesel de référence)",
+              "detail": "Acquisition de la sister-ship diesel Go'vakker Asta (même type, mise en service 2016) chiffrée à ≈ 13 millions NOK, citée comme point de comparaison face aux ~20 M NOK de la version électrique.",
+              "prix": "≈ 13 millions NOK (sister-ship diesel)",
+              "source": "https://www.fredrikstad.kommune.no/tjenester/vei-sykkel-ferge/informasjon-om-byfergene/"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 20 millions NOK (2022-2023, version électrique incluant batteries + infrastructure de recharge inductive à quai ; coque construite chez Swede Ship Marine AB à Djupvik/Tjørn, mise en service 3 fév. 2023). À titre de comparaison, la sister-ship diesel Go'vakker Asta a coûté ≈ 13 millions NOK."
         },
         {
           "nom": "HMS Altair (A501)",
@@ -157477,6 +157754,14 @@
               "nom": "Navire-musée et restaurant, Norrtälje",
               "detail": "Depuis 1968, ancré dans le port de Norrtälje comme navire-musée et restaurant.",
               "source": "https://sketchfab.com/3d-models/ss-norrtelje-1900-4a66ca23ba7640ae87e7a0117897d9c7"
+            },
+            {
+              "annee": "2024",
+              "role": "evenement",
+              "nom": "Subvention de rénovation (Sjöhistoriska/Statens maritima museer)",
+              "detail": "Aide patrimoniale (k-märkt fartyg) pour remplacement de tôles sous la ligne de flottaison. Ce n'est PAS un prix d'acquisition ni de construction. Aucun prix de construction (1900) ni de vente public trouvé après recherche (presse, courtiers, archives).",
+              "prix": "200 000 SEK",
+              "source": "https://svenskhistoria.se/rekordstort-renoveringsstod-till-kulturhistoriska-fartyg/"
             }
           ]
         },
@@ -157523,6 +157808,14 @@
               "nom": "Trafikverket Färjerederiet",
               "detail": "Exploitant : administration des bacs (Färjerederiet) sur le Gullmarsleden.",
               "source": "https://sv.wikipedia.org/wiki/M/S_Neptunus"
+            },
+            {
+              "annee": "2025",
+              "role": "evenement",
+              "nom": "Conversion batterie-hybride chez Stockholms Reparationsvarv (Beckholmen)",
+              "detail": "Investissement de 97 millions de couronnes pour transformer Neptunus en batterie-hybride (docking d'environ un an chez Stockholms Reparationsvarv). Prix d'un retrofit/événement, pas un prix d'acquisition.",
+              "prix": "97 000 000 SEK",
+              "source": "https://www.sjofartstidningen.se/nu-ska-vagfarjan-neptunus-bli-batterihybrid/"
             }
           ]
         }
@@ -160233,6 +160526,14 @@
               "nom": "Trafikverket Färjerederiet (Vinöleden, lac Hjälmaren)",
               "detail": "Exploité sur la traverse de Vinö (Vinöleden) dans le lac Hjälmaren, Närke, aux côtés du sister-ship M/S Vinösund.",
               "source": "https://sv.wikipedia.org/wiki/M/S_Sedna"
+            },
+            {
+              "annee": "2001",
+              "role": "evenement",
+              "nom": "Estimation parlementaire (Riksdag) du coût de la nouvelle färja de Vinön / Vinöleden",
+              "detail": "Question écrite 2000/01:1208 (11 mai 2001) sur 'bro eller färja till Vinön' : coût ESTIMÉ AVANT construction de la nouvelle färja de Vinöleden = 40 à 50 M SEK (frais d'exploitation 10-12 M SEK/an). Le document ne nomme pas M/S Sedna et précède le build (2005), mais correspond à la même ligne/projet. À traiter comme estimation indicative, pas comme prix de contrat confirmé. Aucun prix de construction effectif (Djupviks varv, 2005) ni de vente trouvé.",
+              "prix": "40-50 millions SEK (estimation)",
+              "source": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/skriftlig-fraga/bro-eller-farja-till-vinon_go111208/"
             }
           ]
         },
@@ -160506,8 +160807,25 @@
               "nom": "Fredrikstad kommune (Byfergene)",
               "detail": "ligne Cicignon–Gamlebyen, traversée du Glomma ; présentée comme 1er navire à passagers classé électrique",
               "source": "Maritimt Magasin ; sv.wikipedia"
+            },
+            {
+              "annee": "2017",
+              "role": "construction",
+              "nom": "Swede Ship Marine AB (coque N493) pour Fredrikstad kommune (1ere ferry electrique, recharge inductive)",
+              "detail": "Citation de Helgesen (Fredrikstad kommune) : « Bare bat koster 13-14 millioner » (le navire seul coute 13-14 millions NOK). La commande complete est budgetee a 20 millions NOK, mais cela inclut les stations de charge et autres. Mise en service 2019.",
+              "prix": "13-14 M NOK (navire seul), ~20 M NOK (projet complet)",
+              "source": "https://www.dagsavisen.no/demokraten/nyheter/fredrikstad/2017/05/26/her-er-superferja/"
+            },
+            {
+              "annee": "2018",
+              "role": "evenement",
+              "nom": "Budget municipal Fredrikstad",
+              "detail": "Budget vote : 500 000 NOK de planification en 2017 puis « 20 millioner til innkjop av elektrisk ferge » (20 millions NOK pour l'achat de la ferry electrique) en 2018.",
+              "prix": "20 M NOK (budget d'achat)",
+              "source": "https://www.f-b.no/byfergen/trafikk/fredrikstad-kommune/fredrikstad-budsjettet-vil-kjope-elektrisk-byferge-i-2018/s/5-59-577780"
             }
-          ]
+          ],
+          "prix_acquisition": "13-14 M NOK (2017, coque/navire seul) ; budget total ~20 M NOK incl. stations de charge a terre"
         },
         {
           "nom": "Go'vakker Karen",
@@ -160530,7 +160848,8 @@
               "role": "construction",
               "nom": "Swede Ship Marine, n° N508",
               "detail": "ferry urbain électrique 15 m, charge inductive",
-              "source": "sv.wikipedia liste Swede Ship Marine"
+              "source": "sv.wikipedia liste Swede Ship Marine",
+              "prix": "~20 M NOK (projet complet)"
             },
             {
               "annee": "2021",
@@ -160539,7 +160858,8 @@
               "detail": "traversée du Glomma à Fredrikstad",
               "source": "f-b.no ; sv.wikipedia"
             }
-          ]
+          ],
+          "prix_acquisition": "~20 M NOK (2021, batteries + stations de charge a terre + alimentation incluses)"
         },
         {
           "nom": "Go'vakker Grethe",
@@ -160628,7 +160948,8 @@
               "role": "construction",
               "nom": "Swede Ship Marine, n° N487",
               "detail": "ferry urbain 15 m",
-              "source": "sv.wikipedia liste Swede Ship Marine"
+              "source": "sv.wikipedia liste Swede Ship Marine",
+              "prix": "~13 M NOK"
             },
             {
               "annee": "2015",
@@ -160636,8 +160957,17 @@
               "nom": "Fredrikstad kommune (Byfergene)",
               "detail": "traversée du Glomma",
               "source": "sv.wikipedia"
+            },
+            {
+              "annee": "2014",
+              "role": "evenement",
+              "nom": "Reference sister-ship Go'vakker Maren (serie diesel)",
+              "detail": "Pour cadrer le prix d'Asta : la sister-ship Go'vakker Maren (livree 2014) a coute « rundt 12 millioner kroner » et Go'vakker Thora (2013) « i overkant av ti millioner kroner ». Memes chantier et type que Asta.",
+              "prix": "Maren ~12 M NOK ; Thora >10 M NOK",
+              "source": "https://www.f-b.no/nyheter/nyheter/her-er-go-vakker-maren/s/2-2.952-1.8345873"
             }
-          ]
+          ],
+          "prix_acquisition": "~13 M NOK (2015/2016, ferry diesel, navire seul)"
         },
         {
           "nom": "GoVakker Maren",
@@ -160660,7 +160990,8 @@
               "role": "construction",
               "nom": "Swede Ship Marine, n° N484",
               "detail": "ferry urbain 15 m",
-              "source": "sv.wikipedia liste Swede Ship Marine"
+              "source": "sv.wikipedia liste Swede Ship Marine",
+              "prix": "~ 12 MNOK"
             },
             {
               "annee": "2014",
@@ -160669,7 +161000,8 @@
               "detail": "traversée du Glomma",
               "source": "sv.wikipedia"
             }
-          ]
+          ],
+          "prix_acquisition": "~ 12 millions NOK (2014, coût de construction neuve / kostnadsramme, presse Fredrikstad Blad)"
         },
         {
           "nom": "GoVakker Thora",
@@ -160692,7 +161024,8 @@
               "role": "construction",
               "nom": "Swede Ship Marine, n° N476",
               "detail": "ferry urbain 15 m",
-              "source": "sv.wikipedia liste Swede Ship Marine"
+              "source": "sv.wikipedia liste Swede Ship Marine",
+              "prix": "> 10 MNOK"
             },
             {
               "annee": "2013",
@@ -160701,7 +161034,8 @@
               "detail": "traversée du Glomma",
               "source": "sv.wikipedia"
             }
-          ]
+          ],
+          "prix_acquisition": "> 10 millions NOK (2013, coût de construction neuve, presse Fredrikstad Blad)"
         },
         {
           "nom": "Lätt trossbåt (classe, 16 unités)",
@@ -162319,7 +162653,8 @@
               "role": "construction",
               "nom": "Oskarshamns Mekaniska Verkstad, Oskarshamn (coque 280)",
               "detail": "Lancé le 2 juillet 1931, livré le 28 septembre 1931 sous le nom S/S Öland. Construit renforcé contre les glaces pour la liaison postale Kalmar–Färjestaden.",
-              "source": "https://www.faktaomfartyg.se/oland_1931.htm"
+              "source": "https://www.faktaomfartyg.se/oland_1931.htm",
+              "prix": "310 000 SEK"
             },
             {
               "annee": "1931",
@@ -162333,7 +162668,8 @@
               "role": "proprietaire",
               "nom": "Ångfartygs AB Kalmarsund, Kalmar",
               "detail": "Vendu en 1952 pour 400 000 SEK à la compagnie de Kalmarsund.",
-              "source": "https://www.stockholmshamnar.se/historia/fartyg/ms-stockholm/"
+              "source": "https://www.stockholmshamnar.se/historia/fartyg/ms-stockholm/",
+              "prix": "400 000 SEK"
             },
             {
               "annee": "1958",
@@ -162362,8 +162698,33 @@
               "nom": "S/S Stockholm (Strömma Kanalbolaget)",
               "detail": "Rénové en style art déco par Strömma Kanalbolaget et rebaptisé S/S Stockholm le 4 mai 2000 par le roi Carl XVI Gustaf. Exploité comme navire de croisière depuis Stockholm.",
               "source": "https://www.stromma.com/en-se/stockholm/groups-charter/fleet/classic-ships/ss-stockholm/"
+            },
+            {
+              "annee": "1986",
+              "role": "proprietaire",
+              "nom": "Cafe Casablanca",
+              "detail": "Vente le 12 septembre 1986 a Cafe Casablanca.",
+              "prix": "600 000 SEK",
+              "source": "https://www.faktaomfartyg.se/oland_1931.htm"
+            },
+            {
+              "annee": "1996",
+              "role": "proprietaire",
+              "nom": "Swecox International AB",
+              "detail": "Vente le 12 juin 1996 a Swecox International AB (Vasteras).",
+              "prix": "800 000 SEK",
+              "source": "https://sv.wikipedia.org/wiki/S/S_Stockholm_(1931)"
+            },
+            {
+              "annee": "1998",
+              "role": "proprietaire",
+              "nom": "Stromma Kanalbolaget (Angfartygs AB Stromma kanal)",
+              "detail": "Achat le 9 janvier 1998 par Stromma Kanalbolaget alors que le navire etait promis a la demolition. Suivi d'une renovation complete (totalrenovering) a Tjornvarvet/Ronnangs Varv, cout non publie ; rebaptise S/S Stockholm, inaugure par le roi Carl XVI Gustaf le 4 mai 2000.",
+              "prix": "4,2 M SEK",
+              "source": "https://sv.wikipedia.org/wiki/S/S_Stockholm_(1931)"
             }
-          ]
+          ],
+          "prix_acquisition": "Construction 310 000 SEK (1931) ; derniere vente connue 4,2 M SEK (1998, achat Stromma Kanalbolaget)"
         },
         {
           "nom": "M/S Bore",
@@ -163132,8 +163493,17 @@
               "nom": "Norvège",
               "detail": "Pavillon norvegien, immatricule a Oslo ; dessert la liaison d'Utoya (Utoykaia)",
               "source": "commons.wikimedia.org/wiki/Category:Thorbjorn_(ship,_1948)"
+            },
+            {
+              "annee": "1997",
+              "role": "proprietaire",
+              "nom": "AUF (Arbeidernes Ungdomsfylking)",
+              "detail": "Achat du ferry (ex-Rasmus, construit 1948 Oskarshamn) par l'AUF, devenu le ferry navette d'Utøya. Renommé Thorbjørn d'après Thorbjørn Jagland.",
+              "prix": "SEK 250 000 (≈ 37 000 USD avril 1997)",
+              "source": "https://en.wikipedia.org/wiki/MS_Thorbj%C3%B8rn"
             }
-          ]
+          ],
+          "prix_acquisition": "SEK 250 000 (≈ 37 000 USD) en 1997, achat par l'AUF (organisation de jeunesse travailliste norvégienne), ferry de l'île d'Utøya. Aucun prix de construction de 1948 public."
         },
         {
           "nom": "Wikingen",
@@ -167525,9 +167895,18 @@
               "nom": "BreizhGo Île d'Arz",
               "detail": "DSP, navires propriété des collectivités",
               "source": "ile-arz.fr, DSP CD56 au 1/9/2025"
+            },
+            {
+              "annee": "2013",
+              "role": "construction",
+              "nom": "Île d'Arz",
+              "detail": "Vedette à passagers (20,18 m x 5,65 m, 120 passagers) commandée en 2012, livrée 2013, construite par le Chantier Naval Gléhen (Douarnenez), architecte HT2 (Nantes), pour la ligne DSP Vannes-Séné-Île d'Arz exploitée par les Bateaux-Bus du Golfe (Kersea). Investissement de 1,2 M€ indiqué dans les caractéristiques administratives.",
+              "prix": "≈ 1,2 million EUR (2013)",
+              "source": "http://courriersdefrance.blogspot.com/2017/11/vedette-ile-darz-bateaux-bus-du-golfe.html"
             }
           ],
-          "source": "ile-arz.fr, DSP CD56 au 1/9/2025"
+          "source": "ile-arz.fr, DSP CD56 au 1/9/2025",
+          "prix_acquisition": "≈ 1,2 million EUR (2012-2013, investissement DSP)"
         },
         {
           "nom": "Sterne",
@@ -167672,9 +168051,26 @@
               "nom": "DTM (CD976)",
               "detail": "Régie directe (Direction des Transports Maritimes)",
               "source": "mayotte.fr, service du CD créé en 1977"
+            },
+            {
+              "annee": "2023",
+              "role": "construction",
+              "nom": "Chatouilleuse + Imane (2 amphidromes identiques, 39 m x 13 m, 493 passagers, 6 camions + 24 vehicules)",
+              "detail": "Cout total de l'operation 14 480 000 EUR pour les DEUX amphidromes identiques (Chatouilleuse et sister-ship Imane), construits par le Chantier Naval de l'Ocean Indien (CNOI) a Port-Louis, Maurice ; financement FEDER 12 104 700,80 EUR (83 %) + Departement de Mayotte 2 375 299,20 EUR (17 %). Prix unitaire derive = 14 480 000 / 2 = ≈ 7 240 000 EUR/unite. Inauguration 19 juillet 2023.",
+              "prix": "≈ 7,24 M EUR/unite (derive : 14 480 000 EUR pour 2 amphidromes identiques)",
+              "source": "https://www.mayotte.fr/actualite/lire/788/inauguration-des-deux-amphidromes-imane-et-chatouilleuse"
+            },
+            {
+              "annee": "2023",
+              "role": "evenement",
+              "nom": "Chatouilleuse + Imane (cout total, confirmation presse)",
+              "detail": "Confirmation independante du cout des deux amphidromes : ≈ 14,5 M EUR / 14 128 600 EUR pour la paire, finance a 83 % par le FEDER et 17 % par le Departement (CNOI Maurice).",
+              "prix": "≈ 14,1-14,5 M EUR (total, 2 navires)",
+              "source": "https://www.mayottehebdo.com/actualite/transport/la-barge-chatouilleuse-va-entrer-en-scene/"
             }
           ],
-          "source": "mayotte.fr, service du CD créé en 1977"
+          "source": "mayotte.fr, service du CD créé en 1977",
+          "prix_acquisition": "≈ 7,24 M EUR/unite (2023) (derive : 14 480 000 EUR pour 2 amphidromes identiques Chatouilleuse + Imane)"
         },
         {
           "nom": "Imane",
@@ -167703,9 +168099,18 @@
               "nom": "DTM (CD976)",
               "detail": "Régie directe",
               "source": "mayotte.fr"
+            },
+            {
+              "annee": "2023",
+              "role": "construction",
+              "nom": "Imane (+ Chatouilleuse, sister-ship identique)",
+              "detail": "Marché de construction CNOI (Chantier Naval de l'Océan Indien, Maurice) pour le Service des Transports Maritimes (STM) du Département de Mayotte. Coût total des 2 amphidromes identiques (39,2 m, 392-493 passagers, propulsion diesel-électrique) = 14 480 000 € (coût éligible 14 128 600 €), cofinancé FEDER 83% (12 104 700,80 €) + Conseil Départemental 17% (2 375 299,20 €). Prix unitaire dérivé = 14 480 000 / 2 ≈ 7,24 M€. Imane livré juin 2023, Chatouilleuse mars 2023, inauguration 19 juillet 2023.",
+              "prix": "≈ 7,24 M€/unité (dérivé du total 14 480 000 € pour 2 navires identiques)",
+              "source": "https://www.mayotte.fr/actualite/lire/788/inauguration-des-deux-amphidromes-imane-et-chatouilleuse"
             }
           ],
-          "source": "mayotte.fr"
+          "source": "mayotte.fr",
+          "prix_acquisition": "≈ 7,24 M€/unité (dérivé : marché de 14 480 000 € pour 2 amphidromes identiques Imane + Chatouilleuse, CNOI pour le STM de Mayotte, 2023 ; coût éligible cité aussi à 14 128 600 €, FEDER 83% / Département 17%)"
         },
         {
           "nom": "Karihani",
@@ -167734,9 +168139,18 @@
               "nom": "DTM (CD976)",
               "detail": "Régie directe",
               "source": "mayotte.fr"
+            },
+            {
+              "annee": "2017",
+              "role": "construction",
+              "nom": "Karihani (+ Polé, sister-ship identique)",
+              "detail": "Marché de construction CNOI (Chantier Naval de l'Océan Indien, Maurice) pour le Service des Transports Maritimes (STM) du Département de Mayotte. Coût total des 2 amphidromes identiques (67 m, 590 passagers, 33 véhicules, 4 moteurs Baudouin 331 kW) = 18 407 000 € (presse : ~18,3 M€), cofinancé FEDER à 65% = 11 964 550 €, reste ~35% Département. Prix unitaire dérivé = 18 407 000 / 2 ≈ 9,2 M€. Karihani livré 26 avril 2017 (entrée en service mai 2017), Polé livré octobre 2016.",
+              "prix": "≈ 9,2 M€/unité (dérivé du total 18 407 000 € pour 2 navires identiques)",
+              "source": "https://www.europe-a-mayotte.fr/projets/modernisation-et-renouvellement-des-navires-rouliers-mixtes-type-amphidrome-a-mayotte/"
             }
           ],
-          "source": "mayotte.fr"
+          "source": "mayotte.fr",
+          "prix_acquisition": "≈ 9,2 M€/unité (dérivé : marché de 18 407 000 € pour 2 amphidromes identiques Polé + Karihani, CNOI pour le STM de Mayotte, 2016-2017 ; FEDER 65% = 11 964 550 €)"
         },
         {
           "nom": "Polé",
@@ -167765,9 +168179,18 @@
               "nom": "DTM (CD976)",
               "detail": "Régie directe",
               "source": "mayotte.fr"
+            },
+            {
+              "annee": "2016",
+              "role": "construction",
+              "nom": "Polé (+ Karihani, sister-ship identique)",
+              "detail": "Marché de construction CNOI (Chantier Naval de l'Océan Indien, Maurice) pour le Service des Transports Maritimes (STM) du Département de Mayotte. Source officielle Mayotte : « Le montant total de l'acquisition des deux amphidrômes s'élève à 18.407 millions d'euros cofinancé à 65% par le FEDER soit 11.964 millions d'euros. » 2 navires identiques (67 m, 590 passagers, 33 véhicules, 4 moteurs Baudouin 331 kW). Prix unitaire dérivé = 18 407 000 / 2 ≈ 9,2 M€. Polé livré et inauguré le 26 octobre 2016 (plus grand navire jamais construit à Port-Louis, Maurice), Karihani livré avril 2017.",
+              "prix": "≈ 9,2 M€/unité (dérivé du total 18 407 000 € pour 2 navires identiques)",
+              "source": "https://www.mayotte.fr/actualite/lire/472/le-pole-nouvel-amphidrome-du-service-des-transports-maritimes-stm-inaugure-"
             }
           ],
-          "source": "mayotte.fr"
+          "source": "mayotte.fr",
+          "prix_acquisition": "≈ 9,2 M€/unité (dérivé : marché de 18 407 000 € pour 2 amphidromes identiques Polé + Karihani, CNOI pour le STM de Mayotte, 2016-2017 ; FEDER 65% = 11 964 550 €)"
         },
         {
           "nom": "La Gironde",
@@ -167796,7 +168219,8 @@
               "role": "construction",
               "nom": "Zamakona",
               "detail": "Construit pour Département de la Gironde (CD33) — ligne Verdon - Royan",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+              "prix": "14,75 M EUR"
             },
             {
               "annee": "2002",
@@ -167806,7 +168230,8 @@
               "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
             }
           ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "14,75 M EUR (2002, construction neuve, chantier Astilleros Zamakona Bilbao, financement integral Departement de la Gironde maitre d'ouvrage)"
         },
         {
           "nom": "Capo Rosso 1",
@@ -167835,6 +168260,14 @@
               "nom": "Karu Ferry",
               "detail": "Opérateur privé",
               "source": "opérateur privé"
+            },
+            {
+              "annee": "2019",
+              "role": "construction",
+              "nom": "Capo Rosso (1)",
+              "detail": "Vedette à passagers rapide en aluminium 18 m / 84 places, constructeur ODC Marine, architecte Mer et Design, 2x Volvo D13 500 ch, 20 nœuds, livrée en 2019 à l'armateur Transports Express Caraïbes pour la liaison Le Marin (Martinique)-Sainte-Lucie. Pas de valeur de contrat publiée. Prix INDICATIF du type ODC Marine (modèle voisin 19,40 m / 97 places) annoncé ≈ 1 300 000 € pour une unité neuve sur fiche NauticExpo : ordre de grandeur du modèle, pas prix confirmé du Capo Rosso 1.",
+              "prix": "non publié (ordre de grandeur du type ODC ≈ 1,3 M€)",
+              "source": "https://www.nauticexpo.com/prod/odc-marine/product-33387-550165.html"
             }
           ],
           "source": "opérateur privé"
@@ -168298,9 +168731,18 @@
               "nom": "CMT (passeurs du port des Sables d'Olonne)",
               "detail": "DSP, navires propriété de l'agglomération",
               "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            },
+            {
+              "annee": "2019",
+              "role": "evenement",
+              "nom": "Revente d'occasion La Rochelle vers Les Sables-d'Olonne (SEML)",
+              "detail": "Achat d'occasion à 62 500 €/bateau + 170 000 € de rénovation = 232 500 €/unité, contre 400 000 à 500 000 € pour un neuf équivalent. Total deux navettes : 465 000 €.",
+              "prix": "62 500 € (occasion) / 232 500 € total/unité (2019)",
+              "source": "https://www.lereportersablais.com/les-sables-dolonne-vendee-deux-nouvelles-navettes-maritimes-sappuyant-sur-lenergie-electrique/"
             }
           ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "Revente 2019 : 62 500 € (occasion, prix de cession par La Rochelle aux Sables-d'Olonne) ; coût total mis en service = 62 500 € + 170 000 € de rénovation = 232 500 €/unité (un neuf équivalent valant 400 000-500 000 €). Prix de construction neuve d'origine (2012) non public."
         },
         {
           "nom": "Le Nouch 2",
@@ -168336,9 +168778,18 @@
               "nom": "CMT (passeurs du port des Sables d'Olonne)",
               "detail": "DSP, navires propriété de l'agglomération",
               "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            },
+            {
+              "annee": "2019",
+              "role": "evenement",
+              "nom": "Revente d'occasion La Rochelle vers Les Sables-d'Olonne (SEML)",
+              "detail": "Achat d'occasion à 62 500 €/bateau + 170 000 € de rénovation = 232 500 €/unité, contre 400 000 à 500 000 € pour un neuf équivalent. Total deux navettes : 465 000 €.",
+              "prix": "62 500 € (occasion) / 232 500 € total/unité (2019)",
+              "source": "https://www.lereportersablais.com/les-sables-dolonne-vendee-deux-nouvelles-navettes-maritimes-sappuyant-sur-lenergie-electrique/"
             }
           ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "Revente 2019 : 62 500 € (occasion, prix de cession par La Rochelle aux Sables-d'Olonne) ; coût total mis en service = 62 500 € + 170 000 € de rénovation = 232 500 €/unité (un neuf équivalent valant 400 000-500 000 €). Sister-ship du Nouch. Prix de construction neuve d'origine (2012) non public."
         },
         {
           "nom": "Le Passeur Électrique",
@@ -168442,7 +168893,8 @@
               "role": "construction",
               "nom": "Alternatives Energies",
               "detail": "Construit pour Communauté d'agglomération de La Rochelle — ligne Vieux-Port à Médiathèque",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+              "prix": "≈ 625 000 €/unité (≈ 1 250 000 € pour 2) (2019)"
             },
             {
               "annee": "2019",
@@ -168452,7 +168904,8 @@
               "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
             }
           ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "≈ 625 000 €/unité en 2019 (derive : subvention Région Nouvelle-Aquitaine de 350 000 € pour les 2 sister-ships Volta + Ampère = ~28 % de leur coût, soit un coût total ≈ 1 250 000 € pour 2 unités identiques). Corroboré par un coût de remplacement La Rochelle cité à ~600 000 €/unité."
         },
         {
           "nom": "Copernic",
@@ -168480,7 +168933,8 @@
               "role": "construction",
               "nom": "Alternatives Energies",
               "detail": "Construit pour Communauté d'agglomération de La Rochelle — ligne Vieux-Port - Minimes",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+              "prix": "1 808 726 € (2009)"
             },
             {
               "annee": "2009",
@@ -168490,7 +168944,8 @@
               "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
             }
           ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "1 808 726 € en 2009 (coût de construction supporté par la Communauté d'Agglomération de La Rochelle, soit 40 % de plus qu'un bateau thermique classique). Navire jumeau : Galilée (coût propre non détaillé)."
         },
         {
           "nom": "Galilée",
@@ -168518,7 +168973,8 @@
               "role": "construction",
               "nom": "Alternatives Energies",
               "detail": "Construit pour Communauté d'agglomération de La Rochelle — ligne Vieux-Port - Minimes",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+              "prix": "1 808 726 € pour les 2 unités (Copernic + Galilée) ; ≈ 904 000 €/unité (dérivé : 1 808 726 € / 2 sister-ships électro-solaires identiques de 15 m x 5 m, 75 passagers) ; coût +40% vs un bus de mer thermique"
             },
             {
               "annee": "2009",
@@ -168528,7 +168984,8 @@
               "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
             }
           ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "≈ 904 000 € (2008-2009, dérivé : 1 808 726 € pour 2 bus de mer identiques Copernic + Galilée commandés par la Communauté d'agglomération de La Rochelle, soit +40% vs un bateau thermique)"
         },
         {
           "nom": "Volta",
@@ -168556,7 +169013,8 @@
               "role": "construction",
               "nom": "Alternatives Energies",
               "detail": "Construit pour Communauté d'agglomération de La Rochelle — ligne Vieux-Port à Médiathèque",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+              "prix": "Coût total ≈ 1,25 M€ pour les 2 passeurs (Volta + Ampère) ; ≈ 625 000 €/unité (dérivé : subvention Région Nouvelle-Aquitaine de 350 000 € représentant ≈ 28% du coût total → 350 000 / 0,28 ≈ 1,25 M€ pour 2 sister-ships, / 2)"
             },
             {
               "annee": "2019",
@@ -168564,9 +169022,18 @@
               "nom": "TDLR (réseau Yélo)",
               "detail": "Régie / marché public",
               "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            },
+            {
+              "annee": "2019",
+              "role": "evenement",
+              "nom": "Subvention Région Nouvelle-Aquitaine",
+              "detail": "Montant de cofinancement public confirmé par solaire-info et L'Echo du Solaire ; sert de base au calcul du coût total et unitaire.",
+              "prix": "350 000 € (subvention, = ≈ 28% du coût total des 2 passeurs)",
+              "source": "https://solaire-info.fr/la-rochelle-deux-nouveaux-bateaux-passeurs-a-propulsion-electro-solaire-entrent-en-service/27/03/2019/"
             }
           ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "≈ 625 000 € (2019, dérivé : coût total ≈ 1,25 M€ pour 2 passeurs identiques Volta + Ampère ; subvention Région Nouvelle-Aquitaine de 350 000 € = ≈ 28% du coût total des deux unités)"
         }
       ],
       "sources": [
@@ -169453,6 +169920,14 @@
               "nom": "TAO (réseau Izilo)",
               "detail": "DSP, navires propriété de la collectivité",
               "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            },
+            {
+              "annee": "2021",
+              "role": "evenement",
+              "nom": "Les Deux Rives",
+              "detail": "Cout des travaux de remise a niveau apres acquisition d'occasion par Lorient Agglomeration (55 000 EUR chaine propulsive + 20 000 EUR amenagements + 35 000 EUR gros entretien). N'est PAS le prix d'achat du navire, non divulgue. Navire construit en 1997 (et non 1996) par le chantier Gamelin, ex-croisieres Guadeloupe puis Gironde.",
+              "prix": "110 000 EUR (2021)",
+              "source": "https://www.lorient-agglo.bzh/actualites/toutes-les-actualites/actualite/news/transrade-les-deux-rives-ameliorer-le-confort-et-la-securite-des-passagers-1/"
             }
           ],
           "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
@@ -169896,6 +170371,14 @@
               "nom": "Échéance du contrat",
               "detail": "DSP, navires propriété de la collectivité",
               "source": "DSP Région Bretagne 1/1/2023"
+            },
+            {
+              "annee": "2010",
+              "role": "evenement",
+              "nom": "Refonte (refit) au chantier Piriou de Concarneau",
+              "detail": "Refonte profonde de 3 mois ; ≈ 2,05 M€/navire (derive: coût total de 4,1 M€ pour 2 navires identiques rénovés ensemble, Enez Sun 3 + Enez Eussa III, dans le cadre du plan de rénovation de la flotte Penn ar Bed). Coût de CONSTRUCTION neuve d'origine (1991, chantier de Paimbeuf) non public après recherche presse/archives Finistère.",
+              "prix": "≈ 2,05 M EUR/unite (2010, refit)",
+              "source": "https://fr.wikipedia.org/wiki/Enez_Eussa_III"
             }
           ],
           "source": "DSP Région Bretagne 1/1/2023"
@@ -170221,7 +170704,8 @@
               "role": "construction",
               "nom": "STX Lorient",
               "detail": "Construit pour Lorient Agglomération — ligne rade de Lorient",
-              "source": "marché global de performance hydrogène 2022"
+              "source": "marché global de performance hydrogène 2022",
+              "prix": "3 200 000 EUR"
             },
             {
               "annee": "2013",
@@ -170231,7 +170715,8 @@
               "source": "marché global de performance hydrogène 2022"
             }
           ],
-          "source": "marché global de performance hydrogène 2022"
+          "source": "marché global de performance hydrogène 2022",
+          "prix_acquisition": "3,2 M EUR (2013, investissement public à la construction, incluant surcoût électrique vs diesel +1,7 M EUR et vs hybride +0,9 M EUR)"
         }
       ],
       "sources": [
@@ -170497,7 +170982,8 @@
               "role": "construction",
               "nom": "SNRTM",
               "detail": "Construit pour TLV TVM (délégataire) / TPM — ligne Port d'Hyères / Port et Levant",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+              "prix": "un peu plus de 3 M EUR"
             },
             {
               "annee": "2018",
@@ -170507,7 +170993,8 @@
               "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
             }
           ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "un peu plus de 3 M EUR (2018, construction neuve)"
         },
         {
           "nom": "Méditerranée 15",
@@ -170544,6 +171031,14 @@
               "nom": "TLV TVM",
               "detail": "DSP, navires propriété du délégataire",
               "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            },
+            {
+              "annee": "2018",
+              "role": "evenement",
+              "nom": "Méditerranée XIV (sister-type comparable, PAS le XV)",
+              "detail": "Aucun prix public pour la Méditerranée XV (2007/2008). Reference comparable: la Méditerranée XIV, vedette mixte passagers+fret du meme armateur TLV-TVM, coque alu finie au chantier SNRTM de Bregaillon, a represente un investissement d'un peu plus de 3 M EUR (cout de construction ~3,2 M EUR). NB: la serie Mediterranee n'est PAS strictement identique (dimensions/capacite variables: XIV 25,98 m / 176 pax + 15 t ; XV 25,11 m / 266 pax), donc pas de derivation d'un prix unitaire applicable au XV.",
+              "prix": "~3 M EUR (investissement) / ~3,2 M EUR (construction) — chiffre du Mediterranee XIV, non du XV",
+              "source": "https://www.meretmarine.com/fr/construction-navale/tlv-tvm-receptionne-la-mediterranee-xiv-et-planche-deja-sur-une-nouvelle"
             }
           ],
           "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
@@ -170658,7 +171153,8 @@
               "role": "construction",
               "nom": "Construction aluminium",
               "detail": "Construit pour Métropole Aix-Marseille-Provence (via SEM Transrades) — ligne Vieux-Port - Îles du Frioul",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+              "prix": "1,3 M EUR"
             },
             {
               "annee": "2007",
@@ -170675,7 +171171,8 @@
               "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
             }
           ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "1,3 M EUR (2007, prix unitaire neuf, série identique de 3 sister-ships OCEA)"
         },
         {
           "nom": "Edmond Dantès",
@@ -170703,7 +171200,8 @@
               "role": "construction",
               "nom": "Construction aluminium",
               "detail": "Construit pour Métropole Aix-Marseille-Provence (via SEM Transrades) — ligne Vieux-Port - Îles du Frioul",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+              "prix": "1,3 M EUR"
             },
             {
               "annee": "2007",
@@ -170720,7 +171218,8 @@
               "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
             }
           ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "1,3 M EUR (2007, prix unitaire neuf, série identique de 3 sister-ships OCEA)"
         },
         {
           "nom": "Henri Jacques Espérandieu",
@@ -170748,7 +171247,8 @@
               "role": "construction",
               "nom": "Construction aluminium",
               "detail": "Construit pour Métropole Aix-Marseille-Provence (via SEM Transrades) — ligne Vieux-Port - Îles du Frioul",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+              "prix": "1,3 M EUR"
             },
             {
               "annee": "2007",
@@ -170765,7 +171265,8 @@
               "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
             }
           ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "1,3 M EUR (2007, prix unitaire neuf, série identique de 3 sister-ships OCEA)"
         }
       ],
       "sources": [
