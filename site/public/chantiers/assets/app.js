@@ -136,6 +136,8 @@
     "Barracuda Yacht Design": { ville: "La Forêt-Fouesnant", region: "Bretagne", pays: "France", lat: 47.903, lon: -3.974 },
     "S.E.E. Merré": { ville: "Nort-sur-Erdre", region: "Pays de la Loire", pays: "France", lat: 47.438, lon: -1.500 },
     "Norwegian Ship Design": { ville: "Ålesund", region: "Møre og Romsdal", pays: "Norvège", lat: 62.469, lon: 6.162 },
+    "Solstrand Trading": { ville: "Tomrefjord", region: "Møre og Romsdal", pays: "Norvège", lat: 62.582, lon: 6.928 },
+    "Aker Yards Design": { ville: "Aukra", region: "Møre og Romsdal", pays: "Norvège", lat: 62.797, lon: 6.920 },
     "Ulstein Design": { ville: "Ulsteinvik", region: "Møre og Romsdal", pays: "Norvège", lat: 62.343, lon: 5.849 },
     "Vard Design": { ville: "Ålesund", region: "Møre og Romsdal", pays: "Norvège", lat: 62.466, lon: 6.150 },
     "Havyard Design": { ville: "Fosnavåg", region: "Møre og Romsdal", pays: "Norvège", lat: 62.339, lon: 5.553 },
