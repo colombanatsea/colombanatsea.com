@@ -14,10 +14,17 @@
       <h1>Registre naval européen</h1>
       <p class="dek">Chantiers et navires de France, Norvège, Écosse et Suède : construction, réparation, défense, propulsion</p>
     </div>
-    <div class="viewtoggle" role="tablist" aria-label="Mode d'affichage">
-      <button id="btn-map" class="viewtoggle__btn is-active" role="tab" aria-selected="true">Carte</button>
-      <button id="btn-dir" class="viewtoggle__btn" role="tab" aria-selected="false">Annuaire</button>
-      <button id="btn-nav" class="viewtoggle__btn" role="tab" aria-selected="false">Navires</button>
+    <div class="nav2">
+      <div class="entitytabs" role="tablist" aria-label="Entité">
+        <button id="ent-chantiers" class="entitytab is-active" role="tab" aria-selected="true" data-entity="chantiers">Chantiers</button>
+        <button id="ent-navires" class="entitytab" role="tab" aria-selected="false" data-entity="navires">Navires</button>
+        <button id="ent-dessertes" class="entitytab" role="tab" aria-selected="false" data-entity="dessertes">Dessertes</button>
+        <button id="ent-architectes" class="entitytab" role="tab" aria-selected="false" data-entity="architectes">Architectes</button>
+      </div>
+      <div class="modetabs" id="modetabs" role="tablist" aria-label="Affichage">
+        <button id="mode-annuaire" class="modetab" role="tab" aria-selected="false" data-mode="annuaire">Annuaire</button>
+        <button id="mode-carte" class="modetab is-active" role="tab" aria-selected="true" data-mode="carte">Carte</button>
+      </div>
     </div>
     <button id="btn-corr" class="corrbtn" type="button" title="Mes corrections enregistrées" aria-label="Mes corrections enregistrées">
       <span class="corrbtn__ic" aria-hidden="true">✎</span>
@@ -57,9 +64,9 @@
   </section>
 
   <main class="content">
-    <!-- Vue carte : liste + carte -->
+    <!-- Vue carte (partagée) : liste contextuelle + carte. Sert Chantiers, Dessertes, Architectes. -->
     <div id="view-map" class="view view--map">
-      <aside class="results" id="results" aria-label="Liste des chantiers"></aside>
+      <aside class="results" id="results" aria-label="Liste"></aside>
       <div class="mapwrap">
         <div id="map"></div>
         <div class="legend" id="legend"></div>
@@ -67,7 +74,7 @@
       </div>
     </div>
 
-    <!-- Vue annuaire : tableau -->
+    <!-- Annuaire chantiers : tableau -->
     <div id="view-dir" class="view view--dir is-hidden">
       <table class="table">
         <thead>
@@ -81,6 +88,16 @@
         </thead>
         <tbody id="table-body"></tbody>
       </table>
+    </div>
+
+    <!-- Annuaire dessertes -->
+    <div id="view-dessertes" class="view view--cards is-hidden">
+      <div class="cards-grid" id="dessertes-list"></div>
+    </div>
+
+    <!-- Annuaire architectes -->
+    <div id="view-architectes" class="view view--cards is-hidden">
+      <div class="cards-grid" id="architectes-list"></div>
     </div>
 
     <!-- Vue navires : recherche par navire + facettes dédiées -->

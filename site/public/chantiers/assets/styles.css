@@ -49,12 +49,22 @@ a { color: var(--blue); }
 .title .dek { margin: 2px 0 0; font-size: 12.5px; color: var(--muted); font-weight: 400; }
 .title__count { display: none; }
 
-.viewtoggle { display: inline-flex; background: var(--bg-2); border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; }
-.viewtoggle__btn {
-  border: 0; background: transparent; cursor: pointer; padding: 8px 20px; border-radius: 999px;
-  font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--muted); transition: 0.15s;
+/* Navigation à deux niveaux : entité (tabs soulignées) + mode (segmenté arrondi) */
+.nav2 { display: inline-flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.entitytabs { display: inline-flex; gap: 2px; }
+.entitytab {
+  border: 0; background: transparent; cursor: pointer; padding: 9px 14px 11px; border-bottom: 2px solid transparent;
+  font-family: var(--sans); font-size: 13.5px; font-weight: 600; color: var(--muted); transition: 0.15s; white-space: nowrap;
 }
-.viewtoggle__btn.is-active { background: var(--blue); color: #fff; }
+.entitytab:hover { color: var(--blue); }
+.entitytab.is-active { color: var(--blue); border-bottom-color: var(--blue); font-weight: 700; }
+.modetabs { display: inline-flex; background: var(--bg-2); border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; }
+.modetabs.is-hidden { display: none; }
+.modetab {
+  border: 0; background: transparent; cursor: pointer; padding: 7px 16px; border-radius: 999px;
+  font-family: var(--sans); font-size: 12.5px; font-weight: 600; color: var(--muted); transition: 0.15s;
+}
+.modetab.is-active { background: var(--blue); color: #fff; }
 
 /* count badge moves to controls bar */
 .controls__count { font-size: 12.5px; color: var(--muted); margin-left: auto; align-self: center; white-space: nowrap; }
@@ -113,6 +123,7 @@ a { color: var(--blue); }
   padding: 15px 20px; border-bottom: 1px solid var(--line); cursor: pointer;
   border-left: 3px solid transparent; transition: background 0.12s, border-color 0.12s;
 }
+.card--solo { grid-template-columns: 1fr; }
 .card:hover { background: var(--bg-2); }
 .card.is-active { background: var(--bg-3); border-left-color: var(--red); }
 .card__no { font-variant-numeric: tabular-nums; font-size: 12px; color: var(--blue-l); font-weight: 700; padding-top: 3px; }
@@ -166,6 +177,7 @@ a { color: var(--blue); }
 .legend__title { font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 9px; }
 .legend__row { display: flex; align-items: center; gap: 9px; margin: 6px 0; color: var(--ink); }
 .legend__dot { width: 11px; height: 11px; border-radius: 50%; }
+.legend__line { width: 18px; height: 0; border-top: 2.5px solid #1F9AA8; }
 
 /* ---------- Directory ---------- */
 .view--dir { overflow-y: auto; padding: 0 30px 28px; background: var(--bg); }
@@ -182,6 +194,18 @@ a { color: var(--blue); }
 .table .t-sub { color: var(--muted); font-size: 12px; margin-top: 2px; }
 .table .t-year { font-variant-numeric: tabular-nums; }
 .cellperims { display: flex; gap: 7px; flex-wrap: wrap; }
+
+/* ---------- Annuaires dessertes / architectes (grille de cartes) ---------- */
+.view--cards { overflow-y: auto; padding: 20px 30px 30px; background: var(--bg); }
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; align-content: start; }
+.ecard { display: block; width: 100%; text-align: left; background: var(--bg); border: 1px solid var(--line); border-left: 3px solid var(--blue); border-radius: var(--r-sm); padding: 14px 16px; cursor: pointer; font-family: var(--sans); transition: border-color 0.12s, background 0.12s; }
+.ecard:hover { border-color: var(--blue); background: var(--bg-2); }
+.ecard__nom { font-weight: 700; font-size: 15px; color: var(--ink); line-height: 1.2; }
+.ecard__meta { color: var(--muted); font-size: 12.5px; margin-top: 4px; }
+.ecard__stats { display: flex; align-items: center; gap: 12px; margin-top: 9px; font-size: 12.5px; color: var(--muted); }
+.ecard__stats b { color: var(--blue); }
+.ecard__pin { color: var(--teal, #1F9AA8); font-weight: 600; }
+.side-note { padding: 12px 18px; font-size: 12px; color: var(--muted); border-top: 1px dashed var(--line-2); }
 
 /* ---------- Navires (recherche par navire + facettes) ---------- */
 .view--nav { display: grid; grid-template-columns: 248px 1fr; gap: 0; height: 100%; overflow: hidden; }
@@ -235,6 +259,9 @@ a { color: var(--blue); }
 .ves-yard { display: flex; flex-direction: column; gap: 3px; width: 100%; text-align: left; background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--r-sm); padding: 13px 15px; cursor: pointer; font-family: var(--sans); }
 .ves-yard:hover { border-color: var(--blue); }
 .ves-yard b { color: var(--blue); font-size: 15px; } .ves-yard span { color: var(--muted); font-size: 12.5px; }
+.ves-yard + .ves-yard { margin-top: 10px; }
+.ves-yard__role { font-size: 9.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.ves-yard--arch { border-left: 3px solid #7a3df0; } .ves-yard--arch b { color: #7a3df0; }
 .ves-link { background: none; border: 0; color: var(--red); font-weight: 600; cursor: pointer; padding: 2px 0; font-family: var(--sans); font-size: 13px; text-align: left; }
 .ves-link:hover { text-decoration: underline; }
 
@@ -253,7 +280,7 @@ a { color: var(--blue); }
 .drawer[aria-hidden="false"] { pointer-events: auto; }
 .drawer__backdrop { position: absolute; inset: 0; background: rgba(0,49,79,0.4); opacity: 0; transition: opacity 0.2s; }
 .drawer[aria-hidden="false"] .drawer__backdrop { opacity: 1; }
-.drawer__panel { position: absolute; top: 0; right: 0; height: 100%; width: min(560px, 94vw); background: var(--bg); box-shadow: var(--shadow); overflow-y: auto; padding: 40px 36px 60px; transform: translateX(100%); transition: transform 0.24s ease; }
+.drawer__panel { position: absolute; top: 0; right: 0; height: 100%; width: min(720px, 96vw); background: var(--bg); box-shadow: var(--shadow); overflow-y: auto; padding: 40px 40px 60px; transform: translateX(100%); transition: transform 0.24s ease; }
 .drawer[aria-hidden="false"] .drawer__panel { transform: translateX(0); }
 .drawer__close { position: absolute; top: 18px; right: 20px; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line-2); background: var(--bg); color: var(--ink); font-size: 19px; line-height: 1; cursor: pointer; }
 .drawer__close:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
@@ -266,7 +293,7 @@ a { color: var(--blue); }
 
 .d-section { margin-top: 28px; }
 .d-section h3 { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin: 0 0 13px; padding-bottom: 9px; border-bottom: 1px solid var(--line); }
-.d-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+.d-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px 26px; }
 .d-fact__k { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
 .d-fact__v { font-size: 15px; margin-top: 3px; }
 .d-list { list-style: none; padding: 0; margin: 0; }
@@ -379,12 +406,15 @@ a { color: var(--blue); }
   .content { overflow: visible; }
   .view { height: auto; }
 
-  /* En-tête : titre pleine largeur, bascule de vue en trois parts égales dessous */
+  /* En-tête : titre pleine largeur, navigation dessous (entités défilables + mode) */
   .topbar { flex-wrap: wrap; gap: 12px; padding: 12px 18px; }
   .title { flex: 1 1 100%; }
-  .viewtoggle { display: flex; flex: 1 1 auto; min-width: 0; width: auto; }
-  .viewtoggle__btn { flex: 1; text-align: center; padding: 10px 6px; }
+  .nav2 { flex: 1 1 100%; gap: 10px; justify-content: space-between; }
+  .entitytabs { flex: 1 1 auto; min-width: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .entitytab { flex: 0 0 auto; padding: 9px 11px 11px; }
+  .modetabs { flex: 0 0 auto; }
   .corrbtn { flex: 0 0 auto; padding: 9px 13px; }
+  .view--cards { padding: 16px 16px 24px; }
 
   /* Contrôles : tout en pleine largeur, plus de min-width qui déborde */
   .controls { padding: 12px 18px; gap: 12px; }

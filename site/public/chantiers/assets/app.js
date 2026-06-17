@@ -69,6 +69,37 @@
   ]);
   const isOutremer = (c) => OUTREMER_REGIONS.has(c.region);
 
+  // Gazetteer des ports/escales cités par les dessertes (coordonnées approximatives, usage schématique).
+  // Sert à tracer les lignes de desserte (faute d'AIS, trait direct entre escales). Clé = nom reconnu dans la chaîne.
+  const PORTS = {
+    "Fort-de-France": [14.602, -61.066], "Trois-Îlets": [14.539, -61.038], "Anse Mitan": [14.551, -61.052],
+    "Anse à l'Ane": [14.548, -61.069], "Pointe du Bout": [14.548, -61.053], "Case-Pilote": [14.646, -61.135],
+    "Audierne": [48.022, -4.539], "Sein": [48.038, -4.852], "Molène": [48.396, -4.959],
+    "Ouessant": [48.459, -5.096], "Le Conquet": [48.360, -4.770], "Camaret": [48.277, -4.593], "Brest": [48.388, -4.490],
+    "Basse-Indre": [47.199, -1.694], "Indret": [47.201, -1.661], "Le Pellerin": [47.197, -1.759], "Couëron": [47.214, -1.722],
+    "Belle-Île": [47.347, -3.155], "Groix": [47.638, -3.450], "Houat": [47.391, -2.961], "Hoëdic": [47.343, -2.875],
+    "Blaye": [45.127, -0.665], "Lamarque": [45.098, -0.693], "Le Verdon": [45.546, -1.062], "Verdon": [45.546, -1.062], "Royan": [45.624, -1.028],
+    "Dzaoudzi": [-12.788, 45.270], "Mamoudzou": [-12.780, 45.228],
+    "Fouras": [45.987, -1.090], "Aix": [46.010, -1.175],
+    "Fromentine": [46.893, -2.143], "Port Joinville": [46.727, -2.345], "Yeu": [46.715, -2.349], "Saint-Gilles-Croix-de-Vie": [46.697, -1.943],
+    "Salin-de-Giraud": [43.398, 4.730], "Port-Saint-Louis": [43.386, 4.801], "Saintes-Maries-de-la-Mer": [43.452, 4.428],
+    "Granville": [48.837, -1.597], "Carteret": [49.376, -1.791], "Diélette": [49.553, -1.863], "Jersey": [49.187, -2.107], "Guernesey": [49.455, -2.576], "Aurigny": [49.713, -2.198],
+    "Les Saintes": [15.867, -61.583], "Trois-Rivières": [15.989, -61.640],
+    "Port d'Hyères": [43.091, 6.156], "Hyères": [43.091, 6.156], "Levant": [43.030, 6.468], "Port-Cros": [43.005, 6.392],
+    "Tour Fondue": [43.034, 6.158], "Porquerolles": [43.000, 6.213],
+    "Sables d'Olonne": [46.497, -1.794], "Port-Louis": [47.708, -3.358], "Gâvres": [47.692, -3.404],
+    "Duclair": [49.482, 0.873], "Berville": [49.461, 0.770], "Quillebeuf": [49.470, 0.519],
+    "Saint-Pierre": [46.781, -56.172], "Langlade": [46.862, -56.343], "Miquelon": [47.097, -56.380], "Fortune": [47.067, -55.842],
+    "Saint-Vaast-la-Hougue": [49.589, -1.266], "Tatihou": [49.598, -1.251],
+    "Vannes": [47.658, -2.760], "Séné": [47.622, -2.752], "Île d'Arz": [47.594, -2.799],
+    "Vieux-Port": [43.295, 5.371], "Frioul": [43.281, 5.304], "Minimes": [46.149, -1.169], "Médiathèque": [43.298, 5.364],
+    "rade de Brest": [48.330, -4.470], "rade de Lorient": [47.730, -3.370], "rade de Toulon": [43.110, 5.930], "Lorient": [47.745, -3.367],
+  };
+  // Localisation des cabinets d'architecture/ensembliers navals (siège), pour la carte Architectes.
+  const ARCHITECTES_LIEUX = {
+    "Alternatives Energies": { ville: "La Rochelle", region: "Nouvelle-Aquitaine", pays: "France", lat: 46.158, lon: -1.151 },
+  };
+
   const state = {
     all: [],
     perimRef: {},
@@ -76,7 +107,8 @@
     filters: { q: "", perims: new Set(), type: "", region: "", pays: "",
       navProps: new Set(), navCapTypes: new Set(), navCapMin: 0, navLenMin: 0, navLenMax: 0, navPriceMin: 0, navPriceMax: 0 },
     sort: { key: "nom", dir: 1 },
-    view: "map",
+    entity: "chantiers", // chantiers | navires | dessertes | architectes
+    mode: "carte",       // annuaire | carte (navires = annuaire seul)
     activeId: null,
   };
 
@@ -113,6 +145,7 @@
         state.navires.push(n);
       }
     }));
+    buildDerived();
     // Fond de carte France, servi en local (aucune dépendance externe).
     let geo = null;
     try {
@@ -140,8 +173,15 @@
       const fr = await fetch("data/foreign-countries.geojson", { cache: "force-cache" });
       if (fr.ok) state.foreignGeo = await fr.json();
     } catch (e) { console.warn("Fond pays étrangers indisponible", e); }
+    // Pays hors emprise européenne (Chine, Roumanie, Espagne…) : dessinés mais hors emprise par défaut.
+    state.foreignGeoExtra = null;
+    try {
+      const fe = await fetch("data/foreign-countries-extra.geojson", { cache: "force-cache" });
+      if (fe.ok) state.foreignGeoExtra = await fe.json();
+    } catch (e) { console.warn("Fond pays hors-emprise indisponible", e); }
     buildControls();
     try { initMap(geo); } catch (e) { console.error("Carte indisponible", e); showMapFallback(); }
+    syncViews();
     render();
   }
 
@@ -239,7 +279,7 @@
       // Taille : longueur hors-tout dans la fourchette.
       if (navLenMin && !(n.longueur_m >= navLenMin)) return false;
       if (navLenMax && !(n.longueur_m <= navLenMax)) return false;
-      if (nq && !(norm(n.nom).includes(nq) || norm(n.type).includes(nq) || norm(n.client).includes(nq) || norm(n.operateur).includes(nq) || norm(n.proprietaire).includes(nq) || norm(n._cnom).includes(nq))) return false;
+      if (nq && !(norm(n.nom).includes(nq) || norm(n.type).includes(nq) || norm(n.client).includes(nq) || norm(n.operateur).includes(nq) || norm(n.proprietaire).includes(nq) || norm(n.architecte).includes(nq) || norm(n._cnom).includes(nq))) return false;
       return true;
     });
   }
@@ -264,6 +304,70 @@
       n.port_lourd_dwt ? n.port_lourd_dwt.toLocaleString("fr-FR") + " DWT" : null,
       n.capacite || null, n.energie || null, n.classification || null,
     ].filter(Boolean).join(" · ");
+  }
+
+  /* ---------- Index dérivés : dessertes & architectes ---------- */
+  // Trace une desserte : repère les escales connues du gazetteer dans la chaîne, dans l'ordre d'apparition.
+  function parseRoutePorts(str) {
+    const ns = norm(str);
+    const hits = [];
+    for (const key in PORTS) {
+      const idx = ns.indexOf(norm(key));
+      if (idx >= 0) hits.push({ idx, pt: PORTS[key], key });
+    }
+    hits.sort((a, b) => a.idx - b.idx);
+    // Dé-doublonne les escales co-localisées (ex. « Verdon » / « Le Verdon »).
+    const out = [];
+    hits.forEach((h) => {
+      const last = out[out.length - 1];
+      if (!last || Math.abs(last.pt[0] - h.pt[0]) > 1e-3 || Math.abs(last.pt[1] - h.pt[1]) > 1e-3) out.push(h);
+    });
+    return out.map((h) => h.pt);
+  }
+
+  function buildDerived() {
+    // Dessertes : regroupe les navires par ligne exploitée.
+    const dmap = new Map();
+    state.navires.forEach((n) => {
+      const d = (n.desserte || "").trim();
+      if (!d || /^(r[ée]serve|bateau de r[ée]serve|en r[ée]serve)$/i.test(d)) return;
+      let e = dmap.get(d);
+      if (!e) { e = { nom: d, navires: [], operateurs: new Set(), chantiers: new Set(), regions: new Set(), pays: new Set() }; dmap.set(d, e); }
+      e.navires.push(n);
+      if (n.operateur) e.operateurs.add(n.operateur);
+      if (n._cnom) e.chantiers.add(n._cnom);
+      if (n._cregion) e.regions.add(n._cregion);
+      if (n._cpays) e.pays.add(n._cpays);
+    });
+    // Garde anti-faux-positif : un toponyme ambigu (ex. « Vieux-Port » Marseille vs La Rochelle) peut produire
+    // une ligne aberrante traversant la France. Au-delà de ~1,4° d'amplitude, on ne trace pas (desserte non localisée).
+    const span = (pts) => {
+      if (pts.length < 2) return 0;
+      let la0 = 90, la1 = -90, lo0 = 180, lo1 = -180;
+      pts.forEach((p) => { la0 = Math.min(la0, p[0]); la1 = Math.max(la1, p[0]); lo0 = Math.min(lo0, p[1]); lo1 = Math.max(lo1, p[1]); });
+      return Math.max(la1 - la0, lo1 - lo0);
+    };
+    state.dessertes = [...dmap.values()].map((e, i) => {
+      e._idx = i;
+      const pts = parseRoutePorts(e.nom);
+      if (span(pts) > 1.4) e.points = []; else e.points = pts;
+      e.mapped = e.points.length >= 1;
+      e.operateur = [...e.operateurs][0] || ""; return e;
+    }).sort((a, b) => norm(a.nom).localeCompare(norm(b.nom)));
+
+    // Architectes : regroupe les navires par cabinet d'architecture / ensemblier.
+    const amap = new Map();
+    state.navires.forEach((n) => {
+      const a = (n.architecte || "").trim();
+      if (!a) return;
+      let e = amap.get(a);
+      if (!e) { const loc = ARCHITECTES_LIEUX[a] || {}; e = { nom: a, navires: [], operateurs: new Set(), chantiers: new Set(), ...loc }; amap.set(a, e); }
+      e.navires.push(n);
+      if (n.operateur) e.operateurs.add(n.operateur);
+      if (n._cnom) e.chantiers.add(n._cnom);
+    });
+    state.architectes = [...amap.values()].map((e, i) => { e._idx = i; return e; })
+      .sort((a, b) => b.navires.length - a.navires.length || norm(a.nom).localeCompare(norm(b.nom)));
   }
 
   function sorted(list) {
@@ -383,7 +487,7 @@
       document.querySelectorAll(".chip.is-on, #f-prop .is-on, #f-cap-types .is-on").forEach((c) => c.classList.remove("is-on"));
       ["#f-cap-min", "#f-len-min", "#f-len-max", "#f-price-min", "#f-price-max"].forEach((s) => { const el = $(s); if (el) el.value = ""; });
       $("#drawer").setAttribute("aria-hidden", "true");
-      setView("map");
+      state.entity = "chantiers"; state.mode = "carte"; syncViews();
       if (map && state.homeBounds) {
         try { map.fitBounds(state.homeBounds, { padding: [16, 16] }); } catch (e) { /* noop */ }
       }
@@ -397,10 +501,11 @@
       home.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); resetAll(); } });
     }
 
-    // View toggle
-    $("#btn-map").addEventListener("click", () => setView("map"));
-    $("#btn-dir").addEventListener("click", () => setView("dir"));
-    if ($("#btn-nav")) $("#btn-nav").addEventListener("click", () => setView("nav"));
+    // Navigation à deux niveaux : entité (Chantiers/Navires/Dessertes/Architectes) + mode (Annuaire/Carte).
+    document.querySelectorAll(".entitytab[data-entity]").forEach((b) =>
+      b.addEventListener("click", () => setEntity(b.dataset.entity)));
+    document.querySelectorAll(".modetab[data-mode]").forEach((b) =>
+      b.addEventListener("click", () => setMode(b.dataset.mode)));
 
     // Table sort
     document.querySelectorAll("th[data-sort]").forEach((th) => {
@@ -435,17 +540,47 @@
     updateCorrBadge();
   }
 
-  function setView(v) {
-    state.view = v;
-    [["map", "#btn-map"], ["dir", "#btn-dir"], ["nav", "#btn-nav"]].forEach(([k, sel]) => {
-      const b = $(sel); if (!b) return;
-      b.classList.toggle("is-active", v === k); b.setAttribute("aria-selected", v === k);
+  // Navires : pas de carte (pas de données AIS) → forcé en annuaire.
+  function effectiveMode() { return state.entity === "navires" ? "annuaire" : state.mode; }
+
+  function syncViews() {
+    const e = state.entity, m = effectiveMode();
+    document.querySelectorAll(".entitytab[data-entity]").forEach((b) => {
+      const on = b.dataset.entity === e;
+      b.classList.toggle("is-active", on); b.setAttribute("aria-selected", String(on));
     });
-    $("#view-map").classList.toggle("is-hidden", v !== "map");
-    $("#view-dir").classList.toggle("is-hidden", v !== "dir");
-    $("#view-nav").classList.toggle("is-hidden", v !== "nav");
-    if (v === "map" && map) setTimeout(() => map.invalidateSize(), 60);
-    render();
+    document.querySelectorAll(".modetab[data-mode]").forEach((b) => {
+      const on = b.dataset.mode === m;
+      b.classList.toggle("is-active", on); b.setAttribute("aria-selected", String(on));
+    });
+    const mt = $("#modetabs"); if (mt) mt.classList.toggle("is-hidden", e === "navires");
+    const showMap = m === "carte";
+    $("#view-map").classList.toggle("is-hidden", !showMap);
+    $("#view-dir").classList.toggle("is-hidden", !(e === "chantiers" && m === "annuaire"));
+    $("#view-nav").classList.toggle("is-hidden", e !== "navires");
+    $("#view-dessertes").classList.toggle("is-hidden", !(e === "dessertes" && m === "annuaire"));
+    $("#view-architectes").classList.toggle("is-hidden", !(e === "architectes" && m === "annuaire"));
+    if (showMap && map) setTimeout(() => map.invalidateSize(), 60);
+  }
+
+  function setEntity(e) { state.entity = e; state.activeId = null; syncViews(); render(); fitEntityMap(); }
+  function setMode(m) { if (state.entity === "navires") return; state.mode = m; syncViews(); render(); fitEntityMap(); }
+
+  // Recentre la carte selon l'entité affichée (appelé au changement, pas à chaque frappe de recherche).
+  function fitEntityMap() {
+    if (!map || effectiveMode() !== "carte") return;
+    if (state.entity === "dessertes") {
+      // Cadre sur les dessertes métropolitaines (les lignes DOM-TOM/SPM restent tracées, accessibles au dézoom).
+      const pts = [];
+      (state.dessertes || []).forEach((d) => d.points.forEach((p) => { if (p[0] >= 41 && p[0] <= 52 && p[1] >= -6 && p[1] <= 10) pts.push(p); }));
+      if (pts.length) { try { map.fitBounds(L.latLngBounds(pts).pad(0.08), { maxZoom: 9 }); } catch (e) {} return; }
+    }
+    if (state.entity === "architectes") {
+      const pts = (state.architectes || []).filter((a) => a.lat != null).map((a) => [a.lat, a.lon]);
+      if (pts.length === 1) { try { map.setView(pts[0], 8, { animate: false }); } catch (e) {} return; }
+      if (pts.length > 1) { try { map.fitBounds(L.latLngBounds(pts).pad(0.3), { maxZoom: 8 }); } catch (e) {} return; }
+    }
+    if (state.homeBounds) { try { map.fitBounds(state.homeBounds, { padding: [16, 16] }); } catch (e) {} }
   }
 
   /* ---------- Map ---------- */
@@ -469,6 +604,12 @@
         const fl = L.geoJSON(state.foreignGeo, { style: landStyle, interactive: false }).addTo(map);
         bounds = bounds ? bounds.extend(fl.getBounds()) : fl.getBounds();
       } catch (e) { /* noop */ }
+    }
+    // Pays hors emprise (Chine, Roumanie, Espagne…) : dessinés, mais sans étendre l'emprise par défaut
+    // (sinon la vue se dézoome jusqu'en Asie). On y accède par le filtre Pays ou en dézoomant.
+    if (state.foreignGeoExtra) {
+      try { L.geoJSON(state.foreignGeoExtra, { style: landStyle, interactive: false }).addTo(map); }
+      catch (e) { /* noop */ }
     }
     if (bounds && bounds.isValid()) { state.homeBounds = bounds; map.fitBounds(bounds, { padding: [16, 16] }); }
     else { map.setView([54, 6], 4); }
@@ -529,7 +670,7 @@
       const id = card.dataset.id;
       card.addEventListener("click", () => {
         const m = markers.get(id);
-        if (m && map && state.view === "map") { map.setView(m.getLatLng(), 9, { animate: true }); m.openPopup(); }
+        if (m && map && effectiveMode() === "carte") { map.setView(m.getLatLng(), 9, { animate: true }); m.openPopup(); }
         openDrawer(id);
       });
     });
@@ -877,14 +1018,15 @@
       <div class="d-loc">${[v.type, v.annee, v.imo ? "IMO " + v.imo : null].filter(Boolean).join(" · ")}</div>
       ${(v.propulsion && v.propulsion.length) ? `<div class="d-perims" style="margin:14px 0 4px">${propChips(v.propulsion)}</div>` : ""}
       ${photoHtml}
-      <div class="d-section"><h3>Caractéristiques</h3>
+      <div class="d-section"><h3>Caractéristiques techniques</h3>
         <div class="d-grid">${specRows.map(([k, x]) =>
           `<div class="d-fact"><div class="d-fact__k">${k}</div><div class="d-fact__v">${x}</div></div>`).join("")}</div></div>
       ${expRows.length ? `<div class="d-section"><h3>Exploitation</h3>
         <div class="d-grid">${expRows.map(([k, x]) =>
           `<div class="d-fact"><div class="d-fact__k">${k}</div><div class="d-fact__v">${x}</div></div>`).join("")}</div></div>` : ""}
-      <div class="d-section"><h3>Construit par</h3>
-        <button class="ves-yard" data-open-chantier="${v._cid}"><b>${v._cnom}</b><span>${v._cville} · voir la fiche du chantier →</span></button>
+      <div class="d-section"><h3>Conception &amp; construction</h3>
+        ${v.architecte ? `<button class="ves-yard ves-yard--arch" data-open-arch="${esc(v.architecte)}"><span class="ves-yard__role">Architecte / ensemblier</span><b>${esc(v.architecte)}</b><span>voir l'architecte →</span></button>` : ""}
+        <button class="ves-yard" data-open-chantier="${v._cid}"><span class="ves-yard__role">Chantier constructeur</span><b>${esc(v._cnom)}</b><span>${esc(v._cville)} · voir la fiche du chantier →</span></button>
       </div>
       ${timelineHtml}
       ${sim.length ? `<div class="d-section"><h3>Navires similaires</h3>
@@ -900,6 +1042,9 @@
       </div>`;
     $("#drawer-body").querySelectorAll("[data-open-chantier]").forEach((b) => b.addEventListener("click", () => openDrawer(b.dataset.openChantier)));
     $("#drawer-body").querySelectorAll("[data-open-vessel]").forEach((b) => b.addEventListener("click", () => openVessel(state.navires[+b.dataset.openVessel])));
+    $("#drawer-body").querySelectorAll("[data-open-arch]").forEach((b) => b.addEventListener("click", () => {
+      const a = (state.architectes || []).find((x) => x.nom === b.dataset.openArch); if (a) openArchitecte(a);
+    }));
     const cvTrig = $("#drawer-body").querySelector("[data-corr-vessel]");
     if (cvTrig) cvTrig.addEventListener("click", () => openCorrForm({
       type: "navire", cible_nom: v.nom || v.type || "Navire",
@@ -923,6 +1068,7 @@
           ${(n.propulsion && n.propulsion.length) ? `<div class="nav-props">${propChips(n.propulsion)}</div>` : ""}
           ${vesselSpecs(n) ? `<div class="nav-specs">${vesselSpecs(n)}</div>` : ""}
           ${n.operateur ? `<div class="nav-op">Opérateur : <b>${n.operateur}</b></div>` : ""}
+          ${n.architecte ? `<div class="nav-yard">Architecte : <b>${n.architecte}</b></div>` : ""}
           <div class="nav-yard">Chantier : <b>${n._cnom}</b> <span>· ${n._cville}</span></div>
         </div>
       </div>`).join("");
@@ -932,7 +1078,8 @@
 
   /* ---------- Render orchestration ---------- */
   function render() {
-    if (state.view === "nav") {
+    const e = state.entity, m = effectiveMode();
+    if (e === "navires") {
       const nl = filteredNavires();
       $("#count").innerHTML = nl.length === state.navires.length
         ? `<b>${state.navires.length}</b> navires de référence`
@@ -940,12 +1087,196 @@
       renderNavires(nl);
       return;
     }
+    if (e === "dessertes") { return m === "carte" ? renderDessertesCarte() : renderDessertesAnnuaire(); }
+    if (e === "architectes") { return m === "carte" ? renderArchitectesCarte() : renderArchitectesAnnuaire(); }
+    // Chantiers
     const list = sorted(filtered());
     $("#count").innerHTML = list.length === state.all.length
       ? `<b>${state.all.length}</b> sites recensés`
       : `<b>${list.length}</b> sur ${state.all.length} sites`;
-    if (state.view === "map") { renderMap(list); renderResults(list); renderInsets(list); }
+    if (m === "carte") { mapChrome("chantiers"); renderMap(list); renderResults(list); renderInsets(list); }
     else renderTable(list);
+  }
+
+  // Affiche/masque la légende et le bandeau outre-mer selon l'entité cartographiée.
+  function mapChrome(entity) {
+    const lg = $("#legend"), om = $("#om-strip");
+    if (entity === "chantiers") {
+      if (lg) { lg.style.display = ""; lg.innerHTML = `<div class="legend__title">Périmètre</div>` + Object.keys(PERIM_COLORS).map((p) =>
+        `<div class="legend__row"><span class="legend__dot" style="background:${PERIM_COLORS[p]}"></span>${perimLabel(p)}</div>`).join(""); }
+    } else if (entity === "dessertes") {
+      if (lg) { lg.style.display = ""; lg.innerHTML = `<div class="legend__title">Dessertes</div><div class="legend__row"><span class="legend__line"></span>ligne exploitée</div><div class="legend__row"><span class="legend__dot" style="background:#1F9AA8"></span>escale</div>`; }
+      if (om) { om.classList.add("is-hidden"); om.innerHTML = ""; }
+    } else {
+      if (lg) { lg.style.display = ""; lg.innerHTML = `<div class="legend__title">Architectes</div><div class="legend__row"><span class="legend__dot" style="background:#7a3df0"></span>cabinet / ensemblier</div>`; }
+      if (om) { om.classList.add("is-hidden"); om.innerHTML = ""; }
+    }
+  }
+
+  /* ---------- Dessertes ---------- */
+  function filteredDessertes() {
+    const nq = norm(state.filters.q), pays = state.filters.pays, region = state.filters.region;
+    return state.dessertes.filter((d) => {
+      if (pays && !d.pays.has(pays)) return false;
+      if (region && !d.regions.has(region)) return false;
+      if (nq && !(norm(d.nom).includes(nq) || norm(d.operateur).includes(nq) || [...d.operateurs].some((o) => norm(o).includes(nq)))) return false;
+      return true;
+    });
+  }
+  function renderDessertesAnnuaire() {
+    const list = filteredDessertes();
+    $("#count").innerHTML = list.length === state.dessertes.length
+      ? `<b>${state.dessertes.length}</b> dessertes recensées`
+      : `<b>${list.length}</b> sur ${state.dessertes.length} dessertes`;
+    const el = $("#dessertes-list");
+    if (!list.length) { el.innerHTML = `<p class="empty">Aucune desserte ne correspond.</p>`; return; }
+    el.innerHTML = list.map((d) => `
+      <button class="ecard" data-did="${d._idx}">
+        <div class="ecard__nom">${esc(d.nom)}</div>
+        <div class="ecard__meta">${esc(d.operateur || [...d.operateurs].join(", ") || "Opérateur n.c.")}</div>
+        <div class="ecard__stats"><span><b>${d.navires.length}</b> navire${d.navires.length > 1 ? "s" : ""}</span>${d.mapped ? `<span class="ecard__pin">◉ tracée</span>` : ""}</div>
+      </button>`).join("");
+    el.querySelectorAll("[data-did]").forEach((b) => b.addEventListener("click", () => openDesserte(state.dessertes[+b.dataset.did])));
+  }
+  function renderDessertesCarte() {
+    if (!map || !markerLayer) return;
+    mapChrome("dessertes");
+    const list = filteredDessertes();
+    $("#count").innerHTML = `<b>${list.length}</b> dessertes${list.length !== state.dessertes.length ? ` sur ${state.dessertes.length}` : ""}`;
+    markerLayer.clearLayers(); markers.clear();
+    list.forEach((d) => {
+      if (!d.points.length) return;
+      if (d.points.length >= 2) {
+        L.polyline(d.points, { color: "#1F9AA8", weight: 2.5, opacity: 0.8 }).addTo(markerLayer);
+      }
+      d.points.forEach((pt) => {
+        const mk = L.circleMarker(pt, { radius: 4, color: "#fff", weight: 1.5, fillColor: "#1F9AA8", fillOpacity: 1 });
+        mk.bindPopup(`<div class="pp-nom">${esc(d.nom)}</div><div class="pp-meta">${esc(d.operateur)} · ${d.navires.length} navire(s)</div><div class="pp-btn" data-open-d="${d._idx}">Voir la desserte →</div>`);
+        mk.on("popupopen", (e) => { const b = e.popup.getElement().querySelector("[data-open-d]"); if (b) b.addEventListener("click", () => openDesserte(state.dessertes[+b.dataset.openD])); });
+        mk.addTo(markerLayer);
+      });
+    });
+    renderDessertesSide(list);
+    const nm = list.filter((d) => !d.mapped).length;
+    const note = nm ? `<p class="side-note">${nm} desserte${nm > 1 ? "s" : ""} non localisée${nm > 1 ? "s" : ""} (escales hors gazetteer). Visibles en annuaire.</p>` : "";
+    const side = $("#results"); if (side && note) side.insertAdjacentHTML("beforeend", note);
+  }
+  function renderDessertesSide(list) {
+    const el = $("#results");
+    if (!list.length) { el.innerHTML = `<p class="empty">Aucune desserte.</p>`; return; }
+    el.innerHTML = list.map((d) => `
+      <div class="card card--solo" data-did="${d._idx}">
+        <div class="card__body">
+          <div class="card__nom">${esc(d.nom)}</div>
+          <div class="card__meta">${esc(d.operateur || "")} · ${d.navires.length} navire${d.navires.length > 1 ? "s" : ""}</div>
+        </div>
+      </div>`).join("");
+    el.querySelectorAll("[data-did]").forEach((c) => c.addEventListener("click", () => {
+      const d = state.dessertes[+c.dataset.did];
+      if (d.points.length && map) { try { map.fitBounds(L.latLngBounds(d.points).pad(0.5), { maxZoom: 11 }); } catch (e) {} }
+      openDesserte(d);
+    }));
+  }
+  function openDesserte(d) {
+    if (!d) return;
+    const navs = d.navires.slice().sort((a, b) => norm(a.nom || a.type).localeCompare(norm(b.nom || b.type)));
+    $("#drawer-body").innerHTML = `
+      <div class="d-eyebrow">Desserte · ligne de service public</div>
+      <h2 class="d-nom" id="d-nom">${esc(d.nom)}</h2>
+      <div class="d-loc">${esc([...d.operateurs].join(", ") || "Opérateur n.c.")}</div>
+      <div class="d-section"><h3>Informations</h3>
+        <div class="d-grid">
+          <div class="d-fact"><div class="d-fact__k">Opérateur(s)</div><div class="d-fact__v">${esc([...d.operateurs].join(", ") || "n.c.")}</div></div>
+          <div class="d-fact"><div class="d-fact__k">Navires</div><div class="d-fact__v">${d.navires.length}</div></div>
+          ${d.regions.size ? `<div class="d-fact"><div class="d-fact__k">Région(s)</div><div class="d-fact__v">${esc([...d.regions].join(", "))}</div></div>` : ""}
+          ${d.chantiers.size ? `<div class="d-fact"><div class="d-fact__k">Chantier(s)</div><div class="d-fact__v">${esc([...d.chantiers].join(", "))}</div></div>` : ""}
+        </div>
+      </div>
+      <div class="d-section"><h3>Navires affectés</h3>
+        <ul class="d-list">${navs.map((n) => `
+          <li class="ref-li" data-open-vessel="${n._idx}" style="flex-direction:column;gap:3px;align-items:flex-start">
+            <span><b>${esc(n.nom || n.type || "Navire")}</b>${n.annee ? ` <span style="color:var(--muted)">· ${n.annee}</span>` : ""} <span class="ref-go">→</span></span>
+            <span style="color:var(--muted);font-size:13px">${esc([n.type, n._cnom].filter(Boolean).join(" · "))}</span>
+          </li>`).join("")}</ul></div>`;
+    $("#drawer-body").querySelectorAll("[data-open-vessel]").forEach((el) =>
+      el.addEventListener("click", () => openVessel(state.navires[+el.dataset.openVessel])));
+    $("#drawer").setAttribute("aria-hidden", "false");
+  }
+
+  /* ---------- Architectes ---------- */
+  function filteredArchitectes() {
+    const nq = norm(state.filters.q);
+    return state.architectes.filter((a) => !nq || norm(a.nom).includes(nq) || norm(a.ville).includes(nq));
+  }
+  function renderArchitectesAnnuaire() {
+    const list = filteredArchitectes();
+    $("#count").innerHTML = list.length === state.architectes.length
+      ? `<b>${state.architectes.length}</b> architecte${state.architectes.length > 1 ? "s" : ""} / ensemblier${state.architectes.length > 1 ? "s" : ""}`
+      : `<b>${list.length}</b> sur ${state.architectes.length} architectes`;
+    const el = $("#architectes-list");
+    if (!list.length) { el.innerHTML = `<p class="empty">Aucun architecte recensé pour l'instant. Le champ « architecte » s'enrichit au fil des fiches navire.</p>`; return; }
+    el.innerHTML = list.map((a) => `
+      <button class="ecard" data-aid="${a._idx}">
+        <div class="ecard__nom">${esc(a.nom)}</div>
+        <div class="ecard__meta">${esc([a.ville, a.pays].filter(Boolean).join(", ") || "Localisation n.c.")}</div>
+        <div class="ecard__stats"><span><b>${a.navires.length}</b> navire${a.navires.length > 1 ? "s" : ""} conçu${a.navires.length > 1 ? "s" : ""}</span>${a.lat != null ? `<span class="ecard__pin">◉ situé</span>` : ""}</div>
+      </button>`).join("");
+    el.querySelectorAll("[data-aid]").forEach((b) => b.addEventListener("click", () => openArchitecte(state.architectes[+b.dataset.aid])));
+  }
+  function renderArchitectesCarte() {
+    if (!map || !markerLayer) return;
+    mapChrome("architectes");
+    const list = filteredArchitectes();
+    const placed = list.filter((a) => a.lat != null);
+    $("#count").innerHTML = `<b>${list.length}</b> architecte${list.length > 1 ? "s" : ""}${placed.length < list.length ? ` · ${placed.length} situé(s)` : ""}`;
+    markerLayer.clearLayers(); markers.clear();
+    placed.forEach((a) => {
+      const mk = L.circleMarker([a.lat, a.lon], { radius: 8, color: "#fff", weight: 2, fillColor: "#7a3df0", fillOpacity: 1 });
+      mk.bindPopup(`<div class="pp-nom">${esc(a.nom)}</div><div class="pp-meta">${esc([a.ville, a.pays].filter(Boolean).join(", "))} · ${a.navires.length} navire(s)</div><div class="pp-btn" data-open-a="${a._idx}">Voir l'architecte →</div>`);
+      mk.on("popupopen", (e) => { const b = e.popup.getElement().querySelector("[data-open-a]"); if (b) b.addEventListener("click", () => openArchitecte(state.architectes[+b.dataset.openA])); });
+      mk.addTo(markerLayer);
+    });
+    renderArchitectesSide(list);
+  }
+  function renderArchitectesSide(list) {
+    const el = $("#results");
+    if (!list.length) { el.innerHTML = `<p class="empty">Aucun architecte.</p>`; return; }
+    el.innerHTML = list.map((a) => `
+      <div class="card card--solo" data-aid="${a._idx}">
+        <div class="card__body">
+          <div class="card__nom">${esc(a.nom)}</div>
+          <div class="card__meta">${esc([a.ville, a.pays].filter(Boolean).join(", ") || "Localisation n.c.")} · ${a.navires.length} navire${a.navires.length > 1 ? "s" : ""}</div>
+        </div>
+      </div>`).join("");
+    el.querySelectorAll("[data-aid]").forEach((c) => c.addEventListener("click", () => {
+      const a = state.architectes[+c.dataset.aid];
+      if (a.lat != null && map) map.setView([a.lat, a.lon], 9, { animate: true });
+      openArchitecte(a);
+    }));
+  }
+  function openArchitecte(a) {
+    if (!a) return;
+    const navs = a.navires.slice().sort((x, y) => norm(x.nom || x.type).localeCompare(norm(y.nom || y.type)));
+    $("#drawer-body").innerHTML = `
+      <div class="d-eyebrow">Architecte naval / ensemblier</div>
+      <h2 class="d-nom" id="d-nom">${esc(a.nom)}</h2>
+      <div class="d-loc">${esc([a.ville, a.region, a.pays].filter(Boolean).join(" · ") || "Localisation à préciser")}</div>
+      <div class="d-section"><h3>Informations</h3>
+        <div class="d-grid">
+          <div class="d-fact"><div class="d-fact__k">Navires conçus</div><div class="d-fact__v">${a.navires.length}</div></div>
+          ${a.chantiers.size ? `<div class="d-fact"><div class="d-fact__k">Chantier(s) constructeur(s)</div><div class="d-fact__v">${esc([...a.chantiers].join(", "))}</div></div>` : ""}
+          ${a.operateurs.size ? `<div class="d-fact"><div class="d-fact__k">Opérateur(s)</div><div class="d-fact__v">${esc([...a.operateurs].join(", "))}</div></div>` : ""}
+        </div>
+      </div>
+      <div class="d-section"><h3>Navires conçus</h3>
+        <ul class="d-list">${navs.map((n) => `
+          <li class="ref-li" data-open-vessel="${n._idx}" style="flex-direction:column;gap:3px;align-items:flex-start">
+            <span><b>${esc(n.nom || n.type || "Navire")}</b>${n.annee ? ` <span style="color:var(--muted)">· ${n.annee}</span>` : ""} <span class="ref-go">→</span></span>
+            <span style="color:var(--muted);font-size:13px">${esc([n.type, n.operateur].filter(Boolean).join(" · "))}</span>
+          </li>`).join("")}</ul></div>`;
+    $("#drawer-body").querySelectorAll("[data-open-vessel]").forEach((el) =>
+      el.addEventListener("click", () => openVessel(state.navires[+el.dataset.openVessel])));
+    $("#drawer").setAttribute("aria-hidden", "false");
   }
 
   /* ---------- Cartouches d'outre-mer (contours locaux) ---------- */

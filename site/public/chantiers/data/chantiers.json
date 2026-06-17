@@ -2,7 +2,7 @@
   "meta": {
     "titre": "Chantiers navals français",
     "version": "0.1.0-mvp",
-    "date_maj": "2026-06-09",
+    "date_maj": "2026-06-17",
     "note": "Base enrichie par passe OSINT vérifiée (navires de référence avec caractéristiques). Documentation de référence ; aide au choix d'un chantier par navire similaire. Sources par fiche, aucune invention.",
     "perimetres_ref": {
       "construction-neuve": "Construction neuve",
@@ -167535,279 +167535,6 @@
       "description": "Regroupement des navires de service public dont le chantier de construction n'est pas documenté.",
       "navires_references": [
         {
-          "nom": "Anse Bleue",
-          "imo": "9344431",
-          "type": "Vedette à passagers",
-          "annee": "2018",
-          "longueur_m": 20.06,
-          "largeur_m": 5.8,
-          "jauge_gt": 50.13,
-          "desserte": "Baie de Fort-de-France",
-          "capacite": "147 passagers",
-          "capacite_pax": 147,
-          "energie": "Gazole / MGO",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "client": "Martinique Transport (AOM)",
-          "operateur": "Blue Lines",
-          "proprietaire": "Martinique Transport (AOM)",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2018",
-              "role": "construction",
-              "nom": "ODC",
-              "detail": "Construit pour Martinique Transport (AOM) — ligne Baie de Fort-de-France",
-              "source": "Concession 8 ans depuis le 1/7/2024, marches-securises.fr",
-              "prix": "non publie (comparable chantier : vedette ODC Marine 18m Capo Rosso V, valeur du navire neuf environ 1 300 000 EUR, 2021 ; type voisin du meme chantier, PAS le prix de l'Anse Bleue qui est une 20m)"
-            },
-            {
-              "annee": "2018",
-              "role": "operateur",
-              "nom": "Blue Lines",
-              "detail": "Concession de service public, acquisition par le délégataire",
-              "source": "Concession 8 ans depuis le 1/7/2024, marches-securises.fr"
-            },
-            {
-              "annee": "30/06/2032",
-              "role": "evenement",
-              "nom": "Échéance du contrat",
-              "detail": "Concession de service public, acquisition par le délégataire",
-              "source": "Concession 8 ans depuis le 1/7/2024, marches-securises.fr"
-            }
-          ],
-          "source": "Concession 8 ans depuis le 1/7/2024, marches-securises.fr"
-        },
-        {
-          "nom": "Gros Ilets",
-          "imo": "9923185",
-          "type": "Vedette à passagers",
-          "annee": "2008",
-          "longueur_m": 18.04,
-          "largeur_m": 4.66,
-          "jauge_gt": 30,
-          "desserte": "Baie de Fort-de-France",
-          "capacite": "97 passagers",
-          "capacite_pax": 97,
-          "energie": "Gazole / MGO",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "client": "Martinique Transport (AOM)",
-          "operateur": "Blue Lines",
-          "proprietaire": "Martinique Transport (AOM)",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2008",
-              "role": "construction",
-              "nom": "ODC",
-              "detail": "Construit pour Martinique Transport (AOM) — ligne Baie de Fort-de-France",
-              "source": "Concession 8 ans depuis le 1/7/2024"
-            },
-            {
-              "annee": "2008",
-              "role": "operateur",
-              "nom": "Blue Lines",
-              "detail": "Concession de service public, acquisition par le délégataire",
-              "source": "Concession 8 ans depuis le 1/7/2024"
-            },
-            {
-              "annee": "30/06/2032",
-              "role": "evenement",
-              "nom": "Échéance du contrat",
-              "detail": "Concession de service public, acquisition par le délégataire",
-              "source": "Concession 8 ans depuis le 1/7/2024"
-            }
-          ],
-          "source": "Concession 8 ans depuis le 1/7/2024"
-        },
-        {
-          "nom": "Belle Martinique",
-          "imo": "9344430",
-          "type": "Vedette à passagers",
-          "annee": "2017",
-          "longueur_m": 19.4,
-          "largeur_m": 4.7,
-          "jauge_gt": 48.63,
-          "desserte": "L02 - FdF <> Anse Mitan / Anse à l'Ane",
-          "capacite": "98 passagers",
-          "capacite_pax": 98,
-          "energie": "Gazole / MGO",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "client": "Martinique Transport (AOM)",
-          "operateur": "Blue Lines",
-          "proprietaire": "Martinique Transport (AOM)",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2017",
-              "role": "construction",
-              "nom": "ODC",
-              "detail": "Construit pour Martinique Transport (AOM) — ligne L02 - FdF <> Anse Mitan / Anse à l'Ane",
-              "source": "Concession 8 ans depuis le 1/7/2024",
-              "prix": "non publie (comparable chantier : vedette ODC Marine 18m Capo Rosso V, valeur du navire neuf environ 1 300 000 EUR, 2021 ; meme chantier ODC Marine et meme gabarit 18m, donc ordre de grandeur indicatif et NON un prix source de la Belle Martinique)"
-            },
-            {
-              "annee": "2017",
-              "role": "operateur",
-              "nom": "Blue Lines",
-              "detail": "Concession de service public, acquisition par le délégataire",
-              "source": "Concession 8 ans depuis le 1/7/2024"
-            },
-            {
-              "annee": "30/06/2032",
-              "role": "evenement",
-              "nom": "Échéance du contrat",
-              "detail": "Concession de service public, acquisition par le délégataire",
-              "source": "Concession 8 ans depuis le 1/7/2024"
-            }
-          ],
-          "source": "Concession 8 ans depuis le 1/7/2024"
-        },
-        {
-          "nom": "Cap Salomon",
-          "imo": "9344432",
-          "type": "Vedette à passagers",
-          "annee": "2018",
-          "longueur_m": 20.06,
-          "largeur_m": 5.8,
-          "jauge_gt": 50.13,
-          "desserte": "L01b - FdF <> Marina Pte du Bout",
-          "capacite": "147 passagers",
-          "capacite_pax": 147,
-          "energie": "Gazole / MGO",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "client": "Martinique Transport (AOM)",
-          "operateur": "Blue Lines",
-          "proprietaire": "Martinique Transport (AOM)",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2018",
-              "role": "construction",
-              "nom": "ODC",
-              "detail": "Construit pour Martinique Transport (AOM) — ligne L01b - FdF <> Marina Pte du Bout",
-              "source": "Concession 8 ans depuis le 1/7/2024",
-              "prix": "non publie (comparable chantier : vedette ODC Marine 18m Capo Rosso V, valeur du navire neuf environ 1 300 000 EUR, 2021 ; type voisin du meme chantier, PAS le prix du Cap Salomon qui est une 20m sister-ship de l'Anse Bleue)"
-            },
-            {
-              "annee": "2018",
-              "role": "operateur",
-              "nom": "Blue Lines",
-              "detail": "Concession de service public, acquisition par le délégataire",
-              "source": "Concession 8 ans depuis le 1/7/2024"
-            },
-            {
-              "annee": "30/06/2032",
-              "role": "evenement",
-              "nom": "Échéance du contrat",
-              "detail": "Concession de service public, acquisition par le délégataire",
-              "source": "Concession 8 ans depuis le 1/7/2024"
-            }
-          ],
-          "source": "Concession 8 ans depuis le 1/7/2024"
-        },
-        {
-          "nom": "Diamant",
-          "imo": "9344429",
-          "type": "Vedette à passagers",
-          "annee": "2017",
-          "longueur_m": 19.4,
-          "largeur_m": 4.7,
-          "jauge_gt": 48.63,
-          "desserte": "L01a - FdF <> Bourg des Trois Îlets",
-          "capacite": "98 passagers",
-          "capacite_pax": 98,
-          "energie": "Gazole / MGO",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "client": "Martinique Transport (AOM)",
-          "operateur": "Blue Lines",
-          "proprietaire": "Martinique Transport (AOM)",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2017",
-              "role": "construction",
-              "nom": "ODC",
-              "detail": "Construit pour Martinique Transport (AOM) — ligne L01a - FdF <> Bourg des Trois Îlets",
-              "source": "Concession 8 ans depuis le 1/7/2024"
-            },
-            {
-              "annee": "2017",
-              "role": "operateur",
-              "nom": "Blue Lines",
-              "detail": "Concession de service public, acquisition par le délégataire",
-              "source": "Concession 8 ans depuis le 1/7/2024"
-            },
-            {
-              "annee": "30/06/2032",
-              "role": "evenement",
-              "nom": "Échéance du contrat",
-              "detail": "Concession de service public, acquisition par le délégataire",
-              "source": "Concession 8 ans depuis le 1/7/2024"
-            }
-          ],
-          "source": "Concession 8 ans depuis le 1/7/2024"
-        },
-        {
-          "nom": "Fort Royal",
-          "imo": "9928650",
-          "type": "Vedette à passagers",
-          "annee": "2008",
-          "longueur_m": 18.04,
-          "largeur_m": 4.66,
-          "jauge_gt": 27.29,
-          "desserte": "Baie de Fort-de-France",
-          "capacite": "97 passagers",
-          "capacite_pax": 97,
-          "energie": "Gazole / MGO",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "client": "Martinique Transport (AOM)",
-          "operateur": "Blue Lines",
-          "proprietaire": "Martinique Transport (AOM)",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2008",
-              "role": "construction",
-              "nom": "ODC",
-              "detail": "Construit pour Martinique Transport (AOM) — ligne Baie de Fort-de-France",
-              "source": "Concession 8 ans depuis le 1/7/2024"
-            },
-            {
-              "annee": "2008",
-              "role": "operateur",
-              "nom": "Blue Lines",
-              "detail": "Concession de service public, acquisition par le délégataire",
-              "source": "Concession 8 ans depuis le 1/7/2024"
-            },
-            {
-              "annee": "30/06/2032",
-              "role": "evenement",
-              "nom": "Échéance du contrat",
-              "detail": "Concession de service public, acquisition par le délégataire",
-              "source": "Concession 8 ans depuis le 1/7/2024"
-            }
-          ],
-          "source": "Concession 8 ans depuis le 1/7/2024"
-        },
-        {
           "nom": "Béluré",
           "imo": null,
           "type": "Bac / passage d'eau",
@@ -168193,47 +167920,6 @@
           "prix_acquisition": "≈ 9,2 M€/unité (dérivé : marché de 18 407 000 € pour 2 amphidromes identiques Polé + Karihani, CNOI pour le STM de Mayotte, 2016-2017 ; FEDER 65% = 11 964 550 €)"
         },
         {
-          "nom": "La Gironde",
-          "imo": "9246748",
-          "type": "Bac / passage d'eau",
-          "annee": "2002",
-          "longueur_m": 78,
-          "largeur_m": 18.3,
-          "jauge_gt": 3684,
-          "desserte": "Verdon - Royan",
-          "capacite": "600 passagers, 115 véhicules",
-          "capacite_pax": 600,
-          "capacite_vehicules": 115,
-          "energie": "Gazole / MGO",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "client": "Département de la Gironde (CD33)",
-          "operateur": "DTMD CD33",
-          "proprietaire": "Département de la Gironde (CD33)",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2002",
-              "role": "construction",
-              "nom": "Zamakona",
-              "detail": "Construit pour Département de la Gironde (CD33) — ligne Verdon - Royan",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-              "prix": "14,75 M EUR"
-            },
-            {
-              "annee": "2002",
-              "role": "operateur",
-              "nom": "DTMD CD33",
-              "detail": "Régie directe (DTMD)",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-            }
-          ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-          "prix_acquisition": "14,75 M EUR (2002, construction neuve, chantier Astilleros Zamakona Bilbao, financement integral Departement de la Gironde maitre d'ouvrage)"
-        },
-        {
           "nom": "Capo Rosso 1",
           "imo": null,
           "type": "Vedette à passagers",
@@ -168353,88 +168039,6 @@
           "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
         },
         {
-          "nom": "Nordet",
-          "imo": "9803259",
-          "type": "Roulier / Ferry / NGV",
-          "annee": "2017",
-          "longueur_m": 56,
-          "largeur_m": 10,
-          "jauge_gt": 768,
-          "desserte": "Saint-Pierre / Miquelon / Fortune",
-          "capacite": "188 passagers, 18 véhicules, 118 t fret",
-          "capacite_pax": 188,
-          "capacite_vehicules": 18,
-          "capacite_fret": "118 t",
-          "energie": "Gazole / MGO",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "client": "Collectivité territoriale de Saint-Pierre-et-Miquelon (CT975)",
-          "operateur": "SPM Ferries",
-          "proprietaire": "Collectivité territoriale de Saint-Pierre-et-Miquelon (CT975)",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2017",
-              "role": "construction",
-              "nom": "DAMEN",
-              "detail": "Construit pour Collectivité territoriale de Saint-Pierre-et-Miquelon (CT975) — ligne Saint-Pierre / Miquelon / Fortune",
-              "source": "propriétaire CT975",
-              "prix": "> 50 M$ CAD (global 2 navires + infrastructures)"
-            },
-            {
-              "annee": "2017",
-              "role": "operateur",
-              "nom": "SPM Ferries",
-              "detail": "Régie (CT975)",
-              "source": "propriétaire CT975"
-            }
-          ],
-          "source": "propriétaire CT975"
-        },
-        {
-          "nom": "Suroît",
-          "imo": "9803261",
-          "type": "Roulier / Ferry / NGV",
-          "annee": "2017",
-          "longueur_m": 56,
-          "largeur_m": 10,
-          "jauge_gt": 768,
-          "desserte": "Saint-Pierre / Miquelon / Fortune",
-          "capacite": "188 passagers, 18 véhicules, 118 t fret",
-          "capacite_pax": 188,
-          "capacite_vehicules": 18,
-          "capacite_fret": "118 t",
-          "energie": "Gazole / MGO",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "client": "Collectivité territoriale de Saint-Pierre-et-Miquelon (CT975)",
-          "operateur": "SPM Ferries",
-          "proprietaire": "Collectivité territoriale de Saint-Pierre-et-Miquelon (CT975)",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2017",
-              "role": "construction",
-              "nom": "DAMEN",
-              "detail": "Construit pour Collectivité territoriale de Saint-Pierre-et-Miquelon (CT975) — ligne Saint-Pierre / Miquelon / Fortune",
-              "source": "propriétaire CT975",
-              "prix": "> 50 M$ CAD (global 2 navires + infrastructures)"
-            },
-            {
-              "annee": "2017",
-              "role": "operateur",
-              "nom": "SPM Ferries",
-              "detail": "Régie (CT975)",
-              "source": "propriétaire CT975"
-            }
-          ],
-          "source": "propriétaire CT975"
-        },
-        {
           "nom": "Eric Bloodaxe",
           "imo": null,
           "type": "Vedette à passagers",
@@ -168511,6 +168115,352 @@
             }
           ],
           "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+        },
+        {
+          "nom": "Le Nouch",
+          "imo": null,
+          "type": "Vedette à passagers",
+          "annee": "2012",
+          "longueur_m": 10.13,
+          "largeur_m": 3.45,
+          "jauge_gt": 6,
+          "desserte": "Port des Sables d'Olonne",
+          "capacite": "35 passagers",
+          "capacite_pax": 35,
+          "energie": "Électricité",
+          "propulsion": [
+            "electrique-batterie"
+          ],
+          "client": "Les Sables d'Olonne Agglomération",
+          "operateur": "CMT (passeurs du port des Sables d'Olonne)",
+          "proprietaire": "Les Sables d'Olonne Agglomération",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2012",
+              "role": "construction",
+              "nom": "Alternatives Energies",
+              "detail": "Construit pour Les Sables d'Olonne Agglomération — ligne Port des Sables d'Olonne",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            },
+            {
+              "annee": "2012",
+              "role": "operateur",
+              "nom": "CMT (passeurs du port des Sables d'Olonne)",
+              "detail": "DSP, navires propriété de l'agglomération",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            },
+            {
+              "annee": "2019",
+              "role": "evenement",
+              "nom": "Revente d'occasion La Rochelle vers Les Sables-d'Olonne (SEML)",
+              "detail": "Achat d'occasion à 62 500 €/bateau + 170 000 € de rénovation = 232 500 €/unité, contre 400 000 à 500 000 € pour un neuf équivalent. Total deux navettes : 465 000 €.",
+              "prix": "62 500 € (occasion) / 232 500 € total/unité (2019)",
+              "source": "https://www.lereportersablais.com/les-sables-dolonne-vendee-deux-nouvelles-navettes-maritimes-sappuyant-sur-lenergie-electrique/"
+            }
+          ],
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "Revente 2019 : 62 500 € (occasion, prix de cession par La Rochelle aux Sables-d'Olonne) ; coût total mis en service = 62 500 € + 170 000 € de rénovation = 232 500 €/unité (un neuf équivalent valant 400 000-500 000 €). Prix de construction neuve d'origine (2012) non public.",
+          "architecte": "Alternatives Energies"
+        },
+        {
+          "nom": "Le Nouch 2",
+          "imo": null,
+          "type": "Vedette à passagers",
+          "annee": "2012",
+          "longueur_m": 10.13,
+          "largeur_m": 3.45,
+          "jauge_gt": 6,
+          "desserte": "Port des Sables d'Olonne",
+          "capacite": "35 passagers",
+          "capacite_pax": 35,
+          "energie": "Électricité",
+          "propulsion": [
+            "electrique-batterie"
+          ],
+          "client": "Les Sables d'Olonne Agglomération",
+          "operateur": "CMT (passeurs du port des Sables d'Olonne)",
+          "proprietaire": "Les Sables d'Olonne Agglomération",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2012",
+              "role": "construction",
+              "nom": "Alternatives Energies",
+              "detail": "Construit pour Les Sables d'Olonne Agglomération — ligne Port des Sables d'Olonne",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            },
+            {
+              "annee": "2012",
+              "role": "operateur",
+              "nom": "CMT (passeurs du port des Sables d'Olonne)",
+              "detail": "DSP, navires propriété de l'agglomération",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            },
+            {
+              "annee": "2019",
+              "role": "evenement",
+              "nom": "Revente d'occasion La Rochelle vers Les Sables-d'Olonne (SEML)",
+              "detail": "Achat d'occasion à 62 500 €/bateau + 170 000 € de rénovation = 232 500 €/unité, contre 400 000 à 500 000 € pour un neuf équivalent. Total deux navettes : 465 000 €.",
+              "prix": "62 500 € (occasion) / 232 500 € total/unité (2019)",
+              "source": "https://www.lereportersablais.com/les-sables-dolonne-vendee-deux-nouvelles-navettes-maritimes-sappuyant-sur-lenergie-electrique/"
+            }
+          ],
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "Revente 2019 : 62 500 € (occasion, prix de cession par La Rochelle aux Sables-d'Olonne) ; coût total mis en service = 62 500 € + 170 000 € de rénovation = 232 500 €/unité (un neuf équivalent valant 400 000-500 000 €). Sister-ship du Nouch. Prix de construction neuve d'origine (2012) non public.",
+          "architecte": "Alternatives Energies"
+        },
+        {
+          "nom": "Le Passeur Électrique",
+          "imo": null,
+          "type": "Vedette à passagers",
+          "annee": "1998",
+          "longueur_m": 9.4,
+          "largeur_m": 3.46,
+          "jauge_gt": 5.51,
+          "desserte": "Port des Sables d'Olonne",
+          "capacite": "30 passagers",
+          "capacite_pax": 30,
+          "energie": "Électricité",
+          "propulsion": [
+            "electrique-batterie"
+          ],
+          "client": "Les Sables d'Olonne Agglomération",
+          "operateur": "CMT (passeurs du port des Sables d'Olonne)",
+          "proprietaire": "Les Sables d'Olonne Agglomération",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "1998",
+              "role": "construction",
+              "nom": "Alternatives Energies",
+              "detail": "Construit pour Les Sables d'Olonne Agglomération — ligne Port des Sables d'Olonne",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            },
+            {
+              "annee": "1998",
+              "role": "operateur",
+              "nom": "CMT (passeurs du port des Sables d'Olonne)",
+              "detail": "DSP, navires propriété de l'agglomération",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            }
+          ],
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "architecte": "Alternatives Energies"
+        },
+        {
+          "nom": "Le Passeur Électrique 2",
+          "imo": null,
+          "type": "Vedette à passagers",
+          "annee": "2004",
+          "longueur_m": 9.4,
+          "largeur_m": 3.46,
+          "jauge_gt": 5.57,
+          "desserte": "Port des Sables d'Olonne",
+          "capacite": "30 passagers",
+          "capacite_pax": 30,
+          "energie": "Électricité",
+          "propulsion": [
+            "electrique-batterie"
+          ],
+          "client": "Les Sables d'Olonne Agglomération",
+          "operateur": "CMT (passeurs du port des Sables d'Olonne)",
+          "proprietaire": "Les Sables d'Olonne Agglomération",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2004",
+              "role": "construction",
+              "nom": "Alternatives Energies",
+              "detail": "Construit pour Les Sables d'Olonne Agglomération — ligne Port des Sables d'Olonne",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            },
+            {
+              "annee": "2004",
+              "role": "operateur",
+              "nom": "CMT (passeurs du port des Sables d'Olonne)",
+              "detail": "DSP, navires propriété de l'agglomération",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            }
+          ],
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "architecte": "Alternatives Energies"
+        },
+        {
+          "nom": "Ampère",
+          "imo": null,
+          "type": "Vedette à passagers",
+          "annee": "2019",
+          "longueur_m": 10.05,
+          "largeur_m": 3.5,
+          "jauge_gt": 4.16,
+          "desserte": "Vieux-Port à Médiathèque",
+          "capacite": "35 passagers",
+          "capacite_pax": 35,
+          "energie": "Électricité solaire",
+          "propulsion": [
+            "electrique-batterie"
+          ],
+          "client": "Communauté d'agglomération de La Rochelle",
+          "operateur": "TDLR (réseau Yélo)",
+          "proprietaire": "Communauté d'agglomération de La Rochelle",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2019",
+              "role": "construction",
+              "nom": "Alternatives Energies",
+              "detail": "Construit pour Communauté d'agglomération de La Rochelle — ligne Vieux-Port à Médiathèque",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+              "prix": "≈ 625 000 €/unité (≈ 1 250 000 € pour 2) (2019)"
+            },
+            {
+              "annee": "2019",
+              "role": "operateur",
+              "nom": "TDLR (réseau Yélo)",
+              "detail": "Régie / marché public",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            }
+          ],
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "≈ 625 000 €/unité en 2019 (derive : subvention Région Nouvelle-Aquitaine de 350 000 € pour les 2 sister-ships Volta + Ampère = ~28 % de leur coût, soit un coût total ≈ 1 250 000 € pour 2 unités identiques). Corroboré par un coût de remplacement La Rochelle cité à ~600 000 €/unité.",
+          "architecte": "Alternatives Energies"
+        },
+        {
+          "nom": "Copernic",
+          "imo": null,
+          "type": "Vedette à passagers",
+          "annee": "2009",
+          "longueur_m": 15,
+          "largeur_m": 5,
+          "jauge_gt": 40.65,
+          "desserte": "Vieux-Port - Minimes",
+          "capacite": "75 passagers",
+          "capacite_pax": 75,
+          "energie": "Électricité solaire",
+          "propulsion": [
+            "electrique-batterie"
+          ],
+          "client": "Communauté d'agglomération de La Rochelle",
+          "operateur": "TDLR (réseau Yélo)",
+          "proprietaire": "Communauté d'agglomération de La Rochelle",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2009",
+              "role": "construction",
+              "nom": "Alternatives Energies",
+              "detail": "Construit pour Communauté d'agglomération de La Rochelle — ligne Vieux-Port - Minimes",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+              "prix": "1 808 726 € (2009)"
+            },
+            {
+              "annee": "2009",
+              "role": "operateur",
+              "nom": "TDLR (réseau Yélo)",
+              "detail": "Régie / marché public",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            }
+          ],
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "1 808 726 € en 2009 (coût de construction supporté par la Communauté d'Agglomération de La Rochelle, soit 40 % de plus qu'un bateau thermique classique). Navire jumeau : Galilée (coût propre non détaillé).",
+          "architecte": "Alternatives Energies"
+        },
+        {
+          "nom": "Galilée",
+          "imo": null,
+          "type": "Vedette à passagers",
+          "annee": "2009",
+          "longueur_m": 15,
+          "largeur_m": 5,
+          "jauge_gt": 40.65,
+          "desserte": "Vieux-Port - Minimes",
+          "capacite": "75 passagers",
+          "capacite_pax": 75,
+          "energie": "Électricité solaire",
+          "propulsion": [
+            "electrique-batterie"
+          ],
+          "client": "Communauté d'agglomération de La Rochelle",
+          "operateur": "TDLR (réseau Yélo)",
+          "proprietaire": "Communauté d'agglomération de La Rochelle",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2009",
+              "role": "construction",
+              "nom": "Alternatives Energies",
+              "detail": "Construit pour Communauté d'agglomération de La Rochelle — ligne Vieux-Port - Minimes",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+              "prix": "1 808 726 € pour les 2 unités (Copernic + Galilée) ; ≈ 904 000 €/unité (dérivé : 1 808 726 € / 2 sister-ships électro-solaires identiques de 15 m x 5 m, 75 passagers) ; coût +40% vs un bus de mer thermique"
+            },
+            {
+              "annee": "2009",
+              "role": "operateur",
+              "nom": "TDLR (réseau Yélo)",
+              "detail": "Régie / marché public",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            }
+          ],
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "≈ 904 000 € (2008-2009, dérivé : 1 808 726 € pour 2 bus de mer identiques Copernic + Galilée commandés par la Communauté d'agglomération de La Rochelle, soit +40% vs un bateau thermique)",
+          "architecte": "Alternatives Energies"
+        },
+        {
+          "nom": "Volta",
+          "imo": null,
+          "type": "Vedette à passagers",
+          "annee": "2019",
+          "longueur_m": 10.05,
+          "largeur_m": 3.5,
+          "jauge_gt": 4.16,
+          "desserte": "Vieux-Port à Médiathèque",
+          "capacite": "35 passagers",
+          "capacite_pax": 35,
+          "energie": "Électricité solaire",
+          "propulsion": [
+            "electrique-batterie"
+          ],
+          "client": "Communauté d'agglomération de La Rochelle",
+          "operateur": "TDLR (réseau Yélo)",
+          "proprietaire": "Communauté d'agglomération de La Rochelle",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2019",
+              "role": "construction",
+              "nom": "Alternatives Energies",
+              "detail": "Construit pour Communauté d'agglomération de La Rochelle — ligne Vieux-Port à Médiathèque",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+              "prix": "Coût total ≈ 1,25 M€ pour les 2 passeurs (Volta + Ampère) ; ≈ 625 000 €/unité (dérivé : subvention Région Nouvelle-Aquitaine de 350 000 € représentant ≈ 28% du coût total → 350 000 / 0,28 ≈ 1,25 M€ pour 2 sister-ships, / 2)"
+            },
+            {
+              "annee": "2019",
+              "role": "operateur",
+              "nom": "TDLR (réseau Yélo)",
+              "detail": "Régie / marché public",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            },
+            {
+              "annee": "2019",
+              "role": "evenement",
+              "nom": "Subvention Région Nouvelle-Aquitaine",
+              "detail": "Montant de cofinancement public confirmé par solaire-info et L'Echo du Solaire ; sert de base au calcul du coût total et unitaire.",
+              "prix": "350 000 € (subvention, = ≈ 28% du coût total des 2 passeurs)",
+              "source": "https://solaire-info.fr/la-rochelle-deux-nouveaux-bateaux-passeurs-a-propulsion-electro-solaire-entrent-en-service/27/03/2019/"
+            }
+          ],
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "≈ 625 000 € (2019, dérivé : coût total ≈ 1,25 M€ pour 2 passeurs identiques Volta + Ampère ; subvention Région Nouvelle-Aquitaine de 350 000 € = ≈ 28% du coût total des deux unités)",
+          "architecte": "Alternatives Energies"
         }
       ],
       "sources": [
@@ -168673,367 +168623,6 @@
             }
           ],
           "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-        }
-      ],
-      "sources": [
-        "Sources publiques (presse régionale, registres maritimes, sites des collectivités)"
-      ],
-      "confiance": "a_verifier",
-      "actif": true
-    },
-    {
-      "id": "fr-yard-alternatives-energies",
-      "nom": "Alternatives Energies",
-      "groupe": null,
-      "ville": "",
-      "region": "",
-      "pays": "France",
-      "lat": null,
-      "lon": null,
-      "geo_precision": "ville",
-      "perimetres": [
-        "construction-neuve"
-      ],
-      "types_navires": [],
-      "description": "Chantier constructeur de navires de la flotte de service public (référencé via des sources publiques). Localisation à préciser.",
-      "navires_references": [
-        {
-          "nom": "Le Nouch",
-          "imo": null,
-          "type": "Vedette à passagers",
-          "annee": "2012",
-          "longueur_m": 10.13,
-          "largeur_m": 3.45,
-          "jauge_gt": 6,
-          "desserte": "Port des Sables d'Olonne",
-          "capacite": "35 passagers",
-          "capacite_pax": 35,
-          "energie": "Électricité",
-          "propulsion": [
-            "electrique-batterie"
-          ],
-          "client": "Les Sables d'Olonne Agglomération",
-          "operateur": "CMT (passeurs du port des Sables d'Olonne)",
-          "proprietaire": "Les Sables d'Olonne Agglomération",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2012",
-              "role": "construction",
-              "nom": "Alternatives Energies",
-              "detail": "Construit pour Les Sables d'Olonne Agglomération — ligne Port des Sables d'Olonne",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-            },
-            {
-              "annee": "2012",
-              "role": "operateur",
-              "nom": "CMT (passeurs du port des Sables d'Olonne)",
-              "detail": "DSP, navires propriété de l'agglomération",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-            },
-            {
-              "annee": "2019",
-              "role": "evenement",
-              "nom": "Revente d'occasion La Rochelle vers Les Sables-d'Olonne (SEML)",
-              "detail": "Achat d'occasion à 62 500 €/bateau + 170 000 € de rénovation = 232 500 €/unité, contre 400 000 à 500 000 € pour un neuf équivalent. Total deux navettes : 465 000 €.",
-              "prix": "62 500 € (occasion) / 232 500 € total/unité (2019)",
-              "source": "https://www.lereportersablais.com/les-sables-dolonne-vendee-deux-nouvelles-navettes-maritimes-sappuyant-sur-lenergie-electrique/"
-            }
-          ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-          "prix_acquisition": "Revente 2019 : 62 500 € (occasion, prix de cession par La Rochelle aux Sables-d'Olonne) ; coût total mis en service = 62 500 € + 170 000 € de rénovation = 232 500 €/unité (un neuf équivalent valant 400 000-500 000 €). Prix de construction neuve d'origine (2012) non public."
-        },
-        {
-          "nom": "Le Nouch 2",
-          "imo": null,
-          "type": "Vedette à passagers",
-          "annee": "2012",
-          "longueur_m": 10.13,
-          "largeur_m": 3.45,
-          "jauge_gt": 6,
-          "desserte": "Port des Sables d'Olonne",
-          "capacite": "35 passagers",
-          "capacite_pax": 35,
-          "energie": "Électricité",
-          "propulsion": [
-            "electrique-batterie"
-          ],
-          "client": "Les Sables d'Olonne Agglomération",
-          "operateur": "CMT (passeurs du port des Sables d'Olonne)",
-          "proprietaire": "Les Sables d'Olonne Agglomération",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2012",
-              "role": "construction",
-              "nom": "Alternatives Energies",
-              "detail": "Construit pour Les Sables d'Olonne Agglomération — ligne Port des Sables d'Olonne",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-            },
-            {
-              "annee": "2012",
-              "role": "operateur",
-              "nom": "CMT (passeurs du port des Sables d'Olonne)",
-              "detail": "DSP, navires propriété de l'agglomération",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-            },
-            {
-              "annee": "2019",
-              "role": "evenement",
-              "nom": "Revente d'occasion La Rochelle vers Les Sables-d'Olonne (SEML)",
-              "detail": "Achat d'occasion à 62 500 €/bateau + 170 000 € de rénovation = 232 500 €/unité, contre 400 000 à 500 000 € pour un neuf équivalent. Total deux navettes : 465 000 €.",
-              "prix": "62 500 € (occasion) / 232 500 € total/unité (2019)",
-              "source": "https://www.lereportersablais.com/les-sables-dolonne-vendee-deux-nouvelles-navettes-maritimes-sappuyant-sur-lenergie-electrique/"
-            }
-          ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-          "prix_acquisition": "Revente 2019 : 62 500 € (occasion, prix de cession par La Rochelle aux Sables-d'Olonne) ; coût total mis en service = 62 500 € + 170 000 € de rénovation = 232 500 €/unité (un neuf équivalent valant 400 000-500 000 €). Sister-ship du Nouch. Prix de construction neuve d'origine (2012) non public."
-        },
-        {
-          "nom": "Le Passeur Électrique",
-          "imo": null,
-          "type": "Vedette à passagers",
-          "annee": "1998",
-          "longueur_m": 9.4,
-          "largeur_m": 3.46,
-          "jauge_gt": 5.51,
-          "desserte": "Port des Sables d'Olonne",
-          "capacite": "30 passagers",
-          "capacite_pax": 30,
-          "energie": "Électricité",
-          "propulsion": [
-            "electrique-batterie"
-          ],
-          "client": "Les Sables d'Olonne Agglomération",
-          "operateur": "CMT (passeurs du port des Sables d'Olonne)",
-          "proprietaire": "Les Sables d'Olonne Agglomération",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "1998",
-              "role": "construction",
-              "nom": "Alternatives Energies",
-              "detail": "Construit pour Les Sables d'Olonne Agglomération — ligne Port des Sables d'Olonne",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-            },
-            {
-              "annee": "1998",
-              "role": "operateur",
-              "nom": "CMT (passeurs du port des Sables d'Olonne)",
-              "detail": "DSP, navires propriété de l'agglomération",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-            }
-          ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-        },
-        {
-          "nom": "Le Passeur Électrique 2",
-          "imo": null,
-          "type": "Vedette à passagers",
-          "annee": "2004",
-          "longueur_m": 9.4,
-          "largeur_m": 3.46,
-          "jauge_gt": 5.57,
-          "desserte": "Port des Sables d'Olonne",
-          "capacite": "30 passagers",
-          "capacite_pax": 30,
-          "energie": "Électricité",
-          "propulsion": [
-            "electrique-batterie"
-          ],
-          "client": "Les Sables d'Olonne Agglomération",
-          "operateur": "CMT (passeurs du port des Sables d'Olonne)",
-          "proprietaire": "Les Sables d'Olonne Agglomération",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2004",
-              "role": "construction",
-              "nom": "Alternatives Energies",
-              "detail": "Construit pour Les Sables d'Olonne Agglomération — ligne Port des Sables d'Olonne",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-            },
-            {
-              "annee": "2004",
-              "role": "operateur",
-              "nom": "CMT (passeurs du port des Sables d'Olonne)",
-              "detail": "DSP, navires propriété de l'agglomération",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-            }
-          ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-        },
-        {
-          "nom": "Ampère",
-          "imo": null,
-          "type": "Vedette à passagers",
-          "annee": "2019",
-          "longueur_m": 10.05,
-          "largeur_m": 3.5,
-          "jauge_gt": 4.16,
-          "desserte": "Vieux-Port à Médiathèque",
-          "capacite": "35 passagers",
-          "capacite_pax": 35,
-          "energie": "Électricité solaire",
-          "propulsion": [
-            "electrique-batterie"
-          ],
-          "client": "Communauté d'agglomération de La Rochelle",
-          "operateur": "TDLR (réseau Yélo)",
-          "proprietaire": "Communauté d'agglomération de La Rochelle",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2019",
-              "role": "construction",
-              "nom": "Alternatives Energies",
-              "detail": "Construit pour Communauté d'agglomération de La Rochelle — ligne Vieux-Port à Médiathèque",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-              "prix": "≈ 625 000 €/unité (≈ 1 250 000 € pour 2) (2019)"
-            },
-            {
-              "annee": "2019",
-              "role": "operateur",
-              "nom": "TDLR (réseau Yélo)",
-              "detail": "Régie / marché public",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-            }
-          ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-          "prix_acquisition": "≈ 625 000 €/unité en 2019 (derive : subvention Région Nouvelle-Aquitaine de 350 000 € pour les 2 sister-ships Volta + Ampère = ~28 % de leur coût, soit un coût total ≈ 1 250 000 € pour 2 unités identiques). Corroboré par un coût de remplacement La Rochelle cité à ~600 000 €/unité."
-        },
-        {
-          "nom": "Copernic",
-          "imo": null,
-          "type": "Vedette à passagers",
-          "annee": "2009",
-          "longueur_m": 15,
-          "largeur_m": 5,
-          "jauge_gt": 40.65,
-          "desserte": "Vieux-Port - Minimes",
-          "capacite": "75 passagers",
-          "capacite_pax": 75,
-          "energie": "Électricité solaire",
-          "propulsion": [
-            "electrique-batterie"
-          ],
-          "client": "Communauté d'agglomération de La Rochelle",
-          "operateur": "TDLR (réseau Yélo)",
-          "proprietaire": "Communauté d'agglomération de La Rochelle",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2009",
-              "role": "construction",
-              "nom": "Alternatives Energies",
-              "detail": "Construit pour Communauté d'agglomération de La Rochelle — ligne Vieux-Port - Minimes",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-              "prix": "1 808 726 € (2009)"
-            },
-            {
-              "annee": "2009",
-              "role": "operateur",
-              "nom": "TDLR (réseau Yélo)",
-              "detail": "Régie / marché public",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-            }
-          ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-          "prix_acquisition": "1 808 726 € en 2009 (coût de construction supporté par la Communauté d'Agglomération de La Rochelle, soit 40 % de plus qu'un bateau thermique classique). Navire jumeau : Galilée (coût propre non détaillé)."
-        },
-        {
-          "nom": "Galilée",
-          "imo": null,
-          "type": "Vedette à passagers",
-          "annee": "2009",
-          "longueur_m": 15,
-          "largeur_m": 5,
-          "jauge_gt": 40.65,
-          "desserte": "Vieux-Port - Minimes",
-          "capacite": "75 passagers",
-          "capacite_pax": 75,
-          "energie": "Électricité solaire",
-          "propulsion": [
-            "electrique-batterie"
-          ],
-          "client": "Communauté d'agglomération de La Rochelle",
-          "operateur": "TDLR (réseau Yélo)",
-          "proprietaire": "Communauté d'agglomération de La Rochelle",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2009",
-              "role": "construction",
-              "nom": "Alternatives Energies",
-              "detail": "Construit pour Communauté d'agglomération de La Rochelle — ligne Vieux-Port - Minimes",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-              "prix": "1 808 726 € pour les 2 unités (Copernic + Galilée) ; ≈ 904 000 €/unité (dérivé : 1 808 726 € / 2 sister-ships électro-solaires identiques de 15 m x 5 m, 75 passagers) ; coût +40% vs un bus de mer thermique"
-            },
-            {
-              "annee": "2009",
-              "role": "operateur",
-              "nom": "TDLR (réseau Yélo)",
-              "detail": "Régie / marché public",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-            }
-          ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-          "prix_acquisition": "≈ 904 000 € (2008-2009, dérivé : 1 808 726 € pour 2 bus de mer identiques Copernic + Galilée commandés par la Communauté d'agglomération de La Rochelle, soit +40% vs un bateau thermique)"
-        },
-        {
-          "nom": "Volta",
-          "imo": null,
-          "type": "Vedette à passagers",
-          "annee": "2019",
-          "longueur_m": 10.05,
-          "largeur_m": 3.5,
-          "jauge_gt": 4.16,
-          "desserte": "Vieux-Port à Médiathèque",
-          "capacite": "35 passagers",
-          "capacite_pax": 35,
-          "energie": "Électricité solaire",
-          "propulsion": [
-            "electrique-batterie"
-          ],
-          "client": "Communauté d'agglomération de La Rochelle",
-          "operateur": "TDLR (réseau Yélo)",
-          "proprietaire": "Communauté d'agglomération de La Rochelle",
-          "pavillon": "France",
-          "classification": null,
-          "timeline": [
-            {
-              "annee": "2019",
-              "role": "construction",
-              "nom": "Alternatives Energies",
-              "detail": "Construit pour Communauté d'agglomération de La Rochelle — ligne Vieux-Port à Médiathèque",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-              "prix": "Coût total ≈ 1,25 M€ pour les 2 passeurs (Volta + Ampère) ; ≈ 625 000 €/unité (dérivé : subvention Région Nouvelle-Aquitaine de 350 000 € représentant ≈ 28% du coût total → 350 000 / 0,28 ≈ 1,25 M€ pour 2 sister-ships, / 2)"
-            },
-            {
-              "annee": "2019",
-              "role": "operateur",
-              "nom": "TDLR (réseau Yélo)",
-              "detail": "Régie / marché public",
-              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-            },
-            {
-              "annee": "2019",
-              "role": "evenement",
-              "nom": "Subvention Région Nouvelle-Aquitaine",
-              "detail": "Montant de cofinancement public confirmé par solaire-info et L'Echo du Solaire ; sert de base au calcul du coût total et unitaire.",
-              "prix": "350 000 € (subvention, = ≈ 28% du coût total des 2 passeurs)",
-              "source": "https://solaire-info.fr/la-rochelle-deux-nouveaux-bateaux-passeurs-a-propulsion-electro-solaire-entrent-en-service/27/03/2019/"
-            }
-          ],
-          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-          "prix_acquisition": "≈ 625 000 € (2019, dérivé : coût total ≈ 1,25 M€ pour 2 passeurs identiques Volta + Ampère ; subvention Région Nouvelle-Aquitaine de 350 000 € = ≈ 28% du coût total des deux unités)"
         }
       ],
       "sources": [
@@ -171274,6 +170863,533 @@
       ],
       "confiance": "a_verifier",
       "actif": true
+    },
+    {
+      "capacites": [],
+      "historique": [],
+      "contact": null,
+      "produits": [],
+      "personnes": [],
+      "classification": [],
+      "geo_source": "OSINT 2026-06 (sources publiques presse + chantier)",
+      "id": "cn-yard-odc-marine-dalian",
+      "nom": "ODC Marine",
+      "groupe": null,
+      "ville": "Dalian",
+      "region": "Liaoning",
+      "pays": "Chine",
+      "lat": 38.92,
+      "lon": 121.63,
+      "geo_precision": "ville",
+      "fondation": 2006,
+      "superficie_ha": null,
+      "effectif": null,
+      "perimetres": [
+        "construction-neuve"
+      ],
+      "types_navires": [
+        "catamaran",
+        "servitude-soutien"
+      ],
+      "description": "Chantier naval à capitaux 100 % français implanté à Dalian (Chine) depuis 2006. Construit en aluminium des vedettes à passagers, navires de servitude et catamarans, en propulsion conventionnelle, électrique ou hybride. A livré les vedettes de la flotte Blue Lines (Martinique), notamment Belle Martinique et Diamant (modèles ODC 18 m H41/H42).",
+      "materiaux": [
+        "aluminium"
+      ],
+      "energies": [
+        "diesel",
+        "électrique-batterie",
+        "hybride"
+      ],
+      "taille_max": "≈ 35 m",
+      "sources": [
+        "https://www.meretmarine.com/fr/construction-navale/odc-marine-un-chantier-francais-en-chine",
+        "https://www.nauticexpo.com/prod/odc-marine/product-33387-502359.html"
+      ],
+      "confiance": "moyenne",
+      "actif": true,
+      "navires_references": [
+        {
+          "nom": "Anse Bleue",
+          "imo": "9344431",
+          "type": "Vedette à passagers",
+          "annee": "2018",
+          "longueur_m": 20.06,
+          "largeur_m": 5.8,
+          "jauge_gt": 50.13,
+          "desserte": "Baie de Fort-de-France",
+          "capacite": "147 passagers",
+          "capacite_pax": 147,
+          "energie": "Gazole / MGO",
+          "propulsion": [
+            "diesel-mdo"
+          ],
+          "client": "Martinique Transport (AOM)",
+          "operateur": "Blue Lines",
+          "proprietaire": "Martinique Transport (AOM)",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2018",
+              "role": "construction",
+              "nom": "ODC",
+              "detail": "Construit pour Martinique Transport (AOM) — ligne Baie de Fort-de-France",
+              "source": "Concession 8 ans depuis le 1/7/2024, marches-securises.fr",
+              "prix": "non publie (comparable chantier : vedette ODC Marine 18m Capo Rosso V, valeur du navire neuf environ 1 300 000 EUR, 2021 ; type voisin du meme chantier, PAS le prix de l'Anse Bleue qui est une 20m)"
+            },
+            {
+              "annee": "2018",
+              "role": "operateur",
+              "nom": "Blue Lines",
+              "detail": "Concession de service public, acquisition par le délégataire",
+              "source": "Concession 8 ans depuis le 1/7/2024, marches-securises.fr"
+            },
+            {
+              "annee": "30/06/2032",
+              "role": "evenement",
+              "nom": "Échéance du contrat",
+              "detail": "Concession de service public, acquisition par le délégataire",
+              "source": "Concession 8 ans depuis le 1/7/2024, marches-securises.fr"
+            }
+          ],
+          "source": "Concession 8 ans depuis le 1/7/2024, marches-securises.fr"
+        },
+        {
+          "nom": "Gros Ilets",
+          "imo": "9923185",
+          "type": "Vedette à passagers",
+          "annee": "2008",
+          "longueur_m": 18.04,
+          "largeur_m": 4.66,
+          "jauge_gt": 30,
+          "desserte": "Baie de Fort-de-France",
+          "capacite": "97 passagers",
+          "capacite_pax": 97,
+          "energie": "Gazole / MGO",
+          "propulsion": [
+            "diesel-mdo"
+          ],
+          "client": "Martinique Transport (AOM)",
+          "operateur": "Blue Lines",
+          "proprietaire": "Martinique Transport (AOM)",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2008",
+              "role": "construction",
+              "nom": "ODC",
+              "detail": "Construit pour Martinique Transport (AOM) — ligne Baie de Fort-de-France",
+              "source": "Concession 8 ans depuis le 1/7/2024"
+            },
+            {
+              "annee": "2008",
+              "role": "operateur",
+              "nom": "Blue Lines",
+              "detail": "Concession de service public, acquisition par le délégataire",
+              "source": "Concession 8 ans depuis le 1/7/2024"
+            },
+            {
+              "annee": "30/06/2032",
+              "role": "evenement",
+              "nom": "Échéance du contrat",
+              "detail": "Concession de service public, acquisition par le délégataire",
+              "source": "Concession 8 ans depuis le 1/7/2024"
+            }
+          ],
+          "source": "Concession 8 ans depuis le 1/7/2024"
+        },
+        {
+          "nom": "Belle Martinique",
+          "imo": "9344430",
+          "type": "Vedette à passagers",
+          "annee": "2017",
+          "longueur_m": 19.4,
+          "largeur_m": 4.7,
+          "jauge_gt": 48.63,
+          "desserte": "L02 - FdF <> Anse Mitan / Anse à l'Ane",
+          "capacite": "98 passagers",
+          "capacite_pax": 98,
+          "energie": "Gazole / MGO",
+          "propulsion": [
+            "diesel-mdo"
+          ],
+          "client": "Martinique Transport (AOM)",
+          "operateur": "Blue Lines",
+          "proprietaire": "Martinique Transport (AOM)",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2017",
+              "role": "construction",
+              "nom": "ODC",
+              "detail": "Construit pour Martinique Transport (AOM) — ligne L02 - FdF <> Anse Mitan / Anse à l'Ane",
+              "source": "Concession 8 ans depuis le 1/7/2024",
+              "prix": "non publie (comparable chantier : vedette ODC Marine 18m Capo Rosso V, valeur du navire neuf environ 1 300 000 EUR, 2021 ; meme chantier ODC Marine et meme gabarit 18m, donc ordre de grandeur indicatif et NON un prix source de la Belle Martinique)"
+            },
+            {
+              "annee": "2017",
+              "role": "operateur",
+              "nom": "Blue Lines",
+              "detail": "Concession de service public, acquisition par le délégataire",
+              "source": "Concession 8 ans depuis le 1/7/2024"
+            },
+            {
+              "annee": "30/06/2032",
+              "role": "evenement",
+              "nom": "Échéance du contrat",
+              "detail": "Concession de service public, acquisition par le délégataire",
+              "source": "Concession 8 ans depuis le 1/7/2024"
+            }
+          ],
+          "source": "Concession 8 ans depuis le 1/7/2024"
+        },
+        {
+          "nom": "Cap Salomon",
+          "imo": "9344432",
+          "type": "Vedette à passagers",
+          "annee": "2018",
+          "longueur_m": 20.06,
+          "largeur_m": 5.8,
+          "jauge_gt": 50.13,
+          "desserte": "L01b - FdF <> Marina Pte du Bout",
+          "capacite": "147 passagers",
+          "capacite_pax": 147,
+          "energie": "Gazole / MGO",
+          "propulsion": [
+            "diesel-mdo"
+          ],
+          "client": "Martinique Transport (AOM)",
+          "operateur": "Blue Lines",
+          "proprietaire": "Martinique Transport (AOM)",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2018",
+              "role": "construction",
+              "nom": "ODC",
+              "detail": "Construit pour Martinique Transport (AOM) — ligne L01b - FdF <> Marina Pte du Bout",
+              "source": "Concession 8 ans depuis le 1/7/2024",
+              "prix": "non publie (comparable chantier : vedette ODC Marine 18m Capo Rosso V, valeur du navire neuf environ 1 300 000 EUR, 2021 ; type voisin du meme chantier, PAS le prix du Cap Salomon qui est une 20m sister-ship de l'Anse Bleue)"
+            },
+            {
+              "annee": "2018",
+              "role": "operateur",
+              "nom": "Blue Lines",
+              "detail": "Concession de service public, acquisition par le délégataire",
+              "source": "Concession 8 ans depuis le 1/7/2024"
+            },
+            {
+              "annee": "30/06/2032",
+              "role": "evenement",
+              "nom": "Échéance du contrat",
+              "detail": "Concession de service public, acquisition par le délégataire",
+              "source": "Concession 8 ans depuis le 1/7/2024"
+            }
+          ],
+          "source": "Concession 8 ans depuis le 1/7/2024"
+        },
+        {
+          "nom": "Diamant",
+          "imo": "9344429",
+          "type": "Vedette à passagers",
+          "annee": "2017",
+          "longueur_m": 19.4,
+          "largeur_m": 4.7,
+          "jauge_gt": 48.63,
+          "desserte": "L01a - FdF <> Bourg des Trois Îlets",
+          "capacite": "98 passagers",
+          "capacite_pax": 98,
+          "energie": "Gazole / MGO",
+          "propulsion": [
+            "diesel-mdo"
+          ],
+          "client": "Martinique Transport (AOM)",
+          "operateur": "Blue Lines",
+          "proprietaire": "Martinique Transport (AOM)",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2017",
+              "role": "construction",
+              "nom": "ODC",
+              "detail": "Construit pour Martinique Transport (AOM) — ligne L01a - FdF <> Bourg des Trois Îlets",
+              "source": "Concession 8 ans depuis le 1/7/2024"
+            },
+            {
+              "annee": "2017",
+              "role": "operateur",
+              "nom": "Blue Lines",
+              "detail": "Concession de service public, acquisition par le délégataire",
+              "source": "Concession 8 ans depuis le 1/7/2024"
+            },
+            {
+              "annee": "30/06/2032",
+              "role": "evenement",
+              "nom": "Échéance du contrat",
+              "detail": "Concession de service public, acquisition par le délégataire",
+              "source": "Concession 8 ans depuis le 1/7/2024"
+            }
+          ],
+          "source": "Concession 8 ans depuis le 1/7/2024"
+        },
+        {
+          "nom": "Fort Royal",
+          "imo": "9928650",
+          "type": "Vedette à passagers",
+          "annee": "2008",
+          "longueur_m": 18.04,
+          "largeur_m": 4.66,
+          "jauge_gt": 27.29,
+          "desserte": "Baie de Fort-de-France",
+          "capacite": "97 passagers",
+          "capacite_pax": 97,
+          "energie": "Gazole / MGO",
+          "propulsion": [
+            "diesel-mdo"
+          ],
+          "client": "Martinique Transport (AOM)",
+          "operateur": "Blue Lines",
+          "proprietaire": "Martinique Transport (AOM)",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2008",
+              "role": "construction",
+              "nom": "ODC",
+              "detail": "Construit pour Martinique Transport (AOM) — ligne Baie de Fort-de-France",
+              "source": "Concession 8 ans depuis le 1/7/2024"
+            },
+            {
+              "annee": "2008",
+              "role": "operateur",
+              "nom": "Blue Lines",
+              "detail": "Concession de service public, acquisition par le délégataire",
+              "source": "Concession 8 ans depuis le 1/7/2024"
+            },
+            {
+              "annee": "30/06/2032",
+              "role": "evenement",
+              "nom": "Échéance du contrat",
+              "detail": "Concession de service public, acquisition par le délégataire",
+              "source": "Concession 8 ans depuis le 1/7/2024"
+            }
+          ],
+          "source": "Concession 8 ans depuis le 1/7/2024"
+        }
+      ]
+    },
+    {
+      "capacites": [],
+      "historique": [],
+      "contact": null,
+      "produits": [],
+      "personnes": [],
+      "classification": [],
+      "geo_source": "OSINT 2026-06 (sources publiques presse + chantier)",
+      "id": "ro-yard-damen-galati",
+      "nom": "Damen Shipyards Galați",
+      "groupe": "Damen Shipyards Group (Pays-Bas)",
+      "ville": "Galați",
+      "region": "Galați",
+      "pays": "Roumanie",
+      "lat": 45.45,
+      "lon": 28.05,
+      "geo_precision": "ville",
+      "fondation": null,
+      "superficie_ha": null,
+      "effectif": null,
+      "perimetres": [
+        "construction-neuve"
+      ],
+      "types_navires": [
+        "ferry-ropax"
+      ],
+      "description": "Site roumain du groupe néerlandais Damen, sur le Danube à Galați. A construit les deux ferries Damen Fast RoPax 5510 (Nordet, Suroît) commandés par la Collectivité territoriale de Saint-Pierre-et-Miquelon, livrés en 2017-2018 (55 m, 192 passagers, 18 voitures).",
+      "materiaux": [
+        "acier"
+      ],
+      "energies": [
+        "diesel"
+      ],
+      "taille_max": null,
+      "sources": [
+        "https://www.meretmarine.com/fr/construction-navale/deux-ferries-damen-pour-saint-pierre-et-miquelon"
+      ],
+      "confiance": "haute",
+      "actif": true,
+      "navires_references": [
+        {
+          "nom": "Nordet",
+          "imo": "9803259",
+          "type": "Roulier / Ferry / NGV",
+          "annee": "2017",
+          "longueur_m": 56,
+          "largeur_m": 10,
+          "jauge_gt": 768,
+          "desserte": "Saint-Pierre / Miquelon / Fortune",
+          "capacite": "188 passagers, 18 véhicules, 118 t fret",
+          "capacite_pax": 188,
+          "capacite_vehicules": 18,
+          "capacite_fret": "118 t",
+          "energie": "Gazole / MGO",
+          "propulsion": [
+            "diesel-mdo"
+          ],
+          "client": "Collectivité territoriale de Saint-Pierre-et-Miquelon (CT975)",
+          "operateur": "SPM Ferries",
+          "proprietaire": "Collectivité territoriale de Saint-Pierre-et-Miquelon (CT975)",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2017",
+              "role": "construction",
+              "nom": "DAMEN",
+              "detail": "Construit pour Collectivité territoriale de Saint-Pierre-et-Miquelon (CT975) — ligne Saint-Pierre / Miquelon / Fortune",
+              "source": "propriétaire CT975",
+              "prix": "> 50 M$ CAD (global 2 navires + infrastructures)"
+            },
+            {
+              "annee": "2017",
+              "role": "operateur",
+              "nom": "SPM Ferries",
+              "detail": "Régie (CT975)",
+              "source": "propriétaire CT975"
+            }
+          ],
+          "source": "propriétaire CT975"
+        },
+        {
+          "nom": "Suroît",
+          "imo": "9803261",
+          "type": "Roulier / Ferry / NGV",
+          "annee": "2017",
+          "longueur_m": 56,
+          "largeur_m": 10,
+          "jauge_gt": 768,
+          "desserte": "Saint-Pierre / Miquelon / Fortune",
+          "capacite": "188 passagers, 18 véhicules, 118 t fret",
+          "capacite_pax": 188,
+          "capacite_vehicules": 18,
+          "capacite_fret": "118 t",
+          "energie": "Gazole / MGO",
+          "propulsion": [
+            "diesel-mdo"
+          ],
+          "client": "Collectivité territoriale de Saint-Pierre-et-Miquelon (CT975)",
+          "operateur": "SPM Ferries",
+          "proprietaire": "Collectivité territoriale de Saint-Pierre-et-Miquelon (CT975)",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2017",
+              "role": "construction",
+              "nom": "DAMEN",
+              "detail": "Construit pour Collectivité territoriale de Saint-Pierre-et-Miquelon (CT975) — ligne Saint-Pierre / Miquelon / Fortune",
+              "source": "propriétaire CT975",
+              "prix": "> 50 M$ CAD (global 2 navires + infrastructures)"
+            },
+            {
+              "annee": "2017",
+              "role": "operateur",
+              "nom": "SPM Ferries",
+              "detail": "Régie (CT975)",
+              "source": "propriétaire CT975"
+            }
+          ],
+          "source": "propriétaire CT975"
+        }
+      ]
+    },
+    {
+      "capacites": [],
+      "historique": [],
+      "contact": null,
+      "produits": [],
+      "personnes": [],
+      "classification": [],
+      "geo_source": "OSINT 2026-06 (sources publiques presse + chantier)",
+      "id": "es-yard-zamakona-bilbao",
+      "nom": "Astilleros Zamakona",
+      "groupe": "Zamakona Yards",
+      "ville": "Santurtzi (Bilbao)",
+      "region": "Pays basque",
+      "pays": "Espagne",
+      "lat": 43.33,
+      "lon": -3.03,
+      "geo_precision": "ville",
+      "fondation": null,
+      "superficie_ha": null,
+      "effectif": null,
+      "perimetres": [
+        "construction-neuve",
+        "reparation-refit"
+      ],
+      "types_navires": [
+        "ferry-ropax"
+      ],
+      "description": "Chantier espagnol de la ria de Bilbao (Santurtzi). A construit en 2002 le transbordeur amphidrome La Gironde (78 m, 600 passagers, 138 voitures) pour la liaison Le Verdon - Royan exploitée par le Département de la Gironde.",
+      "materiaux": [
+        "acier"
+      ],
+      "energies": [
+        "diesel"
+      ],
+      "taille_max": null,
+      "sources": [
+        "https://www.cestenfrance.fr/bac-du-verdon/"
+      ],
+      "confiance": "haute",
+      "actif": true,
+      "navires_references": [
+        {
+          "nom": "La Gironde",
+          "imo": "9246748",
+          "type": "Bac / passage d'eau",
+          "annee": "2002",
+          "longueur_m": 78,
+          "largeur_m": 18.3,
+          "jauge_gt": 3684,
+          "desserte": "Verdon - Royan",
+          "capacite": "600 passagers, 115 véhicules",
+          "capacite_pax": 600,
+          "capacite_vehicules": 115,
+          "energie": "Gazole / MGO",
+          "propulsion": [
+            "diesel-mdo"
+          ],
+          "client": "Département de la Gironde (CD33)",
+          "operateur": "DTMD CD33",
+          "proprietaire": "Département de la Gironde (CD33)",
+          "pavillon": "France",
+          "classification": null,
+          "timeline": [
+            {
+              "annee": "2002",
+              "role": "construction",
+              "nom": "Zamakona",
+              "detail": "Construit pour Département de la Gironde (CD33) — ligne Verdon - Royan",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+              "prix": "14,75 M EUR"
+            },
+            {
+              "annee": "2002",
+              "role": "operateur",
+              "nom": "DTMD CD33",
+              "detail": "Régie directe (DTMD)",
+              "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+            }
+          ],
+          "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+          "prix_acquisition": "14,75 M EUR (2002, construction neuve, chantier Astilleros Zamakona Bilbao, financement integral Departement de la Gironde maitre d'ouvrage)"
+        }
+      ]
     }
   ]
 }
