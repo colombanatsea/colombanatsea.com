@@ -95,9 +95,52 @@
     "Vieux-Port": [43.295, 5.371], "Frioul": [43.281, 5.304], "Minimes": [46.149, -1.169], "Médiathèque": [43.298, 5.364],
     "rade de Brest": [48.330, -4.470], "rade de Lorient": [47.730, -3.370], "rade de Toulon": [43.110, 5.930], "Lorient": [47.745, -3.367],
   };
-  // Localisation des cabinets d'architecture/ensembliers navals (siège), pour la carte Architectes.
+  // Localisation des cabinets d'architecture / ensembliers navals (siège), pour la carte Architectes.
+  // Sièges sourcés ; les clés correspondent aux noms canoniques (cf. pipeline merge-arch). Un cabinet
+  // n'apparaît sur la carte que si au moins un navire le référence (agrégation depuis les navires).
   const ARCHITECTES_LIEUX = {
     "Alternatives Energies": { ville: "La Rochelle", region: "Nouvelle-Aquitaine", pays: "France", lat: 46.158, lon: -1.151 },
+    "Mauric": { ville: "Marseille", region: "Provence-Alpes-Côte d'Azur", pays: "France", lat: 43.296, lon: 5.370 },
+    "Stirling Design International": { ville: "Nantes", region: "Pays de la Loire", pays: "France", lat: 47.213, lon: -1.553 },
+    "Marc Lombard": { ville: "La Rochelle", region: "Nouvelle-Aquitaine", pays: "France", lat: 46.160, lon: -1.149 },
+    "VPLP Design": { ville: "Vannes", region: "Bretagne", pays: "France", lat: 47.658, lon: -2.760 },
+    "Berret-Racoupeau": { ville: "La Rochelle", region: "Nouvelle-Aquitaine", pays: "France", lat: 46.156, lon: -1.153 },
+    "LMG Marin": { ville: "Bergen", region: "Vestland", pays: "Norvège", lat: 60.391, lon: 5.322 },
+    "Skipsteknisk": { ville: "Ålesund", region: "Møre og Romsdal", pays: "Norvège", lat: 62.472, lon: 6.155 },
+    "Marin Teknikk": { ville: "Herøy", region: "Møre og Romsdal", pays: "Norvège", lat: 62.340, lon: 5.620 },
+    "Salt Ship Design": { ville: "Stord", region: "Vestland", pays: "Norvège", lat: 59.781, lon: 5.500 },
+    "Multi Maritime": { ville: "Førde", region: "Vestland", pays: "Norvège", lat: 61.452, lon: 5.857 },
+    "Rolls-Royce Marine (UT design)": { ville: "Ulsteinvik", region: "Møre og Romsdal", pays: "Norvège", lat: 62.346, lon: 5.851 },
+    "Wärtsilä Ship Design": { ville: "Fitjar", region: "Vestland", pays: "Norvège", lat: 59.925, lon: 5.308 },
+    "Fjellstrand (design maison)": { ville: "Omastrand", region: "Vestland", pays: "Norvège", lat: 60.128, lon: 5.948 },
+    "Oma Baatbyggeri": { ville: "Stord", region: "Vestland", pays: "Norvège", lat: 59.784, lon: 5.503 },
+    "Møre Maritime": { ville: "Brattvåg", region: "Møre og Romsdal", pays: "Norvège", lat: 62.598, lon: 6.480 },
+    "Marin Design": { ville: "Frøya", region: "Trøndelag", pays: "Norvège", lat: 63.712, lon: 8.700 },
+    "Tomra Engineering": { ville: "Tomrefjord", region: "Møre og Romsdal", pays: "Norvège", lat: 62.580, lon: 6.930 },
+    "Heimli Ship Design": { ville: "Fitjar", region: "Vestland", pays: "Norvège", lat: 59.927, lon: 5.310 },
+    "Naval Consult": { ville: "Måløy", region: "Vestland", pays: "Norvège", lat: 61.937, lon: 5.113 },
+    "Skipskompetanse": { ville: "Måløy", region: "Vestland", pays: "Norvège", lat: 61.939, lon: 5.115 },
+    "Mer et Design": { ville: "Sophia Antipolis", region: "Provence-Alpes-Côte d'Azur", pays: "France", lat: 43.625, lon: 7.048 },
+    "Ship-ST": { ville: "Lorient", region: "Bretagne", pays: "France", lat: 47.745, lon: -3.367 },
+    "H&T Architecture Navale": { ville: "Nantes", region: "Pays de la Loire", pays: "France", lat: 47.215, lon: -1.555 },
+    "Naval Group": { ville: "Lorient", region: "Bretagne", pays: "France", lat: 47.731, lon: -3.371 },
+    "Xavier Faÿ": { ville: "La Rochelle", region: "Nouvelle-Aquitaine", pays: "France", lat: 46.157, lon: -1.150 },
+    "Christophe Barreau": { ville: "La Rochelle", region: "Nouvelle-Aquitaine", pays: "France", lat: 46.159, lon: -1.152 },
+    "Philippe Briand": { ville: "La Rochelle", region: "Nouvelle-Aquitaine", pays: "France", lat: 46.155, lon: -1.148 },
+    "Finot-Conq": { ville: "Vannes", region: "Bretagne", pays: "France", lat: 47.661, lon: -2.758 },
+    "Jean-François Delvoye": { ville: "Tréguier", region: "Bretagne", pays: "France", lat: 48.787, lon: -3.233 },
+    "Barreau-Neuman": { ville: "Ivry-sur-Seine", region: "Île-de-France", pays: "France", lat: 48.813, lon: 2.389 },
+    "Coprexma": { ville: "Pont-l'Abbé", region: "Bretagne", pays: "France", lat: 47.867, lon: -4.222 },
+    "Pantocarène": { ville: "Arzon", region: "Bretagne", pays: "France", lat: 47.548, lon: -2.888 },
+    "OCEA": { ville: "Les Sables-d'Olonne", region: "Pays de la Loire", pays: "France", lat: 46.497, lon: -1.783 },
+    "Barracuda Yacht Design": { ville: "La Forêt-Fouesnant", region: "Bretagne", pays: "France", lat: 47.903, lon: -3.974 },
+    "S.E.E. Merré": { ville: "Nort-sur-Erdre", region: "Pays de la Loire", pays: "France", lat: 47.438, lon: -1.500 },
+    "Norwegian Ship Design": { ville: "Ålesund", region: "Møre og Romsdal", pays: "Norvège", lat: 62.469, lon: 6.162 },
+    "Ulstein Design": { ville: "Ulsteinvik", region: "Møre og Romsdal", pays: "Norvège", lat: 62.343, lon: 5.849 },
+    "Vard Design": { ville: "Ålesund", region: "Møre og Romsdal", pays: "Norvège", lat: 62.466, lon: 6.150 },
+    "Havyard Design": { ville: "Fosnavåg", region: "Møre og Romsdal", pays: "Norvège", lat: 62.339, lon: 5.553 },
+    "Macduff Ship Design": { ville: "Macduff", region: "Aberdeenshire", pays: "Royaume-Uni", lat: 57.668, lon: -2.497 },
+    "BMT": { ville: "Southampton", region: "Angleterre", pays: "Royaume-Uni", lat: 50.909, lon: -1.404 },
   };
 
   // Bases navales / ports de rattachement reconnus dans le champ opérateur (ex. « Marine nationale - base navale de Toulon »).
