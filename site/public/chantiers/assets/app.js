@@ -100,6 +100,57 @@
     "Alternatives Energies": { ville: "La Rochelle", region: "Nouvelle-Aquitaine", pays: "France", lat: 46.158, lon: -1.151 },
   };
 
+  // Bases navales / ports de rattachement reconnus dans le champ opérateur (ex. « Marine nationale - base navale de Toulon »).
+  // Sert à situer sur la carte Opérateurs les flottes de souveraineté sans ligne de desserte. Coordonnées du port.
+  const NAVAL_BASES = {
+    "toulon": [43.118, 5.930], "brest": [48.366, -4.494], "cherbourg": [49.645, -1.625],
+    "lanveoc-poulmic": [48.283, -4.450], "lanveoc": [48.283, -4.450],
+    "degrad-des-cannes": [4.852, -52.275], "saint-mandrier-sur-mer": [43.078, 5.929],
+  };
+  // Opérateurs : normalisation déterministe (suffixes juridiques + accents + parenthèses) puis fusions curées.
+  // OP_EXCLUDE = libellés qui ne désignent pas un exploitant réel (statut / placeholder).
+  const OP_EXCLUDE = /^(desarme|inconnu|en construction|en essais|yacht prive|charter|prive|particulier|non |reserve|aucun|divers|n\/?a$|a definir|loue|location)/;
+  // OP_ALIAS = fusions explicites (clé après strip → libellé canonique). Ne JAMAIS fusionner deux marines d'État
+  // distinctes : seules les variantes de la marine FRANÇAISE sont regroupées (les marines étrangères gardent leur clé).
+  const OP_ALIAS = [
+    { re: /^marine nationale( francaise| france)?$/, key: "marine-nationale-fr", label: "Marine nationale (France)" },
+    { re: /^marine nationale -/, key: "marine-nationale-fr", label: "Marine nationale (France)" },
+  ];
+  const opNorm = (s) => (s || "").toString().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  const opStrip = (s) => opNorm(s).replace(/\([^)]*\)/g, " ")
+    .replace(/\b(a\/s|asa|as|ab|sa|sas|sarl|ltd|limited|gmbh|b\.?v|n\.?v|plc|inc|llc|co|spa|ag|oy|oyj|aps|kg)\b\.?/g, " ")
+    .replace(/[.,]/g, " ").replace(/\s+/g, " ").trim();
+  // Renvoie {key, label} canonique pour un opérateur brut, ou null si non-exploitant.
+  function canonOperator(raw) {
+    if (!raw || !raw.trim()) return null;
+    const stripped = opStrip(raw);
+    if (!stripped || OP_EXCLUDE.test(stripped)) return null;
+    for (const a of OP_ALIAS) if (a.re.test(stripped)) return { key: a.key, label: a.label };
+    // Libellé d'affichage : variante brute débarrassée du suffixe juridique de fin, casse/accents conservés.
+    const label = raw.trim().replace(/\s+(AS|ASA|AB|A\/S|SA|SAS|SARL|Ltd\.?|Limited|GmbH|B\.?V\.?|N\.?V\.?|PLC|Inc\.?|LLC|Co\.?|SpA|AG|Oy|Oyj|ApS|KG)\.?$/i, "").trim();
+    return { key: stripped, label };
+  }
+  // Pavillon nettoyé pour l'affichage (retire parenthèses/codes, déduplique accents/casse).
+  const cleanFlag = (raw) => {
+    if (!raw) return "";
+    let t = String(raw).replace(/\([^)]*\)/g, "").replace(/\b[A-Z]{2,3}\b/g, "").replace(/[,;].*$/, "").replace(/\s+/g, " ").trim();
+    return t;
+  };
+  // Ajoute un pavillon nettoyé à un Map de pays (clé sans accent → meilleure variante accentuée).
+  const addFlag = (m, raw) => {
+    const c = cleanFlag(raw); if (!c) return;
+    const k = opNorm(c); const cur = m.get(k);
+    if (!cur || (/[^\x00-\x7F]/.test(c) && !/[^\x00-\x7F]/.test(cur)) || c.length > cur.length) m.set(k, c);
+  };
+
+  // Base navale éventuellement nommée dans le champ opérateur (souveraineté sans desserte).
+  function operatorBase(raw) {
+    const m = opNorm(raw).match(/base (?:navale )?(?:de |d.)?([a-z\- ]+)/);
+    if (!m) return null;
+    const k = m[1].trim().split(/[)\/,]/)[0].trim().replace(/\s+/g, "-");
+    return NAVAL_BASES[k] ? { name: m[1].trim().split(/[)\/,]/)[0].trim(), pt: NAVAL_BASES[k] } : null;
+  }
+
   const state = {
     all: [],
     perimRef: {},
@@ -347,13 +398,13 @@
       pts.forEach((p) => { la0 = Math.min(la0, p[0]); la1 = Math.max(la1, p[0]); lo0 = Math.min(lo0, p[1]); lo1 = Math.max(lo1, p[1]); });
       return Math.max(la1 - la0, lo1 - lo0);
     };
-    state.dessertes = [...dmap.values()].map((e, i) => {
-      e._idx = i;
+    state.dessertes = [...dmap.values()].map((e) => {
       const pts = parseRoutePorts(e.nom);
       if (span(pts) > 1.4) e.points = []; else e.points = pts;
       e.mapped = e.points.length >= 1;
       e.operateur = [...e.operateurs][0] || ""; return e;
     }).sort((a, b) => norm(a.nom).localeCompare(norm(b.nom)));
+    state.dessertes.forEach((e, i) => { e._idx = i; }); // _idx APRÈS tri : doit indexer le tableau final
 
     // Architectes : regroupe les navires par cabinet d'architecture / ensemblier.
     const amap = new Map();
@@ -366,8 +417,40 @@
       if (n.operateur) e.operateurs.add(n.operateur);
       if (n._cnom) e.chantiers.add(n._cnom);
     });
-    state.architectes = [...amap.values()].map((e, i) => { e._idx = i; return e; })
+    state.architectes = [...amap.values()]
       .sort((a, b) => b.navires.length - a.navires.length || norm(a.nom).localeCompare(norm(b.nom)));
+    state.architectes.forEach((e, i) => { e._idx = i; });
+
+    // Opérateurs : couche normalisée (1191 libellés bruts → ~970 exploitants canoniques). Source unique = chantiers.json.
+    const omap = new Map();
+    state.navires.forEach((n) => {
+      const c = canonOperator(n.operateur);
+      if (!c) return;
+      let e = omap.get(c.key);
+      if (!e) { e = { key: c.key, nom: c.label, _variants: new Map(), navires: [], dessertes: new Set(), chantiers: new Set(), _flags: new Map(), bases: new Map() }; omap.set(c.key, e); }
+      e._variants.set(c.label, (e._variants.get(c.label) || 0) + 1);
+      e.navires.push(n);
+      if (n.desserte && n.desserte.trim()) e.dessertes.add(n.desserte.trim());
+      if (n._cnom) e.chantiers.add(n._cnom);
+      addFlag(e._flags, n.pavillon);
+      const b = operatorBase(n.operateur);
+      if (b) e.bases.set(b.name, b.pt);
+    });
+    // Points cartographiables d'un opérateur : escales de ses dessertes (tracées) + ses bases navales.
+    state.operateurs = [...omap.values()].map((e) => {
+      // Libellé canonique = variante la plus fréquente (sauf alias déjà fixé).
+      const best = [...e._variants.entries()].sort((a, b) => b[1] - a[1])[0];
+      if (best && !/marine-nationale-fr/.test(e.key)) e.nom = best[0];
+      delete e._variants;
+      e.pays = new Set([...e._flags.values()]); delete e._flags;
+      const pts = [];
+      e.dessertes.forEach((d) => { const dd = (state.dessertes || []).find((x) => x.nom === d); if (dd) pts.push(...dd.points); });
+      e.basePts = [...e.bases.entries()];
+      e.routePts = pts;
+      e.mapped = pts.length > 0 || e.basePts.length > 0;
+      return e;
+    }).sort((a, b) => b.navires.length - a.navires.length || norm(a.nom).localeCompare(norm(b.nom)));
+    state.operateurs.forEach((e, i) => { e._idx = i; }); // _idx APRÈS tri
   }
 
   function sorted(list) {
@@ -559,6 +642,7 @@
     $("#view-dir").classList.toggle("is-hidden", !(e === "chantiers" && m === "annuaire"));
     $("#view-nav").classList.toggle("is-hidden", e !== "navires");
     $("#view-dessertes").classList.toggle("is-hidden", !(e === "dessertes" && m === "annuaire"));
+    $("#view-operateurs").classList.toggle("is-hidden", !(e === "operateurs" && m === "annuaire"));
     $("#view-architectes").classList.toggle("is-hidden", !(e === "architectes" && m === "annuaire"));
     if (showMap && map) setTimeout(() => map.invalidateSize(), 60);
   }
@@ -579,6 +663,12 @@
       const pts = (state.architectes || []).filter((a) => a.lat != null).map((a) => [a.lat, a.lon]);
       if (pts.length === 1) { try { map.setView(pts[0], 8, { animate: false }); } catch (e) {} return; }
       if (pts.length > 1) { try { map.fitBounds(L.latLngBounds(pts).pad(0.3), { maxZoom: 8 }); } catch (e) {} return; }
+    }
+    if (state.entity === "operateurs") {
+      const inMetro = (p) => p[0] >= 41 && p[0] <= 52 && p[1] >= -6 && p[1] <= 10;
+      const pts = [];
+      (state.operateurs || []).forEach((o) => { o.routePts.forEach((p) => { if (inMetro(p)) pts.push(p); }); o.basePts.forEach(([, p]) => { if (inMetro(p)) pts.push(p); }); });
+      if (pts.length) { try { map.fitBounds(L.latLngBounds(pts).pad(0.1), { maxZoom: 9 }); } catch (e) {} return; }
     }
     if (state.homeBounds) { try { map.fitBounds(state.homeBounds, { padding: [16, 16] }); } catch (e) {} }
   }
@@ -1088,6 +1178,7 @@
       return;
     }
     if (e === "dessertes") { return m === "carte" ? renderDessertesCarte() : renderDessertesAnnuaire(); }
+    if (e === "operateurs") { return m === "carte" ? renderOperateursCarte() : renderOperateursAnnuaire(); }
     if (e === "architectes") { return m === "carte" ? renderArchitectesCarte() : renderArchitectesAnnuaire(); }
     // Chantiers
     const list = sorted(filtered());
@@ -1101,6 +1192,11 @@
   // Affiche/masque la légende et le bandeau outre-mer selon l'entité cartographiée.
   function mapChrome(entity) {
     const lg = $("#legend"), om = $("#om-strip");
+    if (entity === "operateurs") {
+      if (lg) { lg.style.display = ""; lg.innerHTML = `<div class="legend__title">Opérateurs</div><div class="legend__row"><span class="legend__line"></span>desserte exploitée</div><div class="legend__row"><span class="legend__dot" style="background:#c0392b"></span>base / port d'attache</div>`; }
+      if (om) { om.classList.add("is-hidden"); om.innerHTML = ""; }
+      return;
+    }
     if (entity === "chantiers") {
       if (lg) { lg.style.display = ""; lg.innerHTML = `<div class="legend__title">Périmètre</div>` + Object.keys(PERIM_COLORS).map((p) =>
         `<div class="legend__row"><span class="legend__dot" style="background:${PERIM_COLORS[p]}"></span>${perimLabel(p)}</div>`).join(""); }
@@ -1276,6 +1372,112 @@
           </li>`).join("")}</ul></div>`;
     $("#drawer-body").querySelectorAll("[data-open-vessel]").forEach((el) =>
       el.addEventListener("click", () => openVessel(state.navires[+el.dataset.openVessel])));
+    $("#drawer").setAttribute("aria-hidden", "false");
+  }
+
+  /* ---------- Opérateurs (couche normalisée) ---------- */
+  function filteredOperateurs() {
+    const nq = norm(state.filters.q), pays = state.filters.pays;
+    return state.operateurs.filter((o) => {
+      if (pays && !o.pays.has(pays)) return false;
+      if (nq && !norm(o.nom).includes(nq)) return false;
+      return true;
+    });
+  }
+  function renderOperateursAnnuaire() {
+    const list = filteredOperateurs();
+    $("#count").innerHTML = list.length === state.operateurs.length
+      ? `<b>${state.operateurs.length}</b> opérateurs (flottes normalisées)`
+      : `<b>${list.length}</b> sur ${state.operateurs.length} opérateurs`;
+    const el = $("#operateurs-list");
+    if (!list.length) { el.innerHTML = `<p class="empty">Aucun opérateur ne correspond.</p>`; return; }
+    el.innerHTML = list.map((o) => `
+      <button class="ecard" data-oid="${o._idx}">
+        <div class="ecard__nom">${esc(o.nom)}</div>
+        <div class="ecard__meta">${o.dessertes.size ? esc([...o.dessertes].slice(0, 2).join(" · ")) + (o.dessertes.size > 2 ? " …" : "") : (o.pays.size ? esc([...o.pays].slice(0, 3).join(", ")) : "Flotte")}</div>
+        <div class="ecard__stats"><span><b>${o.navires.length}</b> navire${o.navires.length > 1 ? "s" : ""}</span>${o.dessertes.size ? `<span>${o.dessertes.size} desserte${o.dessertes.size > 1 ? "s" : ""}</span>` : ""}${o.mapped ? `<span class="ecard__pin">◉ cartographié</span>` : ""}</div>
+      </button>`).join("");
+    el.querySelectorAll("[data-oid]").forEach((b) => b.addEventListener("click", () => openOperateur(state.operateurs[+b.dataset.oid])));
+  }
+  function renderOperateursCarte() {
+    if (!map || !markerLayer) return;
+    mapChrome("operateurs");
+    const list = filteredOperateurs();
+    const placed = list.filter((o) => o.mapped);
+    $("#count").innerHTML = `<b>${list.length}</b> opérateurs${placed.length < list.length ? ` · ${placed.length} cartographié(s)` : ""}`;
+    markerLayer.clearLayers(); markers.clear();
+    placed.forEach((o) => {
+      // Routes de l'opérateur (lignes + escales) en sarcelle, bases navales en rouge.
+      const routes = new Set();
+      o.dessertes.forEach((d) => { const dd = (state.dessertes || []).find((x) => x.nom === d); if (dd && dd.points.length) routes.add(dd); });
+      routes.forEach((dd) => {
+        if (dd.points.length >= 2) L.polyline(dd.points, { color: "#1F9AA8", weight: 2, opacity: 0.7 }).addTo(markerLayer);
+        dd.points.forEach((pt) => {
+          const mk = L.circleMarker(pt, { radius: 4, color: "#fff", weight: 1.5, fillColor: "#1F9AA8", fillOpacity: 1 });
+          mk.bindPopup(`<div class="pp-nom">${esc(o.nom)}</div><div class="pp-meta">${esc(dd.nom)}</div><div class="pp-btn" data-open-o="${o._idx}">Voir l'opérateur →</div>`);
+          mk.on("popupopen", (e) => { const b = e.popup.getElement().querySelector("[data-open-o]"); if (b) b.addEventListener("click", () => openOperateur(state.operateurs[+b.dataset.openO])); });
+          mk.addTo(markerLayer);
+        });
+      });
+      o.basePts.forEach(([name, pt]) => {
+        const mk = L.circleMarker(pt, { radius: 7, color: "#fff", weight: 2, fillColor: "#c0392b", fillOpacity: 1 });
+        mk.bindPopup(`<div class="pp-nom">${esc(o.nom)}</div><div class="pp-meta">Base : ${esc(name)}</div><div class="pp-btn" data-open-o="${o._idx}">Voir l'opérateur →</div>`);
+        mk.on("popupopen", (e) => { const b = e.popup.getElement().querySelector("[data-open-o]"); if (b) b.addEventListener("click", () => openOperateur(state.operateurs[+b.dataset.openO])); });
+        mk.addTo(markerLayer);
+      });
+    });
+    renderOperateursSide(list);
+    const nm = list.filter((o) => !o.mapped).length;
+    if (nm) { const side = $("#results"); if (side) side.insertAdjacentHTML("beforeend", `<p class="side-note">${nm} opérateur${nm > 1 ? "s" : ""} sans desserte ni base localisée (haute mer, aquaculture, offshore…). Visibles en annuaire.</p>`); }
+  }
+  function renderOperateursSide(list) {
+    const el = $("#results");
+    if (!list.length) { el.innerHTML = `<p class="empty">Aucun opérateur.</p>`; return; }
+    const mapped = list.filter((o) => o.mapped);
+    el.innerHTML = (mapped.length ? mapped : list).map((o) => `
+      <div class="card card--solo" data-oid="${o._idx}">
+        <div class="card__body">
+          <div class="card__nom">${esc(o.nom)}</div>
+          <div class="card__meta">${o.navires.length} navire${o.navires.length > 1 ? "s" : ""}${o.dessertes.size ? ` · ${o.dessertes.size} desserte${o.dessertes.size > 1 ? "s" : ""}` : ""}${o.basePts.length ? ` · ${o.basePts.length} base${o.basePts.length > 1 ? "s" : ""}` : ""}</div>
+        </div>
+      </div>`).join("");
+    el.querySelectorAll("[data-oid]").forEach((c) => c.addEventListener("click", () => {
+      const o = state.operateurs[+c.dataset.oid];
+      const pts = [...o.routePts, ...o.basePts.map(([, p]) => p)];
+      if (pts.length && map) { try { map.fitBounds(L.latLngBounds(pts).pad(0.4), { maxZoom: 11 }); } catch (e) {} }
+      openOperateur(o);
+    }));
+  }
+  function openOperateur(o) {
+    if (!o) return;
+    const navs = o.navires.slice().sort((a, b) => norm(a.nom || a.type).localeCompare(norm(b.nom || b.type)));
+    $("#drawer-body").innerHTML = `
+      <div class="d-eyebrow">Opérateur / exploitant</div>
+      <h2 class="d-nom" id="d-nom">${esc(o.nom)}</h2>
+      <div class="d-loc">${o.navires.length} navire${o.navires.length > 1 ? "s" : ""} exploité${o.navires.length > 1 ? "s" : ""}${o.pays.size ? " · " + esc([...o.pays].slice(0, 4).join(", ")) : ""}</div>
+      <div class="d-section"><h3>Informations</h3>
+        <div class="d-grid">
+          <div class="d-fact"><div class="d-fact__k">Flotte</div><div class="d-fact__v">${o.navires.length} navire${o.navires.length > 1 ? "s" : ""}</div></div>
+          ${o.dessertes.size ? `<div class="d-fact"><div class="d-fact__k">Dessertes</div><div class="d-fact__v">${o.dessertes.size}</div></div>` : ""}
+          ${o.basePts.length ? `<div class="d-fact"><div class="d-fact__k">Base(s)</div><div class="d-fact__v">${esc(o.basePts.map(([n]) => n).join(", "))}</div></div>` : ""}
+          ${o.chantiers.size ? `<div class="d-fact"><div class="d-fact__k">Chantier(s)</div><div class="d-fact__v">${esc([...o.chantiers].slice(0, 6).join(", "))}${o.chantiers.size > 6 ? "…" : ""}</div></div>` : ""}
+        </div>
+      </div>
+      ${o.dessertes.size ? `<div class="d-section"><h3>Dessertes exploitées</h3>
+        <ul class="d-list">${[...o.dessertes].sort((a, b) => norm(a).localeCompare(norm(b))).map((d) => {
+          const dd = (state.dessertes || []).find((x) => x.nom === d);
+          return `<li class="ref-li" ${dd ? `data-open-desserte="${dd._idx}"` : ""} style="align-items:center">${esc(d)}${dd ? ` <span class="ref-go">→</span>` : ""}</li>`;
+        }).join("")}</ul></div>` : ""}
+      <div class="d-section"><h3>Flotte</h3>
+        <ul class="d-list">${navs.map((n) => `
+          <li class="ref-li" data-open-vessel="${n._idx}" style="flex-direction:column;gap:3px;align-items:flex-start">
+            <span><b>${esc(n.nom || n.type || "Navire")}</b>${n.annee ? ` <span style="color:var(--muted)">· ${n.annee}</span>` : ""} <span class="ref-go">→</span></span>
+            <span style="color:var(--muted);font-size:13px">${esc([n.type, n.desserte, n._cnom].filter(Boolean).join(" · "))}</span>
+          </li>`).join("")}</ul></div>`;
+    $("#drawer-body").querySelectorAll("[data-open-vessel]").forEach((el) =>
+      el.addEventListener("click", () => openVessel(state.navires[+el.dataset.openVessel])));
+    $("#drawer-body").querySelectorAll("[data-open-desserte]").forEach((el) =>
+      el.addEventListener("click", () => openDesserte(state.dessertes[+el.dataset.openDesserte])));
     $("#drawer").setAttribute("aria-hidden", "false");
   }
 
