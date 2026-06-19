@@ -116,9 +116,28 @@
         <td class="num">${r.out_of_spec_count || ""}</td>
         <td class="num">${r.warning_count || ""}</td>
         <td>${sevTag(r.overall_severity)}</td>
+        <td><button class="rm" data-rm="${i}" title="Remove this report">✕</button></td>
       </tr>`).join("");
     $("#reports tbody").querySelectorAll("tr").forEach(tr =>
-      tr.addEventListener("click", () => showDetail(+tr.dataset.i, tr)));
+      tr.addEventListener("click", e => {
+        if (e.target.classList.contains("rm")) { removeReport(+e.target.dataset.rm); return; }
+        showDetail(+tr.dataset.i, tr);
+      }));
+  }
+
+  function removeReport(i) {
+    const r = REPORTS[i];
+    REPORTS.splice(i, 1);
+    $("#detail").classList.add("hidden");
+    setStatus(r ? "Removed " + r.report_id + "." : "");
+    render();
+  }
+
+  function clearAll() {
+    REPORTS = [];
+    $("#detail").classList.add("hidden");
+    $("#results").classList.add("hidden");
+    setStatus("Cleared. Nothing is stored: closing or reloading the page also wipes everything.");
   }
 
   function showDetail(i, tr) {
@@ -196,6 +215,7 @@
   $("#pick").addEventListener("click", () => $("#file").click());
   $("#file").addEventListener("change", e => handleFiles(e.target.files));
   $("#loadSample").addEventListener("click", loadSample);
+  $("#clear").addEventListener("click", clearAll);
   const dz = $("#drop");
   ["dragover", "dragenter"].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.add("drag"); }));
   ["dragleave", "drop"].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.remove("drag"); }));
