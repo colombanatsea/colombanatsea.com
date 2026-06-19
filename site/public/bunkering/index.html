@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Conformité de soutage ISO 8217 · Démonstration</title>
+<title>Bunker fuel compliance, ISO 8217 · Demo</title>
 <style>
   :root{
     --ink:#10243f; --blue:#2A55B3; --blue-700:#1f3f86; --paper:#f6f7fb; --card:#ffffff;
@@ -94,12 +94,12 @@
 <body>
 <header class="top">
   <div class="wrap">
-    <div class="brand"><span class="v">VAIATA DYNAMICS</span><span class="d">Intelligence carburant marin</span></div>
-    <h1>Conformité de soutage, ISO 8217</h1>
-    <p class="lede">Démonstration du moteur d'ingestion et de détection des non-conformités. Cinq formats de
-      laboratoires différents, ramenés à un schéma unique, et un verdict de conformité recalculé de façon
-      homogène, indépendamment du laboratoire émetteur.</p>
-    <div class="privacy">🔒 <span><b>Confidentiel par conception.</b> Tout s'exécute dans votre navigateur. Aucun fichier n'est envoyé.</span></div>
+    <div class="brand"><span class="v">VAIATA DYNAMICS</span><span class="d">Marine fuel intelligence</span></div>
+    <h1>Bunker fuel compliance, ISO 8217</h1>
+    <p class="lede">A demonstration of the ingestion and out-of-spec detection engine. Five different
+      laboratory formats, normalized to a single schema, with a compliance verdict recomputed
+      homogeneously, independent of the issuing laboratory.</p>
+    <div class="privacy">🔒 <span><b>Private by design.</b> Everything runs in your browser. No file is ever uploaded.</span></div>
   </div>
 </header>
 
@@ -107,12 +107,12 @@
   <section>
     <div class="drop" id="drop">
       <div class="txt">
-        <b>Déposez un rapport PDF de soutage</b>
-        <span>Qualité (FOBAS, Intertek, VPS, Viswa, VeriFuel, autre). Lecture et analyse 100% locales.</span>
+        <b>Drop a bunker report PDF</b>
+        <span>Quality report (FOBAS, Intertek, VPS, Viswa, VeriFuel, other). Reading and analysis are 100% local.</span>
       </div>
       <input type="file" id="file" accept="application/pdf" multiple class="hidden">
-      <button class="btn" id="pick">Choisir un fichier</button>
-      <button class="btn ghost" id="loadSample">Charger l'exemple anonymisé</button>
+      <button class="btn" id="pick">Choose a file</button>
+      <button class="btn ghost" id="loadSample">Load anonymized sample</button>
     </div>
     <p class="small muted" id="status" style="margin:10px 2px 0"></p>
   </section>
@@ -122,20 +122,20 @@
 
     <div class="row2" style="margin-top:18px">
       <div class="panel">
-        <h2>Alertes de conformité <span class="sub">non-conformités d'abord, puis points d'attention</span></h2>
+        <h2>Compliance alerts <span class="sub">out-of-spec first, then points of attention</span></h2>
         <div id="alerts"></div>
       </div>
       <div class="panel">
-        <h2>Qualité par fournisseur <span class="sub">score homogène, 100 = parfait</span></h2>
+        <h2>Quality by supplier <span class="sub">homogeneous score, 100 = perfect</span></h2>
         <table id="suppliers"><tbody></tbody></table>
       </div>
     </div>
 
     <div class="panel">
-      <h2>Rapports ingérés <span class="sub">cliquez une ligne pour le détail paramètre par paramètre</span></h2>
+      <h2>Ingested reports <span class="sub">click a row for the parameter-by-parameter detail</span></h2>
       <table id="reports"><thead><tr>
-        <th>Rapport</th><th>Labo</th><th>Type</th><th>Navire</th><th>Grade</th><th>Rév. ISO</th>
-        <th class="num">Param.</th><th class="num">OOS</th><th class="num">Warn</th><th>Sévérité</th>
+        <th>Report</th><th>Lab</th><th>Type</th><th>Vessel</th><th>Grade</th><th>ISO rev.</th>
+        <th class="num">Param.</th><th class="num">OOS</th><th class="num">Warn</th><th>Severity</th>
       </tr></thead><tbody></tbody></table>
     </div>
 
@@ -143,9 +143,9 @@
   </section>
 
   <footer>
-    <p>VAIATA Dynamics · Démonstration technique. Moteur ISO 8217 porté côté navigateur (parité vérifiée avec
-    le moteur de référence). Les seuils ISO 8217 sont indicatifs et doivent être validés par un expert carburant
-    avant tout usage opérationnel. Données d'exemple anonymisées.</p>
+    <p>VAIATA Dynamics · Technical demonstration. ISO 8217 engine ported to the browser (parity verified
+    against the reference engine). ISO 8217 limits are indicative and must be validated by a fuel expert
+    before any operational use. Sample data is anonymized.</p>
   </footer>
 </div>
 

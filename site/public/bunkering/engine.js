@@ -203,28 +203,28 @@
   function withinMargin(value, limit){ if(limit===0) return Math.abs(value)<=WARN_MARGIN; return Math.abs(limit-value)/Math.abs(limit)<=WARN_MARGIN; }
 
   function evaluateValue(operator, value, limit){
-    if(value==null) return {verdict:"qualitative",severity:"ok",rationale:"valeur qualitative"};
-    if(!limit || (limit.min==null && limit.max==null)) return {verdict:"no_limit",severity:"ok",rationale:"parametre informatif, pas de seuil ISO"};
+    if(value==null) return {verdict:"qualitative",severity:"ok",rationale:"qualitative value"};
+    if(!limit || (limit.min==null && limit.max==null)) return {verdict:"no_limit",severity:"ok",rationale:"informational parameter, no ISO limit"};
     const op = operator||"=";
     const lo=limit.min, hi=limit.max;
     const fails=[], warns=[], notes=[];
     if(hi!=null){
-      if(op==="="){ if(value>hi) fails.push(value+" > max "+hi); else if(withinMargin(value,hi)) warns.push(value+" proche du max "+hi); }
-      else if(op==="<"){ if(value<=hi) notes.push("<"+value+" <= max "+hi); else return {verdict:"indeterminate",severity:"warning",rationale:"<"+value+" avec max "+hi+" : conclusion incertaine"}; }
-      else if(op==="<="){ if(value<=hi) notes.push("<="+value+" <= max "+hi); else return {verdict:"indeterminate",severity:"warning",rationale:"<="+value+" avec max "+hi}; }
-      else if(op===">"){ if(value>=hi) fails.push(">"+value+" >= max "+hi); else return {verdict:"indeterminate",severity:"warning",rationale:">"+value+" avec max "+hi}; }
+      if(op==="="){ if(value>hi) fails.push(value+" > max "+hi); else if(withinMargin(value,hi)) warns.push(value+" near max "+hi); }
+      else if(op==="<"){ if(value<=hi) notes.push("<"+value+" <= max "+hi); else return {verdict:"indeterminate",severity:"warning",rationale:"<"+value+" with max "+hi+": inconclusive"}; }
+      else if(op==="<="){ if(value<=hi) notes.push("<="+value+" <= max "+hi); else return {verdict:"indeterminate",severity:"warning",rationale:"<="+value+" with max "+hi+": inconclusive"}; }
+      else if(op===">"){ if(value>=hi) fails.push(">"+value+" >= max "+hi); else return {verdict:"indeterminate",severity:"warning",rationale:">"+value+" with max "+hi+": inconclusive"}; }
       else if(op===">="){ if(value>hi) fails.push(">="+value+" > max "+hi); }
     }
     if(lo!=null){
-      if(op==="="){ if(value<lo) fails.push(value+" < min "+lo); else if(withinMargin(value,lo)) warns.push(value+" proche du min "+lo); }
-      else if(op===">"){ if(value>=lo) notes.push(">"+value+" >= min "+lo); else return {verdict:"indeterminate",severity:"warning",rationale:">"+value+" avec min "+lo}; }
+      if(op==="="){ if(value<lo) fails.push(value+" < min "+lo); else if(withinMargin(value,lo)) warns.push(value+" near min "+lo); }
+      else if(op===">"){ if(value>=lo) notes.push(">"+value+" >= min "+lo); else return {verdict:"indeterminate",severity:"warning",rationale:">"+value+" with min "+lo+": inconclusive"}; }
       else if(op===">="){ if(value>=lo) notes.push(">="+value+" >= min "+lo); }
-      else if(op==="<"){ if(value<=lo) fails.push("<"+value+" <= min "+lo); else return {verdict:"indeterminate",severity:"warning",rationale:"<"+value+" avec min "+lo}; }
+      else if(op==="<"){ if(value<=lo) fails.push("<"+value+" <= min "+lo); else return {verdict:"indeterminate",severity:"warning",rationale:"<"+value+" with min "+lo+": inconclusive"}; }
       else if(op==="<="){ if(value<lo) fails.push("<="+value+" < min "+lo); }
     }
     if(fails.length) return {verdict:"fail",severity:"out_of_spec",rationale:fails.join("; ")};
     if(warns.length) return {verdict:"pass",severity:"warning",rationale:warns.join("; ")};
-    return {verdict:"pass",severity:"ok",rationale:notes.join("; ")||"dans les limites"};
+    return {verdict:"pass",severity:"ok",rationale:notes.join("; ")||"within limits"};
   }
 
   function evaluateReport(report, revision){
@@ -241,7 +241,7 @@
       if(report.report_type!=="quality"){ pr.verdict="no_limit"; return; }
       const limit = pr.canonical_key ? isoLimits[pr.canonical_key] : null;
       if(limit){ pr.iso_limit_min=limit.min; pr.iso_limit_max=limit.max; }
-      if(pr.canonical_key==null){ pr.verdict="unknown_param"; pr.severity="ok"; pr.rationale="parametre non resolu"; }
+      if(pr.canonical_key==null){ pr.verdict="unknown_param"; pr.severity="ok"; pr.rationale="unresolved parameter"; }
       else { const ev=evaluateValue(pr.operator,pr.value,limit||{min:null,max:null}); pr.verdict=ev.verdict; pr.severity=ev.severity; pr.rationale=ev.rationale; }
       if(pr.severity==="out_of_spec") oos++; else if(pr.severity==="warning") warn++;
     });
