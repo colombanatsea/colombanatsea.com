@@ -134,10 +134,11 @@
   }
 
   function clearAll() {
-    REPORTS = [];
+    REPORTS = [];                 // vide tout, y compris l'echantillon anonymise
+    const fi = $("#file"); if (fi) fi.value = "";
     $("#detail").classList.add("hidden");
-    $("#results").classList.add("hidden");
-    setStatus("Cleared. Nothing is stored: closing or reloading the page also wipes everything.");
+    render();                     // masque #results car REPORTS est vide
+    setStatus("Cleared, sample included. Nothing is stored: reloading the page also wipes everything.");
   }
 
   function showDetail(i, tr) {
