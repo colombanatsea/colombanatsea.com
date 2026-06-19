@@ -1,13 +1,16 @@
 # Moteurs de recherche classiques
 User-agent: Googlebot
 Allow: /
+Disallow: /bunkering/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /bunkering/
 
 User-agent: *
 Allow: /
 Disallow: /tools/
+Disallow: /bunkering/
 
 # Crawlers IA - accès interdit
 User-agent: GPTBot
