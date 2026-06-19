@@ -89,6 +89,8 @@
   .pillrow{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}
   .pill{background:#f1f4fa;border:1px solid var(--line);border-radius:6px;padding:3px 9px;font-size:12px}
   .pill b{color:var(--ink)}
+  .rm{border:none;background:none;color:var(--muted);cursor:pointer;font-size:15px;line-height:1;padding:2px 6px;border-radius:5px}
+  .rm:hover{background:var(--oos-bg);color:var(--oos)}
 </style>
 </head>
 <body>
@@ -113,6 +115,7 @@
       <input type="file" id="file" accept="application/pdf" multiple class="hidden">
       <button class="btn" id="pick">Choose a file</button>
       <button class="btn ghost" id="loadSample">Load anonymized sample</button>
+      <button class="btn ghost" id="clear">Clear all</button>
     </div>
     <p class="small muted" id="status" style="margin:10px 2px 0"></p>
   </section>
@@ -135,7 +138,7 @@
       <h2>Ingested reports <span class="sub">click a row for the parameter-by-parameter detail</span></h2>
       <table id="reports"><thead><tr>
         <th>Report</th><th>Lab</th><th>Type</th><th>Vessel</th><th>Grade</th><th>ISO rev.</th>
-        <th class="num">Param.</th><th class="num">OOS</th><th class="num">Warn</th><th>Severity</th>
+        <th class="num">Param.</th><th class="num">OOS</th><th class="num">Warn</th><th>Severity</th><th></th>
       </tr></thead><tbody></tbody></table>
     </div>
 
