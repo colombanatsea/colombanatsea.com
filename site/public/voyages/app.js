@@ -4,7 +4,7 @@ const $ = (s, r = document) => r.querySelector(s);
 const state = {
   voyage: { seafarer: "", vessels: [] },
   routed: null,
-  theme: "parchment", projection: "atlantic",
+  theme: "nautical", projection: "natural",
   showRoutes: true, showPorts: true, showLabels: true, showLegend: true,
   title: "", subtitle: "", lbls: null, lang: "fr",
 };
@@ -25,6 +25,7 @@ const PRESETS = [
 function renderMap() {
   if (!RENDER) return;
   state.lbls = { v: t("vessels"), p: t("ports"), m: t("miles"), emb: t("st_emb"), sea: t("st_sea"), port: t("st_port"), more: t("legend_more") };
+  state.defaultTitle = t("default_title");
   state.credits = t("credits");
   state.keyLbls = { ais: t("key_ais"), inf: t("key_inferred") };
   state.portTip = t("port_click");
@@ -246,13 +247,11 @@ async function loadExample() {
     const d = await (await fetch("./voyage-colomban.json")).json();
     state.routed = d;
     state.voyage = { seafarer: d.seafarer || "", vessels: (d.vessels || []).map((v) => Object.assign({}, v)) };
-    if (!state.title) { state.title = d.seafarer || ""; $("#titlein").value = state.title; }
     renderEditor(); renderMap(); showWarnings();
   } catch (e) { console.error(e); }
 }
 function setVoyage(d) {
   state.voyage = { seafarer: d.seafarer || "", vessels: d.vessels || [] };
-  if (!state.title) { state.title = d.seafarer || ""; $("#titlein").value = state.title; }
   renderEditor();
 }
 
@@ -322,7 +321,7 @@ async function boot() {
   applyI18n();
   const saved = loadSaved();
   if (saved && saved.vessels && saved.vessels.length) { setVoyage(saved); await route(); }
-  else { renderEditor(); renderMap(); } // demarrage vierge : carte du monde nue + editeur vide
+  else { await loadExample(); } // demarrage : exemple (carte de Colomban) charge par defaut
   // mini-tuto premiere visite (skippable), aide reouvrable
   if (window.VOYAGES && window.VOYAGES.tutorial) {
     window.VOYAGES.tutorial(t);
