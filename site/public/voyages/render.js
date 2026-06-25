@@ -124,7 +124,7 @@
       const g = mk(doc, "g", { id: "cartouche", style: "cursor:move", transform: `translate(${(cp && cp.dx) || 0},${(cp && cp.dy) || 0})` });
       const x = 32, y = H - 104;
       const lbl = state.lbls || {};
-      const title = (state.title != null && state.title !== "") ? state.title : ((R && R.seafarer) || "");
+      const title = (state.title != null && state.title !== "") ? state.title : (state.defaultTitle || (R && R.seafarer) || "");
       if (title) { const f = mk(doc, "text", { x, y, "font-family": "'Fraunces',Georgia,serif", "font-weight": 900, "font-size": 34, fill: th.title }); f.textContent = title; g.appendChild(f); }
       if (state.subtitle) { const s = mk(doc, "text", { x, y: y + 22, "font-size": 13, fill: th.title, opacity: 0.82 }); s.textContent = state.subtitle; g.appendChild(s); }
       g.appendChild(mk(doc, "path", { d: `M${x},${y + 34}L${x + 200},${y + 34}`, stroke: th.title, "stroke-width": 1.1, opacity: 0.55 }));
