@@ -122,7 +122,8 @@ details.moredetails > summary{font-size:10px;letter-spacing:.06em}
 
 /* ---------- avertissement carte (relevé sans escales) ---------- */
 .stage-note{position:absolute;top:18px;left:50%;transform:translateX(-50%);max-width:min(620px,86%);z-index:30;display:flex;align-items:flex-start;gap:10px;background:#fef0e7;border:1px solid #e6b8a8;color:#7a2018;border-radius:10px;padding:11px 12px 11px 14px;font-size:12.5px;line-height:1.5;box-shadow:0 8px 24px rgba(26,23,20,.16)}
-.stage-note__x{flex:0 0 auto;font-size:16px;line-height:1;color:#7a2018;opacity:.7;padding:0 2px}
+.stage-note[hidden]{display:none}
+.stage-note__x{flex:0 0 auto;font-size:16px;line-height:1;color:#7a2018;opacity:.7;padding:0 2px;cursor:pointer;background:none;border:0}
 .stage-note__x:hover{opacity:1}
 
 /* ---------- bouton aide + mini-tutoriel ---------- */
