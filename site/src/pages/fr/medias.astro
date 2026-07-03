@@ -19,7 +19,7 @@ const medias = [
   </section>
 
   <!-- Medias logos -->
-  <section class="section">
+  <section class="section section--logos">
     <div class="container">
       <div class="media-logos">
         {medias.map((m) => (
@@ -41,6 +41,7 @@ const medias = [
           <p class="featured__issue mono">Marine &amp; Océans n°291 — Juin 2026</p>
           <h2>L'armateur, chef d'orchestre invisible du commerce mondial</h2>
           <p class="featured__desc">Tribune de Colomban dans le Dossier Armateurs, propriétaire, armateur et affréteur, financement mondial du shipping et place de la France.</p>
+          <p class="featured__note">Numéro accessible librement et intégralement dans le cadre d'une opération de promotion estivale. Vous souhaitez comprendre les enjeux maritimes, abonnez-vous à Marine &amp; Océans : <a href="https://www.marine-oceans.com/" target="_blank" rel="noopener noreferrer">www.marine-oceans.com</a></p>
           <div class="featured__actions">
             <a href={`${base}/medias/marine-oceans-291-juin-2026.pdf`} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
@@ -125,6 +126,9 @@ const medias = [
   .page-hero .mono { margin-bottom: var(--space-sm); }
   .page-hero .subtitle { margin-top: var(--space-md); max-width: 600px; color: var(--gris-400); }
 
+  /* Aligne l'écart logos→à la une sur l'écart header→logos (bas du hero = --space-2xl) */
+  .section--logos { padding-bottom: var(--space-2xl); }
+
   .media-logos {
     display: flex;
     flex-wrap: wrap;
@@ -193,8 +197,20 @@ const medias = [
     color: var(--gris-500);
     line-height: 1.65;
     max-width: 46ch;
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-sm);
   }
+
+  .featured__note {
+    font-size: 0.82rem;
+    color: var(--gris-500);
+    line-height: 1.6;
+    max-width: 46ch;
+    margin-bottom: var(--space-lg);
+    padding-left: 0.85rem;
+    border-left: 2px solid var(--bleu);
+  }
+
+  .featured__note a { color: var(--bleu); }
 
   .featured__actions {
     display: flex;
