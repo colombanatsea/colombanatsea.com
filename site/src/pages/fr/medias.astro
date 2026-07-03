@@ -29,6 +29,30 @@ const medias = [
     </div>
   </section>
 
+  <!-- Featured : Marine & Oceans 291 -->
+  <section class="section">
+    <div class="container">
+      <article class="featured">
+        <a class="featured__cover" href={`${base}/medias/marine-oceans-291-juin-2026.pdf`} target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le PDF de Marine & Océans n°291">
+          <img src={`${base}/medias/marine-oceans-291-preview.jpg`} alt="Tribune de Colomban Monnier dans Marine & Océans n°291, L'armateur, chef d'orchestre invisible du commerce mondial" width="760" height="1014" loading="lazy" />
+        </a>
+        <div class="featured__body">
+          <p class="mono text-bleu">À la une · Presse</p>
+          <p class="featured__issue mono">Marine &amp; Océans n°291 — Juin 2026</p>
+          <h2>L'armateur, chef d'orchestre invisible du commerce mondial</h2>
+          <p class="featured__desc">Tribune de Colomban dans le Dossier Armateurs, propriétaire, armateur et affréteur, financement mondial du shipping et place de la France.</p>
+          <div class="featured__actions">
+            <a href={`${base}/medias/marine-oceans-291-juin-2026.pdf`} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Lire le magazine (PDF)
+            </a>
+            <a href="https://marine-oceans.com/" target="_blank" rel="noopener noreferrer" class="featured__link mono">marine-oceans.com &#8599;</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <!-- Articles timeline -->
   <section class="section-dark section">
     <div class="container">
@@ -122,6 +146,79 @@ const medias = [
   .media-logo:hover {
     color: var(--noir);
     border-color: var(--bleu);
+  }
+
+  .featured {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+    padding: var(--space-xl);
+    border: 1px solid var(--gris-200);
+    border-radius: 16px;
+    transition: all var(--duration-normal);
+  }
+
+  .featured:hover {
+    border-color: var(--bleu);
+    box-shadow: 0 4px 24px rgba(42, 85, 179, 0.08);
+  }
+
+  .featured__cover {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(15, 15, 15, 0.14);
+    transition: transform var(--duration-normal);
+  }
+
+  .featured__cover:hover { transform: translateY(-3px); }
+
+  .featured__cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .featured__issue {
+    font-size: 0.78rem;
+    color: var(--gris-500);
+    margin: var(--space-xs, 0.4rem) 0 var(--space-sm);
+  }
+
+  .featured__body h2 { margin-bottom: var(--space-sm); }
+
+  .featured__desc {
+    font-size: 0.95rem;
+    color: var(--gris-500);
+    line-height: 1.65;
+    max-width: 46ch;
+    margin-bottom: var(--space-lg);
+  }
+
+  .featured__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+  }
+
+  .featured__actions .btn { display: inline-flex; align-items: center; gap: 0.5rem; }
+
+  .featured__link {
+    font-size: 0.8rem;
+    color: var(--bleu);
+  }
+
+  .featured__link:hover { text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    .featured {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+    .featured__cover { max-width: 220px; margin: 0 auto; }
+    .featured__desc { max-width: none; }
   }
 
   .mediaviz-header {
