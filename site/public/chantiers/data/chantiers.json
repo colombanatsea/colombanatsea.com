@@ -2,7 +2,7 @@
   "meta": {
     "titre": "Chantiers navals français",
     "version": "0.1.0-mvp",
-    "date_maj": "2026-06-17",
+    "date_maj": "2026-07-02",
     "note": "Base enrichie par passe OSINT vérifiée (navires de référence avec caractéristiques). Documentation de référence ; aide au choix d'un chantier par navire similaire. Sources par fiche, aucune invention.",
     "perimetres_ref": {
       "construction-neuve": "Construction neuve",
@@ -79764,7 +79764,7 @@
           "operateur": "Viking Cruises (Viking Expeditions)",
           "proprietaire": "Viking Cruises",
           "classification": "DNV (Polar Class 6)",
-          "source": "https://www.vard.com/articles/viking-polaris-delivered",
+          "source": "https://www.seatrade-cruise.com/shipbuilding-equipment/fincantieri-s-vard-delivers-viking-s-second-expedition-ship-viking-polaris",
           "timeline": [
             {
               "annee": "2022",
@@ -79811,7 +79811,7 @@
           "operateur": "Viking Cruises (Viking Expeditions)",
           "proprietaire": "Viking Cruises",
           "classification": "DNV (Polar Class 6)",
-          "source": "https://en.wikipedia.org/wiki/Viking_Octantis",
+          "source": "https://www.vard.com/shipbuilding/references/viking-octantis",
           "timeline": [
             {
               "annee": "2021",
@@ -79899,14 +79899,15 @@
             }
           ],
           "architecte": "Espen Øino International",
-          "architecte_source": "https://www.boatinternational.com/yachts/news/vard-teams-up-with-espen-oino-for-182m-research-vessel--33471 ; en.wikipedia.org/wiki/REV_Ocean (design extérieur Espen Øino, intérieur H2 Yacht Design, avec VARD)"
+          "architecte_source": "https://www.boatinternational.com/yachts/news/vard-teams-up-with-espen-oino-for-182m-research-vessel--33471 ; en.wikipedia.org/wiki/REV_Ocean (design extérieur Espen Øino, intérieur H2 Yacht Design, avec VARD)",
+          "prix_acquisition": "~350 M USD (budget de construction rapporte a la commande, nov. 2018 ; cout final non publie)"
         },
         {
           "nom": "REM Power",
           "imo": "9951422",
           "type": "CSOV (Commissioning Service Operation Vessel)",
           "annee": "2023",
-          "longueur_m": 85,
+          "longueur_m": 88.7,
           "jauge_gt": null,
           "port_lourd_dwt": 2000,
           "capacite": "120 personnes (93 techniciens éoliens + 27 d'équipage)",
@@ -79922,7 +79923,7 @@
           "operateur": "Rem Offshore",
           "proprietaire": "Rem Purus",
           "classification": "DNV",
-          "source": "https://www.bairdmaritime.com/work-boat-world/offshore-world/offshore-operations-maintenance/offshore-maintenance/vessel-review-rem-power-rem-offshore-acquires-versatile-walk-to-work-vessel/",
+          "source": "https://www.vard.com/shipbuilding/references/rem-power ; https://www.vard.com/articles/rem-offshore-and-vard-signed-contracts-for-the-design-and-construction-of-construction-service-operations-vessels ; https://www.bairdmaritime.com/offshore/offshore-support-maintenance/vessel-review-rem-power-rem-offshore-acquires-versatile-walk-to-work-vessel",
           "timeline": [
             {
               "annee": "2022",
@@ -79954,10 +79955,10 @@
           "type": "CSOV",
           "imo": "1074890",
           "annee": "2026",
-          "longueur_m": 85,
+          "longueur_m": 85.5,
           "jauge_gt": null,
           "port_lourd_dwt": null,
-          "capacite": "87 a 90 personnes a bord (techniciens parcs eoliens + equipage)",
+          "capacite": "87 personnes (accommodation), gangway ECMC 30 m compensée 3D, grue 7 t 3D",
           "energie": "diesel-electrique, prepare batteries (hybride)",
           "propulsion": [
             "diesel-electrique",
@@ -80736,15 +80737,15 @@
           "operateur": "Prysmian",
           "proprietaire": "Prysmian",
           "pavillon": "Italie",
-          "prix_acquisition": "≈ 230 M€ (contrat de construction Vard, dec. 2023)",
-          "source": "https://www.vesselfinder.com/vessels/details/9995911 ; https://www.vard.com/articles/prysmian-monna-lisa-built-by-vard-awarded-ship-of-the-year-2025 ; https://www.marinelink.com/news/monna-lisa-cable-layer-joins-prysmians-522006",
+          "prix_acquisition": "240 M€ (investissement annoncé en 2022, livraison février 2025)",
+          "source": "https://www.vard.com/shipbuilding/references/monna-lisa",
           "timeline": [
             {
               "annee": "2025",
               "role": "construction",
               "nom": "Prysmian Monna Lisa",
               "detail": "Conception VARD 9 04 (Vard Design, Ålesund) ; coque construite à Vard Shipyards Romania – Tulcea (NB 970), aménagement/topside/finalisation à Vard Søviknes ; livré février 2025",
-              "prix": null,
+              "prix": "240 M€",
               "source": "https://www.vard.com/articles/prysmian-monna-lisa-built-by-vard-awarded-ship-of-the-year-2025"
             },
             {
@@ -80849,7 +80850,7 @@
           "client": "DOF Subsea",
           "operateur": "AKOFS Offshore",
           "proprietaire": "AKOFS Offshore",
-          "pavillon": null,
+          "pavillon": "Norvège (AKOFS Seafarer, MMSI 257089550)",
           "prix_acquisition": null,
           "source": "https://www.vesselfinder.com/vessels/details/9387229 ; https://www.ship-technology.com/projects/skandi-aker/ ; https://www.tnp.no/norway/economy/1922-skandi-aker-34ship-of-the-year-201034/",
           "timeline": [
@@ -80884,6 +80885,22 @@
               "detail": "Renommé AKOFS Seafarer sous AKOFS Offshore",
               "prix": null,
               "source": "https://www.vesselfinder.com/vessels/details/9387229"
+            },
+            {
+              "annee": "2007",
+              "role": "construction",
+              "nom": "Skandi Aker",
+              "detail": "Contrat mars 2007 Aker Oilfield Services / Aker Yards (devenu STX, puis Vard) pour 4 navires d'intervention sur puits type OSCV 06 WI, livraisons 2010-2011 ; Skandi Aker (yard 705) : coque STX RO Offshore Tulcea, achèvement STX Norway Offshore Søviknes, livré 07/01/2010",
+              "prix": "≈ 4 000 M NOK (série de 4 navires, non ventilé)",
+              "source": "https://www.globenewswire.com/news-release/2007/03/02/1766267/0/en/Establishment-of-Aker-Oilfield-Services.html"
+            },
+            {
+              "annee": "2014",
+              "role": "evenement",
+              "nom": "Skandi Aker",
+              "detail": "Total Angola résilie le contrat de services de 250 M USD ; le navire perd son emploi principal avant la cession",
+              "prix": "250 M USD (contrat d'affrètement Total de 2 ans résilié en juin 2014, pas une vente)",
+              "source": "https://maritime-executive.com/corporate/Skandi-Aker-Vessel-Contract-Canceled-by-Total-2014-06-25"
             }
           ]
         },
@@ -80955,7 +80972,7 @@
           "operateur": "TechnipFMC",
           "proprietaire": "Technip UK Ltd",
           "pavillon": "Bahamas",
-          "prix_acquisition": null,
+          "prix_acquisition": "≈ 1,5 milliard NOK (coût de construction rapporté par la presse norvégienne, livraison 2009)",
           "source": "https://www.ship-technology.com/projects/skandi-arctic/ ; https://www.vesselfinder.com/vessels/details/9413822 ; https://www.marinetraffic.com/en/ais/details/ships/shipid:372931/mmsi:311023800/imo:9413822/vessel:DEEP_ARCTIC",
           "timeline": [
             {
@@ -80963,7 +80980,7 @@
               "role": "construction",
               "nom": "Skandi Arctic",
               "detail": "Construit au chantier Søviknes de STX Europe ; entré en service mars 2009 ; 140 personnes (99 cabines)",
-              "prix": null,
+              "prix": "≈ 1 500 M NOK (coût rapporté)",
               "source": "https://www.ship-technology.com/projects/skandi-arctic/"
             },
             {
@@ -81041,8 +81058,17 @@
               "detail": "Pavillon Norvège (NIS)",
               "prix": null,
               "source": "https://gard.no/vessels/48695/"
+            },
+            {
+              "annee": "2023",
+              "role": "evenement",
+              "nom": "Affrètement Subsea 7 (annoncé nov. 2023, démarrage T1 2025, 18 mois fermes + options)",
+              "detail": null,
+              "prix": "USD 85-105 M (valeur d'affrètement, pas une vente)",
+              "source": "https://www.oedigital.com/news/509454-dof-group-secures-skandi-acergy-charter-adds-maersk-installer-to-fleet"
             }
-          ]
+          ],
+          "longueur_m": 156.9
         },
         {
           "nom": "Skandi Seven",
@@ -81059,7 +81085,7 @@
           "operateur": "DOF Group",
           "proprietaire": "DOF Subsea Rederi III AS",
           "pavillon": "Norvège (NIS)",
-          "prix_acquisition": null,
+          "prix_acquisition": "445 MNOK (2008, valeur inscrite au carnet de commandes des chantiers norvegiens pour la coque 703 d'Aker Yards Soviknes, design Aker/STX OSCV 03)",
           "source": "https://www.vesselfinder.com/vessels/SKANDI-SEVEN-IMO-9408671-MMSI-235067199 ; https://www.dof.com/fleet/skandi-seven",
           "timeline": [
             {
@@ -81067,7 +81093,7 @@
               "role": "construction",
               "nom": "Skandi Seven",
               "detail": "Design STX OSCV 03 ; construit au chantier Aker/Søviknes (ex-yard Aker Søviknes 703) ; 119 personnes",
-              "prix": null,
+              "prix": "445 MNOK (valeur carnet de commandes)",
               "source": "https://www.vesseltracker.com/en/Ships/Skandi-Seven-9408671.html"
             },
             {
@@ -81086,11 +81112,13 @@
               "prix": null,
               "source": "https://www.vesselfinder.com/vessels/SKANDI-SEVEN-IMO-9408671-MMSI-235067199"
             }
-          ]
+          ],
+          "jauge_gt": 9074,
+          "port_lourd_dwt": 6013
         },
         {
           "nom": "Skandi Achiever",
-          "type": "Offshore subsea / construction support vessel (OSCV)",
+          "type": "DSV — navire de support de plongée saturation (design Aker/STX DSV 06, système sat 18 plongeurs, hangar ROV 137 m2)",
           "imo": "9413810",
           "annee": "2007",
           "longueur_m": 106,
@@ -81342,7 +81370,7 @@
           ],
           "classification": null,
           "client": "DOF",
-          "operateur": "Atlantica Shipping",
+          "operateur": "DOF (gestion conservée après la vente à Atlantica Shipping, 2023)",
           "proprietaire": "Atlantica Shipping (ex-DOF)",
           "pavillon": "Norvège",
           "prix_acquisition": "Vendu (avec Skandi Caledonia) à Atlantica Shipping pour 275 M NOK / ≈ 25,1 M USD au TOTAL pour les 2 navires (oct. 2023) — pas de prix unitaire public",
@@ -83587,14 +83615,14 @@
           "type": "PSV",
           "imo": "9334545",
           "annee": "2006",
-          "jauge_gt": 2779,
+          "jauge_gt": 2465,
           "energie": "diesel (MDO)",
           "propulsion": [
             "diesel-mdo"
           ],
           "client": "Siem Offshore",
           "operateur": "Siem Offshore",
-          "pavillon": "Norvege",
+          "pavillon": "Turquie (depuis 2019, apres bref passage Iles Marshall ; renomme Sancar)",
           "capacite": "PSV VS 470 Mk II (yard 205), coque Aker Braila + achevement Langsten",
           "source": "myshiptracking.com (IMO 9334545); shipphotos.co.uk (yard 205); directory.marinelink.com",
           "timeline": [
@@ -83611,7 +83639,8 @@
               "role": "evenement",
               "nom": "Revente par Siem Offshore (lot de 3 PSV)",
               "detail": "Sophie Siem vendu au T1 2019 avec Siem Sasha et Siem Louisa a un acheteur non divulgue. Siem annonce un effet de tresorerie positif d'environ 10 M USD pour le LOT de 3 navires, sans prix unitaire. Renomme Sancar ensuite (pavillon Turquie).",
-              "source": "https://www.offshore-energy.biz/siem-offshore-sheds-platform-supply-vessel-trio/"
+              "source": "https://www.offshore-energy.biz/siem-offshore-sheds-platform-supply-vessel-trio/",
+              "prix": "effet tresorerie positif ~10 M USD pour le LOT de 3, prix unitaire non divulgue"
             }
           ],
           "prix_acquisition": "125 MNOK (2006, valeur du contrat de construction neuve)"
@@ -83926,8 +83955,8 @@
             "diesel-electrique"
           ],
           "client": "PGS (Petroleum Geo-Services)",
-          "operateur": "PGS",
-          "pavillon": "Bahamas",
+          "operateur": "aucun — navire démoli en 2019 (dernier opérateur PGS ; retiré du service/cold-stacked dès 2015)",
+          "pavillon": "aucun — démoli ; dernier pavillon Comores pour le voyage final vers la démolition",
           "capacite": "Navire sismique a coque Ramform (large poupe), recherche geophysique",
           "source": "commons.wikimedia.org/Category:IMO_9141455; directory.marinelink.com",
           "timeline": [
@@ -84052,8 +84081,8 @@
             "diesel-electrique"
           ],
           "client": "PGS",
-          "operateur": "PGS",
-          "pavillon": "Bahamas",
+          "operateur": "JOGMEC (Japan Oil, Gas and Metals National Corporation) — navire renommé Tansa le 01/05/2019",
+          "pavillon": "Japon (port d'attache Tokyo)",
           "capacite": "Navire sismique a coque Ramform (S-class)",
           "source": "commons.wikimedia.org/Category:IMO_9413303; directory.marinelink.com",
           "timeline": [
@@ -84081,7 +84110,7 @@
               "source": "https://subseaworldnews.com/2019/01/09/pgs-sells-ramform-sterling-to-jogmec/"
             }
           ],
-          "prix_acquisition": "≈ 180 M USD (cout de construction total, 14 streamers inclus, hors project management et interets capitalises) ; revendu ~100 M USD a JOGMEC en 2019"
+          "prix_acquisition": "≈ 180 M USD (2009, coût total incluant 14 streamers, hors project management et intérêts capitalisés)"
         },
         {
           "nom": "Nordic Explorer",
@@ -85844,7 +85873,7 @@
           "pavillon": "Norvège",
           "client": "Anders Utkilens Rederi (Utkilen)",
           "operateur": "Utkilen AS (Bergen)",
-          "proprietaire": "Utkilen AS",
+          "proprietaire": "Utkilen Shipinvest KS (Bergen), gestion Utkilen AS",
           "prix_acquisition": null,
           "timeline": [
             {
@@ -86324,8 +86353,8 @@
           "imo": "9448530",
           "type": "PSV (Platform Supply Vessel)",
           "annee": "2010",
-          "longueur_m": null,
-          "jauge_gt": null,
+          "longueur_m": 93,
+          "jauge_gt": 6029,
           "port_lourd_dwt": 4800,
           "capacite": "PSV de ~4 800 tpl",
           "capacite_pax": null,
@@ -86346,7 +86375,8 @@
               "role": "construction",
               "nom": "Vard Brevik",
               "detail": "PSV de design UT 776 CD (~4 800 tpl, pont d'environ 1 000 m2) construit a Vard Brevik en 2010 et livre sous le nom 'E.R. Georgina' (pavillon allemand). IMO 9448530.",
-              "source": "https://www.vesseltracker.com/en/Ships/Standard-Provider-9448530.html"
+              "source": "https://www.vesseltracker.com/en/Ships/Standard-Provider-9448530.html",
+              "prix": "~57 M USD (prix neuf reel, cite en 2017 : 'discount of 81% to USD 57m actual newbuild price')"
             },
             {
               "annee": "2010",
@@ -86375,7 +86405,8 @@
               "role": "proprietaire",
               "nom": "RN Shipping A/S / Rohde Nielsen A/S (Danemark)",
               "detail": "Standard Drilling annonce la vente en octobre 2019 pour 13,5 M USD (acompte de 10 pour cent), cession a l'entreprise danoise de dragage Rohde Nielsen, finalisee fin 2019.",
-              "source": "https://www.offshore-energy.biz/standard-drilling-sells-platform-supplier-for-13-5-million/"
+              "source": "https://www.offshore-energy.biz/standard-drilling-sells-platform-supplier-for-13-5-million/",
+              "prix": "13,5 M USD (annonce 10/2019, plus-value ~3 M USD)"
             },
             {
               "annee": "2019",
@@ -86393,7 +86424,7 @@
               "source": "https://www.offshore-energy.biz/standard-drilling-sells-platform-supplier-for-13-5-million/"
             }
           ],
-          "prix_acquisition": "11,1 M USD (2017, achat par S.D. Standard Drilling depuis E.R. Offshore) ; revendu 13,5 M USD (2019)"
+          "prix_acquisition": "~57 M USD (2010, prix de construction neuve reel cite par le president de S.D. Standard Drilling lors de l'achat 2017)"
         },
         {
           "nom": "Island Duke",
@@ -87971,7 +88002,7 @@
           "operateur": "Bernhard Schulte Offshore (BSO) ; affrete a TenneT",
           "proprietaire": "Investisseur institutionnel (conseille par J.P. Morgan), enregistre via une societe de navire ; gere par Bernhard Schulte Offshore",
           "classification": "DNV +1A, Offshore service vessel, Battery(Power), Walk2work",
-          "source": "https://www.indexbox.io/blog/bernhard-schulte-offshore-adds-windea-carnot-csov-completing-ulstein-series/",
+          "source": "https://ulstein.com/news/windea-curie-delivered-bernhard-schulte-offshore-received-their-latest-csov-from-ulstein-verft",
           "timeline": [
             {
               "annee": "2025",
@@ -88017,7 +88048,7 @@
           "operateur": "Bernhard Schulte Offshore (BSO) ; affrete a ScottishPower Renewables",
           "proprietaire": "Philotes Vermogensverwaltung (societe de detention) ; gere par Bernhard Schulte Offshore",
           "classification": "DNV +1A, Offshore service vessel, Battery(Power), Walk2work",
-          "source": "https://www.indexbox.io/blog/bernhard-schulte-offshore-adds-windea-carnot-csov-completing-ulstein-series/",
+          "source": "https://ulstein.com/news/windea-clausius-delivered-bs-offshore-receives-second-twin-x-stern-csov-from-ulstein",
           "timeline": [
             {
               "annee": "2025",
@@ -88419,7 +88450,7 @@
         },
         {
           "nom": "Bourbon Mistral",
-          "type": "OSV",
+          "type": "PSV (design ULSTEIN PX105, premier PSV à étrave X-BOW)",
           "propulsion": [
             "diesel-electrique"
           ],
@@ -89949,17 +89980,17 @@
           "classification": "DNV",
           "pavillon": "Norvège (Tromsø)",
           "client": "Troms Fylkes Dampskibsselskap",
-          "operateur": "Hurtigruten",
+          "operateur": "Hurtigruten (Hurtigruten Norge, Tromsø) ; livré à Troms Fylkes Dampskibsselskap (TFDS) en 1996, passé à Hurtigruten Group par fusion en 2006",
           "proprietaire": "Hurtigruten Group",
-          "prix_acquisition": null,
-          "source": "https://ulstein.com/references/yno-223-polarlys ; https://en.wikipedia.org/wiki/MS_Polarlys_(1995)",
+          "prix_acquisition": "511 MNOK (contrat du 14/07/1994 avec Ulstein Verft, livraison 18/03/1996)",
+          "source": "https://ulstein.com/references/yno-223-polarlys",
           "timeline": [
             {
               "annee": "1996",
               "role": "construction",
               "nom": "Polarlys",
               "detail": "Yard no 223, Ulstein Verft AS, livré 23 mars 1996, design Polarlys-class, 4x moteurs Ulstein Bergen 11 260 kW",
-              "prix": null,
+              "prix": "511 MNOK",
               "source": "https://ulstein.com/references/yno-223-polarlys"
             },
             {
@@ -90200,17 +90231,17 @@
           "imo": "9187514",
           "annee": "1999",
           "longueur_m": 92.5,
-          "jauge_gt": null,
+          "jauge_gt": 8369,
           "capacite": null,
           "energie": "diesel-mdo",
           "propulsion": [
             "diesel-mdo"
           ],
           "classification": "DNV +1A1, E0, ICE C, HELDK",
-          "pavillon": "Panama",
+          "pavillon": "Russie (depuis 2017, port d'attache Mourmansk) — et non Panama",
           "client": "Western Geophysical (Baker Hughes)",
-          "operateur": "WesternGeco",
-          "proprietaire": "WesternGeco (Londres)",
+          "operateur": "Sevmorneftegeofizika (SMNG), filiale de Rosgeologia (depuis 2017)",
+          "proprietaire": "SMNG / Rosgeologia (acheté à Schlumberger en 2017) — et non 'WesternGeco (Londres)'",
           "prix_acquisition": null,
           "source": "https://ulstein.com/references/yno-242-western-neptune",
           "timeline": [
@@ -90475,7 +90506,7 @@
           "operateur": "BUE Kazakhstan",
           "proprietaire": "Roosalka Shipping Ltd / BUE Marine (Edimbourg)",
           "prix_acquisition": "≈ USD 35 M (2002, cout de construction neuve)",
-          "source": "https://ulstein.com/references/tulpar ; https://en.wikipedia.org/wiki/MV_Tulpar",
+          "source": "https://ulstein.com/references/tulpar",
           "timeline": [
             {
               "annee": "2002",
@@ -90505,7 +90536,7 @@
         },
         {
           "nom": "GSP Vega",
-          "type": "Navire de servitude offshore (Offshore Tug/Supply, UT 742)",
+          "type": "AHTS multifonctionnel / navire subsea (UT 742)",
           "imo": "9181510",
           "annee": "1999",
           "longueur_m": 95,
@@ -90587,7 +90618,7 @@
           ]
         },
         {
-          "nom": "Olympic Intervention IV",
+          "nom": "Lamantin",
           "type": "Navire de construction offshore ROV/OCV avec capacité PSV (ULSTEIN P101)",
           "imo": "9396854",
           "annee": "2008",
@@ -90599,7 +90630,7 @@
             "diesel-mdo"
           ],
           "classification": "DNV +1A1, SF, E0, ICEC, DYNPOS-AUTR, LFLFuelled, CLEAN, HELDK-SH",
-          "pavillon": null,
+          "pavillon": "Russie (précédemment Norvège, puis Chypre/Liberia/Îles Marshall)",
           "client": "Olympic Shipping (affrété par Oceaneering)",
           "operateur": "Oceaneering",
           "proprietaire": "Olympic Shipping AS",
@@ -90761,7 +90792,7 @@
           "architecte_source": "ulstein.com / motorship.com — design VS 4220 OCV développé par Vik Sandvik, Ship of the Year 2007"
         },
         {
-          "nom": "Olympic Hera",
+          "nom": "Skandi Hera",
           "type": "Anchor Handling Tug Supply hybride (AHTS, design A122)",
           "imo": "9424730",
           "annee": "2009",
@@ -90776,7 +90807,7 @@
           "classification": "DNV +1A1, Tug, SupplyVessel, SF, E0, DYNPOS-AUTR, NAUT-OSV(A), CleanDesign, OPP-F, ICEC, COMF-V(3)",
           "pavillon": null,
           "client": "Olympic Shipping AS",
-          "operateur": "DOF",
+          "operateur": "DOF (gestion et exploitation depuis février 2017)",
           "proprietaire": "DOF",
           "prix_acquisition": null,
           "source": "https://ulstein.com/references/olympic-hera",
@@ -90866,6 +90897,14 @@
               "detail": "Contrat signé en juillet 2007 par Eidesvik avec Ulstein Verft pour 2 navires sismiques type SX120 (Oceanic Vega + Oceanic Sirius). Total contrat 1,3 Md NOK ÷ 2 navires identiques ≈ 650 M NOK/unité.",
               "prix": "≈ 650 M NOK/unité (total 1,3 Md NOK pour 2 navires)",
               "source": "https://www.ship-technology.com/projects/oceanicvegaseismicre/"
+            },
+            {
+              "annee": "2019",
+              "role": "evenement",
+              "nom": "Passage sous contrôle Shearwater GeoServices",
+              "detail": "Juin 2019 : CGG reprend les 50% d'Eidesvik dans GSS puis transfère la totalité des actions GSS à Shearwater ; Ulstein confirme Shearwater comme opérateur actuel",
+              "prix": "non divulgué (Eidesvik payé en actions Shearwater pour ses 50% de Global Seismic Shipping AS, avec option de vente des actions à USD 30 M ; transaction multi-navires non ventilée)",
+              "source": "https://eidesvik.no/stock-notification/update-regarding-seismic-joint-venture-global-seismic-shipping-as/ ; https://ulstein.com/references/oceanic-vega"
             }
           ]
         },
@@ -90882,7 +90921,7 @@
             "diesel-electrique"
           ],
           "classification": "DNV +1A1, E0, NAUT-OSV(A), OPP-F, CleanDesign, ICE-C, HELDK-SH, RP",
-          "pavillon": null,
+          "pavillon": "Norvège",
           "client": "Oceanic Seismic Vessels AS (Eidesvik Offshore + CGG Veritas)",
           "operateur": "Shearwater GeoServices",
           "proprietaire": "Shearwater GeoServices",
@@ -90920,16 +90959,24 @@
               "detail": "Contrat signé en juillet 2007 par Eidesvik avec Ulstein Verft pour 2 navires sismiques type SX120 (Oceanic Vega + Oceanic Sirius). Total contrat 1,3 Md NOK ÷ 2 navires identiques ≈ 650 M NOK/unité.",
               "prix": "≈ 650 M NOK/unité (total 1,3 Md NOK pour 2 navires)",
               "source": "https://www.ship-technology.com/projects/oceanic-sirius-seismic-research-vessel/"
+            },
+            {
+              "annee": "2019",
+              "role": "evenement",
+              "nom": "Passage sous contrôle Shearwater GeoServices",
+              "detail": "Juin 2019 : CGG reprend les 50% d'Eidesvik dans GSS puis transfère la totalité des actions GSS à Shearwater ; Ulstein confirme Shearwater comme opérateur/propriétaire actuel",
+              "prix": "non divulgué (Eidesvik payé en actions Shearwater pour ses 50% de Global Seismic Shipping AS, avec option de vente des actions à USD 30 M ; transaction multi-navires non ventilée)",
+              "source": "https://eidesvik.no/stock-notification/update-regarding-seismic-joint-venture-global-seismic-shipping-as/ ; https://ulstein.com/references/oceanic-sirius"
             }
           ]
         },
         {
-          "nom": "Polarcus Amani",
+          "nom": "SW Bly",
           "type": "Navire de recherche sismique 3D (seismic research vessel, design SX134)",
           "imo": "9610171",
           "annee": "2012",
           "longueur_m": 92,
-          "jauge_gt": null,
+          "jauge_gt": 7709,
           "capacite": "3D 12-14 streamers, Arctic-ready ICE-1A",
           "energie": "diesel-electrique",
           "propulsion": [
@@ -90939,7 +90986,7 @@
           "pavillon": "Bahamas (Nassau)",
           "client": "Polarcus",
           "operateur": "Shearwater GeoServices",
-          "proprietaire": "Shearwater GeoServices",
+          "proprietaire": "Shearwater GeoServices (depuis avril 2021)",
           "prix_acquisition": null,
           "source": "https://ulstein.com/references/polarcus-amani",
           "timeline": [
@@ -90974,6 +91021,14 @@
               "detail": "Renommé SW Bly (Shearwater GeoServices), pavillon Bahamas",
               "prix": null,
               "source": "https://ulstein.com/references/polarcus-amani"
+            },
+            {
+              "annee": "2021",
+              "role": "proprietaire",
+              "nom": "Shearwater GeoServices",
+              "detail": "Rachat des 6 navires (Adira, Alima, Amani, Asima, Nadia, Naila) auprès des prêteurs après liquidation de Polarcus ; +50 MUSD pour streamers et équipements sismiques (total 177,5 MUSD) ; renommé SW Bly",
+              "prix": "127,5 MUSD pour les 6 navires Polarcus (non ventilé par navire)",
+              "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/shearwater-swoops-for-polarcus-fleet-and-streamers-in-us177m-deal-65312"
             }
           ]
         },
@@ -90992,8 +91047,8 @@
           "classification": "DNV +1A1, E0, DYNPOS-AUTR, CleanDesign, ICE-1A",
           "pavillon": "Bahamas (Nassau)",
           "client": "Polarcus",
-          "operateur": "Shearwater GeoServices",
-          "proprietaire": "Shearwater GeoServices",
+          "operateur": "Shearwater GeoServices (navire en lay-up depuis 2021)",
+          "proprietaire": "Shearwater GeoServices (depuis avril 2021, vente pour conversion en navire source annoncée avril 2026)",
           "prix_acquisition": "Coût de construction unitaire non divulgué (financé via une facilité bancaire de flotte de 410 M USD couvrant l'ensemble des navires Polarcus). Revente 2021 : ~21,25 M USD/unité (dérivé du lot de 6 navires Polarcus vendus à Shearwater pour 127,5 M USD au total, hors streamers cédés séparément pour 50 M USD)",
           "source": "https://ulstein.com/references/polarcus-adira",
           "timeline": [
@@ -91028,6 +91083,14 @@
               "detail": "Revente : Shearwater GeoServices acquiert les 6 navires Polarcus (dont Polarcus Adira) pour 127,5 M USD au total (streamers et équipement sismique dans une transaction distincte de 50 M USD). Prix unitaire dérivé ≈ 21,25 M USD/navire (127,5 M USD / 6 navires). Renommé SW Baret.",
               "prix": "≈ 21,25 M USD/unité (dérivé : 127,5 M USD pour 6 navires)",
               "source": "https://splash247.com/shearwater-snaps-up-polarcus-assets/"
+            },
+            {
+              "annee": "2021",
+              "role": "proprietaire",
+              "nom": "Shearwater GeoServices (rachat de la flotte ex-Polarcus contrôlée par les prêteurs)",
+              "detail": "Adira, Alima, Amani, Asima, Nadia, Naila, plus 50 MUSD de streamers et équipements sismiques (total 177,5 MUSD), navire renommé SW Baret, en lay-up depuis 2021",
+              "prix": "127,5 MUSD pour 6 navires (non ventilé)",
+              "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/shearwater-swoops-for-polarcus-fleet-and-streamers-in-us177m-deal-65312"
             }
           ]
         },
@@ -92393,15 +92456,15 @@
           "operateur": "Olympic Subsea ASA",
           "proprietaire": "Olympic Subsea ASA",
           "pavillon": "Norvege",
-          "prix_acquisition": "NOK 380 M (USD 69 M) (2011, contrat de construction)",
-          "source": "https://www.offshore-energy.biz/norway-multipurpose-offshore-vessel-olympic-taurus-delivered/ ; https://www.olympic.no/fleet--chartering/subsea--renewable/olympic-taurus/ ; https://www.vesselfinder.com/vessels/details/9628465",
+          "prix_acquisition": "≈385 MNOK (contrat de construction neuve Kleven Verft, livraison 20.11.2012)",
+          "source": "https://batomtaler.skipsrevyen.no/ms-olympic-taurus/m/s/olympic-taurus/1106034",
           "timeline": [
             {
               "annee": "2012",
               "role": "construction",
               "nom": "Olympic Taurus",
               "detail": "Livre par Kleven Verft (Ulsteinvik) le 20 novembre 2012 a Olympic Shipping AS ; MPSV diesel-electrique, classe Bureau Veritas, pont 1060 m2, hebergement 60 personnes",
-              "prix": null,
+              "prix": "≈385 MNOK",
               "source": "https://www.offshore-energy.biz/olympic-shipping-takes-delivery-of-mpsv-olympic-taurus-norway/"
             },
             {
@@ -92438,11 +92501,11 @@
           ],
           "classification": "DNV",
           "client": "Eidesvik Offshore ASA",
-          "operateur": "Eidesvik Offshore ASA",
-          "proprietaire": "DEME",
+          "operateur": "Eidesvik Offshore (ship management pour le compte de DEME)",
+          "proprietaire": "DEME NV (Belgique), depuis le 28/11/2022",
           "pavillon": "Norvege",
-          "prix_acquisition": "USD 124 M (financement long terme Nordea + Eksportkreditt/GIEK, investissement subsea record d'Eidesvik)",
-          "source": "https://www.saltship.com/newscollection/2017/5/18/viking-neptun-salt-301-ocv-gyt6c ; https://www.marinelog.com/news/kleven-delivers-viking-neptune/ ; https://www.vesselfinder.com/vessels/details/9664902 ; https://www.wikidata.org/wiki/Q52514961",
+          "prix_acquisition": "≈ NOK 1,1 milliard (~USD 180M), contrat juin 2012",
+          "source": "https://gcaptain.com/kleven-delivers-new-subsea-monster-eidesvik/",
           "timeline": [
             {
               "annee": "2015",
@@ -92475,6 +92538,22 @@
               "detail": "Propriete du groupe belge DEME, gestion technique confiee a Eidesvik ; pavillon norvegien conserve",
               "prix": null,
               "source": "https://www.oedigital.com/news/498660-eidesvik-offshore-to-manage-deme-s-viking-neptun-construction-vessel"
+            },
+            {
+              "annee": "2012",
+              "role": "construction",
+              "nom": "Kleven Maritime (Kleven Verft, Ulsteinvik) pour Eidesvik Offshore",
+              "detail": "Contrat annoncé juin 2012, design SALT 301 OCV (Salt Ship Design), livraison le 17/02/2015. 145 m, 13 000 tpl, grues 400 t et 100 t, carrousel 4 400 t.",
+              "prix": "≈ NOK 1,1 milliard (~USD 180M)",
+              "source": "https://www.ship-technology.com/uncategorized/newskleven-maritime-wins-order-for-subsea-construction-vessel-from-eidesvik/"
+            },
+            {
+              "annee": "2022",
+              "role": "proprietaire",
+              "nom": "DEME NV (Belgique)",
+              "detail": "Accord annoncé le 12/01/2022, vente finalisée le 28/11/2022. Eidesvik conserve le ship management (contrat 2 ans).",
+              "prix": "non divulgué (gain vendeur ≈ NOK 270M, liquidité +≈ NOK 340M pour Eidesvik)",
+              "source": "https://eidesvik.no/stock-notification/eidesvik-offshore-completes-sale-of-csv-viking-neptun/"
             }
           ]
         },
@@ -92496,8 +92575,8 @@
           "operateur": "Eidesvik Offshore ASA",
           "proprietaire": "Eidesvik Offshore ASA",
           "pavillon": "Norvege",
-          "prix_acquisition": "≈ NOK 220 M / ≈ USD 38,6 M par unite (derive : contrat de NOK 440 M / USD 77,28 M pour 2 navires identiques, juillet 2010)",
-          "source": "https://www.ship-technology.com/projects/viking-prince-offshore-supply-vessel/ ; https://eidesvik.no/vessels/viking-prince/ ; https://www.vesselfinder.com/vessels/VIKING-PRINCE-IMO-9596296-MMSI-257787000",
+          "prix_acquisition": "NOK 440M (~USD 71,5M), contrat juillet 2010",
+          "source": "https://eidesvik.no/vessels/viking-prince/",
           "timeline": [
             {
               "annee": "2012",
@@ -92574,7 +92653,7 @@
           "architecte_source": "marinteknikk.no (Dina Star, design MT 6015), greenyard.no référence Dina Star MPSV / MT 6015, maritimt.com « design fra Marin Teknikk type MT 6015 »"
         },
         {
-          "nom": "Rem Eir",
+          "nom": "Bower Eir",
           "type": "Navire ravitailleur de plateformes (PSV) au GNL",
           "imo": "9668647",
           "annee": "2014",
@@ -92588,11 +92667,11 @@
           ],
           "classification": "DNV (1A1, Offshore Service Vessel +, Supply, DYNPOS-AUTR, GAS FUELLED)",
           "client": "Remoy Shipping AS",
-          "operateur": "Rem Offshore / Remoy Shipping AS",
-          "proprietaire": "Remoy Shipping AS",
+          "operateur": "Bower Offshore (ex Remoy Shipping AS) - societe distincte de Rem Offshore",
+          "proprietaire": "Remoy Shipping AS / Bower Offshore, groupe ZOSCO (Zamil Offshore, Arabie saoudite) depuis dec. 2025",
           "pavillon": "Norvege",
-          "prix_acquisition": "≈ NOK 400 M (≈ USD 66 M) (contrat de construction, commande ~2012)",
-          "source": "https://remoyshipping.no/vessels/rem-eir ; https://www.vesselfinder.com/vessels/details/9668647 ; https://www.offshore-energy.biz/video-kleven-delivers-worlds-largest-lng-powered-psv/",
+          "prix_acquisition": "~400 M NOK (~65 M USD), contrat de construction 2012, livraison 26 nov. 2014",
+          "source": "https://remoyshipping.no/vessels/rem-eir ; https://www.vesselfinder.com/vessels/details/9668647 ; https://worldmaritimenews.com/archives/61462/norway-remoy-shipping-orders-lng-powered-psv-from-kleven-maritime ; https://kommunikasjon.ntb.no/pressemelding/18745480/remoy-shipping-selges-til-zosco",
           "timeline": [
             {
               "annee": "2014",
@@ -92683,9 +92762,9 @@
           "type": "Navire ravitailleur de plateformes (PSV) classe glace arctique",
           "imo": "9731250",
           "annee": "2015",
-          "longueur_m": null,
+          "longueur_m": 87.22,
           "jauge_gt": 4609,
-          "port_lourd_dwt": 4900,
+          "port_lourd_dwt": 5340,
           "energie": "diesel",
           "propulsion": [
             "diesel-electrique"
@@ -92693,10 +92772,10 @@
           "classification": "DNV (coque et propulsion ICE-1B)",
           "client": "Rem Offshore AS",
           "operateur": "Rem Offshore AS",
-          "proprietaire": "Rem Offshore AS",
+          "proprietaire": "Rem Service AS (groupe Rem Offshore, Fosnavåg)",
           "pavillon": "Norvege",
-          "prix_acquisition": "≈ 345 M NOK - prix de construction neuve (contrat janv. 2014, PSV design VS 485 MK III Arctic, navire unique)",
-          "source": "https://worldmaritimenews.com/archives/102709/rem-offshore-orders-arctic-design-psv-from-kleven/ ; https://www.vesselfinder.com/vessels/details/9731250 ; https://www.rivieramm.com/opinion/opinion/ice-class-psv-is-well-suited-to-the-arctic-35534",
+          "prix_acquisition": "≈ 345 M NOK (contrat de construction neuve, janvier 2014, Kleven Verft)",
+          "source": "https://www.offshore-energy.biz/wartsila-designed-psv-for-arctic-operations/ ; https://www.vesselfinder.com/vessels/details/9731250 ; https://en.greenyard.no/references/rem-arctic ; https://www.smp.no/naeringsliv/i/M1dqxR/kleven-skal-byggje-psv-fartoy-for-rem",
           "timeline": [
             {
               "annee": "2015",
@@ -92729,22 +92808,22 @@
         {
           "nom": "Rem Commander",
           "type": "Navire ravitailleur de plateformes (PSV)",
-          "imo": "9482354",
+          "imo": "9591870",
           "annee": "2011",
-          "longueur_m": 94,
-          "jauge_gt": null,
-          "port_lourd_dwt": 5100,
+          "longueur_m": 85,
+          "jauge_gt": 4258,
+          "port_lourd_dwt": 4500,
           "energie": "diesel",
           "propulsion": [
             "diesel-electrique"
           ],
           "classification": "DNV",
           "client": "Rem Offshore AS",
-          "operateur": "Rem Offshore AS",
-          "proprietaire": "Rem Offshore AS",
-          "pavillon": "Norvege",
+          "operateur": "Tidewater (navire renomme Naley Tide, ex Normand Naley)",
+          "proprietaire": "Tidewater Inc. (depuis juillet 2023, lot de 37 PSV Solstad)",
+          "pavillon": "Ile de Man (actuel ; Norvege a la livraison)",
           "prix_acquisition": "≈ 11,2 M USD (2022, valeur courtier VesselsValue, ex-KL Brofjord) ; alternative en-bloc ≈ 11 M USD/unite (derive : 44 M USD pour 4 PSV sister-ships STX PSV 06 CD achetes a K-Line par Rem Offshore)",
-          "source": "https://www.motorship.com/news101/ships-and-shipyards/second-of-two-green-psvs-from-kleven ; https://maritimeoptima.com/public/vessels/pages/imo:9482354/mmsi:257638000/REM_COMMANDER.html ; https://www.vesselfinder.com/vessels/REM-COMMANDER-IMO-9482354-MMSI-257638000",
+          "source": "https://www.vesselfinder.com/vessels/details/9591870 ; https://en.greenyard.no/page-orders-references ; https://www.motorship.com/news101/ships-and-shipyards/second-of-two-green-psvs-from-kleven",
           "timeline": [
             {
               "annee": "2010",
@@ -92777,6 +92856,14 @@
               "detail": "Rem Offshore achete 4 PSV en bloc a K-Line Offshore (KL Brevikfjord, KL Barentsfjord, KL Brisfjord, KL Brofjord = Rem Commander), construits 2010-2011, design identique STX PSV 06 CD (95 m). Total ≈ 44 M USD ; VesselsValue agrege ≈ 41 M USD. Valeur unitaire VesselsValue de KL Brofjord = 11,2 M USD. Derive en-bloc : 44 M USD / 4 sister-ships ≈ 11 M USD/unite.",
               "prix": "≈ 11,2 M USD (unite, VesselsValue) ; ≈ 11 M USD/unite (derive 44 M USD / 4)",
               "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/rem-offshore-acquires-four-k-line-psvs-for-us44m-69082"
+            },
+            {
+              "annee": "2023",
+              "role": "proprietaire",
+              "nom": "Tidewater (renomme Naley Tide)",
+              "detail": "Accord annonce le 7 mars 2023, finalise juillet 2023",
+              "prix": "577 M USD pour 37 PSV Solstad (total en bloc, non ventile)",
+              "source": "https://www.marinelog.com/news/tidewater-to-buy-solstads-37-psvs-for-577-million/"
             }
           ],
           "architecte": "Vard Design",
@@ -92785,22 +92872,22 @@
         {
           "nom": "Rem Fortress",
           "type": "Navire ravitailleur de plateformes (PSV)",
-          "imo": "9482342",
+          "imo": "9591882",
           "annee": "2011",
-          "longueur_m": 94,
-          "jauge_gt": null,
-          "port_lourd_dwt": 5100,
+          "longueur_m": 85,
+          "jauge_gt": 4258,
+          "port_lourd_dwt": 4500,
           "energie": "diesel",
           "propulsion": [
             "diesel-electrique"
           ],
           "classification": "DNV",
           "client": "Rem Offshore AS",
-          "operateur": "Rem Maritime / Rem Offshore",
-          "proprietaire": "Rem Offshore AS",
-          "pavillon": "Chypre",
+          "operateur": "Tidewater (navire renomme Falnes Tide, ex Normand Falnes)",
+          "proprietaire": "Tidewater Inc. (depuis juillet 2023, lot de 37 PSV Solstad)",
+          "pavillon": "Ile de Man (actuel ; Norvege a la livraison)",
           "prix_acquisition": "≈ 10,85 M USD (2022, valeur courtier VesselsValue, ex-KL Brisfjord) ; alternative en-bloc ≈ 11 M USD/unite (derive : 44 M USD pour 4 PSV sister-ships STX PSV 06 CD achetes a K-Line par Rem Offshore)",
-          "source": "https://www.motorship.com/news101/ships-and-shipyards/second-of-two-green-psvs-from-kleven ; https://maritimeoptima.com/public/vessels/pages/imo:9482342/mmsi:209455000/REM_FORTRESS.html ; https://www.vesselfinder.com/vessels/details/9482342",
+          "source": "https://www.vesselfinder.com/vessels/details/9591882 ; https://en.greenyard.no/references/rem-fortress-1 ; https://www.motorship.com/news101/ships-and-shipyards/second-of-two-green-psvs-from-kleven",
           "timeline": [
             {
               "annee": "2010",
@@ -92833,6 +92920,14 @@
               "detail": "Rem Fortress = ex-KL Brisfjord (IMO 9482342, confirme via VesselFinder/vesseltracker). Faisait partie du lot de 4 PSV sister-ships STX PSV 06 CD vendus par K-Line a Rem Offshore (livraison T1 2022). Total ≈ 44 M USD ; valeur unitaire VesselsValue de KL Brisfjord = 10,85 M USD. Derive en-bloc : 44 M USD / 4 sister-ships ≈ 11 M USD/unite.",
               "prix": "≈ 10,85 M USD (unite, VesselsValue) ; ≈ 11 M USD/unite (derive 44 M USD / 4)",
               "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/rem-offshore-acquires-four-k-line-psvs-for-us44m-69082"
+            },
+            {
+              "annee": "2023",
+              "role": "proprietaire",
+              "nom": "Tidewater (renomme Falnes Tide)",
+              "detail": "Accord annonce le 7 mars 2023, finalise juillet 2023 ; pavillon Ile de Man",
+              "prix": "577 M USD pour 37 PSV Solstad (total en bloc, non ventile)",
+              "source": "https://www.marinelog.com/news/tidewater-to-buy-solstads-37-psvs-for-577-million/"
             }
           ],
           "architecte": "Vard Design",
@@ -93671,43 +93766,6 @@
           "architecte_source": "Wikipedia : MS Havila Neptune construit chez Havyard Leirvik au design Havyard 842 (conçu par Havyard)"
         },
         {
-          "nom": "Havila Fanø",
-          "type": "PSV",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "imo": "9538531",
-          "annee": "2010",
-          "port_lourd_dwt": 3879,
-          "energie": "Diesel",
-          "propulsion_detail": null,
-          "client": "Havila Shipping ASA",
-          "operateur": "Havila Shipping ASA",
-          "proprietaire": "Havila Shipping ASA",
-          "pavillon": "Norvège",
-          "classification": null,
-          "capacite": "PSV design Havyard 832 CD ; pont cargo 805 m² ; logement 25 personnes ; DWT 3 879 t ; affrété par Equinor (puis TotalEnergies au Danemark)",
-          "source": "Offshore Energy / MarineLink (Havila Fanø, Havyard 832 CD, construit 2010 Havyard Leirvik) ; MarineTraffic IMO 9538531",
-          "timeline": [
-            {
-              "annee": "2010",
-              "role": "construction",
-              "nom": "Construit et livré par Havyard Leirvik à Havila Shipping, design Havyard 832 CD",
-              "detail": "IMO 9538531",
-              "source": "Offshore Energy ; MarineTraffic"
-            },
-            {
-              "annee": "2024",
-              "role": "operateur",
-              "nom": "Affrètements Equinor puis prolongation pour TotalEnergies (mer du Nord danoise)",
-              "detail": null,
-              "source": "Offshore Energy"
-            }
-          ],
-          "architecte": "Havyard Design",
-          "architecte_source": "vesselfinder.com + havilashipping.no : PSV de design Havyard 832 CD, conçu par Havyard Ship Technology / Havyard Design & Solutions."
-        },
-        {
           "nom": "Havila Charisma",
           "type": "PSV",
           "propulsion": [
@@ -94472,7 +94530,7 @@
           ]
         },
         {
-          "nom": "Havila Venus",
+          "nom": "Skandi Mercury",
           "type": "AHTS (anchor handling tug supply)",
           "imo": "9418030",
           "annee": "2009",
@@ -94488,7 +94546,7 @@
           "classification": null,
           "pavillon": "Norvege",
           "client": "Havila Shipping",
-          "operateur": "Havila Shipping",
+          "operateur": "DOF (management depuis novembre 2023) ; acquéreur non divulgué",
           "proprietaire": "Havila Shipping",
           "prix_acquisition": null,
           "source": "https://www.ship-technology.com/projects/havila-venus-vessel/ ; https://www.scheepvaartwest.be/CMS/index.php/tugs/8007-havila-venus-imo-9418030",
@@ -94688,7 +94746,7 @@
           "imo": "9591923",
           "annee": "2012",
           "longueur_m": 86,
-          "jauge_gt": null,
+          "jauge_gt": 3942,
           "port_lourd_dwt": 4543,
           "capacite": "bau 19.6-20 m, surface de pont 1 002 m2, capacite pont 4 700 t, batterie 565 kWh, 2 x Schottel azimut 1900 kW",
           "energie": "Diesel-electrique + batterie",
@@ -94696,7 +94754,7 @@
             "diesel-electrique",
             "hybride"
           ],
-          "classification": null,
+          "classification": "RINA (Supply Vessel - Heavycargo; Oil recovery ship)",
           "pavillon": "Iles Feroe",
           "client": "Skansi Offshore",
           "operateur": "Skansi Offshore",
@@ -94763,7 +94821,7 @@
           "operateur": "Skansi Offshore",
           "proprietaire": "Skansi Offshore",
           "prix_acquisition": null,
-          "source": "https://skansi.fo/fleet/torsborg/ ; https://www.vesselfinder.com/vessels/TORSBORG-IMO-9644445-MMSI-231851000",
+          "source": "https://skansi.fo/fleet/torsborg/",
           "timeline": [
             {
               "annee": "2012",
@@ -95074,7 +95132,8 @@
               "role": "construction",
               "nom": "Brødrene Aa (Hyen)",
               "detail": "Bygg nr 302 ; sandwich carbone-vinylester ; catamaran tout-electrique le plus rapide au monde",
-              "source": "https://www.braa.no/news/rygerelektra"
+              "source": "https://www.braa.no/news/rygerelektra",
+              "prix": "120 MNOK"
             },
             {
               "annee": "2020",
@@ -95083,7 +95142,8 @@
               "detail": "Exploitation sightseeing autour de Stavanger",
               "source": "https://rodne.no/en/about-rodne/our-fleet/rygerelektra/"
             }
-          ]
+          ],
+          "prix_acquisition": "120 MNOK (2020, coût de construction indiqué par l'armateur Rødne)"
         },
         {
           "nom": "Bard",
@@ -98760,7 +98820,7 @@
           ]
         },
         {
-          "nom": "Nusret Bey",
+          "nom": "IDO Akdeniz",
           "type": "Ferry rapide à passagers (catamaran HSC)",
           "imo": "8607919",
           "annee": "1988",
@@ -98897,7 +98957,7 @@
           "proprietaire": null,
           "pavillon": "Norvège",
           "classification": null,
-          "capacite": null,
+          "capacite": "267 passagers ; 39 noeuds ; 2x MTU 16V396TB84 de 2 040 kW, hydrojets, coque aluminium",
           "prix_acquisition": "≈ 37,5-40 M NOK/unite (derive : contrat de 75-80 M NOK pour 2 catamarans 38,8 m identiques) ; ≈ 5,5-6 M USD/unite",
           "source": "https://commons.wikimedia.org/wiki/Category:IMO_8822351",
           "timeline": [
@@ -98917,27 +98977,28 @@
               "prix": null,
               "source": "https://www.vesselfinder.com/vessels/details/8822351"
             }
-          ]
+          ],
+          "capacite_pax": 267
         },
         {
           "nom": "Princ Zadra",
           "type": "Ferry rapide à passagers (catamaran HSC)",
           "imo": "8822363",
           "annee": "1989",
-          "longueur_m": 38.41,
+          "longueur_m": 38.4,
           "jauge_gt": 446,
           "energie": "Diesel (MDO)",
           "propulsion": [
             "diesel-mdo"
           ],
           "client": null,
-          "operateur": "Miatrade (Croatie)",
+          "operateur": "Miatrade d.o.o. (Miatours), Zadar — ligne 9401 Zadar-Olib via Premuda et Silba, pavillon Croatie",
           "proprietaire": "Miatrade",
           "pavillon": "Croatie",
           "classification": null,
           "capacite": null,
           "prix_acquisition": null,
-          "source": "https://commons.wikimedia.org/wiki/Category:IMO_8822363",
+          "source": "https://www.vesselfinder.com/vessels/details/8822363",
           "timeline": [
             {
               "annee": "1989",
@@ -99061,9 +99122,9 @@
             "diesel-mdo"
           ],
           "client": "DSØ (Danemark)",
-          "operateur": "Líneas Fred. Olsen (Benchi Express)",
+          "operateur": "SNAV (Naples), gestion Marinvest S.r.l. depuis 2012 ; navire en service dans le golfe de Naples",
           "proprietaire": "Aliscafi SNAV (Messine)",
-          "pavillon": null,
+          "pavillon": "Italie",
           "classification": null,
           "capacite": null,
           "prix_acquisition": null,
@@ -99104,7 +99165,7 @@
           ]
         },
         {
-          "nom": "Victor Hugo",
+          "nom": "Guy Tirolien",
           "type": "Navire rapide à passagers (catamaran HSC)",
           "imo": "9157806",
           "annee": "1997",
@@ -99115,7 +99176,7 @@
             "diesel-mdo"
           ],
           "client": null,
-          "operateur": null,
+          "operateur": "Karu'Ferry (Guadeloupe), ligne Pointe-à-Pitre - Marie-Galante",
           "proprietaire": null,
           "pavillon": "France",
           "classification": null,
@@ -99138,11 +99199,19 @@
               "detail": "Aucun prix de construction (1997, sous le nom Salten, Kvaerner Fjellstrand) ni d'acquisition publie apres recherche serieuse. Seul montant trouve : refit hivernal 2017-2018, 4 mois de travaux portant la capacite a 236 passagers et renovant la decoration, pour 1,33 M EUR a la charge du conseil departemental de la Manche. NB : le conseil departemental alloue par ailleurs ~1,2 M EUR/an de subvention d'exploitation a Manche Iles Express.",
               "prix": "1,33 M EUR (refit, pas prix d'achat)",
               "source": "https://www.wikimanche.fr/Victor_Hugo_(bateau)"
+            },
+            {
+              "annee": "2017",
+              "role": "evenement",
+              "nom": "Rénovation, capacité portée de 195 à 236 passagers",
+              "detail": "Travaux 2017-2018",
+              "prix": "1,33 M EUR",
+              "source": "https://www.wikimanche.fr/Victor_Hugo_(bateau)"
             }
           ]
         },
         {
-          "nom": "Ofoten",
+          "nom": "Fjordcharter Explorer",
           "type": "Navire rapide à passagers (HSC)",
           "imo": "9157818",
           "annee": "1997",
@@ -99153,11 +99222,11 @@
             "diesel-mdo"
           ],
           "client": null,
-          "operateur": null,
-          "proprietaire": null,
+          "operateur": "Fjordcharter Norway AS (Haus, port d'attache Bergen)",
+          "proprietaire": "Fjordcharter Norway AS",
           "pavillon": "Norvège",
           "classification": null,
-          "capacite": null,
+          "capacite": "199 passagers, 30 nds, 4 moteurs MTU",
           "prix_acquisition": null,
           "source": "https://commons.wikimedia.org/wiki/Category:IMO_9157818",
           "timeline": [
@@ -99169,7 +99238,8 @@
               "prix": null,
               "source": "https://commons.wikimedia.org/wiki/Category:IMO_9157818"
             }
-          ]
+          ],
+          "capacite_pax": 199
         },
         {
           "nom": "Ceuta Jet",
@@ -99260,7 +99330,7 @@
           "architecte_source": "fjellstrand.no/shipbuilding-and-ship-design/fast-ferries (design JumboCat 60 développé en interne par Fjellstrand) ; hhlweb.org Baltic Jet Kvaerner Fjellstrand JumboCat"
         },
         {
-          "nom": "San Gwann",
+          "nom": "San Giorgio",
           "type": "Ferry rapide mixte (catamaran RoPax HSC)",
           "imo": "9234006",
           "annee": "2001",
@@ -99272,7 +99342,7 @@
           ],
           "client": "Virtu Ferries",
           "operateur": "MHO-Co (San Giorgio)",
-          "proprietaire": "MHO-Co A/S (Esbjerg)",
+          "proprietaire": "Gianclaire Yachting Ltd (Malte) depuis nov. 2021 ; exploité sous le nom San Giorgio par Ragusa Xpress (liaison La Valette-Marina di Ragusa), pavillon Malte",
           "pavillon": "Malte",
           "classification": null,
           "capacite": null,
@@ -99354,7 +99424,7 @@
           "architecte_source": "Kystekspressen / Fjellstrand FlyingCat 40m design (design interne Kvaerner Fjellstrand, pas de cabinet externe nommé)"
         },
         {
-          "nom": "Prinsen",
+          "nom": "Aashi 1",
           "type": "Crew boat / navire rapide à passagers (HSC)",
           "imo": "9119359",
           "annee": "1999",
@@ -99367,11 +99437,11 @@
           "client": null,
           "operateur": null,
           "proprietaire": null,
-          "pavillon": "Émirats arabes unis",
+          "pavillon": "Inde (déployé Port Blair-Havelock-Neil, Andaman)",
           "classification": null,
           "capacite": null,
           "prix_acquisition": null,
-          "source": "https://commons.wikimedia.org/wiki/Category:IMO_9119359",
+          "source": "https://hsc-norway.no/prinsen-1999.html",
           "timeline": [
             {
               "annee": "1999",
@@ -99508,7 +99578,7 @@
           ]
         },
         {
-          "nom": "Vestland Cetus",
+          "nom": "Rem Cetus",
           "type": "Navire de support offshore (OSV/PSV)",
           "imo": "9644342",
           "annee": "2013",
@@ -99520,7 +99590,7 @@
             "diesel-mdo"
           ],
           "client": "Vestland Offshore",
-          "operateur": null,
+          "operateur": "Rem Offshore / Rem Maritime AS",
           "proprietaire": null,
           "pavillon": "Bahamas",
           "classification": null,
@@ -102400,9 +102470,9 @@
           ]
         },
         {
-          "nom": "Viking Nereus",
+          "nom": "Stim Star Angola",
           "type": "Navire ravitailleur de plateformes (PSV)",
-          "imo": "9297797",
+          "imo": "9303687",
           "annee": "2004",
           "longueur_m": 73.4,
           "jauge_gt": 3550,
@@ -102416,7 +102486,7 @@
           "pavillon": "Norvège",
           "classification": "DNV +1A1, SF, E0",
           "prix_acquisition": null,
-          "source": "Fiche officielle Westcon/West Contractors 'Bygg 21 Viking Nereus 2004' (assets.website-files.com/5cc6e0c1d9da333281857ec9/...Bygg%2021%20Viking%20Nereus%202004.pdf) ; rivieramm.com (vente 2009) ; shipspotting IMO 9297797 ; fleetphoto.ru/entities/494",
+          "source": "https://assets.website-files.com/5cc6e0c1d9da333281857ec9/5cc6e0c1d9da33637c8584df_Bygg%2021%20Viking%20Nereus%202004.pdf",
           "timeline": [
             {
               "annee": "2004",
@@ -102457,11 +102527,19 @@
               "detail": "Eidesvik annonce une depreciation (impairment loss) d'environ NOK 55 millions (~6,8 M USD) au T3 2016 liee a la cession; acquereur non nomme; prix non divulgue.",
               "prix": "impairment ~55 M NOK / ~6,8 M USD (prix non divulgue)",
               "source": "https://www.offshore-energy.biz/eidesvik-to-dispose-of-supply-vessel-viking-nereus/"
+            },
+            {
+              "annee": "2009",
+              "role": "proprietaire",
+              "nom": "Acheteur non divulgué (le navire devient Stim Star Angola, aujourd'hui flotte Seacor, pavillon Îles Marshall)",
+              "detail": "Livré au nouveau propriétaire le 25/05/2009, puis converti en well stimulation vessel.",
+              "prix": "non divulgué (plus-value ≈ NOK 135M comptabilisée par Eidesvik au T1 2009)",
+              "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/viking-nereus-is-delivered-to-new-owner-49564"
             }
           ]
         },
         {
-          "nom": "Viking Athene",
+          "nom": "Bakkanes",
           "type": "Navire ravitailleur de plateformes / navire offshore polyvalent (PSV/MPSV)",
           "imo": "9366809",
           "annee": "2006",
@@ -102474,8 +102552,8 @@
           ],
           "client": "Eidesvik AS",
           "operateur": "Eidesvik Offshore",
-          "proprietaire": "Eidesvik Offshore",
-          "pavillon": "Norvège",
+          "proprietaire": "Bakkafrost (navire de servitude aquacole, Écosse/Îles Féroé)",
+          "pavillon": "Îles Féroé",
           "prix_acquisition": null,
           "source": "fleetphoto.ru/entities/494 (yard no 27, 2006) ; MyShipTracking / shipspotting IMO 9366809 ; bairdmaritime.com (vente 2021) ; offshore-energy.biz",
           "timeline": [
@@ -105574,16 +105652,14 @@
           "architecte_source": "oedigital.com / skipsteknisk.no - design ST-216 Arctic de Skipsteknisk AS"
         },
         {
-          "nom": "Zeus",
+          "nom": "Zeus of Finland",
           "imo": "9130729",
           "type": "Remorqueur d'escorte et de terminal (anti-incendie / manutention d'ancres)",
           "annee": "1995",
           "longueur_m": 45.1,
-          "jauge_gt": null,
+          "jauge_gt": 1102,
           "port_lourd_dwt": null,
-          "capacite": "Traction au point fixe (bollard pull) 110 t ; FiFi 1",
-          "capacite_pax": null,
-          "capacite_vehicules": null,
+          "capacite": "Traction au point fixe (bollard pull) 101 t ; FiFi 1 ; classe glace 1A Super",
           "capacite_fret": null,
           "energie": "Diesel (remorqueur, classe glace 1A Super, FiFi 1)",
           "propulsion": [
@@ -105609,14 +105685,15 @@
               "detail": "Armateur finlandais (Turku)",
               "source": "https://alfonshakans.com/fleet/tugs/zeus-of-finland/"
             }
-          ]
+          ],
+          "pavillon": "Chypre (Limassol) depuis 2017 ; Finlande (Helsinki) 1995-2017"
         },
         {
           "nom": "Silex",
           "imo": "9085194",
           "type": "Remorqueur d'escorte et de terminal",
           "annee": "1994",
-          "longueur_m": null,
+          "longueur_m": 35.1,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": null,
@@ -106741,7 +106818,7 @@
           ]
         },
         {
-          "nom": "Thrax",
+          "nom": "Ocean Challenger",
           "type": "remorqueur",
           "imo": "9085209",
           "annee": "1994",
@@ -106751,12 +106828,12 @@
             "diesel-mdo"
           ],
           "client": "Johannes Østensjø d.y A/S",
-          "operateur": "Østensjø Rederi",
-          "proprietaire": "Østensjø Rederi AS",
-          "pavillon": null,
+          "operateur": "Atlantic Towage & Marine, remorquage terminal pétrolier de Bantry Bay",
+          "proprietaire": "Atlantic Towage & Marine Ltd (Bere Island, Co. Cork, Irlande)",
+          "pavillon": "Irlande (ex-Royaume-Uni)",
           "classification": null,
           "capacite": "Remorqueur escorte/terminal, design Wijsmuller, ~14 noeuds (sister-ship de Silex)",
-          "source": "NauticExpo catalogue Simek (080 - Thrax, livré sept. 1994) ; MyShipTracking IMO 9085209",
+          "source": "https://www.vesselfinder.com/vessels/OCEAN-CHALLENGER-IMO-9085209-MMSI-250004312",
           "timeline": [
             {
               "annee": "1994",
@@ -109304,7 +109381,7 @@
         },
         {
           "nom": "Rescuer",
-          "type": "patrouilleur / fast response vessel",
+          "type": "crew transfer vessel (CTV) / navire SAR pour l'éolien offshore, pas un patrouilleur",
           "imo": "9778777",
           "annee": "2015",
           "longueur_m": 21.25,
@@ -110452,7 +110529,7 @@
           ]
         },
         {
-          "nom": "Umoe Firmus",
+          "nom": "MHO Falcon",
           "imo": "9759410",
           "type": "Navire de transfert d'équipages (CTV) à effet de surface (SES) WAVECRAFT",
           "annee": "2016",
@@ -110468,7 +110545,7 @@
             "diesel-mdo"
           ],
           "client": "Statkraft (premier affréteur)",
-          "operateur": "Tidal Transit Limited (gestion/exploitation)",
+          "operateur": "MHO-Co A/S (Esbjerg)",
           "proprietaire": "Tidal Transit Limited (acquéreur ultérieur)",
           "classification": "DNV",
           "source": "https://www.offshorewind.biz/2016/02/29/umoe-firmus-handed-over-to-statkraft-gallery/",
@@ -110501,7 +110578,8 @@
               "detail": "Repris par Tidal Transit / renommé MHO Falcon (pavillon Danemark, MMSI 219213000)",
               "source": "https://vesseltracker.com/en/Ships/Umoe-Firmus-9759410.html"
             }
-          ]
+          ],
+          "pavillon": "Danemark"
         },
         {
           "nom": "Umoe Rapid",
@@ -111737,7 +111815,7 @@
           "proprietaire": "Eidshaug Rederi AS",
           "pavillon": "Norvège",
           "classification": "DNV (+1A1, Ice C)",
-          "prix_acquisition": "100 millions NOK (2008, prix de construction neuve)",
+          "prix_acquisition": "100 MNOK (2008, construction neuve : 'Prislappen paa Svealand er paa 100 millioner kroner', Maritimt Magasin)",
           "source": "https://batomtaler.skipsrevyen.no/ms-svealand/m/s-svealand/1107586 ; https://maritimt.com/nb/batomtaler/svealand-072008 ; https://www.brunsvika.net/nyhetsarkiv-alle-artikler/19416-noen-skip",
           "timeline": [
             {
@@ -111783,8 +111861,8 @@
           "proprietaire": "Egil Ulvan Rederi AS",
           "pavillon": "Norvège",
           "classification": null,
-          "prix_acquisition": "~120 millions NOK (à la livraison, source Maritimt Magasin)",
-          "source": "https://no.wikipedia.org/wiki/MS_%C2%ABWith_Junior%C2%BB ; https://maritimt.com/nb/batomtaler/junior-052009",
+          "prix_acquisition": "un peu moins de 120 M NOK (2009, Maritimt Magasin : « prislapp i underkant av 120 millioner kroner »)",
+          "source": "https://no.wikipedia.org/wiki/MS_%C2%ABWith_Junior%C2%BB ; https://maritimt.com/nb/batomtaler/with-junior-052009",
           "timeline": [
             {
               "annee": "2009",
@@ -111817,7 +111895,7 @@
             "diesel-mdo"
           ],
           "client": "Waxholms Ångfartygs AB (Waxholmsbolaget)",
-          "operateur": "Waxholms Ångfartygs AB (Waxholmsbolaget)",
+          "operateur": "Waxholms Angfartygs AB (Waxholmsbolaget) ; gestion confiee a Blidosundsbolaget depuis octobre 2019",
           "proprietaire": "Waxholms Ångfartygs AB (Waxholmsbolaget)",
           "pavillon": "Suède",
           "classification": null,
@@ -111848,7 +111926,9 @@
               "prix": null,
               "source": "https://www.marinetraffic.com/en/ais/details/ships/shipid:321448/mmsi:265538450/imo:9284312/vessel:SODERARM"
             }
-          ]
+          ],
+          "capacite": "350 passagers (portes a 500 apres reclassement) ; 2x Mitsubishi S6R2, 1 058 kW, 12,7 noeuds ; premier navire Waxholmsbolaget avec ascenseur",
+          "capacite_pax": 350
         },
         {
           "nom": "BB Server",
@@ -112753,14 +112833,15 @@
           "pavillon": "Norvège",
           "classification": null,
           "designer": "Heimli Ship Design (HFMV P37)",
-          "source": "maritimt.com/nb/batomtaler/taupo-022019 ; vesselfinder.com IMO 9836646 ; fmvas.no/fmv/om-oss",
+          "source": "https://maritimt.com/nb/batomtaler/taupo-022019",
           "timeline": [
             {
               "annee": "2019",
               "role": "construction",
               "nom": "Taupo",
               "detail": "Bygg 39 de Fitjar Mek. Verksted, livré janvier 2019 à Napier AS, Bømlo ; premier bateau d'abattage (prosessbåt) du chantier, design Heimli HFMV P37, 42,92 x 11 m, GT 700, capacité 320 t poisson, RSW 400 m3, moteur Caterpillar 3512C",
-              "source": "maritimt.com/nb/batomtaler/taupo-022019 ; fmvas.no/fmv/om-oss"
+              "source": "maritimt.com/nb/batomtaler/taupo-022019 ; fmvas.no/fmv/om-oss",
+              "prix": "150-200 MNOK (fourchette presse pour ce type de prosessbåt, non contractuelle)"
             },
             {
               "annee": "2019",
@@ -112790,7 +112871,7 @@
           "pavillon": "Norvège",
           "classification": null,
           "designer": "Heimli Ship Design (HFMV MFF46)",
-          "source": "fmvas.no/referanser/nybygg/bygg-40-ov-ryvingen ; vesselfinder.com IMO 9824344 ; sismarine.com",
+          "source": "https://batomtaler.skipsrevyen.no/ov-ryvingen/ov-ryvingen/1097589",
           "timeline": [
             {
               "annee": "2018",
@@ -112898,14 +112979,15 @@
           "pavillon": "Norvège",
           "classification": null,
           "designer": "Heimli Ship Design (HFMV P43-400)",
-          "source": "maritimt.com/taupiri-09-2019 ; fmvas.no/nyheter/fmv43-taupiri-er-sjosatt ; marinetraffic.com IMO 9854064",
+          "source": "https://batomtaler.skipsrevyen.no/ms-taupiri/ms-taupiri/1096595",
           "timeline": [
             {
               "annee": "2019",
               "role": "construction",
               "nom": "Taupiri",
               "detail": "Bygg 43 de Fitjar Mek. Verksted, livré 14 juillet 2019 à Napier AS, Bømlo (exploité pour Mowi) ; bateau d'abattage design Heimli HFMV P43-400, 42,9 x 11 m, GT 865, capacité 300 t poisson / RSW 400 m3, moteur Caterpillar 3512C",
-              "source": "maritimt.com/taupiri-09-2019"
+              "source": "maritimt.com/taupiri-09-2019",
+              "prix": "150-200 MNOK (fourchette presse pour ce type de prosessbåt, non contractuelle)"
             },
             {
               "annee": "2019",
@@ -113027,7 +113109,7 @@
           "pavillon": "Norvège",
           "classification": null,
           "designer": "Heimli Ship Design (HFMV H0450 / MFF46)",
-          "source": "fmvas.no/referanser/nybygg/bygg-47-ov-hekkingen ; fmvas.no/nyheter/fmv47-ov-hekkingen-pa-provetur ; kystverket.no ; marinetraffic.com IMO 9887607",
+          "source": "https://batomtaler.skipsrevyen.no/ov-hekkingen/ov-hekkingen/1095405",
           "timeline": [
             {
               "annee": "2020",
@@ -113185,11 +113267,11 @@
           "type": "navire usine / bateau d'abattage (bløggebåt)",
           "imo": "9898589",
           "annee": "2023",
-          "longueur_m": null,
+          "longueur_m": 42.7,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": null,
-          "energie": "Diesel (hybride probable, série bløggebåt FMV)",
+          "energie": "Diesel-électrique hybride (batterie ~850 kWh) — le dataset disait 'Diesel (hybride probable)'",
           "propulsion": [
             "diesel-mdo"
           ],
@@ -113225,7 +113307,7 @@
           "longueur_m": 28.7,
           "jauge_gt": 430,
           "port_lourd_dwt": null,
-          "capacite": null,
+          "capacite": "Abattage ~60 t de poisson par HEURE (et non par jour comme indiqué dans la timeline du dataset)",
           "energie": "Diesel",
           "propulsion": [
             "diesel-mdo"
@@ -113957,7 +114039,7 @@
           "classification": null,
           "port_lourd_dwt": null,
           "prix_acquisition": null,
-          "source": "https://no.wikipedia.org/wiki/OV_%C2%ABSkomv%C3%A6r%C2%BB ; https://www.skipsrevyen.no/ov-skomvaer/1104527",
+          "source": "https://www.marinetraffic.com/en/ais/details/ships/shipid:312435/mmsi:258674000/imo:9533189/vessel:OV_SKOMVAER",
           "timeline": [
             {
               "annee": "2013",
@@ -113990,7 +114072,7 @@
           ],
           "client": "DOF Rederi AS (Norvège)",
           "operateur": "DOF (UK) Ltd",
-          "proprietaire": "Armateur international (renommé Horizon Geodiscovery) depuis 2021",
+          "proprietaire": "Horizon Geosciences (flotte survey), gestion Gardline Shipping — renommé Horizon Geodiscovery en juin 2021",
           "pavillon": "Panama",
           "classification": null,
           "port_lourd_dwt": 4100,
@@ -114044,6 +114126,14 @@
               "detail": "DOF a annonce en decembre 2020 la vente du PSV ; seul le GAIN comptable sur la vente est public (~NOK 16 millions / US$1,83 million), pas le prix de cession ni le prix d'acquisition d'origine.",
               "prix": "gain de vente ~16 M NOK (~1,83 M USD)",
               "source": "https://www.bairdmaritime.com/work-boat-world/offshore-world/offshore-operations-maintenance/platform-supply/dof-sells-2002-built-psv"
+            },
+            {
+              "annee": "2021",
+              "role": "proprietaire",
+              "nom": "Skandi Buchan → Horizon Geodiscovery",
+              "detail": "Vente annoncée par DOF Rederi le 18/12/2020 à un acheteur international, livraison janvier 2021 ; renommé Horizon Geodiscovery (juin 2021), navire de survey chez Horizon Geosciences, pavillon Panama",
+              "prix": "non divulgué ; gain comptable ≈ 16 M NOK (≈ 1,83 M USD) pour DOF",
+              "source": "https://www.bairdmaritime.com/work-boat-world/offshore-world/offshore-operations-maintenance/platform-supply/dof-sells-2002-built-psv"
             }
           ]
         },
@@ -114059,8 +114149,8 @@
             "diesel-electrique"
           ],
           "client": "DOF Rederi AS (Norvège)",
-          "operateur": "DOF",
-          "proprietaire": "DOF (puis revendu, ex-Foula)",
+          "operateur": "Firda Seafood Group (aquaculture, Norvège)",
+          "proprietaire": "Firda Seafood Group (depuis 2022, converti en wellboat, renommé Firda Eir)",
           "pavillon": "Norvège",
           "classification": null,
           "port_lourd_dwt": 4100,
@@ -114157,7 +114247,7 @@
           "classification": null,
           "port_lourd_dwt": 2885,
           "prix_acquisition": null,
-          "source": "https://www.vesselfinder.com/vessels/details/9283473 ; https://www.bairdmaritime.com/fishing/fishing-boat-world-reviews/vessel-refit-froy-challenger-platform-supplier-rebuilt-as-salmon-delousing-boat-for-norwegian-owner ; https://fosenyard.com/ship-references/froy-challenger/",
+          "source": "https://www.offshore-mag.com/vessels/article/14198662/dof-rederi-unloads-another-platform-supply-vessel ; https://ilaks.no/froy-kjoper-supplybat-fra-dof-skal-bygges-om-til-avlusningsfartoy/",
           "timeline": [
             {
               "annee": "2006",
@@ -115686,7 +115776,7 @@
           "operateur": "Reservoir Exploration Technology AS (RXT, affrètement 5 ans)",
           "pavillon": "Gibraltar",
           "classification": "DNV +1A1, ICE-C, HELDK-SH, RP, E0, DYNPOS-AUTR",
-          "prix_acquisition": null,
+          "prix_acquisition": "220 MNOK (chiffrage au contrat, été 2006 ; livraison 2008)",
           "source": "https://maritimt.com/nb/batomtaler/sanco-star-012009 ; https://www.vesselfinder.com/vessels/details/9410313 ; https://www.rivieramm.com/news-content-hub/news-content-hub/new-seismic-vessel-offers-single-ship-solution-50730",
           "timeline": [
             {
@@ -115712,6 +115802,14 @@
               "detail": "Affrété à RXT (Reservoir Exploration Technology), package RXT5, opérations au Brésil",
               "prix": null,
               "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/new-seismic-vessel-offers-single-ship-solution-50730"
+            },
+            {
+              "annee": "2006",
+              "role": "construction",
+              "nom": "Vaagland Båtbyggeri (bnr 140) pour Sanco Holding AS",
+              "detail": "Citation Maritimt Magasin : « Ved kontraktsinngåelsen sommeren 2006, var skipet kostnadsberegnet til 220 millioner kroner » ; design Multi Maritime MM 80 Seismic, 80,00 m, GT 4053, livré le 07/11/2008, affrètement 5 ans RXT avec option",
+              "prix": "220 MNOK (chiffrage au contrat)",
+              "source": "https://maritimt.com/nb/batomtaler/sanco-star-012009"
             }
           ]
         },
@@ -115731,7 +115829,7 @@
           "operateur": "Reservoir Exploration Technology AS (RXT, affrètement 5 ans)",
           "pavillon": "Gibraltar",
           "classification": "DNV +1A1, ICE-C, E0, RP, DYNPOS-AUTR, HELIDECK-SH",
-          "prix_acquisition": null,
+          "prix_acquisition": "≈250 MNOK hors équipement sismique (contrat fin 2006, livraison 2009)",
           "source": "https://maritimt.com/nb/batomtaler/sanco-spirit-112009 ; https://www.vesselfinder.com/vessels/details/9429936",
           "timeline": [
             {
@@ -115757,6 +115855,14 @@
               "detail": "Affrété à RXT, package RXT6",
               "prix": null,
               "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/new-seismic-vessel-offers-single-ship-solution-50730"
+            },
+            {
+              "annee": "2006",
+              "role": "construction",
+              "nom": "Vaagland Båtbyggeri (bnr 141) pour Sanco Holding AS",
+              "detail": "Citation Skipsrevyen : « Prisen ble i sin tid oppgitt til cirka 250 millioner kroner eksklusiv seismisk utrustning » ; design Multi Maritime MM 86 Seismic, 86,00 m, livré le 23/10/2009, affrètement long terme RXT (5 ans + option)",
+              "prix": "≈250 MNOK hors équipement sismique",
+              "source": "https://batomtaler.skipsrevyen.no/ms-sanco-spirit/1110970"
             }
           ]
         },
@@ -118084,7 +118190,7 @@
         },
         {
           "nom": "Frøy Master",
-          "type": "servicebåt aquacole (catamaran MachoCat High, hybride)",
+          "type": "servicebåt aquacole (catamaran MachoCat 25, hybride)",
           "propulsion": [
             "hybride",
             "diesel-electrique",
@@ -121182,7 +121288,7 @@
           "type": "Navire de surface sans équipage (USV) offshore",
           "annee": "2025",
           "longueur_m": 24,
-          "jauge_gt": null,
+          "jauge_gt": 230,
           "port_lourd_dwt": null,
           "capacite": "USV offshore de 24 m piloté depuis le centre d'opérations à distance (ROC) de Horten, conçu pour opérations sous-marines sans équipage (ROV)",
           "capacite_vehicules": null,
@@ -121194,7 +121300,7 @@
           "client": "Reach Subsea ASA",
           "operateur": "Reach Subsea ASA",
           "proprietaire": "Reach Subsea ASA",
-          "classification": null,
+          "classification": "DNV (essais en mer supervisés par DNV et la Norwegian Maritime Authority)",
           "source": "https://www.kongsbergmaritime.com/news-and-events/news-archive/2025/delivers-first-reach-remote-usv/",
           "timeline": [
             {
@@ -121217,10 +121323,19 @@
               "nom": "Reach Subsea (operations a distance via Massterly)",
               "detail": "Exploite par Reach Subsea ; pilote a distance depuis un centre d'operations (ROC). Premiere mission de leves sous-marins au large de Haugesund apres essais en mer supervises par DNV et l'Autorite maritime norvegienne.",
               "source": "https://www.marinelog.com/news/kongsberg-maritime-delivers-reach-remote-1-usv/"
+            },
+            {
+              "annee": "2022",
+              "role": "construction",
+              "nom": "Contrat Reach Subsea / Kongsberg Maritime — Reach Remote 1 & 2",
+              "detail": "Investissement total annoncé le 13/04/2022 couvrant le contrat Kongsberg, les coûts de développement et l'infrastructure ; financé par prêts SR-Bank/Eksfin + 150 M NOK d'equity Wilhelmsen ; à titre de repère, Reach Remote 3 & 4 (options 2025) ≈ 620 M NOK les deux après subvention UE",
+              "prix": "≈ 380-400 M NOK pour les 2 USV (lot non ventilé)",
+              "source": "https://reachsubsea.no/contract-signed-with-kongsberg-maritime-to-build-the-first-two-game-changing-reach-remote-unmanned-offshore-vessels/"
             }
           ],
           "architecte": "Rolls-Royce Marine (UT design)",
-          "architecte_source": "Baird Maritime / Kongsberg (UT5208 design développé par Kongsberg Maritime ; concepteur = constructeur)"
+          "architecte_source": "Baird Maritime / Kongsberg (UT5208 design développé par Kongsberg Maritime ; concepteur = constructeur)",
+          "pavillon": "Norvège"
         },
         {
           "nom": "HNoMS Oslo (F300) - classe Oslo",
@@ -121536,48 +121651,6 @@
               "nom": "Mise en service Garde-cotes norvegiens",
               "detail": null,
               "source": "en.wikipedia.org/wiki/Norwegian_Coast_Guard"
-            }
-          ]
-        },
-        {
-          "nom": "Golar Freeze",
-          "type": "navire frigorifique (reefer)",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "energie": "diesel (Sulzer 9RND68, 12 000 bhp)",
-          "imo": "6828741",
-          "annee": "1968",
-          "jauge_gt": 6709,
-          "port_lourd_dwt": 7244,
-          "capacite": "Navire frigorifique transport de fruits",
-          "client": "Golarfreeze Inc. (armateur-gerant Gotaas-Larsen Inc.)",
-          "operateur": null,
-          "proprietaire": null,
-          "pavillon": "Liberia (immatriculation d origine Monrovia)",
-          "classification": null,
-          "source": "skipet.no (byggenr 164) ; recoupement fiches navire (IMO 6828741) ; en.wikipedia.org Golar LNG",
-          "timeline": [
-            {
-              "annee": "1968",
-              "role": "construction",
-              "nom": "Livre par Marinens Hovedverft, Horten (byggenr 164) a Golarfreeze Inc.",
-              "detail": "6 709 brt / 7 244 tpl ; pavillon Liberia (Monrovia)",
-              "source": "skipet.no"
-            },
-            {
-              "annee": "1976",
-              "role": "renommage",
-              "nom": "Vendu a Intercontinental Transport Service Ltd, renomme Limon",
-              "detail": null,
-              "source": "recoupement fiches navire IMO 6828741"
-            },
-            {
-              "annee": "1993",
-              "role": "evenement",
-              "nom": "Vendu a Dole Fresh Fruit International Ltd, puis demoli en Inde",
-              "detail": null,
-              "source": "recoupement fiches navire IMO 6828741"
             }
           ]
         },
@@ -125546,7 +125619,7 @@
           "capacite": "87 personnes (jusqu'à 120) ; gangway compensé 3D avec ascenseur, grue 3D autonome",
           "capacite_vehicules": null,
           "capacite_fret": null,
-          "energie": "Diesel-électrique avec système hybride-batterie (zéro émission par périodes), préparé pour le méthanol vert ; design VARD 4 19",
+          "energie": "Diesel-électrique hybride batterie (package batterie installé, 4 groupes en configuration father-son) ; « prêt méthanol » non confirmé par VARD ni Norwind Offshore",
           "propulsion": [
             "hybride",
             "diesel-electrique",
@@ -125749,6 +125822,14 @@
               "nom": "Affretement RWE via North Star",
               "detail": "Premier affretement immediat aupres de RWE Offshore Wind via North Star (contrat O&M) ; Windward Offshore fournit deux navires a RWE jusqu'a fin 2026.",
               "source": "https://www.oedigital.com/news/530618-vard-delivers-windward-offshore-s-first-csov"
+            },
+            {
+              "annee": "2025",
+              "role": "evenement",
+              "nom": "Windward Offshore / Crédit Agricole CIB + Eksfin",
+              "detail": "Financement post-livraison des quatre CSOV de la série (Athens, Paris, Munich, Hamburg) signé en février 2025 avec Crédit Agricole CIB et Export Finance Norway, tiré par tranches à chaque livraison; seul montant financier documenté de la série, prix unitaire des navires non divulgué.",
+              "prix": "182 MEUR (facilité senior post-livraison, 4 CSOV, non ventilé)",
+              "source": "https://www.offshorewind.biz/2025/02/19/first-of-four-windward-offshore-csovs-launched-company-secures-eur-182-million-post-delivery-financing/"
             }
           ]
         },
@@ -125788,6 +125869,14 @@
               "nom": "Windward Offshore",
               "detail": "Proprietaire Windward Offshore. Pavillon Malte, IMO 1051185. Affecte a la phase de construction d'un nouveau parc eolien dans la baie allemande (German Bight).",
               "source": "https://www.offshorewind.biz/2026/02/04/vard-delivers-second-csov-to-windward-offshore-vessel-to-soon-start-working-for-rwe/"
+            },
+            {
+              "annee": "2025",
+              "role": "evenement",
+              "nom": "Windward Offshore (série de 4 CSOV Vard)",
+              "detail": "Financement post-livraison de 182 M EUR sécurisé en février 2025 pour les 4 CSOV commandés chez Vard (contrat oct. 2023 + options exercées janv. 2024). La valeur du contrat de construction n'a jamais été publiée par Vard ni par Windward Offshore.",
+              "prix": "182 M EUR (financement post-livraison de la série de 4, pas un prix d'achat)",
+              "source": "https://www.offshorewind.biz/2025/02/19/first-of-four-windward-offshore-csovs-launched-company-secures-eur-182-million-post-delivery-financing/"
             }
           ]
         },
@@ -126009,7 +126098,7 @@
         },
         {
           "nom": "Siem Stingray",
-          "type": "Navire de construction subsea (OSCV 11 / design VARD 3 03), grue AHC 250t",
+          "type": "Navire de construction subsea (OSCV), design VARD 3 03 (Siem l'indique « STX OSCV 03 »), grue AHC 250 t / 3 000 m — le libellé « OSCV 11 » est erroné",
           "imo": "9676292",
           "annee": "2014",
           "longueur_m": 121,
@@ -126774,7 +126863,7 @@
           "longueur_m": 129.8,
           "jauge_gt": 6904,
           "port_lourd_dwt": 1268,
-          "capacite": null,
+          "capacite": "589 passagers ; 212 voitures",
           "energie": "GNL (gaz naturel liquéfié), monocarburant Rolls-Royce Bergen",
           "propulsion": [
             "diesel-electrique",
@@ -126810,10 +126899,20 @@
               "detail": "Pavillon norvégien, port d'attache Florø",
               "prix": null,
               "source": "https://www.vesselfinder.com/vessels/details/9344772"
+            },
+            {
+              "annee": "2004",
+              "role": "construction",
+              "nom": "Contrat Fjord1 / Aker Yards — série de 5 ferries GNL",
+              "detail": "Contrat annoncé fin décembre 2004 : 5 ferries gaziers pour les routes du Hordaland et Rogaland, coques construites à Aker Tulcea (Roumanie), armement à Aker Brattvåg ; livraisons 2006-2007 ; Aker Yards l'a emporté face à Kleven et Remontowa",
+              "prix": "≈ 1,2 Md NOK pour 5 navires (série non ventilée)",
+              "source": "https://www.nettavisen.no/okonomi/stor-fergekontrakt-til-rokke/s/12-95-321235"
             }
           ],
           "architecte": "LMG Marin",
-          "architecte_source": "Riviera Maritime Media (Fjord1 LNG ferries designed by LMG Marin)"
+          "architecte_source": "Riviera Maritime Media (Fjord1 LNG ferries designed by LMG Marin)",
+          "capacite_pax": 589,
+          "capacite_vehicules": 212
         },
         {
           "nom": "Seven Navica",
@@ -126833,7 +126932,7 @@
           "proprietaire": "Subsea 7 Navica AS",
           "pavillon": "Royaume-Uni",
           "classification": null,
-          "prix_acquisition": null,
+          "prix_acquisition": "62 MUSD (achat par Subsea 7, mai 2008)",
           "source": "https://www.marinepublic.com/vessels/imo/9177856 ; https://www.vesselfinder.com/vessels/details/9177856 ; https://www.shipphotos.co.uk/yard/?yard=brattvaag",
           "timeline": [
             {
@@ -126859,6 +126958,14 @@
               "detail": "Pavillon Royaume-Uni",
               "prix": null,
               "source": "https://www.vesseltracker.com/en/Ships/Seven-Navica-9177856.html"
+            },
+            {
+              "annee": "2008",
+              "role": "proprietaire",
+              "nom": "Achat par Subsea 7 à DOF du Skandi Navica après 8 ans d'affrètement, renommé Seven Navica (27/05/2008)",
+              "detail": "navire de pose de conduites rigides en déroulé (reel-lay), profondeur opérationnelle 2 000 m",
+              "prix": "62 MUSD",
+              "source": "https://www.offshore-mag.com/subsea/article/16780506/subsea-7-buys-skandi-navica"
             }
           ]
         },
@@ -126939,12 +127046,12 @@
             "diesel-electrique"
           ],
           "client": "Olympic Ship A/S (Fosnavåg)",
-          "operateur": "Hays Ships Ltd",
+          "operateur": "Hays Ships Ltd (Aberdeen, UK)",
           "proprietaire": "Hays Ships Ltd (Aberdeen)",
-          "pavillon": "Royaume-Uni",
+          "pavillon": "Royaume-Uni (Leith), ex-Norvège 1999-2015 puis Bahamas 2015-2019",
           "classification": "DNV",
           "prix_acquisition": null,
-          "source": "https://www.shipspotting.com/photos/1041667 ; https://www.vesselfinder.com/vessels/details/9177844 ; https://www.shipphotos.co.uk/yard/?yard=brattvaag",
+          "source": "https://www.scheepvaartwest.be/CMS/index.php/tugs/9170-kommandor-susan-imo-9177844",
           "timeline": [
             {
               "annee": "1999",
@@ -127046,7 +127153,7 @@
           ],
           "client": "Volstad Shipping AS",
           "operateur": null,
-          "proprietaire": "Nireas Shipping SA (actuel)",
+          "proprietaire": "Capital Offshore (groupe Capital Maritime, E. Marinakis) — navire renommé Ace Viking (août 2024)",
           "pavillon": "Chypre (actuel)",
           "classification": "DNV (glace ICE-1B)",
           "prix_acquisition": "≈ 40,6 M USD prix de construction neuve (2007) ; revendu 13,3 M USD/unite en 2017 (vente en bloc S.D. Standard Drilling, 40 M USD pour 3 PSV identiques)",
@@ -127091,6 +127198,14 @@
               "detail": "Vente d'occasion : S.D. Standard Drilling acquiert 3 PSV identiques de Volstad Shipping (Volstad Viking, Volstad Supplier, Volstad Princess) pour un total en bloc de 40 M USD = ≈ 13,3 M USD/unite. Annonce 19 janvier 2017, clotures 8 fevrier 2017. Le navire devient ensuite Standard Viking.",
               "prix": "≈ 13,3 M USD/unite (derive : vente en bloc de 40 M USD pour 3 PSV identiques)",
               "source": "https://www.offshore-energy.biz/standard-drillling-takes-over-volstad-psv-trio/"
+            },
+            {
+              "annee": "2023",
+              "role": "evenement",
+              "nom": "Standard Viking → Ace Viking",
+              "detail": "Vente Standard Supply → Capital Maritime/Capital Offshore (E. Marinakis) avec Standard Supplier et Standard Defender ; annonce 14/11/2023, transfert du Standard Viking le 12/12/2023 ; renommé Ace Viking en août 2024, pavillon Chypre",
+              "prix": "72,2 M USD en bloc pour 3 PSV (non ventilé)",
+              "source": "https://www.marinelink.com/news/standard-supply-sell-psv-trio-m-509563"
             }
           ]
         },
@@ -127109,10 +127224,10 @@
           ],
           "client": "Volstad Shipping AS",
           "operateur": null,
-          "proprietaire": null,
+          "proprietaire": "Capital Offshore (groupe Capital Maritime, E. Marinakis) — navire renommé Ace Supplier",
           "pavillon": "Chypre (actuel)",
           "classification": "DNV (glace ICE-1B)",
-          "prix_acquisition": "≈ 40,6 M USD prix de construction neuve (2007) ; revendu 13,3 M USD/unite en 2017 (vente en bloc S.D. Standard Drilling, 40 M USD pour 3 PSV identiques)",
+          "prix_acquisition": "≈ 250 M NOK (≈ 38 M USD), contrat (option exercée) novembre 2005 chez Aker Yards Brattvaag, livraison octobre 2007",
           "source": "https://www.vesselfinder.com/vessels/STANDARD-SUPPLIER-IMO-9363778-MMSI-232008761 ; https://www.shipspotting.com/photos/3276566",
           "timeline": [
             {
@@ -127154,6 +127269,22 @@
               "detail": "Vente d'occasion : inclus dans le lot de 3 PSV identiques rachetes par S.D. Standard Drilling a Volstad Shipping pour 40 M USD en bloc = ≈ 13,3 M USD/unite. Annonce 19 janvier 2017, clotures 8 fevrier 2017. Le navire devient ensuite Standard Supplier.",
               "prix": "≈ 13,3 M USD/unite (derive : vente en bloc de 40 M USD pour 3 PSV identiques)",
               "source": "https://splash247.com/s-d-standard-drilling-acquires-three-volstad-psvs/"
+            },
+            {
+              "annee": "2005",
+              "role": "construction",
+              "nom": "Volstad Supplier",
+              "detail": "Contrat ST-216L CD signé en novembre 2005 (option), livraison planifiée septembre 2007 (réelle: octobre 2007) ; coque construite en Roumanie (Aker Tulcea), armement Aker Yards Brattvaag",
+              "prix": "≈ 250 M NOK (≈ 38 M USD)",
+              "source": "https://www.marinelink.com/news/maritime/volstad-shipping"
+            },
+            {
+              "annee": "2023",
+              "role": "evenement",
+              "nom": "Standard Supplier → Ace Supplier",
+              "detail": "Vente Standard Supply → Capital Maritime/Capital Offshore (E. Marinakis) avec Standard Viking et Standard Defender ; annonce 14/11/2023, transfert du Standard Supplier mi-janvier 2024 ; renommé Ace Supplier, pavillon Chypre",
+              "prix": "72,2 M USD en bloc pour 3 PSV (non ventilé)",
+              "source": "https://www.marinelink.com/news/standard-supply-sell-psv-trio-m-509563"
             }
           ]
         }
@@ -127281,6 +127412,14 @@
               "nom": "NorYards BMV / Laksevåg",
               "detail": "Visite de réparation/entretien au chantier de Laksevåg (référencée parmi les visites navires vérifiées du site ; année exacte non précisée)",
               "source": "https://www.ship2yard.com/yard.php?idy=8266"
+            },
+            {
+              "annee": "2023",
+              "role": "evenement",
+              "nom": "Arret technique en cale seche de Laksevåg (entree en dock 04/10/2023)",
+              "detail": "Renovation sanitaires equipage, remplacement de toles, rivetage ; prelude a la grande refonte greement 2024 (7 mois)",
+              "prix": "25 MNOK (travaux autofinances par la fondation)",
+              "source": "https://www.skipsrevyen.no/statsraad-lehmkuhl/na-gar-statsraaden-i-dokk/1576061"
             }
           ]
         },
@@ -127908,7 +128047,7 @@
           "type": "Paquebot côtier à vapeur (passagers, préservé)",
           "annee": "1913",
           "imo": "5341564",
-          "longueur_m": null,
+          "longueur_m": 47.4,
           "jauge_gt": 376,
           "port_lourd_dwt": null,
           "capacite": null,
@@ -127922,7 +128061,7 @@
           "operateur": "Veteranskipslaget Fjordabåten (navire-musée, Bergen)",
           "proprietaire": "Stiftelsen D/S Stord I / Norsk Veteranskibsklub",
           "annee_construction": "1913",
-          "prix_acquisition": "220 000 kroner (prix de construction neuve, 1913)",
+          "prix_acquisition": "220 000 NOK (1913, prix de construction neuve : 'Byggesummen var paa kr. 220.000' )",
           "prix": null,
           "source": "https://en.wikipedia.org/wiki/SS_Stord_I",
           "timeline": [
@@ -127973,6 +128112,22 @@
               "detail": "Racheté par Veteranskipslaget Fjordabåten (1981), ramené dans l'Ouest norvégien et rebaptisé Stord I ; navire-musée préservé à Bergen",
               "prix": null,
               "source": "https://www.veteranskipslaget.no/d-s-stord-i/"
+            },
+            {
+              "annee": "1931",
+              "role": "evenement",
+              "nom": "Allongement de 3,3 m au maitre-couple (376 vers 465 BRT)",
+              "detail": null,
+              "prix": "~60 000 NOK",
+              "source": "https://lokalhistoriewiki.no/index.php?title=DS_%C2%ABStord%C2%BB"
+            },
+            {
+              "annee": "1949",
+              "role": "evenement",
+              "nom": "Remotorisation vapeur vers diesel chez Bergens Mekaniske Verksteder (2 Paxman Ricardo)",
+              "detail": null,
+              "prix": "1 320 180,70 NOK",
+              "source": "https://lokalhistoriewiki.no/index.php?title=DS_%C2%ABStord%C2%BB"
             }
           ]
         }
@@ -128092,7 +128247,7 @@
           ],
           "client": "Eidesvik Shipping (sismique) ; puis C-Bed (hôtel offshore)",
           "operateur": "C-Bed (hôtellerie offshore éolien)",
-          "proprietaire": "C-Bed",
+          "proprietaire": "C-bed (depuis 2015)",
           "classification": "DNV",
           "source": "https://www.shipsnostalgia.com/media/seismic-survey-vessel-veritas-viking-ii.284205/",
           "timeline": [
@@ -128124,10 +128279,11 @@
               "detail": "Conversion réalisée au chantier Fayard AS (Danemark), achevée au 1er trimestre 2016 ; hébergement et hôtellerie pour 125 personnes ; renommé Wind Innovation",
               "source": "https://www.marinelog.com/news/seismic-survey-vessel-to-become-wind-farm-worker-hotel/"
             }
-          ]
+          ],
+          "pavillon": "Royaume-Uni"
         },
         {
-          "nom": "Veritas Vantage",
+          "nom": "Vantage",
           "imo": "9242704",
           "type": "Navire sismique 3D",
           "annee": "2002",
@@ -128535,7 +128691,8 @@
               "role": "construction",
               "nom": "Mjellem & Karlsen Verft, Bergen",
               "detail": "Quille janvier 1990, lance avril 1991 ; moteur Wartsila Vasa 8R32D, 3000 kW",
-              "source": "en.wikipedia.org/wiki/RV_Tangaroa"
+              "source": "en.wikipedia.org/wiki/RV_Tangaroa",
+              "prix": "27 M NZD ('at a cost of $27 million')"
             },
             {
               "annee": "1991",
@@ -128747,8 +128904,8 @@
           "type": "navire de recherche",
           "imo": "6715607",
           "annee": "1967",
-          "longueur_m": 49.68,
-          "jauge_gt": null,
+          "longueur_m": 49.3,
+          "jauge_gt": 548,
           "capacite": "LOA 49,68 m, largeur 9,33 m, creux 5,01 m, 12 noeuds ; navire de recherche oceanographique",
           "energie": "diesel",
           "propulsion": [
@@ -128756,17 +128913,18 @@
           ],
           "client": "Universidade de São Paulo (USP)",
           "operateur": "USP (Instituto Oceanografico)",
-          "proprietaire": "USP",
+          "proprietaire": "Instituto Oceanográfico da Universidade de São Paulo (IOUSP)",
           "pavillon": "Brésil",
           "classification": null,
-          "source": "shipspotting.com IMO 6715607 ; commons.wikimedia.org categorie M&K (IMO 6715607)",
+          "source": "https://www.io.usp.br/index.php/embarcacoes/n-oc-prof-w-besnard/historico",
           "timeline": [
             {
               "annee": "1967",
               "role": "construction",
               "nom": "Mjellem & Karlsen Verft, Bergen",
               "detail": "Navire oceanographique",
-              "source": "commons.wikimedia.org/wiki/Category:Ships_built_at_Mjellem_&_Karlsen_Verft,_Bergen"
+              "source": "commons.wikimedia.org/wiki/Category:Ships_built_at_Mjellem_&_Karlsen_Verft,_Bergen",
+              "prix": "616 200 USD"
             },
             {
               "annee": "1967",
@@ -128775,7 +128933,8 @@
               "detail": "Port d'attache Santos, pavillon Bresil",
               "source": "shipspotting.com IMO 6715607"
             }
-          ]
+          ],
+          "prix_acquisition": "616 200 USD (contrat du 10/04/1964 avec Mjellem & Karlsen ; équivalent Cr$ 428,5 M de 1963)"
         },
         {
           "nom": "Sarsen",
@@ -128816,6 +128975,14 @@
               "nom": "Sarsen (yacht d'exploration)",
               "detail": "Converti en yacht d'exploration apres carriere de servitude",
               "source": "superyachttimes.com/yachts/sarsen"
+            },
+            {
+              "annee": "2011",
+              "role": "evenement",
+              "nom": "Mise en vente via HMY Yacht Sales (agent central Paul Madden)",
+              "detail": "annonce brokerage du 10/10/2011, yacht d'expédition basé à Phuket ; prix demandé, vente non confirmée",
+              "prix": "5,6 MUSD (prix demandé)",
+              "source": "https://www.boatinternational.com/yacht-market-intelligence/brokerage-sales-news/superyacht-sarsen-for-sale-at-hmy-yacht-sales--9035"
             }
           ]
         },
@@ -129336,8 +129503,8 @@
           "imo": "8976786",
           "annee": "1972",
           "longueur_m": 60.5,
-          "jauge_gt": null,
-          "capacite": "Engin de debarquement (LCU) classe Reinøysund/Tjeldsund",
+          "jauge_gt": 907,
+          "capacite": "Engin de debarquement (LCU) classe Reinøysund (5 unites construites chez Mjellem & Karlsen, en service 1972-1973)",
           "energie": "diesel",
           "propulsion": [
             "diesel-mdo"
@@ -129979,55 +130146,6 @@
         }
       ],
       "navires_references": [
-        {
-          "nom": "Boa Deep C",
-          "imo": "9265342",
-          "type": "Navire de construction/installation offshore (OCV multipurpose)",
-          "annee": "2004",
-          "longueur_m": 120,
-          "jauge_gt": 12913,
-          "port_lourd_dwt": 9000,
-          "capacite": "Grue AHC 250 t à 15 m, profondeur de travail 2000 m, moonpool 7,2x7,2 m, 2 ROV intégrés, bollard pull >260 t",
-          "capacite_pax": null,
-          "capacite_vehicules": null,
-          "capacite_fret": null,
-          "energie": "Diesel, propulsion diesel-électrique, poussée totale 6900 kW",
-          "propulsion": [
-            "diesel-electrique",
-            "diesel-mdo"
-          ],
-          "client": "Boa Offshore (Trondheim)",
-          "operateur": "Boa Offshore",
-          "proprietaire": "Boa Offshore",
-          "classification": null,
-          "source": "https://www.fleetmon.com/vessels/boa-deep-c_9265342_11771/",
-          "timeline": [
-            {
-              "annee": "2004",
-              "role": "construction",
-              "nom": "CSC Jinling Shipyard (Nanjing, Chine)",
-              "detail": "Construction du navire OCV, design VS 4201 OCV",
-              "source": "https://www.marinetraffic.com/en/ais/details/ships/215042000"
-            },
-            {
-              "annee": "2004",
-              "role": "proprietaire",
-              "nom": "Boa Offshore (Trondheim)",
-              "detail": "Armateur et opérateur, immatriculé à Malte",
-              "source": "https://www.fleetmon.com/vessels/boa-deep-c_9265342_11771/"
-            },
-            {
-              "annee": "2020",
-              "role": "evenement",
-              "nom": "OneCo Safe Yards",
-              "detail": "Dock sec à Kristiansand (juin 2020) pour réfection de joint d'hélice et maintenance, quelques jours",
-              "source": "https://oneco.no/en/arkiv/storbesok-i-onecos-dok-pa-andoya/"
-            }
-          ],
-          "architecte": "Wärtsilä Ship Design",
-          "architecte_source": "Wärtsilä Encyclopedia (Subsea Construction Vessel Boa Deep C : designed by the Norwegian consultancy Vik-Sandvik, now Wärtsilä Ship Design)",
-          "pavillon": "Malte (Valletta)"
-        },
         {
           "nom": "Sørlandet",
           "imo": "5334561",
@@ -134103,51 +134221,6 @@
           ]
         },
         {
-          "nom": "MV Fivla",
-          "type": "ferry RoRo inter-îles",
-          "imo": "8410237",
-          "annee": "1985",
-          "longueur_m": 30,
-          "jauge_gt": 230,
-          "energie": "diesel",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "client": "Shetland Islands Council",
-          "operateur": "SIC Ferries (proprietaire Shetland Islands Council, port d'attache Lerwick)",
-          "proprietaire": "Shetland Islands Council",
-          "pavillon": "Royaume-Uni",
-          "classification": null,
-          "prix_acquisition": null,
-          "source": "https://en.wikipedia.org/wiki/MV_Fivla",
-          "timeline": [
-            {
-              "annee": "1985",
-              "role": "construction",
-              "nom": "MV Fivla",
-              "detail": "Ferry RoRo véhicules/passagers de classe IV MCA construit par Ferguson-Ailsa à Troon (n° de coque 566), lancé le 12 février 1985, achevé le 8 avril 1985, en service le 22 avril 1985 ; 30 m, 230 GT, 95 passagers / 11 voitures",
-              "prix": null,
-              "source": "https://en.wikipedia.org/wiki/MV_Fivla"
-            },
-            {
-              "annee": "1985",
-              "role": "operateur",
-              "nom": "MV Fivla",
-              "detail": "Affecté à la liaison de Bluemull Sound (1985-2005) puis utilisé comme navire de réserve par SIC Ferries, port d'attache Lerwick",
-              "prix": null,
-              "source": "https://en.wikipedia.org/wiki/MV_Fivla"
-            },
-            {
-              "annee": "2015-2017",
-              "role": "evenement",
-              "nom": "MV Fivla",
-              "detail": "Cout de prolongation de vie (life-extension) etale sur 2015, 2016 et 2017. Cout de refit/maintenance, PAS un prix d'acquisition. Prix de construction 1985 (chantier Ailsa/Ferguson-Ailsa, Troon) non public.",
-              "prix": "500 000 GBP (refit, total 2015-2017)",
-              "source": "https://en.wikipedia.org/wiki/MV_Fivla"
-            }
-          ]
-        },
-        {
           "nom": "Tirrick",
           "type": "remorqueur",
           "imo": "8127919",
@@ -134344,58 +134417,6 @@
               "detail": "Mini-vraquier construit par Ferguson Brothers, Port Glasgow, pour la Polish Steamship Co ; ~87,99 m x 14,6 m ; sister-ship du Zgorzelec",
               "prix": null,
               "source": "https://en.wikipedia.org/wiki/Ferguson_Marine"
-            }
-          ]
-        },
-        {
-          "nom": "MT Tarihiko",
-          "type": "gazier (LPG tanker)",
-          "imo": "8203232",
-          "annee": "1984",
-          "longueur_m": 81.2,
-          "jauge_gt": 2169,
-          "energie": "diesel",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "client": "Liquigas Ltd (Nouvelle-Zélande)",
-          "operateur": "Navire démoli en 2016 en Turquie (ex-Kilgas Centurion, ex-Sigas Centurion, ex-Angas)",
-          "proprietaire": "Liquigas Ltd (Nouvelle-Zélande)",
-          "pavillon": "Nouvelle-Zélande",
-          "prix_acquisition": null,
-          "source": "https://www.shipspotting.com/photos/259857 ; https://www.odt.co.nz/business/27-years-tarihiko-first-called-lpg-terminal ; https://maritimeradio.org/ship-stations/tarihiko-zmlp/",
-          "timeline": [
-            {
-              "annee": "1983",
-              "role": "construction",
-              "nom": "MT Tarihiko",
-              "detail": "Gazier (LPG) commencé chez Ferguson-Ailsa Ltd à Troon, lancé en 1983, achevé en février 1984 ; 81,1 m, 2169 GRT, pour Liquigas Ltd (Nouvelle-Zélande)",
-              "prix": null,
-              "source": "https://www.odt.co.nz/business/27-years-tarihiko-first-called-lpg-terminal"
-            },
-            {
-              "annee": "1984",
-              "role": "operateur",
-              "nom": "MT Tarihiko",
-              "detail": "Exploité sur la côte néo-zélandaise jusqu'en 1999 (plus de 230 escales à Dunedin)",
-              "prix": null,
-              "source": "https://www.odt.co.nz/business/27-years-tarihiko-first-called-lpg-terminal"
-            },
-            {
-              "annee": "1999",
-              "role": "renommage",
-              "nom": "Kilgas Centurion",
-              "detail": "Vendu le 8 juillet 1999 au groupe Knud I. Larsen, immatriculé à Singapour sous le nom Kilgas Centurion",
-              "prix": null,
-              "source": "https://www.odt.co.nz/business/27-years-tarihiko-first-called-lpg-terminal"
-            },
-            {
-              "annee": "2010",
-              "role": "renommage",
-              "nom": "Angas",
-              "detail": "Renommé Sigas Centurion puis, depuis mars 2010, Angas sous pavillon de Saint-Kitts-et-Nevis ; démoli en 2016 en Turquie",
-              "prix": null,
-              "source": "https://www.odt.co.nz/business/27-years-tarihiko-first-called-lpg-terminal"
             }
           ]
         },
@@ -136458,64 +136479,6 @@
               "nom": "Malin Marine (Renfrew)",
               "detail": "Workboat de 16,2 m conçu et construit en interne à Renfrew, présenté à Aquaculture UK en mai 2018 ; premier navire construit à Renfrew depuis 1964, marquant le retour de la construction commerciale sur la Clyde",
               "source": "https://www.fishfarmingexpert.com/aquaculture-aquaculture-uk-aviemore/malin-makes-a-splash-with-new-clyde-built-workboat/1271404"
-            }
-          ]
-        },
-        {
-          "nom": "CD01 (barge semi-submersible Malin Augustea)",
-          "imo": "9557733",
-          "type": "barge semi-submersible de transport lourd / mise à l'eau",
-          "annee": "2010",
-          "longueur_m": 137,
-          "jauge_gt": 10449,
-          "port_lourd_dwt": null,
-          "capacite": "Peut immerger pour charger des navires/charges jusqu'à 137 m de long et 12 m de tirant d'eau ; une des plus grandes barges de ce type en Europe",
-          "capacite_pax": null,
-          "capacite_vehicules": null,
-          "energie": "Barge (sans propulsion propre, remorquée)",
-          "propulsion": [
-            "autre"
-          ],
-          "client": "Conversion semi-submersible realisee par le chantier Hat-San (Turquie) ; le SMTP/Old Kilpatrick n'a ni construit ni transforme la barge",
-          "operateur": "Malin Augustea UK Ltd / Malin Abram (Malin Group), Glasgow",
-          "proprietaire": "Augustea (Augustea Marine Transportation, Malte) - JV Malin Augustea",
-          "classification": null,
-          "source": "https://ukdefencejournal.org.uk/massive-barge-arrives-in-glasgow-to-move-new-frigate/",
-          "timeline": [
-            {
-              "annee": "2010",
-              "role": "construction",
-              "nom": "Nantong Hongqiang Marine Heavy Industry Co. (Chine)",
-              "detail": "Barge semi-submersible non propulsee de la serie 'C' d'Anchor Marine Transportation (AMT), construite a Nantong Hongqiang (Chine), classe Lloyd's Register. Dimensions d'origine environ 122 m x 36 m, ~19 000 t de port. Livraison de la serie 2010-2011 (premiere barge livree le 22 mars 2010). IMO 9557733.",
-              "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/anchor-marine-transportation-takes-delivery-of-first-c-class-barge-46096"
-            },
-            {
-              "annee": "2011",
-              "role": "proprietaire",
-              "nom": "Anchor Marine Transportation / Augustea (AMT Commander)",
-              "detail": "Mise en service comme AMT Commander (annee de construction 2011), barge semi-submersible exploitee par le groupe Augustea (Anchor Marine Transportation) pour la construction offshore, la logistique de dragage et l'eolien.",
-              "source": "https://www.vesselfinder.com/vessels/details/9557733"
-            },
-            {
-              "annee": "2020",
-              "role": "conversion",
-              "nom": "Hat-San Shipyard (Turquie)",
-              "detail": "Allongee et renforcee au chantier Hat-San en Turquie pour atteindre 137 m x 36,58 m (surface de pont 4 200 m2, immersion jusqu'a 11 m sur pont). Conversion realisee dans le cadre du partenariat Malin Augustea (la conversion finale rattachee au chantier ecossais Malin/Old Kilpatrick).",
-              "source": "https://www.marinelink.com/news/hatsan-lengthens-semisub-barge-malin-487702"
-            },
-            {
-              "annee": "2021",
-              "role": "renommage",
-              "nom": "CD01",
-              "detail": "Livree a Malin Augustea UK Ltd le 29 janvier 2021 et renommee CD01 (ex AMT Commander). Coentreprise entre Malin Group (Glasgow) et Augustea Group ; proprietaire enregistre Augustea Marine Transportation (Sliema, Malte), pavillon Malte, port Valletta ; exploitation operationnelle assuree par le Malin Group.",
-              "source": "https://malingroup.com/malin-abram-2/malin-augustea/"
-            },
-            {
-              "annee": "2021",
-              "role": "evenement",
-              "nom": "Lancement frigates Type 26 (BAE Systems)",
-              "detail": "Rejoint l'Ecosse (Clyde) pour ses premieres operations avec BAE Systems ; utilisee pour la mise a l'eau des fregates Type 26 de la Royal Navy (dont le HMS Glasgow), une des plus grandes barges semi-submersibles d'Europe.",
-              "source": "https://www.heavyliftnews.com/giant-semi-submersible-lifting-barge-being-prepared-for-malin-group/"
             }
           ]
         }
@@ -143029,77 +142992,6 @@
           "prix_acquisition": "12,3 M£ (construction neuve, 2015-2016)"
         },
         {
-          "nom": "MV Loch Frisa",
-          "imo": "9740720",
-          "type": "ferry ro-pax (ex-Utne ; pas un double-ender)",
-          "annee": "2014",
-          "longueur_m": 49.9,
-          "jauge_gt": 1160,
-          "port_lourd_dwt": null,
-          "capacite": "195 passagers ; 34-40 voitures + 4 camions",
-          "capacite_pax": 195,
-          "capacite_vehicules": 40,
-          "capacite_fret": null,
-          "energie": "2 moteurs diesel Scania AB entraînant des propulseurs azimutaux",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "client": "Norled (commande initiale, Norvège)",
-          "operateur": "Caledonian MacBrayne (CalMac)",
-          "proprietaire": "Caledonian Maritime Assets Ltd (CMAL)",
-          "classification": null,
-          "source": "https://www.trusteddocks.com/shipyards/7862-dales-marine---troon",
-          "timeline": [
-            {
-              "annee": "2014",
-              "role": "construction",
-              "nom": "Sefine Shipyard (Turquie)",
-              "detail": "Construit sur plans LMG Marin (Norvège) sous le nom MV Utne",
-              "source": "https://en.wikipedia.org/wiki/MV_Loch_Frisa"
-            },
-            {
-              "annee": "2022",
-              "role": "conversion",
-              "nom": "Dales Marine Services - Leith (Imperial Dock)",
-              "detail": "Converti aux normes britanniques à Leith en 2021-2022, puis renommé Loch Frisa",
-              "source": "https://www.cmassets.co.uk/project/mv-loch-frisa/"
-            },
-            {
-              "annee": "2022",
-              "role": "operateur",
-              "nom": "Caledonian MacBrayne (CalMac)",
-              "detail": "Entré en service sur Oban-Craignure (Mull) en juin 2022",
-              "source": "https://en.wikipedia.org/wiki/MV_Loch_Frisa"
-            },
-            {
-              "annee": "2023",
-              "role": "evenement",
-              "nom": "Dales Marine Services - Troon",
-              "detail": "Passage de radoub/maintenance à Troon (navire référencé parmi les passages vérifiés du chantier)",
-              "source": "https://www.trusteddocks.com/shipyards/7862-dales-marine---troon"
-            },
-            {
-              "annee": "2021",
-              "role": "proprietaire",
-              "nom": "Utne / MV Loch Frisa",
-              "detail": "Achat d'occasion par CMAL aupres de Norled. Prix de revente: 6,6 M EUR (5,6 M GBP / 7,1 M USD), confirme par Wikipedia/Mull & Iona Ferry Committee, The Scotsman et MarineLink.",
-              "prix": "6,6 M EUR (5,6 M GBP) [2021]",
-              "source": "https://www.marinelink.com/news/refurbished-ferry-delivered-calmac-497059"
-            },
-            {
-              "annee": "2022",
-              "role": "evenement",
-              "nom": "MV Loch Frisa",
-              "detail": "Conversion/refit chez Dales Marine Services (Leith) avant mise en service juin 2022: 3,4 M GBP. Investissement total ~9 M GBP. NB: ce navire est rattache ici a Troon mais le refit documente a eu lieu a Leith.",
-              "prix": "3,4 M GBP (refit) [2022]",
-              "source": "https://www.scotsman.com/news/politics/second-hand-ferry-bought-for-ps9m-to-offer-resilience-to-scottish-network-3407168"
-            }
-          ],
-          "prix_acquisition": "EUR 6,6 millions (GBP 5,6 millions), 2021 (achat a Norled)",
-          "architecte": "LMG Marin",
-          "architecte_source": "https://lmgmarin.no/reference/utne/ (Loch Frisa ex-Utne, design LMG 40-DE, construit Sefine Shipyard Turquie 2015 pour Norled)"
-        },
-        {
           "nom": "Grampian Fortress",
           "imo": null,
           "type": "navire de garde / support offshore (ERRV)",
@@ -145418,7 +145310,7 @@
           "proprietaire": "Etat suedois (Kustbevakningen)",
           "pavillon": "Suede",
           "classification": null,
-          "source": "kustbevakningen.se/.../kbv-201-serien ; en.wikipedia.org/wiki/Swedish_Coast_Guard_ships ; vesselfinder.com (IMO 4645212)",
+          "source": "https://sv.wikipedia.org/wiki/Kustbevakningsfartyg_201-serien",
           "timeline": [
             {
               "annee": "1999",
@@ -145434,6 +145326,14 @@
               "nom": "Livraison aux garde-cotes suedois",
               "detail": "Livre septembre 2001, navire de combinaison",
               "source": "kustbevakningen.se/.../kbv-201-serien"
+            },
+            {
+              "annee": "1999-2001",
+              "role": "construction",
+              "nom": "KBV 201",
+              "detail": "Commande passée à Kockums (Karlskronavarvet) en janvier 1999 pour deux navires combinés surveillance/dépollution ; KBV 201 livré à l'automne 2001, KBV 202 le 25 janvier 2002",
+              "prix": "236 948 000 SEK (total commande KBV 201 + KBV 202, non ventilé par unité)",
+              "source": "https://sv.wikipedia.org/wiki/Kustbevakningsfartyg_201-serien"
             }
           ],
           "prix_acquisition": "≈ 118,5 M SEK/unite (derive: cout d'acquisition total de 236 948 000 SEK pour 2 navires identiques KBV 201 + KBV 202, commande janv. 1999)"
@@ -145455,7 +145355,7 @@
           "proprietaire": "Etat suedois (Kustbevakningen)",
           "pavillon": "Suede",
           "classification": null,
-          "source": "kustbevakningen.se/.../kbv-201-serien ; vesseltracker.com (IMO 4645224)",
+          "source": "https://sv.wikipedia.org/wiki/Kustbevakningsfartyg_201-serien",
           "timeline": [
             {
               "annee": "1999",
@@ -146048,7 +145948,7 @@
           "operateur": "demoli (1982)",
           "proprietaire": "demoli (1982)",
           "annee_": null,
-          "source": "Wikipedia MT Frans Suell",
+          "source": "http://www.faktaomfartyg.se/frans_suell_1958.htm",
           "timeline": [
             {
               "annee": "1958",
@@ -146113,7 +146013,7 @@
           "operateur": "Oxford Shipping Inc. (au naufrage) ; gestion Wallem Ship Management (Hong Kong)",
           "proprietaire": "coule (1980)",
           "annee_": null,
-          "source": "Wikipedia Salem (supertanker)",
+          "source": "https://en.wikipedia.org/wiki/Salem_(supertanker)",
           "timeline": [
             {
               "annee": "1969",
@@ -146181,7 +146081,7 @@
           "operateur": "demoli (1986)",
           "proprietaire": "demoli (1986)",
           "annee_": null,
-          "source": "Wikipedia MS Star Clipper",
+          "source": "https://en.wikipedia.org/wiki/MS_Star_Clipper",
           "timeline": [
             {
               "annee": "1968",
@@ -146239,8 +146139,8 @@
             "autre"
           ],
           "classification": null,
-          "prix_acquisition": "≈ 25 M USD (prix de construction neuve, 1969)",
-          "source": "https://www.balticshipping.com/vessel/imo/6901892 ; https://www.conocophillips.com/spiritnow/story/conocophillips-and-japan-mark-50-years-of-lng/ ; http://varvshistoria.com/kockums/nybyggen/ (nr 516)",
+          "prix_acquisition": "25 000 000 USD (contrat de construction Kockums, livre 1969)",
+          "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/kenai-calls-time-on-japan-exports-44020",
           "timeline": [
             {
               "annee": "1969",
@@ -146273,6 +146173,14 @@
               "detail": "Renommé SCF Polar ; en 2005 vendu à GasLog LNG Services Ltd, Hamilton",
               "prix": null,
               "source": "https://www.balticshipping.com/vessel/imo/6901892"
+            },
+            {
+              "annee": "2014",
+              "role": "evenement",
+              "nom": "Vente a la demolition sous le nom ARIS, Alang (chantier Jawandamal Dhannamal)",
+              "detail": "Ex SCF Polar (Sovcomflot), vendu apres fin d affretement Gas Natural Fenosa, demolition entamee 19/04/2014 ; montant issu du registre AlangToday, non recoupe par une deuxieme source ouverte",
+              "prix": "10 052 766 USD (prix de dechirage total rapporte)",
+              "source": "https://www.alangtoday.com/all-demolition.aspx"
             }
           ]
         },
@@ -146374,7 +146282,7 @@
           ],
           "classification": null,
           "prix_acquisition": null,
-          "source": "https://en.wikipedia.org/wiki/MS_SeaFrance_C%C3%A9zanne ; http://varvshistoria.com/kockums/nybyggen/ (nr 568)",
+          "source": "https://en.wikipedia.org/wiki/MS_SeaFrance_C%C3%A9zanne",
           "timeline": [
             {
               "annee": "1980",
@@ -146431,6 +146339,14 @@
               "detail": "Retiré du service le 12/02/2009 ; renommé Western Light en 2011 puis démoli en Inde la même année",
               "prix": null,
               "source": "https://en.wikipedia.org/wiki/MS_SeaFrance_C%C3%A9zanne"
+            },
+            {
+              "annee": "2011",
+              "role": "proprietaire",
+              "nom": "Vente pour démolition (renommée Western Light, pavillon Belize), échouée à Alang (Inde) le 16/11/2011",
+              "detail": "Produit global de la vente des deux ferries pour SeaFrance/SNCF selon Robin des Bois ; montant unitaire non documenté",
+              "prix": "≈7 M EUR pour Cézanne + Renoir (non ventilé)",
+              "source": "https://robindesbois.org/en/lautre-scandale-seafrance/"
             }
           ]
         },
@@ -146456,7 +146372,7 @@
           ],
           "classification": null,
           "prix_acquisition": null,
-          "source": "https://www.faktaomfartyg.se/scandinavia_1980.htm ; https://en.wikipedia.org/wiki/MS_Wawel ; http://varvshistoria.com/kockums/nybyggen/ (nr 569)",
+          "source": "https://www.ferry-site.dk/ferry.php?id=7814462&lang=en",
           "timeline": [
             {
               "annee": "1980",
@@ -146521,6 +146437,22 @@
               "detail": "Sale-and-leaseback : le ferry est vendu a Stena Equipment and Aircraft Leasing Ltd puis immediatement reloue a Stena Fantasia (F.L) Ltd. Pas le prix de construction neuve.",
               "prix": "55 M GBP",
               "source": "https://www.doverferryphotosforums.co.uk/mv-fantasia-past-and-present/"
+            },
+            {
+              "annee": "1991",
+              "role": "evenement",
+              "nom": "Contrat de travaux Cityvarvet Göteborg",
+              "detail": "Contrat couvrant Fantasia (futur Wawel) et son jumeau Fiesta, montant non ventilé par navire : manoeuvrabilité, vitesse, réaménagements intérieurs",
+              "prix": "11 M£ (contrat global, deux jumeaux)",
+              "source": "https://www.hhvferry.com/fantasia_1.html"
+            },
+            {
+              "annee": "1993/94",
+              "role": "evenement",
+              "nom": "Refit Lloyd Werft Bremerhaven (Stena Fantasia)",
+              "detail": null,
+              "prix": "1 M£",
+              "source": "https://www.hhvferry.com/fantasia_1.html"
             }
           ]
         },
@@ -146641,7 +146573,7 @@
           ],
           "classification": null,
           "prix_acquisition": "≈ 80 M USD/unite (derive : commande de 160 M USD passee en juillet 1982 au chantier Kockums pour 2 navires identiques, Atlantic Companion + Atlantic Concert)",
-          "source": "https://www.faktaomfartyg.se/atlantic_companion_1984.htm ; https://www.varvshistoria.com/bilfarjan-ms-atlantic-companion-nr-593-1984/ ; http://varvshistoria.com/kockums/nybyggen/ (nr 593)",
+          "source": "https://de.wikipedia.org/wiki/ACL_G3-Serie",
           "timeline": [
             {
               "annee": "1984",
@@ -146705,7 +146637,7 @@
           ],
           "classification": null,
           "prix_acquisition": "≈ 80 M USD/unite (derive : commande de 160 M USD passee en juillet 1982 au chantier Kockums pour 2 navires identiques, Atlantic Companion + Atlantic Concert)",
-          "source": "http://www.faktaomfartyg.se/atlantic_concert_1984.htm ; http://varvshistoria.com/kockums/nybyggen/ (nr 594)",
+          "source": "https://de.wikipedia.org/wiki/ACL_G3-Serie",
           "timeline": [
             {
               "annee": "1984",
@@ -146769,7 +146701,7 @@
           ],
           "classification": null,
           "prix_acquisition": null,
-          "source": "https://www.scheepvaartwest.be/CMS/index.php/car-carriers-ro-ro/57-atlantic-compass-imo-8214176 ; http://varvshistoria.com/kockums/nybyggen/ (nr 595)",
+          "source": "https://de.wikipedia.org/wiki/ACL_G3-Serie",
           "timeline": [
             {
               "annee": "1984",
@@ -146816,7 +146748,7 @@
             "diesel-mdo"
           ],
           "classification": null,
-          "source": "https://en.wikipedia.org/wiki/MS_Jubilee ; http://varvshistoria.com/kockums/nybyggen/ (nr 596)",
+          "source": "https://en.wikipedia.org/wiki/MS_Jubilee",
           "timeline": [
             {
               "annee": "1986",
@@ -146865,8 +146797,17 @@
               "detail": "A l'arret de HNA Cruises (nov. 2015), le navire alors nomme Henna est mis en vente a 35 M USD ; aucun acheteur, il part finalement a la demolition. Prix affiche, pas une transaction realisee.",
               "prix": "35 M USD (prix demande, sans acquereur)",
               "source": "https://en.wikipedia.org/wiki/MS_Jubilee"
+            },
+            {
+              "annee": "2015-2016",
+              "role": "evenement",
+              "nom": "Henna",
+              "detail": "HNA Cruises cesse ses opérations en novembre 2015 après trois ans de pertes ; navire désarmé et mis en vente sans trouver d'acheteur",
+              "prix": "35 000 000 USD (prix demandé, vente non conclue)",
+              "source": "https://en.wikipedia.org/wiki/MS_Jubilee"
             }
-          ]
+          ],
+          "prix_acquisition": "134 000 000 USD (contrat de construction, livraison 1986)"
         },
         {
           "nom": "Celebration",
@@ -146887,7 +146828,7 @@
             "diesel-mdo"
           ],
           "classification": null,
-          "prix_acquisition": "130 M USD (cout de construction, livre 1987)",
+          "prix_acquisition": "130 millions USD (coût de construction, Kockums Malmö, livraison 1987)",
           "source": "https://en.wikipedia.org/wiki/MS_Celebration ; http://varvshistoria.com/kockums/nybyggen/ (nr 597)",
           "timeline": [
             {
@@ -149455,7 +149396,7 @@
         },
         {
           "nom": "Ronja Ocean",
-          "type": "OSV",
+          "type": "Navire de transport de poissons vivants (wellboat), design NVC 387 LFC Rolls-Royce, 3 200 m3 — pas un OSV",
           "imo": "9782053",
           "annee": "2017",
           "jauge_gt": 4600,
@@ -149481,8 +149422,8 @@
           ]
         },
         {
-          "nom": "Ronja Diamond",
-          "type": "OSV",
+          "nom": "Ronia Diamond",
+          "type": "Navire vivier (wellboat / live fish carrier), puits 3200 m3",
           "imo": "9814947",
           "annee": "2017",
           "energie": "Diesel",
@@ -149570,7 +149511,7 @@
         },
         {
           "nom": "Ronja Silver",
-          "type": "OSV",
+          "type": "Navire de transport de poissons vivants (wellboat), design NVC 390 LFC Kongsberg, 5 000 m3 — pas un OSV",
           "imo": "9932024",
           "annee": "2023",
           "energie": "Diesel",
@@ -149681,7 +149622,7 @@
         },
         {
           "nom": "Sanco Sword",
-          "type": "OSV",
+          "type": "Navire sismique 3D haute capacité (recherche/survey), design Skipsteknisk ST-324 CD, jusqu'à 16 streamers — pas un OSV",
           "imo": "9662100",
           "annee": "2014",
           "longueur_m": 96,
@@ -149741,13 +149682,13 @@
           ]
         },
         {
-          "nom": "Ocean Art",
+          "nom": "Rem Art",
           "type": "OSV",
           "imo": "9667253",
           "annee": "2014",
           "longueur_m": 90.4,
-          "jauge_gt": 4400,
-          "port_lourd_dwt": 5700,
+          "jauge_gt": 4800,
+          "port_lourd_dwt": 5733,
           "energie": "Diesel (retrofit hybride batterie)",
           "propulsion": [
             "hybride",
@@ -149755,8 +149696,8 @@
             "diesel-mdo"
           ],
           "client": "Atlantic Offshore AS",
-          "operateur": "Atlantic Offshore AS",
-          "proprietaire": "Atlantic Offshore AS",
+          "operateur": "Rem Offshore",
+          "proprietaire": "Rem Offshore",
           "pavillon": "Norvege",
           "classification": "DNV",
           "capacite": "PSV, 25 personnes, pont 1050 m2, 3000 t deck load",
@@ -149934,7 +149875,8 @@
               "role": "construction",
               "nom": "Kleven Myklebust Verft (BN 348), design Wartsila VS 485 MPSV CD",
               "detail": "MPSV livre 2011, premier affretement Statoil",
-              "source": "myklebustverft.com; rivieramm.com"
+              "source": "myklebustverft.com; rivieramm.com",
+              "prix": "≈375 MNOK (valeur projet)"
             },
             {
               "annee": "2011",
@@ -149943,7 +149885,8 @@
               "detail": "Converti de MPSV en navire cablier (CLV)",
               "source": "rivieramm.com"
             }
-          ]
+          ],
+          "prix_acquisition": "≈375 MNOK (valeur projet bnr 348, contrat juillet 2010, livraison mars 2011)"
         },
         {
           "nom": "Siem Topaz",
@@ -149956,8 +149899,8 @@
             "diesel-electrique"
           ],
           "client": "Siem Offshore",
-          "operateur": "Sea1 Offshore (ex-Siem Offshore)",
-          "proprietaire": "Sea1 Offshore",
+          "operateur": "Siem Shipping (groupe Siem) — particulars publiés par siemshipping.com en mars 2025 ; Sea1 n'a assuré la gestion que transitoirement (~1 an post-transfert)",
+          "proprietaire": "Siem Sustainable Energy et sociétés liées (groupe Kristian Siem) — sorti de la flotte Siem Offshore/Sea1 avant le 01/07/2024",
           "pavillon": "Norvege",
           "classification": "DNV",
           "capacite": "AHTS, traction ~306 t, pont 800 m2, 60 personnes",
@@ -149972,7 +149915,8 @@
               "prix": "≈ USD 98,5 M/unite (derive : contrat combine USD 197 M pour 2 AHTS identiques VS 491 CD)"
             }
           ],
-          "prix_acquisition": "Construction ≈ USD 98,5 M/unite (2010, derive : contrat combine USD 197 M pour 2 AHTS identiques VS 491 CD livres ete 2010)"
+          "prix_acquisition": "≈ USD 98,5 M/unité (dérivé : contrat combiné USD 197 M pour 2 AHTS VS 491 CD commandés en août 2007 chez Kleven Verft + Myklebust Verft, livraison été 2010)",
+          "jauge_gt": 7473
         },
         {
           "nom": "Siem Sapphire",
@@ -150022,7 +149966,7 @@
           "client": "Siem Offshore",
           "operateur": "Sea1 Offshore (ex-Siem Offshore)",
           "proprietaire": "Sea1 Offshore",
-          "pavillon": "Iles Marshall",
+          "pavillon": "Bahamas (callsign C6YG5, MMSI 311031800) ; Îles Marshall = pavillon 2010 seulement",
           "classification": "DNV",
           "capacite": "MPSV/ROV support, 68 personnes, grue 100 t",
           "source": "DCN Diving / myklebustverft.com (BN 326, MT 6017 MkII); IMO 9424508",
@@ -150040,6 +149984,14 @@
               "nom": "Norvege puis Iles Marshall",
               "detail": "Immatricule Norvege le 12 juin 2009, repavillonne Majuro (Iles Marshall) en fevrier 2010",
               "source": "DCN Diving spec sheet"
+            },
+            {
+              "annee": "2007",
+              "role": "construction",
+              "nom": "Contrat Kleven Maritime, MPSV MT 6017 (janvier 2007, 11e contrat Siem-Kleven)",
+              "detail": "Contrat annoncé le 14/01/2007 : MT 6017 multi-purpose PSV, 93,7 m, pont 1 047 m2, 68 personnes, grue + helideck, NOK 350 M. Correspond au profil exact du Siem Dorado (livré 02/06/2009) mais un sister-ship existe, donc prix non certifié pour cette coque.",
+              "prix": "NOK 350 M (référence de série, attribution à la coque BN 326 non certaine : Siem Marlin, 2009, est aussi un MT 6017 MkII)",
+              "source": "https://docplayer.net/59669589-8-e-jaargang-nr-1-dd-14-januari-aankoop-verkoop-nieuwbouw-vernoemingen-etc.html"
             }
           ]
         },
@@ -150191,41 +150143,6 @@
           "architecte_source": "Fiche technique armateur (Fletcher Group, FS Aries Specification) : FS Aries ex Aries Warrior = design 'VS 470 MK II' (Vik-Sandvik / Wärtsilä Ship Design), construit Myklebust 2008"
         },
         {
-          "nom": "Cerberus",
-          "type": "Navire de soutien plongee (diving support vessel) de la Marine royale neerlandaise (HNLMS Cerberus A851)",
-          "imo": "9021734",
-          "annee": "1992",
-          "longueur_m": 28.7,
-          "energie": "Diesel",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "client": "Armateur offshore",
-          "operateur": "Harms Offshore",
-          "proprietaire": "Koninklijke Marine (Marine royale neerlandaise)",
-          "pavillon": "Pays-Bas",
-          "classification": "DNV",
-          "capacite": "PSV VS 470 Mk II",
-          "source": "Chantier reel = Scheepswerf Visser, Den Helder (Pays-Bas), pas Myklebust Verft",
-          "timeline": [
-            {
-              "annee": "2006",
-              "role": "construction",
-              "nom": "Kleven Myklebust Verft, design Vik-Sandvik VS 470 Mk II",
-              "detail": "PSV livre 2006",
-              "source": "myklebustverft.com"
-            },
-            {
-              "annee": "2006",
-              "role": "proprietaire",
-              "nom": "Harms Offshore (Hambourg)",
-              "detail": "Detenu par Harms Offshore PSV Cerberus GmbH",
-              "source": "VesselFinder"
-            }
-          ],
-          "jauge_gt": 213
-        },
-        {
           "nom": "Skandi Captain",
           "type": "OSV",
           "imo": "9284324",
@@ -150270,7 +150187,7 @@
         },
         {
           "nom": "Skandi Sotra",
-          "type": "OSV",
+          "type": "PSV (design Marin Teknikk MT 6000), converti en cablier 2023-2025",
           "imo": "9276391",
           "annee": "2003",
           "energie": "Diesel-electrique",
@@ -150278,9 +150195,9 @@
             "diesel-electrique"
           ],
           "client": "DOF",
-          "operateur": "Acheteur international (vendu 2022 par DOF)",
-          "proprietaire": "Acheteur international (ex-DOF Rederi)",
-          "pavillon": "Norvege",
+          "operateur": "Triasmitra (Indonesie), pose de cables sous-marins en Asie du Sud-Est",
+          "proprietaire": "Triasmitra Group (PT Ketrosden Triasmitra), Indonesie",
+          "pavillon": "Indonesie (ex-Norvege jusqu'en 2022, Panama transitoire 2022-2023)",
           "classification": "DNV",
           "capacite": "MPSV / ROV-ship & pipe carrier MT 6000",
           "source": "VesselFinder/balticshipping IMO 9276391; oedigital; myklebustverft.com (MT 6000)",
@@ -150299,11 +150216,14 @@
               "detail": "Vendu par DOF Rederi, livraison 1er semestre 2022",
               "source": "oedigital"
             }
-          ]
+          ],
+          "longueur_m": 83.85,
+          "jauge_gt": 3482,
+          "port_lourd_dwt": 3933
         },
         {
           "nom": "Skandi Rona",
-          "type": "OSV",
+          "type": "PSV (design Marin Teknikk MT 6000)",
           "imo": "9249635",
           "annee": "2002",
           "energie": "Diesel-electrique",
@@ -150311,8 +150231,8 @@
             "diesel-electrique"
           ],
           "client": "DOF",
-          "operateur": "Acheteur international (vendu 2022 par DOF)",
-          "proprietaire": "Acheteur international (ex-DOF Rederi)",
+          "operateur": "Høyland Offshore AS (gestion du SAR Odin)",
+          "proprietaire": "Olsen Gruppen AS (depuis mars 2022, renommé SAR Odin)",
           "pavillon": "Norvege",
           "classification": "DNV",
           "capacite": "MPSV MT 6000",
@@ -150663,7 +150583,7 @@
         },
         {
           "nom": "Polfoss",
-          "type": "porte-conteneurs",
+          "type": "Navire frigorifique (reefer) avec capacité conteneurs en pontée (28 EVP), design MM 80 Reefer MK II — pas un porte-conteneurs",
           "imo": "9393917",
           "annee": "2008",
           "longueur_m": 81.55,
@@ -150672,12 +150592,12 @@
             "diesel-mdo"
           ],
           "client": "Eimskip",
-          "operateur": "Eimskip",
-          "proprietaire": "Eimskip",
+          "operateur": "Eimskip (Eimskip Island ehf, Reykjavik), pavillon NIS, port d'attache Tromsø",
+          "proprietaire": "Pol Line Limited",
           "pavillon": "Norvege",
           "classification": "DNV",
           "capacite": "Reefer / porte-conteneurs refrigere, 5500 m3 / 14 conteneurs 45 ft",
-          "source": "maritimeoptima IMO 9393917; kuldepartner; myklebustverft.com (MM 80 Reefer MK II, 2008)",
+          "source": "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/7893-polfoss-imo-9393917",
           "timeline": [
             {
               "annee": "2008",
@@ -151493,7 +151413,7 @@
         },
         {
           "nom": "Vingtor",
-          "type": "ferry",
+          "type": "Catamaran rapide à passagers (HSC), 290 passagers, 35 nœuds",
           "propulsion": [
             "diesel-mdo"
           ],
@@ -151509,7 +151429,7 @@
           "proprietaire": "Norled",
           "pavillon": "Norvège",
           "classification": null,
-          "source": "oma.no/history ; VesselFinder IMO 9616814 ; scheepvaartwest",
+          "source": "https://www.skipsrevyen.no/aktuelt-norled-as-oma-baatbyggeri-as/m/s-vingtor/239787",
           "timeline": [
             {
               "annee": "2012",
@@ -151525,9 +151445,17 @@
               "nom": "Norvège",
               "detail": "Immatriculé Norvège, port d'attache Stavanger, MMSI 257151900",
               "source": "https://www.vesselfinder.com/vessels/details/9616814"
+            },
+            {
+              "annee": "2010",
+              "role": "construction",
+              "nom": "Oma Baatbyggeri (Stord) pour Tide Sjø, devenu Norled",
+              "detail": "Contrat de décembre 2010 pour deux catamarans rapides (bygg 530-531) ; Vingtor = bygg 530, livré le 30/04/2012, en service le 01/05/2012 sur Bergen-Sogn/Nordfjord.",
+              "prix": "≈ NOK 60M par navire",
+              "source": "https://www.skipsrevyen.no/aktuelt-norled-as-oma-baatbyggeri-as/m/s-vingtor/239787"
             }
           ],
-          "prix_acquisition": "≈ 60 M NOK/unite (2010-2012, construction neuve)"
+          "prix_acquisition": "≈ NOK 60M (contrat décembre 2010, chiffre rapporté par Skipsrevyen et Wikipédia norvégienne)"
         },
         {
           "nom": "Frøya",
@@ -151785,7 +151713,7 @@
         },
         {
           "nom": "Trym",
-          "type": "ropax",
+          "type": "catamaran rapide hybride-électrique combi passagers/véhicules (CombiCat 30M; classé Passenger/Ro-Ro Cargo) plutôt que ropax classique",
           "propulsion": [
             "hybride",
             "electrique-batterie",
@@ -151802,11 +151730,11 @@
           "capacite": "Combi-catamaran CombiCat 30M aluminium. 30 m x 10 m, 272 GT. 72 passagers + 7 voitures ou ~22 t de fret. Cale + grue. Vitesse de service 22-25 noeuds.",
           "energie": "Hybride batterie-électrique",
           "client": "Norled",
-          "operateur": "Norled",
+          "operateur": "Norled AS (rutepakke 2, Sogn)",
           "proprietaire": "Norled",
           "pavillon": "Norvège",
           "classification": null,
-          "source": "Norsk Skipsfarts Forum (coque 549 Trym) ; VesselFinder IMO 9979371 (MMSI 259018930, callsign JXRJ) ; ferryshippingnews",
+          "source": "https://www.nssm.no/nybyggprosjekter/trym-levert-fra-oma-baatbyggeri/",
           "timeline": [
             {
               "annee": "2023",
@@ -155285,10 +155213,10 @@
             "diesel-mdo"
           ],
           "client": "HH Ferries Group (commande initiale Scandlines/SFL)",
-          "operateur": "Öresundslinjen (ForSea Ferries / Molslinjen)",
+          "operateur": "Öresundslinjen Helsingør ApS (groupe Molslinjen), ex-ForSea / HH Ferries / Scandlines / DSB",
           "proprietaire": "ForSea Helsingborg AB",
           "classification": "DNV",
-          "source": "https://en.wikipedia.org/wiki/MF_Tycho_Brahe",
+          "source": "https://www.faktaomfartyg.se/tycho_brahe_1991.htm",
           "timeline": [
             {
               "annee": "1991",
@@ -155325,9 +155253,18 @@
               "detail": "Montant couvrant la paire Tycho Brahe et Aurora, pas le seul Tycho Brahe ; conversion diesel vers batterie, pas une acquisition.",
               "prix": "investissement total ~300 M SEK pour les DEUX navires (dont ~120 M SEK, soit ~12 M EUR, de subvention UE INEA)",
               "source": "https://www.mynewsdesk.com/forsea/pressreleases/forsea-to-upgrade-tycho-brahe-with-the-worlds-largest-battery-pack-extending-the-vessel-lifetime-and-cutting-emissions-3112242"
+            },
+            {
+              "annee": "2017-2018",
+              "role": "evenement",
+              "nom": "Conversion batterie chez Öresund DryDocks, Landskrona (ABB Onboard DC Grid, batteries 4 160 kWh), premiere des deux conversions, inauguration 09/11/2018",
+              "detail": "Soutien UE (INEA) ~120 MSEK sur le total ; montant par navire non ventile",
+              "prix": "~300 MSEK au total pour Tycho Brahe + Aurora (non ventilé)",
+              "source": "https://www.mynewsdesk.com/forsea/pressreleases/forsea-to-upgrade-tycho-brahe-with-the-worlds-largest-battery-pack-extending-the-vessel-lifetime-and-cutting-emissions-3112242"
             }
           ],
-          "prix_acquisition": "≈ SEK 150 000 000/unite (derive: ~SEK 300 M de conversion batterie 2018 pour 2 ferries identiques Tycho Brahe + Aurora) — conversion uniquement, prix de construction 1991 non public"
+          "prix_acquisition": "≈ SEK 150 000 000/unite (derive: ~SEK 300 M de conversion batterie 2018 pour 2 ferries identiques Tycho Brahe + Aurora) — conversion uniquement, prix de construction 1991 non public",
+          "pavillon": "Danemark"
         },
         {
           "nom": "M/F Aurora af Helsingborg",
@@ -155347,10 +155284,10 @@
             "diesel-mdo"
           ],
           "client": "HH Ferries Group",
-          "operateur": "Öresundslinjen (ForSea Ferries / Molslinjen)",
+          "operateur": "Öresundslinjen Helsingborg AB (groupe Molslinjen), ex-ForSea / HH Ferries / Scandlines / SweFerry",
           "proprietaire": "ForSea Helsingborg AB",
           "classification": "DNV",
-          "source": "https://www.vesselfinder.com/vessels/details/9007128",
+          "source": "https://www.faktaomfartyg.se/aurora_af_helsingborg_1992.htm",
           "timeline": [
             {
               "annee": "1992",
@@ -155388,6 +155325,14 @@
               "detail": "Investissement total ≈ 300 M SEK pour les deux ferries (citation ForSea : « Aurora and Tycho Brahe have both also been converted to battery-powered operation for a total investment cost of approximately SEK 300 million »), dont ≈ 120 M SEK de l'agence UE INEA. Derive unitaire ≈ 150 M SEK/navire (2 sister-ships identiques convertis ensemble). Equivalent presse ~29 M EUR total, ~12 M EUR UE.",
               "prix": "≈ 150 M SEK/unite (derive: 300 M SEK total pour 2 navires) — UE ~120 M SEK",
               "source": "https://www.mynewsdesk.com/forsea/pressreleases/forsea-to-upgrade-tycho-brahe-with-the-worlds-largest-battery-pack-extending-the-vessel-lifetime-and-cutting-emissions-3112242"
+            },
+            {
+              "annee": "2018",
+              "role": "evenement",
+              "nom": "Conversion batterie chez Öresund DryDocks, Landskrona (ABB, batteries 4 160 kWh), inauguration 09/11/2018",
+              "detail": "Soutien UE (INEA) ~120 MSEK sur le total ; montant par navire non ventile",
+              "prix": "~300 MSEK au total pour Aurora + Tycho Brahe (non ventilé)",
+              "source": "https://www.mynewsdesk.com/forsea/pressreleases/forsea-to-upgrade-tycho-brahe-with-the-worlds-largest-battery-pack-extending-the-vessel-lifetime-and-cutting-emissions-3112242"
             }
           ],
           "photo": {
@@ -155396,12 +155341,13 @@
             "licence": "CC BY 2.0",
             "source": "https://commons.wikimedia.org/wiki/File:20221015_Forsea_Aurora_0002_(52431359661).jpg"
           },
-          "prix_acquisition": "Conversion tout-electrique batterie : env. 300 M SEK (~29 M EUR) pour les DEUX sister-ships Aurora + Tycho Brahe, dont ~120 M SEK de subvention UE/INEA, soit ≈ 150 M SEK/unite (derive: 300 M SEK pour 2 navires identiques convertis ensemble). Conversion realisee au chantier Oresund DryDocks (2017-2018). Prix de construction neuve d'origine (Langsten Slip & Batbyggeri, Norvege, 1992) non public."
+          "prix_acquisition": "Conversion tout-electrique batterie : env. 300 M SEK (~29 M EUR) pour les DEUX sister-ships Aurora + Tycho Brahe, dont ~120 M SEK de subvention UE/INEA, soit ≈ 150 M SEK/unite (derive: 300 M SEK pour 2 navires identiques convertis ensemble). Conversion realisee au chantier Oresund DryDocks (2017-2018). Prix de construction neuve d'origine (Langsten Slip & Batbyggeri, Norvege, 1992) non public.",
+          "pavillon": "Suède"
         },
         {
           "nom": "M/F Hamlet",
           "imo": "9150030",
-          "type": "Ferry RoPax en conversion hybride/électrique",
+          "type": "Ferry RoPax converti tout-électrique à batterie (conversion achevée chez Öresund DryDocks, retour en service le 15/12/2025 ; diesels conservés en secours)",
           "annee": 1997,
           "longueur_m": 111.2,
           "jauge_gt": null,
@@ -155417,10 +155363,10 @@
             "diesel-mdo"
           ],
           "client": "Öresundslinjen",
-          "operateur": "Öresundslinjen (Molslinjen)",
+          "operateur": "Öresundslinjen Helsingør ApS (groupe Molslinjen), ex-ForSea / HH Ferries / Scandlines",
           "proprietaire": "Öresundslinjen",
           "classification": null,
-          "source": "https://kongsbergmaritime.com/news-and-events/news-archive/2025/key-player-in-hybrid-conversion-of-mf-hamlet-for-oresundlinjen/",
+          "source": "https://www.faktaomfartyg.se/hamlet_1997.htm",
           "timeline": [
             {
               "annee": "2025",
@@ -155539,7 +155485,7 @@
               "source": "https://digitaltmuseum.se/021018825134/oresundsvarvet-m-s-nihon-nybygge-234-sjosatt-den-26-november-1971-levererad"
             }
           ],
-          "prix_acquisition": "Prix de construction neuve : 109 950 000 SEK (livre le 17 mai 1972 a AB Svenska Ostasiatiska Kompaniet, Goteborg). Nybygge 234, premier d'une serie de 6 porte-conteneurs pour le pool ScanDutch."
+          "prix_acquisition": "109 950 000 SEK (1972, coût de construction, nybygge 234 Öresundsvarvet)"
         },
         {
           "nom": "Visby",
@@ -155560,7 +155506,7 @@
           "proprietaire": "Ventouris Ferries",
           "pavillon": "Chypre",
           "classification": "DNV",
-          "source": "faktaomfartyg.se/visby_1980.htm ; en.wikipedia.org/wiki/MS_Rigel_II",
+          "source": "https://www.faktaomfartyg.se/visby_1980.htm",
           "timeline": [
             {
               "annee": "1980",
@@ -155641,7 +155587,7 @@
           "proprietaire": "Mediterranean Shipping Company (MSC)",
           "pavillon": "Italie",
           "classification": "DNV",
-          "source": "en.wikipedia.org/wiki/MS_GNV_Azzurra ; faktaomfartyg.se/gotland_1981.htm",
+          "source": "https://www.faktaomfartyg.se/gotland_1981.htm",
           "timeline": [
             {
               "annee": "1981",
@@ -155699,10 +155645,26 @@
               "detail": "Sister-ship identique du Visby. Source gotlandsbatar.com : contrat ≈ 240 M SEK/navire, cout de production reel ≈ 400 M SEK/navire ; part payee par Gotlandsbolaget ≈ 137 M SEK. Les deux jumbo-ferries ont ete commandes ensemble en nov. 1978.",
               "prix": "contrat ≈ 240 M SEK ; paye ≈ 137 M SEK ; cout reel ≈ 400 M SEK (1981)",
               "source": "https://gotlandsbatar.com/visby-5/"
+            },
+            {
+              "annee": "1978",
+              "role": "construction",
+              "nom": "Rederi AB Gotland (Gotlandsbolaget)",
+              "detail": "Commande de 2 jumbo-ferries (Visby + Gotland) a Oresundsvarvet pour sauver le chantier ; cout reel de production ~400 MSEK/navire ; nybygge 279 livre 24/06/1981",
+              "prix": "~240 MSEK contrat, 137 MSEK nets payes",
+              "source": "https://gotlandsbatar.com/2021/02/26/visby-5/ (site suspendu, contenu lu via index de recherche, Wayback inaccessible depuis cet environnement)"
+            },
+            {
+              "annee": "2007",
+              "role": "proprietaire",
+              "nom": "Mediterranean Shipping Company (achat a Color Line)",
+              "detail": "Vente du Peter Wessel signee le 19/10/2007 ; exploite ensuite par SNAV (Snav Toscana 2008) puis GNV (GNV Azzurra 2017)",
+              "prix": "25 M EUR (~200 M NOK)",
+              "source": "https://de-academic.com/dic.nsf/dewiki/893887"
             }
           ],
           "capacite_fret": "750 ml",
-          "prix_acquisition": "Sister-ship identique du Visby (commande conjointe nov. 1978). Memes conditions : contrat ≈ 240 M SEK, cout reel de production ≈ 400 M SEK ; Gotlandsbolaget ne payait que ≈ 137 M SEK/navire (subvention d'Etat au chantier). Livre le 24 juin 1981 ; mis en service sous le nom Wasa Star (affrete), l'Etat ayant juge trop cher d'exploiter deux jumbo-ferries sur Gotland."
+          "prix_acquisition": "137 MSEK nets payes par Gotlandsbolaget (contrat ~240 MSEK/navire, commande novembre 1978, subventions d'Etat suedoises couvrant l'ecart)"
         },
         {
           "nom": "Trelleborg",
@@ -155791,7 +155753,7 @@
           "proprietaire": null,
           "pavillon": "Norvege (a l origine)",
           "classification": null,
-          "source": "en.wikipedia.org/wiki/MS_Skaubryn",
+          "source": "https://en.wikipedia.org/wiki/MS_Skaubryn",
           "timeline": [
             {
               "annee": "1951",
@@ -155833,7 +155795,7 @@
           "proprietaire": null,
           "pavillon": "Norvege (a l origine)",
           "classification": null,
-          "source": "digitaltmuseum.no (Norsk Maritimt Museum) ; commons.wikimedia.org/wiki/Category:Anne_Mildred_Brovig_(ship,_1962)",
+          "source": "https://commons.wikimedia.org/wiki/Category:Anne_Mildred_Br%C3%B8vig_(ship,_1962)",
           "timeline": [
             {
               "annee": "1962",
@@ -155893,12 +155855,12 @@
         },
         {
           "nom": "Havtjeld",
-          "type": "OBO / petrolier-vraquier",
+          "type": "cargo general (shelter-decker ferme, 12 passagers)",
           "propulsion": [
             "diesel-mdo"
           ],
           "imo": "5144459",
-          "annee": "1961",
+          "annee": "1962",
           "jauge_gt": 9639,
           "energie": "diesel",
           "client": "A/S Havprins (P. Meyer), Oslo",
@@ -155906,7 +155868,7 @@
           "proprietaire": null,
           "pavillon": "Norvege (a l origine)",
           "classification": null,
-          "source": "shipspotting.com (HAVTJELD IMO 5144459) ; imsvintagephotos.com (OBO MS Havprins Gotaverken/Oresundsvarvet a P. Meyer Oslo)",
+          "source": "https://varv100.se/havtjeld-ms177.html",
           "timeline": [
             {
               "annee": "1961",
@@ -155914,8 +155876,17 @@
               "nom": "construit a Oresundsvarvet AB Landskrona (coque no 177) pour A/S Havprins (P. Meyer), Oslo",
               "detail": "9639 brt ; IMO 5144459 a confirmer ; serie d'OBO/combines P. Meyer (cf. Havprins)",
               "source": "shipspotting.com/photos/2945484"
+            },
+            {
+              "annee": "1962",
+              "role": "construction",
+              "nom": "P. Meyers Rederi A/S, Oslo (A/S Havprins)",
+              "detail": "Nybygge MS177, cargo shelter-decker ferme 131,06 m / 11 300 tpl, livre 03/05/1962",
+              "prix": "35 785 340 NOK",
+              "source": "https://varv100.se/havtjeld-ms177.html"
             }
-          ]
+          ],
+          "prix_acquisition": "35 785 340 NOK (cout de construction, livraison 1962)"
         },
         {
           "nom": "Maria Gorthon",
@@ -155966,8 +155937,8 @@
           ],
           "imo": "5031999",
           "annee": "1957",
-          "longueur_m": 141.08,
-          "jauge_gt": 8995,
+          "longueur_m": 141.1,
+          "jauge_gt": 5650,
           "port_lourd_dwt": 12980,
           "energie": "diesel",
           "client": "Brodin Line (Brodin Shipping AB), Suede",
@@ -155975,7 +155946,7 @@
           "proprietaire": null,
           "pavillon": "Suede (a l origine)",
           "classification": null,
-          "source": "commons.wikimedia.org/wiki/Category:Axeline_Brodin_(ship,_1957) ; shipspotting.com (Axeline Brodin IMO 5031999)",
+          "source": "https://www.faktaomfartyg.se/axeline_brodin_1957.htm",
           "timeline": [
             {
               "annee": "1957",
@@ -156320,7 +156291,7 @@
           "pavillon": "Bahamas",
           "capacite": null,
           "classification": null,
-          "source": "varv100.se (n° 274)",
+          "source": "https://www.shipspotting.com/photos/1224437",
           "timeline": [
             {
               "annee": "1980",
@@ -156458,7 +156429,7 @@
         },
         {
           "nom": "Woensdrecht",
-          "type": "porte-conteneurs",
+          "type": "conbulker : vraquier/porte-conteneurs polyvalent gréé (41 451 tpl, 1 668 EVP, 4 grues de 36 t)",
           "propulsion": [
             "diesel-mdo"
           ],
@@ -156656,75 +156627,6 @@
           ]
         },
         {
-          "nom": "Jag Leela",
-          "type": "tanker",
-          "propulsion": [
-            "diesel-mdo"
-          ],
-          "imo": "7389651",
-          "annee": "1976",
-          "longueur_m": 248,
-          "port_lourd_dwt": 124100,
-          "energie": "Diesel (HFO)",
-          "propulsion_detail": "B&W K90GF 8 cyl., 23 200 EHP, 15 noeuds",
-          "client": "The Great Eastern Shipping Co. Ltd., Bombay",
-          "operateur": null,
-          "proprietaire": null,
-          "pavillon": "Inde",
-          "source": "varv100.se (n° 254)",
-          "timeline": [
-            {
-              "annee": "1976",
-              "role": "construction",
-              "nom": "Jag Leela",
-              "detail": "Quille 1 décembre 1975, lancé 14 février 1976, livré 24 juin 1976, transporteur OBO, chantier n° 254",
-              "source": "varv100.se"
-            },
-            {
-              "annee": "1976",
-              "role": "proprietaire",
-              "nom": "The Great Eastern Shipping Co. Ltd.",
-              "detail": "Armateur d'origine, Bombay (Inde)",
-              "source": "varv100.se"
-            },
-            {
-              "annee": "1976",
-              "role": "pavillon",
-              "nom": "Inde",
-              "detail": "Immatriculé Bombay",
-              "source": "varv100.se"
-            },
-            {
-              "annee": "1995",
-              "role": "renommage",
-              "nom": "Esra-1",
-              "detail": "Vendu à Ardeniz Gemi Isletmeciligi AS (Istanbul), renommé Esra-1",
-              "source": "varv100.se"
-            },
-            {
-              "annee": "1997",
-              "role": "renommage",
-              "nom": "Tango",
-              "detail": "Renommé Tango, pavillon turc",
-              "source": "varv100.se"
-            },
-            {
-              "annee": "1997",
-              "role": "pavillon",
-              "nom": "Turquie",
-              "detail": "Pavillon turc",
-              "source": "varv100.se"
-            },
-            {
-              "annee": "2000",
-              "role": "evenement",
-              "nom": "Démolition",
-              "detail": "Renommé Tang, arrivé à Alang le 15 novembre 2000 pour démolition",
-              "source": "varv100.se"
-            }
-          ]
-        },
-        {
           "nom": "Jag Laxmi",
           "type": "tanker",
           "propulsion": [
@@ -156754,7 +156656,7 @@
         },
         {
           "nom": "Tarcoola",
-          "type": "tanker",
+          "type": "vraquier (123 000 tpl)",
           "propulsion": [
             "diesel-mdo"
           ],
@@ -156816,7 +156718,7 @@
         },
         {
           "nom": "OBO Queen",
-          "type": "tanker",
+          "type": "minéralier-vraquier-pétrolier (OBO combination carrier), pas un tanker pur",
           "propulsion": [
             "diesel-mdo"
           ],
@@ -157174,7 +157076,7 @@
             "diesel-mdo"
           ],
           "imo": "5053686",
-          "annee": "1957",
+          "annee": "1956",
           "energie": "Diesel",
           "client": "Brodin Line, Helsingborg",
           "operateur": null,
@@ -157211,7 +157113,7 @@
           "operateur": null,
           "proprietaire": null,
           "pavillon": null,
-          "source": "varv100.se (n° 123) ; MarineTraffic IMO 5158929",
+          "source": "https://varv100.se/ilheos-ms123.html",
           "timeline": [
             {
               "annee": "1952",
@@ -157512,7 +157414,7 @@
           "prix_acquisition": null,
           "port_lourd_dwt": null,
           "capacite": null,
-          "source": "https://en.wikipedia.org/wiki/MS_Fennia ; https://commons.wikimedia.org/wiki/Category:IMO_6600462",
+          "source": "https://en.wikipedia.org/wiki/MS_Fennia",
           "timeline": [
             {
               "annee": "1966",
@@ -157545,12 +157447,20 @@
               "detail": "demolition a Gadani (Pakistan)",
               "prix": null,
               "source": "https://commons.wikimedia.org/wiki/Category:IMO_6600462"
+            },
+            {
+              "annee": "2001",
+              "role": "proprietaire",
+              "nom": "RG Line, Vaasa",
+              "detail": "Achat à Rederi Ab Sally, renommé Casino Express (ligne Vaasa-Umeå)",
+              "prix": "USD 4 millions",
+              "source": "https://www.faktaomfartyg.se/fennia_1966.htm"
             }
           ]
         },
         {
           "nom": "Atlantic Saga",
-          "type": "porte-conteneurs",
+          "type": "roulier porte-conteneurs (ConRo)",
           "imo": "6717813",
           "annee": "1967",
           "longueur_m": 197.06,
@@ -157562,12 +157472,12 @@
           "classification": null,
           "pavillon": null,
           "client": "Svenska Amerika Linjen (Swedish America Line)",
-          "operateur": null,
+          "operateur": "AB Svenska Amerika Linjen pour Atlantic Container Line (ACL)",
           "proprietaire": null,
           "prix_acquisition": null,
           "port_lourd_dwt": 17374,
           "capacite": null,
-          "source": "https://commons.wikimedia.org/wiki/Category:IMO_6717813",
+          "source": "https://www.faktaomfartyg.se/atlantic_saga_1967.htm",
           "timeline": [
             {
               "annee": "1967",
@@ -157732,7 +157642,7 @@
           "nom": "Britta Oden",
           "type": "roulier-ro-ro",
           "imo": "7800746",
-          "annee": "1979",
+          "annee": "1978",
           "longueur_m": 143.26,
           "jauge_gt": 4546,
           "energie": "diesel-mdo",
@@ -157743,11 +157653,11 @@
           "pavillon": null,
           "client": "Rederi Oden (B&N) / Nordsjofrakt",
           "operateur": null,
-          "proprietaire": null,
+          "proprietaire": "Rederi AB Nordsjöfrakt, Skärhamn (armateur d'origine, exploitation Oden Line)",
           "prix_acquisition": null,
           "port_lourd_dwt": 6950,
           "capacite": null,
-          "source": "https://www.faktaomfartyg.se/britta_oden_1978.htm ; https://commons.wikimedia.org/wiki/Category:IMO_7800746",
+          "source": "https://www.faktaomfartyg.se/britta_oden_1978.htm",
           "timeline": [
             {
               "annee": "1979",
@@ -157802,7 +157712,7 @@
           "prix_acquisition": null,
           "port_lourd_dwt": 6950,
           "capacite": null,
-          "source": "https://www.faktaomfartyg.se/anna_oden_1979.htm ; https://commons.wikimedia.org/wiki/Category:IMO_7800758",
+          "source": "https://www.scheepvaartwest.be/CMS/index.php/car-carriers-ro-ro/36-ana-oden-imo-7800758",
           "timeline": [
             {
               "annee": "1979",
@@ -158031,7 +157941,7 @@
           "type": "petrolier",
           "imo": "6521331",
           "annee": "1965",
-          "longueur_m": null,
+          "longueur_m": 210,
           "jauge_gt": null,
           "energie": "diesel-mdo",
           "propulsion": [
@@ -158041,7 +157951,7 @@
           "pavillon": null,
           "client": "A.K. Fernströms Rederier, Karlshamn",
           "operateur": null,
-          "proprietaire": null,
+          "proprietaire": "A.K. Fernströms Rederier, Karlshamn (armateur d'origine)",
           "prix_acquisition": "4 650 000 USD (1972, revente, prix de vente du navire en 1972)",
           "port_lourd_dwt": 48300,
           "capacite": null,
@@ -158117,7 +158027,7 @@
           "type": "cargo",
           "imo": "5205992",
           "annee": "1962",
-          "longueur_m": 141.1,
+          "longueur_m": 141.43,
           "jauge_gt": 8606,
           "energie": "diesel-mdo",
           "propulsion": [
@@ -158131,7 +158041,7 @@
           "prix_acquisition": null,
           "port_lourd_dwt": null,
           "capacite": null,
-          "source": "https://commons.wikimedia.org/wiki/Category:IMO_5205992 ; https://www.fotoflite.com/store/general-cargo-ship/lena-christina-brodin-detail",
+          "source": "http://www.faktaomfartyg.se/lena_christina_brodin_1962.htm",
           "timeline": [
             {
               "annee": "1962",
@@ -158225,7 +158135,7 @@
           "prix_acquisition": null,
           "port_lourd_dwt": null,
           "capacite": null,
-          "source": "https://commons.wikimedia.org/wiki/Category:IMO_5020160",
+          "source": "https://varv100.se/antonina-ms121.html",
           "timeline": [
             {
               "annee": "1952",
@@ -158338,6 +158248,75 @@
               "source": "https://commons.wikimedia.org/wiki/Category:IMO_5279694"
             }
           ]
+        },
+        {
+          "nom": "Jag Leela",
+          "type": "OBO carrier (minerai-vrac-petrole)",
+          "propulsion": [
+            "diesel-mdo"
+          ],
+          "imo": "7389651",
+          "annee": "1976",
+          "longueur_m": 248,
+          "port_lourd_dwt": 124100,
+          "energie": "Diesel (HFO)",
+          "propulsion_detail": "B&W K90GF 8 cyl., 23 200 EHP, 15 noeuds",
+          "client": "The Great Eastern Shipping Co. Ltd., Bombay",
+          "operateur": null,
+          "proprietaire": null,
+          "pavillon": "Inde",
+          "source": "https://varv100.se/jag-leela-ms254.html (coque MS254, quille 01/12/1975, lancement 14/02/1976, livraison 24/06/1976 a Great Eastern Shipping, Bombay)",
+          "timeline": [
+            {
+              "annee": "1976",
+              "role": "construction",
+              "nom": "Jag Leela",
+              "detail": "Quille 1 décembre 1975, lancé 14 février 1976, livré 24 juin 1976, transporteur OBO, chantier n° 254",
+              "source": "varv100.se"
+            },
+            {
+              "annee": "1976",
+              "role": "proprietaire",
+              "nom": "The Great Eastern Shipping Co. Ltd.",
+              "detail": "Armateur d'origine, Bombay (Inde)",
+              "source": "varv100.se"
+            },
+            {
+              "annee": "1976",
+              "role": "pavillon",
+              "nom": "Inde",
+              "detail": "Immatriculé Bombay",
+              "source": "varv100.se"
+            },
+            {
+              "annee": "1995",
+              "role": "renommage",
+              "nom": "Esra-1",
+              "detail": "Vendu à Ardeniz Gemi Isletmeciligi AS (Istanbul), renommé Esra-1",
+              "source": "varv100.se"
+            },
+            {
+              "annee": "1997",
+              "role": "renommage",
+              "nom": "Tango",
+              "detail": "Renommé Tango, pavillon turc",
+              "source": "varv100.se"
+            },
+            {
+              "annee": "1997",
+              "role": "pavillon",
+              "nom": "Turquie",
+              "detail": "Pavillon turc",
+              "source": "varv100.se"
+            },
+            {
+              "annee": "2000",
+              "role": "evenement",
+              "nom": "Démolition",
+              "detail": "Renommé Tang, arrivé à Alang le 15 novembre 2000 pour démolition",
+              "source": "varv100.se"
+            }
+          ]
         }
       ],
       "sources": [
@@ -158440,7 +158419,8 @@
               "role": "construction",
               "nom": "Nauta Shiprepair Yard S.A. (Gdynia, Pologne)",
               "detail": "Construction de la coque et de l'essentiel du navire (2013-2020)",
-              "source": "https://www.gu.se/en/skagerak/ship-facts"
+              "source": "https://www.gu.se/en/skagerak/ship-facts",
+              "prix": "~140 MSEK (budget initial)"
             },
             {
               "annee": "2021",
@@ -158455,8 +158435,17 @@
               "nom": "Northern Offshore Services (NOS)",
               "detail": "Armement et gestion technique pour le compte de l'Université de Göteborg",
               "source": "https://n-o-s.eu/the-fleet/r-v-skagerak/"
+            },
+            {
+              "annee": "2021",
+              "role": "evenement",
+              "nom": "Achèvement chez Falkvarv (Falkenberg) et livraison à Göteborgs universitet",
+              "detail": "Achèvement 2020-2021, livraison juin 2021, baptême par le roi Carl XVI Gustaf le 15/10/2021",
+              "prix": "221 MSEK (coût total final, +80 MSEK vs budget)",
+              "source": "https://www.gu.se/en/skagerak/about-us/background-history"
             }
-          ]
+          ],
+          "prix_acquisition": "221 MSEK coût total final (livraison juin 2021) ; budget initial ~140 MSEK (commande 2013)"
         },
         {
           "nom": "mv Nordanhav",
@@ -158493,7 +158482,7 @@
           "nom": "Bro Grace",
           "imo": "9190195",
           "type": "Tanker / navire-citerne",
-          "annee": null,
+          "annee": "1999",
           "longueur_m": null,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -159968,7 +159957,7 @@
           "operateur": "Africa Morocco Link (affrètement)",
           "proprietaire": "Stena Line",
           "classification": null,
-          "source": "https://en.wikipedia.org/wiki/Stena_Europe",
+          "source": "https://en.wikipedia.org/wiki/MS_Stena_Europe",
           "timeline": [
             {
               "annee": "1980",
@@ -160059,7 +160048,7 @@
             "diesel-mdo"
           ],
           "imo": "5383304",
-          "annee": "1946",
+          "annee": "1948",
           "longueur_m": 160.08,
           "jauge_gt": 12165,
           "port_lourd_dwt": null,
@@ -160141,7 +160130,8 @@
               "role": "evenement",
               "nom": "Demolition",
               "detail": "Vendu pour demolition a Galloo (Gand) en juin 2025, arrive le 4 juillet 2025",
-              "source": "en.wikipedia.org/wiki/MS_Stockholm_(1946)"
+              "source": "en.wikipedia.org/wiki/MS_Stockholm_(1946)",
+              "prix": "200 000 EUR"
             },
             {
               "annee": "1960",
@@ -160285,7 +160275,7 @@
         },
         {
           "nom": "Winter Sea",
-          "type": "porte-conteneurs",
+          "type": "navire frigorifique (reefer), classe Winter de Salén, capacité conteneurs accessoire 240 EVP",
           "propulsion": [
             "diesel-mdo"
           ],
@@ -160342,7 +160332,7 @@
         },
         {
           "nom": "Winter Star",
-          "type": "porte-conteneurs",
+          "type": "navire frigorifique (reefer), classe Winter de Salén, capacité conteneurs accessoire 240 EVP",
           "propulsion": [
             "diesel-mdo"
           ],
@@ -160399,7 +160389,7 @@
         },
         {
           "nom": "Winter Moon",
-          "type": "porte-conteneurs",
+          "type": "navire frigorifique (reefer)",
           "propulsion": [
             "diesel-mdo"
           ],
@@ -160415,7 +160405,7 @@
           "operateur": null,
           "proprietaire": null,
           "pavillon": null,
-          "source": "shipspotting.com (IMO 7707906) + shippingtandy.com/features/salenrederierna-of-sweden ; classe Winter, Gotaverken Arendal Goteborg ; moteur B&W-Gotaverken 6 cyl ~15 293 kW",
+          "source": "https://www.balticshipping.com/vessel/imo/7707906",
           "timeline": [
             {
               "annee": "1979",
@@ -160428,7 +160418,7 @@
         },
         {
           "nom": "Winter Sun",
-          "type": "porte-conteneurs",
+          "type": "navire frigorifique (reefer), classe Winter de Salén",
           "propulsion": [
             "diesel-mdo"
           ],
@@ -161107,7 +161097,7 @@
           "proprietaire": "Nordström & Thulin, Stockholm",
           "pavillon": "Suède",
           "prix_acquisition": null,
-          "source": "https://www.shipspotting.com/photos/1061135 ; varvshistoriska.se",
+          "source": "https://www.lanspumpen.se/bat_apr18.html",
           "timeline": [
             {
               "annee": "1968",
@@ -161233,7 +161223,7 @@
           "operateur": "Africa Morocco Link (affrètement)",
           "proprietaire": "Stena Line",
           "classification": null,
-          "source": "https://www.niferry.co.uk/stena-europe-gotaverken-arendal-gva-908/amp/",
+          "source": "http://www.faktaomfartyg.se/kronprinsessan_victoria_1981.htm",
           "timeline": [
             {
               "annee": "1982",
@@ -161427,7 +161417,8 @@
               "role": "construction",
               "nom": "William Lindbergs Verkstad och Varfs AB, Stockholm (nybygge 234)",
               "detail": "Vapeur d'archipel construit en 1900 par le chantier William Lindberg à Stockholm (design Ernst Hemberg). 44,2 m. NB: l'attribution au chantier 'Stockholms Reparationsvarv' de la work-list est à vérifier ; les sources nomment le chantier William Lindberg (Södra varvet).",
-              "source": "https://www.faktaomfartyg.se/norrtelje_1900.htm"
+              "source": "https://www.faktaomfartyg.se/norrtelje_1900.htm",
+              "prix": "225 000 SEK"
             },
             {
               "annee": "1900",
@@ -161450,8 +161441,25 @@
               "detail": "Aide patrimoniale (k-märkt fartyg) pour remplacement de tôles sous la ligne de flottaison. Ce n'est PAS un prix d'acquisition ni de construction. Aucun prix de construction (1900) ni de vente public trouvé après recherche (presse, courtiers, archives).",
               "prix": "200 000 SEK",
               "source": "https://svenskhistoria.se/rekordstort-renoveringsstod-till-kulturhistoriska-fartyg/"
+            },
+            {
+              "annee": "1965",
+              "role": "evenement",
+              "nom": "Nyman & Schultz : conversion en restaurant flottant/bureau d'information à Skeppsbron",
+              "detail": "Montant des travaux d'aménagement, pas un prix d'achat (rachat par Nyman & Schultz en 1964)",
+              "prix": "912 000 SEK",
+              "source": "https://www.faktaomfartyg.se/norrtelje_1900.htm"
+            },
+            {
+              "annee": "1968",
+              "role": "proprietaire",
+              "nom": "Fondation de préservation (Norrtälje), navire-musée et restaurant",
+              "detail": "Sauvée de la démolition, amarrée à Norrtälje depuis 1968",
+              "prix": "100 000 SEK",
+              "source": "https://www.faktaomfartyg.se/norrtelje_1900.htm"
             }
-          ]
+          ],
+          "prix_acquisition": "225 000 SEK (contrat de construction, livraison 3 février 1900)"
         },
         {
           "nom": "Neptunus",
@@ -166250,7 +166258,7 @@
           "nom": "S/S Drotten",
           "imo": "5094006",
           "type": "ferry a vapeur (passagers)",
-          "annee": "1927",
+          "annee": "1928",
           "longueur_m": null,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -166418,7 +166426,7 @@
           "imo": "5048485",
           "type": "ferry passagers",
           "annee": "1960",
-          "longueur_m": null,
+          "longueur_m": 99.4,
           "jauge_gt": null,
           "port_lourd_dwt": null,
           "capacite": null,
@@ -166433,7 +166441,7 @@
           "operateur": "Navire-musée Bore (Forum Marinum), Turku",
           "proprietaire": "Ville de Turku / Forum Marinum (navire-musée)",
           "classification": null,
-          "source": "https://en.wikipedia.org/wiki/Oskarshamn_Shipyard",
+          "source": "https://www.laiva.fi/ships/461/",
           "timeline": [
             {
               "annee": "1960",
@@ -166596,7 +166604,7 @@
         {
           "nom": "S/S Enköping",
           "imo": "5334755",
-          "type": "navire a vapeur (passagers/cargo)",
+          "type": "navire à passagers historique (vapeur d'origine 1868, motorisé diesel depuis 1948)",
           "annee": "1868",
           "longueur_m": null,
           "jauge_gt": null,
@@ -166605,7 +166613,7 @@
           "capacite_pax": null,
           "capacite_vehicules": null,
           "capacite_fret": null,
-          "energie": "Vapeur",
+          "energie": "diesel (Volvo Penta TMD 100C, 175 kW) depuis 1948, vapeur d'origine",
           "propulsion": [
             "autre"
           ],
@@ -166984,7 +166992,7 @@
         },
         {
           "nom": "M/S Gustafsberg VII",
-          "type": "ferry",
+          "type": "Vapeur d'archipel passagers/fret (ligne Stockholm-Gustavsberg), motorisé diesel en 1985, aujourd'hui navire d'excursion Strömma à Stockholm (210 passagers)",
           "propulsion": [
             "diesel-mdo"
           ],
@@ -166997,11 +167005,11 @@
           "capacite_pax": 260,
           "capacite": "260 passagers ; 266 GRT",
           "client": "Gustavsbergs fabriker",
-          "operateur": "Stromma Kanalbolaget",
+          "operateur": "Strömma Turism och Sjöfart AB, Stockholm (depuis 1973)",
           "proprietaire": "Stromma Kanalbolaget",
           "pavillon": "Suède",
           "classification": null,
-          "source": "en.wikipedia.org/wiki/MV_Gustafsberg_VII",
+          "source": "https://en.wikipedia.org/wiki/MV_Gustafsberg_VII",
           "timeline": [
             {
               "annee": "1912",
@@ -167100,6 +167108,14 @@
               "detail": "Revente",
               "prix": "100 000 SEK",
               "source": "https://www.skargardsbatar.se/gustafsberg7_1912/"
+            },
+            {
+              "annee": "1964",
+              "role": "proprietaire",
+              "nom": "Epave vendue a deux etudiants passionnes de vapeurs (Staffan Lindhé et Hans Johansson) apres chavirage et naufrage dans le Saxarfjärden, renfloue et restaure, retour en service 1966",
+              "detail": "L'assureur avait juge le renflouement non rentable",
+              "prix": "1 200 SEK",
+              "source": "https://en.wikipedia.org/wiki/MV_Gustafsberg_VII"
             }
           ],
           "prix_acquisition": "Construction 1911-1912 : 155 000 SEK (cout contractuel). Reventes ensuite de 1 200 SEK a 800 000 SEK selon l'epoque ; renovation 1974 chez Finnboda varv = 1,5 M SEK."
@@ -167334,7 +167350,7 @@
           "operateur": "Waxholmsbolaget (Waxholms Angfartygs AB)",
           "proprietaire": "Region Stockholm (autorite organisatrice des transports)",
           "classification": null,
-          "source": "https://en.wikipedia.org/wiki/Oskarshamn_Shipyard",
+          "source": "https://www.skargardsbatar.se/vaxo_1993/",
           "timeline": [
             {
               "annee": "1993",
@@ -167530,7 +167546,7 @@
           "operateur": "Perdu en 1988",
           "proprietaire": "Perdu en 1988",
           "pavillon": "Chypre (au moment du naufrage)",
-          "source": "de.wikipedia.org/wiki/Athenian_Venture (construit chez Oskarshamnsvarvet, byggnummer 408, ex-Karkonosze) ; sv.wikipedia.org/wiki/Oskarshamnsvarvet_Sweden",
+          "source": "https://www.polsteam.com/en/karkonosze-2/",
           "timeline": [
             {
               "annee": "1975",
@@ -167616,7 +167632,7 @@
           "proprietaire": "Ockero (Suede)",
           "pavillon": "Suede (port d'attache Ockero)",
           "classification": "Voilier-ecole (sail training)",
-          "source": "windseeker.org/ship/gunilla ; vesselfinder.com/vessels/details/5239515 ; recherche (construit par Oskarshamnsvarvet, IMO 5239515)",
+          "source": "https://www.faktaomfartyg.se/gunilla_1940.htm",
           "timeline": [
             {
               "annee": "1940",
@@ -168077,7 +168093,7 @@
         },
         {
           "nom": "Finneagle",
-          "type": "porte-conteneurs",
+          "type": "roulier ro-ro (cargo)",
           "propulsion": [
             "diesel-mdo"
           ],
@@ -168426,7 +168442,7 @@
           "nom": "MF Strada Corsara (ex-Linné)",
           "imo": "7389194",
           "type": "navire roulier / RoRo",
-          "annee": "1978",
+          "annee": "1979",
           "longueur_m": null,
           "jauge_gt": null,
           "port_lourd_dwt": null,
@@ -168734,7 +168750,7 @@
           "operateur": null,
           "proprietaire": null,
           "pavillon": null,
-          "source": "faktaomfartyg.se/tudor_1962.htm (varvsnummer 136, byggd Lodose varv Ab)",
+          "source": "https://www.faktaomfartyg.se/tudor_1962.htm",
           "timeline": [
             {
               "annee": "1962",
@@ -168936,7 +168952,7 @@
           "operateur": null,
           "proprietaire": null,
           "pavillon": null,
-          "source": "walleniuslines.com history 1960s (Builder: AB Lodose Varf, Porgy sept. 1964) ; de.wikipedia.org/wiki/Typ_Aniara (Lodose varvsnr 141)",
+          "source": "https://www.faktaomfartyg.se/porgy_1964.htm",
           "timeline": [
             {
               "annee": "1964",
@@ -168970,7 +168986,7 @@
           "imo": "6423383",
           "annee": "1965",
           "longueur_m": 75.56,
-          "jauge_gt": 499,
+          "jauge_gt": 1700,
           "port_lourd_dwt": 1025,
           "capacite": "499 GT / 1025 tpl ; transporteur de voitures RoRo (100 voitures + 20 remorques, jusqu'a 350 voitures) ; dernier des sister-ships d'Aniara",
           "capacite_vehicules": 100,
@@ -168980,7 +168996,7 @@
           "operateur": null,
           "proprietaire": null,
           "pavillon": null,
-          "source": "walleniuslines.com history 1960s (Builder: AB Lodose Varf, Bess janv. 1965) ; de.wikipedia.org/wiki/Typ_Aniara (Lodose varvsnr 142)",
+          "source": "https://de.wikipedia.org/wiki/Typ_Aniara",
           "timeline": [
             {
               "annee": "1965",
@@ -169016,7 +169032,7 @@
           "operateur": null,
           "proprietaire": null,
           "pavillon": null,
-          "source": "faktaomfartyg.se/otaru_1969.htm (varvsnr 147) ; sisters Otelia/Otello/Ottawa/Otoni",
+          "source": "https://www.faktaomfartyg.se/otaru_1969.htm",
           "timeline": [
             {
               "annee": "1969",
@@ -169073,7 +169089,7 @@
           "operateur": null,
           "proprietaire": null,
           "pavillon": null,
-          "source": "faktaomfartyg.se/otelia_1969.htm (varvsnr 152)",
+          "source": "https://www.faktaomfartyg.se/otelia_1969.htm",
           "timeline": [
             {
               "annee": "1969",
@@ -169137,7 +169153,7 @@
           "operateur": null,
           "proprietaire": null,
           "pavillon": null,
-          "source": "faktaomfartyg.se/otello_1969.htm (varvsnr 153)",
+          "source": "https://www.faktaomfartyg.se/otello_1969.htm",
           "timeline": [
             {
               "annee": "1969",
@@ -169194,7 +169210,7 @@
           "operateur": null,
           "proprietaire": null,
           "pavillon": null,
-          "source": "faktaomfartyg.se/ottawa_1970.htm (varvsnr 155)",
+          "source": "https://www.faktaomfartyg.se/ottawa_1970.htm",
           "timeline": [
             {
               "annee": "1970",
@@ -169251,7 +169267,7 @@
           "operateur": null,
           "proprietaire": null,
           "pavillon": null,
-          "source": "faktaomfartyg.se/otoni_1970.htm (varvsnr 156)",
+          "source": "https://www.faktaomfartyg.se/otoni_1970.htm",
           "timeline": [
             {
               "annee": "1970",
@@ -169356,7 +169372,7 @@
         },
         {
           "nom": "Malaren",
-          "type": "cargo",
+          "type": "pétrolier de produits (oil products tanker), pas un cargo",
           "propulsion": [
             "diesel-mdo"
           ],
@@ -169436,7 +169452,7 @@
           "operateur": null,
           "proprietaire": null,
           "pavillon": null,
-          "source": "faktaomfartyg.se/valerie_1972.htm (varvsnr 161) ; sisters Vallann/Vallmo",
+          "source": "https://www.faktaomfartyg.se/valerie_1972.htm",
           "timeline": [
             {
               "annee": "1972",
@@ -169548,7 +169564,7 @@
         },
         {
           "nom": "Kaprifol",
-          "type": "ropax",
+          "type": "roulier cargo (ro-ro cargo) à la construction, converti plus tard en ferry passagers (ex-Euromagique), pas un ropax à l'origine",
           "propulsion": [
             "diesel-mdo"
           ],
@@ -169565,7 +169581,7 @@
           "operateur": null,
           "proprietaire": null,
           "pavillon": null,
-          "source": "faktaomfartyg.se/kaprifol_1977.htm (varvsnr 169) ; doverferryphotosforums (MV Euromagique) ; sisters Vallmo (varvsnr 179) et Linne/Nordborg (varvsnr 180)",
+          "source": "https://www.doverferryphotosforums.co.uk/mv-euromagique-past-and-present/",
           "timeline": [
             {
               "annee": "1976",
@@ -169737,7 +169753,7 @@
           "proprietaire": "Captain Christos Shipping Company (Le Piree)",
           "pavillon": "Grece",
           "prix_acquisition": null,
-          "source": "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/1771-kapetan-christos-imo-5337824 ; https://www.vesselfinder.com/vessels/details/5337824 ; https://www.shipspotting.com/photos/2353948",
+          "source": "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/1771-kapetan-christos-imo-5337824",
           "timeline": [
             {
               "annee": "1957",
@@ -169795,10 +169811,10 @@
           "classification": null,
           "client": null,
           "operateur": null,
-          "proprietaire": null,
-          "pavillon": null,
+          "proprietaire": "Ab Ronja Marin Ltd (Finlande)",
+          "pavillon": "Finlande",
           "prix_acquisition": null,
-          "source": "https://www.shipspotting.com/photos/1384935 ; https://fleetphoto.ru/entities/782/?lang=en",
+          "source": "http://www.faktaomfartyg.se/isbjorn_1958.htm",
           "timeline": [
             {
               "annee": "1958",
@@ -174931,7 +174947,7 @@
           "imo": "9803259",
           "type": "Roulier / Ferry / NGV",
           "annee": "2017",
-          "longueur_m": 56,
+          "longueur_m": 56.7,
           "largeur_m": 10,
           "jauge_gt": 768,
           "desserte": "Saint-Pierre / Miquelon / Fortune",
@@ -174965,7 +174981,7 @@
               "source": "propriétaire CT975"
             }
           ],
-          "source": "propriétaire CT975",
+          "source": "https://outremers360.com/economie/saint-pierre-et-miquelon-les-nouveaux-ferries-suroit-et-nordet-bientot-en-service ; https://www.spm-ferries.fr/en/about-us/our-fleet/ ; https://www.vesselfinder.com/vessels/details/9803259",
           "architecte": "Damen",
           "architecte_source": "Damen products (Fast RoPax 5510 Nordet and Suroit) : conception interne Damen en coopération avec le client"
         },
@@ -174974,7 +174990,7 @@
           "imo": "9803261",
           "type": "Roulier / Ferry / NGV",
           "annee": "2017",
-          "longueur_m": 56,
+          "longueur_m": 56.7,
           "largeur_m": 10,
           "jauge_gt": 768,
           "desserte": "Saint-Pierre / Miquelon / Fortune",
@@ -175008,7 +175024,7 @@
               "source": "propriétaire CT975"
             }
           ],
-          "source": "propriétaire CT975"
+          "source": "https://outremers360.com/economie/saint-pierre-et-miquelon-les-nouveaux-ferries-suroit-et-nordet-bientot-en-service ; https://www.spm-ferries.fr/en/about-us/our-fleet/ ; https://www.vesselfinder.com/vessels/details/9803261"
         }
       ]
     },
@@ -175093,6 +175109,149 @@
           ],
           "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
           "prix_acquisition": "14,75 M EUR (2002, construction neuve, chantier Astilleros Zamakona Bilbao, financement integral Departement de la Gironde maitre d'ouvrage)"
+        }
+      ]
+    },
+    {
+      "id": "ailsa-shipbuilding-company-troon",
+      "nom": "Ailsa Shipbuilding Company (Troon)",
+      "groupe": "Historique : British Shipbuilders (1977), Ferguson-Ailsa Ltd (1981-1986), Ailsa & Perth (1986), fermé comme constructeur en 2000",
+      "ville": "Troon",
+      "region": "South Ayrshire",
+      "pays": "Écosse",
+      "lat": 55.5459,
+      "lon": -4.681,
+      "geo_precision": "site",
+      "fondation": 1885,
+      "effectif": null,
+      "superficie_ha": null,
+      "actif": false,
+      "perimetres": [
+        "construction-neuve",
+        "reparation-refit"
+      ],
+      "types_navires": [
+        "ferry",
+        "caboteur",
+        "gazier",
+        "dragueur de mines",
+        "chalutier",
+        "vapeur à aubes"
+      ],
+      "description": "Chantier fondé en 1885 à Troon par Archibald Kennedy (3e marquis d'Ailsa). Nationalisé en 1977 (British Shipbuilders), fusionné en 1981 avec Ferguson Brothers sous Ferguson-Ailsa Ltd (deux sites distincts : Troon et Port Glasgow), scindé et privatisé en 1986 (Ailsa & Perth). Fin de la construction de grande série en 1988, fermeture comme constructeur en 2000. Le site du port de Troon est aujourd'hui occupé par Dales Marine Services (réparation).",
+      "materiaux": [
+        "acier"
+      ],
+      "classification": [],
+      "energies": [
+        "diesel-mdo",
+        "vapeur"
+      ],
+      "taille_max": "Caboteurs et gaziers ~80 m (Tarihiko 81,2 m)",
+      "capacites": [],
+      "historique": null,
+      "contact": null,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ailsa_Shipbuilding_Company"
+      ],
+      "confiance": "haute",
+      "navires_references": [
+        {
+          "nom": "MT Tarihiko",
+          "type": "gazier (LPG tanker)",
+          "imo": "8203232",
+          "annee": "1984",
+          "longueur_m": 81.2,
+          "jauge_gt": 2169,
+          "energie": "diesel",
+          "propulsion": [
+            "diesel-mdo"
+          ],
+          "client": "Liquigas Ltd (Nouvelle-Zélande)",
+          "operateur": "Navire démoli en 2016 en Turquie (ex-Kilgas Centurion, ex-Sigas Centurion, ex-Angas)",
+          "proprietaire": "Navire démoli en 2016 en Turquie ; dernier nom Angas (ex-Sigas Centurion, ex-Kilgas Centurion), pavillon Saint-Kitts-et-Nevis depuis mars 2010",
+          "pavillon": "Nouvelle-Zélande",
+          "prix_acquisition": null,
+          "source": "https://www.shipspotting.com/photos/259857 ; https://www.odt.co.nz/business/27-years-tarihiko-first-called-lpg-terminal ; https://maritimeradio.org/ship-stations/tarihiko-zmlp/ ; https://en.wikipedia.org/wiki/Ailsa_Shipbuilding_Company (Yard No 559, site de Troon)",
+          "timeline": [
+            {
+              "annee": "1983",
+              "role": "construction",
+              "nom": "MT Tarihiko",
+              "detail": "Gazier (LPG) commencé chez Ferguson-Ailsa Ltd, site de Troon (ex-Ailsa Shipbuilding), Yard No 559; 81,1 m, 2169 GRT, pour Liquigas Ltd (Nouvelle-Zélande)",
+              "prix": null,
+              "source": "https://www.odt.co.nz/business/27-years-tarihiko-first-called-lpg-terminal"
+            },
+            {
+              "annee": "1984",
+              "role": "operateur",
+              "nom": "MT Tarihiko",
+              "detail": "Exploité sur la côte néo-zélandaise jusqu'en 1999 (plus de 230 escales à Dunedin)",
+              "prix": null,
+              "source": "https://www.odt.co.nz/business/27-years-tarihiko-first-called-lpg-terminal"
+            },
+            {
+              "annee": "1999",
+              "role": "renommage",
+              "nom": "Kilgas Centurion",
+              "detail": "Vendu le 8 juillet 1999 au groupe Knud I. Larsen, immatriculé à Singapour sous le nom Kilgas Centurion",
+              "prix": null,
+              "source": "https://www.odt.co.nz/business/27-years-tarihiko-first-called-lpg-terminal"
+            },
+            {
+              "annee": "2010",
+              "role": "renommage",
+              "nom": "Angas",
+              "detail": "Renommé Sigas Centurion puis, depuis mars 2010, Angas sous pavillon de Saint-Kitts-et-Nevis ; démoli en 2016 en Turquie",
+              "prix": null,
+              "source": "https://www.odt.co.nz/business/27-years-tarihiko-first-called-lpg-terminal"
+            }
+          ]
+        },
+        {
+          "nom": "MV Fivla",
+          "type": "ferry RoRo inter-îles",
+          "imo": "8410237",
+          "annee": "1985",
+          "longueur_m": 30,
+          "jauge_gt": 230,
+          "energie": "diesel",
+          "propulsion": [
+            "diesel-mdo"
+          ],
+          "client": "Shetland Islands Council",
+          "operateur": "SIC Ferries (proprietaire Shetland Islands Council, port d'attache Lerwick)",
+          "proprietaire": "Shetland Islands Council",
+          "pavillon": "Royaume-Uni",
+          "classification": null,
+          "prix_acquisition": null,
+          "source": "https://en.wikipedia.org/wiki/MV_Fivla ; https://en.wikipedia.org/wiki/Ailsa_Shipbuilding_Company (Yard No 566, site de Troon)",
+          "timeline": [
+            {
+              "annee": "1985",
+              "role": "construction",
+              "nom": "MV Fivla",
+              "detail": "Ferry RoRo véhicules/passagers de classe IV MCA construit par Ferguson-Ailsa Ltd, site de Troon (ex-Ailsa Shipbuilding), Yard No 566; 30 m, 230 GT, 95 passagers / 11 voitures",
+              "prix": null,
+              "source": "https://en.wikipedia.org/wiki/MV_Fivla"
+            },
+            {
+              "annee": "1985",
+              "role": "operateur",
+              "nom": "MV Fivla",
+              "detail": "Affecté à la liaison de Bluemull Sound (1985-2005) puis utilisé comme navire de réserve par SIC Ferries, port d'attache Lerwick",
+              "prix": null,
+              "source": "https://en.wikipedia.org/wiki/MV_Fivla"
+            },
+            {
+              "annee": "2015-2017",
+              "role": "evenement",
+              "nom": "MV Fivla",
+              "detail": "Cout de prolongation de vie (life-extension) etale sur 2015, 2016 et 2017. Cout de refit/maintenance, PAS un prix d'acquisition. Prix de construction 1985 (chantier Ailsa/Ferguson-Ailsa, Troon) non public.",
+              "prix": "500 000 GBP (refit, total 2015-2017)",
+              "source": "https://en.wikipedia.org/wiki/MV_Fivla"
+            }
+          ]
         }
       ]
     }
