@@ -14831,7 +14831,8 @@
               "prix": "≈ 6,5 M€/unité (dérivé: contrat de 19,5 M€ pour 3 navires identiques)",
               "source": "https://www.meretmarine.com/fr/defense/gendarmerie-maritime-socarenam-va-livrer-la-nouvelle-vcsm-maroni"
             }
-          ]
+          ],
+          "architecte": "Pierre Delion"
         },
         {
           "nom": "Oyapock",
@@ -16769,7 +16770,8 @@
               "prix": "485 M$ (1995) pour 8 navires ; ≈ 60 M$/unité",
               "source": "https://www.naval-technology.com/projects/combattante/"
             }
-          ]
+          ],
+          "architecte": "CMN (design maison)"
         },
         {
           "nom": "3 patrouilleurs Vigilante de la marine omanaise",
@@ -30213,7 +30215,7 @@
               "source": "meretmarine.com ; corsenetinfos.corsica"
             }
           ],
-          "architecte": "Frederic Neuman",
+          "architecte": "Frédéric Neuman",
           "architecte_source": "Mer et Marine et Merre : navire concu par les bureaux d'etudes de Merre en association avec l'architecte naval Frederic Neuman (meretmarine.com, merre.fr)"
         },
         {
@@ -38790,7 +38792,7 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "architecte": "Jean-Francois Delvoye",
+          "architecte": "Jean-François Delvoye",
           "architecte_source": "Bateaux.com / Boreal Yachts : Boreal 47.2 concu par l'architecte naval Jean-Francois Delvoye, fondateur du chantier Boreal (architecte = fondateur du chantier)"
         },
         {
@@ -40071,7 +40073,8 @@
               "source": "https://www.annoncesbateau.com/bateaux/etat-occasion/categorie-voiliers/marque-jpk/pays-france/"
             }
           ],
-          "prix_acquisition": "Occasion dans la fourchette basse de la gamme JPK (a partir de ~85 000 EUR ; voiliers JPK 9-10 m 2003-2010 generalement 90 000 a 130 000 EUR selon etat). Pas de prix unitaire exact isole pour un JPK 998 specifique apres recherche."
+          "prix_acquisition": "Occasion dans la fourchette basse de la gamme JPK (a partir de ~85 000 EUR ; voiliers JPK 9-10 m 2003-2010 generalement 90 000 a 130 000 EUR selon etat). Pas de prix unitaire exact isole pour un JPK 998 specifique apres recherche.",
+          "architecte": "Jacques Valer"
         },
         {
           "nom": "JPK 960",
@@ -43390,7 +43393,8 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 5
+          "capacite_pax": 5,
+          "architecte": "Jacques Fauroux"
         },
         {
           "nom": "Cap-Ferret 228 Touring",
@@ -53416,7 +53420,8 @@
               "source": "https://www.meretmarine.com/fr/construction-navale/navalu-va-construire-une-navette-electrique-pour-lorient-agglomeration"
             }
           ],
-          "prix_acquisition": "1,39 M€ HT (2025, contrat de construction Navalu pour Lorient Agglomération)"
+          "prix_acquisition": "1,39 M€ HT (2025, contrat de construction Navalu pour Lorient Agglomération)",
+          "architecte": "NepTech"
         },
         {
           "nom": "Eros III",
@@ -53575,7 +53580,8 @@
               "source": "https://hydrogentoday.info/le-passeur-a-hydrogene-enfin-en-operation-a-nantes/"
             }
           ],
-          "prix_acquisition": "678 000 € (2017)"
+          "prix_acquisition": "678 000 € (2017)",
+          "architecte": "Ship-ST"
         },
         {
           "nom": "La Bohème",
@@ -54141,7 +54147,8 @@
           "energie": null,
           "client": "Station de pilotage de La Reunion",
           "classification": null,
-          "source": "https://www.nauticexpo.com/prod/h2x-yachts-ships/product-26919-491193.html"
+          "source": "https://www.nauticexpo.com/prod/h2x-yachts-ships/product-26919-491193.html",
+          "architecte": "Vaton Design"
         },
         {
           "nom": "Catamaran 17 m canaux de Rotterdam",
@@ -54179,7 +54186,8 @@
           "energie": null,
           "client": "Station de pilotage (Nouvelle-Caledonie)",
           "classification": null,
-          "source": "https://www.nauticexpo.com/prod/h2x-yachts-ships/product-26919-491193.html"
+          "source": "https://www.nauticexpo.com/prod/h2x-yachts-ships/product-26919-491193.html",
+          "architecte": "Vaton Design"
         },
         {
           "nom": "Andre Malraux",
@@ -54221,7 +54229,7 @@
           "client": "DGA",
           "classification": null,
           "source": "https://www.meretmarine.com/fr/defense/un-nouveau-navire-dronise-pour-la-dga",
-          "architecte": "Mer & Design",
+          "architecte": "Mer et Design",
           "architecte_source": "Description NauticExpo / Mer et Marine : catamaran de travail composite conçu par le bureau Mer & Design, construit par H2X."
         },
         {
@@ -54235,7 +54243,8 @@
           "energie": null,
           "client": "Pilotage de Toulon (les pilotes de Toulon)",
           "classification": null,
-          "source": "https://www.meretmarine.com/fr/construction-navale/h2x-de-la-plaisance-aux-navires-professionnels"
+          "source": "https://www.meretmarine.com/fr/construction-navale/h2x-de-la-plaisance-aux-navires-professionnels",
+          "architecte": "Vaton Design"
         },
         {
           "nom": "Ulom al-Behar",
@@ -62884,7 +62893,8 @@
           "energie": null,
           "client": null,
           "classification": null,
-          "source": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/2021/06/04/pinasse-kimata-patrimoine-naval-bassin-arcachon-plaisance-bonnin/"
+          "source": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/2021/06/04/pinasse-kimata-patrimoine-naval-bassin-arcachon-plaisance-bonnin/",
+          "architecte": "Joseph Guédon"
         },
         {
           "nom": "Valentine",
@@ -75839,7 +75849,8 @@
           "source": "https://www.yachts-classiques.com/yachts/atlas",
           "propulsion": [
             "velique"
-          ]
+          ],
+          "architecte": "Guy Ribadeau Dumas"
         },
         {
           "nom": "Yoles de Bantry (4 unités)",
@@ -81160,7 +81171,8 @@
               "prix": null,
               "source": "https://www.vesseltracker.com/dn/Ships/Skandi-Achiever-9413810.html"
             }
-          ]
+          ],
+          "architecte": "Aker Yards Design"
         },
         {
           "nom": "Island Empress",
@@ -90906,7 +90918,8 @@
               "prix": "non divulgué (Eidesvik payé en actions Shearwater pour ses 50% de Global Seismic Shipping AS, avec option de vente des actions à USD 30 M ; transaction multi-navires non ventilée)",
               "source": "https://eidesvik.no/stock-notification/update-regarding-seismic-joint-venture-global-seismic-shipping-as/ ; https://ulstein.com/references/oceanic-vega"
             }
-          ]
+          ],
+          "architecte": "Ulstein Design"
         },
         {
           "nom": "Oceanic Sirius",
@@ -90968,7 +90981,8 @@
               "prix": "non divulgué (Eidesvik payé en actions Shearwater pour ses 50% de Global Seismic Shipping AS, avec option de vente des actions à USD 30 M ; transaction multi-navires non ventilée)",
               "source": "https://eidesvik.no/stock-notification/update-regarding-seismic-joint-venture-global-seismic-shipping-as/ ; https://ulstein.com/references/oceanic-sirius"
             }
-          ]
+          ],
+          "architecte": "Ulstein Design"
         },
         {
           "nom": "SW Bly",
@@ -91030,7 +91044,8 @@
               "prix": "127,5 MUSD pour les 6 navires Polarcus (non ventilé par navire)",
               "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/shearwater-swoops-for-polarcus-fleet-and-streamers-in-us177m-deal-65312"
             }
-          ]
+          ],
+          "architecte": "Ulstein Design"
         },
         {
           "nom": "Polarcus Adira",
@@ -91092,7 +91107,8 @@
               "prix": "127,5 MUSD pour 6 navires (non ventilé)",
               "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/shearwater-swoops-for-polarcus-fleet-and-streamers-in-us177m-deal-65312"
             }
-          ]
+          ],
+          "architecte": "Ulstein Design"
         },
         {
           "nom": "Genesis Sea",
@@ -91131,7 +91147,8 @@
               "prix": null,
               "source": "https://ulstein.com/news/seatrial-csov-genesis-sea"
             }
-          ]
+          ],
+          "architecte": "Ulstein Design"
         }
       ],
       "sources": [
@@ -91412,10 +91429,27 @@
               "nom": "Skandi Mobiliser",
               "detail": "Renomme Skandi Mobiliser apres l'integration sous DOF (rebranding flotte, fin 2024). Pavillon Canada.",
               "source": "https://www.vesselfinder.com/vessels/MAERSK-MOBILISER-IMO-9765471-MMSI-316038993"
+            },
+            {
+              "annee": "2014",
+              "role": "construction",
+              "nom": "Kleven Verft (commande Maersk Supply Service)",
+              "detail": "Commande d'octobre 2014 de 6 AHTS eaux profondes identiques (série Starfish, design SALT 200, sister-ships : Maersk Master, Mariner, Minder, Mobiliser, etc.) ; Maersk Mobiliser livré en 2018 ; Riviera : « The vessels are being built with a total budget that exceeds US$0.5Bn » ; dérivation unitaire : >500 M USD / 6 ≈ >83 M USD",
+              "prix": "> 500 M USD pour 6 navires identiques, soit ≈ 83 M USD/unité",
+              "source": "https://www.rivieramm.com/opinion/modified-delivery-schedule-for-ahts-series-reflects-changed-market-reality-27270"
+            },
+            {
+              "annee": "2024",
+              "role": "evenement",
+              "nom": "DOF Group (acquisition de Maersk Supply Service)",
+              "detail": "Acquisition de l'ensemble de Maersk Supply Service (22 navires dont le Maersk Mobiliser : 13 AHTS, 8 CSV, 1 câblier) par DOF Group, cash + actions (25 % du capital DOF), annoncée le 2 juillet 2024, close fin 2024 ; montant global non ventilé par navire",
+              "prix": "≈ 1,112 Md USD (transaction globale, non ventilée par navire)",
+              "source": "https://gcaptain.com/dof-to-acquire-maersk-supply-service-in-1-1-billion-deal/"
             }
           ],
           "architecte": "Salt Ship Design",
-          "architecte_source": "offshore-energy.biz / rivieramm (série Starfish Maersk Supply = design Salt 200 AHTS de Salt Ship Design)"
+          "architecte_source": "offshore-energy.biz / rivieramm (série Starfish Maersk Supply = design Salt 200 AHTS de Salt Ship Design)",
+          "prix_acquisition": "≈ 83 M USD/unité (dérivé : budget total > 500 M USD (« exceeds US$0.5Bn ») pour la série de 6 AHTS identiques Starfish, design SALT 200, commande octobre 2014 chez Kleven ; >500/6 ≈ >83 M USD)"
         },
         {
           "nom": "Mærsk Maker (série Starfish)",
@@ -91922,7 +91956,8 @@
               "source": "vesselfinder.com 9745768"
             }
           ],
-          "prix_acquisition": "~400 millions NOK (construction neuve, contrat janv. 2014, livraison/bapteme juillet 2015)"
+          "prix_acquisition": "~400 millions NOK (construction neuve, contrat janv. 2014, livraison/bapteme juillet 2015)",
+          "architecte": "Marin Teknikk"
         },
         {
           "nom": "NKT Victoria",
@@ -92090,7 +92125,8 @@
               "source": "https://www.marinelink.com/news/construction-contract360116"
             }
           ],
-          "prix_acquisition": "NOK 1,4 milliard (contrat de construction 2013, le plus important jamais signé par Kleven à cette date)"
+          "prix_acquisition": "NOK 1,4 milliard (contrat de construction 2013, le plus important jamais signé par Kleven à cette date)",
+          "architecte": "Salt Ship Design"
         },
         {
           "nom": "Ulysses",
@@ -92137,7 +92173,8 @@
               "role": "construction",
               "nom": "Kleven Maritime AS (Ulsteinvik), coques CIG Shipbuilding Pologne, finition Dorries Marine Bremerhaven",
               "detail": "Lance mars 2016, fin technique Norvege dec. 2016, livraison juin 2018 a Graeme Hart. Chiffre estime, pas un contrat confirme.",
-              "source": "https://www.superyachtfan.com/yacht/ulysses/"
+              "source": "https://www.superyachtfan.com/yacht/ulysses/",
+              "prix": "≈ 275 M USD (2018, coût de construction rapporté)"
             },
             {
               "annee": "2018",
@@ -92146,8 +92183,17 @@
               "detail": "Revente octobre 2018 a Yuri Milner. Montant rapporte par la presse specialisee superyacht, non officiel.",
               "prix": "~195 M USD",
               "source": "https://www.superyachtfan.com/yacht/multiverse/"
+            },
+            {
+              "annee": "2018",
+              "role": "proprietaire",
+              "nom": "Yuri Milner",
+              "detail": "Vente par Graeme Hart au milliardaire Yuri Milner en octobre 2018, navire renommé Multiverse ; prix rapporté par la presse yachting (valeur estimée ensuite ≈ 250 M USD, annonce ultérieure affichée à 300 M€)",
+              "prix": "≈ 195 M USD (2018)",
+              "source": "https://yacht.the-billionaires-club.com/property/multiverse-116m-expedition-yacht-by-kleven-maritime-as/"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 275 M USD (coût de construction rapporté par la presse yachting, livraison Kleven juin 2018)"
         },
         {
           "nom": "SS Nujoma",
@@ -101561,7 +101607,8 @@
               "role": "construction",
               "nom": "Coque ADA Shipyard (Tuzla/Istanbul, Turquie), achevement/livraison Fiskerstrand Verft (chantier no.78), septembre 2014",
               "detail": "Cargo a aliment pour poisson au GNL, sister-ship du With Harvest, design Multi Maritime AS MM 70 CC LNG, indicatif LJHU, affrete par Marine Harvest ASA",
-              "source": "fiskerstrand.no chantier no.78 ; skipsrevyen"
+              "source": "fiskerstrand.no chantier no.78 ; skipsrevyen",
+              "prix": "≈ 450 M NOK pour les 2 sister-ships ; ≈ 225 M NOK/unité (dérivé: 450/2)"
             },
             {
               "annee": "2014",
@@ -101570,7 +101617,8 @@
               "detail": null,
               "source": "fiskerstrand.no chantier no.78"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 225 M NOK/unité, 2014 (dérivé: contrat d'environ 450 M NOK pour 2 navires identiques With Marine + With Harvest, design Multi Maritime MM 70 CC LNG)"
         },
         {
           "nom": "Hasvik",
@@ -103079,7 +103127,8 @@
               "role": "construction",
               "nom": "Larsnes Mek. Verksted AS",
               "detail": "Navire de recherche mis en service au printemps 2006, revendiqué dans les références du chantier (à confirmer)",
-              "source": "https://www.larsnes-mek.no/en/our-history/"
+              "source": "https://www.larsnes-mek.no/en/our-history/",
+              "prix": "≈ 40 M NOK (2006)"
             },
             {
               "annee": "2006",
@@ -103088,7 +103137,8 @@
               "detail": "Université norvégienne des sciences et technologies, exploitant scientifique",
               "source": "https://www.ntnu.edu/oceans/gunnerus"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 40 M NOK, 2006 (coût de construction pour NTNU)"
         },
         {
           "nom": "Zephyr",
@@ -108929,7 +108979,8 @@
               "annee": "1971",
               "role": "construction",
               "nom": "Blaalid (bygg nr. 24)",
-              "source": "stadyard.no/references"
+              "source": "stadyard.no/references",
+              "prix": "≈ 2 M NOK/unité (dérivé: contrat de ≈ 12 M NOK pour une série de 6 navires identiques; 5 finalement livrés)"
             },
             {
               "annee": "1971",
@@ -108943,7 +108994,8 @@
               "nom": "Danemark",
               "source": "stadyard.no/references (armateur danois)"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 2 M NOK/unité, 1971 (dérivé: contrat total ≈ 12 M NOK pour une série de 6 navires identiques chez Blaalid Slip & Mek. Verksted, Raudeberg; 5 livrés 1971-1973)"
         },
         {
           "nom": "Nanna Buur",
@@ -108965,7 +109017,8 @@
               "annee": "1971",
               "role": "construction",
               "nom": "Blaalid (bygg nr. 25)",
-              "source": "stadyard.no/references"
+              "source": "stadyard.no/references",
+              "prix": "≈ 2 M NOK/unité (dérivé: contrat de ≈ 12 M NOK pour une série de 6 navires identiques; 5 finalement livrés)"
             },
             {
               "annee": "1971",
@@ -108979,7 +109032,8 @@
               "nom": "Danemark",
               "source": "stadyard.no/references (armateur danois)"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 2 M NOK/unité, 1971 (dérivé: contrat total ≈ 12 M NOK pour une série de 6 navires identiques chez Blaalid Slip & Mek. Verksted, Raudeberg; 5 livrés 1971-1973)"
         },
         {
           "nom": "Tora Buur",
@@ -109001,7 +109055,8 @@
               "annee": "1972",
               "role": "construction",
               "nom": "Blaalid (bygg nr. 26)",
-              "source": "stadyard.no/references"
+              "source": "stadyard.no/references",
+              "prix": "≈ 2 M NOK/unité (dérivé: contrat de ≈ 12 M NOK pour une série de 6 navires identiques; 5 finalement livrés)"
             },
             {
               "annee": "1972",
@@ -109015,7 +109070,8 @@
               "nom": "Danemark",
               "source": "stadyard.no/references (armateur danois)"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 2 M NOK/unité, 1971 (dérivé: contrat total ≈ 12 M NOK pour une série de 6 navires identiques chez Blaalid Slip & Mek. Verksted, Raudeberg; 5 livrés 1971-1973)"
         },
         {
           "nom": "Tina Buur",
@@ -109037,7 +109093,8 @@
               "annee": "1972",
               "role": "construction",
               "nom": "Blaalid (bygg nr. 27)",
-              "source": "stadyard.no/references"
+              "source": "stadyard.no/references",
+              "prix": "≈ 2 M NOK/unité (dérivé: contrat de ≈ 12 M NOK pour une série de 6 navires identiques; 5 finalement livrés)"
             },
             {
               "annee": "1972",
@@ -109051,7 +109108,8 @@
               "nom": "Danemark",
               "source": "stadyard.no/references (armateur danois)"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 2 M NOK/unité, 1971 (dérivé: contrat total ≈ 12 M NOK pour une série de 6 navires identiques chez Blaalid Slip & Mek. Verksted, Raudeberg; 5 livrés 1971-1973)"
         },
         {
           "nom": "Fenja Buur",
@@ -109073,7 +109131,8 @@
               "annee": "1973",
               "role": "construction",
               "nom": "Blaalid (bygg nr. 28)",
-              "source": "stadyard.no/references"
+              "source": "stadyard.no/references",
+              "prix": "≈ 2 M NOK/unité (dérivé: contrat de ≈ 12 M NOK pour une série de 6 navires identiques; 5 finalement livrés)"
             },
             {
               "annee": "1973",
@@ -109087,7 +109146,8 @@
               "nom": "Danemark",
               "source": "stadyard.no/references (armateur danois)"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 2 M NOK/unité, 1971 (dérivé: contrat total ≈ 12 M NOK pour une série de 6 navires identiques chez Blaalid Slip & Mek. Verksted, Raudeberg; 5 livrés 1971-1973)"
         }
       ],
       "sources": [
@@ -109436,6 +109496,14 @@
               "nom": "Grovfjord Mek. Verksted (bnr 124), 2x Caterpillar C32 Acert 1081 bkW",
               "detail": "Livré 22/12/2016",
               "source": "gmv.no"
+            },
+            {
+              "annee": "2014",
+              "role": "evenement",
+              "nom": "Contrat-cadre GMV / Northern Offshore Services AB (2 CTV D-class + option sur 2)",
+              "detail": "Fremover (28/12/2014): GMV sécurise un contrat pour deux nouveaux CTV vindmølle plus option sur deux autres; le Defender (5e D-class, livré le 21/12/2016 selon offshorewind.biz) est vraisemblablement issu de ce cadre. Montant global jamais ventilé par navire, le total inclut aussi des navires aquacoles",
+              "prix": "Part non isolable d'environ 200 M NOK de nouveaux contrats GMV (décembre 2014, CTV + navires aquacoles confondus)",
+              "source": "https://www.fremover.no/lokale-nyheter/familiebedriften-i-grovfjord-var-i-ferd-med-a-gjore-en-kjempetabbe-men-sa-provde-de-noe-nytt/s/5-17-11040"
             }
           ]
         },
@@ -110404,8 +110472,25 @@
               "nom": "Marine royale norvégienne",
               "detail": "Mise en service (commissioning) du Skjold ; cinq sister-ships (Storm, Skudd, Steil, Glimt, Gnist) livrés ensuite entre 2010 et 2012",
               "source": "https://en.wikipedia.org/wiki/Skjold-class_corvette"
+            },
+            {
+              "annee": "1996",
+              "role": "construction",
+              "nom": "Kværner Mandal (futur Umoe Mandal), pour la Marine royale norvégienne",
+              "detail": "Contrat du 30 août 1996 pour le forseriefartøy (prototype) du projet 6081, avec option sur 7 unités de série; livré le 17 avril 1999 sans armes ni conduite de tir; dépassement d'environ 10% selon la presse norvégienne de 1999",
+              "prix": "235 MNOK (≈ 36,7 MUSD 1996); la section financement du même rapport indique 330 MNOK",
+              "source": "https://www.forecastinternational.com/archive/disp_pdf.cfm?DACH_RECNO=1014"
+            },
+            {
+              "annee": "2003",
+              "role": "evenement",
+              "nom": "Mise à niveau au standard série (projet P6300 Skjold Serie)",
+              "detail": "La refonte du prototype KNM Skjold au standard opérationnel est incluse dans le contrat du 30 novembre 2003 avec le Skjold Prime Consortium (5 navires neufs + mise à niveau du prototype)",
+              "prix": "incluse dans le contrat série de 3,7 mds NOK (niveau de prix juin 2003)",
+              "source": "https://www.ntnu.no/documents/1261860271/1262012574/Evaluering+prosjekt+6300+Skjold-Klassen+MTBer.pdf/5b96f79d-ffe0-4162-a4d4-f0e156352107?t=1684766321300"
             }
-          ]
+          ],
+          "prix_acquisition": "235 MNOK (≈ 36,7 MUSD, 1996), contrat prototype du 30 août 1996 à Kværner Mandal, coque livrée sans armement en avril 1999 (le même rapport Forecast International cite aussi 330 MNOK dans sa section financement; dépassement ~10% signalé par la presse norvégienne en 1999)"
         },
         {
           "nom": "KNM Storm (P961)",
@@ -110442,8 +110527,25 @@
               "nom": "Marine royale norvégienne",
               "detail": "Mise en service (commissioning)",
               "source": "https://en.wikipedia.org/wiki/Skjold-class_corvette"
+            },
+            {
+              "annee": "2003",
+              "role": "construction",
+              "nom": "Skjold Prime Consortium (Umoe Mandal, Armaris/DCN-Thales, Kongsberg Defence & Aerospace) pour la Marine royale norvégienne",
+              "detail": "Contrat signé le 30 novembre 2003: 5 navires de série identiques + refonte du prototype; parts: Umoe Mandal ≈ 2 mds NOK, Armaris ≈ 1 md NOK, KDA ≈ 0,8 md NOK; accord de compensations industrielles de 1,6 md NOK en sus (valeur totale annoncée 5,2 mds NOK); KNM Storm est la première unité de série, admise au service actif le 9 septembre 2010",
+              "prix": "3,7 mds NOK (niveau juin 2003) pour la série; ≈ 125 MUSD/unité hors armement + 35 MUSD d'armement (Forecast International, 2003)",
+              "source": "https://www.nrk.no/sorlandet/kontrakt-for-mtb-er-fra-mandal-1.316638"
+            },
+            {
+              "annee": "2012",
+              "role": "evenement",
+              "nom": "Coût final du projet P6300 Skjold Serie (évaluation officielle)",
+              "detail": "Cadre de coût 4,675 mds NOK (2003) porté à 5,658 mds NOK (2012); coût final estimé 5,0 mds NOK (niveau 2012) hors missiles NSM; les 48 missiles NSM des 6 navires ≈ 2 mds NOK; coût d'acquisition total ≈ 7 mds NOK (niveau 2010-2011)",
+              "prix": "≈ 5,0 mds NOK (2012) hors NSM; ≈ 7 mds NOK avec NSM",
+              "source": "https://www.ntnu.no/documents/1261860271/1262012574/Evaluering+prosjekt+6300+Skjold-Klassen+MTBer.pdf/5b96f79d-ffe0-4162-a4d4-f0e156352107?t=1684766321300"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 617 à 740 MNOK/unité (dérivé: contrat série SPC de 3,7 mds NOK signé le 30 novembre 2003, niveau de prix juin 2003, couvrant 5 navires neufs identiques plus la mise à niveau du prototype, soit 6 coques; 3,7/6 ≈ 617 MNOK, 3,7/5 ≈ 740 MNOK); Forecast International: ≈ 125 MUSD/unité + 35 MUSD d'armement (2003), contrat de production de 556 MUSD pour les 5 unités (janv. 2004)"
         },
         {
           "nom": "KNM Oksøy (M340)",
@@ -110525,8 +110627,25 @@
               "nom": "Norscrap West AS",
               "detail": "Retire du service ; remorque le 29 juin 2022 vers Norscrap West AS pour demolition, demantele avant le 23 juillet 2022",
               "source": "https://en.wikipedia.org/wiki/Alta-class_minesweeper"
+            },
+            {
+              "annee": "1989",
+              "role": "construction",
+              "nom": "Kværner Mandal (futur Umoe Mandal), programme Oksøy/Alta pour la Marine royale norvégienne",
+              "detail": "Commande 1989 de 9 navires de guerre des mines (4 chasseurs Oksøy + 5 dragueurs Alta), catamarans à effet de surface en composite, livrés 1994-1997; KNM Alta livré en 1996; NRK indique 400 MNOK par navire en couronnes 1994 (≈ 800 MNOK valeur 2025), soit ≈ 3,6 mds NOK pour le programme",
+              "prix": "≈ 400 MNOK/unité (couronnes 1994); programme ≈ 3,6 mds NOK (1994)",
+              "source": "https://www.nrk.no/rogaland/xl/forsvarets-milliardprosjekt-ble-solgt-pa-finn.no-1.17367090"
+            },
+            {
+              "annee": "2009",
+              "role": "evenement",
+              "nom": "Vente de deux unités retirées de la classe (KNM Glomma et KNM Oksøy) à SHS Shipping",
+              "detail": "Référence de marché pour la valeur résiduelle de la série: deux navires jumeaux retirés vendus ensemble en 2009 pour une fraction infime du coût de construction",
+              "prix": "5,6 MNOK pour les deux navires (2009)",
+              "source": "https://www.nrk.no/rogaland/xl/forsvarets-milliardprosjekt-ble-solgt-pa-finn.no-1.17367090"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 400 MNOK/unité (couronnes 1994, soit ≈ 800 MNOK de 2025 selon NRK); programme Oksøy/Alta: 9 navires de guerre des mines commandés en 1989 chez Kværner Mandal pour ≈ 3,6 mds NOK (valeur 1994), livrés 1994-1997"
         },
         {
           "nom": "MHO Falcon",
@@ -110717,9 +110836,27 @@
               "role": "evenement",
               "nom": "Modernisation Kongsberg",
               "detail": "Contrat Kongsberg (~400 MNOK) de modernisation du systeme de combat des 6 corvettes Skjold ; duree de vie prolongee au-dela de 2030",
-              "source": "navalnews.com 2026-02 ; armyrecognition.com 2026"
+              "source": "navalnews.com 2026-02 ; armyrecognition.com 2026",
+              "prix": "410 M NOK (contrat classe, 4 navires sur 6)"
+            },
+            {
+              "annee": "2003",
+              "role": "construction",
+              "nom": "Skjold Prime Consortium (Umoe Mandal, Kongsberg, Armaris DCN-Thales) pour la Marine royale norvégienne",
+              "detail": "Contrat série signé le 28/11/2003: 3,6 Mds NOK pour la livraison de 5 vedettes lance-missiles identiques (Storm, Skudd, Steil, Glimt, Gnist), plus ≈ 1,6 Md NOK de contreparties pour l'industrie de défense norvégienne, total 5,2 Mds NOK. Prix unitaire dérivé: 3,6 Mds NOK / 5 = ≈ 720 M NOK. Livraisons prévues 2006-2009, réalisées 2010-2012.",
+              "prix": "3,6 Mds NOK pour 5 navires (≈ 720 M NOK/unité, dérivé 3,6 Mds/5), 5,2 Mds NOK contrat total",
+              "source": "https://www.nrk.no/sorlandet/kontrakt-for-mtb-er-fra-mandal-1.316638"
+            },
+            {
+              "annee": "2004",
+              "role": "construction",
+              "nom": "Skjold Prime Consortium, contrat de production",
+              "detail": "Contrat de production attribué en janvier 2004, valeur 556 M USD; l'accord de juillet 2003 valorisé 637 M USD couvrait 5 navires neufs plus la remise au standard opérationnel du prototype KNM Skjold. Coût unitaire selon Forecast International: 125 M USD hors armement, plus 35 M USD d'armement, soit 160 M USD par navire armé (USD 2003).",
+              "prix": "556 M USD (contrat de production 2004); ≈ 125 M USD/unité hors armement, ≈ 160 M USD armé",
+              "source": "https://www.forecastinternational.com/archive/disp_pdf.cfm?DACH_RECNO=1014"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 720 M NOK/unité, prix 2003 (dérivé: contrat série du 28/11/2003 de 3,6 Mds NOK pour 5 navires identiques classe Skjold, Storm/Skudd/Steil/Glimt/Gnist, soit 3,6 Mds/5; 5,2 Mds NOK avec les contreparties industrielles). Forecast International: coût unitaire ≈ 125 M USD hors armement, ≈ 160 M USD armé (USD 2003)"
         },
         {
           "nom": "KNM Steil (P963)",
@@ -110767,9 +110904,27 @@
               "role": "evenement",
               "nom": "Modernisation Kongsberg",
               "detail": "Contrat Kongsberg de modernisation du systeme de combat des 6 corvettes Skjold ; duree de vie prolongee au-dela de 2030",
-              "source": "navalnews.com 2026-02"
+              "source": "navalnews.com 2026-02",
+              "prix": "410 M NOK (contrat classe, 4 navires sur 6)"
+            },
+            {
+              "annee": "2003",
+              "role": "construction",
+              "nom": "Skjold Prime Consortium (Umoe Mandal, Kongsberg, Armaris DCN-Thales) pour la Marine royale norvégienne",
+              "detail": "Contrat série signé le 28/11/2003: 3,6 Mds NOK pour la livraison de 5 vedettes lance-missiles identiques (Storm, Skudd, Steil, Glimt, Gnist), plus ≈ 1,6 Md NOK de contreparties pour l'industrie de défense norvégienne, total 5,2 Mds NOK. Prix unitaire dérivé: 3,6 Mds NOK / 5 = ≈ 720 M NOK. Livraisons prévues 2006-2009, réalisées 2010-2012.",
+              "prix": "3,6 Mds NOK pour 5 navires (≈ 720 M NOK/unité, dérivé 3,6 Mds/5), 5,2 Mds NOK contrat total",
+              "source": "https://www.nrk.no/sorlandet/kontrakt-for-mtb-er-fra-mandal-1.316638"
+            },
+            {
+              "annee": "2004",
+              "role": "construction",
+              "nom": "Skjold Prime Consortium, contrat de production",
+              "detail": "Contrat de production attribué en janvier 2004, valeur 556 M USD; l'accord de juillet 2003 valorisé 637 M USD couvrait 5 navires neufs plus la remise au standard opérationnel du prototype KNM Skjold. Coût unitaire selon Forecast International: 125 M USD hors armement, plus 35 M USD d'armement, soit 160 M USD par navire armé (USD 2003).",
+              "prix": "556 M USD (contrat de production 2004); ≈ 125 M USD/unité hors armement, ≈ 160 M USD armé",
+              "source": "https://www.forecastinternational.com/archive/disp_pdf.cfm?DACH_RECNO=1014"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 720 M NOK/unité, prix 2003 (dérivé: contrat série du 28/11/2003 de 3,6 Mds NOK pour 5 navires identiques classe Skjold, Storm/Skudd/Steil/Glimt/Gnist, soit 3,6 Mds/5; 5,2 Mds NOK avec les contreparties industrielles). Forecast International: coût unitaire ≈ 125 M USD hors armement, ≈ 160 M USD armé (USD 2003)"
         },
         {
           "nom": "KNM Glimt (P964)",
@@ -110817,9 +110972,27 @@
               "role": "evenement",
               "nom": "Modernisation Kongsberg",
               "detail": "Contrat Kongsberg de modernisation du systeme de combat des 6 corvettes Skjold ; duree de vie prolongee au-dela de 2030",
-              "source": "navalnews.com 2026-02"
+              "source": "navalnews.com 2026-02",
+              "prix": "410 M NOK (contrat classe, 4 navires sur 6)"
+            },
+            {
+              "annee": "2003",
+              "role": "construction",
+              "nom": "Skjold Prime Consortium (Umoe Mandal, Kongsberg, Armaris DCN-Thales) pour la Marine royale norvégienne",
+              "detail": "Contrat série signé le 28/11/2003: 3,6 Mds NOK pour la livraison de 5 vedettes lance-missiles identiques (Storm, Skudd, Steil, Glimt, Gnist), plus ≈ 1,6 Md NOK de contreparties pour l'industrie de défense norvégienne, total 5,2 Mds NOK. Prix unitaire dérivé: 3,6 Mds NOK / 5 = ≈ 720 M NOK. Livraisons prévues 2006-2009, réalisées 2010-2012.",
+              "prix": "3,6 Mds NOK pour 5 navires (≈ 720 M NOK/unité, dérivé 3,6 Mds/5), 5,2 Mds NOK contrat total",
+              "source": "https://www.nrk.no/sorlandet/kontrakt-for-mtb-er-fra-mandal-1.316638"
+            },
+            {
+              "annee": "2004",
+              "role": "construction",
+              "nom": "Skjold Prime Consortium, contrat de production",
+              "detail": "Contrat de production attribué en janvier 2004, valeur 556 M USD; l'accord de juillet 2003 valorisé 637 M USD couvrait 5 navires neufs plus la remise au standard opérationnel du prototype KNM Skjold. Coût unitaire selon Forecast International: 125 M USD hors armement, plus 35 M USD d'armement, soit 160 M USD par navire armé (USD 2003).",
+              "prix": "556 M USD (contrat de production 2004); ≈ 125 M USD/unité hors armement, ≈ 160 M USD armé",
+              "source": "https://www.forecastinternational.com/archive/disp_pdf.cfm?DACH_RECNO=1014"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 720 M NOK/unité, prix 2003 (dérivé: contrat série du 28/11/2003 de 3,6 Mds NOK pour 5 navires identiques classe Skjold, Storm/Skudd/Steil/Glimt/Gnist, soit 3,6 Mds/5; 5,2 Mds NOK avec les contreparties industrielles). Forecast International: coût unitaire ≈ 125 M USD hors armement, ≈ 160 M USD armé (USD 2003)"
         },
         {
           "nom": "KNM Gnist (P965)",
@@ -110867,9 +111040,27 @@
               "role": "evenement",
               "nom": "Modernisation Kongsberg",
               "detail": "Contrat Kongsberg de modernisation du systeme de combat des 6 corvettes Skjold ; duree de vie prolongee au-dela de 2030",
-              "source": "navalnews.com 2026-02"
+              "source": "navalnews.com 2026-02",
+              "prix": "410 M NOK (contrat classe, 4 navires sur 6)"
+            },
+            {
+              "annee": "2003",
+              "role": "construction",
+              "nom": "Skjold Prime Consortium (Umoe Mandal, Kongsberg, Armaris DCN-Thales) pour la Marine royale norvégienne",
+              "detail": "Contrat série signé le 28/11/2003: 3,6 Mds NOK pour la livraison de 5 vedettes lance-missiles identiques (Storm, Skudd, Steil, Glimt, Gnist), plus ≈ 1,6 Md NOK de contreparties pour l'industrie de défense norvégienne, total 5,2 Mds NOK. Prix unitaire dérivé: 3,6 Mds NOK / 5 = ≈ 720 M NOK. Livraisons prévues 2006-2009, réalisées 2010-2012.",
+              "prix": "3,6 Mds NOK pour 5 navires (≈ 720 M NOK/unité, dérivé 3,6 Mds/5), 5,2 Mds NOK contrat total",
+              "source": "https://www.nrk.no/sorlandet/kontrakt-for-mtb-er-fra-mandal-1.316638"
+            },
+            {
+              "annee": "2004",
+              "role": "construction",
+              "nom": "Skjold Prime Consortium, contrat de production",
+              "detail": "Contrat de production attribué en janvier 2004, valeur 556 M USD; l'accord de juillet 2003 valorisé 637 M USD couvrait 5 navires neufs plus la remise au standard opérationnel du prototype KNM Skjold. Coût unitaire selon Forecast International: 125 M USD hors armement, plus 35 M USD d'armement, soit 160 M USD par navire armé (USD 2003).",
+              "prix": "556 M USD (contrat de production 2004); ≈ 125 M USD/unité hors armement, ≈ 160 M USD armé",
+              "source": "https://www.forecastinternational.com/archive/disp_pdf.cfm?DACH_RECNO=1014"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 720 M NOK/unité, prix 2003 (dérivé: contrat série du 28/11/2003 de 3,6 Mds NOK pour 5 navires identiques classe Skjold, Storm/Skudd/Steil/Glimt/Gnist, soit 3,6 Mds/5; 5,2 Mds NOK avec les contreparties industrielles). Forecast International: coût unitaire ≈ 125 M USD hors armement, ≈ 160 M USD armé (USD 2003)"
         },
         {
           "nom": "KNM Karmøy (M341)",
@@ -111011,7 +111202,8 @@
               "role": "construction",
               "nom": "Kvaerner Mandal (devenu Umoe Mandal)",
               "detail": "Dragueur de mines classe Alta (jumelle de la classe Oksoy), coque catamaran sandwich FRP (SES)",
-              "source": "naval-technology.com Oksoy/Alta"
+              "source": "naval-technology.com Oksoy/Alta",
+              "prix": "≈ 400 M NOK/navire (kroner 1994)"
             },
             {
               "annee": "1996",
@@ -111019,8 +111211,25 @@
               "nom": "Marine royale norvegienne",
               "detail": "Admission au service le 8 novembre 1996 ; toujours actif",
               "source": "en.wikipedia.org/wiki/Alta-class_minesweeper"
+            },
+            {
+              "annee": "2009",
+              "role": "evenement",
+              "nom": "Vente de sister-ships déclassés (référence de valeur résiduelle, pas KNM Otra)",
+              "detail": "Les coques sister-ships démilitarisées KNM Glomma et KNM Oksøy (équipements militaires, moteurs et hydrojets déposés) ont été vendues à SHS Shipping pour 2,8 M NOK et 2,5 M NOK, 5,3 M NOK au total. Référence de décote massive des coques SES/GRP démilitarisées de la série; KNM Otra reste en service.",
+              "prix": "2,5 à 2,8 M NOK par coque démilitarisée (sister-ships)",
+              "source": "https://www.nettavisen.no/nyheter/forsvaret-solgte-krigsskip/s/12-95-2617355"
+            },
+            {
+              "annee": "2026",
+              "role": "evenement",
+              "nom": "Accord-cadre de maintenance Forsvarsmateriell / Umoe Mandal",
+              "detail": "Accord-cadre annoncé le 10/02/2026 couvrant maintenance planifiée et corrective, réparations, modifications, prolongation de vie et services de dock pour les classes Skjold, Oksøy et Alta, dont KNM Otra.",
+              "prix": "jusqu'à 870 M NOK (accord-cadre multi-classes)",
+              "source": "https://www.fma.no/aktuelt-og-media/2026/ny-rammeavtale-for-vedlikehold-av-mineryddere-og-korvetter"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 400 M NOK/navire en kroner 1994, soit plus de 800 M NOK de 2025 (coût de construction moyen du programme de 9 navires de guerre des mines Oksøy/Alta commandé à Kværner Mandal en novembre 1989, NRK); ordre de grandeur corroboré par Nettavisen, ≈ 430 M NOK/navire"
         },
         {
           "nom": "KNM Rauma (M352)",
@@ -111047,7 +111256,8 @@
               "role": "construction",
               "nom": "Kvaerner Mandal (devenu Umoe Mandal)",
               "detail": "Dragueur de mines classe Alta, coque catamaran sandwich FRP (SES)",
-              "source": "naval-technology.com Oksoy/Alta"
+              "source": "naval-technology.com Oksoy/Alta",
+              "prix": "≈ 400 M NOK/navire (kroner 1994)"
             },
             {
               "annee": "1996",
@@ -111055,8 +111265,25 @@
               "nom": "Marine royale norvegienne",
               "detail": "Admission au service le 2 decembre 1996 ; toujours actif",
               "source": "en.wikipedia.org/wiki/Alta-class_minesweeper"
+            },
+            {
+              "annee": "2009",
+              "role": "evenement",
+              "nom": "Vente de sister-ships déclassés (référence de valeur résiduelle, pas KNM Rauma)",
+              "detail": "Les coques sister-ships démilitarisées KNM Glomma et KNM Oksøy (équipements militaires, moteurs et hydrojets déposés) ont été vendues à SHS Shipping pour 2,8 M NOK et 2,5 M NOK, 5,3 M NOK au total. Référence de décote massive des coques SES/GRP démilitarisées de la série; KNM Rauma reste en service.",
+              "prix": "2,5 à 2,8 M NOK par coque démilitarisée (sister-ships)",
+              "source": "https://www.nettavisen.no/nyheter/forsvaret-solgte-krigsskip/s/12-95-2617355"
+            },
+            {
+              "annee": "2026",
+              "role": "evenement",
+              "nom": "Accord-cadre de maintenance Forsvarsmateriell / Umoe Mandal",
+              "detail": "Accord-cadre annoncé le 10/02/2026 couvrant maintenance planifiée et corrective, réparations, modifications, prolongation de vie et services de dock pour les classes Skjold, Oksøy et Alta, dont KNM Rauma.",
+              "prix": "jusqu'à 870 M NOK (accord-cadre multi-classes)",
+              "source": "https://www.fma.no/aktuelt-og-media/2026/ny-rammeavtale-for-vedlikehold-av-mineryddere-og-korvetter"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 400 M NOK/navire en kroner 1994, soit plus de 800 M NOK de 2025 (coût de construction moyen du programme de 9 navires de guerre des mines Oksøy/Alta commandé à Kværner Mandal en novembre 1989, NRK); ordre de grandeur corroboré par Nettavisen, ≈ 430 M NOK/navire"
         },
         {
           "nom": "KNM Orkla (M353)",
@@ -111083,7 +111310,8 @@
               "role": "construction",
               "nom": "Kvaerner Mandal (devenu Umoe Mandal)",
               "detail": "Dragueur de mines classe Alta, coque catamaran sandwich FRP (SES)",
-              "source": "naval-technology.com Oksoy/Alta"
+              "source": "naval-technology.com Oksoy/Alta",
+              "prix": "300 MNOK (NOK, coût de construction)"
             },
             {
               "annee": "1997",
@@ -111097,9 +111325,11 @@
               "role": "evenement",
               "nom": "Perte par incendie",
               "detail": "Detruit par un incendie le 19 novembre 2002",
-              "source": "en.wikipedia.org/wiki/Alta-class_minesweeper"
+              "source": "en.wikipedia.org/wiki/Alta-class_minesweeper",
+              "prix": "347 MNOK (NOK 2002, valeur du navire perdue)"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 300 MNOK (coût de construction, NOK, chantier Kvaerner/Umoe Mandal); valeur totale du navire citée à 347 MNOK lors de sa perte en 2002 (Adresseavisen)"
         },
         {
           "nom": "KNM Glomma (M354)",
@@ -111126,7 +111356,8 @@
               "role": "construction",
               "nom": "Kvaerner Mandal (devenu Umoe Mandal)",
               "detail": "Dragueur de mines classe Alta, coque catamaran sandwich FRP (SES)",
-              "source": "naval-technology.com Oksoy/Alta"
+              "source": "naval-technology.com Oksoy/Alta",
+              "prix": "400 MNOK/unité (NOK 1994)"
             },
             {
               "annee": "1997",
@@ -111140,9 +111371,11 @@
               "role": "proprietaire",
               "nom": "Vente hors marine",
               "detail": "Retire du service puis vendu en 2009 (destination/acquereur non confirmes)",
-              "source": "en.wikipedia.org/wiki/HNoMS_Glomma"
+              "source": "en.wikipedia.org/wiki/HNoMS_Glomma",
+              "prix": "≈ 2,8 MNOK/unité (dérivé: vente de 5,6 MNOK pour les 2 navires, NOK 2009)"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 400 MNOK/unité (NOK 1994, coût de construction, classe Oksøy/Alta chez Kvaerner/Umoe Mandal, source TV2 et NRK); revendu 2009 à SHS Shipping ≈ 2,8 MNOK/unité (dérivé: 5,6 MNOK pour les 2 navires KNM Oksøy + KNM Glomma)"
         }
       ],
       "sources": [
@@ -111319,6 +111552,14 @@
               "nom": "Moen Marin",
               "detail": "Développement du NABCREW Zero AirBlue 1240 en collaboration avec Pascal Technologies (technologie AirHull/coussin d'air), modèle tout-électrique de transport de personnel aquacole",
               "source": "https://plugboats.com/two-new-electric-boats-efficient-airhull-technology/"
+            },
+            {
+              "annee": "2023",
+              "role": "evenement",
+              "nom": "Subvention Enova à Moen Marin (projet NABCREW Zero AirBlue 1240 avec Pascal Technologies et R2 Marine)",
+              "detail": "Communiqué Enova: «Enova gir i tillegg 7,3 mNOK i støtte til Moen Marin som skal bygge en fullelektrisk hurtiggående personbåt for oppdrettsnæringen». Subvention au projet, le prix de construction du navire n'est pas public",
+              "prix": "7,3 MNOK (NOK 2023, subvention Enova, pas le prix du navire)",
+              "source": "https://kommunikasjon.ntb.no/pressemelding/18002284/709-millioner-kroner-til-utslippsfri-maritim-transport?publisherId=17848299&lang=no"
             }
           ]
         },
@@ -111507,6 +111748,14 @@
               "nom": "NRS Farming",
               "detail": "Catamaran de servitude pour sites aquacoles",
               "source": "Danfoss, Edel aquaculture boat"
+            },
+            {
+              "annee": "2019",
+              "role": "evenement",
+              "nom": "Subvention Enova au projet Edel (catamaran hybride NabCat 13,5 m pour NRS Farming / Norway Royal Salmon)",
+              "detail": "Premier navire aquacole hybride diesel-électrique de Moen Marin (2 moteurs Danfoss Editron 105 kW, batterie 244 kWh). Moen Marin: soutien Enova de 2 160 000 NOK au projet; le prix du contrat de construction n'est pas public",
+              "prix": "2 160 000 NOK (subvention Enova, pas le prix du navire)",
+              "source": "https://www.moenmarin.no/moen-marin-bygger-hybrid-katamaran-for-nrs-farming/"
             }
           ]
         },
@@ -111659,7 +111908,8 @@
               "role": "construction",
               "nom": "Moen Marin AS (chantier de Croatie)",
               "detail": "3e monocoque AQS, moteur CAT C32, pont 137 m2",
-              "source": "Baird Maritime, VESSEL REVIEW AQS Tor"
+              "source": "Baird Maritime, VESSEL REVIEW AQS Tor",
+              "prix": "6,6 M€ (2021)"
             },
             {
               "annee": "2021",
@@ -111690,7 +111940,8 @@
               "detail": "Immatriculation norvégienne",
               "source": "ShipSpotting IMO 9896957"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 6,6 M€ (2021) : valeur du navire neuf citée par SalmonBusiness au moment de sa livraison (remorquage après l'incident Eemslift Hendrika)"
         },
         {
           "nom": "Fakstind",
@@ -112602,7 +112853,8 @@
               "detail": "Exploité comme navire de service/entrepreneur maritime (plongée, aquaculture)",
               "source": "https://maritimt.com/nb/batomtaler/fda-mimmi-102023"
             }
-          ]
+          ],
+          "architecte": "Fitjar Mekaniske Verksted (design maison)"
         },
         {
           "nom": "Multi Arctic",
@@ -112774,6 +113026,14 @@
               "nom": "Skandi Commander",
               "detail": "Bygg 29 de Fitjar Mekaniske Verksted, design Marin Teknikk MT6009, 74,30 x 16,40 m, pour DOF ASA",
               "source": "fmvas.no/referanser/nybygg/bygg-29-skandi-commander"
+            },
+            {
+              "annee": "2026",
+              "role": "evenement",
+              "nom": "Affrètement Petrobras (DOF Group ASA)",
+              "detail": "Contrat d'affrètement de 4 ans (support ROV + AUV) débutant janvier 2027, annoncé le 2 janvier 2026. Valeur d'exploitation, PAS un prix d'acquisition. Le prix de construction 2007 (Fitjar Mekaniske Verksted bnr 29, coque Vyborg Shipyard, design MT 6009, contrat DOF du 02.12.2004) n'a jamais été publié : la colonne valeur du carnet de commandes norvégien (Refvik v7.02, 15.02.2007) est vide pour ce bnr.",
+              "prix": "≈ 150 MUSD (affrètement 4 ans, 2026)",
+              "source": "https://www.shipuniverse.com/news/skandi-commander-lands-four-year-petrobras-award-as-dof-adds-another-150m-slice-of-brazil-backlog/"
             }
           ]
         },
@@ -112849,8 +113109,17 @@
               "nom": "Norvège",
               "detail": "Immatriculé en Norvège (IMO 9836646)",
               "source": "vesselfinder.com IMO 9836646"
+            },
+            {
+              "annee": "2019",
+              "role": "proprietaire",
+              "nom": "Napier AS (Bømlo, Norvège)",
+              "detail": "Livraison en janvier 2019 (bygg nr 40, design HFMV P43-400, 43 x 11 m, 300 t). L'article Tekfisk indique que ce type de bateau coûte entre 150 et 200 millions de kroner. Exploitation sous contrat de 5 ans avec SalMar (zone Frøya), valeur du contrat d'affrètement non publiée.",
+              "prix": "150 à 200 MNOK (NOK 2019)",
+              "source": "https://www.tekfisk.no/fou/reder-fremtiden-er-prosessbater-fremfor-bronnbater/2-1-517307"
             }
-          ]
+          ],
+          "prix_acquisition": "150 à 200 MNOK (NOK, 2019, fourchette indiquée par la presse spécialisée pour ce prosessbåt de 43 m de Napier à sa livraison)"
         },
         {
           "nom": "OV Ryvingen",
@@ -112996,7 +113265,8 @@
               "detail": "Immatriculé en Norvège (IMO 9854064, MMSI 257077570)",
               "source": "marinetraffic.com IMO 9854064"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 150 à 200 MNOK (NOK, 2019; dérivé: fourchette publiée pour la série P43 de Napier à propos de Taupo, sister-ship identique de 43 m / 300 t; aucun prix individuel publié pour Taupiri)"
         },
         {
           "nom": "Hordagut",
@@ -113170,6 +113440,14 @@
               "nom": "Norvège",
               "detail": "Immatriculé en Norvège (IMO 9879507, MMSI 257090840)",
               "source": "vesselfinder.com IMO 9879507"
+            },
+            {
+              "annee": "2018",
+              "role": "evenement",
+              "nom": "Repère de valeur: prédécesseur Hordabas",
+              "detail": "Seul repère public pour la flotte Thermo Service: le bløggebåt Hordabas (14,9 m, capacité environ trois fois moindre que Hordafjell) a coûté environ 30 MNOK (« båten koster cirka 30 millioner kroner », Fiskeribladet/Tekfisk, consulté via Wayback Machine). Ce montant concerne Hordabas, pas Hordafjell.",
+              "prix": "≈ 30 MNOK (Hordabas, navire prédécesseur plus petit, à titre de repère uniquement)",
+              "source": "http://web.archive.org/web/20200626063526/https://fiskeribladet.no/tekfisk/nyheter/?artikkel=65487"
             }
           ]
         },
@@ -113288,7 +113566,8 @@
               "role": "construction",
               "nom": "Volt Harvest III",
               "detail": "Bygg 51 (FMV51) de Fitjar Mek. Verksted, livré mai 2023 à Volt Service AS ; design Heimli HFMV P42-500, construit complet à Fitjar ; 10e bateau d'abattage (bløggebåt) livré par FMV",
-              "source": "fmvas.no Brosjyre 2023 (PDF)"
+              "source": "fmvas.no Brosjyre 2023 (PDF)",
+              "prix": "≈ 400 MNOK pour les deux navires Volt Harvest III + Volt Collector III (NOK 2023)"
             },
             {
               "annee": "2023",
@@ -113297,7 +113576,8 @@
               "detail": "Immatriculé en Norvège (IMO 9898589, MMSI 258120000, call sign LGEX)",
               "source": "vesselfinder.com IMO 9898589"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 400 MNOK (NOK, 2023) pour les DEUX navires commandés ensemble par Volt Service: Volt Harvest III (42,7 m, Fitjar Mekaniske Verksted) et Volt Collector III (22 m, Moen Marin). Navires non identiques, prix unitaire non dérivable; Volt Harvest III est nettement le plus grand des deux."
         },
         {
           "nom": "Volt Harvest I",
@@ -114000,7 +114280,7 @@
           "pavillon": "Norvège",
           "classification": null,
           "port_lourd_dwt": null,
-          "prix_acquisition": null,
+          "prix_acquisition": "≈ 129 MNOK (2012, contrat de construction neuve, Fitjar Mekaniske Verksted bygg nr 33 pour Kystverket)",
           "source": "https://no.wikipedia.org/wiki/OV_%C2%ABUtv%C3%A6r%C2%BB",
           "timeline": [
             {
@@ -114008,7 +114288,7 @@
               "role": "construction",
               "nom": "OV Utvær",
               "detail": "Construit par Fitjar Mekaniske Verksted (byggenr. 33), navire de dépollution 44x12 m, 907 GT, 3x CAT C32 (994 kW), 14 nds ; livré à Kystverket le 06/07/2012 ; premier de la série de renouvellement de flotte",
-              "prix": null,
+              "prix": "≈ 129 MNOK",
               "source": "https://no.wikipedia.org/wiki/OV_%C2%ABUtv%C3%A6r%C2%BB"
             },
             {
@@ -114038,7 +114318,7 @@
           "pavillon": "Norvège",
           "classification": null,
           "port_lourd_dwt": null,
-          "prix_acquisition": null,
+          "prix_acquisition": "≈ 160 MNOK (2013, contrat de construction neuve, Fitjar Mekaniske Verksted pour Kystverket, soit plus de 20 % au-dessus du prix annoncé pour l'OV Utvær)",
           "source": "https://www.marinetraffic.com/en/ais/details/ships/shipid:312435/mmsi:258674000/imo:9533189/vessel:OV_SKOMVAER",
           "timeline": [
             {
@@ -114046,7 +114326,7 @@
               "role": "construction",
               "nom": "OV Skomvær",
               "detail": "Construit par Fitjar Mekaniske Verksted (byggenr. 34), navire de dépollution 44x12 m, 945 GT, 3x CAT C32 (994 kW), 14 nds ; livré à Kystverket le 11/07/2013 ; sister-ship de l'OV Utvær",
-              "prix": null,
+              "prix": "≈ 160 MNOK",
               "source": "https://no.wikipedia.org/wiki/OV_%C2%ABSkomv%C3%A6r%C2%BB"
             },
             {
@@ -114135,7 +114415,8 @@
               "prix": "non divulgué ; gain comptable ≈ 16 M NOK (≈ 1,83 M USD) pour DOF",
               "source": "https://www.bairdmaritime.com/work-boat-world/offshore-world/offshore-operations-maintenance/platform-supply/dof-sells-2002-built-psv"
             }
-          ]
+          ],
+          "architecte": "Marin Teknikk"
         },
         {
           "nom": "Skandi Foula",
@@ -114181,7 +114462,8 @@
               "prix": null,
               "source": "https://www.myshiptracking.com/vessels/ex-foula-mmsi-259408000-imo-9250749"
             }
-          ]
+          ],
+          "architecte": "Marin Teknikk"
         },
         {
           "nom": "Skandi Caledonia",
@@ -114227,7 +114509,8 @@
               "prix": "NOK 275 M (~25,1 M USD)",
               "source": "https://splash247.com/dof-offloads-pair-of-elderly-psvs-to-atlantica-shipping/"
             }
-          ]
+          ],
+          "architecte": "Marin Teknikk"
         },
         {
           "nom": "Skandi Texel",
@@ -114800,8 +115083,17 @@
               "nom": "Salthammer Båtbyggeri (byggenr 159) pour Herøy Servicebåt AS, livraison prévue T1 2027",
               "detail": "Design CoastCat25TT (nouveau design Tomra Engineering) ; annoncé comme la servicekatamaran hybride la plus puissante de l'aquaculture norvégienne ; armateur entré au capital : Kobbvåglaks",
               "source": "nssm.no/aktuelt/bygger-bransjens-kraftigste-hybride-servicekatamaran"
+            },
+            {
+              "annee": "2025",
+              "role": "construction",
+              "nom": "Herøy Servicebåt (commande chez Salthammer Båtbyggeri, byggenr 159)",
+              "detail": "Contrat de construction du CoastCat25TT (25 m x 13 m, hybride, design Tomra Engineering), livraison prévue T1 2027. La directrice générale Bente Helen Sund : « Det nye fartøyet vil ha en samlet investeringsramme på mellom 150 og 200 millioner kroner » (article ilaks du 23/12/2025)",
+              "prix": "150-200 MNOK (NOK 2025)",
+              "source": "https://ilaks.no/heroy-servicebat-har-fatt-kobbvaglaks-pa-eiersiden-na-satser-de-et-tresifret-millionbelop-pa-nytt-fartoy/"
             }
-          ]
+          ],
+          "prix_acquisition": "150 à 200 MNOK (cadre d'investissement total annoncé par l'armateur, NOK 2025)"
         },
         {
           "nom": "Csaver",
@@ -116374,8 +116666,17 @@
               "nom": "Garde-côte royal norvégien",
               "detail": "Mis en service pour patrouille et sauvetage",
               "source": "https://www.maritime-partner.com/news/sjoborn38hpb1"
+            },
+            {
+              "annee": "2024",
+              "role": "construction",
+              "nom": "Forsvarsmateriell (NDMA) / Kystvakten - contrat avec Maritime Partner AS",
+              "detail": "Contrat pour 5 patrouilleurs rapides Sjøbjørn 38 en aluminium destinés à remplacer les vedettes embarquées de la classe Nornen (Indre Kystvakt) : 3 livraisons en 2025, 2 en 2026. NETT NO (13/09/2024) : « Verdien på kontrakten som ble utlyst i fjor er på rundt 69 millioner kroner ». Prix unitaire ≈ 13,8 MNOK (69 MNOK / 5 unités identiques). HPB2 et HPB3 font partie de cette série ; nombre et calendrier confirmés par Forsvarsmateriell (fma.no, 13/09/2024)",
+              "prix": "≈ 69 MNOK pour 5 unités, soit ≈ 13,8 MNOK/unité (NOK 2024)",
+              "source": "https://nett.no/nyheter/skal-levere-serie-med-b%C3%A5ter-til-kystvakta"
             }
-          ]
+          ],
+          "prix_acquisition": "≈ 13,8 MNOK/unité (dérivé : contrat d'environ 69 MNOK pour 5 patrouilleurs Sjøbjørn 38 identiques commandés par Forsvarsmateriell, NOK 2024)"
         },
         {
           "nom": "Sjøbjørn 71 / Danish Rescue Vessel (DRV)",
@@ -121678,6 +121979,38 @@
               "nom": "Livre par Marinens Hovedverft/Horten Verft (byggenr 150) a H. Borthen, Oslo",
               "detail": "Petrolier 31 825 brt",
               "source": "skipet.no"
+            },
+            {
+              "annee": "1973",
+              "role": "proprietaire",
+              "nom": "Tønnevolds Tankrederi A/S",
+              "detail": "Vente en mai par A/S Oljefart II & Skibs-A/S Motortank (Harry Borthen & Co., Oslo), renommé THORHILD",
+              "prix": "7 650 000 USD (1973)",
+              "source": "https://skipshistorie.net/Oslo/OSL323HarryBorthen/Tekster/OSL32319640100000%20HARRY%20BORTHEN.htm"
+            },
+            {
+              "annee": "1974",
+              "role": "proprietaire",
+              "nom": "K/S A/S Geir (Fekete & Co.), Oslo",
+              "detail": "Vente en novembre, renommé ENIGHEDEN",
+              "prix": "7 600 000 USD (1974)",
+              "source": "https://skipshistorie.net/Oslo/OSL323HarryBorthen/Tekster/OSL32319640100000%20HARRY%20BORTHEN.htm"
+            },
+            {
+              "annee": "1977",
+              "role": "proprietaire",
+              "nom": "Norrona Shipping Pte. Ltd",
+              "detail": "Vente en octobre après faillite du propriétaire précédent, renommé CHERRY EARL",
+              "prix": "2 150 000 USD (1977)",
+              "source": "https://skipshistorie.net/Oslo/OSL323HarryBorthen/Tekster/OSL32319640100000%20HARRY%20BORTHEN.htm"
+            },
+            {
+              "annee": "1984",
+              "role": "evenement",
+              "nom": "Vente à la démolition, Chi Tai Steel Enterprise Co. Ltd (Taïwan)",
+              "detail": "Vendu comme ferraille, démolition entamée le 08/03/1984",
+              "prix": "133 USD par tonne lège (LDT) (1984)",
+              "source": "https://skipshistorie.net/Oslo/OSL323HarryBorthen/Tekster/OSL32319640100000%20HARRY%20BORTHEN.htm"
             }
           ]
         },
@@ -121705,6 +122038,14 @@
               "nom": "Livre par Horten Verft (byggenr 155) a H. Borthen, Oslo",
               "detail": "Petrolier 28 837 brt",
               "source": "skipet.no"
+            },
+            {
+              "annee": "1975",
+              "role": "proprietaire",
+              "nom": "China Ocean Shipping Co. (COSCO), Guangzhou/Dalian",
+              "detail": "Vente en février par A/S Oljefart II & Skibs-A/S Motortank (Harry Borthen & Co., Oslo), renommé QING HU, démoli à Shanghai en 1986",
+              "prix": "9 800 000 USD (1975)",
+              "source": "https://skipshistorie.net/Oslo/OSL323HarryBorthen/Tekster/OSL32319660100000%20JENNY.htm"
             }
           ]
         },
@@ -121732,6 +122073,22 @@
               "nom": "Livre par Horten Verft (byggenr 147) a H. Borthen, Oslo",
               "detail": "Cargo 12 930 brt",
               "source": "skipet.no"
+            },
+            {
+              "annee": "1968",
+              "role": "proprietaire",
+              "nom": "Skibs-A/S Gylfe (Eivind Evensen), Oslo",
+              "detail": "Vente en octobre par A/S Oljefart II & Skibs-A/S Motortank (Harry Borthen & Co., Oslo), renommé GYLFE",
+              "prix": "2 030 000 USD (1968)",
+              "source": "https://skipshistorie.net/Oslo/OSL323HarryBorthen/Tekster/OSL32319620100000%20NINA%20BORTHEN.htm"
+            },
+            {
+              "annee": "1976",
+              "role": "proprietaire",
+              "nom": "P/R Dea Brøvig (Th. Brøvig), Farsund",
+              "detail": "Vente en septembre, renommé DEA BRØVIG, puis WARLORD en 1984, démoli à Alang en 1985",
+              "prix": "1 500 000 USD (1976)",
+              "source": "https://skipshistorie.net/Oslo/OSL323HarryBorthen/Tekster/OSL32319620100000%20NINA%20BORTHEN.htm"
             }
           ]
         },
@@ -121813,6 +122170,14 @@
               "nom": "Livre par Marinens Hovedverft, Horten (byggenr 136) a Samuel Bakke, Haugesund",
               "detail": "Cargo 4 701 brt",
               "source": "skipet.no"
+            },
+            {
+              "annee": "1974",
+              "role": "evenement",
+              "nom": "Vente à la démolition, chantiers pakistanais",
+              "detail": "Vendu aux démolisseurs pakistanais après cession 1973 à Krimac S.A. (T. J. Stevenson & Co., New York), démoli en 1975 par Ismail, Karachi",
+              "prix": "418 000 USD (1974)",
+              "source": "https://skipshistorie.net/Haugesund/HAU201ChristianHaaland/Tekster/HAU20119520100000%20CONCORDIA%20STAR.htm"
             }
           ]
         },
@@ -126049,7 +126414,8 @@
               "source": "https://grokipedia.com/page/mv_normand_maximus"
             }
           ],
-          "prix_acquisition": "≈ 367 M USD (≈ 2,2 Md NOK), contrat ferme juin 2014"
+          "prix_acquisition": "≈ 367 M USD (≈ 2,2 Md NOK), contrat ferme juin 2014",
+          "architecte": "Vard Design"
         },
         {
           "nom": "Siem Spearfish",
@@ -126094,7 +126460,8 @@
               "detail": "Prix de cession non divulgué ; renouvellement de flotte. Navire désormais BOKA Spearfish.",
               "source": "https://www.offshore-energy.biz/sea1-selling-11-year-old-subsea-construction-vessel-as-part-of-fleet-renewal/"
             }
-          ]
+          ],
+          "architecte": "Vard Design"
         },
         {
           "nom": "Siem Stingray",
@@ -126140,7 +126507,8 @@
               "detail": "Augmentation de flotte Swire Seabed ; montant non publié.",
               "source": "https://www.swirepacific.com/en/investor-relations/updates-to-our-shareholders/press-releases/subsea-operations-specialist-swire-seabed-as-increases-vessel-fleet-with-three-year-bareboat-charter"
             }
-          ]
+          ],
+          "architecte": "Vard Design"
         },
         {
           "nom": "Siem Daya 1",
@@ -149419,7 +149787,8 @@
               "detail": "Livre 24 mars 2017, 22e navire de la flotte Solvtrans",
               "source": "myklebustverft.com; VesselFinder"
             }
-          ]
+          ],
+          "architecte": "Rolls-Royce Marine (NVC design)"
         },
         {
           "nom": "Ronia Diamond",
@@ -149533,7 +149902,8 @@
               "detail": "Livre avril 2023, coque construite en Turquie",
               "source": "myklebustverft.com; MarineTraffic"
             }
-          ]
+          ],
+          "architecte": "Kongsberg Maritime (NVC design)"
         },
         {
           "nom": "Grand Canyon II",
@@ -149652,7 +150022,8 @@
               "detail": "Affretement long terme par Dolphin (puis Shearwater)",
               "source": "Dolphin Group ASA"
             }
-          ]
+          ],
+          "architecte": "Skipsteknisk"
         },
         {
           "nom": "Sanco Swift",
@@ -150219,7 +150590,8 @@
           ],
           "longueur_m": 83.85,
           "jauge_gt": 3482,
-          "port_lourd_dwt": 3933
+          "port_lourd_dwt": 3933,
+          "architecte": "Marin Teknikk"
         },
         {
           "nom": "Skandi Rona",
@@ -150252,7 +150624,8 @@
               "detail": "Vendu par DOF Rederi, livraison avril 2022",
               "source": "marinelink (synthese)"
             }
-          ]
+          ],
+          "architecte": "Marin Teknikk"
         },
         {
           "nom": "Edda Fonn",
@@ -150604,9 +150977,20 @@
               "role": "construction",
               "nom": "Kleven Myklebust Verft, design Multi Maritime MM 80 Reefer MK II",
               "detail": "Reefer/porte-conteneurs refrigere livre debut 2008 a Eimskip",
-              "source": "maritimeoptima; ship-technology.com"
+              "source": "maritimeoptima; ship-technology.com",
+              "prix": "> 100 M NOK (2008, valeur à la livraison, pas un prix de contrat publié)"
+            },
+            {
+              "annee": "2019",
+              "role": "evenement",
+              "nom": "Eimskip (vente de reefers norvégiens, repère de valeur)",
+              "detail": "Repère de valeur, Polfoss NON inclus dans la transaction : Eimskip vend en novembre 2019 un lot de 3 reefers norvégiens comprenant le sister-ship Langfoss (2007, même design MM 80) avec Stigfoss et Vidfoss (navires plus anciens, non identiques) ; pas de dérivation unitaire possible car lot hétérogène",
+              "prix": "12 M USD (10,9 M€) pour le lot de 3 navires",
+              "source": "https://www.vesselfinder.com/news/17003-Eimskip-sells-three-reefer-vessels-in-Norway"
             }
-          ]
+          ],
+          "architecte": "Møre Maritime",
+          "prix_acquisition": "> 100 M NOK (valeur du navire indiquée à la livraison 2008 par Maritimt Magasin : « Verdien på fartøyet er på godt over hundre millioner kroner » ; prix de contrat exact non publié)"
         },
         {
           "nom": "Holmfoss",
@@ -174982,7 +175366,7 @@
             }
           ],
           "source": "https://outremers360.com/economie/saint-pierre-et-miquelon-les-nouveaux-ferries-suroit-et-nordet-bientot-en-service ; https://www.spm-ferries.fr/en/about-us/our-fleet/ ; https://www.vesselfinder.com/vessels/details/9803259",
-          "architecte": "Damen",
+          "architecte": "Damen Shipyards",
           "architecte_source": "Damen products (Fast RoPax 5510 Nordet and Suroit) : conception interne Damen en coopération avec le client"
         },
         {
