@@ -5395,7 +5395,9 @@
               "source": "https://encyclopedia.pub/entry/37870"
             }
           ],
-          "prix_acquisition": "≈ 250 M€/unité plateforme (dérivé : contrat de 1 Md€ pour 4 corvettes Gowind 2500, 2014, hors systèmes d'armes) ; coût programme global 1,5 à 1,7 Md€ armement MBDA et torpilles inclus"
+          "prix_acquisition": "≈ 250 M€/unité plateforme (dérivé : contrat de 1 Md€ pour 4 corvettes Gowind 2500, 2014, hors systèmes d'armes) ; coût programme global 1,5 à 1,7 Md€ armement MBDA et torpilles inclus",
+          "architecte": "Naval Group",
+          "architecte_source": "Corvette de type Gowind 2500, design développé par Naval Group (ex-DCNS) (Wikipedia 'Gowind-class design', naval-technology.com, Wikipedia 'ENS El Fateh')"
         },
         {
           "nom": "Auvergne (D654)",
@@ -5996,7 +5998,9 @@
               "source": "https://defense-militaire.over-blog.com/2023/08/quel-prix-coutent-50-des-principaux-equipements-bateaux-avions-armement-de-la-marine-nationale-francaise.html"
             }
           ],
-          "prix_acquisition": "1,77 milliard FRF (cond. 1996) = ~426,15 M EUR reactualises 2022 (cout unitaire FLF classe La Fayette, sister-ship F710)"
+          "prix_acquisition": "1,77 milliard FRF (cond. 1996) = ~426,15 M EUR reactualises 2022 (cout unitaire FLF classe La Fayette, sister-ship F710)",
+          "architecte": "Naval Group",
+          "architecte_source": "https://en.wikipedia.org/wiki/La_Fayette-class_frigate (classe La Fayette conçue par le bureau d'études de DCN/DCN International ; construite par DCN Lorient)"
         },
         {
           "nom": "Aconit (F713)",
@@ -6717,7 +6721,9 @@
               "source": "https://fr.wikipedia.org/wiki/Classe_d'Estienne_d'Orves"
             }
           ],
-          "prix_acquisition": "≈ 270 M FRF/unité (~41,2 M€) coût de construction, prix de série classe A69"
+          "prix_acquisition": "≈ 270 M FRF/unité (~41,2 M€) coût de construction, prix de série classe A69",
+          "architecte": "DTCN",
+          "architecte_source": "Historique classe A69 (belgian-navy.be, techno-science.net) : conception par le bureau d'études de l'État, la DTCN/DCN (ingénieurs Goullet de Rugy et Marcel Guiguen), distincte du chantier constructeur de Lorient. Navire d'État conçu par la direction technique de la Marine, pas par un cabinet privé."
         },
         {
           "nom": "Amyot d'Inville (F782)",
@@ -7339,7 +7345,9 @@
               "detail": "En service 23 octobre 1982 ; toujours en service (retrait prévu 2026)",
               "source": "Wikipedia D'Estienne d'Orves-class aviso"
             }
-          ]
+          ],
+          "architecte": "Naval Group",
+          "architecte_source": "Aviso type A69, classe d'Estienne d'Orves, conçu par la DCN (Direction des Constructions Navales, ancêtre de Naval Group) (Wikipedia 'D'Estienne d'Orves-class aviso')"
         },
         {
           "nom": "Commandant Ducuing (F795)",
@@ -13152,7 +13160,9 @@
           "propulsion": [
             "diesel-electrique",
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Piriou Ingénierie",
+          "architecte_source": "piriou.com (brochure PS 1500 mc³ Franche Terre) + meretmarine.com : conception interne par Piriou Ingénierie, division ingénierie navale de Piriou (études menées à Concarneau), pas de cabinet externe distinct"
         },
         {
           "nom": "Atlantique (ex-Saint-Antoine Marie II)",
@@ -16475,7 +16485,9 @@
               "prix": "900 M€ (2023) pour 7 navires ; ≈ 128,6 M€/unité",
               "source": "https://www.defense.gouv.fr/dga/actualites/dga-commande-sept-premiers-batiments-du-programme-patrouilleurs-hauturiers"
             }
-          ]
+          ],
+          "architecte": "Naval Group",
+          "architecte_source": "Naval Group (communiqué « achève la conception des futurs patrouilleurs hauturiers ») + Mer et Marine + Wikipédia : Naval Group architecte-concepteur du PH, construction répartie entre CMN, Piriou et Socarenam — https://www.naval-group.com/en/node/1324"
         },
         {
           "nom": "UHSI32 MkII (plus grand drone de combat de surface construit en France)",
@@ -16711,7 +16723,9 @@
           "source": "https://yachtharbour.com/yacht/de-de-1017",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Stirling Design International",
+          "architecte_source": "Boat International, Superyacht Directory (fiche De De, CMN 2002) : Naval Architect crédité 'CMN and Stirling Design'. Stirling Design International intervient comme cabinet d'architecture navale distinct du chantier CMN."
         },
         {
           "nom": "La Tania",
@@ -17766,7 +17780,9 @@
               "detail": "Coule par l'USS Simpson lors de l'operation Praying Mantis",
               "source": "en.wikipedia Kaman-class"
             }
-          ]
+          ],
+          "architecte": "Constructions Mécaniques de Normandie",
+          "architecte_source": "Wikipedia (La Combattante II / Kaman-class): commande passee au constructeur francais CMN a Cherbourg ; type La Combattante II conçu par CMN apres rejet du projet Lürssen initial par la France. Architecte naval = constructeur (bureau de design integre CMN)."
         },
         {
           "nom": "Classe Sa'ar 3 / projet de Cherbourg (vedettes lance-missiles Israel)",
@@ -17814,7 +17830,9 @@
               "detail": "Cinq vedettes (Sufa, Ga'ash, Herev, Hanit, Hetz) quittent Cherbourg malgre l'embargo francais decrete apres la guerre des Six Jours",
               "source": "en.wikipedia Cherbourg Project"
             }
-          ]
+          ],
+          "architecte": "Lürssen",
+          "architecte_source": "en.wikipedia.org/wiki/Sa'ar_3-class_missile_boat : coque dérivée de la Jaguar-class, conçue par Lürssen (steel, +2,4 m) puis construite en licence à CMN Cherbourg"
         },
         {
           "nom": "Classe Tiger / Type 148 (20 vedettes lance-missiles Bundesmarine)",
@@ -17862,7 +17880,9 @@
               "detail": "Fuchs, Loewe, Alk, Dommel, Weihe vendus a l'Egypte (2002) ; plusieurs unites vers le Chili (1997-2014)",
               "source": "en.wikipedia Tiger-class"
             }
-          ]
+          ],
+          "architecte": "Lürssen",
+          "architecte_source": "en.wikipedia.org/wiki/Tiger-class_fast_attack_craft : « La Combattante IIa had been designed by Lürssen of Germany », construites à CMN Cherbourg (et Lürssen)"
         },
         {
           "nom": "Classe Perdana / La Combattante II (4 patrouilleurs Malaisie)",
@@ -17896,7 +17916,9 @@
               "detail": "Perdana, Serang, Ganas, Ganyang",
               "source": "en.wikipedia La Combattante II type"
             }
-          ]
+          ],
+          "architecte": "Constructions Mécaniques de Normandie",
+          "architecte_source": "Wikipedia (La Combattante II type / La Combattante-class): 'between 1968 and 1974 CMN built a further 37 vessels, known as La Combattante II, for the navies of Iran, Malaysia and Libya'. Classe Perdana (Malaisie) = type La Combattante II conçu par CMN (design francais adopte apres rejet du projet Lürssen). Architecte naval = constructeur (CMN)."
         },
         {
           "nom": "Classe Beir Grassa / La Combattante II (vedettes lance-missiles Libye)",
@@ -17923,7 +17945,9 @@
               "detail": "Serie de vedettes lance-missiles type La Combattante IIG pour la Libye",
               "source": "en.wikipedia La Combattante II type"
             }
-          ]
+          ],
+          "architecte": "Constructions Mécaniques de Normandie",
+          "architecte_source": "Wikipedia (La Combattante II type / La Combattante-class): le concept initial derivait d'une vedette rapide dessinee par Lürssen, mais la France a impose et adopte le design francais de CMN. CMN (bureau d'etudes maison) est l'autorite de conception du type La Combattante II. Cas ou l'architecte naval EST le constructeur (chantier a bureau de design integre)."
         },
         {
           "nom": "Classe La Combattante IIIa (4 vedettes lance-missiles Grece)",
@@ -17957,7 +17981,9 @@
               "detail": "Derniere unite IIIa de Cherbourg",
               "source": "en.wikipedia La Combattante III type"
             }
-          ]
+          ],
+          "architecte": "Constructions Mécaniques de Normandie",
+          "architecte_source": "Wikipedia (La Combattante III type): classe La Combattante IIIa (4 unites construites par CMN pour la Grece ; 6 IIIb sous licence en Grece). Type III conçu par le bureau d'etudes de CMN (allongement 1975 du type II). Architecte naval = constructeur (CMN)."
         },
         {
           "nom": "Classe Siri / La Combattante IIIB (3 vedettes lance-missiles Nigeria)",
@@ -17991,7 +18017,9 @@
               "detail": "Derniere unite de la serie nigeriane",
               "source": "en.wikipedia La Combattante III type"
             }
-          ]
+          ],
+          "architecte": "Lürssen",
+          "architecte_source": "en.wikipedia.org/wiki/La_Combattante_III(_&_II)_type_fast_attack_craft : famille La Combattante = design de patrouilleur rapide Lürssen ; variante III (+9 m) développée par CMN, Siri commandée 1977 à CMN. Concepteur de base Lürssen, dérivé III par CMN"
         },
         {
           "nom": "Classe Damsah / La Combattante III (3 vedettes lance-missiles Qatar)",
@@ -18025,7 +18053,9 @@
               "detail": "3 unites La Combattante III pour le Qatar",
               "source": "en.wikipedia La Combattante III type"
             }
-          ]
+          ],
+          "architecte": "Constructions Mécaniques de Normandie",
+          "architecte_source": "Wikipedia (La Combattante III type): 'In 1975 Constructions Mécaniques de Normandie (CMN) modified the La Combattante II design, adding nine metres...'. Le type III est un developpement/allongement conçu par le bureau d'etudes de CMN. Variante IIIM pour le Qatar (Damsah). Architecte naval = constructeur (CMN)."
         },
         {
           "nom": "Classe La Galite / La Combattante III (3 patrouilleurs lance-missiles Tunisie)",
@@ -18059,7 +18089,9 @@
               "detail": "La Galite, Tunis, Carthage",
               "source": "Wikimanche ; en.wikipedia La Combattante III type"
             }
-          ]
+          ],
+          "architecte": "Constructions Mécaniques de Normandie",
+          "architecte_source": "Wikipedia (La Combattante III type): 3 unites de type La Combattante IIIM pour la marine tunisienne (dont La Galite). Type III conçu par le bureau d'etudes de CMN. Architecte naval = constructeur (CMN)."
         }
       ]
     },
@@ -18726,7 +18758,9 @@
               "prix": "39,5 M EUR (2024)",
               "source": "https://www.navalnews.com/naval-news/2024/04/guyana-to-buy-french-opv/"
             }
-          ]
+          ],
+          "architecte": "OCEA",
+          "architecte_source": "Mer et Marine (meretmarine.com/fr/defense/ocea-delivers-all-aluminium-opv) : « The OPV 190 was designed by OCEA's design office » — conception par le bureau d'études interne d'OCEA"
         },
         {
           "nom": "KRI Rigel (933, OSV 190 SC-WB)",
@@ -19038,7 +19072,9 @@
           "source": "https://fr.wikipedia.org/wiki/Fouladou_(patrouilleur)",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "OCEA",
+          "architecte_source": "Mer et Marine (meretmarine.com/fr/defense/ocea-delivers-all-aluminium-opv) : l'OPV 190 conçu par le bureau d'études interne d'OCEA"
         },
         {
           "nom": "Patrouilleur hauturier du Guyana, type OPV 190",
@@ -20580,7 +20616,9 @@
               "detail": "Modèle de série de catamaran de croisière (~13,3 m) produit par le Groupe Bénéteau sous la marque Excess, orienté performance à la voile ; destiné à des plaisanciers privés ou au charter (pas d'identité de navire unique, propriétaire/opérateur variable par exemplaire).",
               "source": "https://www.dreamyachtsales.com/blog/45-to-46-foot-catamaran-models-comparison/"
             }
-          ]
+          ],
+          "architecte": "VPLP Design",
+          "architecte_source": "vplp.fr/en/cruising/excess14 + cruisingworld.com : « The Excess 14 is a catamaran conceptualized by naval architect VPLP Design » (coque asymétrique) ; extérieur Patrick le Quément"
         },
         {
           "nom": "Lagoon 46",
@@ -20676,7 +20714,9 @@
           "source": "https://www.classefigarobeneteau.fr/fr/le-figaro-beneteau-3",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "VPLP Design",
+          "architecte_source": "VPLP Design (vplp.fr/course/figaro-3) et Yachting World : monotype à foils Figaro Beneteau 3 dessiné par VPLP (Van Peteghem Lauriot-Prévost) en collaboration avec le bureau d'études Bénéteau, construit par le Groupe Bénéteau."
         },
         {
           "nom": "Monte Carlo Yachts MCY 80",
@@ -22132,7 +22172,9 @@
               "source": "superyachts.com ; Boat International"
             }
           ],
-          "capacite_pax": 12
+          "capacite_pax": 12,
+          "architecte": "Exequiel Cano Lanza",
+          "architecte_source": "YachtBuyer et Boat International : yacht Couach 3700 FLY (36,88 m, 2008) ; design extérieur par Exequiel Cano Lanza (studio CLYD, Arcachon, clyd.fr). L'architecture navale (lignes de coque) est réalisée en interne par Couach, le chantier constructeur. Cabinet de design distinct du constructeur = Cano Lanza."
         },
         {
           "nom": "Apmonia (ex Nyota, ex Tosca)",
@@ -25458,7 +25500,9 @@
               "detail": "Exploité par la Marine royale marocaine pour la prospection et le contrôle de la ZEE (domaines civil et militaire).",
               "source": "https://fr.wikipedia.org/wiki/Dar_al_Beida"
             }
-          ]
+          ],
+          "architecte": "Piriou",
+          "architecte_source": "Mer et Marine + communiqué Piriou (26/11/2018) : le BHO2M dérive des plans des B2M classe D'Entrecasteaux ; Piriou a assuré le design général, les études et la construction, Kership (JV Piriou/Naval Group) le pilotage contrat et systèmes militaires. Conception = bureau d'études Piriou."
         },
         {
           "nom": "L'Astrolabe, patrouilleur polaire / PLC 72 (patrol & logistics vessel)",
@@ -26038,7 +26082,9 @@
               "detail": "Mis en service en 2023, affecté au littoral breton (subdivision de Brest). Maître d'ouvrage : DGAMPA / Phares et Balises.",
               "source": "https://www.meretmarine.com/fr/construction-navale/chantiers-glehen-le-futur-baliseur-brestois-a-commence-ses-essais-en-mer"
             }
-          ]
+          ],
+          "architecte": "Coprexma",
+          "architecte_source": "Mer et Marine (meretmarine.com) - articles sur le baliseur Finistère de l'APB construit par Chantiers Gléhen, conçu avec le bureau d'architecture navale Coprexma"
         },
         {
           "nom": "Harmonie",
@@ -29051,7 +29097,9 @@
               "source": "https://www.actunautique.com/2017/02/la-cour-des-comptes-epingle-l-amateurisme-des-douanes-dans-la-gestion-de-ses-commandes-de-bateaux.html"
             }
           ],
-          "prix_acquisition": "≈ 1,1 M€ (DF61 = Touloubre, tete de serie des VSR ORC 120 13 m, cout unitaire Cour des comptes)"
+          "prix_acquisition": "≈ 1,1 M€ (DF61 = Touloubre, tete de serie des VSR ORC 120 13 m, cout unitaire Cour des comptes)",
+          "architecte": "Pantocarène",
+          "architecte_source": "Mer et Marine : la DF61 Touloubre (2013) est une VSR de type ORC 120, carène de conception Pantocarène (arch. Didier Marchand), construite par les Chantiers Navals Bernard ; Pantocarène SARL, 24 bd de la Rade, Port-Navalo, Arzon (56)."
         },
         {
           "nom": "Les Océanes",
@@ -30125,7 +30173,9 @@
               "detail": "Désarmé fin 2022 (capacité jugée insuffisante)",
               "source": "fr.wikipedia.org Flotte CGN"
             }
-          ]
+          ],
+          "architecte": "Mauric",
+          "architecte_source": "https://fr.wikipedia.org/wiki/Coppet_(bateau) (conçu par le triplet Flahault Design / Bureau Mauric / S.E.E. Merré)"
         },
         {
           "nom": "Genève",
@@ -31615,7 +31665,9 @@
               "detail": "Modele de serie produit a Perigny (La Rochelle), pas un navire individuel nomme. Aucun IMO ni proprietaire/operateur unique : voilier de plaisance/charter vendu a des proprietaires prives multiples.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "yachtingworld.com / dufour-yachts.com (naval architect Umberto Felci of Felci Yachts Design, interior Luca Ardizio)"
         },
         {
           "nom": "Dufour 44",
@@ -31641,7 +31693,9 @@
               "detail": "Modele de serie produit a Perigny ; pas un navire individuel. Aucun IMO ni armateur unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "cruisingworld.com (Dufour 44 preview/review : exterior by Umberto Felci of Felci Yacht Design, interior by Luca Ardizio)"
         },
         {
           "nom": "Dufour 41",
@@ -31667,7 +31721,9 @@
               "detail": "Modele de serie ; pas un navire individuel nomme. Aucun IMO ni proprietaire/operateur unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "felciyachtdesign.com/news/unveiled-the-new-dufour-41 ; dufour-yachts.com (architecte naval Umberto Felci)"
         },
         {
           "nom": "Dufour 37",
@@ -31692,7 +31748,9 @@
               "detail": "Modele de serie produit a Perigny ; pas un navire individuel. Aucun IMO ni armateur unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "felciyachtdesign.com/news/the-new-dufour-37 ; dufour-yachts.com/en/design (collaboration Umberto Felci)"
         },
         {
           "nom": "Dufour 32",
@@ -31717,7 +31775,9 @@
               "detail": "Modele de serie compact ; pas un navire individuel nomme. Aucun IMO ni proprietaire unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "goodoldboat.com/saildata/boat/dufour-32/ ; dufour-yachts.com/en/design/ (partenariat Dufour–Umberto Felci)"
         },
         {
           "nom": "Dufour 61",
@@ -31742,7 +31802,9 @@
               "detail": "Vaisseau amiral de serie produit a Perigny ; pas un navire individuel. Aucun IMO ni armateur unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "https://www.barchemagazine.com/en/dufour-61-heres-the-new-flagship/"
         },
         {
           "nom": "Dufour 470",
@@ -31768,7 +31830,9 @@
               "detail": "Modele de serie ; pas un navire individuel nomme. Aucun IMO ni proprietaire/operateur unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "felciyachtdesign.com (portfolio DUFOUR 470) ; no-frills-sailing.com/new-dufour-470-umberto-felci"
         },
         {
           "nom": "Dufour 530",
@@ -31795,7 +31859,9 @@
               "detail": "Modele de serie ; pas un navire individuel. Aucun IMO ni armateur unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "https://www.felciyachtdesign.com/yachts/cruiser/dufour-530/"
         },
         {
           "nom": "Dufour 430 Grand Large",
@@ -31820,7 +31886,9 @@
               "detail": "Modele de serie gamme Grand Large ; pas un navire individuel nomme. Aucun IMO ni proprietaire unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "felciyachtdesign.com (portfolio DUFOUR 430 Grand Large) ; universalyachting.com/umberto-felci-designer-of-dufour-yachts"
         },
         {
           "nom": "Dufour 390 Grand Large",
@@ -31846,7 +31914,9 @@
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
           ],
-          "capacite_pax": 8
+          "capacite_pax": 8,
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "felciyachtdesign.com/yachts/cruiser/dufour-390-grand-large (studio Felci, Umberto Felci)"
         },
         {
           "nom": "Dufour 63 Exclusive",
@@ -31871,7 +31941,9 @@
               "detail": "Vaisseau amiral gamme Exclusive ; pas un navire individuel nomme. Aucun IMO ni proprietaire unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "https://www.barchemagazine.com/en/dufour-61-heres-the-new-flagship/"
         },
         {
           "nom": "Dufour 56 Exclusive",
@@ -31896,7 +31968,9 @@
               "detail": "Modele de serie gamme Exclusive ; pas un navire individuel. Aucun IMO ni armateur unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "https://www.yachtingworld.com/boat-test/dufour-56-exclusive-review-120657"
         },
         {
           "nom": "Dufour 512 Grand Large",
@@ -31921,7 +31995,9 @@
               "detail": "Modele de serie gamme Grand Large ; pas un navire individuel nomme. Aucun IMO ni proprietaire unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "https://www.boat-specs.com/sailing/sailboats/dufour/dufour-512-grand-large"
         },
         {
           "nom": "Dufour 460 Grand Large",
@@ -31946,7 +32022,9 @@
               "detail": "Modele de serie gamme Grand Large ; pas un navire individuel. Aucun IMO ni armateur unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "cruisingworld.com / yachtaris.com (Felci-designed hull, naval architect Umberto Felci)"
         },
         {
           "nom": "Dufour 382 Grand Large",
@@ -31971,7 +32049,9 @@
               "detail": "Modele de serie gamme Grand Large ; pas un navire individuel nomme. Aucun IMO ni proprietaire unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "felciyachtdesign.com/yachts/cruiser/dufour-382-grand-large ; sailboat.guide/dufour/382-grand-large (designed by Umberto Felci)"
         },
         {
           "nom": "Dufour 350 Grand Large",
@@ -31996,7 +32076,9 @@
               "detail": "Modele de serie gamme Grand Large ; pas un navire individuel. Aucun IMO ni armateur unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "velmundi.com/dufour-350-grand-large.html ; dufour-yachts.com/en/design/ (partenariat Dufour–Umberto Felci depuis 2005)"
         },
         {
           "nom": "Dufour 310 Grand Large",
@@ -32021,7 +32103,9 @@
               "detail": "Modele de serie gamme Grand Large ; pas un navire individuel nomme. Aucun IMO ni proprietaire unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "felciyachtdesign.com/yachts/cruiser/dufour-310-grand-large/ ; dufour-yachts.com/en/design/"
         },
         {
           "nom": "Dufour 560 Grand Large",
@@ -32046,7 +32130,9 @@
               "detail": "Vaisseau amiral gamme Grand Large ; pas un navire individuel. Aucun IMO ni armateur unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "https://www.felciyachtdesign.com/yachts/cruiser/dufour-560-grand-large/"
         },
         {
           "nom": "Dufour 500 Grand Large",
@@ -32071,7 +32157,9 @@
               "detail": "Modele de serie gamme Grand Large ; produit apres le rachat de Dufour par Bavaria (Anchorage Advisors/Oaktree). Pas un navire individuel nomme. Aucun IMO ni proprietaire unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "https://www.felciyachtdesign.com/yachts/cruiser/dufour-500-grand-large/"
         },
         {
           "nom": "Dufour 445 Grand Large",
@@ -32096,7 +32184,9 @@
               "detail": "Modele de serie gamme Grand Large ; pas un navire individuel. Aucun IMO ni armateur unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "listingsport.com / universalyachting.com (design Umberto Felci, accommodations Patrick Roseo)"
         },
         {
           "nom": "Dufour 40e Performance",
@@ -32112,7 +32202,9 @@
           "source": "https://sailboatdata.com/sailboat/dufour-40e/",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "boat-specs.com/sailing/sailboats/dufour/dufour-40e-performance (designed by Felci Yachts) ; universalyachting.com (Felci gamme Performance depuis 2002)"
         },
         {
           "nom": "Dufour 405 Grand Large",
@@ -32137,7 +32229,9 @@
               "detail": "Modele de serie gamme Grand Large ; produit sous l'actionnariat Rhone Capital. Pas un navire individuel nomme. Aucun IMO ni proprietaire unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "sailingtheweb.com (Dufour 405 Grand Large / Felci) ; universalyachting.com/umberto-felci-designer-of-dufour-yachts (Felci + Patrick Roseo interiors)"
         },
         {
           "nom": "Dufour 45e Performance",
@@ -32153,7 +32247,9 @@
           "source": "https://www.boat-specs.com/sailing/sailboats/dufour/dufour-45e-performance",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "boat-specs.com / sailboatdata.com (designer Umberto Felci / Felci Yachts, interior Patrick Roseo)"
         },
         {
           "nom": "Dufour 34e Performance",
@@ -32169,7 +32265,9 @@
           "source": "https://sailboatdata.com/sailboat/dufour-34-performance/",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "sailboatdata.com/sailboat/dufour-34-performance/ ; goodoldboat.com/saildata/boat/dufour-34/ (Felci/Roséo)"
         },
         {
           "nom": "Dufour 425 Grand Large",
@@ -32194,7 +32292,9 @@
               "detail": "Modele de serie gamme Grand Large ; pas un navire individuel. Aucun IMO ni armateur unique.",
               "source": "https://fr.wikipedia.org/wiki/Dufour_(entreprise)"
             }
-          ]
+          ],
+          "architecte": "Felci Yacht Design",
+          "architecte_source": "sailboatdata.com/sailboat/dufour-425-grand-large ; sailboat.guide/dufour/425-grand-large (designed by Umberto Felci, interiors Patrick Roseo)"
         },
         {
           "nom": "Arpège",
@@ -34665,7 +34765,9 @@
           "propulsion": [
             "velique",
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Philippe Briand",
+          "architecte_source": "cnbyachts.com/en/yachts/78 et philippebriand.com : Naval Architect Philippe Briand (intérieur Piaton Yacht Design)."
         },
         {
           "nom": "CNB 66",
@@ -34683,7 +34785,9 @@
             "velique",
             "diesel-mdo"
           ],
-          "capacite_pax": 8
+          "capacite_pax": 8,
+          "architecte": "Philippe Briand",
+          "architecte_source": "cnbyachts.com/en/yachts/66 + philippebriand.com : « Philippe Briand is the naval architect for the CNB 66 » (intérieur Jean-Marc Piaton & Rafaël Bonet)"
         },
         {
           "nom": "Lagoon Sixty 5",
@@ -34937,7 +35041,9 @@
               "detail": "Monocoque de plaisance sous 24 m ; aucun numero IMO (hors champ du registre IMO).",
               "source": "https://www.marketscreener.com/quote/stock/BENETEAU-4622/news/Solaris-Yachts-S-R-L-completed-the-acquisition-of-Construction-Navale-Bordeaux-S-A-from-Beneteau-33436755/"
             }
-          ]
+          ],
+          "architecte": "Philippe Briand",
+          "architecte_source": "philippebriand.com/yacht-for-sale/briand-cnb-76 et cnbyachts.com : architecte naval Philippe Briand (intérieur Piaton/Bonet)."
         },
         {
           "nom": "Lagoon 52 F",
@@ -35002,7 +35108,9 @@
           "propulsion": [
             "velique",
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Philippe Briand",
+          "architecte_source": "philippebriand.com/yacht-for-sale/cnb-77-swallows-and-amazons : yacht conçu par l'architecte naval Philippe Briand."
         },
         {
           "nom": "Lagoon 620",
@@ -36439,7 +36547,9 @@
           "source": "https://www.katamarans.com/gunboat-68/",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "VPLP Design",
+          "architecte_source": "Gunboat (gunboat.com, brochure Gunboat 68), katamarans.com, multihulls-world.com : architecture navale du Gunboat 68 par VPLP (Van Peteghem Lauriot-Prévost), design extérieur/intérieur par Patrick le Quément et Christophe Chedal Anglay. Dash = Gunboat 68 (68.02), 2019."
         },
         {
           "nom": "Convexity2",
@@ -38511,7 +38621,9 @@
           "propulsion": [
             "velique",
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Finot-Conq",
+          "architecte_source": "finot.com (page dédiée Cigale 14 mètres) et no-frills-sailing.com : Cigale 14 dessiné par Jean-Marie Finot / groupe FinotConq en 1997, construit par Alubat. Siège actuel Finot-Conq : Vannes (56)."
         },
         {
           "nom": "CIGALE 16",
@@ -38528,7 +38640,9 @@
           "propulsion": [
             "velique",
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Finot-Conq",
+          "architecte_source": "finot.com (page dédiée Cigale 16 mètres) et bateaux.com : Cigale 16 (1993-2009) dessiné par Jean-Marie Finot / Groupe Finot, construit par Alubat. Siège actuel Finot-Conq : Vannes (56). NB : la 2e génération (2016+) est de Marc Lombard, mais l'unité de 1993 est bien Finot."
         },
         {
           "nom": "OVNI 28",
@@ -38562,7 +38676,9 @@
           "propulsion": [
             "velique",
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Finot-Conq",
+          "architecte_source": "Alubat (alubat.com, post Facebook Alubat 'le mot de l'architecte Finot Conq') et boatnews.com/marineindustrynews : Cigale 15 QR conçu par le cabinet Finot-Conq, héritier du groupe Finot. Siège Vannes (56)."
         },
         {
           "nom": "Vodka",
@@ -47247,7 +47363,9 @@
               "prix": "≈ 10,16 M€/unite (derive de 406,44 M€ pour 40 navires identiques)",
               "source": "https://www.navalnews.com/naval-news/2025/05/philippines-inks-deal-with-ocea-for-40-coast-guard-patrol-boats/"
             }
-          ]
+          ],
+          "architecte": "OCEA",
+          "architecte_source": "naval-technology.com : la gamme FPB 110 MkII a ete concue et developpee par OCEA (bureau d'etudes integre, conception interne du constructeur, pas de cabinet externe distinct)"
         },
         {
           "nom": "Gyptis",
@@ -47547,7 +47665,9 @@
               "prix": "39,5 M EUR (2024, OPV 190 Mk II Guyana)",
               "source": "https://www.navalnews.com/naval-news/2024/04/guyana-to-buy-french-opv/"
             }
-          ]
+          ],
+          "architecte": "OCEA",
+          "architecte_source": "Mer et Marine (meretmarine.com/fr/defense/ocea-delivers-all-aluminium-opv) : l'OPV 190 conçu par le bureau d'études interne d'OCEA"
         },
         {
           "nom": "NNS Okpoku (P175)",
@@ -48594,7 +48714,9 @@
             "diesel-mdo"
           ],
           "capacite_pax": 30,
-          "capacite_fret": "5 t"
+          "capacite_fret": "5 t",
+          "architecte": "OCEA",
+          "architecte_source": "Mer et Marine : série Combi 60 « entièrement conçue et construite par OCEA » (conception interne du chantier, pas de cabinet externe) — https://www.meretmarine.com/fr/construction-navale/ocea-livre-deux-nouveaux-crew-boats-a-petro-services"
         },
         {
           "nom": "Palétuvier",
@@ -49005,7 +49127,9 @@
           "source": "https://www.littoral-manche-atlantique.com/tag/st%20:%20sete/",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Mauric",
+          "architecte_source": "Martinez Constructions Navales et mag.hookandnet.com : derniere unite de la serie Deux Freres (4 catamarans de peche a foil), plans etablis par le cabinet Mauric."
         },
         {
           "nom": "Deux Freres VII",
@@ -49021,7 +49145,9 @@
           "source": "https://martinez-constructions-navales.fr/catamaran-deux-freres-7",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Mauric",
+          "architecte_source": "Martinez Constructions Navales (martinez-constructions-navales.fr) et mag.hookandnet.com : serie Deux Freres a foil concue par le cabinet Mauric (programme Avallone 2019-2021)."
         },
         {
           "nom": "Oslo",
@@ -49053,7 +49179,9 @@
           "source": "https://www.littoral-manche-atlantique.com/2023/10/deux-freres-vi-st.935041.html",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Mauric",
+          "architecte_source": "mag.hookandnet.com (2022) : 'sa societe a travaille avec l'architecte MAURIC' ; Martinez Constructions Navales confirme la conception Mauric du Deux Freres VI a foil T retractable."
         },
         {
           "nom": "Corsaire d'Emeraude",
@@ -49090,7 +49218,9 @@
               "source": "https://www.meretmarine.com/fr/marine-marchande/martinez-livre-une-nouvelle-vedette-a-corsaire"
             }
           ],
-          "prix_acquisition": "2,2 M EUR (2019, construction neuve)"
+          "prix_acquisition": "2,2 M EUR (2019, construction neuve)",
+          "architecte": "Mer et Design",
+          "architecte_source": "https://martinez-constructions-navales.fr/produits/corsaire-demeraude-vedette-de-transport-de-passagers (Plans: Bureau d'étude Mer et Design) ; https://meretdesign.fr/"
         },
         {
           "nom": "Mahi Mahi III",
@@ -49122,7 +49252,9 @@
           "source": "https://www.littoral-manche-atlantique.com/2021/03/deux-freres-v-st.935040.html",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Mauric",
+          "architecte_source": "Martinez Constructions Navales (martinez-constructions-navales.fr) et mag.hookandnet.com : les plans de la serie de catamarans de peche Deux Freres (programme Avallone, 4 unites 2019-2021) ont ete etablis par le cabinet Mauric, qui a realise les simulations CFD du foil."
         },
         {
           "nom": "Chrisderic V",
@@ -49138,7 +49270,9 @@
           "source": "https://www.ici.fr/infos/agriculture-peche/premiere-campagne-de-peche-pour-le-nouveau-thonier-de-saint-cyprien-1526934353",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Mauric",
+          "architecte_source": "https://www.nauticexpo.com/prod/martinez-constructions-navales/product-58035-484063.html ; https://www.meretmarine.com/fr/construction-navale/bureau-mauric-l-innovation-a-tous-niveaux"
         },
         {
           "nom": "Navivoile",
@@ -49497,7 +49631,9 @@
               "detail": "Livree debut mai a Rocca Croisieres (Bonifacio). Diesel en transit, electrique lors des visites de zones sensibles (calanques).",
               "source": "https://www.meretmarine.com/fr/construction-navale/e-perla-la-nouvelle-vedette-hybride-livree-par-gatto"
             }
-          ]
+          ],
+          "architecte": "Eric Jean",
+          "architecte_source": "https://www.eric-jean.com/en/travail/e-perla/ ; Mer et Marine (meretmarine.com) - vedette hybride conçue par l'architecte naval Eric Jean (avec Philippe Frasca / Jean & Frasca Design, PROFILS SARL)"
         },
         {
           "nom": "Planier",
@@ -51087,7 +51223,9 @@
           "source": "https://www.meretmarine.com/fr/construction-navale/pech-alu-livre-a-dcns-deux-nouvelles-vedettes-de-soutien-aux-plongeurs",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Mer et Design",
+          "architecte_source": "Mer et Marine (article 'Pêch'Alu livre à DCNS deux nouvelles vedettes de soutien aux plongeurs') et page réalisations Pêch'Alu (pech-alu-international.com) : vedette Donator (Toulon) conçue par le bureau d'architecture navale Mer et Design, siège à Sophia Antipolis (meretdesign.fr)."
         },
         {
           "nom": "Le Vexin",
@@ -52403,7 +52541,9 @@
           "source": "https://fr.wikipedia.org/wiki/Fouladou_(patrouilleur)",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "OCEA",
+          "architecte_source": "Mer et Marine (meretmarine.com/fr/defense/ocea-delivers-all-aluminium-opv) : l'OPV 190 conçu par le bureau d'études interne d'OCEA"
         },
         {
           "nom": "KRI Rigel (933)",
@@ -52545,7 +52685,9 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 10
+          "capacite_pax": 10,
+          "architecte": "Joubert/Nivelt",
+          "architecte_source": "MegayachtNews (megayachtnews.com/2011/11/ocea-commuter-155-elisabet) : 'Bearing naval architecture by Joubert/Nivelt'"
         },
         {
           "nom": "Kerdonis",
@@ -53462,7 +53604,9 @@
               "detail": "Exploite par la SNR (engagement annonce sur 20 ans) pour le transfert d'equipes et la maintenance des trois eoliennes flottantes du projet Eolmed, au large de l'Aude (Occitanie), parc exploite par BW Ideol. Livraison 2026.",
               "source": "https://www.meretmarine.com/fr/energies-marines/a-port-la-nouvelle-la-snr-met-le-pied-a-l-etrier-de-l-eolien-flottant"
             }
-          ]
+          ],
+          "architecte": "Navalu",
+          "architecte_source": "Mer et Marine (mise à l'eau Eros III) + Maritime Journal / World Maritime News : Eros III sistership du Sea Fox, design NxS 24 produit par l'équipe de conception interne de Navalu"
         },
         {
           "nom": "Spered Skorf",
@@ -60036,7 +60180,9 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 12
+          "capacite_pax": 12,
+          "architecte": "Vitruvius Yachts",
+          "architecte_source": "Design extérieur et intérieur de la conversion par Philippe Briand / Vitruvius Yachts ; architecture navale par McFarlane Ship Design (Boat International, vitruviusyachts.com, atlanticrefitcenter.com)"
         },
         {
           "type": "refit / repaint (PAS de construction neuve) - motor yacht construit 1990 par Feadship (Pays-Bas), design De Voogt, premier Feadship à 4 ponts complets ; refit ARC 5,5 mois (révision 20 ans moteurs, stabilisateurs, traitement coque)",
@@ -62053,7 +62199,9 @@
               "source": "https://pro.annonces-marine.com/neo-marine/annonce-bateau-143698.html"
             }
           ],
-          "prix_acquisition": "Revente : 450 000 EUR (annonce courtier, unité de 2000 basée au Marin, Martinique, listée ~2019-2020). Prix de construction neuve non public."
+          "prix_acquisition": "Revente : 450 000 EUR (annonce courtier, unité de 2000 basée au Marin, Martinique, listée ~2019-2020). Prix de construction neuve non public.",
+          "architecte": "Mortain & Mavrikios",
+          "architecte_source": "SuperYacht Times (fiche Ocean Voyager 64) et nauticexpo : catamaran day-charter dessiné par les architectes navals Alain Mortain & Yannis Mavrikios, construit par CIM à Rochefort. Bureau Mortain & Mavrikios : Les Minimes, La Rochelle."
         }
       ],
       "geo_source": "https://fr.mappy.com/poi/50ae02fc84ae33b58a18927d"
@@ -64513,7 +64661,9 @@
               "source": "https://www.boat24.com/en/sailingboats/garcia/garcia-explocat-52/detail/647162/"
             }
           ],
-          "prix_acquisition": "≈ 1 294 000 € HT (prix neuf de base, modèle Garcia Explocat 52, 2020)"
+          "prix_acquisition": "≈ 1 294 000 € HT (prix neuf de base, modèle Garcia Explocat 52, 2020)",
+          "architecte": "Pierre Delion",
+          "architecte_source": "bateaux.com/boatsnews.com (article 36292) + garciayachts.com : Explocat 52 conçu par l'architecte naval Pierre Delion (agence de Nantes) en coopération avec Garcia ; construit par Alumarine"
         },
         {
           "nom": null,
@@ -64841,7 +64991,9 @@
           "propulsion": [
             "velique"
           ],
-          "capacite_pax": 12
+          "capacite_pax": 12,
+          "architecte": "VPLP Design",
+          "architecte_source": "Wikipedia (Douce France) et CharterWorld : catamaran de 42 m conçu par VPLP design (Marc Van Peteghem et Vincent Lauriot-Prévost), plans d'architecture navale par Marc Van Peteghem ; construit par Alumarine. Design intérieur : Anne-Monique Bonadei (distinct)."
         },
         {
           "nom": null,
@@ -66288,7 +66440,9 @@
               "source": "https://www.bateaux.com/article/34777/tarification-et-alternatives-face-a-l-excess-15-un-prix-de-base-pour-naviguer"
             }
           ],
-          "prix_acquisition": "625 000 € HT (prix de base neuf, modele de serie, 2019-2020)"
+          "prix_acquisition": "625 000 € HT (prix de base neuf, modele de serie, 2019-2020)",
+          "architecte": "VPLP Design",
+          "architecte_source": "vplp.fr/en/cruising/excess15 + excess-catamarans.com : « The Excess 15 has been designed by VPLP design » ; extérieur Patrick le Quément, intérieur Nauta Design"
         },
         {
           "nom": "Lagoon SEVENTY 7 (Lagoon 77)",
@@ -66330,7 +66484,9 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 6
+          "capacite_pax": 6,
+          "architecte": "Philippe Briand",
+          "architecte_source": "philippebriand.com et cnbyachts.com : architecture navale Philippe Briand (aménagement intérieur Jean-Marc Piaton / Rafaël Bonet). Studios Briand La Rochelle (FR) et Londres (UK)."
         },
         {
           "nom": "CNB 76",
@@ -66347,7 +66503,9 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 6
+          "capacite_pax": 6,
+          "architecte": "Philippe Briand",
+          "architecte_source": "philippebriand.com et cnbyachts.com : architecte naval Philippe Briand (intérieur Piaton/Bonet)."
         },
         {
           "nom": "Lagoon 620",
@@ -66388,7 +66546,9 @@
           "source": "https://www.navisyachts.com/20110408500/superyacht-news/cnb-100.html",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Luca Brenta &",
+          "architecte_source": "superyachts.com/fleet/chrisco : architecture navale ET design extérieur par Luca Brenta & Co. (intérieur Wetzels Brown Partners), construit par CNB Bordeaux 2009"
         },
         {
           "nom": "Simeron",
@@ -70514,7 +70674,9 @@
           "propulsion": [
             "diesel-mdo"
           ],
-          "capacite_pax": 8
+          "capacite_pax": 8,
+          "architecte": "Joubert-Nivelt",
+          "architecte_source": "Fiche constructeur META Yachts (meta-yachts.com/en/realisations/fleur-australe) : champ Architect(s) = 'Joubert & Nivelt' (Michel Joubert & Bernard Nivelt)."
         },
         {
           "nom": "Damien II",
@@ -70530,7 +70692,9 @@
           "source": "https://fr.wikipedia.org/wiki/Damien_(bateau)",
           "propulsion": [
             "diesel-mdo"
-          ]
+          ],
+          "architecte": "Michel Joubert",
+          "architecte_source": "Wikipédia 'Damien (bateau)', lesamisdumuseemaritime.fr, bateaux.com : goélette acier de 14 m dessinée en 1974 par l'architecte naval Michel Joubert (La Rochelle) sur les idées de Poncet et Janichon, ~25 exemplaires construits 1974-1981 par META Chantier Naval."
         },
         {
           "nom": "Om",
@@ -77282,7 +77446,9 @@
           "source": "https://www.actunautique.com/2022/02/chantier-brava-constructeur-nantais-des-corsaire-et-muscadet-en-bois.html",
           "propulsion": [
             "velique"
-          ]
+          ],
+          "architecte": "Jean-Jacques Herbulot",
+          "architecte_source": "https://fr.wikipedia.org/wiki/Corsaire_(voilier) (dériveur dessiné par l'architecte naval Jean-Jacques Herbulot en 1954)"
         }
       ],
       "geo_source": "https://firmania.fr/saint-herblain/chantier-brava-3011450"
@@ -83015,7 +83181,9 @@
               "detail": "Livre a Farstad",
               "source": "directory.marinelink.com"
             }
-          ]
+          ],
+          "architecte": "Rolls-Royce Marine (UT design)",
+          "architecte_source": "offshore-energy.biz et Rolls-Royce — AHTS de design UT 731 CD (série UT Rolls-Royce Marine), construit par Vard/Aker Langsten pour Farstad"
         },
         {
           "nom": "Far Saracen",
@@ -83039,7 +83207,9 @@
               "detail": "Livre a Farstad",
               "source": "directory.marinelink.com"
             }
-          ]
+          ],
+          "architecte": "Rolls-Royce Marine (UT design)",
+          "architecte_source": "offshore-energy.biz / worldmaritimenews et Rolls-Royce — AHTS de design UT 731 CD (série UT Rolls-Royce Marine), construit par STX/Vard Langsten pour Farstad"
         },
         {
           "nom": "Far Shogun",
@@ -83071,7 +83241,9 @@
               "prix": "≈ 600 M NOK/unite (indicatif, derive du contrat 2 navires UT 731 CD a 1,2 Md NOK, 2011)",
               "source": "https://www.marinelog.com/offshore/oil-gas/farstad-places-new-ahts-orders-at-stx-osv/"
             }
-          ]
+          ],
+          "architecte": "Rolls-Royce Marine (UT design)",
+          "architecte_source": "worldmaritimenews / ship-technology : AHTS UT 731 CD conçu par Rolls-Royce Marine (construit par STX OSV / Vard Langsten)"
         },
         {
           "nom": "Far Sailor",
@@ -83095,7 +83267,9 @@
               "detail": "Livre a Farstad",
               "source": "directory.marinelink.com"
             }
-          ]
+          ],
+          "architecte": "Ulstein Design",
+          "architecte_source": "bluestarline.org (flotte Farstad) — AHTS de design UT 722 (série UT Ulstein), construit par Langsten"
         },
         {
           "nom": "Far Senior",
@@ -83119,7 +83293,9 @@
               "detail": "Livre a Farstad",
               "source": "directory.marinelink.com"
             }
-          ]
+          ],
+          "architecte": "Rolls-Royce Marine (UT design)",
+          "architecte_source": "bluestarline.org/farstad/far_senior.html : design UT 722 L (série UT Ulstein / Rolls-Royce Marine), construit chez Langsten"
         },
         {
           "nom": "Far Solitaire",
@@ -83152,7 +83328,9 @@
               "source": "https://www.ship-technology.com/projects/far-solitaire-platform-supply-vessel/"
             }
           ],
-          "prix_acquisition": "≈ 55,95 M USD/unite (2010, derive: contrat de 223,8 M USD pour 4 PSV identiques de design UT 754 WP commandes par Farstad a STX OSV)"
+          "prix_acquisition": "≈ 55,95 M USD/unite (2010, derive: contrat de 223,8 M USD pour 4 PSV identiques de design UT 754 WP commandes par Farstad a STX OSV)",
+          "architecte": "Rolls-Royce Marine (UT design)",
+          "architecte_source": "ship-technology.com (Far Solitaire PSV) : design UT 754 WP développé par Rolls-Royce Marine avec Farstad, Ship of the Year 2012"
         },
         {
           "nom": "Far Senator",
@@ -83185,7 +83363,9 @@
               "source": "https://gcaptain.com/farstad-announces-ahts-newbuilds/"
             }
           ],
-          "prix_acquisition": "≈ 600 M NOK / unite a la construction (≈ 109 M USD ; derive: contrat de 1,2 milliard NOK pour 2 AHTS sister-ships identiques UT 731 CD Far Senator + Far Statesman) ; revente sale & leaseback a Ocean Yield en 2013 (prix confidentiel)"
+          "prix_acquisition": "≈ 600 M NOK / unite a la construction (≈ 109 M USD ; derive: contrat de 1,2 milliard NOK pour 2 AHTS sister-ships identiques UT 731 CD Far Senator + Far Statesman) ; revente sale & leaseback a Ocean Yield en 2013 (prix confidentiel)",
+          "architecte": "Rolls-Royce Marine (UT design)",
+          "architecte_source": "offshore-energy.biz (livraison Vard Langsten) + ship-technology.com : design UT 731 CD, conçu par Rolls-Royce Marine"
         },
         {
           "nom": "Far Sirius",
@@ -83218,7 +83398,9 @@
               "source": "https://www.offshore-energy.biz/norway-stx-osv-to-build-two-multifunctional-ahts-vessels-for-farstad/"
             }
           ],
-          "prix_acquisition": "≈ 600 M NOK / unite a la construction (≈ 100 M USD ; derive: contrat de 1,2 milliard NOK passe en mars 2012 pour 2 AHTS sister-ships identiques UT 731 CD Far Sirius + Far Sigma, livraison 1er trim. 2014)"
+          "prix_acquisition": "≈ 600 M NOK / unite a la construction (≈ 100 M USD ; derive: contrat de 1,2 milliard NOK passe en mars 2012 pour 2 AHTS sister-ships identiques UT 731 CD Far Sirius + Far Sigma, livraison 1er trim. 2014)",
+          "architecte": "Rolls-Royce Marine (UT design)",
+          "architecte_source": "vard.com/shipbuilding/references/far-sirius : Designer = Rolls-Royce, design UT 731 CD"
         },
         {
           "nom": "Far Statesman",
@@ -83251,7 +83433,9 @@
               "source": "https://gcaptain.com/farstad-announces-ahts-newbuilds/"
             }
           ],
-          "prix_acquisition": "≈ 600 M NOK / unite a la construction (≈ 109 M USD ; derive: contrat de 1,2 milliard NOK pour 2 AHTS sister-ships identiques UT 731 CD Far Senator + Far Statesman) ; revente sale & leaseback a Ocean Yield le 4 juin 2013 (prix confidentiel)"
+          "prix_acquisition": "≈ 600 M NOK / unite a la construction (≈ 109 M USD ; derive: contrat de 1,2 milliard NOK pour 2 AHTS sister-ships identiques UT 731 CD Far Senator + Far Statesman) ; revente sale & leaseback a Ocean Yield le 4 juin 2013 (prix confidentiel)",
+          "architecte": "Rolls-Royce Marine (UT design)",
+          "architecte_source": "vard.com/shipbuilding/references/far-statesman : Designer = Rolls-Royce, design UT 731 CD"
         },
         {
           "nom": "Bourbon Borgstein",
@@ -92545,7 +92729,9 @@
               "detail": "Design Marin Teknikk MT-6067 FSV ; destine au champ gazier Neptun Deep (mer Noire). Commande non encore livree, nom et IMO non attribues.",
               "source": "splash247.com ; bairdmaritime.com ; greenyard.no/nyhende-artiklar/b404-arrived-green-yard-kleven"
             }
-          ]
+          ],
+          "architecte": "Marin Teknikk",
+          "architecte_source": "Baird Maritime et Green Yard (greenyard.no) : FSV pour OMV Petrom (projet Neptun Deep) conçu par Marin Teknikk AS, design MT-6067 FSV, construit par Green Yard Kleven (coque à Montex, Gdansk)."
         },
         {
           "nom": "Olympic Taurus",
@@ -93199,7 +93385,9 @@
               "prix": "contrat global 'milliardavtale' (>1 Md NOK) pour 3 ferries identiques + option, montant exact non divulgue",
               "source": "https://www.metalsupply.no/article/view/1072531/havyard_signerer_milliardavtale"
             }
-          ]
+          ],
+          "architecte": "LMG Marin",
+          "architecte_source": "LMG Marin (lmgmarin.no, adresse Damsgårdsveien 14, Bergen) et Offshore Energy : les ferries batterie-hybride Norled des lignes Stokkvågen-Lovund/Træna sont conçus par LMG Marin en coopération avec Norled, construits par Tersan Havyard Leirvik."
         },
         {
           "nom": "Ferry Norled n°156 (sister-ship Stokkvågen)",
@@ -93246,7 +93434,9 @@
               "prix": "contrat global 'milliardavtale' (>1 Md NOK) pour 3 ferries identiques + option, montant exact non divulgue",
               "source": "https://www.metalsupply.no/article/view/1072531/havyard_signerer_milliardavtale"
             }
-          ]
+          ],
+          "architecte": "LMG Marin",
+          "architecte_source": "LMG Marin (lmgmarin.no) et Offshore Energy : sister-ship de la série de ferries batterie-hybride Norled classe Stokkvågen, conçue par LMG Marin, construite par Tersan Havyard Leirvik."
         },
         {
           "nom": "Ronja Storm",
@@ -93594,7 +93784,9 @@
               "detail": null,
               "source": "Esvagt"
             }
-          ]
+          ],
+          "architecte": "Havyard Design",
+          "architecte_source": "ship-technology.com + offshore-energy.biz : Havyard 832 SOV 'designed and engineered by Havyard Design & Solutions' (Havyard Design & Engineering AS, Fosnavåg), distinct du chantier de Leirvik"
         },
         {
           "nom": "Havtrans (ex-FS Stormy)",
@@ -95351,7 +95543,9 @@
               "detail": "Exploite sous la marque Zeam (Torghatten + Zeabuz) entre Kungsholmen et Sodermalm a Stockholm ; essai 2024 de pilotage a distance depuis Trondheim (600 km).",
               "source": "https://www.torghatten.no/en/about/news/16b10b48-210f-4354-a6d9-d309e1aa3b34/torghatten-og-zeabuz-skaper-historie-i-stockholm"
             }
-          ]
+          ],
+          "architecte": "Brødrene Aa",
+          "architecte_source": "offshore-energy.biz / braa.no : navire 'designed and constructed by Brødrene Aa' (catamaran fibre de carbone) ; Zeabuz ne fournit que le système autonome, pas l'architecture navale"
         },
         {
           "nom": "Brisen",
@@ -95389,7 +95583,9 @@
               "detail": "Croisieres fjord d'Oslo",
               "source": "https://brimexplorer.com/ms-brisen"
             }
-          ]
+          ],
+          "architecte": "Hareide Design",
+          "architecte_source": "hareidedesign.com ; braa.no ; brimexplorer.com (design du navire par Einar Hareide / Hareide Design ; ingénierie et construction carbone par le chantier Brødrene Aa)"
         },
         {
           "nom": "Bre",
@@ -95551,7 +95747,9 @@
               "detail": "ligne Bodø-Gildeskål-Væran (Nordland)",
               "source": "bairdmaritime.com"
             }
-          ]
+          ],
+          "architecte": "Brødrene Aa",
+          "architecte_source": "Design-build : conception interne Brødrene Aa (braa.no/fast-ferries/fjordstrom ; Baird Maritime vessel review, aucun designer distinct listé)."
         },
         {
           "nom": "Fjordtind",
@@ -95586,7 +95784,9 @@
               "detail": "ligne Bodø-Gildeskål (Nordland)",
               "source": "bairdmaritime.com"
             }
-          ]
+          ],
+          "architecte": "Brødrene Aa",
+          "architecte_source": "Design-build : conception interne Brødrene Aa (braa.no ; Baird Maritime vessel review, aucun designer distinct listé)."
         },
         {
           "nom": "Fredrikke Tønder-Olsen",
@@ -96485,7 +96685,9 @@
               "detail": "ligne Sunnhordland",
               "source": "no.wikipedia.org"
             }
-          ]
+          ],
+          "architecte": "Paradis Nautica",
+          "architecte_source": "Maritimt Magasin (maritimt.com/nb/batomtaler/fjordbris-042014) : «Fjordbris» er designet av Paradis Nautica"
         },
         {
           "nom": "Fjordlys",
@@ -96510,7 +96712,9 @@
               "detail": "livré à Norled",
               "source": "braa.no"
             }
-          ]
+          ],
+          "architecte": "Brødrene Aa",
+          "architecte_source": "Chantier concepteur-constructeur (design-build) : les catamarans fibre de carbone sont conçus en interne par les architectes navals de Brødrene Aa (arcadia-alliance.com/brodrene-aa-ferries ; braa.no). Aucun cabinet externe crédité."
         },
         {
           "nom": "Nefelin V",
@@ -96867,7 +97071,9 @@
               "source": "https://www.korculainfo.com/new-jadrolinija-catamaran-vida-will-serve-split-hvar-korcula-ferry-route-june-2016/"
             }
           ],
-          "prix_acquisition": "Revente ≈ 5 M EUR / ≈ 35 M HRK (2016) — coût de construction d'origine non public"
+          "prix_acquisition": "Revente ≈ 5 M EUR / ≈ 35 M HRK (2016) — coût de construction d'origine non public",
+          "architecte": "Brødrene Aa",
+          "architecte_source": "Design-build : conception interne Brødrene Aa (arcadia-alliance.com ; braa.no). Aucun architecte externe crédité."
         },
         {
           "nom": "Rivö",
@@ -97384,7 +97590,9 @@
               "detail": "livré à L. Rødne og Sønner",
               "source": "braa.no"
             }
-          ]
+          ],
+          "architecte": "Brødrene Aa",
+          "architecte_source": "Design-build : conception interne Brødrene Aa (arcadia-alliance.com ; braa.no). Petit catamaran commuter Rødne, aucun architecte externe crédité."
         },
         {
           "nom": "Rygerstril",
@@ -102477,7 +102685,9 @@
               "detail": "Destine a la flotte DFO pour repondre aux besoins d'installation de cables a Taiwan (remplace de la capacite perdue apres le maintien de l'Orient Adventurer en Europe). Navire non encore livre ; nom definitif et IMO non encore attribues.",
               "source": "https://www.oedigital.com/news/533285-dong-fang-offshore-picks-westcon-for-new-clv-delivery"
             }
-          ]
+          ],
+          "architecte": "Breeze Ship Design",
+          "architecte_source": "breeze.no (19/01/2026) + marinelink.com : Breeze Ship Design fournit le package complet design & engineering du subsea/cable lay vessel Westcon pour Dong Fang Offshore (livraison Q1 2027)"
         },
         {
           "nom": "MF Hjellestad",
@@ -104090,7 +104300,9 @@
               "prix": "350-400 M NOK (2019)",
               "source": "https://ilaks.no/rostein-har-kontrahert-nok-en-hybrid-bronnbat-ved-larsnes-mek-verksted/"
             }
-          ]
+          ],
+          "architecte": "Skipskompetanse",
+          "architecte_source": "https://www.larsnes-mek.no/en/ ; https://www.skipskompetanse.no/news/new-build-for-rostein/ (newbuilds Rostein LFC de Larsnes conçus par Skipskompetanse ; NB: la mention 'ropax' du jeu de données semble erronée, il s'agit d'un vivier/live fish carrier)"
         }
       ],
       "sources": [
@@ -106342,7 +106554,9 @@
               "detail": "PSV UT 755 L livré oct. 2006",
               "source": "NauticExpo 106 - De Vries Tide"
             }
-          ]
+          ],
+          "architecte": "Rolls-Royce Marine (UT design)",
+          "architecte_source": "Bases navires (Baltic Shipping / Maritime-Connector, IMO 9258143) : navire de type Ulstein UT 755 L, construit par Simek AS. Le design UT 755 est un plan Ulstein (série UT), distinct du chantier constructeur."
         },
         {
           "nom": "Portosalvo",
@@ -107427,7 +107641,9 @@
               "prix": null,
               "source": "https://batomtaler.skipsrevyen.no/2001-ms-far-swan-supplyskip/m/s-far-swan/1728354"
             }
-          ]
+          ],
+          "architecte": "Ulstein Ship Technology",
+          "architecte_source": "batomtaler.skipsrevyen.no (M/S Far Swan, 2001) : design UT 745 L développé par Ulstein Ship Technology AS, construit par Simek AS Flekkefjord (série UT, lignée Rolls-Royce Marine)"
         },
         {
           "nom": "OceanicaSub VI",
@@ -107904,7 +108120,9 @@
               "detail": "Voyage de livraison de 45 jours de Måløy à Fremantle, mise en pêche légine/poisson des glaces en océan Austral",
               "source": "https://austral.com.au/the-cape-arkona-departs-norway-for-fremantle/"
             }
-          ]
+          ],
+          "architecte": "Skipskompetanse",
+          "architecte_source": "bairdmaritime.com (vessel review Cape Arkona) : 'The Skipskompetanse-designed... Cape Arkona was completed at Batbygg' ; portfolio skipskompetanse.no/delivered-vessels/cape-arkona-2"
         },
         {
           "nom": "Référence client Austral Fisheries (navire antérieur)",
@@ -112172,7 +112390,9 @@
               "detail": "Servitude pour concessions aquacoles du Nord de la Norvège",
               "source": "iLaks, salmar-valgte-moen-marin"
             }
-          ]
+          ],
+          "architecte": "Pro-Marin",
+          "architecte_source": "iLaks (ilaks.no/salmar-valgte-moen-marin) — catamaran NabCat 1350 conçu par Pro-Marin, construit par Moen Marin"
         },
         {
           "nom": "Nora",
@@ -115046,7 +115266,9 @@
               "detail": "Contrat catamaran de service hybride, construction à Vestnes, livraison prévue septembre 2027",
               "source": "https://www.salmonbusiness.com/salthammer-wins-contract-for-hybrid-aquaculture-service-vessel/"
             }
-          ]
+          ],
+          "architecte": "Tomra Engineering",
+          "architecte_source": "https://www.bairdmaritime.com/fishing/aquaculture/norways-charvest-selects-local-yard-for-new-fish-farm-service-vessel"
         },
         {
           "nom": "Fosnakongen",
@@ -115102,7 +115324,9 @@
               "detail": "Design CoastCat 22W de Tomra Engineering ; 3e navire livré à Abyss",
               "source": "nssm.no/aktuelt/salthammer-overleverer-m-s-fosnahav-til-abyss-aqua"
             }
-          ]
+          ],
+          "architecte": "Tomra Engineering",
+          "architecte_source": "iLaks (ilaks.no/her-er-abyss-nye-arbeidshest) : « Fosnahav » suit le même design que « Fosnakongen », les deux conçus par Tomra Engineering (bureau d'études du groupe Salthammer)"
         },
         {
           "nom": "Aqua Fighter",
@@ -115212,7 +115436,9 @@
               "detail": "Hybride : 2 x Scania DI16 90M + 2 x ABB M3LP 374 kW ; 4e navire livré par Salthammer à Abyss",
               "source": "ilaks.no ; skipsfarts-forum.net"
             }
-          ]
+          ],
+          "architecte": "Tomra Engineering",
+          "architecte_source": "iLaks / Norsk Skipsfarts Forum : Fosnasund, CoastCat design conçu par Tomra Engineering AS (groupe Salthammer) en collaboration avec l'armateur et le chantier"
         },
         {
           "nom": "Charlie Knight",
@@ -116743,7 +116969,9 @@
               "detail": "Exploitant du Reinefjord depuis plus de 26 ans ; livraison du BRIT par Maritime Partner",
               "source": "https://workboat365.com/maritime-partner-delivers-all-electric-ferry-to-moskenes-shipping/"
             }
-          ]
+          ],
+          "architecte": "Ola Lilloe-Olsen",
+          "architecte_source": "https://shippingtelegraph.com/shipyard-news/maritime-partner-delivers-first-electric-passenger-catamaran/"
         },
         {
           "nom": "Skyrunner (Alusafe 1250 WF)",
@@ -117234,7 +117462,9 @@
               "source": "maritimt.com/brim-11-2019"
             }
           ],
-          "prix_acquisition": "46 MNOK (2019, construction neuve)"
+          "prix_acquisition": "46 MNOK (2019, construction neuve)",
+          "architecte": "Hareide Design",
+          "architecte_source": "maritime-executive.com ; plugboats.com ; hareidedesign.com (design du navire par Einar Hareide / Hareide Design, hydrodynamique de coque avec Wave Propulsion ; construit par Maritime Partner)"
         },
         {
           "nom": "Bard (rebaptisé Berg)",
@@ -117674,7 +117904,9 @@
               "prix": null,
               "source": "https://maritimt.com/frb-22-02-2024"
             }
-          ]
+          ],
+          "architecte": "Maritime Partner",
+          "architecte_source": "maritime-partner.com : gamme Alusafe conçue en interne par les architectes navals de Maritime Partner (marque de design Alusafe). Conception interne, pas de cabinet externe distinct confirmé pour l'Alusafe 1215 FRB"
         },
         {
           "nom": "FRB 23",
@@ -117713,7 +117945,9 @@
               "prix": null,
               "source": "https://maritimt.com/frb-23-frb-24-10-2024"
             }
-          ]
+          ],
+          "architecte": "Maritime Partner",
+          "architecte_source": "maritime-partner.com : gamme Alusafe conçue en interne par les architectes navals de Maritime Partner (marque de design Alusafe). Conception interne, pas de cabinet externe distinct confirmé pour l'Alusafe 1215 FRB"
         },
         {
           "nom": "FRB 24",
@@ -117752,7 +117986,9 @@
               "prix": null,
               "source": "https://maritimt.com/frb-23-frb-24-10-2024"
             }
-          ]
+          ],
+          "architecte": "Maritime Partner",
+          "architecte_source": "maritime-partner.com : gamme Alusafe conçue en interne par les architectes navals de Maritime Partner (marque de design Alusafe). Conception interne, pas de cabinet externe distinct confirmé pour l'Alusafe 1215 FRB"
         }
       ],
       "sources": [
@@ -119639,7 +119875,9 @@
               "detail": "Hyke (ex-Hydrolift Smart City Ferries) conçoit et commercialise la navette F-15 ; production en serie de coques legeres en composite par Herde Kompositt",
               "source": "https://www.bairdmaritime.com/passenger/ferry/norwegian-joint-venture-cityboat-orders-electric-ferry-from-local-builder"
             }
-          ]
+          ],
+          "architecte": "Eker Design",
+          "architecte_source": "https://ekerdesign.com/work/hyke-shuttle-0001/ ; https://hykeelectricferries.com/ (design du navire et de la coque par Eker Design ; construction Herde Kompositt/Hydrolift)"
         }
       ],
       "sources": [
@@ -127199,7 +127437,9 @@
               "detail": "Coque Vard Braila, achevement Vard Brattvag ; livre janvier 2022, bapteme Tromso juin 2022 ; 2e des 3 chalutiers Nergard (apres Senja)",
               "source": "vard.com ; bairdmaritime"
             }
-          ]
+          ],
+          "architecte": "Vard Design",
+          "architecte_source": "vard.com ; bairdmaritime.com (design VARD 8 02, bureau de design Vard, distinct du site de construction Vard Brattvåg)"
         },
         {
           "nom": "Sorkapp",
@@ -134750,7 +134990,9 @@
               "prix": "GBP 4,9 M/unite",
               "source": "https://www.tamarcrossings.org.uk/about/torpoint-ferry/"
             }
-          ]
+          ],
+          "architecte": "Burness Corlett Three Quays",
+          "architecte_source": "http://www.bctq.com/bctq-projects.asp?ProjectID=21"
         },
         {
           "nom": "CF Tamar II",
@@ -134785,7 +135027,9 @@
               "prix": "GBP 4,9 M/unite",
               "source": "https://www.tamarcrossings.org.uk/about/torpoint-ferry/"
             }
-          ]
+          ],
+          "architecte": "Burness Corlett Three Quays",
+          "architecte_source": "http://www.bctq.com/bctq-projects.asp?ProjectID=21"
         },
         {
           "nom": "CF Lynher II",
@@ -134828,7 +135072,9 @@
               "prix": "~20 M£ projet global (incl. infrastructures)",
               "source": "https://en.wikipedia.org/wiki/Torpoint_Ferry"
             }
-          ]
+          ],
+          "architecte": "Burness Corlett Three Quays",
+          "architecte_source": "http://www.bctq.com/bctq-projects.asp?ProjectID=21"
         },
         {
           "nom": "Tirrick",
@@ -137485,7 +137731,9 @@
               "detail": "Livre a Stewart Buchan, pair trawling",
               "source": "The Fishing Daily"
             }
-          ]
+          ],
+          "architecte": "Macduff Ship Design",
+          "architecte_source": "macduffshipdesign.com (news/pair-trawlers) et Baird Maritime — Macduff Ship Design a développé la carène, les lignes, la stabilité et les plans de structure"
         },
         {
           "nom": "Orion BF 432",
@@ -137758,7 +138006,9 @@
               "prix": null,
               "source": "https://thefishingdaily.com/latest-news/excel-bf-110-macduff-shipyards-delivers-new-trawler-to-watt-family/"
             }
-          ]
+          ],
+          "architecte": "Macduff Ship Design",
+          "architecte_source": "thefishingdaily.com / macduffshipdesign.com (MSY New Build 702 Excel) : « EXCEL is a new design of fishing vessel, designed between the yard and local Naval Architecture & Consultancy firm Macduff Ship Design »"
         },
         {
           "nom": "Audacious",
@@ -138035,7 +138285,9 @@
               "detail": "Armateur basé à Peterhead",
               "source": "https://thefishingdaily.com/business-features/forever-faithful-pd-289-macduff-shipyards-delivers-new-build-to-west-family/"
             }
-          ]
+          ],
+          "architecte": "Macduff Ship Design",
+          "architecte_source": "RINA Ship & Boat International et Baird Maritime : chalutier langoustinier concu par Macduff Ship Design Ltd (bureau d'architecture navale distinct du chantier Macduff Shipyards), etude CFD sur deux carenes avec le Wolfson Unit. https://rina.org.uk/publications/ship-and-boat-international/macduff-delivers-north-sea-prawn-trawler-forever-faithful-mkii/"
         },
         {
           "nom": "Zenith",
@@ -138103,7 +138355,9 @@
               "detail": "Premier de la série de trois coques sœurs construites au site de Buckie nouvellement développé ; remis été 2022 ; lauréat Best Medium Trawler Baird Maritime 2022 ; pêche depuis Peterhead, langoustine mer du Nord",
               "source": "https://thefishingdaily.com/latest-news/macduff-shipyards-delivers-new-celestial-dawn-bf-109-to-peterhead/"
             }
-          ]
+          ],
+          "architecte": "Macduff Ship Design",
+          "architecte_source": "https://www.macduffshipdesign.com/ship-design/celestial-dawn-bf109/ ; https://www.bairdmaritime.com/fishing/catching/trawling/vessel-review-celestial-dawn-custom-designed-prawn-trawler-for-scottish-north-sea-fisherman"
         },
         {
           "nom": "Crystal River",
@@ -138140,7 +138394,9 @@
               "detail": "Armateurs de Fraserburgh",
               "source": "https://thefishingdaily.com/business-features/macduff-shipyards-delivers-new-faithful-crystal-river/"
             }
-          ]
+          ],
+          "architecte": "Macduff Ship Design",
+          "architecte_source": "Macduff Ship Design (communiqué « Faithful & Crystal River » : développement de la carène, fairing des lignes, stabilité, plans de structure) + Baird Maritime vessel review — https://www.macduffshipdesign.com/news/pair-trawlers/"
         },
         {
           "nom": "Faithful",
@@ -138177,7 +138433,9 @@
               "detail": "Armateurs de Fraserburgh",
               "source": "https://thefishingdaily.com/business-features/macduff-shipyards-delivers-new-faithful-crystal-river/"
             }
-          ]
+          ],
+          "architecte": "Macduff Ship Design",
+          "architecte_source": "macduffshipdesign.com/news/pair-trawlers (Faithful & Crystal River) + thefishingdaily.com : chalutier bœuf conçu par le cabinet Macduff Ship Design, construit par Macduff Shipyards"
         },
         {
           "nom": "Bradan an Eòlais",
@@ -138215,7 +138473,9 @@
               "detail": "Livre en 2025 a Bakkafrost Scotland, proprietaire et exploitant ; prepare les cages pour les bains d'eau douce et soutient les wellboats sur la cote ouest et les iles d'Ecosse.",
               "source": "https://www.welovestornoway.com/index.php/articles/39106-ceremony-for-new-bakkafrost-scotland-vessel"
             }
-          ]
+          ],
+          "architecte": "Macduff Ship Design",
+          "architecte_source": "macduffshipdesign.com ; workboat365.com ; fishfarmingexpert.com (bureau de design distinct du chantier constructeur Macduff Shipyards)"
         },
         {
           "nom": "Premier chalutier hybride Macduff (non encore nommé publiquement)",
@@ -138341,7 +138601,9 @@
               "detail": "Pavillon britannique, immatriculation BCK 35, MMSI 232014358, callsign MCSU2 (pas de numero IMO attribue)",
               "source": "VesselFinder / MyShipTracking (Caledonia III BCK35)"
             }
-          ]
+          ],
+          "architecte": "Macduff Ship Design",
+          "architecte_source": "https://fishingnews.co.uk/features/caledonia-iii/"
         },
         {
           "nom": "MV Loch Alainn",
@@ -149903,7 +150165,9 @@
               "detail": "Quatre chalutiers NVC 374 WP de la serie; Emeraude pour la filiale francaise du groupe Samherji",
               "source": "Wikipedia (de) NVC 374 WP"
             }
-          ]
+          ],
+          "architecte": "Rolls-Royce Marine (UT design)",
+          "architecte_source": "Fiche chantier Myklebust Verft (myklebustverft.no/referansar-3/bn-395-emeraude), rubrique Design : 'Rolls-Royce Marine AS'"
         },
         {
           "nom": "Cuxhaven",
@@ -149931,7 +150195,9 @@
               "detail": "Livre aout 2017, baptise a Cuxhaven",
               "source": "Wikipedia (de) NVC 374 WP; deutsche-flagge.de"
             }
-          ]
+          ],
+          "architecte": "Rolls-Royce Marine (UT design)",
+          "architecte_source": "Green Yard / World Fishing / Baird Maritime : chalutier NVC 374 WP, premier d'une série de 4 sur un nouveau design « wave piercing » de Rolls-Royce Marine, construit par Myklebust Verft — https://greenyard.no/referansar/cuxhaven"
         },
         {
           "nom": "Berlin",
@@ -150944,7 +151210,9 @@
               "detail": "Converti en navire de plongee/hydrographie, renomme HMNZS Manawanui",
               "source": "Wikipedia HMNZS Manawanui (2019)"
             }
-          ]
+          ],
+          "architecte": "Skipsteknisk",
+          "architecte_source": "https://skipsteknisk.no/delivered-ships/edda-fonn/29/212 ; ship-technology.com - design ST-253 de Skipsteknisk AS, construit par Myklebust Verft pour Ostensjo Rederi"
         },
         {
           "nom": "SD Northern River",
@@ -151554,7 +151822,9 @@
               "detail": "Patrouilleur garde-cotes / surveillance des peches",
               "source": "myklebustverft.com"
             }
-          ]
+          ],
+          "architecte": "Knud E. Hansen",
+          "architecte_source": "knudehansen.com/reference/brimil (design conceptuel : plan des formes, plan général, prédictions de vitesse/puissance, stabilité ; construit par le groupe Kleven au chantier Myklebust Verft)"
         },
         {
           "nom": "BF Tysfjord",
@@ -153277,7 +153547,9 @@
               "source": "https://www.varden.no/nyheter/naeringsliv/n/zABQrr/grunder-fra-skien-faar-40-millioner-i-stoette"
             }
           ],
-          "prix_acquisition": "≈ 100 M NOK/unite (derive: contrat total de 200 M NOK pour 2 trimarans identiques, dont 40 M NOK de subvention Enova) [2026]"
+          "prix_acquisition": "≈ 100 M NOK/unite (derive: contrat total de 200 M NOK pour 2 trimarans identiques, dont 40 M NOK de subvention Enova) [2026]",
+          "architecte": "WIND Naval Architects",
+          "architecte_source": "shippax.com ; marinelink.com ; rivieramm.com (coques du trimaran par WIND Naval Architects ; design général par Einar Hareide ; coques construites par Herde Kompositt, armement final Horten Shipyards)"
         }
       ],
       "sources": [
@@ -153546,7 +153818,9 @@
               "detail": "Yacht à moteur Silver de 80 ft ayant participé à l'évacuation de Dunkerque, sauvant plus de 900 hommes",
               "source": "https://www.helensburghadvertiser.co.uk/news/19707305.rosneath-boat-designer-john-bain-made-silvers-yard-world-famous/"
             }
-          ]
+          ],
+          "architecte": "John Bain",
+          "architecte_source": "helensburghadvertiser.co.uk ('Rosneath boat designer John Bain made Silvers yard world famous') ; yachtworld.com/boats.com/sandemanyachtcompany.co.uk — 'Naval architect John Bain and his James A Silver yard on the Clyde were responsible for the vessel' ; John Bain, architecte naval en chef du chantier James A. Silver, est explicitement nommé comme concepteur."
         },
         {
           "nom": "Ormidale",
@@ -153852,7 +154126,9 @@
               "detail": "Amarrée à Villeneuve-sur-Yonne, inscrite Overseas Watch List",
               "source": "National Historic Ships UK #3670"
             }
-          ]
+          ],
+          "architecte": "John Bain",
+          "architecte_source": "Helensburgh Advertiser ('The Rosneath boat designer who made Silvers yard world famous') et Sandeman Yacht Co. : John Bain fut l'architecte naval maison de Silvers/James Silver (Rosneath) qui dessina l'ensemble des yachts du chantier de 1919 aux années 1950. Davia (motor yacht Silvers, 1929) relève de cette production Bain ; la fiche ne nomme pas Bain individuellement pour Davia mais l'attribution au concepteur du chantier est établie."
         },
         {
           "nom": "Nyctea",
@@ -160282,7 +160558,9 @@
               "detail": "Tornado Marström, quasi-monopole en classe olympique de 1988 à 2008",
               "source": "https://marstrom.com/about-us/"
             }
-          ]
+          ],
+          "architecte": "Rodney March",
+          "architecte_source": "Classe Tornado concue en 1967 par Rodney March (avec Reg White et Terry Pierce), Angleterre ; en.wikipedia.org/wiki/Tornado_(sailboat) et tornado-class.org/the-class. Marstrom Composite n'est que le constructeur licencie."
         },
         {
           "nom": "Marström M20",
@@ -162524,7 +162802,9 @@
               "detail": "Mise en service sous pavillon grec (Garde-côtes hellénique)",
               "source": "dockstavarvet.se/references/greece/"
             }
-          ]
+          ],
+          "architecte": "Dockstavarvet",
+          "architecte_source": "Design CB90 concu par Dockstavarvet, qui l'a aussi construit (en.wikipedia.org/wiki/CB90-class_fast_assault_craft). ATTENTION : concepteur = constructeur (conception interne), pas de cabinet d'architecture navale tiers distinct."
         },
         {
           "nom": "CB 90 H / CB 90 HEX - Royal Malaysian Navy",
@@ -162578,7 +162858,9 @@
               "detail": "Mise en service sous pavillon malaisien (Marine royale)",
               "source": "dockstavarvet.se/references/malaysia/"
             }
-          ]
+          ],
+          "architecte": "Dockstavarvet",
+          "architecte_source": "Dockstavarvet a remporte le concours pour concevoir ET construire le CB90 pour la Marine suedoise (en.wikipedia.org/wiki/CB90-class_fast_assault_craft). ATTENTION : concepteur = constructeur (conception interne), il n'existe pas de cabinet d'architecture navale tiers distinct."
         },
         {
           "nom": "Interceptor Craft 16M (IC 16M) - Royal Malaysian Customs",
@@ -162778,7 +163060,9 @@
               "detail": "Pavillon danois",
               "source": "dockstavarvet.se/references/denmark/"
             }
-          ]
+          ],
+          "architecte": "Murray Cormack Associates",
+          "architecte_source": "dockstavarvet.se/references/denmark : 'The MC-versions back in early 1990ies are of Murray Cormack design, whilst the AP-versions are of Dockstavarvet design.' Canopus = MC 15 M livre avril 1993 a Limfjorden East Pilots."
         },
         {
           "nom": "Comet (MC 13M2)",
@@ -162811,7 +163095,9 @@
               "detail": "Pavillon danois",
               "source": "dockstavarvet.se/references/denmark/"
             }
-          ]
+          ],
+          "architecte": "Murray Cormack Associates",
+          "architecte_source": "dockstavarvet.se/references/denmark : 'the MC-versions back in early 1990ies are of Murray Cormack design'. MC 13 M2 COMET livré aux Sound Pilots d'Elseneur en juillet 1993. Murray Cormack Associates, architectes navals écossais (bizify/maritimedex : Dunoon, Argyll)."
         },
         {
           "nom": "Pollux (MC 13M1)",
@@ -166924,7 +167210,9 @@
               "detail": "Megayacht ~50 m construit fin des annees 1980",
               "source": "https://www.superyachts.com/fleet/braveheart-2409/"
             }
-          ]
+          ],
+          "architecte": "Pieter Beeldsnijder Design",
+          "architecte_source": "boatinternational.com ; superyachts.com (architecture navale et design extérieur par Pieter Beeldsnijder)"
         },
         {
           "nom": "S/S Drotten",
