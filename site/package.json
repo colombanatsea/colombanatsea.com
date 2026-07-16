@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "astro": "^5.18.0",
+    "astro": "^7.1.0",
     "earcut": "^3.0.2",
     "three": "^0.160.0"
   },
