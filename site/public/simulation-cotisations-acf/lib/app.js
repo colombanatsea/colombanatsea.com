@@ -35,8 +35,8 @@ var BASE=[
 {n:"LS Résa",t:0,c:0,ccn:0,col:"C",fx:0,pp:0,tp:"e",nw:1},
 {n:"Adam Assurances",t:0,c:0,ccn:0,col:"C",fx:0,pp:0,tp:"e",nw:1},
 {n:"Ouest Sécurité Marine",t:0,c:0,ccn:0,col:"C",fx:0,pp:0,tp:"e",nw:1},
-{n:"ARMAM",t:0,c:10000,ccn:0,col:"C",fx:10000,pp:0,tp:"h"},
-{n:"Howden",t:0,c:970,ccn:0,col:"C",fx:970,pp:0,tp:"h"},
+{n:"ARMAM",t:0,c:0,ccn:0,col:"C",fx:0,pp:0,tp:"h",fv:10000,nw:1},
+{n:"Howden",t:0,c:970,ccn:0,col:"C",fx:970,pp:0,tp:"h",fv:970},
 ];
 var LG=[{n:"SPLMNA (44 vedettes)",t:440,c:2910,ccn:1,col:"C",fx:2910,pp:0,tp:"e",lam:1,crew:212,ved:44}];
 var LS=[
@@ -57,7 +57,7 @@ function fm(n){return Math.round(n).toLocaleString("fr-FR");}
 function comp(mm,sv,sc,lb,sb,sf,fz){
 var lt=lb>0?mk(lb):[],st=sb>0?mk(sb):[];
 return mm.map(function(m){
-if(m.tp==="h")return Object.assign({},m,{sv:0,lo:0,so:0,tot:m.fx,delta:m.fx-m.c,pct:0});
+if(m.tp==="h")return Object.assign({},m,{sv:0,lo:0,so:0,tot:m.fv,delta:m.fv-m.c,pct:0});
 if(fz[m.n])return Object.assign({},m,{sv:0,lo:0,so:0,tot:m.c,delta:0,pct:0,frozen:1});
 var v=m.tp==="e"?sc:sv;
 var l=m.tp==="a"&&lt.length?dg(m.t,lt):0;
@@ -98,7 +98,7 @@ var _so=us("delta"),so=_so[0],sso=_so[1];
 var _fi=us("all"),fi=_fi[0],sfi=_fi[1];
 var _pr=us("S4 Flat social"),pr=_pr[0],spr=_pr[1];
 var _ls=us(false),ls=_ls[0],sls=_ls[1];
-var _fz=us({}),fz=_fz[0],sfz=_fz[1];
+var _fz=us({"TMC":1,"LD-Tide":1}),fz=_fz[0],sfz=_fz[1];
 function tf(n){var o=Object.assign({},fz);if(o[n])delete o[n];else o[n]=1;sfz(o);}
 
 function ap(n){var p=PR[n];ssv(p.s);ssc(p.sc);slb(p.l);ssb(p.sb);ssf(p.f);spr(n);}
