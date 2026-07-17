@@ -22,34 +22,43 @@ var BASE=[
 {n:"RD TPM Toulon",t:950,c:5931,ccn:1,col:"A",fx:2910,pp:3021,tp:"a"},
 {n:"Blue Lines (Martinique)",t:321,c:3931,ccn:1,col:"A",fx:2910,pp:1021,tp:"a"},
 {n:"DNO",t:325,c:2910,ccn:0,col:"A",fx:2910,pp:0,tp:"a"},
+{n:"SAEML Osani Ghjirulatu",t:10,c:0,ccn:1,col:"A",fx:0,pp:0,tp:"a",nw:1},
 {n:"TMC",t:622,c:2910,ccn:1,col:"B",fx:2910,pp:0,tp:"a"},
 {n:"Cie Vendeenne",t:551,c:2910,ccn:0,col:"B",fx:2910,pp:0,tp:"a"},
 {n:"JALILO / Arcachon",t:31,c:2910,ccn:1,col:"B",fx:2910,pp:0,tp:"a"},
 {n:"LD-Tide",t:1127,c:2910,ccn:1,col:"B",fx:2910,pp:0,tp:"a"},
+{n:"Solkaper",t:100,c:0,ccn:0,col:"B",fx:0,pp:0,tp:"a",nw:1},
+{n:"Mobyfly",t:15,c:0,ccn:0,col:"B",fx:0,pp:0,tp:"a",nw:1},
 {n:"FILHET ALLARD",t:0,c:2910,ccn:0,col:"C",fx:2910,pp:0,tp:"e"},
 {n:"CAPSTAN Avocats",t:0,c:2910,ccn:0,col:"C",fx:2910,pp:0,tp:"e"},
+{n:"Ecomer Data",t:0,c:0,ccn:0,col:"C",fx:0,pp:0,tp:"e",nw:1},
+{n:"LS Résa",t:0,c:0,ccn:0,col:"C",fx:0,pp:0,tp:"e",nw:1},
+{n:"Adam Assurances",t:0,c:0,ccn:0,col:"C",fx:0,pp:0,tp:"e",nw:1},
+{n:"Ouest Sécurité Marine",t:0,c:0,ccn:0,col:"C",fx:0,pp:0,tp:"e",nw:1},
+{n:"ARMAM",t:0,c:10000,ccn:0,col:"C",fx:10000,pp:0,tp:"h"},
 {n:"Howden",t:0,c:970,ccn:0,col:"C",fx:970,pp:0,tp:"h"},
 ];
-var LG=[{n:"SPLMNA (44 vedettes)",t:440,c:2910,ccn:1,col:"A",fx:2910,pp:0,tp:"a",lam:1,crew:212,ved:44}];
+var LG=[{n:"SPLMNA (44 vedettes)",t:440,c:2910,ccn:1,col:"C",fx:2910,pp:0,tp:"e",lam:1,crew:212,ved:44}];
 var LS=[
-{n:"Lam. Bayonne",t:30,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"a",lam:1,crew:6,ved:3},
-{n:"Lam. Bordeaux",t:50,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"a",lam:1,crew:36,ved:5},
-{n:"Lam. La Rochelle",t:50,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"a",lam:1,crew:25,ved:5},
-{n:"Lam. Donges",t:80,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"a",lam:1,crew:47,ved:8},
-{n:"Lam. Lorient",t:30,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"a",lam:1,crew:10,ved:3},
-{n:"Lam. Brest",t:40,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"a",lam:1,crew:35,ved:4},
-{n:"Lam. Ouistreham",t:10,c:363,ccn:1,col:"A",fx:363,pp:0,tp:"a",lam:1,crew:8,ved:1},
-{n:"Lam. Rouen-Dieppe",t:150,c:363,ccn:1,col:"A",fx:363,pp:0,tp:"a",lam:1,crew:45,ved:15},
+{n:"Lam. Bayonne",t:30,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"e",lam:1,crew:6,ved:3},
+{n:"Lam. Bordeaux",t:50,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"e",lam:1,crew:36,ved:5},
+{n:"Lam. La Rochelle",t:50,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"e",lam:1,crew:25,ved:5},
+{n:"Lam. Donges",t:80,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"e",lam:1,crew:47,ved:8},
+{n:"Lam. Lorient",t:30,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"e",lam:1,crew:10,ved:3},
+{n:"Lam. Brest",t:40,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"e",lam:1,crew:35,ved:4},
+{n:"Lam. Ouistreham",t:10,c:363,ccn:1,col:"C",fx:363,pp:0,tp:"e",lam:1,crew:8,ved:1},
+{n:"Lam. Rouen-Dieppe",t:150,c:363,ccn:1,col:"C",fx:363,pp:0,tp:"e",lam:1,crew:45,ved:15},
 ];
 
 function mk(b){return[[1000,b],[2000,b*.9],[4000,b*.8],[6000,b*.7],[8000,b*.6],[10000,b*.5]];}
 function dg(t,tr){var s=0,p=0;for(var i=0;i<tr.length;i++){if(t<=p)break;s+=(Math.min(t,tr[i][0])-p)*tr[i][1];p=tr[i][0];}return s;}
 function fm(n){return Math.round(n).toLocaleString("fr-FR");}
 
-function comp(mm,sv,sc,lb,sb,sf){
+function comp(mm,sv,sc,lb,sb,sf,fz){
 var lt=lb>0?mk(lb):[],st=sb>0?mk(sb):[];
 return mm.map(function(m){
-if(m.tp==="h")return Object.assign({},m,{sv:970,lo:0,so:0,tot:970,delta:0,pct:0});
+if(m.tp==="h")return Object.assign({},m,{sv:0,lo:0,so:0,tot:m.fx,delta:m.fx-m.c,pct:0});
+if(fz[m.n])return Object.assign({},m,{sv:0,lo:0,so:0,tot:m.c,delta:0,pct:0,frozen:1});
 var v=m.tp==="e"?sc:sv;
 var l=m.tp==="a"&&lt.length?dg(m.t,lt):0;
 var o=0;if(m.ccn){o=sf>0?sf:(st.length?dg(m.t,st):0);}
@@ -89,12 +98,14 @@ var _so=us("delta"),so=_so[0],sso=_so[1];
 var _fi=us("all"),fi=_fi[0],sfi=_fi[1];
 var _pr=us("S4 Flat social"),pr=_pr[0],spr=_pr[1];
 var _ls=us(false),ls=_ls[0],sls=_ls[1];
+var _fz=us({}),fz=_fz[0],sfz=_fz[1];
+function tf(n){var o=Object.assign({},fz);if(o[n])delete o[n];else o[n]=1;sfz(o);}
 
 function ap(n){var p=PR[n];ssv(p.s);ssc(p.sc);slb(p.l);ssb(p.sb);ssf(p.f);spr(n);}
 
 var mm=um(function(){return BASE.concat(ls?LS:LG);},[ls]);
-var all=um(function(){return comp(mm,sv,sc,lb,sb,sf);},[mm,sv,sc,lb,sb,sf]);
-var ka=all.filter(function(r){return r.tp!=="h";});
+var all=um(function(){return comp(mm,sv,sc,lb,sb,sf,fz);},[mm,sv,sc,lb,sb,sf,fz]);
+var ka=all;
 
 var data=um(function(){
 var r=all.slice();
@@ -196,31 +207,34 @@ h("span",null,h("span",{style:{display:"inline-block",width:10,height:10,borderR
 h("b",{style:{marginLeft:6}},"SC\u00c9NARIO :"),
 h("span",null,h("span",{style:{display:"inline-block",width:10,height:10,borderRadius:2,background:"#0F4761",verticalAlign:"middle",marginRight:3}}),"Services"),
 h("span",null,h("span",{style:{display:"inline-block",width:10,height:10,borderRadius:2,background:"#3b9fc1",verticalAlign:"middle",marginRight:3}}),"Lobbying"),
-h("span",null,h("span",{style:{display:"inline-block",width:10,height:10,borderRadius:2,background:"#f59e0b",verticalAlign:"middle",marginRight:3}}),"Social")),
+h("span",null,h("span",{style:{display:"inline-block",width:10,height:10,borderRadius:2,background:"#f59e0b",verticalAlign:"middle",marginRight:3}}),"Social"),
+h("span",{style:{marginLeft:6}},"❄ cliquer pour geler un adhérent à sa cotisation N-1")),
 
 // Chart
 h("div",{style:{background:"#fff",borderRadius:12,padding:"10px 14px",boxShadow:"0 1px 3px rgba(0,0,0,.06)"}},
 data.map(function(r,i){
 var dc=r.delta>50?"#16a34a":r.delta<-50?"#dc2626":"#888";
 var hl=r.n==="DNO"||r.lam;
-var ih=r.tp==="h";
-return h("div",{key:r.n+"-"+i,style:{display:"grid",gridTemplateColumns:"190px 28px 1fr 76px",gap:4,alignItems:"center",padding:"4px 0",borderBottom:i<data.length-1?"1px solid #f3f4f6":"none",background:hl?"#fffbeb":ih?"#f9fafb":"transparent",opacity:ih?0.6:1}},
+var ih=r.tp==="h",gl=!!r.frozen;
+return h("div",{key:r.n+"-"+i,style:{display:"grid",gridTemplateColumns:"190px 64px 1fr 76px",gap:4,alignItems:"center",padding:"4px 0",borderBottom:i<data.length-1?"1px solid #f3f4f6":"none",background:hl?"#fffbeb":(ih||gl)?"#f9fafb":"transparent",opacity:(ih||gl)?0.6:1}},
 h("div",{style:{display:"flex",alignItems:"center",gap:3,overflow:"hidden"}},
 h("span",{style:{background:cBg[r.col],color:cFg[r.col],padding:"1px 6px",borderRadius:4,fontSize:10,fontWeight:700}},r.col),
 h("span",{style:{fontSize:10.5,fontWeight:hl?700:500,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}},r.n)),
-h("div",{style:{display:"flex",gap:2}},
+h("div",{style:{display:"flex",gap:2,flexWrap:"wrap",alignItems:"center"}},
+ih?null:h("span",{onClick:function(){tf(r.n);},title:gl?"D\u00e9geler : appliquer le bar\u00e8me":"Geler \u00e0 la cotisation N-1 ("+fm(r.c)+" \u20ac)",style:{cursor:"pointer",fontSize:11,lineHeight:1,padding:"1px 3px",borderRadius:3,background:gl?"#dbeafe":"transparent",opacity:gl?1:0.3,userSelect:"none"}},"\u2744"),
 r.ccn?h("span",{style:{background:"#fef3c7",color:"#92400e",padding:"1px 4px",borderRadius:3,fontSize:9,fontWeight:700}},"3228"):null,
 r.tp==="e"?h("span",{style:{background:"#f3e8ff",color:"#6b21a8",padding:"1px 4px",borderRadius:3,fontSize:9,fontWeight:700}},"exp"):null,
+r.nw?h("span",{style:{background:"#dcfce7",color:"#166534",padding:"1px 4px",borderRadius:3,fontSize:9,fontWeight:700}},"new"):null,
 ih?h("span",{style:{background:"#e5e7eb",color:"#6b7280",padding:"1px 4px",borderRadius:3,fontSize:9,fontWeight:700}},"fixe"):null),
 h("div",{style:{display:"flex",flexDirection:"column",gap:1.5}},
 h("div",{style:{display:"flex",height:14,borderRadius:2,overflow:"hidden",background:"#f1f5f9"}},h(Seg,{v:r.fx,mx:mx,color:"#94a3b8"}),h(Seg,{v:r.pp,mx:mx,color:"#64748b"})),
-h("div",{style:{display:"flex",height:14,borderRadius:2,overflow:"hidden",background:"#f1f5f9"}},h(Seg,{v:r.sv,mx:mx,color:"#0F4761"}),h(Seg,{v:r.lo,mx:mx,color:"#3b9fc1"}),h(Seg,{v:r.so,mx:mx,color:"#f59e0b"}))),
+h("div",{style:{display:"flex",height:14,borderRadius:2,overflow:"hidden",background:"#f1f5f9"}},(ih||gl)?h(Seg,{v:r.tot,mx:mx,color:"#94a3b8"}):null,h(Seg,{v:r.sv,mx:mx,color:"#0F4761"}),h(Seg,{v:r.lo,mx:mx,color:"#3b9fc1"}),h(Seg,{v:r.so,mx:mx,color:"#f59e0b"}))),
 h("div",{style:{textAlign:"right"}},
-ih?h("div",{style:{fontSize:11,fontWeight:700,color:"#888"}},"970 \u20ac"):
+(ih||gl)?h("div",null,h("div",{style:{fontSize:11,fontWeight:700,color:"#888"}},fm(r.tot)+" \u20ac"),h("div",{style:{fontSize:9,color:"#888"}},gl?"gel\u00e9 N-1":"fixe")):
 h("div",null,h("div",{style:{fontSize:11,fontWeight:700,color:dc}},(r.delta>=0?"+":"")+fm(r.delta)+" \u20ac"),h("div",{style:{fontSize:9,color:dc}},(r.pct>=0?"+":"")+r.pct.toFixed(1)+"%"))));}),
 
 // Total
-h("div",{style:{display:"grid",gridTemplateColumns:"190px 28px 1fr 76px",gap:4,alignItems:"center",padding:"8px 0 2px",borderTop:"2px solid #0F4761",marginTop:4}},
+h("div",{style:{display:"grid",gridTemplateColumns:"190px 64px 1fr 76px",gap:4,alignItems:"center",padding:"8px 0 2px",borderTop:"2px solid #0F4761",marginTop:4}},
 h("div",{style:{fontSize:11,fontWeight:700,color:"#0F4761"}},"TOTAL ("+data.length+")"),
 h("div"),
 h("div",{style:{fontSize:10,color:"#555"}},"Actuel ",h("b",null,fm(data.reduce(function(s,r){return s+r.c;},0))+" \u20ac")," \u2192 ",h("b",{style:{color:"#0F4761"}},fm(data.reduce(function(s,r){return s+r.tot;},0))+" \u20ac")),
