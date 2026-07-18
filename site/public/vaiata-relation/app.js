@@ -286,4 +286,17 @@
       impBtn.textContent='✓ Importé'; impBtn.style.opacity=.6;
     },1100);
   });
+
+  /* ---------- Deux vues : presentation / demo ---------- */
+  var enter=document.getElementById('enter-demo'), exit_=document.getElementById('exit-demo');
+  if(enter) enter.addEventListener('click',function(e){
+    e.preventDefault();
+    document.body.classList.add('demo');
+    window.scrollTo(0,0);
+    go('dash');
+  });
+  if(exit_) exit_.addEventListener('click',function(){
+    document.body.classList.remove('demo');
+    window.scrollTo(0,0);
+  });
 })();
