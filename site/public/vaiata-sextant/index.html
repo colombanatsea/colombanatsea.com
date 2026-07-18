@@ -877,7 +877,7 @@ document.getElementById('ioexport').addEventListener('click',async()=>{
   const name=mode==='r26'?pname+' 26 (semaine)':`${pname} 27 ${MONTHS[month-1].replace('.','')}`;
   XLSX.utils.book_append_sheet(wb,ws,name.slice(0,31));
   XLSX.writeFile(wb,`SEXTANT_${activePort}_${mode==='r26'?'2026_semaine':'2027_'+String(month).padStart(2,'0')}.xlsx`);
-  ioout.innerHTML=`<b>Export généré</b> : ${days.length} jours × 3 cales au canevas officiel (créneaux, Sécurité, BM). En production, l'export reprend le classeur complet 7 ports.`;
+  ioout.innerHTML=`<b>Export généré</b> : ${days.length} jours × ${curCales().length} postes au canevas officiel (créneaux, Sécurité, BM). En production, l'export reprend le classeur complet 7 ports.`;
 });
 
 // import plan de service (format PS : onglets mensuels, grilles heure × minutes)
