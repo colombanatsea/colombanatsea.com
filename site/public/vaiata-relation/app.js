@@ -10,6 +10,11 @@
     window.scrollTo(0,0);
   }
   navBtns.forEach(function(b){b.addEventListener('click',function(){go(b.dataset.s)})});
+  if(location.hash==='#demo'||location.search.indexOf('demo')>-1){document.body.classList.add('demo');}
+  document.addEventListener('click',function(e){
+    if(e.target.closest('#enter-demo')){e.preventDefault(); document.body.classList.add('demo'); window.scrollTo(0,0); go('dash'); return;}
+    if(e.target.closest('#exit-demo')){document.body.classList.remove('demo'); window.scrollTo(0,0); return;}
+  });
   document.addEventListener('click',function(e){
     var el=e.target.closest('[data-go]');
     if(el && !e.target.closest('[data-cmt]')) go(el.dataset.go, el.dataset.arg);
@@ -287,16 +292,4 @@
     },1100);
   });
 
-  /* ---------- Deux vues : presentation / demo ---------- */
-  var enter=document.getElementById('enter-demo'), exit_=document.getElementById('exit-demo');
-  if(enter) enter.addEventListener('click',function(e){
-    e.preventDefault();
-    document.body.classList.add('demo');
-    window.scrollTo(0,0);
-    go('dash');
-  });
-  if(exit_) exit_.addEventListener('click',function(){
-    document.body.classList.remove('demo');
-    window.scrollTo(0,0);
-  });
 })();
