@@ -235,6 +235,40 @@ a.abtn:hover{filter:brightness(1.08)}
 .todo label{display:flex; gap:10px; align-items:flex-start; cursor:pointer}
 .todo input{accent-color:var(--red); margin-top:3px}
 .todo input:checked ~ span{text-decoration:line-through; color:var(--muted)}
+/* ---------- Tournee mobile ---------- */
+.tourwrap{display:flex; gap:24px; margin-top:16px; flex-wrap:wrap; align-items:flex-start}
+.phone{width:342px; flex:none; border:1px solid var(--border-strong); border-radius:26px; background:var(--surface); box-shadow:var(--shadow); overflow:hidden}
+.phone .pstat{display:flex; justify-content:space-between; padding:9px 18px 3px; font-size:10px; color:var(--muted)}
+.phone .phd{padding:3px 16px 10px; display:flex; align-items:baseline; gap:8px; border-bottom:1px solid var(--border)}
+.phone .phd b{font-size:15px}
+.phone .phd .mut{margin-left:auto; font-size:10.5px}
+.pmap{position:relative; height:132px; border-bottom:1px solid var(--border); overflow:hidden}
+.pmap svg{width:100%; height:100%; display:block}
+.pin{position:absolute; width:21px; height:21px; border-radius:50% 50% 50% 0; transform:rotate(-45deg); background:var(--red); display:flex; align-items:center; justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.pin i{transform:rotate(45deg); font-size:10px; font-weight:800; color:#fff; font-style:normal}
+.visit{display:flex; gap:10px; padding:10px 14px; border-bottom:1px solid var(--border); font-size:12px; align-items:flex-start}
+.visit:last-of-type{border-bottom:none}
+.visit .vh{flex:none; font-variant-numeric:tabular-nums; font-weight:700; color:var(--red)}
+.visit b{display:block; font-size:12.5px}
+.visit .m{color:var(--muted); font-size:11px}
+.dictzone{padding:4px 14px 16px}
+.bubble{display:none; background:var(--chip); border-radius:12px; padding:10px 12px; font-size:12px; margin-top:9px}
+.bubble.show{display:block}
+.tourside{flex:1; min-width:270px}
+.tourside .feat{margin-bottom:12px; background:var(--surface)}
+/* ---------- Reprise de donnees ---------- */
+.dz{border:2px dashed var(--border-strong); border-radius:13px; padding:14px; text-align:center; font-size:12.5px; color:var(--muted); background:var(--bg)}
+.filechip{display:flex; align-items:center; gap:9px; border:1px solid var(--border); border-radius:9px; padding:8px 11px; font-size:12.5px; margin-top:9px; background:var(--surface)}
+.filechip .ext{flex:none; font-size:10px; font-weight:700; color:#fff; background:var(--ok); border-radius:4px; padding:2px 5px}
+.filechip .ext.sp{background:var(--navy)}
+.filechip small{margin-left:auto; color:var(--muted)}
+.maprow{display:grid; grid-template-columns:1fr 20px 1fr; gap:8px; align-items:center; font-size:12px; padding:4px 0; color:var(--muted)}
+.maprow .to{color:var(--red); text-align:center; font-weight:700}
+.maprow .field{background:var(--chip); border-radius:6px; padding:4px 9px; color:var(--ink); font-weight:600}
+.imp-result{display:none; margin-top:12px}
+.imp-result.show{display:block}
+.roadmap{margin-top:24px; font-size:12.5px; color:var(--muted); border-top:1px dashed var(--border); padding-top:14px; max-width:76ch}
+.roadmap b{color:var(--ink)}
 /* ---------- Rapports ---------- */
 .hbar{display:grid; grid-template-columns:170px 1fr 76px; gap:10px; align-items:center; font-size:12.5px; padding:6px 0}
 .hbar .track{height:10px; border-radius:99px; background:var(--chip); overflow:hidden}
@@ -257,6 +291,7 @@ a.abtn:hover{filter:brightness(1.08)}
       <div class="feat"><b>L'orchestration des prestataires</b><p>Une option posée = chaque partenaire alerté de sa part. Un décalage de date = tout le monde re-notifié, en un clic.</p></div>
       <div class="feat"><b>La traçabilité complète</b><p>Emails Outlook rattachés, appels journalisés, commentaires et tags entre collègues : l'historique ne part plus avec les personnes.</p></div>
     </div>
+    <p class="roadmap"><b>Et ensuite :</b> campagnes emails segmentées avec consentements RGPD, signature électronique des conventions, encaissement des acomptes en ligne. Le produit se construit avec ses premiers armateurs.</p>
   </div>
 </div>
 <div class="app" id="demo">
@@ -274,6 +309,8 @@ a.abtn:hover{filter:brightness(1.08)}
       <button data-s="catalog"><svg viewBox="0 0 24 24"><path d="M12 3.2l8.8 4.6L12 12.4 3.2 7.8z"/><path d="M3.2 12.2l8.8 4.6 8.8-4.6"/><path d="M3.2 16.6l8.8 4.6 8.8-4.6"/></svg><span>Catalogue d'offres</span></button>
       <button data-s="mail"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><span>Messagerie</span></button>
       <button data-s="reports"><svg viewBox="0 0 24 24"><path d="M4.5 20V11"/><path d="M10.5 20V4.5"/><path d="M16.5 20v-7"/><path d="M21.5 20H2.5"/></svg><span>Rapports</span></button>
+      <button data-s="tour"><svg viewBox="0 0 24 24"><path d="M12 21.5s-7-5.8-7-11.3a7 7 0 0114 0c0 5.5-7 11.3-7 11.3z"/><circle cx="12" cy="10" r="2.6"/></svg><span>Ma tournée</span></button>
+      <button data-s="imports"><svg viewBox="0 0 24 24"><path d="M12 15.5V4.5"/><path d="M7.5 8.5L12 4l4.5 4.5"/><path d="M4 15.5v4a1 1 0 001 1h14a1 1 0 001-1v-4"/></svg><span>Reprise de données</span></button>
     </nav>
     <div class="foot"><b>VD</b><span class="wdot" style="width:4px;height:4px"></span> · VAIATA Dynamics<br>Démo interactive · données fictives</div>
   </aside>
@@ -448,6 +485,7 @@ a.abtn:hover{filter:brightness(1.08)}
           </div>
           <div class="actions">
             <button class="btn ghost">✉ Écrire</button>
+            <button class="btn ghost" id="btn-brief">✨ Préparer ma visite</button>
             <button class="btn ghost" data-go="validations">Prestations en attente</button>
             <button class="btn">＋ Nouvelle transaction</button>
           </div>
@@ -459,6 +497,15 @@ a.abtn:hover{filter:brightness(1.08)}
         </div>
         <div class="grid g23">
           <div>
+            <div class="card" id="brief-card" style="display:none; margin-bottom:14px">
+              <div class="hd">✨ Brief de visite <span class="right">VAIATA Intelligence · inférence souveraine</span></div>
+              <div class="bd" style="font-size:12.5px">
+                <p><b>L'essentiel :</b> partenaire hébergement n°2 (28 640 € apportés en 2025, +9 %). La convention 2024-087 expire le 31/08 : c'est l'objet principal de la visite.</p>
+                <p style="margin-top:6px"><b>Signaux :</b> dernier email d'Élise Rondeau hier, « Disponibilités mobil-homes septembre », resté sans réponse · 184 réservations en 2025, rythme +12 % · login portail utilisé il y a 3 jours, partenaire engagé.</p>
+                <p style="margin-top:6px"><b>À proposer :</b> renouvellement 2 ans, maintien de la commission à 12 %, intégration à l'offre « Escale nature » où la nuitée est déjà en option.</p>
+                <p class="mut" style="margin-top:8px; font-size:11.5px">Généré depuis la fiche, l'historique email et les transactions. Chaque affirmation renvoie à sa source.</p>
+              </div>
+            </div>
             <div class="card">
               <div class="hd">Coordonnées & contrat</div>
               <div class="bd">
@@ -769,6 +816,83 @@ a.abtn:hover{filter:brightness(1.08)}
             <tr><td>Escale nature · vélo & panier</td><td class="num">204</td><td class="num">96 730 €</td><td><span class="pill ok">74 %</span></td><td>B2C, familles</td></tr>
             <tr><td>Séminaire à la journée</td><td class="num">31</td><td class="num">87 350 €</td><td><span class="pill warn">41 %</span></td><td>Entreprises, CE</td></tr>
           </table>
+        </div>
+      </section>
+
+      <!-- ================= MA TOURNÉE ================= -->
+      <section class="screen" id="s-tour">
+        <div class="head-row">
+          <div>
+            <h2>Ma tournée</h2>
+            <p class="sub">L'application mobile du commercial en tournée : l'itinéraire du jour, la fiche complète dans la poche, le compte rendu dicté en sortant.</p>
+          </div>
+          <div class="actions"><button class="btn ghost">⚙ Optimiser l'itinéraire</button></div>
+        </div>
+        <div class="tourwrap">
+          <div class="phone">
+            <div class="pstat"><span>09:42</span><span>VAIATA Relation</span><span>▮▮▮▯ 78 %</span></div>
+            <div class="phd"><b>Vendredi 24 juillet</b><span class="mut">3 visites · 21 km</span></div>
+            <div class="pmap">
+              <svg viewBox="0 0 342 132" preserveAspectRatio="none" aria-hidden="true">
+                <rect width="342" height="132" fill="#CFE4EC"/>
+                <path d="M0 96 C60 78 90 108 150 92 C210 76 240 100 342 84 L342 132 L0 132 Z" fill="#E9E2CE"/>
+                <path d="M0 40 C80 24 150 52 220 34 C270 22 310 40 342 30" stroke="#FFFFFF" stroke-width="2" fill="none" opacity=".55"/>
+                <path d="M52 88 C110 70 180 96 236 66 C260 54 286 60 300 50" stroke="#0E7C86" stroke-width="2.5" stroke-dasharray="6 5" fill="none"/>
+              </svg>
+              <div class="pin" style="left:42px; top:70px"><i>1</i></div>
+              <div class="pin" style="left:160px; top:66px"><i>2</i></div>
+              <div class="pin" style="left:284px; top:32px"><i>3</i></div>
+            </div>
+            <div class="visit"><span class="vh">10:00</span><div><b>Camping Les Cormorans</b><span class="m">Renouvellement convention · Kbis, RIB et CA sur la fiche</span></div><span class="pill warn">Échéance 31/08</span></div>
+            <div class="visit"><span class="vh">11:30</span><div><b>Cyclo'Côte</b><span class="m">Point saison · 14 620 € apportés en 2025</span></div><span class="pill ok">Portail actif</span></div>
+            <div class="visit"><span class="vh">14:00</span><div><b>La Table du Port</b><span class="m">Nouveau tarif groupes 2027 à négocier</span></div><span class="pill neutral">Devis en cours</span></div>
+            <div class="dictzone">
+              <button class="btn" id="btn-dictate" style="width:100%; text-align:center">🎙 Dicter le compte rendu</button>
+              <div class="bubble" id="dict-bubble">« Convention renouvelée deux ans, commission maintenue à 12 %, Élise d'accord pour rejoindre l'offre Escale nature dès avril. »<div style="margin-top:7px"><span class="pill ok">Rattaché à la fiche</span> <span class="pill warn">Tâche créée : envoyer l'avenant</span></div></div>
+            </div>
+          </div>
+          <div class="tourside">
+            <div class="feat"><b>L'itinéraire vient du CRM</b><p>Les visites se planifient depuis les fiches : échéances de convention, partenaires à réactiver, devis en attente deviennent des tournées optimisées.</p></div>
+            <div class="feat"><b>La fiche dans la poche</b><p>Convention, Kbis, RIB, historique, chiffre d'affaires, dernier email : tout ce qui est à l'écran au bureau est dans la main sur le terrain.</p></div>
+            <div class="feat"><b>Le compte rendu ne se perd plus</b><p>Dicté en sortant du rendez-vous, transcrit, rattaché à la fiche, transformé en tâches. L'historique ne part plus avec le commercial.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= REPRISE DE DONNÉES ================= -->
+      <section class="screen" id="s-imports">
+        <div class="head-row">
+          <div>
+            <h2>Reprise de données</h2>
+            <p class="sub">Vos fichiers Excel et vos fiches SharePoint deviennent le référentiel. Dédoublonnage automatique, chaque fusion réversible, rien ne se perd.</p>
+          </div>
+        </div>
+        <div class="grid g3">
+          <div class="card" style="padding:16px">
+            <div class="hd" style="padding:0 0 10px; border:none">1 · Déposer</div>
+            <div class="dz">Glissez vos fichiers ici<br><b>ou connectez SharePoint</b></div>
+            <div class="filechip"><span class="ext">XLS</span> clients-2026.xlsx <small>10 000 lignes</small></div>
+            <div class="filechip"><span class="ext">XLS</span> prospects-groupes.xlsx <small>1 480 lignes</small></div>
+            <div class="filechip"><span class="ext sp">SP</span> SharePoint /Contacts <small>1 000 fiches</small></div>
+          </div>
+          <div class="card" style="padding:16px">
+            <div class="hd" style="padding:0 0 10px; border:none">2 · Faire correspondre</div>
+            <div class="maprow"><span class="field">Colonne « Société »</span><span class="to">→</span><span class="field">Compte</span></div>
+            <div class="maprow"><span class="field">Colonne « Mail »</span><span class="to">→</span><span class="field">Email</span></div>
+            <div class="maprow"><span class="field">Colonne « Tél. »</span><span class="to">→</span><span class="field">Téléphone</span></div>
+            <div class="maprow"><span class="field">Colonne « Type »</span><span class="to">→</span><span class="field">Segment</span></div>
+            <p class="mut" style="font-size:11.5px; margin-top:8px">Correspondances proposées automatiquement, ajustables colonne par colonne. Les colonnes inconnues deviennent des champs personnalisés.</p>
+          </div>
+          <div class="card" style="padding:16px">
+            <div class="hd" style="padding:0 0 10px; border:none">3 · Dédoublonner & importer</div>
+            <p style="font-size:12.5px">12 480 lignes analysées · <b>247 doublons probables</b> détectés par email, téléphone et raison sociale.</p>
+            <div style="margin-top:12px"><button class="btn" id="imp-run">Lancer l'import</button></div>
+            <div class="imp-result" id="imp-result">
+              <span class="pill ok">Import terminé</span>
+              <p style="font-size:12.5px; margin-top:8px"><b>12 095 fiches créées</b> · 247 doublons fusionnés (réversible fiche par fiche) · 138 emails invalides signalés pour correction.</p>
+              <p class="mut" style="font-size:11.5px; margin-top:6px">Les fichiers source restent archivés. Le lundi suivant, l'équipe travaille dans le référentiel, plus dans Excel.</p>
+            </div>
+          </div>
         </div>
       </section>
 

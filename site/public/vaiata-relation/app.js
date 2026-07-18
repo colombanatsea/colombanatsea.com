@@ -1,7 +1,7 @@
 (function(){
   /* ---------- Router ---------- */
   var navBtns=document.querySelectorAll('nav button');
-  var screenNav={dash:'dash',clients:'clients',client:'clients',partners:'partners',partner:'partners',deals:'deals',deal:'deals',validations:'validations',catalog:'catalog',mail:'mail',reports:'reports'};
+  var screenNav={dash:'dash',clients:'clients',client:'clients',partners:'partners',partner:'partners',deals:'deals',deal:'deals',validations:'validations',catalog:'catalog',mail:'mail',reports:'reports',tour:'tour',imports:'imports'};
   function go(s,arg){
     navBtns.forEach(function(b){b.classList.toggle('active',b.dataset.s===screenNav[s])});
     document.querySelectorAll('.screen').forEach(function(sc){sc.classList.toggle('on',sc.id==='s-'+s)});
@@ -91,7 +91,9 @@
     {k:'o',lbl:'OFFRE',n:'Escale nature · vélo & panier',d:'à partir de 54 € / pers.',go:'catalog'},
     {k:'o',lbl:'DOCUMENT',n:'Convention 2024-087 · Camping Les Cormorans',d:'PDF · SharePoint',go:'partner'},
     {k:'o',lbl:'ÉCRAN',n:'Messagerie · emails rattachés',d:'Outlook connecté',go:'mail'},
-    {k:'o',lbl:'ÉCRAN',n:'Rapports · pilotage commercial',d:'CA, conversion, partenaires',go:'reports'}
+    {k:'o',lbl:'ÉCRAN',n:'Rapports · pilotage commercial',d:'CA, conversion, partenaires',go:'reports'},
+    {k:'o',lbl:'ÉCRAN',n:'Ma tournée · mobile terrain',d:'itinéraire, fiches, dictée',go:'tour'},
+    {k:'o',lbl:'ÉCRAN',n:'Reprise de données Excel & SharePoint',d:'import, dédoublonnage',go:'imports'}
   ];
   var kcls={client:'',p:'p',t:'t',o:'o'};
   var ovS=document.getElementById('ov-search'), inp=document.getElementById('search-input'), res=document.getElementById('search-results');
@@ -254,5 +256,34 @@
       st.className='pill ok mst'; st.textContent='Fiche créée · Vendée Tourisme';
       btn.outerHTML='<span class="link" data-go="partners">Ouvrir →</span>';
     });
+  });
+
+  /* ---------- Brief de visite IA ---------- */
+  var briefBtn=document.getElementById('btn-brief');
+  if(briefBtn) briefBtn.addEventListener('click',function(){
+    var c=document.getElementById('brief-card');
+    c.style.display='block';
+    briefBtn.textContent='✓ Brief généré'; briefBtn.disabled=true; briefBtn.style.opacity=.6;
+    c.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+
+  /* ---------- Tournée : dictée ---------- */
+  var dictBtn=document.getElementById('btn-dictate');
+  if(dictBtn) dictBtn.addEventListener('click',function(){
+    dictBtn.textContent='● Transcription…'; dictBtn.disabled=true;
+    setTimeout(function(){
+      document.getElementById('dict-bubble').classList.add('show');
+      dictBtn.textContent='✓ Compte rendu rattaché'; dictBtn.style.opacity=.6;
+    },900);
+  });
+
+  /* ---------- Reprise : import ---------- */
+  var impBtn=document.getElementById('imp-run');
+  if(impBtn) impBtn.addEventListener('click',function(){
+    impBtn.textContent='Import en cours…'; impBtn.disabled=true;
+    setTimeout(function(){
+      document.getElementById('imp-result').classList.add('show');
+      impBtn.textContent='✓ Importé'; impBtn.style.opacity=.6;
+    },1100);
   });
 })();
