@@ -48,7 +48,7 @@
   function pill(ok,txtOk,txtKo,warn){return '<span class="pill '+(ok?(warn?'warn':'ok'):'neutral')+'">'+(ok?txtOk:txtKo)+'</span>'}
   function renderPartners(f){
     document.querySelectorAll('#partner-chips button').forEach(function(b){b.classList.toggle('active',b.dataset.f===f)});
-    var rows='<tr><th>Partenaire</th><th>Catégorie</th><th>Convention</th><th>Portail</th><th class="num">CA apporté 2025</th></tr>';
+    var rows='<tr><th>Partenaire</th><th>Segment</th><th>Convention</th><th>Portail</th><th class="num">CA apporté 2025</th></tr>';
     partners.filter(function(p){return f==='all'||p.c===f}).forEach(function(p){
       rows+='<tr class="row-link"'+(p.fiche?' data-go="partner"':'')+'><td><span class="link">'+p.n+'</span></td><td>'+p.c+'</td>'+
         '<td>'+(p.convW?'<span class="pill warn">':'<span class="pill ok">')+p.conv+'</span></td>'+
@@ -72,8 +72,10 @@
 
   /* ---------- Tuile CA ---------- */
   var caData={ytd:['312 480 €','+18 % vs 2025',1], mom:['64 210 €','+11 % vs juin 2026',1], yoy:['64 210 €','+23 % vs juillet 2025',1]};
-  document.getElementById('ca-view').addEventListener('change',function(){
-    var d=caData[this.value];
+  var caOrder=['ytd','mom','yoy'], caIdx=0;
+  document.getElementById('ca-cycle').addEventListener('click',function(){
+    caIdx=(caIdx+1)%caOrder.length;
+    var d=caData[caOrder[caIdx]];
     document.getElementById('ca-val').textContent=d[0];
     var v=document.getElementById('ca-var'); v.textContent=d[1]; v.classList.toggle('down',!d[2]);
   });
@@ -292,4 +294,69 @@
     },1100);
   });
 
+
+  /* ---------- Tri des tableaux (clic sur l entete) ---------- */
+  function sortNum(txt){
+    var n=parseFloat(txt.replace(/[\u202f\u00a0\s]/g,'').replace(/[^0-9,.-]/g,'').replace(',','.'));
+    return isNaN(n)?null:n;
+  }
+  function makeSortable(id){
+    var t=document.getElementById(id); if(!t) return;
+    t.addEventListener('click',function(e){
+      if(e.target.closest('button,.link,input,select')) return;
+      var th=e.target.closest('th'); if(!th) return;
+      var hrow=t.querySelector('tr');
+      var ci=[].indexOf.call(hrow.children,th); if(ci<0) return;
+      var dir=(t.dataset.sc==String(ci)&&t.dataset.sd=='1')?-1:1;
+      t.dataset.sc=String(ci); t.dataset.sd=String(dir);
+      var rows=[].slice.call(t.querySelectorAll('tr')).slice(1);
+      rows.sort(function(a,b){
+        var av=(a.cells[ci]?a.cells[ci].textContent:'').trim();
+        var bv=(b.cells[ci]?b.cells[ci].textContent:'').trim();
+        var an=sortNum(av), bn=sortNum(bv);
+        return dir*((an!==null&&bn!==null)?(an-bn):av.localeCompare(bv,'fr',{sensitivity:'base'}));
+      });
+      var par=rows.length?rows[0].parentNode:null;
+      rows.forEach(function(r){par.appendChild(r)});
+      [].forEach.call(hrow.children,function(h){h.classList.remove('s-asc','s-desc')});
+      th.classList.add(dir===1?'s-asc':'s-desc');
+    });
+  }
+  ['client-table','partner-table','val-table','offer-table','mail-table'].forEach(makeSortable);
+
+  /* ---------- Filtre plein-texte des tableaux ---------- */
+  var filters={};
+  function applyFilter(tid){
+    var t=document.getElementById(tid); if(!t) return;
+    var q=(filters[tid]||'').trim(), qq=norm(q);
+    [].slice.call(t.querySelectorAll('tr')).slice(1).forEach(function(r){
+      r.style.display=(!q||norm(r.textContent).indexOf(qq)>-1)?'':'none';
+    });
+  }
+  document.querySelectorAll('.tbl-filter').forEach(function(inp){
+    inp.addEventListener('input',function(){filters[inp.dataset.table]=inp.value; applyFilter(inp.dataset.table)});
+  });
+  document.getElementById('client-chips').addEventListener('click',function(){applyFilter('client-table')});
+  document.getElementById('partner-chips').addEventListener('click',function(){applyFilter('partner-table')});
+
+  /* ---------- Appel en cours : widget flottant non bloquant ---------- */
+  var callBox=document.getElementById('callbox'), callT=null, callS=0;
+  function fmtT(){var m=('0'+Math.floor(callS/60)).slice(-2), s2=('0'+(callS%60)).slice(-2); return m+':'+s2}
+  document.querySelectorAll('.open-call').forEach(function(b){b.addEventListener('click',function(){
+    if(callT) clearInterval(callT);
+    callS=0; callBox.hidden=false;
+    document.getElementById('call-timer').textContent='00:00';
+    callT=setInterval(function(){callS++; document.getElementById('call-timer').textContent=fmtT()},1000);
+  })});
+  document.getElementById('call-close').addEventListener('click',function(){callBox.hidden=true; if(callT) clearInterval(callT)});
+  document.getElementById('call-save').addEventListener('click',function(){
+    if(callT) clearInterval(callT);
+    var notes=document.getElementById('call-notes').value.trim()||'Appel journalisé, sans note.';
+    var who=document.getElementById('call-who').value.split(' (')[0];
+    var esc=notes.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/@(\w+)/g,'<span class="tag">@$1</span>');
+    var li=document.createElement('li');
+    li.innerHTML='<div class="who red">TE</div><div>✆ '+esc+'<time>Appel de '+fmtT()+' · rattaché à '+who+'</time></div>';
+    var tl=document.getElementById('deal-tl'); if(tl) tl.insertBefore(li,tl.firstChild);
+    callBox.hidden=true; document.getElementById('call-notes').value='';
+  });
 })();
