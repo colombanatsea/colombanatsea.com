@@ -93,7 +93,7 @@ h2{font-size:21px; font-weight:650; letter-spacing:-.01em; text-wrap:balance}
 .grid{display:grid; gap:14px; margin-top:16px}
 .g3{grid-template-columns:repeat(3,1fr)}
 .g23{grid-template-columns:2fr 1fr}
-@media(max-width:900px){ .g3,.g23{grid-template-columns:1fr} .side{width:62px} .side .brand,.side .foot,nav button span{display:none} nav button{justify-content:center} nav button .dot{display:none} }
+@media(max-width:900px){ .g3,.g23{grid-template-columns:1fr} .side{width:62px} .side .brand,.side .foot,nav button span{display:none} nav button{justify-content:center} nav button .dot{display:none} .search{flex:none; width:40px; justify-content:center; padding:6px 0} .search .s-label,.search kbd{display:none} .demo-tag{display:none} .client-logo{height:28px} .callbox{right:8px; bottom:8px; width:calc(100vw - 16px)} }
 .pill{display:inline-flex; align-items:center; gap:5px; font-size:11.5px; font-weight:600; padding:2px 9px; border-radius:20px; white-space:nowrap}
 .pill::before{content:""; width:6px; height:6px; border-radius:50%; background:currentColor}
 .pill.ok{color:var(--ok); background:var(--ok-bg)}
@@ -205,6 +205,32 @@ button.btn[disabled]{opacity:.55; cursor:default}
 .portal .p-hd{background:var(--navy); color:#fff; padding:10px 16px; font-size:12px; display:flex; gap:8px; align-items:center}
 .portal .p-hd b{letter-spacing:.14em}
 .portal .p-bd{padding:14px 16px}
+/* ---------- Recherche une ligne ---------- */
+.search{white-space:nowrap}
+.search .s-label{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin-left:6px}
+.ico-btn{all:unset; cursor:pointer; margin-left:auto; color:var(--muted); padding:2px 6px; border-radius:6px; display:flex; align-items:center}
+.ico-btn:hover{color:var(--red); background:var(--chip)}
+.ico-btn:focus-visible{outline:2px solid var(--red)}
+/* ---------- Tri + filtre tableaux ---------- */
+#client-table th,#partner-table th,#val-table th,#offer-table th,#mail-table th{cursor:pointer; user-select:none}
+th.s-asc::after{content:" ▲"; font-size:9px}
+th.s-desc::after{content:" ▼"; font-size:9px}
+.tbl-filter{display:block; margin-top:10px; width:min(340px,100%); border:1px solid var(--border-strong); border-radius:8px; padding:7px 12px; font:inherit; font-size:13px; background:var(--surface); color:var(--ink)}
+.tbl-filter:focus-visible{outline:2px solid var(--red)}
+/* ---------- Badge option ---------- */
+.optb{margin-left:auto; font-size:8.5px; font-weight:700; letter-spacing:.06em; border:1px solid currentColor; border-radius:8px; padding:0 5px; opacity:.65; text-transform:uppercase}
+/* ---------- Appel en cours ---------- */
+.callbox{position:fixed; right:18px; bottom:18px; width:302px; background:var(--surface); border:1px solid var(--border-strong); border-top:3px solid var(--red); border-radius:12px; box-shadow:0 10px 34px rgba(26,26,46,.28); z-index:40}
+.callbox[hidden]{display:none}
+.cb-hd{display:flex; align-items:center; gap:8px; padding:9px 12px; font-size:12.5px; font-weight:700; border-bottom:1px solid var(--border)}
+.cb-hd .mono{color:var(--red)}
+.cb-hd .x{all:unset; cursor:pointer; margin-left:auto; color:var(--muted); padding:2px 7px; border-radius:5px}
+.cb-hd .x:hover{background:var(--chip); color:var(--ink)}
+.cb-bd{padding:10px 12px; display:flex; flex-direction:column; gap:8px}
+.callbox select,.callbox textarea{border:1px solid var(--border-strong); border-radius:7px; padding:7px 9px; font:inherit; font-size:12.5px; background:var(--bg); color:var(--ink)}
+.callbox textarea{min-height:72px; resize:vertical}
+.cb-row{display:flex; gap:9px; align-items:center}
+.cb-row .mut{font-size:11px}
 /* ---------- Wordmark ---------- */
 .wmk{color:#fff; font-size:16.5px; font-weight:800; letter-spacing:-.01em; line-height:1.15}
 .wdot{display:inline-block; width:.18em; height:.18em; border-radius:50%; background:var(--red); margin-left:.06em; vertical-align:.02em}
@@ -314,7 +340,7 @@ a.abtn:hover{filter:brightness(1.08)}
       <button data-s="catalog"><svg viewBox="0 0 24 24"><path d="M12 3.2l8.8 4.6L12 12.4 3.2 7.8z"/><path d="M3.2 12.2l8.8 4.6 8.8-4.6"/><path d="M3.2 16.6l8.8 4.6 8.8-4.6"/></svg><span>Catalogue d'offres</span></button>
       <button data-s="mail"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><span>Messagerie</span></button>
       <button data-s="reports"><svg viewBox="0 0 24 24"><path d="M4.5 20V11"/><path d="M10.5 20V4.5"/><path d="M16.5 20v-7"/><path d="M21.5 20H2.5"/></svg><span>Rapports</span></button>
-      <button data-s="tour"><svg viewBox="0 0 24 24"><path d="M12 21.5s-7-5.8-7-11.3a7 7 0 0114 0c0 5.5-7 11.3-7 11.3z"/><circle cx="12" cy="10" r="2.6"/></svg><span>Ma tournée</span></button>
+      <button data-s="tour"><svg viewBox="0 0 24 24"><path d="M12 21.5s-7-5.8-7-11.3a7 7 0 0114 0c0 5.5-7 11.3-7 11.3z"/><circle cx="12" cy="10" r="2.6"/></svg><span>Ma tournée</span><span class="optb">option</span></button>
       <button data-s="imports"><svg viewBox="0 0 24 24"><path d="M12 15.5V4.5"/><path d="M7.5 8.5L12 4l4.5 4.5"/><path d="M4 15.5v4a1 1 0 001 1h14a1 1 0 001-1v-4"/></svg><span>Reprise de données</span></button>
     </nav>
     <div class="foot"><b>VD</b><span class="wdot" style="width:4px;height:4px"></span> · VAIATA Dynamics<br>Démo interactive · données fictives</div>
@@ -324,7 +350,7 @@ a.abtn:hover{filter:brightness(1.08)}
     <div class="topbar">
       <button class="backlink" id="exit-demo">← Présentation</button>
       <img class="client-logo" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4gPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNzguNDUgODAuMjciPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojZTIwNjEzO30uY2xzLTJ7ZmlsbDojMTgzYTY1O30uY2xzLTN7ZmlsbDojMDA5YmI4O308L3N0eWxlPjwvZGVmcz48ZyBpZD0iQ2FscXVlXzIiIGRhdGEtbmFtZT0iQ2FscXVlIDIiPjxnIGlkPSJDYWxxdWVfMS0yIiBkYXRhLW5hbWU9IkNhbHF1ZSAxIj48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik03OC42MywyNS4xM0M3NywyMy44MSw3MiwxOS40MSw3My44NywxNS42N2EyLjIxLDIuMjEsMCwwLDEsMS44NSwyLjY2bDEuNzEtMS4yN2ExLjM1LDEuMzUsMCwwLDAtLjIyLTEuNzJjLjU1LjMyLDQuMzcsMi43Ny0uMTUsNi45bC4xMi4yNVM4Mi41OSwxOSw4MC44NywxNS45YzEuMTIsMS4xNCwzLDQuMjQtMi4yNCw5LjIzTTgyLDE0bC0xLjU4LDEuMjNBNi4xOSw2LjE5LDAsMCwwLDc4Ljc0LDE0bC0xLjU4LDEuMjlBMS4wNywxLjA3LDAsMCwwLDc3LDE1LjFjLS44NS0uOTQtMS40Ny0xLjE1LTIuMDgtLjc4YTE2LjEyLDE2LjEyLDAsMCwwLTIuMDgsMS40M2MtLjYxLjUzLTIuODIsMi4zNy42NCw3LjMxLDAsMC01LjE4LTUuNDMtMS41LThsLjc3LS41M2MuMzctLjI1LjMzLS42OS4yNS0xLjFzLS4wOS0uNzQtLjE2LTEuMTkuMi0uNTMuODYtLjYxYTE5LjY4LDE5LjY4LDAsMCwxLDMuNSwwLDcuNTksNy41OSwwLDAsMCw0LjA5LS4zN0w4Mi41LDkuNzFhNS43MSw1LjcxLDAsMCwxLTIuMTMuMjFjLTEuNDcsMC0yLjYtLjIzLTMuMzEtLjI1LjIzLDAsLjcxLS4wNi43NC0uNDlzMC0xLjA2LDAtMS4wNmwxLjM5LS40MSwxLTEuNzZhMTAuMjksMTAuMjksMCwwLDEtMi40OS4zM0E3LjY0LDcuNjQsMCwwLDEsNzgsNC44OWExMC42LDEwLjYsMCwwLDAtMS43NiwxbC0uMTIuMzMtLjY1LjA4TDc0LjI5LDguMmwxLjU1LDBMNzYsOS43MWE5LjcyLDkuNzIsMCwwLDAtMi41Ny4yMWMtMSwuMjgtMS4xLjQ1LTEuOCwxLjM0YTIuODQsMi44NCwwLDAsMC0uNzgsMi4xM0ExMS40OSwxMS40OSwwLDAsMCw3MSwxNC44MmMwLC4yOCwwLC40NS0uNDUuNjlhMy40MSwzLjQxLDAsMCwwLTEuNzYsMi40MWMtLjE3LDEuMTEtLjY1LDIuODYsNC40NSw4LjI1TDc1LjEsMjVhMTMuNzksMTMuNzksMCwwLDAsMi40MSwxLjg0bDEuNjMtMS4zNS0uMjctLjJjLjc3LS41Myw5LTYuNDgsMy4xNC0xMS4yNyI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTc4LjQ1LDExLjg5Yy0yLS4wOC0yLjczLS4xMi0zLjE1LjY5cy0uNDQsMS4zNi41OCwxLjI4YTkuODMsOS44MywwLDAsMSwyLjQxLDAsOC4xLDguMSwwLDAsMCw0LjA4LS4zMmwxLjE0LTEuMzVhMTAuMDgsMTAuMDgsMCwwLDEtMS41NS4xMmMtLjg1LDAtMS41MS0uMjgtMy41MS0uMzciPjwvcGF0aD48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik02NS42NSw3MS4xM0E0MC43Nyw0MC43NywwLDAsMSw1NS4zNiw3Ny4zYTM5LjMsMzkuMywwLDAsMS0xNS4yOCwzLDM4LjgzLDM4LjgzLDAsMCwxLTE1LjYtMy4xNUE0MC4yNiw0MC4yNiwwLDAsMSwzLjE1LDU1Ljc3LDM5LDM5LDAsMCwxLDAsNDAuMTQsMzkuMTMsMzkuMTMsMCwwLDEsMy4xNSwyNC41LDQwLjI2LDQwLjI2LDAsMCwxLDI0LjQ4LDMuMTUsMzguODMsMzguODMsMCwwLDEsNDAuMDgsMCwzOSwzOSwwLDAsMSw1NS40MSwzLDQwLjU3LDQwLjU3LDAsMCwxLDY2LjI5LDkuNzVsLTMuNzUsNS41OVM2MC4wOSwxMy40OSw1OSwxMi43NkEzNC41NCwzNC41NCwwLDAsMCw1MC4yMSw4LjQsMzIuMzEsMzIuMzEsMCwwLDAsNDAuMDgsNi44NCwzMy4xNCwzMy4xNCwwLDAsMCwzMS4yNCw4YTMyLjcyLDMyLjcyLDAsMCwwLTcuOTQsMy4zNywzNC40MywzNC40MywwLDAsMC02Ljc0LDUuMiwzMi4yNSwzMi4yNSwwLDAsMC01LjIsNi43NCwzNC44OSwzNC44OSwwLDAsMC0zLjM3LDhBMzMuMiwzMy4yLDAsMCwwLDgsNDlhMzUuMTUsMzUuMTUsMCwwLDAsMy4zNyw4LDMyLjQ1LDMyLjQ1LDAsMCwwLDUuMiw2LjczLDM0LjQzLDM0LjQzLDAsMCwwLDYuNzQsNS4yLDMyLjMzLDMyLjMzLDAsMCwwLDcuOTQsMy4zNywzMi43NCwzMi43NCwwLDAsMCw4Ljg0LDEuMTgsMzIuMTEsMzIuMTEsMCwwLDAsMTAuMS0xLjU4QTM1LjkxLDM1LjkxLDAsMCwwLDU5LDY3LjU2Yy41MS0uMzIsMy0yLjM5LDMtMi4zOVoiPjwvcGF0aD48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iOTIuODggNDQuMDEgODkuMjUgMzguMDQgODQuNDMgMzguMDQgODQuNDMgMzkuMDUgOTAuNjcgNDguMjEgOTAuNjcgNTUuMSA5NS4wOSA1NS4xIDk1LjA5IDQ4LjE2IDEwMS4zMyAzOS4wNSAxMDEuMzMgMzguMDQgOTYuNTEgMzguMDQgOTIuODggNDQuMDEiPjwvcG9seWdvbj48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMTAzLjMxIDU1LjEgMTE0LjkxIDU1LjEgMTE0LjkxIDUxLjQyIDEwNy43MiA1MS40MiAxMDcuNzIgNDguNTYgMTEzLjk2IDQ4LjU2IDExMy45NiA0NC44OCAxMDcuNzIgNDQuODggMTA3LjcyIDQxLjcyIDExNC45MSA0MS43MiAxMTQuOTEgMzguMDQgMTAzLjMxIDM4LjA0IDEwMy4zMSA1NS4xIj48L3BvbHlnb24+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTI3LjIxLDQ4LjU0YTIuOTIsMi45MiwwLDAsMS0uNzgsMi4yLDIuNjQsMi42NCwwLDAsMS0xLjk0Ljc4LDIuNTksMi41OSwwLDAsMS0xLjkyLS43NywyLjkzLDIuOTMsMCwwLDEtLjc3LTIuMjFWMzhoLTQuNDJ2MTAuNWE2LjM3LDYuMzcsMCwwLDAsMi4wNSw1LDgsOCwwLDAsMCwxMC4xNCwwLDYuMzUsNi4zNSwwLDAsMCwyLjA2LTVWMzhoLTQuNDJaIj48L3BhdGg+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTQ5LjM3LDQxLjgxYTYuNjgsNi42OCwwLDAsMSw0LjA3LDEuNWwuMzguMjksMS44OC0zLjQ4LS4yOC0uMjFhMTEuNzEsMTEuNzEsMCwwLDAtMi44LTEuNTgsMTAuMiwxMC4yLDAsMCwwLTEwLDIsOC44NCw4Ljg0LDAsMCwwLDAsMTIuNDYsOS4xOCw5LjE4LDAsMCwwLDYuNzUsMi41Niw5LjA3LDkuMDcsMCwwLDAsMy4yNy0uNTQsMTEuNzcsMTEuNzcsMCwwLDAsMi44LTEuNTlsLjI4LS4yMS0xLjg4LTMuNDctLjM4LjI5YTYuNjYsNi42NiwwLDAsMS00LjA3LDEuNDlBNC42OCw0LjY4LDAsMCwxLDE0NS44Miw1MGE1LjA2LDUuMDYsMCwwLDEsMC02LjgyQTQuNjgsNC42OCwwLDAsMSwxNDkuMzcsNDEuODFaIj48L3BhdGg+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTY1LjE0LDM3Ljc5YTguNTgsOC41OCwwLDAsMC02LjI2LDIuNTgsOC43Myw4LjczLDAsMCwwLDAsMTIuNDEsOC44Niw4Ljg2LDAsMCwwLDEyLjUsMCw4LjczLDguNzMsMCwwLDAsMC0xMi40MUE4LjU3LDguNTcsMCwwLDAsMTY1LjE0LDM3Ljc5Wm0zLjE2LDEyLjEzYTQuNDUsNC40NSwwLDAsMS02LjMzLDBoMGE0Ljk0LDQuOTQsMCwwLDEsMC02LjcsNC40OCw0LjQ4LDAsMCwxLDYuMzMsMCw1LDUsMCwwLDEsMCw2LjdaIj48L3BhdGg+PHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjE4Ni4zMSA0Ni45OCAxNzkuNzkgMzguMDQgMTc2LjQxIDM4LjA0IDE3Ni40MSA1NS4wOCAxODAuODMgNTUuMDggMTgwLjgzIDQ2LjA4IDE4Ny4zOCA1NS4xIDE5MC43NCA1NS4xIDE5MC43NCAzOC4wNCAxODYuMzEgMzguMDQgMTg2LjMxIDQ2Ljk4Ij48L3BvbHlnb24+PHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjE5Mi44NSA0MS44OCAxOTcuNDIgNDEuODggMTk3LjQyIDU1LjEgMjAxLjc5IDU1LjEgMjAxLjc5IDQxLjg4IDIwNi40MSA0MS44OCAyMDYuNDEgMzguMDQgMTkyLjg1IDM4LjA0IDE5Mi44NSA0MS44OCI+PC9wb2x5Z29uPjxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iMjA4LjUzIiB5PSIzOC4wNCIgd2lkdGg9IjQuNDIiIGhlaWdodD0iMTcuMDYiPjwvcmVjdD48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMjI2LjMxIDQ2Ljk4IDIxOS43OSAzOC4wNCAyMTYuNDEgMzguMDQgMjE2LjQxIDU1LjA4IDIyMC44MyA1NS4wOCAyMjAuODMgNDYuMDggMjI3LjM3IDU1LjEgMjMwLjczIDU1LjEgMjMwLjczIDM4LjA0IDIyNi4zMSAzOC4wNCAyMjYuMzEgNDYuOTgiPjwvcG9seWdvbj48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMjM0LjIyIDU1LjEgMjQ1LjgzIDU1LjEgMjQ1LjgzIDUxLjQyIDIzOC42NCA1MS40MiAyMzguNjQgNDguNTYgMjQ0Ljg4IDQ4LjU2IDI0NC44OCA0NC44OCAyMzguNjQgNDQuODggMjM4LjY0IDQxLjcyIDI0NS44MyA0MS43MiAyNDUuODMgMzguMDQgMjM0LjIyIDM4LjA0IDIzNC4yMiA1NS4xIj48L3BvbHlnb24+PHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjI1OC4zNiA0Ni45OCAyNTEuODQgMzguMDQgMjQ4LjQ2IDM4LjA0IDI0OC40NiA1NS4wOCAyNTIuODggNTUuMDggMjUyLjg4IDQ2LjA4IDI1OS40MiA1NS4xIDI2Mi43OCA1NS4xIDI2Mi43OCAzOC4wNCAyNTguMzYgMzguMDQgMjU4LjM2IDQ2Ljk4Ij48L3BvbHlnb24+PHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjI2NC44OSAzOC4wNCAyNjQuODkgNDEuODggMjY5LjQ2IDQxLjg4IDI2OS40NiA1NS4xIDI3My44NCA1NS4xIDI3My44NCA0MS44OCAyNzguNDUgNDEuODggMjc4LjQ1IDM4LjA0IDI2NC44OSAzOC4wNCI+PC9wb2x5Z29uPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSI0MS4zOSAyNi40MyAzMi45MyAyNi40MyAyNi41NiAzNi45MSAyMC4xOCAyNi40MyAxMS43MiAyNi40MyAxMS43MiAyOC4xOSAyMi42OCA0NC4yOCAyMi42OCA1Ni4zOSAzMC40NCA1Ni4zOSAzMC40NCA0NC4yIDQxLjM5IDI4LjE5IDQxLjM5IDI2LjQzIj48L3BvbHlnb24+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNNjEuOTEsNDcuMTRhMTEuNjgsMTEuNjgsMCwwLDEtNy4xNCwyLjYzLDguMjcsOC4yNywwLDAsMS02LjI0LTIuMzcsOC4xNiw4LjE2LDAsMCwxLTIuMzItNiw4LDgsMCwwLDEsOC41Ni04LjM2LDExLjY3LDExLjY3LDAsMCwxLDcuMTQsMi42MmwuNjcuNTEsMy4zMS02LjEtLjUtLjM3YTIwLjUyLDIwLjUyLDAsMCwwLTQuOTItMi43OEExNiwxNiwwLDAsMCw1NC43MywyNmMtNC44NywwLTguODYsMS41MS0xMS44NSw0LjQ5YTE0LjkzLDE0LjkzLDAsMCwwLTQuNTEsMTAuOTQsMTQuOTMsMTQuOTMsMCwwLDAsNC41MSwxMC45NGMzLDMsNyw0LjQ4LDExLjg1LDQuNDhhMTYsMTYsMCwwLDAsNS43NC0uOTQsMjAuODcsMjAuODcsMCwwLDAsNC45Mi0yLjc4bC41LS4zOC0zLjMxLTYuMVoiPjwvcGF0aD48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik04NS4yOSwyNy40MmE0LjU3LDQuNTcsMCwwLDEsMy4zNi0xLjI2LDQuNzcsNC43NywwLDAsMSwyLjkyLDFMOTEsMjguMzFhMy43NiwzLjc2LDAsMCwwLTIuMjktLjc3LDMsMywwLDAsMC0yLjIzLDUuMTMsMywzLDAsMCwwLDIuMjMuODVBMy43MSwzLjcxLDAsMCwwLDkxLDMyLjc0bC42MiwxLjE4YTQuNzYsNC43NiwwLDAsMS0yLjkyLDEsNC41NCw0LjU0LDAsMCwxLTMuMzYtMS4yNyw0LjQzLDQuNDMsMCwwLDEsMC02LjIxWiI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTk1LjkyLDI3LjQ0YTQuNDUsNC40NSwwLDAsMSw2LjI1LDAsNC4zLDQuMywwLDAsMSwwLDYuMTgsNC40NSw0LjQ1LDAsMCwxLTYuMjUsMCw0LjMsNC4zLDAsMCwxLDAtNi4xOFpNOTcsMzIuNjVhMi44NCwyLjg0LDAsMCwwLDQsMCwzLjEyLDMuMTIsMCwwLDAsMC00LjI0LDIuODQsMi44NCwwLDAsMC00LDAsMy4xMiwzLjEyLDAsMCwwLDAsNC4yNFoiPjwvcGF0aD48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMTEuNiwzNC42N2wtMi40My01LjgzLS41LDUuOTNoLTEuNTVsLjc4LTguNDhoMS42M2wyLjYsNi4yNCwyLjU5LTYuMjRoMS42MmwuOCw4LjQ4aC0xLjU1bC0uNTItNS45My0yLjQyLDUuODNaIj48L3BhdGg+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTIxLjM2LDM0Ljc3VjI2LjI5aDMuNTdhMi40NSwyLjQ1LDAsMCwxLDEuOTMuNzksMi43NSwyLjc1LDAsMCwxLC43MiwxLjkzLDIuNjUsMi42NSwwLDAsMS0uNzIsMS44OSwyLjUxLDIuNTEsMCwwLDEtMS45My43N2gtMnYzLjFabTMuMzItNC4zM2ExLjE5LDEuMTksMCwwLDAsMS0uNCwxLjUyLDEuNTIsMCwwLDAsLjM1LTEsMS41NiwxLjU2LDAsMCwwLS4zNS0xLjA2LDEuMTksMS4xOSwwLDAsMC0xLS40aC0xLjc2djIuOVoiPjwvcGF0aD48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMjkuOCwzNC43N2wzLjI3LTguNDhoMS42MUwxMzgsMzQuNzdoLTEuNThsLS42NS0xLjY2SDEzMmwtLjYxLDEuNjZabTQuMDgtNi45MS0xLjQzLDRoMi44NVoiPjwvcGF0aD48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xNDMuMTEsMjguNDRhMywzLDAsMCwwLS44MSwyLjExLDIuOTEsMi45MSwwLDAsMCwuODEsMi4wOSwyLjgzLDIuODMsMCwwLDAsMi4xNy44NiwzLjU5LDMuNTksMCwwLDAsMS43OC0uNDRWMzEuNThIMTQ0LjhWMzAuMzVoMy42OXYzLjMxYTQuNjcsNC42NywwLDAsMS0zLjIzLDEuMjRBNC40Miw0LjQyLDAsMCwxLDE0MiwzMy42M2E0LjE2LDQuMTYsMCwwLDEtMS4zLTMuMDlBNC4yMiw0LjIyLDAsMCwxLDE0MiwyNy40M2E0LjM4LDQuMzgsMCwwLDEsMy4yMy0xLjI3LDUsNSwwLDAsMSwzLjA4LDFsLS43LDEuMTdhNC4xOCw0LjE4LDAsMCwwLTIuMzQtLjc5QTIuNzYsMi43NiwwLDAsMCwxNDMuMTEsMjguNDRaIj48L3BhdGg+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTU0LjE5LDI5LjA1djUuNzJoLTEuNTVWMjYuMjloMS4xN0wxNTgsMzJWMjYuMjloMS41NXY4LjQ4aC0xLjE2WiI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE2NS43MSwzNC43N2gtMS41NVYyNi4yOWgxLjU1WiI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE3MC4zMiwzNC43N1YyNi4yOWg1LjUxdjEuMjVoLTRWMzBoMy40NXYxLjIzaC0zLjQ1djIuM2g0djEuMjRaIj48L3BhdGg+PC9nPjwvZz48L3N2Zz4g" alt="Yeu Continent"><div class="top-sep"></div>
-      <div class="search" id="search-open" role="button" tabindex="0" aria-label="Recherche transversale">⌕ Rechercher un client, un partenaire, une transaction, une offre… <kbd>Ctrl K</kbd></div>
+      <div class="search" id="search-open" role="button" tabindex="0" aria-label="Recherche transversale">⌕<span class="s-label">Rechercher un client, un partenaire, une transaction…</span><kbd>Ctrl K</kbd></div>
       <span class="demo-tag">Démo interactive · données fictives</span>
       <div class="avatars" title="10 utilisateurs : direction + service communication">
         <div class="av red">TE</div><div class="av">MG</div><div class="av">SB</div><div class="av">+7</div>
@@ -341,11 +367,7 @@ a.abtn:hover{filter:brightness(1.08)}
           <div class="card stat"><div class="lbl">Options ouvertes</div><div class="val">23</div><div class="var">+4 cette semaine</div></div>
           <div class="card stat">
             <div class="lbl">CA packages
-              <select id="ca-view" aria-label="Période du chiffre d'affaires">
-                <option value="ytd">2026 cumulé</option>
-                <option value="mom">Juil. vs juin</option>
-                <option value="yoy">Juil. vs juil. 2025</option>
-              </select>
+              <button class="ico-btn" id="ca-cycle" title="Changer la période : cumul, mois vs mois, mois vs année passée" aria-label="Changer la période du chiffre d'affaires"><svg viewBox="0 0 24 24" width="14" height="14" style="stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round"><path d="M7 4L3.5 7.5 7 11"/><path d="M3.5 7.5H16a4.5 4.5 0 010 9h-3"/></svg></button>
             </div>
             <div class="val mono" id="ca-val">312 480 €</div>
             <div class="var" id="ca-var">+18 % vs 2025</div>
@@ -406,6 +428,7 @@ a.abtn:hover{filter:brightness(1.08)}
           <button data-f="TO">Tour-opérateurs</button>
           <button data-f="B2C">Particuliers B2C</button>
         </div>
+        <input class="tbl-filter" data-table="client-table" placeholder="⌕ Filtrer les clients : nom, segment, contact…" aria-label="Filtrer les clients">
         <div class="card" style="margin-top:14px">
           <table id="client-table">
             <tr><th>Compte</th><th>Segment</th><th>Contact</th><th class="num">CA 2025</th><th>Dernière activité</th><th>RGPD</th></tr>
@@ -424,7 +447,7 @@ a.abtn:hover{filter:brightness(1.08)}
           </div>
           <div class="actions">
             <button class="btn ghost">✉ Écrire</button>
-            <button class="btn ghost">✆ Journaliser un appel</button>
+            <button class="btn ghost open-call">✆ Journaliser un appel</button>
             <button class="btn" id="btn-devis-client">＋ Devis</button>
           </div>
         </div>
@@ -474,9 +497,10 @@ a.abtn:hover{filter:brightness(1.08)}
           <button data-f="Activités & visites">Activités & visites</button>
           <button data-f="Mobilité">Mobilité</button>
         </div>
+        <input class="tbl-filter" data-table="partner-table" placeholder="⌕ Filtrer les partenaires : nom, segment, convention…" aria-label="Filtrer les partenaires">
         <div class="card" style="margin-top:14px">
           <table id="partner-table">
-            <tr><th>Partenaire</th><th>Catégorie</th><th>Convention</th><th>Portail</th><th class="num">CA apporté 2025</th></tr>
+            <tr><th>Partenaire</th><th>Segment</th><th>Convention</th><th>Portail</th><th class="num">CA apporté 2025</th></tr>
           </table>
         </div>
       </section>
@@ -653,7 +677,8 @@ a.abtn:hover{filter:brightness(1.08)}
           </div>
           <div class="actions"><button class="btn ghost" id="btn-portal">Aperçu du portail partenaire</button></div>
         </div>
-        <div class="card" style="margin-top:16px">
+        <input class="tbl-filter" data-table="val-table" placeholder="⌕ Filtrer les validations : partenaire, transaction…" aria-label="Filtrer les validations" style="margin-top:14px">
+        <div class="card" style="margin-top:2px">
           <table id="val-table">
             <tr><th>Transaction</th><th>Prestation</th><th>Partenaire</th><th>Demandé le</th><th>Statut</th><th>Actions</th></tr>
             <tr>
@@ -742,10 +767,10 @@ a.abtn:hover{filter:brightness(1.08)}
             <h2>Messagerie</h2>
             <p class="sub">Boîtes Outlook connectées : chaque email se rattache à une fiche et à une transaction, automatiquement par expéditeur et fil de discussion, ou d'un clic.</p>
           </div>
-          <div class="actions"><button class="btn ghost">✆ Journaliser un appel</button><button class="btn">✉ Nouveau message</button></div>
+          <div class="actions"><button class="btn ghost open-call">✆ Journaliser un appel</button><button class="btn">✉ Nouveau message</button></div>
         </div>
         <div class="card" style="margin-top:16px">
-          <table>
+          <table id="mail-table">
             <tr><th>De</th><th>Objet</th><th>Reçu</th><th>Rattachement</th><th></th></tr>
             <tr>
               <td><b>Les Cars Rocheteau</b></td><td>RE: option 30 personnes du 12 octobre</td><td class="mono">hier 17:12</td>
@@ -816,7 +841,7 @@ a.abtn:hover{filter:brightness(1.08)}
         </div>
         <div class="card" style="margin-top:14px">
           <div class="hd">Offres du catalogue · performance 2026</div>
-          <table>
+          <table id="offer-table">
             <tr><th>Offre</th><th class="num">Dossiers</th><th class="num">CA</th><th>Conversion</th><th>Segment moteur</th></tr>
             <tr><td>Journée groupe insulaire</td><td class="num">146</td><td class="num">128 400 €</td><td><span class="pill ok">68 %</span></td><td>Autocaristes, CE</td></tr>
             <tr><td>Escale nature · vélo & panier</td><td class="num">204</td><td class="num">96 730 €</td><td><span class="pill ok">74 %</span></td><td>B2C, familles</td></tr>
@@ -830,7 +855,7 @@ a.abtn:hover{filter:brightness(1.08)}
         <div class="head-row">
           <div>
             <h2>Ma tournée</h2>
-            <p class="sub">L'application mobile du commercial en tournée : l'itinéraire du jour, la fiche complète dans la poche, le compte rendu dicté en sortant.</p>
+            <p class="sub"><b>Module optionnel, pour aller plus loin.</b> L'application mobile du commercial en tournée : l'itinéraire du jour, la fiche complète dans la poche, le compte rendu dicté en sortant.</p>
           </div>
           <div class="actions"><button class="btn ghost">⚙ Optimiser l'itinéraire</button></div>
         </div>
@@ -907,6 +932,20 @@ a.abtn:hover{filter:brightness(1.08)}
 </div>
 
 <div class="pagefoot"><b>VD.</b> VAIATA Relation est un produit VAIATA Dynamics · démo interactive, données fictives · <a href="https://vaiata-dynamics.com">vaiata-dynamics.com</a> · <a href="mailto:colomban@vaiata-dynamics.fr">Discuter du produit</a></div>
+
+<!-- ================= APPEL EN COURS (widget flottant) ================= -->
+<div class="callbox" id="callbox" hidden>
+  <div class="cb-hd">✆ Appel en cours <span class="mono" id="call-timer">00:00</span><button class="x" id="call-close" aria-label="Fermer sans rattacher">✕</button></div>
+  <div class="cb-bd">
+    <select id="call-who" aria-label="Contact de l'appel">
+      <option>Les Cars Rocheteau (client)</option>
+      <option>Camping Les Cormorans (partenaire)</option>
+      <option>Nouveau contact…</option>
+    </select>
+    <textarea id="call-notes" placeholder="Notes d'appel… naviguez librement dans l'app pendant l'appel, le widget vous suit."></textarea>
+    <div class="cb-row"><button class="btn sm" id="call-save">Terminer et rattacher</button><span class="mut">Rattaché à la fiche + journal</span></div>
+  </div>
+</div>
 
 <!-- ================= RECHERCHE TRANSVERSALE ================= -->
 <div class="overlay" id="ov-search">
@@ -1015,7 +1054,7 @@ a.abtn:hover{filter:brightness(1.08)}
   </div>
 </div>
 
-<script src="app.js?v=2"></script>
+<script src="app.js?v=3"></script>
 
 </body>
 </html>
