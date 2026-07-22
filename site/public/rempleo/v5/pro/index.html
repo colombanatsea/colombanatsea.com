@@ -156,6 +156,8 @@
   <nav class="sidebar">
     <div class="navgroup">Principal</div>
     <button class="navitem" data-page="dash" aria-selected="true"><span class="ic">📊</span> Tableau de bord</button>
+    <button class="navitem" data-page="messages" aria-selected="false"><span class="ic">💬</span> Messages <span class="pill" style="background:var(--red-soft);color:var(--red)">2</span></button>
+    <button class="navitem" data-page="contrats" aria-selected="false"><span class="ic">📝</span> Contrats</button>
     <div class="navgroup">Publicité</div>
     <button class="navitem" data-page="builder" aria-selected="false"><span class="ic">🎯</span> Nouvelle campagne</button>
     <button class="navitem" data-page="contenu" aria-selected="false"><span class="ic">✍️</span> Articles &amp; réseaux <span class="pill">300 €</span></button>
@@ -208,6 +210,45 @@
           <p style="margin:12px 0 0;font-size:11.5px"><a href="#" style="color:var(--mint-deep);font-weight:700" data-goto="annonces">Voir mes annonces et leurs performances →</a></p>
           <p style="margin:10px 0 0;font-size:11.5px;color:var(--mut)">💡 Les titulaires &gt; 200 patients/sem cliquent 2,3× plus sur vos pubs. <a href="#" style="color:var(--mint-deep);font-weight:700" data-goto="builder">Cibler ce segment →</a></p>
         </div>
+      </div>
+    </section>
+
+    <!-- ================= MESSAGES ================= -->
+    <section class="page" id="messages">
+      <div class="page-head">
+        <div><h1>Messages</h1><p>Vos conversations avec les kinés, candidats et l'équipe Rempleo.</p></div>
+      </div>
+      <div class="card">
+        <table>
+          <thead><tr><th>Conversation</th><th>Dernier message</th><th class="num">Date</th><th></th></tr></thead>
+          <tbody>
+            <tr class="msgrow"><td><b>Anaïs P.</b> <span class="pill p-red" style="margin-left:6px">Non lu</span><br><span style="font-size:11px;color:var(--mut)">CDI Cannes</span></td><td style="font-size:12.5px">« Merci pour le contrat, je le signe ce soir »</td><td class="num">21/07</td><td>💬</td></tr>
+            <tr class="msgrow"><td><b>Léo V.</b> <span class="pill p-red" style="margin-left:6px">Non lu</span><br><span style="font-size:11px;color:var(--mut)">CDD Ajaccio</span></td><td style="font-size:12.5px">« Le logement est-il inclus dès juillet ? »</td><td class="num">21/07</td><td>💬</td></tr>
+            <tr class="msgrow"><td><b>Khalil B.</b><br><span style="font-size:11px;color:var(--mut)">Rempleo</span></td><td><span class="pill p-blue">📄 Contrat à finaliser</span></td><td class="num">14/07</td><td>💬</td></tr>
+            <tr class="msgrow"><td><b>Sofia M.</b><br><span style="font-size:11px;color:var(--mut)">CDI Cannes</span></td><td style="font-size:12.5px">« Disponible pour un échange jeudi »</td><td class="num">12/07</td><td>💬</td></tr>
+            <tr class="msgrow"><td><b>Camille R.</b><br><span style="font-size:11px;color:var(--mut)">CDI Cannes</span></td><td><span class="pill p-mint">📄 Contrat signé</span></td><td class="num">02/07</td><td>💬</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ================= CONTRATS ================= -->
+    <section class="page" id="contrats">
+      <div class="page-head">
+        <div><h1>Contrats</h1><p>Proposés, en cours de signature, signés. Signature électronique intégrée.</p></div>
+        <button class="btn btn-mint" id="newcontract">+ Proposer un contrat</button>
+      </div>
+      <div class="card">
+        <table>
+          <thead><tr><th>Contrat</th><th>Avec</th><th>Annonce</th><th>Statut</th><th class="num">Mis à jour</th><th></th></tr></thead>
+          <tbody>
+            <tr class="ctrrow"><td><b>CDI temps plein</b></td><td>Anaïs P.</td><td style="font-size:12px">CDI Cannes</td><td><span class="pill p-amber">À finaliser</span></td><td class="num">21/07</td><td>✍️</td></tr>
+            <tr class="ctrrow"><td><b>CDD saisonnier</b></td><td>Léo V.</td><td style="font-size:12px">CDD Ajaccio</td><td><span class="pill p-blue">Proposé</span></td><td class="num">18/07</td><td>👁️</td></tr>
+            <tr class="ctrrow"><td><b>CDI temps plein</b></td><td>Camille R.</td><td style="font-size:12px">CDI Cannes</td><td><span class="pill p-mint">Signé ✓</span></td><td class="num">02/07</td><td>⬇️</td></tr>
+            <tr class="ctrrow"><td><b>Vacation juillet</b></td><td>Hugo T.</td><td style="font-size:12px">Vacation Paris 15e</td><td><span class="pill p-red">Refusé</span></td><td class="num">28/06</td><td>👁️</td></tr>
+          </tbody>
+        </table>
+        <p style="margin:12px 0 0;font-size:11.5px;color:var(--mut)">Les contrats signés sont horodatés et archivés. Relance automatique à J+3 sur les contrats proposés sans réponse.</p>
       </div>
     </section>
 
@@ -528,6 +569,9 @@
   document.getElementById('newart').addEventListener('click',function(){toast('Éditeur d\'article ouvert &middot; 300 € débités à la publication, après validation');});
   document.getElementById('recharge').addEventListener('click',function(){toast('Recharge CB via Stancer &middot; solde crédité instantanément');});
   document.getElementById('newoffer').addEventListener('click',function(){toast('Éditeur d\'annonce &middot; CDI, CDD, vacation ou intérim, en ligne après validation');});
+  document.getElementById('newcontract').addEventListener('click',function(){toast('Choisissez un candidat, le contrat type se pré-remplit depuis l\'annonce');});
+  document.querySelectorAll('.msgrow').forEach(function(r){r.style.cursor='pointer';r.addEventListener('click',function(){toast('Conversation ouverte &middot; messagerie sécurisée Rempleo');});});
+  document.querySelectorAll('.ctrrow').forEach(function(r){r.style.cursor='pointer';r.addEventListener('click',function(){toast('Contrat ouvert &middot; signature électronique horodatée');});});
   document.getElementById('fixoffer').addEventListener('click',function(e){e.preventDefault();toast('Suggestion appliquée en brouillon : 26-28 €/h &middot; à confirmer avant publication');});
   document.querySelectorAll('.offr').forEach(function(r){r.style.cursor='pointer';r.addEventListener('click',function(){toast('Détail annonce : funnel, démographie et pipeline ci-dessous');});});
 
