@@ -91,11 +91,11 @@ style:{width:p.step<1?72:62,textAlign:"right",fontSize:16,fontWeight:700,color:p
 }
 
 function App(){
-var _sv=us(2650),sv=_sv[0],ssv=_sv[1];
+var _sv=us(2600),sv=_sv[0],ssv=_sv[1];
 var _sc=us(2800),sc=_sc[0],ssc=_sc[1];
-var _lb=us(3.18),lb=_lb[0],slb=_lb[1];
+var _lb=us(3.15),lb=_lb[0],slb=_lb[1];
 var _sb=us(0),sb=_sb[0],ssb=_sb[1];
-var _sf=us(110),sf=_sf[0],ssf=_sf[1];
+var _sf=us(150),sf=_sf[0],ssf=_sf[1];
 var _so=us("delta"),so=_so[0],sso=_so[1];
 var _fi=us("all"),fi=_fi[0],sfi=_fi[1];
 var _pr=us("Custom"),pr=_pr[0],spr=_pr[1];
@@ -214,6 +214,13 @@ h("span",null,h("span",{style:{display:"inline-block",width:10,height:10,borderR
 h("span",null,h("span",{style:{display:"inline-block",width:10,height:10,borderRadius:2,background:"#f59e0b",verticalAlign:"middle",marginRight:3}}),"Social"),
 h("span",{style:{marginLeft:6}},"❄ geler à la cotisation N-1"),
 h("span",{style:{color:"#dc2626"}},"✕ marquer un adhérent perdu (retire la ligne N)")),
+
+// Bandeau adhérents retirés
+Object.keys(pd).length>0?h("div",{style:{display:"flex",alignItems:"center",gap:10,flexWrap:"wrap",marginBottom:8,padding:"7px 12px",background:"#fef2f2",border:"1.5px solid #fecaca",borderRadius:8}},
+h("span",{style:{fontSize:11,fontWeight:700,color:"#dc2626"}},"✕ "+Object.keys(pd).length+" adhérent(s) retiré(s) :"),
+h("span",{style:{fontSize:11,color:"#991b1b"}},Object.keys(pd).join(", ")),
+Object.keys(pd).map(function(nm){return h("button",{key:nm,onClick:function(){tp2(nm);},style:{padding:"2px 8px",border:"1.5px solid #dc2626",borderRadius:5,background:"#fff",color:"#dc2626",cursor:"pointer",fontWeight:600,fontSize:10}},"Réintégrer "+nm);}),
+h("button",{onClick:function(){spd({});},style:{marginLeft:"auto",padding:"2px 10px",border:"none",borderRadius:5,background:"#dc2626",color:"#fff",cursor:"pointer",fontWeight:700,fontSize:10}},"Réintégrer tout")):null,
 
 // Chart
 h("div",{style:{background:"#fff",borderRadius:12,padding:"10px 14px",boxShadow:"0 1px 3px rgba(0,0,0,.06)"}},
