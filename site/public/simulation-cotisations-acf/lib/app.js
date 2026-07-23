@@ -21,7 +21,7 @@ var BASE=[
 {n:"TAO (Lorient)",t:524,c:4576,ccn:1,col:"A",fx:2910,pp:1666,tp:"a"},
 {n:"RD TPM Toulon",t:950,c:5931,ccn:1,col:"A",fx:2910,pp:3021,tp:"a"},
 {n:"Blue Lines (Martinique)",t:321,c:3931,ccn:1,col:"A",fx:2910,pp:1021,tp:"a"},
-{n:"LHD",t:0,c:0,ccn:1,col:"A",fx:0,pp:0,tp:"a",nw:1},
+{n:"LHD",t:20,c:0,ccn:1,col:"A",fx:0,pp:0,tp:"a",nw:1},
 {n:"DNO",t:325,c:2910,ccn:0,col:"A",fx:2910,pp:0,tp:"a"},
 {n:"SAEML Osani Ghjirulatu",t:10,c:0,ccn:1,col:"A",fx:0,pp:0,tp:"a",nw:1},
 {n:"TMC",t:622,c:2910,ccn:1,col:"B",fx:2910,pp:0,tp:"a"},
@@ -39,7 +39,7 @@ var BASE=[
 {n:"ARMAM",t:0,c:0,ccn:0,col:"C",fx:0,pp:0,tp:"h",fv:10000,nw:1},
 {n:"Howden",t:0,c:970,ccn:0,col:"C",fx:970,pp:0,tp:"e"},
 ];
-var LG=[{n:"SPLMNA (44 vedettes)",t:440,c:2910,ccn:1,col:"A",fx:2910,pp:0,tp:"e",lam:1,crew:212,ved:44}];
+var LG=[{n:"SPLMNA (44 vedettes)",t:40,c:2910,ccn:1,col:"A",fx:2910,pp:0,tp:"e",lam:1,crew:212,ved:44}];
 var LS=[
 {n:"Lam. Bayonne",t:30,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"e",lam:1,crew:6,ved:3},
 {n:"Lam. Bordeaux",t:50,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"e",lam:1,crew:36,ved:5},
