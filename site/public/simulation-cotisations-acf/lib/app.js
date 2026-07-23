@@ -36,7 +36,7 @@ var BASE=[
 {n:"Adam Assurances",t:0,c:0,ccn:0,col:"C",fx:0,pp:0,tp:"e",nw:1},
 {n:"Ouest Sécurité Marine",t:0,c:0,ccn:0,col:"C",fx:0,pp:0,tp:"e",nw:1},
 {n:"ARMAM",t:0,c:0,ccn:0,col:"C",fx:0,pp:0,tp:"h",fv:10000,nw:1},
-{n:"Howden",t:0,c:970,ccn:0,col:"C",fx:970,pp:0,tp:"h",fv:970},
+{n:"Howden",t:0,c:970,ccn:0,col:"C",fx:970,pp:0,tp:"e"},
 ];
 var LG=[{n:"SPLMNA (44 vedettes)",t:440,c:2910,ccn:1,col:"C",fx:2910,pp:0,tp:"e",lam:1,crew:212,ved:44}];
 var LS=[
@@ -54,9 +54,10 @@ function mk(b){return[[1000,b],[2000,b*.9],[4000,b*.8],[6000,b*.7],[8000,b*.6],[
 function dg(t,tr){var s=0,p=0;for(var i=0;i<tr.length;i++){if(t<=p)break;s+=(Math.min(t,tr[i][0])-p)*tr[i][1];p=tr[i][0];}return s;}
 function fm(n){return Math.round(n).toLocaleString("fr-FR");}
 
-function comp(mm,sv,sc,lb,sb,sf,fz){
+function comp(mm,sv,sc,lb,sb,sf,fz,pd){
 var lt=lb>0?mk(lb):[],st=sb>0?mk(sb):[];
 return mm.map(function(m){
+if(pd[m.n])return Object.assign({},m,{sv:0,lo:0,so:0,tot:0,delta:-m.c,pct:m.c>0?-100:0,lost:1});
 if(m.tp==="h")return Object.assign({},m,{sv:0,lo:0,so:0,tot:m.fv,delta:m.fv-m.c,pct:0});
 if(fz[m.n])return Object.assign({},m,{sv:0,lo:0,so:0,tot:m.c,delta:0,pct:0,frozen:1});
 var v=m.tp==="e"?sc:sv;
@@ -99,12 +100,14 @@ var _fi=us("all"),fi=_fi[0],sfi=_fi[1];
 var _pr=us("S4 Flat social"),pr=_pr[0],spr=_pr[1];
 var _ls=us(false),ls=_ls[0],sls=_ls[1];
 var _fz=us({"TMC":1,"LD-Tide":1}),fz=_fz[0],sfz=_fz[1];
-function tf(n){var o=Object.assign({},fz);if(o[n])delete o[n];else o[n]=1;sfz(o);}
+var _pd=us({}),pd=_pd[0],spd=_pd[1];
+function tf(n){var o=Object.assign({},fz);if(o[n])delete o[n];else o[n]=1;sfz(o);if(pd[n]){var q=Object.assign({},pd);delete q[n];spd(q);}}
+function tp2(n){var o=Object.assign({},pd);if(o[n])delete o[n];else o[n]=1;spd(o);if(fz[n]){var q=Object.assign({},fz);delete q[n];sfz(q);}}
 
 function ap(n){var p=PR[n];ssv(p.s);ssc(p.sc);slb(p.l);ssb(p.sb);ssf(p.f);spr(n);}
 
 var mm=um(function(){return BASE.concat(ls?LS:LG);},[ls]);
-var all=um(function(){return comp(mm,sv,sc,lb,sb,sf,fz);},[mm,sv,sc,lb,sb,sf,fz]);
+var all=um(function(){return comp(mm,sv,sc,lb,sb,sf,fz,pd);},[mm,sv,sc,lb,sb,sf,fz,pd]);
 var ka=all;
 
 var data=um(function(){
@@ -171,8 +174,8 @@ ls?h("span",{style:{fontSize:11,color:"#92400e",fontWeight:600}},"212 salari\u00
 h("div",{style:{background:"#fff",borderRadius:12,padding:"16px 20px",boxShadow:"0 1px 3px rgba(0,0,0,.06)",marginBottom:14}},
 h("div",{style:{fontSize:13,fontWeight:700,color:"#0F4761",marginBottom:10}},"Param\u00e8tres du bar\u00e8me"),
 h("div",{style:{display:"flex",gap:20,flexWrap:"wrap"}},
-param("Services armateurs",sv,ssv,500,3500,10,"\u20ac","#0F4761","A + B + C armateurs"),
-param("Services experts",sc,ssc,0,2910,10,"\u20ac","#0F4761","Filhet, Capstan (Howden = 970\u20ac fixe)"),
+param("Services pour les armateurs",sv,ssv,500,3500,10,"\u20ac","#0F4761","A + B + C armateurs"),
+param("Services pour les experts",sc,ssc,0,2910,10,"\u20ac","#0F4761","Filhet, Capstan, Howden"),
 param("Lobbying 1\u00e8re tranche",lb,slb,0,4.00,0.02,"\u20ac/UMS","#3b9fc1","D\u00e9gressif \u00d70.90/0.80/0.70/0.60/0.50"),
 param("Social 1\u00e8re tranche",sb,ssb,0,3.00,0.02,"\u20ac/UMS","#f59e0b","D\u00e9gressif. CCN 3228 transversal"),
 param("Social forfait (si > 0)",sf,ssf,0,1500,10,"\u20ac","#f59e0b","Remplace le proportionnel social")),
@@ -208,20 +211,22 @@ h("b",{style:{marginLeft:6}},"SC\u00c9NARIO :"),
 h("span",null,h("span",{style:{display:"inline-block",width:10,height:10,borderRadius:2,background:"#0F4761",verticalAlign:"middle",marginRight:3}}),"Services"),
 h("span",null,h("span",{style:{display:"inline-block",width:10,height:10,borderRadius:2,background:"#3b9fc1",verticalAlign:"middle",marginRight:3}}),"Lobbying"),
 h("span",null,h("span",{style:{display:"inline-block",width:10,height:10,borderRadius:2,background:"#f59e0b",verticalAlign:"middle",marginRight:3}}),"Social"),
-h("span",{style:{marginLeft:6}},"❄ cliquer pour geler un adhérent à sa cotisation N-1")),
+h("span",{style:{marginLeft:6}},"❄ geler à la cotisation N-1"),
+h("span",{style:{color:"#dc2626"}},"✕ marquer un adhérent perdu (retire la ligne N)")),
 
 // Chart
 h("div",{style:{background:"#fff",borderRadius:12,padding:"10px 14px",boxShadow:"0 1px 3px rgba(0,0,0,.06)"}},
 data.map(function(r,i){
 var dc=r.delta>50?"#16a34a":r.delta<-50?"#dc2626":"#888";
 var hl=r.n==="DNO"||r.lam;
-var ih=r.tp==="h",gl=!!r.frozen;
-return h("div",{key:r.n+"-"+i,style:{display:"grid",gridTemplateColumns:"190px 64px 1fr 76px",gap:4,alignItems:"center",padding:"4px 0",borderBottom:i<data.length-1?"1px solid #f3f4f6":"none",background:hl?"#fffbeb":(ih||gl)?"#f9fafb":"transparent",opacity:(ih||gl)?0.6:1}},
+var ih=r.tp==="h",gl=!!r.frozen,pd2=!!r.lost;
+return h("div",{key:r.n+"-"+i,style:{display:"grid",gridTemplateColumns:"190px 64px 1fr 76px",gap:4,alignItems:"center",padding:"4px 0",borderBottom:i<data.length-1?"1px solid #f3f4f6":"none",background:pd2?"#fef2f2":hl?"#fffbeb":(ih||gl)?"#f9fafb":"transparent",opacity:pd2?0.75:(ih||gl)?0.6:1}},
 h("div",{style:{display:"flex",alignItems:"center",gap:3,overflow:"hidden"}},
 h("span",{style:{background:cBg[r.col],color:cFg[r.col],padding:"1px 6px",borderRadius:4,fontSize:10,fontWeight:700}},r.col),
 h("span",{style:{fontSize:10.5,fontWeight:hl?700:500,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}},r.n)),
 h("div",{style:{display:"flex",gap:2,flexWrap:"wrap",alignItems:"center"}},
 ih?null:h("span",{onClick:function(){tf(r.n);},title:gl?"D\u00e9geler : appliquer le bar\u00e8me":"Geler \u00e0 la cotisation N-1 ("+fm(r.c)+" \u20ac)",style:{cursor:"pointer",fontSize:11,lineHeight:1,padding:"1px 3px",borderRadius:3,background:gl?"#dbeafe":"transparent",opacity:gl?1:0.3,userSelect:"none"}},"\u2744"),
+(ih||!r.c)?null:h("span",{onClick:function(){tp2(r.n);},title:pd2?"R\u00e9int\u00e9grer l'adh\u00e9rent":"Marquer comme perdu (retire la ligne N, conserve N-1)",style:{cursor:"pointer",fontSize:11,lineHeight:1,padding:"1px 3px",borderRadius:3,background:pd2?"#fee2e2":"transparent",color:pd2?"#dc2626":"#9ca3af",opacity:pd2?1:0.3,userSelect:"none"}},"\u2715"),
 r.ccn?h("span",{style:{background:"#fef3c7",color:"#92400e",padding:"1px 4px",borderRadius:3,fontSize:9,fontWeight:700}},"3228"):null,
 r.tp==="e"?h("span",{style:{background:"#f3e8ff",color:"#6b21a8",padding:"1px 4px",borderRadius:3,fontSize:9,fontWeight:700}},"exp"):null,
 r.nw?h("span",{style:{background:"#dcfce7",color:"#166534",padding:"1px 4px",borderRadius:3,fontSize:9,fontWeight:700}},"new"):null,
@@ -230,6 +235,7 @@ h("div",{style:{display:"flex",flexDirection:"column",gap:1.5}},
 h("div",{style:{display:"flex",height:14,borderRadius:2,overflow:"hidden",background:"#f1f5f9"}},h(Seg,{v:r.fx,mx:mx,color:"#94a3b8"}),h(Seg,{v:r.pp,mx:mx,color:"#64748b"})),
 h("div",{style:{display:"flex",height:14,borderRadius:2,overflow:"hidden",background:"#f1f5f9"}},(ih||gl)?h(Seg,{v:r.tot,mx:mx,color:"#94a3b8"}):null,h(Seg,{v:r.sv,mx:mx,color:"#0F4761"}),h(Seg,{v:r.lo,mx:mx,color:"#3b9fc1"}),h(Seg,{v:r.so,mx:mx,color:"#f59e0b"}))),
 h("div",{style:{textAlign:"right"}},
+pd2?h("div",null,h("div",{style:{fontSize:11,fontWeight:700,color:"#dc2626"}},fm(r.delta)+" \u20ac"),h("div",{style:{fontSize:9,color:"#dc2626"}},"perdu")):
 (ih||gl)?h("div",null,h("div",{style:{fontSize:11,fontWeight:700,color:"#888"}},fm(r.tot)+" \u20ac"),h("div",{style:{fontSize:9,color:"#888"}},gl?"gel\u00e9 N-1":"fixe")):
 h("div",null,h("div",{style:{fontSize:11,fontWeight:700,color:dc}},(r.delta>=0?"+":"")+fm(r.delta)+" \u20ac"),h("div",{style:{fontSize:9,color:dc}},(r.pct>=0?"+":"")+r.pct.toFixed(1)+"%"))));}),
 
