@@ -21,6 +21,7 @@ var BASE=[
 {n:"TAO (Lorient)",t:524,c:4576,ccn:1,col:"A",fx:2910,pp:1666,tp:"a"},
 {n:"RD TPM Toulon",t:950,c:5931,ccn:1,col:"A",fx:2910,pp:3021,tp:"a"},
 {n:"Blue Lines (Martinique)",t:321,c:3931,ccn:1,col:"A",fx:2910,pp:1021,tp:"a"},
+{n:"LHD",t:0,c:0,ccn:1,col:"A",fx:0,pp:0,tp:"a",nw:1},
 {n:"DNO",t:325,c:2910,ccn:0,col:"A",fx:2910,pp:0,tp:"a"},
 {n:"SAEML Osani Ghjirulatu",t:10,c:0,ccn:1,col:"A",fx:0,pp:0,tp:"a",nw:1},
 {n:"TMC",t:622,c:2910,ccn:1,col:"B",fx:2910,pp:0,tp:"a"},
@@ -38,14 +39,14 @@ var BASE=[
 {n:"ARMAM",t:0,c:0,ccn:0,col:"C",fx:0,pp:0,tp:"h",fv:10000,nw:1},
 {n:"Howden",t:0,c:970,ccn:0,col:"C",fx:970,pp:0,tp:"e"},
 ];
-var LG=[{n:"SPLMNA (44 vedettes)",t:440,c:2910,ccn:1,col:"C",fx:2910,pp:0,tp:"e",lam:1,crew:212,ved:44}];
+var LG=[{n:"SPLMNA (44 vedettes)",t:440,c:2910,ccn:1,col:"A",fx:2910,pp:0,tp:"e",lam:1,crew:212,ved:44}];
 var LS=[
-{n:"Lam. Bayonne",t:30,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"e",lam:1,crew:6,ved:3},
-{n:"Lam. Bordeaux",t:50,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"e",lam:1,crew:36,ved:5},
-{n:"Lam. La Rochelle",t:50,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"e",lam:1,crew:25,ved:5},
-{n:"Lam. Donges",t:80,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"e",lam:1,crew:47,ved:8},
-{n:"Lam. Lorient",t:30,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"e",lam:1,crew:10,ved:3},
-{n:"Lam. Brest",t:40,c:364,ccn:1,col:"C",fx:364,pp:0,tp:"e",lam:1,crew:35,ved:4},
+{n:"Lam. Bayonne",t:30,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"e",lam:1,crew:6,ved:3},
+{n:"Lam. Bordeaux",t:50,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"e",lam:1,crew:36,ved:5},
+{n:"Lam. La Rochelle",t:50,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"e",lam:1,crew:25,ved:5},
+{n:"Lam. Donges",t:80,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"e",lam:1,crew:47,ved:8},
+{n:"Lam. Lorient",t:30,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"e",lam:1,crew:10,ved:3},
+{n:"Lam. Brest",t:40,c:364,ccn:1,col:"A",fx:364,pp:0,tp:"e",lam:1,crew:35,ved:4},
 {n:"Lam. Ouistreham",t:10,c:363,ccn:1,col:"C",fx:363,pp:0,tp:"e",lam:1,crew:8,ved:1},
 {n:"Lam. Rouen-Dieppe",t:150,c:363,ccn:1,col:"C",fx:363,pp:0,tp:"e",lam:1,crew:45,ved:15},
 ];
@@ -90,16 +91,16 @@ style:{width:p.step<1?72:62,textAlign:"right",fontSize:16,fontWeight:700,color:p
 }
 
 function App(){
-var _sv=us(2000),sv=_sv[0],ssv=_sv[1];
-var _sc=us(2910),sc=_sc[0],ssc=_sc[1];
-var _lb=us(3.22),lb=_lb[0],slb=_lb[1];
+var _sv=us(2650),sv=_sv[0],ssv=_sv[1];
+var _sc=us(2800),sc=_sc[0],ssc=_sc[1];
+var _lb=us(3.18),lb=_lb[0],slb=_lb[1];
 var _sb=us(0),sb=_sb[0],ssb=_sb[1];
-var _sf=us(800),sf=_sf[0],ssf=_sf[1];
+var _sf=us(110),sf=_sf[0],ssf=_sf[1];
 var _so=us("delta"),so=_so[0],sso=_so[1];
 var _fi=us("all"),fi=_fi[0],sfi=_fi[1];
-var _pr=us("S4 Flat social"),pr=_pr[0],spr=_pr[1];
+var _pr=us("Custom"),pr=_pr[0],spr=_pr[1];
 var _ls=us(false),ls=_ls[0],sls=_ls[1];
-var _fz=us({"TMC":1,"LD-Tide":1}),fz=_fz[0],sfz=_fz[1];
+var _fz=us({"DNO":1,"TMC":1,"Cie Vendeenne":1,"LD-Tide":1,"Howden":1}),fz=_fz[0],sfz=_fz[1];
 var _pd=us({}),pd=_pd[0],spd=_pd[1];
 function tf(n){var o=Object.assign({},fz);if(o[n])delete o[n];else o[n]=1;sfz(o);if(pd[n]){var q=Object.assign({},pd);delete q[n];spd(q);}}
 function tp2(n){var o=Object.assign({},pd);if(o[n])delete o[n];else o[n]=1;spd(o);if(fz[n]){var q=Object.assign({},fz);delete q[n];sfz(q);}}
