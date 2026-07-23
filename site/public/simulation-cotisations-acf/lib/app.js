@@ -95,7 +95,7 @@ var _sv=us(2600),sv=_sv[0],ssv=_sv[1];
 var _sc=us(2800),sc=_sc[0],ssc=_sc[1];
 var _lb=us(3.15),lb=_lb[0],slb=_lb[1];
 var _sb=us(0),sb=_sb[0],ssb=_sb[1];
-var _sf=us(150),sf=_sf[0],ssf=_sf[1];
+var _sf=us(110),sf=_sf[0],ssf=_sf[1];
 var _so=us("delta"),so=_so[0],sso=_so[1];
 var _fi=us("all"),fi=_fi[0],sfi=_fi[1];
 var _pr=us("Custom"),pr=_pr[0],spr=_pr[1];
