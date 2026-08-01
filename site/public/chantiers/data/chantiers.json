@@ -13210,10 +13210,10 @@
      "type": "Navire à passagers (desserte insulaire, accessibilité PMR)",
      "annee": "2011",
      "longueur_m": 45,
-     "jauge_gt": null,
+     "jauge_gt": 530,
      "port_lourd_dwt": null,
      "capacite": "365 passagers (dont 12 PMR), 8 marins ; vitesse 15 nœuds ; ascenseur, bar",
-     "energie": "Diesel",
+     "energie": "Gazole / MGO",
      "client": "Penn Ar Bed / Conseil départemental du Finistère (desserte Ouessant et Molène)",
      "classification": null,
      "source": "https://pennarbed.breizhgo.bzh/nos-navires/fromveur-2/",
@@ -13253,10 +13253,46 @@
        "detail": "Investissement public porté par le Conseil général du Finistère, propriétaire ; financement total rapporté à 12,2 M€ (presse maritime). Variante de chiffre (~12,2 à 13 M€).",
        "prix": "12,2 M€",
        "source": "https://seatosea.fr/actualites/archives/fromveur-ii-un-nouveau-navire-pour-ouessant-et-molene"
+      },
+      {
+       "annee": "2011",
+       "role": "construction",
+       "nom": "Piriou",
+       "detail": "Construit pour Région Bretagne — ligne Le Conquet / Molène-Ouessant",
+       "source": "DSP Région Bretagne 1/1/2023",
+       "prix": "12,2 millions EUR (2011, total projet)"
+      },
+      {
+       "annee": "2011",
+       "role": "operateur",
+       "nom": "Penn Ar Bed (Keolis)",
+       "detail": "DSP, navires propriété de la collectivité",
+       "source": "DSP Région Bretagne 1/1/2023"
+      },
+      {
+       "annee": "31/12/2029",
+       "role": "evenement",
+       "nom": "Échéance du contrat",
+       "detail": "DSP, navires propriété de la collectivité",
+       "source": "DSP Région Bretagne 1/1/2023"
+      },
+      {
+       "annee": "2011",
+       "role": "evenement",
+       "nom": "Fromveur 2",
+       "detail": "Mise à l'eau aux chantiers Piriou rapportée par Mer et Marine ; investissement présenté à ~13 M€ par le Conseil général du Finistère (variante d'arrondi du montant total de 12,2 M€).",
+       "prix": "≈ 13 millions EUR (investissement, arrondi)",
+       "source": "https://www.meretmarine.com/fr/marine-marchande/le-fromveur-2-mis-a-l-eau-aux-chantiers-piriou"
       }
      ],
      "imo": "9588134",
-     "prix_acquisition": "≈ 13 M€ (2011 ; 12,2 M€ financés par le Conseil général du Finistère)"
+     "prix_acquisition": "12,2 millions EUR (2011, coût total du projet, financé par le Conseil général du Finistère)",
+     "largeur_m": 9.9,
+     "desserte": "Le Conquet / Molène-Ouessant",
+     "capacite_fret": "25 t",
+     "pavillon": "France",
+     "source_ref": "DSP Région Bretagne 1/1/2023",
+     "tracabilite": "document-non-public"
     },
     {
      "nom": "Franche Terre",
@@ -13427,63 +13463,6 @@
      ],
      "source_ref": "dont Dexia crédit-bail",
      "tracabilite": "reference-sans-url"
-    },
-    {
-     "nom": "Fromveur 2",
-     "imo": null,
-     "type": "Mixte passagers + fret",
-     "annee": "2011",
-     "longueur_m": 45,
-     "largeur_m": 9.9,
-     "jauge_gt": 530,
-     "desserte": "Le Conquet / Molène-Ouessant",
-     "capacite": "365 passagers, 25 t fret",
-     "capacite_pax": 365,
-     "capacite_fret": "25 t",
-     "energie": "Gazole / MGO",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "Région Bretagne",
-     "operateur": "Penn Ar Bed (Keolis)",
-     "proprietaire": "Région Bretagne",
-     "pavillon": "France",
-     "classification": null,
-     "timeline": [
-      {
-       "annee": "2011",
-       "role": "construction",
-       "nom": "Piriou",
-       "detail": "Construit pour Région Bretagne — ligne Le Conquet / Molène-Ouessant",
-       "source": "DSP Région Bretagne 1/1/2023",
-       "prix": "12,2 millions EUR (2011, total projet)"
-      },
-      {
-       "annee": "2011",
-       "role": "operateur",
-       "nom": "Penn Ar Bed (Keolis)",
-       "detail": "DSP, navires propriété de la collectivité",
-       "source": "DSP Région Bretagne 1/1/2023"
-      },
-      {
-       "annee": "31/12/2029",
-       "role": "evenement",
-       "nom": "Échéance du contrat",
-       "detail": "DSP, navires propriété de la collectivité",
-       "source": "DSP Région Bretagne 1/1/2023"
-      },
-      {
-       "annee": "2011",
-       "role": "evenement",
-       "nom": "Fromveur 2",
-       "detail": "Mise à l'eau aux chantiers Piriou rapportée par Mer et Marine ; investissement présenté à ~13 M€ par le Conseil général du Finistère (variante d'arrondi du montant total de 12,2 M€).",
-       "prix": "≈ 13 millions EUR (investissement, arrondi)",
-       "source": "https://www.meretmarine.com/fr/marine-marchande/le-fromveur-2-mis-a-l-eau-aux-chantiers-piriou"
-      }
-     ],
-     "prix_acquisition": "12,2 millions EUR (2011, coût total du projet, financé par le Conseil général du Finistère)",
-     "source_ref": "DSP Région Bretagne 1/1/2023",
-     "tracabilite": "document-non-public"
     },
     {
      "nom": "Cap Sainte Marie",
@@ -27042,14 +27021,14 @@
      ]
     },
     {
-     "nom": "Ile d'Arz",
+     "nom": "Île d'Arz",
      "type": "vedette a passagers d'ile (transport public)",
      "annee": "2013",
      "longueur_m": null,
-     "jauge_gt": null,
+     "jauge_gt": 68.5,
      "port_lourd_dwt": null,
      "capacite": "120 passagers, 11 noeuds ; desserte de l'ile d'Arz (golfe du Morbihan) ; commande passee en 2012",
-     "energie": null,
+     "energie": "Gazole / MGO",
      "client": "Compagnie du golfe / desserte ile d'Arz (Morbihan)",
      "classification": null,
      "source": "http://courriersdefrance.blogspot.com/2017/11/vedette-ile-darz-bateaux-bus-du-golfe.html",
@@ -27078,9 +27057,23 @@
        "nom": "Bateaux-bus du Golfe (groupe Finist'mer)",
        "detail": "Depuis le 1er janvier 2012, Bateaux-bus du Golfe (groupe Finist'mer) a repris l'exploitation à la Compagnie du Golfe. Desserte sous DSP avec la Région Bretagne (réseau BreizhGo).",
        "source": "http://courriersdefrance.blogspot.com/2017/11/vedette-ile-darz-bateaux-bus-du-golfe.html"
+      },
+      {
+       "annee": "",
+       "role": "operateur",
+       "nom": "BreizhGo Île d'Arz",
+       "detail": "DSP, navires propriété des collectivités",
+       "source": "ile-arz.fr, DSP CD56 au 1/9/2025"
       }
      ],
-     "prix_acquisition": "1,2 M€ (2013, investissement pour la vedette Ile d'Arz construite par le chantier Gléhen de Douarnenez pour les Bateaux-bus du Golfe, Morbihan)"
+     "prix_acquisition": "1,2 M€ (2013, investissement pour la vedette Ile d'Arz construite par le chantier Gléhen de Douarnenez pour les Bateaux-bus du Golfe, Morbihan)",
+     "desserte": "Vannes - Séné - Île d'Arz",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "pavillon": "France",
+     "source_ref": "DSP CD56 au 1/9/2025",
+     "tracabilite": "url-domaine-seul"
     },
     {
      "nom": "Île d'Aix II",
@@ -27453,7 +27446,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Catamaran aluminium 31 m x 8,60 m, tirant d'eau 1,90 m, 399 passagers, jusqu'a 20 noeuds, 2 x MTU 16V2000 M70 (2 x 1428 ch) ; catamaran a vision sous-marine",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,jacques-de-thezac,9,57.html",
      "timeline": [
       {
        "annee": "2004",
@@ -27470,8 +27463,7 @@
        "source": "vedettes-odet.com"
       }
      ],
-     "source_ref": "vedettes-passagers, fiche Jacques de Thezac) ; nauticexpo.com (fiche produit Glehen) ; vedettes-odet.com (underwater vision catamaran",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "vedettes-passagers, fiche Jacques de Thezac) ; nauticexpo.com (fiche produit Glehen) ; vedettes-odet.com (underwater vision catamaran"
     },
     {
      "nom": "Rose Here",
@@ -27538,7 +27530,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Vedette aluminium 27 m, 196 passagers",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,rivage-express,9,60.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -27548,8 +27540,7 @@
        "source": "chantier-glehen.com/fr,vedettes-passagers,9.html"
       }
      ],
-     "source_ref": "vedettes-passagers) ; nauticexpo.fr (fiche produit Glehen",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "vedettes-passagers) ; nauticexpo.fr (fiche produit Glehen"
     },
     {
      "nom": "Rivage",
@@ -27638,7 +27629,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Vedette aluminium 28 m, 287 passagers ; desserte de l'Ile-de-Brehat",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,chevalier-arlequin,9,89.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -27648,8 +27639,7 @@
        "source": "chantier-glehen.com/fr,chevalier-arlequin,9,89.html"
       }
      ],
-     "source_ref": "vedettes-passagers, fiche Chevalier Arlequin) ; iledebrehat.fr",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "vedettes-passagers, fiche Chevalier Arlequin) ; iledebrehat.fr"
     },
     {
      "nom": "Ty Nautilus",
@@ -27665,7 +27655,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Vedette aluminium 16 m a vision sous-marine (bateau a fond de verre)",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,ty-nautilus,9,56.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -27675,8 +27665,7 @@
        "source": "chantier-glehen.com/fr,vedettes-passagers,9.html"
       }
      ],
-     "source_ref": "vedettes-passagers, fiche Ty Nautilus",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "vedettes-passagers, fiche Ty Nautilus"
     },
     {
      "nom": "Zohar",
@@ -27692,7 +27681,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Vedette aluminium 21,50 m, transport de passagers et restauration a bord",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,zohar,9,77.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -27702,8 +27691,7 @@
        "source": "chantier-glehen.com/fr,vedettes-passagers,9.html"
       }
      ],
-     "source_ref": "vedettes-passagers, fiche Zohar",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "vedettes-passagers, fiche Zohar"
     },
     {
      "nom": "Viga",
@@ -27718,7 +27706,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Navire mixte transport maritime + ostreiculture",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,viga,10,101.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -27728,8 +27716,7 @@
        "source": "chantier-glehen.com/fr,transport-fret---passagers,10.html"
       }
      ],
-     "source_ref": "transport-fret-passagers, fiche Viga",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "transport-fret-passagers, fiche Viga"
     },
     {
      "nom": "Pilotine Amiral Muselier",
@@ -27820,7 +27807,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Navire source pour recherche sismique marine, 23,50 m, coque acier + superstructure aluminium",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,resolution,8,86.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -27830,8 +27817,7 @@
        "source": "chantier-glehen.com/fr,navires-de-servitude,8.html"
       }
      ],
-     "source_ref": "navires-de-servitude, fiche Resolution",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "navires-de-servitude, fiche Resolution"
     },
     {
      "nom": "Avel Vor",
@@ -27846,7 +27832,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Vedette de lamanage, traction 4 t, vitesse proche de 10 noeuds, charge utile 1,5 t",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,avel-vor,8,65.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -27856,8 +27842,7 @@
        "source": "chantier-glehen.com/fr,navires-de-servitude,8.html"
       }
      ],
-     "source_ref": "navires-de-servitude, fiche Avel Vor",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "navires-de-servitude, fiche Avel Vor"
     },
     {
      "nom": "Helena",
@@ -27872,7 +27857,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Landing craft aluminium, 6 t sur le pont + 20 personnels",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,helena,8,97.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -27882,8 +27867,7 @@
        "source": "chantier-glehen.com/fr,navires-de-servitude,8.html"
       }
      ],
-     "source_ref": "navires-de-servitude, fiche Helena",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "navires-de-servitude, fiche Helena"
     },
     {
      "nom": "PC6 (pousseurs portuaires Marine Nationale)",
@@ -28000,7 +27984,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Chalutier 25 m",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,tournevire-ii,7,47.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28010,8 +27994,7 @@
        "source": "chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Tournevire II",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "peche, fiche Tournevire II"
     },
     {
      "nom": "Ar Laeres",
@@ -28027,7 +28010,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Chalutier 18 m",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,ar-laeres,7,50.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28037,8 +28020,7 @@
        "source": "chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Ar Laeres",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "peche, fiche Ar Laeres"
     },
     {
      "nom": "Heracles",
@@ -28054,7 +28036,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Chalutier 14,90 m",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,heracles,7,51.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28064,8 +28046,7 @@
        "source": "chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Heracles",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "peche, fiche Heracles"
     },
     {
      "nom": "Le Corail",
@@ -28081,7 +28062,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Chalutier / langoustinier 15 m",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,le-corail,7,117.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28091,8 +28072,7 @@
        "source": "chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Le Corail",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "peche, fiche Le Corail"
     },
     {
      "nom": "Kronos",
@@ -28108,7 +28088,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Chalutier / langoustinier 15 m",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,kronos,7,116.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28118,8 +28098,7 @@
        "source": "chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Kronos",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "peche, fiche Kronos"
     },
     {
      "nom": "Caraibes II",
@@ -28135,7 +28114,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Chalutier / langoustinier 15 m",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,caraibes-ii,7,104.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28145,8 +28124,7 @@
        "source": "chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Caraibes II",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "peche, fiche Caraibes II"
     },
     {
      "nom": "Alcor",
@@ -28162,7 +28140,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Fileyeur 21 m",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,alcor,7,53.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28172,8 +28150,7 @@
        "source": "chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Alcor",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "peche, fiche Alcor"
     },
     {
      "nom": "Zubernoa",
@@ -28188,7 +28165,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Caseyeur",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,zubernoa,7,49.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28198,8 +28175,7 @@
        "source": "chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Zubernoa",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "peche, fiche Zubernoa"
     },
     {
      "nom": "Vag a Lamm",
@@ -28214,7 +28190,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Navire polyvalent (recolte d'algues goemon / peche a la coquille)",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,vag-a-lamm,7,124.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28224,8 +28200,7 @@
        "source": "chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Vag a Lamm",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "peche, fiche Vag a Lamm"
     },
     {
      "nom": "La Belle Alliance",
@@ -28268,7 +28243,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Chalutier",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,le-belier,7,52.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28278,8 +28253,7 @@
        "source": "chantier-glehen.com/fr,le-belier,7,52.html"
       }
      ],
-     "source_ref": "peche, fiche Le Belier",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "peche, fiche Le Belier"
     },
     {
      "nom": "Goemonier",
@@ -28294,7 +28268,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Goemonier (recolte d'algues)",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,goemonier,7,75.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28304,8 +28278,7 @@
        "source": "chantier-glehen.com/fr,goemonier,7,75.html"
       }
      ],
-     "source_ref": "peche, fiche Goemonier",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "peche, fiche Goemonier"
     },
     {
      "nom": "Damien Florent",
@@ -28320,7 +28293,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Navire de peche",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,damien-florent,7,88.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28330,8 +28303,7 @@
        "source": "chantier-glehen.com/fr,damien-florent,7,88.html"
       }
      ],
-     "source_ref": "peche, fiche Damien Florent",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "peche, fiche Damien Florent"
     },
     {
      "nom": "Gwennec III",
@@ -28347,7 +28319,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Barge ostreicole aluminium 24 m",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,gwennec-iii,11,133.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28357,8 +28329,7 @@
        "source": "chantier-glehen.com/fr,ostreiculture---mytiliculture,11.html"
       }
      ],
-     "source_ref": "ostreiculture-mytiliculture, fiche Gwennec III",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "ostreiculture-mytiliculture, fiche Gwennec III"
     },
     {
      "nom": "Dalceh Mad II",
@@ -28426,7 +28397,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Barge ostreicole / mytilicole",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,nevis,11,71.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28436,8 +28407,7 @@
        "source": "chantier-glehen.com/fr,ostreiculture---mytiliculture,11.html"
       }
      ],
-     "source_ref": "ostreiculture-mytiliculture, fiche Nevis",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "ostreiculture-mytiliculture, fiche Nevis"
     },
     {
      "nom": "Nazca",
@@ -28452,7 +28422,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Barge ostreicole / mytilicole",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,nazca,11,72.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28462,8 +28432,7 @@
        "source": "chantier-glehen.com/fr,ostreiculture---mytiliculture,11.html"
       }
      ],
-     "source_ref": "ostreiculture-mytiliculture, fiche Nazca",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "ostreiculture-mytiliculture, fiche Nazca"
     },
     {
      "nom": "Le Parun",
@@ -28478,7 +28447,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Barge ostreicole / mytilicole",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,le-parun,11,73.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28488,8 +28457,7 @@
        "source": "chantier-glehen.com/fr,le-parun,11,73.html"
       }
      ],
-     "source_ref": "ostreiculture-mytiliculture, fiche Le Parun",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "ostreiculture-mytiliculture, fiche Le Parun"
     },
     {
      "nom": "Flipper",
@@ -28504,7 +28472,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Barge ostreicole / mytilicole",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,flipper,11,74.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28514,8 +28482,7 @@
        "source": "chantier-glehen.com/fr,ostreiculture---mytiliculture,11.html"
       }
      ],
-     "source_ref": "ostreiculture-mytiliculture, fiche Flipper",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "ostreiculture-mytiliculture, fiche Flipper"
     },
     {
      "nom": "Baie de Saint Jean",
@@ -28530,7 +28497,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Barge ostreicole / mytilicole",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,baie-de-saint-jean,11,94.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28540,8 +28507,7 @@
        "source": "chantier-glehen.com/fr,ostreiculture---mytiliculture,11.html"
       }
      ],
-     "source_ref": "ostreiculture-mytiliculture, fiche Baie de Saint Jean",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "ostreiculture-mytiliculture, fiche Baie de Saint Jean"
     },
     {
      "nom": "Val d'Argoat",
@@ -28557,7 +28523,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Pousseur fluvial acier 25 m",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,val-d-argoat,6,44.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28567,8 +28533,7 @@
        "source": "chantier-glehen.com/fr,fluvial,6.html"
       }
      ],
-     "source_ref": "fluvial, fiche Val d'Argoat",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "fluvial, fiche Val d'Argoat"
     },
     {
      "nom": "Val d'Armor",
@@ -28584,7 +28549,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Pousseur fluvial acier 25 m",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,val-d-armor,6,61.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28594,8 +28559,7 @@
        "source": "chantier-glehen.com/fr,fluvial,6.html"
       }
      ],
-     "source_ref": "fluvial, fiche Val d'Armor",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "fluvial, fiche Val d'Armor"
     },
     {
      "nom": "Val d'Avel",
@@ -28611,7 +28575,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Pousseur fluvial acier 25 m",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,val-d-avel,6,63.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28621,8 +28585,7 @@
        "source": "chantier-glehen.com/fr,fluvial,6.html"
       }
      ],
-     "source_ref": "fluvial, fiche Val d'Avel",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "fluvial, fiche Val d'Avel"
     },
     {
      "nom": "Navibus",
@@ -28637,7 +28600,7 @@
      "pavillon": null,
      "classification": null,
      "capacite": "Navette fluviale a passagers, coque acier + superstructures aluminium",
-     "source": "https://chantier-glehen.com",
+     "source": "https://www.chantier-glehen.com/fr,navibus,6,62.html",
      "timeline": [
       {
        "annee": "inconnue",
@@ -28647,57 +28610,7 @@
        "source": "chantier-glehen.com/fr,fluvial,6.html"
       }
      ],
-     "source_ref": "fluvial, fiche Navibus",
-     "tracabilite": "url-domaine-seul"
-    },
-    {
-     "nom": "Île d'Arz",
-     "imo": null,
-     "type": "Vedette à passagers",
-     "annee": null,
-     "longueur_m": null,
-     "largeur_m": null,
-     "jauge_gt": 68.5,
-     "desserte": "Vannes - Séné - Île d'Arz",
-     "capacite": "120 passagers",
-     "capacite_pax": 120,
-     "energie": "Gazole / MGO",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "CD Morbihan / Région Bretagne",
-     "operateur": "BreizhGo Île d'Arz",
-     "proprietaire": "CD Morbihan / Région Bretagne",
-     "pavillon": "France",
-     "classification": null,
-     "timeline": [
-      {
-       "annee": "",
-       "role": "operateur",
-       "nom": "BreizhGo Île d'Arz",
-       "detail": "DSP, navires propriété des collectivités",
-       "source": "ile-arz.fr, DSP CD56 au 1/9/2025"
-      },
-      {
-       "annee": "2013",
-       "role": "construction",
-       "nom": "Île d'Arz",
-       "detail": "Vedette à passagers (20,18 m x 5,65 m, 120 passagers) commandée en 2012, livrée 2013, construite par le Chantier Naval Gléhen (Douarnenez), architecte HT2 (Nantes), pour la ligne DSP Vannes-Séné-Île d'Arz exploitée par les Bateaux-Bus du Golfe (Kersea). Investissement de 1,2 M€ indiqué dans les caractéristiques administratives.",
-       "prix": "≈ 1,2 million EUR (2013)",
-       "source": "http://courriersdefrance.blogspot.com/2017/11/vedette-ile-darz-bateaux-bus-du-golfe.html"
-      },
-      {
-       "annee": null,
-       "role": "construction",
-       "nom": "Chantiers Gléhen",
-       "detail": "Vedette a passagers mise en service en 2013, construite par le Chantier Naval Glehen a Douarnenez sur plans HT2 : 20,18 m, 120 passagers, 2 x 209 kW, armateur proprietaire Finist'mer.",
-       "source": "http://courriersdefrance.blogspot.com/2017/11/vedette-ile-darz-bateaux-bus-du-golfe.html"
-      }
-     ],
-     "source": "https://ile-arz.fr",
-     "prix_acquisition": "≈ 1,2 million EUR (2012-2013, investissement DSP)",
-     "source_ref": "DSP CD56 au 1/9/2025",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "fluvial, fiche Navibus"
     }
    ],
    "geo_source": "https://api-adresse.data.gouv.fr/search/?q=port+du+rosmeur+douarnenez"
@@ -30545,7 +30458,7 @@
     },
     {
      "nom": "Barcarin V",
-     "type": "Inconnu",
+     "type": "Bac / passage d'eau",
      "annee": "2011",
      "longueur_m": 48,
      "jauge_gt": 498,
@@ -30558,7 +30471,34 @@
      "propulsion": [
       "autre"
      ],
-     "capacite_vehicules": 36
+     "capacite_vehicules": 36,
+     "imo": "9582740",
+     "largeur_m": 14.2,
+     "desserte": "Grand Rhône : Salin-de-Giraud - Port-Saint-Louis",
+     "capacite_pax": 196,
+     "capacite_fret": "200 t",
+     "operateur": "SMTDR",
+     "proprietaire": "Département des Bouches-du-Rhône (via SMTDR)",
+     "pavillon": "France",
+     "prix_acquisition": "7 M€ (2010, construction neuve)",
+     "tracabilite": "non-tracee",
+     "timeline": [
+      {
+       "annee": "2010",
+       "role": "construction",
+       "nom": "MERRE",
+       "detail": "Construit pour Département des Bouches-du-Rhône (via SMTDR) — ligne Grand Rhône : Salin-de-Giraud - Port-Saint-Louis",
+       "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+       "prix": "7 000 000 EUR"
+      },
+      {
+       "annee": "2010",
+       "role": "operateur",
+       "nom": "SMTDR",
+       "detail": "Régie directe",
+       "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
+      }
+     ]
     },
     {
      "nom": "Île Dumet",
@@ -30707,48 +30647,6 @@
      "client": "Armateur public sénégalais",
      "classification": "Bureau Veritas",
      "source": "https://www.meretmarine.com/fr/construction-navale/merre-le-nouveau-bac-de-seine-baptise"
-    },
-    {
-     "nom": "Barcarin 5",
-     "imo": "9582740",
-     "type": "Bac / passage d'eau",
-     "annee": "2010",
-     "longueur_m": 43,
-     "largeur_m": 14.2,
-     "jauge_gt": 498,
-     "desserte": "Grand Rhône : Salin-de-Giraud - Port-Saint-Louis",
-     "capacite": "196 passagers, 36 véhicules, 200 t fret",
-     "capacite_pax": 196,
-     "capacite_vehicules": 36,
-     "capacite_fret": "200 t",
-     "energie": "Gazole / MGO",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "Département des Bouches-du-Rhône (via SMTDR)",
-     "operateur": "SMTDR",
-     "proprietaire": "Département des Bouches-du-Rhône (via SMTDR)",
-     "pavillon": "France",
-     "classification": null,
-     "timeline": [
-      {
-       "annee": "2010",
-       "role": "construction",
-       "nom": "MERRE",
-       "detail": "Construit pour Département des Bouches-du-Rhône (via SMTDR) — ligne Grand Rhône : Salin-de-Giraud - Port-Saint-Louis",
-       "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-       "prix": "7 000 000 EUR"
-      },
-      {
-       "annee": "2010",
-       "role": "operateur",
-       "nom": "SMTDR",
-       "detail": "Régie directe",
-       "source": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)"
-      }
-     ],
-     "prix_acquisition": "7 M€ (2010, construction neuve)",
-     "tracabilite": "non-tracee"
     },
     {
      "nom": "Taillefer 3",
@@ -37213,6 +37111,22 @@
    "taille_max": "Catamarans de plaisance jusqu'à ~24,65 m hors-tout (Gunboat 80, 80'10\\\"). Pas de jauge GT publiée (unités de plaisance, déplacement lège 27-28 t).",
    "navires_references": [
     {
+     "nom": null,
+     "type": "catamaran voile (Gunboat 70, nouveau modèle annoncé 2023, remplaçant du Gunboat 68 ; programme de production lancé, premier de série non encore attesté à flot)",
+     "annee": null,
+     "longueur_m": 21,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "catamaran full carbone ~21 m, architecture VPLP ; mât reculé ; remplace la série 68 à partir de 2025",
+     "energie": "voile (architecture VPLP) + moteurs diesel inboard auxiliaires",
+     "client": null,
+     "classification": "CE Cat A (haute mer)",
+     "source": "https://www.yachtingworld.com/reviews/boat-tests/first-look-gunboats-gb80-and-gb70",
+     "propulsion": [
+      "diesel-mdo"
+     ]
+    },
+    {
      "nom": "Yasasin",
      "type": "catamaran voile (Gunboat 72, hull 72.03, version flybridge)",
      "annee": "2025",
@@ -37407,22 +37321,6 @@
      "client": "armateur privé",
      "classification": "CE Cat A",
      "source": "https://www.katamarans.com/gunboat-68/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": null,
-     "type": "catamaran voile (Gunboat 70, nouveau modèle annoncé 2023, remplaçant du Gunboat 68 ; programme de production lancé, premier de série non encore attesté à flot)",
-     "annee": null,
-     "longueur_m": 21,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "catamaran full carbone ~21 m, architecture VPLP ; mât reculé ; remplace la série 68 à partir de 2025",
-     "energie": "voile (architecture VPLP) + moteurs diesel inboard auxiliaires",
-     "client": null,
-     "classification": "CE Cat A (haute mer)",
-     "source": "https://www.yachtingworld.com/reviews/boat-tests/first-look-gunboats-gb80-and-gb70",
      "propulsion": [
       "diesel-mdo"
      ]
@@ -40361,6 +40259,39 @@
      ]
     },
     {
+     "nom": "Pogo 50₂",
+     "type": "Voilier de grande croisière / course au large (Pogo 50, bois), FUTUR (annoncé)",
+     "annee": "2027 (lancement prévu fin 2027 ; construction été 2026)",
+     "longueur_m": 15,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Premier modèle 50 pieds de la gamme Pogo, plans Finot-Conq, quille relevable, mât carbone et grand-voile à corne, catégorie A (hauturier). Construction bois au Chantier du Guip pour Pogo Structures. NON ENCORE LIVRÉ.",
+     "energie": "vélique (mât carbone) + moteur auxiliaire",
+     "client": "Pogo Structures",
+     "classification": "Catégorie A (CE, hauturier)",
+     "source": "https://mersetbateaux.com/pogo-50%E2%82%82/",
+     "propulsion": [
+      "velique",
+      "diesel-mdo"
+     ],
+     "timeline": [
+      {
+       "annee": "2026",
+       "role": "evenement",
+       "nom": "Annonce du Pogo 50₂ (Pogo Structures)",
+       "detail": "Pogo Structures annonce en mai 2026 le Pogo 50₂, voilier de 15 m de grande croisiere / course au large inspire des IMOCA, deuxieme generation du Pogo 50, plan Finot-Conq, quille relevable a grand allongement, mat carbone. Modele de serie a venir, pas une unite unique.",
+       "source": "https://www.actunautique.com/2026/05/pogo-structures-annonce-le-pogo-50-un-voilier-de-50-pieds-de-grand-voyage-inspire-des-imoca.html"
+      },
+      {
+       "annee": "2027",
+       "role": "construction",
+       "nom": "Pogo Structures (Combrit Sainte-Marine)",
+       "detail": "Presentation officielle prevue janvier 2027 et mise a l'eau fin 2027, coincidant avec les 40 ans du chantier. Categorie A (hauturiere). Modele de serie en projet ; aucun IMO (< 24 m), pas de proprietaire/operateur unique.",
+       "source": "https://www.bateaux.com/article/51825/pogo-50-evolution-d-un-voilier-de-15-m-dedie-a-la-grande-croisiere-rapide"
+      }
+     ]
+    },
+    {
      "nom": "Pogo 12.50",
      "type": "Voilier de croisière performance",
      "annee": "2010",
@@ -40614,39 +40545,6 @@
       }
      ],
      "prix_acquisition": "≈ 29 950 € (prix au Salon nautique, version de série, vers 2002 ; soit 196 459 FF)"
-    },
-    {
-     "nom": "Pogo 50₂",
-     "type": "Voilier de grande croisière / course au large (Pogo 50, bois), FUTUR (annoncé)",
-     "annee": "2027 (lancement prévu fin 2027 ; construction été 2026)",
-     "longueur_m": 15,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Premier modèle 50 pieds de la gamme Pogo, plans Finot-Conq, quille relevable, mât carbone et grand-voile à corne, catégorie A (hauturier). Construction bois au Chantier du Guip pour Pogo Structures. NON ENCORE LIVRÉ.",
-     "energie": "vélique (mât carbone) + moteur auxiliaire",
-     "client": "Pogo Structures",
-     "classification": "Catégorie A (CE, hauturier)",
-     "source": "https://mersetbateaux.com/pogo-50%E2%82%82/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ],
-     "timeline": [
-      {
-       "annee": "2026",
-       "role": "evenement",
-       "nom": "Annonce du Pogo 50₂ (Pogo Structures)",
-       "detail": "Pogo Structures annonce en mai 2026 le Pogo 50₂, voilier de 15 m de grande croisiere / course au large inspire des IMOCA, deuxieme generation du Pogo 50, plan Finot-Conq, quille relevable a grand allongement, mat carbone. Modele de serie a venir, pas une unite unique.",
-       "source": "https://www.actunautique.com/2026/05/pogo-structures-annonce-le-pogo-50-un-voilier-de-50-pieds-de-grand-voyage-inspire-des-imoca.html"
-      },
-      {
-       "annee": "2027",
-       "role": "construction",
-       "nom": "Pogo Structures (Combrit Sainte-Marine)",
-       "detail": "Presentation officielle prevue janvier 2027 et mise a l'eau fin 2027, coincidant avec les 40 ans du chantier. Categorie A (hauturiere). Modele de serie en projet ; aucun IMO (< 24 m), pas de proprietaire/operateur unique.",
-       "source": "https://www.bateaux.com/article/51825/pogo-50-evolution-d-un-voilier-de-15-m-dedie-a-la-grande-croisiere-rapide"
-      }
-     ]
     }
    ],
    "geo_source": "https://www.pogostructures.com/contact/"
@@ -46044,7 +45942,8 @@
     "diesel",
     "vapeur"
    ],
-   "geo_source": "https://www.cmhindustrie.com/"
+   "geo_source": "https://www.cmhindustrie.com/",
+   "navires_references": []
   },
   {
    "id": "foselev-marine-la-seyne-sur-mer",
@@ -46209,7 +46108,8 @@
     "diesel"
    ],
    "taille_max": "Mise au sec jusqu'à 55-60 m et ~950 tonnes (dock flottant Mac JIP, 59 m x 21 m, mis en service 2016) ; quai de 250 m linéaires. Capacité de construction neuve : aucune (chantier de réparation/refit, pas de cale ni de forme de construction).",
-   "geo_source": "https://www.annuaire-horaire.fr/societe/Port-fluvial-SEYNE-SUR-MER-Port-de-Commerce-la-Seyne-Bregaillon-CCIV/3735392"
+   "geo_source": "https://www.annuaire-horaire.fr/societe/Port-fluvial-SEYNE-SUR-MER-Port-de-Commerce-la-Seyne-Bregaillon-CCIV/3735392",
+   "navires_references": []
   },
   {
    "id": "la-ciotat-shipyards-la-ciotat",
@@ -46745,7 +46645,8 @@
     "aluminium",
     "composite"
    ],
-   "taille_max": "Refit/levage : yachts jusqu'à 80 m de longueur et 10 m de tirant d'eau (forme IMS 700 : 100 m × 13 m). Levage travelift 670 t (et 320 t), remorque automotrice jusqu'à 350 t. Aucune capacité de construction neuve actuelle (newbuilding abandonné en 1992)."
+   "taille_max": "Refit/levage : yachts jusqu'à 80 m de longueur et 10 m de tirant d'eau (forme IMS 700 : 100 m × 13 m). Levage travelift 670 t (et 320 t), remorque automotrice jusqu'à 350 t. Aucune capacité de construction neuve actuelle (newbuilding abandonné en 1992).",
+   "navires_references": []
   },
   {
    "id": "damen-shiprepair-dunkerque-dunkerque",
@@ -47290,7 +47191,8 @@
      "titre": "Fondatrice et dirigeante (15 ans d'expérience dans l'exploitation de superyachts)"
     }
    ],
-   "taille_max": "Yachts et navires jusqu'à 110 m de longueur, accueillis dans des formes de radoub de 180 m × 24 m (Formes de l'Eure, GPMH/HAROPA Le Havre). Jauge GT non documentée."
+   "taille_max": "Yachts et navires jusqu'à 110 m de longueur, accueillis dans des formes de radoub de 180 m × 24 m (Formes de l'Eure, GPMH/HAROPA Le Havre). Jauge GT non documentée.",
+   "navires_references": []
   },
   {
    "id": "le-havre-naval-projects-le-havre",
@@ -47408,7 +47310,8 @@
      "titre": "Fondatrice et dirigeante (CEO)"
     }
    ],
-   "taille_max": "Navires jusqu'a ~180 m x 24 m (capacite d'accueil par sas/forme) ; yachts de 30 a 110 m, navires de commerce de 22 a 120 m traites"
+   "taille_max": "Navires jusqu'a ~180 m x 24 m (capacite d'accueil par sas/forme) ; yachts de 30 a 110 m, navires de commerce de 22 a 120 m traites",
+   "navires_references": []
   },
   {
    "id": "refit-bordeaux-grand-port-maritime-de-bordeaux-bordeaux",
@@ -49978,7 +49881,8 @@
       "diesel-mdo"
      ],
      "architecte": "Mauric",
-     "architecte_source": "Martinez Constructions Navales et mag.hookandnet.com : derniere unite de la serie Deux Freres (4 catamarans de peche a foil), plans etablis par le cabinet Mauric."
+     "architecte_source": "Martinez Constructions Navales et mag.hookandnet.com : derniere unite de la serie Deux Freres (4 catamarans de peche a foil), plans etablis par le cabinet Mauric.",
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "Deux Freres VII",
@@ -50012,7 +49916,8 @@
      "source": "https://www.littoral-manche-atlantique.com/tag/st%20:%20sete/",
      "propulsion": [
       "diesel-mdo"
-     ]
+     ],
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "Deux Freres VI",
@@ -50227,7 +50132,8 @@
      "source": "https://www.littoral-manche-atlantique.com/tag/st%20:%20sete/",
      "propulsion": [
       "diesel-mdo"
-     ]
+     ],
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "Gipsy XX",
@@ -55256,7 +55162,8 @@
        "prix": "200 M EUR (contrat global mixte, non ventile)",
        "source": "https://defenceweb.co.za/sea/sea-sea/cmn-launches-mozambiques-first-ocean-eagle-patrol-vessel/"
       }
-     ]
+     ],
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "Heva (La Reunion)",
@@ -55644,7 +55551,8 @@
    "materiaux": [
     "acier"
    ],
-   "geo_source": "https://www.portbooker.com/us/marinas/port-napoleon/port-saint-louis-du-rhone/provence-alpes-cote-d-azur/france"
+   "geo_source": "https://www.portbooker.com/us/marinas/port-napoleon/port-saint-louis-du-rhone/provence-alpes-cote-d-azur/france",
+   "navires_references": []
   },
   {
    "id": "global-nautic-port-saint-louis",
@@ -55776,7 +55684,8 @@
     "composite"
    ],
    "taille_max": "Monocoques et catamarans de plaisance jusqu'à 30 m de longueur ; manutention/levage jusqu'à 120 tonnes au site Port Navy Service",
-   "geo_source": "https://www.globalnautic.com/en/"
+   "geo_source": "https://www.globalnautic.com/en/",
+   "navires_references": []
   },
   {
    "id": "cimat-sartec-foselev-marine-la-seyne-sur-mer",
@@ -55889,7 +55798,8 @@
     "diesel"
    ],
    "taille_max": "Dock flottant Mac JIP 59 m x 21 m, levage ~950 t (jusqu'a ~1 000 t) ; navires accueillis jusqu'a 55-60 m et 900-950 t. Aucune capacite de construction neuve : taille_max ne concerne que le levage/refit.",
-   "geo_source": "https://www.foselev.com/agence/maintenance-cimat-sartec-toulon/"
+   "geo_source": "https://www.foselev.com/agence/maintenance-cimat-sartec-toulon/",
+   "navires_references": []
   },
   {
    "id": "catana-group-canet-en-roussil",
@@ -57872,7 +57782,8 @@
     "bois"
    ],
    "taille_max": "Pas de LOA/jauge officielle publiee. Capacite bornee par le levage (remorque hydraulique Parklev ~31 t, adaptee aux multicoques) et la nef (porte 14 m de large x 8,05 m de haut, 29 m de profondeur interieure ; batiment 32 x 19 x 9,5 m). Compatible avec de grands catamarans de croisiere ; aucune limite de largeur annoncee pour la sortie d'eau. DSP du port pour les navires de plus de 6,60 m de largeur.",
-   "geo_source": "https://nominatim.openstreetmap.org/search?q=Quai+Pla+de+l%27Entree+Leucate&format=json"
+   "geo_source": "https://nominatim.openstreetmap.org/search?q=Quai+Pla+de+l%27Entree+Leucate&format=json",
+   "navires_references": []
   },
   {
    "id": "a-sea-venture-yachting-canet-en-roussil",
@@ -58180,62 +58091,6 @@
    "taille_max": "Monocoques composite jusqu'a environ 30 m (coque sur mesure a l'unite) ; catamarans jusqu'a environ 25 m sur mesure. Plus grande unite a passagers reellement livree : 25 m (Le Millesime). Jauge maximale non documentee.",
    "navires_references": [
     {
-     "nom": "Le Millesime",
-     "type": "Navire a passagers (vedette monocoque)",
-     "annee": "2003 (mise en construction), rallonge en 2008",
-     "longueur_m": 25,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "126 passagers (3e categorie) / 166 passagers (4e categorie), largeur 5 m, vitesse 14 noeuds",
-     "energie": "Diesel ; remotorisation 2025 en 2 x 405 ch Volvo Penta D8 AdBlue (motorisation d'origine 2 x 220 ch Baudouin)",
-     "client": "Les Bateaux Agathois (Grau d'Agde / Cap d'Agde)",
-     "classification": "Navigation 3e et 4e categories (categorie reglementaire francaise ; societe de classe non documentee)",
-     "source": "https://lesbateauxagathois.com/nos-bateaux/",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 126,
-     "operateur": "Les Bateaux Agathois (Eric Bousquet)",
-     "proprietaire": "Les Bateaux Agathois (Eric Bousquet)",
-     "timeline": [
-      {
-       "annee": "2003",
-       "role": "construction",
-       "nom": "Nouvelle Vague Constructions Navales (Marseillan)",
-       "detail": "Mise en construction d'une vedette à passagers monocoque (env. 25 m), conçue pour les croisières et la pêche promenade, par le chantier Nouvelle Vague à Marseillan.",
-       "source": "https://lesbateauxagathois.com/nos-bateaux/"
-      },
-      {
-       "annee": "2005",
-       "role": "proprietaire",
-       "nom": "Les Bateaux Agathois (Eric Bousquet)",
-       "detail": "Acquisition du Millésime par Les Bateaux Agathois (entreprise fondée en 1994 par Eric Bousquet) ; exploité au départ du Grau d'Agde et du Cap d'Agde.",
-       "source": "https://lesbateauxagathois.com/nos-bateaux/"
-      },
-      {
-       "annee": "2005",
-       "role": "operateur",
-       "nom": "Les Bateaux Agathois (Eric Bousquet)",
-       "detail": "Exploitant du navire depuis son acquisition : croisières côte volcanique, Fort Brescou, fleuve Hérault, canal du Midi, étang de Thau, sorties pêche en mer.",
-       "source": "https://lesbateauxagathois.com/nos-bateaux/"
-      },
-      {
-       "annee": "2008",
-       "role": "conversion",
-       "nom": "Nouvelle Vague Constructions Navales (Marseillan)",
-       "detail": "Rallongement (allongement de coque) du Millésime réalisé par le chantier naval Nouvelle Vague à Marseillan.",
-       "source": "https://lesbateauxagathois.com/nos-bateaux/"
-      },
-      {
-       "annee": "2025",
-       "role": "conversion",
-       "nom": "Les Bateaux Agathois (Eric Bousquet)",
-       "detail": "Remotorisation : remplacement des moteurs par des Volvo Penta D8 AdBlue, présentés comme moins polluants et moins bruyants pour le confort des passagers.",
-       "source": "https://lesbateauxagathois.com/nos-bateaux/"
-      }
-     ]
-    },
-    {
      "nom": null,
      "type": "Navire a passagers (catamaran, 4e categorie, navigation maritime + canal du Midi)",
      "annee": null,
@@ -58426,6 +58281,62 @@
      "client": "Commune de Marseillan (et clubs de joutes)",
      "classification": null,
      "source": "https://www.constructions-navales.com/chantier-naval-realisations-bateaux.html"
+    },
+    {
+     "nom": "Le Millesime",
+     "type": "Navire a passagers (vedette monocoque)",
+     "annee": "2003 (mise en construction), rallonge en 2008",
+     "longueur_m": 25,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "126 passagers (3e categorie) / 166 passagers (4e categorie), largeur 5 m, vitesse 14 noeuds",
+     "energie": "Diesel ; remotorisation 2025 en 2 x 405 ch Volvo Penta D8 AdBlue (motorisation d'origine 2 x 220 ch Baudouin)",
+     "client": "Les Bateaux Agathois (Grau d'Agde / Cap d'Agde)",
+     "classification": "Navigation 3e et 4e categories (categorie reglementaire francaise ; societe de classe non documentee)",
+     "source": "https://lesbateauxagathois.com/nos-bateaux/",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "capacite_pax": 126,
+     "operateur": "Les Bateaux Agathois (Eric Bousquet)",
+     "proprietaire": "Les Bateaux Agathois (Eric Bousquet)",
+     "timeline": [
+      {
+       "annee": "2003",
+       "role": "construction",
+       "nom": "Nouvelle Vague Constructions Navales (Marseillan)",
+       "detail": "Mise en construction d'une vedette à passagers monocoque (env. 25 m), conçue pour les croisières et la pêche promenade, par le chantier Nouvelle Vague à Marseillan.",
+       "source": "https://lesbateauxagathois.com/nos-bateaux/"
+      },
+      {
+       "annee": "2005",
+       "role": "proprietaire",
+       "nom": "Les Bateaux Agathois (Eric Bousquet)",
+       "detail": "Acquisition du Millésime par Les Bateaux Agathois (entreprise fondée en 1994 par Eric Bousquet) ; exploité au départ du Grau d'Agde et du Cap d'Agde.",
+       "source": "https://lesbateauxagathois.com/nos-bateaux/"
+      },
+      {
+       "annee": "2005",
+       "role": "operateur",
+       "nom": "Les Bateaux Agathois (Eric Bousquet)",
+       "detail": "Exploitant du navire depuis son acquisition : croisières côte volcanique, Fort Brescou, fleuve Hérault, canal du Midi, étang de Thau, sorties pêche en mer.",
+       "source": "https://lesbateauxagathois.com/nos-bateaux/"
+      },
+      {
+       "annee": "2008",
+       "role": "conversion",
+       "nom": "Nouvelle Vague Constructions Navales (Marseillan)",
+       "detail": "Rallongement (allongement de coque) du Millésime réalisé par le chantier naval Nouvelle Vague à Marseillan.",
+       "source": "https://lesbateauxagathois.com/nos-bateaux/"
+      },
+      {
+       "annee": "2025",
+       "role": "conversion",
+       "nom": "Les Bateaux Agathois (Eric Bousquet)",
+       "detail": "Remotorisation : remplacement des moteurs par des Volvo Penta D8 AdBlue, présentés comme moins polluants et moins bruyants pour le confort des passagers.",
+       "source": "https://lesbateauxagathois.com/nos-bateaux/"
+      }
+     ]
     }
    ]
   },
@@ -58542,7 +58453,8 @@
     }
    ],
    "taille_max": "Bateaux de plaisance de 5 à 25 m (manutention/mise à sec) ; levage jusqu'à 75 tonnes",
-   "geo_source": "https://nominatim.openstreetmap.org/search?q=Port+Charles+Ornano+Ajaccio&format=json"
+   "geo_source": "https://nominatim.openstreetmap.org/search?q=Port+Charles+Ornano+Ajaccio&format=json",
+   "navires_references": []
   },
   {
    "id": "uni-bateaux-union-nautique-insulaire-sarrola-carcopin",
@@ -58652,7 +58564,8 @@
     "diesel"
    ],
    "taille_max": "Manutention d'unités de plaisance de 5 à 20 m (voile et moteur). Pas d'élévateur à sangles ni de cale sèche identifiés ; levage par grue mobile, bers hydrauliques et remorques. Hangars couverts 3 000 m², site total 15 000 m² (1,5 ha).",
-   "geo_source": "https://api-adresse.data.gouv.fr/search/?q=Effrico+Sarrola-Carcopino (lieu-dit Effrico, route de Bastia, adresse du chantier confirmee sur https://www.uni-bateaux.com/)"
+   "geo_source": "https://api-adresse.data.gouv.fr/search/?q=Effrico+Sarrola-Carcopino (lieu-dit Effrico, route de Bastia, adresse du chantier confirmee sur https://www.uni-bateaux.com/)",
+   "navires_references": []
   },
   {
    "id": "nautic-services-corse-afa-agglomeratio",
@@ -58729,7 +58642,8 @@
    ],
    "materiaux": [
     "composite"
-   ]
+   ],
+   "navires_references": []
   },
   {
    "id": "amerscorse-chantier-naval-de-sagone-sagone-commune-d",
@@ -58800,7 +58714,8 @@
     "reparation-refit",
     "plaisance",
     "hivernage-stockage"
-   ]
+   ],
+   "navires_references": []
   },
   {
    "id": "chantier-naval-parodi-saint-florent",
@@ -58907,7 +58822,8 @@
    "energies": [
     "diesel"
    ],
-   "geo_source": "https://api-adresse.data.gouv.fr/search/?q=Faggiolo+Saint-Florent (Chemin de Faggiolo / Lieu dit Fagiollo, adresse du chantier confirmee sur https://www.cn-parodi.fr/)"
+   "geo_source": "https://api-adresse.data.gouv.fr/search/?q=Faggiolo+Saint-Florent (Chemin de Faggiolo / Lieu dit Fagiollo, adresse du chantier confirmee sur https://www.cn-parodi.fr/)",
+   "navires_references": []
   },
   {
    "id": "manche-industrie-marine-dieppe",
@@ -59607,7 +59523,8 @@
     "bois",
     "composite"
    ],
-   "geo_source": "https://api-adresse.data.gouv.fr/search/?q=rue+Charles+Bloud+Dieppe (Base Adresse Nationale) ; localisation confirmee rue Charles Bloud / Blould sur le port de Dieppe par https://portdedieppe.fr/chantiers-navals-installes-sur-le-port/"
+   "geo_source": "https://api-adresse.data.gouv.fr/search/?q=rue+Charles+Bloud+Dieppe (Base Adresse Nationale) ; localisation confirmee rue Charles Bloud / Blould sur le port de Dieppe par https://portdedieppe.fr/chantiers-navals-installes-sur-le-port/",
+   "navires_references": []
   },
   {
    "id": "cm-mouquet-constructions-metalliques-mouquet-fecamp",
@@ -60073,7 +59990,8 @@
     "polyester (composite stratifié verre)"
    ],
    "taille_max": "Élévateur à sangles (travel-lift) 400 t accessible via chenal de 200 m ; grue de levage propre 30 t ; bers de calage jusqu'à 16 t ; cabine de peinture 18 m x 8 m ; terre-plein 2 000 m² (4 bâtiments). Limite pratique de mise à terre/manutention propre au chantier : ~16-30 t (grue/bers), au-delà via le travel-lift 400 t mutualisé du pôle technique.",
-   "geo_source": "https://nominatim.openstreetmap.org/search?q=6+Avenue+Louis+Martin+35400+Saint-Malo (adresse 6 Avenue Louis Martin confirmee par https://www.etoile-chantier.com/) ; site de travail au Pole Naval Jacques Cartier, bassin Jacques Cartier"
+   "geo_source": "https://nominatim.openstreetmap.org/search?q=6+Avenue+Louis+Martin+35400+Saint-Malo (adresse 6 Avenue Louis Martin confirmee par https://www.etoile-chantier.com/) ; site de travail au Pole Naval Jacques Cartier, bassin Jacques Cartier",
+   "navires_references": []
   },
   {
    "id": "chantier-naval-de-la-ville-audrain-saint-malo",
@@ -60563,7 +60481,8 @@
     "bois",
     "composite"
    ],
-   "geo_source": "https://www.saintmalo-cancale.port.bzh/page/cnr"
+   "geo_source": "https://www.saintmalo-cancale.port.bzh/page/cnr",
+   "navires_references": []
   },
   {
    "id": "chemineau-composite-naval-saint-malo",
@@ -60665,7 +60584,8 @@
    "energies": [
     "vélique"
    ],
-   "geo_source": "https://www.chemineau-composite-naval.fr/"
+   "geo_source": "https://www.chemineau-composite-naval.fr/",
+   "navires_references": []
   },
   {
    "id": "pole-naval-jacques-cartier-pnjc-saint-malo",
@@ -61783,7 +61703,8 @@
     "diesel"
    ],
    "taille_max": "Voiliers et bateaux à moteur de plaisance jusqu'à environ 12 t et largeur < 1,6 m via l'élévateur Parklev propre au chantier ; unités plus lourdes manutentionnées via les élévateurs du port de plaisance (10, 50 ou 150 t). Aucune capacité de construction de navires neufs.",
-   "geo_source": "https://www.navigueralarochelle.com/chantier-naval-des-minimes/"
+   "geo_source": "https://www.navigueralarochelle.com/chantier-naval-des-minimes/",
+   "navires_references": []
   },
   {
    "id": "chantier-nautique-du-vieux-port-la-rochelle",
@@ -63365,7 +63286,8 @@
     "essence-hors-bord"
    ],
    "taille_max": "Manutention 15 t (levage/mise à l'eau/sortie d'eau) ; stockage bateaux jusqu'à 16 t (Rochefort) / 15 t (Port-des-Barques) ; mâtage/démâtage de voiliers jusqu'à 17 m de hauteur de mât. Aucune capacité de construction neuve : pas de longueur ni de jauge constructibles.",
-   "geo_source": "https://www.guide-plaisance-mobile.fr/17-port-des-barques-rochefort-charente-maritime-js-marine"
+   "geo_source": "https://www.guide-plaisance-mobile.fr/17-port-des-barques-rochefort-charente-maritime-js-marine",
+   "navires_references": []
   },
   {
    "id": "chantier-naval-laly-bourcefranc-le-c",
@@ -63535,7 +63457,8 @@
      "energie": null,
      "client": "Peche, quartier maritime ile d'Oleron",
      "classification": null,
-     "source": "https://www.littoral-manche-atlantique.com/tag/io%20:%20ile%20d'oleron/"
+     "source": "https://www.littoral-manche-atlantique.com/tag/io%20:%20ile%20d'oleron/",
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "MEN BRIAL (ex-Oceane Marina)",
@@ -63975,7 +63898,8 @@
      "energie": null,
      "client": "H. Linssen (Antwerp Yacht Club)",
      "classification": null,
-     "source": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/category/voilier/"
+     "source": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/category/voilier/",
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "M'Amie",
@@ -63991,7 +63915,8 @@
      "source": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/category/voilier/",
      "propulsion": [
       "velique"
-     ]
+     ],
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "L'Horizon",
@@ -64020,7 +63945,8 @@
      "energie": null,
      "client": null,
      "classification": null,
-     "source": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/category/pinasse/"
+     "source": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/category/pinasse/",
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "Miramar II",
@@ -65175,7 +65101,8 @@
    ],
    "energies": [
     "diesel"
-   ]
+   ],
+   "navires_references": []
   },
   {
    "id": "yacht-care-services-les-sables-d-olo",
@@ -65298,7 +65225,8 @@
     "polyester"
    ],
    "taille_max": "Coques de plaisance jusqu'a environ 15 m de longueur ; largeur (bau) jusqu'a 11 m ; manutention jusqu'a 500 tonnes (travelift). Aucune capacite de construction neuve : refit, reparation et preparation uniquement.",
-   "geo_source": "https://nominatim.openstreetmap.org/search?q=Yacht+Care+Services+Les+Sables+d%27Olonne&format=json"
+   "geo_source": "https://nominatim.openstreetmap.org/search?q=Yacht+Care+Services+Les+Sables+d%27Olonne&format=json",
+   "navires_references": []
   },
   {
    "id": "alumarine-shipyard-coueron",
@@ -65471,22 +65399,6 @@
    "taille_max": "Coques aluminium jusqu'à ~50 m de longueur (capacité site de Couëron, orientée yachting/professionnel). Jauge maximale non documentée publiquement.",
    "navires_references": [
     {
-     "nom": "Men Garo",
-     "type": "vedette-de-lamanage",
-     "annee": "2022",
-     "longueur_m": 7.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Vedette de lamanage",
-     "energie": "Diesel Volvo D7 265 cv + propulseur hydraulique 300 kg",
-     "client": "Groupe Boluda, port de Longoni (Mayotte) ; mise a l'eau 21 mars 2022",
-     "classification": "Aluminium",
-     "source": "https://www.meretmarine.com/fr/construction-navale/a-bord-de-la-nouvelle-vedette-des-pompiers-du-sdis-22",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
      "nom": null,
      "type": "vedette-scientifique",
      "annee": "2022",
@@ -65503,23 +65415,6 @@
      ]
     },
     {
-     "nom": "Locman",
-     "type": "vedette-de-lamanage",
-     "annee": "2021",
-     "longueur_m": 8.25,
-     "jauge_gt": null,
-     "port_lourd_dwt": 1.73,
-     "capacite": "6 lamaneurs ; 1,2 t de fret ; traction 20 kN ; croc de largage sous charge",
-     "energie": "Volvo D7 CTA 265 cv (inverseur ZF), helice 4 pales fixes + propulseur d'etrave hydraulique 300 kgf, 15 noeuds ; 412 L gasoil",
-     "client": "Societe cooperative de lamanage de Lorient (4e unite de la gamme)",
-     "classification": "Aluminium (architecte Geronimo) ; longueur hors-tout 8,6 m, largeur 3,6 m, tirant d'eau 1,35 m, deplacement lege arme 6 t",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-mise-a-l-eau-de-la-vedette-des-lamaneurs-lorientais-et-commande-de",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_fret": "2 t"
-    },
-    {
      "nom": null,
      "type": "barge-depollution-autopropulsee",
      "annee": "2021",
@@ -65533,65 +65428,6 @@
      "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-nouvelle-vedette-de-lamanage-pour-lorient-et-barges-pour-ecotank",
      "propulsion": [
       "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Ile de la Giraglia",
-     "type": "vedette-corse-phares-et-balises",
-     "annee": "2020",
-     "longueur_m": 11.99,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Pont de travail > 25 m2 ; grue Guerra capacite 3,5 t (pose, retrait, entretien de bouees et balises)",
-     "energie": "2 moteurs diesel Volvo D6 de 300 cv, 2 helices, 20 noeuds a vide / 12 en charge ; 2x550 L",
-     "client": "Armement des Phares et Balises (APB), base a Bastia (Corse)",
-     "classification": "Aluminium (architecte Pierre Delion), deplacement lege arme 12,8 t, largeur 4,68 m, tirant d'eau 1,18 m",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-la-nouvelle-vedette-corse-des-phares-et-balises",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "prix_acquisition": "458 980 EUR (2019, marché public attribué a Alumarine pour la fourniture de la vedette de travaux munie d'une grue pour le centre de Bastia, Armement des Phares et Balises)",
-     "timeline": [
-      {
-       "annee": "2019",
-       "role": "construction",
-       "nom": "Armement des Phares et Balises (maitre d'ouvrage) / Alumarine Shipyard (constructeur)",
-       "detail": "Marche public 'Etude, construction, fourniture et livraison en Corse d'une vedette de travaux munie d'une grue pour le centre de Bastia' attribue a Alumarine, notifie le 21/11/2019, duree 10 mois. Vedette livree fin 2020 sous le nom Ile de la Giraglia (12 m alu, grue 3,5 t).",
-       "prix": "458 980 EUR",
-       "source": "https://www.boamp.fr/avis/detail/14-5238"
-      }
-     ]
-    },
-    {
-     "nom": "Gilles IV",
-     "type": "vedette-de-lamanage",
-     "annee": "2020",
-     "longueur_m": 7,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Traction au bollard 1,8 t (premiere de la nouvelle gamme remorquage)",
-     "energie": "Volvo D7C-B TA de 265 cv, 18 noeuds",
-     "client": "Groupe Lamanage Huchet Desmars (LHD)",
-     "classification": "Aluminium (gamme Alumarine, conforme division 222 et BV NR467) ; largeur hors-tout 3,35 m, tirant d'eau 1,25 m, deplacement lege arme 4,9 t",
-     "source": "https://www.meretmarine.com/fr/construction-navale/lamanage-alumarine-livre-les-deux-premieres-vedettes-de-sa-nouvelle-gamme",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Marlin",
-     "type": "vedette-de-lamanage",
-     "annee": "2020",
-     "longueur_m": 7.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Traction au bollard 1,4 t",
-     "energie": "Iveco FPT NEF 280 de 180 cv, 13 noeuds a mi-charge",
-     "client": "Grand Port Maritime de Nantes Saint-Nazaire (GPMNSN)",
-     "classification": "Aluminium ; largeur 3,2 m, tirant d'eau 1,25 m, deplacement 4,9 t",
-     "source": "https://www.meretmarine.com/fr/construction-navale/lamanage-alumarine-livre-les-deux-premieres-vedettes-de-sa-nouvelle-gamme",
-     "propulsion": [
-      "autre"
      ]
     },
     {
@@ -65611,59 +65447,6 @@
      ]
     },
     {
-     "nom": "Explocat 52",
-     "type": "catamaran-a-voile-de-croisiere",
-     "annee": "2020",
-     "longueur_m": 16.95,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisiere a voile (serie)",
-     "energie": "Voile",
-     "client": "Garcia Yachts (groupe Grand Large Yachting) : Alumarine realise les coques aluminium (prototype + 3e unite + 3 autres prevues a Coueron)",
-     "classification": "Aluminium (architecte Pierre Delion) ; largeur 8,2 m",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-bateaux-professionnels-et-plaisance-les-deux-piliers-du-chantier",
-     "propulsion": [
-      "velique"
-     ],
-     "operateur": "Propriétaires privés (par exemplaire, non nominativement publics)",
-     "proprietaire": "Garcia Yachts (constructeur, groupe Grand Large Yachting)",
-     "timeline": [
-      {
-       "annee": "2019",
-       "role": "evenement",
-       "nom": "Garcia Yachts",
-       "detail": "Lancement de la production du premier Explocat 52, catamaran d'exploration en aluminium, par Garcia Yachts (Normandie), au sein du groupe Grand Large Yachting (qui réunit Outremer et Gunboat). Architecture navale Pierre Delion, design intérieur Darnet Design.",
-       "source": "https://www.actunautique.com/2019/02/lancement-de-la-production-du-premier-catamaran-explocat-52-chez-garcia-yachting.html"
-      },
-      {
-       "annee": "2020",
-       "role": "construction",
-       "nom": "Garcia Yachts / Alumarine Shipyard",
-       "detail": "Premier exemplaire (coque n°1) lancé en juillet 2020, premières navigations en juillet à Cherbourg, exposé au Grand Pavois La Rochelle 2020. Modèle 16,95 m x 8,20 m en aluminium. Alumarine est intervenu comme sous-traitant chaudronnerie aluminium sur le programme ; le constructeur/intégrateur de série reste Garcia Yachts.",
-       "source": "https://www.garciayachts.com/en/news/launch-of-garcia-explocat-52",
-       "prix": "≈ 1 294 000 € HT (base, neuf)"
-      },
-      {
-       "annee": "2020",
-       "role": "evenement",
-       "nom": "Plaisanciers privés",
-       "detail": "Catamaran de croisière hauturière de série (16 unités commandées dès le lancement) ; chaque exemplaire est vendu à un propriétaire privé pour la grande croisière. Les noms et reventes des propriétaires de chaque coque ne sont pas publics (marché de plaisance privé) ; non renseignés pour éviter toute invention.",
-       "source": "https://www.yachtingworld.com/reviews/boat-tests/garcia-explocat-52-review-a-go-anywhere-aluminium-catamaran"
-      },
-      {
-       "annee": "2022",
-       "role": "evenement",
-       "nom": "Garcia Explocat 52 (occasion)",
-       "detail": "Cote occasion sur le marche : unite 2022/2023 listee a 2 500 000 - 2 550 000 EUR (revente courtage).",
-       "prix": "≈ 2 500 000 - 2 550 000 € (revente)",
-       "source": "https://www.boat24.com/en/sailingboats/garcia/garcia-explocat-52/detail/647162/"
-      }
-     ],
-     "prix_acquisition": "≈ 1 294 000 € HT (prix neuf de base, modèle Garcia Explocat 52, 2020)",
-     "architecte": "Pierre Delion",
-     "architecte_source": "bateaux.com/boatsnews.com (article 36292) + garciayachts.com : Explocat 52 conçu par l'architecte naval Pierre Delion (agence de Nantes) en coopération avec Garcia ; construit par Alumarine"
-    },
-    {
      "nom": null,
      "type": "vedette-pompiers-secours",
      "annee": "2019",
@@ -65678,23 +65461,6 @@
      "propulsion": [
       "diesel-mdo"
      ]
-    },
-    {
-     "nom": "SNS 277 Président Charles Pilorget",
-     "type": "vedette-de-sauvetage",
-     "annee": "2018",
-     "longueur_m": 11.59,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "8 passagers + 2 membres d'équipage",
-     "energie": "2 moteurs diesel Volvo D6-330, 2 réservoirs de 400 L, 25 à 30 nœuds selon charge",
-     "client": "SNSM, station de Port-Blanc (Baden, Golfe du Morbihan)",
-     "classification": "Vedette de sauvetage aluminium, architecte Geronimo Naval Design",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-la-vedette-sns-277-aux-sauveteurs-du-morbihan",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 8
     },
     {
      "nom": null,
@@ -65713,42 +65479,6 @@
      ],
      "capacite_pax": 30,
      "capacite_fret": "8 t"
-    },
-    {
-     "nom": "San Ghjaseppu",
-     "type": "bateau-fret-passagers",
-     "annee": "2018",
-     "longueur_m": 11.95,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "12 passagers (assises rabattables) + 7 t de fret ; pont arriere 24 m2",
-     "energie": "2 moteurs diesel Volvo de 300 cv sur lignes d'arbres, 20 noeuds ; 2x530 L",
-     "client": "Desserte maritime du golfe de Girolata (Corse), en remplacement d'une unite existante",
-     "classification": "Aluminium (architecte Delion), poids lege 10 t, largeur 4,68 m, tirant d'eau 0,73 m",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-acheve-un-bateau-fret-et-passagers-pour-la-corse",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 12,
-     "operateur": "Desserte maritime du golfe de Girolata (village de Girolata, commune d'Osani, Corse)",
-     "proprietaire": "Desserte maritime du golfe de Girolata",
-     "timeline": [
-      {
-       "annee": "2018",
-       "role": "construction",
-       "nom": "Alumarine Shipyard (Couëron)",
-       "detail": "Bateau mixte fret et passagers de 11,95 m x 4,68 m, 10 t lège, tirant d'eau 0,73 m, deux moteurs diesel Volvo 300 CV, 20 nds, sur plans du bureau d'architecture Delion. Essais sur la Loire avant rejoindre la Corse.",
-       "source": "https://www.meretmarine.com/fr/content/alumarine-acheve-un-bateau-fret-et-passagers-pour-la-corse"
-      },
-      {
-       "annee": "2018",
-       "role": "operateur",
-       "nom": "Desserte maritime du golfe de Girolata",
-       "detail": "Assure le ravitaillement (vivres, fret, matériaux) et le transport de passagers vers Girolata, village non accessible par la route ; commandant cité : Laurent Macquet. Navire sous le seuil de tonnage d'attribution d'un numéro IMO (pas d'IMO).",
-       "source": "https://www.meretmarine.com/fr/content/alumarine-acheve-un-bateau-fret-et-passagers-pour-la-corse"
-      }
-     ],
-     "capacite_fret": "7 t"
     },
     {
      "nom": null,
@@ -65779,22 +65509,6 @@
      "client": "Operations de lamanage et de pilotage de Port-la-Nouvelle",
      "classification": "Aluminium, deplacement 5 t ; timonerie vitree vue 360, defense Ocean 3",
      "source": "https://www.meretmarine.com/fr/construction-navale/port-la-nouvelle-alumarine-livre-une-vedette-de-lamanage-pilotage",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "VB Lama",
-     "type": "pilotine",
-     "annee": "2017",
-     "longueur_m": 14.93,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "9 places dont 3 d'équipage",
-     "energie": "2 x Cummins QSM 11 de 455 ch, deux lignes d'arbre en V-Drive, 23 nœuds",
-     "client": "Port de Lomé (Togo)",
-     "classification": "Pilotine aluminium (architecte Géronimo Naval Design) adaptée environnement tropical ; largeur 4,6 m",
-     "source": "https://www.meretmarine.com/fr/content/alumarine-livre-une-pilotine-lome",
      "propulsion": [
       "diesel-mdo"
      ]
@@ -65847,52 +65561,6 @@
      "propulsion": [
       "diesel-mdo"
      ]
-    },
-    {
-     "nom": "L'Escapade",
-     "type": "navire-a-passagers-fluvial-hybride",
-     "annee": "2015",
-     "longueur_m": 27.8,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "102 passagers en mode promenade / 60 couverts en mode restaurant",
-     "energie": "Hybride : moteur diesel + moteur électrique couplés via boîte de transmission, batteries lithium fer phosphate (LiFePO4) 150 kW, navigation silencieuse en mode électrique ; réserve gasoil 1800 L",
-     "client": "Communauté de communes des Deux Vallées (Oise) ; exploité par La Cité des Bateliers, ligne Longueil-Annel / Compiègne",
-     "classification": "Navire à passagers eaux intérieures (architecte DN&T) ; largeur 5 m, tirant d'eau 0,77 m",
-     "source": "https://www.meretmarine.com/fr/content/alumarine-livre-une-vedette-de-28-metres-propulsion-hybride",
-     "propulsion": [
-      "electrique-batterie",
-      "hybride",
-      "diesel-mdo"
-     ],
-     "capacite_pax": 102,
-     "operateur": "Communauté de communes des Deux Vallées (croisières sur l'Oise)",
-     "proprietaire": "Communauté de communes des Deux Vallées",
-     "timeline": [
-      {
-       "annee": "2015",
-       "role": "construction",
-       "nom": "Alumarine Shipyard (Couëron)",
-       "detail": "Vedette à passagers fluviale en aluminium 27,8 m x 5 m, tirant d'eau 0,77 m, propulsion hybride (mode thermique et mode électrique silencieux, ~3 h d'autonomie en électrique), plans DN&T. Capacité 102 passagers en croisière / 60 en formule restaurant.",
-       "source": "https://www.meretmarine.com/fr/content/alumarine-livre-une-vedette-de-28-metres-propulsion-hybride",
-       "prix": "≈ 1 000 000 €"
-      },
-      {
-       "annee": "2015",
-       "role": "evenement",
-       "nom": "Longueil-Annel (Oise)",
-       "detail": "Baptisée le 10 octobre à Longueil-Annel. Mise en service sur l'Oise (et non la Loire) : croisières commentées Longueil-Annel - Compiègne (~1h30) et croisières-repas (~3h).",
-       "source": "https://www.fluvialnet.com/murmures-actualites-lescapade-un-bateau-a-passagers-pour-loise/9764"
-      },
-      {
-       "annee": "2015",
-       "role": "operateur",
-       "nom": "Communauté de communes des Deux Vallées",
-       "detail": "Commanditaire, propriétaire et exploitant. Croisières touristiques sur l'Oise (valorisées par la Cité des Bateliers / tourisme de l'Oise).",
-       "source": "https://www.citedesbateliers.com/croisiere-sur-l-oise-le-bateau-lescapade-2/"
-      }
-     ],
-     "prix_acquisition": "≈ 1 M€ (2015, coût total de construction)"
     },
     {
      "nom": null,
@@ -65959,41 +65627,6 @@
      ]
     },
     {
-     "nom": "SNS 275 La Barcaresienne",
-     "type": "vedette-de-sauvetage",
-     "annee": "2014",
-     "longueur_m": 11.45,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Vedette de sauvetage polyvalente",
-     "energie": "2 moteurs diesel 2x320 cv, vitesse max 30 noeuds",
-     "client": "SNSM, station du Barcares (Pyrenees-Orientales) ; modele a l'origine de la serie SNS 277",
-     "classification": "Aluminium (architecte Geronimo Naval Design)",
-     "source": "https://etablissement.snsm.org/occitanie/pyrenees-orientales/le-barcares/station-snsm-du-barcares-266",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Douce France",
-     "type": "catamaran-a-voile-de-luxe",
-     "annee": "1998",
-     "longueur_m": 42.2,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "12 invités en 6 cabines (charter de luxe)",
-     "energie": "Voile (goélette catamaran bi-mât) ; jusqu'à 22 nœuds sous voile",
-     "client": "Yacht de charter ; architectes Van Peteghem Lauriot-Prévost (VPLP)",
-     "classification": "Coque aluminium ; greement goelette (schooner) bi-mat ; pas de societe de classification renseignee",
-     "source": "https://en.wikipedia.org/wiki/Douce_France",
-     "propulsion": [
-      "velique"
-     ],
-     "capacite_pax": 12,
-     "architecte": "VPLP Design",
-     "architecte_source": "Wikipedia (Douce France) et CharterWorld : catamaran de 42 m conçu par VPLP design (Marc Van Peteghem et Vincent Lauriot-Prévost), plans d'architecture navale par Marc Van Peteghem ; construit par Alumarine. Design intérieur : Anne-Monique Bonadei (distinct)."
-    },
-    {
      "nom": null,
      "type": "catamaran-amphidrome-bac-fluvial",
      "annee": null,
@@ -66036,6 +65669,301 @@
      "client": "Navire de service pour parcs éoliens offshore atlantiques (architecte Bureau Mauric, soutien Neopolia, études Hydrocean) ; commande LD Power & Logistics / LD Armateurs pour le parc de Saint-Nazaire",
      "classification": "Coque semi-SWATH à deux flotteurs (transferts personnel jusqu'à 2,5 m de houle), aluminium",
      "source": "https://www.meretmarine.com/fr/construction-navale/bureau-mauric-et-alumarine-un-crew-boat-pour-l-eolien-offshore"
+    },
+    {
+     "nom": "Men Garo",
+     "type": "vedette-de-lamanage",
+     "annee": "2022",
+     "longueur_m": 7.5,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Vedette de lamanage",
+     "energie": "Diesel Volvo D7 265 cv + propulseur hydraulique 300 kg",
+     "client": "Groupe Boluda, port de Longoni (Mayotte) ; mise a l'eau 21 mars 2022",
+     "classification": "Aluminium",
+     "source": "https://www.meretmarine.com/fr/construction-navale/a-bord-de-la-nouvelle-vedette-des-pompiers-du-sdis-22",
+     "propulsion": [
+      "diesel-mdo"
+     ]
+    },
+    {
+     "nom": "Locman",
+     "type": "vedette-de-lamanage",
+     "annee": "2021",
+     "longueur_m": 8.25,
+     "jauge_gt": null,
+     "port_lourd_dwt": 1.73,
+     "capacite": "6 lamaneurs ; 1,2 t de fret ; traction 20 kN ; croc de largage sous charge",
+     "energie": "Volvo D7 CTA 265 cv (inverseur ZF), helice 4 pales fixes + propulseur d'etrave hydraulique 300 kgf, 15 noeuds ; 412 L gasoil",
+     "client": "Societe cooperative de lamanage de Lorient (4e unite de la gamme)",
+     "classification": "Aluminium (architecte Geronimo) ; longueur hors-tout 8,6 m, largeur 3,6 m, tirant d'eau 1,35 m, deplacement lege arme 6 t",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-mise-a-l-eau-de-la-vedette-des-lamaneurs-lorientais-et-commande-de",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "capacite_fret": "2 t"
+    },
+    {
+     "nom": "Ile de la Giraglia",
+     "type": "vedette-corse-phares-et-balises",
+     "annee": "2020",
+     "longueur_m": 11.99,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Pont de travail > 25 m2 ; grue Guerra capacite 3,5 t (pose, retrait, entretien de bouees et balises)",
+     "energie": "2 moteurs diesel Volvo D6 de 300 cv, 2 helices, 20 noeuds a vide / 12 en charge ; 2x550 L",
+     "client": "Armement des Phares et Balises (APB), base a Bastia (Corse)",
+     "classification": "Aluminium (architecte Pierre Delion), deplacement lege arme 12,8 t, largeur 4,68 m, tirant d'eau 1,18 m",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-la-nouvelle-vedette-corse-des-phares-et-balises",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "prix_acquisition": "458 980 EUR (2019, marché public attribué a Alumarine pour la fourniture de la vedette de travaux munie d'une grue pour le centre de Bastia, Armement des Phares et Balises)",
+     "timeline": [
+      {
+       "annee": "2019",
+       "role": "construction",
+       "nom": "Armement des Phares et Balises (maitre d'ouvrage) / Alumarine Shipyard (constructeur)",
+       "detail": "Marche public 'Etude, construction, fourniture et livraison en Corse d'une vedette de travaux munie d'une grue pour le centre de Bastia' attribue a Alumarine, notifie le 21/11/2019, duree 10 mois. Vedette livree fin 2020 sous le nom Ile de la Giraglia (12 m alu, grue 3,5 t).",
+       "prix": "458 980 EUR",
+       "source": "https://www.boamp.fr/avis/detail/14-5238"
+      }
+     ]
+    },
+    {
+     "nom": "Gilles IV",
+     "type": "vedette-de-lamanage",
+     "annee": "2020",
+     "longueur_m": 7,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Traction au bollard 1,8 t (premiere de la nouvelle gamme remorquage)",
+     "energie": "Volvo D7C-B TA de 265 cv, 18 noeuds",
+     "client": "Groupe Lamanage Huchet Desmars (LHD)",
+     "classification": "Aluminium (gamme Alumarine, conforme division 222 et BV NR467) ; largeur hors-tout 3,35 m, tirant d'eau 1,25 m, deplacement lege arme 4,9 t",
+     "source": "https://www.meretmarine.com/fr/construction-navale/lamanage-alumarine-livre-les-deux-premieres-vedettes-de-sa-nouvelle-gamme",
+     "propulsion": [
+      "diesel-mdo"
+     ]
+    },
+    {
+     "nom": "Marlin",
+     "type": "vedette-de-lamanage",
+     "annee": "2020",
+     "longueur_m": 7.5,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Traction au bollard 1,4 t",
+     "energie": "Iveco FPT NEF 280 de 180 cv, 13 noeuds a mi-charge",
+     "client": "Grand Port Maritime de Nantes Saint-Nazaire (GPMNSN)",
+     "classification": "Aluminium ; largeur 3,2 m, tirant d'eau 1,25 m, deplacement 4,9 t",
+     "source": "https://www.meretmarine.com/fr/construction-navale/lamanage-alumarine-livre-les-deux-premieres-vedettes-de-sa-nouvelle-gamme",
+     "propulsion": [
+      "autre"
+     ]
+    },
+    {
+     "nom": "Explocat 52",
+     "type": "catamaran-a-voile-de-croisiere",
+     "annee": "2020",
+     "longueur_m": 16.95,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Catamaran de croisiere a voile (serie)",
+     "energie": "Voile",
+     "client": "Garcia Yachts (groupe Grand Large Yachting) : Alumarine realise les coques aluminium (prototype + 3e unite + 3 autres prevues a Coueron)",
+     "classification": "Aluminium (architecte Pierre Delion) ; largeur 8,2 m",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-bateaux-professionnels-et-plaisance-les-deux-piliers-du-chantier",
+     "propulsion": [
+      "velique"
+     ],
+     "operateur": "Propriétaires privés (par exemplaire, non nominativement publics)",
+     "proprietaire": "Garcia Yachts (constructeur, groupe Grand Large Yachting)",
+     "timeline": [
+      {
+       "annee": "2019",
+       "role": "evenement",
+       "nom": "Garcia Yachts",
+       "detail": "Lancement de la production du premier Explocat 52, catamaran d'exploration en aluminium, par Garcia Yachts (Normandie), au sein du groupe Grand Large Yachting (qui réunit Outremer et Gunboat). Architecture navale Pierre Delion, design intérieur Darnet Design.",
+       "source": "https://www.actunautique.com/2019/02/lancement-de-la-production-du-premier-catamaran-explocat-52-chez-garcia-yachting.html"
+      },
+      {
+       "annee": "2020",
+       "role": "construction",
+       "nom": "Garcia Yachts / Alumarine Shipyard",
+       "detail": "Premier exemplaire (coque n°1) lancé en juillet 2020, premières navigations en juillet à Cherbourg, exposé au Grand Pavois La Rochelle 2020. Modèle 16,95 m x 8,20 m en aluminium. Alumarine est intervenu comme sous-traitant chaudronnerie aluminium sur le programme ; le constructeur/intégrateur de série reste Garcia Yachts.",
+       "source": "https://www.garciayachts.com/en/news/launch-of-garcia-explocat-52",
+       "prix": "≈ 1 294 000 € HT (base, neuf)"
+      },
+      {
+       "annee": "2020",
+       "role": "evenement",
+       "nom": "Plaisanciers privés",
+       "detail": "Catamaran de croisière hauturière de série (16 unités commandées dès le lancement) ; chaque exemplaire est vendu à un propriétaire privé pour la grande croisière. Les noms et reventes des propriétaires de chaque coque ne sont pas publics (marché de plaisance privé) ; non renseignés pour éviter toute invention.",
+       "source": "https://www.yachtingworld.com/reviews/boat-tests/garcia-explocat-52-review-a-go-anywhere-aluminium-catamaran"
+      },
+      {
+       "annee": "2022",
+       "role": "evenement",
+       "nom": "Garcia Explocat 52 (occasion)",
+       "detail": "Cote occasion sur le marche : unite 2022/2023 listee a 2 500 000 - 2 550 000 EUR (revente courtage).",
+       "prix": "≈ 2 500 000 - 2 550 000 € (revente)",
+       "source": "https://www.boat24.com/en/sailingboats/garcia/garcia-explocat-52/detail/647162/"
+      }
+     ],
+     "prix_acquisition": "≈ 1 294 000 € HT (prix neuf de base, modèle Garcia Explocat 52, 2020)",
+     "architecte": "Pierre Delion",
+     "architecte_source": "bateaux.com/boatsnews.com (article 36292) + garciayachts.com : Explocat 52 conçu par l'architecte naval Pierre Delion (agence de Nantes) en coopération avec Garcia ; construit par Alumarine"
+    },
+    {
+     "nom": "SNS 277 Président Charles Pilorget",
+     "type": "vedette-de-sauvetage",
+     "annee": "2018",
+     "longueur_m": 11.59,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "8 passagers + 2 membres d'équipage",
+     "energie": "2 moteurs diesel Volvo D6-330, 2 réservoirs de 400 L, 25 à 30 nœuds selon charge",
+     "client": "SNSM, station de Port-Blanc (Baden, Golfe du Morbihan)",
+     "classification": "Vedette de sauvetage aluminium, architecte Geronimo Naval Design",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-la-vedette-sns-277-aux-sauveteurs-du-morbihan",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "capacite_pax": 8
+    },
+    {
+     "nom": "San Ghjaseppu",
+     "type": "bateau-fret-passagers",
+     "annee": "2018",
+     "longueur_m": 11.95,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "12 passagers (assises rabattables) + 7 t de fret ; pont arriere 24 m2",
+     "energie": "2 moteurs diesel Volvo de 300 cv sur lignes d'arbres, 20 noeuds ; 2x530 L",
+     "client": "Desserte maritime du golfe de Girolata (Corse), en remplacement d'une unite existante",
+     "classification": "Aluminium (architecte Delion), poids lege 10 t, largeur 4,68 m, tirant d'eau 0,73 m",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-acheve-un-bateau-fret-et-passagers-pour-la-corse",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "capacite_pax": 12,
+     "operateur": "Desserte maritime du golfe de Girolata (village de Girolata, commune d'Osani, Corse)",
+     "proprietaire": "Desserte maritime du golfe de Girolata",
+     "timeline": [
+      {
+       "annee": "2018",
+       "role": "construction",
+       "nom": "Alumarine Shipyard (Couëron)",
+       "detail": "Bateau mixte fret et passagers de 11,95 m x 4,68 m, 10 t lège, tirant d'eau 0,73 m, deux moteurs diesel Volvo 300 CV, 20 nds, sur plans du bureau d'architecture Delion. Essais sur la Loire avant rejoindre la Corse.",
+       "source": "https://www.meretmarine.com/fr/content/alumarine-acheve-un-bateau-fret-et-passagers-pour-la-corse"
+      },
+      {
+       "annee": "2018",
+       "role": "operateur",
+       "nom": "Desserte maritime du golfe de Girolata",
+       "detail": "Assure le ravitaillement (vivres, fret, matériaux) et le transport de passagers vers Girolata, village non accessible par la route ; commandant cité : Laurent Macquet. Navire sous le seuil de tonnage d'attribution d'un numéro IMO (pas d'IMO).",
+       "source": "https://www.meretmarine.com/fr/content/alumarine-acheve-un-bateau-fret-et-passagers-pour-la-corse"
+      }
+     ],
+     "capacite_fret": "7 t"
+    },
+    {
+     "nom": "VB Lama",
+     "type": "pilotine",
+     "annee": "2017",
+     "longueur_m": 14.93,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "9 places dont 3 d'équipage",
+     "energie": "2 x Cummins QSM 11 de 455 ch, deux lignes d'arbre en V-Drive, 23 nœuds",
+     "client": "Port de Lomé (Togo)",
+     "classification": "Pilotine aluminium (architecte Géronimo Naval Design) adaptée environnement tropical ; largeur 4,6 m",
+     "source": "https://www.meretmarine.com/fr/content/alumarine-livre-une-pilotine-lome",
+     "propulsion": [
+      "diesel-mdo"
+     ]
+    },
+    {
+     "nom": "L'Escapade",
+     "type": "navire-a-passagers-fluvial-hybride",
+     "annee": "2015",
+     "longueur_m": 27.8,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "102 passagers en mode promenade / 60 couverts en mode restaurant",
+     "energie": "Hybride : moteur diesel + moteur électrique couplés via boîte de transmission, batteries lithium fer phosphate (LiFePO4) 150 kW, navigation silencieuse en mode électrique ; réserve gasoil 1800 L",
+     "client": "Communauté de communes des Deux Vallées (Oise) ; exploité par La Cité des Bateliers, ligne Longueil-Annel / Compiègne",
+     "classification": "Navire à passagers eaux intérieures (architecte DN&T) ; largeur 5 m, tirant d'eau 0,77 m",
+     "source": "https://www.meretmarine.com/fr/content/alumarine-livre-une-vedette-de-28-metres-propulsion-hybride",
+     "propulsion": [
+      "electrique-batterie",
+      "hybride",
+      "diesel-mdo"
+     ],
+     "capacite_pax": 102,
+     "operateur": "Communauté de communes des Deux Vallées (croisières sur l'Oise)",
+     "proprietaire": "Communauté de communes des Deux Vallées",
+     "timeline": [
+      {
+       "annee": "2015",
+       "role": "construction",
+       "nom": "Alumarine Shipyard (Couëron)",
+       "detail": "Vedette à passagers fluviale en aluminium 27,8 m x 5 m, tirant d'eau 0,77 m, propulsion hybride (mode thermique et mode électrique silencieux, ~3 h d'autonomie en électrique), plans DN&T. Capacité 102 passagers en croisière / 60 en formule restaurant.",
+       "source": "https://www.meretmarine.com/fr/content/alumarine-livre-une-vedette-de-28-metres-propulsion-hybride",
+       "prix": "≈ 1 000 000 €"
+      },
+      {
+       "annee": "2015",
+       "role": "evenement",
+       "nom": "Longueil-Annel (Oise)",
+       "detail": "Baptisée le 10 octobre à Longueil-Annel. Mise en service sur l'Oise (et non la Loire) : croisières commentées Longueil-Annel - Compiègne (~1h30) et croisières-repas (~3h).",
+       "source": "https://www.fluvialnet.com/murmures-actualites-lescapade-un-bateau-a-passagers-pour-loise/9764"
+      },
+      {
+       "annee": "2015",
+       "role": "operateur",
+       "nom": "Communauté de communes des Deux Vallées",
+       "detail": "Commanditaire, propriétaire et exploitant. Croisières touristiques sur l'Oise (valorisées par la Cité des Bateliers / tourisme de l'Oise).",
+       "source": "https://www.citedesbateliers.com/croisiere-sur-l-oise-le-bateau-lescapade-2/"
+      }
+     ],
+     "prix_acquisition": "≈ 1 M€ (2015, coût total de construction)"
+    },
+    {
+     "nom": "SNS 275 La Barcaresienne",
+     "type": "vedette-de-sauvetage",
+     "annee": "2014",
+     "longueur_m": 11.45,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Vedette de sauvetage polyvalente",
+     "energie": "2 moteurs diesel 2x320 cv, vitesse max 30 noeuds",
+     "client": "SNSM, station du Barcares (Pyrenees-Orientales) ; modele a l'origine de la serie SNS 277",
+     "classification": "Aluminium (architecte Geronimo Naval Design)",
+     "source": "https://etablissement.snsm.org/occitanie/pyrenees-orientales/le-barcares/station-snsm-du-barcares-266",
+     "propulsion": [
+      "diesel-mdo"
+     ]
+    },
+    {
+     "nom": "Douce France",
+     "type": "catamaran-a-voile-de-luxe",
+     "annee": "1998",
+     "longueur_m": 42.2,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "12 invités en 6 cabines (charter de luxe)",
+     "energie": "Voile (goélette catamaran bi-mât) ; jusqu'à 22 nœuds sous voile",
+     "client": "Yacht de charter ; architectes Van Peteghem Lauriot-Prévost (VPLP)",
+     "classification": "Coque aluminium ; greement goelette (schooner) bi-mat ; pas de societe de classification renseignee",
+     "source": "https://en.wikipedia.org/wiki/Douce_France",
+     "propulsion": [
+      "velique"
+     ],
+     "capacite_pax": 12,
+     "architecte": "VPLP Design",
+     "architecte_source": "Wikipedia (Douce France) et CharterWorld : catamaran de 42 m conçu par VPLP design (Marc Van Peteghem et Vincent Lauriot-Prévost), plans d'architecture navale par Marc Van Peteghem ; construit par Alumarine. Design intérieur : Anne-Monique Bonadei (distinct)."
     },
     {
      "nom": "Grain de Sail",
@@ -72490,7 +72418,8 @@
      "titre": "Gérant"
     }
    ],
-   "taille_max": "Carénage/réparation jusqu'à 24-25 m de longueur (LOA max 24 m), largeur (bau) max 8,8-8,9 m sur dock flottant. Aucune capacité de construction neuve documentée."
+   "taille_max": "Carénage/réparation jusqu'à 24-25 m de longueur (LOA max 24 m), largeur (bau) max 8,8-8,9 m sur dock flottant. Aucune capacité de construction neuve documentée.",
+   "navires_references": []
   },
   {
    "id": "marinalu-uturoa-raiatea",
@@ -73013,7 +72942,8 @@
      "source": "https://marinalu.pf/category/professionnels/",
      "propulsion": [
       "diesel-mdo"
-     ]
+     ],
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "Bateaux de plongée (M21 Plongée, M26 Plongée)",
@@ -73157,7 +73087,8 @@
    ],
    "materiaux": [
     "composite"
-   ]
+   ],
+   "navires_references": []
   },
   {
    "id": "armement-enez-atelier-de-reparation-navale-le-port",
@@ -74193,7 +74124,8 @@
    "energies": [
     "diesel"
    ],
-   "taille_max": "Monocoques/quillards jusqu'a ~60 pieds (~18 m) ; levage jusqu'a 25 t ; tirant d'eau max 2,50 m. Limite de halage/refit, non de construction (aucune construction neuve)."
+   "taille_max": "Monocoques/quillards jusqu'a ~60 pieds (~18 m) ; levage jusqu'a 25 t ; tirant d'eau max 2,50 m. Limite de halage/refit, non de construction (aucune construction neuve).",
+   "navires_references": []
   },
   {
    "id": "catamarine-noumea",
@@ -74607,7 +74539,8 @@
    "energies": [
     "diesel"
    ],
-   "taille_max": "Pas de longueur/jauge max constructible publiée. Manutention plafonnée par les moyens de levage existants : portique roulant 30 t et remorques hydrauliques jusqu'à 15-20 t (catamarans), capacité travel-lift indiquée à 35 t selon une source secondaire. Pas de forme de radoub ni de dock flottant ; sortie d'eau par cales de halage (slipway) sur 1,5 ha. Construction neuve limitée à de petites coques aluminium de plaisance."
+   "taille_max": "Pas de longueur/jauge max constructible publiée. Manutention plafonnée par les moyens de levage existants : portique roulant 30 t et remorques hydrauliques jusqu'à 15-20 t (catamarans), capacité travel-lift indiquée à 35 t selon une source secondaire. Pas de forme de radoub ni de dock flottant ; sortie d'eau par cales de halage (slipway) sur 1,5 ha. Construction neuve limitée à de petites coques aluminium de plaisance.",
+   "navires_references": []
   },
   {
    "id": "carenantilles-le-marin",
@@ -74755,7 +74688,8 @@
     "composite",
     "bois"
    ],
-   "taille_max": "Navires de plaisance et de travail jusqu'a 50 m (superyachts); leve max 440 tonnes (travel lift Cimolai), tirant d'eau max 5 m, largeur max 14 m"
+   "taille_max": "Navires de plaisance et de travail jusqu'a 50 m (superyachts); leve max 440 tonnes (travel lift Cimolai), tirant d'eau max 5 m, largeur max 14 m",
+   "navires_references": []
   },
   {
    "id": "mayotte-marine-service-mamoudzou",
@@ -74830,7 +74764,8 @@
    "materiaux": [
     "composite"
    ],
-   "geo_source": "https://www.pappers.fr/entreprise/mayotte-marine-service-094120367"
+   "geo_source": "https://www.pappers.fr/entreprise/mayotte-marine-service-094120367",
+   "navires_references": []
   },
   {
    "id": "chantier-naval-rousseau-etablissements-rousseau-saint-mammes",
@@ -74977,7 +74912,8 @@
    "energies": [
     "diesel"
    ],
-   "taille_max": "Unités fluviales jusqu'à ~50 m de longueur (limite cale/dock), tirant d'eau max 1,2-2 m. Pas de jauge GT pertinente."
+   "taille_max": "Unités fluviales jusqu'à ~50 m de longueur (limite cale/dock), tirant d'eau max 1,2-2 m. Pas de jauge GT pertinente.",
+   "navires_references": []
   },
   {
    "id": "chantier-naval-de-watten-cnw-chantier-naval-worl-watten",
@@ -75099,7 +75035,8 @@
     "diesel",
     "électrique-batterie"
    ],
-   "taille_max": "Longueur max 42 m en cale sèche (type Freycinet, tirant d'eau 1,10 m) ; construction neuve sur mesure jusqu'à 40 m en acier ; levage > 15 tonnes. Jauge non documentée."
+   "taille_max": "Longueur max 42 m en cale sèche (type Freycinet, tirant d'eau 1,10 m) ; construction neuve sur mesure jusqu'à 40 m en acier ; levage > 15 tonnes. Jauge non documentée.",
+   "navires_references": []
   },
   {
    "id": "chantiers-navals-vandenbossche-villeneuve-la-ga",
@@ -76665,7 +76602,8 @@
     "polyester/fibre de verre"
    ],
    "taille_max": "Levage / sortie d'eau jusqu'à 20 tonnes (grue ou remorquage hydraulique). Pas de construction neuve : capacité bornée par le levage et les 3 postes de cale (slipway) pour bateaux fluviaux et de plaisance. Longueur et jauge max non publiées.",
-   "geo_source": "https://nominatim.openstreetmap.org/search?q=20+chemin+des+deux+ponts+82100+Castelsarrasin&format=json"
+   "geo_source": "https://nominatim.openstreetmap.org/search?q=20+chemin+des+deux+ponts+82100+Castelsarrasin&format=json",
+   "navires_references": []
   },
   {
    "id": "les-chantiers-des-hauts-de-lutece-saint-mammes",
@@ -78654,7 +78592,8 @@
    "materiaux": [
     "bois"
    ],
-   "geo_source": "https://www.pole-nautique-loire-estuaire.fr/menuiserie-marine-jpto/charpente-de-marine/"
+   "geo_source": "https://www.pole-nautique-loire-estuaire.fr/menuiserie-marine-jpto/charpente-de-marine/",
+   "navires_references": []
   },
   {
    "id": "chantier-naval-bernard-saint-vaast-la-h",
@@ -115880,6 +115819,44 @@
      "source_ref": "marinetraffic.com IMO 1052696 ; fda.no/en/fda-niklas"
     },
     {
+     "nom": "FDA Niklas",
+     "type": "catamaran de servitude aquacole",
+     "imo": "9809241",
+     "annee": "2016",
+     "longueur_m": null,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": null,
+     "energie": "Diesel-électrique",
+     "propulsion": [
+      "diesel-electrique"
+     ],
+     "client": "Finnsnes Dykk & Anleggservice (FDA)",
+     "operateur": "Finnsnes Dykk & Anleggservice (FDA)",
+     "proprietaire": "Finnsnes Dykk & Anleggservice (FDA)",
+     "pavillon": "Norvège",
+     "classification": null,
+     "designer": "Fitjar Mek. Verksted",
+     "source": "https://fda.no/en/fartoy",
+     "timeline": [
+      {
+       "annee": "inconnu",
+       "role": "construction",
+       "nom": "Niklas",
+       "detail": "Catamaran de servitude aquacole construit par Fitjar Mek. Verksted pour Finnsnes Dykk & Anleggservice (ancien navire, série FMV2xx, antérieur aux FDA Mimmi/Niklas/Emilie récents) ; propulsion diesel-électrique. Année exacte non confirmée. Attribution constructeur FMV confirmée par la liste de flotte FDA",
+       "source": "fda.no/en/fartoy"
+      },
+      {
+       "annee": "inconnu",
+       "role": "pavillon",
+       "nom": "Norvège",
+       "detail": "Immatriculé en Norvège (IMO 9809241, MMSI 258688000) ; année d'immatriculation non confirmée",
+       "source": "vesselfinder.com IMO 9809241"
+      }
+     ],
+     "source_ref": "attribution constructeur FMV) ; vesselfinder.com IMO 9809241"
+    },
+    {
      "nom": "Liland",
      "type": "navire de servitude aquacole (service vessel)",
      "imo": null,
@@ -116043,44 +116020,6 @@
        "source": "maritimt.com/nb/batomtaler/hordabas-042019"
       }
      ]
-    },
-    {
-     "nom": "FDA Niklas",
-     "type": "catamaran de servitude aquacole",
-     "imo": "9809241",
-     "annee": "2016",
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "Diesel-électrique",
-     "propulsion": [
-      "diesel-electrique"
-     ],
-     "client": "Finnsnes Dykk & Anleggservice (FDA)",
-     "operateur": "Finnsnes Dykk & Anleggservice (FDA)",
-     "proprietaire": "Finnsnes Dykk & Anleggservice (FDA)",
-     "pavillon": "Norvège",
-     "classification": null,
-     "designer": "Fitjar Mek. Verksted",
-     "source": "https://fda.no/en/fartoy",
-     "timeline": [
-      {
-       "annee": "inconnu",
-       "role": "construction",
-       "nom": "Niklas",
-       "detail": "Catamaran de servitude aquacole construit par Fitjar Mek. Verksted pour Finnsnes Dykk & Anleggservice (ancien navire, série FMV2xx, antérieur aux FDA Mimmi/Niklas/Emilie récents) ; propulsion diesel-électrique. Année exacte non confirmée. Attribution constructeur FMV confirmée par la liste de flotte FDA",
-       "source": "fda.no/en/fartoy"
-      },
-      {
-       "annee": "inconnu",
-       "role": "pavillon",
-       "nom": "Norvège",
-       "detail": "Immatriculé en Norvège (IMO 9809241, MMSI 258688000) ; année d'immatriculation non confirmée",
-       "source": "vesselfinder.com IMO 9809241"
-      }
-     ],
-     "source_ref": "attribution constructeur FMV) ; vesselfinder.com IMO 9809241"
     },
     {
      "nom": "Endre Dyrøy 1",
@@ -133247,7 +133186,8 @@
        "detail": "Passage en cale sèche (~1 semaine de maintenance et modifications) ; référence publiée par le chantier illustrant son activité de docking",
        "source": "http://www.safeyards.no/category/news/"
       }
-     ]
+     ],
+     "tracabilite": "url-regroupement"
     }
    ],
    "sources": [
@@ -140424,7 +140364,7 @@
       "diesel-mdo"
      ],
      "prix_acquisition": null,
-     "source": "https://fishingnews.co.uk/tag/ocean-vision-bf-190/",
+     "source": "https://fishingnews.co.uk/tag/ocean-vision-bf-190/ ; https://www.vesselfinder.com/vessels/OCEAN-VISION-IMO-9658757-MMSI-0 ; https://www.marinetraffic.com/en/ais/details/ships/shipid:5349355/mmsi:232012960/imo:0/vessel:OCEAN_VISION_BF190",
      "timeline": [
       {
        "annee": "2014",
@@ -140437,7 +140377,7 @@
      ],
      "architecte": "Macduff Ship Design",
      "architecte_source": "https://fishingnews.co.uk/tag/twin-rig-trawler/ + worldfishing.net (Macduff Ship Design, bureau de conception interne de Macduff Shipyards)",
-     "source_ref": "https://fishingnews.co.uk/tag/ocean-vision-bf-190/ ; https://www.vesselfinder.com/vessels/OCEAN-VISION-IMO-9658757-MMSI-0 ; https://www.marinetraffic.com/en/ais/details/ships/shipid:5349355/mmsi:232012960/imo:0/vessel:OCEAN_VISION_BF190"
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "Benarkle II",
@@ -150853,7 +150793,7 @@
       }
      ],
      "source_ref": "coque de Sydväst Stålbåtar AB, armement/livraison Ö-varvet, Öckerö",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "GG 39 Rossö (1988)",
@@ -150880,7 +150820,7 @@
       }
      ],
      "source_ref": "coque de Sydväst Stålbåtar AB, armement Ö-varvet, Rörö",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "GG 237 Marika",
@@ -150914,7 +150854,7 @@
       }
      ],
      "source_ref": "fiske.zaramis.se 2015-06-18 (coque de TJ Svets AB, achevement Ö-varvet",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "GG 981 Ocean",
@@ -150948,7 +150888,7 @@
       }
      ],
      "source_ref": "fiske.zaramis.se 2015-06-18",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "GG 73 Ingun",
@@ -150975,7 +150915,7 @@
       }
      ],
      "source_ref": "coque assemblee a l'atelier de Hönö, achevement Öckerö",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "GG 392 Strannefjord",
@@ -151009,7 +150949,7 @@
       }
      ],
      "source_ref": "fiske.zaramis.se 2015-06-18",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "GG 781 Sandefjord",
@@ -151036,7 +150976,7 @@
       }
      ],
      "source_ref": "coque fabriquee a l'unite de Hönö, achevement Öckerö",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "GG 32 Danavik",
@@ -151070,7 +151010,7 @@
       }
      ],
      "source_ref": "fiske.zaramis.se 2015-06-18",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "GG 70 Marie",
@@ -151097,7 +151037,7 @@
       }
      ],
      "source_ref": "coque de Bredgaard Bådeværft, achevement Ö-varvet",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "GG 29 Tristan",
@@ -151131,7 +151071,7 @@
       }
      ],
      "source_ref": "fiske.zaramis.se 2015-06-18 (coque de Bredgaard Bådeværft, achevement Ö-varvet",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-regroupement"
     }
    ],
    "sources": [
@@ -154926,7 +154866,8 @@
        "detail": "Le catamaran tout-électrique d'Oma pour le Lysefjord est le 'Rygerlys', commandé par Rødne Fjord Cruise (route Lauvik–Lysebotn), livraison juin 2026 — distinct du M/S Lysefjord (IMO 9381158). Sourcé ici pour signaler le risque de confusion sur l'identité du navire visé par la fiche.",
        "source": "https://www.mynewsdesk.com/fjord-norway/news/roedne-fjord-cruise-invests-in-large-new-hybrid-vessel-for-bergen-507141"
       }
-     ]
+     ],
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "Vingtor",
@@ -169732,7 +169673,8 @@
        "detail": "Premiere unite documentee du chantier, construite pour des armateurs de Halso, lors du passage du borde a clin au borde a franc-bord",
        "source": "https://fiskebatar.zaramis.se/varv/ringens-varv/"
       }
-     ]
+     ],
+     "tracabilite": "url-regroupement"
     }
    ],
    "sources": [
@@ -170321,7 +170263,7 @@
      "longueur_m": null,
      "jauge_gt": null,
      "port_lourd_dwt": null,
-     "capacite": null,
+     "capacite": "dragueur de mines en bois (amagnetique, coque 3 plis de pin colles en diagonale) ; classe Arko (M57-M68)",
      "capacite_pax": null,
      "capacite_vehicules": null,
      "capacite_fret": null,
@@ -170341,8 +170283,24 @@
        "nom": "Oskarshamnsvarvet",
        "detail": "Tete de classe Arkö pour la Marine suedoise",
        "source": "https://sv.wikipedia.org/wiki/Oskarshamnsvarvet_Sweden"
+      },
+      {
+       "annee": "1957",
+       "role": "construction",
+       "nom": "Oskarshamns Varv (coque sous-traitee a Fisksatra varv, equipement a Oskarshamn)",
+       "detail": "navire de tete de la classe Arko, lance 21 janv 1957, livre a la marine 1958 ; coque bois amagnetique",
+       "source": "sv.wikipedia.org/wiki/Ark%C3%B6-klass"
+      },
+      {
+       "annee": "1958",
+       "role": "operateur",
+       "nom": "Marine royale suedoise",
+       "detail": "dragueur de mines cotier",
+       "source": "sv.wikipedia.org/wiki/Ark%C3%B6-klass"
       }
-     ]
+     ],
+     "pavillon": "Suede",
+     "source_ref": "vhfk.se (serie Arko M57-M68"
     },
     {
      "nom": "R/V Nils Strömcrona",
@@ -171966,42 +171924,6 @@
      ],
      "source_ref": "recherche web (de.wikipedia / marinepublic) ; faktaomfartyg.se/finneagle_1981.htm",
      "tracabilite": "url-domaine-seul"
-    },
-    {
-     "nom": "HMS Arko",
-     "type": "dragueur de mines",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "imo": null,
-     "annee": "1958",
-     "longueur_m": null,
-     "jauge_gt": null,
-     "capacite": "dragueur de mines en bois (amagnetique, coque 3 plis de pin colles en diagonale) ; classe Arko (M57-M68)",
-     "energie": "diesel",
-     "classification": null,
-     "client": "Marine royale suedoise (Svenska marinen)",
-     "operateur": "Marine royale suedoise",
-     "proprietaire": "Marine royale suedoise",
-     "pavillon": "Suede",
-     "source": "https://sv.wikipedia.org/wiki/Ark%C3%B6-klass",
-     "timeline": [
-      {
-       "annee": "1957",
-       "role": "construction",
-       "nom": "Oskarshamns Varv (coque sous-traitee a Fisksatra varv, equipement a Oskarshamn)",
-       "detail": "navire de tete de la classe Arko, lance 21 janv 1957, livre a la marine 1958 ; coque bois amagnetique",
-       "source": "sv.wikipedia.org/wiki/Ark%C3%B6-klass"
-      },
-      {
-       "annee": "1958",
-       "role": "operateur",
-       "nom": "Marine royale suedoise",
-       "detail": "dragueur de mines cotier",
-       "source": "sv.wikipedia.org/wiki/Ark%C3%B6-klass"
-      }
-     ],
-     "source_ref": "vhfk.se (serie Arko M57-M68"
     }
    ],
    "sources": [
@@ -172256,7 +172178,8 @@
        "detail": "OT-rederierna fait faillite en 1982 ; la flotte est dispersée et vendue. Devenir précis de l'Ilse non sourçable de façon fiable.",
        "source": "https://www.faktaomfartyg.se/ot_rederiet.htm"
       }
-     ]
+     ],
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "MF Strada Corsara (ex-Linné)",
@@ -173949,7 +173872,8 @@
        "detail": "Chalutier acier livre, l'un des 12 chalutiers commandes sous Helge Olsson (design FKAB Uddevalla)",
        "source": "https://fiskebatar.zaramis.se/varv/marstrands-mekaniska-verkstad/"
       }
-     ]
+     ],
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "GK 220 Guðbjörg",
@@ -173980,7 +173904,8 @@
        "detail": "Chalutier acier exporte vers l'Islande",
        "source": "https://fiskebatar.zaramis.se/varv/marstrands-mekaniska-verkstad/"
       }
-     ]
+     ],
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "Sölve",
@@ -174056,7 +173981,8 @@
        "detail": "Coque construite a Marstrand, achevee en Norvege ; livree a un armateur des Shetland",
        "source": "https://fiskebatar.zaramis.se/varv/marstrands-mekaniska-verkstad/"
       }
-     ]
+     ],
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "HMS M3",
@@ -174321,7 +174247,7 @@
      "client": "Stanley, Nils et Dan Andersson ; Filip Larsson (Fotö)",
      "pavillon": "Suède (district GG)",
      "capacite": "Chalutier acier",
-     "source": "https://fiskebatar.zaramis.se",
+     "source": "https://fiskebatar.zaramis.se/titania/",
      "timeline": [
       {
        "annee": "1961",
@@ -174331,8 +174257,7 @@
        "source": "fiskebatar.zaramis.se Marstrands Mekaniska Verkstad"
       }
      ],
-     "source_ref": "Marstrands Mekaniska Verkstad",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "Marstrands Mekaniska Verkstad"
     },
     {
      "nom": "Hemland (LL 701)",
@@ -174553,7 +174478,7 @@
      "client": "Karl-Bror Karlsson, Arne L. Carlsson, Stig E. Carlsson, Östen Antonsson (Donsö)",
      "pavillon": "Suède (district GG)",
      "capacite": "Chalutier acier",
-     "source": "https://fiskebatar.zaramis.se",
+     "source": "https://fiskebatar.zaramis.se/kristina/",
      "timeline": [
       {
        "annee": "1965",
@@ -174563,8 +174488,7 @@
        "source": "fiskebatar.zaramis.se Marstrands Mekaniska Verkstad"
       }
      ],
-     "source_ref": "Marstrands Mekaniska Verkstad",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "Marstrands Mekaniska Verkstad"
     },
     {
      "nom": "Rättvik (GG 59)",
@@ -174601,7 +174525,7 @@
      "client": "Valter Larsson, Rune Antonsson, Gotthard Bengtsson, Gösta Olausson (Björkö)",
      "pavillon": "Suède (district GG)",
      "capacite": "Chalutier acier",
-     "source": "https://fiskebatar.zaramis.se",
+     "source": "https://fiskebatar.zaramis.se/gg-575-tudor/",
      "timeline": [
       {
        "annee": "1966",
@@ -174611,8 +174535,7 @@
        "source": "fiskebatar.zaramis.se Marstrands Mekaniska Verkstad"
       }
      ],
-     "source_ref": "Marstrands Mekaniska Verkstad",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "Marstrands Mekaniska Verkstad"
     },
     {
      "nom": "Renland (GG 156, puis GG 346)",
@@ -174625,7 +174548,7 @@
      "client": "Wilhelm Utbult, Karl-Gunnar Berntsson, Helge Samuelsson (Öckerö)",
      "pavillon": "Suède (district GG)",
      "capacite": "Chalutier acier ; commande mai 1965, livraison juillet 1966",
-     "source": "https://fiskebatar.zaramis.se",
+     "source": "https://fiskebatar.zaramis.se/gg-346-renland-1966/",
      "timeline": [
       {
        "annee": "1965",
@@ -174642,8 +174565,7 @@
        "source": "fiskebatar.zaramis.se Marstrands Mekaniska Verkstad"
       }
      ],
-     "source_ref": "Marstrands Mekaniska Verkstad ; fiskebatar.zaramis.se GG 346 Renland (1966",
-     "tracabilite": "url-domaine-seul"
+     "source_ref": "Marstrands Mekaniska Verkstad ; fiskebatar.zaramis.se GG 346 Renland (1966"
     },
     {
      "nom": "Ekefjord (GG 715)",
@@ -174690,7 +174612,7 @@
      "pavillon": "Suède (GG) puis Danemark",
      "longueur_m": 31.5,
      "capacite": "Chalutier acier de 103 pieds (31,5 m), machine jusqu'à 1000 ch",
-     "source": "https://fiskebatar.zaramis.se",
+     "source": "https://fiskebatar.zaramis.se/category/fiskelagen/bohuslan/marstrand/",
      "timeline": [
       {
        "annee": "1968",
@@ -174722,7 +174644,7 @@
       }
      ],
      "source_ref": "Marstrands Mekaniska Verkstad",
-     "tracabilite": "url-domaine-seul"
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "Stjørnan (FD 675)",
@@ -174827,7 +174749,7 @@
      "client": "Armateur norvégien",
      "pavillon": "Norvège (immatriculations T 137 BG et F 127 BD)",
      "capacite": "Coque/navire construit par FEAB (skrovbygge)",
-     "source": "https://fiskebatar.zaramis.se",
+     "source": "https://fiskebatar.zaramis.se/tag/strandby/",
      "timeline": [
       {
        "annee": "1978",
@@ -174838,7 +174760,7 @@
       }
      ],
      "source_ref": "Marstrands Mekaniska Verkstad",
-     "tracabilite": "url-domaine-seul"
+     "tracabilite": "url-regroupement"
     },
     {
      "nom": "Sanco Atlantic (ex-Veronica, ex-Hellesoy, ex-Atlantic Explorer)",
