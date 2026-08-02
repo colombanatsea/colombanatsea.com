@@ -20,7 +20,8 @@
         <button id="ent-navires" class="entitytab" role="tab" aria-selected="false" data-entity="navires">Navires</button>
         <button id="ent-dessertes" class="entitytab" role="tab" aria-selected="false" data-entity="dessertes">Dessertes</button>
         <button id="ent-operateurs" class="entitytab" role="tab" aria-selected="false" data-entity="operateurs">Opérateurs</button>
-        <button id="ent-architectes" class="entitytab" role="tab" aria-selected="false" data-entity="architectes">Architectes</button>
+        <button id="ent-architectes" class="entitytab" role="tab" aria-selected="false" data-entity="architectes">Architectes et BE</button>
+        <button id="ent-equipementiers" class="entitytab" role="tab" aria-selected="false" data-entity="equipementiers">Équipementiers</button>
       </div>
       <div class="modetabs" id="modetabs" role="tablist" aria-label="Affichage">
         <button id="mode-annuaire" class="modetab" role="tab" aria-selected="false" data-mode="annuaire">Annuaire</button>
@@ -104,6 +105,11 @@
     <!-- Annuaire architectes -->
     <div id="view-architectes" class="view view--cards is-hidden">
       <div class="cards-grid" id="architectes-list"></div>
+    </div>
+
+    <!-- Annuaire equipementiers -->
+    <div id="view-equipementiers" class="view view--cards is-hidden">
+      <div class="cards-grid" id="equipementiers-list"></div>
     </div>
 
     <!-- Vue navires : recherche par navire + facettes dédiées -->

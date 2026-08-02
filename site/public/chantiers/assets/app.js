@@ -203,7 +203,7 @@
     filters: { q: "", perims: new Set(), type: "", region: "", pays: "",
       navProps: new Set(), navCapTypes: new Set(), navCapMin: 0, navLenMin: 0, navLenMax: 0, navPriceMin: 0, navPriceMax: 0 },
     sort: { key: "nom", dir: 1 },
-    entity: "chantiers", // chantiers | navires | dessertes | architectes
+    entity: "chantiers", // chantiers | navires | dessertes | operateurs | architectes | equipementiers
     mode: "carte",       // annuaire | carte (navires = annuaire seul)
     activeId: null,
   };
@@ -230,6 +230,9 @@
     const res = await fetch("data/chantiers.json", { cache: "no-cache" });
     const data = await res.json();
     state.all = data.chantiers;
+    // Bloc racine ajouté par l'option B. Absent des fichiers antérieurs, d'où
+    // le repli sur un tableau vide : une version ancienne du JSON reste lisible.
+    state.equipementiers = data.equipementiers || [];
     state.perimRef = data.meta.perimetres_ref || {};
     state.typesRef = data.meta.types_navires_ref || {};
     // Index plat des navires de référence (recherche par navire).
@@ -462,6 +465,10 @@
       if (n.operateur) e.operateurs.add(n.operateur);
       if (n._cnom) e.chantiers.add(n._cnom);
     });
+    // Les equipementiers sont une entite de PREMIER RANG : ils viennent du bloc
+    // racine `equipementiers[]` et non d'une derivation des navires. Un
+    // equipementier existe donc meme sans reference de navire publique.
+    (state.equipementiers || []).forEach((e, i) => { e._idx = i; });
     state.architectes = [...amap.values()]
       .sort((a, b) => b.navires.length - a.navires.length || norm(a.nom).localeCompare(norm(b.nom)));
     state.architectes.forEach((e, i) => { e._idx = i; });
@@ -689,6 +696,7 @@
     $("#view-dessertes").classList.toggle("is-hidden", !(e === "dessertes" && m === "annuaire"));
     $("#view-operateurs").classList.toggle("is-hidden", !(e === "operateurs" && m === "annuaire"));
     $("#view-architectes").classList.toggle("is-hidden", !(e === "architectes" && m === "annuaire"));
+    $("#view-equipementiers").classList.toggle("is-hidden", !(e === "equipementiers" && m === "annuaire"));
     if (showMap && map) setTimeout(() => map.invalidateSize(), 60);
   }
 
@@ -703,6 +711,10 @@
       const pts = [];
       (state.dessertes || []).forEach((d) => d.points.forEach((p) => { if (p[0] >= 41 && p[0] <= 52 && p[1] >= -6 && p[1] <= 10) pts.push(p); }));
       if (pts.length) { try { map.fitBounds(L.latLngBounds(pts).pad(0.08), { maxZoom: 9 }); } catch (e) {} return; }
+    }
+    if (state.entity === "equipementiers") {
+      const pts = (state.equipementiers || []).filter((e) => e.lat != null).map((e) => [e.lat, e.lon]);
+      if (pts.length > 1) { try { map.fitBounds(L.latLngBounds(pts).pad(0.2), { maxZoom: 8 }); } catch (e) {} return; }
     }
     if (state.entity === "architectes") {
       const pts = (state.architectes || []).filter((a) => a.lat != null).map((a) => [a.lat, a.lon]);
@@ -1225,6 +1237,7 @@
     if (e === "dessertes") { return m === "carte" ? renderDessertesCarte() : renderDessertesAnnuaire(); }
     if (e === "operateurs") { return m === "carte" ? renderOperateursCarte() : renderOperateursAnnuaire(); }
     if (e === "architectes") { return m === "carte" ? renderArchitectesCarte() : renderArchitectesAnnuaire(); }
+    if (e === "equipementiers") { return m === "carte" ? renderEquipementiersCarte() : renderEquipementiersAnnuaire(); }
     // Chantiers
     const list = sorted(filtered());
     $("#count").innerHTML = list.length === state.all.length
@@ -1237,6 +1250,22 @@
   // Affiche/masque la légende et le bandeau outre-mer selon l'entité cartographiée.
   function mapChrome(entity) {
     const lg = $("#legend"), om = $("#om-strip");
+    if (entity === "equipementiers") {
+      if (lg) {
+        const lib = { "batteries": "Batteries et stockage",
+          "moteurs-electriques": "Moteurs et conversion \u00e9lectrique",
+          "piles-a-combustible": "Piles \u00e0 combustible et hydrog\u00e8ne",
+          "velique": "Propulsion v\u00e9lique", "foils": "Foils et sustentation" };
+        lg.style.display = "";
+        lg.innerHTML = '<div class="legend__title">Levier</div>'
+          + Object.keys(LEVIER_COULEUR).map(function (k) {
+              return '<div class="legend__row"><span class="legend__dot" style="background:'
+                + LEVIER_COULEUR[k] + '"></span>' + (lib[k] || k) + "</div>";
+            }).join("");
+      }
+      if (om) { om.classList.add("is-hidden"); om.innerHTML = ""; }
+      return;
+    }
     if (entity === "operateurs") {
       if (lg) { lg.style.display = ""; lg.innerHTML = `<div class="legend__title">Opérateurs</div><div class="legend__row"><span class="legend__line"></span>desserte exploitée</div><div class="legend__row"><span class="legend__dot" style="background:#c0392b"></span>base / port d'attache</div>`; }
       if (om) { om.classList.add("is-hidden"); om.innerHTML = ""; }
@@ -1417,6 +1446,120 @@
           </li>`).join("")}</ul></div>`;
     $("#drawer-body").querySelectorAll("[data-open-vessel]").forEach((el) =>
       el.addEventListener("click", () => openVessel(state.navires[+el.dataset.openVessel])));
+    $("#drawer").setAttribute("aria-hidden", "false");
+  }
+
+  /* ---------- Équipementiers (bloc racine, option B) ---------- */
+  const LEVIER_COULEUR = {
+    "batteries": "#1f9d55", "moteurs-electriques": "#0b7fd4",
+    "piles-a-combustible": "#d4770b", "velique": "#7a3df0", "foils": "#c2185b",
+  };
+  function filteredEquipementiers() {
+    const nq = norm(state.filters.q);
+    return (state.equipementiers || []).filter((e) => !nq
+      || norm(e.nom).includes(nq) || norm(e.ville).includes(nq)
+      || norm(e.levier_libelle).includes(nq) || norm(e.produit).includes(nq));
+  }
+  function equipCount(list) {
+    const tot = (state.equipementiers || []).length;
+    $("#count").innerHTML = list.length === tot
+      ? "<b>" + tot + "</b> équipementier" + (tot > 1 ? "s" : "")
+      : "<b>" + list.length + "</b> sur " + tot + " équipementiers";
+  }
+  function renderEquipementiersAnnuaire() {
+    const list = filteredEquipementiers();
+    equipCount(list);
+    const el = $("#equipementiers-list");
+    if (!list.length) { el.innerHTML = '<p class="empty">Aucun équipementier.</p>'; return; }
+    el.innerHTML = list.map(function (e) {
+      const loc = esc([e.ville, e.pays].filter(Boolean).join(", ") || "Localisation n.c.");
+      const res = e.confiance === "moyenne"
+        ? '<span class="ecard__pin">source à conforter</span>' : "";
+      return '<button class="ecard" data-eqid="' + e._idx + '">'
+        + '<div class="ecard__nom">' + esc(e.nom) + "</div>"
+        + '<div class="ecard__meta">' + loc + "</div>"
+        + '<div class="ecard__stats"><span>' + esc(e.levier_libelle || "") + "</span>"
+        + res + "</div></button>";
+    }).join("");
+    el.querySelectorAll("[data-eqid]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        openEquipementier(state.equipementiers[+b.dataset.eqid]);
+      });
+    });
+  }
+  function renderEquipementiersCarte() {
+    if (!map || !markerLayer) return;
+    mapChrome("equipementiers");
+    const list = filteredEquipementiers();
+    equipCount(list);
+    markerLayer.clearLayers(); markers.clear();
+    list.filter(function (e) { return e.lat != null; }).forEach(function (e) {
+      const mk = L.circleMarker([e.lat, e.lon], { radius: 8, color: "#fff", weight: 2,
+        fillColor: LEVIER_COULEUR[e.levier] || "#555", fillOpacity: 1 });
+      mk.bindPopup('<div class="pp-nom">' + esc(e.nom) + "</div>"
+        + '<div class="pp-meta">' + esc([e.ville, e.pays].filter(Boolean).join(", "))
+        + " &middot; " + esc(e.levier_libelle || "") + "</div>"
+        + '<div class="pp-btn" data-open-eq="' + e._idx + '">Voir la fiche</div>');
+      mk.on("popupopen", function (ev) {
+        const b = ev.popup.getElement().querySelector("[data-open-eq]");
+        if (b) b.addEventListener("click", function () {
+          openEquipementier(state.equipementiers[+b.dataset.openEq]);
+        });
+      });
+      mk.addTo(markerLayer);
+    });
+    renderEquipementiersSide(list);
+  }
+  function renderEquipementiersSide(list) {
+    const el = $("#results");
+    if (!list.length) { el.innerHTML = '<p class="empty">Aucun équipementier.</p>'; return; }
+    el.innerHTML = list.map(function (e) {
+      return '<div class="card card--solo" data-eqid="' + e._idx + '">'
+        + '<div class="card__body"><div class="card__nom">' + esc(e.nom) + "</div>"
+        + '<div class="card__meta">'
+        + esc([e.ville, e.levier_libelle].filter(Boolean).join(" \u00b7 "))
+        + "</div></div></div>";
+    }).join("");
+    el.querySelectorAll("[data-eqid]").forEach(function (c) {
+      c.addEventListener("click", function () {
+        const e = state.equipementiers[+c.dataset.eqid];
+        if (e.lat != null && map) map.setView([e.lat, e.lon], 9, { animate: true });
+        openEquipementier(e);
+      });
+    });
+  }
+  function openEquipementier(e) {
+    if (!e) return;
+    const yard = e.rattachement_chantier
+      ? (state.all || []).find(function (c) { return c.id === e.rattachement_chantier; })
+      : null;
+    const fact = function (k, v) {
+      return v ? '<div class="d-fact"><div class="d-fact__k">' + k
+        + '</div><div class="d-fact__v">' + esc(v) + "</div></div>" : "";
+    };
+    $("#drawer-body").innerHTML =
+      '<div class="d-eyebrow">Équipementier &middot; ' + esc(e.levier_libelle || "") + "</div>"
+      + '<h2 class="d-nom" id="d-nom">' + esc(e.nom) + "</h2>"
+      + '<div class="d-loc">'
+      + esc([e.ville, e.region, e.pays].filter(Boolean).join(" \u00b7 ")
+            || "Localisation à préciser") + "</div>"
+      + (e.produit ? '<div class="d-section"><h3>Produit</h3><p>' + esc(e.produit)
+                     + "</p></div>" : "")
+      + '<div class="d-section"><h3>Informations</h3><div class="d-grid">'
+      + fact("Raison sociale", e.raison_sociale)
+      + fact("Levier", e.levier_libelle)
+      + fact("Adresse", e.adresse)
+      + fact("Niveau de confiance", e.confiance)
+      + "</div></div>"
+      + (yard ? '<div class="d-section"><h3>Rattachement</h3><p>Gamme portée par le chantier <b>'
+                + esc(yard.nom) + "</b>, ce n'est pas une société indépendante.</p></div>" : "")
+      + (e.note ? '<div class="d-section"><h3>Réserve</h3><p>' + esc(e.note) + "</p></div>" : "")
+      + '<div class="d-section"><h3>Sources</h3><ul class="d-list">'
+      + (e.sources || []).map(function (s) {
+          return '<li><a href="' + esc(s) + '" target="_blank" rel="noopener noreferrer">'
+            + esc(s) + "</a></li>";
+        }).join("")
+      + "</ul></div>";
     $("#drawer").setAttribute("aria-hidden", "false");
   }
 
