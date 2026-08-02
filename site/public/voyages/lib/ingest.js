@@ -116,7 +116,7 @@
   }
 
   async function xlsxRows(file) {
-    if (!g.XLSX) await loadScript("./vendor/xlsx.full.min.js");
+    if (!g.XLSX) await loadScript("./lib_ext/xlsx.full.min.js");
     const buf = await file.arrayBuffer();
     const wb = g.XLSX.read(buf, { type: "array" });
     const ws = wb.Sheets[wb.SheetNames[0]];
@@ -130,12 +130,12 @@
   }
 
   async function pdfRows(file) {
-    if (!g.pdfjsLib) await loadScript("./vendor/pdf.min.js");
+    if (!g.pdfjsLib) await loadScript("./lib_ext/pdf.min.js");
     // Parsing PDF dans le thread principal, sans Web Worker : on charge le module worker
     // comme script normal. pdf.js detecte globalThis.pdfjsWorker.WorkerMessageHandler et
     // n'appelle jamais new Worker() -> indifferent a worker-src de la CSP. isEvalSupported
     // false car la CSP n'autorise pas 'unsafe-eval'.
-    if (!(g.pdfjsWorker && g.pdfjsWorker.WorkerMessageHandler)) await loadScript("./vendor/pdf.worker.min.js");
+    if (!(g.pdfjsWorker && g.pdfjsWorker.WorkerMessageHandler)) await loadScript("./lib_ext/pdf.worker.min.js");
     const buf = await file.arrayBuffer();
     const pdf = await g.pdfjsLib.getDocument({ data: buf, isEvalSupported: false }).promise;
     const rows = [];

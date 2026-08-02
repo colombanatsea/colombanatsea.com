@@ -21368,477 +21368,239 @@
     "solaire (assistance, panneaux intégrés rooftop ~2000 W)"
    ],
    "taille_max": "Environ 24 m de longueur hors-tout (modèle Power 80, plus grand catamaran à moteur du chantier, 23,98 m, lancé 2025). Pas de jauge GT publiée (gamme plaisance, navires sous 24 m / sous le seuil de jaugeage commercial).",
-   "navires_references": [
+   "navires_references": [],
+   "produits": [
     {
-     "nom": "Power 80",
-     "type": "modele_serie",
+     "type": "Power 80",
+     "details": "Jusqu'à 12 invités ; >400 m2 d'espace de vie ; configuration modulable 6 cabines",
      "annee": "2025",
      "longueur_m": 23.98,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Jusqu'à 12 invités ; >400 m2 d'espace de vie ; configuration modulable 6 cabines",
-     "energie": "Diesel - 2 x 750 ch (std) jusqu'à 2 x 950 ch (option), réservoir 4800 L",
-     "client": "Marché plaisance / charter (vaisseau amiral de la gamme moteur)",
-     "classification": "CE Catégorie A",
      "source": "https://www.motoryachts-fountaine-pajot.com/en/motor-yachts-catamarans/catamaran-power-80/",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 12
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Veya 53",
-     "type": "modele_serie",
+     "type": "Veya 53",
+     "details": "Nouvelle gamme de motor yachts (~53 pieds)",
      "annee": "2025",
      "longueur_m": 19.1,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Nouvelle gamme de motor yachts (~53 pieds)",
-     "energie": "Diesel bi-moteur ; orientation efficience énergétique",
-     "client": "Marché plaisance / charter",
-     "classification": "CE Catégorie A",
      "source": "https://www.motoryachts-fountaine-pajot.com/en/motor-yachts-catamarans/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "FPY120",
-     "type": "modele_serie",
+     "type": "FPY120",
+     "details": "Vaisseau amiral de la gamme, plus grand catamaran à moteur du chantier (>35 m)",
      "annee": "2026",
      "longueur_m": 35,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Vaisseau amiral de la gamme, plus grand catamaran à moteur du chantier (>35 m)",
-     "energie": "Diesel (propulsion bi-moteur), grande autonomie",
-     "client": "Marché yachting de luxe / superyacht catamaran",
-     "classification": "CE Catégorie A",
      "source": "https://www.yachtbuyer.com/en-us/news/new-35m-fountaine-pajot-fpy120-catamaran-unveiled-at-2026-pbibs",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Power 67",
-     "type": "modele_serie",
+     "type": "Power 67",
+     "details": "4 cabines invités, couchage jusqu'à 14 personnes",
      "annee": "2023",
      "longueur_m": 19.69,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "4 cabines invités, couchage jusqu'à 14 personnes",
-     "energie": "Diesel - 2 x 300 ch à 2 x 435 ch, autonomie ~4000 nq en vitesse éco, réservoir ~4000 L",
-     "client": "Marché plaisance / charter (catamaran à moteur)",
-     "classification": "CE Catégorie A",
      "source": "https://www.yachtbuyer.com/en/fountaine-pajot/new/power-67",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 14
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "FPY70",
-     "type": "modele_serie",
+     "type": "FPY70",
+     "details": "Catamaran à moteur de grande croisière (~75 pieds)",
      "annee": "2023",
      "longueur_m": 22.95,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran à moteur de grande croisière (~75 pieds)",
-     "energie": "Diesel bi-moteur",
-     "client": "Marché plaisance / yachting de luxe",
-     "classification": "CE Catégorie A",
      "source": "https://www.motoryachts-fountaine-pajot.com/en/motor-yachts-catamarans/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Thira 80",
-     "type": "modele_serie",
+     "type": "Thira 80",
+     "details": "Catamaran à voile de grand luxe (~80 pieds), plus grand voilier du chantier",
      "annee": "2023",
      "longueur_m": 24,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran à voile de grand luxe (~80 pieds), plus grand voilier du chantier",
-     "energie": "Voile + propulsion diesel auxiliaire ; options hybride/électrique",
-     "client": "Marché plaisance / charter haut de gamme",
-     "classification": "CE Catégorie A",
      "source": "https://www.giornaledellavela.com/2025/10/31/fountaine-pajot-history-of-a-shipyard-that-revolutionized-the-world-of-catamarans/?lang=en",
-     "propulsion": [
-      "hybride",
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Aura 51 (FP51)",
-     "type": "modele_serie",
+     "type": "Aura 51 (FP51)",
+     "details": "4 à 6 cabines doubles ; déplacement lège ~18,1 t ; flybridge",
      "annee": "2021",
      "longueur_m": 15.91,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "4 à 6 cabines doubles ; déplacement lège ~18,1 t ; flybridge",
-     "energie": "Voile (GV 95 m2, génois 59 m2) + 2 x 60 ch ou 2 x 75 ch diesel ; version Smart Electric (panneaux solaires 1600 W, batteries lithium-ion ~54 kWh)",
-     "client": "Marché plaisance / charter (Cruising World Boat of the Year 2024 <50')",
-     "classification": "CE Catégorie A",
      "source": "https://www.catamarans-fountaine-pajot.com/en/sailing-catamarans/catamaran-fp51/",
-     "propulsion": [
-      "electrique-batterie",
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Tanna 47",
-     "type": "modele_serie",
+     "type": "Tanna 47",
+     "details": "3 à 5 cabines ; déplacement lège ~14,7 t ; voilure 77 m2",
      "annee": "2021",
      "longueur_m": 13.94,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "3 à 5 cabines ; déplacement lège ~14,7 t ; voilure 77 m2",
-     "energie": "Voile + diesel ; option panneaux solaires intégrés",
-     "client": "Marché plaisance / charter (architecte Berret-Racoupeau)",
-     "classification": "CE Catégorie A",
      "source": "https://www.samboat.com/model/fountaine-pajot-tanna-47",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Isla 40",
-     "type": "modele_serie",
+     "type": "Isla 40",
+     "details": "3 ou 4 cabines doubles (+ cabine skipper) ; déplacement lège ~10,3 t ; versions Maestro / Quatuor",
      "annee": "2021",
      "longueur_m": 11.93,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "3 ou 4 cabines doubles (+ cabine skipper) ; déplacement lège ~10,3 t ; versions Maestro / Quatuor",
-     "energie": "Voile + diesel",
-     "client": "Marché plaisance / charter (entrée de gamme voile)",
-     "classification": "CE Catégorie A",
      "source": "https://www.samboat.com/model/fountaine-pajot-isla-40",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Samana 59",
-     "type": "modele_serie",
+     "type": "Samana 59",
+     "details": "Jusqu'à 6 cabines invités ; flybridge ~30 m2 (le plus grand de sa catégorie)",
      "annee": "2019",
      "longueur_m": 18.21,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Jusqu'à 6 cabines invités ; flybridge ~30 m2 (le plus grand de sa catégorie)",
-     "energie": "Voile (catamaran de croisière) + propulsion auxiliaire diesel",
-     "client": "Marché plaisance / charter (architecte Berret-Racoupeau, produit depuis 2017)",
-     "classification": "CE Catégorie A",
      "source": "https://www.multihulls-world.com/review/catamaran/samana-59-the-real-luxury-space-and-freedom",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "MY5 (MY 40)",
-     "type": "modele_serie",
+     "type": "MY5 (MY 40)",
+     "details": "Catamaran à moteur ~40-45 pieds, comblant l'écart entre MY 37 et MY 44",
      "annee": "2019",
      "longueur_m": 13.4,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran à moteur ~40-45 pieds, comblant l'écart entre MY 37 et MY 44",
-     "energie": "Diesel bi-moteur (Volvo Penta IPS)",
-     "client": "Marché plaisance / charter (lancé Boot Düsseldorf 2019)",
-     "classification": "CE Catégorie A",
      "source": "https://www.multihulls-world.com/review/catamaran/fountaine-pajot-my40-luxury-power-and-comfort",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Elba 45",
-     "type": "modele_serie",
+     "type": "Elba 45",
+     "details": "3 à 5 cabines (versions Maestro / Quatuor)",
      "annee": "2019",
      "longueur_m": 13.4,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "3 à 5 cabines (versions Maestro / Quatuor)",
-     "energie": "Voile + diesel ; option Smart Electric",
-     "client": "Marché plaisance / charter (remplace Helia 44)",
-     "classification": "CE Catégorie A",
      "source": "https://www.katamarans.com/product-tag/fountainepajot/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Astréa 42",
-     "type": "modele_serie",
+     "type": "Astréa 42",
+     "details": "4 cabines doubles, jusqu'à 8 personnes ; versions Maestro / Quatuor",
      "annee": "2018",
      "longueur_m": 12.58,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "4 cabines doubles, jusqu'à 8 personnes ; versions Maestro / Quatuor",
-     "energie": "Voile (voilure ~101 m2) + diesel (60 ch) ; version électrique/hybride disponible",
-     "client": "Marché plaisance / charter (European Yacht of the Year 2019 - Multihulls, architecte Berret-Racoupeau)",
-     "classification": "CE Catégorie A",
      "source": "https://www.caribbean-multihulls.com/news/fountaine-pajot-astrea-42-awarded-european-yacht-of-the-year-2019-2019-01-20",
-     "propulsion": [
-      "hybride",
-      "diesel-mdo"
-     ],
-     "capacite_pax": 8
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Alegria 67",
-     "type": "modele_serie",
+     "type": "Alegria 67",
+     "details": "Catamaran de croisière haut de gamme (~67 pieds), nombreuses configurations cabines",
      "annee": "2018",
      "longueur_m": 20.4,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière haut de gamme (~67 pieds), nombreuses configurations cabines",
-     "energie": "Voile + diesel ; options solaire/hybride",
-     "client": "Marché plaisance / charter de luxe",
-     "classification": "CE Catégorie A",
      "source": "https://www.boat-specs.com/sailing/sailboats/fountaine-pajot/alegria-67",
-     "propulsion": [
-      "hybride",
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "MY6 (MY 44)",
-     "type": "modele_serie",
+     "type": "MY6 (MY 44)",
+     "details": "Catamaran à moteur ~45 pieds ; LOA 13,94 m, bau 6,55 m ; carburant 2 x 1000 L",
      "annee": "2017",
      "longueur_m": 13.94,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran à moteur ~45 pieds ; LOA 13,94 m, bau 6,55 m ; carburant 2 x 1000 L",
-     "energie": "Diesel - 2 x 260 ch Volvo Penta IPS 350 (std), jusqu'à IPS 600 ; croisière rapide ~18 nds",
-     "client": "Marché plaisance / charter (lancé La Grande Motte 2017 sous nom MY 44, renommé MY6)",
-     "classification": "CE Catégorie A",
      "source": "https://www.multihulls-world.com/technical-specifications/fountaine-pajot-motor-yachts/my-44-fountaine-pajot",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Saona 47",
-     "type": "modele_serie",
+     "type": "Saona 47",
+     "details": "3 à 6 cabines ; flybridge",
      "annee": "2017",
      "longueur_m": 13.94,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "3 à 6 cabines ; flybridge",
-     "energie": "Voile + diesel",
-     "client": "Marché plaisance / charter",
-     "classification": "CE Catégorie A",
      "source": "https://www.boat-specs.com/sailing/sailboats/fountaine-pajot/saona-47",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "MY4S (MY 37)",
-     "type": "modele_serie",
+     "type": "MY4S (MY 37)",
+     "details": "Catamaran à moteur ~37 pieds (11 m x 5 m)",
      "annee": "2016",
      "longueur_m": 11.3,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran à moteur ~37 pieds (11 m x 5 m)",
-     "energie": "Diesel - 2 x 150 ch ou 2 x 220 ch ; croisière confort ~15 nds",
-     "client": "Marché plaisance / charter (entrée de gamme moteur, présenté en 2016)",
-     "classification": "CE Catégorie A",
      "source": "https://www.multihulls-world.com/review/motor/fountaine-pajot-my-37-vive-les-power-cats",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Lucia 40",
-     "type": "modele_serie",
+     "type": "Lucia 40",
+     "details": "3 ou 4 cabines (entrée de gamme voile)",
      "annee": "2016",
      "longueur_m": 11.73,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "3 ou 4 cabines (entrée de gamme voile)",
-     "energie": "Voile + diesel",
-     "client": "Marché plaisance / charter (lancé pour le 40e anniversaire 2016)",
-     "classification": "CE Catégorie A",
      "source": "https://www.boat-specs.com/sailing/sailboats/fountaine-pajot/lucia-40",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Ipanema 58",
-     "type": "modele_serie",
+     "type": "Ipanema 58",
+     "details": "Catamaran de croisière (~58 pieds), grand volume",
      "annee": "2016",
      "longueur_m": 17.55,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière (~58 pieds), grand volume",
-     "energie": "Voile + diesel",
-     "client": "Marché plaisance / charter (lancé pour le 40e anniversaire 2016)",
-     "classification": "CE Catégorie A",
      "source": "https://www.katamarans.com/product-tag/fountainepajot/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Saba 50",
-     "type": "modele_serie",
+     "type": "Saba 50",
+     "details": "Catamaran de croisière (~50 pieds), 4 à 6 cabines",
      "annee": "2014",
      "longueur_m": 14.98,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière (~50 pieds), 4 à 6 cabines",
-     "energie": "Voile + diesel",
-     "client": "Marché plaisance / charter",
-     "classification": "CE Catégorie A",
      "source": "https://www.boat-specs.com/sailing/sailboats/fountaine-pajot/saba-50",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Victoria 67",
-     "type": "modele_serie",
+     "type": "Victoria 67",
+     "details": "Catamaran de croisière de luxe (~67 pieds)",
      "annee": "2013",
      "longueur_m": 20.4,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière de luxe (~67 pieds)",
-     "energie": "Voile + diesel",
-     "client": "Marché plaisance / charter de luxe",
-     "classification": "CE Catégorie A",
      "source": "https://www.katamarans.com/product-tag/fountainepajot/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Helia 44",
-     "type": "modele_serie",
+     "type": "Helia 44",
+     "details": "3 à 6 cabines ; flybridge (succède à l'Orana 44)",
      "annee": "2012",
      "longueur_m": 13.3,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "3 à 6 cabines ; flybridge (succède à l'Orana 44)",
-     "energie": "Voile + diesel ; version Helia 44 Evolution (2016)",
-     "client": "Marché plaisance / charter (best-seller, plusieurs centaines d'unités)",
-     "classification": "CE Catégorie A",
      "source": "https://www.katamarans.com/product-tag/fountainepajot/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Lipari 41",
-     "type": "modele_serie",
+     "type": "Lipari 41",
+     "details": "3 ou 4 cabines (succède au Lavezzi 40)",
      "annee": "2009",
      "longueur_m": 11.93,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "3 ou 4 cabines (succède au Lavezzi 40)",
-     "energie": "Voile + diesel",
-     "client": "Marché plaisance / charter",
-     "classification": "CE Catégorie A",
      "source": "https://www.katamarans.com/product-tag/fountainepajot/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Galathea 65",
-     "type": "modele_serie",
+     "type": "Galathea 65",
+     "details": "Catamaran de croisière de luxe (~65 pieds)",
      "annee": "2009",
      "longueur_m": 19.8,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière de luxe (~65 pieds)",
-     "energie": "Voile + diesel",
-     "client": "Marché plaisance / charter de luxe",
-     "classification": "CE Catégorie A",
      "source": "https://www.katamarans.com/product-tag/fountainepajot/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Orana 44 / Salina 48 / Cumberland 46 / Highland 35 Pilot",
-     "type": "modele_serie",
+     "type": "Orana 44 / Salina 48 / Cumberland 46 / Highland 35 Pilot",
+     "details": "Quatre modèles lancés en 2008 (Orana 44 et Salina 48 voile ; Cumberland 46 et Highland 35 Pilot moteur/trawler)",
      "annee": "2008",
      "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Quatre modèles lancés en 2008 (Orana 44 et Salina 48 voile ; Cumberland 46 et Highland 35 Pilot moteur/trawler)",
-     "energie": "Voile + diesel (Orana, Salina) ; moteur diesel (Cumberland, Highland Pilot)",
-     "client": "Marché plaisance / charter",
-     "classification": "CE Catégorie A",
      "source": "https://www.fountaine-pajot.com/en/fountaine-pajot-half-a-century-of-history-expertise-and-ambition/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Mahe 36",
-     "type": "modele_serie",
+     "type": "Mahe 36",
+     "details": "Catamaran d'entrée de gamme (~36 pieds), 2 à 4 cabines",
      "annee": "2006",
      "longueur_m": 11,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran d'entrée de gamme (~36 pieds), 2 à 4 cabines",
-     "energie": "Voile + diesel",
-     "client": "Marché plaisance / charter (entrée de gamme)",
-     "classification": "CE Catégorie A",
      "source": "https://catamaranguru.com/yacht-sales/new-yachts/fountaine-pajot-catamarans/fp-mahe-36-catamaran/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Eleuthera 60",
-     "type": "modele_serie",
+     "type": "Eleuthera 60",
+     "details": "Catamaran de croisière de luxe (~60 pieds)",
      "annee": "2004",
      "longueur_m": 18.3,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière de luxe (~60 pieds)",
-     "energie": "Voile + diesel",
-     "client": "Marché plaisance / charter de luxe",
-     "classification": "CE Catégorie A",
      "source": "https://www.katamarans.com/product-tag/fountainepajot/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Lavezzi 40",
-     "type": "modele_serie",
+     "type": "Lavezzi 40",
+     "details": "3 ou 4 cabines ; cockpit de référence design 2003",
      "annee": "2003",
      "longueur_m": 11.9,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "3 ou 4 cabines ; cockpit de référence design 2003",
-     "energie": "Voile + diesel ; coque par procédé Infusion",
-     "client": "Marché plaisance / charter (succès commercial)",
-     "classification": "CE Catégorie A",
      "source": "https://www.boat-specs.com/sailing/sailboats/fountaine-pajot/lavezzi-40",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Bahia 46",
-     "type": "modele_serie",
+     "type": "Bahia 46",
+     "details": "Catamaran de croisière (~46 pieds), ~180 unités vendues",
      "annee": "1997",
      "longueur_m": 14.05,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière (~46 pieds), ~180 unités vendues",
-     "energie": "Voile + diesel",
-     "client": "Marché plaisance / charter (best-seller historique)",
-     "classification": "CE Catégorie A",
      "source": "https://www.multihulls-world.com/review/catamaran/bahia-46",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     }
    ]
   },
@@ -33738,6 +33500,102 @@
     {
      "type": "Modèles antérieurs",
      "details": "Outremer 51 (51,3 pieds ; 11,2-14,1 t), Outremer 55 (54,9 pieds ; 13,9-18,5 t), Outremer 5X (60 pieds ; 14,8-20 t), ainsi que les premiers Outremer 45/49/50 historiques."
+    },
+    {
+     "type": "Outremer 64 (nouvelle generation)",
+     "details": "Vaisseau amiral nouvelle gen, deplacement lege 20,45 t / 28,75 t en charge, jusqu'a 10 personnes, inspiration semi-custom Gunboat. Mise en chantier janv. 2026, premiere Cannes 2027",
+     "annee": "2026",
+     "longueur_m": 19.51,
+     "source": "https://www.multihulls-world.com/technical-specifications/outremer-yachting/outremer-64",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Outremer 57 (nouvelle generation)",
+     "details": "Heritiere du 55, deplacement lege 14,24 t, surface de voiles 172 m2, 2x60 ch. Mise en chantier La Grande-Motte janv. 2026, premiere Cannes 2027 (LOA variable selon sources 17,07-17,60 m)",
+     "annee": "2026",
+     "longueur_m": 17.07,
+     "source": "https://sailmagazine.com/sail-extras/outremer-announces-two-new-models-57-and-64/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Outremer 48",
+     "details": "Nouveau modele 2026 successeur du 45 ; deplacement 10,5-15 t ; bau 7,56 m ; charge utile ~4 t (dessin VPLP)",
+     "annee": "2025",
+     "longueur_m": 14.63,
+     "source": "https://catamaran-outremer.com/en/catamarans/outremer-48/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Outremer 52",
+     "details": "Croisiere hauturiere equipage reduit ; deplacement ~12,5 t ; dessin VPLP",
+     "annee": "2023",
+     "longueur_m": 15.73,
+     "source": "https://www.vplp.fr/en/cruising/outremer-52/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Outremer 55",
+     "details": "Grande croisiere en equipage reduit ; versions 3-4 cabines ; EYOTY 2022, Multihull of the Year 2020",
+     "annee": "2021",
+     "longueur_m": 16.69,
+     "source": "https://catamaran-outremer.com/en/catamarans/outremer-55/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Outremer 4X",
+     "details": "Version performance du 45 (~500 kg de moins) ; deplacement 8,2-11,1 t ; 2x30 ch ; mat carbone rotatif",
+     "annee": "2016",
+     "longueur_m": 14.63,
+     "source": "https://catamaran-outremer.com/en/catamarans/outremer-4x/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Outremer 45",
+     "details": "Catamaran de voyage en equipage reduit (single-handed), 3 cabines, deplacement 8,7-12,0 t, tirant d'eau 0,9 m. Dessin Barreau/Neuman ; remplace par le 48",
+     "annee": "2014",
+     "longueur_m": 14.62,
+     "source": "https://catamaran-outremer.com/en/catamarans/outremer-45/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Outremer 51",
+     "details": "Croisiere familiale tour du monde ; 2x40 ch ; plus de 100 unites construites ; 2x EYOTY + Boat of the Year US",
+     "annee": "2012",
+     "longueur_m": 15.27,
+     "source": "https://catamaran-outremer.com/en/catamarans/outremer-51/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Outremer 5X",
+     "details": "Ancien navire amiral ~60 pieds ; deplace ~15 t lege ; manoeuvrable a deux ; EYOTY 2013",
+     "annee": "2012",
+     "longueur_m": 18.29,
+     "source": "https://www.katamarans.com/product-tag/outremer/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Outremer 49",
+     "details": "Catamaran de croisiere rapide, bau 7,45 m, deplacement lege ~9,98 t, 2x39 ch, 3-4 cabines doubles. Dessin Christophe Barreau (developpe apres rachat 2007) ; remplace par le 51",
+     "annee": "2009",
+     "longueur_m": 14.98,
+     "source": "https://www.multihulls-world.com/technical-specifications/outremer-yachting/outremer-49",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Outremer 64",
+     "details": "Nouveau navire amiral semi-custom ; deplacement ~25,1 t ; bau 8,80 m ; 2x115 ch ; construction des janvier 2026",
+     "annee": null,
+     "longueur_m": 19.5,
+     "source": "https://www.multihulls-world.com/news-catamaran-trimaran/outremer-64-the-new-flagship-model",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Outremer 57",
+     "details": "Evolution du 55 ; deplacement ~13,9 t ; bau 8,30 m ; 2x60 ch ; debut Cannes 2027",
+     "annee": null,
+     "longueur_m": 17.2,
+     "source": "https://www.multihulls-world.com/news-catamaran-trimaran/outremer-57-the-55-but-better",
+     "origine": "modele de production, anciennement compte comme navire"
     }
    ],
    "personnes": [
@@ -33784,97 +33642,6 @@
    "taille_max": "Catamarans de série de 45 à 64 pieds ; unité maximale catalogue = Outremer 64 (20,50 m LOA, déplacement 20,4-28,7 t, bau 8,90 m). Jauge GT non publiée (plaisance, non assujettie à jauge commerciale).",
    "navires_references": [
     {
-     "nom": "Outremer 64 (nouvelle generation)",
-     "type": "modele",
-     "annee": "2026",
-     "longueur_m": 19.51,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Vaisseau amiral nouvelle gen, deplacement lege 20,45 t / 28,75 t en charge, jusqu'a 10 personnes, inspiration semi-custom Gunboat. Mise en chantier janv. 2026, premiere Cannes 2027",
-     "energie": "Velique + diesel (options electrique/hybride)",
-     "client": "Armateurs prives (semi-custom)",
-     "classification": "CE categorie A (haute mer)",
-     "source": "https://www.multihulls-world.com/technical-specifications/outremer-yachting/outremer-64",
-     "propulsion": [
-      "velique",
-      "hybride",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Outremer 57 (nouvelle generation)",
-     "type": "modele",
-     "annee": "2026",
-     "longueur_m": 17.07,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Heritiere du 55, deplacement lege 14,24 t, surface de voiles 172 m2, 2x60 ch. Mise en chantier La Grande-Motte janv. 2026, premiere Cannes 2027 (LOA variable selon sources 17,07-17,60 m)",
-     "energie": "Velique + 2 moteurs diesel 2x60 ch (options electrique/hybride)",
-     "client": "Armateurs prives (grande croisiere hauturiere)",
-     "classification": "CE categorie A (haute mer)",
-     "source": "https://sailmagazine.com/sail-extras/outremer-announces-two-new-models-57-and-64/",
-     "propulsion": [
-      "velique",
-      "hybride",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Outremer 48",
-     "type": "modele",
-     "annee": "2025",
-     "longueur_m": 14.63,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Nouveau modele 2026 successeur du 45 ; deplacement 10,5-15 t ; bau 7,56 m ; charge utile ~4 t (dessin VPLP)",
-     "energie": "Velique + diesel (options electrique/hybride)",
-     "client": "Armateurs prives",
-     "classification": "CE categorie A (haute mer)",
-     "source": "https://catamaran-outremer.com/en/catamarans/outremer-48/",
-     "propulsion": [
-      "velique",
-      "hybride",
-      "diesel-mdo"
-     ],
-     "capacite_fret": "4 t"
-    },
-    {
-     "nom": "Outremer 52",
-     "type": "modele",
-     "annee": "2023",
-     "longueur_m": 15.73,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Croisiere hauturiere equipage reduit ; deplacement ~12,5 t ; dessin VPLP",
-     "energie": "Velique + diesel (options electrique/hybride)",
-     "client": "Armateurs prives",
-     "classification": "CE categorie A (haute mer)",
-     "source": "https://www.vplp.fr/en/cruising/outremer-52/",
-     "propulsion": [
-      "velique",
-      "hybride",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Outremer 55",
-     "type": "modele",
-     "annee": "2021",
-     "longueur_m": 16.69,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Grande croisiere en equipage reduit ; versions 3-4 cabines ; EYOTY 2022, Multihull of the Year 2020",
-     "energie": "Velique + diesel (options electrique/hybride Oceanvolt)",
-     "client": "Armateurs prives (grande croisiere hauturiere)",
-     "classification": "CE categorie A (haute mer)",
-     "source": "https://catamaran-outremer.com/en/catamarans/outremer-55/",
-     "propulsion": [
-      "velique",
-      "hybride",
-      "diesel-mdo"
-     ]
-    },
-    {
      "nom": "Outremer 4.Zero \"Aventura Zero\" (Jimmy Cornell)",
      "type": "unite_notable",
      "annee": "2020",
@@ -33889,91 +33656,6 @@
      "propulsion": [
       "velique",
       "electrique-batterie"
-     ]
-    },
-    {
-     "nom": "Outremer 4X",
-     "type": "modele",
-     "annee": "2016",
-     "longueur_m": 14.63,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Version performance du 45 (~500 kg de moins) ; deplacement 8,2-11,1 t ; 2x30 ch ; mat carbone rotatif",
-     "energie": "Velique + diesel (2x30 ch)",
-     "client": "Armateurs prives (croisiere rapide / course)",
-     "classification": "CE categorie A (haute mer)",
-     "source": "https://catamaran-outremer.com/en/catamarans/outremer-4x/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Outremer 45",
-     "type": "modele",
-     "annee": "2014",
-     "longueur_m": 14.62,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de voyage en equipage reduit (single-handed), 3 cabines, deplacement 8,7-12,0 t, tirant d'eau 0,9 m. Dessin Barreau/Neuman ; remplace par le 48",
-     "energie": "Velique + 2 moteurs diesel in-bord (options electrique)",
-     "client": "Armateurs prives (croisiere single-handed)",
-     "classification": "CE categorie A (haute mer)",
-     "source": "https://catamaran-outremer.com/en/catamarans/outremer-45/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Outremer 51",
-     "type": "modele",
-     "annee": "2012",
-     "longueur_m": 15.27,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Croisiere familiale tour du monde ; 2x40 ch ; plus de 100 unites construites ; 2x EYOTY + Boat of the Year US",
-     "energie": "Velique + diesel (2x40 ch)",
-     "client": "Armateurs prives / familles en circumnavigation",
-     "classification": "CE categorie A (haute mer)",
-     "source": "https://catamaran-outremer.com/en/catamarans/outremer-51/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Outremer 5X",
-     "type": "modele",
-     "annee": "2012",
-     "longueur_m": 18.29,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Ancien navire amiral ~60 pieds ; deplace ~15 t lege ; manoeuvrable a deux ; EYOTY 2013",
-     "energie": "Velique + diesel",
-     "client": "Armateurs prives (grande croisiere haut de gamme)",
-     "classification": "CE categorie A (haute mer)",
-     "source": "https://www.katamarans.com/product-tag/outremer/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Outremer 49",
-     "type": "modele",
-     "annee": "2009",
-     "longueur_m": 14.98,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisiere rapide, bau 7,45 m, deplacement lege ~9,98 t, 2x39 ch, 3-4 cabines doubles. Dessin Christophe Barreau (developpe apres rachat 2007) ; remplace par le 51",
-     "energie": "Velique + 2 moteurs diesel 2x39 ch",
-     "client": "Armateurs prives (croisiere)",
-     "classification": "CE categorie A (haute mer)",
-     "source": "https://www.multihulls-world.com/technical-specifications/outremer-yachting/outremer-49",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
      ]
     },
     {
@@ -34041,42 +33723,6 @@
      "source": "https://www.katamarans.com/product-tag/outremer/",
      "propulsion": [
       "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Outremer 64",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 19.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Nouveau navire amiral semi-custom ; deplacement ~25,1 t ; bau 8,80 m ; 2x115 ch ; construction des janvier 2026",
-     "energie": "Velique + diesel (options electrique/hybride)",
-     "client": "Armateurs prives (grande croisiere hauturiere)",
-     "classification": "CE categorie A (haute mer)",
-     "source": "https://www.multihulls-world.com/news-catamaran-trimaran/outremer-64-the-new-flagship-model",
-     "propulsion": [
-      "velique",
-      "hybride",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Outremer 57",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 17.2,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Evolution du 55 ; deplacement ~13,9 t ; bau 8,30 m ; 2x60 ch ; debut Cannes 2027",
-     "energie": "Velique + diesel (options electrique/hybride)",
-     "client": "Armateurs prives (grande croisiere)",
-     "classification": "CE categorie A (haute mer)",
-     "source": "https://www.multihulls-world.com/news-catamaran-trimaran/outremer-57-the-55-but-better",
-     "propulsion": [
-      "velique",
-      "hybride",
       "diesel-mdo"
      ]
     }
@@ -34211,6 +33857,238 @@
     {
      "type": "Catamaran de croisière hauturière Privilège Signature 600",
      "details": "Nouveau modèle dévoilé le 26 avril 2026."
+    },
+    {
+     "type": "Privilège Signature 600",
+     "details": "Évolution du Signature 580, cabine arrière babord modulable ; positionnement entre 510 et 650 ; présenté au Salon International du Multicoque le 24 mars 2026",
+     "annee": "2026",
+     "longueur_m": null,
+     "source": "https://privilege-marine.com/privilege-marine-unveils-the-new-signature-600/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège Signature 650 (Serie 640 / 650)",
+     "details": "4 à 5 cabines, déplacement lège 29 t (37 t en charge), bau 9,20 m, tirant d'eau 1,85 m, surface de voilure 140 m2 GV + 92 m2 génois",
+     "annee": "2022",
+     "longueur_m": 21.25,
+     "source": "https://marclombard.com/en/privilege-650/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège Signature 580",
+     "details": "3 à 4 cabines ; déplacement lège 29 t (35 t en charge) ; bau 9,18 m, tirant d'eau 1,75 m",
+     "annee": "2021",
+     "longueur_m": 17.9,
+     "source": "https://www.multihulls-world.com/technical-specifications/privilege-marine/privilege-signature-580",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège Signature 510",
+     "details": "3 cabines, suite propriétaire pleine largeur à l'avant ; déplacement en charge 22,8 t",
+     "annee": "2020",
+     "longueur_m": 17.09,
+     "source": "https://privilege-marine.com/en/our-range/privilege-signature-510/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège Euphorie 5",
+     "details": "Catamaran à MOTEUR (version power de la Serie 5), 52 pieds ; coques retravaillées par Marc Lombard ; flying bridge ; présenté au Cannes Boat Show 2018",
+     "annee": "2018",
+     "longueur_m": 15.25,
+     "source": "https://www.multihulls-world.com/news-catamaran-trimaran/euphorie-5-back-to-the-future",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège Serie 7 / Privilège 740",
+     "details": "Navire amiral ~74-75 pieds, 5 cabines avec salle de bain privative, suite propriétaire centrale, longueur coque 22,70 m, bau 10,90 m, déplacement lège 44 t (53 t en charge), tirant d'air 32,68 m, voilure 160 m2 GV + 104 m2 génois",
+     "annee": "2016",
+     "longueur_m": 24.58,
+     "source": "https://marclombard.com/en/privilege-740/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège Serie 6 / Privilège 640 (version power et voile)",
+     "details": "Catamaran 64 pieds, 5 cabines, ~180 m2 d'espace de vie, longueur coque 19,50 m, bau 9,20 m, déplacement ~28,3 t, voilure 220 m2, double flybridge à deux postes de barre",
+     "annee": "2016",
+     "longueur_m": 19.5,
+     "source": "https://www.multihulls-world.com/technical-specifications/privilege-marine/privilege-serie-640",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège Serie 5 / Privilège 510 (premier 50 pieds Privilège Marine)",
+     "details": "Catamaran de croisière 50 pieds, 3 à 4 cabines, déplacement ~16 t, bau 7,98 m, voilure 88 m2 GV + 53 m2 génois ; relance de la gamme après la transformation Alliaura -> Privilège Marine",
+     "annee": "2014",
+     "longueur_m": 15.24,
+     "source": "https://www.denisonyachtsales.com/2015/11/privilege-series-5-catamaran-a-real-privilege-to-sail/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 745",
+     "details": "Ancien navire amiral Alliaura Marine ~74 pieds, l'un des plus grands catamarans de luxe de série au monde de son époque, suite propriétaire, jacuzzi flybridge possible ; date de premier exemplaire 2008 selon sailboatdata (modèle dévoilé au début des années 2000 par Alliaura)",
+     "annee": "2008",
+     "longueur_m": 22.7,
+     "source": "https://www.multihulls-world.com/technical-specifications/alliaura-marine/privilege-745",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 515",
+     "details": "Catamaran de croisière Alliaura Marine, petit frère du 745 créé en 2007 avec le 615",
+     "annee": "2007",
+     "longueur_m": 15.1,
+     "source": "https://www.multihulls-world.com/technical-specifications/alliaura-marine/privilege-515",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 615",
+     "details": "Catamaran de croisière Alliaura Marine 61 pieds, bau 9,25 m, déplacement 26,5 t, conçu par Marc Lombard ; petit frère du 745",
+     "annee": "2006",
+     "longueur_m": 18.5,
+     "source": "https://www.multihulls-world.com/technical-specifications/alliaura-marine/privilege-615",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 495",
+     "details": "Catamaran de croisière ~50 pieds, évolution du Privilège 465 ; LOA 14,33 m",
+     "annee": "2004",
+     "longueur_m": 14.95,
+     "source": "https://www.multihulls-world.com/technical-specifications/alliaura-marine/privilege-495",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 445",
+     "details": "Catamaran de croisière ~44 pieds, LOA 13,45 m",
+     "annee": "2004",
+     "longueur_m": 13.45,
+     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 395",
+     "details": "Catamaran de croisière ~39 pieds, LOA 11,94 m",
+     "annee": "2004",
+     "longueur_m": 11.94,
+     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 585",
+     "details": "Catamaran de croisière Alliaura Marine ~56-58 pieds, bau 9,25 m, déplacement 17,5 t, production 2002-2005, modèle très répandu en charter, conçu par Marc Lombard",
+     "annee": "2002",
+     "longueur_m": 17.26,
+     "source": "https://www.multihulls-world.com/technical-specifications/alliaura-marine/privilege-585",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 435",
+     "details": "Catamaran de croisière ~43 pieds, LOA 13,11 m",
+     "annee": "1999",
+     "longueur_m": 13.11,
+     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 465",
+     "details": "Catamaran de croisière ~47 pieds, LOA 14,33 m ; deviendra le Privilège 495",
+     "annee": "1998",
+     "longueur_m": 14.95,
+     "source": "https://www.multihulls-world.com/technical-specifications/alliaura-marine/privilege-465",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 42",
+     "details": "Catamaran de croisière 42 pieds, LOA 12,80 m ; titre US Yacht of the Year (vers 1995-1996)",
+     "annee": "1995",
+     "longueur_m": 12.8,
+     "source": "https://itboat.com/shipyards/855-privilege",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 37",
+     "details": "Catamaran de croisière 37 pieds, LOA 11,28 m, plus petit modèle du catalogue",
+     "annee": "1995",
+     "longueur_m": 11.28,
+     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 51",
+     "details": "Catamaran de croisière 51 pieds, LOA 15,54 m (ère Jeantot Marine)",
+     "annee": "1994",
+     "longueur_m": 15.54,
+     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 482",
+     "details": "Catamaran de croisière 48 pieds, LOA 14,66 m (ère Jeantot Marine)",
+     "annee": "1992",
+     "longueur_m": 14.66,
+     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 39",
+     "details": "Catamaran de croisière ~39 pieds, LOA 11,81 m (ère Jeantot Marine)",
+     "annee": "1988",
+     "longueur_m": 11.81,
+     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 48",
+     "details": "Catamaran de croisière 48 pieds, LOA 14,63 m (ère Jeantot Marine)",
+     "annee": "1987",
+     "longueur_m": 14.63,
+     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 47",
+     "details": "Premier catamaran Privilège, LOA 14,50 m, présenté au Salon nautique de Paris 1985 (fondation Jeantot Marine par Philippe Jeantot)",
+     "annee": "1985",
+     "longueur_m": 14.5,
+     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège Signature 650",
+     "details": "4 à 5 cabines ; déplacement lège 29 t (37 t en charge) ; bau 9,2 m, tirant d'eau 1,85 m",
+     "annee": null,
+     "longueur_m": 19.5,
+     "source": "https://privilege-marine.com/en/our-range/privilege-signature-650/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège Serie 5",
+     "details": "Catamaran de croisière 50 pieds, premier d'une gamme de trois (Serie 5/6/7) ; 3 à 4 cabines ; déplacement 16 t ; bau 7,98 m. Production ramenée à Les Sables-d'Olonne (réorganisation 2012)",
+     "annee": null,
+     "longueur_m": 15.24,
+     "source": "https://www.multihulls-world.com/technical-specifications/privilege-marine/privilege-serie-5",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège Serie 6 / Serie 640",
+     "details": "Catamaran 64 pieds, évolution du Privilège 615 ; suite propriétaire ; conçu par Marc Lombard",
+     "annee": null,
+     "longueur_m": 19.5,
+     "source": "https://www.bateaux.com/article/22927/privilege-serie-6-un-voilier-cour-motor-yachts",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège Serie 7 / Serie 740",
+     "details": "Navire amiral 74 pieds, plus grand catamaran de série du marché ; cabine propriétaire 8 m de large ; déplacement 44 t lège ; évolution du Privilège 745 ; conçu par Marc Lombard",
+     "annee": null,
+     "longueur_m": 22.7,
+     "source": "https://www.multihulls-world.com/technical-specifications/privilege-marine/privilege-serie-7",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Privilège 1000 (projet)",
+     "details": "Coque expérimentale de catamaran de ~30 m développée au début des années 2000 par Alliaura ; projet entravé par les difficultés de la maison mère, non industrialisé",
+     "annee": null,
+     "longueur_m": 30,
+     "source": "https://itboat.com/shipyards/855-privilege",
+     "origine": "modele de production, anciennement compte comme navire"
     }
    ],
    "personnes": [
@@ -34241,501 +34119,7 @@
     "Vélique (catamarans à voile, gréement sloop)"
    ],
    "taille_max": "Plus grande unité de série connue : Privilège Serie 7 / Serie 740, 24,83 m de longueur hors-tout, déplacement lège 44 t (53 t en charge). Pas de jauge GT publiée (navires de plaisance, non soumis au jaugeage marchand).",
-   "navires_references": [
-    {
-     "nom": "Privilège Signature 600",
-     "type": "modele_serie",
-     "annee": "2026",
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Évolution du Signature 580, cabine arrière babord modulable ; positionnement entre 510 et 650 ; présenté au Salon International du Multicoque le 24 mars 2026",
-     "energie": "Diesel + vélique (catamaran de croisière hauturière)",
-     "client": null,
-     "classification": "CE Catégorie A (présumé, gamme hauturière)",
-     "source": "https://privilege-marine.com/privilege-marine-unveils-the-new-signature-600/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège Signature 650 (Serie 640 / 650)",
-     "type": "modele_serie",
-     "annee": "2022",
-     "longueur_m": 21.25,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "4 à 5 cabines, déplacement lège 29 t (37 t en charge), bau 9,20 m, tirant d'eau 1,85 m, surface de voilure 140 m2 GV + 92 m2 génois",
-     "energie": "Diesel 2 x ~110 ch + vélique (gréement sloop fractionné), carburant 2 x 1000 L",
-     "client": null,
-     "classification": "Marquage CE Catégorie A",
-     "source": "https://marclombard.com/en/privilege-650/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège Signature 580",
-     "type": "modele_serie",
-     "annee": "2021",
-     "longueur_m": 17.9,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "3 à 4 cabines ; déplacement lège 29 t (35 t en charge) ; bau 9,18 m, tirant d'eau 1,75 m",
-     "energie": "Diesel 2 x 75 ch + vélique (grand-voile 121 m2, génois 92 m2)",
-     "client": null,
-     "classification": "CE Catégorie A",
-     "source": "https://www.multihulls-world.com/technical-specifications/privilege-marine/privilege-signature-580",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège Signature 510",
-     "type": "modele_serie",
-     "annee": "2020",
-     "longueur_m": 17.09,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "3 cabines, suite propriétaire pleine largeur à l'avant ; déplacement en charge 22,8 t",
-     "energie": "Diesel 2 x 80 ch (Yanmar) + vélique (grand-voile 88 m2, gennaker option 120 m2)",
-     "client": null,
-     "classification": "CE Catégorie A",
-     "source": "https://privilege-marine.com/en/our-range/privilege-signature-510/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège Euphorie 5",
-     "type": "modele_serie",
-     "annee": "2018",
-     "longueur_m": 15.25,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran à MOTEUR (version power de la Serie 5), 52 pieds ; coques retravaillées par Marc Lombard ; flying bridge ; présenté au Cannes Boat Show 2018",
-     "energie": "Diesel 2 x 320 ch (Yanmar) ; vitesse croisière 15 nds, max 22 nds ; pas de vélique",
-     "client": null,
-     "classification": "CE Catégorie A (présumé)",
-     "source": "https://www.multihulls-world.com/news-catamaran-trimaran/euphorie-5-back-to-the-future",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège Serie 7 / Privilège 740",
-     "type": "modele_serie",
-     "annee": "2016",
-     "longueur_m": 24.58,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Navire amiral ~74-75 pieds, 5 cabines avec salle de bain privative, suite propriétaire centrale, longueur coque 22,70 m, bau 10,90 m, déplacement lège 44 t (53 t en charge), tirant d'air 32,68 m, voilure 160 m2 GV + 104 m2 génois",
-     "energie": "Diesel 2 lignes d'arbre + vélique",
-     "client": null,
-     "classification": "Marquage CE Catégorie A",
-     "source": "https://marclombard.com/en/privilege-740/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège Serie 6 / Privilège 640 (version power et voile)",
-     "type": "modele_serie",
-     "annee": "2016",
-     "longueur_m": 19.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran 64 pieds, 5 cabines, ~180 m2 d'espace de vie, longueur coque 19,50 m, bau 9,20 m, déplacement ~28,3 t, voilure 220 m2, double flybridge à deux postes de barre",
-     "energie": "Diesel + vélique (gréement sloop fractionné) ; version power existante",
-     "client": null,
-     "classification": "Marquage CE Catégorie A",
-     "source": "https://www.multihulls-world.com/technical-specifications/privilege-marine/privilege-serie-640",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège Serie 5 / Privilège 510 (premier 50 pieds Privilège Marine)",
-     "type": "modele_serie",
-     "annee": "2014",
-     "longueur_m": 15.24,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière 50 pieds, 3 à 4 cabines, déplacement ~16 t, bau 7,98 m, voilure 88 m2 GV + 53 m2 génois ; relance de la gamme après la transformation Alliaura -> Privilège Marine",
-     "energie": "Diesel 2 x 55 ch + vélique",
-     "client": null,
-     "classification": "Marquage CE Catégorie A",
-     "source": "https://www.denisonyachtsales.com/2015/11/privilege-series-5-catamaran-a-real-privilege-to-sail/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 745",
-     "type": "modele_serie",
-     "annee": "2008",
-     "longueur_m": 22.7,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Ancien navire amiral Alliaura Marine ~74 pieds, l'un des plus grands catamarans de luxe de série au monde de son époque, suite propriétaire, jacuzzi flybridge possible ; date de premier exemplaire 2008 selon sailboatdata (modèle dévoilé au début des années 2000 par Alliaura)",
-     "energie": "Diesel inboard 2 lignes d'arbre + vélique",
-     "client": null,
-     "classification": "Marquage CE Catégorie A",
-     "source": "https://www.multihulls-world.com/technical-specifications/alliaura-marine/privilege-745",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 515",
-     "type": "modele_serie",
-     "annee": "2007",
-     "longueur_m": 15.1,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière Alliaura Marine, petit frère du 745 créé en 2007 avec le 615",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": "Marquage CE Catégorie A",
-     "source": "https://www.multihulls-world.com/technical-specifications/alliaura-marine/privilege-515",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 615",
-     "type": "modele_serie",
-     "annee": "2006",
-     "longueur_m": 18.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière Alliaura Marine 61 pieds, bau 9,25 m, déplacement 26,5 t, conçu par Marc Lombard ; petit frère du 745",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": "Marquage CE Catégorie A",
-     "source": "https://www.multihulls-world.com/technical-specifications/alliaura-marine/privilege-615",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 495",
-     "type": "modele_serie",
-     "annee": "2004",
-     "longueur_m": 14.95,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière ~50 pieds, évolution du Privilège 465 ; LOA 14,33 m",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": "Marquage CE Catégorie A",
-     "source": "https://www.multihulls-world.com/technical-specifications/alliaura-marine/privilege-495",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 445",
-     "type": "modele_serie",
-     "annee": "2004",
-     "longueur_m": 13.45,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière ~44 pieds, LOA 13,45 m",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": "Marquage CE Catégorie A",
-     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 395",
-     "type": "modele_serie",
-     "annee": "2004",
-     "longueur_m": 11.94,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière ~39 pieds, LOA 11,94 m",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": "Marquage CE Catégorie A",
-     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 585",
-     "type": "modele_serie",
-     "annee": "2002",
-     "longueur_m": 17.26,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière Alliaura Marine ~56-58 pieds, bau 9,25 m, déplacement 17,5 t, production 2002-2005, modèle très répandu en charter, conçu par Marc Lombard",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": "Marquage CE Catégorie A",
-     "source": "https://www.multihulls-world.com/technical-specifications/alliaura-marine/privilege-585",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 435",
-     "type": "modele_serie",
-     "annee": "1999",
-     "longueur_m": 13.11,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière ~43 pieds, LOA 13,11 m",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": "Marquage CE Catégorie A",
-     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 465",
-     "type": "modele_serie",
-     "annee": "1998",
-     "longueur_m": 14.95,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière ~47 pieds, LOA 14,33 m ; deviendra le Privilège 495",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": "Marquage CE Catégorie A",
-     "source": "https://www.multihulls-world.com/technical-specifications/alliaura-marine/privilege-465",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 42",
-     "type": "modele_serie",
-     "annee": "1995",
-     "longueur_m": 12.8,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière 42 pieds, LOA 12,80 m ; titre US Yacht of the Year (vers 1995-1996)",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": null,
-     "source": "https://itboat.com/shipyards/855-privilege",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 37",
-     "type": "modele_serie",
-     "annee": "1995",
-     "longueur_m": 11.28,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière 37 pieds, LOA 11,28 m, plus petit modèle du catalogue",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": null,
-     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 51",
-     "type": "modele_serie",
-     "annee": "1994",
-     "longueur_m": 15.54,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière 51 pieds, LOA 15,54 m (ère Jeantot Marine)",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": "Marquage CE (avant directive 2013/53/UE)",
-     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 482",
-     "type": "modele_serie",
-     "annee": "1992",
-     "longueur_m": 14.66,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière 48 pieds, LOA 14,66 m (ère Jeantot Marine)",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": null,
-     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 39",
-     "type": "modele_serie",
-     "annee": "1988",
-     "longueur_m": 11.81,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière ~39 pieds, LOA 11,81 m (ère Jeantot Marine)",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": null,
-     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 48",
-     "type": "modele_serie",
-     "annee": "1987",
-     "longueur_m": 14.63,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière 48 pieds, LOA 14,63 m (ère Jeantot Marine)",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": null,
-     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 47",
-     "type": "modele_serie",
-     "annee": "1985",
-     "longueur_m": 14.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Premier catamaran Privilège, LOA 14,50 m, présenté au Salon nautique de Paris 1985 (fondation Jeantot Marine par Philippe Jeantot)",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": null,
-     "source": "https://sailboatdata.com/builder/privilege-catamarans/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège Signature 650",
-     "type": "modele_serie",
-     "annee": null,
-     "longueur_m": 19.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "4 à 5 cabines ; déplacement lège 29 t (37 t en charge) ; bau 9,2 m, tirant d'eau 1,85 m",
-     "energie": "Diesel 2 x 82 kW (~2 x 110 ch) + vélique (surface totale 232 m2) ; carburant 2 x 1000 L, eau douce 2 x 650 L",
-     "client": null,
-     "classification": "CE Catégorie A",
-     "source": "https://privilege-marine.com/en/our-range/privilege-signature-650/",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège Serie 5",
-     "type": "modele_serie",
-     "annee": null,
-     "longueur_m": 15.24,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran de croisière 50 pieds, premier d'une gamme de trois (Serie 5/6/7) ; 3 à 4 cabines ; déplacement 16 t ; bau 7,98 m. Production ramenée à Les Sables-d'Olonne (réorganisation 2012)",
-     "energie": "Diesel 2 x 55 ch + vélique (grand-voile 88 m2, génois 53 m2)",
-     "client": null,
-     "classification": "CE Catégorie A (présumé)",
-     "source": "https://www.multihulls-world.com/technical-specifications/privilege-marine/privilege-serie-5",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège Serie 6 / Serie 640",
-     "type": "modele_serie",
-     "annee": null,
-     "longueur_m": 19.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catamaran 64 pieds, évolution du Privilège 615 ; suite propriétaire ; conçu par Marc Lombard",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": "CE Catégorie A (présumé)",
-     "source": "https://www.bateaux.com/article/22927/privilege-serie-6-un-voilier-cour-motor-yachts",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège Serie 7 / Serie 740",
-     "type": "modele_serie",
-     "annee": null,
-     "longueur_m": 22.7,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Navire amiral 74 pieds, plus grand catamaran de série du marché ; cabine propriétaire 8 m de large ; déplacement 44 t lège ; évolution du Privilège 745 ; conçu par Marc Lombard",
-     "energie": "Diesel 2 x 200 ch + vélique (grand-voile 160 m2, génois 106 m2)",
-     "client": null,
-     "classification": "CE Catégorie A (présumé)",
-     "source": "https://www.multihulls-world.com/technical-specifications/privilege-marine/privilege-serie-7",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Privilège 1000 (projet)",
-     "type": "modele_serie",
-     "annee": null,
-     "longueur_m": 30,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Coque expérimentale de catamaran de ~30 m développée au début des années 2000 par Alliaura ; projet entravé par les difficultés de la maison mère, non industrialisé",
-     "energie": "Diesel + vélique",
-     "client": null,
-     "classification": null,
-     "source": "https://itboat.com/shipyards/855-privilege",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    }
-   ],
+   "navires_references": [],
    "geo_source": "https://nominatim.openstreetmap.org/search?q=Privil%C3%A8ge+Marine+Les+Sables+d%27Olonne&format=json"
   },
   {
@@ -37093,11 +36477,11 @@
      "details": "longueur hors-tout 24,65 m (80'10\"), flottaison 23,95 m, bau 10,25 m, architecture VPLP"
     },
     {
-     "intitule": "catamaran voile (Gunboat 70, nouveau modèle annoncé 2023, remplaçant du Gunboat 68 ; programme de production lancé, premier de série non encore attesté à flot)",
-     "detail": "catamaran full carbone ~21 m, architecture VPLP ; mât reculé ; remplace la série 68 à partir de 2025",
      "periode": null,
      "source": "https://www.yachtingworld.com/reviews/boat-tests/first-look-gunboats-gb80-and-gb70",
-     "origine": "ligne de production, anciennement classee a tort comme navire"
+     "origine": "ligne de production, anciennement classee a tort comme navire",
+     "type": "catamaran voile (Gunboat 70, nouveau modèle annoncé 2023, remplaçant du Gunboat 68 ; programme de production lancé, premier de série non encore attesté à flot)",
+     "details": "catamaran full carbone ~21 m, architecture VPLP ; mât reculé ; remplace la série 68 à partir de 2025"
     }
    ],
    "personnes": [
@@ -43953,148 +43337,74 @@
     "électrique (modèle BEACH(R))"
    ],
    "taille_max": "Environ 10,40 m de longueur de coque (modèle V12, vaisseau amiral homologué jusqu'à 15 personnes). Chantier de plaisance, pas de jauge GT (navires non jaugés au sens commercial).",
-   "navires_references": [
+   "navires_references": [],
+   "geo_source": "https://www.marque-bassin-arcachon.fr/annuaire/beacher-concept/",
+   "produits": [
     {
-     "nom": "Beacher V10 Croisière (V10.2)",
-     "type": "modele",
+     "type": "Beacher V10 Croisière (V10.2)",
+     "details": "Homologation catégorie C (14 à 17 personnes selon source) ; cabine avec grand lit double, douche et WC",
      "annee": "2017",
      "longueur_m": 9.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Homologation catégorie C (14 à 17 personnes selon source) ; cabine avec grand lit double, douche et WC",
-     "energie": "Hors-bord essence, puissance max 2x250 cv (conseillée 2x150 cv)",
-     "client": "Plaisanciers (particuliers)",
-     "classification": "CE catégorie C",
      "source": "https://www.beacher-nautique.com/beacher-v10-croisiere/",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "timeline": [
-      {
-       "annee": "2017",
-       "role": "construction",
-       "nom": "Beacher (Gujan-Mestras)",
-       "detail": "Modèle de série de bateau amphibie / plaisance (9,5 m) produit en série pour des particuliers. Aucun navire individuel exploité : pas d'IMO ni de propriétaire/exploitant unique. Année = version V10.2 du modèle.",
-       "source": "https://www.beacher.fr/"
-      }
-     ],
-     "architecte": "Yves Marechal",
-     "architecte_source": "Beacher Nautique et bateaux.com : carene en V du V10 dessinee par l'architecte Yves Marechal, plan de pont par Fabrice Duffour (beacher-nautique.com)"
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Beacher V12",
-     "type": "modele",
+     "type": "Beacher V12",
+     "details": "15 personnes (homologation)",
      "annee": "2008",
      "longueur_m": 10.4,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "15 personnes (homologation)",
-     "energie": "2 moteurs in-bord diesel Volvo Penta D4-260 avec embases DP Duo-Prop",
-     "client": "Plaisanciers (particuliers)",
-     "classification": "Navire de plaisance CE",
      "source": "https://www.myboat-arcachon.com/annonce/beacher-v12/33781",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Beacher V8 Open",
-     "type": "modele",
+     "type": "Beacher V8 Open",
+     "details": "Catégorie de conception C, 10 places ; poids à vide 2200 kg",
      "annee": "à partir de 2006",
      "longueur_m": 8.7,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Catégorie de conception C, 10 places ; poids à vide 2200 kg",
-     "energie": "Hors-bord essence monomoteur, puissance maxi 300 cv (conseillée 150 cv)",
-     "client": "Plaisanciers (particuliers)",
-     "classification": "CE catégorie C",
      "source": "https://www.beacher-nautique.com/beacher-v8/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Beacher V9",
-     "type": "modele",
+     "type": "Beacher V9",
+     "details": "Largeur 2,93 m ; catégorie de conception B/6 personnes, C/12 personnes (jusqu'à 12 personnes) ; vedette emblématique du Bassin d'Arcachon de la génération antérieure ; bain de soleil avant",
      "annee": "2004",
      "longueur_m": 8.26,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Largeur 2,93 m ; catégorie de conception B/6 personnes, C/12 personnes (jusqu'à 12 personnes) ; vedette emblématique du Bassin d'Arcachon de la génération antérieure ; bain de soleil avant",
-     "energie": "2 hors-bord essence Mercury EFI 150 cv (injection, 4 temps) ; capacité 2x150 L de carburant",
-     "client": "Plaisanciers (particuliers)",
-     "classification": "Navire de plaisance CE (cat. B/C)",
      "source": "https://hallnautique.fr/?wdk-listing=beacher-v9",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Beacher V10 Pic Nic",
-     "type": "modele",
+     "type": "Beacher V10 Pic Nic",
+     "details": "14 personnes en catégorie C",
      "annee": null,
      "longueur_m": 9.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "14 personnes en catégorie C",
-     "energie": "Hors-bord essence, puissance max 2x250 cv (conseillée 2x150 cv)",
-     "client": "Plaisanciers (particuliers)",
-     "classification": "CE catégorie C",
      "source": "https://www.beacher-nautique.com/beacher-v10-pic-nic/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Beacher V10",
-     "type": "modele",
+     "type": "Beacher V10",
+     "details": "Jusqu'à 14 personnes",
      "annee": null,
      "longueur_m": 8.4,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Jusqu'à 14 personnes",
-     "energie": "Hors-bord essence Mercury V8 300 cv (carène en V profond, étrave fine)",
-     "client": "Plaisanciers (particuliers)",
-     "classification": "Navire de plaisance CE",
      "source": "https://www.beacher-nautique.com/beacher-v10/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Beacher V10 Trawler",
-     "type": "modele",
+     "type": "Beacher V10 Trawler",
+     "details": "Cabine double + salon en U convertible (couchages) ; capacité carburant/eau supérieure aux autres modèles",
      "annee": null,
      "longueur_m": 9.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Cabine double + salon en U convertible (couchages) ; capacité carburant/eau supérieure aux autres modèles",
-     "energie": "Hors-bord essence 2x90 cv Honda (jusqu'à 2x150 cv), ~25 nœuds en version puissante",
-     "client": "Plaisanciers (particuliers)",
-     "classification": "Navire de plaisance CE",
      "source": "https://www.argusdubateau.fr/actualite/a-l-essai-beacher-v10-trawler",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "BEACH(R)",
-     "type": "modele",
+     "type": "BEACH(R)",
+     "details": "Bateau pour lacs et lagons (fond plat, faible tirant d'eau), conçu pour le démontage facile ; plateformes latérales, largeur de pont 4,55 m",
      "annee": null,
      "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Bateau pour lacs et lagons (fond plat, faible tirant d'eau), conçu pour le démontage facile ; plateformes latérales, largeur de pont 4,55 m",
-     "energie": "Hors-bord essence thermique (Beach(R) 7 : 100-115 cv ; Beach(R) 8 : 2x100 cv) ; coque inspirée des barges ostréicoles, recyclable à 80%",
-     "client": "Plaisanciers (particuliers)",
-     "classification": "Navire de plaisance CE",
      "source": "https://www.beacher-nautique.com/beacher-r/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     }
-   ],
-   "geo_source": "https://www.marque-bassin-arcachon.fr/annuaire/beacher-concept/"
+   ]
   },
   {
    "id": "b2-marine-latresne",
@@ -44923,169 +44233,90 @@
     "essence (hors-bord)"
    ],
    "taille_max": "Longueur max ~11 m (moule GT 8-11 m ; moule Custom 6,5-8 m). Pas de jauge GT significative : unités < 24 m, hors champ jauge conventionnelle.",
-   "navires_references": [
+   "navires_references": [],
+   "geo_source": "https://www.ribwest.fr/contact/",
+   "produits": [
     {
-     "nom": "Ribwest Pro GT (10 Pro Fishing)",
-     "type": "modele",
+     "type": "Ribwest Pro GT (10 Pro Fishing)",
+     "details": "6 à 16 personnes (jusqu'à 16) ; pont allongé, assises XXL ; usage pêche pro / secours / intervention",
      "annee": null,
      "longueur_m": 10,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "6 à 16 personnes (jusqu'à 16) ; pont allongé, assises XXL ; usage pêche pro / secours / intervention",
-     "energie": "hors-bord essence (jusqu'à 1000 cv)",
-     "client": "Professionnels (pêcheurs commerciaux, secours en mer, intervention)",
-     "classification": "ICNN ; cat. CE B/C ; NUC",
      "source": "https://www.ribwest.fr/nos-realisations/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Ribwest Pro GT (gamme GT 8-11 m)",
-     "type": "modele",
+     "type": "Ribwest Pro GT (gamme GT 8-11 m)",
+     "details": "6 à 16 pers. ; coque renforcée usage intensif ; vitesse 48-65 nds ; réservoir 100-600 L",
      "annee": null,
      "longueur_m": 11,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "6 à 16 pers. ; coque renforcée usage intensif ; vitesse 48-65 nds ; réservoir 100-600 L",
-     "energie": "hors-bord 115 à 1000 cv",
-     "client": "Pêcheurs commerciaux, organismes de sécurité maritime",
-     "classification": "ICNN ; cat. CE B/C ; NUC",
      "source": "https://www.ribwest.fr/bateau/pro-gt/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Ribwest Pro (gamme Custom 6,5-8 m)",
-     "type": "modele",
+     "type": "Ribwest Pro (gamme Custom 6,5-8 m)",
+     "details": "6 à 16 pers. ; coque renforcée mousse Corecell ; aménagement sur mesure (secours, pêche, guidage, course)",
      "annee": null,
      "longueur_m": 6.5011658,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "6 à 16 pers. ; coque renforcée mousse Corecell ; aménagement sur mesure (secours, pêche, guidage, course)",
-     "energie": "hors-bord essence (jusqu'à 1000 cv)",
-     "client": "Professionnels du nautisme (secours, pêche, guidage, course)",
-     "classification": "ICNN ; cat. CE B/C ; NUC",
      "source": "https://www.ribwest.fr/bateau/pro/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Ribwest Fish 8.99 (8,99 Fishing)",
-     "type": "modele",
+     "type": "Ribwest Fish 8.99 (8,99 Fishing)",
+     "details": "Bateau de pêche pro/loisir ; vivier LED, marchepied ; aménagement pêche",
      "annee": null,
      "longueur_m": 8.99,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Bateau de pêche pro/loisir ; vivier LED, marchepied ; aménagement pêche",
-     "energie": "hors-bord essence",
-     "client": "Pêcheurs (loisir et professionnels)",
-     "classification": "ICNN ; cat. CE ; NUC possible",
      "source": "https://www.ribwest.fr/nos-realisations/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Ribwest RS 7.50 / Fish Custom 7.50",
-     "type": "modele",
+     "type": "Ribwest RS 7.50 / Fish Custom 7.50",
+     "details": "Configurations multiples (Fish Custom, Family) ; assises arrière, flexiteek, antidérapant ; CE C",
      "annee": null,
      "longueur_m": 7.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Configurations multiples (Fish Custom, Family) ; assises arrière, flexiteek, antidérapant ; CE C",
-     "energie": "hors-bord essence (Yamaha 250-300 cv)",
-     "client": "Plaisance et pêche",
-     "classification": "ICNN ; cat. CE C",
      "source": "https://www.hypenautic.fr/bateaux/ribwest-rs-fish-7-5/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Ribwest RS 7 / RS 6.99 (Fish Custom 6.99)",
-     "type": "modele",
+     "type": "Ribwest RS 7 / RS 6.99 (Fish Custom 6.99)",
+     "details": "12 personnes ; largeur 2,55 m ; poids ~1100 kg ; moteur max 250 cv",
      "annee": null,
      "longueur_m": 6.99,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "12 personnes ; largeur 2,55 m ; poids ~1100 kg ; moteur max 250 cv",
-     "energie": "hors-bord essence (225-250 cv)",
-     "client": "Plaisance / pêche (sur mesure)",
-     "classification": "Catégorie de conception CE C",
      "source": "https://www.hypenautic.fr/bateaux/ribwest-rs-7/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Ribwest Family GT",
-     "type": "modele",
+     "type": "Ribwest Family GT",
+     "details": "Coque GT spacieuse et polyvalente, loisir famille ; jusqu'à 16 pers. selon longueur",
      "annee": null,
      "longueur_m": 11,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Coque GT spacieuse et polyvalente, loisir famille ; jusqu'à 16 pers. selon longueur",
-     "energie": "hors-bord essence",
-     "client": "Plaisance familiale",
-     "classification": "ICNN ; cat. CE B/C",
      "source": "https://www.ribwest.fr/rib-family/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Ribwest Family Custom",
-     "type": "modele",
+     "type": "Ribwest Family Custom",
+     "details": "Coque Custom 6,5-8 m, balades en famille",
      "annee": null,
      "longueur_m": 8,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Coque Custom 6,5-8 m, balades en famille",
-     "energie": "hors-bord essence",
-     "client": "Plaisance familiale",
-     "classification": "ICNN ; cat. CE",
      "source": "https://www.ribwest.fr/rib-family/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Ribwest 10 Pro Fishing (Pro GT)",
-     "type": "modele",
+     "type": "Ribwest 10 Pro Fishing (Pro GT)",
+     "details": "Jusqu'a 16 personnes ; pont allonge, assises XXL ; usage peche pro / secours / intervention",
      "annee": null,
      "longueur_m": 10,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Jusqu'a 16 personnes ; pont allonge, assises XXL ; usage peche pro / secours / intervention",
-     "energie": "hors-bord essence (jusqu'a 1000 cv)",
-     "client": "Professionnels (pecheurs commerciaux, secours en mer, intervention)",
-     "classification": "ICNN ; categorie CE B/C ; attestation NUC",
      "source": "https://www.ribwest.fr/nos-realisations/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     },
     {
-     "nom": "Ribwest 8.99 Fishing (Fish 9)",
-     "type": "modele",
+     "type": "Ribwest 8.99 Fishing (Fish 9)",
+     "details": "Bateau de peche pro/loisir ; vivier LED, marchepied, amenagement peche",
      "annee": null,
      "longueur_m": 8.99,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Bateau de peche pro/loisir ; vivier LED, marchepied, amenagement peche",
-     "energie": "hors-bord essence",
-     "client": "Pecheurs (loisir et professionnels)",
-     "classification": "ICNN ; categorie CE ; NUC possible",
      "source": "https://www.hypenautic.fr/bateaux/ribwest-fish-9/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
+     "origine": "modele de production, anciennement compte comme navire"
     }
-   ],
-   "geo_source": "https://www.ribwest.fr/contact/"
+   ]
   },
   {
    "id": "sillinger-mer",
@@ -45212,6 +44443,30 @@
     {
      "type": "Production globale",
      "details": "Bateaux pneumatiques pliables et semi-rigides de 2,4 m à 12 m (jusqu'à 20 passagers), environ 28 modèles, 150 à 200 bateaux par an (pneumatiques ~60% de la production)."
+    },
+    {
+     "type": "Gamme RAFALE",
+     "details": "Gamme militaire/forces speciales de 9,5 a 16 m (6 modeles) ; Rafale 950 produit phare (jusqu'a 17 pers.), Rafale 1000 jusqu'a 20 pers. ; configurations in-board, Z-Drive, helices de surface ; marque Rafale rachetee par Sillinger (accord Dassault Aviation pour le nom)",
+     "annee": "2025",
+     "longueur_m": 9.5,
+     "source": "https://www.meretmarine.com/fr/defense/sillinger-reorganise-sa-gamme-et-lance-une-nouvelle-embarcation-commando",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "820 ALURAID",
+     "details": "jusqu a 12 personnes ; pont configurable ; poids a vide 2 350 kg ; charge utile 1 000 kg hors moteurs ; 2 reservoirs de 300 L ; presente en premiere mondiale a Euronaval 2024",
+     "annee": "2024",
+     "longueur_m": 8.2,
+     "source": "https://www.meretmarine.com/fr/construction-navale/820-aluraid-le-nouveau-semi-rigide-de-sillinger-a-flotteur-renforce",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Gamme SRD / SRD SUB (pneumatiques pliables commando, 4,25 a 5,25 m)",
+     "details": "Gamme SRD (4 modeles : 380, 425, 470, 525 SRD) de 3,8 a 5,25 m ; pneumatiques pliables, deploiement rapide (gonflage ~45 s), larguables par air (airdrop) ou en deploiement sous-marin",
+     "annee": null,
+     "longueur_m": 3.8,
+     "source": "https://sillinger.fr/en/products/srd",
+     "origine": "modele de production, anciennement compte comme navire"
     }
    ],
    "personnes": [
@@ -45273,22 +44528,6 @@
      ]
     },
     {
-     "nom": "Gamme RAFALE",
-     "type": "gamme",
-     "annee": "2025",
-     "longueur_m": 9.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Gamme militaire/forces speciales de 9,5 a 16 m (6 modeles) ; Rafale 950 produit phare (jusqu'a 17 pers.), Rafale 1000 jusqu'a 20 pers. ; configurations in-board, Z-Drive, helices de surface ; marque Rafale rachetee par Sillinger (accord Dassault Aviation pour le nom)",
-     "energie": "In-board, hors-bord, Z-Drive, helices de surface",
-     "client": "Forces speciales / commandos marine, marche militaire et professionnel",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/defense/sillinger-reorganise-sa-gamme-et-lance-une-nouvelle-embarcation-commando",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
      "nom": "765 PRORAID (contrat-cadre SSF / Marine nationale)",
      "type": "modele-contrat",
      "annee": "2024",
@@ -45300,22 +44539,6 @@
      "client": "Marine nationale (Service de soutien de la flotte) - bases navales, brigades nautiques, centres de plongée",
      "classification": null,
      "source": "https://gican.asso.fr/adherents/livraison-du-premier-765-proraid-a-la-marine-nationale/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "820 ALURAID",
-     "type": "modele",
-     "annee": "2024",
-     "longueur_m": 8.2,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "jusqu a 12 personnes ; pont configurable ; poids a vide 2 350 kg ; charge utile 1 000 kg hors moteurs ; 2 reservoirs de 300 L ; presente en premiere mondiale a Euronaval 2024",
-     "energie": "Moteurs hors-bord (300 ch, évolutif 350 ch)",
-     "client": "Présentation salon Euronaval (gamme militaire/professionnelle)",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/construction-navale/820-aluraid-le-nouveau-semi-rigide-de-sillinger-a-flotteur-renforce",
      "propulsion": [
       "diesel-mdo"
      ]
@@ -45396,22 +44619,6 @@
      "client": "Marine et garde-côtes libyens (export)",
      "classification": null,
      "source": "https://www.meretmarine.com/fr/content/sillinger-vend-50-embarcations-rapides-la-libye",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Gamme SRD / SRD SUB (pneumatiques pliables commando, 4,25 a 5,25 m)",
-     "type": "gamme",
-     "annee": null,
-     "longueur_m": 3.8,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Gamme SRD (4 modeles : 380, 425, 470, 525 SRD) de 3,8 a 5,25 m ; pneumatiques pliables, deploiement rapide (gonflage ~45 s), larguables par air (airdrop) ou en deploiement sous-marin",
-     "energie": "Moteur hors-bord",
-     "client": "Commandos marine / forces speciales et services de secours (UGAP)",
-     "classification": null,
-     "source": "https://sillinger.fr/en/products/srd",
      "propulsion": [
       "diesel-mdo"
      ]
@@ -58065,60 +57272,60 @@
      "details": "Specialite locale"
     },
     {
-     "intitule": "Bateaux ostreicoles / conchylicoles (barges, chalands)",
-     "detail": "Barges de 7 a 12 m de long, largeur 3 a 4,50 m, hauteur de coque ajustable ; construction composite (sans bois) ; carenes optimisees conso ; etang de Thau",
      "periode": null,
      "source": "https://www.constructions-navales.com/1-bateaux-ostreicoles-bateaux-conchylicoles",
-     "origine": "ligne de production, anciennement classee a tort comme navire"
+     "origine": "ligne de production, anciennement classee a tort comme navire",
+     "type": "Bateaux ostreicoles / conchylicoles (barges, chalands)",
+     "details": "Barges de 7 a 12 m de long, largeur 3 a 4,50 m, hauteur de coque ajustable ; construction composite (sans bois) ; carenes optimisees conso ; etang de Thau"
     },
     {
-     "intitule": "Bateaux de peche (vedettes monocoques et catamarans, composite)",
-     "detail": "Monocoques composite 6,50 a 10 m sur moule (sur mesure jusqu'a 30 m) ; catamarans 7,50 a 10 m (largeur 3,20 a 4 m, sur mesure jusqu'a 25 m)",
      "periode": null,
      "source": "https://www.constructions-navales.com/5-bateaux-de-peche.html",
-     "origine": "ligne de production, anciennement classee a tort comme navire"
+     "origine": "ligne de production, anciennement classee a tort comme navire",
+     "type": "Bateaux de peche (vedettes monocoques et catamarans, composite)",
+     "details": "Monocoques composite 6,50 a 10 m sur moule (sur mesure jusqu'a 30 m) ; catamarans 7,50 a 10 m (largeur 3,20 a 4 m, sur mesure jusqu'a 25 m)"
     },
     {
-     "intitule": "Bateaux de plaisance (coques bois et composite)",
-     "detail": "Construction et transformation, coques bois et composite",
      "periode": null,
      "source": "https://www.constructions-navales.com/constructions-et-reparations-navales-bateaux",
-     "origine": "ligne de production, anciennement classee a tort comme navire"
+     "origine": "ligne de production, anciennement classee a tort comme navire",
+     "type": "Bateaux de plaisance (coques bois et composite)",
+     "details": "Construction et transformation, coques bois et composite"
     },
     {
-     "intitule": "Bateaux de course offshore et barques de joutes languedociennes",
-     "detail": "Unites offshore engagees en championnat de France Race Nautic Tour ; barques de joutes pour la commune de Marseillan",
      "periode": null,
      "source": "https://www.constructions-navales.com/8-bateaux-de-course.html",
-     "origine": "ligne de production, anciennement classee a tort comme navire"
+     "origine": "ligne de production, anciennement classee a tort comme navire",
+     "type": "Bateaux de course offshore et barques de joutes languedociennes",
+     "details": "Unites offshore engagees en championnat de France Race Nautic Tour ; barques de joutes pour la commune de Marseillan"
     },
     {
-     "intitule": "Bateaux ostreicoles / conchylicoles (barges, plates, chalands)",
-     "detail": "Barges de 7 a 12 m de long, largeur 3 a 4,50 m, hauteur de coque ajustable ; construction composite (sans bois) ; carenes optimisees consommation ; etang de Thau",
      "periode": null,
      "source": "https://www.constructions-navales.com/1-bateaux-ostreicoles-bateaux-conchylicoles",
-     "origine": "ligne de production, anciennement classee a tort comme navire"
+     "origine": "ligne de production, anciennement classee a tort comme navire",
+     "type": "Bateaux ostreicoles / conchylicoles (barges, plates, chalands)",
+     "details": "Barges de 7 a 12 m de long, largeur 3 a 4,50 m, hauteur de coque ajustable ; construction composite (sans bois) ; carenes optimisees consommation ; etang de Thau"
     },
     {
-     "intitule": "Bateaux de plaisance (coques bois et composite, construction et transformation)",
-     "detail": "Construction et transformation de coques bois et composite (resine epoxy, fibre de carbone)",
      "periode": null,
      "source": "https://www.constructions-navales.com/constructions-et-reparations-navales-bateaux",
-     "origine": "ligne de production, anciennement classee a tort comme navire"
+     "origine": "ligne de production, anciennement classee a tort comme navire",
+     "type": "Bateaux de plaisance (coques bois et composite, construction et transformation)",
+     "details": "Construction et transformation de coques bois et composite (resine epoxy, fibre de carbone)"
     },
     {
-     "intitule": "Bateaux de course offshore (composite)",
-     "detail": "Unites engagees au championnat de France Race Nautic Tour",
      "periode": null,
      "source": "https://www.constructions-navales.com/chantier-naval-realisations-bateaux.html",
-     "origine": "ligne de production, anciennement classee a tort comme navire"
+     "origine": "ligne de production, anciennement classee a tort comme navire",
+     "type": "Bateaux de course offshore (composite)",
+     "details": "Unites engagees au championnat de France Race Nautic Tour"
     },
     {
-     "intitule": "Barques de joutes languedociennes",
-     "detail": "Barques traditionnelles de joutes nautiques (specialite locale)",
      "periode": null,
      "source": "https://www.constructions-navales.com/chantier-naval-realisations-bateaux.html",
-     "origine": "ligne de production, anciennement classee a tort comme navire"
+     "origine": "ligne de production, anciennement classee a tort comme navire",
+     "type": "Barques de joutes languedociennes",
+     "details": "Barques traditionnelles de joutes nautiques (specialite locale)"
     }
    ],
    "personnes": [
@@ -58876,6 +58083,62 @@
     {
      "type": "Ouvrages chaudronnés",
      "details": "Construction d'ouvrages chaudronnés pour travaux maritimes ; sous-ensembles (blocs) ou navires complets en pièces détachées assemblables sur d'autres sites."
+    },
+    {
+     "type": "Pousseur fluvial (en construction 2023-2024)",
+     "details": "Pousseur fluvial en construction chez MIM fin 2023-2024 (réalisé désormais de A à Z, timonerie et équipements numériques inclus) ; nom et client non publiés",
+     "annee": "2024",
+     "longueur_m": null,
+     "source": "https://www.normandie-maritime.fr/actualite/les-chantiers-manche-industrie-marine-ont-le-vent-en-poupe/1801",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Remorqueurs (coques acier et aluminium)",
+     "details": null,
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://mim-dieppe.com/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Navires de servitude / pilotines (acier et aluminium)",
+     "details": null,
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://mim-dieppe.com/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Chalutiers / navires de peche (coque acier, timonerie aluminium)",
+     "details": null,
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://www.normandie-maritime.fr/annuaire/mim---manche-industrie-marine/18",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Pontons et restaurants flottants de riviere",
+     "details": null,
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://www.normandie-maritime.fr/annuaire/mim---manche-industrie-marine/18",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Barges et restaurants/bars flottants de Seine",
+     "details": "Nombreuses barges parisiennes accueillant bars, restaurants ou espaces culturels en bord de Seine ; également pontons et atténuateurs de houle (ex. caissons remis en état pour le port de plaisance de Dieppe, barge Le Havre)",
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://www.normandie-maritime.fr/actualite/les-chantiers-manche-industrie-marine-ont-le-vent-en-poupe/1801",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Remorqueurs, pilotines et navires de servitude (coques acier et aluminium)",
+     "details": "Gamme historique du chantier : remorqueurs, bateaux de servitude / pilotines en acier et aluminium ; navires/coques complets ou sous-ensembles assemblés ailleurs",
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://mim-dieppe.com/",
+     "origine": "modele de production, anciennement compte comme navire"
     }
    ],
    "personnes": [
@@ -58929,22 +58192,6 @@
      "client": "Armement Cap Fagnet (Fecamp) ; Yvon Neveu (80%), Matthieu Panel patron (8%), fonds Normandie Littoral (12%)",
      "classification": null,
      "source": "https://www.normandie-maritime.fr/actualite/manche-industrie-marine-innove-sur-son-dernier-ne--le-chalutier-le-relais/1926",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Pousseur fluvial (en construction 2023-2024)",
-     "type": "famille",
-     "annee": "2024",
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Pousseur fluvial en construction chez MIM fin 2023-2024 (réalisé désormais de A à Z, timonerie et équipements numériques inclus) ; nom et client non publiés",
-     "energie": "Diesel",
-     "client": null,
-     "classification": null,
-     "source": "https://www.normandie-maritime.fr/actualite/les-chantiers-manche-industrie-marine-ont-le-vent-en-poupe/1801",
      "propulsion": [
       "diesel-mdo"
      ]
@@ -59089,99 +58336,6 @@
      "propulsion": [
       "diesel-mdo"
      ]
-    },
-    {
-     "nom": "Remorqueurs (coques acier et aluminium)",
-     "type": "famille",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "Diesel",
-     "client": null,
-     "classification": null,
-     "source": "https://mim-dieppe.com/",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "tracabilite": "url-domaine-seul"
-    },
-    {
-     "nom": "Navires de servitude / pilotines (acier et aluminium)",
-     "type": "famille",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "Diesel",
-     "client": null,
-     "classification": null,
-     "source": "https://mim-dieppe.com/",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "tracabilite": "url-domaine-seul"
-    },
-    {
-     "nom": "Chalutiers / navires de peche (coque acier, timonerie aluminium)",
-     "type": "famille",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "Diesel",
-     "client": null,
-     "classification": null,
-     "source": "https://www.normandie-maritime.fr/annuaire/mim---manche-industrie-marine/18",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Pontons et restaurants flottants de riviere",
-     "type": "famille",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": null,
-     "client": null,
-     "classification": null,
-     "source": "https://www.normandie-maritime.fr/annuaire/mim---manche-industrie-marine/18"
-    },
-    {
-     "nom": "Barges et restaurants/bars flottants de Seine",
-     "type": "famille",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Nombreuses barges parisiennes accueillant bars, restaurants ou espaces culturels en bord de Seine ; également pontons et atténuateurs de houle (ex. caissons remis en état pour le port de plaisance de Dieppe, barge Le Havre)",
-     "energie": null,
-     "client": "Clients parisiens (bord de Seine) ; Ports de Normandie / Dieppe pour l'atténuateur de houle",
-     "classification": null,
-     "source": "https://www.normandie-maritime.fr/actualite/les-chantiers-manche-industrie-marine-ont-le-vent-en-poupe/1801"
-    },
-    {
-     "nom": "Remorqueurs, pilotines et navires de servitude (coques acier et aluminium)",
-     "type": "famille",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Gamme historique du chantier : remorqueurs, bateaux de servitude / pilotines en acier et aluminium ; navires/coques complets ou sous-ensembles assemblés ailleurs",
-     "energie": "Diesel",
-     "client": null,
-     "classification": null,
-     "source": "https://mim-dieppe.com/",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "tracabilite": "url-domaine-seul"
     },
     {
      "nom": "Bac 26",
@@ -60138,6 +59292,70 @@
     {
      "type": "Espars et gréements",
      "details": "Fabrication d'espars (mâts, bômes, vergues, tangons) et répliques de gréements anciens"
+    },
+    {
+     "type": "Doris",
+     "details": null,
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://lecharles.fr/notre-savoir-faire/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Plates traditionnelles (bois massif et contreplaqué)",
+     "details": null,
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://lecharles.fr/notre-savoir-faire/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Annexes et petites embarcations (bois / polyester)",
+     "details": null,
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://lecharles.fr/notre-savoir-faire/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Voiliers et bateaux de plaisance (construction et restauration de coques)",
+     "details": null,
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://lecharles.fr/notre-savoir-faire/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Bateaux de pêche (coques bois et polyester)",
+     "details": null,
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://www.bretagne-info-nautisme.fr/fr/entreprises/entreprises-a-la-hune/entreprises/chantier-naval-le-charles",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Espars et gréements (mâts, bômes, vergues, tangons) et répliques de gréements anciens",
+     "details": null,
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://lecharles.fr/notre-savoir-faire/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Coques de pêche et de plaisance (construction et restauration, bois et polyester)",
+     "details": null,
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://www.bretagne-info-nautisme.fr/fr/entreprises/entreprises-a-la-hune/entreprises/chantier-naval-le-charles",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Espars, gréements et répliques de gréements anciens (mâts, bômes, vergues, tangons)",
+     "details": null,
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://lecharles.fr/notre-savoir-faire/",
+     "origine": "modele de production, anciennement compte comme navire"
     }
    ],
    "personnes": [
@@ -60162,128 +59380,7 @@
     "diesel"
    ],
    "taille_max": "Artisanat de petites unités. Aucune dimension maximale publiée. Productions de type embarcations traditionnelles (Doris, plates, annexes) et coques de pêche/plaisance, indicativement sous ~15 m. Non confirmé par source.",
-   "navires_references": [
-    {
-     "nom": "Doris",
-     "type": "categorie",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "aviron / voile",
-     "client": null,
-     "classification": null,
-     "source": "https://lecharles.fr/notre-savoir-faire/",
-     "propulsion": [
-      "autre"
-     ]
-    },
-    {
-     "nom": "Plates traditionnelles (bois massif et contreplaqué)",
-     "type": "categorie",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": null,
-     "client": null,
-     "classification": null,
-     "source": "https://lecharles.fr/notre-savoir-faire/"
-    },
-    {
-     "nom": "Annexes et petites embarcations (bois / polyester)",
-     "type": "categorie",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": null,
-     "client": null,
-     "classification": null,
-     "source": "https://lecharles.fr/notre-savoir-faire/"
-    },
-    {
-     "nom": "Voiliers et bateaux de plaisance (construction et restauration de coques)",
-     "type": "categorie",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "voile (vélique)",
-     "client": null,
-     "classification": null,
-     "source": "https://lecharles.fr/notre-savoir-faire/",
-     "propulsion": [
-      "velique"
-     ]
-    },
-    {
-     "nom": "Bateaux de pêche (coques bois et polyester)",
-     "type": "categorie",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "diesel",
-     "client": null,
-     "classification": null,
-     "source": "https://www.bretagne-info-nautisme.fr/fr/entreprises/entreprises-a-la-hune/entreprises/chantier-naval-le-charles",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Espars et gréements (mâts, bômes, vergues, tangons) et répliques de gréements anciens",
-     "type": "categorie",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": null,
-     "client": null,
-     "classification": null,
-     "source": "https://lecharles.fr/notre-savoir-faire/"
-    },
-    {
-     "nom": "Coques de pêche et de plaisance (construction et restauration, bois et polyester)",
-     "type": "categorie",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "voile (vélique) / diesel",
-     "client": null,
-     "classification": null,
-     "source": "https://www.bretagne-info-nautisme.fr/fr/entreprises/entreprises-a-la-hune/entreprises/chantier-naval-le-charles",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Espars, gréements et répliques de gréements anciens (mâts, bômes, vergues, tangons)",
-     "type": "categorie",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "voile (vélique)",
-     "client": null,
-     "classification": null,
-     "source": "https://lecharles.fr/notre-savoir-faire/",
-     "propulsion": [
-      "velique"
-     ]
-    }
-   ],
+   "navires_references": [],
    "geo_source": "https://nominatim.openstreetmap.org/search?q=13+Rue+des+Petits+Champs+35400+Saint-Malo (adresse 13 rue des Petits Champs confirmee par https://www.bretagne-info-nautisme.fr/fr/entreprises/entreprises-a-la-hune/entreprises/chantier-naval-le-charles)"
   },
   {
@@ -72422,6 +71519,12 @@
     {
      "type": "Barges de transport",
      "details": "Différentes tailles, destinées au transport de sable, d'engins ou de matériel lourd"
+    },
+    {
+     "type": "Barges de transport (sable, engins, matériel lourd)",
+     "details": "Transport de sable, d'engins et de matériel lourd ; différentes tailles",
+     "source": "https://marinalu.pf/realisations.php",
+     "origine": "gamme de production, anciennement comptee comme navire"
     }
    ],
    "personnes": [
@@ -72725,31 +71828,6 @@
        "role": "construction",
        "nom": "Marinalu, Uturoa (Raiatea)",
        "detail": "Categorie de navires (pas un navire nomme unique) : deux bateaux-pilotes (navires de servitude) construits par Marinalu pour la station de pilotage du port de Papeete.",
-       "source": "http://www.marinalu.pf/realisations.php"
-      }
-     ]
-    },
-    {
-     "nom": "Barges de transport (sable, engins, matériel lourd)",
-     "type": "barge",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Transport de sable, d'engins et de matériel lourd ; différentes tailles",
-     "energie": "Diesel ou non propulsées",
-     "client": "Hôtels, perliculteurs, opérateurs de sable de Polynésie",
-     "classification": "Aluminium / acier",
-     "source": "https://marinalu.pf/realisations.php",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "timeline": [
-      {
-       "annee": "",
-       "role": "construction",
-       "nom": "Marinalu, Uturoa (Raiatea)",
-       "detail": "Categorie de navires (pas un navire nomme unique) : plusieurs barges de transport (sable, engins, materiel lourd) construites par Marinalu pour des hotels, perliculteurs et operateurs de sable de Polynesie. Proprietaires multiples.",
        "source": "http://www.marinalu.pf/realisations.php"
       }
      ]
@@ -73235,18 +72313,18 @@
      "details": "Tôlerie, chaudronnerie, soudage, tuyauterie sur acier, aluminium et inox ; au service de la flotte de pêche, des ferries, des navires de servitude et de la Marine nationale."
     },
     {
-     "intitule": "Pontons flottants acier",
-     "detail": "Environ 50 pontons flottants acier, tailles 12, 20 et 30 m",
      "periode": "2002-2016",
      "source": "http://www.cnps.pf/historique/",
-     "origine": "ligne de production, anciennement classee a tort comme navire"
+     "origine": "ligne de production, anciennement classee a tort comme navire",
+     "type": "Pontons flottants acier",
+     "details": "Environ 50 pontons flottants acier, tailles 12, 20 et 30 m"
     },
     {
-     "intitule": "Serie de navires acier de peche (thoniers)",
-     "detail": "30 navires acier de 21 a 28 m, dont 9 a l'export ; 2 premiers thoniers lances le 7 decembre 1992",
      "periode": "1992-2005",
      "source": "http://www.cnps.pf/historique/",
-     "origine": "ligne de production, anciennement classee a tort comme navire"
+     "origine": "ligne de production, anciennement classee a tort comme navire",
+     "type": "Serie de navires acier de peche (thoniers)",
+     "details": "30 navires acier de 21 a 28 m, dont 9 a l'export ; 2 premiers thoniers lances le 7 decembre 1992"
     }
    ],
    "materiaux": [
@@ -73537,6 +72615,150 @@
     {
      "type": "Coques polyester (résine anti-osmose)",
      "details": "Embarcations de plaisance, pêche, excursion lagonaire, plongée et transfert de pensions, de 15 à 35 pieds. Trois familles de carène: coque en V, coque plate et profil 'Aile de Mouette'. Options sur mesure. Plus de 600 coques produites depuis 1961 (source: site officiel blouin.pf)."
+    },
+    {
+     "type": "Blouin coque plate (fond plat)",
+     "details": null,
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://www.blouin.pf/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin profil 'Aile de Mouette'",
+     "details": null,
+     "annee": null,
+     "longueur_m": null,
+     "source": "https://www.blouin.pf/",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin 21 pieds (fond plat, bordé simple)",
+     "details": "8 personnes (selon annonce occasion)",
+     "annee": null,
+     "longueur_m": 6.4,
+     "source": "https://www.tevea.cc/annonces/offre/1eef469c-4523-6fce-830a-83653512ea33",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin 24 pieds (fond plat, bordé simple)",
+     "details": null,
+     "annee": null,
+     "longueur_m": 7.3,
+     "source": "https://www.blouin.pf/catalogue",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin 15' (coque en V)",
+     "details": "6 personnes",
+     "annee": null,
+     "longueur_m": 4.7,
+     "source": "https://www.blouin.pf/catalogue",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin 17' (coque en V)",
+     "details": "4 à 6 personnes (version semi-ponton)",
+     "annee": null,
+     "longueur_m": 5.34,
+     "source": "https://www.blouin.pf/catalogue",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin 19' (coque en V)",
+     "details": "6 personnes",
+     "annee": null,
+     "longueur_m": 5.97,
+     "source": "https://www.blouin.pf/catalogue",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin Coque plate 21'",
+     "details": "5 à 8 personnes (navigation lagon)",
+     "annee": null,
+     "longueur_m": 6.3,
+     "source": "https://www.blouin.pf/catalogue",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin Chaloupe 24' (fond plat)",
+     "details": "6 personnes",
+     "annee": null,
+     "longueur_m": 7.1,
+     "source": "https://www.blouin.pf/catalogue",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin Coque plate 28'",
+     "details": "9 à 19 personnes (navigation lagon)",
+     "annee": null,
+     "longueur_m": 8.46,
+     "source": "https://www.blouin.pf/catalogue",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin NUC 21' (version commerciale / professionnelle)",
+     "details": null,
+     "annee": null,
+     "longueur_m": 6.3,
+     "source": "https://www.blouin.pf/catalogue",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin NUC 24' (version commerciale / professionnelle)",
+     "details": null,
+     "annee": null,
+     "longueur_m": 7.1,
+     "source": "https://www.blouin.pf/catalogue",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin NUC 28' (version commerciale / professionnelle)",
+     "details": null,
+     "annee": null,
+     "longueur_m": 8.46,
+     "source": "https://www.blouin.pf/catalogue",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin Aile de Mouette 25'",
+     "details": "12 personnes",
+     "annee": null,
+     "longueur_m": 7.6,
+     "source": "https://www.blouin.pf/catalogue",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin Aile de Mouette 28'",
+     "details": "12 personnes",
+     "annee": null,
+     "longueur_m": 8.55,
+     "source": "https://www.blouin.pf/catalogue",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin Aile de Mouette 32'",
+     "details": null,
+     "annee": null,
+     "longueur_m": 9.68,
+     "source": "https://www.blouin.pf/catalogue",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin Aile de Mouette 35'",
+     "details": null,
+     "annee": null,
+     "longueur_m": 10.75,
+     "source": "https://www.blouin.pf/catalogue",
+     "origine": "modele de production, anciennement compte comme navire"
+    },
+    {
+     "type": "Blouin 21 pieds fond plat (exemplaire d'occasion attesté)",
+     "details": "8 personnes (selon annonce occasion)",
+     "annee": null,
+     "longueur_m": 6.4,
+     "source": "https://www.blouin.pf/",
+     "origine": "modele de production, anciennement compte comme navire"
     }
    ],
    "personnes": [
@@ -73570,297 +72792,6 @@
      "propulsion": [
       "diesel-mdo"
      ]
-    },
-    {
-     "nom": "Blouin coque plate (fond plat)",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "moteur hors-bord essence",
-     "client": "lagon / faibles tirants d'eau, pêche, perliculture",
-     "classification": null,
-     "source": "https://www.blouin.pf/",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "tracabilite": "url-domaine-seul"
-    },
-    {
-     "nom": "Blouin profil 'Aile de Mouette'",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "moteur hors-bord essence",
-     "client": "plaisance / excursion",
-     "classification": null,
-     "source": "https://www.blouin.pf/",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "tracabilite": "url-domaine-seul"
-    },
-    {
-     "nom": "Blouin 21 pieds (fond plat, bordé simple)",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 6.4,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "8 personnes (selon annonce occasion)",
-     "energie": "hors-bord essence Yamaha 4 temps (300 ch observé sur le marché de l'occasion)",
-     "client": "plaisance / sorties en mer / excursion",
-     "classification": null,
-     "source": "https://www.tevea.cc/annonces/offre/1eef469c-4523-6fce-830a-83653512ea33",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Blouin 24 pieds (fond plat, bordé simple)",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 7.3,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "hors-bord essence",
-     "client": "pêche / excursion lagonaire",
-     "classification": null,
-     "source": "https://www.blouin.pf/catalogue",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Blouin 15' (coque en V)",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 4.7,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "6 personnes",
-     "energie": "hors-bord essence ~75 ch",
-     "client": "plaisance / excursion lagonaire / pêche",
-     "classification": null,
-     "source": "https://www.blouin.pf/catalogue",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Blouin 17' (coque en V)",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 5.34,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "4 à 6 personnes (version semi-ponton)",
-     "energie": "hors-bord essence 115 à 200 ch",
-     "client": "plaisance / pêche / excursion",
-     "classification": null,
-     "source": "https://www.blouin.pf/catalogue",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Blouin 19' (coque en V)",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 5.97,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "6 personnes",
-     "energie": "hors-bord essence ~200 ch",
-     "client": "plaisance / pêche / excursion",
-     "classification": null,
-     "source": "https://www.blouin.pf/catalogue",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Blouin Coque plate 21'",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 6.3,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "5 à 8 personnes (navigation lagon)",
-     "energie": "hors-bord essence ~150 ch",
-     "client": "lagon / pêche / perliculture / transfert pensions",
-     "classification": null,
-     "source": "https://www.blouin.pf/catalogue",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Blouin Chaloupe 24' (fond plat)",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 7.1,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "6 personnes",
-     "energie": "hors-bord essence ~200 ch",
-     "client": "pêche / excursion lagonaire / servitude",
-     "classification": null,
-     "source": "https://www.blouin.pf/catalogue",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Blouin Coque plate 28'",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 8.46,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "9 à 19 personnes (navigation lagon)",
-     "energie": "hors-bord essence ~200 ch",
-     "client": "transfert pensions / excursion lagonaire / desserte",
-     "classification": null,
-     "source": "https://www.blouin.pf/catalogue",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Blouin NUC 21' (version commerciale / professionnelle)",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 6.3,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "hors-bord essence ~200 ch",
-     "client": "usage professionnel (NUC) / servitude / pêche",
-     "classification": null,
-     "source": "https://www.blouin.pf/catalogue",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Blouin NUC 24' (version commerciale / professionnelle)",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 7.1,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "hors-bord essence ~200 ch",
-     "client": "usage professionnel (NUC) / servitude / pêche",
-     "classification": null,
-     "source": "https://www.blouin.pf/catalogue",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Blouin NUC 28' (version commerciale / professionnelle)",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 8.46,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "hors-bord essence ~250 ch",
-     "client": "usage professionnel (NUC) / desserte / servitude",
-     "classification": null,
-     "source": "https://www.blouin.pf/catalogue",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Blouin Aile de Mouette 25'",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 7.6,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "12 personnes",
-     "energie": "hors-bord essence ~250 ch",
-     "client": "excursion / plongée / transfert pensions",
-     "classification": null,
-     "source": "https://www.blouin.pf/catalogue",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Blouin Aile de Mouette 28'",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 8.55,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "12 personnes",
-     "energie": "hors-bord essence ~250 ch",
-     "client": "excursion / plongée / transfert pensions",
-     "classification": null,
-     "source": "https://www.blouin.pf/catalogue",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Blouin Aile de Mouette 32'",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 9.68,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "2 x hors-bord essence ~250 ch",
-     "client": "excursion / desserte / pêche hauturière côtière",
-     "classification": null,
-     "source": "https://www.blouin.pf/catalogue",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Blouin Aile de Mouette 35'",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 10.75,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "energie": "2 x hors-bord essence ~250 ch",
-     "client": "excursion / desserte / motor-yacht / pêche",
-     "classification": null,
-     "source": "https://www.blouin.pf/catalogue",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": "Blouin 21 pieds fond plat (exemplaire d'occasion attesté)",
-     "type": "modele",
-     "annee": null,
-     "longueur_m": 6.4,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "8 personnes (selon annonce occasion)",
-     "energie": "hors-bord essence (motorisation variable selon exemplaire ; ex. Yamaha 4 temps ou Mercury 90)",
-     "client": "plaisance / sorties en mer / excursion",
-     "classification": null,
-     "source": "https://www.blouin.pf/",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "tracabilite": "url-domaine-seul"
     }
    ],
    "geo_source": "https://www.blouin.pf/"

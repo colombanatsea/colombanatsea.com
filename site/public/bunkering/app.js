@@ -17,9 +17,9 @@
     });
   }
   async function ensurePdfjs() {
-    if (!window.pdfjsLib) await loadScript("vendor/pdf.min.js");
+    if (!window.pdfjsLib) await loadScript("lib_ext/pdf.min.js");
     if (!(window.pdfjsWorker && window.pdfjsWorker.WorkerMessageHandler))
-      await loadScript("vendor/pdf.worker.min.js");
+      await loadScript("lib_ext/pdf.worker.min.js");
   }
 
   // -------- pdf.js : reconstruction des lignes (approx. pdfplumber) ----------

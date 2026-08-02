@@ -1,5 +1,5 @@
 /* Routage maritime cote navigateur — port de la logique leg_route() de server.py.
-   Primaire : searoute-js (vendor/searoute.bundle.js, lazy). Repli : grand-cercle autonome.
+   Primaire : searoute-js (lib_ext/searoute.bundle.js, lazy). Repli : grand-cercle autonome.
    a, b sont des couples [lat, lon] (comme les tuples Python). Sortie coords D3 = [lon, lat]. */
 (function (g) {
   const V = (g.VOYAGES = g.VOYAGES || {});
@@ -51,7 +51,7 @@
     if (V._searoute) { _sr = V._searoute; return _sr; }
     if (typeof document === "undefined") { _sr = false; return _sr; }
     if (!_loading) _loading = (async () => {
-      try { await loadScript("./vendor/searoute.bundle.js"); _sr = g.searoute || false; }
+      try { await loadScript("./lib_ext/searoute.bundle.js"); _sr = g.searoute || false; }
       catch (e) { console.warn("searoute indisponible, repli grand-cercle", e); _sr = false; }
       return _sr;
     })();
