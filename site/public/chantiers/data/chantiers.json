@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Chantiers navals français",
   "version": "0.1.0-mvp",
-  "date_maj": "2026-08-01",
+  "date_maj": "2026-08-02",
   "note": "Base enrichie par passe OSINT vérifiée (navires de référence avec caractéristiques). Documentation de référence ; aide au choix d'un chantier par navire similaire. Sources par fiche, aucune invention.",
   "perimetres_ref": {
    "construction-neuve": "Construction neuve",
@@ -24,6 +24,10 @@
    "voilier": "Voilier",
    "motor-yacht": "Motor yacht",
    "navire-technique": "Navire technique / hydrographie"
+  },
+  "blocs": {
+   "chantiers": "Chantiers navals, avec leurs navires de reference.",
+   "equipementiers": "Equipementiers de la decarbonation maritime, classes par levier. Entite de premier rang : un equipementier existe meme sans reference de navire publique. Une maison deja fichee comme chantier n'est pas dupliquee ici, elle porte un `rattachement_chantier`."
   }
  },
  "chantiers": [
@@ -37087,6 +37091,13 @@
     {
      "type": "catamaran Gunboat 80",
      "details": "longueur hors-tout 24,65 m (80'10\"), flottaison 23,95 m, bau 10,25 m, architecture VPLP"
+    },
+    {
+     "intitule": "catamaran voile (Gunboat 70, nouveau modèle annoncé 2023, remplaçant du Gunboat 68 ; programme de production lancé, premier de série non encore attesté à flot)",
+     "detail": "catamaran full carbone ~21 m, architecture VPLP ; mât reculé ; remplace la série 68 à partir de 2025",
+     "periode": null,
+     "source": "https://www.yachtingworld.com/reviews/boat-tests/first-look-gunboats-gb80-and-gb70",
+     "origine": "ligne de production, anciennement classee a tort comme navire"
     }
    ],
    "personnes": [
@@ -37110,22 +37121,6 @@
    ],
    "taille_max": "Catamarans de plaisance jusqu'à ~24,65 m hors-tout (Gunboat 80, 80'10\\\"). Pas de jauge GT publiée (unités de plaisance, déplacement lège 27-28 t).",
    "navires_references": [
-    {
-     "nom": null,
-     "type": "catamaran voile (Gunboat 70, nouveau modèle annoncé 2023, remplaçant du Gunboat 68 ; programme de production lancé, premier de série non encore attesté à flot)",
-     "annee": null,
-     "longueur_m": 21,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "catamaran full carbone ~21 m, architecture VPLP ; mât reculé ; remplace la série 68 à partir de 2025",
-     "energie": "voile (architecture VPLP) + moteurs diesel inboard auxiliaires",
-     "client": null,
-     "classification": "CE Cat A (haute mer)",
-     "source": "https://www.yachtingworld.com/reviews/boat-tests/first-look-gunboats-gb80-and-gb70",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
     {
      "nom": "Yasasin",
      "type": "catamaran voile (Gunboat 72, hull 72.03, version flybridge)",
@@ -58068,6 +58063,62 @@
     {
      "type": "Barques de joutes languedociennes",
      "details": "Specialite locale"
+    },
+    {
+     "intitule": "Bateaux ostreicoles / conchylicoles (barges, chalands)",
+     "detail": "Barges de 7 a 12 m de long, largeur 3 a 4,50 m, hauteur de coque ajustable ; construction composite (sans bois) ; carenes optimisees conso ; etang de Thau",
+     "periode": null,
+     "source": "https://www.constructions-navales.com/1-bateaux-ostreicoles-bateaux-conchylicoles",
+     "origine": "ligne de production, anciennement classee a tort comme navire"
+    },
+    {
+     "intitule": "Bateaux de peche (vedettes monocoques et catamarans, composite)",
+     "detail": "Monocoques composite 6,50 a 10 m sur moule (sur mesure jusqu'a 30 m) ; catamarans 7,50 a 10 m (largeur 3,20 a 4 m, sur mesure jusqu'a 25 m)",
+     "periode": null,
+     "source": "https://www.constructions-navales.com/5-bateaux-de-peche.html",
+     "origine": "ligne de production, anciennement classee a tort comme navire"
+    },
+    {
+     "intitule": "Bateaux de plaisance (coques bois et composite)",
+     "detail": "Construction et transformation, coques bois et composite",
+     "periode": null,
+     "source": "https://www.constructions-navales.com/constructions-et-reparations-navales-bateaux",
+     "origine": "ligne de production, anciennement classee a tort comme navire"
+    },
+    {
+     "intitule": "Bateaux de course offshore et barques de joutes languedociennes",
+     "detail": "Unites offshore engagees en championnat de France Race Nautic Tour ; barques de joutes pour la commune de Marseillan",
+     "periode": null,
+     "source": "https://www.constructions-navales.com/8-bateaux-de-course.html",
+     "origine": "ligne de production, anciennement classee a tort comme navire"
+    },
+    {
+     "intitule": "Bateaux ostreicoles / conchylicoles (barges, plates, chalands)",
+     "detail": "Barges de 7 a 12 m de long, largeur 3 a 4,50 m, hauteur de coque ajustable ; construction composite (sans bois) ; carenes optimisees consommation ; etang de Thau",
+     "periode": null,
+     "source": "https://www.constructions-navales.com/1-bateaux-ostreicoles-bateaux-conchylicoles",
+     "origine": "ligne de production, anciennement classee a tort comme navire"
+    },
+    {
+     "intitule": "Bateaux de plaisance (coques bois et composite, construction et transformation)",
+     "detail": "Construction et transformation de coques bois et composite (resine epoxy, fibre de carbone)",
+     "periode": null,
+     "source": "https://www.constructions-navales.com/constructions-et-reparations-navales-bateaux",
+     "origine": "ligne de production, anciennement classee a tort comme navire"
+    },
+    {
+     "intitule": "Bateaux de course offshore (composite)",
+     "detail": "Unites engagees au championnat de France Race Nautic Tour",
+     "periode": null,
+     "source": "https://www.constructions-navales.com/chantier-naval-realisations-bateaux.html",
+     "origine": "ligne de production, anciennement classee a tort comme navire"
+    },
+    {
+     "intitule": "Barques de joutes languedociennes",
+     "detail": "Barques traditionnelles de joutes nautiques (specialite locale)",
+     "periode": null,
+     "source": "https://www.constructions-navales.com/chantier-naval-realisations-bateaux.html",
+     "origine": "ligne de production, anciennement classee a tort comme navire"
     }
    ],
    "personnes": [
@@ -58090,198 +58141,6 @@
    ],
    "taille_max": "Monocoques composite jusqu'a environ 30 m (coque sur mesure a l'unite) ; catamarans jusqu'a environ 25 m sur mesure. Plus grande unite a passagers reellement livree : 25 m (Le Millesime). Jauge maximale non documentee.",
    "navires_references": [
-    {
-     "nom": null,
-     "type": "Navire a passagers (catamaran, 4e categorie, navigation maritime + canal du Midi)",
-     "annee": null,
-     "longueur_m": 20,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "140 passagers ; unite ulterieurement rallongee de 4,80 m ; navigation mer + canal du Midi (tirant d'air limite, ponts bas)",
-     "energie": null,
-     "client": null,
-     "classification": "4e categorie de navigation (categorie reglementaire francaise)",
-     "source": "https://www.constructions-navales.com/constructions-et-reparations-navales-bateaux",
-     "capacite_pax": 140
-    },
-    {
-     "nom": null,
-     "type": "Navire a passagers (deuxieme unite du meme type, conception integrale chantier)",
-     "annee": null,
-     "longueur_m": 24,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Deuxieme bateau du meme type, 24 m, mis a l'eau en juin ; conception a realisation par Cyril Camboulive",
-     "energie": null,
-     "client": null,
-     "classification": null,
-     "source": "https://www.constructions-navales.com/",
-     "tracabilite": "url-domaine-seul"
-    },
-    {
-     "nom": null,
-     "type": "Bateaux ostreicoles / conchylicoles (barges, chalands)",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Barges de 7 a 12 m de long, largeur 3 a 4,50 m, hauteur de coque ajustable ; construction composite (sans bois) ; carenes optimisees conso ; etang de Thau",
-     "energie": null,
-     "client": null,
-     "classification": null,
-     "source": "https://www.constructions-navales.com/1-bateaux-ostreicoles-bateaux-conchylicoles"
-    },
-    {
-     "nom": null,
-     "type": "Bateaux de peche (vedettes monocoques et catamarans, composite)",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Monocoques composite 6,50 a 10 m sur moule (sur mesure jusqu'a 30 m) ; catamarans 7,50 a 10 m (largeur 3,20 a 4 m, sur mesure jusqu'a 25 m)",
-     "energie": null,
-     "client": null,
-     "classification": null,
-     "source": "https://www.constructions-navales.com/5-bateaux-de-peche.html"
-    },
-    {
-     "nom": null,
-     "type": "Bateaux de plaisance (coques bois et composite)",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Construction et transformation, coques bois et composite",
-     "energie": null,
-     "client": null,
-     "classification": null,
-     "source": "https://www.constructions-navales.com/constructions-et-reparations-navales-bateaux"
-    },
-    {
-     "nom": null,
-     "type": "Bateaux de course offshore et barques de joutes languedociennes",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Unites offshore engagees en championnat de France Race Nautic Tour ; barques de joutes pour la commune de Marseillan",
-     "energie": null,
-     "client": "Commune de Marseillan (barques de joutes)",
-     "classification": null,
-     "source": "https://www.constructions-navales.com/8-bateaux-de-course.html"
-    },
-    {
-     "nom": null,
-     "type": "Navire a passagers (catamaran mixte mer + canal du Midi, 4e categorie)",
-     "annee": null,
-     "longueur_m": 20,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "140 passagers ; unite ulterieurement rallongee de 4,80 m (longueur portee a 24,80 m) ; navigation maritime et canal du Midi (tirant d'air limite, ponts bas) ; conception avec assistance d'un architecte",
-     "energie": null,
-     "client": null,
-     "classification": "4e categorie de navigation (categorie reglementaire francaise)",
-     "source": "https://www.constructions-navales.com/constructions-et-reparations-navales-bateaux",
-     "capacite_pax": 140
-    },
-    {
-     "nom": null,
-     "type": "Navire a passagers (deuxieme unite du meme type, conception et realisation integrales du chantier)",
-     "annee": "Mis a l'eau en juin (annee non datee par la source)",
-     "longueur_m": 24,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Deuxieme bateau du meme type que le catamaran 20 m ; conception a realisation par Cyril Camboulive",
-     "energie": null,
-     "client": null,
-     "classification": null,
-     "source": "https://www.constructions-navales.com/",
-     "tracabilite": "url-domaine-seul"
-    },
-    {
-     "nom": null,
-     "type": "Catamaran de peche (composite) avec allongement de coque",
-     "annee": null,
-     "longueur_m": 17.85,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Coque de 13,85 m rallongee a 17,85 m par le chantier (operation d'allongement attestee)",
-     "energie": null,
-     "client": null,
-     "classification": null,
-     "source": "https://www.constructions-navales.com/5-bateaux-de-peche.html"
-    },
-    {
-     "nom": null,
-     "type": "Bateaux ostreicoles / conchylicoles (barges, plates, chalands)",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Barges de 7 a 12 m de long, largeur 3 a 4,50 m, hauteur de coque ajustable ; construction composite (sans bois) ; carenes optimisees consommation ; etang de Thau",
-     "energie": "Diesel",
-     "client": "Ostreiculteurs / conchyliculteurs de l'etang de Thau",
-     "classification": null,
-     "source": "https://www.constructions-navales.com/1-bateaux-ostreicoles-bateaux-conchylicoles",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": null,
-     "type": "Bateaux de peche (vedettes monocoques et catamarans, composite, serie / sur mesure)",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Monocoques composite 6,50 a 10 m sur moule (sur mesure jusqu'a ~30 m) ; catamarans 7,50 a 10 m (largeur 3,20 a 4 m, sur mesure jusqu'a ~25 m)",
-     "energie": "Diesel",
-     "client": null,
-     "classification": null,
-     "source": "https://www.constructions-navales.com/5-bateaux-de-peche.html",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": null,
-     "type": "Bateaux de plaisance (coques bois et composite, construction et transformation)",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Construction et transformation de coques bois et composite (resine epoxy, fibre de carbone)",
-     "energie": null,
-     "client": null,
-     "classification": null,
-     "source": "https://www.constructions-navales.com/constructions-et-reparations-navales-bateaux"
-    },
-    {
-     "nom": null,
-     "type": "Bateaux de course offshore (composite)",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Unites engagees au championnat de France Race Nautic Tour",
-     "energie": null,
-     "client": null,
-     "classification": null,
-     "source": "https://www.constructions-navales.com/chantier-naval-realisations-bateaux.html"
-    },
-    {
-     "nom": null,
-     "type": "Barques de joutes languedociennes",
-     "annee": null,
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Barques traditionnelles de joutes nautiques (specialite locale)",
-     "energie": null,
-     "client": "Commune de Marseillan (et clubs de joutes)",
-     "classification": null,
-     "source": "https://www.constructions-navales.com/chantier-naval-realisations-bateaux.html"
-    },
     {
      "nom": "Le Millesime",
      "type": "Navire a passagers (vedette monocoque)",
@@ -58337,6 +58196,47 @@
        "source": "https://lesbateauxagathois.com/nos-bateaux/"
       }
      ]
+    },
+    {
+     "nom": null,
+     "type": "Navire a passagers (catamaran, 4e categorie, navigation maritime + canal du Midi)",
+     "annee": null,
+     "longueur_m": 20,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "140 passagers ; unite ulterieurement rallongee de 4,80 m ; navigation mer + canal du Midi (tirant d'air limite, ponts bas)",
+     "energie": null,
+     "client": null,
+     "classification": "4e categorie de navigation (categorie reglementaire francaise)",
+     "source": "https://www.constructions-navales.com/constructions-et-reparations-navales-bateaux",
+     "capacite_pax": 140
+    },
+    {
+     "nom": null,
+     "type": "Navire a passagers (deuxieme unite du meme type, conception integrale chantier)",
+     "annee": "Mis a l'eau en juin (annee non datee par la source)",
+     "longueur_m": 24,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Deuxieme bateau du meme type, 24 m, mis a l'eau en juin ; conception a realisation par Cyril Camboulive",
+     "energie": null,
+     "client": null,
+     "classification": null,
+     "source": "https://www.constructions-navales.com/",
+     "tracabilite": "url-domaine-seul"
+    },
+    {
+     "nom": null,
+     "type": "Catamaran de peche (composite) avec allongement de coque",
+     "annee": null,
+     "longueur_m": 17.85,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Coque de 13,85 m rallongee a 17,85 m par le chantier (operation d'allongement attestee)",
+     "energie": null,
+     "client": null,
+     "classification": null,
+     "source": "https://www.constructions-navales.com/5-bateaux-de-peche.html"
     }
    ]
   },
@@ -65399,278 +65299,6 @@
    "taille_max": "Coques aluminium jusqu'à ~50 m de longueur (capacité site de Couëron, orientée yachting/professionnel). Jauge maximale non documentée publiquement.",
    "navires_references": [
     {
-     "nom": null,
-     "type": "vedette-scientifique",
-     "annee": "2022",
-     "longueur_m": 12,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Jusqu'a 10 personnes ; vire-filet et compresseur pour campagnes de plongee",
-     "energie": "2 moteurs Volvo D6 en Z-Drive, plus de 23 noeuds",
-     "client": "Universite de Corse, plateforme Stella Mare a Bastia (peche, aquaculture, environnement)",
-     "classification": "Aluminium ; largeur ~4,5 m",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-une-vedette-scientifique-pour-l-universite-de-corse",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": null,
-     "type": "barge-depollution-autopropulsee",
-     "annee": "2021",
-     "longueur_m": 6.6,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Recuperation eaux noires, grises, de cale et hydrocarbures jusqu'a ~4,5 t (ports et yachts)",
-     "energie": "Moteur 50 cv (option moteur electrique ou turbine)",
-     "client": "Ecotank (Alpes-Maritimes) : 3 coques (option pour 2 de plus), apres 8 unites deja livrees",
-     "classification": "Aluminium (coques realisees par Alumarine puis equipees chez Ecotank) ; largeur 2,48 m",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-nouvelle-vedette-de-lamanage-pour-lorient-et-barges-pour-ecotank",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": null,
-     "type": "vedette-de-lamanage",
-     "annee": "2020",
-     "longueur_m": 7.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "3e unite de la nouvelle gamme lamanage/remorquage",
-     "energie": "Diesel (gamme Alumarine/Geronimo)",
-     "client": "Cooperative des lamaneurs de Dunkerque (livree decembre 2020)",
-     "classification": "Aluminium",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-nouvelle-vedette-de-lamanage-pour-lorient-et-barges-pour-ecotank",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": null,
-     "type": "vedette-pompiers-secours",
-     "annee": "2019",
-     "longueur_m": 11.99,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Sauvetage en mer, evacuation, lutte incendie, projection de materiel ; navigation en archipel (Brehat)",
-     "energie": "2 moteurs avec embases Z-Drive (tirant d'eau reduit)",
-     "client": "SDIS 22 (Service departemental d'incendie et de secours des Cotes-d'Armor)",
-     "classification": "Aluminium (design sea-proven Pierre Delion, deja realise par Socarenam : 4 unites en 2015-2016)",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-et-delion-vont-realiser-une-vedette-pour-les-pompiers-costarmoricains",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": null,
-     "type": "barge-fret-passagers",
-     "annee": "2018",
-     "longueur_m": 12.2,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "30 passagers OU 4 a 8 t de fret ; pont plat modulable, plateforme avant rabattable",
-     "energie": "2 hors-bord Yamaha de 150 cv, plus de 16 noeuds ; 2x250 L carburant",
-     "client": "Region reculee en Afrique de l'Ouest (desenclavement)",
-     "classification": "Aluminium, tirant d'eau < 0,30 m (beachage), largeur 4,4 m",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-une-barge-fretpassagers-en-afrique",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 30,
-     "capacite_fret": "8 t"
-    },
-    {
-     "nom": null,
-     "type": "crew-boat-fret-personnel",
-     "annee": "2018",
-     "longueur_m": 11.8,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "12 passagers assis + zone fret 6 m2 ; 2 marins d'equipage",
-     "energie": "Bi-propulsion 530 cv avec hydrojets, 20 noeuds, autonomie 180 milles (2x500 L)",
-     "client": "LD Ports & Logistics (groupe Louis Dreyfus Armateurs), centrale thermique d'Hassyan, Dubai (approche via Neopolia)",
-     "classification": "Aluminium (architecte Geronimo Naval Design), deplacement lege arme 8,9 t, largeur 3,6 m, tirant d'eau 0,65 m",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-la-construction-du-crew-boat-de-ldpl-avance",
-     "propulsion": [
-      "autre"
-     ],
-     "capacite_pax": 12
-    },
-    {
-     "nom": null,
-     "type": "vedette-lamanage-pilotage",
-     "annee": "2018",
-     "longueur_m": 9.25,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Lamanage (amarrage, remorquage, poussage) et pilotage ; traction 1,9 t",
-     "energie": "Volvo D6 de 370 cv, 20 noeuds ; propulseur d'etrave",
-     "client": "Operations de lamanage et de pilotage de Port-la-Nouvelle",
-     "classification": "Aluminium, deplacement 5 t ; timonerie vitree vue 360, defense Ocean 3",
-     "source": "https://www.meretmarine.com/fr/construction-navale/port-la-nouvelle-alumarine-livre-une-vedette-de-lamanage-pilotage",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": null,
-     "type": "catamaran-a-passagers",
-     "annee": "2017",
-     "longueur_m": 21,
-     "jauge_gt": 34,
-     "port_lourd_dwt": null,
-     "capacite": "195 passagers assis sur 2 ponts (3e catégorie)",
-     "energie": "2 moteurs de 425 ch, 18 nœuds",
-     "client": "Croisières touristiques et événementiel en Méditerranée (architecte Mer & Design)",
-     "classification": "Catamaran aluminium, largeur 9,5 m, tirant d'eau 2,9 m, déplacement lège ~34 t ; réglementation division 223b",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-un-catamaran-a-passagers-de-21-metres",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 195
-    },
-    {
-     "nom": null,
-     "type": "vedette-de-servitude",
-     "annee": "2017",
-     "longueur_m": 7.52,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Assistance, surveillance, balisage, entretien ; potence de levage amovible 160 kg",
-     "energie": "Hors-bord 100 cv, reservoir largable 90 L, 25 noeuds",
-     "client": "Conseil departemental de la Gironde (bassin d'Arcachon)",
-     "classification": "Aluminium, coque moussee insubmersible autovideuse ; conforme divisions 222-236 des Affaires Maritimes ; largeur 2,5 m, tirant d'eau 0,20 m",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-une-vedette-de-servitude-pour-le-bassin-d-arcachon",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": null,
-     "type": "vedette-de-lamanage",
-     "annee": "2016",
-     "longueur_m": 9,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Traction au bollard 1,9 t",
-     "energie": "Diesel 300 cv + propulseur d'etrave, 18 noeuds",
-     "client": "Station de lamanage francaise (apres une vedette de 8 m certifiee ATEX livree debut 2016)",
-     "classification": "Aluminium ; defense peripherique",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-enchaine-les-vedettes-de-lamanage",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": null,
-     "type": "bateau-de-travaux-maritimes",
-     "annee": "2015",
-     "longueur_m": 12,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Pont de 30 m2 ; emport 7,5 a 11 t selon engin de levage ; grue 4 t/m ; traction au bollard 1,5 t",
-     "energie": "Diesel (non detaille)",
-     "client": "Chantier de la nouvelle route du Littoral (autoroute littorale), La Reunion",
-     "classification": "Aluminium ; equipe pour operations de plongee (compartiments bouteilles, potence, narguile)",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-un-bateau-de-travaux-pour-le-chantier-de-la-reunion",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": null,
-     "type": "vedette-assistance-portuaire",
-     "annee": "2015",
-     "longueur_m": 7.8,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Missions d'assistance, surveillance, remorquage et entretien",
-     "energie": "Diesel (non detaille)",
-     "client": "Port de plaisance de Concarneau (receptionnee janvier 2015)",
-     "classification": "Aluminium ; conforme a la nouvelle reglementation imposant des navires professionnels aux ports de plaisance",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-30-ans-de-construction-alu",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": null,
-     "type": "pousseur-polyvalent",
-     "annee": "2015",
-     "longueur_m": 10,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Capacite de poussee de plus de 400 tonnes",
-     "energie": "Diesel (non detaille)",
-     "client": "Livre en novembre 2015 en region parisienne",
-     "classification": "Aluminium",
-     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-30-ans-de-construction-alu",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    },
-    {
-     "nom": null,
-     "type": "crew-transfer-vessel-eolien-offshore",
-     "annee": "2015",
-     "longueur_m": 28,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Jusqu'a 24 personnes (techniciens) + 3 a 4 membres d'equipage ; transferts jusqu'a 2,5 m de houle",
-     "energie": "Non detaille",
-     "client": "Design developpe avec Bureau Mauric (soutien Neopolia, etudes Hydrocean) pour les parcs eoliens offshore de la facade atlantique ; client historique Louis Dreyfus Armateurs",
-     "classification": "Coque semi-SWATH a deux flotteurs, aluminium",
-     "source": "https://www.meretmarine.com/fr/construction-navale/bureau-mauric-et-alumarine-un-crew-boat-pour-l-eolien-offshore",
-     "propulsion": [
-      "autre"
-     ]
-    },
-    {
-     "nom": null,
-     "type": "catamaran-amphidrome-bac-fluvial",
-     "annee": null,
-     "longueur_m": 23,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "165 passagers (3e cat.) / 180 passagers (4e cat.)",
-     "energie": null,
-     "client": "Bac fluvial amphidrome (circulation dans les deux sens sans demi-tour), opéré aux Pays-Bas",
-     "classification": "Catamaran aluminium eaux intérieures, classé Bureau Veritas ; timonerie vision 360° avec double console de barre",
-     "source": "https://www.nauticexpo.com/prod/alumarine-shipyard/product-20002-191877.html",
-     "capacite_pax": 165
-    },
-    {
-     "nom": null,
-     "type": "catamaran-a-passagers",
-     "annee": null,
-     "longueur_m": 26.3,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "230 passagers",
-     "energie": "2 x 600 kW, 18 nœuds",
-     "client": "Modèle ferry eaux intérieures / côtier (catalogue chantier, architecte Stirling Design International)",
-     "classification": "Catamaran aluminium, largeur 9,70 m",
-     "source": "https://www.nauticexpo.com/prod/alumarine-shipyard/product-20002-266700.html",
-     "propulsion": [
-      "autre"
-     ],
-     "capacite_pax": 230
-    },
-    {
-     "nom": null,
-     "type": "crew-transfer-vessel-eolien-offshore",
-     "annee": null,
-     "longueur_m": 28,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "jusqu'à 24 personnes (techniciens) + 3-4 membres d'équipage",
-     "energie": null,
-     "client": "Navire de service pour parcs éoliens offshore atlantiques (architecte Bureau Mauric, soutien Neopolia, études Hydrocean) ; commande LD Power & Logistics / LD Armateurs pour le parc de Saint-Nazaire",
-     "classification": "Coque semi-SWATH à deux flotteurs (transferts personnel jusqu'à 2,5 m de houle), aluminium",
-     "source": "https://www.meretmarine.com/fr/construction-navale/bureau-mauric-et-alumarine-un-crew-boat-pour-l-eolien-offshore"
-    },
-    {
      "nom": "Men Garo",
      "type": "vedette-de-lamanage",
      "annee": "2022",
@@ -66027,6 +65655,265 @@
      "prix_acquisition": "≈ 1 M€ (cout de construction / investissement, contrat signe oct. 2018)",
      "source_ref": "Mer et Marine (signature avec Alumarine 2018 ; construction 2018-2019 ; a bord du voilier-cargo) ; Le Journal des Entreprises Finistere ; MarineTraffic/VesselFinder (MMSI 228376700, indicatif FLXB, pavillon France, 22 m AIS) ; Maritime Executive / Brooklyn Eagle (premiere transat Saint-Malo->New York, depart 18 nov. 2020)",
      "tracabilite": "reference-sans-url"
+    },
+    {
+     "nom": null,
+     "type": "vedette-scientifique",
+     "annee": "2022",
+     "longueur_m": 12,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Jusqu'a 10 personnes ; vire-filet et compresseur pour campagnes de plongee",
+     "energie": "2 moteurs Volvo D6 en Z-Drive, plus de 23 noeuds",
+     "client": "Universite de Corse, plateforme Stella Mare a Bastia (peche, aquaculture, environnement)",
+     "classification": "Aluminium ; largeur ~4,5 m",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-une-vedette-scientifique-pour-l-universite-de-corse",
+     "propulsion": [
+      "diesel-mdo"
+     ]
+    },
+    {
+     "nom": null,
+     "type": "barge-depollution-autopropulsee",
+     "annee": "2021",
+     "longueur_m": 6.6,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Recuperation eaux noires, grises, de cale et hydrocarbures jusqu'a ~4,5 t (ports et yachts)",
+     "energie": "Moteur 50 cv (option moteur electrique ou turbine)",
+     "client": "Ecotank (Alpes-Maritimes) : 3 coques (option pour 2 de plus), apres 8 unites deja livrees",
+     "classification": "Aluminium (coques realisees par Alumarine puis equipees chez Ecotank) ; largeur 2,48 m",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-nouvelle-vedette-de-lamanage-pour-lorient-et-barges-pour-ecotank",
+     "propulsion": [
+      "diesel-mdo"
+     ]
+    },
+    {
+     "nom": null,
+     "type": "vedette-de-lamanage",
+     "annee": "2020",
+     "longueur_m": 7.5,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "3e unite de la nouvelle gamme lamanage/remorquage",
+     "energie": "Diesel (gamme Alumarine/Geronimo)",
+     "client": "Cooperative des lamaneurs de Dunkerque (livree decembre 2020)",
+     "classification": "Aluminium",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-nouvelle-vedette-de-lamanage-pour-lorient-et-barges-pour-ecotank",
+     "propulsion": [
+      "diesel-mdo"
+     ]
+    },
+    {
+     "nom": null,
+     "type": "vedette-pompiers-secours",
+     "annee": "2019",
+     "longueur_m": 11.99,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Sauvetage en mer, evacuation, lutte incendie, projection de materiel ; navigation en archipel (Brehat)",
+     "energie": "2 moteurs avec embases Z-Drive (tirant d'eau reduit)",
+     "client": "SDIS 22 (Service departemental d'incendie et de secours des Cotes-d'Armor)",
+     "classification": "Aluminium (design sea-proven Pierre Delion, deja realise par Socarenam : 4 unites en 2015-2016)",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-et-delion-vont-realiser-une-vedette-pour-les-pompiers-costarmoricains",
+     "propulsion": [
+      "diesel-mdo"
+     ]
+    },
+    {
+     "nom": null,
+     "type": "barge-fret-passagers",
+     "annee": "2018",
+     "longueur_m": 12.2,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "30 passagers OU 4 a 8 t de fret ; pont plat modulable, plateforme avant rabattable",
+     "energie": "2 hors-bord Yamaha de 150 cv, plus de 16 noeuds ; 2x250 L carburant",
+     "client": "Region reculee en Afrique de l'Ouest (desenclavement)",
+     "classification": "Aluminium, tirant d'eau < 0,30 m (beachage), largeur 4,4 m",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-une-barge-fretpassagers-en-afrique",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "capacite_pax": 30,
+     "capacite_fret": "8 t"
+    },
+    {
+     "nom": null,
+     "type": "crew-boat-fret-personnel",
+     "annee": "2018",
+     "longueur_m": 11.8,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "12 passagers assis + zone fret 6 m2 ; 2 marins d'equipage",
+     "energie": "Bi-propulsion 530 cv avec hydrojets, 20 noeuds, autonomie 180 milles (2x500 L)",
+     "client": "LD Ports & Logistics (groupe Louis Dreyfus Armateurs), centrale thermique d'Hassyan, Dubai (approche via Neopolia)",
+     "classification": "Aluminium (architecte Geronimo Naval Design), deplacement lege arme 8,9 t, largeur 3,6 m, tirant d'eau 0,65 m",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-la-construction-du-crew-boat-de-ldpl-avance",
+     "propulsion": [
+      "autre"
+     ],
+     "capacite_pax": 12
+    },
+    {
+     "nom": null,
+     "type": "vedette-lamanage-pilotage",
+     "annee": "2018",
+     "longueur_m": 9.25,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Lamanage (amarrage, remorquage, poussage) et pilotage ; traction 1,9 t",
+     "energie": "Volvo D6 de 370 cv, 20 noeuds ; propulseur d'etrave",
+     "client": "Operations de lamanage et de pilotage de Port-la-Nouvelle",
+     "classification": "Aluminium, deplacement 5 t ; timonerie vitree vue 360, defense Ocean 3",
+     "source": "https://www.meretmarine.com/fr/construction-navale/port-la-nouvelle-alumarine-livre-une-vedette-de-lamanage-pilotage",
+     "propulsion": [
+      "diesel-mdo"
+     ]
+    },
+    {
+     "nom": null,
+     "type": "catamaran-a-passagers",
+     "annee": "2017",
+     "longueur_m": 21,
+     "jauge_gt": 34,
+     "port_lourd_dwt": null,
+     "capacite": "195 passagers assis sur 2 ponts (3e catégorie)",
+     "energie": "2 moteurs de 425 ch, 18 nœuds",
+     "client": "Croisières touristiques et événementiel en Méditerranée (architecte Mer & Design)",
+     "classification": "Catamaran aluminium, largeur 9,5 m, tirant d'eau 2,9 m, déplacement lège ~34 t ; réglementation division 223b",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-un-catamaran-a-passagers-de-21-metres",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "capacite_pax": 195
+    },
+    {
+     "nom": null,
+     "type": "vedette-de-servitude",
+     "annee": "2017",
+     "longueur_m": 7.52,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Assistance, surveillance, balisage, entretien ; potence de levage amovible 160 kg",
+     "energie": "Hors-bord 100 cv, reservoir largable 90 L, 25 noeuds",
+     "client": "Conseil departemental de la Gironde (bassin d'Arcachon)",
+     "classification": "Aluminium, coque moussee insubmersible autovideuse ; conforme divisions 222-236 des Affaires Maritimes ; largeur 2,5 m, tirant d'eau 0,20 m",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-une-vedette-de-servitude-pour-le-bassin-d-arcachon",
+     "propulsion": [
+      "diesel-mdo"
+     ]
+    },
+    {
+     "nom": null,
+     "type": "vedette-de-lamanage",
+     "annee": "2016",
+     "longueur_m": 9,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Traction au bollard 1,9 t",
+     "energie": "Diesel 300 cv + propulseur d'etrave, 18 noeuds",
+     "client": "Station de lamanage francaise (apres une vedette de 8 m certifiee ATEX livree debut 2016)",
+     "classification": "Aluminium ; defense peripherique",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-enchaine-les-vedettes-de-lamanage",
+     "propulsion": [
+      "diesel-mdo"
+     ]
+    },
+    {
+     "nom": null,
+     "type": "bateau-de-travaux-maritimes",
+     "annee": "2015",
+     "longueur_m": 12,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Pont de 30 m2 ; emport 7,5 a 11 t selon engin de levage ; grue 4 t/m ; traction au bollard 1,5 t",
+     "energie": "Diesel (non detaille)",
+     "client": "Chantier de la nouvelle route du Littoral (autoroute littorale), La Reunion",
+     "classification": "Aluminium ; equipe pour operations de plongee (compartiments bouteilles, potence, narguile)",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-un-bateau-de-travaux-pour-le-chantier-de-la-reunion",
+     "propulsion": [
+      "diesel-mdo"
+     ]
+    },
+    {
+     "nom": null,
+     "type": "vedette-assistance-portuaire",
+     "annee": "2015",
+     "longueur_m": 7.8,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Missions d'assistance, surveillance, remorquage et entretien",
+     "energie": "Diesel (non detaille)",
+     "client": "Port de plaisance de Concarneau (receptionnee janvier 2015)",
+     "classification": "Aluminium ; conforme a la nouvelle reglementation imposant des navires professionnels aux ports de plaisance",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-30-ans-de-construction-alu",
+     "propulsion": [
+      "diesel-mdo"
+     ]
+    },
+    {
+     "nom": null,
+     "type": "pousseur-polyvalent",
+     "annee": "2015",
+     "longueur_m": 10,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Capacite de poussee de plus de 400 tonnes",
+     "energie": "Diesel (non detaille)",
+     "client": "Livre en novembre 2015 en region parisienne",
+     "classification": "Aluminium",
+     "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-30-ans-de-construction-alu",
+     "propulsion": [
+      "diesel-mdo"
+     ]
+    },
+    {
+     "nom": null,
+     "type": "crew-transfer-vessel-eolien-offshore",
+     "annee": "2015",
+     "longueur_m": 28,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Jusqu'a 24 personnes (techniciens) + 3 a 4 membres d'equipage ; transferts jusqu'a 2,5 m de houle",
+     "energie": "Non detaille",
+     "client": "Design developpe avec Bureau Mauric (soutien Neopolia, etudes Hydrocean) pour les parcs eoliens offshore de la facade atlantique ; client historique Louis Dreyfus Armateurs",
+     "classification": "Coque semi-SWATH a deux flotteurs, aluminium",
+     "source": "https://www.meretmarine.com/fr/construction-navale/bureau-mauric-et-alumarine-un-crew-boat-pour-l-eolien-offshore",
+     "propulsion": [
+      "autre"
+     ]
+    },
+    {
+     "nom": null,
+     "type": "catamaran-amphidrome-bac-fluvial",
+     "annee": null,
+     "longueur_m": 23,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "165 passagers (3e cat.) / 180 passagers (4e cat.)",
+     "energie": null,
+     "client": "Bac fluvial amphidrome (circulation dans les deux sens sans demi-tour), opéré aux Pays-Bas",
+     "classification": "Catamaran aluminium eaux intérieures, classé Bureau Veritas ; timonerie vision 360° avec double console de barre",
+     "source": "https://www.nauticexpo.com/prod/alumarine-shipyard/product-20002-191877.html",
+     "capacite_pax": 165
+    },
+    {
+     "nom": null,
+     "type": "catamaran-a-passagers",
+     "annee": null,
+     "longueur_m": 26.3,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "230 passagers",
+     "energie": "2 x 600 kW, 18 nœuds",
+     "client": "Modèle ferry eaux intérieures / côtier (catalogue chantier, architecte Stirling Design International)",
+     "classification": "Catamaran aluminium, largeur 9,70 m",
+     "source": "https://www.nauticexpo.com/prod/alumarine-shipyard/product-20002-266700.html",
+     "propulsion": [
+      "autre"
+     ],
+     "capacite_pax": 230
     }
    ],
    "geo_source": "https://nominatim.openstreetmap.org/search?q=20+boulevard+de+l%27Oc%C3%A9an+Cou%C3%ABron&format=json"
@@ -73346,6 +73233,20 @@
     {
      "type": "Réparation et maintenance navale et industrielle",
      "details": "Tôlerie, chaudronnerie, soudage, tuyauterie sur acier, aluminium et inox ; au service de la flotte de pêche, des ferries, des navires de servitude et de la Marine nationale."
+    },
+    {
+     "intitule": "Pontons flottants acier",
+     "detail": "Environ 50 pontons flottants acier, tailles 12, 20 et 30 m",
+     "periode": "2002-2016",
+     "source": "http://www.cnps.pf/historique/",
+     "origine": "ligne de production, anciennement classee a tort comme navire"
+    },
+    {
+     "intitule": "Serie de navires acier de peche (thoniers)",
+     "detail": "30 navires acier de 21 a 28 m, dont 9 a l'export ; 2 premiers thoniers lances le 7 decembre 1992",
+     "periode": "1992-2005",
+     "source": "http://www.cnps.pf/historique/",
+     "origine": "ligne de production, anciennement classee a tort comme navire"
     }
    ],
    "materiaux": [
@@ -73360,37 +73261,7 @@
     "diesel"
    ],
    "taille_max": "Coques acier neuves d'environ 28 m de long (plus grand neuf documente) ; pontons acier jusqu'a 30 m. Pas de jauge GT publiee.",
-   "navires_references": [
-    {
-     "nom": null,
-     "type": "Pontons flottants acier",
-     "annee": "2002-2016",
-     "longueur_m": 30,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Environ 50 pontons flottants acier, tailles 12, 20 et 30 m",
-     "energie": null,
-     "client": null,
-     "classification": null,
-     "source": "http://www.cnps.pf/historique/"
-    },
-    {
-     "nom": null,
-     "type": "Serie de navires acier de peche (thoniers)",
-     "annee": "1992-2005",
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "30 navires acier de 21 a 28 m, dont 9 a l'export ; 2 premiers thoniers lances le 7 decembre 1992",
-     "energie": "diesel",
-     "client": null,
-     "classification": null,
-     "source": "http://www.cnps.pf/historique/",
-     "propulsion": [
-      "diesel-mdo"
-     ]
-    }
-   ],
+   "navires_references": [],
    "geo_source": "https://fr.pf.yellowflagguides.com/directory/listing/chantier-naval-du-pacific-sud-cnps"
   },
   {
@@ -179277,6 +179148,349 @@
      ]
     }
    ]
+  }
+ ],
+ "equipementiers": [
+  {
+   "id": "eq-accuwatt",
+   "nom": "Accuwatt",
+   "raison_sociale": "ACCUWATT Technologies",
+   "ville": "Aiton",
+   "pays": "France",
+   "levier": "batteries",
+   "levier_libelle": "Batteries et stockage",
+   "produit": "Systemes de stockage lithium-ion pour environnements contraints : cellules, packs, BMS, integration thermique, chargeurs. Batterie AWT 150/150-VE pour applications sous-marines et chargeur AWT-CH-200-25-VE. Adherent GICAN depuis 2023, 17 salaries. Cree en 2004.",
+   "confiance": "moyenne",
+   "note": "Positionnement dominant defense / services speciaux / mobilite electrique. La reference marine explicite est le produit sous-marin liste sur la fiche GICAN. Pas de reference de navire de surface identifiee.",
+   "sources": [
+    "https://www.accuwatt-technologies.com/en/about-us",
+    "https://gican.asso.fr/annuaire-des-adherents-du-gican-lindustrie-navale-francaise/accuwatt-technologies/"
+   ],
+   "navires_equipes": [],
+   "adresse": "Aiton (Savoie), 56 rue Aristide Berges / Parc d'activites Arc'Alp, 73220",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.5583,
+   "lon": 6.2678,
+   "geo_precision": "ville"
+  },
+  {
+   "id": "eq-saft",
+   "nom": "Saft",
+   "raison_sociale": "Saft Groupe SAS (filiale de TotalEnergies)",
+   "ville": "Poitiers",
+   "pays": "France",
+   "levier": "batteries",
+   "levier_libelle": "Batteries et stockage",
+   "produit": "Systemes batteries lithium-ion marine Seanergy 2.0, 130 Wh/L, modulaires jusqu'a 1 060 V, pour navires 100 % electriques et hybrides : ferries, workboats, remorqueurs, offshore support, paquebots, yachts. Fabrique a Poitiers.",
+   "confiance": "haute",
+   "note": "Le site officiel saft.com n'a pas pu etre ouvert depuis cet environnement (echec de validation du certificat TLS). Source retenue : reprise integrale du communique Saft par Batteries News. A recouper sur saft.com depuis un poste normal.",
+   "sources": [
+    "https://batteriesnews.com/saft-new-seanergy-2-0-li-ion-battery-drive-decarbonization-marine-industry/"
+   ],
+   "navires_equipes": [],
+   "adresse": "Poitiers (site de production des batteries marine) ; siege groupe en region parisienne",
+   "region": "Nouvelle-Aquitaine",
+   "lat": 46.5802,
+   "lon": 0.3404,
+   "geo_precision": "ville"
+  },
+  {
+   "id": "eq-wattalps",
+   "nom": "WattAlps",
+   "raison_sociale": "WATTALPS",
+   "ville": "Moirans",
+   "pays": "France",
+   "levier": "batteries",
+   "levier_libelle": "Batteries et stockage",
+   "produit": "Batteries lithium-ion a refroidissement par immersion (fluide biodegradable, non toxique, non inflammable, 7 brevets), de 10 a 500 kWh. Segment maritime revendique : electrification de navires, dont un workboat hybride alimente a 180 kW par une batterie trois fois plus petite qu'une solution marine conventionnelle. Issue du CEA-Liten.",
+   "confiance": "haute",
+   "note": "Pas de nom de navire publie sur le site : la reference workboat est anonyme.",
+   "sources": [
+    "https://www.wattalps.com/"
+   ],
+   "navires_equipes": [],
+   "adresse": "Moirans (Isere), 410 avenue Aldo Eriani, 38430",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.33,
+   "lon": 5.5544,
+   "geo_precision": "ville"
+  },
+  {
+   "id": "eq-seair",
+   "nom": "SEAir",
+   "raison_sociale": "SEAir, exploitant la marque SEAir Platforms",
+   "ville": "Lorient",
+   "pays": "France",
+   "levier": "foils",
+   "levier_libelle": "Foils et sustentation",
+   "produit": "Plateformes marines volantes a foils retractables et controle de vol electronique, propulsion hybride diesel-electrique avec pods electriques, 50 % d'economie de carburant revendiquee. Gamme SP90 (semi-rigide volant 9 m, plus de 40 noeuds, 200 NM), SP120 (12 m, projet ARROW, 45 noeuds, 400 NM), SP200 (20 m, projet TRANSFLYTOR, 47 noeuds, 800 NM). Creee en avril 2016 par Richard Forest.",
+   "confiance": "moyenne",
+   "note": "La ville de Lorient et l'annee 2016 ne figurent pas sur seair-platforms.com, seule page officielle ouverte ; elles proviennent de la presse economique (Maddyness, 7jours) non ouverte. ATTENTION au positionnement : SEAir a pivote de la plaisance a foils vers les plateformes de defense et les drones navals. Ce n'est plus un equipementier de decarbonation au sens strict.",
+   "sources": [
+    "https://seair-platforms.com/"
+   ],
+   "navires_equipes": [],
+   "adresse": "Lorient (Morbihan)",
+   "region": "Bretagne",
+   "lat": 47.748,
+   "lon": -3.366,
+   "geo_precision": "ville"
+  },
+  {
+   "id": "eq-bluenav",
+   "nom": "BlueNav",
+   "raison_sociale": "BlueNav",
+   "ville": "La Teste-de-Buch",
+   "pays": "France",
+   "levier": "moteurs-electriques",
+   "levier_libelle": "Moteurs et conversion electrique",
+   "produit": "Moteurs electriques marins retractables BlueSpin, en hybridation sur navires existants : 8 kW, 11 kW et 15 kW, hors-bord et in-bord, propulsion 360 degres, assistance a l'accostage, ancre virtuelle. Plus de 80 moteurs deployes dans 10 pays, cibles plaisance et professionnels (whale watching, plongee, peche).",
+   "confiance": "haute",
+   "note": null,
+   "sources": [
+    "https://www.bluenav.com/"
+   ],
+   "navires_equipes": [],
+   "adresse": "La Teste-de-Buch (Gironde), 80 avenue du General Leclerc, 33260 ; conception et assemblage a Arcachon",
+   "region": "Nouvelle-Aquitaine",
+   "lat": 44.632,
+   "lon": -1.145,
+   "geo_precision": "ville"
+  },
+  {
+   "id": "eq-enag",
+   "nom": "ENAG",
+   "raison_sociale": "ENAG",
+   "ville": "Quimper",
+   "pays": "France",
+   "levier": "moteurs-electriques",
+   "levier_libelle": "Moteurs et conversion electrique",
+   "produit": "Conversion d'energie embarquee : convertisseurs de frequence 50/60 Hz, alternateurs 24 V et d'arbre, chargeurs, onduleurs, et systemes de propulsion electrique et hybride jusqu'a 2 MW. Marches maritime, defense, EMR, offshore. Maison de plus de 70 ans.",
+   "confiance": "haute",
+   "note": null,
+   "sources": [
+    "https://www.enag.fr/"
+   ],
+   "navires_equipes": [],
+   "adresse": "Quimper (Finistere), 31 rue Marcel Paul, ZI Kerdroniou Est, 29000",
+   "region": "Bretagne",
+   "lat": 47.996,
+   "lon": -4.097,
+   "geo_precision": "ville"
+  },
+  {
+   "id": "eq-fapmo",
+   "nom": "FAPMO",
+   "raison_sociale": "Fapmo (groupe Moret Industries), avec EN Moteurs a Coueron",
+   "ville": "Outreau",
+   "pays": "France",
+   "levier": "moteurs-electriques",
+   "levier_libelle": "Moteurs et conversion electrique",
+   "produit": "Pompes centrifuges et moteurs electriques sur mesure pour le naval et la defense, environnements extremes et nucleaire. Maison fondee en 1923.",
+   "confiance": "moyenne",
+   "note": "Le coeur de metier FAPMO reste la pompe centrifuge navale ; les moteurs electriques viennent de l'entite EN Moteurs. Le classer en levier « moteurs electriques » de decarbonation est un raccourci a arbitrer : ce n'est pas un motoriste de propulsion.",
+   "sources": [
+    "https://www.fapmo.com/"
+   ],
+   "navires_equipes": [],
+   "adresse": "Outreau (Pas-de-Calais), 35-37 rue Roger Salengro, 62230",
+   "region": "Hauts-de-France",
+   "lat": 50.7053,
+   "lon": 1.5875,
+   "geo_precision": "ville"
+  },
+  {
+   "id": "eq-jeumont-electric",
+   "nom": "Jeumont Electric",
+   "raison_sociale": "JEUMONT Electric (filiale de Framatome et Naval Group)",
+   "ville": "Jeumont",
+   "pays": "France",
+   "levier": "moteurs-electriques",
+   "levier_libelle": "Moteurs et conversion electrique",
+   "produit": "Moteurs de propulsion electrique, alternateurs, convertisseurs moyenne tension et auxiliaires de bord pour la marine militaire et marchande. Environ 700 salaries, 100 MEUR de chiffre d'affaires. References citees : moteurs et alternateurs du ferry Rusadir (1 670 passagers), propulsion des sous-marins Scorpene de la marine indienne. Adherent GICAN depuis 2007.",
+   "confiance": "haute",
+   "note": "Le site officiel jeumontelectric.com n'a pas pu etre resolu depuis cet environnement (DNS). Fiche GICAN retenue.",
+   "sources": [
+    "https://gican.asso.fr/annuaire-des-adherents-du-gican-lindustrie-navale-francaise/jeumont-electric/"
+   ],
+   "navires_equipes": [],
+   "adresse": "Jeumont (Nord), 367 rue de l'Industrie, 59572",
+   "region": "Hauts-de-France",
+   "lat": 50.296,
+   "lon": 4.101,
+   "geo_precision": "ville"
+  },
+  {
+   "id": "eq-eodev",
+   "nom": "EODev",
+   "raison_sociale": "Energy Observer Developments (EODev)",
+   "ville": "Saint-Malo",
+   "pays": "France",
+   "levier": "piles-a-combustible",
+   "levier_libelle": "Piles a combustible et hydrogene",
+   "produit": "REXH2, prolongateur d'autonomie hydrogene marinise, modulaire, plug and play, pour la propulsion et les auxiliaires de navires maritimes et fluviaux, base sur une pile a combustible Toyota. Egalement GEH2 (generateur terrestre) et BESSTIE 120 (stockage batterie LFP). Ne du programme Energy Observer, Toyota Motor Europe entre au capital en avril 2021.",
+   "confiance": "haute",
+   "note": "Classe ici en piles a combustible, pas en batteries comme dans la liste de depart : le produit maritime concret est le REXH2, un systeme pile a combustible.",
+   "sources": [
+    "https://www.energy-observer.org/fr/qui-sommes-nous/le-groupe-eo/eodev",
+    "https://www.bretagne-economique.com/actualites/hydrogene-eodev-35-fait-entrer-toyota-dans-son-capital"
+   ],
+   "navires_equipes": [],
+   "adresse": "Saint-Malo (Ille-et-Vilaine)",
+   "region": "Bretagne",
+   "lat": 48.6493,
+   "lon": -2.0257,
+   "geo_precision": "ville"
+  },
+  {
+   "id": "eq-genevos",
+   "nom": "Genevos",
+   "raison_sociale": "Genevos SAS",
+   "ville": "La Rochelle",
+   "pays": "France",
+   "levier": "piles-a-combustible",
+   "levier_libelle": "Piles a combustible et hydrogene",
+   "produit": "Hydrogen Power Module (HPM), systemes pile a combustible marins, presentes comme fuel agnostic (GNL, bio-methane, methanol, hydrogene, adaptable ammoniac), pour cargos, workboats, bateaux accompagnateurs et navires a passagers. Societe active depuis 2018.",
+   "confiance": "haute",
+   "note": null,
+   "sources": [
+    "https://www.genevos.com/"
+   ],
+   "navires_equipes": [],
+   "adresse": "La Rochelle (Charente-Maritime)",
+   "region": "Nouvelle-Aquitaine",
+   "lat": 46.1591,
+   "lon": -1.152,
+   "geo_precision": "ville"
+  },
+  {
+   "id": "eq-helion",
+   "nom": "Helion",
+   "raison_sociale": "HELION Hydrogen Power (filiale a 100 % d'ALSTOM depuis le 1er avril 2021)",
+   "ville": "Aix-en-Provence",
+   "pays": "France",
+   "levier": "piles-a-combustible",
+   "levier_libelle": "Piles a combustible et hydrogene",
+   "produit": "Piles a combustible PEM de forte puissance, ligne d'assemblage robotisee inauguree fin 2021 (jusqu'a 800 stacks par an, 30 MW). Reference maritime : pile a combustible de 200 kW pour l'Hydromer, premiere drague hydrogene au monde, armee par la Region Occitanie a Sete, construite par Piriou ; contrat signe en avril 2022, livraison et certification marine en 2025. Cree en 2001, 90 salaries en 2023.",
+   "confiance": "haute",
+   "note": "L'Hydromer figure DEJA dans chantiers.json, chantier Piriou, annee 2024. C'est le meilleur point d'accroche navire-equipementier du corpus.",
+   "sources": [
+    "https://fr.wikipedia.org/wiki/HELION_Hydrogen_Power"
+   ],
+   "navires_equipes": [],
+   "adresse": "Aix-en-Provence (Bouches-du-Rhone)",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 43.5297,
+   "lon": 5.4474,
+   "geo_precision": "ville"
+  },
+  {
+   "id": "eq-inocel",
+   "nom": "Inocel",
+   "raison_sociale": "INOCEL",
+   "ville": "Saint-Égrève",
+   "pays": "France",
+   "levier": "piles-a-combustible",
+   "levier_libelle": "Piles a combustible et hydrogene",
+   "produit": "Piles a combustible PEM compactes de tres forte puissance, module Z300 de 300 kW dans un cube de 50 cm pour 100 kg, issues de plus de 20 ans de recherche CEA. Applications stationnaire, transport lourd et maritime. Creee en 2022 par Mike Horn et Mauro Ricci.",
+   "confiance": "moyenne",
+   "note": "Le site officiel inocel.com ouvert ce jour ne mentionne AUCUNE application maritime : il cible data centers, chantiers, aeroports, microgrids. Le debouche maritime n'est atteste que par la presse regionale. Le demonstrateur « Poseidon » cite en recherche n'a pas ete confirme par une page ouverte : non retenu.",
+   "sources": [
+    "https://www.presences-grenoble.fr/actualites-start-grenoble/inocel-leve-64-meu-pour-industrialiser-sa-pile-hydrogene-modulaire.htm",
+    "https://inocel.com/fr/inocel-installe-sa-gigafactory-a-belfort-une-nouvelle-etape-franchie-pour-les-piles-a-combustible-de-tres-forte-puissance/"
+   ],
+   "navires_equipes": [],
+   "adresse": "Saint-Egreve (agglomeration de Grenoble) pour le centre de developpement ; usine de plus de 15 000 m2 a Belfort",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.232,
+   "lon": 5.68,
+   "geo_precision": "ville"
+  },
+  {
+   "id": "eq-airseas",
+   "nom": "Airseas",
+   "raison_sociale": "Airseas",
+   "ville": "Nantes",
+   "pays": "France",
+   "levier": "velique",
+   "levier_libelle": "Propulsion velique",
+   "produit": "Seawing, aile de traction automatisee de type kite, deployee et pilotee automatiquement, pour la decarbonation des navires de commerce. Navire d'essai cite : le Ville de Bordeaux. Partenaires cites : K LINE et OCEANICWING S.A.S. Creee en 2016.",
+   "confiance": "haute",
+   "note": null,
+   "sources": [
+    "https://www.airseas.com/"
+   ],
+   "navires_equipes": [],
+   "adresse": "Nantes (Loire-Atlantique), 8 allee de la centrale electrique de Chantenay, 44100",
+   "region": "Pays de la Loire",
+   "lat": 47.2184,
+   "lon": -1.5536,
+   "geo_precision": "ville"
+  },
+  {
+   "id": "eq-cws-computed-wing-sail",
+   "nom": "CWS (Computed Wing Sail)",
+   "raison_sociale": "CWS (Computed Wing Sail)",
+   "ville": "Paris",
+   "pays": "France",
+   "levier": "velique",
+   "levier_libelle": "Propulsion velique",
+   "produit": "Ailes veliques rigides automatisees AIRFIN350, 353 m2, a technologie d'inversion donnant une poussee reguliere sur presque toute la plage de vent et de vitesse navire, sans intervention d'equipage. Neuf et retrofit. 30 salaries, adherent GICAN depuis 2022.",
+   "confiance": "haute",
+   "note": "Pas de navire equipe nomme a ce stade : la premiere aile a ete assemblee a Montoir. Une levee de 12 MEUR a ete annoncee en octobre 2025 (source Bpifrance non ouverte, non retenue).",
+   "sources": [
+    "https://gican.asso.fr/annuaire-des-adherents-du-gican-lindustrie-navale-francaise/cws-computed-wing-sail/"
+   ],
+   "navires_equipes": [],
+   "adresse": "Paris (siege) ; usine d'assemblage de 4 800 m2 a Montoir-de-Bretagne / Saint-Nazaire (Loire-Atlantique)",
+   "region": "Île-de-France",
+   "lat": 48.8566,
+   "lon": 2.3522,
+   "geo_precision": "ville"
+  },
+  {
+   "id": "eq-oceanwings-ex-ayro",
+   "nom": "OceanWings (ex-AYRO)",
+   "raison_sociale": "AYRO, devenue OceanWings",
+   "ville": "Caen",
+   "pays": "France",
+   "levier": "velique",
+   "levier_libelle": "Propulsion velique",
+   "produit": "Ailes veliques Oceanwings pour navires de commerce et yachts. Quatre Oceanwings 363 assemblees a partir de decembre 2021 pour le cargo Canopee, ro-ro de 121 m exploite par Alizee (coentreprise Jifmar et Zephyr & Boree) qui transporte les elements du lanceur Ariane 6 entre l'Europe et la Guyane.",
+   "confiance": "haute",
+   "note": "Le site oceanwings.eu n'a pas pu etre ouvert (erreur TLS). Le changement de nom AYRO vers OceanWings est reporte par Mer et Marine, page non ouverte (403) : a confirmer. Canopee n'est PAS dans chantiers.json (construit chez Neptune Marine, Pays-Bas).",
+   "sources": [
+    "https://gican.asso.fr/adherents/ayro-installe-son-usine-a-caen-pour-fabriquer-les-oceanwings-des-ailes-de-propulsion-pour-les-navires-de-commerce/"
+   ],
+   "navires_equipes": [],
+   "adresse": "Usine au port de commerce de Caen (Calvados)",
+   "region": "Normandie",
+   "lat": 49.1829,
+   "lon": -0.3707,
+   "geo_precision": "ville"
+  },
+  {
+   "id": "eq-solidsail",
+   "nom": "SolidSail",
+   "raison_sociale": "Chantiers de l'Atlantique (programme Ecorizon) ; filiale industrielle SolidSail Mast Factory (SMAF)",
+   "ville": "Saint-Nazaire",
+   "pays": "France",
+   "levier": "velique",
+   "levier_libelle": "Propulsion velique",
+   "produit": "Voiles rigides composite verre, carbone et epoxy, jusqu'a 1 500 m2 par unite de greement, associees au greement AeolDrive : mats carbone de 85 a 100 m, cornes rotatives a 360 degres et basculement a 70 degres pour le passage des ponts. Navires equipes ou prevus : Neoliner Origin (cargo 136 m, lance en janvier 2025), Orient Express Corinthian (paquebot 220 m, service printemps 2026), Orient Express Olympian (2027), Atlas World Adventurer (2028), Grain de Sail III (2027).",
+   "confiance": "haute",
+   "note": "Cas particulier : SolidSail n'est PAS une societe independante, c'est une gamme produit de Chantiers de l'Atlantique, deja fiche comme chantier dans chantiers.json. A traiter comme un produit rattache a une fiche chantier existante, pas comme un nouvel equipementier. N'est pas une societe independante : gamme portee par la fiche chantier rattachee. Regle d'arbitrage anti-doublon de l'option B.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/SolidSail",
+    "https://graindesail.com/fr/voilier-cargo-grain-de-sail-3/"
+   ],
+   "navires_equipes": [],
+   "rattachement_chantier": "chantiers-atlantique-saint-nazaire",
+   "adresse": "Saint-Nazaire (Loire-Atlantique) ; usine de mats SMAF a Lanester (Morbihan), ZI du Rohu",
+   "region": "Pays de la Loire",
+   "lat": 47.2836,
+   "lon": -2.1903,
+   "geo_precision": "ville"
   }
  ]
 }
