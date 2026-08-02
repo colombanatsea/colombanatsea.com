@@ -35680,7 +35680,9 @@
      "source": "https://www.cdk-technologies.com/news-detail/svr-lazartigue-trimaran.html",
      "propulsion": [
       "velique"
-     ]
+     ],
+     "architecte": "VPLP Design",
+     "architecte_source": "Ultim dessine par VPLP, ex-Macif 100, mis a l'eau en 2021 pour Francois Gabart et son equipe MerConcept. https://www.vplp.fr/en/racing/svr-lazartigue/"
     },
     {
      "nom": "Maxi Banque Populaire XI",
@@ -36198,7 +36200,9 @@
      "source": "https://fr.wikipedia.org/wiki/SVR-Lazartigue_(trimaran)",
      "propulsion": [
       "velique"
-     ]
+     ],
+     "architecte": "VPLP Design",
+     "architecte_source": "Ultim dessine par VPLP, ex-Macif 100, mis a l'eau en 2021 pour Francois Gabart et son equipe MerConcept. https://www.vplp.fr/en/racing/svr-lazartigue/"
     },
     {
      "nom": "Maxi Banque Populaire XI",
@@ -36230,7 +36234,9 @@
      "source": "https://fr.wikipedia.org/wiki/Apivia_(IMOCA)",
      "propulsion": [
       "velique"
-     ]
+     ],
+     "architecte": "Guillaume Verdier",
+     "architecte_source": "IMOCA 60 dessine par Guillaume Verdier, construit par CDK Technologies et mis a l'eau en 2019 ; le skipper Charlie Dalin, lui-meme architecte naval, et MerConcept ont contribue a la conception. https://en.wikipedia.org/wiki/IMOCA_60_Apivia"
     },
     {
      "nom": "Charal",
@@ -178075,6 +178081,60 @@
        "nom": "Chantiers de Villeneuve-la-Garenne",
        "detail": "Attribution du chantier constructeur etablie sur source publique.",
        "source": "https://www.marine-marchande.net/Flotte/P-T/Sauzon.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "merconcept-concarneau",
+   "nom": "MerConcept",
+   "groupe": null,
+   "ville": "Concarneau",
+   "region": "Bretagne",
+   "pays": "France",
+   "lat": 47.8746,
+   "lon": -3.9187,
+   "geo_precision": "ville",
+   "fondation": 2006,
+   "perimetres": [
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "navire-passagers",
+    "voilier-course"
+   ],
+   "description": "Structure fondee en 2006 par Francois Gabart a Concarneau, longtemps dediee a la course au large (mise en oeuvre du trimaran Ultim SVR-Lazartigue et de l'IMOCA Apivia) et qui se diversifie vers le navire professionnel. Elle construit le passeur electrique de Concarneau, mis en service prevu en novembre 2026, en consortium avec CT Mer Forte pour l'ingenierie, Alternatives Energies pour la motorisation, IDB Marine pour les flotteurs et Kairos pour l'eco-conception.",
+   "sources": [
+    "https://www.bretagne-economique.com/actualites/merconcept-se-diversifie-et-construit-le-futur-bac-electrique-de-concarneau/",
+    "https://www.boatindustry.fr/article/52268/bac-electrique-de-concarneau-merconcept-accelere-son-developpement-dans-les-navires-professionnels",
+    "https://www.meretmarine.com/fr/construction-navale/le-futur-bac-de-concarneau-en-cours-de-construction"
+   ],
+   "navires_references": [
+    {
+     "nom": "Passeur électrique de Concarneau",
+     "type": "Bac à passagers électrique",
+     "annee": "2026",
+     "longueur_m": 11.9,
+     "largeur_m": 4.2,
+     "capacite": "45 passagers, 2 personnes à mobilité réduite et 8 vélos",
+     "capacite_pax": 45,
+     "energie": "Électrique sur batteries, appoint photovoltaïque",
+     "propulsion": [
+      "electrique"
+     ],
+     "desserte": "Traversée du port de Concarneau, 120 m entre les deux rives",
+     "operateur": "Ville de Concarneau",
+     "architecte": "CT Mer Forte",
+     "architecte_source": "Consortium publie : MerConcept construit, CT Mer Forte assure l'ingenierie, Alternatives Energies la motorisation, IDB Marine les flotteurs, Kairos l'eco-conception. https://www.boatindustry.fr/article/52268/bac-electrique-de-concarneau-merconcept-accelere-son-developpement-dans-les-navires-professionnels",
+     "source": "https://www.bretagne-economique.com/actualites/merconcept-se-diversifie-et-construit-le-futur-bac-electrique-de-concarneau/",
+     "timeline": [
+      {
+       "annee": "2026",
+       "role": "construction",
+       "nom": "MerConcept",
+       "detail": "Deux moteurs electriques de 27 kW, 8 noeuds au maximum, panneaux solaires et materiaux biosources dont de la fibre de lin produite localement. Il remplace le passeur actuel qui assure pres de 300 000 traversees par an.",
+       "source": "https://www.meretmarine.com/fr/construction-navale/le-futur-bac-de-concarneau-en-cours-de-construction"
       }
      ]
     }
