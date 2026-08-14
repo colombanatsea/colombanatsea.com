@@ -1255,7 +1255,13 @@
         const lib = { "batteries": "Batteries et stockage",
           "moteurs-electriques": "Moteurs et conversion \u00e9lectrique",
           "piles-a-combustible": "Piles \u00e0 combustible et hydrog\u00e8ne",
-          "velique": "Propulsion v\u00e9lique", "foils": "Foils et sustentation" };
+          "velique": "Propulsion v\u00e9lique", "foils": "Foils et sustentation",
+          "integration-energie": "Int\u00e9gration \u00e9nergie et propulsion",
+          "moteurs-hydrogene": "Moteurs \u00e0 combustion hydrog\u00e8ne",
+          "solaire": "Solaire embarqu\u00e9",
+          "revetements": "Rev\u00eatements et peintures de car\u00e8ne",
+          "recuperation-chaleur": "R\u00e9cup\u00e9ration de chaleur (ORC)",
+          "routage-exploitation": "Routage et optimisation d'exploitation" };
         lg.style.display = "";
         lg.innerHTML = '<div class="legend__title">Levier</div>'
           + Object.keys(LEVIER_COULEUR).map(function (k) {
@@ -1453,6 +1459,9 @@
   const LEVIER_COULEUR = {
     "batteries": "#1f9d55", "moteurs-electriques": "#0b7fd4",
     "piles-a-combustible": "#d4770b", "velique": "#7a3df0", "foils": "#c2185b",
+    "integration-energie": "#00838f", "moteurs-hydrogene": "#a1451c",
+    "solaire": "#c9a227", "revetements": "#5d6d7e",
+    "recuperation-chaleur": "#8d6e63", "routage-exploitation": "#37474f",
   };
   function filteredEquipementiers() {
     const nq = norm(state.filters.q);
