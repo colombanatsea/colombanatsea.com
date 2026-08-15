@@ -121638,7 +121638,14 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.wavecraft.no/",
     "lien mort constate le 2026-08-03 : https://www.um.no/contact-us/"
-   ]
+   ],
+   "contact": {
+    "web": "https://www.um.no/",
+    "telephone": "+47 38 27 92 00",
+    "adresse": "Gismerøyveien 205N, 4515 Mandal, Norvège"
+   },
+   "contact_source": "https://www.um.no/contact",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Moen Marin AS",
@@ -122737,7 +122744,14 @@
    "id": "moen-marin-as-kolvereid",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.fishfarmermagazine.com/2024/02/07/salmar-to-operate-worlds-first-hydrogen-workboat/"
-   ]
+   ],
+   "contact": {
+    "web": "https://moenmarin.no/",
+    "telephone": "+47 73 10 98 00",
+    "adresse": "Havnegata 7, 7010 Trondheim, Norvège"
+   },
+   "contact_source": "https://moenmarin.no/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Hellesøy Verft AS",
@@ -123141,7 +123155,14 @@
     "https://www.wergeland.com/skipsverft"
    ],
    "confiance": "haute",
-   "id": "solund-verft-as-hardbakke"
+   "id": "solund-verft-as-hardbakke",
+   "contact": {
+    "web": "https://solundverft.no/",
+    "telephone": "+47 57 78 60 10",
+    "adresse": "Krakhellevegen 355, 6924 Hardbakke, Norvège"
+   },
+   "contact_source": "https://www.solundverft.no/contact-us",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Fitjar Mekaniske Verksted AS",
@@ -128570,7 +128591,14 @@
    "id": "helgeland-plast-as-polarcirkel-akva-group-mo",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.akvagroup.com/news/from-pioneering-work-in-mo-i-rana-to-global-boat-success"
-   ]
+   ],
+   "contact": {
+    "web": "https://www.akvagroup.com/helgelandplast/",
+    "telephone": "+47 51 77 85 00",
+    "adresse": "Båsmosjyen 4, N-8616 Mo i Rana, Norvège"
+   },
+   "contact_source": "https://www.akvagroup.com/helgelandplast/ (adresse du site de Mo i Rana, téléphone et e-mail post@akvagroup.com). Réserve : le numéro publié est celui du standard AKVA group à Klepp stasjon, pas une ligne propre à Mo i Rana. Le registre Brønnøysund donne pour HELGELAND PLAST AS (org. 987 065 311) la même adresse Båsmosjyen 4, 8616 Mo i Rana, 119 salariés, NACE 22.210, société active, anciennement dénommée Polarcirkel AS (2007-2009).",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Sletta Verft AS",
@@ -130256,7 +130284,14 @@
     "https://massworld.news/paris-2024-autonomous-ferry-tender-results/"
    ],
    "confiance": "haute",
-   "id": "hyke-hydrolift-smart-city-ferries-oslo"
+   "id": "hyke-hydrolift-smart-city-ferries-oslo",
+   "contact": {
+    "web": "https://hykeelectricferries.com/",
+    "telephone": "+47 976 40 446",
+    "adresse": "Drammensveien 130, entrée C19, 0277 Oslo, Norvège"
+   },
+   "contact_source": "https://hykeelectricferries.com/contact/ (adresse postale, téléphone, e-mail info@hyke.no). Note : l'ancien domaine hyke.no redirige en 301 vers hykeelectricferries.com.",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Herde Kompositt AS",
@@ -132249,7 +132284,14 @@
    "id": "selfa-arctic-as-harstad-sandtorg",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://corvusenergy.com/projects/karoline-2/"
-   ]
+   ],
+   "contact": {
+    "web": "https://selfa.no/",
+    "telephone": null,
+    "adresse": "Rødskjærveien 2, 9430 Sandtorg (site de production Rødskjær / Harstad)"
+   },
+   "contact_source": "https://selfa.no/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Harstad Mekaniske Verksted (HAMEK)",
@@ -142507,7 +142549,14 @@
     "https://aibel.com/news/three-giants-at-the-yard-in-haugesund"
    ],
    "confiance": "haute",
-   "id": "aibel-haugesund-chantier-de-ris-y-haugesund"
+   "id": "aibel-haugesund-chantier-de-ris-y-haugesund",
+   "contact": {
+    "web": "https://aibel.com/locations/haugesund",
+    "telephone": "+47 85 27 00 00",
+    "adresse": "Jens Risøens gate 72, 5527 Haugesund, Norvège (adresse postale : Aibel AS, P.O. Box 2180, N-5504 Haugesund)"
+   },
+   "contact_source": "https://aibel.com/locations/haugesund",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "OneCo Safe Yards AS (GOT SafeYards)",
@@ -142724,7 +142773,14 @@
    "id": "oneco-safe-yards-as-got-safeyards-kristiansand",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : http://www.safeyards.no/category/news/"
-   ]
+   ],
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "Andøyveien 27, 4623 Kristiansand S, Norvège"
+   },
+   "contact_source": "https://virksomhet.brreg.no/nb/oppslag/enheter/916997663 (fiche du registre des entités, Brønnøysundregistrene). Aucun site officiel vérifié : safeyards.no et gotsafeyards.no ne répondent pas (connexion refusée / HTTP 403), oneco.no ne mentionne aucune activité « Safe Yards ». Aucun téléphone publié sur une page consultée, donc null.",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Bredalsholmen Dokk og Fartøyvernsenter",
@@ -143061,7 +143117,14 @@
     "lien mort constate le 2026-08-03 : https://www.bredalsholmen.no/en/",
     "lien mort constate le 2026-08-03 : https://bredalsholmen.no/en/the-dock-facilities",
     "lien mort constate le 2026-08-03 : https://www.radich.no/wp-content/uploads/2011/11/Seilskipene_endelig_vers2.pdf"
-   ]
+   ],
+   "contact": {
+    "web": "https://www.bredalsholmen.no/",
+    "telephone": "38 60 10 50",
+    "adresse": "Andøyveien 188, 4623 Kristiansand S, Norvège"
+   },
+   "contact_source": "https://www.bredalsholmen.no/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Drammen Yard AS",
@@ -161994,7 +162057,14 @@
     "https://www.marinelink.com/news/port-gothenburg-inspection-vessel-set-502898"
    ],
    "confiance": "haute",
-   "id": "o-varvet-ab-ockero"
+   "id": "o-varvet-ab-ockero",
+   "contact": {
+    "web": "https://ovarvet.se/",
+    "telephone": "+46 31 756 00 00",
+    "adresse": "Kabyssvägen 11, 475 31 Öckerö, Suède (adresse postale : Box 1083, 475 22 Öckerö)"
+   },
+   "contact_source": "https://ovarvet.se/kontakt/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Candela Technology AB",
@@ -162512,7 +162582,14 @@
     "https://sailboatdata.com/sailboat/arcona-435-2/"
    ],
    "confiance": "haute",
-   "id": "arcona-yachts-boo-marin-ab-gustavsberg"
+   "id": "arcona-yachts-boo-marin-ab-gustavsberg",
+   "contact": {
+    "web": "https://arconayachts.se/",
+    "telephone": "+46 8 519 410 40",
+    "adresse": "Varvsvägen 1, SE-473 31 Henån, Suède"
+   },
+   "contact_source": "https://arconayachts.se/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Nimbus Group AB",
@@ -162940,7 +163017,14 @@
     "https://www.yachtbuyer.com/en/windy/new/sr44-blackhawk"
    ],
    "confiance": "haute",
-   "id": "windy-scandinavia-ab-vastervik"
+   "id": "windy-scandinavia-ab-vastervik",
+   "contact": {
+    "web": "https://www.windyboats.com/",
+    "telephone": "+46 490 258 850",
+    "adresse": "Södra Varvsgatan 27, SE-593 50 Västervik, Suède"
+   },
+   "contact_source": "https://www.windyboats.com/contact/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Myklebust Verft AS",
@@ -166730,7 +166814,14 @@
     "https://blog.bospower.com/news/bos-power-contract-electric-propulsion-torghatten-nord-ferries"
    ],
    "confiance": "haute",
-   "id": "oma-baatbyggeri-as-stord"
+   "id": "oma-baatbyggeri-as-stord",
+   "contact": {
+    "web": "https://oma.no/",
+    "telephone": "+47 53 40 98 00",
+    "adresse": "Storhaugvegen 140, 5416 Stord, Norvège"
+   },
+   "contact_source": "https://oma.no/contact/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Hyke / Eker Werks (Hydrolift Smart City Ferries)",
@@ -167068,7 +167159,14 @@
    "id": "herde-kompositt-as-arsnes",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.proff.no/selskap/herde-kompositt-as/%C3%B8lve/b%C3%A5tbyggerier/IFBNH6X008P"
-   ]
+   ],
+   "contact": {
+    "web": "https://www.herdekompositt.no/",
+    "telephone": null,
+    "adresse": "Årsnes Industriområde, Lyngstrandvegen 65, 5474 Løfallstrand, Norvège"
+   },
+   "contact_source": "https://www.herdekompositt.no/om-oss/ (adresse du site d'Årsnes, org. 936 968 449, e-mail post@herdekompositt.no). Aucun téléphone publié sur les pages consultées, donc null. Le registre norvégien donne pour la même société l'adresse d'affaires c/o Odda Plast AS, Holmavegen 15, 5750 Odda.",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Horten Shipyards AS",
@@ -167554,7 +167652,7 @@
    "fondation": 1910,
    "effectif": null,
    "superficie_ha": null,
-   "actif": false,
+   "actif": true,
    "perimetres": [
     "reparation-refit",
     "plaisance",
@@ -168254,7 +168352,7 @@
    ],
    "confiance": "moyenne",
    "id": "silvers-marine-rosneath",
-   "actif_source": "La societe nommee est morte, le site industriel vit. SILVERS MARINE LIMITED (SC084699) a ete dissoute le 2 octobre 2015 ; SILVERS MARINE SERVICES LTD (SC364439) dissoute le 31 mars 2020. L'emprise du chantier de Silverhills, Rosneath (Gareloch) est aujourd'hui exploitee par GSS Marine Services / Gareloch Support Services Plant Ltd, qui y a installe son siege (Silverhills, Rosneath, Argyll & Bute G84 0RW, tel. +44 1436 821277). Valeur precedente true non justifiee, remplacee le 2026-08-15. https://find-and-update.company-information.service.gov.uk/company/SC084699 (dissolution) ; https://gssplant.co.uk/ (exploitant actuel du site de Silverhills, Rosneath)"
+   "actif_source": "FERMETURE REFUTEE le 15/08/2026 par verification adversariale integrale. La valeur precedente (ferme) provenait d'une vague de moisson et a ete infirmee. Motif du verificateur : Chantier REPRIS, pas fermé. Le chantier de Silverhills, Rosneath (Stroul Bay, Gareloch, Écosse), fondé dans les années 1880 et rendu célèbre par James A. Silver, a été racheté en avril 2014 par la société de Rhu Gareloch Support Services (GSS), qui y a transféré son siège et a CONSERVÉ la marque Silvers Marine (Helensburgh Advertiser, avril 2014 : « business as usual », embauches et apprentissage annoncés, aucune fermeture ni licenciement). La thèse de fermeture repose vraisemblablement sur la dissolution des coquilles juridiques homonymes au Companies House : SILVERS MARINE LIMITED (SC084699, dissoute le 02/10/2015, siège 1 Rutland Court Édimbourg, soit une ADRESSE POSTALE de mandataire, pas l'adresse d'exploitation) et SILVERS MARINE SERVICES LTD (SC364439, dissoute le 31/03/2020). Or l'exploitant réel est GARELOCH SUPPORT SERVICES (PLANT) LIMITED, SC117613, statut ACTIF, siège déclaré | Sources : https://find-and-update.company-information.service.gov.uk/company/SC117613 (Companies House, GARELOCH SUPPORT SERVICES (PLANT) LTD, actif, siège Silverhills Rosneath G84 0RW, comptes 29/09/2025, CS 02/06/2026) ; https://www.helensburghadvertiser.co.uk/news/13979331.rosneath-boatyard-bought-rhu-firm-gss/ (rachat par GSS, avril 2014, marque Silvers Marine conservée) ; https://www.britishmarine.co.u"
   },
   {
    "nom": "Mackay Boatbuilders (Arbroath)",
@@ -175309,7 +175407,14 @@
     "https://sv.wikipedia.org/wiki/Falkenbergs_Varv"
    ],
    "confiance": "haute",
-   "id": "falkvarv-ab-falkenberg"
+   "id": "falkvarv-ab-falkenberg",
+   "contact": {
+    "web": "https://www.falkvarv.com/",
+    "telephone": "+46 346 141 50",
+    "adresse": "Hamnvägen 12, SE-311 32 Falkenberg, Suède"
+   },
+   "contact_source": "https://www.falkvarv.com/en/contact.aspx",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Green City Ferries / Echandia (E/S Movitz)",
@@ -175492,7 +175597,14 @@
    "id": "green-city-ferries-echandia-e-s-movitz-stockholm",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://movitz.info/"
-   ]
+   ],
+   "contact": {
+    "web": "https://greencityferries.com/",
+    "telephone": "+46 8 502 425 60",
+    "adresse": "Echandia AB, Johannesfredsvägen 15, 168 69 Bromma, Suède"
+   },
+   "contact_source": "https://greencityferries.com/ et https://greencityferries.com/about pour Green City Ferries (siège déclaré à Stockholm et Bruxelles, contact hello@greencityferries.com uniquement, aucune adresse postale ni téléphone publiés). Adresse et téléphone rendus sont ceux d'Echandia AB, relevés sur https://www.echandia.com/ (le domaine echandia.se redirige en 301 vers echandia.com).",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Hallberg-Rassy Varvs AB",
@@ -175813,7 +175925,14 @@
     "https://www.yachtingworld.com/reviews/boat-tests/hallberg-rassy-40c-swedish-yard-best"
    ],
    "confiance": "haute",
-   "id": "hallberg-rassy-varvs-ab-ellos"
+   "id": "hallberg-rassy-varvs-ab-ellos",
+   "contact": {
+    "web": "https://www.hallberg-rassy.com/",
+    "telephone": "+46 304 54 800",
+    "adresse": "Hallberg-Rassyvägen 1, SE-474 31 Ellös, Suède"
+   },
+   "contact_source": "https://www.hallberg-rassy.com/contact/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Najad Yachts AB (Najadvarvet)",
@@ -176037,7 +176156,14 @@
     "https://sailboatdata.com/sailboat/najad-395/"
    ],
    "confiance": "haute",
-   "id": "najad-yachts-ab-najadvarvet-henan"
+   "id": "najad-yachts-ab-najadvarvet-henan",
+   "contact": {
+    "web": "https://www.najad.se/",
+    "telephone": "+46 (0)304 30 800",
+    "adresse": "Varvsvägen 1, 473 31 Henån, Suède"
+   },
+   "contact_source": "https://www.najad.se/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Storebro Bruk AB (Storebro Boats)",
@@ -176247,7 +176373,14 @@
     "https://sailboatdata.com/builder/storebro-bruk-ab-swe/",
     "https://itboat.com/news/399-nord-west-brand-became-the-property-of-storebro"
    ],
-   "id": "storebro-bruk-ab-storebro-boats-vastervik"
+   "id": "storebro-bruk-ab-storebro-boats-vastervik",
+   "contact": {
+    "web": "https://storebro.se/",
+    "telephone": "+46 492 195 00",
+    "adresse": "Vimmerbyvägen 21, 598 70 Storebro, Suède"
+   },
+   "contact_source": "https://storebro.se/kontakt/ (adresse, téléphone, e-mails sales@storebro.se et info@storebro.se). Le domaine storebro.com redirige en 301 vers storebro.se.",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Marström Composite AB",
@@ -176444,7 +176577,14 @@
     "https://www.boat-specs.com/sailing/sailboats/marstrom-composite-ab/marstrom-m20",
     "https://www.yachtingworld.com/yachts-and-gear/m32-catamaran-a-high-speed-cat-for-the-world-match-racing-tour-69883"
    ],
-   "id": "marstrom-composite-ab-vastervik"
+   "id": "marstrom-composite-ab-vastervik",
+   "contact": {
+    "web": "https://www.marstrom.com/",
+    "telephone": "+46 (0)490 89580",
+    "adresse": "Lucernavägen 9, 593 50 Västervik, Suède"
+   },
+   "contact_source": "https://www.marstrom.com/contact/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "ALUKIN Boats Sweden AB",
@@ -176624,7 +176764,14 @@
     "https://nimbusgroup.se/en/nimbus-groups-workboat-for-the-swedish-armed-forces-receives-fmv-design-approval/",
     "https://alukinboats.com/"
    ],
-   "id": "alukin-boats-sweden-ab-norrtalje"
+   "id": "alukin-boats-sweden-ab-norrtalje",
+   "contact": {
+    "web": "https://www.alukinboats.com/",
+    "telephone": "+46 (0) 176 22 44 40",
+    "adresse": null
+   },
+   "contact_source": "https://www.alukinboats.com/the-company (nom de société, téléphone, e-mail info@alukin.se). Aucune adresse postale n'est publiée sur les pages consultées : le site n'indique que « Roslagen, Suède ». Aucune adresse n'est donc rendue plutôt que devinée.",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Götaverken (chantier historique)",
@@ -181519,7 +181666,14 @@
     "https://www.dockstavarvet.se/references/sweden/"
    ],
    "confiance": "haute",
-   "id": "saab-dockstavarvet-docksta-shipyard-docksta"
+   "id": "saab-dockstavarvet-docksta-shipyard-docksta",
+   "contact": {
+    "web": "https://www.dockstavarvet.se/",
+    "telephone": "+46 613 711 600",
+    "adresse": "SE-873 96 Docksta, Suède"
+   },
+   "contact_source": "https://www.dockstavarvet.se/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Swede Ship Marine AB (Djupviks Varv / Djupvik Shipyard)",
@@ -193302,7 +193456,11 @@
   {
    "capacites": [],
    "historique": [],
-   "contact": null,
+   "contact": {
+    "web": "https://www.odcmarine.com/",
+    "telephone": null,
+    "adresse": "Dalian ODC Marine Manufacture Co., Ltd., High Tech Park, Long Wang Tang Port, Dalian 116044, Chine. C'est la seule adresse publiee sur le site officiel ; aucune adresse europeenne n'y figure."
+   },
    "produits": [],
    "personnes": [],
    "classification": [],
@@ -193656,7 +193814,9 @@
      ],
      "source": "https://www.bateau-electrique.com/membres/odc-marine/"
     }
-   ]
+   ],
+   "contact_source": "https://www.odcmarine.com/nous-trouver/",
+   "contact_maj": "2026-08-15"
   },
   {
    "capacites": [],
@@ -209080,698 +209240,6 @@
    "taille_max_source": "https://www.hartmanshipbuilding.com/"
   },
   {
-   "id": "pa-yard-groningen",
-   "nom": "Groningen Shipyards B.V.",
-   "groupe": "Maas Onroerend Goed (Kolham) / D. Maas Beheer, avec Maas Shipyard Hoogezand et W.S. Doesburg-Maas",
-   "ville": "Waterhuizen",
-   "region": "Groningue",
-   "pays": "Pays-Bas",
-   "lat": 53.18553,
-   "lon": 6.64717,
-   "geo_precision": "ville",
-   "perimetres": [
-    "construction-neuve"
-   ],
-   "types_navires": [],
-   "description": "Chantier de Waterhuizen fonde en 1806 par Jan Hinderikus Moolman, exploite par la famille van Diepen jusqu en 2001, puis Maas Shipyard Waterhuizen (2002-2008), Groningen Shipyard / Groningen Shipyards B.V. (2008-2013) et GS Yard B.V., raison sociale complete Groningen Shipyards (2013-2024). Specialite : conception et construction de caboteurs fluviomaritimes et de bateaux de navigation interieure de 86 et 110 metres, cargos secs, chimiquiers, pousseurs, capacite maximale 135 x 15,80 m, environ 10 navires par an. Series maison Sea-River Liner 3700 puis Eco Freighter 3700. Faillite prononcee le 5 avril 2024 par le tribunal de Noord-Nederland ; le site a ete repris en avril 2024 par Ship and St",
-   "navires_references": [
-    {
-     "nom": "Lady Adele",
-     "type": "Caboteur fluvio-maritime (Sea-River Liner 3700)",
-     "annee": "2015",
-     "imo": "9624859",
-     "longueur_m": 88,
-     "largeur_m": 13.4,
-     "jauge_gt": 2544,
-     "port_lourd_dwt": 3694,
-     "capacite": "Tirant d eau ete 4,90 m ; cale unique 62,30 x 10,80 x 7,73 m ; glace 2(ii)",
-     "energie": "diesel",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "operateur": "Wijnne Barends B.V.",
-     "proprietaire": "Beheermaatschappij Lady Adele B.V. (puis Rederij Lady Adele), Delfzijl",
-     "pavillon": "Pays-Bas",
-     "source": "https://markprummel.nl/ship/lady-adele-pbew-9624859/",
-     "capacite_fret": "16 EVP ; 182 000 pieds cubes grain/balle ; 5 300 m3 bois",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identité confirmée (nom↔IMO 9624859, clé OMI valide, pavillon néerlandais, 88 x 14 m, cargo général). L'ATTRIBUTION à Groningen Shipyards B.V. n'a PAS pu être recoupée : aucun tiers consultable n'a livré le constructeur. BalticShipping renvoie une erreur MySQL, VesselFinder / MarineTraffic / ShipVault / FleetMon renvoient 403 ou sont injoignables, la recherche par nom sur marhisdata.nl passe en POST et n'est pas atteignable, le budget de recherche web de la session était épuisé. Vesseltracker laisse le champ constructeur vide. Manque : une fiche registre (Equasis, marhisdata, presse Schuttevaer/SWZ) nommant le chantier constructeur.",
-      "source": "https://www.vesseltracker.com/en/Ships/Lady-Adele-9624859.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Lady Alexandra",
-     "type": "Caboteur fluvio-maritime (Sea-River Liner 3700)",
-     "annee": "2012",
-     "imo": "9624835",
-     "longueur_m": 88,
-     "largeur_m": 13.39,
-     "jauge_gt": 2544,
-     "port_lourd_dwt": 3718,
-     "capacite": "Tirant d eau 4,90 m ; creux 7,05 m ; glace 2(ii)",
-     "energie": "diesel",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "operateur": "Wijnne Barends B.V.",
-     "proprietaire": "B.V. Beheermaatschappij Lady Alexandra (puis Rederij Lady Alexandra), Delfzijl",
-     "pavillon": "Pays-Bas",
-     "source": "https://markprummel.nl/ship/lady-alexandra-pces-9624835/",
-     "capacite_fret": "16 EVP ; 182 000 pieds cubes grain/balle",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identité confirmée (nom↔IMO 9624835, clé OMI valide, pavillon néerlandais, 88 x 13 m). Largeur relevée 13 m, la base ne la donnait pas. Attribution à Groningen Shipyards NON recoupée : aucune source tierce consultable ne nomme le constructeur (registres hors service ou en 403, budget de recherche épuisé). Le site de l'armateur (wijnnebarends.com) ne mentionne aucun chantier.",
-      "source": "https://www.vesseltracker.com/en/Ships/Lady-Alexandra-9624835.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Lady Alida",
-     "type": "Caboteur fluvio-maritime (Sea-River Liner 3700)",
-     "annee": "2016",
-     "imo": "9760380",
-     "longueur_m": 88,
-     "largeur_m": 13.39,
-     "jauge_gt": 2544,
-     "port_lourd_dwt": 3700,
-     "capacite": "Tirant d eau 4,913 m ; cale unique 62,30 x 10,80 x 7,73 m ; glace 2(ii)",
-     "energie": "diesel",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "operateur": "Wijnne Barends B.V.",
-     "proprietaire": "B.V. Beheermaatschappij Lady Alida, Bruinisse (puis Rederij, Delfzijl)",
-     "pavillon": "Pays-Bas",
-     "source": "https://markprummel.nl/ship/lady-alida-pbff-9760380/",
-     "capacite_fret": "16 EVP ; 182 000 pieds cubes grain/balle ; 5 300 m3 bois",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identité confirmée (nom↔IMO 9760380, clé OMI valide, pavillon néerlandais, 88 x 14 m). Attribution au chantier NON vérifiée faute de source tierce : le champ constructeur est vide chez vesseltracker et les autres registres sont inaccessibles. Manque une fiche registre ou un article de presse spécialisée nommant le chantier.",
-      "source": "https://www.vesseltracker.com/en/Ships/Lady-Alida-9760380.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Lady Amalia",
-     "type": "Caboteur fluvio-maritime (Sea-River Liner 3700)",
-     "annee": "2012",
-     "imo": "9624847",
-     "longueur_m": 88,
-     "largeur_m": 13.4,
-     "jauge_gt": 2544,
-     "port_lourd_dwt": 3718,
-     "capacite": "Tirant d eau 4,90 m ; creux 7,05 m ; glace 2(ii)",
-     "energie": "diesel",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "operateur": "Wijnne Barends B.V.",
-     "proprietaire": "B.V. Beheermaatschappij Lady Amalia (puis Rederij Lady Amalia), Delfzijl",
-     "pavillon": "Pays-Bas",
-     "source": "https://markprummel.nl/ship/lady-amalia-pcnv-9624847/",
-     "capacite_fret": "16 EVP ; 182 000 pieds cubes grain/balle",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identité confirmée (nom↔IMO 9624847, clé OMI valide, pavillon néerlandais, 88 x 13 m). Attribution à Groningen Shipyards NON recoupée : aucun tiers consultable n'a livré le constructeur.",
-      "source": "https://www.vesseltracker.com/en/Ships/Lady-Amalia-9624847.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Lady Ami",
-     "type": "Caboteur fluvio-maritime (Sea-River Liner 3700)",
-     "annee": "2015",
-     "imo": "9624861",
-     "longueur_m": 88,
-     "largeur_m": 13.4,
-     "jauge_gt": 2544,
-     "port_lourd_dwt": 3692,
-     "capacite": "Tirant d eau 4,90 m ; creux 7,05 m ; glace 2(ii)",
-     "energie": "diesel",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "operateur": "Wijnne Barends B.V.",
-     "proprietaire": "Rederij Lady Ami, Delfzijl",
-     "pavillon": "Pays-Bas",
-     "source": "https://markprummel.nl/ship/lady-ami-pczt-9624861/",
-     "capacite_fret": "16 EVP ; 182 000 pieds cubes grain/balle",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identité confirmée (nom↔IMO 9624861, clé OMI valide, pavillon néerlandais, 88 x 14 m, indicatif PCZT). Attribution au chantier NON vérifiée faute de source tierce nommant le constructeur.",
-      "source": "https://www.vesseltracker.com/en/Ships/Lady-Ami-9624861.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Lady Anna",
-     "type": "Caboteur fluvio-maritime (Sea-River Liner 3700)",
-     "annee": "2012",
-     "imo": "9624811",
-     "longueur_m": 88,
-     "largeur_m": 13.4,
-     "jauge_gt": 2544,
-     "port_lourd_dwt": 3700,
-     "capacite": "Tirant d eau 4,90 m ; glace 2(ii)",
-     "energie": "diesel",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "operateur": "Wijnne Barends B.V.",
-     "proprietaire": "B.V. Beheermaatschappij Lady Anna (puis Rederij Lady Anna), Delfzijl",
-     "pavillon": "Pays-Bas",
-     "source": "https://markprummel.nl/ship/lady-anna-pcnd-9624811/",
-     "capacite_fret": "16 EVP ; 182 000 pieds cubes grain/balle",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identité et millésime confirmés par tiers : IMO 9624811, clé OMI valide, construit 2012, 2 544 GT, 3 700 tpl, pavillon néerlandais, indicatif PCND (myshiptracking.com/vessels/lady-anna-mmsi-246838000-imo-9624811 en complément de vesseltracker). Largeur laissée à null : vesseltracker donne 13 m, myshiptracking 14 m, les deux sources divergent. ATTRIBUTION à Groningen Shipyards NON recoupée : aucune source tierce consultable ne nomme le constructeur.",
-      "source": "https://www.vesseltracker.com/en/Ships/Lady-Anna-9624811.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Lady Anneke",
-     "annee": "2012",
-     "imo": "9624823",
-     "type": "Cargo general fluviomaritime, serie Sea-River Liner 3700",
-     "jauge_gt": 2544,
-     "port_lourd_dwt": 3718,
-     "longueur_m": 88,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "B.V. Beheermaatschappij Lady Anneke, Delfzijl (puis Rederij Lady Anneke, 2021)",
-     "operateur": "Wijnne Barends B.V., Delfzijl",
-     "pavillon": "Pays-Bas",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/lady-anneke-pcnq-9624823/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identité confirmée (nom↔IMO 9624823, clé OMI valide, pavillon néerlandais, 88 x 13 m). Attribution au chantier NON vérifiée faute de source tierce.",
-      "source": "https://www.vesseltracker.com/en/Ships/Lady-Anneke-9624823.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Lady Ariane",
-     "annee": "2015",
-     "imo": "9760366",
-     "type": "Cargo general fluviomaritime, serie Sea-River Liner 3700",
-     "jauge_gt": 2544,
-     "port_lourd_dwt": 3702,
-     "longueur_m": 88,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "Beheermaatschappij Lady Ariane B.V., Delfzijl (puis Rederij Lady Ariane, 2021)",
-     "operateur": "Wijnne Barends B.V., Delfzijl",
-     "pavillon": "Pays-Bas",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/lady-ariane-pdhb-9760366/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identité confirmée (nom↔IMO 9760366, clé OMI valide, pavillon néerlandais, indicatif PDBH, 88 x 14 m). Attribution au chantier NON vérifiée : le champ constructeur est vide et aucun autre registre n'a été atteignable.",
-      "source": "https://www.vesseltracker.com/en/Ships/Lady-Ariane-9760366.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Lady Ariette",
-     "annee": "2016",
-     "imo": "9760378",
-     "type": "Cargo general fluviomaritime, serie Sea-River Liner 3700",
-     "jauge_gt": 2544,
-     "port_lourd_dwt": 3702,
-     "longueur_m": 88,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "B.V. Beheermaatschappij Lady Ariette, Delfzijl (puis Rederij Lady Ariette, 2021)",
-     "operateur": "Wijnne Barends B.V., Delfzijl",
-     "pavillon": "Pays-Bas",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/lady-ariette-pdcz-9760378/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identité confirmée (nom↔IMO 9760378, clé OMI valide, pavillon néerlandais, 88 x 14 m). Attribution au chantier NON vérifiée faute de source tierce nommant le constructeur.",
-      "source": "https://www.vesseltracker.com/en/Ships/Lady-Ariette-9760378.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Lady Anne Beau",
-     "annee": "2016",
-     "imo": "9760407",
-     "type": "Cargo general fluviomaritime, serie Sea-River Liner 3700, timonerie escamotable",
-     "jauge_gt": 2544,
-     "port_lourd_dwt": 3692,
-     "longueur_m": 88,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "Rederij Anne Beau, Delfzijl",
-     "operateur": "Wijnne Barends B.V., Delfzijl",
-     "pavillon": "Pays-Bas",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/lady-anne-beau-pbpm-9760407/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identité confirmée (nom↔IMO 9760407, clé OMI valide, pavillon néerlandais, 88 x 14 m). Attribution au chantier NON vérifiée faute de source tierce.",
-      "source": "https://www.vesseltracker.com/en/Ships/Lady-Anne-Beau-9760407.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Lady Anne-Lynn",
-     "annee": "2016",
-     "imo": "9760392",
-     "type": "Cargo general fluviomaritime, serie Sea-River Liner 3700, coque 160",
-     "jauge_gt": 2544,
-     "port_lourd_dwt": 3688,
-     "longueur_m": 88,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "Rederij Lady Anne-Lynn, Delfzijl",
-     "operateur": "Wijnne Barends B.V., Delfzijl",
-     "pavillon": "Pays-Bas",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/lady-anne-lynn-pcmd-9760392/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identité confirmée (nom↔IMO 9760392, clé OMI valide, pavillon néerlandais, 88 x 14 m). Attribution au chantier NON vérifiée : constructeur non renseigné chez le tiers, autres registres inaccessibles.",
-      "source": "https://www.vesseltracker.com/en/Ships/Lady-Anne-Lynn-9760392.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Lady Astrid",
-     "annee": "2016",
-     "imo": "9760419",
-     "type": "Cargo general fluviomaritime, serie Sea-River Liner 3700",
-     "jauge_gt": 2544,
-     "port_lourd_dwt": 3692,
-     "longueur_m": 88,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "Beheermaatschappij Lady Astrid B.V., Delfzijl (puis Rederij Lady Astrid, 2021)",
-     "operateur": "Wijnne Barends B.V., Delfzijl",
-     "pavillon": "Pays-Bas",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/lady-astrid-pcku-9760419/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identité confirmée (nom↔IMO 9760419, clé OMI valide, pavillon néerlandais, indicatif PCKU, 88 x 14 m). Attribution au chantier NON vérifiée faute de source tierce.",
-      "source": "https://www.vesseltracker.com/en/Ships/Lady-Astrid-9760419.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Alma",
-     "annee": "2024",
-     "imo": "9969429",
-     "type": "Cargo general, serie Eco Freighter 3700",
-     "jauge_gt": 2545,
-     "port_lourd_dwt": 3718,
-     "longueur_m": 88,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "Scheepvaartonderneming Alma B.V., Heerenveen",
-     "operateur": "Holwerda Shipmanagement B.V., Heerenveen",
-     "pavillon": "Pays-Bas",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/alma-pbei-9969429/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identité confirmée (nom↔IMO 9969429, clé OMI valide, pavillon néerlandais, indicatif PBEI, MMSI 244062000, 88 x 14 m). Année 2024 non confirmée : le champ est vide chez le tiers. Attribution à Groningen Shipyards NON recoupée, aucun tiers consultable ne nomme le constructeur ni ne confirme la série Eco Freighter 3700. Le domaine de l'armateur déclaré (holwerdashipmanagement.nl) ne résout pas.",
-      "source": "https://www.vesseltracker.com/en/Ships/Alma-9969429.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Alinda",
-     "annee": "2024",
-     "imo": "9969431",
-     "type": "Cargo general, serie Eco Freighter 3700",
-     "jauge_gt": 2545,
-     "port_lourd_dwt": 3718,
-     "longueur_m": 88,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "Scheepvaartonderneming Alinda B.V., Heerenveen",
-     "operateur": "Holwerda Shipmanagement B.V., Heerenveen",
-     "pavillon": "Pays-Bas",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/alinda-pfwl-9969431/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identité confirmée (nom↔IMO 9969431, clé OMI valide, pavillon néerlandais, MMSI 244820058, 88 x 14 m). Année 2024 et attribution à Groningen Shipyards NON confirmées faute de source tierce renseignant l'année de construction et le constructeur.",
-      "source": "https://www.vesseltracker.com/en/Ships/Alinda-9969431.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Mark D",
-     "annee": "2024",
-     "imo": "9969443",
-     "type": "Cargo general, serie Eco Freighter 3700",
-     "jauge_gt": 2593,
-     "port_lourd_dwt": 3718,
-     "longueur_m": 88,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "MS Mark D Schiffahrts GmbH & Co. KG, Cuxhaven",
-     "operateur": "Drevin Bereederungs-GmbH & Co. KG, Cuxhaven",
-     "pavillon": "Antigua-et-Barbuda",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/mark-d-v2hq9-9969443/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "NOM PÉRIMÉ dans la base : l'IMO 9969443 (clé OMI valide) est aujourd'hui exploité sous le nom SOPHIA, MMSI 244972000, pavillon néerlandais, 88 x 14 m. « Mark D » est un nom antérieur. La fiche doit porter Sophia (ex-Mark D). Attribution à Groningen Shipyards NON recoupée, ni l'année 2024 ni le constructeur ne sont confirmés par un tiers consultable. L'opérateur déclaré Drevin Bereederungs-GmbH n'est pas vérifié et le changement de nom rend l'exploitant probablement obsolète lui aussi.",
-      "source": "https://www.vesseltracker.com/en/Ships/Mark-D-9969443.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "CL Flanders",
-     "annee": "2024",
-     "imo": "9969455",
-     "type": "Cargo general, serie Eco Freighter 3700",
-     "jauge_gt": 2545,
-     "port_lourd_dwt": 3718,
-     "longueur_m": 88,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "Conti-Lines Coastal NV, Anvers",
-     "operateur": "De Bock Maritiem BV, Alkmaar",
-     "pavillon": "Belgique",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/cl-flanders-onlq-9969455/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identité confirmée (nom↔IMO 9969455, clé OMI valide, indicatif ONLQ, MMSI 205168000, 88 x 13 m). PAVILLON : belge, la base ne le renseignait pas, ce qui contredit l'opérateur déclaré « De Bock Maritiem BV, Alkmaar » (société néerlandaise) sans le réfuter formellement. Le tiers signale un échouement à Getterön en février 2026 à la sortie de Varberg, navire renfloué et remis en service. Attribution à Groningen Shipyards et année 2024 NON recoupées faute de source tierce nommant le constructeur.",
-      "source": "https://www.vesseltracker.com/en/Ships/CL-Flanders-9969455.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Greetje",
-     "annee": "2024",
-     "imo": "9969467",
-     "type": "Cargo general, serie Eco Freighter 3700",
-     "jauge_gt": 2545,
-     "port_lourd_dwt": 3718,
-     "longueur_m": 88,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "Scheepvaartonderneming Greetje B.V., Heerenveen",
-     "operateur": "Holwerda Shipmanagement B.V., Heerenveen",
-     "pavillon": "Pays-Bas",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/greetje-phav-9969467/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identite confirmee sur tiers (vesseltracker) : IMO 9969467 = Greetje, cargo, pavillon Pays-Bas, 88 x 14 m, MMSI 244978000, indicatif PHAV. En revanche AUCUNE source tierce consultable n'etablit le constructeur : ni Equasis, ni BalticShipping (base MySQL hors service au moment du controle), ni VesselFinder (403), ni MarineTraffic (403) n'ont livre le champ chantier. L'attribution a Groningen Shipyards B.V. reste donc une allegation non recoupee. Doute renforce : la serie 'Eco Freighter 3700' de 88 m et les armateurs clients (Holwerda, Wagle Chartering) correspondent au portefeuille historique de Royal Bodewes (Martenshoek), chantier toujours en activite en 2024 selon nl.wikipedia.org/wiki/Royal_Bodewes, ce qui ne permet pas d'exclure une attribution erronee. A trancher sur registre (Equasis / IHS) avant tout usage.",
-      "source": "https://www.vesseltracker.com/en/Ships/Greetje-9969467.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Longsun",
-     "annee": "2024",
-     "imo": "9969479",
-     "type": "Cargo general, serie Eco Freighter 3700, rebaptise Baltic Sea le 13/12/2024",
-     "jauge_gt": 2545,
-     "port_lourd_dwt": 3718,
-     "longueur_m": 88,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "Longsun Beheer B.V., Groningue",
-     "operateur": "Wagle Chartering AS, Moss",
-     "pavillon": "Pays-Bas",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/longsun-pibx-9969479/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "IDENTITE : la fiche IMO 9969479 ouvre sur un navire nomme BALTIC SEA (pavillon Pays-Bas, MMSI 246440000, indicatif PIBX, 88 x 13 m, Gdansk au dernier point). Le nom 'Longsun' de la base n'est donc plus le nom en service : soit nom de livraison depuis renomme, soit erreur. La coque existe bien. CONSTRUCTEUR non recoupe : aucune source tierce consultable (BalticShipping en panne SQL, VesselFinder et MarineTraffic bloques) ne donne le chantier. L'attribution a Groningen Shipyards B.V. reste non verifiee, et la piste Royal Bodewes (client Wagle Chartering, serie 88 m) n'est pas exclue. Largeur base 13 m confirmee.",
-      "source": "https://www.vesseltracker.com/en/Ships/Longsun-9969479.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Meine Fahre 1",
-     "annee": "2024",
-     "imo": "9977658",
-     "type": "Ferry a passagers et vehicules, ligne Norddeich-Norderney",
-     "jauge_gt": 898,
-     "port_lourd_dwt": 120,
-     "longueur_m": 50,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "Reederei Meine Fahre GmbH, Norderney",
-     "operateur": "Reederei Meine Fahre GmbH, Norderney (puis Fehn Ship Management GmbH & Co. KG, Leer)",
-     "pavillon": "Allemagne",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/meine-faehre-1-dkxd2-9977658/",
-     "verification": {
-      "statut": "corrige",
-      "confiance": "reproduite",
-      "motif": "verdict revu au controle a l'aveugle (contradiction) le 2026-08-05. CORRECTIONS. 1) Le chantier constructeur est nommé GS Yard, à Waterhuizen (Pays-Bas), et non « Groningen Shipyards B.V. » : il s'agit du même site, GS Yard B.V. ayant fait faillite puis été repris et exploité sous le nom Groningen Shipyards. L'attribution au site de Waterhuizen tient donc, mais la raison sociale du constructeur à la date de construction est GS Yard. 2) Année de construction 2023,",
-      "source": "https://de.wikipedia.org/wiki/Meine_F%C3%A4hre_1",
-      "le": "2026-08-05",
-      "champs": [
-       "annee : « 2024 » -> « 2023 »"
-      ]
-     },
-     "source_ref": "source complementaire (2026-08-05) : https://de.wikipedia.org/wiki/Meine_F%C3%A4hre_1 ; source complementaire (2026-08-05) : http://www.ferry-site.dk/ferry.php?id=9977658&lang=en",
-     "largeur_m": 13.2,
-     "capacite_pax": 90,
-     "capacite_vehicules": 27
-    },
-    {
-     "nom": "CL Nogaro",
-     "annee": "2025",
-     "imo": "9969493",
-     "type": "Cargo general, serie Eco Freighter 3700",
-     "jauge_gt": 2545,
-     "port_lourd_dwt": 3718,
-     "longueur_m": 88,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "Conti-Lines Coastal NV, Anvers",
-     "operateur": "De Bock Maritiem BV, Alkmaar",
-     "pavillon": "Belgique",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/cl-nogaro-onlr-9969493/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identite confirmee sur tiers : IMO 9969493 = CL NOGARO, cargo, pavillon BELGE (la base ne renseignait pas le pavillon), 88 x 13 m. Constructeur NON recoupe : la fiche vesseltracker laisse le champ builder vide en acces public, BalticShipping est hors service (erreur MySQL 2002), VesselFinder et MarineTraffic renvoient 403. L'attribution a Groningen Shipyards B.V. n'est donc appuyee par aucune source tierce ; meme reserve que pour les autres 'Eco Freighter 3700' du lot, ou la piste Royal Bodewes n'est pas ecartee.",
-      "source": "https://www.vesseltracker.com/en/Ships/Cl-Nogaro-9969493.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Jan D",
-     "annee": "2025",
-     "imo": "9969510",
-     "type": "Cargo general, serie Eco Freighter 3700",
-     "jauge_gt": 2593,
-     "port_lourd_dwt": 3700,
-     "longueur_m": 88,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "MS Jan D Schiffahrts GmbH & Co. KG, Cuxhaven",
-     "operateur": "Drevin Bereederungs-GmbH & Co. KG, Cuxhaven",
-     "pavillon": "Portugal (Madere)",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/jan-d-cq2353-9969510/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identite confirmee sur tiers : IMO 9969510 = JAN D, cargo, pavillon PORTUGAL (vraisemblablement registre international de Madere, la base ne renseignait pas le pavillon), 88 x 13 m. Constructeur NON recoupe : champ builder inaccessible sans compte sur vesseltracker, BalticShipping hors service, VesselFinder et MarineTraffic bloques. L'attribution a Groningen Shipyards B.V. reste une allegation non verifiee.",
-      "source": "https://www.vesseltracker.com/en/Ships/Jan-D-9969510.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Baltic Dream",
-     "annee": "2025",
-     "imo": "9969522",
-     "type": "Cargo general, serie Eco Freighter 3700, lance sous GS Yard puis acheve par Ship and Steelbuilding",
-     "jauge_gt": 2545,
-     "port_lourd_dwt": 3718,
-     "longueur_m": 88,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "proprietaire": "Longsea Beheer B.V., Groningue",
-     "operateur": "Wagle Chartering AS, Moss",
-     "pavillon": "Pays-Bas",
-     "architecte": null,
-     "energie": null,
-     "capacite": null,
-     "capacite_fret": null,
-     "prix_acquisition": null,
-     "source": "https://markprummel.nl/ship/baltic-dream-pdlw-9969522/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "Identite confirmee sur tiers : IMO 9969522 = BALTIC DREAM, cargo, pavillon Pays-Bas, 88 x 13 m. Attention a ne pas confondre avec la fiche i=17 du meme lot, dont l'IMO 9969479 porte aujourd'hui le nom BALTIC SEA : ce sont bien deux coques distinctes, pas un doublon. Constructeur NON recoupe (aucune source tierce accessible ne livre le chantier) : l'attribution a Groningen Shipyards B.V. n'est pas etablie.",
-      "source": "https://www.vesseltracker.com/en/Ships/Baltic-Dream-9969522.html",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    }
-   ],
-   "sources": [
-    "https://markprummel.nl/ship/lady-adele-pbew-9624859/",
-    "https://markprummel.nl/ship/lady-alexandra-pces-9624835/",
-    "https://markprummel.nl/ship/lady-alida-pbff-9760380/",
-    "https://markprummel.nl/ship/lady-amalia-pcnv-9624847/",
-    "https://markprummel.nl/ship/lady-ami-pczt-9624861/",
-    "https://markprummel.nl/ship/lady-anna-pcnd-9624811/",
-    "https://nl.wikipedia.org/wiki/GS_Yard",
-    "https://nl.wikipedia.org/wiki/Waterhuizen",
-    "https://markprummel.nl/photos/shipyard/gs-yard-waterhuizen/",
-    "https://www.rtvnoord.nl/economie/1258279/na-een-gedurfde-overname-staat-er-weer-een-bloeiende-werf-in-waterhuizen",
-    "https://koopvaardij.blogspot.com/2024/04/op-8-april-2024-is-gs-yard-b.html",
-    "https://nl.wikipedia.org/wiki/Maas_Shipyard_Waterhuizen",
-    "https://nl.wikipedia.org/wiki/Speciaal:VerwijzingenNaarHier/GS_Yard",
-    "https://markprummel.nl/photos/general-cargo-shipyard/gs-yard-waterhuizen/",
-    "https://www.rtvnoord.nl/economie/1150405/doorstart-in-de-maak-van-scheepswerf-gs-yard-vakbond-woest-over-gang-van-zaken",
-    "https://www.rtvnoord.nl/economie/1154858/overname-en-doorstart-van-gs-yard-gered-vanuit-hart-voor-de-scheepsbouw",
-    "https://eemshavenonline.nl/scheepvaart/nieuwbouw-jan-d-afgemeerd-in-beatrixhaven/",
-    "https://koopvaardij.blogspot.com/2024/04/3-april-2024-in-afbouw-bij-gs-yard-b.html",
-    "https://binnenvaartlog.nl/werf-gs-yard-in-waterhuizen-in-zwaar-weer-door-grote-schuldenlast-curator-zoekt-overnamekandidaat-voor-deel-dat-cascos-bouwt-er-zijn-opdrachten-er-is-werk/"
-   ],
-   "confiance": "sourcee",
-   "actif": false,
-   "fondation": 1806,
-   "capacites": [
-    {
-     "type": "dimensions maximales de construction",
-     "capacite": "environ 10 navires par an",
-     "dimensions": "135 x 15,80 m (L x l)",
-     "source": "https://nl.wikipedia.org/wiki/GS_Yard"
-    },
-    {
-     "type": "cale de lancement longitudinale (langshelling)",
-     "capacite": "installee en 1978 sous Gebroeders van Diepen",
-     "dimensions": null,
-     "source": "https://nl.wikipedia.org/wiki/GS_Yard"
-    },
-    {
-     "type": "cale de lancement longitudinale",
-     "capacite": "cale longitudinale construite en 1978, sur le Winschoterdiep",
-     "dimensions": "navires jusqu'à 135 m x 15,80 m",
-     "source": "https://nl.wikipedia.org/wiki/GS_Yard"
-    },
-    {
-     "type": "capacité de production",
-     "capacite": "environ 10 navires par an (séries fluviales standardisées 86 m et 110 m)",
-     "dimensions": null,
-     "source": "https://nl.wikipedia.org/wiki/GS_Yard"
-    },
-    {
-     "type": "site industriel",
-     "capacite": "cale transversale historique (dwarshelling) sur le Winschoterdiep, premier chantier rencontré en venant de Groningue vers Hoogezand",
-     "dimensions": null,
-     "source": "https://nl.wikipedia.org/wiki/Waterhuizen"
-    }
-   ],
-   "effectif": 65
-  },
-  {
    "id": "pa-yard-intervakconstructie",
    "nom": "Intervak Scheepswerf & Constructie B.V.",
    "groupe": null,
@@ -212534,7 +212002,7 @@
     "https://da.wikipedia.org/wiki/Orskov_Yard"
    ],
    "confiance": "sourcee",
-   "actif": false,
+   "actif": true,
    "fondation": 1958,
    "contact": {
     "web": "https://www.orskov.dk/",
@@ -212543,7 +212011,7 @@
    },
    "contact_source": "https://www.orskov.dk/contact/",
    "contact_maj": "2026-08-15",
-   "actif_source": "DENOMINATION HISTORIQUE. Orskov Christensens Staalskibsvaerft, fonde en 1958 par Arne Orskov Christensen, a ferme son activite de construction neuve en 2003 face a la concurrence de l'Est (plus de 200 navires construits de 1972 a 2003). L'emprise de Frederikshavn est exploitee aujourd'hui par ORSKOV YARD A/S (CVR 26694027), societe distincte creee en 2003 par Jeppe Orskov, orientee reparation et maintenance navale, environ 220 salaries pour le groupe Orskov. Le site vit, la maison nommee ici n'existe plus. Valeur precedente true non justifiee, remplacee le 2026-08-15. https://www.orskov.dk/news/",
+   "actif_source": "FERMETURE REFUTEE le 15/08/2026 par verification adversariale integrale. La valeur precedente (ferme) provenait d'une vague de moisson et a ete infirmee. Motif du verificateur : Chantier en pleine exploitation, la « fermeture » repose sur une confusion de raison sociale. Ørskov Christensen Staalskibsværft A/S (Frederikshavn, Danemark, fondé 1958) opère aujourd'hui sous la marque Orskov Yard A/S, même site (Havnepladsen 16, DK-9900 Frederikshavn), même contrôle familial (Christina Ørskov, troisième génération). Aucun fait de faillite, liquidation, radiation ou démantèlement de l'outil : ce qui a changé en 2003 est le modèle d'activité, passage de la construction neuve à la réparation, conversion et refit, pas l'existence du chantier. Preuves de vie postérieures et vérifiées sur le site officiel, section actualités : chiffre d'affaires en hausse de 808 à 914 MDKK annoncé le 15 janvier 2026, quatrième exercice record consécutif ; 37 apprentis sur près de 200 ouvriers au 30 janvier 2026 ; le MS Vesterålen 100e navire accueilli au dock 5 depuis son inauguration en 20 | Sources : https://www.orskov.dk/news-from-orskov-yard/ (actualités datées jusqu'au 2 juillet 2026) et https://www.orskov.dk/ (siège Havnepladsen 16, Frederikshavn, certifications DNV)",
    "materiaux": [
     "acier"
    ]
@@ -225055,7 +224523,17 @@
    "actif": true,
    "fondation": 2000,
    "taille_max": "Forme de radoub 162 m x 35,2 m, capacité 10 000 t de levage et jusqu'à 25 000 TPL ; deux cales couvertes de 150 m x 19 m (jumelables, largeur 38 m, 3 500 t) ; 700 m de quais",
-   "taille_max_source": "https://www.metalships.com/en/shipyard/"
+   "taille_max_source": "https://www.metalships.com/en/shipyard/",
+   "contact": {
+    "web": "https://www.metalships.com/",
+    "telephone": "+34 986 811 800",
+    "adresse": "Ríos, Teis s/n, 36216 Vigo, Espagne"
+   },
+   "contact_source": "https://www.metalships.com/contact/",
+   "contact_maj": "2026-08-15",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "es-yard-astillerosarmada-vigo",
@@ -225488,7 +224966,20 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": 1967
+   "fondation": 1967,
+   "contact": {
+    "web": "https://westersmek.se/",
+    "telephone": "+46 706 84 60 84",
+    "adresse": "Hultås 321, 451 97 Uddevalla, Suède"
+   },
+   "contact_source": "https://www.westersmek.se/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Bateaux aluminium jusqu'a 15 metres de long",
+   "taille_max_source": "https://www.westersmek.se/",
+   "materiaux": [
+    "aluminium",
+    "acier inoxydable"
+   ]
   },
   {
    "id": "se-yard-tjornvarvet-ronnang",
@@ -227225,7 +226716,14 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": 1980
+   "fondation": 1980,
+   "contact": {
+    "web": "https://mooneyboats.ie/",
+    "telephone": "+353 74 973 1152",
+    "adresse": "Mooney Boat Ltd, Shore Road, Killybegs, Co. Donegal, Irlande, F94 AEC5"
+   },
+   "contact_source": "https://mooneyboats.ie/contact/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "ie-yard-corkdockyard-cobh",
@@ -227399,7 +226897,19 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": 1861
+   "fondation": 1861,
+   "contact": {
+    "web": "https://navantia.co.uk/harland-wolff/",
+    "telephone": null,
+    "adresse": "Queen's Island, Belfast BT3 9EU, Royaume-Uni"
+   },
+   "contact_source": "https://navantia.co.uk/contact-us/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Cale seche principale 556 m x 93 m (tirant d'eau 8,41 m PMVE) ; seconde cale 335 m x 50,29 m (12,3 m PMVE) ; portiques Goliath de 840 t et 900 t ; site de 81 acres",
+   "taille_max_source": "https://navantia.co.uk/harland-wolff/",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "ni-yard-workman-belfast",
@@ -227635,7 +227145,17 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": 1892
+   "fondation": 1892,
+   "contact": {
+    "web": "https://www.3maj.hr/",
+    "telephone": "+385 51 611 111",
+    "adresse": "Liburnijska ul. 3, 51000 Rijeka, Croatie (entrée ouest : Pulska 1 ; entrée est : Milutina Barača bb)"
+   },
+   "contact_source": "https://www.3maj.hr/?page_id=19",
+   "contact_maj": "2026-08-15",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "hr-yard-brodosplit-split",
@@ -227872,7 +227392,21 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": 1922
+   "fondation": 1922,
+   "contact": {
+    "web": "https://www.brodosplit.hr/en",
+    "telephone": "+385 21 392 202",
+    "adresse": "Put Supavla 21, 21000 Split, Croatie (siege social declare : Ulica Velimira Škorpika 11, 10090 Zagreb)"
+   },
+   "contact_source": "https://www.brodosplit.hr/en/brodosplit/about-us/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Quatre cales equipees permettant des navires de 300 m de long et 50 m de large ; superficie totale 560 000 m2",
+   "taille_max_source": "https://www.brodosplit.hr/en/brodosplit/about-us/",
+   "materiaux": [
+    "acier",
+    "aluminium",
+    "fonte"
+   ]
   },
   {
    "id": "hr-yard-brodotrogir-trogir",
@@ -228635,7 +228169,19 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": 1956
+   "fondation": 1956,
+   "contact": {
+    "web": "https://www.tehnomont.hr/",
+    "telephone": "+385 52 386 923",
+    "adresse": "Ulica Fižela 6, 52100 Pula, Croatie"
+   },
+   "contact_source": "https://www.tehnomont.hr/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Constructions récentes de 17 à 28 m (navire de servitude hybride de 28 m mis à l'eau en 2025)",
+   "taille_max_source": "https://www.tehnomont.hr/hr/porinuce-hibridnog-servisnog-broda-gr126-fox-master-38",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "hr-yard-greben-velaluka",
@@ -229115,7 +228661,8 @@
    "lon": 6.64717,
    "geo_precision": "ville",
    "perimetres": [
-    "construction-neuve"
+    "construction-neuve",
+    "reparation-refit"
    ],
    "types_navires": [
     "navire fluvial de charge (86 et 110 m)",
@@ -229123,9 +228670,15 @@
     "pousseur",
     "cargo frigorifique",
     "caboteur",
-    "chaland et tjalk en bois (XIXe siecle)"
+    "chaland et tjalk en bois (XIXe siecle)",
+    "caboteur fluvio-maritime",
+    "cargo general",
+    "navire a passagers",
+    "remorqueur",
+    "barge citerne",
+    "goelette (historique)"
    ],
-   "description": "Chantier naval du Winschoterdiep a Waterhuizen (commune de Midden-Groningen), fonde en 1806 par Jan Hinderikus Moolman qui y construisait des tjalks en bois, des goelettes et des chalands couverts. Repris en 1859 par son gendre Jan van Diepen, puis exploite par la famille van Diepen jusqu'en 2001 (Gebroeders J. en H. van Diepen a partir de 1902, Scheepswerf van Diepen B.V. de 1995 a la faillite de decembre 2001). Le site a ensuite porte les raisons sociales Maas Shipyard Waterhuizen (2002-2008, deux faillites), Groningen Shipyard B.V. (2008-2013, actionnariat allemand) puis GS Yard (2013-2024). Specialise en fin de periode dans la conception et l'achevement de navires fluviaux de 86 et 110 metres, ainsi que dans les chimiquiers et les pousseurs, avec une production d'environ dix navires par an et une cale de lancement acceptant jusqu'a 135 x 15,80 metres. L'Inspection du travail neerlandaise a releve en 2009 des conditions de travail insuffisantes pour des ouvriers roumains, le syndicat FNV invoquant des manquements a la convention collective. GS Yard a depose son bilan le 5 avril 2024 en raison d'un endettement post-pandemie ; le site a ete repris dans la foulee par Ship and Steelbuilding, qui poursuit l'exploitation sous le nom Ship and Steelbuilding (SaS) Waterhuizen.",
+   "description": "Chantier naval du Winschoterdiep a Waterhuizen (commune de Midden-Groningen), fonde en 1806 par Jan Hinderikus Moolman qui y construisait des tjalks en bois, des goelettes et des chalands couverts. Repris en 1859 par son gendre Jan van Diepen, puis exploite par la famille van Diepen jusqu'en 2001 (Gebroeders J. en H. van Diepen a partir de 1902, Scheepswerf van Diepen B.V. de 1995 a la faillite de decembre 2001). Le site a ensuite porte les raisons sociales Maas Shipyard Waterhuizen (2002-2008, deux faillites), Groningen Shipyard B.V. (2008-2013, actionnariat allemand) puis GS Yard (2013-2024). Specialise en fin de periode dans la conception et l'achevement de navires fluviaux de 86 et 110 metres, ainsi que dans les chimiquiers et les pousseurs, avec une production d'environ dix navires par an et une cale de lancement acceptant jusqu'a 135 x 15,80 metres. L'Inspection du travail neerlandaise a releve en 2009 des conditions de travail insuffisantes pour des ouvriers roumains, le syndicat FNV invoquant des manquements a la convention collective. GS Yard a depose son bilan le 5 avril 2024 en raison d'un endettement post-pandemie ; le site a ete repris dans la foulee par Ship and Steelbuilding, qui poursuit l'exploitation sous le nom Ship and Steelbuilding (SaS) Waterhuizen. Fiche fusionnee le 2026-08-15 avec « GS Yard » (Waterhuizen) : meme quai, deux graphies. Fiche fusionnee le 2026-08-15 avec « Groningen Shipyards B.V. » (Waterhuizen) : meme quai, deux graphies.",
    "navires_references": [
     {
      "nom": "Hoop op Zegen",
@@ -229152,13 +228705,565 @@
      "nom": "Lady Alexandra",
      "annee": "2012",
      "source": "https://nl.wikipedia.org/wiki/GS_Yard"
+    },
+    {
+     "nom": "De Wadden",
+     "type": "goelette auxiliaire trois-mats a coque acier",
+     "annee": "1917",
+     "longueur_m": 37.19,
+     "largeur_m": 7.44,
+     "jauge_gt": 251,
+     "client": "Rederij Hollandia",
+     "source": "https://en.wikipedia.org/wiki/De_Wadden"
+    },
+    {
+     "nom": "Booya",
+     "type": "goelette auxiliaire trois-mats a coque acier (ex-De Lauwers, ex-Argosy Lemal)",
+     "annee": "1917",
+     "longueur_m": 35.79,
+     "largeur_m": 7.44,
+     "jauge_gt": 254,
+     "source": "https://en.wikipedia.org/wiki/Booya_(ship)"
+    },
+    {
+     "nom": "Wawaloam",
+     "type": "goelette a trois mats (tern schooner)",
+     "annee": "1919",
+     "source": "https://en.wikipedia.org/wiki/Lou_Kenedy"
+    },
+    {
+     "nom": "Clary",
+     "type": "caboteur",
+     "annee": "1939",
+     "longueur_m": 36.96,
+     "largeur_m": 6.93,
+     "jauge_gt": 215,
+     "port_lourd_dwt": 305,
+     "source": "https://en.wikipedia.org/wiki/MV_Clary_(1939)"
+    },
+    {
+     "nom": "Delfshaven",
+     "type": "baliseur, aujourd'hui navire-ecole",
+     "annee": "1959",
+     "longueur_m": 40.6,
+     "largeur_m": 7.96,
+     "jauge_gt": 248,
+     "operateur": "Loodswezen (Den Haag), puis Scheepvaart- en transportcollege",
+     "imo": "8434013",
+     "source": "https://nl.wikipedia.org/wiki/Delfshaven_(schip,_1959)"
+    },
+    {
+     "nom": "TMS Eventus",
+     "type": "barge citerne",
+     "annee": "2010",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2010"
+    },
+    {
+     "nom": "Tom Burmester",
+     "type": "cargo general / polyvalent",
+     "annee": "2011",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2011"
+    },
+    {
+     "nom": "Liberty",
+     "type": "cargo general / polyvalent",
+     "annee": "2011",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2011"
+    },
+    {
+     "nom": "Lady Anna",
+     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
+     "annee": "2011",
+     "operateur": "Wijnne Barends",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2011"
+    },
+    {
+     "nom": "Lady Anneke",
+     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
+     "annee": "2011",
+     "operateur": "Wijnne Barends",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2011"
+    },
+    {
+     "nom": "Lady Amalia",
+     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
+     "annee": "2012",
+     "operateur": "Wijnne Barends",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2012"
+    },
+    {
+     "nom": "Georg Burmester",
+     "type": "cargo classe Sunrise",
+     "annee": "2012",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2012"
+    },
+    {
+     "nom": "Piz Bever",
+     "type": "cargo classe Sunrise",
+     "annee": "2012",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2012"
+    },
+    {
+     "nom": "Judith",
+     "type": "navire de servitude",
+     "annee": "2013",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2013"
+    },
+    {
+     "nom": "Megantic",
+     "type": "navire de servitude",
+     "annee": "2013",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2013"
+    },
+    {
+     "nom": "Manito",
+     "type": "navire de servitude",
+     "annee": "2013",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2013"
+    },
+    {
+     "nom": "Chantal",
+     "type": "cargo general",
+     "annee": "2014",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2014"
+    },
+    {
+     "nom": "Maria Theresa",
+     "type": "navire a passagers",
+     "annee": "2014",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2014"
+    },
+    {
+     "nom": "Calimero",
+     "type": "cargo general",
+     "annee": "2014",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2014"
+    },
+    {
+     "nom": "Lady Ami",
+     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
+     "annee": "2015",
+     "operateur": "Wijnne Barends",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2015"
+    },
+    {
+     "nom": "Lady Adele",
+     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
+     "annee": "2015",
+     "operateur": "Wijnne Barends",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2015"
+    },
+    {
+     "nom": "Lady Ariane",
+     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
+     "annee": "2015",
+     "operateur": "Wijnne Barends",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2015"
+    },
+    {
+     "nom": "Lady Alida",
+     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
+     "annee": "2016",
+     "operateur": "Wijnne Barends",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2016"
+    },
+    {
+     "nom": "Lady Anne-Lynn",
+     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
+     "annee": "2016",
+     "operateur": "Wijnne Barends",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2016"
+    },
+    {
+     "nom": "Lady Anne Beau",
+     "type": "caboteur fluvio-maritime Sea-River Liner 3700 a passerelle escamotable (numero de coque 161)",
+     "annee": "2016",
+     "longueur_m": 88,
+     "largeur_m": 13.4,
+     "jauge_gt": 2544,
+     "operateur": "Wijnne Barends",
+     "proprietaire": "Maurice de Jonge",
+     "pavillon": "Pays-Bas",
+     "source": "https://nl.wikipedia.org/wiki/Lady_Anne_Beau_(schip,_2016)"
+    },
+    {
+     "nom": "Ares",
+     "type": "cargo sec classe Sunrise",
+     "annee": "2016",
+     "operateur": "Wijnne Barends",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2016"
+    },
+    {
+     "nom": "Scot Navigator",
+     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
+     "annee": "2017",
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2017"
+    },
+    {
+     "nom": "Lady Ariette",
+     "annee": "2016",
+     "imo": "9760378",
+     "type": "Cargo general fluviomaritime, serie Sea-River Liner 3700",
+     "jauge_gt": 2544,
+     "port_lourd_dwt": 3702,
+     "longueur_m": 88,
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "proprietaire": "B.V. Beheermaatschappij Lady Ariette, Delfzijl (puis Rederij Lady Ariette, 2021)",
+     "operateur": "Wijnne Barends B.V., Delfzijl",
+     "pavillon": "Pays-Bas",
+     "architecte": null,
+     "energie": null,
+     "capacite": null,
+     "capacite_fret": null,
+     "prix_acquisition": null,
+     "source": "https://markprummel.nl/ship/lady-ariette-pdcz-9760378/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "Identité confirmée (nom↔IMO 9760378, clé OMI valide, pavillon néerlandais, 88 x 14 m). Attribution au chantier NON vérifiée faute de source tierce nommant le constructeur.",
+      "source": "https://www.vesseltracker.com/en/Ships/Lady-Ariette-9760378.html",
+      "le": "2026-08-03",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Lady Astrid",
+     "annee": "2016",
+     "imo": "9760419",
+     "type": "Cargo general fluviomaritime, serie Sea-River Liner 3700",
+     "jauge_gt": 2544,
+     "port_lourd_dwt": 3692,
+     "longueur_m": 88,
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "proprietaire": "Beheermaatschappij Lady Astrid B.V., Delfzijl (puis Rederij Lady Astrid, 2021)",
+     "operateur": "Wijnne Barends B.V., Delfzijl",
+     "pavillon": "Pays-Bas",
+     "architecte": null,
+     "energie": null,
+     "capacite": null,
+     "capacite_fret": null,
+     "prix_acquisition": null,
+     "source": "https://markprummel.nl/ship/lady-astrid-pcku-9760419/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "Identité confirmée (nom↔IMO 9760419, clé OMI valide, pavillon néerlandais, indicatif PCKU, 88 x 14 m). Attribution au chantier NON vérifiée faute de source tierce.",
+      "source": "https://www.vesseltracker.com/en/Ships/Lady-Astrid-9760419.html",
+      "le": "2026-08-03",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Alma",
+     "annee": "2024",
+     "imo": "9969429",
+     "type": "Cargo general, serie Eco Freighter 3700",
+     "jauge_gt": 2545,
+     "port_lourd_dwt": 3718,
+     "longueur_m": 88,
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "proprietaire": "Scheepvaartonderneming Alma B.V., Heerenveen",
+     "operateur": "Holwerda Shipmanagement B.V., Heerenveen",
+     "pavillon": "Pays-Bas",
+     "architecte": null,
+     "energie": null,
+     "capacite": null,
+     "capacite_fret": null,
+     "prix_acquisition": null,
+     "source": "https://markprummel.nl/ship/alma-pbei-9969429/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "Identité confirmée (nom↔IMO 9969429, clé OMI valide, pavillon néerlandais, indicatif PBEI, MMSI 244062000, 88 x 14 m). Année 2024 non confirmée : le champ est vide chez le tiers. Attribution à Groningen Shipyards NON recoupée, aucun tiers consultable ne nomme le constructeur ni ne confirme la série Eco Freighter 3700. Le domaine de l'armateur déclaré (holwerdashipmanagement.nl) ne résout pas.",
+      "source": "https://www.vesseltracker.com/en/Ships/Alma-9969429.html",
+      "le": "2026-08-03",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Alinda",
+     "annee": "2024",
+     "imo": "9969431",
+     "type": "Cargo general, serie Eco Freighter 3700",
+     "jauge_gt": 2545,
+     "port_lourd_dwt": 3718,
+     "longueur_m": 88,
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "proprietaire": "Scheepvaartonderneming Alinda B.V., Heerenveen",
+     "operateur": "Holwerda Shipmanagement B.V., Heerenveen",
+     "pavillon": "Pays-Bas",
+     "architecte": null,
+     "energie": null,
+     "capacite": null,
+     "capacite_fret": null,
+     "prix_acquisition": null,
+     "source": "https://markprummel.nl/ship/alinda-pfwl-9969431/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "Identité confirmée (nom↔IMO 9969431, clé OMI valide, pavillon néerlandais, MMSI 244820058, 88 x 14 m). Année 2024 et attribution à Groningen Shipyards NON confirmées faute de source tierce renseignant l'année de construction et le constructeur.",
+      "source": "https://www.vesseltracker.com/en/Ships/Alinda-9969431.html",
+      "le": "2026-08-03",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Mark D",
+     "annee": "2024",
+     "imo": "9969443",
+     "type": "Cargo general, serie Eco Freighter 3700",
+     "jauge_gt": 2593,
+     "port_lourd_dwt": 3718,
+     "longueur_m": 88,
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "proprietaire": "MS Mark D Schiffahrts GmbH & Co. KG, Cuxhaven",
+     "operateur": "Drevin Bereederungs-GmbH & Co. KG, Cuxhaven",
+     "pavillon": "Antigua-et-Barbuda",
+     "architecte": null,
+     "energie": null,
+     "capacite": null,
+     "capacite_fret": null,
+     "prix_acquisition": null,
+     "source": "https://markprummel.nl/ship/mark-d-v2hq9-9969443/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "NOM PÉRIMÉ dans la base : l'IMO 9969443 (clé OMI valide) est aujourd'hui exploité sous le nom SOPHIA, MMSI 244972000, pavillon néerlandais, 88 x 14 m. « Mark D » est un nom antérieur. La fiche doit porter Sophia (ex-Mark D). Attribution à Groningen Shipyards NON recoupée, ni l'année 2024 ni le constructeur ne sont confirmés par un tiers consultable. L'opérateur déclaré Drevin Bereederungs-GmbH n'est pas vérifié et le changement de nom rend l'exploitant probablement obsolète lui aussi.",
+      "source": "https://www.vesseltracker.com/en/Ships/Mark-D-9969443.html",
+      "le": "2026-08-03",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "CL Flanders",
+     "annee": "2024",
+     "imo": "9969455",
+     "type": "Cargo general, serie Eco Freighter 3700",
+     "jauge_gt": 2545,
+     "port_lourd_dwt": 3718,
+     "longueur_m": 88,
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "proprietaire": "Conti-Lines Coastal NV, Anvers",
+     "operateur": "De Bock Maritiem BV, Alkmaar",
+     "pavillon": "Belgique",
+     "architecte": null,
+     "energie": null,
+     "capacite": null,
+     "capacite_fret": null,
+     "prix_acquisition": null,
+     "source": "https://markprummel.nl/ship/cl-flanders-onlq-9969455/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "Identité confirmée (nom↔IMO 9969455, clé OMI valide, indicatif ONLQ, MMSI 205168000, 88 x 13 m). PAVILLON : belge, la base ne le renseignait pas, ce qui contredit l'opérateur déclaré « De Bock Maritiem BV, Alkmaar » (société néerlandaise) sans le réfuter formellement. Le tiers signale un échouement à Getterön en février 2026 à la sortie de Varberg, navire renfloué et remis en service. Attribution à Groningen Shipyards et année 2024 NON recoupées faute de source tierce nommant le constructeur.",
+      "source": "https://www.vesseltracker.com/en/Ships/CL-Flanders-9969455.html",
+      "le": "2026-08-03",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Greetje",
+     "annee": "2024",
+     "imo": "9969467",
+     "type": "Cargo general, serie Eco Freighter 3700",
+     "jauge_gt": 2545,
+     "port_lourd_dwt": 3718,
+     "longueur_m": 88,
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "proprietaire": "Scheepvaartonderneming Greetje B.V., Heerenveen",
+     "operateur": "Holwerda Shipmanagement B.V., Heerenveen",
+     "pavillon": "Pays-Bas",
+     "architecte": null,
+     "energie": null,
+     "capacite": null,
+     "capacite_fret": null,
+     "prix_acquisition": null,
+     "source": "https://markprummel.nl/ship/greetje-phav-9969467/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "Identite confirmee sur tiers (vesseltracker) : IMO 9969467 = Greetje, cargo, pavillon Pays-Bas, 88 x 14 m, MMSI 244978000, indicatif PHAV. En revanche AUCUNE source tierce consultable n'etablit le constructeur : ni Equasis, ni BalticShipping (base MySQL hors service au moment du controle), ni VesselFinder (403), ni MarineTraffic (403) n'ont livre le champ chantier. L'attribution a Groningen Shipyards B.V. reste donc une allegation non recoupee. Doute renforce : la serie 'Eco Freighter 3700' de 88 m et les armateurs clients (Holwerda, Wagle Chartering) correspondent au portefeuille historique de Royal Bodewes (Martenshoek), chantier toujours en activite en 2024 selon nl.wikipedia.org/wiki/Royal_Bodewes, ce qui ne permet pas d'exclure une attribution erronee. A trancher sur registre (Equasis / IHS) avant tout usage.",
+      "source": "https://www.vesseltracker.com/en/Ships/Greetje-9969467.html",
+      "le": "2026-08-03",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Longsun",
+     "annee": "2024",
+     "imo": "9969479",
+     "type": "Cargo general, serie Eco Freighter 3700, rebaptise Baltic Sea le 13/12/2024",
+     "jauge_gt": 2545,
+     "port_lourd_dwt": 3718,
+     "longueur_m": 88,
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "proprietaire": "Longsun Beheer B.V., Groningue",
+     "operateur": "Wagle Chartering AS, Moss",
+     "pavillon": "Pays-Bas",
+     "architecte": null,
+     "energie": null,
+     "capacite": null,
+     "capacite_fret": null,
+     "prix_acquisition": null,
+     "source": "https://markprummel.nl/ship/longsun-pibx-9969479/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "IDENTITE : la fiche IMO 9969479 ouvre sur un navire nomme BALTIC SEA (pavillon Pays-Bas, MMSI 246440000, indicatif PIBX, 88 x 13 m, Gdansk au dernier point). Le nom 'Longsun' de la base n'est donc plus le nom en service : soit nom de livraison depuis renomme, soit erreur. La coque existe bien. CONSTRUCTEUR non recoupe : aucune source tierce consultable (BalticShipping en panne SQL, VesselFinder et MarineTraffic bloques) ne donne le chantier. L'attribution a Groningen Shipyards B.V. reste non verifiee, et la piste Royal Bodewes (client Wagle Chartering, serie 88 m) n'est pas exclue. Largeur base 13 m confirmee.",
+      "source": "https://www.vesseltracker.com/en/Ships/Longsun-9969479.html",
+      "le": "2026-08-03",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Meine Fahre 1",
+     "annee": "2024",
+     "imo": "9977658",
+     "type": "Ferry a passagers et vehicules, ligne Norddeich-Norderney",
+     "jauge_gt": 898,
+     "port_lourd_dwt": 120,
+     "longueur_m": 50,
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "proprietaire": "Reederei Meine Fahre GmbH, Norderney",
+     "operateur": "Reederei Meine Fahre GmbH, Norderney (puis Fehn Ship Management GmbH & Co. KG, Leer)",
+     "pavillon": "Allemagne",
+     "architecte": null,
+     "energie": null,
+     "capacite": null,
+     "capacite_fret": null,
+     "prix_acquisition": null,
+     "source": "https://markprummel.nl/ship/meine-faehre-1-dkxd2-9977658/",
+     "verification": {
+      "statut": "corrige",
+      "confiance": "reproduite",
+      "motif": "verdict revu au controle a l'aveugle (contradiction) le 2026-08-05. CORRECTIONS. 1) Le chantier constructeur est nommé GS Yard, à Waterhuizen (Pays-Bas), et non « Groningen Shipyards B.V. » : il s'agit du même site, GS Yard B.V. ayant fait faillite puis été repris et exploité sous le nom Groningen Shipyards. L'attribution au site de Waterhuizen tient donc, mais la raison sociale du constructeur à la date de construction est GS Yard. 2) Année de construction 2023,",
+      "source": "https://de.wikipedia.org/wiki/Meine_F%C3%A4hre_1",
+      "le": "2026-08-05",
+      "champs": [
+       "annee : « 2024 » -> « 2023 »"
+      ]
+     },
+     "source_ref": "source complementaire (2026-08-05) : https://de.wikipedia.org/wiki/Meine_F%C3%A4hre_1 ; source complementaire (2026-08-05) : http://www.ferry-site.dk/ferry.php?id=9977658&lang=en",
+     "largeur_m": 13.2,
+     "capacite_pax": 90,
+     "capacite_vehicules": 27
+    },
+    {
+     "nom": "CL Nogaro",
+     "annee": "2025",
+     "imo": "9969493",
+     "type": "Cargo general, serie Eco Freighter 3700",
+     "jauge_gt": 2545,
+     "port_lourd_dwt": 3718,
+     "longueur_m": 88,
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "proprietaire": "Conti-Lines Coastal NV, Anvers",
+     "operateur": "De Bock Maritiem BV, Alkmaar",
+     "pavillon": "Belgique",
+     "architecte": null,
+     "energie": null,
+     "capacite": null,
+     "capacite_fret": null,
+     "prix_acquisition": null,
+     "source": "https://markprummel.nl/ship/cl-nogaro-onlr-9969493/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "Identite confirmee sur tiers : IMO 9969493 = CL NOGARO, cargo, pavillon BELGE (la base ne renseignait pas le pavillon), 88 x 13 m. Constructeur NON recoupe : la fiche vesseltracker laisse le champ builder vide en acces public, BalticShipping est hors service (erreur MySQL 2002), VesselFinder et MarineTraffic renvoient 403. L'attribution a Groningen Shipyards B.V. n'est donc appuyee par aucune source tierce ; meme reserve que pour les autres 'Eco Freighter 3700' du lot, ou la piste Royal Bodewes n'est pas ecartee.",
+      "source": "https://www.vesseltracker.com/en/Ships/Cl-Nogaro-9969493.html",
+      "le": "2026-08-03",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Jan D",
+     "annee": "2025",
+     "imo": "9969510",
+     "type": "Cargo general, serie Eco Freighter 3700",
+     "jauge_gt": 2593,
+     "port_lourd_dwt": 3700,
+     "longueur_m": 88,
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "proprietaire": "MS Jan D Schiffahrts GmbH & Co. KG, Cuxhaven",
+     "operateur": "Drevin Bereederungs-GmbH & Co. KG, Cuxhaven",
+     "pavillon": "Portugal (Madere)",
+     "architecte": null,
+     "energie": null,
+     "capacite": null,
+     "capacite_fret": null,
+     "prix_acquisition": null,
+     "source": "https://markprummel.nl/ship/jan-d-cq2353-9969510/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "Identite confirmee sur tiers : IMO 9969510 = JAN D, cargo, pavillon PORTUGAL (vraisemblablement registre international de Madere, la base ne renseignait pas le pavillon), 88 x 13 m. Constructeur NON recoupe : champ builder inaccessible sans compte sur vesseltracker, BalticShipping hors service, VesselFinder et MarineTraffic bloques. L'attribution a Groningen Shipyards B.V. reste une allegation non verifiee.",
+      "source": "https://www.vesseltracker.com/en/Ships/Jan-D-9969510.html",
+      "le": "2026-08-03",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Baltic Dream",
+     "annee": "2025",
+     "imo": "9969522",
+     "type": "Cargo general, serie Eco Freighter 3700, lance sous GS Yard puis acheve par Ship and Steelbuilding",
+     "jauge_gt": 2545,
+     "port_lourd_dwt": 3718,
+     "longueur_m": 88,
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "proprietaire": "Longsea Beheer B.V., Groningue",
+     "operateur": "Wagle Chartering AS, Moss",
+     "pavillon": "Pays-Bas",
+     "architecte": null,
+     "energie": null,
+     "capacite": null,
+     "capacite_fret": null,
+     "prix_acquisition": null,
+     "source": "https://markprummel.nl/ship/baltic-dream-pdlw-9969522/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "Identite confirmee sur tiers : IMO 9969522 = BALTIC DREAM, cargo, pavillon Pays-Bas, 88 x 13 m. Attention a ne pas confondre avec la fiche i=17 du meme lot, dont l'IMO 9969479 porte aujourd'hui le nom BALTIC SEA : ce sont bien deux coques distinctes, pas un doublon. Constructeur NON recoupe (aucune source tierce accessible ne livre le chantier) : l'attribution a Groningen Shipyards B.V. n'est pas etablie.",
+      "source": "https://www.vesseltracker.com/en/Ships/Baltic-Dream-9969522.html",
+      "le": "2026-08-03",
+      "confiance": "simple"
+     }
     }
    ],
    "sources": [
     "https://nl.wikipedia.org/wiki/GS_Yard",
     "https://nl.wikipedia.org/wiki/Maas_Shipyard_Waterhuizen",
     "https://nl.wikipedia.org/wiki/Waterhuizen",
-    "https://nl.wikipedia.org/wiki/Categorie:Scheepswerf_in_Nederland"
+    "https://nl.wikipedia.org/wiki/Categorie:Scheepswerf_in_Nederland",
+    "https://markprummel.nl/ship/lady-adele-pbew-9624859/",
+    "https://markprummel.nl/ship/lady-alexandra-pces-9624835/",
+    "https://markprummel.nl/ship/lady-alida-pbff-9760380/",
+    "https://markprummel.nl/ship/lady-amalia-pcnv-9624847/",
+    "https://markprummel.nl/ship/lady-ami-pczt-9624861/",
+    "https://markprummel.nl/ship/lady-anna-pcnd-9624811/",
+    "https://markprummel.nl/photos/shipyard/gs-yard-waterhuizen/",
+    "https://www.rtvnoord.nl/economie/1258279/na-een-gedurfde-overname-staat-er-weer-een-bloeiende-werf-in-waterhuizen",
+    "https://koopvaardij.blogspot.com/2024/04/op-8-april-2024-is-gs-yard-b.html",
+    "https://nl.wikipedia.org/wiki/Speciaal:VerwijzingenNaarHier/GS_Yard",
+    "https://markprummel.nl/photos/general-cargo-shipyard/gs-yard-waterhuizen/",
+    "https://www.rtvnoord.nl/economie/1150405/doorstart-in-de-maak-van-scheepswerf-gs-yard-vakbond-woest-over-gang-van-zaken",
+    "https://www.rtvnoord.nl/economie/1154858/overname-en-doorstart-van-gs-yard-gered-vanuit-hart-voor-de-scheepsbouw",
+    "https://eemshavenonline.nl/scheepvaart/nieuwbouw-jan-d-afgemeerd-in-beatrixhaven/",
+    "https://koopvaardij.blogspot.com/2024/04/3-april-2024-in-afbouw-bij-gs-yard-b.html",
+    "https://binnenvaartlog.nl/werf-gs-yard-in-waterhuizen-in-zwaar-weer-door-grote-schuldenlast-curator-zoekt-overnamekandidaat-voor-deel-dat-cascos-bouwt-er-zijn-opdrachten-er-is-werk/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -229174,7 +229279,8 @@
    "taille_max_source": "https://www.shipandsteelbuilding.com/nieuws/",
    "materiaux": [
     "acier"
-   ]
+   ],
+   "sources_ref": []
   },
   {
    "id": "pa-yard-feadshipvries-alsmeer",
@@ -232221,7 +232327,14 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": null
+   "fondation": null,
+   "contact": {
+    "web": "https://www.cemreshipyard.com/",
+    "telephone": "+90 226 461 44 44",
+    "adresse": "Hersek Mah. Hakkı Kan Cad. No:4/1 Altınova/Yalova, Türkiye"
+   },
+   "contact_source": "https://www.cemreshipyard.com/contact",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "xx-yard-sefine-yalova",
@@ -232429,7 +232542,19 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": null
+   "fondation": null,
+   "contact": {
+    "web": "https://www.sefine.com.tr/",
+    "telephone": "+90 226 815 36 36",
+    "adresse": "Hersek Mah. İpekyolu Cad. No:7, 77700 Altınova, Yalova, Turquie"
+   },
+   "contact_source": "https://www.sefine.com.tr/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Capacite de levage annoncee de 40 000 tonnes",
+   "taille_max_source": "https://www.sefine.com.tr/",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "xx-yard-remontowa-gdansk",
@@ -232627,251 +232752,6 @@
    "fondation": null
   },
   {
-   "id": "pa-yard-gs-waterhuizen",
-   "nom": "GS Yard",
-   "groupe": "Ship and Steelbuilding (SAS Waterhuizen) depuis avril 2024",
-   "ville": "Waterhuizen",
-   "region": "Groningue",
-   "pays": "Pays-Bas",
-   "lat": 53.18553,
-   "lon": 6.64717,
-   "geo_precision": "ville",
-   "perimetres": [
-    "construction-neuve",
-    "reparation-refit"
-   ],
-   "types_navires": [
-    "caboteur fluvio-maritime",
-    "cargo general",
-    "navire a passagers",
-    "remorqueur",
-    "barge citerne",
-    "goelette (historique)"
-   ],
-   "description": "Chantier du Winschoterdiep à Waterhuizen, fondé par Jan Hinderikus Moolman en 1806, repris par Jan van Diepen en 1859 puis par les frères van Diepen (Gebroeders van Diepen) de 1902 à 1995. Raisons sociales successives sur le meme quai : Scheepswerf van Diepen BV (1995-2001, faillite decembre 2001), Maas Shipyard Waterhuizen (2002-2008), Groningen Shipyard (2008-2013), GS Yard (2013-2024, faillite le 5 avril 2024), Ship and Steelbuilding Waterhuizen / SAS Waterhuizen depuis avril 2024. Production annoncee d'une dizaine de navires par an sous l'enseigne GS Yard, essentiellement des caboteurs fluvio-maritimes de la serie Sea-River Liner 3700 pour Wijnne Barends. Le site construit aussi des coques nues de navires a passagers armees ailleurs et pratique la reparation de tankers et de cargos. Adresse : Waterhuizen 8, 9609 PA Waterhuizen.",
-   "navires_references": [
-    {
-     "nom": "De Wadden",
-     "type": "goelette auxiliaire trois-mats a coque acier",
-     "annee": "1917",
-     "longueur_m": 37.19,
-     "largeur_m": 7.44,
-     "jauge_gt": 251,
-     "client": "Rederij Hollandia",
-     "source": "https://en.wikipedia.org/wiki/De_Wadden"
-    },
-    {
-     "nom": "Booya",
-     "type": "goelette auxiliaire trois-mats a coque acier (ex-De Lauwers, ex-Argosy Lemal)",
-     "annee": "1917",
-     "longueur_m": 35.79,
-     "largeur_m": 7.44,
-     "jauge_gt": 254,
-     "source": "https://en.wikipedia.org/wiki/Booya_(ship)"
-    },
-    {
-     "nom": "Wawaloam",
-     "type": "goelette a trois mats (tern schooner)",
-     "annee": "1919",
-     "source": "https://en.wikipedia.org/wiki/Lou_Kenedy"
-    },
-    {
-     "nom": "Clary",
-     "type": "caboteur",
-     "annee": "1939",
-     "longueur_m": 36.96,
-     "largeur_m": 6.93,
-     "jauge_gt": 215,
-     "port_lourd_dwt": 305,
-     "source": "https://en.wikipedia.org/wiki/MV_Clary_(1939)"
-    },
-    {
-     "nom": "Schippersgracht",
-     "type": "cargo (numero de coque 919)",
-     "annee": "1951",
-     "source": "https://nl.wikipedia.org/wiki/GS_Yard"
-    },
-    {
-     "nom": "Delfshaven",
-     "type": "baliseur, aujourd'hui navire-ecole",
-     "annee": "1959",
-     "longueur_m": 40.6,
-     "largeur_m": 7.96,
-     "jauge_gt": 248,
-     "operateur": "Loodswezen (Den Haag), puis Scheepvaart- en transportcollege",
-     "imo": "8434013",
-     "source": "https://nl.wikipedia.org/wiki/Delfshaven_(schip,_1959)"
-    },
-    {
-     "nom": "Magnific",
-     "type": "navire de charge (numero de coque 1034)",
-     "annee": "1992",
-     "source": "https://nl.wikipedia.org/wiki/GS_Yard"
-    },
-    {
-     "nom": "TMS Eventus",
-     "type": "barge citerne",
-     "annee": "2010",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2010"
-    },
-    {
-     "nom": "Tom Burmester",
-     "type": "cargo general / polyvalent",
-     "annee": "2011",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2011"
-    },
-    {
-     "nom": "Liberty",
-     "type": "cargo general / polyvalent",
-     "annee": "2011",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2011"
-    },
-    {
-     "nom": "Lady Anna",
-     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
-     "annee": "2011",
-     "operateur": "Wijnne Barends",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2011"
-    },
-    {
-     "nom": "Lady Anneke",
-     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
-     "annee": "2011",
-     "operateur": "Wijnne Barends",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2011"
-    },
-    {
-     "nom": "Lady Alexandra",
-     "type": "caboteur fluvio-maritime Sea-River Liner 3700 (numero de coque 129)",
-     "annee": "2012",
-     "operateur": "Wijnne Barends",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2012"
-    },
-    {
-     "nom": "Lady Amalia",
-     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
-     "annee": "2012",
-     "operateur": "Wijnne Barends",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2012"
-    },
-    {
-     "nom": "Georg Burmester",
-     "type": "cargo classe Sunrise",
-     "annee": "2012",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2012"
-    },
-    {
-     "nom": "Piz Bever",
-     "type": "cargo classe Sunrise",
-     "annee": "2012",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2012"
-    },
-    {
-     "nom": "Judith",
-     "type": "navire de servitude",
-     "annee": "2013",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2013"
-    },
-    {
-     "nom": "Megantic",
-     "type": "navire de servitude",
-     "annee": "2013",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2013"
-    },
-    {
-     "nom": "Manito",
-     "type": "navire de servitude",
-     "annee": "2013",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2013"
-    },
-    {
-     "nom": "Chantal",
-     "type": "cargo general",
-     "annee": "2014",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2014"
-    },
-    {
-     "nom": "Maria Theresa",
-     "type": "navire a passagers",
-     "annee": "2014",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2014"
-    },
-    {
-     "nom": "Calimero",
-     "type": "cargo general",
-     "annee": "2014",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2014"
-    },
-    {
-     "nom": "Lady Ami",
-     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
-     "annee": "2015",
-     "operateur": "Wijnne Barends",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2015"
-    },
-    {
-     "nom": "Lady Adele",
-     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
-     "annee": "2015",
-     "operateur": "Wijnne Barends",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2015"
-    },
-    {
-     "nom": "Lady Ariane",
-     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
-     "annee": "2015",
-     "operateur": "Wijnne Barends",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2015"
-    },
-    {
-     "nom": "Lady Alida",
-     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
-     "annee": "2016",
-     "operateur": "Wijnne Barends",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2016"
-    },
-    {
-     "nom": "Lady Anne-Lynn",
-     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
-     "annee": "2016",
-     "operateur": "Wijnne Barends",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2016"
-    },
-    {
-     "nom": "Lady Anne Beau",
-     "type": "caboteur fluvio-maritime Sea-River Liner 3700 a passerelle escamotable (numero de coque 161)",
-     "annee": "2016",
-     "longueur_m": 88,
-     "largeur_m": 13.4,
-     "jauge_gt": 2544,
-     "operateur": "Wijnne Barends",
-     "proprietaire": "Maurice de Jonge",
-     "pavillon": "Pays-Bas",
-     "source": "https://nl.wikipedia.org/wiki/Lady_Anne_Beau_(schip,_2016)"
-    },
-    {
-     "nom": "Ares",
-     "type": "cargo sec classe Sunrise",
-     "annee": "2016",
-     "operateur": "Wijnne Barends",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2016"
-    },
-    {
-     "nom": "Scot Navigator",
-     "type": "caboteur fluvio-maritime Sea-River Liner 3700",
-     "annee": "2017",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2017"
-    }
-   ],
-   "sources": [
-    "https://nl.wikipedia.org/wiki/GS_Yard"
-   ],
-   "confiance": "moyenne",
-   "actif": false,
-   "fondation": 1806,
-   "actif_source": "La société GS Yard, chantier de Waterhuizen sur le Winschoterdiep (Groningue), a été déclarée en faillite le 5 avril 2024. L'emprise a été reprise le 23 avril 2024 par le chantier voisin Ship and Steelbuilding (SaS), établi à Foxhol, qui l'exploite depuis : effectif passé de 20 à 100 personnes et retour proche de la rentabilité selon l'article du 18 décembre 2024. Le site industriel vit donc, mais sous SaS, pas sous la dénomination GS Yard. Le domaine gsyard.nl redirige aujourd'hui vers carlospin.nl, un site de jeux d'argent sans rapport. Valeur precedente true non justifiee, remplacee le 2026-08-15. https://www.schuttevaer.nl/nieuws/actueel/2024/04/23/kleine-sas-neemt-grote-buur-gs-yard-over/"
-  },
-  {
    "id": "pa-yard-vries-alsmeer",
    "nom": "Koninklijke De Vries Scheepsbouw, site d'Aalsmeer",
    "groupe": "Feadship",
@@ -233058,7 +232938,17 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": null
+   "fondation": null,
+   "contact": {
+    "web": "https://www.sedefshipyard.com/",
+    "telephone": "+90 216 581 77 00",
+    "adresse": "Evliya Celebi Mah. Tersaneler Cad. No:10, 34944 Tuzla, Istanbul, Türkiye (second site : Istanbul Deri Organize Sanayi Bolgesi, Aritma Cad. No:2, 34956 Tuzla)"
+   },
+   "contact_source": "https://www.sedefshipyard.com/en/iletisim.aspx",
+   "contact_maj": "2026-08-15",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "xx-yard-tersan-yalova",
@@ -234333,7 +234223,14 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1909 (I/S Sandnessjøen Patentslip og Reparasjonsverksted), origines dans la pêche au hareng et la réparation de bateaux dès les années 1860"
+   "fondation": "1909 (I/S Sandnessjøen Patentslip og Reparasjonsverksted), origines dans la pêche au hareng et la réparation de bateaux dès les années 1860",
+   "contact": {
+    "web": "https://slipen.no/",
+    "telephone": "+47 75 07 61 00",
+    "adresse": "Kirkeveien 1, 8800 Sandnessjøen, Norvège"
+   },
+   "contact_source": "https://slipen.no/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "xx-yard-stengineering-singapour",
@@ -234524,7 +234421,17 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": null
+   "fondation": null,
+   "contact": {
+    "web": "https://mazagondock.in/",
+    "telephone": "+91 22 2376 2202 / 2223 / 2240",
+    "adresse": null
+   },
+   "contact_source": "https://mazagondock.in/English/contact-us",
+   "contact_maj": "2026-08-15",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "xx-yard-itaguaiconstrucoesnavais-itaguai",
@@ -234793,7 +234700,7 @@
     "https://en.wikipedia.org/wiki/ADV_Reliant"
    ],
    "confiance": "moyenne",
-   "actif": false,
+   "actif": true,
    "fondation": null,
    "contact": {
     "web": null,
@@ -234802,7 +234709,7 @@
    },
    "contact_source": "https://data.brreg.no/enhetsregisteret/api/enheter/923322132",
    "contact_maj": "2026-08-15",
-   "actif_source": "DENOMINATION HISTORIQUE. KLEVEN VERFT AS, org. 923 322 132, est en faillite depuis le 3 juillet 2020 au registre norvegien Enhetsregisteret, avec un bo de faillite distinct (KLEVEN VERFT AS KONKURSBO, org. 925 297 143). L'emprise industrielle de Klubbenesvegen 39 a Ulsteinvik est aujourd'hui exploitee par GREEN YARD KLEVEN AS, org. 925 396 060, a la meme adresse. Il s'agit donc du meme site que la fiche Green Yard Kleven du present lot, a deux epoques : la fiche Kleven Verft AS ne doit pas etre comptee comme un chantier en activite. Vague contact-activite du 2026-08-15. https://data.brreg.no/enhetsregisteret/api/enheter/923322132",
+   "actif_source": "FERMETURE REFUTEE le 15/08/2026 par verification adversariale integrale. La valeur precedente (ferme) provenait d'une vague de moisson et a ete infirmee. Motif du verificateur : Cas classique de reprise confondue avec une fermeture. Le registre national norvegien (Enhetsregisteret, Bronnoysund) confirme bien que la coquille juridique KLEVEN VERFT AS (org. 923 322 132, Klubbenesvegen 39, 6065 Ulsteinvik) est en faillite depuis le 03/07/2020, avec son konkursbo (org. 925 297 143). Mais l'outil industriel n'a jamais ete demantele : GREEN YARD KLEVEN AS (org. 925 396 060) a ete immatriculee le 27/07/2020, trois semaines apres la faillite, a LA MEME ADRESSE D'AFFAIRES, Klubbenesvegen 39, 6065 Ulsteinvik, code NACE 30.110 construction de navires civils, objet statutaire << Verftstjenester >>. Preuves de vie posterieures a la fermeture alleguee : 104 salaries declares au registre, aucun drapeau konkurs, aucun underAvvikling, aucun underTvangsavvikling, aucune slettedato, inscription au Foretaksregisteret active, et dernier exercice comptable depose pour 2025. Le contro | Sources : https://data.brreg.no/enhetsregisteret/api/enheter/925396060 (Green Yard Kleven AS, actif, 104 salaries, Klubbenesvegen 39 Ulsteinvik, comptes 2025 deposes) ; https://data.brreg.no/enhetsregisteret/api/enheter/923322132 (Kleven Verft AS, konkurs 2020-07-03, meme adresse) ; https://data.brreg.no/enhetsregisteret/api/enheter?kommunenummer=1516&naeringskode=30.110",
    "materiaux": [
     "acier"
    ]
@@ -235219,7 +235126,7 @@
     "https://www.marinteknikk.no/ship/skandi-patagonia/"
    ],
    "confiance": "moyenne",
-   "actif": false,
+   "actif": true,
    "fondation": null,
    "contact": {
     "web": "https://www.vard.com/location/norway/vard-brattvaag",
@@ -235228,7 +235135,7 @@
    },
    "contact_source": "https://www.vard.com/location/norway/vard-brattvaag",
    "contact_maj": "2026-08-15",
-   "actif_source": "DÉNOMINATION HISTORIQUE. « Brattvaag Skipsverft » est le nom d'origine du chantier fondé en 1949 ; la page officielle VARD indique qu'il fait partie du groupe VARD depuis 1993. La même emprise industrielle opère aujourd'hui sous le nom Vard Brattvaag (filiale de Vard Group AS, groupe Fincantieri), et ce site-là est bien en activité : armement final et mise en service de coques venues de Roumanie, réparation et transformation, 115 salariés. L'entité « Brattvaag Skipsverft AS » comme telle n'existe plus. Vague contact-activite du 2026-08-15. https://www.vard.com/location/norway/vard-brattvaag",
+   "actif_source": "FERMETURE REFUTEE le 15/08/2026 par verification adversariale integrale. La valeur precedente (ferme) provenait d'une vague de moisson et a ete infirmee. Motif du verificateur : Chantier repris, pas fermé. Le registre norvégien (Brønnøysundregistrene, unité 980100820) montre la continuité juridique ininterrompue AKER BRATTVAAG HOLDING AS (1998) → AKER BRATTVAAG AS → AKER YARDS AS → STX NORWAY OFFSHORE AS → STX OSV AS → VARD GROUP AS (groupe Fincantieri). Drapeaux au registre : konkurs=false, underAvvikling=false, underTvangsavviklingEllerTvangsopplosning=false, slettedato=null. Code NACE 30.110 (construction de navires civils), 876 salariés, dernier exercice déposé 2025. Preuve de vie postérieure : cérémonie de baptême du Windward Paris à Vard Brattvaag le 2 février 2026, le site figurant parmi les chantiers actifs du groupe. Deux pièges présents et écartés : (1) adresse postale contre adresse d'affaires, l'adresse enregistrée est Skansekaia 2, 6002 Ålesund, siège du groupe, alors que la cale et les ateliers sont à Brattvåg 6270, où subsiste la VELFERDSORGANISAS | Sources : https://data.brreg.no/enhetsregisteret/api/enheter/980100820 (registre des entreprises norvégien, historique de dénominations et drapeaux de procédure) ; https://www.vard.com/ (baptême du Windward Paris à Vard Brattvaag, 2 février 2026)",
    "taille_max": "Quai principal 275 m (tirant d'eau 10-12 m), superficie 20 500 m², hall d'armement 1 672 m², grues 2x50 t et 1x60 t",
    "taille_max_source": "https://www.vard.com/location/norway/vard-brattvaag"
   },
@@ -235306,7 +235213,7 @@
     "https://www.vesselfinder.com/vessels/details/9330680"
    ],
    "confiance": "moyenne",
-   "actif": false,
+   "actif": true,
    "fondation": null,
    "contact": {
     "web": "https://www.vard.com/location/norway/vard-s%C3%B8viknes",
@@ -235315,7 +235222,7 @@
    },
    "contact_source": "https://www.vard.com/location/norway/vard-s%C3%B8viknes",
    "contact_maj": "2026-08-15",
-   "actif_source": "DÉNOMINATION HISTORIQUE. Le chantier a été fondé en 1936 sous le nom Søviknes Verft ; la page officielle VARD indique qu'il appartient au groupe VARD depuis 1995. Le site opère aujourd'hui sous le nom Vard Søviknes (Vard Group AS, groupe Fincantieri) et reste en activité : armement final de coques roumaines, réparation et transformation, prototypes complexes dont brise-glaces et navires d'expédition, 160 salariés. L'entité « Søviknes Verft AS » comme telle n'existe plus. Vague contact-activite du 2026-08-15. https://www.vard.com/location/norway/vard-s%C3%B8viknes",
+   "actif_source": "FERMETURE REFUTEE le 15/08/2026 par verification adversariale integrale. La valeur precedente (ferme) provenait d'une vague de moisson et a ete infirmee. Motif du verificateur : Cas typique de reprise confondue avec une fermeture. Le registre norvégien (Brønnøysundregistrene) ne contient plus d'entité « Søviknes Verft AS », mais aucune faillite, liquidation ni radiation n'apparaît : le chantier de Søvik a été absorbé par les groupes successifs (Aker Yards, STX, puis Vard Group AS, groupe Fincantieri) et opère aujourd'hui sous le nom VARD GROUP AS AVD SØVIKNES, org. 971779489, à Søvikneset 51, 6280 Søvik, commune de Haram. Fiche vérifiée le 15/08/2026 : code NACE 30.110 (construction de navires civils), 147 salariés déclarés, oppstartsdato 31/12/1965, aucune nedleggelsesdato, aucune slettedato, entité mère 980100820 (Vard Group AS) active. Trois organisations syndicales et d'entreprise « Vard Søviknes » restent enregistrées à la même adresse, et un prestataire de restauration collective (NOR FACILITY AS VARD SØVIKNES, 38 salariés, démarrage 01/01/2022) y est acti | Sources : https://data.brreg.no/enhetsregisteret/api/underenheter/971779489 (VARD GROUP AS AVD SØVIKNES, actif, 147 salariés) ; recherches de contrôle https://data.brreg.no/enhetsregisteret/api/enheter?navn=S%C3%B8viknes%20Verft (aucune entité, aucun drapeau faillite) et https://data.brreg.no/enhetsregisteret/api/underenheter?navn=Vard%20S%C3%B8viknes",
    "taille_max": "Slipway 4 000 t : longueur maximale 120 m hors tout (90 m de quille), largeur 23 m. Trois quais : 150 m (10 m), 100 m (8 m), 75 m (8 m). Site de 57 000 m²",
    "taille_max_source": "https://www.vard.com/location/norway/vard-s%C3%B8viknes"
   },
@@ -235502,8 +235409,21 @@
     "https://de.wikipedia.org/wiki/Hanseatic_spirit"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": null
+   "actif": true,
+   "fondation": null,
+   "contact": {
+    "web": "https://www.vard.com/location/romania/vard-tulcea",
+    "telephone": "+47 7021 0600",
+    "adresse": null
+   },
+   "contact_source": "https://www.vard.com/location/romania/vard-tulcea — la page nomme le chantier « Vard Shipyards Romania - Tulcea », à Tulcea sur le Danube, à environ 40 milles de la mer Noire. Réserve : le téléphone +47 7021 0600 et l'adresse postale P.O. Box 76, NO-6001 Ålesund figurant sur cette page sont ceux du siège VARD Group en Norvège, pas une adresse postale roumaine ; aucune adresse postale locale n'étant publiée, contact_adresse est rendu null plutôt que deviné.",
+   "contact_maj": "2026-08-15",
+   "actif_source": "Chantier en activité, spécialisé coques et pré-armement, capable de livrer des navires entièrement armés. Créé en 1975, intégré à VARD en 2000. Certifié ISO 9001:2015, 14001:2015, 45001:2018. Vague contact-activite du 2026-08-15. https://www.vard.com/articles/rev-ocean-delivered-from-vard (18/03/2025) : « Since construction began in 2018 at Vard Shipyards Romania – Tulcea, REV Ocean has been on an ambitious journey »",
+   "taille_max": "Cales de construction jusqu'à 310 m de long × 34 m de large ; dock flottant de 27 000 t ; plus grands grands-blocs peints 40 × 27 × 25 m ; emprise phase I de 756 000 m² (source : https://www.vard.com/location/romania/vard-tulcea)",
+   "taille_max_source": "https://www.vard.com/location/romania/vard-tulcea",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "xx-yard-mediterranea-viareggio",
@@ -235943,8 +235863,19 @@
     "https://en.wikipedia.org/wiki/Tersan_Shipyard"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": "Début 1990 comme société de services navals, chantier de construction ouvert à Tuzla en 2001, nouveau chantier à Yalova en 2008"
+   "actif": true,
+   "fondation": "Début 1990 comme société de services navals, chantier de construction ouvert à Tuzla en 2001, nouveau chantier à Yalova en 2008",
+   "contact": {
+    "web": "https://www.tersanshipyard.com/",
+    "telephone": "+90 226 465 62 00",
+    "adresse": "Tavşanlı Beldesi Fatih Mah., Boğaziçi Cad. No:30, Altınova, Yalova, Turquie"
+   },
+   "contact_source": "https://www.tersanshipyard.com/",
+   "contact_maj": "2026-08-15",
+   "actif_source": "Article date du 11.06.2026 sur le site officiel annoncant la livraison du navire NB1122 Acta Gemini depuis les installations de Yalova. Autres livraisons datees 2026 : Takapo (13.05.2026), Annie Hillina (04.04.2026), Acta Hercules (24.03.2026). Vague contact-activite du 2026-08-15. https://tersanshipyard.com/en/news/tersan-proudly-delivers-nb1122-acta-gemini-departing-from-yalova-facilities",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "fr-yard-dufouryachts-rochelle",
@@ -237328,8 +237259,9 @@
     "https://en.wikipedia.org/wiki/AG_Vulcan_Stettin"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": 1948
+   "actif": true,
+   "fondation": 1948,
+   "actif_source": "FERMETURE REFUTEE le 15/08/2026 par verification adversariale integrale. La valeur precedente (ferme) provenait d'une vague de moisson et a ete infirmee. Motif du verificateur : La base confond la liquidation d'une raison sociale avec la fermeture du chantier. Stocznia Szczecinska Nowa sp. z o.o. a bien ete liquidee le 13 decembre 2011 sous la specustawa stoczniowa de 2009, mais le site industriel historique est exploite aujourd'hui par Stocznia Szczecinska Wulkan sp. z o.o., detenue par l'Etat polonais via le Fundusz Rozwoju Spolek. Preuves de vie 2026, toutes tierces : comptes 2025 publies le 6 mai 2026 avec un resultat net de +36 M PLN, plus de 130 M PLN de CA production et 60 M PLN de locations et services, environ 250 salaries directs et pres de 2 500 travailleurs sur site ; lancement des deux modules d'un dock flottant de 240 metres les 19 et 21 avril 2026 pour le chantier Gryfia ; accord du 26 mai 2026 avec PGZ Stocznia Wojenna pour la fabrication du bloc d'etrave de plus de 1 000 tonnes de l'ORP Ratownik de la Marine polonaise, quille posee en fevrier 20 | Sources : https://www.portalmorski.pl/stocznie-statki/60701-stocznia-szczecinska-wulkan-36-mln-zl-na-plusie-za-rok-2025 ; https://www.portalmorski.pl/stocznie-statki/60863-wojenna-i-wulkan-lacza-sily-przy-budowie-ratownika ; https://www.portalmorski.pl/tagi/stocznia-szczecinska-wulkan"
   },
   {
    "id": "xx-yard-ahlers-elsfleth",
