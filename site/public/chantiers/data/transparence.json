@@ -1,65 +1,65 @@
 {
  "date": "2026-08-15",
  "volumes": {
-  "chantiers": 500,
-  "entrees_navire": 6910,
-  "plancher_coques_distinctes": 6675,
+  "chantiers": 527,
+  "entrees_navire": 7023,
+  "plancher_coques_distinctes": 6783,
   "equipementiers": 23,
-  "pays": 25
+  "pays": 28
  },
  "sources": {
-  "url_total": 16730,
-  "domaines_distincts": 1510,
-  "navires_avec_url": 6329,
-  "taux_navires_avec_url": 91.6
+  "url_total": 16966,
+  "domaines_distincts": 1546,
+  "navires_avec_url": 6442,
+  "taux_navires_avec_url": 91.7
  },
  "explicabilite": {
-  "attributions_architecte": 1088,
-  "dont_justifiees": 936,
-  "taux": 86
+  "attributions_architecte": 1120,
+  "dont_justifiees": 968,
+  "taux": 86.4
  },
  "corroboration": {
-  "chantiers_corrobores": 438,
-  "taux_chantiers": 87.6,
-  "chantiers_deux_tiers": 308,
-  "taux_deux_tiers": 61.6,
-  "chantiers_un_seul_tiers": 99,
+  "chantiers_corrobores": 460,
+  "taux_chantiers": 87.3,
+  "chantiers_deux_tiers": 326,
+  "taux_deux_tiers": 61.9,
+  "chantiers_un_seul_tiers": 103,
   "chantiers_sans_aucun_tiers": 31,
-  "chantiers_temoin_unique": 62,
-  "navires_sous_temoin_unique": 129,
-  "part_navires_sous_temoin_unique": 1.9,
+  "chantiers_temoin_unique": 67,
+  "navires_sous_temoin_unique": 141,
+  "part_navires_sous_temoin_unique": 2,
   "navires_corrobores": 0,
   "taux_navires": 0
  },
  "identite": {
-  "eligibles_imo": 3364,
-  "inegibles": 1456,
-  "indetermines": 2090,
-  "porteurs_imo": 1575,
-  "taux_couverture_sur_eligible": 46.8
+  "eligibles_imo": 3392,
+  "inegibles": 1490,
+  "indetermines": 2141,
+  "porteurs_imo": 1579,
+  "taux_couverture_sur_eligible": 46.6
  },
  "sollicitation": {
-  "actifs": 340,
-  "fermes": 65,
-  "activite_indeterminee": 95,
+  "actifs": 360,
+  "fermes": 69,
+  "activite_indeterminee": 98,
   "sollicitables_sur_actifs": 221,
-  "taux_haut": 65,
+  "taux_haut": 61.4,
   "joignables": 296,
-  "taux_joignables": 59.2
+  "taux_joignables": 56.2
  },
  "serie": [
   {
    "date": "2026-08-15",
-   "motif": "Vague bureaux d'etudes : 60 cabinets fiches, 56 joignables. Le test de preuve HTTP ne condamne plus une source sur un 429 renvoye par notre propre cadence.",
-   "chantiers": 500,
-   "entrees": 6910,
-   "coques_plancher": 6675,
-   "url": 16730,
-   "taux_navires_source": 91.6,
-   "taux_architecte_justifie": 86,
-   "eligibles_imo": 3364,
-   "taux_imo_sur_eligible": 46.8,
-   "taux_joignables": 59.2
+   "motif": "Vague de moisson sur la frontiere assainie : 27 chantiers neufs, 113 navires entres, 15 noeuds clotures. Le geocodeur connait desormais la Tunisie et la Russie europeenne.",
+   "chantiers": 527,
+   "entrees": 7023,
+   "coques_plancher": 6783,
+   "url": 16966,
+   "taux_navires_source": 91.7,
+   "taux_architecte_justifie": 86.4,
+   "eligibles_imo": 3392,
+   "taux_imo_sur_eligible": 46.6,
+   "taux_joignables": 56.2
   }
  ]
 }

@@ -36465,7 +36465,10 @@
     "https://sailmagazine.com/sail-extras/outremer-announces-two-new-models-57-and-64/",
     "https://catamaran-outremer.com/en/catamarans/outremer-5x/",
     "https://catamaran-outremer.com/actualites/salon-international-du-multicoque-2026-merci-detre-venus-nous-voir/",
-    "https://catamaran-outremer.com/actualites/outremer-57-n1-le-debut-d-une-vraie-histoire-de-mer/"
+    "https://catamaran-outremer.com/actualites/outremer-57-n1-le-debut-d-une-vraie-histoire-de-mer/",
+    "https://www.cruisingworld.com/sailboats/outremer-unveils-64-57-catamarans/",
+    "https://www.boatnews.com/story/50809/outremer-unveils-the-64-and-57-two-new-catamarans-designed-for-long-distance-cruising",
+    "https://www.giornaledellavela.com/2026/07/29/outremer-57-17-m-the-new-ocean-going-yacht-designed-by-vplp/?lang=en"
    ],
    "confiance": "moyenne",
    "pays": "France",
@@ -36736,6 +36739,15 @@
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: prive"
+    },
+    {
+     "nom": "Outremer 57",
+     "type": "catamaran de grande croisiere a voile",
+     "annee": 2027,
+     "longueur_m": 17.6,
+     "architecte": "VPLP Design",
+     "architecte_source": "https://www.giornaledellavela.com/2026/07/29/outremer-57-17-m-the-new-ocean-going-yacht-designed-by-vplp/?lang=en",
+     "source": "https://www.giornaledellavela.com/2026/07/29/outremer-57-17-m-the-new-ocean-going-yacht-designed-by-vplp/?lang=en"
     }
    ],
    "geo_source": "https://fr.mappy.com/poi/50ae0b7484ae753f399e2c0d",
@@ -37663,7 +37675,9 @@
     "https://en.wikipedia.org/wiki/Lagoon_52",
     "https://www.boat-specs.com/sailing/sailboats/lagoon/lagoon-50",
     "https://sailmagazine.com/multihulls/frances-major-multihull-builders/",
-    "https://www.actunautique.com/2015/04/une-nouvelle-cale-de-mise-a-l-eau-sur-la-garonne-pour-le-chantier-cnb-lagoon-33.html"
+    "https://www.actunautique.com/2015/04/une-nouvelle-cale-de-mise-a-l-eau-sur-la-garonne-pour-le-chantier-cnb-lagoon-33.html",
+    "https://fr.kompass.com/c/construction-navale-bordeaux/fr8111740/",
+    "https://www.actunautique.com/pages/Construction_Navale_Bordeaux_CNB-6049519.html"
    ],
    "confiance": "moyenne",
    "pays": "France",
@@ -38543,6 +38557,14 @@
       "valeur": "9929541",
       "raison": "cle de controle OMI invalide"
      }
+    },
+    {
+     "nom": "Lagoon 77",
+     "type": "catamaran de croisiere a voile",
+     "annee": 2017,
+     "architecte": "VPLP Design",
+     "architecte_source": "https://en.wikipedia.org/wiki/Lagoon_catamaran",
+     "source": "https://en.wikipedia.org/wiki/Lagoon_catamaran"
     }
    ],
    "geo_source": "https://api-adresse.data.gouv.fr/search/?q=162+quai+de+brazza+bordeaux&limit=1",
@@ -38671,7 +38693,8 @@
     "https://www.multiplast.eu/newsletter-10-2024/",
     "https://www.meretmarine.com/fr/construction-navale/le-chantier-multiplast-s-agrandit-avec-un-nouveau-hall",
     "https://www.meretmarine.com/fr/construction-navale/le-chantier-multiplast-va-s-agrandir-a-vannes-et-continue-d-embaucher",
-    "https://www.mauric.com/news/jaric"
+    "https://www.mauric.com/news/jaric",
+    "https://www.multiplast.eu/fr/actualit%C3%A9s/newsletters/archives-composites/191-multiplast-s-agrandit-sur-le-port-de-vannes.html"
    ],
    "confiance": "moyenne",
    "pays": "France",
@@ -59847,7 +59870,9 @@
     "https://sailboatdata.com/sailboat/catana-50/",
     "https://www.multihulls-world.com/technical-specifications/catana-sa/catana-59-carbon-infusion",
     "https://www.boat-specs.com/sailing/sailboats/catana/catana-70",
-    "https://www.cruisingworld.com/boat-review-catana-53/"
+    "https://www.cruisingworld.com/boat-review-catana-53/",
+    "https://www.actunautique.com/2019/08/catana-group-catana-et-bali-accroit-sa-capacite-de-production.html",
+    "https://www.actunautique.com/2026/03/fiche-technique-bali-7.0.html"
    ],
    "confiance": "haute",
    "produits": [
@@ -69645,7 +69670,9 @@
     "https://www.meretmarine.com/fr/construction-navale/alumarine-un-bateau-de-travaux-pour-le-chantier-de-la-reunion",
     "https://www.meretmarine.com/fr/construction-navale/alumarine-enchaine-les-vedettes-de-lamanage",
     "https://annuaire-entreprises.data.gouv.fr/etablissement/50784316700036",
-    "https://lemarin.ouest-france.fr/industries-navales/alumarine-shipyard-se-recentre-sur-la-plaisance-et-les-vedettes-portuaires-ff712465-3c02-430b-9007-46bd4e5723bc"
+    "https://lemarin.ouest-france.fr/industries-navales/alumarine-shipyard-se-recentre-sur-la-plaisance-et-les-vedettes-portuaires-ff712465-3c02-430b-9007-46bd4e5723bc",
+    "https://fr.kompass.com/c/alumarine-shipyard/fr1421721/",
+    "https://en.wikipedia.org/wiki/Douce_France"
    ],
    "confiance": "haute",
    "produits": [
@@ -108639,7 +108666,9 @@
     "https://energy-oil-gas.com/news/fjellstrand-as/",
     "https://www.ship-technology.com/projects/norled-zerocat-electric-powered-ferry/",
     "https://www.bairdmaritime.com/passenger/ferry/vessel-review-medstraum-electric-catamaran-ferry-for-norways-kolumbus",
-    "https://tramproject.eu/2022/07/14/the-worlds-first-zero-emission-fast-ferry-is-ready-for-operation/"
+    "https://tramproject.eu/2022/07/14/the-worlds-first-zero-emission-fast-ferry-is-ready-for-operation/",
+    "https://fjellstrand.no/projects/nb-1696-ampere/",
+    "https://fjellstrand.no/projects/nb-1700-medstraum/"
    ],
    "confiance": "haute",
    "id": "fjellstrand-as-omastrand",
@@ -113734,6 +113763,61 @@
       "le": "2026-08-05",
       "confiance": "simple"
      }
+    },
+    {
+     "nom": "Ro Vanguard",
+     "type": "brønnbåt (live fish carrier)",
+     "longueur_m": 84.2,
+     "largeur_m": 15.5,
+     "client": "Rostein AS",
+     "operateur": "Rostein AS",
+     "pavillon": "Norvège",
+     "architecte": "Skipskompetanse AS",
+     "architecte_source": "https://www.skipskompetanse.no/delivered-vessels/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "attribution issue du portfolio du concepteur (skipskompetanse.no), non recoupee sur un tiers",
+      "source": "https://www.skipskompetanse.no/delivered-vessels/ro-tbn-5/",
+      "le": "2026-08-15"
+     },
+     "source": "https://www.skipskompetanse.no/delivered-vessels/ro-tbn-5/"
+    },
+    {
+     "nom": "Ro Fjord",
+     "type": "brønnbåt (live fish carrier)",
+     "annee": 2009,
+     "longueur_m": 72,
+     "largeur_m": 15,
+     "client": "Rostein AS",
+     "pavillon": "Norvège",
+     "architecte": "Skipskompetanse AS",
+     "architecte_source": "https://www.skipskompetanse.no/delivered-vessels/ro-fjord-2/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "attribution issue du portfolio du concepteur (skipskompetanse.no), non recoupee sur un tiers",
+      "source": "https://www.skipskompetanse.no/delivered-vessels/ro-fjord-2/",
+      "le": "2026-08-15"
+     },
+     "source": "https://www.skipskompetanse.no/delivered-vessels/ro-fjord-2/"
+    },
+    {
+     "nom": "Straumberg",
+     "type": "senneur / chalutier",
+     "annee": 2014,
+     "longueur_m": 46.5,
+     "largeur_m": 12,
+     "energie": "diesel-mécanique hybride",
+     "client": "Straumberg AS",
+     "pavillon": "Norvège",
+     "architecte": "Skipskompetanse AS",
+     "architecte_source": "https://www.skipskompetanse.no/delivered-vessels/straumberg-2/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "attribution issue du portfolio du concepteur (skipskompetanse.no), non recoupee sur un tiers",
+      "source": "https://www.skipskompetanse.no/delivered-vessels/straumberg-2/",
+      "le": "2026-08-15"
+     },
+     "source": "https://www.skipskompetanse.no/delivered-vessels/straumberg-2/"
     }
    ],
    "sources": [
@@ -113743,7 +113827,8 @@
     "https://www.larsnes-mek.no/en/nyheter/ro-senja-handed-over-to-the-shipowners/",
     "https://www.vesselfinder.com/vessels/details/9871579",
     "https://www.vesselfinder.com/vessels/details/9936173",
-    "https://www.fishfarmingexpert.com/hybrid-norway-ro-vision/hybrid-wellboat-named-norways-ship-of-the-year/1217004"
+    "https://www.fishfarmingexpert.com/hybrid-norway-ro-vision/hybrid-wellboat-named-norways-ship-of-the-year/1217004",
+    "https://www.larsnes-mek.no/en/kontakt/"
    ],
    "confiance": "haute",
    "id": "larsnes-mek-verksted-as-larsnes",
@@ -115594,7 +115679,10 @@
     "https://www.vesselfinder.com/vessels/details/9904443",
     "https://www.bairdmaritime.com/fishing-boat-world/processing/vessel-review-ronja-princess-locally-built-high-capacity-wellboat-for-norways-solvtrans/",
     "https://veranavis.com/aas-mek-delivered-newbuilding-no-211-ronja-aurora/",
-    "https://veranavis.com/aas-mek-delivered-newbuilding-no-208-ronja-princess/"
+    "https://veranavis.com/aas-mek-delivered-newbuilding-no-208-ronja-princess/",
+    "https://www.ship2yard.com/yard.php?idy=8034",
+    "https://www.wikidata.org/wiki/Q50136501",
+    "https://www.bairdmaritime.com/fishing/aquaculture/solvtrans-takes-delivery-of-large-wellboat"
    ],
    "confiance": "haute",
    "id": "aas-mek-verksted-as-vestnes",
@@ -118039,7 +118127,8 @@
     "https://www.maloymaritime.no/news/batbygg-signs-new-contract-with-austral-fisheries/",
     "https://www.bairdmaritime.com/amp/story/fishing/catching/longlining/vessel-review-australian-owners-new-toothfish-longlinerprocessor-to-be-operated-in-southern-ocean",
     "https://mag.hookandnet.com/2020/08/06/2020-08capearkona1/content.html",
-    "https://www.marinteknikk.no/news/austral-odyssey-christened-in-mauritius-now-heading-for-the-fishing-grounds/"
+    "https://www.marinteknikk.no/news/austral-odyssey-christened-in-mauritius-now-heading-for-the-fishing-grounds/",
+    "https://www.bairdmaritime.com/ausmarine/ausmarine-fishing-and-aquaculture/vessel-review-cape-arkona-austral-fisheries-newbuild-is-capable-of-trawling-potting-and-autoline-fishing-on-a-single-trip"
    ],
    "confiance": "haute",
    "id": "batbygg-as-raudeberg",
@@ -119572,7 +119661,8 @@
     "https://mag.hookandnet.com/2019/03/15/2019-03stottfjord1/pugpig_index.html",
     "https://www.skipskompetanse.no/delivered-vessels/stottfjord-2/",
     "https://www.bairdmaritime.com/fishing/fishing-boat-world-reviews/vessel-review-arnoytind-versatile-purse-seiner-boasts-environment-friendly-features",
-    "https://www.bairdmaritime.com/fishing-boat-world/trawling/vessel-review-skar-senior-norwegian-seafood-companys-new-locally-built-48m-seiner-trawler"
+    "https://www.bairdmaritime.com/fishing-boat-world/trawling/vessel-review-skar-senior-norwegian-seafood-companys-new-locally-built-48m-seiner-trawler",
+    "https://www.skipskompetanse.no/delivered-vessels/trondskjaer-2/"
    ],
    "confiance": "haute",
    "id": "stadyard-as-raudeberg",
@@ -127563,6 +127653,45 @@
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: as"
+    },
+    {
+     "nom": "Beret Paulsdatter",
+     "type": "navire de recherche et de formation",
+     "annee": 2022,
+     "longueur_m": 26.42,
+     "largeur_m": 10,
+     "capacite_pax": 14,
+     "client": "UiT Norges arktiske universitet",
+     "operateur": "UiT Norges arktiske universitet",
+     "pavillon": "Norvège",
+     "architecte": "Skipskompetanse AS",
+     "architecte_source": "https://www.skipskompetanse.no/delivered-vessels/beret-paulsdatter/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "attribution issue du portfolio du concepteur (skipskompetanse.no), non recoupee sur un tiers",
+      "source": "https://www.skipskompetanse.no/delivered-vessels/beret-paulsdatter/",
+      "le": "2026-08-15"
+     },
+     "source": "https://www.skipskompetanse.no/delivered-vessels/beret-paulsdatter/"
+    },
+    {
+     "nom": "Bjørg Pauline",
+     "type": "brønnbåt (live fish carrier)",
+     "annee": 2010,
+     "longueur_m": 70,
+     "largeur_m": 15,
+     "client": "Nordlaks Transport AS",
+     "operateur": "Intership AS (renommé Inter Nord)",
+     "pavillon": "Norvège",
+     "architecte": "Skipskompetanse AS avec Startrans AS",
+     "architecte_source": "https://www.skipskompetanse.no/delivered-vessels/bjorg-pauline-2/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "attribution issue du portfolio du concepteur (skipskompetanse.no), non recoupee sur un tiers",
+      "source": "https://www.skipskompetanse.no/delivered-vessels/bjorg-pauline-2/",
+      "le": "2026-08-15"
+     },
+     "source": "https://www.skipskompetanse.no/delivered-vessels/bjorg-pauline-2/"
     }
    ],
    "sources": [
@@ -127573,7 +127702,8 @@
     "https://workboat365.com/innovative-battery-hybrid-service-boat-delivered-to-froy/",
     "https://www.bairdmaritime.com/fishing/aquaculture/abyss-orders-two-new-hybrid-workboats-from-vaagland-batbyggeri",
     "https://ilaks.no/omsetningen-til-vaagland-batbyggeri-falt-med-over-40-prosent-ble-reddet-av-nybygg/",
-    "https://www.multi-maritime.no/mikal-with"
+    "https://www.multi-maritime.no/mikal-with",
+    "https://www.skipskompetanse.no/delivered-vessels/beret-paulsdatter/"
    ],
    "confiance": "haute",
    "id": "vaagland-batbyggeri-as-vagland",
@@ -151011,7 +151141,9 @@
     "https://www.maritimejournal.com/mj-directory/macduff-shipyard-limited/431726.supplier",
     "https://thefishingdaily.com/business-features/macduff-shipyards-limited-scotland-uk-steel-fabricated-fishing-vessels/",
     "https://www.bairdmaritime.com/fishing/aquaculture/vessel-review-naomi-jennifer-scottish-fish-farm-service-company-adds-hybrid-workboat-to-fleet",
-    "https://www.bairdmaritime.com/fishing/aquaculture/vessel-review-geraldine-mary-hybrid-vessel-for-scottish-aquaculture-support-company"
+    "https://www.bairdmaritime.com/fishing/aquaculture/vessel-review-geraldine-mary-hybrid-vessel-for-scottish-aquaculture-support-company",
+    "https://www.macduffshipdesign.com/news/2025-review-of-the-year/",
+    "https://workboat365.com/macduff-ship-design-a-review-of-vessel-deliveries-in-2025/"
    ],
    "confiance": "haute",
    "id": "macduff-shipyards-limited-site-de-macduff-macduff"
@@ -238568,6 +238700,1884 @@
    ],
    "actif": true,
    "actif_source": "Rubrique actualite du chantier mentionnant le lancement d'un nouveau navire mytilicole classe en 2026, page mise a jour le 27/01/2026 ; societe SAS active au registre national (SIREN 390 284 222, NAF 30.12Z), 11 salaries au millesime 2023. Vague contact-activite du 2026-08-15. https://chantierdelavergne.com/actualite/"
+  },
+  {
+   "id": "xx-yard-behrensschiffsundschweisstechnik-hambourg",
+   "nom": "Behrens Schiffs- und Schweißtechnik GmbH (Behrens-Werft)",
+   "groupe": "",
+   "ville": "Hambourg (Finkenwerder)",
+   "region": "Hambourg",
+   "pays": "Allemagne",
+   "lat": 53.63636,
+   "lon": 9.99455,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit"
+   ],
+   "types_navires": [
+    "cutters de pêche en bois (Finkenwerder Hochseekutter)",
+    "Fischewer 30 à 50 BT",
+    "loggers harenguiers",
+    "caboteurs à voile / Frachtewer",
+    "chalands et barkassen de port"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Hermine",
+     "type": "Goélette à corne (Gaffelschoner), caboteur à voile en bois",
+     "annee": "1904",
+     "longueur_m": 35.2,
+     "largeur_m": 6,
+     "jauge_gt": 71,
+     "client": "Hinrich Bardenhagen, pêcheur",
+     "operateur": "Ville de Cuxhaven",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Hermine_(Schiff)"
+    },
+    {
+     "nom": "Greta (HF 452)",
+     "type": "Elbfischkutter en bois, gréement à corne",
+     "annee": "1904",
+     "longueur_m": 10.5,
+     "largeur_m": 3.5,
+     "operateur": "Stiftung Hamburg Maritim",
+     "pavillon": "Allemagne",
+     "source": "https://stiftung-hamburg-maritim.de/greta/"
+    },
+    {
+     "nom": "Margaretha (BÜS 39)",
+     "type": "Cutter de pêche à corne en chêne, ferraillé en 2022",
+     "annee": "1911",
+     "longueur_m": 16,
+     "largeur_m": 3.8,
+     "operateur": "Museumshafen Büsum e.V.",
+     "pavillon": "Allemagne",
+     "source": "https://museumshafen-buesum.de/margaretha/"
+    },
+    {
+     "nom": "Wilma (HF 329)",
+     "type": "Finkenwerder Hochseekutter, ketch à corne, converti en yacht dans les années 1980",
+     "annee": "1936",
+     "pavillon": "Allemagne",
+     "source": "https://www.schiffsspotter.de/Stagsegelketschen/Hochseekutter_Wilma_HF329"
+    }
+   ],
+   "sources": [
+    "https://de.wikipedia.org/wiki/Behrens-Werft_(Hamburg)",
+    "https://dewiki.de/Lexikon/Behrens-Werft_(Hamburg)"
+   ],
+   "confiance": "moyenne",
+   "actif": null,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-beckmannwerft-cuxhaven",
+   "nom": "Beckmannwerft (ex Sanftleben & Co.)",
+   "groupe": "Schichau Unterweser AG (SUAG) a partir de 1971",
+   "ville": "Cuxhaven",
+   "region": "Basse-Saxe",
+   "pays": "Allemagne",
+   "lat": 53.86878,
+   "lon": 8.69829,
+   "geo_precision": "ville",
+   "perimetres": [
+    "reparation-refit",
+    "construction-neuve",
+    "naval-defense"
+   ],
+   "types_navires": [
+    "chalutiers et navires de peche",
+    "caboteurs (Kustenmotorschiffe)",
+    "bateaux-feu",
+    "navires de guerre (M-Boote, Kriegsmarine puis Bundesmarine)",
+    "bateaux-pilotes",
+    "chalands"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Greundiek (ex Hermann-Hans, ex Rita Dolling)",
+     "type": "caboteur (Kustenmotorschiff), aujourd'hui navire musee",
+     "annee": 1950,
+     "longueur_m": 46.55,
+     "jauge_gt": 348,
+     "client": "Hermann Behrens (armateur d'origine)",
+     "operateur": "Alter Hafen Stade e.V.",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Greundiek"
+    }
+   ],
+   "sources": [
+    "https://de.wikipedia.org/wiki/Beckmannwerft",
+    "https://cuxpedia.de/index.php?title=Beckmannwerft",
+    "https://de.wikipedia.org/wiki/Werften_in_Cuxhaven"
+   ],
+   "confiance": "moyenne",
+   "actif": false,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-alushiptechnologyspzoo-gdansk",
+   "nom": "Aluship Technology Sp. z o.o.",
+   "groupe": "",
+   "ville": "Gdańsk",
+   "region": "Poméranie",
+   "pays": "Pologne",
+   "lat": 54.34829,
+   "lon": 18.65402,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "coques et superstructures aluminium",
+    "sections et blocs pour chantiers tiers",
+    "megayachts",
+    "constructions offshore"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Ampere (coque aluminium)",
+     "type": "coque de ferry roulier electrique ZeroCat 120 livree a Fjellstrand",
+     "annee": 2014,
+     "longueur_m": 79,
+     "largeur_m": 21,
+     "jauge_gt": 1598,
+     "capacite_pax": 360,
+     "capacite_vehicules": 120,
+     "energie": "tout electrique a batteries",
+     "client": "Fjellstrand",
+     "operateur": "Norled",
+     "pavillon": "Norvège",
+     "architecte": "Fjellstrand",
+     "architecte_source": "https://fjellstrand.no/projects/nb-1696-ampere/",
+     "source": "https://en.wikipedia.org/wiki/MV_Ampere"
+    }
+   ],
+   "sources": [
+    "https://www.aluship.com/contact/",
+    "https://www.aluship.com/info/history/",
+    "https://en.wikipedia.org/wiki/MV_Ampere"
+   ],
+   "confiance": "moyenne",
+   "actif": null,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-blohmvossco-hambourg",
+   "nom": "Blohm+Voss B.V. & Co. KG",
+   "groupe": "NVL Group (Naval Vessels Lürssen), racheté par Rheinmetall, closing 1er mars 2026",
+   "ville": "Hambourg",
+   "region": "Hambourg (Steinwerder, port de Hambourg)",
+   "pays": "Allemagne",
+   "lat": 53.55017,
+   "lon": 10.00132,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit",
+    "naval-defense",
+    "plaisance"
+   ],
+   "types_navires": [
+    "frégates",
+    "corvettes",
+    "patrouilleurs hauturiers",
+    "navires de soutien logistique",
+    "chasseurs de mines",
+    "mégayachts",
+    "porte-conteneurs (historique)",
+    "cuirassés et sous-marins (historique)"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Eclipse",
+     "type": "mégayacht",
+     "annee": 2010,
+     "longueur_m": 162.5,
+     "largeur_m": 22,
+     "jauge_gt": 13000,
+     "client": "Roman Abramovitch",
+     "pavillon": "Bermudes",
+     "architecte": "Terence Disdale",
+     "architecte_source": "https://en.wikipedia.org/wiki/Eclipse_(yacht)",
+     "imo": "1009613",
+     "source": "https://en.wikipedia.org/wiki/Eclipse_(yacht)"
+    },
+    {
+     "nom": "Lady Moura",
+     "type": "mégayacht",
+     "annee": 1990,
+     "longueur_m": 105,
+     "largeur_m": 18.5,
+     "pavillon": "Bahamas",
+     "architecte": "Diana Yacht Design (Luigi Sturchio)",
+     "architecte_source": "https://en.wikipedia.org/wiki/Lady_Moura",
+     "imo": "1002380",
+     "source": "https://en.wikipedia.org/wiki/Lady_Moura"
+    },
+    {
+     "nom": "Baden-Württemberg (F222)",
+     "type": "frégate F125",
+     "annee": 2013,
+     "longueur_m": 149.52,
+     "largeur_m": 18.8,
+     "client": "Bundeswehr",
+     "operateur": "Deutsche Marine",
+     "pavillon": "Allemagne",
+     "source": "https://en.wikipedia.org/wiki/German_frigate_Baden-W%C3%BCrttemberg"
+    },
+    {
+     "nom": "Bismarck",
+     "type": "cuirassé",
+     "annee": 1939,
+     "longueur_m": 251,
+     "largeur_m": 36,
+     "operateur": "Kriegsmarine",
+     "pavillon": "Allemagne",
+     "source": "https://en.wikipedia.org/wiki/German_battleship_Bismarck"
+    }
+   ],
+   "sources": [
+    "https://de.wikipedia.org/wiki/Blohm_%2B_Voss",
+    "https://nvl.de/en/shipyards-and-docks/blohmvoss",
+    "https://en.wikipedia.org/wiki/Elbe_17",
+    "https://www.navalnews.com/naval-news/2025/09/rheinmetall-reaches-agreement-with-lurssen-group-on-acquisition-of-nvl/"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-cheoylee-zhuhai",
+   "nom": "Cheoy Lee Shipyards Ltd (Hin Lee Zhuhai Shipyard)",
+   "groupe": "",
+   "ville": "Zhuhai",
+   "region": "District de Doumen, Guangdong",
+   "pays": "Chine",
+   "lat": 22.17452,
+   "lon": 113.38493,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "plaisance"
+   ],
+   "types_navires": [
+    "workboats",
+    "remorqueurs",
+    "navires de servitude portuaire",
+    "yachts"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "SAAM Eriks",
+     "type": "workboat de lamanage / servitude",
+     "annee": 2025,
+     "longueur_m": 14,
+     "largeur_m": 5.5,
+     "client": "SAAM Towage Canada",
+     "operateur": "SAAM Towage Canada",
+     "pavillon": "Canada",
+     "architecte": "Macduff Ship Design",
+     "architecte_source": "https://www.macduffshipdesign.com/news/cheoy-lee-shipyard-saam-towage-canada/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "attribution issue du portfolio du concepteur (macduffshipdesign.com), non recoupee sur un tiers",
+      "source": "https://www.macduffshipdesign.com/news/cheoy-lee-shipyard-saam-towage-canada/",
+      "le": "2026-08-15"
+     },
+     "source": "https://www.macduffshipdesign.com/news/cheoy-lee-shipyard-saam-towage-canada/"
+    },
+    {
+     "nom": "SAAM Lucille",
+     "type": "workboat de lamanage / servitude",
+     "annee": 2025,
+     "longueur_m": 14,
+     "largeur_m": 5.5,
+     "client": "SAAM Towage Canada",
+     "operateur": "SAAM Towage Canada",
+     "pavillon": "Canada",
+     "architecte": "Macduff Ship Design",
+     "architecte_source": "https://www.macduffshipdesign.com/news/cheoy-lee-shipyard-saam-towage-canada/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "attribution issue du portfolio du concepteur (macduffshipdesign.com), non recoupee sur un tiers",
+      "source": "https://www.macduffshipdesign.com/news/cheoy-lee-shipyard-saam-towage-canada/",
+      "le": "2026-08-15"
+     },
+     "source": "https://www.macduffshipdesign.com/news/cheoy-lee-shipyard-saam-towage-canada/"
+    }
+   ],
+   "sources": [
+    "https://www.macduffshipdesign.com/news/cheoy-lee-shipyard-saam-towage-canada/",
+    "https://www.cheoylee.com/location/detail/2/",
+    "https://workboat365.com/macduff-ship-design-a-review-of-vessel-deliveries-in-2025/"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-etkinmarin-istanbul",
+   "nom": "Etkin Marin",
+   "groupe": "",
+   "ville": "Istanbul",
+   "region": "",
+   "pays": "Turquie",
+   "lat": 41.00638,
+   "lon": 28.97587,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "navires de pêche",
+    "navires de servitude aquacole",
+    "conchyliculture"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Fruitful Harvest",
+     "type": "navire de récolte mytilicole",
+     "annee": 2023,
+     "longueur_m": 20,
+     "largeur_m": 7.2,
+     "client": "Blueshell Mussels",
+     "operateur": "Blueshell Mussels (Shetland)",
+     "pavillon": "Royaume-Uni",
+     "architecte": "Macduff Ship Design",
+     "architecte_source": "https://www.macduffshipdesign.com/news/mv-fruitful-harvest-fruitful-bough/",
+     "source": "https://www.bairdmaritime.com/fishing/aquaculture/vessel-review-fruitful-harvest-fruitful-bough-mussel-harvesting-boats-to-be-operated-in-scotlands-shetland-islands"
+    },
+    {
+     "nom": "Fruitful Bough",
+     "type": "navire de récolte mytilicole",
+     "annee": 2023,
+     "longueur_m": 20,
+     "largeur_m": 7.2,
+     "client": "Blueshell Mussels",
+     "operateur": "Blueshell Mussels (Shetland)",
+     "pavillon": "Royaume-Uni",
+     "architecte": "Macduff Ship Design",
+     "architecte_source": "https://www.macduffshipdesign.com/news/mv-fruitful-harvest-fruitful-bough/",
+     "source": "https://www.bairdmaritime.com/fishing/aquaculture/vessel-review-fruitful-harvest-fruitful-bough-mussel-harvesting-boats-to-be-operated-in-scotlands-shetland-islands"
+    }
+   ],
+   "sources": [
+    "https://www.worldfishing.net/news/vessel-builder-etkin-marin-offers-the-full-package/1492479.article",
+    "https://www.bairdmaritime.com/fishing/aquaculture/vessel-review-fruitful-harvest-fruitful-bough-mussel-harvesting-boats-to-be-operated-in-scotlands-shetland-islands"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-tor-tuzla",
+   "nom": "Tor Group (Tor Marine)",
+   "groupe": "",
+   "ville": "Tuzla (Istanbul)",
+   "region": "Istanbul",
+   "pays": "Turquie",
+   "lat": 40.81617,
+   "lon": 29.30342,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "navires de servitude multi-rôles",
+    "remorqueurs",
+    "pilotines",
+    "navires de support éolien offshore"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Tor Boreas",
+     "type": "navire de servitude multi-rôles (remorquage portuaire, support plongée, éolien offshore)",
+     "annee": 2025,
+     "longueur_m": 26.95,
+     "largeur_m": 11,
+     "jauge_gt": 397,
+     "energie": "diesel-électrique hybride",
+     "client": "Tor Group",
+     "operateur": "Tor Group",
+     "architecte": "Macduff Ship Design",
+     "architecte_source": "https://www.macduffshipdesign.com/news/marine-vessel-tor-boreas/",
+     "source": "https://www.bairdmaritime.com/offshore/offshore-support-maintenance/vessel-review-tor-boreas-new-utility-vessel-to-serve-offshore-wind-towing-and-marine-construction-sectors"
+    }
+   ],
+   "sources": [
+    "https://www.bairdmaritime.com/offshore/offshore-support-maintenance/vessel-review-tor-boreas-new-utility-vessel-to-serve-offshore-wind-towing-and-marine-construction-sectors",
+    "https://www.tor-group.net/contact",
+    "https://workboat365.com/macduff-ship-design-tor-group-celebrate-delivery-of-tor-boreas/"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-synergyshipbuildersndockworks-vascodagama",
+   "nom": "Synergy Shipbuilders N Dock Works Limited",
+   "groupe": "",
+   "ville": "Vasco da Gama",
+   "region": "Goa",
+   "pays": "Inde",
+   "lat": 15.39842,
+   "lon": 73.81288,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit"
+   ],
+   "types_navires": [
+    "remorqueurs ASD",
+    "crew boats",
+    "navires à passagers",
+    "AHTS"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "River Pearl 15",
+     "type": "remorqueur de servitude ASD",
+     "annee": 2025,
+     "longueur_m": 21,
+     "client": "Knowledge Marine and Engineering Limited",
+     "operateur": "Knowledge Marine and Engineering Limited",
+     "pavillon": "Inde",
+     "architecte": "Macduff Ship Design",
+     "architecte_source": "https://www.macduffshipdesign.com/news/2025-review-of-the-year/",
+     "source": "https://workboat365.com/macduff-ship-design-a-review-of-vessel-deliveries-in-2025/"
+    },
+    {
+     "nom": "River Pearl 16",
+     "type": "remorqueur de servitude ASD",
+     "annee": 2025,
+     "longueur_m": 21,
+     "client": "Knowledge Marine and Engineering Limited",
+     "operateur": "Knowledge Marine and Engineering Limited",
+     "pavillon": "Inde",
+     "architecte": "Macduff Ship Design",
+     "architecte_source": "https://www.macduffshipdesign.com/news/2025-review-of-the-year/",
+     "source": "https://workboat365.com/macduff-ship-design-a-review-of-vessel-deliveries-in-2025/"
+    }
+   ],
+   "sources": [
+    "https://workboat365.com/macduff-ship-design-a-review-of-vessel-deliveries-in-2025/",
+    "https://www.macduffshipdesign.com/news/2025-review-of-the-year/"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-haco-haouaria",
+   "nom": "Haco (filiale tunisienne de Catana Group)",
+   "groupe": "Catana Group",
+   "ville": "El Haouaria",
+   "region": "Cap Bon (gouvernorat de Nabeul)",
+   "pays": "Tunisie",
+   "lat": 37.04981,
+   "lon": 11.01165,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "plaisance"
+   ],
+   "types_navires": [
+    "catamaran de croisière à voile",
+    "catamaran à moteur"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Bali Catspace",
+     "type": "catamaran de croisière à voile",
+     "longueur_m": 12.32,
+     "largeur_m": 6.53,
+     "client": "Catana Group / marque Bali Catamarans",
+     "architecte": "Lasta Design Studio (architecture navale), conception Olivier Poncin, intérieur Piaton Berco",
+     "architecte_source": "https://www.bali-catamarans.com/en/catamarans/bali-catspace",
+     "source": "https://www.bali-catamarans.com/en/catamarans/bali-catspace"
+    }
+   ],
+   "sources": [
+    "https://www.actunautique.com/2019/12/tunisie-catana-group-rachete-le-chantier-naval-mythique-magic-yachts.html",
+    "https://www.actunautique.com/2019/08/catana-group-catana-et-bali-accroit-sa-capacite-de-production.html"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-magicyachts-bizerte",
+   "nom": "Magic Yachts (Haco / Catana Group)",
+   "groupe": "Catana Group",
+   "ville": "Bizerte",
+   "region": "Gouvernorat de Bizerte",
+   "pays": "Tunisie",
+   "lat": 37.27209,
+   "lon": 9.87086,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit",
+    "plaisance"
+   ],
+   "types_navires": [
+    "voiliers et navires à moteur jusqu'à 40 m",
+    "composite",
+    "refit jusqu'à 45 m"
+   ],
+   "description": "",
+   "navires_references": [],
+   "sources": [
+    "https://www.boatindustry.fr/article/32606/implantation-a-bizerte-catana-va-construire-plus-de-catamarans-en-tunisie",
+    "https://www.actunautique.com/2019/12/tunisie-catana-group-rachete-le-chantier-naval-mythique-magic-yachts.html"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-yot-aveiro",
+   "nom": "Yot (Catana Group), usine d'Aveiro",
+   "groupe": "Catana Group",
+   "ville": "Aveiro",
+   "region": "Région d'Aveiro",
+   "pays": "Portugal",
+   "lat": 40.6405,
+   "lon": -8.65378,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "plaisance"
+   ],
+   "types_navires": [
+    "navires à moteur Yot",
+    "habitats flottants Seaty"
+   ],
+   "description": "",
+   "navires_references": [],
+   "sources": [
+    "https://www.multicoques-mag.com/dossiers-catamaran-trimaran/yot-une-usine-ultra-moderne-au-portugal"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "no-yard-batservicemandal-mandal",
+   "nom": "Båtservice Mandal Verft AS",
+   "groupe": "",
+   "ville": "Mandal",
+   "region": "Agder",
+   "pays": "Norvège",
+   "lat": 58.02682,
+   "lon": 7.45348,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit"
+   ],
+   "types_navires": [
+    "navire rapide 15 à 60 m",
+    "catamaran de servitude",
+    "baliseur"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Lindesnes",
+     "type": "catamaran de servitude / baliseur, capacité antipollution",
+     "annee": 2009,
+     "longueur_m": 22.2,
+     "largeur_m": 9,
+     "client": "Kystverket Rederi",
+     "operateur": "Kystverket",
+     "pavillon": "Norvège",
+     "architecte": "Skipskompetanse AS",
+     "architecte_source": "https://www.skipskompetanse.no/delivered-vessels/lindesnes-2/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "attribution issue du portfolio du concepteur (skipskompetanse.no), non recoupee sur un tiers",
+      "source": "https://www.skipskompetanse.no/delivered-vessels/lindesnes-2/",
+      "le": "2026-08-15"
+     },
+     "source": "https://www.skipskompetanse.no/delivered-vessels/lindesnes-2/"
+    }
+   ],
+   "sources": [
+    "https://www.skipskompetanse.no/delivered-vessels/lindesnes-2/",
+    "https://www.batserviceyards.com/contact-us.html"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-projectsspzoo-gdansk",
+   "nom": "Marine Projects Ltd. Sp. z o.o.",
+   "groupe": "",
+   "ville": "Gdańsk",
+   "region": "Poméranie",
+   "pays": "Pologne",
+   "lat": 54.34829,
+   "lon": 18.65402,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "coques et blocs de coque acier",
+    "superstructures armées",
+    "navires de pêche partiellement équipés"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Cape Arkona",
+     "type": "chalutier / caseyeur / palangrier polyvalent (coque)",
+     "annee": 2020,
+     "longueur_m": 68,
+     "largeur_m": 15,
+     "client": "Austral Fisheries",
+     "pavillon": "Australie",
+     "architecte": "Skipskompetanse AS",
+     "architecte_source": "https://www.skipskompetanse.no/delivered-vessels/cape-arkona-2/",
+     "source": "https://www.bairdmaritime.com/ausmarine/ausmarine-fishing-and-aquaculture/vessel-review-cape-arkona-austral-fisheries-newbuild-is-capable-of-trawling-potting-and-autoline-fishing-on-a-single-trip"
+    },
+    {
+     "nom": "Ro Spirit",
+     "type": "brønnbåt (live fish carrier), coque",
+     "annee": 2023,
+     "longueur_m": 79.27,
+     "largeur_m": 15,
+     "jauge_gt": 2999,
+     "client": "Rostein AS",
+     "pavillon": "Norvège",
+     "architecte": "Skipskompetanse AS",
+     "architecte_source": "https://www.skipskompetanse.no/delivered-vessels/",
+     "source": "https://www.bairdmaritime.com/fishing/fishing-boat-world-reviews/vessel-review-ro-spirit-norwegian-salmon-wellboat-fitted-with-innovative-bow-foil-technology"
+    }
+   ],
+   "sources": [
+    "https://marineprojects.pl/company/",
+    "https://www.bairdmaritime.com/ausmarine/ausmarine-fishing-and-aquaculture/vessel-review-cape-arkona-austral-fisheries-newbuild-is-capable-of-trawling-potting-and-autoline-fishing-on-a-single-trip"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-yantar-kaliningrad",
+   "nom": "Chantier naval Yantar (PSZ Yantar)",
+   "groupe": "",
+   "ville": "Kaliningrad",
+   "region": "Oblast de Kaliningrad",
+   "pays": "Russie",
+   "lat": 54.70465,
+   "lon": 20.45657,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "naval-defense"
+   ],
+   "types_navires": [
+    "chalutier senneur",
+    "navire de pêche",
+    "bâtiment militaire"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Komandor",
+     "type": "chalutier / senneur",
+     "annee": 2019,
+     "longueur_m": 50.6,
+     "largeur_m": 12,
+     "capacite_pax": 15,
+     "energie": "diesel-mécanique",
+     "client": "Kolkhoze de pêche V.I. Lénine, Petropavlovsk-Kamtchatski",
+     "pavillon": "Russie",
+     "architecte": "Skipskompetanse AS",
+     "architecte_source": "https://www.skipskompetanse.no/delivered-vessels/komandor-2/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "attribution issue du portfolio du concepteur (skipskompetanse.no), non recoupee sur un tiers",
+      "source": "https://www.skipskompetanse.no/delivered-vessels/komandor-2/",
+      "le": "2026-08-15"
+     },
+     "source": "https://www.skipskompetanse.no/delivered-vessels/komandor-2/"
+    }
+   ],
+   "sources": [
+    "https://www.skipskompetanse.no/delivered-vessels/komandor-2/"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-bieritz-friedrichskoog",
+   "nom": "Bieritz-Werft (Bootswerft Peter Bieritz)",
+   "groupe": "",
+   "ville": "Friedrichskoog",
+   "region": "Schleswig-Holstein (Kreis Dithmarschen)",
+   "pays": "Allemagne",
+   "lat": 54.00729,
+   "lon": 8.88412,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit",
+    "plaisance"
+   ],
+   "types_navires": [
+    "chalutier crevettier en bois (Krabbenkutter)",
+    "cotre de peche",
+    "navire a passagers",
+    "yacht a voile en bois",
+    "ketch",
+    "repliques de cotres des douanes (Colin Archer)"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Kehrwieder (FRI 14)",
+     "type": "cotre de peche en bois",
+     "annee": 1921,
+     "longueur_m": 9.1,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bieritz-Werft"
+    },
+    {
+     "nom": "Elise (BUS 98)",
+     "type": "cotre de peche en bois",
+     "annee": 1929,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Nordstern (OTT 1)",
+     "type": "cotre de peche en bois",
+     "annee": 1933,
+     "longueur_m": 11.7,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bieritz-Werft"
+    },
+    {
+     "nom": "Wilhelmine (FRI 15)",
+     "type": "cotre de peche en bois",
+     "annee": 1936,
+     "longueur_m": 12.2,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bieritz-Werft"
+    },
+    {
+     "nom": "Grete (NEU 138)",
+     "type": "cotre de peche en bois, converti en cotre a gaffe",
+     "annee": 1937,
+     "longueur_m": 12.5,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bieritz-Werft"
+    },
+    {
+     "nom": "Karin (NEU 139)",
+     "type": "cotre de peche en bois",
+     "annee": 1938,
+     "longueur_m": 13.2,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bieritz-Werft"
+    },
+    {
+     "nom": "Ludwig (BUS 54)",
+     "type": "cotre de peche en bois",
+     "annee": 1941,
+     "longueur_m": 13.1,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bieritz-Werft"
+    },
+    {
+     "nom": "Inge (BUS 76)",
+     "type": "cotre de peche en bois",
+     "annee": 1942,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Helgo (FRI 4)",
+     "type": "cotre de peche en bois",
+     "annee": 1948,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "California (BUS 40)",
+     "type": "cotre de peche en bois",
+     "annee": 1949,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Heimkehr (FRI 67)",
+     "type": "cotre de peche en bois",
+     "annee": 1950,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Rum Hart (PEL 15)",
+     "type": "cotre de peche en bois, converti en cotre de promenade (Lutt Matten)",
+     "annee": 1956,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Sirius (FRI 86)",
+     "type": "cotre de peche en bois",
+     "annee": 1957,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Hornsriff (SD 1)",
+     "type": "cotre de peche en bois",
+     "annee": 1960,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Seeburg (ST 1), ex-Davy Jones (SD 16)",
+     "type": "cotre de peche en bois",
+     "annee": 1960,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Astarte",
+     "type": "yacht a voile en bois, ketch",
+     "annee": 1961,
+     "operateur": "Museumshafen Heiligenhafen (jusqu'en 2019), puis Grossenbrode",
+     "pavillon": "Allemagne",
+     "source": "https://www.mh-heiligenhafen.de/der-hafen/die-boote/astarte-bj-1961/"
+    },
+    {
+     "nom": "Stor (DOR 5)",
+     "type": "cotre de peche en bois",
+     "annee": 1961,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Holsatia (FRI 3)",
+     "type": "cotre de peche en bois",
+     "annee": 1962,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Corona (yacht)",
+     "type": "yacht a voile en bois",
+     "annee": 1963,
+     "pavillon": "Allemagne",
+     "source": "https://www.yachtsportmuseum.de/suche/schiffsregister/details/dsv1949-X64X1593"
+    },
+    {
+     "nom": "Edelweiss (HUS 9), ex-SD 14",
+     "type": "cotre de peche en bois",
+     "annee": 1965,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Adler II (aujourd'hui Rungholt, ex-Pallucca, ex-Rungholt I)",
+     "type": "navire a passagers en bois",
+     "annee": 1966,
+     "longueur_m": 17.5,
+     "largeur_m": 5.3,
+     "capacite_pax": 50,
+     "operateur": "Halligreederei Kapitan Bernd Diedrichsen, Husum",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Rungholt_(Schiff,_1966)"
+    },
+    {
+     "nom": "Olympia (SD 5), puis E. 614 Leif Brink",
+     "type": "cotre de peche en bois",
+     "annee": 1967,
+     "pavillon": "Allemagne puis Danemark",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Compasrose",
+     "type": "yacht a voile en bois",
+     "annee": 1967,
+     "pavillon": "Allemagne",
+     "source": "https://www.yachtsportmuseum.de/suche/schiffsregister/details/schiffe-XAD03X376"
+    },
+    {
+     "nom": "Hol Di Ran (aujourd'hui Myrtle)",
+     "type": "yacht a voile en bois (type Peter Bieritz 40)",
+     "annee": 1967,
+     "pavillon": "Royaume-Uni",
+     "source": "https://brighton.boatshed.com/peter_bieritz_40-boat-312465.html"
+    },
+    {
+     "nom": "Marschenland (FRI 23), puis Godewind, puis King of the North",
+     "type": "cotre de peche en bois",
+     "annee": 1968,
+     "pavillon": "Allemagne puis Pays-Bas",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Bayern (SC 14), aujourd'hui Maret",
+     "type": "cotre de peche en bois",
+     "annee": 1969,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Hindenburg (SD 11), aujourd'hui Bussard I",
+     "type": "cotre de peche en bois, devenu cotre d'excursion",
+     "annee": 1970,
+     "operateur": "exploitation aux Canaries (La Palma)",
+     "pavillon": "Espagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Glauke",
+     "type": "cotre-yacht en bois (Kutteryacht), cotre d'excursion",
+     "annee": 1971,
+     "operateur": "Museumshafen Rostock",
+     "pavillon": "Allemagne",
+     "source": "https://glauke-segelkutter.de/pages/informationen/das-schiff.php"
+    },
+    {
+     "nom": "Albatros (SD 19), puis Jan Maat, Asgard, Freyja (SW 8)",
+     "type": "cotre de peche en bois, coule par incendie machine le 17 septembre 2021 au nord de Hooge",
+     "annee": 1971,
+     "pavillon": "Allemagne",
+     "source": "https://www.bsu-bund.de/SharedDocs/pdf/DE/Unfallberichte/2023/Untersuchungsbericht_300_21.pdf?__blob=publicationFile&v=2"
+    },
+    {
+     "nom": "Gluckauf (ST 28), aujourd'hui Stella Polaris (SD 28)",
+     "type": "cotre de peche en bois",
+     "annee": 1973,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Joachim (KIE 2), puis Janine (SB 8), puis Caroline",
+     "type": "cotre de peche en bois, demoli a Heiligenhafen en mars 2026",
+     "annee": 1975,
+     "pavillon": "Allemagne",
+     "source": "https://www.kreiszeitung.de/lokales/schleswig-holstein/heiligenhafen/die-caroline-verlaesst-den-hafen-94204557.html"
+    },
+    {
+     "nom": "Thetis von Laboe",
+     "type": "chaloupe, replique d'une chaloupe pomeranienne (100e navire neuf du chantier)",
+     "annee": 1975,
+     "pavillon": "Allemagne",
+     "source": "http://www.tallship-fan.de/cgi-bin/tallship_d.pl?ACTION=DISPLAY&SCHIFFSID=2038"
+    },
+    {
+     "nom": "Venus (SD 24)",
+     "type": "cotre de peche en bois",
+     "annee": 1976,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Hildegard (HUS 25), aujourd'hui Christine (SD 10)",
+     "type": "cotre de peche en bois",
+     "annee": 1976,
+     "pavillon": "Allemagne",
+     "source": "https://www.eo-ems.de/haefen/?Deutschland_Nordsee:Friedrichskoog-SD-FRI:SD10"
+    },
+    {
+     "nom": "Anna",
+     "type": "replique de cotre des douanes sur plans Colin Archer, construite par l'apprenti Reiner Schlimme",
+     "annee": 1980,
+     "operateur": "Museumshafen Kiel",
+     "pavillon": "Allemagne",
+     "architecte": "Colin Archer (plans d'origine)",
+     "architecte_source": "https://de.wikipedia.org/wiki/Bieritz-Werft",
+     "source": "https://woodvibes.com/main/kath_html_de/kath4.html"
+    },
+    {
+     "nom": "Maya",
+     "type": "replique de cotre des douanes sur plans Colin Archer, construite par l'apprenti Thomas Paetzel",
+     "annee": 1980,
+     "pavillon": "Allemagne",
+     "architecte": "Colin Archer (plans d'origine)",
+     "architecte_source": "https://de.wikipedia.org/wiki/Bieritz-Werft",
+     "source": "https://museumshafen-probstei.de/maya.html"
+    },
+    {
+     "nom": "Bjorn af Brekkukot, renomme Henriette en 1990",
+     "type": "replique de cotre des douanes sur plans Colin Archer",
+     "annee": 1980,
+     "operateur": "Museumshafen Kiel",
+     "pavillon": "Allemagne",
+     "architecte": "Colin Archer (plans d'origine)",
+     "architecte_source": "https://de.wikipedia.org/wiki/Bieritz-Werft",
+     "source": "https://www.museumshafen-germaniahafen-kiel.de/unsere-schiffe/henriette/"
+    },
+    {
+     "nom": "Wappen von Bremen III, renomme Freya",
+     "type": "yacht a voile en bois (coque 115)",
+     "annee": 1982,
+     "client": "Segelkameradschaft Das Wappen von Bremen",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Pillau (BUR 3), puis SAS 103",
+     "type": "cotre de peche en bois",
+     "annee": 1983,
+     "pavillon": "Allemagne",
+     "source": "https://www.eo-ems.de/haefen/?Deutschland_Ostsee:Sassnitz-SAS:SAS103"
+    },
+    {
+     "nom": "Helga I (KAS 1), puis Pilgrim, puis Kulle Christoph",
+     "type": "cotre de peche en bois, coule a Moltenort le 2 janvier 2025 et demoli",
+     "annee": 1984,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+    },
+    {
+     "nom": "Achat (SC 36)",
+     "type": "cotre de peche en bois (coque 123)",
+     "annee": 1986,
+     "pavillon": "Allemagne",
+     "source": "http://eo-ems.de/haefen/index.php?Deutschland_Nordsee:B%C3%BCsum-SC-B%C3%9CS:SC36"
+    },
+    {
+     "nom": "Pinizelic",
+     "type": "yacht a moteur en bois (type Peter Bieritz trawler)",
+     "annee": 1988,
+     "pavillon": "Croatie",
+     "source": "https://dailyboats.com/de/boat/223007-buy-peter-bieritz-trawler-for-sale"
+    },
+    {
+     "nom": "Skua",
+     "type": "replique de cotre des douanes sur plans Colin Archer, construite par l'apprenti Gerhard Hess",
+     "annee": 1990,
+     "pavillon": "Allemagne",
+     "architecte": "Colin Archer (plans d'origine)",
+     "architecte_source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft",
+     "source": "https://www.schiffsspotter.de/Kutter/Zollkutter_Skua"
+    },
+    {
+     "nom": "Karen Zwo",
+     "type": "cotre-yacht en bois, dernier navire neuf du chantier (coque 128)",
+     "annee": 1995,
+     "longueur_m": 16,
+     "pavillon": "Allemagne",
+     "source": "https://www.nordostsee-yachten.de/gebrauchte-yachten-ostsee-nordsee-nordostsee-yachten-bavaria/gebrauchte-kutter-deutscher-werftbau-ostsee-nordsee-nordostsee-yachten/"
+    },
+    {
+     "nom": "Aurora von Altona (ex-KOL 12 Hans, ex-Gluckauf II, ex-Liane II)",
+     "type": "cotre a voile, refit",
+     "annee": "1934 (construit chez Goetz-Werft), refit Bieritz 1974-1976",
+     "operateur": "Museumshafen Flensburg",
+     "pavillon": "Allemagne",
+     "source": "https://historischer-hafen.de/schiff/aurora-von-altona/"
+    },
+    {
+     "nom": "Islaborg",
+     "type": "cotre du Groenland, transformation en cotre de plaisance",
+     "annee": "1959 (construit chez Andersen & Ferdinansen, Gilleleje), refit Bieritz 1980-1981",
+     "pavillon": "Allemagne",
+     "source": "https://www.takel-ing.de/kutter-islaborg.html"
+    }
+   ],
+   "sources": [
+    "https://de.wikipedia.org/wiki/Bieritz-Werft",
+    "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft",
+    "https://www.ezdk.de/index.php/presse/nachrichten/83-fuer-mich-muss-ein-kutter-aus-holz-sein",
+    "https://digitaler-lesesaal.bundesarchiv.de/video/28849/687912"
+   ],
+   "confiance": "moyenne",
+   "actif": false,
+   "fondation": null
+  },
+  {
+   "id": "fr-yard-cdktechnologies-foretfouesnant",
+   "nom": "CDK Technologies",
+   "groupe": "",
+   "ville": "La Foret-Fouesnant",
+   "region": "Bretagne (Finistere)",
+   "pays": "France",
+   "lat": 47.90819,
+   "lon": -3.97966,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit",
+    "plaisance"
+   ],
+   "types_navires": [
+    "IMOCA 60",
+    "multicoque de course",
+    "mats et pieces composites"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Charal",
+     "type": "IMOCA 60 de course au large",
+     "annee": 2018,
+     "largeur_m": 5.9,
+     "client": "Jeremie Beyou / Charal",
+     "pavillon": "France",
+     "architecte": "VPLP Design",
+     "architecte_source": "https://en.wikipedia.org/wiki/IMOCA_60_Charal",
+     "source": "https://en.wikipedia.org/wiki/IMOCA_60_Charal"
+    },
+    {
+     "nom": "Banque Populaire VIII",
+     "type": "IMOCA 60 de course au large",
+     "annee": 2015,
+     "client": "Banque Populaire Sailing Team",
+     "pavillon": "France",
+     "architecte": "VPLP Design et Guillaume Verdier",
+     "architecte_source": "https://en.wikipedia.org/wiki/IMOCA_60_Banque_Populaire_8",
+     "source": "https://en.wikipedia.org/wiki/IMOCA_60_Banque_Populaire_8"
+    }
+   ],
+   "sources": [
+    "https://www.cdk-technologies.com/infrastructure-de-Port-la-For%C3%AAt-CDK-Technologies.html",
+    "https://en.wikipedia.org/wiki/CDK_Technologies",
+    "https://www.bretagne-economique.com/actualites/port-la-foret-29-cdk-technologies-agrandit-son-site-finisterien/"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "fr-yard-oceandeveloppement-lorient",
+   "nom": "Ocean Developpement",
+   "groupe": "",
+   "ville": "Lorient",
+   "region": "Bretagne (Morbihan)",
+   "pays": "France",
+   "lat": 47.74773,
+   "lon": -3.36609,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "plaisance"
+   ],
+   "types_navires": [
+    "multicoques de course",
+    "catamarans de grande plaisance electriques"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "MODX 70",
+     "type": "catamaran de grande plaisance, propulsion electrique et ailes gonflables",
+     "annee": 2025,
+     "longueur_m": 21.3,
+     "largeur_m": 9.92,
+     "energie": "electrique (2 x 40 kW), 230 kWh batteries, 12 kWc solaire, hydrogeneration",
+     "operateur": "MODX Catamarans",
+     "pavillon": "France",
+     "architecte": "VPLP Design",
+     "architecte_source": "https://www.vplp.fr/en/cruising/modx70/",
+     "source": "https://www.multihulls-world.com/news-catamaran-trimaran/modx-70-launch-of-a-truly-innovative-catamaran"
+    }
+   ],
+   "sources": [
+    "https://www.vplp.fr/en/news/modx-70-the-culmination-of-a-revolutionary-design/",
+    "https://modx-catamarans.com/wp-content/uploads/2024/08/CP-Navigation-vers-Lorient-Aout-2024.pdf",
+    "https://www.multihulls-world.com/news-catamaran-trimaran/modx-70-launch-of-a-truly-innovative-catamaran"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "fr-yard-neeltrimarans-rochelle",
+   "nom": "Neel Trimarans",
+   "groupe": "",
+   "ville": "La Rochelle",
+   "region": "Nouvelle-Aquitaine (Charente-Maritime)",
+   "pays": "France",
+   "lat": 46.15973,
+   "lon": -1.1516,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "plaisance"
+   ],
+   "types_navires": [
+    "trimarans de croisiere",
+    "coques et superstructures composites"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "MODX 70 (coque)",
+     "type": "catamaran de grande plaisance electrique, coque uniquement",
+     "annee": 2024,
+     "longueur_m": 21.3,
+     "largeur_m": 9.92,
+     "architecte": "VPLP Design",
+     "architecte_source": "https://www.vplp.fr/en/news/modx-70-the-culmination-of-a-revolutionary-design/",
+     "source": "https://www.vplp.fr/en/news/modx-70-the-culmination-of-a-revolutionary-design/"
+    }
+   ],
+   "sources": [
+    "https://www.boatindustry.fr/article/37698/neel-trimarans-investit-aux-abords-de-la-rochelle-pour-faire-face-a-sa-croissance",
+    "https://www.vplp.fr/en/news/modx-70-the-culmination-of-a-revolutionary-design/"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "fr-yard-excesscatamarans-poiresurvie",
+   "nom": "Excess Catamarans (Groupe Beneteau)",
+   "groupe": "Groupe Beneteau",
+   "ville": "Le Poire-sur-Vie",
+   "region": "Pays de la Loire (Vendee)",
+   "pays": "France",
+   "lat": 46.76824,
+   "lon": -1.50949,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "plaisance"
+   ],
+   "types_navires": [
+    "catamarans de croisiere de serie"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Excess 14",
+     "type": "catamaran de croisiere a voile",
+     "annee": 2022,
+     "longueur_m": 13.97,
+     "largeur_m": 7.87,
+     "pavillon": "France",
+     "architecte": "VPLP Design, design exterieur Patrick le Quement",
+     "architecte_source": "https://www.vplp.fr/en/cruising/excess14/",
+     "source": "https://www.vplp.fr/en/cruising/excess14/"
+    }
+   ],
+   "sources": [
+    "https://www.excess-catamarans.com/our-news/factory-tour-2024-in-the-heart-of-the-excess-shipyard",
+    "https://www.vplp.fr/en/cruising/excess14/"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-trimarinecompositos-moita",
+   "nom": "Trimarine Compositos",
+   "groupe": "",
+   "ville": "Moita (Sarilhos Pequenos)",
+   "region": "District de Setubal",
+   "pays": "Portugal",
+   "lat": 38.66105,
+   "lon": -8.99837,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "plaisance"
+   ],
+   "types_navires": [
+    "catamarans de grande plaisance carbone",
+    "yachts de course"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Catch Me (GP70 n.1)",
+     "type": "catamaran de grande croisiere rapide, sandwich carbone epoxy",
+     "annee": 2023,
+     "longueur_m": 21,
+     "capacite_pax": 10,
+     "architecte": "VPLP Design",
+     "architecte_source": "https://www.multihulls-world.com/videos-catamaran-trimaran/gp70-an-eye-catching-vplp-design",
+     "source": "https://www.trimarine.com/en/2024/01/30/gp70-catch-me/"
+    }
+   ],
+   "sources": [
+    "https://www.trimarine.com/en/2024/01/30/gp70-catch-me/",
+    "https://www.trimarine.com/en/production-sites/",
+    "https://www.multihulls-world.com/videos-catamaran-trimaran/gp70-an-eye-catching-vplp-design"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-bootswerftempacher-eberbach",
+   "nom": "Bootswerft Empacher GmbH",
+   "groupe": "",
+   "ville": "Eberbach",
+   "region": "Bade-Wurtemberg (Rhein-Neckar-Kreis)",
+   "pays": "Allemagne",
+   "lat": 49.46353,
+   "lon": 8.98552,
+   "geo_precision": "ville",
+   "perimetres": [
+    "plaisance"
+   ],
+   "types_navires": [
+    "bateaux d'aviron de course (skiff, deux, quatre, huit)",
+    "bateaux d'aviron de loisir et para-aviron",
+    "avirons et pelles"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Empacher XCR 80 (huit de couple/pointe, modele de coque)",
+     "type": "bateau d'aviron de course, huit",
+     "longueur_m": 17.25,
+     "source": "https://www.empacher.com/en/"
+    }
+   ],
+   "sources": [
+    "https://de.wikipedia.org/wiki/Bootswerft_Empacher",
+    "https://www.empacher.com/en/",
+    "https://www.eberbach.de/site/eberbach_2023root/node/3010721/zmdetail_93787/BootswerftEmpacherGmbH.html?zm.sid=zmvhrzrmk9m1&nodeID=93787",
+    "https://worldrowing.com/partner/empacher"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-bodanmetallbauco-kressbronnambodensee",
+   "nom": "Bodan Werft Metallbau GmbH & Co. KG (Bodan-Werft)",
+   "groupe": "",
+   "ville": "Kressbronn am Bodensee",
+   "region": "Bade-Wurtemberg",
+   "pays": "Allemagne",
+   "lat": 47.59658,
+   "lon": 9.60033,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "naval-defense",
+    "plaisance"
+   ],
+   "types_navires": [
+    "ferry transbordeur lacustre",
+    "navire a passagers d'excursion",
+    "bac a double etrave",
+    "bateau de peche a moteur",
+    "yacht prive",
+    "engin de debarquement / bac de franchissement militaire"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Lodi",
+     "type": "bac transbordeur a double etrave, passagers et vehicules",
+     "annee": 2010,
+     "longueur_m": 82.37,
+     "largeur_m": 13.4,
+     "port_lourd_dwt": 400,
+     "capacite_pax": 700,
+     "capacite_vehicules": 64,
+     "client": "Stadtwerke Konstanz",
+     "operateur": "Stadtwerke Konstanz",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Lodi_(Schiff)"
+    },
+    {
+     "nom": "Tabor",
+     "type": "bac transbordeur a double etrave, passagers et vehicules",
+     "annee": 2004,
+     "longueur_m": 72,
+     "largeur_m": 13.4,
+     "capacite_pax": 700,
+     "capacite_vehicules": 60,
+     "client": "Stadtwerke Konstanz",
+     "operateur": "Stadtwerke Konstanz",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/T%C3%A1bor_(Schiff)"
+    },
+    {
+     "nom": "Sonnenkonigin",
+     "type": "navire a passagers evenementiel",
+     "annee": 2008,
+     "longueur_m": 69.16,
+     "largeur_m": 14.5,
+     "capacite_pax": 1000,
+     "client": "Walter Klaus GmbH & Co KG",
+     "operateur": "Walter Klaus GmbH & Co KG, puis Werner Netzer (2009)",
+     "pavillon": "Autriche",
+     "source": "https://de.wikipedia.org/wiki/Sonnenk%C3%B6nigin"
+    },
+    {
+     "nom": "Munchen",
+     "type": "navire a passagers d'excursion",
+     "annee": 1962,
+     "longueur_m": 57.5,
+     "largeur_m": 12,
+     "capacite_pax": 1100,
+     "client": "Deutsche Bundesbahn",
+     "operateur": "Bodensee-Schiffsbetriebe (depuis 1994)",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/M%C3%BCnchen_(Schiff,_1962)"
+    },
+    {
+     "nom": "Konstanz",
+     "type": "navire a passagers d'excursion",
+     "annee": 1964,
+     "longueur_m": 57,
+     "largeur_m": 11.4,
+     "capacite_pax": 700,
+     "client": "Deutsche Bundesbahn",
+     "operateur": "Bodensee-Schiffsbetriebe (depuis 1994)",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Konstanz_(Schiff,_1964)"
+    },
+    {
+     "nom": "Bayern",
+     "type": "navire a passagers d'excursion",
+     "annee": 1988,
+     "longueur_m": 30.8,
+     "largeur_m": 7.5,
+     "capacite_pax": 246,
+     "operateur": "Bodensee-Schiffsbetriebe",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Bayern_(Schiff,_1988)"
+    }
+   ],
+   "sources": [
+    "https://de.wikipedia.org/wiki/Bodan-Werft",
+    "https://www.bodan-areal.de/en/history/",
+    "https://dewiki.de/Lexikon/Bodan-Werft",
+    "https://en.wikipedia.org/wiki/Bodan-Werft"
+   ],
+   "confiance": "moyenne",
+   "actif": false,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-bohmewerft-cuxhaven",
+   "nom": "Böhmewerft (site repris par Schiffs- und Yachtwerft Cuxhaven GmbH)",
+   "groupe": "",
+   "ville": "Cuxhaven",
+   "region": "Basse-Saxe",
+   "pays": "Allemagne",
+   "lat": 53.86878,
+   "lon": 8.69829,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit",
+    "plaisance"
+   ],
+   "types_navires": [
+    "cotre de peche en bois",
+    "vedette garde-frontiere",
+    "yacht a voile (cotre aurique)",
+    "bateau de plaisance GRP"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Henry Syx",
+     "type": "cotre de peche",
+     "annee": 1946,
+     "jauge_gt": 26,
+     "source": "https://de.wikipedia.org/wiki/B%C3%B6hmewerft"
+    },
+    {
+     "nom": "Johanna",
+     "type": "cotre de peche, transforme ensuite en yacht",
+     "annee": 1946,
+     "source": "https://de.wikipedia.org/wiki/B%C3%B6hmewerft"
+    },
+    {
+     "nom": "Grete",
+     "type": "cotre de peche",
+     "annee": 1948,
+     "source": "https://cuxpedia.de/index.php?title=B%C3%B6hmewerft"
+    },
+    {
+     "nom": "Kehrwieder",
+     "type": "cotre de peche",
+     "annee": 1948,
+     "jauge_gt": 7,
+     "source": "https://de.wikipedia.org/wiki/B%C3%B6hmewerft"
+    },
+    {
+     "nom": "Liesel Denker",
+     "type": "cotre de peche",
+     "annee": 1950,
+     "jauge_gt": 12,
+     "source": "https://de.wikipedia.org/wiki/B%C3%B6hmewerft"
+    },
+    {
+     "nom": "W18",
+     "type": "vedette de flottille (conversion d'un cotre de guerre)",
+     "annee": 1952,
+     "client": "Bundesgrenzschutz (garde-frontiere federal allemand)",
+     "operateur": "Bundesgrenzschutz",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/B%C3%B6hmewerft"
+    },
+    {
+     "nom": "Neptun",
+     "type": "cotre de peche",
+     "annee": 1956,
+     "client": "pecheur de Dorum",
+     "source": "https://de.wikipedia.org/wiki/B%C3%B6hmewerft"
+    },
+    {
+     "nom": "Cormoran (NC 462)",
+     "type": "cotre de peche",
+     "annee": 1963,
+     "source": "https://cuxpedia.de/index.php?title=B%C3%B6hmewerft"
+    },
+    {
+     "nom": "Sonnenland 2 (puis Becks, puis Odin)",
+     "type": "yacht cotre aurique a deux mats (type Kambala)",
+     "annee": 1967,
+     "source": "https://de.wikipedia.org/wiki/B%C3%B6hmewerft"
+    }
+   ],
+   "sources": [
+    "https://de.wikipedia.org/wiki/B%C3%B6hmewerft",
+    "https://cuxpedia.de/index.php?title=B%C3%B6hmewerft",
+    "https://www.wikidata.org/wiki/Q54565926",
+    "https://www.northdata.de/Schiffs-+und+Yachtwerft+Cuxhaven+GmbH,+Cuxhaven/Amtsgericht+Tostedt+HRB+202110",
+    "https://cuxpedia.de/index.php?title=Kapit%C3%A4n-Alexander-Stra%C3%9Fe"
+   ],
+   "confiance": "moyenne",
+   "actif": null,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-vebboddenwerftdamgarten-ribnitzdamgarten",
+   "nom": "VEB Boddenwerft Damgarten",
+   "groupe": "",
+   "ville": "Ribnitz-Damgarten",
+   "region": "Mecklembourg-Poméranie-Occidentale",
+   "pays": "Allemagne",
+   "lat": 54.24333,
+   "lon": 12.43197,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "cutter de pêche en bois 17 m",
+    "cutter de pêche 24 m",
+    "cutter 12 m"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Adolf Reichwein",
+     "type": "Cotre de pêche en bois, 17 m (numéro de construction FK 09)",
+     "annee": "1949",
+     "longueur_m": 17.6,
+     "largeur_m": 5,
+     "energie": "Diesel 59 kW (80 ch)",
+     "client": "Pêche RDA, immatriculations successives SAS 95, STR 190, WOG 115",
+     "operateur": "Deutsches Meeresmuseum Stralsund (navire-musée depuis 1973)",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Adolf_Reichwein_(Schiff,_1949)"
+    },
+    {
+     "nom": "Marlen",
+     "type": "Cotre de pêche en bois renforcé acier, chalut latéral",
+     "annee": "1950",
+     "longueur_m": 17.6,
+     "largeur_m": 5.15,
+     "operateur": "Maritimes Traditionszentrum Wismar (en restauration depuis 2014)",
+     "pavillon": "Allemagne",
+     "source": "https://metropolregion.hamburg.de/natur-und-kultur-erleben/industriekultur-am-wasser/schiffe/fischkutter-marlen-10492"
+    },
+    {
+     "nom": "Pasewalk",
+     "type": "Cotre de pêche 17 m",
+     "annee": "1950",
+     "longueur_m": 17,
+     "largeur_m": 5.6,
+     "operateur": "Port d'attache Warnemünde, immatriculation WAR 56, ex SAS 146",
+     "pavillon": "Allemagne",
+     "source": "https://www.schiffsspotter.de/Fischereifahrzeuge/17-Meter-Kutter_Pasewalk"
+    }
+   ],
+   "sources": [
+    "https://de.wikipedia.org/wiki/Flugplatz_Damgarten",
+    "https://lostplacewunderland.wordpress.com/2019/12/17/ribnitz-damgarten-boddenwerft/",
+    "https://technikmuseum-puetnitz.de/historie.html"
+   ],
+   "confiance": "moyenne",
+   "actif": false,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-luxundschiffahrt-niederkasselmondorf",
+   "nom": "Lux-Werft und Schiffahrt GmbH",
+   "groupe": "",
+   "ville": "Niederkassel-Mondorf",
+   "region": "Rhénanie-du-Nord-Westphalie",
+   "pays": "Allemagne",
+   "lat": 50.77957,
+   "lon": 7.06751,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit"
+   ],
+   "types_navires": [
+    "Fahrgastschiff (bateau à passagers fluvial)",
+    "bateau d'excursion lacustre",
+    "bac fluvial (Rhin)",
+    "barcasse / Nachen",
+    "navire à propulsion électrique"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Rhein Star",
+     "type": "Bateau à passagers fluvial",
+     "annee": 2003,
+     "longueur_m": 44.4,
+     "largeur_m": 9.2,
+     "capacite_pax": 600,
+     "client": "Rössler-Linie",
+     "operateur": "Rössler-Linie, Rüdesheim",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Rhein_Star"
+    },
+    {
+     "nom": "Princesse Marie-Astrid",
+     "type": "Bateau d'excursion à la journée",
+     "annee": 2010,
+     "longueur_m": 60,
+     "largeur_m": 11.4,
+     "capacite_pax": 500,
+     "energie": "Diesel-mécanique, 2 x Volvo Penta D12-500 (736 kW)",
+     "client": "Entente touristique de la Moselle Luxembourgeoise asbl",
+     "operateur": "Entente touristique de la Moselle Luxembourgeoise asbl",
+     "pavillon": "Luxembourg",
+     "source": "https://de.wikipedia.org/wiki/Princesse_Marie-Astrid_(Schiff,_2010)"
+    },
+    {
+     "nom": "Seeshaupt",
+     "type": "Bateau d'excursion à la journée (lac de Starnberg)",
+     "annee": 2012,
+     "longueur_m": 60,
+     "largeur_m": 12.5,
+     "capacite_pax": 800,
+     "energie": "Diesel, 2 x Deutz BF8M 1015 MC (728 kW)",
+     "client": "Bayerische Seenschifffahrt GmbH",
+     "operateur": "Bayerische Seenschifffahrt GmbH",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Seeshaupt_(Schiff,_2012)"
+    },
+    {
+     "nom": "Schluchsee",
+     "type": "Bateau d'excursion à la journée (lac de Schluchsee)",
+     "annee": 2014,
+     "longueur_m": 33,
+     "largeur_m": 6.8,
+     "capacite_pax": 250,
+     "energie": "Diesel, 2 x John Deere 6068 AFM 75 (2 x 125 kW)",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Schluchsee_(Schiff,_2014)"
+    },
+    {
+     "nom": "Kelheim",
+     "type": "Bateau d'excursion à la journée (Danube)",
+     "annee": 2015,
+     "longueur_m": 49.9,
+     "largeur_m": 10.1,
+     "energie": "Diesel, 2 x Volvo 212 kW",
+     "client": "Personenschiffahrt Stadler GmbH",
+     "operateur": "Personenschiffahrt Stadler GmbH",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Kelheim_(Schiff,_2015)"
+    },
+    {
+     "nom": "Berg",
+     "type": "Bateau d'excursion à la journée (lac de Starnberg)",
+     "annee": 2021,
+     "longueur_m": 35,
+     "largeur_m": 8.2,
+     "capacite_pax": 300,
+     "energie": "Tout électrique (plus grand navire 100 % électrique sur un lac intérieur allemand à sa mise en service, 5,3 M EUR)",
+     "client": "Bayerische Seenschifffahrt GmbH",
+     "operateur": "Bayerische Seenschifffahrt GmbH",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Berg_(Schiff,_2021)"
+    }
+   ],
+   "sources": [
+    "https://de.wikipedia.org/wiki/Lux-Werft",
+    "https://de.wikipedia.org/wiki/Bauliste_der_Lux-Werft"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-hitzler-lauenburgelbe",
+   "nom": "Hitzler Werft GmbH",
+   "groupe": "Famille Klimenko (depuis le 1er mars 2021)",
+   "ville": "Lauenburg/Elbe",
+   "region": "Schleswig-Holstein",
+   "pays": "Allemagne",
+   "lat": 53.37898,
+   "lon": 10.55139,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit",
+    "naval-defense"
+   ],
+   "types_navires": [
+    "navire fluvial",
+    "navire spécial",
+    "bac fluvial",
+    "baliseur / navire de servitude",
+    "vedette de police et de surveillance côtière",
+    "navire de recherche"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Johann Georg Repsold",
+     "type": "Baliseur (Tonnenleger), reconverti en navire polyvalent sous le nom Lev Taifun",
+     "annee": 1964,
+     "longueur_m": 41.58,
+     "largeur_m": 8.09,
+     "jauge_gt": 263,
+     "energie": "2 moteurs diesel MAN, 514 kW, 2 propulseurs Voith-Schneider",
+     "client": "Wasser- und Schiffahrtsdirektion Hamburg",
+     "operateur": "Wasser- und Schifffahrtsamt Hamburg",
+     "pavillon": "Allemagne",
+     "imo": "8650382",
+     "source": "https://de.wikipedia.org/wiki/Johann_Georg_Repsold_(Schiff)"
+    },
+    {
+     "nom": "Fehmarn (ex-, aujourd'hui Gode Wind puis Diana L)",
+     "type": "Vedette de surveillance côtière, reconvertie en tender offshore",
+     "annee": 1988,
+     "longueur_m": 28.28,
+     "largeur_m": 6.4,
+     "jauge_gt": 146,
+     "port_lourd_dwt": 15,
+     "capacite_pax": 12,
+     "energie": "2 diesels Klöckner-Humboldt-Deutz TBD 604 BV 12, 2 394 kW",
+     "client": "Wasserschutzpolizei Schleswig-Holstein",
+     "operateur": "Reederei Norden-Frisia (ultérieurement)",
+     "pavillon": "Allemagne",
+     "imo": "8807404",
+     "source": "https://de.wikipedia.org/wiki/Gode_Wind_(Schiff,_1988)"
+    },
+    {
+     "nom": "Amt Neuhaus (bac de l'Elbe pour Bleckede)",
+     "type": "Bac fluvial roulier",
+     "annee": "2025 (livraison prévue)",
+     "port_lourd_dwt": 40,
+     "capacite_vehicules": 18,
+     "energie": "Gaz-électrique au biométhane, moteur électrique 300 kW (410 ch), premier bac au monde de ce type ; 6,8 M EUR dont 669 000 EUR d'aide fédérale",
+     "client": "MOIN, société de mobilité et d'infrastructure du Landkreis Lüneburg",
+     "operateur": "Landkreis Lüneburg",
+     "pavillon": "Allemagne",
+     "source": "https://www.landkreis-lueneburg.de/das-wichtigste-auf-einen-blick/aktuelle-informationen/presse/pressemitteilungen/innovativ-regional-und-nachhaltig-hitzler-werft-baut-neue-elbfaehre-fuer-bleckede-vertrag-in-lauenburg-unterzeichnet.html"
+    }
+   ],
+   "sources": [
+    "https://de.wikipedia.org/wiki/Hitzler_Werft",
+    "https://www.landkreis-lueneburg.de/das-wichtigste-auf-einen-blick/aktuelle-informationen/presse/pressemitteilungen/innovativ-regional-und-nachhaltig-hitzler-werft-baut-neue-elbfaehre-fuer-bleckede-vertrag-in-lauenburg-unterzeichnet.html"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-schiffswerfttrier-treves",
+   "nom": "Schiffswerft Trier (ex-Schiffswerft Hans Boost, Trier, Maschinen- und Stahlbau GmbH & Co. KG)",
+   "groupe": "Personenschifffahrt Gebr. Kolb OHG (exploitation depuis le 1er juillet 2024)",
+   "ville": "Trèves (Trier)",
+   "region": "Rhénanie-Palatinat",
+   "pays": "Allemagne",
+   "lat": 49.75962,
+   "lon": 6.64419,
+   "geo_precision": "ville",
+   "perimetres": [
+    "reparation-refit",
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "automoteur fluvial (Mosel, Rhin)",
+    "bac roulier fluvial",
+    "chaland et prahm",
+    "drague et bateau-grue",
+    "barcasse remorqueur et chaland à hydrocarbures pour la marine allemande"
+   ],
+   "description": "",
+   "navires_references": [
+    {
+     "nom": "Landskrone (Rheinfähre)",
+     "type": "Bac à double étrave (Doppelendfähre), Rhin PK 480,65 Nierstein/Oppenheim - Kornsand",
+     "annee": 1966,
+     "longueur_m": 45,
+     "largeur_m": 11.1,
+     "port_lourd_dwt": 140,
+     "capacite_pax": 300,
+     "capacite_vehicules": 21,
+     "energie": "4 diesels Deutz, 309 kW, 4 Schottel SRP100",
+     "operateur": "Rheinfähre Landskrone GmbH, Rüdesheim am Rhein",
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Rheinf%C3%A4hre_Landskrone"
+    },
+    {
+     "nom": "Stolzeneck",
+     "type": "Automoteur fluvial de charge",
+     "annee": 1970,
+     "port_lourd_dwt": 1500,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Schiffswerft_Hans_Boost,_Trier,_Maschinen-_und_Stahlbau"
+    },
+    {
+     "nom": "Vigilia",
+     "type": "Automoteur fluvial de charge (GMS)",
+     "annee": 1980,
+     "port_lourd_dwt": 2850,
+     "pavillon": "Allemagne",
+     "source": "https://www.binnenschifferforum.de/showthread.php?115846-Vigilia-GMS-04305500"
+    },
+    {
+     "nom": "Franca",
+     "type": "Automoteur fluvial de charge",
+     "annee": 1979,
+     "port_lourd_dwt": 2850,
+     "pavillon": "Allemagne",
+     "source": "https://de.wikipedia.org/wiki/Schiffswerft_Hans_Boost,_Trier,_Maschinen-_und_Stahlbau"
+    }
+   ],
+   "sources": [
+    "https://de.wikipedia.org/wiki/Schiffswerft_Hans_Boost,_Trier,_Maschinen-_und_Stahlbau"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
   }
  ],
  "equipementiers": [
