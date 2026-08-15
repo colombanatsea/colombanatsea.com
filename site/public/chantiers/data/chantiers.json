@@ -239239,5 +239239,1685 @@
    "contact_source": null,
    "contact_maj": "2026-08-15"
   }
+ ],
+ "bureaux_etudes": [
+  {
+   "id": "be-rollsroyce",
+   "cle": "rollsroyce",
+   "nom": "Rolls-Royce Marine (UT design)",
+   "pays": "Norvège",
+   "ville": "Kongsberg",
+   "contact": {
+    "web": "https://www.kongsbergmaritime.com/",
+    "telephone": "+47 33 03 24 07",
+    "adresse": "Kongsberg Maritime AS, Kirkegårdsveien 45, 3616 Kongsberg, Norvège"
+   },
+   "contact_source": "https://www.kongsbergmaritime.com/services/ship-design/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "navires de servitude offshore (psv, ahts)",
+    "éolien en mer",
+    "garde-côtes",
+    "navires de recherche",
+    "sismique",
+    "ferries et navires à passagers",
+    "pêche",
+    "aquaculture",
+    "brise-glace"
+   ],
+   "actif": true,
+   "actif_source": "Le bureau d'études UT n'a pas fermé : le portefeuille UT est passé de Rolls-Royce Marine à Kongsberg Maritime lors du rachat de 2019. La série UT est toujours commercialisée sur la page Ship Design de Kongsberg Maritime, décrite comme « a worldwide benchmark for specialised vessels ». Kongsberg Maritime publie des actualités datées en 2026 (contrat KOTUG du 9 juillet 2026, résultats T2 2026, acquisition de Berg Propulsion) et Kongsberg Maritime AS est enregistrée active au Brønnøysund, 3 689 salariés, derniers comptes déposés 2025. Réserve : la raison sociale « Rolls-Royce Marine » n'existe plus, et l'adresse rendue est le siège enregistré de Kongsberg Maritime AS, pas nécessairement le studio de conception historique (Ålesund / Ulsteinvik). Vague bureaux d'etudes du 2026-08-15. https://www.kongsbergmaritime.com/no/news-and-events/",
+   "sources": [
+    "https://www.kongsbergmaritime.com/services/ship-design/",
+    "https://www.kongsbergmaritime.com/no/news-and-events/",
+    "https://data.brreg.no/enhetsregisteret/api/enheter/979750730"
+   ]
+  },
+  {
+   "id": "be-multi",
+   "cle": "multi",
+   "nom": "Multi Maritime",
+   "pays": "Norvège",
+   "ville": "Førde",
+   "contact": {
+    "web": "https://www.multi-maritime.no/",
+    "telephone": "+47 57 82 30 00",
+    "adresse": "Firdavegen 6, 6800 Førde, Norvège (boîte postale 90, 6801 Førde) ; bureaux secondaires à Bergen (C. Sundts gate 1, 5004) et Florø (Strandgata 52, 6905)"
+   },
+   "contact_source": "https://www.multi-maritime.no/contacts",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "ferries rouliers à passagers",
+    "ferries électriques",
+    "navires à passagers",
+    "aquaculture et viviers",
+    "cargos",
+    "chimiquiers",
+    "navires de servitude offshore",
+    "brise-glace",
+    "propulsion ammoniac"
+   ],
+   "actif": true,
+   "actif_source": "Actualité datée du 16 mars 2026 : attribution des contrats de design et d'ingénierie pour la transformation de quatre ferries de Fjord1. Autres jalons récents : avis préliminaire favorable de la Sjøfartsdirektoratet pour le NORBJØRN à l'ammoniac (20 novembre 2025), contrat de conception de deux navires à passagers 100 % électriques pour la Suède (22 août 2025). Multi Maritime A/S est enregistrée active au Brønnøysund (org. 943 019 770), 14 salariés, derniers comptes 2024. Attention : le domaine multimaritime.no est hors service, le site réel est multi-maritime.no. Vague bureaux d'etudes du 2026-08-15. https://www.multi-maritime.no/news",
+   "sources": [
+    "https://www.multi-maritime.no/contacts",
+    "https://www.multi-maritime.no/news",
+    "https://data.brreg.no/enhetsregisteret/api/enheter/943019770"
+   ]
+  },
+  {
+   "id": "be-ulsteindesign",
+   "cle": "ulsteindesign",
+   "nom": "Ulstein Design",
+   "pays": "Norvège",
+   "ville": "Ulsteinvik",
+   "contact": {
+    "web": "https://ulstein.com/",
+    "telephone": "+47 7000 8000",
+    "adresse": "Ulstein Design & Solutions AS, Osnesvegen 110, 6065 Ulsteinvik, Norvège"
+   },
+   "contact_source": "https://ulstein.com/contact",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "navires de servitude offshore",
+    "éolien en mer (csov, sov)",
+    "poseurs de câbles",
+    "construction sous-marine",
+    "expédition et croisière d'exploration",
+    "remorqueurs",
+    "carènes x-bow et twin x-stern"
+   ],
+   "actif": true,
+   "actif_source": "Fil d'actualité très dense en 2026 : livraison d'un navire sous pavillon américain conçu par Ulstein Design & Solutions B.V. (9 juillet 2026), découpe de la première tôle du câblier CS Resilience pour OMS (7 juillet 2026), livraison du câblier DP3 Nexans Electra (18 mai 2026), résultats 2025 du groupe (19 juin 2026). Ulstein Design & Solutions AS est enregistrée active au Brønnøysund (org. 926 738 461), 28 salariés, comptes 2025 déposés. Vague bureaux d'etudes du 2026-08-15. https://ulstein.com/news",
+   "sources": [
+    "https://ulstein.com/contact",
+    "https://ulstein.com/news",
+    "https://data.brreg.no/enhetsregisteret/api/enheter/926738461"
+   ]
+  },
+  {
+   "id": "be-varddesign",
+   "cle": "varddesign",
+   "nom": "Vard Design",
+   "pays": "Norvège",
+   "ville": "Ålesund",
+   "contact": {
+    "web": "https://www.vard.com/",
+    "telephone": "+47 70 21 06 00",
+    "adresse": "Vard Design AS, Skansekaia 2, 6002 Ålesund, Norvège (Vard Group AS, P.O. Box 76, NO-6001 Ålesund)"
+   },
+   "contact_source": "https://www.vard.com/ship-design",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "navires de servitude offshore (psv, ahts)",
+    "construction sous-marine",
+    "énergies marines renouvelables",
+    "navires à passagers et croisière d'expédition",
+    "patrouilleurs hauturiers",
+    "pêche et aquaculture",
+    "navires de recherche"
+   ],
+   "actif": true,
+   "actif_source": "Article daté du 3 février 2026 sur la page actualités de Vard, « Markus and Alberto explores the future of ship design », consacré au bureau de design. La page Ship Design présente la gamme VARD-Series active et nomme le directeur général de Vard Design (Kjell Morten Urke). Vard Design AS est enregistrée active au Brønnøysund (org. 982 710 162), 44 salariés, comptes 2025 déposés. Vague bureaux d'etudes du 2026-08-15. https://www.vard.com/news",
+   "sources": [
+    "https://www.vard.com/ship-design",
+    "https://www.vard.com/news",
+    "https://data.brreg.no/enhetsregisteret/api/enheter/982710162"
+   ]
+  },
+  {
+   "id": "be-marinteknikk",
+   "cle": "marinteknikk",
+   "nom": "Marin Teknikk",
+   "pays": "Norvège",
+   "ville": "Gurskøy (Herøy)",
+   "contact": {
+    "web": "https://www.marinteknikk.no/",
+    "telephone": "+47 70 08 34 00",
+    "adresse": "Marin Teknikk AS, Industrivegen 21, NO-6080 Gurskøy, Norvège"
+   },
+   "contact_source": "https://www.marinteknikk.no/contact",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "navires de servitude offshore (ahts, psv, mpsv, imr, dsv)",
+    "poseurs de câbles et de conduites",
+    "sismique",
+    "pêche (chalutiers, senneurs, palangriers)",
+    "aquaculture et viviers",
+    "remorqueurs",
+    "cargos",
+    "yachts",
+    "multi hull design"
+   ],
+   "actif": true,
+   "actif_source": "Actualité du 20 avril 2026 : lancement chez Montex (Pologne) du premier navire fondé sur le Multi Hull Design de Marin Teknikk, transféré à Green Yard Kleven pour l'achèvement. Communiqué du 27 mars 2026, et contrat de design et d'ingénierie signé avec Chevalier Floatels le 26 septembre 2025. Marin Teknikk AS est enregistrée active au Brønnøysund (org. 990 306 850), 34 salariés, derniers comptes 2024. Vague bureaux d'etudes du 2026-08-15. https://www.marinteknikk.no/news",
+   "sources": [
+    "https://www.marinteknikk.no/contact",
+    "https://www.marinteknikk.no/news",
+    "https://data.brreg.no/enhetsregisteret/api/enheter/990306850"
+   ]
+  },
+  {
+   "id": "be-navalgroup",
+   "cle": "navalgroup",
+   "nom": "Naval Group",
+   "pays": "France",
+   "ville": "Paris",
+   "contact": {
+    "web": "https://www.naval-group.com/",
+    "telephone": "+33 1 40 59 50 00",
+    "adresse": "40-42 rue du Docteur Finlay, 75015 Paris, France"
+   },
+   "contact_source": "https://www.naval-group.com/fr/mentions-legales",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "sous-marins",
+    "frégates et navires de surface militaires",
+    "porte-avions",
+    "patrouilleurs",
+    "systèmes de combat et de mission",
+    "drones de surface et sous-marins",
+    "armes sous-marines",
+    "mco et services de flotte"
+   ],
+   "actif": true,
+   "actif_source": "Société anonyme à conseil d'administration, RCS Paris B 441 133 808, capital 563 000 000 €, mentions légales à jour sur le site institutionnel. État administratif « en activité » avec dépôt des comptes 2025 enregistré le 15 mai 2026, code NAF 30.11Z (construction de navires et de structures flottantes), plus de 10 000 salariés. Note de périmètre : Naval Group est à la fois architecte et constructeur, ce n'est pas un bureau d'études indépendant au sens des cinq autres cibles. Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/naval-group-441133808",
+   "sources": [
+    "https://www.naval-group.com/fr/mentions-legales",
+    "https://www.pappers.fr/entreprise/naval-group-441133808"
+   ]
+  },
+  {
+   "id": "be-felciyachtdesign",
+   "cle": "felciyachtdesign",
+   "nom": "Felci Yacht Design",
+   "pays": "Italie",
+   "ville": "Padenghe sul Garda (Brescia)",
+   "contact": {
+    "web": "https://www.felciyachtdesign.com/",
+    "telephone": "+39 030 990 8841",
+    "adresse": "Felci Yachts srl, Via Marconi 57, 25080 Padenghe sul Garda (BS), Italie"
+   },
+   "contact_source": "https://www.felciyachtdesign.com/contact/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "voiliers de croisiere",
+    "bluewater cruisers",
+    "fast cruisers",
+    "multicoques",
+    "voiliers de course",
+    "one-design",
+    "yachts custom",
+    "projets de serie pour chantiers"
+   ],
+   "actif": true,
+   "actif_source": "Site officiel en ligne et consulte le 15/08/2026, page contact a jour avec raison sociale Felci Yachts srl, P.IVA IT02841100163, REA BS 426390, telephone et email. Le pays probable indique (France) est errone : le studio est italien, fonde par Umberto Felci en 1993. Attention, le domaine felciyachts.com presente un certificat TLS invalide (certificat *.dadapro.com) ; le site accessible est felciyachtdesign.com. Vague bureaux d'etudes du 2026-08-15. https://www.felciyachtdesign.com/contact/",
+   "sources": [
+    "https://www.felciyachtdesign.com/contact/"
+   ]
+  },
+  {
+   "id": "be-wartsilashipdesign",
+   "cle": "wartsilashipdesign",
+   "nom": "Wärtsilä Ship Design",
+   "pays": "Finlande",
+   "ville": "Helsinki",
+   "contact": {
+    "web": "https://www.wartsila.com/",
+    "telephone": "+358 10 709 0000",
+    "adresse": "Wärtsilä Corporation, Wärtsilä Helsinki Campus, Hiililaiturinkuja 2, FI-00180 Helsinki, Finlande (siege du groupe ; aucune adresse de bureau d'etudes navales publiee)"
+   },
+   "contact_source": "https://www.wartsila.com/contact",
+   "contact_maj": "2026-08-15",
+   "competences": [],
+   "actif": null,
+   "actif_source": null,
+   "sources": [
+    "https://www.wartsila.com/contact",
+    "https://www.wartsila.com/marine/essentials-for-ship-designers"
+   ]
+  },
+  {
+   "id": "be-skipsteknisk",
+   "cle": "skipsteknisk",
+   "nom": "Skipsteknisk",
+   "pays": "Norvège",
+   "ville": "Ålesund",
+   "contact": {
+    "web": "https://www.skipsteknisk.no/",
+    "telephone": "+47 70 10 33 44",
+    "adresse": "Skipsteknisk AS, Klaus Nilsens gate 4, 6003 Ålesund (adresse postale : P.O. Box 36 Sentrum, NO-6001 Ålesund), Norvège"
+   },
+   "contact_source": "https://www.skipsteknisk.no/contact",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "peche (chalutiers arriere, palangriers, crabbiers)",
+    "navires de recherche et oceanographiques",
+    "offshore (construction, poseurs de cables)",
+    "energies marines renouvelables",
+    "aquaculture",
+    "navires militaires et patrouilleurs"
+   ],
+   "actif": true,
+   "actif_source": "Registre des entreprises norvegien consulte le 15/08/2026 : SKIPSTEKNISK AS, org. 966476850, enregistree le 20/02/1995, adresse Klaus Nilsens gate 4, 6003 Ålesund, code NACE 74.990, 53 salaries, ni faillite ni liquidation ni dissolution forcee. Site officiel en ligne avec contacts commerciaux nominatifs (CEO Hans Ove Holmoy +47 70 10 33 60, Anne Mari Lausund Relling offshore et renouvelables, Vegard Hjelvik peche et aquaculture). Email : office@skipsteknisk.no. Vague bureaux d'etudes du 2026-08-15. https://data.brreg.no/enhetsregisteret/api/enheter/966476850",
+   "sources": [
+    "https://www.skipsteknisk.no/contact",
+    "https://data.brreg.no/enhetsregisteret/api/enheter/966476850"
+   ]
+  },
+  {
+   "id": "be-lmgmarin",
+   "cle": "lmgmarin",
+   "nom": "LMG Marin",
+   "pays": "Norvège",
+   "ville": "Bergen",
+   "contact": {
+    "web": "https://www.lmgmarin.no/",
+    "telephone": "+47 55 59 40 00",
+    "adresse": "LMG Marin AS, Damsgårdsveien 14, 5058 Bergen (postal : Postboks 2424 Solheimsviken, 5824 Bergen), Norvège. Bureaux : Ålesund, Kongens gate 19, 6002 Ålesund (+47 90 65 42 60) ; France, 25 rue Théodore Ozenne, 31000 Toulouse et 68 rue de la République, 13002 Marseille (+33 5 36 09 00 71) ; Pologne, Jerzego Janosika 17, 71-424 Szczecin (+48 91 814 50 21)"
+   },
+   "contact_source": "https://www.lmgmarin.no/contact/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "ferries et car-ferries",
+    "ferries double-bout",
+    "navires a passagers",
+    "navires de charge",
+    "structures flottantes et plateformes",
+    "ingenierie et documentation de construction"
+   ],
+   "actif": true,
+   "actif_source": "Registre des entreprises norvegien consulte le 15/08/2026 : LMG MARIN AS, org. 998645964, adresse Damsgårdsveien 14, 5058 Bergen, code NACE 71.129, 34 salaries, derniers comptes annuels deposes pour l'exercice 2025, ni faillite ni liquidation. Signe d'activite supplementaire : ouverture d'un bureau a Ålesund annoncee en juin 2026 sur le site officiel, dirige par Severin Ulstein. Direction : Stig Rau Andersen (MD Bergen), Vincent Rudelle (MD France). Vague bureaux d'etudes du 2026-08-15. https://data.brreg.no/enhetsregisteret/api/enheter/998645964",
+   "sources": [
+    "https://www.lmgmarin.no/contact/",
+    "https://data.brreg.no/enhetsregisteret/api/enheter/998645964"
+   ]
+  },
+  {
+   "id": "be-havyarddesign",
+   "cle": "havyarddesign",
+   "nom": "Havyard Design",
+   "pays": "Norvège",
+   "ville": "Fosnavåg (Herøy)",
+   "contact": {
+    "web": "https://havdesign.no/",
+    "telephone": "+47 70 08 01 80",
+    "adresse": "HAV Design AS, Holmefjordvegen 1, 6090 Fosnavåg, Herøy, Norvège"
+   },
+   "contact_source": "https://havdesign.no/contact",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "aquaculture et peche (segment seafood)",
+    "ferries et navires cotiers",
+    "navires frigorifiques (reefer)",
+    "offshore et eolien en mer (sov)",
+    "brise-glaces",
+    "navires zero et bas carbone",
+    "packages systeme et ingenierie"
+   ],
+   "actif": true,
+   "actif_source": "Actif, sous une raison sociale changee, ce qui ne constitue pas une fermeture. Registre des entreprises norvegien consulte le 15/08/2026 : HAV DESIGN AS, org. 988162175, creee le 15/04/2005, Holmefjordvegen 1, 6090 Fosnavåg, code NACE 71.129, 42 salaries, membre d'un groupe (HAV Group ASA), ni faillite ni liquidation. Le registre confirme la chaine de noms : HAVYARD MARITIME AS (2005-2008) puis HAVYARD DESIGN & SOLUTIONS AS (2013-2021) puis HAV DESIGN AS. Le site du groupe revendique plus de 100 designs de navires realises. Email : office@havdesign.no (groupe : office@havgroup.no). Vague bureaux d'etudes du 2026-08-15. https://data.brreg.no/enhetsregisteret/api/enheter/988162175",
+   "sources": [
+    "https://havdesign.no/contact",
+    "https://data.brreg.no/enhetsregisteret/api/enheter/988162175"
+   ]
+  },
+  {
+   "id": "be-mauric",
+   "cle": "mauric",
+   "nom": "Mauric",
+   "pays": "France",
+   "ville": "Marseille",
+   "contact": {
+    "web": "https://www.mauric.com/",
+    "telephone": "+33 4 91 33 08 07 (Marseille) ; +33 2 51 86 49 49 (Nantes)",
+    "adresse": "MAURIC, 68 rue Sainte, 13001 Marseille, France (siege social, SIREN 331 430 306). Etablissement secondaire actif a Nantes depuis novembre 2021."
+   },
+   "contact_source": "https://www.mauric.com/contact-us",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "defense et securite (patrouilleurs)",
+    "offshore et energie",
+    "navires de recherche et hydrographie",
+    "peche et navires-ecoles de peche",
+    "ferries et ropax",
+    "navires a passagers",
+    "navires de charge",
+    "propulsion velique et navires bas carbone (hybride, electrique, carburants alternatifs)",
+    "services maritimes et servitude"
+   ],
+   "actif": true,
+   "actif_source": "Actif. Donnees legales francaises consultees le 15/08/2026 : MAURIC, SIREN 331 430 306, SA a directoire, siege 68 rue Sainte 13001 Marseille, NAF 71.12B, etat administratif A (active), comptes 2024 publies (CA 3,85 M EUR, resultat net 380 kEUR, 31 salaries), etablissement de Nantes actif depuis novembre 2021, president du directoire Vincent Seguin. Site officiel en ligne, se presentant comme « An Exail Group Company » et « Pioneering Maritime Innovation Since 1945 ». Attention, le domaine mauric.fr n'est plus detenu par le cabinet : il est parque en vente par un revendeur de noms de domaine. Le domaine vivant est mauric.com. Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/mauric-331430306",
+   "sources": [
+    "https://www.mauric.com/contact-us",
+    "https://www.pappers.fr/entreprise/mauric-331430306"
+   ]
+  },
+  {
+   "id": "be-skipskompetanse",
+   "cle": "skipskompetanse",
+   "nom": "Skipskompetanse",
+   "pays": "Norvège",
+   "ville": "Måløy",
+   "contact": {
+    "web": "https://skipskompetanse.no/",
+    "telephone": "+47 57 00 14 40",
+    "adresse": "Måløy Kompetansehub, Gate 1 nr. 20, 6700 Måløy, Norvège (postal : PB 266, 6701 Måløy) ; e-mail post@skipskompetanse.no"
+   },
+   "contact_source": "https://skipskompetanse.no/nyheter/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "brønnbåter (viviers)",
+    "pêche (senneurs, chalutiers pélagiques, palangriers)",
+    "navires de recherche",
+    "navires de servitude et workboats",
+    "catamarans",
+    "aquaculture"
+   ],
+   "actif": true,
+   "actif_source": "Article de presse professionnelle du 19 janvier 2026 : Rostein AS commande à Larsnes Mek. un nouveau vivier, 13e d'une série conçue par Skipskompetanse AS (design SK-6100 DM LCF III), avec Per Jørgen Silden de Skipskompetanse comme contact projet. Entité 993 096 504 enregistrée au Brønnøysund, ni faillite ni liquidation. Vague bureaux d'etudes du 2026-08-15. https://www.larsnes-mek.no/en/nyheter/rostein-as-orders-yet-another-live-fish-carrier-from-larsnes-mek/",
+   "sources": [
+    "https://skipskompetanse.no/nyheter/",
+    "https://www.larsnes-mek.no/en/nyheter/rostein-as-orders-yet-another-live-fish-carrier-from-larsnes-mek/",
+    "https://virksomhet.brreg.no/nb/oppslag/enheter/993096504"
+   ]
+  },
+  {
+   "id": "be-macduffshipdesign",
+   "cle": "macduffshipdesign",
+   "nom": "Macduff Ship Design",
+   "pays": "Écosse (Royaume-Uni)",
+   "ville": "Macduff, Aberdeenshire",
+   "contact": {
+    "web": "https://www.macduffshipdesign.com/",
+    "telephone": "+44 (0)1261 833 825",
+    "adresse": "Low Shore, Macduff, Aberdeenshire, Écosse AB44 1RE (siège social déclaré au registre : Johnstone House, 52-54 Rose Street, Aberdeen AB10 1HA)"
+   },
+   "contact_source": "https://www.macduffshipdesign.com/contact-us/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "remorqueurs asd et conventionnels",
+    "pêche",
+    "workboats",
+    "navires de servitude aquacole",
+    "pilotines, patrouilleurs, crew boats",
+    "navires polyvalents",
+    "propulsion hybride"
+   ],
+   "actif": true,
+   "actif_source": "Communiqué du 16 juin 2026 sur le site du cabinet : trois navires hybrides conçus par Macduff Ship Design commandés par Inverlussa Marine Services, livraison été 2027. Companies House : MACDUFF SHIP DESIGN LIMITED, SC143359, statut Active, derniers comptes arrêtés au 31 mars 2025, prochains comptes dus au 31 décembre 2026. Vague bureaux d'etudes du 2026-08-15. https://www.macduffshipdesign.com/news/inverlussa-press-release/",
+   "sources": [
+    "https://www.macduffshipdesign.com/contact-us/",
+    "https://www.macduffshipdesign.com/news/inverlussa-press-release/",
+    "https://find-and-update.company-information.service.gov.uk/company/SC143359"
+   ]
+  },
+  {
+   "id": "be-xavierfay",
+   "cle": "xavierfay",
+   "nom": "Xavier Faÿ",
+   "pays": "France",
+   "ville": null,
+   "contact": null,
+   "contact_source": null,
+   "contact_maj": null,
+   "competences": [
+    "catamarans de croisière",
+    "multicoques de plaisance",
+    "architecture navale voile"
+   ],
+   "actif": null,
+   "actif_source": null,
+   "sources": [
+    "https://www.bali-catamarans.com/en/catamarans/bali-5-8"
+   ]
+  },
+  {
+   "id": "be-vplpdesign",
+   "cle": "vplpdesign",
+   "nom": "VPLP Design",
+   "pays": "France",
+   "ville": "Paris (sièges secondaires Vannes et Nantes)",
+   "contact": {
+    "web": "https://www.vplp.fr/",
+    "telephone": "+33 1 42 77 24 00 (Paris) ; +33 2 97 44 74 19 (Vannes) ; +33 9 85 11 79 77 (Nantes)",
+    "adresse": "2 rue d'Hauteville, 75010 Paris (siège VPLP Design Paris, SIREN 429 420 094) ; Vannes : Parc du Golfe, 18 allée Loïc Caradec, 56000 Vannes (VPLP Design Vannes, SIREN 492 810 775) ; e-mail team@vplp.fr"
+   },
+   "contact_source": "https://www.vplp.fr/en/contact/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "multicoques de course",
+    "voiliers de croisière et catamarans de série",
+    "yachts",
+    "propulsion vélique (ailes, oceanwings)",
+    "navires de recherche et d'expédition",
+    "décarbonation, analyse de cycle de vie"
+   ],
+   "actif": true,
+   "actif_source": "Fil d'actualité du cabinet alimenté en 2026 : publications datées du 15 juillet 2026, 8 juillet 2026 et 3 juillet 2026. Au registre, VPLP DESIGN PARIS (SIREN 429 420 094) est en activité, mise à jour RCS et RNE du 15 août 2026. Vague bureaux d'etudes du 2026-08-15. https://www.vplp.fr/en/news/",
+   "sources": [
+    "https://www.vplp.fr/en/contact/",
+    "https://www.vplp.fr/en/news/",
+    "https://www.pappers.fr/entreprise/vplp-design-paris-429420094"
+   ]
+  },
+  {
+   "id": "be-saltshipdesign",
+   "cle": "saltshipdesign",
+   "nom": "Salt Ship Design",
+   "pays": "Norvège",
+   "ville": "Stord (bureaux à Bergen, Gdynia en Pologne et Novi Sad en Serbie)",
+   "contact": {
+    "web": "https://www.saltship.com/",
+    "telephone": "+47 466 56 300",
+    "adresse": "Sunnhordlandskaien 1, 5411 Stord, Norvège (postal : Postboks 13, 5401 Stord) ; Bergen : C. Sundts Gate 17, 5004 Bergen"
+   },
+   "contact_source": "https://www.saltship.com/contact",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "viviers et aquaculture",
+    "offshore éolien (sov, csov)",
+    "poseurs de câbles",
+    "subsea et construction",
+    "pêche",
+    "navires sismiques",
+    "psv et anchor handling",
+    "navires de logistique navale et militaire",
+    "ferries et ropax",
+    "navires d'expédition"
+   ],
+   "actif": true,
+   "actif_source": "Actualités datées du 12 août 2026 (deux viviers de 4 500 m³ commandés par Frøy), du 5 août 2026 (navire d'installation grand fond pour Solstad et SBM Offshore) et du 26 mai 2026 (contrat avec Kongsberg Defence & Aerospace pour la Marine royale norvégienne). Entité 897 523 752 au Brønnøysund, ni faillite ni liquidation. Vague bureaux d'etudes du 2026-08-15. https://www.saltship.com/news",
+   "sources": [
+    "https://www.saltship.com/contact",
+    "https://www.saltship.com/news",
+    "https://virksomhet.brreg.no/nb/oppslag/enheter/897523752"
+   ]
+  },
+  {
+   "id": "be-stirlingdesigninternational",
+   "cle": "stirlingdesigninternational",
+   "nom": "Stirling Design International",
+   "pays": "France",
+   "ville": "Nantes",
+   "contact": {
+    "web": "https://www.stirlingdesign.fr/",
+    "telephone": "+33 (0)2 40 95 79 45",
+    "adresse": "3 chemin du Pressoir Chênaie, 44100 Nantes ; e-mail contact@stirlingdesign.fr"
+   },
+   "contact_source": "https://www.stirlingdesign.fr/en/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "navires à passagers",
+    "paquebots de croisière et navires d'expédition",
+    "ferries",
+    "design intérieur et extérieur",
+    "architecture navale et avant-projets",
+    "navires de recherche",
+    "voiliers"
+   ],
+   "actif": true,
+   "actif_source": "Société STIRLING DESIGN INTERNATIONAL, SIREN 503 585 036, créée le 8 avril 2008, présidée par Thibaut Tincelin, statut « en activité », mise à jour RCS et RNE du 15 août 2026 (INSEE 14 août 2026), 6 à 9 salariés. Site du cabinet en ligne avec projets R&D Horizon Europe NEMOSHIP et WHISPER référencés 2025. Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/stirling-design-international-503585036",
+   "sources": [
+    "https://www.stirlingdesign.fr/en/",
+    "https://www.pappers.fr/entreprise/stirling-design-international-503585036",
+    "https://www.societe.com/societe/stirling-design-international-503585036.html"
+   ]
+  },
+  {
+   "id": "be-philippebriand",
+   "cle": "philippebriand",
+   "nom": "Philippe Briand",
+   "pays": "France",
+   "ville": "La Rochelle",
+   "contact": {
+    "web": "https://www.philippebriand.com/",
+    "telephone": "+33 5 46 50 57 44",
+    "adresse": "26 rue Saint-Sauveur, 17000 La Rochelle, France (studio européen) ; second studio 60 Sydney Street, Londres SW3 6PS, Royaume-Uni"
+   },
+   "contact_source": "https://www.philippebriand.com/contact/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "voiliers de grande croisière",
+    "superyachts à voile",
+    "motoryachts (vitruvius)",
+    "yachts à propulsion vélique",
+    "architecture navale de plaisance"
+   ],
+   "actif": true,
+   "actif_source": "Studio en activité, 15 collaborateurs répartis entre La Rochelle et Londres (page 'Our studios'). La structure porteuse PHILIPPE BRIAND LIMITED (n° 06656608, Londres, 'Specialised design activities') est 'Active' au registre britannique : comptes de l'exercice clos le 31/12/2025 à déposer avant le 30/09/2026, prochaine confirmation statement due le 08/08/2027, ce qui suppose une déclaration déposée en juillet 2026. La société française PHILIPPE BRIAND (SIREN 315986166, même adresse rue Saint-Sauveur) est en revanche cessée : la raison sociale française a disparu, pas le bureau d'études. Vague bureaux d'etudes du 2026-08-15. https://find-and-update.company-information.service.gov.uk/company/06656608",
+   "sources": [
+    "https://www.philippebriand.com/contact/",
+    "https://find-and-update.company-information.service.gov.uk/company/06656608"
+   ]
+  },
+  {
+   "id": "be-finotconq",
+   "cle": "finotconq",
+   "nom": "Finot-Conq",
+   "pays": "France",
+   "ville": "Vannes",
+   "contact": {
+    "web": "https://www.finot-conq.com/",
+    "telephone": "+33 2 97 40 81 81",
+    "adresse": "Parc du Golfe, 12 B allée Loïc Caradec, 56000 Vannes, France"
+   },
+   "contact_source": "http://finot.com/accueil/contact2.htm",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "voiliers de croisière",
+    "voiliers de course au large",
+    "yachts de luxe à voile",
+    "voiliers aluminium à quille relevable",
+    "architecture navale de série"
+   ],
+   "actif": true,
+   "actif_source": "Cabinet en activité sur l'avant-port de Vannes depuis 2009, dans la continuité du Groupe Finot. Preuve datée : le 11/06/2026 (article mis à jour le 15/06/2026), Figaro Nautisme rapporte qu'Alubat lance aux Sables-d'Olonne la construction du premier Cigale 15 QR, voilier de 15,70 m en aluminium 'dessiné par Finot-Conq'. La SAS FINOT-CONQ (SIREN 509602116) est active, 3 à 5 salariés, DG David de Durand de Prémorel. Vague bureaux d'etudes du 2026-08-15. https://figaronautisme.meteoconsult.fr/actus-nautisme-bateaux/2026-06-15/89296-alubat-lance-le-cigale-15-qr-un-voilier-pense-pour-aller-loin-et-explorer-plus-librement",
+   "sources": [
+    "http://finot.com/accueil/contact2.htm",
+    "https://figaronautisme.meteoconsult.fr/actus-nautisme-bateaux/2026-06-15/89296-alubat-lance-le-cigale-15-qr-un-voilier-pense-pour-aller-loin-et-explorer-plus-librement",
+    "https://www.pappers.fr/entreprise/finot-conq-509602116"
+   ]
+  },
+  {
+   "id": "be-jeanfrancoisdelvoye",
+   "cle": "jeanfrancoisdelvoye",
+   "nom": "Jean-François Delvoye",
+   "pays": "France",
+   "ville": "Paimpol",
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "Delvoye Design SARL, 18 rue de Beauport, 22500 Paimpol, France"
+   },
+   "contact_source": "https://bretagne-nautisme.bzh/structure/delvoye-design-sarl-a5f8219b-7495-412a-84b0-fdb2cdb72266/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "voiliers de grande croisière en aluminium",
+    "dériveurs intégraux / quille relevable",
+    "voiliers d'expédition hautes latitudes",
+    "conseil et études dans le domaine naval"
+   ],
+   "actif": true,
+   "actif_source": "Concepteur et fondateur du chantier Boréal (Tréguier) ; gammes Boréal 44, 47, 52, 55, 70 en aluminium. Son bureau d'études DELVOYE DESIGN SARL (SIREN 890289796, Paimpol, gérants Jean-François Delvoye et Claire Jacob) est en activité : déclarations de comptes confidentiels déposées en 2025 et 2026, dernière mise à jour du registre le 15/08/2026. Aucun site web propre identifié. Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/delvoye-design-sarl-890289796",
+   "sources": [
+    "https://bretagne-nautisme.bzh/structure/delvoye-design-sarl-a5f8219b-7495-412a-84b0-fdb2cdb72266/",
+    "https://www.pappers.fr/entreprise/delvoye-design-sarl-890289796",
+    "https://www.boat-specs.com/sailing/fr/architectes/jean-francois-delvoye"
+   ]
+  },
+  {
+   "id": "be-merdesign",
+   "cle": "merdesign",
+   "nom": "Mer et Design",
+   "pays": "France",
+   "ville": "Valbonne (Sophia Antipolis)",
+   "contact": {
+    "web": "https://meretdesign.fr/",
+    "telephone": "+33 4 92 96 06 09",
+    "adresse": "Buropolis 3, 1240 route des Dolines, 06560 Valbonne / Sophia Antipolis, France"
+   },
+   "contact_source": "https://meretdesign.fr/expertise-services/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "navires à passagers",
+    "navettes inter-îles",
+    "catamarans rapides",
+    "ferries côtiers",
+    "vedettes touristiques",
+    "navires de servitude et de travail",
+    "navires de pêche techniques",
+    "navires de sécurité, plongée et fermes marines"
+   ],
+   "actif": true,
+   "actif_source": "Bureau d'architecture navale actif, 35 ans d'expérience revendiqués, plus de 70 % de l'activité sur les navires à passagers, adossé au groupe CNOI (Chantier Naval de l'Océan Indien) depuis 2019. La SAS MER ET DESIGN (SIREN 419721188, président Emmanuel Le Roy depuis 2021) est en activité, 7 salariés, CA 829 k€ en 2023, aucune procédure collective. Contact également par email contact@meretdesign.fr. Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/mer-et-design-419721188",
+   "sources": [
+    "https://meretdesign.fr/expertise-services/",
+    "https://www.pappers.fr/entreprise/mer-et-design-419721188"
+   ]
+  },
+  {
+   "id": "be-alternativesenergies",
+   "cle": "alternativesenergies",
+   "nom": "Alternatives Energies",
+   "pays": "France",
+   "ville": "La Rochelle",
+   "contact": {
+    "web": "https://www.alternativesenergies.com/",
+    "telephone": "+33 5 46 50 29 87",
+    "adresse": "52 rue Sénac de Meilhan, 17000 La Rochelle, France"
+   },
+   "contact_source": "https://www.alternativesenergies.com/entreprise-alternatives-energies/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "propulsion électrique",
+    "hybridation navale",
+    "navires à passagers et bacs / passeurs",
+    "solaire embarqué",
+    "piles à combustible hydrogène",
+    "gestion d'énergie de bord",
+    "rétrofit"
+   ],
+   "actif": true,
+   "actif_source": "Intégrateur-concepteur de systèmes de propulsion propre pour navires professionnels et fluviaux (premier bac 100 % électrique mis en service à La Rochelle dès 1998). Preuve datée : article du 30/06/2026 annonçant la construction d'un bâtiment industriel de 1 200 m² dans le parc Technocéan à La Rochelle, avec 10 à 20 emplois attendus. La SAS ALTERNATIVES ENERGIES (SIREN 410433304) est active, présidée par FOUNTAINE PAJOT, DG Antoine Lecestre depuis le 26/07/2024, CA 4,98 M€ en 2024 (comptes déposés le 28/04/2025), mise à jour registre du 15/08/2026. Vague bureaux d'etudes du 2026-08-15. https://www.en2mots.info/une/2026/06/30/878105-Alternatives+Energies+s%27implante+%C3%A0+La+Rochelle",
+   "sources": [
+    "https://www.alternativesenergies.com/entreprise-alternatives-energies/",
+    "https://www.en2mots.info/une/2026/06/30/878105-Alternatives+Energies+s%27implante+%C3%A0+La+Rochelle",
+    "https://www.pappers.fr/entreprise/alternatives-energies-410433304"
+   ]
+  },
+  {
+   "id": "be-barreauneuman",
+   "cle": "barreauneuman",
+   "nom": "Barreau-Neuman",
+   "pays": "France",
+   "ville": "Saint-Nazaire",
+   "contact": {
+    "web": "https://barreau-neuman.com/",
+    "telephone": "+33 2 51 76 91 19",
+    "adresse": "1 rue du Port, 44600 Saint-Nazaire, France"
+   },
+   "contact_source": "https://barreau-neuman.com/contact/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "catamarans et multicoques",
+    "voiliers de croisière et de course",
+    "navires militaires et de défense",
+    "navires de sauvetage (snsm)",
+    "navires à passagers",
+    "drones de surface",
+    "navires de pêche",
+    "décarbonation et propulsion électrique / hybride",
+    "assistance vélique",
+    "calculs de stabilité, structure et hydrodynamique",
+    "refit"
+   ],
+   "actif": true,
+   "actif_source": "Duo formé en 2006 entre l'architecte naval Christophe Barreau (Catana, Outremer, Windelo) et l'ingénieur Frédéric Neuman ; la marque BARREAU·NEUMAN reste le nom de domaine et l'identité historique, l'agence s'affiche désormais sous 'Agence NEUMAN'. La SARL NEUMAN (SIREN 940799208, 1 rue du Port à Saint-Nazaire, gérant Frédéric Neuman) a été créée le 10/02/2025, capital 350 k€, comptes déposés le 19/06/2026. Site refondu en janvier 2026 (médias datés 2026/01). Références affichées : DGA, SNSM, Thales, Bénéteau, Outremer, Bureau Veritas, ports et parcs naturels marins. Changement de raison sociale, pas fermeture. Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/neuman-940799208",
+   "sources": [
+    "https://barreau-neuman.com/contact/",
+    "https://www.pappers.fr/entreprise/neuman-940799208"
+   ]
+  },
+  {
+   "id": "be-tomraengineering",
+   "cle": "tomraengineering",
+   "nom": "Tomra Engineering",
+   "pays": "Norvège",
+   "ville": "Tomrefjord (commune de Vestnes)",
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "Mathsonbygget, Vikvegen 55, 6393 Tomrefjord, Norvège"
+   },
+   "contact_source": "https://virksomhet.brreg.no/nb/oppslag/enheter/977518334",
+   "contact_maj": "2026-08-15",
+   "competences": [],
+   "actif": true,
+   "actif_source": "TOMRA ENGINEERING AS, org. 977518334, inscrite au registre norvégien depuis le 12/05/1997, 6 salariés, ni faillite ni liquidation, dernier exercice comptable transmis : 2025. Vague bureaux d'etudes du 2026-08-15. https://virksomhet.brreg.no/nb/oppslag/enheter/977518334",
+   "sources": [
+    "https://virksomhet.brreg.no/nb/oppslag/enheter/977518334"
+   ]
+  },
+  {
+   "id": "be-coprexma",
+   "cle": "coprexma",
+   "nom": "Coprexma",
+   "pays": "France",
+   "ville": "Pont-l'Abbé (Finistère)",
+   "contact": {
+    "web": "https://coprexma.fr/",
+    "telephone": "+33 2 98 82 47 71",
+    "adresse": "ZA du Guirric, 2 rue du Menhir, 29120 Pont-l'Abbé, France"
+   },
+   "contact_source": "https://coprexma.fr/contact/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "pêche",
+    "navires à passagers",
+    "navires de servitude",
+    "cargos",
+    "pilotines",
+    "action de l'état en mer",
+    "propulsion électrique",
+    "pile à combustible hydrogène",
+    "acier, aluminium, composite, bois"
+   ],
+   "actif": true,
+   "actif_source": "SASU COPREXMA, SIREN 444119614, état administratif actif, présidence renouvelée le 26/03/2025, derniers comptes déposés le 23/05/2025 pour l'exercice clos au 30/09/2024. Aucune procédure collective. Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/coprexma-444119614",
+   "sources": [
+    "https://coprexma.fr/contact/",
+    "https://www.pappers.fr/entreprise/coprexma-444119614"
+   ]
+  },
+  {
+   "id": "be-consult",
+   "cle": "consult",
+   "nom": "Naval Consult",
+   "pays": null,
+   "ville": null,
+   "contact": null,
+   "contact_source": null,
+   "contact_maj": null,
+   "competences": [],
+   "actif": null,
+   "actif_source": null,
+   "sources": []
+  },
+  {
+   "id": "be-deltamarin",
+   "cle": "deltamarin",
+   "nom": "Deltamarin",
+   "pays": "Finlande",
+   "ville": "Turku",
+   "contact": {
+    "web": "https://deltamarin.com/",
+    "telephone": "+358 2 4336 300",
+    "adresse": "Postikatu 2, FI-20250 Turku, Finlande"
+   },
+   "contact_source": "https://deltamarin.com/contact/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "ferries ropax",
+    "navires à passagers",
+    "méthaniers lng",
+    "car-carriers pctc",
+    "cargos",
+    "open deck carriers",
+    "navires classe glace",
+    "offshore",
+    "propulsion vélique",
+    "hybride et méthanol",
+    "hydrodynamique et rétrofit"
+   ],
+   "actif": true,
+   "actif_source": "Bureau d'études pleinement actif : communiqué du 13/05/2026 sur son entrée dans le projet Horizon Europe H4PERION, et contrat de basic design signé pour l'open deck carrier de Meriaura annoncé le 28/01/2026. Le pays probable indiqué (Suède) est faux : le siège est finlandais, à Turku, avec bureaux à Helsinki, Rauma, Gdansk et Shanghai. Vague bureaux d'etudes du 2026-08-15. https://deltamarin.com/news/press-release/article/deltamarin-contributes-to-advancing-hydrogen-powered-shipping-in-new-eu-funded-h4perion-project/",
+   "sources": [
+    "https://deltamarin.com/contact/",
+    "https://deltamarin.com/news/press-release/article/deltamarin-contributes-to-advancing-hydrogen-powered-shipping-in-new-eu-funded-h4perion-project/"
+   ]
+  },
+  {
+   "id": "be-berretracoupeau",
+   "cle": "berretracoupeau",
+   "nom": "Berret-Racoupeau",
+   "pays": "France",
+   "ville": "La Rochelle",
+   "contact": {
+    "web": "https://www.berret-racoupeau.com/",
+    "telephone": "+33 5 46 45 79 79",
+    "adresse": "La Ville en Bois, 3 bis avenue des Amériques, 17000 La Rochelle, France"
+   },
+   "contact_source": "https://www.berret-racoupeau.com/contact_uk.php",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "yachts à voile",
+    "yachts à moteur",
+    "catamarans et multicoques",
+    "voiliers hauturiers",
+    "yachts de série",
+    "yachts custom",
+    "design extérieur",
+    "architecture intérieure"
+   ],
+   "actif": true,
+   "actif_source": "SAS BERRET RACOUPEAU YACHT DESIGN, SIREN 397980368, état actif ; derniers comptes déposés le 06/05/2026 pour l'exercice clos au 31/07/2025 (CA 3,18 M€). Le site annonce trois grands multicoques en construction en juin 2026 et le dévoilement du Hanse 590 en décembre 2025. Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/berret-racoupeau-yacht-design-397980368",
+   "sources": [
+    "https://www.berret-racoupeau.com/contact_uk.php",
+    "https://www.pappers.fr/entreprise/berret-racoupeau-yacht-design-397980368"
+   ]
+  },
+  {
+   "id": "be-christophebarreau",
+   "cle": "christophebarreau",
+   "nom": "Christophe Barreau",
+   "pays": null,
+   "ville": null,
+   "contact": null,
+   "contact_source": null,
+   "contact_maj": null,
+   "competences": [],
+   "actif": null,
+   "actif_source": null,
+   "sources": []
+  },
+  {
+   "id": "be-akerdesign",
+   "cle": "akerdesign",
+   "nom": "Aker Yards Design",
+   "pays": "Norvège",
+   "ville": "Ålesund",
+   "contact": {
+    "web": "https://www.vard.com/",
+    "telephone": "+47 70 21 06 00",
+    "adresse": "Skansekaia 2, 6002 Ålesund, Norvège (Postboks 76, 6001 Ålesund)"
+   },
+   "contact_source": "https://virksomhet.brreg.no/nb/oppslag/enheter/982710162",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "offshore",
+    "navires de servitude",
+    "pêche et aquaculture",
+    "expédition et croisière",
+    "yachts",
+    "militaire et garde-côtes",
+    "éolien offshore (csov/sov)",
+    "câbliers"
+   ],
+   "actif": true,
+   "actif_source": "Le bureau d'études n'a pas fermé, il a changé de nom. L'entité Brønnøysund 982710162 porte les anciennes raisons sociales Aker Yards Prosjektutvikling AS, Aker Yards Project AS, STX Norway Offshore Design AS et STX OSV Design AS, et s'appelle aujourd'hui VARD DESIGN AS, Ålesund. Registre consulté le 15/08/2026 : 44 salariés, derniers comptes annuels déposés pour l'exercice 2025, aucune procédure de faillite ni de liquidation. Objet social enregistré : « Markeds-, prosjektutvikling og prosjektering av skip ». Cohérent avec les chantiers du corpus, Vard Søviknes et Vard Aukra appartenant au même groupe Vard. Vague bureaux d'etudes du 2026-08-15. https://data.brreg.no/enhetsregisteret/api/enheter/982710162",
+   "sources": [
+    "https://virksomhet.brreg.no/nb/oppslag/enheter/982710162",
+    "https://data.brreg.no/enhetsregisteret/api/enheter/982710162"
+   ]
+  },
+  {
+   "id": "be-more",
+   "cle": "more",
+   "nom": "Møre Maritime",
+   "pays": "Norvège",
+   "ville": "Kristiansund",
+   "contact": {
+    "web": "https://www.moremaritime.no/",
+    "telephone": "+47 71 58 30 00",
+    "adresse": "Dalegata 137, 6518 Kristiansund N, Norvège"
+   },
+   "contact_source": "https://www.moremaritime.no/kontakt-oss/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "aquaculture",
+    "viviers (brønnbåter)",
+    "navires de servitude",
+    "navires de transformation",
+    "pêche",
+    "ferries électriques",
+    "ingénierie et transformation"
+   ],
+   "actif": true,
+   "actif_source": "MØRE MARITIME AS, org. 985 464 138, immatriculée le 10/03/2003. Registre Brønnøysund consulté le 15/08/2026 : 8 salariés, derniers comptes annuels déposés pour l'exercice 2025, aucune faillite ni liquidation. Objet : développement, marketing et vente de design de navires et services d'ingénierie. Le site publie des projets récents, dont un concept de sundbåt 100 % électrique de 20 m et 99 passagers pour Kristiansund. Vague bureaux d'etudes du 2026-08-15. https://data.brreg.no/enhetsregisteret/api/enheter/985464138",
+   "sources": [
+    "https://www.moremaritime.no/kontakt-oss/",
+    "https://data.brreg.no/enhetsregisteret/api/enheter/985464138",
+    "https://virksomhet.brreg.no/nb/oppslag/enheter/985464138"
+   ]
+  },
+  {
+   "id": "be-seacon",
+   "cle": "seacon",
+   "nom": "Seacon",
+   "pays": "Norvège",
+   "ville": "Måløy",
+   "contact": {
+    "web": "https://www.seacon.no/",
+    "telephone": "+47 57 84 84 00",
+    "adresse": "Gate 1 nr 108 (Sjøgata), 6700 Måløy, Norvège"
+   },
+   "contact_source": "https://www.seacon.no/om-seacon",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "pêche",
+    "navires côtiers",
+    "chalutiers",
+    "transformations et allongements",
+    "ingénierie maritime 3d"
+   ],
+   "actif": true,
+   "actif_source": "SEACON AS, org. 988 509 612, créée le 10/06/2005, Måløy (commune de Kinn). Registre Brønnøysund consulté le 15/08/2026 : derniers comptes annuels déposés pour l'exercice 2025, aucune faillite, liquidation ni dissolution forcée. Le site annonce un contrat récent avec Oma Kyst AS pour un caseyeur côtier de 15 m de type SC15 (MS Katrine S). Cohérent avec les chantiers du corpus, Stadyard AS et Solund Verft AS figurant dans ses références de presse. Vague bureaux d'etudes du 2026-08-15. https://data.brreg.no/enhetsregisteret/api/enheter/988509612",
+   "sources": [
+    "https://www.seacon.no/om-seacon",
+    "https://data.brreg.no/enhetsregisteret/api/enheter/988509612",
+    "https://virksomhet.brreg.no/nb/oppslag/enheter/988509612"
+   ]
+  },
+  {
+   "id": "be-heimlishipdesign",
+   "cle": "heimlishipdesign",
+   "nom": "Heimli Ship Design",
+   "pays": "Norvège",
+   "ville": "Fitjar",
+   "contact": {
+    "web": "https://www.heimlishipdesign.no/",
+    "telephone": "+47 469 17 270",
+    "adresse": "Havnavegen 90, 5419 Fitjar, Norvège (Postboks 102, 5418 Fitjar)"
+   },
+   "contact_source": "https://www.heimlishipdesign.no/kontakt-oss/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "pêche",
+    "navires de travail",
+    "navires de transformation",
+    "viviers (brønnbåter)",
+    "aquaculture"
+   ],
+   "actif": true,
+   "actif_source": "Entité juridique HEIMLI AS, org. 993 231 908, immatriculée le 27/10/2008, même adresse que le site (Havnavegen 90, Fitjar), site déclaré heimli.com. Registre Brønnøysund consulté le 15/08/2026 : derniers comptes annuels déposés pour l'exercice 2025, aucune faillite ni liquidation. Objet : dessins de construction et calculs pour l'industrie maritime. Directeur général Asbjørn Vik, asbjorn.vik@heimli.com, +47 934 10 704. Contact général post@heimli.com. Cohérent avec le corpus, la plupart des navires référencés étant construits chez FMV AS (Fitjar Mekaniske Verksted). Vague bureaux d'etudes du 2026-08-15. https://data.brreg.no/enhetsregisteret/api/enheter/993231908",
+   "sources": [
+    "https://www.heimlishipdesign.no/kontakt-oss/",
+    "https://data.brreg.no/enhetsregisteret/api/enheter/993231908",
+    "https://virksomhet.brreg.no/nb/oppslag/enheter/993231908"
+   ]
+  },
+  {
+   "id": "be-solstrandtrading",
+   "cle": "solstrandtrading",
+   "nom": "Solstrand Trading",
+   "pays": "Norvège",
+   "ville": "Tomrefjord (Vestnes)",
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "Postboks 23, 6398 Tomrefjord, 6393 Tomrefjord, commune de Vestnes, Norvège"
+   },
+   "contact_source": "https://virksomhet.brreg.no/nb/oppslag/enheter/996521532",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "pêche",
+    "aquaculture",
+    "design industriel de coques"
+   ],
+   "actif": true,
+   "actif_source": "SOLSTRAND TRADING AS, org. 996 521 532, immatriculée le 05/02/2011, assujettie TVA depuis mai 2011, capital 100 000 NOK. Registre Brønnøysund consulté le 15/08/2026 : derniers comptes annuels déposés pour l'exercice 2025, aucune faillite, liquidation ni dissolution forcée. Code NACE 74.110 avec activité déclarée « Design av båter til fiskeri og havbruk » (conception de bateaux de pêche et d'aquaculture). Aucun site web propre trouvé, aucun numéro de téléphone public : l'entité est domiciliée à Tomrefjord, siège du chantier Solstrand Verft AS (Fjordvegen 684, 6393 Tomrefjord, +47 71 18 81 20), mais le site de ce chantier ne mentionne pas Solstrand Trading, donc le rattachement n'est pas rendu comme un contact. Vague bureaux d'etudes du 2026-08-15. https://data.brreg.no/enhetsregisteret/api/enheter/996521532",
+   "sources": [
+    "https://virksomhet.brreg.no/nb/oppslag/enheter/996521532",
+    "https://data.brreg.no/enhetsregisteret/api/enheter/996521532"
+   ]
+  },
+  {
+   "id": "be-dcns",
+   "cle": "dcns",
+   "nom": "DCNS / Naval Group",
+   "pays": "France",
+   "ville": null,
+   "contact": {
+    "web": "https://www.naval-group.com/",
+    "telephone": null,
+    "adresse": null
+   },
+   "contact_source": "https://www.naval-group.com/en/singapore",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "militaire",
+    "frégates",
+    "sous-marins",
+    "garde-côtes et sécurité maritime côtière",
+    "maintien en condition opérationnelle",
+    "modernisation et refonte",
+    "barrières flottantes"
+   ],
+   "actif": true,
+   "actif_source": "DCNS a été renommée Naval Group en 2017, le bureau d'études n'a pas disparu. La filiale citée par le corpus est Naval Group Far East, créée à Singapour en 2005 et détenue à 100 % par Naval Group SA : elle assure la maintenance et le soutien des frégates de classe Formidable et des barrières flottantes de la Republic of Singapore Navy, ces frégates ayant été construites chez ST Engineering Marine (Benoi Yard) sur conception DCNS. Page consultée le 15/08/2026, contenu à jour 2026. Réserve : la maison mère est française, la localisation singapourienne ne concerne que la filiale de soutien, et aucune adresse postale ni téléphone n'est publié sur la page consultée, donc ces champs restent nuls plutôt que devinés. Vague bureaux d'etudes du 2026-08-15. https://www.naval-group.com/en/singapore",
+   "sources": [
+    "https://www.naval-group.com/en/singapore"
+   ]
+  },
+  {
+   "id": "be-shipst",
+   "cle": "shipst",
+   "nom": "Ship-ST",
+   "pays": "France",
+   "ville": "Lorient",
+   "contact": {
+    "web": "https://www.ship-st.com/",
+    "telephone": "+33 2 97 50 38 05",
+    "adresse": "58 avenue de La Perrière, 56100 Lorient, France (2e bureau : 6 rue Baboneau, 44000 Nantes)"
+   },
+   "contact_source": "https://www.ship-st.com/contact.php",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "navires de recherche",
+    "ferries / navires à passagers",
+    "transport fluvial urbain",
+    "pêche",
+    "patrouilleurs",
+    "propulsion hydrogène",
+    "navires de servitude"
+   ],
+   "actif": true,
+   "actif_source": "SARL SHIP ST, SIREN 442013355, immatriculée depuis le 01/04/2002, statut « en activité », deux établissements actifs (Lorient et Nantes), mise à jour RCS/RNE du 15/08/2026 et INSEE du 14/08/2026. Gérant Laurent Mermier. Effectif 10-19 salariés. Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/ship-st-442013355",
+   "sources": [
+    "https://www.ship-st.com/contact.php",
+    "https://www.pappers.fr/entreprise/ship-st-442013355"
+   ]
+  },
+  {
+   "id": "be-pantocarene",
+   "cle": "pantocarene",
+   "nom": "Pantocarène",
+   "pays": "France",
+   "ville": "Vannes",
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "4 rue Louis de Broglie, 56000 Vannes, France"
+   },
+   "contact_source": "https://www.societe.com/societe/pantocarene-344239470.html",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "conception navale",
+    "études techniques",
+    "contrôle et surveillance de construction"
+   ],
+   "actif": true,
+   "actif_source": "PANTOCARENE, SIREN 344239470, créée le 03/03/1988, statut « en activité », gérant Didier Marchand, 1-2 salariés. Mise à jour RCS/RNE du 15/08/2026 (Pappers) et du 14/08/2026 (societe.com). Siège transféré d'Arzon à Vannes au 01/01/2018. Aucun site web actif trouvé : les domaines pantocarene.com, pantocarene.fr et pantocarene.net ne résolvent plus en DNS. Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/pantocarene-344239470",
+   "sources": [
+    "https://www.societe.com/societe/pantocarene-344239470.html",
+    "https://www.pappers.fr/entreprise/pantocarene-344239470"
+   ]
+  },
+  {
+   "id": "be-akerarctic",
+   "cle": "akerarctic",
+   "nom": "Aker Arctic",
+   "pays": "Finlande",
+   "ville": "Helsinki",
+   "contact": {
+    "web": "https://railotech.fi/",
+    "telephone": "+358 10 323 6300",
+    "adresse": "Merenkulkijankatu 6, 00980 Helsinki, Finlande"
+   },
+   "contact_source": "https://railotech.fi/en/contact/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "brise-glace",
+    "navires de classe glace",
+    "navires polaires",
+    "essais en bassin de glace",
+    "corvettes / militaire",
+    "propulsion azimutale (das)"
+   ],
+   "actif": true,
+   "actif_source": "Actif, mais attention : le pays probable indiqué (Norvège) est faux, Aker Arctic est finlandais (Helsinki). Le domaine akerarctic.fi redirige désormais en HTTP 301 vers railotech.fi : le bureau a été rebaptisé Railo Technology Inc, même siège, même téléphone. Preuve datée d'activité : actualités du 07/07/2026 (« Two icebreakers, sixty years apart »), 28/06/2026 (conception du prochain brise-glace polaire canadien) et 26/06/2026. Changement de marque, pas de fermeture. Vague bureaux d'etudes du 2026-08-15. https://railotech.fi/en/news/",
+   "sources": [
+    "https://railotech.fi/en/contact/",
+    "https://railotech.fi/en/news/"
+   ]
+  },
+  {
+   "id": "be-stefanqviberg",
+   "cle": "stefanqviberg",
+   "nom": "Stefan Qviberg",
+   "pays": "Suède",
+   "ville": null,
+   "contact": null,
+   "contact_source": null,
+   "contact_maj": null,
+   "competences": [],
+   "actif": null,
+   "actif_source": null,
+   "sources": []
+  },
+  {
+   "id": "be-pierredelion",
+   "cle": "pierredelion",
+   "nom": "Pierre Delion",
+   "pays": "France",
+   "ville": "Nantes",
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "ARCHI DELION, 4 rue Gresset, 44000 Nantes, France"
+   },
+   "contact_source": "https://www.pappers.fr/entreprise/archi-delion-810837518",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "bateaux motorisés et non motorisés",
+    "plans de construction",
+    "aménagement de navires"
+   ],
+   "actif": true,
+   "actif_source": "Exerce via ARCHI DELION SARL, SIREN 810837518, créée le 01/04/2015, statut « en activité », gérant Pierre Delion, 6-9 salariés. Objet social déclaré : « conception et réalisation de plans pour la construction et l'aménagement de bateaux motorisés ou non, structures et équipements ». Dépôts de comptes annuels au BODACC jusqu'en avril 2026, aucune procédure collective. Aucun site web trouvé (archidelion.com et archidelion.fr ne résolvent pas en DNS). Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/archi-delion-810837518",
+   "sources": [
+    "https://www.pappers.fr/entreprise/archi-delion-810837518"
+   ]
+  },
+  {
+   "id": "be-lurssen",
+   "cle": "lurssen",
+   "nom": "Lürssen",
+   "pays": "Allemagne",
+   "ville": "Bremen-Vegesack",
+   "contact": {
+    "web": "https://www.lurssen.com/",
+    "telephone": "+49 421 6604 0",
+    "adresse": "Zum Alten Speicher 11, 28759 Bremen-Vegesack, Allemagne"
+   },
+   "contact_source": "https://www.lurssen.com/en/contact/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "yachts",
+    "superyachts et gigayachts",
+    "refit",
+    "design et ingénierie intégrés"
+   ],
+   "actif": true,
+   "actif_source": "Actif. Le pays probable indiqué (France) est faux : Lürssen est allemand, siège à Bremen-Vegesack. Preuve datée : communiqué de presse du 13/03/2026 annonçant la livraison du yacht de 78,20 m ODISEA. Bureau de design et d'ingénierie interne revendiqué sur la page dédiée du site. Vague bureaux d'etudes du 2026-08-15. https://www.lurssen.com/en/news-media-friends/press-releases/",
+   "sources": [
+    "https://www.lurssen.com/en/contact/",
+    "https://www.lurssen.com/en/news-media-friends/press-releases/"
+   ]
+  },
+  {
+   "id": "be-neptech",
+   "cle": "neptech",
+   "nom": "NepTech",
+   "pays": "France",
+   "ville": "Aix-en-Provence",
+   "contact": {
+    "web": "https://neptech.co/",
+    "telephone": null,
+    "adresse": "Domaine du Petit Arbois, Avenue Louis Philibert, 13100 Aix-en-Provence, France (email contact(at)neptech.co)"
+   },
+   "contact_source": "https://neptech.co/contact-fr/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "navires a passagers",
+    "navettes maritimes et fluviales",
+    "navires de servitude",
+    "propulsion electrique",
+    "hydrogene / h2-ready",
+    "architecture navale",
+    "cfd"
+   ],
+   "actif": true,
+   "actif_source": "Societe NEPTECH, SIREN 883 708 687, creee le 19/05/2020, statut en activite ; comptes de l'exercice clos au 31/12/2025 deposes le 12/06/2026. Actualites datees sur le site (juillet 2025, gamme Nep12 en mai 2025). Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/neptech-883708687",
+   "sources": [
+    "https://neptech.co/contact-fr/",
+    "https://www.pappers.fr/entreprise/neptech-883708687"
+   ]
+  },
+  {
+   "id": "be-marclombard",
+   "cle": "marclombard",
+   "nom": "Marc Lombard",
+   "pays": "France",
+   "ville": "La Rochelle",
+   "contact": {
+    "web": "https://marclombard.com/",
+    "telephone": "+33 5 46 45 30 30",
+    "adresse": "7 rue de la Trinquette, 2e etage, 17000 La Rochelle, France (siege RCS : Le Sextant, rue de la Trinquette, 17000 La Rochelle)"
+   },
+   "contact_source": "https://marclombard.com/contact/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "voiliers de course",
+    "voiliers de croisiere de serie",
+    "voiliers one-off",
+    "catamarans",
+    "motor yachts",
+    "ingenierie structure",
+    "cfd"
+   ],
+   "actif": true,
+   "actif_source": "SARL MARC LOMBARD, SIREN 391 304 482, creee le 01/04/1993, NAF 71.12B ingenierie, statut en activite ; comptes 2025 deposes le 27/04/2026, mise a jour INSEE du 14/08/2026. Gerants Paul Cougnaud, Henry-Paul Schipman, Eric Levet. Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/sarl-marc-lombard-391304482",
+   "sources": [
+    "https://marclombard.com/contact/",
+    "https://www.pappers.fr/entreprise/sarl-marc-lombard-391304482"
+   ]
+  },
+  {
+   "id": "be-vripack",
+   "cle": "vripack",
+   "nom": "Vripack",
+   "pays": "Pays-Bas",
+   "ville": "Sneek",
+   "contact": {
+    "web": "https://vripack.com/",
+    "telephone": "+31 515 43 66 00",
+    "adresse": "Oppenhuizerweg 2, 8606 AS Sneek, Pays-Bas (KvK 01035286)"
+   },
+   "contact_source": "https://vripack.com/contact/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "superyachts custom",
+    "design exterieur",
+    "design interieur",
+    "yachts a propulsion renouvelable",
+    "refit et conversion"
+   ],
+   "actif": true,
+   "actif_source": "Site en activite avec publications datees : article projet du 5 juin 2026, Moonen 122 Martinique du 30 mars 2026, plusieurs actualites 2025. Le pays probable indique dans la cible (France) est errone : le studio est neerlandais, a Sneek (Frise). Vague bureaux d'etudes du 2026-08-15. https://vripack.com/news/",
+   "sources": [
+    "https://vripack.com/contact/",
+    "https://vripack.com/news/"
+   ]
+  },
+  {
+   "id": "be-joubertnivelt",
+   "cle": "joubertnivelt",
+   "nom": "Joubert-Nivelt",
+   "pays": "France",
+   "ville": "Saint-Xandre (agglomeration de La Rochelle)",
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "L'Aubrecay, 17138 Saint-Xandre, France (siege SCM JOUBERT ET NIVELT, SIREN 329 746 093)"
+   },
+   "contact_source": "https://www.pappers.fr/entreprise/scm-joubert-et-nivelt-329746093",
+   "contact_maj": "2026-08-15",
+   "competences": [],
+   "actif": null,
+   "actif_source": null,
+   "sources": [
+    "https://www.pappers.fr/entreprise/scm-joubert-et-nivelt-329746093"
+   ]
+  },
+  {
+   "id": "be-vatondesign",
+   "cle": "vatondesign",
+   "nom": "Vaton Design",
+   "pays": "France",
+   "ville": "Marseille",
+   "contact": {
+    "web": "https://www.gillesvaton.com/",
+    "telephone": "+33 6 13 02 04 17",
+    "adresse": "9 bis rue Protis, 13007 Marseille, France (email gvaton(at)sfr.fr ; siege declare au registre : 19 quai de Rive Neuve, 13007 Marseille)"
+   },
+   "contact_source": "https://www.gillesvaton.com/contact/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "voiliers one-off",
+    "voiliers de course",
+    "voiliers de serie",
+    "motor yachts",
+    "navires professionnels",
+    "refit et restauration",
+    "suivi de construction et essais"
+   ],
+   "actif": true,
+   "actif_source": "Entreprise individuelle VATON GILLES, SIREN 317 370 567, activite d'architecture, creee en 1979, etablissement principal ouvert depuis le 01/04/1999, statut en activite avec mise a jour INSEE du 14/08/2026. Site professionnel en ligne et joignable. Structure sans salarie : le cabinet repose sur l'architecte lui-meme. Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/vaton-gilles-317370567",
+   "sources": [
+    "https://www.gillesvaton.com/contact/",
+    "https://www.pappers.fr/entreprise/vaton-gilles-317370567"
+   ]
+  },
+  {
+   "id": "be-sawicon",
+   "cle": "sawicon",
+   "nom": "Sawicon",
+   "pays": "Norvege",
+   "ville": "Bergen",
+   "contact": {
+    "web": "https://www.sawicon.no/",
+    "telephone": "+47 55 34 92 40",
+    "adresse": "Sydnesplassen 3, 5007 Bergen, Norvege (email sawicon(at)sawicon.no)"
+   },
+   "contact_source": "https://www.sawicon.no/contact/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "navires offshore et de service",
+    "sov / w2w",
+    "aquaculture (viviers, barges d'alimentation)",
+    "ferries",
+    "cargos et tankers",
+    "navires de peche",
+    "conversion et rebuild",
+    "electrification"
+   ],
+   "actif": true,
+   "actif_source": "SAWICON AS, org.nr 979 425 570, immatriculee le 20/11/1997 a Bergen, code NACE 71.129 conseil technique, enregistree au registre des entreprises norvegien. Comptes annuels de l'exercice 2025 (01/01/2025 au 31/12/2025) deposes au Regnskapsregisteret. A noter : la rubrique actualites du site n'a pas ete mise a jour depuis le 6 juin 2023, la preuve d'activite vient du registre. Vague bureaux d'etudes du 2026-08-15. https://data.brreg.no/regnskapsregisteret/regnskap/979425570",
+   "sources": [
+    "https://www.sawicon.no/contact/",
+    "https://data.brreg.no/regnskapsregisteret/regnskap/979425570",
+    "https://virksomhet.brreg.no/nb/oppslag/enheter/979425570"
+   ]
+  },
+  {
+   "id": "be-cmn",
+   "cle": "cmn",
+   "nom": "CMN (design maison)",
+   "pays": "France",
+   "ville": "Cherbourg-en-Cotentin",
+   "contact": {
+    "web": "https://www.cmn-group.com/",
+    "telephone": "+33 2 33 88 30 00",
+    "adresse": "51 rue de la Bretonnière, 50105 Cherbourg-en-Cotentin, France (siège social RCS : 19 avenue Franklin D. Roosevelt, 75008 Paris)"
+   },
+   "contact_source": "https://gican.asso.fr/annuaire-des-adherents-du-gican-lindustrie-navale-francaise/constructions-mecaniques-de-normandie-cmn/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "navires militaires",
+    "corvettes",
+    "patrouilleurs",
+    "intercepteurs rapides",
+    "trimaran de surveillance",
+    "chaland de débarquement",
+    "énergies marines renouvelables",
+    "architecture et ingénierie navale intégrée"
+   ],
+   "actif": true,
+   "actif_source": "CMN Constructions Mécaniques de Normandie, SIREN 562 110 965, statut « en activité » au registre (SA, capital 20 M€, 250-499 salariés, NAF 30.11Z). Adhérent GICAN depuis 2002, 473 salariés et 158 M€ de CA à la fiche annuaire. Le bureau d'études maison conçoit ses propres gammes (BR71 MkII, HSI32 MkII, Ocean Eagle 43, LCT 200), site cmn-group.com à jour en 2026. Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/562110965",
+   "sources": [
+    "https://gican.asso.fr/annuaire-des-adherents-du-gican-lindustrie-navale-francaise/constructions-mecaniques-de-normandie-cmn/",
+    "https://www.pappers.fr/entreprise/562110965"
+   ]
+  },
+  {
+   "id": "be-robertobiscontini",
+   "cle": "robertobiscontini",
+   "nom": "Roberto Biscontini",
+   "pays": "Italie",
+   "ville": "Milan",
+   "contact": {
+    "web": "https://www.biscontinidesign.com/",
+    "telephone": null,
+    "adresse": null
+   },
+   "contact_source": "https://www.beneteau.com/en-us/designer-architecte/biscontini-yacht-design",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "voiliers de croisière",
+    "voiliers de performance",
+    "carènes de régate",
+    "america's cup",
+    "yachts de série"
+   ],
+   "actif": true,
+   "actif_source": "Studio Biscontini Yacht Design, basé à Milan (page designer officielle du Groupe Bénéteau). Activité confirmée en 2026 : le Groupe Bénéteau lui a confié les carènes du First 60 présenté en première mondiale, article daté du 25 février 2026. Le site du studio est peu maintenu (dernière modification sitemap 2020), ce qui n'affecte pas l'activité. Adresse et téléphone non retenus faute de page consultée les portant : le pays probable France indiqué en entrée est erroné, le studio est italien. Vague bureaux d'etudes du 2026-08-15. https://www.bwsailing.com/cc/2026/02/new-beneteau-first-60-pushes-the-design-envelope-to-the-limit/",
+   "sources": [
+    "https://www.beneteau.com/en-us/designer-architecte/biscontini-yacht-design",
+    "https://www.bwsailing.com/cc/2026/02/new-beneteau-first-60-pushes-the-design-envelope-to-the-limit/"
+   ]
+  },
+  {
+   "id": "be-exequielcanolanza",
+   "cle": "exequielcanolanza",
+   "nom": "Exequiel Cano Lanza",
+   "pays": "France",
+   "ville": "Arcachon",
+   "contact": {
+    "web": "https://clyd.fr/",
+    "telephone": "+33 6 13 42 46 71",
+    "adresse": "Quai Goslar, Pôle Nautisme, 33120 Arcachon, France"
+   },
+   "contact_source": "https://clyd.fr/contact/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "yachts",
+    "superyachts",
+    "navires militaires",
+    "navires à passagers",
+    "houseboats",
+    "refit",
+    "ingénierie et architecture navale",
+    "propulsion hydrogène"
+   ],
+   "actif": true,
+   "actif_source": "CLYD CANO LANZA YACHT DESIGN (aussi CLYD MARINE), SARL créée le 17 août 2010, SIREN 524 496 866, NAF 71.12B ingénierie et études techniques, statut « en activité ». Horacio Exequiel Cano Lanza gérant depuis le 10 mars 2014. Ancien directeur des bureaux d'études et design du Chantier Naval Couach (1995-2010), ce qui recoupe le lien Couach du corpus. Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/524496866",
+   "sources": [
+    "https://clyd.fr/contact/",
+    "https://www.pappers.fr/entreprise/524496866"
+   ]
+  },
+  {
+   "id": "be-fredericneuman",
+   "cle": "fredericneuman",
+   "nom": "Frédéric Neuman",
+   "pays": "France",
+   "ville": "Saint-Nazaire",
+   "contact": {
+    "web": "https://barreau-neuman.com/",
+    "telephone": "+33 2 51 76 91 19",
+    "adresse": "1 rue du Port, 44600 Saint-Nazaire, France"
+   },
+   "contact_source": "https://gican.asso.fr/annuaire-des-adherents-du-gican-lindustrie-navale-francaise/neuman/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "navires de servitude",
+    "pêche",
+    "patrouilleurs et navires de défense",
+    "drones de surface",
+    "fluvial",
+    "plaisance et voiliers",
+    "propulsion électrique et hybride",
+    "décarbonation",
+    "hydrodynamique et stabilité"
+   ],
+   "actif": true,
+   "actif_source": "Agence NEUMAN (ingénierie et architecture navale), fondée en 2004 par Frédéric Neuman, 5 salariés, adhérente GICAN depuis 2024. Structure SARL en 2025 avec trois associés : Frédéric Neuman, Lauranne Maisonneuve et le groupe BMA. Partenariats chantiers CIB et Merré, ce qui recoupe les liens Bernard et Merré du corpus. Vague bureaux d'etudes du 2026-08-15. https://barreau-neuman.com/agence/",
+   "sources": [
+    "https://gican.asso.fr/annuaire-des-adherents-du-gican-lindustrie-navale-francaise/neuman/",
+    "https://barreau-neuman.com/agence/"
+   ]
+  },
+  {
+   "id": "be-seemerre",
+   "cle": "seemerre",
+   "nom": "S.E.E. Merré",
+   "pays": "France",
+   "ville": "Nort-sur-Erdre",
+   "contact": {
+    "web": "https://www.merre.fr/",
+    "telephone": "+33 2 40 29 50 44",
+    "adresse": "Route de Nantes, BP 57, 44390 Nort-sur-Erdre, France (établissement : Les Roches, Route de Nantes)"
+   },
+   "contact_source": "https://www.merre.fr/contact",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "dragues et engins de dragage",
+    "remorqueurs",
+    "pilotines",
+    "travaux portuaires",
+    "défense",
+    "navires à passagers et transport public",
+    "coques acier et aluminium 12 à 80 m",
+    "architecture, conception et ingénierie"
+   ],
+   "actif": true,
+   "actif_source": "SEEM Société des Établissements Merré, SIREN 950 019 299, SASU au capital de 314 090,71 €, NAF 30.11Z, statut « en activité », inscription RCS mise à jour le 15 août 2026, 20 à 49 salariés. Présidée par BMA Naval, groupe BMA depuis 2012. Le chantier porte en interne l'architecture, la conception et l'ingénierie, d'où son rôle de concepteur au registre. Vague bureaux d'etudes du 2026-08-15. https://www.pappers.fr/entreprise/seem-societe-des-etablissements-merre-950019299",
+   "sources": [
+    "https://www.merre.fr/contact",
+    "https://www.pappers.fr/entreprise/seem-societe-des-etablissements-merre-950019299"
+   ]
+  },
+  {
+   "id": "be-barracudayachtdesign",
+   "cle": "barracudayachtdesign",
+   "nom": "Barracuda Yacht Design",
+   "pays": "Espagne",
+   "ville": "Madrid",
+   "contact": {
+    "web": "https://barracuda-yd.com/",
+    "telephone": "+34 914 400 450",
+    "adresse": "c/ Alfonso Gómez, 9, 28037 Madrid, Espagne"
+   },
+   "contact_source": "https://barracuda-yd.com/custom-yachts/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "voiliers de série",
+    "voiliers custom",
+    "yachts à moteur de série",
+    "yachts à moteur custom",
+    "catamarans à moteur",
+    "explorers long-range",
+    "shadow vessels et tenders",
+    "refit",
+    "project management"
+   ],
+   "actif": true,
+   "actif_source": "Barracuda Yacht Design Ltd, dirigée par Iñigo Toledo. Exposant officiel du Monaco Yacht Show 2026 (23-26 septembre, emplacement QH22). Fiche société vérifiée sur source officielle au 9 juillet 2026 par Superyacht Guide. Portefeuille incluant le JFA 70' Aldebarán, ce qui recoupe le lien JFA Yachts du corpus. Le pays probable France indiqué en entrée est erroné, le studio est espagnol. Vague bureaux d'etudes du 2026-08-15. https://www.monacoyachtshow.com/en/exhibitors/588",
+   "sources": [
+    "https://barracuda-yd.com/custom-yachts/",
+    "https://www.monacoyachtshow.com/en/exhibitors/588",
+    "https://superyachtguide.com/companies/barracuda-yacht-design/"
+   ]
+  },
+  {
+   "id": "be-marindesign",
+   "cle": "marindesign",
+   "nom": "Marin Design",
+   "pays": "Norvège",
+   "ville": "Kolvereid (Nærøysund), Trøndelag",
+   "contact": {
+    "web": "https://www.marindesign.no/",
+    "telephone": "+47 743 97 900",
+    "adresse": "Strandvegen 25, 7970 Kolvereid, Norvège (agence : Havnegata 7, Pirsenteret, 7010 Trondheim) ; post@marindesign.no"
+   },
+   "contact_source": "https://www.marindesign.no/om-oss/contact",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "navires de servitude aquacole",
+    "ferries",
+    "remorqueurs",
+    "pêche",
+    "bateaux de plongée",
+    "inspection de navires"
+   ],
+   "actif": true,
+   "actif_source": "Article daté du 11 avril 2025 : Marin Design a conçu avec Moen Marin le NabWork 1785 commandé par Cooke Scotland, livraison prévue juin 2026. Entité MARIN DESIGN AS, org. 989 301 187, statut « enregistré » au registre des entreprises norvégien. Vague bureaux d'etudes du 2026-08-15. https://www.fishfarmingexpert.com/cooke-scotland-feed-boat-marin-design/cooke-scotland-orders-new-vessel-from-norway/1923064",
+   "sources": [
+    "https://www.marindesign.no/om-oss/contact",
+    "https://www.fishfarmingexpert.com/cooke-scotland-feed-boat-marin-design/cooke-scotland-orders-new-vessel-from-norway/1923064",
+    "https://virksomhet.brreg.no/nb/oppslag/enheter/989301187"
+   ]
+  },
+  {
+   "id": "be-viksandvik",
+   "cle": "viksandvik",
+   "nom": "Vik-Sandvik AS",
+   "pays": "Norvège",
+   "ville": "Fitjar (origine, île de Stord) ; activité poursuivie depuis Stord",
+   "contact": {
+    "web": "https://breeze.no/",
+    "telephone": "+47 53 01 10 20",
+    "adresse": "Breeze Ship Design AS, Borggata 8, 5417 Stord, Norvège ; post@breeze.no"
+   },
+   "contact_source": "https://breeze.no/contact/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "offshore",
+    "psv",
+    "pêche pélagique",
+    "tankers produits et chimiquiers",
+    "navires spécialisés"
+   ],
+   "actif": true,
+   "actif_source": "Le pays probable indiqué (Danemark) est faux : Vik-Sandvik est norvégien, fondé à Fitjar en 1984. Racheté par Wärtsilä (clôture le 27 août 2008) et intégré à Wärtsilä Ship Design. Wärtsilä ayant quitté le design de navires, les équipes et la base de plus de 4 000 plans (marques Vik-Sandvik, Skipskonsulent, Wärtsilä Ship Design, Schiffko, Conan Wu) sont passées à Breeze Ship Design, fondé en octobre 2020 à Stord, qui exploite aujourd'hui ce portefeuille. Le nom subsiste aussi via Vik-Sandvik Design India (Chennai/New Delhi). Aucune entité « Vik-Sandvik AS » active en propre : la joignabilité passe par Breeze. Vague bureaux d'etudes du 2026-08-15. https://breeze.no/about/",
+   "sources": [
+    "https://breeze.no/contact/",
+    "https://breeze.no/about/",
+    "https://www.wartsila.com/media/news/27-08-2008-acquisition-of-vik-sandvik's-ship-design-companies-in-norway-closed"
+   ]
+  },
+  {
+   "id": "be-burnesscorlettthreequays",
+   "cle": "burnesscorlettthreequays",
+   "nom": "Burness Corlett Three Quays",
+   "pays": "Royaume-Uni",
+   "ville": "Newcastle upon Tyne (siège social enregistré) ; Ramsey, île de Man",
+   "contact": {
+    "web": "http://www.bctq.com/",
+    "telephone": null,
+    "adresse": "Burness Corlett Three Quays (London) Limited, The Grainger Suite, Dobson House, Regent Centre, Gosforth, Newcastle-upon-Tyne NE3 3PF, Royaume-Uni"
+   },
+   "contact_source": "https://find-and-update.company-information.service.gov.uk/company/02832627",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "ferries ro-ro",
+    "navires à passagers et croisière",
+    "cargos",
+    "tankers",
+    "catamarans rapides",
+    "yachts",
+    "offshore",
+    "expertise et survey",
+    "gestion de projet neuf"
+   ],
+   "actif": true,
+   "actif_source": "Le pays probable indiqué (Écosse) est faux : BCTQ est anglo-mannois, né en 2005 de la fusion Burness Corlett & Partners (1952) et Three Quays Marine Services. L'entité BURNESS CORLETT THREE QUAYS (LONDON) LIMITED (n° 02832627) est « Active » au Companies House, comptes déposés pour l'exercice clos le 31 mars 2025 et déclaration de confirmation au 2 juillet 2025. Structure très réduite (2 à 10 salariés d'après sa page LinkedIn). L'entité soeur BURNESS CORLETT THREE QUAYS (SOUTHAMPTON) LIMITED (FC011749) est également « Active » mais sans comptes déposés depuis 2007. Vague bureaux d'etudes du 2026-08-15. https://find-and-update.company-information.service.gov.uk/company/02832627",
+   "sources": [
+    "https://find-and-update.company-information.service.gov.uk/company/02832627",
+    "https://find-and-update.company-information.service.gov.uk/company/FC011749"
+   ]
+  },
+  {
+   "id": "be-murraycormackassociates",
+   "cle": "murraycormackassociates",
+   "nom": "Murray Cormack Associates",
+   "pays": "Royaume-Uni (Écosse)",
+   "ville": "Innellan / Dunoon et Helensburgh, Argyll",
+   "contact": {
+    "web": "https://www.murraycormack.com/",
+    "telephone": "+44 1369 830210",
+    "adresse": "Old Bank House, Innellan, Dunoon, Argyll PA23 7TP, Écosse (bureau d'études : 44 Abercromby Crescent, Helensburgh G84 9DX)"
+   },
+   "contact_source": "https://www.bizify.co.uk/naval-architects/dunoon/PA23-7TP/murray-cormack-associates",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "architecture navale",
+    "pilotines",
+    "vedettes et workboats",
+    "ferries",
+    "expertise et survey",
+    "études de faisabilité"
+   ],
+   "actif": null,
+   "actif_source": null,
+   "sources": [
+    "https://www.bizify.co.uk/naval-architects/dunoon/PA23-7TP/murray-cormack-associates",
+    "https://ydsa.co.uk/find/designers/"
+   ]
+  },
+  {
+   "id": "be-bmt",
+   "cle": "bmt",
+   "nom": "BMT",
+   "pays": "Royaume-Uni",
+   "ville": "Teddington (Grand Londres)",
+   "contact": {
+    "web": "https://www.bmt.org/",
+    "telephone": "+44 (0)20 8943 5544",
+    "adresse": "1 Park Road, Teddington TW11 0AP, Royaume-Uni"
+   },
+   "contact_source": "https://www.bmt.org/contact-us/united-kingdom/teddington/goodrich-house/bmt/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "militaire et défense",
+    "éolien offshore (ctv, sov)",
+    "navires de recherche polaire",
+    "navires de servitude",
+    "offshore",
+    "commerce et cargo",
+    "gestion de risque et conseil"
+   ],
+   "actif": true,
+   "actif_source": "Le pays probable indiqué (France) est faux : BMT Group Ltd est britannique, créé en 1985 par fusion et privatisation de la BSRA et du National Maritime Institute, détenu par un Employee Benefit Trust. Environ 1 300 à 1 500 professionnels, 47 bureaux sur quatre continents. Les pages de contact et de localisation du site institutionnel sont à jour et servies en 2026. Vague bureaux d'etudes du 2026-08-15. https://www.bmt.org/contact-us/",
+   "sources": [
+    "https://www.bmt.org/contact-us/united-kingdom/teddington/goodrich-house/bmt/",
+    "https://www.bmt.org/contact-us/",
+    "https://en.wikipedia.org/wiki/BMT_Group"
+   ]
+  },
+  {
+   "id": "be-htarchitecture",
+   "cle": "htarchitecture",
+   "nom": "H&T Architecture Navale",
+   "pays": "France",
+   "ville": "Nantes (siège) ; agence à Paris",
+   "contact": {
+    "web": "https://www.architecture-navale.net/",
+    "telephone": "+33 2 40 48 16 66",
+    "adresse": "9 rue Jeanne d'Arc, 44000 Nantes (agence : 11 passage Boudin, 75020 Paris, tél. +33 1 42 72 32 33)"
+   },
+   "contact_source": "https://www.architecture-navale.net/",
+   "contact_maj": "2026-08-15",
+   "competences": [
+    "navires à passagers",
+    "recherche scientifique",
+    "navires de servitude portuaire et baliseurs",
+    "intervention et sauvetage",
+    "cargos",
+    "pêche",
+    "militaire",
+    "fluvial",
+    "installations flottantes",
+    "plaisance"
+   ],
+   "actif": true,
+   "actif_source": "Raison sociale HERSKOVITS & TOBIE ARCHITECTURE NAVALE ET INGENIERIE MARITIME, SIREN 388 937 211, SARL nantaise dirigée par André Herskovits et Alain Tobie, 10 à 19 salariés, statut actif (fiche mise à jour au 15 août 2026). Preuve d'activité : le transporteur polyvalent de près de 40 m Ker Bossy, conçu par H&T, commandé fin 2025 par Seaway Transports Maritimes et en construction au chantier Delavergne, livraison attendue début 2027. Vague bureaux d'etudes du 2026-08-15. https://www.meretmarine.com/fr/marine-marchande/seaway-transports-maritimes-un-nouveau-navire-pour-l-ile-d-yeu-en-construction-chez-delavergne",
+   "sources": [
+    "https://www.meretmarine.com/fr/marine-marchande/seaway-transports-maritimes-un-nouveau-navire-pour-l-ile-d-yeu-en-construction-chez-delavergne",
+    "https://www.societe.com/societe/herskovits-tobie-architecture-navale-et-ingenierie-maritime-388937211.html"
+   ]
+  }
  ]
 }
