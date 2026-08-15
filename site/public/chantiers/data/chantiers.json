@@ -238591,7 +238591,14 @@
    "region": "Auvergne-Rhône-Alpes",
    "lat": 45.5583,
    "lon": 6.2678,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": "https://www.accuwatt-technologies.com",
+    "telephone": "+33 4 79 26 44 49",
+    "adresse": "56 rue Aristide Bergès, 73220 Aiton, France"
+   },
+   "contact_source": "https://www.accuwatt-technologies.com/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-saft",
@@ -238612,7 +238619,14 @@
    "region": "Nouvelle-Aquitaine",
    "lat": 46.5802,
    "lon": 0.3404,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": "https://www.saftbatteries.com",
+    "telephone": null,
+    "adresse": "26 quai Charles Pasqua, 92300 Levallois-Perret, France (siège social Saft Groupe, SIREN 481480465)"
+   },
+   "contact_source": "https://www.saftbatteries.com",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-wattalps",
@@ -238626,14 +238640,22 @@
    "confiance": "haute",
    "note": "Pas de nom de navire publie sur le site : la reference workboat est anonyme.",
    "sources": [
-    "https://www.wattalps.com/"
+    "https://www.wattalps.com/",
+    "https://www.wattalps.com/contact/"
    ],
    "navires_equipes": [],
    "adresse": "Moirans (Isere), 410 avenue Aldo Eriani, 38430",
    "region": "Auvergne-Rhône-Alpes",
    "lat": 45.33,
    "lon": 5.5544,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": "https://www.wattalps.com",
+    "telephone": "+33 4 58 00 54 91",
+    "adresse": "410 avenue Aldo Eriani, 38430 Moirans, France"
+   },
+   "contact_source": "https://www.wattalps.com/contact/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-seair",
@@ -238647,14 +238669,22 @@
    "confiance": "moyenne",
    "note": "La ville de Lorient et l'annee 2016 ne figurent pas sur seair-platforms.com, seule page officielle ouverte ; elles proviennent de la presse economique (Maddyness, 7jours) non ouverte. ATTENTION au positionnement : SEAir a pivote de la plaisance a foils vers les plateformes de defense et les drones navals. Ce n'est plus un equipementier de decarbonation au sens strict.",
    "sources": [
-    "https://seair-platforms.com/"
+    "https://seair-platforms.com/",
+    "https://seair-platforms.com/mentions-legales/"
    ],
    "navires_equipes": [],
    "adresse": "Lorient (Morbihan)",
    "region": "Bretagne",
    "lat": 47.748,
    "lon": -3.366,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": "https://seair-platforms.com",
+    "telephone": "+33 9 72 60 10 84",
+    "adresse": "10 rue Chalutier Les 2 Anges, 56100 Lorient, France (SEAir Solutions SAS, RCS Lorient 819 778 838)"
+   },
+   "contact_source": "https://seair-platforms.com/mentions-legales/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-bluenav",
@@ -238668,14 +238698,22 @@
    "confiance": "haute",
    "note": null,
    "sources": [
-    "https://www.bluenav.com/"
+    "https://www.bluenav.com/",
+    "https://www.bluenav.com/contact"
    ],
    "navires_equipes": [],
    "adresse": "La Teste-de-Buch (Gironde), 80 avenue du General Leclerc, 33260 ; conception et assemblage a Arcachon",
    "region": "Nouvelle-Aquitaine",
    "lat": 44.632,
    "lon": -1.145,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": "https://www.bluenav.com",
+    "telephone": "+33 5 56 83 70 25",
+    "adresse": "80 avenue du Général Leclerc, Pôle nautique de la Pointe, 33260 La Teste-de-Buch, France"
+   },
+   "contact_source": "https://www.bluenav.com/contact",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-enag",
@@ -238689,14 +238727,22 @@
    "confiance": "haute",
    "note": null,
    "sources": [
-    "https://www.enag.fr/"
+    "https://www.enag.fr/",
+    "https://www.enag.fr/contact/"
    ],
    "navires_equipes": [],
    "adresse": "Quimper (Finistere), 31 rue Marcel Paul, ZI Kerdroniou Est, 29000",
    "region": "Bretagne",
    "lat": 47.996,
    "lon": -4.097,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": "https://www.enag.fr",
+    "telephone": "+33 2 98 55 51 99",
+    "adresse": "31 rue Marcel Paul, ZI Kerdroniou Est, 29000 Quimper, France"
+   },
+   "contact_source": "https://www.enag.fr/contact/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-fapmo",
@@ -238710,14 +238756,22 @@
    "confiance": "moyenne",
    "note": "Le coeur de metier FAPMO reste la pompe centrifuge navale ; les moteurs electriques viennent de l'entite EN Moteurs. Le classer en levier « moteurs electriques » de decarbonation est un raccourci a arbitrer : ce n'est pas un motoriste de propulsion.",
    "sources": [
-    "https://www.fapmo.com/"
+    "https://www.fapmo.com/",
+    "https://www.fapmo.com/en/contact/"
    ],
    "navires_equipes": [],
    "adresse": "Outreau (Pas-de-Calais), 35-37 rue Roger Salengro, 62230",
    "region": "Hauts-de-France",
    "lat": 50.7053,
    "lon": 1.5875,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": "https://www.fapmo.com",
+    "telephone": null,
+    "adresse": "35-37 rue Roger Salengro, 62230 Outreau, France (site EN Moteurs : 24 bis rue Jan Palach, 44220 Couëron)"
+   },
+   "contact_source": "https://www.fapmo.com/en/contact/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-jeumont-electric",
@@ -238731,14 +238785,22 @@
    "confiance": "haute",
    "note": "Le site officiel jeumontelectric.com n'a pas pu etre resolu depuis cet environnement (DNS). Fiche GICAN retenue.",
    "sources": [
-    "https://gican.asso.fr/annuaire-des-adherents-du-gican-lindustrie-navale-francaise/jeumont-electric/"
+    "https://gican.asso.fr/annuaire-des-adherents-du-gican-lindustrie-navale-francaise/jeumont-electric/",
+    "https://www.jeumontelectric.com/mentions-legales/"
    ],
    "navires_equipes": [],
    "adresse": "Jeumont (Nord), 367 rue de l'Industrie, 59572",
    "region": "Hauts-de-France",
    "lat": 50.296,
    "lon": 4.101,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": "https://www.jeumontelectric.com",
+    "telephone": "+33 3 61 99 96 00",
+    "adresse": "367 rue de l'Industrie, BP 20109, 59572 Jeumont, France"
+   },
+   "contact_source": "https://www.jeumontelectric.com/mentions-legales/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-eodev",
@@ -238753,14 +238815,23 @@
    "note": "Classe ici en piles a combustible, pas en batteries comme dans la liste de depart : le produit maritime concret est le REXH2, un systeme pile a combustible.",
    "sources": [
     "https://www.energy-observer.org/fr/qui-sommes-nous/le-groupe-eo/eodev",
-    "https://www.bretagne-economique.com/actualites/hydrogene-eodev-35-fait-entrer-toyota-dans-son-capital"
+    "https://www.bretagne-economique.com/actualites/hydrogene-eodev-35-fait-entrer-toyota-dans-son-capital",
+    "https://www.societe.com/societe/energy-observer-developments-848756227.html",
+    "https://www.pappers.fr/entreprise/energy-observer-developments-848756227"
    ],
    "navires_equipes": [],
    "adresse": "Saint-Malo (Ille-et-Vilaine)",
    "region": "Bretagne",
    "lat": 48.6493,
    "lon": -2.0257,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "82 rue Henri Farman, 92130 Issy-les-Moulineaux, France (siège actuel ; l'établissement de Saint-Malo, 27 quai Duguay-Trouin, est fermé depuis le 11 janvier 2022)"
+   },
+   "contact_source": "https://www.societe.com/societe/energy-observer-developments-848756227.html",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-genevos",
@@ -238774,14 +238845,23 @@
    "confiance": "haute",
    "note": null,
    "sources": [
-    "https://www.genevos.com/"
+    "https://www.genevos.com/",
+    "https://genevos.com/contact/",
+    "https://www.societe.com/societe/genevos-838135358.html"
    ],
    "navires_equipes": [],
    "adresse": "La Rochelle (Charente-Maritime)",
    "region": "Nouvelle-Aquitaine",
    "lat": 46.1591,
    "lon": -1.152,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": "https://genevos.com",
+    "telephone": null,
+    "adresse": "4 rue Auguste Perret, 17140 Lagord, France"
+   },
+   "contact_source": "https://genevos.com/contact/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-helion",
@@ -238795,14 +238875,23 @@
    "confiance": "haute",
    "note": "L'Hydromer figure DEJA dans chantiers.json, chantier Piriou, annee 2024. C'est le meilleur point d'accroche navire-equipementier du corpus.",
    "sources": [
-    "https://fr.wikipedia.org/wiki/HELION_Hydrogen_Power"
+    "https://fr.wikipedia.org/wiki/HELION_Hydrogen_Power",
+    "https://www.helion-hydrogen-power.alstom.com/legal-notice",
+    "https://www.helion-hydrogen-power.alstom.com/contact"
    ],
    "navires_equipes": [],
    "adresse": "Aix-en-Provence (Bouches-du-Rhone)",
    "region": "Provence-Alpes-Côte d'Azur",
    "lat": 43.5297,
    "lon": 5.4474,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": "https://www.helion-hydrogen-power.alstom.com",
+    "telephone": "+33 4 42 90 81 50",
+    "adresse": "ALSTOM Hydrogène SAS, avenue Louis Philibert, Domaine du Petit Arbois, bâtiment Jules Verne, 13547 Aix-en-Provence cedex 4, France"
+   },
+   "contact_source": "https://www.helion-hydrogen-power.alstom.com/legal-notice",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-inocel",
@@ -238824,7 +238913,14 @@
    "region": "Auvergne-Rhône-Alpes",
    "lat": 45.232,
    "lon": 5.68,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": "https://www.inocel.com",
+    "telephone": null,
+    "adresse": "INOCEL DEVELOPMENT, 9 rue Louis Néel, 38120 Saint-Égrève, France"
+   },
+   "contact_source": "https://www.inocel.com/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-airseas",
@@ -238838,14 +238934,22 @@
    "confiance": "haute",
    "note": null,
    "sources": [
-    "https://www.airseas.com/"
+    "https://www.airseas.com/",
+    "https://www.airseas.com/contact"
    ],
    "navires_equipes": [],
    "adresse": "Nantes (Loire-Atlantique), 8 allee de la centrale electrique de Chantenay, 44100",
    "region": "Pays de la Loire",
    "lat": 47.2184,
    "lon": -1.5536,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": "https://airseas.com",
+    "telephone": null,
+    "adresse": "8 allée de la Centrale Électrique de Chantenay, 44100 Nantes, France"
+   },
+   "contact_source": "https://www.airseas.com/contact",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-cws-computed-wing-sail",
@@ -238866,7 +238970,14 @@
    "region": "Île-de-France",
    "lat": 48.8566,
    "lon": 2.3522,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": "https://www.computedwingsail.com",
+    "telephone": "+33 6 20 86 44 34",
+    "adresse": "20 rue Bouvier, 75011 Paris, France (site industriel : 42 boulevard Paul Leferme, 44600 Saint-Nazaire)"
+   },
+   "contact_source": "https://www.computedwingsail.com/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-oceanwings-ex-ayro",
@@ -238887,7 +238998,14 @@
    "region": "Normandie",
    "lat": 49.1829,
    "lon": -0.3707,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "16 Cité d'Hauteville, 75010 Paris, France"
+   },
+   "contact_source": null,
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-solidsail",
@@ -238910,7 +239028,14 @@
    "region": "Pays de la Loire",
    "lat": 47.2836,
    "lon": -2.1903,
-   "geo_precision": "ville"
+   "geo_precision": "ville",
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "SolidSail Mast Factory (SMAF), 140 avenue Victor Schoelcher, 56600 Lanester, France ; maison mère Chantiers de l'Atlantique, avenue Antoine Bourdelle, 44600 Saint-Nazaire"
+   },
+   "contact_source": null,
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-ehm",
@@ -238929,9 +239054,17 @@
    "note": "Stade démonstrateur, aucun navire en service équipé identifié au 14/08/2026.",
    "sources": [
     "https://gican.asso.fr/annuaire-des-adherents-du-gican-lindustrie-navale-francaise/ehm-efficient-hydrogen-motors/",
-    "https://hydrogene-renouvelable.bzh/ehm-efficient-hydrogen-motors-precurseur-retrofit-mobilite-lourde/"
+    "https://hydrogene-renouvelable.bzh/ehm-efficient-hydrogen-motors-precurseur-retrofit-mobilite-lourde/",
+    "https://www.ehm.bzh/contact-us"
    ],
-   "navires_equipes": []
+   "navires_equipes": [],
+   "contact": {
+    "web": "https://www.ehm.bzh",
+    "telephone": null,
+    "adresse": "Pépinière d'entreprises, 9 ZA de Ty Nevez Pouillot, 29150 Châteaulin, France"
+   },
+   "contact_source": "https://www.ehm.bzh",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-solution-f",
@@ -238952,7 +239085,14 @@
     "https://www.solutionf.com/en/hydrogen-combustion-engine/",
     "https://hydrogentoday.info/gck-moteur-hydrogene/"
    ],
-   "navires_equipes": []
+   "navires_equipes": [],
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "299 allée du Verdon, 13770 Venelles, France"
+   },
+   "contact_source": null,
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-symbio",
@@ -238971,11 +239111,19 @@
    "note": null,
    "sources": [
     "https://www.avem.fr/2017/08/03/une-navette-fluviale-hydrogene-a-nantes-avec-symbio-fcell-et-navalu/",
-    "https://www.h2-mobile.fr/actus/pile-hydrogene-symbio-premier-projet-maritime/"
+    "https://www.h2-mobile.fr/actus/pile-hydrogene-symbio-premier-projet-maritime/",
+    "https://www.symbio.one/en/legal-statements/"
    ],
    "navires_equipes": [
     "Navibus H2 / Jules Verne 2 (projet Navhybus)"
-   ]
+   ],
+   "contact": {
+    "web": "https://www.symbio.one",
+    "telephone": "+33 9 72 64 15 33",
+    "adresse": "SYMPHONHY, 10 rue Specia, 69190 Saint-Fons, France"
+   },
+   "contact_source": "https://www.symbio.one/en/legal-statements/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-bluefins",
@@ -238996,7 +239144,14 @@
     "https://www.meretmarine.com/fr/construction-navale/bluefins-a-assemble-a-brest-son-foil-de-propulsion-et-va-l-installer-sur-le-tsm-alize",
     "https://www.actunautique.com/2021/03/un-foil-nageoire-de-baleine-pour-reduire-la-consommation-d-energie-des-navires.html"
    ],
-   "navires_equipes": []
+   "navires_equipes": [],
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "130 cours Aimé Césaire, 29000 Brest, France"
+   },
+   "contact_source": null,
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-nautix",
@@ -239015,9 +239170,17 @@
    "note": null,
    "sources": [
     "https://www.nautix.com/",
-    "https://www.nautix.com/antifouling-consommation-de-carburant/"
+    "https://www.nautix.com/antifouling-consommation-de-carburant/",
+    "https://www.nautix.com/mentions-legales/"
    ],
-   "navires_equipes": []
+   "navires_equipes": [],
+   "contact": {
+    "web": "https://www.nautix.com",
+    "telephone": null,
+    "adresse": "Parc d'activités des Cinq Chemins, 24 rue Nicolas Appert, 56520 Guidel, France"
+   },
+   "contact_source": "https://www.nautix.com/mentions-legales/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-enogia",
@@ -239036,9 +239199,17 @@
    "note": "Réserve à connaître avant tout usage du levier : le consortium réuni par VNF avec Enogia, l'IFPEN et Naviwatt, sur le navire d'essai Eridan (110 m), conclut que l'intégration d'un ORC en RÉTROFIT de bateaux existants ne semble pas pertinente (coût lié au déplacement du moteur, absence de solution du marché pour l'injection directe sur ligne d'arbre). Seule application jugée viable, le bateau hybride électrique neuf.",
    "sources": [
     "https://enogia.com/en/en-orc/",
-    "https://www.vnf.fr/vnf/dossiers-actualitess/recuperation-de-chaleur-orc-les-conditions-restrictives-pour-un-deploiement-dans-le-secteur-fluvial/"
+    "https://www.vnf.fr/vnf/dossiers-actualitess/recuperation-de-chaleur-orc-les-conditions-restrictives-pour-un-deploiement-dans-le-secteur-fluvial/",
+    "https://enogia.com/mentions-legales/"
    ],
-   "navires_equipes": []
+   "navires_equipes": [],
+   "contact": {
+    "web": "https://enogia.com",
+    "telephone": "+33 4 84 25 60 17",
+    "adresse": "43 avenue de Boisbaudran, 13015 Marseille, France"
+   },
+   "contact_source": "https://enogia.com/mentions-legales/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "eq-solar-cloth",
@@ -239059,7 +239230,14 @@
     "https://www.solar-cloth.fr/",
     "https://www.solar-cloth.fr/voiles-solaires-navires/"
    ],
-   "navires_equipes": []
+   "navires_equipes": [],
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "141 avenue Jean Mermoz, 06210 Mandelieu-la-Napoule, France"
+   },
+   "contact_source": null,
+   "contact_maj": "2026-08-15"
   }
  ]
 }
