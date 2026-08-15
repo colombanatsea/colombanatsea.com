@@ -41,6 +41,14 @@ a { color: var(--blue); }
   display: flex; align-items: center; gap: 22px; padding: 13px 30px;
   background: var(--bg); border-top: 3px solid var(--blue); border-bottom: 1px solid var(--line);
   box-shadow: 0 1px 0 rgba(0,66,114,0.04);
+  /* La barre POUSSAIT la page entiere : sur un viewport de 390 px elle mesurait
+     600 px et le document glissait de 210 px vers la droite. `.entitytabs` avait
+     bien `overflow-x: auto`, mais un conteneur flex dont le `min-width` reste a
+     `auto` refuse de descendre sous la largeur de son contenu : le defilement
+     interne ne servait a rien puisque la barre n'etait jamais contrainte.
+     Le contenu large defile DANS son conteneur, le corps de page ne defile JAMAIS
+     horizontalement. Huit onglets d'entite ne tiennent pas dans un telephone. */
+  min-width: 0; max-width: 100%;
 }
 .title { flex: 1; min-width: 0; border-left: 3px solid var(--red); padding-left: 15px; cursor: pointer; border-radius: 0 var(--r-sm) var(--r-sm) 0; transition: background 0.12s; }
 .title:hover { background: var(--bg-2); }
@@ -50,7 +58,11 @@ a { color: var(--blue); }
 .title__count { display: none; }
 
 /* Navigation à deux niveaux : entité (tabs soulignées) + mode (segmenté arrondi) */
-.nav2 { display: inline-flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+/* `min-width: 0` : sans lui, un conteneur flex garde `min-width: auto` et refuse
+   de descendre sous la largeur de son contenu. Le `overflow-x: auto` pose sur
+   `.entitytabs` ne servait alors a rien, puisque rien ne contraignait jamais sa
+   largeur. Il faut la chaine COMPLETE : topbar, nav2, entitytabs. */
+.nav2 { display: inline-flex; align-items: center; gap: 16px; flex-wrap: wrap; min-width: 0; max-width: 100%; }
 .entitytabs { display: inline-flex; gap: 2px; }
 .entitytab {
   border: 0; background: transparent; cursor: pointer; padding: 9px 14px 11px; border-bottom: 2px solid transparent;
@@ -276,7 +288,14 @@ a { color: var(--blue); }
 .tl-prix { display: inline-block; font-size: 12px; font-weight: 700; color: var(--blue); background: var(--bg-3); border-radius: 999px; padding: 1px 8px; margin-left: 2px; white-space: nowrap; }
 
 /* ---------- Drawer ---------- */
-.drawer { position: fixed; inset: 0; z-index: 1000; pointer-events: none; }
+/* `overflow: clip` : le panneau au repos est pousse hors ecran par
+   `translateX(100%)`, et un conteneur `fixed` en overflow visible laisse cette
+   translation ETENDRE la zone defilable du document. Mesure sur un viewport de
+   390 px : la page glissait de 210 px vers la droite, decouvrant du vide.
+   `clip` plutot que `hidden` : `hidden` cree un contexte de defilement et casse
+   le `position: sticky` des elements a l'interieur. Le panneau ouvert revient a
+   `translateX(0)`, donc dans les bornes : rien n'est rogne. */
+.drawer { position: fixed; inset: 0; z-index: 1000; pointer-events: none; overflow: clip; }
 .drawer[aria-hidden="false"] { pointer-events: auto; }
 .drawer__backdrop { position: absolute; inset: 0; background: rgba(0,49,79,0.4); opacity: 0; transition: opacity 0.2s; }
 .drawer[aria-hidden="false"] .drawer__backdrop { opacity: 1; }
@@ -450,8 +469,14 @@ a { color: var(--blue); }
   .facets .reset { flex: 1 1 100%; }
   .nav-list { grid-template-columns: 1fr; padding: 14px 18px 28px; }
 
-  /* Cartouches outre-mer : marges réduites */
-  .om-strip { left: 8px; right: 8px; bottom: 8px; padding: 6px; gap: 8px; }
+  /* Cartouches outre-mer : marges réduites, et hauteur PLAFONNÉE.
+     Posées par-dessus la carte, elles couvraient le tiers inférieur d'un écran de
+     téléphone, soit exactement la latitude de l'Espagne et de la Grèce. Les sortir
+     du flux a été essayé et abandonné : `#map` est en `position: absolute` dans un
+     `.mapwrap` à hauteur fixe, la bande rendue au flux normal ne repoussait rien
+     et rouvrait un débordement de 312 px. On plafonne donc sa hauteur : elle
+     défile en interne, et le cadrage lui réserve cette hauteur-là. */
+  .om-strip { left: 8px; right: 8px; bottom: 8px; padding: 6px; gap: 8px; max-height: 26vh; }
 }
 
 @media (max-width: 560px) {

@@ -4,7 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Registre naval européen · VAIATA Intelligence</title>
-  <meta name="description" content="Carte et annuaire des chantiers navals d'Europe (France, Norvège, Écosse, Suède) et de leurs navires : propulsion, capacité, opérateurs, propriétaires, timeline. VAIATA Intelligence." />
+  <!-- Formulation volontairement SANS liste de pays. La precedente en citait quatre
+       (France, Norvege, Ecosse, Suede) alors que la base en portait huit : une
+       enumeration figee dans le HTML se perime a la premiere ouverture de pays, en
+       silence, et annonce moins que ce qui existe. Le sous-titre visible, lui, est
+       derive de la donnee a l'affichage. -->
+  <meta name="description" content="Carte et annuaire des chantiers navals européens et de leurs navires : construction, réparation, défense, propulsion, capacité, opérateurs, propriétaires, timeline. VAIATA Intelligence." />
   <link rel="stylesheet" href="assets/lib/leaflet/leaflet.css" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
@@ -12,7 +17,7 @@
   <header class="topbar">
     <div class="title" id="home" role="button" tabindex="0" title="Revenir à l'accueil (réinitialise recherche et filtres)">
       <h1>Registre naval européen</h1>
-      <p class="dek">Chantiers et navires de France, Norvège, Écosse et Suède : construction, réparation, défense, propulsion</p>
+      <p class="dek" id="dek">Chantiers et navires d'Europe : construction, réparation, défense, propulsion</p>
     </div>
     <div class="nav2">
       <div class="entitytabs" role="tablist" aria-label="Entité">
