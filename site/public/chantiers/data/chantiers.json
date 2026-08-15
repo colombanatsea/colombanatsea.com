@@ -115917,9 +115917,9 @@
     {
      "nom": "Rem Server",
      "type": "OSV",
-     "imo": "9482366",
+     "imo": null,
      "annee": "2007",
-     "longueur_m": 76.6,
+     "longueur_m": 73.69,
      "port_lourd_dwt": 3260,
      "energie": "diesel",
      "propulsion": [
@@ -115956,7 +115956,9 @@
      "propriete": "privee",
      "exploitation": "commerciale",
      "caractere_motif": "propriete: as ; exploitation: offshore",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "imo_source": "IMO RETIRE le 15/08/2026. Deux navires distincts portent le nom Rem Server : celui-ci, livre par Simek en decembre 2007 pour Rem Offshore (Fosnavag), design UT 755 LC, classe DNV ; et un second livre par STX Norway Brevik (aujourd'hui Vard Brevik) en 2011, qui est le porteur reel de l'IMO 9482366 (VesselFinder, MarineTraffic, pavillon Chypre, port d'attache Limassol). L'IMO du navire de 2007 n'a pas ete etabli en source ouverte : le champ reste vide plutot que de porter celui d'une autre coque. Un IMO faux est pire qu'un IMO absent, il fait passer deux navires pour un seul. https://www.nauticexpo.com/prod/simek-as/product-32363-379257.html et https://vesselfinder.com/vessels/REM-SERVER-IMO-9482366-MMSI-209272000",
+     "longueur_source": "Simek (fiche constructeur 117 - Rem Server, NauticExpo) : longueur hors tout 73,69 m, entre perpendiculaires 68,2 m, largeur 16,0 m, port en lourd 3 260 t, UT 755 LC, livre en decembre 2007. La valeur precedente de 76,6 m n'etait pas sourcee et ne correspond a aucune des deux mesures publiees. https://www.nauticexpo.com/prod/simek-as/product-32363-379257.html"
     },
     {
      "nom": "Rem Mermaid",
@@ -145746,7 +145748,7 @@
      "type": "ferry",
      "imo": "9006411",
      "annee": "1991",
-     "longueur_m": 54.2,
+     "longueur_m": 73.8,
      "jauge_gt": 549,
      "capacite_pax": 200,
      "capacite_vehicules": 36,
@@ -145787,7 +145789,8 @@
      "source": "https://en.wikipedia.org/wiki/MV_Loch_Fyne",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "longueur_source": "Wikipedia (MV Loch Fyne, IMO 9006411) : « Length 54,2 m ; 73,8 m overall ». Le schema de la base definit `longueur_m` comme la longueur HORS TOUT : la valeur 54,2 m etait la longueur entre perpendiculaires. Corrige le 15/08/2026 apres detection d'une divergence entre les deux entrees de la meme coque (chantier constructeur Ferguson et chantier de reparation Dales Marine Greenock). https://en.wikipedia.org/wiki/MV_Loch_Fyne"
     },
     {
      "nom": "MV Leirna",
@@ -234567,8 +234570,8 @@
      "operateur": "Ponant",
      "proprietaire": "Compagnie du Ponant",
      "pavillon": "France",
-     "architecte": "Vard Design",
-     "architecte_source": "https://www.vard.com/shipbuilding/references/le-commandant-charcot-2",
+     "architecte": "Aker Arctic",
+     "architecte_source": "Aker Arctic (page de reference du programme, source primaire du concepteur) : Aker Arctic a eu la responsabilite de tout ce qui est sous le pont principal, machines et carene comprises ; Stirling Design International a concu les ponts superieurs et les interieurs. Vard, dont la page de reference credite son propre bureau Vard Design, est le CONSTRUCTEUR : coque montee a Vard Tulcea (Roumanie) puis armement a Vard Soviknes (Norvege). Les deux fiches de chantier portent donc le meme navire a deux sites du groupe, et desormais le meme architecte, l'architecte etant une propriete du NAVIRE et non du site. Aligne le 15/08/2026 apres detection d'une attribution contradictoire entre les deux fiches. https://akerarctic.fi/reference/ponant-icebreaker/ et https://www.vard.com/shipbuilding/references/le-commandant-charcot-2",
      "source": "https://en.wikipedia.org/wiki/Le_Commandant_Charcot"
     },
     {
