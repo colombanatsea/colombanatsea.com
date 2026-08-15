@@ -24130,8 +24130,8 @@
       }
      ],
      "capacite_pax": 12,
-     "architecte": "Exequiel Cano Lanza",
-     "architecte_source": "YachtBuyer et Boat International : yacht Couach 3700 FLY (36,88 m, 2008) ; design extérieur par Exequiel Cano Lanza (studio CLYD, Arcachon, clyd.fr). L'architecture navale (lignes de coque) est réalisée en interne par Couach, le chantier constructeur. Cabinet de design distinct du constructeur = Cano Lanza.",
+     "architecte": null,
+     "architecte_source": "YachtBuyer et SuperYacht Times (fiche Dragon, Couach 3700 FLY, 36,88 m, 2008) : « her exterior design comes from the drawing boards of Exequiel Cano Lanza, while Couach is responsible for her naval architecture ». L'architecture navale est donc du chantier constructeur lui-meme : conformement a la doctrine (pas d'architecte TIERS), le champ repasse a null plutot que de porter le designer exterieur. Corrige le 15/08/2026 par le controle ARCHITECTE-STYLING-SEUL. https://www.yachtbuyer.com/en/fleet/dragon-121-couach",
      "source_ref": "Boat International (Dragon, Couach Yachts, 36.8m, 2008) ; superyachts.com ; CharterWorld",
      "tracabilite": "reference-sans-url",
      "caractere": "prive",
@@ -86409,8 +86409,8 @@
       "licence": "Domaine public (oeuvre d un agent du gouvernement federal des Etats-Unis)",
       "source": "https://en.wikipedia.org/wiki/Le_Commandant_Charcot (image d infobox) ; https://commons.wikimedia.org/wiki/File:Le_Commandant_Charcot_during_Operation_Tugaalik_in_June_23,_2024_(1).jpg"
      },
-     "architecte": "Stirling Design International",
-     "architecte_source": "https://www.stirlingdesign.fr/en/portfolio/le-commandant-charcot/ ; Baird Maritime vessel review (design extérieur + architecture navale par Stirling Design International, en coopération avec Aker Arctic pour la coque brise-glace)",
+     "architecte": "Aker Arctic",
+     "architecte_source": "Aker Arctic (page de reference du programme, source primaire du concepteur) : le trace initial a ete prepare avec Ponant et Stirling Design International, mais Aker Arctic a eu la responsabilite de TOUT ce qui est sous le pont principal, machines et carene comprises, tandis que Stirling Design a concu les ponts superieurs et les interieurs. La doctrine reserve le champ architecte aux lignes de coque et a l'ingenierie : la valeur est donc Aker Arctic. Corrige le 15/08/2026 par le controle ARCHITECTE-STYLING-SEUL de audit-coherence.js. https://akerarctic.fi/reference/ponant-icebreaker/",
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: compagnie",
@@ -86588,7 +86588,7 @@
       }
      ],
      "architecte": "Espen Øino International",
-     "architecte_source": "https://www.boatinternational.com/yachts/news/vard-teams-up-with-espen-oino-for-182m-research-vessel--33471 ; en.wikipedia.org/wiki/REV_Ocean (design extérieur Espen Øino, intérieur H2 Yacht Design, avec VARD)",
+     "architecte_source": "Boat International (superyacht directory, fiche REV Ocean) et Robb Report : Espen Oino a concu les lignes de coque effilees, le bulbe brise-lame et l'etrave elancee destines au rendement, en plus du design exterieur ; l'amenagement interieur est de H2 Yacht Design. Le role depasse donc le styling et releve bien de l'architecture navale au sens de la doctrine. Coque acier construite a Vard Tulcea (Roumanie) en 18 mois puis remorquee en Norvege pour l'armement. Justificatif complete le 15/08/2026 apres revue du signalement ARCHITECTE-STYLING-SEUL, qui etait un FAUX POSITIF. https://www.boatinternational.com/yachts/the-superyacht-directory/rev-ocean--90675",
      "prix_acquisition": "~350 M USD (budget de construction rapporte a la commande, nov. 2018 ; cout final non publie)",
      "verification": {
       "statut": "douteux",
@@ -214676,10 +214676,11 @@
      "proprietaire": "Marine polonaise",
      "operateur": "Marine polonaise",
      "pavillon": "Pologne",
-     "architecte": "conception conjointe polono-néerlandaise",
+     "architecte": null,
      "prix_acquisition": null,
      "capacite": "numéro de coque 205 ; déplacement 1 110 t surface / 1 473 t plongée ; lancé le 15 janvier 1938",
-     "source": "https://en.wikipedia.org/wiki/ORP_Orze%C5%82_(1938)"
+     "source": "https://en.wikipedia.org/wiki/ORP_Orze%C5%82_(1938)",
+     "architecte_source": "Fait de conception releve en base : « conception conjointe polono-néerlandaise ». Ce n'est pas le nom d'une maison, le champ `architecte` repasse donc a null pour ne pas creer de cabinet fantome dans la couche Architectes et BE, qui en est derivee. Aucun concepteur nomme n'a ete identifie a ce jour pour ce navire. Deplacement du 15/08/2026, controle architecte-description."
     },
     {
      "nom": "Tromp (F801)",
@@ -215473,7 +215474,7 @@
       "diesel-mdo"
      ],
      "energie": "CODADE, 2 diesels Wärtsilä de 4,5 MW, trois auxiliaires, deux propulseurs d'étrave",
-     "architecte": "conception dérivée du roulier Ben-my-Chree",
+     "architecte": null,
      "source": "https://en.wikipedia.org/wiki/HMNZS_Canterbury_(L421)",
      "largeur_m": 23.4,
      "capacite": "deplacement 9 000 tonnes en charge, jusqu a 243 militaires embarques, 33 conteneurs EVP",
@@ -215484,7 +215485,8 @@
       "source": "https://en.wikipedia.org/wiki/HMNZS_Canterbury_(L421)",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "architecte_source": "Fait de conception releve en base : « conception dérivée du roulier Ben-my-Chree ». Ce n'est pas le nom d'une maison, le champ `architecte` repasse donc a null pour ne pas creer de cabinet fantome dans la couche Architectes et BE, qui en est derivee. Aucun concepteur nomme n'a ete identifie a ce jour pour ce navire. Deplacement du 15/08/2026, controle architecte-description."
     },
     {
      "nom": "Seaway",
