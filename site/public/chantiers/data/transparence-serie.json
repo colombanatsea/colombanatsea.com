@@ -1,15 +1,15 @@
 [
  {
   "date": "2026-08-15",
-  "motif": "Vague bureaux d'etudes : 60 cabinets fiches, 56 joignables. Le test de preuve HTTP ne condamne plus une source sur un 429 renvoye par notre propre cadence.",
-  "chantiers": 500,
-  "entrees": 6910,
-  "coques_plancher": 6675,
-  "url": 16730,
-  "taux_navires_source": 91.6,
-  "taux_architecte_justifie": 86,
-  "eligibles_imo": 3364,
-  "taux_imo_sur_eligible": 46.8,
-  "taux_joignables": 59.2
+  "motif": "Vague de moisson sur la frontiere assainie : 27 chantiers neufs, 113 navires entres, 15 noeuds clotures. Le geocodeur connait desormais la Tunisie et la Russie europeenne.",
+  "chantiers": 527,
+  "entrees": 7023,
+  "coques_plancher": 6783,
+  "url": 16966,
+  "taux_navires_source": 91.7,
+  "taux_architecte_justifie": 86.4,
+  "eligibles_imo": 3392,
+  "taux_imo_sur_eligible": 46.6,
+  "taux_joignables": 56.2
  }
 ]
