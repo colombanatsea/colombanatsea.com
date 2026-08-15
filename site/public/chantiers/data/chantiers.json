@@ -90777,7 +90777,8 @@
      ],
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: offshore"
+     "caractere_motif": "exploitation: offshore",
+     "note": "ENTREE NON CONFIRMEE, signalee le 15/08/2026. Sourcee par un annuaire d'entreprises (directory.marinelink.com, page societe Vard Langsten) et non par une fiche de navire : l'annuaire atteste un lien entre le chantier et un navire de ce nom, il n'atteste ni l'annee 2010 ni une coque distincte. Deux Rem Server sont etablis par ailleurs, celui de Simek (2007, 73,69 m) et celui de Brevik (2011, IMO 9482366) : cette entree peut etre un troisieme navire, ou l'une des deux autres coques mal datee et mal rattachee. Conservee faute de preuve de suppression, a instruire en phase 3."
     },
     {
      "nom": "Island Valiant",
@@ -190366,7 +190367,8 @@
     "Sources publiques (presse régionale, registres maritimes, sites des collectivités)"
    ],
    "confiance": "a_verifier",
-   "actif": true
+   "actif": null,
+   "actif_source": "`actif` repasse a null le 15/08/2026, controle actif-contredit-par-la-fiche. Placeholder assume, pas un chantier : sa propre description commence par « Ce n'est PAS un chantier ». Ne peut etre ni actif ni ferme. La valeur true contredisait le texte de la fiche et faisait entrer ce nom dans le denominateur de la couche SOLLICITATION, qui decide si l'on appelle. Null dit l'ignorance ou l'absence d'objet ; false affirmerait une fermeture qui n'est pas la bonne categorie pour une denomination ou un placeholder."
   },
   {
    "id": "fr-yard-chantier-de-l-arsenal",
@@ -190526,7 +190528,7 @@
     "navire-passagers",
     "navire-servitude"
    ],
-   "description": "Chantier naval varois specialise dans la construction et la reparation de navires de service et de transport de passagers jusqu'a 35 metres, avec l'aluminium pour coeur de metier, complete par l'acier et le composite. Implante Parc Activites Marines, Hall Sainte-Sophie a Saint-Mandrier-sur-Mer, apres une longue presence a La Seyne-sur-Mer. Le chantier revendique notamment La Vendeenne et la vedette Saint-Honorat IV, et a construit les vedettes Mediterranee 14 (2018) et Mediterranee 15 (2008) pour TLV-TVM. Il assure aussi la conception et la construction de terminaux maritimes.",
+   "description": "Chantier naval varois specialise dans la construction et la reparation de navires de service et de transport de passagers jusqu'a 35 metres, avec l'aluminium pour coeur de metier, complete par l'acier et le composite. Implante Parc Activites Marines, Hall Sainte-Sophie a Saint-Mandrier-sur-Mer, apres une longue presence a La Seyne-sur-Mer. Le chantier revendique notamment La Vendeenne et la vedette Saint-Honorat IV, et a construit les vedettes Mediterranee 14 (2018) et Mediterranee 15 (2008) pour TLV-TVM. Il assure aussi la conception et la construction de terminaux maritimes. Longtemps implante a La Seyne-sur-Mer, le chantier est aujourd'hui etabli au Parc d'Activites Marines de Saint-Mandrier-sur-Mer.",
    "navires_references": [
     {
      "nom": "La Vendéenne",
@@ -191264,7 +191266,8 @@
    ],
    "confiance": "a_verifier",
    "actif": true,
-   "historique": "Longtemps implante a La Seyne-sur-Mer, le chantier est aujourd'hui etabli au Parc d'Activites Marines de Saint-Mandrier-sur-Mer."
+   "historique": [],
+   "_maj_osint": "2026-08-15 : le champ `historique` portait une CHAINE au lieu du tableau d'evenements dates prevu par data/SCHEMA.md. Le texte, non date, releve de la description : il y a ete verse et le champ repasse a un tableau vide. Aucune information perdue, aucune date inventee. Ce defaut de type faisait tomber audit-coherence.js en entier des qu'un controle supposait le tableau."
   },
   {
    "id": "fr-yard-gamelin",
@@ -191284,7 +191287,7 @@
     "navire-passagers",
     "navire-servitude"
    ],
-   "description": "Chantier fonde en 1983 par Joel Gamelin a Marans, installe depuis 1998 sur le port de La Pallice a La Rochelle. Specialise dans la construction et la reparation en aluminium et en acier, en particulier les navires a passagers de moins de 24 metres, les bateaux de servitude et les unites militaires. Un second site a ouvert a Saint-Malo en decembre 2006 (29 salaries). Place en redressement judiciaire le 5 decembre 2008 puis en liquidation en janvier 2009 ; radie le 20 mars 2018. Le chantier a livre entre 2002 et 2006 les vedettes Spiren, Kistinig et Boedic 2, puis la Logoden 2 en 2007, ainsi que la Tocqueville (37 m, 2007) et les bateaux-bus electriques Copernic et Galilee (2009).",
+   "description": "Chantier fonde en 1983 par Joel Gamelin a Marans, installe depuis 1998 sur le port de La Pallice a La Rochelle. Specialise dans la construction et la reparation en aluminium et en acier, en particulier les navires a passagers de moins de 24 metres, les bateaux de servitude et les unites militaires. Un second site a ouvert a Saint-Malo en decembre 2006 (29 salaries). Place en redressement judiciaire le 5 decembre 2008 puis en liquidation en janvier 2009 ; radie le 20 mars 2018. Le chantier a livre entre 2002 et 2006 les vedettes Spiren, Kistinig et Boedic 2, puis la Logoden 2 en 2007, ainsi que la Tocqueville (37 m, 2007) et les bateaux-bus electriques Copernic et Galilee (2009). Fonde a Marans en 1983, transfere a La Pallice en 1998. Site de Saint-Malo ouvert en decembre 2006. Liquidation judiciaire en janvier 2009, radiation le 20 mars 2018.",
    "navires_references": [
     {
      "nom": "Ogia",
@@ -191943,7 +191946,8 @@
    "actif": true,
    "fondation": 1983,
    "effectif": 49,
-   "historique": "Fonde a Marans en 1983, transfere a La Pallice en 1998. Site de Saint-Malo ouvert en decembre 2006. Liquidation judiciaire en janvier 2009, radiation le 20 mars 2018."
+   "historique": [],
+   "_maj_osint": "2026-08-15 : le champ `historique` portait une CHAINE au lieu du tableau d'evenements dates prevu par data/SCHEMA.md. Le texte, non date, releve de la description : il y a ete verse et le champ repasse a un tableau vide. Aucune information perdue, aucune date inventee. Ce defaut de type faisait tomber audit-coherence.js en entier des qu'un controle supposait le tableau."
   },
   {
    "id": "fr-yard-chantier-naval-du-ponant",
@@ -192154,7 +192158,8 @@
     "https://www.meretmarine.com/fr/construction-navale/aker-lorient-signe-pour-un-transbordeur-et-espere-des-anneaux-de-fregates"
    ],
    "confiance": "a_verifier",
-   "actif": true
+   "actif": null,
+   "actif_source": "`actif` repasse a null le 15/08/2026, controle actif-contredit-par-la-fiche. Denomination historique du site du Rohu a Lanester, exploite successivement par Alstom Leroux Naval, Aker Yards puis STX France. La fiche documente une PERIODE, pas un chantier vivant. La valeur true contredisait le texte de la fiche et faisait entrer ce nom dans le denominateur de la couche SOLLICITATION, qui decide si l'on appelle. Null dit l'ignorance ou l'absence d'objet ; false affirmerait une fermeture qui n'est pas la bonne categorie pour une denomination ou un placeholder."
   },
   {
    "id": "fr-yard-la-perriere-lorient",
@@ -192530,7 +192535,8 @@
     "https://www.objectifeco.com/bourse/matieres-premieres/energies/bateau-electrique-a-supercondensateur-ar-vag-tredan-baptise-a-lorient.html"
    ],
    "confiance": "a_verifier",
-   "actif": true
+   "actif": null,
+   "actif_source": "`actif` repasse a null le 15/08/2026, controle actif-contredit-par-la-fiche. Denomination du meme site du Rohu apres la reprise d'Aker Yards par STX, sur la meme emprise industrielle a une periode differente, comme le dit sa propre description. La valeur true contredisait le texte de la fiche et faisait entrer ce nom dans le denominateur de la couche SOLLICITATION, qui decide si l'on appelle. Null dit l'ignorance ou l'absence d'objet ; false affirmerait une fermeture qui n'est pas la bonne categorie pour une denomination ou un placeholder."
   },
   {
    "id": "fr-yard-dubourdieu",
@@ -192623,7 +192629,7 @@
     "remorqueur",
     "navire-passagers"
    ],
-   "description": "Societe de remorquage et de travaux maritimes du groupe Arnal, auquel appartient egalement l'operateur TLV-TVM. La SNRTM entretient sa propre flotte de remorqueurs dans son chantier naval de Bregaillon, a La Seyne-sur-Mer, avec ses mecaniciens, electriciens, peintres et soudeurs. CORRECTION D'ATTRIBUTION : la SNRTM n'est pas le constructeur des vedettes Mediterranee, elle en assure les essais et l'entretien. Les Mediterranee 14 et 15 ont ete construites par Transmetal Industrie.",
+   "description": "Societe de remorquage et de travaux maritimes du groupe Arnal, auquel appartient egalement l'operateur TLV-TVM. La SNRTM entretient sa propre flotte de remorqueurs dans son chantier naval de Bregaillon, a La Seyne-sur-Mer, avec ses mecaniciens, electriciens, peintres et soudeurs. CORRECTION D'ATTRIBUTION : la SNRTM n'est pas le constructeur des vedettes Mediterranee, elle en assure les essais et l'entretien. Les Mediterranee 14 et 15 ont ete construites par Transmetal Industrie. Chantier de reparation propre implante a Bregaillon, La Seyne-sur-Mer.",
    "navires_references": [
     {
      "nom": "Archipel V",
@@ -192838,7 +192844,8 @@
    ],
    "confiance": "a_verifier",
    "actif": true,
-   "historique": "Chantier de reparation propre implante a Bregaillon, La Seyne-sur-Mer."
+   "historique": [],
+   "_maj_osint": "2026-08-15 : le champ `historique` portait une CHAINE au lieu du tableau d'evenements dates prevu par data/SCHEMA.md. Le texte, non date, releve de la description : il y a ete verse et le champ repasse a un tableau vide. Aucune information perdue, aucune date inventee. Ce defaut de type faisait tomber audit-coherence.js en entier des qu'un controle supposait le tableau."
   },
   {
    "id": "fr-yard-proteau",
@@ -193575,7 +193582,7 @@
    ],
    "taille_max": "Caboteurs et gaziers ~80 m (Tarihiko 81,2 m)",
    "capacites": [],
-   "historique": null,
+   "historique": [],
    "contact": null,
    "sources": [
     "https://en.wikipedia.org/wiki/Ailsa_Shipbuilding_Company"
