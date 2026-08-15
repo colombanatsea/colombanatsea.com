@@ -272,7 +272,7 @@
       const fr = await fetch("data/foreign-countries.geojson", { cache: "force-cache" });
       if (fr.ok) state.foreignGeo = await fr.json();
     } catch (e) { console.warn("Fond pays étrangers indisponible", e); }
-    // Pays hors emprise européenne (Chine, Roumanie, Espagne…) : dessinés mais hors emprise par défaut.
+    // Pays hors emprise européenne (Chine, Roumanie) : dessinés mais hors emprise par défaut.
     state.foreignGeoExtra = null;
     try {
       const fe = await fetch("data/foreign-countries-extra.geojson", { cache: "force-cache" });
@@ -539,9 +539,24 @@
     selT.addEventListener("change", () => { state.filters.type = selT.value; render(); });
 
     // Pays (registre européen)
-    const PAYS_ORDER = ["France", "Norvège", "Écosse", "Suède"];
+    const PAYS_ORDER = ["France", "Norvège", "Écosse", "Suède", "Pays-Bas", "Danemark",
+      "Espagne", "Grèce", "Irlande", "Irlande du Nord", "Croatie"];
     const paysSet = [...new Set(state.all.map((c) => c.pays))];
     const paysList = PAYS_ORDER.filter((p) => paysSet.includes(p)).concat(paysSet.filter((p) => !PAYS_ORDER.includes(p)));
+    // Le sous-titre se DERIVE des pays reellement presents. Il etait ecrit en dur
+    // dans index.html et annoncait « France, Norvege, Ecosse et Suede » alors que la
+    // base en portait huit : une enumeration figee se perime a la premiere ouverture
+    // de pays, en silence, et fait paraitre le registre plus etroit qu'il n'est.
+    // Au-dela de six pays on cesse d'enumerer : une liste qui deborde ne renseigne
+    // plus, elle encombre.
+    const dek = $("#dek");
+    if (dek && paysList.length) {
+      const p = paysList.length > 6
+        ? `${paysList.length} pays`
+        : paysList.slice(0, -1).join(", ") + (paysList.length > 1 ? " et " + paysList[paysList.length - 1] : "");
+      dek.textContent = `Chantiers et navires de ${p} : construction, réparation, défense, propulsion`;
+    }
+
     const selP = $("#f-pays");
     if (selP) {
       paysList.forEach((p) => selP.add(new Option(p + " (" + state.all.filter((c) => c.pays === p).length + ")", p)));
@@ -738,7 +753,14 @@
 
   function initMap(geo) {
     if (typeof L === "undefined") { showMapFallback(); return; }
-    map = L.map("map", { zoomControl: true, attributionControl: false, minZoom: 4, maxZoom: 12 });
+    // `minZoom: 3` et non 4. L'emprise du registre va desormais de la Crete (34,5 N)
+    // au Finnmark (71,7 N) : contenir 37 degres de latitude demande un zoom d'environ
+    // 3,5, et le plancher a 4 l'interdisait. La consequence n'etait pas un cadrage
+    // approximatif mais un ROGNAGE : la carte s'ouvrait sur l'Europe du Nord et 21
+    // marqueurs, toute l'Espagne et toute la Grece, restaient invisibles tant qu'on
+    // ne dezoomait pas a la main. Les bornes etaient justes depuis le debut, c'est le
+    // plancher de zoom qui les rendait inatteignables.
+    map = L.map("map", { zoomControl: true, attributionControl: false, minZoom: 3, maxZoom: 12 });
     const landStyle = { fillColor: "#DBE6EF", color: "#A8BCCD", weight: 1, fillOpacity: 1 };
     let bounds = null;
     if (geo) {
@@ -752,18 +774,71 @@
         bounds = bounds ? bounds.extend(fl.getBounds()) : fl.getBounds();
       } catch (e) { /* noop */ }
     }
-    // Pays hors emprise (Chine, Roumanie, Espagne…) : dessinés, mais sans étendre l'emprise par défaut
+    // Pays hors emprise (Chine, Roumanie) : dessinés, mais sans étendre l'emprise par défaut.
+    // L'Espagne en a été RETIRÉE le 05/08/2026 : elle portait 26 chantiers et restait
+    // hors du cadrage d'accueil, donc invisible à l'ouverture. Un pays du registre
+    // n'est pas un pays de la périphérie.
     // (sinon la vue se dézoome jusqu'en Asie). On y accède par le filtre Pays ou en dézoomant.
     if (state.foreignGeoExtra) {
       try { L.geoJSON(state.foreignGeoExtra, { style: landStyle, interactive: false }).addTo(map); }
       catch (e) { /* noop */ }
     }
-    if (bounds && bounds.isValid()) { state.homeBounds = bounds; map.fitBounds(bounds, { padding: [16, 16] }); }
+    // L'emprise d'accueil se calcule sur les CHANTIERS, pas sur les fonds de carte.
+    // Elle etait derivee des contours dessines, et l'ouverture de l'Espagne et de la
+    // Grece l'a montre : 21 marqueurs tombaient hors du cadre a l'ouverture, donc 21
+    // chantiers reels etaient invisibles tant qu'on ne dezoomait pas. Un fond de
+    // carte est un decor ; ce que la carte doit montrer, c'est la donnee.
+    // FENETRE EUROPEENNE, et c'est une correction de ma propre premiere version :
+    // en prenant TOUS les chantiers j'ai fait entrer l'outre-mer dans le calcul.
+    // Polynesie francaise a -149 de longitude et Nouvelle-Caledonie a +166 etirent
+    // les bornes sur la moitie du globe ; `minZoom: 4` bloque alors le dezoom, la
+    // vue se centre au milieu d'un ocean, et 49 marqueurs europeens sortent du
+    // cadre au lieu de 21. L'outre-mer n'est pas aberrant, il a deja SA place :
+    // la bande de vignettes `om-inset` sous la carte. La carte principale cadre
+    // l'Europe.
+    const EURO = (la, lo) => la >= 30 && la <= 72 && lo >= -25 && lo <= 45;
+    const pts = (state.all || [])
+      .filter((c) => typeof c.lat === "number" && typeof c.lon === "number" && EURO(c.lat, c.lon))
+      .map((c) => [c.lat, c.lon]);
+    let emprise = null;
+    if (pts.length > 1) { try { emprise = L.latLngBounds(pts).pad(0.06); } catch (e) { /* noop */ } }
+    if (!emprise || !emprise.isValid()) emprise = bounds;
+    if (emprise && emprise.isValid()) { state.homeBounds = emprise; map.fitBounds(emprise, { padding: [16, 16] }); }
     else { map.setView([54, 6], 4); }
     markerLayer = L.layerGroup().addTo(map);
     // La grille CSS peut finir sa mise en page après l'init : on recalcule la taille.
-    setTimeout(() => map.invalidateSize(), 0);
-    requestAnimationFrame(() => map.invalidateSize());
+    // Et on RE-CADRE derrière. `invalidateSize` corrige la taille du conteneur mais
+    // conserve le centre et le zoom : un cadrage calculé sur une boîte encore vide
+    // reste faux après coup. C'est ce qui laissait 21 marqueurs hors du cadre à
+    // l'ouverture, dont toute l'Espagne et toute la Grèce, alors que l'emprise
+    // calculée, elle, était juste. Le défaut n'était pas dans les bornes mais dans
+    // l'instant où on les appliquait.
+    // La bande de vignettes d'outre-mer est POSEE PAR-DESSUS le bas de la carte.
+    // Cadrer sans reserver sa hauteur revient a cacher la partie sud de l'emprise :
+    // une fois le zoom corrige, l'Espagne et la Grece etaient bien dans le cadre,
+    // et masquees par la bande. Un marqueur couvert vaut un marqueur absent.
+    const padBas = () => {
+      const s = document.querySelector(".om-strip");
+      const h = s ? Math.round(s.getBoundingClientRect().height) : 0;
+      const dispo = document.querySelector("#map").getBoundingClientRect().height || 0;
+      // Plafond RELATIF, pas absolu. Un seuil fixe a 400 px marchait sur un ecran
+      // large et lachait sur telephone, ou la bande est proportionnellement plus
+      // haute : la reserve etait refusee et 19 marqueurs restaient couverts.
+      // On reserve au plus 45 % de la hauteur : au-dela, la carte n'aurait plus
+      // assez de place pour montrer quoi que ce soit.
+      const max = Math.floor(dispo * 0.45);
+      if (!h || !dispo) return 16;
+      return Math.max(16, Math.min(h + 12, max));
+    };
+    const recadre = () => {
+      map.invalidateSize();
+      if (!state.homeBounds) return;
+      try {
+        map.fitBounds(state.homeBounds, { paddingTopLeft: [16, 16], paddingBottomRight: [16, padBas()] });
+      } catch (e) { /* noop */ }
+    };
+    setTimeout(recadre, 0);
+    requestAnimationFrame(recadre);
   }
 
   // Recentre la carte sur les chantiers d'un pays (hors outre-mer), ou sur l'emprise complète.
@@ -902,6 +977,22 @@
               ${refSpecs(n) ? `<span style="color:var(--muted);font-size:13px">${refSpecs(n)}</span>` : ""}
             </li>`).join("")}</ul></div>` : "";
 
+    // INTERVENTIONS : les navires PASSÉS chez ce chantier sans y avoir été
+    // construits. 120 entrées dont le champ `type` disait lui-même « refit »
+    // figuraient dans les navires de référence, c'est-à-dire dans le carnet de
+    // construction. Le Chantier Naval de Marseille se voyait ainsi créditer de
+    // neuf paquebots sortis de Saint-Nazaire, de Marghera et de Papenburg.
+    // Elles ne sont pas supprimées : le passage a bien eu lieu, et c'est une
+    // information de premier ordre sur un chantier de réparation. Elles sont
+    // rangées ailleurs, sous un titre qui dit ce qu'elles sont.
+    const interHtml = (c.interventions && c.interventions.length)
+      ? `<div class="d-section"><h3>Passages en chantier <span style="color:var(--muted);font-weight:400;font-size:13px">· refit, conversion, restauration — non construits ici</span></h3>
+          <ul class="d-list">${c.interventions.map((n) => `
+            <li style="flex-direction:column;gap:3px;align-items:flex-start">
+              <span><b>${n.nom || n.type || "Navire"}</b>${n.annee ? ` <span style="color:var(--muted)">· ${n.annee}</span>` : ""}</span>
+              ${n.type ? `<span style="color:var(--muted);font-size:13px">${n.type}</span>` : ""}
+            </li>`).join("")}</ul></div>` : "";
+
     const contactHtml = (c.contact && (c.contact.adresse || c.contact.web || c.contact.interlocuteur || c.contact.telephone))
       ? `<div class="d-section"><h3>Contact</h3>
           ${c.contact.adresse ? `<div class="d-fact__v">${c.contact.adresse}</div>` : ""}
@@ -928,6 +1019,7 @@
 
       ${caracHtml}
       ${refHtml}
+      ${interHtml}
       ${capHtml}
       ${prodHtml}
       ${persHtml}
@@ -1147,6 +1239,28 @@
         ${(v.photo.credit || v.photo.licence || v.photo.source) ? `<figcaption>${[v.photo.credit, v.photo.licence].filter(Boolean).join(" · ")}${v.photo.source ? ` <a href="${v.photo.source}" target="_blank" rel="noopener" title="source de l'image">↗</a>` : ""}</figcaption>` : ""}
       </figure>` : "";
     const ROLE = { construction: "Construction", proprietaire: "Propriétaire", operateur: "Opérateur", pavillon: "Pavillon", renommage: "Renommage", conversion: "Conversion", evenement: "Événement" };
+    // « Chantier constructeur » etait ecrit sous CHAQUE navire, y compris sur les
+    // 63 chantiers que la base declare elle-meme comme purement reparation-refit :
+    // 172 navires y portaient une affirmation que la fiche du chantier contredit
+    // deux clics plus loin. Reparer n'est pas construire, c'est la regle du journal
+    // des erreurs, et l'interface l'ignorait.
+    // Le libelle se DERIVE des perimetres, il n'est pas ecrit dans la donnee : le
+    // jour ou un chantier est reclasse, l'etiquette suit, sans passe de correction.
+    // Le TYPE du navire prime sur les périmètres du chantier. 122 navires portent
+    // un type qui dit lui-même « refit », « restauration-refit » ou « conversion »,
+    // et beaucoup sont sur des chantiers qui construisent aussi : l'étiquette
+    // déduite des seuls périmètres disait donc « Chantier constructeur » sous un
+    // navire dont la fiche affiche « refit » deux lignes plus haut. La donnée se
+    // contredisait à l'écran, et elle avait raison dans le champ le plus précis.
+    const REFIT = /^(restauration|refit|r[ée]paration|maintenance|car[ée]nage|conversion|jumboisation|allongement|passage)/i;
+    const roleChantier = (v) => {
+      if (REFIT.test(String(v.type || ""))) return "Chantier d'intervention (refit)";
+      const p = v._cperims || [];
+      if (!p.length) return "Chantier";
+      if (p.includes("construction-neuve") || p.includes("naval-defense")) return "Chantier constructeur";
+      if (p.includes("reparation-refit")) return "Chantier d'intervention (réparation, refit)";
+      return "Chantier";
+    };
     const tl = Array.isArray(v.timeline) ? v.timeline.filter((e) => e && e.annee) : [];
     const timelineHtml = tl.length
       ? `<div class="d-section"><h3>Vie du navire</h3>
@@ -1173,7 +1287,7 @@
           `<div class="d-fact"><div class="d-fact__k">${k}</div><div class="d-fact__v">${x}</div></div>`).join("")}</div></div>` : ""}
       <div class="d-section"><h3>Conception &amp; construction</h3>
         ${v.architecte ? `<button class="ves-yard ves-yard--arch" data-open-arch="${esc(v.architecte)}"><span class="ves-yard__role">Architecte / ensemblier</span><b>${esc(v.architecte)}</b><span>voir l'architecte →</span></button>` : ""}
-        <button class="ves-yard" data-open-chantier="${v._cid}"><span class="ves-yard__role">Chantier constructeur</span><b>${esc(v._cnom)}</b><span>${esc(v._cville)} · voir la fiche du chantier →</span></button>
+        <button class="ves-yard" data-open-chantier="${v._cid}"><span class="ves-yard__role">${roleChantier(v)}</span><b>${esc(v._cnom)}</b><span>${esc(v._cville)} · voir la fiche du chantier →</span></button>
       </div>
       ${timelineHtml}
       ${sim.length ? `<div class="d-section"><h3>Navires similaires</h3>
@@ -1256,12 +1370,10 @@
           "moteurs-electriques": "Moteurs et conversion \u00e9lectrique",
           "piles-a-combustible": "Piles \u00e0 combustible et hydrog\u00e8ne",
           "velique": "Propulsion v\u00e9lique", "foils": "Foils et sustentation",
-          "integration-energie": "Int\u00e9gration \u00e9nergie et propulsion",
           "moteurs-hydrogene": "Moteurs \u00e0 combustion hydrog\u00e8ne",
           "solaire": "Solaire embarqu\u00e9",
           "revetements": "Rev\u00eatements et peintures de car\u00e8ne",
-          "recuperation-chaleur": "R\u00e9cup\u00e9ration de chaleur (ORC)",
-          "routage-exploitation": "Routage et optimisation d'exploitation" };
+          "recuperation-chaleur": "R\u00e9cup\u00e9ration de chaleur (ORC)" };
         lg.style.display = "";
         lg.innerHTML = '<div class="legend__title">Levier</div>'
           + Object.keys(LEVIER_COULEUR).map(function (k) {
@@ -1459,9 +1571,8 @@
   const LEVIER_COULEUR = {
     "batteries": "#1f9d55", "moteurs-electriques": "#0b7fd4",
     "piles-a-combustible": "#d4770b", "velique": "#7a3df0", "foils": "#c2185b",
-    "integration-energie": "#00838f", "moteurs-hydrogene": "#a1451c",
-    "solaire": "#c9a227", "revetements": "#5d6d7e",
-    "recuperation-chaleur": "#8d6e63", "routage-exploitation": "#37474f",
+    "moteurs-hydrogene": "#a1451c", "solaire": "#c9a227",
+    "revetements": "#5d6d7e", "recuperation-chaleur": "#8d6e63",
   };
   function filteredEquipementiers() {
     const nq = norm(state.filters.q);
