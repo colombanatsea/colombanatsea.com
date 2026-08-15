@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Chantiers navals français",
   "version": "0.1.0-mvp",
-  "date_maj": "2026-08-14",
+  "date_maj": "2026-08-15",
   "note": "Base enrichie par passe OSINT vérifiée (navires de référence avec caractéristiques). Documentation de référence ; aide au choix d'un chantier par navire similaire. Sources par fiche, aucune invention.",
   "perimetres_ref": {
    "construction-neuve": "Construction neuve",
@@ -34,7 +34,8 @@
     "date": "2026-08-14",
     "objet": "Vérification du catalogue de fournisseurs du GICAN pour le GT décarbonation de la flotte côtière (DGAMPA). Déclencheur : plusieurs bureaux d'études consultés ont signalé des références erronées.",
     "methodologie": "docs/CHANTIERS-methodologie-osint.md",
-    "resultats": "Aucun chantier disparu parmi les 14 cités. Corrections principales : NepTech n'a aucun navire hydrogène livré et n'est pas un chantier ; ODC Marine construit en Chine ; MIM est à Dieppe sans référence d'amphidrome ; Ayro et OceanWings sont la même société ; MobyFly est suisse ; l'entité Martinez a changé après redressement judiciaire en avril 2024."
+    "resultats": "Aucun chantier disparu parmi les 14 cités. Corrections principales : NepTech n'a aucun navire hydrogène livré et n'est pas un chantier ; ODC Marine construit en Chine ; MIM est à Dieppe sans référence d'amphidrome ; Ayro et OceanWings sont la même société ; MobyFly est suisse ; l'entité Martinez a changé après redressement judiciaire en avril 2024.",
+    "correction": "2026-08-15 : cinq fiches retirees, non conformes a la regle 4 de la phase EQUIPEMENTIERS du pipeline (un integrateur ou un bureau d etudes n est pas un equipementier) : Alternatives Energies, Actemium Marine, Naviwatt, Syroco, Sinay. Le fait Actemium est porte par la timeline du retrofit de l Ar Vag Tredann dans la base amont."
    }
   ]
  },
@@ -186824,82 +186825,6 @@
    "geo_precision": "ville"
   },
   {
-   "id": "eq-alternatives-energies",
-   "nom": "Alternatives Énergies",
-   "ville": "La Rochelle",
-   "region": "Nouvelle-Aquitaine",
-   "pays": "France",
-   "lat": 46.158,
-   "lon": -1.151,
-   "geo_precision": "ville",
-   "levier": "integration-energie",
-   "levier_libelle": "Intégration énergie et propulsion",
-   "produit": "Intégrateur de systèmes énergie-propulsion zéro émission et hybrides pour la navigation professionnelle. Pionnier français : premier passeur 100% électrique de 30 places mis en service à La Rochelle en 1998, second en 2003. Catamarans électriques Copernic et Galilée (18 t, 75 passagers, 6 nœuds, batteries nickel 120 kW). Bus de mer Volta et Ampère sous couleurs Yelo, jusqu'à 30% d'apport solaire contre 10% sur la génération précédente. Intégrateur énergie et propulsion des deux navettes NepTech des Sables d'Olonne. Développement du Bernard Palissy III électro-solaire.",
-   "confiance": "haute",
-   "note": "Également fiché comme architecte dans la base, via les navires qu'il a conçus. Sa présence ici tient à son métier réel d'intégrateur de systèmes, distinct de l'architecture navale.",
-   "sources": [
-    "https://www.alternativesenergies.com/en/the-company/",
-    "https://www.alternativesenergies.com/en/Nos-produits/bus-de-mer-la-rochelle/",
-    "https://www.bateau-electrique.com/actualites/la-rochelle-lance-nouveaux-passeurs-electro-solaires-alternatives-energies/"
-   ],
-   "navires_equipes": [
-    "Le Passeur Électrique (1998)",
-    "Copernic",
-    "Galilée",
-    "Volta",
-    "Ampère",
-    "Navettes NepTech Les Sables d'Olonne",
-    "Bernard Palissy III"
-   ],
-   "_maj_osint": "2026-08-14 : fiche créée lors de la passe de vérification du catalogue de fournisseurs du GICAN, dans le cadre du GT décarbonation de la flotte côtière (DGAMPA)."
-  },
-  {
-   "id": "eq-actemium-marine",
-   "nom": "Actemium Marine",
-   "ville": "Lorient",
-   "region": "Bretagne",
-   "pays": "France",
-   "lat": 47.745,
-   "lon": -3.367,
-   "geo_precision": "ville",
-   "levier": "integration-energie",
-   "levier_libelle": "Intégration énergie et propulsion",
-   "produit": "Intégration électrique et automatismes marins, marque du réseau VINCI Energies, à laquelle appartient également Barillec Marine. Mène le groupement d'entreprises retenu pour le rétrofit de l'Ar Vag Tredan de Lorient Agglomération, 3,6 M€ et 14 à 16 mois de travaux, maîtrise d'œuvre de conception Ship-ST, retour en service au printemps 2026.",
-   "confiance": "haute",
-   "note": "Le navire ressort en motorisation hybride électrique-diesel alors qu'il était 100% électrique sur supercondensateurs à l'origine : la référence ne doit pas être présentée comme un rétrofit 100% électrique.",
-   "sources": [
-    "https://www.actemium-marine.com/",
-    "https://www.meretmarine.com/fr/marine-marchande/le-bateau-electrique-ar-vag-tredan-entre-en-grand-chantier-de-remotorisation",
-    "https://www.bateau-electrique.com/actualites/ship-st-actemium-seconde-vie-bateau-bus-electrique-lorient/"
-   ],
-   "navires_equipes": [
-    "Ar Vag Tredann (rétrofit 2026)"
-   ],
-   "_maj_osint": "2026-08-14 : fiche créée lors de la passe de vérification du catalogue de fournisseurs du GICAN, dans le cadre du GT décarbonation de la flotte côtière (DGAMPA)."
-  },
-  {
-   "id": "eq-naviwatt",
-   "nom": "Naviwatt",
-   "ville": "Arzon",
-   "region": "Bretagne",
-   "pays": "France",
-   "lat": 47.545,
-   "lon": -2.891,
-   "geo_precision": "ville",
-   "levier": "integration-energie",
-   "levier_libelle": "Intégration énergie et propulsion",
-   "produit": "Systèmes de propulsion électrique et hybride pour navires, architecture navale et ingénierie : conception et construction de bateaux de travail électriques, rétrofits électriques de navires existants, solutions de supervision de flotte. Intégrateur et architecte naval du consortium ORC réuni par VNF avec Enogia et l'IFPEN sur le navire d'essai Eridan.",
-   "confiance": "moyenne",
-   "note": null,
-   "sources": [
-    "https://www.naviwatt.com/",
-    "https://www.bateau-electrique.com/membres/naviwatt/",
-    "https://www.vnf.fr/vnf/dossiers-actualitess/recuperation-de-chaleur-orc-les-conditions-restrictives-pour-un-deploiement-dans-le-secteur-fluvial/"
-   ],
-   "navires_equipes": [],
-   "_maj_osint": "2026-08-14 : fiche créée lors de la passe de vérification du catalogue de fournisseurs du GICAN, dans le cadre du GT décarbonation de la flotte côtière (DGAMPA)."
-  },
-  {
    "id": "eq-ehm",
    "nom": "EHM (Efficient Hydrogen Motors)",
    "ville": "Châteaulin",
@@ -186979,50 +186904,6 @@
    "sources": [
     "https://enogia.com/en/en-orc/",
     "https://www.vnf.fr/vnf/dossiers-actualitess/recuperation-de-chaleur-orc-les-conditions-restrictives-pour-un-deploiement-dans-le-secteur-fluvial/"
-   ],
-   "navires_equipes": [],
-   "_maj_osint": "2026-08-14 : fiche créée lors de la passe de vérification du catalogue de fournisseurs du GICAN, dans le cadre du GT décarbonation de la flotte côtière (DGAMPA)."
-  },
-  {
-   "id": "eq-syroco",
-   "nom": "Syroco",
-   "ville": "Marseille",
-   "region": "Provence-Alpes-Côte d'Azur",
-   "pays": "France",
-   "lat": 43.296,
-   "lon": 5.37,
-   "geo_precision": "ville",
-   "levier": "routage-exploitation",
-   "levier_libelle": "Routage et optimisation d'exploitation",
-   "produit": "Plateforme d'optimisation de voyage fondée sur un jumeau numérique du navire et l'intelligence artificielle, calcul de routes et de profils de vitesse optimisés sous contrainte d'heure d'arrivée. Gain annoncé d'au moins 10% de carburant. Déployée sur des navires de la Compagnie Maritime Nantaise (dont le MN Pelican) et de TotalEnergies.",
-   "confiance": "moyenne",
-   "note": "Levier sans objet sur la flotte côtière à passagers : le routage suppose une route libre et une vitesse arbitrable sur plusieurs jours de mer, ce qu'un bac ou une vedette de desserte n'a pas.",
-   "sources": [
-    "https://cdn.syro.co/en/",
-    "https://www.offshore-energy.biz/syroco-weather-routing-solution-to-cut-fuel-consumption-co2-emissions-on-mn-pelican/"
-   ],
-   "navires_equipes": [
-    "MN Pelican (Compagnie Maritime Nantaise)"
-   ],
-   "_maj_osint": "2026-08-14 : fiche créée lors de la passe de vérification du catalogue de fournisseurs du GICAN, dans le cadre du GT décarbonation de la flotte côtière (DGAMPA)."
-  },
-  {
-   "id": "eq-sinay",
-   "nom": "Sinay",
-   "ville": "Caen",
-   "region": "Normandie",
-   "pays": "France",
-   "lat": 49.183,
-   "lon": -0.37,
-   "geo_precision": "ville",
-   "levier": "routage-exploitation",
-   "levier_libelle": "Routage et optimisation d'exploitation",
-   "produit": "PME créée à Caen, plateforme logicielle modulaire intégrant algorithmes d'IA et API pour transformer les données maritimes (GNSS, AIS, capteurs, satellites) en indicateurs opérationnels et environnementaux. Digital Port Platform développée avec le soutien de l'ESA et du CNES, optimisation des arrivées de navires et réduction des temps d'attente.",
-   "confiance": "moyenne",
-   "note": null,
-   "sources": [
-    "https://sinay.ai/en/verticals/",
-    "https://www.choisirlanormandie.fr/sinay-une-pme-4-0/"
    ],
    "navires_equipes": [],
    "_maj_osint": "2026-08-14 : fiche créée lors de la passe de vérification du catalogue de fournisseurs du GICAN, dans le cadre du GT décarbonation de la flotte côtière (DGAMPA)."
