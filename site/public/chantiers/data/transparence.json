@@ -8,8 +8,8 @@
   "pays": 25
  },
  "sources": {
-  "url_total": 16713,
-  "domaines_distincts": 1506,
+  "url_total": 16730,
+  "domaines_distincts": 1510,
   "navires_avec_url": 6329,
   "taux_navires_avec_url": 91.6
  },
@@ -54,7 +54,7 @@
    "chantiers": 500,
    "entrees": 6910,
    "coques_plancher": 6675,
-   "url": 16713,
+   "url": 16730,
    "taux_navires_source": 91.6,
    "taux_architecte_justifie": 86,
    "eligibles_imo": 3364,
