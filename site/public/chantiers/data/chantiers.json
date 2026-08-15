@@ -5254,7 +5254,10 @@
      "descendu_le": "2026-08-05",
      "motif": "type de refit : passage en chantier, pas une construction"
     }
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : MSC World Asia (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/saint-nazaire-l-assemblage-du-msc-world-asia-presque-termine-a-un-mois-de-sa-mise-a-l-eau"
   },
   {
    "id": "naval-group-lorient",
@@ -8481,7 +8484,10 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.naval-group.com/fr/news/dcns-transfere-la-fremm-tahya-misr-a-la-marine-egyptienne/",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Nearchos (F602) (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.naval-group.com/en/launching-hs-nearchos-second-defence-and-intervention-frigate-fdi-hellenic-navy"
   },
   {
    "id": "naval-group-cherbourg",
@@ -11094,7 +11100,10 @@
    "geo_source": "https://fr.wikipedia.org/wiki/Arsenal_de_Cherbourg",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Tourville (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://fr.wikipedia.org/wiki/Classe_Suffren_(sous-marin)"
   },
   {
    "id": "naval-group-brest",
@@ -11195,7 +11204,9 @@
     "https://fr.wikipedia.org/wiki/Fr%C3%A9gate_multi-missions",
     "https://en.wikipedia.org/wiki/Naval_Group",
     "https://fr.wikipedia.org/wiki/Mistral_(L9013)",
-    "https://fr.wikipedia.org/wiki/Tonnerre_(L9014)"
+    "https://fr.wikipedia.org/wiki/Tonnerre_(L9014)",
+    "https://naval-group.com/fr/actualites/lamiral-ronarch-lepreuve-du-large",
+    "https://naval-group.com/fr/implantations"
    ],
    "confiance": "haute",
    "produits": [
@@ -11639,7 +11650,9 @@
    "geo_source": "https://patrimoine.bzh/gertrude-diffusion/dossier/IA29001878",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Article du 21/07/2026 sur la fregate Amiral Ronarc'h indiquant Brest comme port-base et annonçant son arret technique majeur de septembre a decembre 2026 ; l'etablissement Naval Group de Brest (SIRET 441 133 808 00036, NAF 33.15Z reparation navale) est ouvert au repertoire SIRENE et le site assure le MCO et la modernisation des batiments. Vague contact-activite du 2026-08-15. https://naval-group.com/fr/actualites/lamiral-ronarch-lepreuve-du-large"
   },
   {
    "id": "naval-group-toulon",
@@ -11766,7 +11779,9 @@
     "https://www.meretmarine.com/fr/defense/que-contient-exactement-le-programme-de-modernisation-des-fregates-horizon",
     "https://fr.wikipedia.org/wiki/Chevalier_Paul_(fr%C3%A9gate)",
     "https://www.meretmarine.com/fr/defense/toulon-inauguration-du-deuxieme-bassin-renove-et-couvert-de-la-darse-missiessy",
-    "https://www.opex360.com/2017/02/08/le-porte-avions-charles-de-gaulle-rejoint-le-bassin-vauban-pour-sa-refonte/"
+    "https://www.opex360.com/2017/02/08/le-porte-avions-charles-de-gaulle-rejoint-le-bassin-vauban-pour-sa-refonte/",
+    "https://naval-group.com/fr/presse/naval-group-livre-le-4-e-sous-marin-nucleaire-dattaque-sna-du-programme-barracuda",
+    "https://naval-group.com/fr/implantations"
    ],
    "confiance": "haute",
    "produits": [
@@ -12203,7 +12218,9 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : http://defens-aero.com/2018/05/arret-technique-majeur-porte-avions-charles-gaulle-flot.html",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Communique du 26/06/2026 sur la livraison du 4e SNA Barracuda precisant que Naval Group assure l'entretien de ces sous-marins a Toulon ; l'etablissement Naval Group de Toulon (SIRET 441 133 808 00077, NAF 30.11Z) est ouvert au repertoire SIRENE. Vague contact-activite du 2026-08-15. https://naval-group.com/fr/presse/naval-group-livre-le-4-e-sous-marin-nucleaire-dattaque-sna-du-programme-barracuda"
   },
   {
    "id": "naval-group-nantes-indret",
@@ -13223,7 +13240,10 @@
    "geo_source": "https://nominatim.openstreetmap.org/search?q=Naval%20Group%20Indret%20Indre%20Loire-Atlantique&format=jsonv2",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Sous-marins nucléaires d'attaque classe Suffren (programme Barracuda), 6 unités dont Suffren - sous-marin nucléaire d'attaque (SNA) (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/defense/naval-group-indret-livre-son-dernier-bloc-moteur-de-barracuda"
   },
   {
    "id": "piriou-concarneau",
@@ -15512,7 +15532,10 @@
    ],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Trolley de Prévaux (1er PH) (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/defense/piriou-met-a-l-eau-le-premier-des-nouveaux-patrouilleurs-hauturiers-francais"
   },
   {
    "id": "socarenam-boulogne",
@@ -17634,7 +17657,10 @@
    "geo_source": "https://nominatim.openstreetmap.org/search?q=Socarenam%20Boulogne-sur-Mer&format=jsonv2",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : BNS Vega (P903) (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.navalnews.com/naval-news/2026/04/socarenam-launches-third-patrol-vessel-for-belgian-navy/"
   },
   {
    "id": "cmn-cherbourg",
@@ -19693,7 +19719,10 @@
    ],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : NRA Ekuikui II (F300), 1re de 3 corvettes Angola (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.navalnews.com/naval-news/2026/03/video-first-br71-mkii-corvette-for-angola-launched-by-cmn/"
   },
   {
    "id": "ocea-les-sables",
@@ -22260,7 +22289,10 @@
    "geo_source": "https://fr.mappy.com/plan/Quai-de-la-Cabaude---Port-Olona-85100-Les-Sables-d'Olonne",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Patrouilleur hauturier du Guyana, type OPV 190 (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/defense/ocea-debute-la-construction-d-un-patrouilleur-de-58-metres-pour-le-guyana"
   },
   {
    "id": "beneteau-saint-gilles",
@@ -22883,7 +22915,10 @@
      "descendu_le": "2026-08-05",
      "motif": "type de refit : passage en chantier, pas une construction"
     }
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Bénéteau Oceanis 52 (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.actunautique.com/2025/07/nouveaute-beneteau-oceanis-52-une-8e-generation-proposant-une-nouvelle-lecture-a-la-grande-croisiere.html"
   },
   {
    "id": "fountaine-pajot-aigrefeuille",
@@ -22975,7 +23010,9 @@
     "https://www.multihulls-world.com/review/motor/fountaine-pajot-my-37-vive-les-power-cats",
     "https://www.catamarans-fountaine-pajot.com/en/sailing-catamarans/catamaran-samana-59/",
     "https://www.theglobesailor.com/fountaine-pajot-boat-models-sb7.html",
-    "https://www.boatindustry.fr/article/24000/fountaine-pajot-inaugure-nouvelle-usine"
+    "https://www.boatindustry.fr/article/24000/fountaine-pajot-inaugure-nouvelle-usine",
+    "https://www.catamarans-fountaine-pajot.com/fp48-decouvrez-les-premieres-images-officielles-du-nouveau-catamaran-a-voile-fountaine-pajot/",
+    "https://www.pappers.fr/entreprise/fountaine-pajot-307309898"
    ],
    "confiance": "haute",
    "materiaux": [
@@ -23228,7 +23265,9 @@
    ],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Presentation publique des premieres images officielles du catamaran FP48 le 16/07/2026 et Open Days a La Rochelle le 09/07/2026 ; depot des comptes sociaux et consolides de l'exercice clos le 31/08/2025 publie au BODACC le 25/06/2026, 772 salaries et 229 M EUR de chiffre d'affaires 2025. Vague contact-activite du 2026-08-15. https://www.catamarans-fountaine-pajot.com/fp48-decouvrez-les-premieres-images-officielles-du-nouveau-catamaran-a-voile-fountaine-pajot/"
   },
   {
    "id": "couach-gujan-mestras",
@@ -24706,7 +24745,10 @@
     "lien mort constate le 2026-08-03 : https://edecideur.com/leader/511791410-0051966-m-walter-ceglia-chantier-naval-couach-cnc-10-rue-de-l-yser-33470-gujan-mestras.html",
     "lien mort constate le 2026-08-03 : https://www.snsm.org/actualites/la-nouvelle-flotte-de-la-snsm-construite-par-couach-entre-en-phase-de-test-avant-son-deploiement",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : VGMAR (série de 24, 4 fermes) (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.mauric.com/news/gendarmerie-maritilme-patrol-vessel-signature"
   },
   {
    "id": "cndm-marseille",
@@ -24870,7 +24912,10 @@
     "https://www.meretmarine.com/fr/vie-portuaire/marseille-un-enorme-navire-de-pose-de-pipelines-en-cale-seche-dans-la-forme-10",
     "https://cndm.fr/fr/reference/saipem-constellation",
     "https://cndm.fr/en/reference/gnv-suprema",
-    "https://cndm.fr/fr/installations"
+    "https://cndm.fr/fr/installations",
+    "https://cndm.fr/en/2026-01-30/welcome-in-marseille-aida-bella",
+    "https://www.pappers.fr/entreprise/chantier-naval-de-marseille-521974493",
+    "https://cndm.fr/en/facilities"
    ],
    "confiance": "haute",
    "produits": [
@@ -25742,7 +25787,9 @@
      "descendu_le": "2026-08-05",
      "motif": "type de refit : passage en chantier, pas une construction"
     }
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Accueil du paquebot AIDA Bella pour six semaines de modernisation, annonce datee du 30/01/2026, et participation a Euromaritime le 06/02/2026 ; depot des comptes de l'exercice 2025 publie au BODACC le 23/06/2026, 175 salaries et 106 M EUR de chiffre d'affaires 2025. Vague contact-activite du 2026-08-15. https://cndm.fr/en/2026-01-30/welcome-in-marseille-aida-bella"
   },
   {
    "id": "damen-brest",
@@ -26721,7 +26768,10 @@
      "source": "https://en.wikipedia.org/wiki/MSC_Euribia",
      "note": "descendu de navires_references le 2026-08-05 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. Construit à Saint-Nazaire, pas à Brest. Damen Brest est un site de réparation ; l'année 2024 en base est un arrêt technique."
     }
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Le Commandant Charcot (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://cruiseindustrynews.com/cruise-news/2026/05/le-commandant-charcot-completes-upgrades-at-damen-shipyard/"
   },
   {
    "id": "mb92-la-ciotat",
@@ -26900,7 +26950,10 @@
     "https://www.equinoxeyachts.com/wp-content/uploads/2022/02/Logica_Equinoxe-Yachts-Brochure_.pdf",
     "https://yachtharbour.com/builders/Compositeworks",
     "https://www.actu-transport-logistique.fr/journal-de-la-marine-marchande/shipping/mb92-sancre-jusquen-2042-dans-la-grande-forme-de-la-ciotat-743914.php",
-    "https://www.laciotat-shipyards.com/en/exploitation-de-la-grande-forme-et-despaces-annexes-mb92-resigne-pour-20-ans/"
+    "https://www.laciotat-shipyards.com/en/exploitation-de-la-grande-forme-et-despaces-annexes-mb92-resigne-pour-20-ans/",
+    "https://mb92.com/a-look-back-at-the-ministerial-visit-to-la-ciotat-shipyards/",
+    "https://www.laciotat-shipyards.com/fr/visite-de-catherine-chabaud-ministre-deleguee-chargee-de-la-mer-et-de-la-peche/",
+    "https://mb92.com/la-ciotat/"
    ],
    "confiance": "haute",
    "pays": "France",
@@ -27055,7 +27108,9 @@
      "descendu_le": "2026-08-05",
      "motif": "type de refit : passage en chantier, pas une construction"
     }
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Article du 09/02/2026 sur la visite de la ministre de la Mer aux chantiers de La Ciotat, avec présentation par MB92 La Ciotat de son programme de refit ; la SPL exploitante du site relate la même visite du 4 février 2026 en citant la présence de Bruno Ricard pour MB92. Vague contact-activite du 2026-08-15. https://mb92.com/a-look-back-at-the-ministerial-visit-to-la-ciotat-shipyards/"
   },
   {
    "id": "monaco-marine-la-seyne",
@@ -27193,7 +27248,8 @@
     "https://www.superyachttimes.com/yacht-news/la-seyne-toulon-shipyard-news",
     "https://www.superyachttimes.com/yacht-news/monaco-marine-completes-bijin-refit",
     "https://www.superyachttimes.com/yacht-news/41m-feadship-superyacht-synthesis-66-refit-at-monaco-marine",
-    "https://www.yachting-pages.com/articles/monaco-marine-opens-new-la-seyne-toulon-shipyard.html"
+    "https://www.yachting-pages.com/articles/monaco-marine-opens-new-la-seyne-toulon-shipyard.html",
+    "https://www.pappers.fr/entreprise/808571194"
    ],
    "confiance": "moyenne",
    "pays": "France",
@@ -27385,7 +27441,9 @@
    "geo_source": "https://api-adresse.data.gouv.fr/search/?q=corniche+philippe+giovannini+la+seyne-sur-mer",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Le chantier de La Seyne-sur-Mer (Espace Grimaud) est exploite par la SAS immatriculee sous le SIREN 808 571 194, en activite, 26 salaries en 2025, chiffre d'affaires 15,3 M EUR, comptes de l'exercice 2025 deposes le 20/05/2026 et changement de president en juin 2026 au profit de Safe Harbor France ; la societe porte desormais la denomination SAFE HARBOR LA SEYNE-TOULON. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/808571194"
   },
   {
    "id": "kership-lorient",
@@ -28286,7 +28344,10 @@
    ],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Brugge (M942), chasseur de mines classe City / programme rMCM (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/defense/kership-met-a-l-eau-le-brugge-5eme-des-12-nouveaux-chasseurs-de-mines-belgo-neerlandais"
   },
   {
    "id": "glehen-douarnenez",
@@ -28454,7 +28515,10 @@
     "https://mag.hookandnet.com/2019/08/12/2019-08oasisiifr/pugpig_index.html",
     "https://www.nauticexpo.com/prod/chantier-naval-glehen/product-194180-524555.html",
     "http://courriersdefrance.blogspot.com/2017/11/vedette-ile-darz-bateaux-bus-du-golfe.html",
-    "https://www.meretmarine.com/fr/construction-navale/a-douarnenez-le-vieux-slipway-va-etre-remplace-par-un-nouvel-outil"
+    "https://www.meretmarine.com/fr/construction-navale/a-douarnenez-le-vieux-slipway-va-etre-remplace-par-un-nouvel-outil",
+    "https://www.ouest-france.fr/economie/chantiers-navals/on-se-bat-pour-notre-territoire-a-douarnenez-le-chantier-glehen-navigue-dans-un-contexte-incertain-52bf6984-2f60-11f1-b6ef-35cf984fdd2d",
+    "https://www.letelegramme.fr/finistere/douarnenez-29100/construire-les-bateaux-de-demain-le-chantier-glehen-ouvre-ses-portes-a-douarnenez-6915806.php",
+    "https://www.chantier-glehen.com/fr,contact,13.html"
    ],
    "confiance": "moyenne",
    "pays": "France",
@@ -30731,7 +30795,9 @@
    "geo_source": "https://api-adresse.data.gouv.fr/search/?q=port+du+rosmeur+douarnenez",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Ouest-France du 03/04/2026 décrit un chantier en activité à Douarnenez, en construction et réparation navale, confronté à un manque de visibilité et à un outil de levage inadapté au Rosmeur ; Le Télégramme du 26/10/2025 indique une quarantaine de salariés sur Douarnenez, Le Guilvinec et Loctudy. Vague contact-activite du 2026-08-15. https://www.ouest-france.fr/economie/chantiers-navals/on-se-bat-pour-notre-territoire-a-douarnenez-le-chantier-glehen-navigue-dans-un-contexte-incertain-52bf6984-2f60-11f1-b6ef-35cf984fdd2d"
   },
   {
    "id": "chantiers-bernard-lorient",
@@ -32288,7 +32354,10 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://seatosea.fr/actualites/archives/chalutier-trimaran-peche-arriere-de-21-m-megaptere-",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Capella (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/les-chantiers-bernard-liquides-leur-dernier-bateau-remorque-a-saint-nazaire"
   },
   {
    "id": "merre-nort-sur-erdre",
@@ -33923,7 +33992,10 @@
    ],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : CTP - 2 chalands de travaux portuaires (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/merre-va-construire-les-nouveaux-chalands-de-travaux-portuaires-de-la-marine-nationale"
   },
   {
    "id": "efinor-allais-paimpol",
@@ -34741,7 +34813,10 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://en.meretmarine.com/allais-crewboats-new-horizons/159937",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : USV Sea Cleaner (Mass Cleaner) (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/efinor-sea-cleaner-devoile-son-drone-de-depollution-en-mer-et-dans-les-ports"
   },
   {
    "id": "dufour-la-rochelle",
@@ -35749,7 +35824,10 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.boat-specs.com/sailing/sailboats/dufour/",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Dufour 48 (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.dufour-yachts.com/en/the-dufour-48-the-2025-new-model-presented-without-its-hardtop/"
   },
   {
    "id": "amel-la-rochelle",
@@ -36286,7 +36364,10 @@
    "geo_source": "https://fr.mappy.com/poi/50ae147e84ae753f399e6d15",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : AMEL 50.2 (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.actunautique.com/2026/06/fiche-technique-amel-50.2-voilier-de-grande-croisiere-hauturiere-de-16-70-m.html"
   },
   {
    "id": "outremer-la-grande-motte",
@@ -36382,7 +36463,9 @@
     "https://www.multihulls-world.com/technical-specifications/outremer-yachting/outremer-52",
     "https://www.multihulls-world.com/technical-specifications/outremer-yachting/outremer-64",
     "https://sailmagazine.com/sail-extras/outremer-announces-two-new-models-57-and-64/",
-    "https://catamaran-outremer.com/en/catamarans/outremer-5x/"
+    "https://catamaran-outremer.com/en/catamarans/outremer-5x/",
+    "https://catamaran-outremer.com/actualites/salon-international-du-multicoque-2026-merci-detre-venus-nous-voir/",
+    "https://catamaran-outremer.com/actualites/outremer-57-n1-le-debut-d-une-vraie-histoire-de-mer/"
    ],
    "confiance": "moyenne",
    "pays": "France",
@@ -36658,7 +36741,9 @@
    "geo_source": "https://fr.mappy.com/poi/50ae0b7484ae753f399e2c0d",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Production et vie de gamme continues en 2026 : premier Outremer 57 presente le 24 fevrier 2026, Salon International du Multicoque de La Grande-Motte le 28 avril 2026, derniere actualite publiee le 25 juin 2026 ; l'exploitant Grand Large Yachting Mediterranee (SIREN 501 597 215, 726 avenue Robert Fages, La Grande-Motte) est actif au registre au 14 aout 2026. Vague contact-activite du 2026-08-15. https://catamaran-outremer.com/actualites/salon-international-du-multicoque-2026-merci-detre-venus-nous-voir/"
   },
   {
    "id": "privilege-les-sables",
@@ -36764,7 +36849,8 @@
     "https://www.multihulls-world.com/technical-specifications/privilege-marine/privilege-serie-640",
     "https://www.multihulls-world.com/technical-specifications/privilege-marine/privilege-serie-5",
     "https://www.actunautique.com/2015/09/mise-a-l-eau-d-un-catamaran-de-luxe-de-74-pieds-chez-privilege-marine-85.html",
-    "https://www.katamarans.com/product-tag/privilege/"
+    "https://www.katamarans.com/product-tag/privilege/",
+    "https://www.pappers.fr/entreprise/privilege-marine-752530683"
    ],
    "confiance": "moyenne",
    "pays": "France",
@@ -37053,7 +37139,9 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.allboatsavenue.com/alliaura-marine-privilege-745-l%E2%80%99un-des-plus-grands-catamarans-de-luxe-du-monde/",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Devoilement du nouveau catamaran Signature 600 le 26/04/2026 et actualite du 31/05/2026 sur la Vendee Arctique ; societe SAS active, augmentation de capital et nomination d'Antoine Maillot comme president publiees au BODACC le 19/11/2025, aucune procedure collective. Vague contact-activite du 2026-08-15. https://privilege-marine.com/privilege-marine-unveils-the-new-signature-600/"
   },
   {
    "id": "allures-cherbourg",
@@ -37423,7 +37511,10 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.allures.com/en/the-first-of-the-allures-51-9-has-been-launched/",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Allures Horizon 47 (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.bateaux.com/article/49810/horizon-47-le-nouveau-voilier-allures-pense-pour-la-vision-et-la-grande-croisiere"
   },
   {
    "id": "cnb-bordeaux",
@@ -38961,7 +39052,10 @@
     "lien mort constate le 2026-08-03 : https://www.multiplast.eu/fr/actualit%C3%A9s/newsletters/actualit%C3%A9s-composite-yachts/256-multiplast-construit-le-vo70-groupama.html",
     "lien mort constate le 2026-08-03 : https://www.class40.com/fr/bateaux/167-happyvore---cafe-joyeux.htm",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : DMG Mori Global One (nouvelle unite) (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.imoca.org/fr/news/news/dmg-mori-sailing-team-lance-la-construction-d-un-nouvel-imoca-en-vue-de-the-ocean-race-2027"
   },
   {
    "id": "cdk-lorient",
@@ -39121,7 +39215,8 @@
     "https://www.meretmarine.com/fr/content/cdk-va-construire-deux-voiliers-pour-le-prochain-vendee-globe",
     "https://www.scanvoile.com/2018/08/imoca-charal-de-jeremie-beyou-est-sorti-du-chantier-cdk-histoire-de-sa-construction.html",
     "https://www.bretagne-economique.com/actualites/cdk-technologies-investit-dans-un-autoclave-de-grande-capacite-outillage-unique-en/",
-    "https://www.meretmarine.com/fr/construction-navale/lorient-debarquement-d-un-grand-four-autoclave-pour-cdk-technologies"
+    "https://www.meretmarine.com/fr/construction-navale/lorient-debarquement-d-un-grand-four-autoclave-pour-cdk-technologies",
+    "https://www.cdk-technologies.com/actualite/malizia-4.html"
    ],
    "confiance": "moyenne",
    "pays": "France",
@@ -39442,7 +39537,9 @@
    "geo_source": "https://www.cdk-technologies.com/actualite/cdk-technologies-lorient.html",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Le chantier a publie le 7 juin 2026 la mise a l'eau de MALIZIA 4, son 21e IMOCA, et le 11 mars 2026 la sortie d'atelier du maxi Gitana 18 ; l'unite legale CDK TECHNOLOGIES (SIREN 495017352, siege 40 rue Ingenieur Henry Verriere a Lorient, NAF 30.12Z, 50-99 salaries, deux etablissements ouverts) est en activite au repertoire Sirene au 14 aout 2026. Vague contact-activite du 2026-08-15. https://www.cdk-technologies.com/actualite/malizia-4.html"
   },
   {
    "id": "gunboat-la-grande-motte",
@@ -39821,7 +39918,10 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.catsailingnews.com/2019/01/gunboat-68-launched.html",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Yasasin (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://gunboat.com/gunboat-7203-the-next-chapter-begins/"
   },
   {
    "id": "nautitech-catamarans-rochefort",
@@ -40357,7 +40457,10 @@
    "geo_source": "https://www.pagesjaunes.fr/pros/57788475",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Nautitech 41 Type S (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.multihulls-world.com/news-catamaran-trimaran/nautitech-41-type-s-lighter-and-adaptable-over-time"
   },
   {
    "id": "neel-trimarans-perigny",
@@ -40483,7 +40586,9 @@
     "https://www.multihulls-world.com/technical-specifications/neel-trimarans/neel-65-evolution",
     "https://aeroyacht.com/neel-trimarans/neel-52/",
     "https://aeroyacht.com/leen-power-multihulls/leen-50-power-trimaran/",
-    "https://wavetrain.net/2015/06/07/neel-65-a-whole-lotta-trimaran-going-on/"
+    "https://wavetrain.net/2015/06/07/neel-65-a-whole-lotta-trimaran-going-on/",
+    "https://www.neel-trimarans.com/discover-the-new-neel-48/",
+    "https://www.pappers.fr/entreprise/neel-trimarans-514815844"
    ],
    "confiance": "haute",
    "produits": [
@@ -40864,7 +40969,9 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.neel-trimarans.com/neel-trimarans-is-proud-to-announce-the-launch-of-the-neel-48-and-its-limited-edition-yannick-bestaven/",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Chantier en activité malgré une procédure collective : redressement judiciaire ouvert le 05/12/2025, plan de cession arrêté et conversion en liquidation le 24/03/2026 (BODACC), l'exploitation étant reprise. Le chantier publie depuis : nouvelle équipe dirigeante annoncée le 13/07/2026, présence au Cannes Yachting Festival 2026 (article du 21/07/2026), lancement du programme NEEL 48 le 30/07/2026 pour une disponibilité à l'automne 2027. Établissement de production de Périgny (rue Blaise Pascal) actif au répertoire SIRENE. Vague contact-activite du 2026-08-15. https://www.neel-trimarans.com/discover-the-new-neel-48/"
   },
   {
    "id": "garcia-yachts-cherbourg-en-cot",
@@ -40989,7 +41096,9 @@
     "https://sailmagazine.com/boats/garcia-exploration-45-jimmy-cornells-ideal-boat/",
     "https://www.boatinternational.com/yachts/the-superyacht-directory/zurbagan--65733",
     "https://fr.wikipedia.org/wiki/36.15_MET",
-    "https://www.nautipedia.it/index.php/HISTORY_OF_GARCIA_SHIPYARD"
+    "https://www.nautipedia.it/index.php/HISTORY_OF_GARCIA_SHIPYARD",
+    "https://www.garciayachts.com/actus/garcia-yachts-cannes-yachting-festival-2026",
+    "https://www.pappers.fr/entreprise/grand-large-yachting-manche-atlantique-507843167"
    ],
    "confiance": "haute",
    "produits": [
@@ -41329,7 +41438,9 @@
    "geo_source": "https://www.garciayachts.com/votre-aventure/nous-rencontrer/",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Marque exploitée par GRAND LARGE YACHTING MANCHE-ATLANTIQUE (SIREN 507 843 167), société active au RCS de Cherbourg, mise à jour RCS/RNE du 15/08/2026, chiffre d'affaires 2025 de 29 M€ et effectif 100 à 199 salariés. Le chantier annonce le 07/07/2026 la présentation à flot d'un Garcia Exploration 60 au Cannes Yachting Festival 2026. À noter : l'ancienne société GARCIA YACHTING (SIREN 522 770 213) est fermée depuis le 31/12/2020, ce qui ne signifie pas l'arrêt du chantier. Vague contact-activite du 2026-08-15. https://www.garciayachts.com/actus/garcia-yachts-cannes-yachting-festival-2026"
   },
   {
    "id": "alubat-les-sables-d-olo",
@@ -42199,7 +42310,10 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.nauticnews.com/en/nautism/2008/04/22/alubat-ovni-495-2/",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : OVNI 490 (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.alubat.com/the-range/ovni-490/"
   },
   {
    "id": "chantier-naval-boreal-boreal-yachts-minihy-treguier",
@@ -42241,7 +42355,11 @@
     }
    ],
    "historique": [],
-   "contact": null,
+   "contact": {
+    "web": "https://www.boreal-yachts.com/",
+    "telephone": "+33 2 96 92 44 37",
+    "adresse": "ZA Convenant Vraz, 22220 Minihy-Treguier"
+   },
    "sources": [
     "https://www.bretagne-info-nautisme.fr/fr/entreprises/entreprises-a-la-hune/entreprises/chantier-naval-boreal",
     "https://france3-regions.franceinfo.fr/bretagne/cotes-d-armor/minihy-treguier-22-belle-histoire-du-chantier-naval-boreal-1155743.html",
@@ -42257,7 +42375,8 @@
     "https://www.boat-specs.com/sailing/sailboats/boreal/boreal-47",
     "https://interestingsailboats.blogspot.com/2022/01/the-new-boreal-442-great-aluminum.html",
     "https://www.boreal-yachts.com/boreal-52-voilier-europeen-de-lannee-2015/",
-    "https://www.bateaux.com/article/36285/boreal-la-quintessence-dans-le-bateau-de-voyage-au-long-cours"
+    "https://www.bateaux.com/article/36285/boreal-la-quintessence-dans-le-bateau-de-voyage-au-long-cours",
+    "https://www.pappers.fr/entreprise/boreal-yachts-487688350"
    ],
    "confiance": "haute",
    "materiaux": [
@@ -42454,7 +42573,11 @@
    "geo_source": "https://www.bretagne-info-nautisme.fr/fr/entreprises/entreprises-a-la-hune/entreprises/chantier-naval-boreal",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "contact_source": "https://www.boreal-yachts.com/",
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "actif_source": "SAS BOREAL YACHTS (SIREN 487 688 350) a Minihy-Treguier, en activite au RCS de Saint-Brieuc (derniere mise a jour registre le 15 aout 2026), commissaire aux comptes en fonction, aucune procedure collective ; le chantier publie une actualite datee du 4 juin 2025 sur le passage du Nord-Ouest realise par le Boreal 47 LUMINA. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/boreal-yachts-487688350"
   },
   {
    "id": "pogo-structures-combrit-sainte-m",
@@ -43253,7 +43376,10 @@
      "prix_acquisition": "≈ 29 950 € (prix au Salon nautique, version de série, vers 2002 ; soit 196 459 FF)"
     }
    ],
-   "geo_source": "https://www.pogostructures.com/contact/"
+   "geo_source": "https://www.pogostructures.com/contact/",
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Loxo 40 (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.bateaux.com/article/49769/loxo-40-les-avantages-d-un-poids-plume-pour-une-croisiere-confortable-et-sobre"
   },
   {
    "id": "jpk-composites-larmor-plage",
@@ -43698,7 +43824,10 @@
    "geo_source": "https://www.jpk.fr/en/le-chantier/",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : JPK 1050 (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.jpk.fr/en/le-chantier/"
   },
   {
    "id": "rm-yachts-fora-marine-la-rochelle",
@@ -44388,7 +44517,10 @@
    "geo_source": "https://www.societe.com/societe/rm-yachts-830434809.html",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : RM 980 (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.boatnews.com/story/50590/rm-yachts-unveils-the-rm-980-a-new-32-foot-cruiser-inspired-by-ocean-racing"
   },
   {
    "id": "marsaudon-composites-lorient",
@@ -44486,7 +44618,9 @@
     "https://www.multihulls-world.com/technical-specifications/eos-catamaran/eos-54",
     "https://en.wikipedia.org/wiki/IDEC_2",
     "https://nigelirens.com/boats/racing-boats/idec/",
-    "https://www.bretagne-economique.com/portraits/marsaudon-composites-dans-lancienne-base-sous-marine-de-lorient/"
+    "https://www.bretagne-economique.com/portraits/marsaudon-composites-dans-lancienne-base-sous-marine-de-lorient/",
+    "https://www.ocean-rider-catamarans.com/orc-exclusive-days-2026-essais-en-mer-du-catamaran-orc-52-2-a-lorient/",
+    "https://www.pappers.fr/entreprise/marsaudon-composites-422732867"
    ],
    "confiance": "haute",
    "produits": [
@@ -44649,7 +44783,9 @@
    "geo_source": "https://www.bretagne-economique.com/portraits/marsaudon-composites-dans-lancienne-base-sous-marine-de-lorient/",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Le site de Lorient La Base poursuit son activite sous la marque Ocean Rider Catamarans : journees d'essais en mer du catamaran ORC 52.2 n°1 organisees a Lorient, publiees le 11 juin 2026. La SAS Marsaudon Composites (SIREN 422 732 867) avait ete placee en liquidation judiciaire le 25 aout 2023 avec plan de cession arrete le 12 septembre 2023 : reprise, pas fermeture. Vague contact-activite du 2026-08-15. https://www.ocean-rider-catamarans.com/orc-exclusive-days-2026-essais-en-mer-du-catamaran-orc-52-2-a-lorient/"
   },
   {
    "id": "wauquiez-neuville-en-ferr",
@@ -44748,7 +44884,9 @@
     "https://sailboatdata.com/sailboat/centurion-40s/",
     "https://sailboatdata.com/sailboat/centurion-57/",
     "https://www.cruisingworld.com/sailboats/wauquiez-pilot-saloon-55-mini-review/",
-    "https://www.berret-racoupeau.com/wauquiez_fr.php"
+    "https://www.berret-racoupeau.com/wauquiez_fr.php",
+    "https://www.wauquiez.com/2026/08/03/ready-to-tack-visit-us-at-the-cannes-yachting-festival/",
+    "https://www.wauquiez.com/mention-legales/"
    ],
    "confiance": "haute",
    "produits": [
@@ -45392,7 +45530,9 @@
    "geo_source": "https://us.kompass.com/c/wauquiez-boats/fr8078554/",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "La marque publie des actualites hebdomadaires en 2026 : le 3 aout 2026 elle annonce l'exposition de deux Wauquiez 55 (coques n°1 et n°2) au Cannes Yachting Festival, modele elu European Yacht of the Year 2026 ; a noter, aucune unite legale navale active n'est enregistree au Vertuquet a Neuville-en-Ferrain, WAUQUIEZ BOATS (SIREN 530122431), cite dans les mentions legales du site, est fermee depuis le 18 juin 2021 avec zero etablissement ouvert. Vague contact-activite du 2026-08-15. https://www.wauquiez.com/2026/08/03/ready-to-tack-visit-us-at-the-cannes-yachting-festival/"
   },
   {
    "id": "latitude-46-tofinou-la-rochelle",
@@ -45480,7 +45620,10 @@
     "https://www.media.stellantis.com/fr-fr/peugeot/press/peugeot-design-lab-et-latitude-46-associes-dans-le-design-du-voilier-tofinou-9-7",
     "https://www.actunautique.com/2019/05/tofinou-9.7-un-nouveau-dayboat-imagine-avec-le-peugeot-design-lab.html",
     "https://www.actunautique.com/2014/10/andreyale-15-le-yachting-classique-a-la-francaise.html",
-    "https://www.usinenouvelle.com/article/la-famille-tofinou-s-agrandit-en-cultivant-sa-difference.N474579"
+    "https://www.usinenouvelle.com/article/la-famille-tofinou-s-agrandit-en-cultivant-sa-difference.N474579",
+    "https://tofinou.com/tofinou-au-grand-pavois-de-la-rochelle-2026-rendez-vous-du-22-au-27-septembre/",
+    "https://tofinou.com/refit-un-tofinou-7-qui-fait-peau-neuve/",
+    "https://tofinou.com/contact/"
    ],
    "confiance": "haute",
    "produits": [
@@ -45719,7 +45862,9 @@
    "geo_source": "https://www.pagesjaunes.fr/pros/55278937",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Chantier en activité à La Rochelle sous la marque Tofinou : publications régulières et rapprochées sur son site, dont « Refit : un Tofinou 7 qui fait peau neuve » le 26/02/2026, « Tofinou aux Nautiques de Port Camargue » le 02/04/2026 et l'annonce de sa participation au Grand Pavois de La Rochelle du 22 au 27 septembre 2026, publiée le 13/08/2026. Attention au piège d'identité juridique : la société CHANTIER NAVAL LATITUDE 46 (SIREN 810 899 153) a été dissoute par transmission universelle de patrimoine au profit de son actionnaire unique et radiée le 28/04/2021, et LATITUDE 46 SARL est fermée depuis le 12/05/2020, sans que l'exploitation du chantier ait cessé. Vague contact-activite du 2026-08-15. https://tofinou.com/tofinou-au-grand-pavois-de-la-rochelle-2026-rendez-vous-du-22-au-27-septembre/"
   },
   {
    "id": "chantier-nautique-vendee-cnv-chaille-les-mara",
@@ -46424,7 +46569,10 @@
    "geo_source": "https://www.jfa-yachts.com/en/contact-jfa-yachts/",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Canoa (Explorer 50M, ex-projet) (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.boatinternational.com/yachts/the-superyacht-directory/canoa--13886"
   },
   {
    "id": "rhea-marine-la-rochelle",
@@ -46466,7 +46614,11 @@
     }
    ],
    "historique": [],
-   "contact": null,
+   "contact": {
+    "web": "https://www.rhea-marine.fr/",
+    "telephone": "+33 6 14 76 64 63",
+    "adresse": "Rue Elie Barreau, 17000 La Rochelle"
+   },
    "sources": [
     "https://france3-regions.franceinfo.fr/nouvelle-aquitaine/charente-maritime/la-rochelle/la-rochelle-le-chantier-naval-rhea-marine-ouvre-ses-portes-ce-week-end-701839.html",
     "https://www.pagesjaunes.fr/pros/08159640",
@@ -46486,7 +46638,9 @@
     "https://www.rhea-marine.fr/27-escapade/",
     "https://www.rhea-marine.fr/29-hb-timonier/",
     "https://www.rhea-marine.fr/23-open-v2/",
-    "https://www.navigueralarochelle.com/rhea-marine/"
+    "https://www.navigueralarochelle.com/rhea-marine/",
+    "https://www.rhea-marine.fr/derriere-chaque-rhea-un-savoir-faire-qui-traverse-le-temps/",
+    "https://www.rhea-marine.fr/journees-privilege-a-marseille-essayez-le-rhea-23-origine-les-17-et-18-juillet/"
    ],
    "confiance": "haute",
    "materiaux": [
@@ -46791,7 +46945,11 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.rhea-marine.fr/patrimoine-savoir-faire/",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "contact_source": "https://www.rhea-marine.fr/",
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "actif_source": "Le chantier publie le 6 aout 2026 l'annonce de ses 30 ans et de sa participation au Grand Pavois de La Rochelle du 22 au 27 septembre 2026, avec les Rhea 23 Origine et Trawler 34 ; plusieurs actualites datees de juin, juillet et aout 2026 (journees privilege a Marseille les 17 et 18 juillet 2026). Vague contact-activite du 2026-08-15. https://www.rhea-marine.fr/derriere-chaque-rhea-un-savoir-faire-qui-traverse-le-temps/"
   },
   {
    "id": "beacher-gujan-mestras",
@@ -46990,7 +47148,11 @@
     }
    ],
    "historique": [],
-   "contact": null,
+   "contact": {
+    "web": "https://www.b2marine.fr/",
+    "telephone": "+33 5 56 20 67 41",
+    "adresse": "Parc d'Activites des Augustins, 33360 Latresne"
+   },
    "sources": [
     "https://www.b2marine.fr/fr",
     "https://www.lejournaldesentreprises.com/nouvelle-aquitaine/article/le-chantier-naval-b2marine-mise-sur-de-plus-grands-bateaux-136468",
@@ -47008,7 +47170,9 @@
     "https://www.b2marine.fr/fr/element/djinn-7-1",
     "https://www.nauticexpo.com/prod/b2-marine/product-20078-531062.html",
     "https://www.bateaux.com/plaisance/bateaux-a-moteur/cap-ferret-722-t-cruiser-REFrDbXCPU-se4,/1/fiche-technique",
-    "https://www.bateaux.com/plaisance/voiliers/blue-djinn-REF7v4mHneMLko,"
+    "https://www.bateaux.com/plaisance/voiliers/blue-djinn-REF7v4mHneMLko,",
+    "https://www.pappers.fr/entreprise/b2-marine-335184461",
+    "https://www.b2marine.fr/fr/salons-evenements/"
    ],
    "confiance": "haute",
    "materiaux": [
@@ -47398,7 +47562,11 @@
    "geo_source": "https://www.b2marine.fr/fr/contact",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.annonces-marine.com/85,constructeur-bateau-b2-marine.html"
-   ]
+   ],
+   "contact_source": "https://www.b2marine.fr/",
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "actif_source": "SAS B2 MARINE (SIREN 335 184 461) a Latresne : plan de sauvegarde resolu et redressement judiciaire ouvert par jugement du 10 decembre 2025, la societe reste immatriculee en activite (etat administratif A, donnees mises a jour le 14 aout 2026) et annonce sa presence au Grand Pavois de La Rochelle 2026 ; aucune cessation d'activite constatee. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/b2-marine-335184461"
   },
   {
    "id": "sealver-wave-boat-sanguinet",
@@ -47457,7 +47625,11 @@
     }
    ],
    "historique": [],
-   "contact": null,
+   "contact": {
+    "web": "https://www.sealver.com/",
+    "telephone": "+33 5 58 78 45 00",
+    "adresse": "1203 rue de l'Arieste, 40460 Sanguinet"
+   },
    "sources": [
     "https://sealver.com/shipyard/",
     "https://www.boatindustry.fr/article/43143/sealver-200-bateaux-construits-chaque-annee-dans-la-region-bordelaise",
@@ -47478,7 +47650,8 @@
     "https://sealver.com/waveboat-z7-hevoline-jetboat/",
     "https://sealver.com/2022/02/07/moteur-boat-test-z8-hevo-vs-z8-hybris/",
     "https://watercraftjournal.com/sealver-waveboat-announces-new-z-line-hevo-lineup/",
-    "https://www.boatindustry.com/news/30380/a-new-engine-for-sealvers-wave-boats"
+    "https://www.boatindustry.com/news/30380/a-new-engine-for-sealvers-wave-boats",
+    "https://www.pappers.fr/entreprise/sealver-518336623"
    ],
    "confiance": "haute",
    "materiaux": [
@@ -47775,7 +47948,11 @@
    "geo_source": "https://sealver.com/shipyard/",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "contact_source": "https://www.sealver.com/",
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "actif_source": "SASU SEALVER (SIREN 518 336 623) a Sanguinet, en redressement judiciaire depuis le 17 octobre 2025 : la periode d'observation a ete prolongee de six mois par jugement du 3 avril 2026, l'entreprise poursuit donc son exploitation et est toujours immatriculee en activite (donnees registre mises a jour le 14 aout 2026). Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/sealver-518336623"
   },
   {
    "id": "ribwest-baden",
@@ -48294,7 +48471,10 @@
    "geo_source": "https://api-adresse.data.gouv.fr/search/?q=14+rue+de+buray+Mer&postcode=41500",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : PRORAID (renouvellement contrat-cadre Marine nationale) (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://sillinger.fr/actualites/la-marine-nationale-renouvelle-sa-confiance-envers-sillinger"
   },
   {
    "id": "aasm-alu-acier-service-marine-longueville",
@@ -48792,7 +48972,8 @@
     "https://www.cmhindustrie.com/secteurs",
     "https://www.cmhindustrie.com/",
     "https://fr.kompass.com/c/compagnie-marine-hydraulique/fr8392818/",
-    "https://www.cmhindustrie.com/reparation-navale-w2"
+    "https://www.cmhindustrie.com/reparation-navale-w2",
+    "https://www.pappers.fr/entreprise/cmh-industrie-981745631"
    ],
    "confiance": "moyenne",
    "produits": [
@@ -48834,7 +49015,11 @@
    "navires_references": [],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Societe active (SIREN 981 745 631, NAF 33.15Z reparation et maintenance navale), effectif salarie renseigne au millesime 2026, creee le 14/12/2023 par reprise du fonds de la Compagnie Marine Hydraulique (annonces BODACC des 29/12/2023 et 04/01/2024) ; dernier depot de comptes le 04/04/2025 pour l'exercice 2024. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/cmh-industrie-981745631",
+   "taille_max": "Pas de cale : atelier de 600 m2, aire exterieure de 240 m2, pont roulant de 12,5 tonnes",
+   "taille_max_source": "https://www.cmhindustrie.com/"
   },
   {
    "id": "la-ciotat-shipyards-la-ciotat",
@@ -49022,7 +49207,9 @@
     "https://fr.wikipedia.org/wiki/Mariette-Pacha",
     "https://archives-maritimes.blogspot.com/2013/10/20-decembre-1953-lancement-du-petrolier.html",
     "https://histoire.ftm-cgt.fr/explorer/terrain/lutter/1988-aux-chantiers-navals-de-la-ciotat/",
-    "https://www.laciotat-shipyards.com/en/2022-horizon/megayacht-platform/"
+    "https://www.laciotat-shipyards.com/en/2022-horizon/megayacht-platform/",
+    "https://www.laciotat-shipyards.com/fr/succes-pour-la-premiere-edition-de-la-matinee-de-lemploi-aux-chantiers-navals-de-la-ciotat/",
+    "https://www.pappers.fr/entreprise/la-ciotat-shipyards-401974555"
    ],
    "confiance": "haute",
    "produits": [
@@ -49251,7 +49438,9 @@
    "geo_source": "https://api-adresse.data.gouv.fr/search/?q=quai+francois+mitterrand+La+Ciotat",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Actualite du 29/06/2026 sur la premiere Matinee de l'Emploi aux Chantiers navals de La Ciotat (plus de 500 candidats recus par les entreprises du refit) ; entite LA CIOTAT SHIPYARDS (ex-SEMIDEP-Ciotat, SIREN 401 974 555) en activite, CA 18,6 M EUR, comptes 2024 deposes le 22/01/2026. Vague contact-activite du 2026-08-15. https://www.laciotat-shipyards.com/fr/succes-pour-la-premiere-edition-de-la-matinee-de-lemploi-aux-chantiers-navals-de-la-ciotat/"
   },
   {
    "id": "ims-shipyard-saint-mandrier-s",
@@ -49414,7 +49603,9 @@
     "https://www.meretmarine.com/fr/nautisme/ims-shipyard-premier-yacht-mis-au-sec-a-saint-mandrier",
     "https://fr.kompass.com/c/international-marine-services/fr0020702/",
     "https://www.societe.com/societe/international-marine-services-341638153.html",
-    "https://www.meretmarine.com/fr/nautisme/saint-mandrier-la-construction-du-chantier-ims-dans-sa-phase-finale"
+    "https://www.meretmarine.com/fr/nautisme/saint-mandrier-la-construction-du-chantier-ims-dans-sa-phase-finale",
+    "https://www.pappers.fr/entreprise/international-marine-services-341638153",
+    "https://ims-shipyard.com/gb/dry-dock-solutions.html"
    ],
    "confiance": "haute",
    "produits": [
@@ -49442,7 +49633,9 @@
    "navires_references": [],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Exploite par IMS International Marine Services (SIREN 341 638 153, NAF 33.15Z), societe active au Pin Rolland : depot des comptes de l'exercice clos le 31/12/2025 publie au BODACC le 30/07/2026, chiffre d'affaires 4,52 M EUR et resultat net 217 kEUR en 2025. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/international-marine-services-341638153"
   },
   {
    "id": "damen-shiprepair-dunkerque-dunkerque",
@@ -50354,7 +50547,9 @@
     "https://fr.wikipedia.org/wiki/Meuse_(p%C3%A9trolier-ravitailleur)",
     "https://france.vinci-construction.com/fr/deconstruction-8-batiments-militaires-bordeaux/",
     "https://www.actu-transport-logistique.fr/journal-de-la-marine-marchande/archives/bordeaux-accueille-son-premier-chantier-de-refit-de-yacht-746751.php",
-    "https://www.linfodurable.fr/huit-ex-navires-de-guerre-deconstruits-bordeaux-commencer-par-le-suffren-42409"
+    "https://www.linfodurable.fr/huit-ex-navires-de-guerre-deconstruits-bordeaux-commencer-par-le-suffren-42409",
+    "https://www.bordeaux-port.fr/tarifs-du-port-de-bordeaux/",
+    "https://www.bordeaux-port.fr/reparation-navale/"
    ],
    "confiance": "moyenne",
    "produits": [
@@ -50631,7 +50826,9 @@
      "descendu_le": "2026-08-05",
      "motif": "type de refit : passage en chantier, pas une construction"
     }
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Tarifs pole naval GPMB 2026 et Reglement d'exploitation pole naval 2026 en vigueur, publies sur la page tarifs du port (mise a jour 12/06/2026), ce qui atteste l'exploitation courante des formes de radoub de Bassens et des Bassins a flot. Vague contact-activite du 2026-08-15. https://www.bordeaux-port.fr/tarifs-du-port-de-bordeaux/"
   },
   {
    "id": "chantier-naval-de-la-martinique-fort-de-france",
@@ -52312,7 +52509,10 @@
    "geo_source": "https://fr.kompass.com/c/ocea/fr5502001/",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : OPV 190 Mk II (commande Guyana) (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/defense/ocea-debute-la-construction-d-un-patrouilleur-de-58-metres-pour-le-guyana"
   },
   {
    "id": "ocea-site-de-la-rochelle-la-rochelle",
@@ -52566,7 +52766,10 @@
    ],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Haiakwa et Haiama (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/ocea-acheve-deux-nouvelles-pilotines-pour-le-guyana"
   },
   {
    "id": "snsm-pole-de-soutien-de-la-flotte-chantier-naval-saint-malo",
@@ -52761,7 +52964,9 @@
     "lien mort constate le 2026-08-03 : https://www.snsm.org/actualites/la-snsm-redevient-constructeur-naval-du-futur-canot-tous-temps-de-saint-malo",
     "lien mort constate le 2026-08-03 : https://www.snsm.org/actualites/construit-par-la-snsm-le-pourquoi-pas-iii-est-desormais-apte-au-service",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "La page officielle de la SNSM consacrée à l'entretien de la flotte, mise à jour le 16/06/2026 selon le sitemap du site, décrit le Pôle de Soutien de la Flotte de Saint-Malo en exploitation : 15 salariés permanents, 3 000 m² de terrain, bâtiment de 1 500 m² avec nef modulable pouvant accueillir trois embarcations simultanément, en charge de l'entretien, de la réparation et de la modernisation à mi-vie de l'ensemble de la flotte de sauvetage. Vague contact-activite du 2026-08-15. https://www.snsm.org/notre-association/nos-bateaux-de-sauvetage/lentretien-de-la-flotte-de-sauvetage/"
   },
   {
    "id": "chantier-naval-martinez-martinez-constructions-n-saint-cyprien",
@@ -53327,7 +53532,10 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.gazechim-composites.fr/actualites/construction-du-corsaire-emeraude/",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : VSH2 / CTT55 (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/martinez-et-le-chantier-malouin-de-la-snsm-vont-construire-une-nouvelle-serie-de-canots-de-sauvetage"
   },
   {
    "id": "chantier-naval-gatto-martigues",
@@ -53414,7 +53622,8 @@
     "https://www.bateau-electrique.com/actualites/e-perla-vedette-hybride-rocca-croisieres/",
     "https://www.businews.fr/Une-vedette-neuve-pour-les-navettes-maritimes-RTM_a1804.html",
     "https://www.mauric.com/news/alba",
-    "https://www.mauric.com/news/news1"
+    "https://www.mauric.com/news/news1",
+    "https://www.pappers.fr/entreprise/chantier-naval-gatto-441625019"
    ],
    "confiance": "haute",
    "produits": [
@@ -53838,7 +54047,9 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.snsm.org/actualites/programme-nouvelle-flotte-lancement-de-la-construction-des-vedettes-de-sauvetage-cotier-vsc1",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "SARL CHANTIER NAVAL GATTO (SIREN 441 625 019), construction, entretien et reparation de navires a Martigues, en activite : comptes de l'exercice clos le 30 septembre 2025 deposes le 7 mai 2026, aucune procedure collective. Une ancienne coquille homonyme (SIREN 392 969 333) est radiee, la structure d'exploitation continue a la meme adresse. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/chantier-naval-gatto-441625019"
   },
   {
    "id": "chantier-naval-de-pors-moro-pont-l-abbe",
@@ -55098,7 +55309,10 @@
      "descendu_le": "2026-08-05",
      "motif": "type de refit : passage en chantier, pas une construction"
     }
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : SNS 12-02 Notre Dame des Passes II (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/snsm-le-chantier-de-pors-moro-acheve-la-nouvelle-vedette-de-la-station-de-sauvetage-d-arcachon"
   },
   {
    "id": "pech-alu-international-inzinzac-lochris",
@@ -56479,7 +56693,10 @@
     "https://www.meretmarine.com/fr/defense/le-drone-sterenn-du-poursuit-ses-essais-a-brest — (Sterenn Du)",
     "https://www.meretmarine.com/fr/construction-navale/passerelles-coques-nues-pech-alu-monte-en-gamme — (Le Télégramme, 05/02/2025)",
     "https://www.meretmarine.com/fr/construction-navale/le-chantier-pech-alu-est-a-vendre — (Caroline Britz, 11/02/2016 - historique Largouët)"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Pass'Avel (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/le-passeur-des-iles-le-navire-hybride-pass-avel-mis-a-l-eau"
   },
   {
    "id": "ocea-site-saint-nazaire-saint-nazaire",
@@ -57760,7 +57977,10 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.meretmarine.com/fr/defense/ocea-se-lance-sur-le-marche-des-grands-opv-0",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Lam Elec I (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/a-saint-nazaire-ocea-met-a-l-eau-une-vedette-de-lamanage-100-electrique"
   },
   {
    "id": "navalu-bouin",
@@ -58334,7 +58554,10 @@
    "geo_source": "https://www.navalu.fr/entreprise-construction-navale",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Eros III (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/navalu-mise-a-l-eau-d-eros-iii-ctv-pour-le-parc-eolien-offshore-eolmed"
   },
   {
    "id": "h2x-la-ciotat",
@@ -58459,7 +58682,9 @@
     "https://www.meretmarine.com/fr/defense/exail-a-l-occasion-de-repmus-le-drone-drix-o-16-a-franchi-1100-nautiques-en-autonomie",
     "https://www.exail-technologies.com/commercial-success-of-the-drix-and-first-sale-of-the-ocean-model-the-largest-drone-developed-by-exail/",
     "https://www.armyrecognition.com/archives/archives-naval-defense/naval-defense-2014/first-ocean-eagle-43-trimaran-patrol-vessel-hull-for-mozambique-delivered-to-cmn",
-    "https://www.nauticexpo.com/prod/h2x-yachts-ships/product-26919-491191.html"
+    "https://www.nauticexpo.com/prod/h2x-yachts-ships/product-26919-491191.html",
+    "https://www.laciotat.com/actualite/les-actualites/15672-visite-de-lentreprise-exail-aux-chantiers-navals-de-la-ciotat",
+    "https://www.laciotat-shipyards.com/fr/bapteme-du-drix-o-16-drone-de-surface-transoceanique-made-in-la-ciotat/"
    ],
    "confiance": "haute",
    "produits": [
@@ -59116,7 +59341,9 @@
     "lien mort constate le 2026-08-03 : https://www.navyrecognition.com/index.php/naval-news/naval-news-archive/2020/october/9205-french-navy-receives-luciole-last-of-8-multi-mission-hybrid-diesel-electric-propulsion-barges.html",
     "lien mort constate le 2026-08-03 : https://www.armateursdefrance.org/actualite/ixblue-met-leau-vedette-servitude-speed-hope",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "La personne morale IXBLUE DIVISION H2X (SIREN 384 123 055, Nef A, 46 quai François Mitterrand, La Ciotat) est cessée depuis le 01/09/2016 par absorption dans iXblue, devenu Exail ; la Ville de La Ciotat rend compte le 13/05/2026 d'une visite d'Exail aux chantiers navals de La Ciotat avec les directeurs du pôle maritime, et La Ciotat Shipyards documente la production du drone DriX O-16 sur le site. Vague contact-activite du 2026-08-15. https://www.laciotat.com/actualite/les-actualites/15672-visite-de-lentreprise-exail-aux-chantiers-navals-de-la-ciotat"
   },
   {
    "id": "chantier-naval-metal-marine-port-saint-louis",
@@ -61022,7 +61249,10 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.medinboats.fr/2023/03/14/lhistoire-de-catana-le-chantier-francais-de-renommee-mondiale/",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Bali 7.0 (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.multihulls-world.com/news-catamaran-trimaran/bali-70-a-first-multiyacht"
   },
   {
    "id": "windelo-catamarans-canet-en-roussil",
@@ -61451,7 +61681,10 @@
    "geo_source": "https://nominatim.openstreetmap.org/search?q=8+Rue+Hermione+66140+Canet-en-Roussillon&format=json",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Windelo 58 (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.cruisingworld.com/sailboats/windelo-58-62-foot-eco-catamarans/"
   },
   {
    "id": "carina-ulixis-port-leucate-leu",
@@ -61852,7 +62085,8 @@
     "https://lesbateauxagathois.com/nos-bateaux/",
     "https://www.tourisme-sete.com/bateaux-promenade-millesime-azur-agde.html",
     "https://www.lagathois.fr/articles/39127/grau-d-agde-une-belle-prise-pour-le-millesime-au-grau-d-agde",
-    "https://www.constructions-navales.com/chantier-naval-nouvelle-vague"
+    "https://www.constructions-navales.com/chantier-naval-nouvelle-vague",
+    "https://www.pappers.fr/entreprise/eurl-exploitation-nouvelle-vague-480211713"
    ],
    "confiance": "haute",
    "produits": [
@@ -62065,7 +62299,9 @@
    ],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "L'EURL Exploitation Nouvelle Vague (SIREN 480 211 713, 26 quai de la Plaisance, Marseillan Plage), geree par Cyril Camboulive, est active au registre, sans procedure collective, etat verifie au 14 aout 2026 ; aucune actualite datee n'est en revanche publiee sur le site du chantier. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/eurl-exploitation-nouvelle-vague-480211713"
   },
   {
    "id": "bizzari-nautic-chantier-naval-d-ajaccio-ajaccio",
@@ -62259,7 +62495,9 @@
     "https://www.uni-bateaux.com/",
     "https://www.communiti.corsica/organisations/uni-bateaux",
     "https://www.boat24.com/en/dealers/1497/union-nautique-insulaire/",
-    "https://www.bateaux.com/plaisance/annuaire-nautisme/uni-bateaux-REF8zhqXh2sYhw"
+    "https://www.bateaux.com/plaisance/annuaire-nautisme/uni-bateaux-REF8zhqXh2sYhw",
+    "https://www.pappers.fr/entreprise/uni-bateaux-501243406",
+    "https://www.societe.com/societe/uni-bateaux-501243406.html"
    ],
    "confiance": "haute",
    "produits": [
@@ -62294,7 +62532,9 @@
    "navires_references": [],
    "sources_ref": [
     "lien mort constate le 2026-08-03 : http://www.uni-bateaux.com/vente-et-location-de-bateaux-ajaccio-union-nautique-insulaire-manutention-31-fr.html"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "SAS UNI BATEAUX (SIREN 501243406) en activite, exploitant le site d'Effrico a Sarrola-Carcopino : comptes de l'exercice 2024 deposes le 3 novembre 2025 (CA 12,4 M EUR, +18 %), fiche RCS a jour au 15/08/2026, 10 a 19 salaries, trois etablissements actifs. La coquille historique UNION NAUTIQUE INSULAIRE (SIREN 329360853) a cesse au 01/01/2008 et a ete reprise le meme jour par UNI BATEAUX a la meme adresse : ce n'est pas une fermeture de chantier. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/uni-bateaux-501243406"
   },
   {
    "id": "nautic-services-corse-afa-agglomeratio",
@@ -62341,7 +62581,8 @@
     "https://www.societe.com/societe/nautic-services-832406235.html",
     "https://www.nautic-services-corse.fr/services/renovation",
     "https://www.nautic-services-corse.fr/services/entretien",
-    "https://www.pappers.fr/entreprise/nautic-services-832406235"
+    "https://www.pappers.fr/entreprise/nautic-services-832406235",
+    "https://www.societe.com/societe/nautic-services-corse-105213029.html"
    ],
    "confiance": "moyenne",
    "produits": [
@@ -62374,7 +62615,9 @@
    "navires_references": [],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "SAS NAUTIC SERVICES CORSE (SIREN 105213029) immatriculee en 2026 (creation SIRENE 14/04/2026, immatriculation RCS Ajaccio 21/05/2026), en activite, code NAF 3315Z reparation et maintenance navale, siege a Trefolo 20167 Afa, donnees INSEE/RNE a jour au 14/08/2026. Objet declare : achat, vente, reparation, entretien et stockage de bateaux. Vague contact-activite du 2026-08-15. https://www.societe.com/societe/nautic-services-corse-105213029.html"
   },
   {
    "id": "amerscorse-chantier-naval-de-sagone-sagone-commune-d",
@@ -62437,7 +62680,8 @@
     "https://amerscorse.com/",
     "https://www.societe.com/liste-3315Z-20.html",
     "https://annuaire-entreprises.data.gouv.fr/etablissement/79230414900026",
-    "https://fr.kompass.com/a/chantiers-navals-et-services-de-maintenance/66010/r/corse/fr_94/"
+    "https://fr.kompass.com/a/chantiers-navals-et-services-de-maintenance/66010/r/corse/fr_94/",
+    "https://www.societe.com/societe/andre-marine-entretien-reparation-services-792304149.html"
    ],
    "confiance": "moyenne",
    "classification": [
@@ -62448,6 +62692,11 @@
    "navires_references": [],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
+   ],
+   "actif": true,
+   "actif_source": "SAS ANDRE MARINE ENTRETIEN REPARATION SERVICES (AMERS, SIREN 792304149), exploitant le chantier de Sagone depuis le 05/07/2023, est en activite sous procedure de redressement judiciaire ouverte par le tribunal de commerce d'Ajaccio le 19/01/2026 (cessation des paiements fixee au 10/01/2026). Un redressement judiciaire est une poursuite d'activite sous controle du tribunal, pas une liquidation : aucune cessation ni cession du site n'est constatee. Vague contact-activite du 2026-08-15. https://www.societe.com/societe/andre-marine-entretien-reparation-services-792304149.html",
+   "materiaux": [
+    "polyester"
    ]
   },
   {
@@ -62513,7 +62762,9 @@
     "https://www.cn-parodi.fr/services/",
     "https://www.cn-parodi.fr/partenaires/",
     "https://www.manageo.fr/entreprises/531760783.html",
-    "https://www.bateaux.com/plaisance/annuaire-nautisme/chantier-naval-parodi-REFBS2Sh0aDQRM"
+    "https://www.bateaux.com/plaisance/annuaire-nautisme/chantier-naval-parodi-REFBS2Sh0aDQRM",
+    "https://www.pappers.fr/entreprise/chantier-naval-parodi-531760783",
+    "https://www.societe.com/societe/chantier-naval-parodi-531760783.html"
    ],
    "confiance": "haute",
    "produits": [
@@ -62558,7 +62809,9 @@
    "navires_references": [],
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://u-corsu.com/annuaire/professionnel/ste-exploit-du-chantier-naval-parodi/8279"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "SARL CHANTIER NAVAL PARODI (SIREN 531760783) en activite, code NAF 3315Z, 3 a 5 salaries (effectif 2023), aucune procedure collective. Dernier acte date au registre : radiation du co-gerant Patrice Parodi le 16/01/2024, Didier Parodi restant gerant. Piege d'adresse a signaler : le siege RCS est declare LD Faggiolo 20232 Oletta alors que le chantier communique une adresse d'exploitation a Saint-Florent (lieu-dit Faggiolo, D82, 20217) : il s'agit du meme lieu-dit, en limite communale. Aucune preuve datee de 2025 ou 2026 n'a pu etre trouvee au-dela de l'etat d'activite au registre consulte le 15/08/2026. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/chantier-naval-parodi-531760783"
   },
   {
    "id": "manche-industrie-marine-dieppe",
@@ -63254,7 +63507,10 @@
     "lien mort constate le 2026-08-03 : http://agglodieppe-maritime.com/manche_industrie_marine.html",
     "lien mort constate le 2026-08-03 : https://fludis.eu/our-fleet/?lang=en",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Saint-Paul II (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.cmn-group.com/un-nouveau-depart-pour-le-chalutier-saint-paul-ii/"
   },
   {
    "id": "r-services-dieppe",
@@ -63397,7 +63653,9 @@
     "https://web.archive.org/web/20220118112805/http://cm-mouquet.com/images/ERP.pdf",
     "https://web.archive.org/web/20220118110325/http://cm-mouquet.com/images/Plaisance.pdf",
     "https://web.archive.org/web/20220118110407/http://cm-mouquet.com/images/Fluvial.pdf",
-    "https://www.fluvialnet.com/chantier-naval/constructions-metalliques-mouquet/48"
+    "https://www.fluvialnet.com/chantier-naval/constructions-metalliques-mouquet/48",
+    "https://www.pappers.fr/entreprise/constructions-metalliques-mouquet-370500621",
+    "https://www.pappers.fr/entreprise/constructions-metalliques-mouquet-370500621?onglet=procedures"
    ],
    "confiance": "haute",
    "produits": [
@@ -63608,7 +63866,9 @@
    ],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": false,
+   "actif_source": "CONSTRUCTIONS METALLIQUES MOUQUET (SIREN 370 500 621, 232 quai de Verdun, 76400 Fécamp) a fait l'objet d'un jugement d'ouverture de redressement judiciaire le 11/04/2025 par le Tribunal des activités économiques du Havre (cessation des paiements au 01/02/2025), converti en liquidation judiciaire le 23/05/2025, liquidateur Me Martin Chollet. Aucun plan de cession ni repreneur n'est publié plus de quinze mois après, et une interdiction de gérer de cinq ans a été prononcée le 03/07/2026 contre l'ancien président. La société n'est pas encore radiée et le répertoire SIRENE la porte toujours comme active, ce qui est l'état normal d'une société en cours de liquidation. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/constructions-metalliques-mouquet-370500621"
   },
   {
    "id": "chantier-naval-etoile-marine-saint-malo",
@@ -63789,7 +64049,9 @@
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json",
     "https://www.etoile-chantier.com/ — (page Réalisations : galeries peinture/strat, bois/menuiserie, manutention/calage)"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "SARL CHANTIER NAVAL ETOILE MARINE (SIREN 799077755) en activite a Saint-Malo, 6 a 9 salaries, code NAF 3315Z : comptes de l'exercice clos le 30/09/2025 deposes le 2 avril 2026, aucune procedure collective, et grilles tarifaires manutention et services millesimees 2026 publiees sur le site du chantier. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/chantier-naval-etoile-marine-799077755"
   },
   {
    "id": "chantier-naval-de-la-ville-audrain-saint-malo",
@@ -63873,7 +64135,9 @@
     "https://www.societe.com/societe/chantiers-navals-de-la-ville-audrain-344872296.html",
     "https://www.pagesjaunes.fr/pros/00683600",
     "https://www.bateaux.com/plaisance/annuaire-nautisme/cn-de-ville-audrain-saint-malo-REFqlwHacGvUxw",
-    "https://www.beneteau.com/en-us/dealers/chantiers-navals-de-la-ville-audrain"
+    "https://www.beneteau.com/en-us/dealers/chantiers-navals-de-la-ville-audrain",
+    "https://www.pappers.fr/entreprise/chantiers-navals-de-la-ville-audrain-487436156",
+    "https://www.societe.com/societe/chantiers-navals-de-la-ville-audrain-487436156.html"
    ],
    "confiance": "moyenne",
    "produits": [
@@ -63934,7 +64198,9 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.navicom.fr/reseau/saint-malo/chantier-naval-la-ville-audrain-1",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "SAS CHANTIERS NAVALS DE LA VILLE AUDRAIN (SIREN 487436156) en activite a Saint-Malo, code NAF 3315Z, 10 a 19 salaries, presidee par Vincent Bidard : comptes annuels deposes le 29 juin 2026 (resultat net 15 400 EUR), fiche RCS a jour au 15/08/2026, aucune procedure collective. A ne pas confondre avec l'homonyme CHANTIERS NAVALS DE LA VILLE AUDRAIN SIREN 344872296, cessee, qui est une coquille anterieure. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/chantiers-navals-de-la-ville-audrain-487436156"
   },
   {
    "id": "chantier-naval-le-charles-saint-malo",
@@ -64017,7 +64283,9 @@
     "https://www.lecharles.fr",
     "https://lecharles.fr/notre-savoir-faire/",
     "https://www.pagesjaunes.fr/pros/03107501",
-    "https://www.bateaux.com/plaisance/annuaire-nautisme/chantier-naval-charles-REFxV-Cq-PloTI"
+    "https://www.bateaux.com/plaisance/annuaire-nautisme/chantier-naval-charles-REFxV-Cq-PloTI",
+    "https://www.pappers.fr/entreprise/sarl-chantier-naval-le-charles-450512538",
+    "https://www.societe.com/societe/chantier-naval-le-charles-450512538.html"
    ],
    "confiance": "haute",
    "produits": [
@@ -64129,7 +64397,9 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : http://www.qualinautic.com/fr/35-ille-et-vilaine/artisan-2-chantier-naval-le-charles.html",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "SARL CHANTIER NAVAL LE CHARLES (SIREN 450512538) en activite a Saint-Malo, code NAF 3011Z construction de navires et de structures flottantes, 3 a 5 salaries, gerant Laurent Le Charles : comptes de l'exercice clos le 30/09/2025 deposes en mai 2026, capital porte a 800 000 EUR le 22/02/2024, aucune procedure collective. Membre du GIE QUALINAUTIC 35. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/sarl-chantier-naval-le-charles-450512538"
   },
   {
    "id": "chantier-naval-de-la-passagere-saint-malo",
@@ -64296,7 +64566,9 @@
     "https://hoodspot.fr/reparation-et-maintenance-navale/chemineau-composite-naval-32314614200084/",
     "https://www.annuaire-des-entreprises-locales.fr/entreprises-locales/ille-et-vilaine/saint-malo-35400/chantier-naval/chemineau-composite-naval",
     "https://www.chemineau-composite-naval.fr/index.php/realisations",
-    "https://www.chemineau-composite-naval.fr/index.php/contacter-henri-chemineau"
+    "https://www.chemineau-composite-naval.fr/index.php/contacter-henri-chemineau",
+    "https://www.pappers.fr/entreprise/henri-chemineau-323146142",
+    "https://www.societe.com/societe/chemineau-henri-323146142.html"
    ],
    "confiance": "moyenne",
    "produits": [
@@ -64334,7 +64606,11 @@
    "navires_references": [],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Entreprise individuelle HENRI CHEMINEAU (SIREN 323146142), nom commercial CHEMINEAU COMPOSITE NAVAL, en activite a Saint-Malo, code NAF 3315Z, etablissement rouvert le 05/12/2019, aucune procedure collective, donnees INSEE/RNE a jour au 15/08/2026 ; effectif 0 salarie en 2026, l'artisan travaillant seul. Les etablissements secondaires mediterraneens (Cavalaire-sur-Mer, La Mole) sont fermes, l'exploitation est concentree a Saint-Malo. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/henri-chemineau-323146142",
+   "taille_max": "Espars carbone jusqu'a 10 m ; interventions de reparation et modification realisees sur place a bord",
+   "taille_max_source": "https://www.chemineau-composite-naval.fr/"
   },
   {
    "id": "pole-naval-jacques-cartier-pnjc-saint-malo",
@@ -64488,7 +64764,8 @@
     "https://www.uimm35-56.com/cmv-amphibie-inaugure-la-premiere-barge-mytilicole-a-motorisation-hydrogene/",
     "https://europetechnologies.com/motorisation-hydrogene-barge-amphibie/",
     "https://www.meretmarine.com/fr/peche/cancale-la-premiere-barge-mytilicole-retrofitee-a-l-hydrogene-demarre-ses-activites",
-    "https://www.saintmalo-cancale.port.bzh/page/infrastructures-facilities"
+    "https://www.saintmalo-cancale.port.bzh/page/infrastructures-facilities",
+    "https://www.saintmalo-cancale.port.bzh/page/tarifs"
    ],
    "confiance": "moyenne",
    "produits": [
@@ -64629,7 +64906,9 @@
    "geo_source": "https://www.saintmalo-cancale.port.bzh/page/cnr",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Le port de Saint-Malo publie ses tarifs d'utilisation de l'outillage public au 1er janvier 2026 et un projet au 1er juillet 2026, qui couvrent explicitement le Pôle naval Jacques Cartier ; le GIE QUALINAUTIC 35, domicilié Pôle Naval Jacques Cartier, quai Garnier du Fougeray à Saint-Malo, est inscrit actif au répertoire Sirene, données traitées le 24/07/2026. Vague contact-activite du 2026-08-15. https://www.saintmalo-cancale.port.bzh/page/tarifs"
   },
   {
    "id": "atlantic-refit-center-la-rochelle",
@@ -64783,7 +65062,9 @@
     "https://www.meretmarine.com/fr/vie-portuaire/la-rochelle-atlantic-refit-center-consolide-le-refit-de-grands-yachts",
     "https://www.superyachttimes.com/companies/atlantic-refit-center",
     "https://www.boatinternational.com/yachts/news/107m-kleven-explorer-yacht-ulysses-completes-la-rochelle-upgrade--27137",
-    "https://www.charterworld.com/news/wsa-2014-motor-yacht-enigma-xk-converted-superyacht-atlantic-refit-center"
+    "https://www.charterworld.com/news/wsa-2014-motor-yacht-enigma-xk-converted-superyacht-atlantic-refit-center",
+    "https://www.pappers.fr/entreprise/atlantic-refit-center-arc-498967215",
+    "https://www.atlanticrefitcenter.com/non-classe/global-superyacht-forum-mestrade-2025-amsterdam/"
    ],
    "confiance": "haute",
    "produits": [
@@ -65004,7 +65285,9 @@
      "descendu_le": "2026-08-05",
      "motif": "type de refit : passage en chantier, pas une construction"
     }
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Entité active au RCS de La Rochelle (SIREN 498 967 215), changement de dénomination en ATLANTIC REFIT CENTER et nomination de Fabrice Maitre comme président enregistrés le 24 juillet 2026 ; mise à jour RCS/RNE du 15 août 2026. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/atlantic-refit-center-arc-498967215"
   },
   {
    "id": "lecamus-la-rochelle",
@@ -65123,7 +65406,10 @@
     "https://seapolelarochelle.com/entreprises/lecamus/",
     "https://www.larochelle.port.fr/nos-engagements/actualites/1196-pole-de-reparation-et-de-construction-navales.html",
     "https://www.umlr.fr/2023/08/04/un-ete-bien-occupe-au-prcn/",
-    "https://www.bateauresist.com/resist"
+    "https://www.bateauresist.com/resist",
+    "https://www.pappers.fr/entreprise/395237522",
+    "https://www.societe.com/societe/sarl-lecamus-395237522.html",
+    "https://www.lecamus.com/contact"
    ],
    "confiance": "haute",
    "produits": [
@@ -65405,7 +65691,9 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://larochelleinfo.media/une-nouvelle-drague-dans-le-port-de-royan/",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "SARL LECAMUS (SIREN 395 237 522), reparation et maintenance navale (NAF 33.15Z) a La Rochelle, en activite, 20 a 49 salaries, comptes de l'exercice clos le 30/06/2025 deposes le 19/01/2026, aucune procedure collective, fiche mise a jour le 15/08/2026. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/395237522"
   },
   {
    "id": "chantier-naval-des-minimes-la-rochelle",
@@ -65493,7 +65781,8 @@
     "https://www.navigueralarochelle.com/chantier-naval-des-minimes/",
     "https://www.pagesjaunes.fr/pros/00626182",
     "https://www.bateaux.com/plaisance/annuaire-nautisme/chantier-naval-minimes-REFSXihmRP8IjE",
-    "https://www.portlarochelle.com/un-plateau-technique-100-operationnel/"
+    "https://www.portlarochelle.com/un-plateau-technique-100-operationnel/",
+    "https://www.pappers.fr/entreprise/chantier-naval-des-minimes-903686079"
    ],
    "confiance": "haute",
    "produits": [
@@ -65532,7 +65821,9 @@
    "navires_references": [],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Société active (SIREN 903 686 079), comptes annuels de l'exercice clos le 31/12/2023 déposés le 6 février 2025 ; mise à jour RCS du 15 août 2026, 6 à 9 salariés. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/chantier-naval-des-minimes-903686079"
   },
   {
    "id": "chantier-nautique-du-vieux-port-la-rochelle",
@@ -65605,7 +65896,9 @@
     "https://www.xboat.fr/6040-AMEL_AMEL-MARAMU.html",
     "https://www.bateaux.com/plaisance/voiliers/x-102-REFnh9UT4bYbWI",
     "https://sailboatdata.com/sailboat/x-102/",
-    "https://annuaire-entreprises.data.gouv.fr/entreprise/chantier-nautique-du-vieux-port-344528484"
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/chantier-nautique-du-vieux-port-344528484",
+    "https://www.pappers.fr/entreprise/chantier-nautique-du-vieux-port-344528484",
+    "https://chantiernautiqueduvieuxport.com/recrutement/"
    ],
    "confiance": "haute",
    "produits": [
@@ -65655,7 +65948,9 @@
    "geo_source": "https://fr.mappy.com/poi/5111cd7b84aebc2c63b48101",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Societe SAS en activite au registre national (SIREN 344 528 484), qui a procede a un depot de comptes annuels publie au BODACC le 07/08/2026 ; effectif 12 salaries (millesime 2023), aucune procedure collective. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/chantier-nautique-du-vieux-port-344528484"
   },
   {
    "id": "cim-constructions-industrielles-et-maritimes-rochefort",
@@ -67024,7 +67319,10 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.nautitechcatamarans.com/en/catamarans/48-open",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Nautitech 41 Type S (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.multihulls-world.com/news-catamaran-trimaran/nautitech-41-type-s-lighter-and-adaptable-over-time"
   },
   {
    "id": "js-marine-port-des-barques",
@@ -67142,7 +67440,8 @@
     "https://dealers.youboat.com/js-marine",
     "https://www.bateaux.com/plaisance/annuaire-nautisme/js-marine-REFJbBiHl9gxgI",
     "https://www.pagesjaunes.fr/pros/00881136",
-    "https://www.starofservice.com/professionnel/mecaniciens-navals/rochefort/172787682/js-marine-chantier-nautique-du-port"
+    "https://www.starofservice.com/professionnel/mecaniciens-navals/rochefort/172787682/js-marine-chantier-nautique-du-port",
+    "https://www.pappers.fr/entreprise/js-marine-489639526"
    ],
    "confiance": "haute",
    "produits": [
@@ -67194,7 +67493,9 @@
    ],
    "taille_max": "Manutention 15 t (levage/mise à l'eau/sortie d'eau) ; stockage bateaux jusqu'à 16 t (Rochefort) / 15 t (Port-des-Barques) ; mâtage/démâtage de voiliers jusqu'à 17 m de hauteur de mât. Aucune capacité de construction neuve : pas de longueur ni de jauge constructibles.",
    "geo_source": "https://www.guide-plaisance-mobile.fr/17-port-des-barques-rochefort-charente-maritime-js-marine",
-   "navires_references": []
+   "navires_references": [],
+   "actif": false,
+   "actif_source": "Liquidation judiciaire ouverte le 21 avril 2026 (date de cessation des paiements au 31 mars 2026), liquidateur Maître Diarra Abdouramane ; aucun repreneur identifié à ce jour. Réserve : siège et unique établissement enregistrés quai Le Moyne de Sérigny à Rochefort (17300), aucun établissement à Port-des-Barques, la localisation de la base est à vérifier. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/js-marine-489639526"
   },
   {
    "id": "chantier-naval-laly-bourcefranc-le-c",
@@ -67533,7 +67834,9 @@
     "https://tvba.fr/le-chantier-bonnin-met-a-leau-sa-derniere-pinasse-electrique-suzon/",
     "https://www.ici.fr/infos/societe/suzon-la-pinasse-2-0-qui-vogue-a-l-electrique-sur-la-bassin-d-arcachon-1624368248",
     "https://www.nautipedia.it/index.php/CHANTIER_NAVAL_BONNIN_HISTOIRE",
-    "https://www.yco-voile.fr/dragon/"
+    "https://www.yco-voile.fr/dragon/",
+    "https://mbordeauxm.fr/visite-de-chantier-chantier-bonnin-bossuet-arcachon/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/g-bonnin-freres-457201564"
    ],
    "confiance": "haute",
    "produits": [
@@ -68250,7 +68553,9 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : http://bordeauxaquitainemarine2.fr/n-chbonin.htm",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "La Mémoire de Bordeaux Métropole publie le 04/02/2026 le compte rendu d'une visite du chantier Bonnin, pointe de l'Aiguillon à La Teste, le 30/01/2026, dirigé par Alexis Bonnin, sixième génération ; la société G BONNIN FRERES (SIREN 457 201 564, réparation et maintenance navale) est en activité au registre avec trois établissements ouverts. Vague contact-activite du 2026-08-15. https://mbordeauxm.fr/visite-de-chantier-chantier-bonnin-bossuet-arcachon/"
   },
   {
    "id": "chantier-naval-bossuet-la-teste-de-buch",
@@ -68340,7 +68645,9 @@
     "https://tvba.fr/bassin-arcachon-pinasse-voile-bernard-magrez-2019/",
     "https://tvba.fr/bleu-2-mer-la-pinasse-a-voile-du-confinement/",
     "https://www.nauticexpo.fr/prod/bo-yachting-bonnin-bossuet/product-64995-594715.html",
-    "https://www.boyachting.fr/la-gamme"
+    "https://www.boyachting.fr/la-gamme",
+    "https://www.pappers.fr/entreprise/jean-baptiste-bossuet-493333264",
+    "https://www.pappers.fr/entreprise/jean-baptiste-bossuet-493333264?onglet=marches-publics"
    ],
    "confiance": "haute",
    "produits": [
@@ -68592,7 +68899,9 @@
     "lien mort constate le 2026-08-03 : http://www.chantier-naval-bossuet.com/renovation.htm",
     "lien mort constate le 2026-08-03 : http://www.chantier-naval-bossuet.com/realisation.php",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json (HTTP 403 à la récupération automatisée, identité confirmée par recoupement)"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Entreprise individuelle JEAN BAPTISTE BOSSUET (SIREN 493 333 264), nom commercial CHANTIER NAVAL BOSSUET, 1 rue Alexandrine à La Teste-de-Buch, inscrite au RCS de Bordeaux depuis le 20/12/2006, statut artisan, code NAF 30.12Z, effectif 3 à 5 salariés, aucune procédure collective ni sanction. Mise à jour RCS et RNE du 15/08/2026, INSEE du 14/08/2026. Dernier marché public notifié le 10/07/2024 par la commune d'Audenge pour la construction d'une pinassotte, 56 400 €, durée deux ans. Le nom de domaine chantier-naval-bossuet.com ne résout plus, fait DNS sans portée sur l'activité. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/jean-baptiste-bossuet-493333264"
   },
   {
    "id": "chantier-naval-bassin-d-arcachon-arcachon",
@@ -68812,7 +69121,8 @@
     "https://www.normandie-maritime.fr/actualite/la-flamme-olympique-a-bord-d_imagine---une-vitrine-mondiale-pour-notre-adherent-finx---/1929",
     "https://www.bordeauxgironde.cci.fr/actualite/seaweed-le-bateau-en-aile-de-mouette-made-cap-ferret",
     "https://www.francebleu.fr/emissions/l-eco-d-ici-en-gironde/entreprise-du-mois-le-chantier-naval-du-cap-ferret-fabrique-le-bateau-parfait-pour-naviguer-sur-le-bassin-2378422",
-    "https://ecomnews.fr/news/gironde-cap-sur-le-succes-pour-seaweed-le-bateau-du-cap-ferret/"
+    "https://ecomnews.fr/news/gironde-cap-sur-le-succes-pour-seaweed-le-bateau-du-cap-ferret/",
+    "https://www.pappers.fr/entreprise/chantier-naval-du-cap-ferret-834227654"
    ],
    "confiance": "haute",
    "produits": [
@@ -68976,7 +69286,9 @@
    "geo_source": "https://www.chantiernavalducapferret.fr/1-10.htm",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "L'EURL Chantier Naval du Cap-Ferret (CNCF, SIREN 834 227 654, 18 rue Ducasse) est active et a depose ses comptes de l'exercice clos le 31 decembre 2025 le 26 juin 2026, publication BODACC du 30 juin 2026 ; le chantier annonce par ailleurs sa presence au Salon Nautique d'Arcachon d'avril 2026. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/chantier-naval-du-cap-ferret-834227654"
   },
   {
    "id": "atlantique-reparation-navale-les-sables-d-olo",
@@ -69089,7 +69401,9 @@
     "lien mort constate le 2026-08-03 : https://fr.mappy.com/poi/512b8a1e84ae6490d9857651",
     "lien mort constate le 2026-08-03 : https://www.lindustrie-recrute.fr/entreprise/6638/",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": false,
+   "actif_source": "Liquidation judiciaire ouverte le 6 novembre 2024 (cessation des paiements au 11 avril 2024), liquidateur SCP MJuris, Maître Olivier Collet ; capitaux propres négatifs au dernier exercice déposé (2023). Aucun repreneur identifié quai de la Cabaude vingt-et-un mois après. Dénomination exacte au registre : ATLANTIQUE REPERATION NAVALE, SIREN 448 896 415. Le nom de domaine ar-navale.com présente un certificat expiré, fait DNS non retenu comme preuve. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/atlantique-reperation-navale-448896415"
   },
   {
    "id": "yacht-care-services-les-sables-d-olo",
@@ -69183,7 +69497,8 @@
     "https://annuaire-entreprises.data.gouv.fr/etablissement/48272124800029",
     "https://www.pagesjaunes.fr/pros/55185703",
     "https://fr.kompass.com/c/yacht-care-services/fr4065852/",
-    "https://www.lsodeveloppement.fr/atouts-du-territoire/un-territoire-tourne-vers-la-mer/les-entreprises-du-nautisme-et-du-naval/"
+    "https://www.lsodeveloppement.fr/atouts-du-territoire/un-territoire-tourne-vers-la-mer/les-entreprises-du-nautisme-et-du-naval/",
+    "https://www.pappers.fr/entreprise/yacht-care-services-482721248"
    ],
    "confiance": "haute",
    "produits": [
@@ -69215,7 +69530,9 @@
    "navires_references": [],
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://nautisme-innovation-numerique-atlantique.fr/directory/listing/yacht-care-services"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Société active (SIREN 482 721 248), comptes de l'exercice 2025 déposés le 19 juin 2026, effectif de 5 salariés en 2025 en hausse de 25 % sur un an ; établissement secondaire zone portuaire quai de la Cabaude aux Sables-d'Olonne ouvert depuis le 1er janvier 2014, le siège de Saint-Hilaire-de-Riez n'étant qu'une adresse administrative. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/yacht-care-services-482721248"
   },
   {
    "id": "alumarine-shipyard-coueron",
@@ -69326,7 +69643,9 @@
     "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-une-vedette-scientifique-pour-l-universite-de-corse",
     "https://www.meretmarine.com/fr/construction-navale/alumarine-livre-une-vedette-de-servitude-pour-le-bassin-d-arcachon",
     "https://www.meretmarine.com/fr/construction-navale/alumarine-un-bateau-de-travaux-pour-le-chantier-de-la-reunion",
-    "https://www.meretmarine.com/fr/construction-navale/alumarine-enchaine-les-vedettes-de-lamanage"
+    "https://www.meretmarine.com/fr/construction-navale/alumarine-enchaine-les-vedettes-de-lamanage",
+    "https://annuaire-entreprises.data.gouv.fr/etablissement/50784316700036",
+    "https://lemarin.ouest-france.fr/industries-navales/alumarine-shipyard-se-recentre-sur-la-plaisance-et-les-vedettes-portuaires-ff712465-3c02-430b-9007-46bd4e5723bc"
    ],
    "confiance": "haute",
    "produits": [
@@ -70079,7 +70398,9 @@
     "lien mort constate le 2026-08-03 : http://chantier-naval-aluminium.com/fr/navires-passagers/fluvial-23m-catamaran.html",
     "lien mort constate le 2026-08-03 : https://oceannavigator.com/alumarine-joins-the-grand-large-yachting-group/",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "La personne morale ALUMARINE SHIPYARD (SIREN 798 807 236) est cessée depuis le 25/01/2021, mais le site de Couëron reste exploité : l'établissement sous enseigne ALUMARINE, Le Port Launay 44220 Couëron, SIRET 507 843 167 00036, ouvert le 31/12/2020, est en activité au registre au 15/08/2026 comme établissement secondaire de Grand Large Yachting Manche-Atlantique. Vague contact-activite du 2026-08-15. https://annuaire-entreprises.data.gouv.fr/etablissement/50784316700036"
   },
   {
    "id": "jeanneau-chantiers-jeanneau-les-herbiers",
@@ -70199,7 +70520,8 @@
     "https://sailboatdata.com/sailboat/sun-fast-3300-jeanneau/",
     "https://sailboatdata.com/sailboat/sun-fast-3600-jeanneau/",
     "https://sailboatdata.com/sailboat/sun-fast-3200-jeanneau/",
-    "https://www.jeanneau.com/boats/powerboat/7-cap-camarat-walk-around/652-cap-camarat-12-5wa"
+    "https://www.jeanneau.com/boats/powerboat/7-cap-camarat-walk-around/652-cap-camarat-12-5wa",
+    "https://www.vendee.gouv.fr/Publications/Demande-de-cas-par-cas-ESSOC/LES-HERBIERS-SPBI-Jeanneau-Beneteau-mise-a-jour-administrative-du-site"
    ],
    "confiance": "haute",
    "produits": [
@@ -71154,7 +71476,9 @@
    "geo_source": "https://nominatim.openstreetmap.org/search?q=Jeanneau+Les+Herbiers&format=json",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "La préfecture de la Vendée publie, page mise à jour le 20/02/2026, une demande d'examen au cas par cas déposée par SPBI Jeanneau pour un projet d'évolution du site des Herbiers ; la personne morale CHANTIERS JEANNEAU (SIREN 423 894 310) est cessée depuis 2009, le site étant exploité par SPBI, groupe Bénéteau. Vague contact-activite du 2026-08-15. https://www.vendee.gouv.fr/Publications/Demande-de-cas-par-cas-ESSOC/LES-HERBIERS-SPBI-Jeanneau-Beneteau-mise-a-jour-administrative-du-site"
   },
   {
    "id": "lagoon-construction-navale-bordeaux-beneteau-bordeaux",
@@ -72240,7 +72564,10 @@
     "https://gv-bateaux.e-monsite.com/pages/louarn-couz-gv898457.html",
     "http://gv-bateaux.e-monsite.com/pages/porz-streilhen-gv642404.html",
     "https://www.chantier-naval-henaff.fr/actualite/le-kervily-ii-retrouve-son-element/",
-    "https://www.littoral-manche-atlantique.com/2022/04/liou-an-amzer-gv.514559.html"
+    "https://www.littoral-manche-atlantique.com/2022/04/liou-an-amzer-gv.514559.html",
+    "https://lemarin.ouest-france.fr/industries-navales/le-chantier-henaff-planche-en-2026-sur-le-refit-dun-chalutier-langoustinier-3043125a-4d3f-11f1-aaad-3dc0b7ad690d",
+    "https://www.chantier-naval-henaff.fr/actualite/%e2%9a%93-liou-an-amzer-les-couleurs-du-temps-il/",
+    "https://www.chantier-naval-henaff.fr/contact-guilvinec-finistere/"
    ],
    "confiance": "haute",
    "produits": [
@@ -75479,7 +75806,9 @@
      "descendu_le": "2026-08-05",
      "motif": "type de refit : passage en chantier, pas une construction"
     }
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Le marin du 11/05/2026 indique que le chantier Hénaff travaille en 2026 sur le refit d'un chalutier langoustinier ; le site du chantier publie une actualité datée du 05/08/2026 sur le navire Liou an Amzer. Vague contact-activite du 2026-08-15. https://lemarin.ouest-france.fr/industries-navales/le-chantier-henaff-planche-en-2026-sur-le-refit-dun-chalutier-langoustinier-3043125a-4d3f-11f1-aaad-3dc0b7ad690d"
   },
   {
    "id": "chantier-naval-ocqueteau-le-chateau-d-ole",
@@ -76287,7 +76616,10 @@
      "descendu_le": "2026-08-05",
      "motif": "type de refit : passage en chantier, pas une construction"
     }
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : L'Olivier (modèle Fifty) (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://madeinmarseille.net/actualite/201032-borg-chantier-naval-fifty/"
   },
   {
    "id": "meta-yachts-meta-chantier-naval-tarare",
@@ -76401,7 +76733,10 @@
     "http://antoine.tv/site2016/167_FR_om",
     "http://antoine.tv/site2016/5_FR_banana-split",
     "https://www.bateaux.com/article/47925/meta-36-un-biquille-en-aluminium-simple-et-efficace-pret-pour-toutes-les-aventures",
-    "https://www.bateaux.com/plaisance/voiliers/meta-50-REFZ2cyVFNBsho"
+    "https://www.bateaux.com/plaisance/voiliers/meta-50-REFZ2cyVFNBsho",
+    "https://lemarin.ouest-france.fr/industries-navales/repris-par-un-entrepreneur-a-la-barre-du-tribunal-de-commerce-le-chantier-naval-meta-cherche-a-se-relancer-37983ebe-381c-11f1-8542-71e3dd27f2c6",
+    "https://www.actunautique.com/2026/04/meta-pourquoi-jean-luc-domas-a-repris-le-celebre-chantier-de-tarare.html",
+    "https://meta-yachts.com/en/contact/"
    ],
    "confiance": "haute",
    "produits": [
@@ -77183,7 +77518,9 @@
    "geo_source": "https://meta-yachts.com/en/",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.museemaritime.larochelle.fr/un-avant-gout/les-incontournables/joshua"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Placé en liquidation judiciaire en juillet 2025, le fonds de commerce a été racheté le 27 octobre à la barre du tribunal par Jean-Luc Domas ; Le marin du 15/04/2026 et ActuNautique du 30/04/2026 décrivent un chantier relancé, présent au salon fluvial de Saint-Jean-de-Losne et conservant le procédé breveté Strongall. Vague contact-activite du 2026-08-15. https://lemarin.ouest-france.fr/industries-navales/repris-par-un-entrepreneur-a-la-barre-du-tribunal-de-commerce-le-chantier-naval-meta-cherche-a-se-relancer-37983ebe-381c-11f1-8542-71e3dd27f2c6"
   },
   {
    "id": "caraibes-docks-services-pointe-a-pitre",
@@ -77311,7 +77648,13 @@
     }
    ],
    "taille_max": "Carénage/réparation jusqu'à 24-25 m de longueur (LOA max 24 m), largeur (bau) max 8,8-8,9 m sur dock flottant. Aucune capacité de construction neuve documentée.",
-   "navires_references": []
+   "navires_references": [],
+   "actif": true,
+   "actif_source": "Société active (SIREN 824 971 543), gérant Igor Bessin depuis le 8 décembre 2017, aucune procédure collective ; mise à jour RCS/RNE du 15 août 2026 et INSEE du 14 août 2026, 3 à 5 salariés. Réserve : aucune actualité datée ni intervention datée trouvée sur le site du chantier, la preuve est administrative et non opérationnelle. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/caraibes-docks-services-824971543",
+   "materiaux": [
+    "composite polyester (gelcoat, stratification)",
+    "bois (teck)"
+   ]
   },
   {
    "id": "marinalu-uturoa-raiatea",
@@ -77387,7 +77730,8 @@
     "https://marinalu.pf/category/professionnels/",
     "https://portail.documentation.developpement-durable.gouv.fr/pub/ITMOUV00252145-rapport-enquete-simplifie-rapport-investigation-pr.html",
     "https://www.tahititourisme.fr/service/maupiti-express-ii/",
-    "https://outremers360.com/bassin-pacifique-appli/sur-lile-de-raiatea-en-polynesie-la-construction-navale-a-le-vent-en-poupe"
+    "https://outremers360.com/bassin-pacifique-appli/sur-lile-de-raiatea-en-polynesie-la-construction-navale-a-le-vent-en-poupe",
+    "https://marinalu.pf/contact/"
    ],
    "confiance": "haute",
    "produits": [
@@ -77922,7 +78266,8 @@
     "https://www.psi-sarl.com/ventede-carbone.php",
     "https://www.psi-sarl.com/",
     "https://www.europages.fr/PLASTIQUES-SERVICES-IMPORT-SARL-PSI/FRA653113-00101.html",
-    "https://www.pagesjaunes.fr/pros/06870081"
+    "https://www.pagesjaunes.fr/pros/06870081",
+    "https://www.psi-sarl.com/chantier-naval.php"
    ],
    "confiance": "moyenne",
    "produits": [
@@ -77952,7 +78297,9 @@
    "materiaux": [
     "composite"
    ],
-   "navires_references": []
+   "navires_references": [],
+   "actif": true,
+   "actif_source": "Société active sous plan de continuation : redressement judiciaire ouvert le 9 octobre 2024 (cessation des paiements au 1er août 2024), plan de redressement sur dix ans arrêté le 12 novembre 2025 ; 6 à 9 salariés, mise à jour du 13 août 2026. Le plan homologué vaut poursuite d'activité, non cessation. Vague contact-activite du 2026-08-15. https://www.societe.com/societe/plastiques-services-import-392945960.html"
   },
   {
    "id": "armement-enez-atelier-de-reparation-navale-le-port",
@@ -78010,7 +78357,8 @@
     "https://www.societe.com/societe/armement-enez-du-418896833.html",
     "https://imazpress.com/actus-reunion/chantier-naval-reunimer-et-enez-ont-realise-la-plus-importante-renovation-de-navire",
     "https://reunion.orange.fr/actu/reunion/chantier-naval-reunimer-et-enez-ont-realise-la-plus-importante.html",
-    "https://www.meretmarine.com/fr/construction-navale/piriou-reunion-un-nouveau-pole-de-reparation-navale-en-ocean-indien"
+    "https://www.meretmarine.com/fr/construction-navale/piriou-reunion-un-nouveau-pole-de-reparation-navale-en-ocean-indien",
+    "https://www.reunimer.com/groupe"
    ],
    "confiance": "moyenne",
    "produits": [
@@ -78051,7 +78399,9 @@
     "lien mort constate le 2026-08-03 : https://www.reunimer.com/armement",
     "lien mort constate le 2026-08-03 : https://www.reunimer.com/en-mer-peche-a-la-palangre",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "ARMEMENT ENEZ DU (SIREN 418 896 833) est active, sans procédure collective, 20 à 49 salariés, comptes de l'exercice 2025 déposés le 15 août 2026 ; filiale du groupe Réunimer, dont la page Groupe cite la maintenance navale parmi les activités du site du Port. Réserve : aucune preuve datée propre à l'atelier de réparation navale lui-même, dont le code NAF de la société est 03.11Z pêche en mer ; l'URL fournie par la base, reunimer.com/a-terre-reparation-navale-gestion-bateaux, renvoie une erreur 404. Vague contact-activite du 2026-08-15. https://www.societe.com/societe/armement-enez-du-418896833.html"
   },
   {
    "id": "chantier-naval-du-pacifique-sud-cnps-papeete",
@@ -78180,7 +78530,8 @@
     "https://la1ere.franceinfo.fr/polynesie/tahiti/la-seconde-vie-des-chantiers-navals-du-pacifique-sud-370851.html",
     "https://www.pappers.fr/entreprise/cnps-chantier-naval-du-pacifique-sud-212563",
     "https://www.meretmarine.com/fr/construction-navale/polynesie-nsi-livre-le-thonier-mereana-5",
-    "https://www.meretmarine.com/fr/defense/le-nouveau-patrouilleur-destine-a-la-polynesie-francaise-se-prepare-a-rejoindre-papeete"
+    "https://www.meretmarine.com/fr/defense/le-nouveau-patrouilleur-destine-a-la-polynesie-francaise-se-prepare-a-rejoindre-papeete",
+    "https://www.cnps.pf/contact/"
    ],
    "confiance": "haute",
    "produits": [
@@ -78783,7 +79134,8 @@
     "https://en.pf.yellowflagguides.com/directory/listing/chantier-naval-des-iles-sous-le-vent-cni",
     "http://etoile-de-lune.net/edl/polynesie/raiatea_cni.html",
     "https://outremers360.com/bassin-pacifique-appli/sur-lile-de-raiatea-en-polynesie-la-construction-navale-a-le-vent-en-poupe",
-    "https://marinalu.pf/a-propos/"
+    "https://marinalu.pf/a-propos/",
+    "https://cnislv.com/carenage-de-bateau-en-polynesie-quelle-frequence-prevoir/"
    ],
    "confiance": "haute",
    "produits": [
@@ -78825,7 +79177,9 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.tahiticruisersguide.com/articles/chantier-naval-des-iles-s-vent-cni-raiatea",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Article de conseil technique sur le carenage publie le 8 juin 2026 sur le site du chantier, date visible sur la page ; le site est tenu a jour en continu (lastmod du sitemap au 15 aout 2026, pages services remaniees les 7 et 8 aout 2026). Vague contact-activite du 2026-08-15. https://cnislv.com/carenage-de-bateau-en-polynesie-quelle-frequence-prevoir/"
   },
   {
    "id": "catamarine-noumea",
@@ -79389,7 +79743,8 @@
     "https://www.martiniqueactive.com/poi/carenantilles/",
     "https://la1ere.franceinfo.fr/martinique/affaire-carenantilles-marin-ancien-directeur-mer-est-garde-vue-752451.html",
     "https://www.marinetraffic.com/fr/maritime-companies/profile/74507/company_name:carenantilles",
-    "https://www.dnb.com/business-directory/company-profiles.carenantilles.aca697ae1a037ccb8b5fe75cb4065768.html"
+    "https://www.dnb.com/business-directory/company-profiles.carenantilles.aca697ae1a037ccb8b5fe75cb4065768.html",
+    "https://www.pappers.fr/entreprise/carenantilles-387788854"
    ],
    "confiance": "haute",
    "produits": [
@@ -79423,7 +79778,9 @@
     "bois"
    ],
    "taille_max": "Navires de plaisance et de travail jusqu'a 50 m (superyachts); leve max 440 tonnes (travel lift Cimolai), tirant d'eau max 5 m, largeur max 14 m",
-   "navires_references": []
+   "navires_references": [],
+   "actif": true,
+   "actif_source": "SASU active, comptes de l'exercice clos le 31 decembre 2025 deposes le 10 juillet 2026, chiffre d'affaires 2,64 M EUR et 19 salaries, aucune procedure collective ; presidence reprise par BEAUSEJOUR GESTION en octobre 2025. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/carenantilles-387788854"
   },
   {
    "id": "mayotte-marine-service-mamoudzou",
@@ -79608,7 +79965,8 @@
     "https://www.lejournaldugrandparis.fr/portfolio-a-veneux-les-sablons-un-chantier-naval-traverse-le-siecle-par-ayoub-benkarroum/",
     "https://www.pagesjaunes.fr/pros/06496607",
     "https://www.societe.com/societe/etablissements-rousseau-382780948.html",
-    "https://fr.geoview.info/chantier_naval_rousseau,660752787n"
+    "https://fr.geoview.info/chantier_naval_rousseau,660752787n",
+    "https://www.pappers.fr/entreprise/etablissements-rousseau-382780948"
    ],
    "confiance": "haute",
    "produits": [
@@ -79651,7 +80009,9 @@
    "navires_references": [],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "SAS ETABLISSEMENTS ROUSSEAU (SIREN 382780948) active, code 30.11Z construction de navires, resultat net 2025 de 36 500 EUR et comptes 2025 deposes en confidentialite partielle (avis BODACC), effectif 6 a 9 salaries, aucune procedure collective ; fiche mise a jour le 15 aout 2026. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/etablissements-rousseau-382780948"
   },
   {
    "id": "chantier-naval-de-watten-cnw-chantier-naval-worl-watten",
@@ -79732,7 +80092,9 @@
     "https://www.fluvialnet.com/chantier-naval/chantier-naval-de-watten/218",
     "https://www.watten.fr/vos-rubriques-pratiques/histoire-de-watten/laa-canalisee-et-les-chantiers-navals/",
     "https://societe.com/societe/chantier-naval-de-watten-837751569.html",
-    "https://www.verif.com/en/company/CHANTIER-NAVAL-DE-WATTEN-68d9c1231299230338c319e3/"
+    "https://www.verif.com/en/company/CHANTIER-NAVAL-DE-WATTEN-68d9c1231299230338c319e3/",
+    "https://www.societe.com/societe/chantier-naval-worldship-837751569.html",
+    "https://www.pappers.fr/entreprise/chantier-naval-worldship-837751569"
    ],
    "confiance": "haute",
    "produits": [
@@ -80119,7 +80481,10 @@
    ],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : La Perle Noire de Paris (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/seine-alliance-un-nouveau-navire-entierement-electrique-mis-a-l-eau-a-villeneuve-la-garenne"
   },
   {
    "id": "chantiers-de-la-haute-seine-villeneuve-le-ro",
@@ -80282,7 +80647,8 @@
     "https://www.meretmarine.com/fr/construction-navale/hybridation-du-mulet-coureau-et-de-l-hirondelle-enag-et-marinelec-dans-le-meme-bateau-mouche",
     "https://www.usinenouvelle.com/article/tourisme-fluvial-et-decarbonation-boostent-l-activite-des-chantiers-navals-le-long-de-la-seine.N2226813",
     "https://www.transfluid.eu/fr/navigation-durable-a-paris/",
-    "https://www.constructioncayola.com/terrassements-carrieres/article/2018/09/05/120555/cemex-les-barges-coulent-douce"
+    "https://www.constructioncayola.com/terrassements-carrieres/article/2018/09/05/120555/cemex-les-barges-coulent-douce",
+    "https://www.pappers.fr/entreprise/chantiers-de-la-haute-seine-785790247"
    ],
    "confiance": "haute",
    "produits": [
@@ -80669,7 +81035,9 @@
     "lien mort constate le 2026-08-03 : https://www.cemex.fr/-/communique-de-presse-3-juin-2019",
     "lien mort constate le 2026-08-03 : https://www.cemex.fr/documents/46519955/46620495/Brochure+CHS.pdf",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "SAS CHANTIERS DE LA HAUTE SEINE (SIREN 785 790 247), code NAF 33.15Z réparation et maintenance navale, active, mise à jour RCS du 15/08/2026, comptes 2025 avec un chiffre d'affaires de 10,5 M€ en hausse de 7,6 %, résultat net 752 k€, 44 salariés, président Frédéric Motreff, commissaire aux comptes KPMG. Le siège déclaré est 13 rue du Capricorne à Rungis, adresse postale du groupe, l'exploitation étant sur la Seine à Villeneuve-le-Roi. Dernière modification publiée le 18/08/2025. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/chantiers-de-la-haute-seine-785790247"
   },
   {
    "id": "chantier-naval-cpc-construction-polyester-du-cen-digoin",
@@ -81269,7 +81637,10 @@
    "geo_source": "https://nominatim.openstreetmap.org/search?q=Chantier+naval+CPC+Digoin&format=json",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : LaPéniche eXP (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.actunautique.com/2026/05/lapeniche-exp-ouvre-une-nouvelle-voie-a-la-navigation-fluviale-electrique.html"
   },
   {
    "id": "chantier-fluvial-de-castelsarrasin-castelsarrasin",
@@ -81409,7 +81780,8 @@
     "https://www.pappers.fr/entreprise/chantier-fluvial-castelsarrasin-477528137",
     "https://www.chantierfluvialcastel.com/",
     "https://france3-regions.franceinfo.fr/occitanie/tarn-et-garonne/montauban/castelsarrasin-chantier-naval-loin-mer-1356395.html",
-    "https://www.ville-castelsarrasin.fr/tourisme-et-patrimoine/port-et-canal/la-voie-verte-1"
+    "https://www.ville-castelsarrasin.fr/tourisme-et-patrimoine/port-et-canal/la-voie-verte-1",
+    "https://www.societe.com/societe/chantier-fluvial-castelsarrasin-477528137.html"
    ],
    "confiance": "haute",
    "produits": [
@@ -81439,7 +81811,9 @@
    ],
    "taille_max": "Levage / sortie d'eau jusqu'à 20 tonnes (grue ou remorquage hydraulique). Pas de construction neuve : capacité bornée par le levage et les 3 postes de cale (slipway) pour bateaux fluviaux et de plaisance. Longueur et jauge max non publiées.",
    "geo_source": "https://nominatim.openstreetmap.org/search?q=20+chemin+des+deux+ponts+82100+Castelsarrasin&format=json",
-   "navires_references": []
+   "navires_references": [],
+   "actif": true,
+   "actif_source": "SARL CHANTIER FLUVIAL CASTELSARRASIN (SIREN 477528137) active, comptes de l'exercice clos le 31 mai 2025 deposes le 13 mars 2026, chiffre d'affaires 454 300 EUR en hausse de 6 % et 3 a 5 salaries ; fiche mise a jour le 13 aout 2026. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/chantier-fluvial-castelsarrasin-477528137"
   },
   {
    "id": "les-chantiers-des-hauts-de-lutece-saint-mammes",
@@ -81656,7 +82030,9 @@
    ],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Le sitemap du site officiel horodate une actualité au 12/12/2025 et une mise à jour de l'ensemble des pages au 13/02/2026 ; l'établissement de Saint-Mammès (SIRET 42192608000035, 1 Île de la Celle) est inscrit actif au répertoire Sirene, l'entreprise (SIREN 421926080, NAF 30.12Z construction navale) étant à jour au 06/12/2025. Vague contact-activite du 2026-08-15. https://www.navalchl.com/sitemap.xml"
   },
   {
    "id": "chantier-du-guip-site-ile-aux-moines-ile-aux-moines",
@@ -81773,7 +82149,10 @@
     "https://patrimoine.ti-anna.bzh/fr/patrimoines/patrimoine/sinagot-jean-et-jeanne/",
     "https://patrimoine.ti-anna.bzh/fr/patrimoines/patrimoine/sinagot-mab-er-guip/",
     "https://www.boatindustry.fr/article/25820/chantier-guip-s-agrandit-accueillir-plus-de-bateaux",
-    "https://mersetbateaux.com/chantier-du-guip/"
+    "https://mersetbateaux.com/chantier-du-guip/",
+    "https://www.pappers.fr/entreprise/chantier-du-guip-380808550",
+    "https://www.actunautique.com/2026/08/a-l-ile-aux-moines-penhap-bois-ocean-reprend-le-berceau-historique-du-chantier-du-guip.html",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/penhap-bois-ocean-105482517"
    ],
    "confiance": "haute",
    "produits": [
@@ -82487,7 +82866,9 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : http://www.chantierduguip.com/hitorique,61.html",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "SARL active (SIREN 380 808 550), réparation et maintenance navale, deux sites : quai Commandant Malbert à Brest et Penhap à l'Île-aux-Moines. Comptes de l'exercice clos le 31/08/2025 déposés le 16/03/2026, chiffre d'affaires 3,59 M€ en hausse de 5,7 %, résultat net 138 k€, effectif de 20 à 49 salariés, gérants Tegwen Mauffret et Yann Mauffret. Le fil d'actualités du site du chantier s'arrête en mai 2019, ce qui ne dit rien de son activité. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/chantier-du-guip-380808550"
   },
   {
    "id": "chantier-naval-bois-cost-art-plouezoc-h",
@@ -82722,7 +83103,8 @@
     "https://www.chantierdesileaux.com/arcachon31/",
     "https://www.chantierdesileaux.com/reder-moor/",
     "https://www.nauticexpo.fr/prod/chantier-ileaux/product-38542-382875.html",
-    "https://www.vivierboats.com/en/jeanne-j-noirmoutier/"
+    "https://www.vivierboats.com/en/jeanne-j-noirmoutier/",
+    "https://www.chantierdesileaux.com/tarifs/"
    ],
    "confiance": "haute",
    "produits": [
@@ -83567,7 +83949,9 @@
     "https://www.pole-nautique-loire-estuaire.fr/menuiserie-marine-jpto/amenagement-interieur/",
     "http://www.ufmo.org/team-members/chantier-de-lesclain/",
     "https://www.pole-nautique-loire-estuaire.fr/menuiserie-marine-jpto/",
-    "https://www.pole-nautique-loire-estuaire.fr/menuiserie-marine-jpto/menuiserie-dagencement/"
+    "https://www.pole-nautique-loire-estuaire.fr/menuiserie-marine-jpto/menuiserie-dagencement/",
+    "https://www.pappers.fr/entreprise/atelier-bois-jpto-512135385",
+    "https://www.societe.com/societe/atelier-bois-j-pto-512135385.html"
    ],
    "confiance": "moyenne",
    "produits": [
@@ -83595,7 +83979,9 @@
    "navires_references": [],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": false,
+   "actif_source": "SARL radiee : cessation d'activite au 30 septembre 2015, dissolution avec nomination de Jean-Marie Marais comme liquidateur, radiation du registre publiee en decembre 2015 ; aucun repreneur ni etablissement successeur au 23 bd de Chantenay a Nantes dans le repertoire, et la page du Pole Nautique Loire Estuaire qui la referencait n'existe plus. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/atelier-bois-jpto-512135385"
   },
   {
    "id": "chantier-naval-bernard-saint-vaast-la-h",
@@ -83694,7 +84080,8 @@
     "https://www.wikimanche.fr/Marit%C3%A9",
     "https://fr.wikipedia.org/wiki/Fleur_de_Lampaul",
     "https://www.chantier-naval-bernard.com/actualites-chantier-naval-bernard.php",
-    "https://france3-regions.franceinfo.fr/normandie/manche/c-normand-chantiers-navals-bernard-saint-vaast-tradition-du-bois-837737.html"
+    "https://france3-regions.franceinfo.fr/normandie/manche/c-normand-chantiers-navals-bernard-saint-vaast-tradition-du-bois-837737.html",
+    "https://www.chantier-naval-bernard.com/plan-contact.php"
    ],
    "confiance": "haute",
    "produits": [
@@ -84203,7 +84590,8 @@
     "https://france3-regions.franceinfo.fr/hauts-de-france/pas-calais/calais/c-est-un-bateau-exceptionnel-le-dundee-lorette-dernier-voilier-de-peche-en-bois-a-decouvrir-lors-des-semaines-de-la-mer-3132733.html",
     "http://www.patrimoine-maritime.com/chantier-naval/projet-lorette/432-restauration-de-lorette-les-nouvelles-membrures",
     "https://france3-regions.franceinfo.fr/hauts-de-france/pas-calais/calais/les-savoir-faire-du-chantier-naval-de-calais-inscrits-au-patrimoine-culturel-immateriel-2638736.html",
-    "http://www.patrimoine-maritime.com/chantier-naval/activites-du-chantier/25-un-chantier-naval-pour-le-patrimoine-et-linsertion"
+    "http://www.patrimoine-maritime.com/chantier-naval/activites-du-chantier/25-un-chantier-naval-pour-le-patrimoine-et-linsertion",
+    "https://www.patrimoine-maritime.com/reseau/activites/518-le-reseau-dans-la-presse-juillet-2026"
    ],
    "confiance": "moyenne",
    "produits": [
@@ -84318,7 +84706,9 @@
    "geo_source": "https://www.patrimoine-maritime.com/contact/nous-contacter/2-frcpm-bureau-de-calais",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Le centre, 25 rue de Cronstadt a Calais, est cite comme site en fonctionnement du reseau dans la revue de presse publiee le 28 juillet 2026 par la Federation regionale pour la culture et le patrimoine maritimes, qui publie egalement des actualites datees de juin et aout 2026. Vague contact-activite du 2026-08-15. https://www.patrimoine-maritime.com/reseau/activites/518-le-reseau-dans-la-presse-juillet-2026"
   },
   {
    "id": "atelier-des-barques-conseil-departemental-des-py-port-vendres-pau",
@@ -84763,7 +85153,9 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.terraimar.fr/activit%C3%A9s/les-barques-catalanes/historique-et-restauration-du-bel-ange",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Atelier départemental de restauration de barques catalanes installé depuis 2010 dans les anciens bâtiments Nobel de l'anse de Paulilles ; la fiche du Conseil départemental (dernière modification 20/09/2024 selon le sitemap du site) décrit deux agents à temps plein plus un apprenti charpentier de marine, un programme de restauration en cours et des visites guidées gratuites de mai à octobre. Aucune preuve datée de 2025 ou 2026 n'a pu être trouvée, aucun indice de cessation non plus. Vague contact-activite du 2026-08-15. https://www.ledepartement66.fr/dossier/latelier-des-barques/"
   },
   {
    "id": "chantier-naval-gilbert-pasqui-villefranche-sur",
@@ -85617,7 +86009,10 @@
      "descendu_le": "2026-08-05",
      "motif": "type de refit : passage en chantier, pas une construction"
     }
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Nexo 22.5 Runabout (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.ventdouestcm.com/construction-neuve/"
   },
   {
    "id": "chantier-despierres-atelier-bois-ocean-la-rochelle",
@@ -85714,7 +86109,8 @@
     "https://france3-regions.franceinfo.fr/nouvelle-aquitaine/charente-maritime/la-rochelle/c-est-un-plaisir-de-travailler-sur-une-piece-historique-100-000-euros-pour-sauver-le-saint-anne-iii-un-voilier-de-90-ans-2900948.html",
     "https://fr.wikipedia.org/wiki/Girl_Joyce",
     "https://www.boatindustry.fr/article/23691/coup-de-jeune-a-tete-chantier-naval-despierres",
-    "https://www.franceinfo.fr/culture/patrimoine/artisanat-les-charpentiers-de-la-mer-a-la-rescousse-des-bateaux_6602073.html"
+    "https://www.franceinfo.fr/culture/patrimoine/artisanat-les-charpentiers-de-la-mer-a-la-rescousse-des-bateaux_6602073.html",
+    "https://www.pappers.fr/entreprise/despierres-charpente-navale-414997007"
    ],
    "confiance": "haute",
    "produits": [
@@ -85880,7 +86276,9 @@
    "geo_source": "https://despierres-atelierboisocean.fr/en/",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "actif_source": "L'EURL Despierres Charpente Navale (SIREN 414 997 007, Plateau Nautique rue Senac de Meilhan, La Rochelle), dirigee par Nicolas Chanteloup depuis mai 2016, est active, sans procedure collective, avec des comptes deposes sur l'exercice 2025 (resultat net 46 kEUR, capitaux propres 349 kEUR) et 10 a 19 salaries. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/despierres-charpente-navale-414997007"
   },
   {
    "id": "candela-chantier-naval-candela-bruno-barbara-la-rochelle",
@@ -85994,7 +86392,8 @@
     "https://www.pagesjaunes.fr/pros/09137701",
     "https://www.alabordage.fr/blog/chantiers-navals-restauration-bateau-classique/",
     "https://classicsailboats.org/william-fife-iii-viola/",
-    "https://www.sandemanyachtcompany.co.uk/yacht/549/alfred-mylne-29ft-gaff-sloop-19092007"
+    "https://www.sandemanyachtcompany.co.uk/yacht/549/alfred-mylne-29ft-gaff-sloop-19092007",
+    "https://www.pappers.fr/entreprise/candela-483948824"
    ],
    "confiance": "moyenne",
    "produits": [
@@ -86314,7 +86713,9 @@
      "descendu_le": "2026-08-05",
      "motif": "type de refit : passage en chantier, pas une construction"
     }
-   ]
+   ],
+   "actif": true,
+   "actif_source": "SARL CANDELA (SIREN 483 948 824), charpente navale et restauration de voiliers classiques a La Rochelle, immatriculee en activite au RCS de La Rochelle, dernier depot de comptes annuels enregistre en avril 2026, aucune procedure collective. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/candela-483948824"
   },
   {
    "nom": "Vard Søviknes",
@@ -178634,7 +179035,8 @@
     "https://en.wikipedia.org/wiki/Stena_Europe",
     "https://en.wikipedia.org/wiki/PD-50",
     "https://sv.wikipedia.org/wiki/Cityvarvet",
-    "https://sv.wikipedia.org/wiki/G%C3%B6taverken"
+    "https://sv.wikipedia.org/wiki/G%C3%B6taverken",
+    "https://www.sjohistoriska.se/sv/utforska/fartyg-kulturmiljoer/k-markning-av-fartyg/lista-pa-k-markta-fartyg/spica-t121/"
    ],
    "confiance": "haute",
    "id": "gotaverken-chantier-historique-goteborg"
@@ -193192,7 +193594,8 @@
    ],
    "sources": [
     "https://www.dubourdieu.fr/",
-    "https://www.dubourdieu.fr/histoire/"
+    "https://www.dubourdieu.fr/histoire/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/dubourdieu-1800-432678894"
    ],
    "confiance": "a_verifier",
    "actif": true,
@@ -193906,7 +194309,8 @@
    ],
    "taille_max": null,
    "sources": [
-    "https://www.meretmarine.com/fr/construction-navale/deux-ferries-damen-pour-saint-pierre-et-miquelon"
+    "https://www.meretmarine.com/fr/construction-navale/deux-ferries-damen-pour-saint-pierre-et-miquelon",
+    "https://www.damen.com/companies/damen-shipyards-galati"
    ],
    "confiance": "haute",
    "actif": true,
@@ -194190,7 +194594,8 @@
    "historique": [],
    "contact": null,
    "sources": [
-    "https://en.wikipedia.org/wiki/Ailsa_Shipbuilding_Company"
+    "https://en.wikipedia.org/wiki/Ailsa_Shipbuilding_Company",
+    "https://www.nationalarchives.gov.uk/accessions/2003/03returns/03ac248.htm"
    ],
    "confiance": "haute",
    "navires_references": [
@@ -194352,7 +194757,8 @@
    ],
    "description": "Chantier de La Seyne-sur-Mer, constructeur de vedettes a passagers.",
    "sources": [
-    "http://courriersdefrance.blogspot.com/2018/08/vedette-star-cote-dazur-izenah.html"
+    "http://courriersdefrance.blogspot.com/2018/08/vedette-star-cote-dazur-izenah.html",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/sud-navires-industries-403702459"
    ],
    "groupe": null,
    "navires_references": [
@@ -194608,7 +195014,10 @@
       }
      ]
     }
-   ]
+   ],
+   "actif": true,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Passeur électrique de Concarneau (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.bretagne-economique.com/actualites/merconcept-se-diversifie-et-construit-le-futur-bac-electrique-de-concarneau/"
   },
   {
    "id": "pa-yard-holland",
@@ -205029,7 +205438,9 @@
     }
    ],
    "sources": [
-    "https://www.wikidata.org/wiki/Special:EntityData/Q11706296.json"
+    "https://www.wikidata.org/wiki/Special:EntityData/Q11706296.json",
+    "https://www.nrc.nl/nieuws/1992/10/10/fusie-harlingse-scheepswerven-rond-7159039-a258343",
+    "https://www.scotline.co.uk/a-clip-from-the-archives-scot-mariner-launch/"
    ],
    "confiance": "a_verifier",
    "actif": null
@@ -208889,7 +209300,9 @@
     }
    ],
    "sources": [
-    "https://www.micharms.de/Seeschiffe/sites/roro/b/balticborg.html"
+    "https://www.micharms.de/Seeschiffe/sites/roro/b/balticborg.html",
+    "https://royaltshipyards.com/en/locations/harlingen/",
+    "https://www.rtvdrenthe.nl/nieuws/73053/bodewes-groep-meppel-koopt-scheepswerf-harlingen"
    ],
    "confiance": "a_verifier",
    "actif": null
@@ -209355,7 +209768,8 @@
     }
    ],
    "sources": [
-    "https://en.wikipedia.org/wiki/Shoalway"
+    "https://en.wikipedia.org/wiki/Shoalway",
+    "https://www.cobouw.nl/bouwbreed/nieuws/2010/10/intervak-groeit-in-nieuwe-bouwrol-10189257"
    ],
    "confiance": "a_verifier",
    "actif": null
@@ -213636,7 +214050,9 @@
     }
    ],
    "sources": [
-    "https://da.wikipedia.org/wiki/Helsing%C3%B8r_Skibsv%C3%A6rft"
+    "https://da.wikipedia.org/wiki/Helsing%C3%B8r_Skibsv%C3%A6rft",
+    "https://trap.lex.dk/Helsing%C3%B8r_V%C3%A6rft",
+    "https://helsingormuseer.dk/besoegssteder/vaerftsmuseet/"
    ],
    "confiance": "a_verifier",
    "actif": null
@@ -214040,7 +214456,8 @@
     "https://da.wikipedia.org/wiki/Redningsb%C3%A5d",
     "https://de.wikipedia.org/wiki/Nords%C3%B8v%C3%A6rftet",
     "https://www.wikidata.org/wiki/Q52279283",
-    "https://da.wikipedia.org/wiki/M/F_Margrete_L%C3%A6s%C3%B8"
+    "https://da.wikipedia.org/wiki/M/F_Margrete_L%C3%A6s%C3%B8",
+    "https://www.northdata.com/Nords%C3%B8v%C3%A6rftet+A/S,+Ringk%C3%B8bing/CVR+73173914"
    ],
    "confiance": "sourcee",
    "actif": false,
@@ -214083,7 +214500,9 @@
     }
    ],
    "sources": [
-    "https://en.wikipedia.org/wiki/HDMY_Dannebrog_(A540)"
+    "https://en.wikipedia.org/wiki/HDMY_Dannebrog_(A540)",
+    "https://lex.dk/Orlogsv%C3%A6rftet",
+    "https://milhist.dk/major-danish-warships-built-holmen-shipyard-1692-1744/"
    ],
    "confiance": "a_verifier",
    "actif": null
@@ -214422,7 +214841,8 @@
     "https://nl.wikipedia.org/wiki/Damen_Verolme_Rotterdam",
     "https://en.wikipedia.org/wiki/Damen_Verolme_Rotterdam",
     "https://nl.wikipedia.org/wiki/Lepton_(schip)",
-    "https://nl.wikipedia.org/wiki/Otapan"
+    "https://nl.wikipedia.org/wiki/Otapan",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/verolme-botlek-429652688"
    ],
    "confiance": "sourcee",
    "actif": true
@@ -216386,7 +216806,8 @@
     "https://da.wikipedia.org/wiki/MHV_800-klassen",
     "https://da.wikipedia.org/wiki/MHV_900-klassen",
     "https://da.wikipedia.org/wiki/M/F_Ragna",
-    "https://da.wikipedia.org/wiki/Elf%C3%A6rgen_Ellen"
+    "https://da.wikipedia.org/wiki/Elf%C3%A6rgen_Ellen",
+    "https://sobyshipyard.com/news/annual-report-2024/"
    ],
    "confiance": "sourcee",
    "actif": true,
@@ -219762,7 +220183,8 @@
     "https://en.wikipedia.org/wiki/La_Combattante_III-class_fast_attack_craft",
     "https://en.wikipedia.org/wiki/List_of_active_Hellenic_Navy_ships",
     "https://en.wikipedia.org/wiki/Greek_frigate_Psara",
-    "https://el.wikipedia.org/wiki/%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC_%CE%9D%CE%B1%CF%85%CF%80%CE%B7%CE%B3%CE%B5%CE%AF%CE%B1"
+    "https://el.wikipedia.org/wiki/%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC_%CE%9D%CE%B1%CF%85%CF%80%CE%B7%CE%B3%CE%B5%CE%AF%CE%B1",
+    "https://nafsgreen.gr/skaramangas-shipyards-join-the-green-award-program/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -220214,7 +220636,8 @@
     "https://en.wikipedia.org/wiki/Etna-class_replenishment_oiler",
     "https://en.wikipedia.org/wiki/List_of_active_Hellenic_Navy_ships",
     "https://el.wikipedia.org/wiki/%CE%9D%CE%B1%CF%85%CF%80%CE%B7%CE%B3%CE%B5%CE%AF%CE%B1_%CE%95%CE%BB%CE%B5%CF%85%CF%83%CE%AF%CE%BD%CE%B1%CF%82",
-    "https://en.wikipedia.org/wiki/Blue_Star_Chios"
+    "https://en.wikipedia.org/wiki/Blue_Star_Chios",
+    "https://nafsgreen.gr/onex-elefsis-shipyards-and-bureau-veritas-marine-offshore-sign-agreement-for-the-construction-of-20-newbuilding-tugs/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -220289,7 +220712,8 @@
    "sources": [
     "https://en.wikipedia.org/wiki/Chalkis_Shipyards",
     "https://en.wikipedia.org/wiki/Category:Shipbuilding_companies_of_Greece",
-    "https://en.wikipedia.org/wiki/List_of_active_Hellenic_Navy_ships"
+    "https://en.wikipedia.org/wiki/List_of_active_Hellenic_Navy_ships",
+    "https://www.chalkis-shipyards.gr/contact/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -220481,7 +220905,8 @@
     "https://es.wikipedia.org/wiki/La_Naval_de_Sestao",
     "https://es.wikipedia.org/wiki/Sociedad_Espa%C3%B1ola_de_Construcci%C3%B3n_Naval",
     "https://es.wikipedia.org/wiki/Astilleros_Espa%C3%B1oles",
-    "https://es.wikipedia.org/wiki/Construcciones_Navales_del_Norte"
+    "https://es.wikipedia.org/wiki/Construcciones_Navales_del_Norte",
+    "https://www.northdata.com/Construcciones+Navales+del+Norte+SL,+Sestao"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -220739,7 +221164,8 @@
     "https://en.wikipedia.org/wiki/Villa_Vie_Odyssey",
     "https://en.wikipedia.org/wiki/Orient_Queen_(1989)",
     "https://en.wikipedia.org/wiki/MV_Ocean_Majesty",
-    "https://en.wikipedia.org/wiki/VidantaWorld_Elegant"
+    "https://en.wikipedia.org/wiki/VidantaWorld_Elegant",
+    "https://www.northdata.com/Inversiones%20Maritimas%20del%20Mediterraneo%20SA,%20Val%C3%A8ncia/NIF%20A46018594"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -220915,7 +221341,8 @@
     "https://es.wikipedia.org/wiki/Hijos_de_J._Barreras",
     "https://es.wikipedia.org/wiki/Astilleros_Armon_Vigo",
     "https://es.wikipedia.org/wiki/Clase_Albatun",
-    "https://es.wikipedia.org/wiki/Astilleros_Arm%C3%B3n"
+    "https://es.wikipedia.org/wiki/Astilleros_Arm%C3%B3n",
+    "https://www.northdata.com/Hijos+de+J+Barreras+SA,+Vigo"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -220991,7 +221418,8 @@
    "sources": [
     "https://es.wikipedia.org/wiki/Factor%C3%ADas_Vulcano_S.A.",
     "https://es.wikipedia.org/wiki/Maartje_Theadora",
-    "https://es.wikipedia.org/wiki/FV_Athena"
+    "https://es.wikipedia.org/wiki/FV_Athena",
+    "https://aclunaga.es/listado-socios/astilleros-san-enrique-s-l/"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -222421,7 +222849,8 @@
     "https://en.wikipedia.org/wiki/Spanish_oiler_Cantabria",
     "https://en.wikipedia.org/wiki/MS_Sk%C3%A5ne",
     "https://en.wikipedia.org/wiki/MS_Stena_Germanica_(2000)",
-    "https://es.wikipedia.org/wiki/Astilleros_Espa%C3%B1oles"
+    "https://es.wikipedia.org/wiki/Astilleros_Espa%C3%B1oles",
+    "https://www.puertocadiz.com/actividad-industrial/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -222714,7 +223143,8 @@
     }
    ],
    "sources": [
-    "https://en.wikipedia.org/wiki/MS_Adriana"
+    "https://en.wikipedia.org/wiki/MS_Adriana",
+    "https://digitaltmuseum.no/021015516041/m-s-aquarius-b-1972-united-shipping-yard-co-perama-rederi-hellenic-mediterranean"
    ],
    "confiance": "moyenne",
    "actif": null,
@@ -223255,7 +223685,8 @@
    "navires_references": [],
    "sources": [
     "https://www.astander.es/en/",
-    "https://www.astander.es/en/facilities/"
+    "https://www.astander.es/en/facilities/",
+    "https://www.infoempresa.com/es-es/es/empresa/astilleros-de-santander-sa"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -223732,7 +224163,8 @@
     }
    ],
    "sources": [
-    "https://sv.wikipedia.org/wiki/Uddevallavarvet"
+    "https://sv.wikipedia.org/wiki/Uddevallavarvet",
+    "https://digitaltmuseum.se/021166009599"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -223804,7 +224236,8 @@
     }
    ],
    "sources": [
-    "https://sv.wikipedia.org/wiki/Kalmar_varv"
+    "https://sv.wikipedia.org/wiki/Kalmar_varv",
+    "https://digitaltmuseum.se/0210114732219"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -224053,7 +224486,8 @@
    ],
    "sources": [
     "https://sv.wikipedia.org/wiki/Lindholmens_varv",
-    "https://sv.wikipedia.org/wiki/Special:Exportera/Lindholmens_varv"
+    "https://sv.wikipedia.org/wiki/Special:Exportera/Lindholmens_varv",
+    "https://runeberg.org/rhasvindus/1/0071.html"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -224096,7 +224530,8 @@
    "sources": [
     "https://sv.wikipedia.org/wiki/Arendalsvarvet",
     "https://sv.wikipedia.org/wiki/Special:Exportera/Arendalsvarvet",
-    "https://en.wikipedia.org/wiki/G%C3%B6taverken"
+    "https://en.wikipedia.org/wiki/G%C3%B6taverken",
+    "https://digitaltmuseum.se/021166009508"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -224520,7 +224955,8 @@
     }
    ],
    "sources": [
-    "https://es.wikipedia.org/wiki/Astilleros_Francisco_Cardama"
+    "https://es.wikipedia.org/wiki/Astilleros_Francisco_Cardama",
+    "https://www.astilleroscardama.com/cardama/historia/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -224617,7 +225053,8 @@
    "sources": [
     "https://es.wikipedia.org/wiki/MetalShips_%26_Docks",
     "https://es.wikipedia.org/wiki/Deep_Orient",
-    "https://es.wikipedia.org/wiki/Sea_Cloud_Spirit"
+    "https://es.wikipedia.org/wiki/Sea_Cloud_Spirit",
+    "https://www.metalships.com/carbon-footprint-2/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -224702,7 +225139,8 @@
     }
    ],
    "sources": [
-    "https://es.wikipedia.org/wiki/Astilleros_Armada"
+    "https://es.wikipedia.org/wiki/Astilleros_Armada",
+    "https://astillerosarmada.com/alargamiento-buque-pilar-torre/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -224744,7 +225182,8 @@
    "description": "Chantier fondé en 1940, implanté dans la paroisse de Teis (zone de Ríos), à Vigo. Construit en acier et en bois des navires de 18 à 70 m : pêche (chalutiers, palangriers), navires océanographiques, yachts, navires à passagers, dragues, ainsi que des bateaux rabelo traditionnels du Douro.",
    "navires_references": [],
    "sources": [
-    "https://es.wikipedia.org/wiki/Astilleros_J.M._Armada"
+    "https://es.wikipedia.org/wiki/Astilleros_J.M._Armada",
+    "https://astillerosarmada.com/alargamiento-buque-pilar-torre/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -224825,7 +225264,8 @@
     }
    ],
    "sources": [
-    "https://es.wikipedia.org/wiki/Aister"
+    "https://es.wikipedia.org/wiki/Aister",
+    "https://aister.com/es/blog/construccion-catamaran-hibrido-aluminio-jeune-france-ii/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -224904,7 +225344,8 @@
    "navires_references": [],
    "sources": [
     "https://gl.wikipedia.org/wiki/Nodosa",
-    "https://es.wikipedia.org/wiki/Intermares_(A-41)"
+    "https://es.wikipedia.org/wiki/Intermares_(A-41)",
+    "https://www.infoempresa.com/es-es/es/empresa/nodosa-sl"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -224933,7 +225374,8 @@
    "description": "Constructeur fondé en 1974 par Manuel Rodríguez Vázquez (le nom vient de l'inversion des initiales de son nom), établi à Vigo avec des installations à Meira (Moaña). Produit des patrouilleurs de police et militaires de 10 à 44 m (gammes Rodman 33 à 145) et des bateaux de plaisance. Le groupe détient également le chantier MetalShips & Docks à Vigo (Teis).",
    "navires_references": [],
    "sources": [
-    "https://es.wikipedia.org/wiki/Rodman"
+    "https://es.wikipedia.org/wiki/Rodman",
+    "https://rodman.es/en/blog/rodman-delivers-the-eighth-patrol-boat-of-the-audaz-series-the-rodman-55-audaz-viii-to-the-aeat/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -225062,7 +225504,8 @@
     }
    ],
    "sources": [
-    "https://sv.wikipedia.org/wiki/Westers_Mekaniska"
+    "https://sv.wikipedia.org/wiki/Westers_Mekaniska",
+    "https://www.northdata.com/Westers+Mekaniska+AB,+Uddevalla/SE5567075311"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -225126,7 +225569,8 @@
     }
    ],
    "sources": [
-    "https://sv.wikipedia.org/wiki/Tj%C3%B6rnvarvet"
+    "https://sv.wikipedia.org/wiki/Tj%C3%B6rnvarvet",
+    "https://www.tjornvarvet.se/projects"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -225376,7 +225820,8 @@
    "sources": [
     "https://astillerosdemallorca.com/en/about-us/history",
     "https://astillerosdemallorca.com/en/about-us/facilities",
-    "https://astillerosdemallorca.com/en/about-us/locations"
+    "https://astillerosdemallorca.com/en/about-us/locations",
+    "https://www.northdata.com/Astilleros+de+Mallorca+SA,+Palma"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -225469,7 +225914,8 @@
    "description": "Chantier de réparation et refit de yachts et superyachts fondé en 1984, établi à Arenys de Mar au nord de Barcelone, avec un travelift sur place et une aire de mise à sec à Barcelone. Services de marina pour superyachts, stockage de grands annexes, gestion de projet. Certifié ISO 9001, ISO 14001 et ISO 45001. Aucune construction neuve mentionnée.",
    "navires_references": [],
    "sources": [
-    "https://www.varador2000.com/en/"
+    "https://www.varador2000.com/en/",
+    "https://www.infoempresa.com/es-es/es/empresa/varador-2000-sa"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -225525,7 +225971,8 @@
    "navires_references": [],
    "sources": [
     "https://www.zamakonayards.com/en/",
-    "https://www.zamakonayards.com/en/shipyards/repnaval-shipyard/"
+    "https://www.zamakonayards.com/en/shipyards/repnaval-shipyard/",
+    "https://www.infoempresa.com/es-es/es/empresa/reparaciones-navales-canarias-sa"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -225622,7 +226069,8 @@
    ],
    "sources": [
     "https://sv.wikipedia.org/wiki/Finnboda_varv",
-    "https://sv.wikipedia.org/wiki/Bergsunds_Mekaniska_Verkstad"
+    "https://sv.wikipedia.org/wiki/Bergsunds_Mekaniska_Verkstad",
+    "https://stockholmskallan.stockholm.se/teman/Stockholmsplatser/finnboda-varv/"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -225712,7 +226160,8 @@
    ],
    "sources": [
     "https://sv.wikipedia.org/wiki/Ekensbergs_varv",
-    "https://sv.wikipedia.org/w/index.php?title=Ekensbergs_Varv&action=raw"
+    "https://sv.wikipedia.org/w/index.php?title=Ekensbergs_Varv&action=raw",
+    "https://stockholmskallan.stockholm.se/teman/Stockholmsplatser/ekensbergs-varv/"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -225781,7 +226230,9 @@
     }
    ],
    "sources": [
-    "https://sv.wikipedia.org/wiki/Bergsunds_Mekaniska_Verkstad"
+    "https://sv.wikipedia.org/wiki/Bergsunds_Mekaniska_Verkstad",
+    "https://stockholmskallan.stockholm.se/teman/foretagande-i-stockholm/bergsunds-mekaniska-verkstad/",
+    "https://runeberg.org/rhasvindus/1/0139.html"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -225850,7 +226301,8 @@
     }
    ],
    "sources": [
-    "https://sv.wikipedia.org/wiki/W._Lindbergs_Varvs-_och_Verkstads_AB"
+    "https://sv.wikipedia.org/wiki/W._Lindbergs_Varvs-_och_Verkstads_AB",
+    "https://runeberg.org/rhasvindus/1/0143.html"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -225922,7 +226374,8 @@
    ],
    "sources": [
     "https://sv.wikipedia.org/wiki/G%C3%A4vle_Varv",
-    "https://sv.wikipedia.org/w/index.php?title=G%C3%A4vle_Varv&action=raw"
+    "https://sv.wikipedia.org/w/index.php?title=G%C3%A4vle_Varv&action=raw",
+    "http://www.gavlevarv.se/varv_historik_varvet.html"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -226080,7 +226533,9 @@
    "description": "Second site du groupe Astilleros de Murueta, sur la ria de Bilbao, avenida José Luis Goyoaga 33. Une cale de 165 x 24 m, élargissable à 29 m au maître-bau, tirant d'eau supérieur à 8 m à marée basse. Deux grues de 50 t en pied de cale, une grue extérieure de 20 t, ponts roulants intérieurs. Deux ateliers couverts à toiture mobile sur 3 600 m2 avec zones dédiées à l'inox et à l'aluminium pour éviter la contamination, atelier de tuyauterie et d'usinage. Quai d'armement de 170 m avec grue de 20 t permettant l'armement simultané de plusieurs navires, accès direct au port de Bilbao. Aucune répartition publiée des navires entre Erandio et Murueta : la liste de constructions est portée sur la fiche du site de Murueta.",
    "navires_references": [],
    "sources": [
-    "https://www.astillerosmurueta.com/shipyards/shipyard-erandio.php"
+    "https://www.astillerosmurueta.com/shipyards/shipyard-erandio.php",
+    "https://www.empresia.es/empresa/astilleros-de-murueta/",
+    "https://www.pymar.com/en/shipyards/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -226167,7 +226622,8 @@
    "navires_references": [],
    "sources": [
     "https://en.wikipedia.org/wiki/Atlantic_44",
-    "https://en.wikipedia.org/wiki/Category:Greek_boat_builders"
+    "https://en.wikipedia.org/wiki/Category:Greek_boat_builders",
+    "https://www.olympicmarine.gr/en/shipyard/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -226443,7 +226899,8 @@
     "https://en.wikipedia.org/wiki/Salamis_Naval_Base",
     "https://el.wikipedia.org/wiki/%CE%A1%CF%85%CE%BC%CE%BF%CF%85%CE%BB%CE%BA%CE%AC_%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%BF%CF%8D_%CE%A0%CE%BF%CE%BB%CE%B5%CE%BC%CE%B9%CE%BA%CE%BF%CF%8D_%CE%9D%CE%B1%CF%85%CF%84%CE%B9%CE%BA%CE%BF%CF%8D",
     "https://en.wikipedia.org/wiki/Salamis_Island",
-    "https://el.wikipedia.org/wiki/%CE%9D%CE%B1%CF%8D%CF%83%CF%84%CE%B1%CE%B8%CE%BC%CE%BF%CF%82_%CE%A3%CE%B1%CE%BB%CE%B1%CE%BC%CE%AF%CE%BD%CE%B1%CF%82"
+    "https://el.wikipedia.org/wiki/%CE%9D%CE%B1%CF%8D%CF%83%CF%84%CE%B1%CE%B8%CE%BC%CE%BF%CF%82_%CE%A3%CE%B1%CE%BB%CE%B1%CE%BC%CE%AF%CE%BD%CE%B1%CF%82",
+    "https://hellenicnavy.gr/el/organosi/dioikisi-dioikitikis-merimnas-naftikoy/ypagomenes-dioikiseis-ddmn/naystathmos-salaminas.html"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -226829,7 +227286,8 @@
     "https://mooneyboats.ie/news/boat_building/b53-ocean-transfer/",
     "https://mooneyboats.ie/news/boat_building/b52-wave-crest",
     "https://mooneyboats.ie/news/boat_building/b51-sparkling-star/",
-    "https://mooneyboats.ie/news/boat_building/b50-eilean-croine/"
+    "https://mooneyboats.ie/news/boat_building/b50-eilean-croine/",
+    "https://fishingnews.co.uk/features/ella-irish-yard-delivers-compact-pelagic-vessel-to-killybegs-onwer/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -227010,7 +227468,8 @@
    "sources": [
     "https://en.wikipedia.org/wiki/Harland_%26_Wolff",
     "https://en.wikipedia.org/wiki/Belfast",
-    "https://en.wikipedia.org/wiki/List_of_ships_built_by_Harland_and_Wolff"
+    "https://en.wikipedia.org/wiki/List_of_ships_built_by_Harland_and_Wolff",
+    "https://find-and-update.company-information.service.gov.uk/company/R0000283"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -227048,7 +227507,8 @@
    "description": "Chantier fonde en 1879 par Frank Workman et George Clark, distinct de Harland & Wolff et implante sur un autre site du port de Belfast : une carte du port de 1909 montre ses installations de part et d'autre du Victoria Channel. Quatrieme constructeur naval du Royaume-Uni en 1895. Vers 1900, il construisait des paquebots transatlantiques pour des clients majeurs, dont la Cunard Line et Alfred Holt. Rachete par la Northumberland Shipbuilding Company en 1918 ; la faillite de la maison mere en 1927 entraine une reprise temporaire de l'activite, avant la mise en liquidation definitive en 1935. Fermeture : 1935.",
    "navires_references": [],
    "sources": [
-    "https://en.wikipedia.org/wiki/Workman_Clark"
+    "https://en.wikipedia.org/wiki/Workman_Clark",
+    "https://historyhubulster.co.uk/ships-built-by-workman-clark-co/"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -227167,7 +227627,8 @@
     "https://en.wikipedia.org/wiki/Category:Ships_built_in_Pula",
     "https://en.wikipedia.org/wiki/Equinox-class_freighter",
     "https://hr.wikipedia.org/wiki/Brodogradili%C5%A1te_Uljanik",
-    "https://en.wikipedia.org/wiki/Category:Shipbuilding_companies_of_Croatia"
+    "https://en.wikipedia.org/wiki/Category:Shipbuilding_companies_of_Croatia",
+    "https://www.northdata.com/ULJANIK+d.d.,+Pula"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -227575,7 +228036,8 @@
    "sources": [
     "https://en.wikipedia.org/wiki/Category:Ships_built_in_Trogir",
     "https://en.wikipedia.org/wiki/MV_Volcan_de_Tacande",
-    "https://en.wikipedia.org/wiki/KRI_Sorong"
+    "https://en.wikipedia.org/wiki/KRI_Sorong",
+    "https://www.brodotrogir.hr/en/index.php/about-us/history"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -227699,7 +228161,8 @@
     "https://en.wikipedia.org/wiki/Kralj-class_missile_boat",
     "https://en.wikipedia.org/wiki/Kon%C4%8Dar-class_missile_boat",
     "https://en.wikipedia.org/wiki/Category:Shipbuilding_companies_of_Croatia",
-    "https://hr.wikipedia.org/wiki/Brodogradili%C5%A1te_Kraljevica"
+    "https://hr.wikipedia.org/wiki/Brodogradili%C5%A1te_Kraljevica",
+    "https://www.northdata.com/BRODOGRADILI%C5%A0TE+KRALJEVICA+d.d.,+Kraljevica"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -227894,7 +228357,8 @@
     "https://en.wikipedia.org/wiki/L%C3%89_Deirdre",
     "https://en.wikipedia.org/wiki/L%C3%89_Emer",
     "https://en.wikipedia.org/wiki/L%C3%89_Aoife",
-    "https://en.wikipedia.org/wiki/L%C3%89_Aisling"
+    "https://en.wikipedia.org/wiki/L%C3%89_Aisling",
+    "https://www.northdata.com/Verolme+Cork+Dockyard+Ltd.,+Rushbrooke"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -228031,7 +228495,8 @@
     "https://en.wikipedia.org/wiki/MV_Naomh_%C3%89anna",
     "https://en.wikipedia.org/wiki/L%C3%89_Setanta",
     "https://en.wikipedia.org/wiki/Dublin_Port",
-    "https://en.wikipedia.org/wiki/HMY_Helga"
+    "https://en.wikipedia.org/wiki/HMY_Helga",
+    "https://www.northdata.com/Liffey+Dockyard+Ltd.,+Dublin"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -228070,7 +228535,8 @@
     }
    ],
    "sources": [
-    "https://en.wikipedia.org/wiki/Asgard_II"
+    "https://en.wikipedia.org/wiki/Asgard_II",
+    "https://arklowheritage.ie/discover/boatbuilding/"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -228322,7 +228788,8 @@
    "description": "Chantier naval de Vela Luka sur l'ile de Korcula. Son existence et sa localisation sont confirmees par l'article Wikipedia de Vela Luka, qui illustre le chantier Greben. Aucune source ouverte accessible en consultation directe n'a permis de documenter la date de fondation, les installations, les perimetres d'activite ni la liste des navires construits : le site greben.hr n'est pas joignable (certificat TLS invalide en HTTPS, resolution impossible en HTTP) et aucun article Wikipedia dedie n'existe. Fiche a completer.",
    "navires_references": [],
    "sources": [
-    "https://en.wikipedia.org/wiki/Vela_Luka"
+    "https://en.wikipedia.org/wiki/Vela_Luka",
+    "https://www.morh.hr/zaprimljeno-osam-ponuda-za-nabavu-obalnog-ophodnog-broda/"
    ],
    "confiance": "moyenne",
    "actif": null,
@@ -228758,7 +229225,9 @@
     "https://de.wikipedia.org/wiki/Ferus_Smit_FS_14600",
     "https://de.wikipedia.org/wiki/Ferus_Smit_4500",
     "https://de.wikipedia.org/wiki/Ferus_Smit_6000",
-    "https://de.wikipedia.org/wiki/Ferus_Smit_Ecobox"
+    "https://de.wikipedia.org/wiki/Ferus_Smit_Ecobox",
+    "https://www.ferussmit.com/nb-474-thun-response-successfully-launched/",
+    "https://www.northdata.de/Ferus+Smit+Leer+GmbH,+Leer/HRB+110020"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -229814,7 +230283,8 @@
    ],
    "sources": [
     "https://nl.wikipedia.org/wiki/Feadship",
-    "https://en.wikipedia.org/wiki/Feadship"
+    "https://en.wikipedia.org/wiki/Feadship",
+    "https://zoeken-mijn.s-bb.nl/Home/Details?leerbedrijfId=100128047"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -230231,7 +230701,8 @@
    ],
    "sources": [
     "https://nl.wikipedia.org/wiki/Feadship",
-    "https://en.wikipedia.org/wiki/Feadship"
+    "https://en.wikipedia.org/wiki/Feadship",
+    "https://api.gleif.org/api/v1/lei-records/529900E9C89KLWKJ9M52"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -230265,7 +230736,9 @@
    "description": "Site de construction de Koninklijke De Vries Scheepsbouw ouvert en 2005, dimensionné pour les unités de plus de 120 m. Aucune coque ne lui est rattachée ici : la source ne répartit pas les livraisons entre Aalsmeer et Makkum.",
    "navires_references": [],
    "sources": [
-    "https://en.wikipedia.org/wiki/Feadship"
+    "https://en.wikipedia.org/wiki/Feadship",
+    "https://www.schuttevaer.nl/nieuws/actueel/2026/04/02/eerste-blik-op-feadship-superjacht-project-1014-in-makkum/",
+    "https://www.superyachttimes.com/yacht-news/feadship-de-vries-makkum-secures-new-xl-order"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -230292,7 +230765,8 @@
    "description": "Dock de Royal Van Lent ouvert début 2019 sur le site d'Oostenburg à Amsterdam, capable d'accueillir des superyachts jusqu'à 160 m. Aucune coque ne lui est rattachée ici : la source ne répartit pas les livraisons entre Kaag et Amsterdam.",
    "navires_references": [],
    "sources": [
-    "https://en.wikipedia.org/wiki/Feadship"
+    "https://en.wikipedia.org/wiki/Feadship",
+    "https://www.superyachtnews.com/business/feadship-opens-new-sustainable-facility-in-amsterdam"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -231193,7 +231667,8 @@
     "https://en.wikipedia.org/wiki/Heesen_Yachts",
     "https://nl.wikipedia.org/wiki/Heesen_Yachts",
     "https://en.wikipedia.org/wiki/List_of_yachts_built_by_Heesen",
-    "https://en.wikipedia.org/wiki/Illusion_(yacht)"
+    "https://en.wikipedia.org/wiki/Illusion_(yacht)",
+    "https://www.heesenyachts.com/news/heesen-launches-50-metre-project-sophia/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -231290,7 +231765,8 @@
    "sources": [
     "https://nl.wikipedia.org/wiki/Werf_Gusto",
     "https://nl.wikipedia.org/wiki/P%C3%A9lican_(schip,_1972)",
-    "https://en.wikipedia.org/wiki/Royal_IHC"
+    "https://en.wikipedia.org/wiki/Royal_IHC",
+    "https://collecties.schiedam.nl/detail.php?nav_id=4-1&id=7448949"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -232751,7 +233227,8 @@
    "sources": [
     "https://www.lmgmarin.no/reference/ben-woollacott/",
     "https://www.lmgmarin.no/reference/ryfylke/",
-    "https://www.lmgmarin.no/reference/toll/"
+    "https://www.lmgmarin.no/reference/toll/",
+    "https://remontowa-rsb.pl/en/aktualnosci/steel-cutting-marks-the-start-of-construction-of-another-ferry-for-cmal/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -232820,7 +233297,8 @@
    ],
    "sources": [
     "https://www.lmgmarin.no/reference/altera/",
-    "https://www.lmgmarin.no/reference/l-317/"
+    "https://www.lmgmarin.no/reference/l-317/",
+    "https://crist.com.pl/w-stoczni-crist-wystartowala-budowa-kablowca"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -232889,7 +233367,8 @@
    ],
    "sources": [
     "https://www.lmgmarin.no/reference/brassavola/",
-    "https://www.lmgmarin.no/reference/leikanger/"
+    "https://www.lmgmarin.no/reference/leikanger/",
+    "https://seatrium.com/assets/releases/20240403-Seatrium-Strengthens-Position-as-a-Leading-RU-Shipyard.pdf"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -232963,7 +233442,8 @@
    "sources": [
     "https://nl.wikipedia.org/wiki/Koninklijke_De_Vries_Scheepsbouw",
     "https://en.wikipedia.org/wiki/Feadship",
-    "https://nl.wikipedia.org/wiki/Feadship"
+    "https://nl.wikipedia.org/wiki/Feadship",
+    "https://marineindustrynews.co.uk/feadship-marks-leadership-transition-at-aalsmeer-shipyard/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -233092,7 +233572,8 @@
    ],
    "sources": [
     "https://www.multi-maritime.no/mm-105-fe-el",
-    "https://www.multi-maritime.no/mm-75-fe-el"
+    "https://www.multi-maritime.no/mm-75-fe-el",
+    "https://www.navalnews.com/naval-news/2023/04/turkish-navy-welcomes-its-new-flagship-tcg-anadolu/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -233539,7 +234020,8 @@
    ],
    "sources": [
     "https://www.multi-maritime.no/mm62fd-el",
-    "https://www.multi-maritime.no/ah-san-fruttuoso"
+    "https://www.multi-maritime.no/ah-san-fruttuoso",
+    "https://data.brreg.no/enhetsregisteret/api/enheter/929585860"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -233862,7 +234344,8 @@
     }
    ],
    "sources": [
-    "https://www.multi-maritime.no/ms-seven-eagle"
+    "https://www.multi-maritime.no/ms-seven-eagle",
+    "https://inventaris.onroerenderfgoed.be/erfgoedobjecten/201054"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -234482,7 +234965,8 @@
     }
    ],
    "sources": [
-    "https://en.wikipedia.org/wiki/Formidable-class_frigate"
+    "https://en.wikipedia.org/wiki/Formidable-class_frigate",
+    "https://www.offshore-energy.biz/st-engineering-to-built-eight-new-vessels-for-the-republic-of-singapore-navy/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -234542,7 +235026,8 @@
    "sources": [
     "https://en.wikipedia.org/wiki/ENS_El_Moez",
     "https://en.wikipedia.org/wiki/ENS_Luxor",
-    "https://en.wikipedia.org/wiki/ENS_Port_Said"
+    "https://en.wikipedia.org/wiki/ENS_Port_Said",
+    "https://www.navalnews.com/naval-news/2020/05/egyptian-navys-final-el-fateh-class-corvette-luxor-launched-by-alexandria-shipyard/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -234616,7 +235101,8 @@
     }
    ],
    "sources": [
-    "https://en.wikipedia.org/wiki/Scorp%C3%A8ne-class_submarine"
+    "https://en.wikipedia.org/wiki/Scorp%C3%A8ne-class_submarine",
+    "https://mazagondock.in/English/press-release"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -234688,7 +235174,9 @@
     }
    ],
    "sources": [
-    "https://en.wikipedia.org/wiki/Riachuelo-class_submarine"
+    "https://en.wikipedia.org/wiki/Riachuelo-class_submarine",
+    "https://www.navalnews.com/naval-news/2024/01/brazilian-navy-commissions-second-s-br-submarine/",
+    "https://www.marinha.mil.br/noticias/marinha-e-itaguai-construcoes-navais-realizam-preparativos-finais-para-o-lancamento-do"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -234731,7 +235219,8 @@
     }
    ],
    "sources": [
-    "https://en.wikipedia.org/wiki/Gowind-class_design"
+    "https://en.wikipedia.org/wiki/Gowind-class_design",
+    "https://www.bhic.com.my/defence-security.php"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -234783,7 +235272,8 @@
     }
    ],
    "sources": [
-    "https://en.wikipedia.org/wiki/Scorp%C3%A8ne-class_submarine"
+    "https://en.wikipedia.org/wiki/Scorp%C3%A8ne-class_submarine",
+    "https://www.navantia.es/media/CCAA_Consolidada_Navantia_2025_e_inf_auditoria_Firmadas_56566baf9a.pdf"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -235157,7 +235647,8 @@
     "https://www.marinteknikk.no/ship/olympic-electra/",
     "https://www.marinteknikk.no/ship/skandi-captain/",
     "https://www.marinteknikk.no/ship/skandi-sotra/",
-    "https://www.marinteknikk.no/ship/skandi-rona/"
+    "https://www.marinteknikk.no/ship/skandi-rona/",
+    "https://data.brreg.no/enhetsregisteret/api/enheter/983145310"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -235210,7 +235701,8 @@
     }
    ],
    "sources": [
-    "https://www.marinteknikk.no/ship/otto-explorer/"
+    "https://www.marinteknikk.no/ship/otto-explorer/",
+    "https://www.batamec.com/batamec-about-us/"
    ],
    "confiance": "moyenne",
    "actif": null,
@@ -235267,7 +235759,8 @@
    ],
    "sources": [
     "https://www.marinteknikk.no/ship/stril-odin/",
-    "https://www.marinteknikk.no/ship/strilmoy/"
+    "https://www.marinteknikk.no/ship/strilmoy/",
+    "https://www.nb.no/items/URN:NBN:no-nb_digavis_vestnesavisa_null_null_20030903_15_32_1?searchText=%22Aker%20Langsten%22"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -235371,7 +235864,8 @@
     "https://www.marinteknikk.no/ship/skandi-chieftain/",
     "https://www.marinteknikk.no/ship/olympic-princess/",
     "https://www.marinteknikk.no/ship/skandi-marstein/",
-    "https://www.marinteknikk.no/ship/skandi-patagonia/"
+    "https://www.marinteknikk.no/ship/skandi-patagonia/",
+    "https://www.nb.no/items/3d8ff728f9bff00921a906cf7d908289"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -235711,8 +236205,10 @@
     "https://www.mauric.com/news/salavatorep-delivery"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": null
+   "actif": true,
+   "fondation": null,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : SalvatoreP (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.mauric.com/news/salavatorep-delivery"
   },
   {
    "id": "fr-yard-cnbpro-bordeaux",
@@ -235750,7 +236246,8 @@
     }
    ],
    "sources": [
-    "https://www.mauric.com/news/news21-206"
+    "https://www.mauric.com/news/news21-206",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/construction-navale-bordeaux-342012390"
    ],
    "confiance": "moyenne",
    "actif": null,
@@ -235794,8 +236291,10 @@
     "https://www.mauric.com/news/neoliner-origin-launch"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": null
+   "actif": true,
+   "fondation": null,
+   "actif_methode": "deduction-livraison-recente",
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Neoliner Origin (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.mauric.com/news/neoliner-origin-launch"
   },
   {
    "id": "da-yard-odensestalskibsvaerft-munkebo",
@@ -235921,7 +236420,8 @@
    ],
    "sources": [
     "https://da.wikipedia.org/wiki/Fayard",
-    "https://en.wikipedia.org/wiki/Emma_M%C3%A6rsk"
+    "https://en.wikipedia.org/wiki/Emma_M%C3%A6rsk",
+    "https://www.northdata.com/Odense+Staalskibsv%C3%A6rft+A%2FS,+K%C3%B8benhavn"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -236044,7 +236544,9 @@
    "navires_references": [],
    "sources": [
     "https://da.wikipedia.org/wiki/B%C3%B8rresens_B%C3%A5debyggeri",
-    "https://da.wikipedia.org/wiki/BB_10"
+    "https://da.wikipedia.org/wiki/BB_10",
+    "https://arkiv.dk/vis/2256028",
+    "https://datacvr.virk.dk/enhed/virksomhed/75906528"
    ],
    "confiance": "moyenne",
    "actif": null,
@@ -236383,7 +236885,8 @@
    "navires_references": [],
    "sources": [
     "https://nl.wikipedia.org/wiki/Linssen_Yachts",
-    "https://nl.wikipedia.org/wiki/Maasbracht"
+    "https://nl.wikipedia.org/wiki/Maasbracht",
+    "https://www.linssenyachts.com/en/latest-news/linssen-yachts-boat-show-2025-successful-edition-in-maasbracht.html"
    ],
    "confiance": "moyenne",
    "actif": null,
@@ -236652,7 +237155,8 @@
    "description": "Atelier de reparation navale et de sectionnement de coques, occupant l'ancien site de l'Adler Werft a Bremen apres sa fermeture ; sous-traitant notamment de Blohm & Voss.",
    "navires_references": [],
    "sources": [
-    "https://de.wikipedia.org/wiki/Adler_Werft"
+    "https://de.wikipedia.org/wiki/Adler_Werft",
+    "https://www.online-handelsregister.de/handelsregisterauszug/hb/Bremen/HRA/16907HB/Stephani-Werft-Ludwig-Mueller-GmbH-Co-Kommandit-Gesellschaft"
    ],
    "confiance": "moyenne",
    "actif": null,
@@ -236729,7 +237233,8 @@
    "sources": [
     "https://de.wikipedia.org/wiki/Atlas-Werke",
     "https://de.wikipedia.org/wiki/Spreestein-Klasse",
-    "https://de.wikipedia.org/wiki/AG_Weser"
+    "https://de.wikipedia.org/wiki/AG_Weser",
+    "https://www.deutsche-digitale-bibliothek.de/item/BVNLQXELHKL3FZILUQRGIFYBYIYI245R"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -236792,7 +237297,8 @@
    "sources": [
     "https://de.wikipedia.org/wiki/AG_Weser",
     "https://de.wikipedia.org/wiki/Bremen_(Schiff,_1929)",
-    "https://en.wikipedia.org/wiki/AG_Weser"
+    "https://en.wikipedia.org/wiki/AG_Weser",
+    "https://www.deutsche-digitale-bibliothek.de/item/RPS5DHOLYMSGM3PAL5AGNLPXV6OOB4TI"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -236889,7 +237395,8 @@
     }
    ],
    "sources": [
-    "https://de.wikipedia.org/wiki/Reiherstiegwerft"
+    "https://de.wikipedia.org/wiki/Reiherstiegwerft",
+    "https://www.deutsche-digitale-bibliothek.de/item/PTCGITLAYEWLRJRICMC5XRFASFEUBRJG"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -236943,7 +237450,8 @@
     }
    ],
    "sources": [
-    "https://de.wikipedia.org/wiki/Seebeckwerft"
+    "https://de.wikipedia.org/wiki/Seebeckwerft",
+    "https://www.northdata.de/Schichau+Seebeckwerft+AG,+Bremerhaven/HRB+1016+BHV"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -236992,7 +237500,8 @@
     }
    ],
    "sources": [
-    "https://de.wikipedia.org/wiki/Bachmann_%26_Johanny"
+    "https://de.wikipedia.org/wiki/Bachmann_%26_Johanny",
+    "https://www.kuladig.de/Objektansicht/KLD-244531"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -237092,7 +237601,8 @@
     }
    ],
    "sources": [
-    "https://de.wikipedia.org/wiki/Schiffswerft_Oberwinter"
+    "https://de.wikipedia.org/wiki/Schiffswerft_Oberwinter",
+    "https://www.northdata.de/Schiffswerft+Oberwinter+GmbH,+Oberwinter/HRB+10026"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -237167,7 +237677,8 @@
     }
    ],
    "sources": [
-    "https://de.wikipedia.org/wiki/Schiffswerft_Schmidt"
+    "https://de.wikipedia.org/wiki/Schiffswerft_Schmidt",
+    "https://www.northdata.de/Schiffswerft+Schmidt+GmbH,+Remagen/Amtsgericht+Koblenz+HRB+10947"
    ],
    "confiance": "moyenne",
    "actif": null,
@@ -237301,7 +237812,8 @@
    "sources": [
     "https://de.wikipedia.org/wiki/Abeking_%26_Rasmussen",
     "https://en.wikipedia.org/wiki/Abeking_%26_Rasmussen",
-    "https://en.wikipedia.org/wiki/List_of_yachts_built_by_Abeking_%26_Rasmussen"
+    "https://en.wikipedia.org/wiki/List_of_yachts_built_by_Abeking_%26_Rasmussen",
+    "https://www.abeking.com/en/ar-celebrates-successful-completion-and-delivery-of-the-refitted-yacht-starfire/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -237456,7 +237968,8 @@
     }
    ],
    "sources": [
-    "https://de.wikipedia.org/wiki/Arminiuswerft"
+    "https://de.wikipedia.org/wiki/Arminiuswerft",
+    "https://www.northdata.de/Arminiuswerft+GmbH,+Bodenwerder/Amtsgericht+Dortmund+HRB+5446"
    ],
    "confiance": "moyenne",
    "actif": false,
@@ -237548,7 +238061,8 @@
    "sources": [
     "https://en.wikipedia.org/wiki/Szczecin_Shipyard",
     "https://de.wikipedia.org/wiki/AG_Vulcan_Stettin",
-    "https://en.wikipedia.org/wiki/AG_Vulcan_Stettin"
+    "https://en.wikipedia.org/wiki/AG_Vulcan_Stettin",
+    "https://www.northdata.com/Stocznia+Szczeci%C5%84ska+S.A.,+Szczecin"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -237585,7 +238099,9 @@
    "navires_references": [],
    "sources": [
     "https://de.wikipedia.org/wiki/Ahlers_Werft",
-    "https://de.wikipedia.org/w/index.php?title=Ahlers_Werft&action=raw"
+    "https://de.wikipedia.org/w/index.php?title=Ahlers_Werft&action=raw",
+    "https://nds.museum-digital.de/object/86779?navlang=de",
+    "https://www.nwzonline.de/plus/elsfleth-werft-ahlers-an-der-unterweser-von-elsfleth-in-die-welt_a_50,2,4038397479.html"
    ],
    "confiance": "moyenne",
    "actif": null,
@@ -237667,7 +238183,9 @@
    "description": "",
    "navires_references": [],
    "sources": [
-    "https://de.wikipedia.org/w/index.php?title=BBG_Bootsbau_Berlin&oldid=267054632"
+    "https://de.wikipedia.org/w/index.php?title=BBG_Bootsbau_Berlin&oldid=267054632",
+    "https://nat.museum-digital.de/index.php?t=people&id=7569",
+    "https://wassersportzentrum.de/wss-historie.htm"
    ],
    "confiance": "moyenne",
    "actif": null,
@@ -237715,7 +238233,9 @@
     }
    ],
    "sources": [
-    "https://de.wikipedia.org/wiki/Aker_MTW"
+    "https://de.wikipedia.org/wiki/Aker_MTW",
+    "https://www.northdata.de/AKER+MTW+Werft+GmbH,+Wismar/Amtsgericht+Frankfurt+am+Main+HRB+44358",
+    "https://www.navalnews.com/naval-news/2022/06/thysssenkrupp-marine-systems-acquires-mv-werften/"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -237757,7 +238277,8 @@
     }
    ],
    "sources": [
-    "https://de.wikipedia.org/wiki/Warnowwerft"
+    "https://de.wikipedia.org/wiki/Warnowwerft",
+    "https://www.ddr-museum.de/de/blog/archive/schiffbau-der-ddr-die-entstehung-der-volkswerften-der-ostseekueste"
    ],
    "confiance": "moyenne",
    "actif": null,
@@ -237801,7 +238322,8 @@
     }
    ],
    "sources": [
-    "https://de.wikipedia.org/wiki/Volkswerft_Stralsund"
+    "https://de.wikipedia.org/wiki/Volkswerft_Stralsund",
+    "https://www.northdata.de/Volkswerft+Stralsund+GmbH,+Stralsund/HRB+4171"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -237881,7 +238403,8 @@
     }
    ],
    "sources": [
-    "https://de.wikipedia.org/wiki/Peene-Werft"
+    "https://de.wikipedia.org/wiki/Peene-Werft",
+    "https://nvl.de/sites/default/files/2023-07/Pressemeldung%20der%20NVL%20Group_75%20Jahre%20Peene-Werft.pdf"
    ],
    "confiance": "moyenne",
    "actif": true,
@@ -237941,7 +238464,8 @@
     }
    ],
    "sources": [
-    "https://en.wikipedia.org/wiki/Germaniawerft"
+    "https://en.wikipedia.org/wiki/Germaniawerft",
+    "http://www.museen-sh.de/Objekt/DE-MUS-075910/lido/113-1999"
    ],
    "confiance": "moyenne",
    "actif": null,
@@ -238016,7 +238540,9 @@
    },
    "sources": [
     "https://chantierdelavergne.com/",
-    "https://annuaire-entreprises.data.gouv.fr/entreprise/chantier-naval-delavergne-390284222"
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/chantier-naval-delavergne-390284222",
+    "https://chantierdelavergne.com/actualite/",
+    "https://www.pappers.fr/entreprise/chantier-naval-delavergne-390284222"
    ],
    "confiance": "haute",
    "taille_max": "40 m",
@@ -238039,7 +238565,9 @@
      "caractere": "prive",
      "exploitation": "commerciale"
     }
-   ]
+   ],
+   "actif": true,
+   "actif_source": "Rubrique actualite du chantier mentionnant le lancement d'un nouveau navire mytilicole classe en 2026, page mise a jour le 27/01/2026 ; societe SAS active au registre national (SIREN 390 284 222, NAF 30.12Z), 11 salaries au millesime 2023. Vague contact-activite du 2026-08-15. https://chantierdelavergne.com/actualite/"
   }
  ],
  "equipementiers": [
