@@ -24137,7 +24137,27 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: prive ; exploitation: charter"
+     "caractere_motif": "propriete: prive ; exploitation: charter",
+     "intervenants": [
+      {
+       "role": "architecture-navale",
+       "nom": "Chantier Naval Couach",
+       "detail": "« Couach is responsible for her naval architecture ». L'architecture est du constructeur lui-meme, d'ou `architecte` a null : il n'y a pas d'architecte TIERS.",
+       "source": "https://www.yachtbuyer.com/en/fleet/dragon-121-couach"
+      },
+      {
+       "role": "design-exterieur",
+       "nom": "Exequiel Cano Lanza",
+       "detail": "« Her exterior design comes from the drawing boards of Exequiel Cano Lanza ». Studio CLYD, Arcachon.",
+       "source": "https://www.yachtbuyer.com/en/fleet/dragon-121-couach"
+      },
+      {
+       "role": "construction-coque",
+       "nom": "Chantier Naval Couach",
+       "detail": "Couach 3700 FLY, coque planante GRP, 36,88 m, livre en 2008.",
+       "source": "https://www.yachtbuyer.com/en/fleet/dragon-121-couach"
+      }
+     ]
     },
     {
      "nom": "Apmonia (ex Nyota, ex Tosca)",
@@ -86419,7 +86439,39 @@
       "source": "https://en.wikipedia.org/wiki/Le_Commandant_Charcot",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "intervenants": [
+      {
+       "role": "architecture-navale",
+       "nom": "Aker Arctic",
+       "detail": "Responsable de tout ce qui est sous le pont principal, carene et machines comprises. Coque brise-glace Polar Class 2, principe Double Acting Ship.",
+       "source": "https://akerarctic.fi/reference/ponant-icebreaker/"
+      },
+      {
+       "role": "design-exterieur",
+       "nom": "Stirling Design International",
+       "detail": "A concu les ponts superieurs, avec Ponant, a partir du trace initial prepare en commun.",
+       "source": "https://akerarctic.fi/reference/ponant-icebreaker/"
+      },
+      {
+       "role": "design-interieur",
+       "nom": "Stirling Design International",
+       "detail": "Amenagements interieurs.",
+       "source": "https://akerarctic.fi/reference/ponant-icebreaker/"
+      },
+      {
+       "role": "construction-coque",
+       "nom": "Vard Tulcea",
+       "detail": "Coque acier montee en Roumanie.",
+       "source": "https://www.vard.com/shipbuilding/references/le-commandant-charcot-2"
+      },
+      {
+       "role": "armement",
+       "nom": "Vard Soviknes",
+       "detail": "Armement et parachevement en Norvege, livraison juillet 2021.",
+       "source": "https://www.vard.com/shipbuilding/references/le-commandant-charcot-2"
+      }
+     ]
     },
     {
      "nom": "Viking Polaris",
@@ -86597,7 +86649,27 @@
       "source": "https://en.wikipedia.org/wiki/REV_Ocean",
       "le": "2026-08-05",
       "chantier_reel": "Vard Tulcea (coque, Roumanie), puis armement a Vard Brattvaag et Fosen Yard (Norvege), achevement chez Damen Shiprepair Vlissingen (Pays-Bas)"
-     }
+     },
+     "intervenants": [
+      {
+       "role": "architecture-navale",
+       "nom": "Espen Øino International",
+       "detail": "Lignes de coque effilees, bulbe brise-lame et etrave elancee, en plus du design exterieur : le role depasse le styling.",
+       "source": "https://www.boatinternational.com/yachts/the-superyacht-directory/rev-ocean--90675"
+      },
+      {
+       "role": "design-interieur",
+       "nom": "H2 Yacht Design",
+       "detail": "Amenagements interieurs.",
+       "source": "https://www.boatinternational.com/yachts/the-superyacht-directory/rev-ocean--90675"
+      },
+      {
+       "role": "construction-coque",
+       "nom": "Vard Tulcea",
+       "detail": "Coque acier construite en Roumanie en 18 mois puis remorquee en Norvege.",
+       "source": "https://www.boatinternational.com/yachts/the-superyacht-directory/rev-ocean--90675"
+      }
+     ]
     },
     {
      "nom": "REM Power",
@@ -88603,7 +88675,14 @@
     "https://www.vard.com/shipbuilding/references/le-commandant-charcot-2"
    ],
    "confiance": "haute",
-   "id": "vard-s-viknes-s"
+   "id": "vard-s-viknes-s",
+   "contact": {
+    "web": "https://www.vard.com/location/norway/vard-s%C3%B8viknes",
+    "telephone": "+47 70 21 06 00",
+    "adresse": "Vard Soviknes, P.O. Box 76, NO-6001 Alesund, Norvege (site situe a Sovik, commune d'Alesund, More og Romsdal). Courriel du chantier : soviknes@vard.com"
+   },
+   "contact_source": "https://www.vard.com/location/norway/vard-s%C3%B8viknes",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Vard Langsten AS",
@@ -91814,7 +91893,14 @@
     "https://no.wikipedia.org/wiki/KV_Jan_Mayen"
    ],
    "confiance": "haute",
-   "id": "vard-langsten-as-tomrefjord"
+   "id": "vard-langsten-as-tomrefjord",
+   "contact": {
+    "web": "https://www.vard.com/location/norway/vard-langsten",
+    "telephone": "+47 70 21 06 00",
+    "adresse": "Vard Langsten, Tomrefjord, Norvège (adresse postale groupe VARD : P.O. Box 76, NO-6001 Ålesund). Courriel du chantier : langsten@vard.com"
+   },
+   "contact_source": "https://www.vard.com/location/norway/vard-langsten",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Vard Aukra (site Aukra, ex-Vard / Aukra Maritime · Bauta Maritime)",
@@ -91828,7 +91914,7 @@
    "fondation": null,
    "effectif": null,
    "superficie_ha": null,
-   "actif": true,
+   "actif": false,
    "perimetres": [
     "construction-neuve",
     "reparation-refit"
@@ -93346,7 +93432,8 @@
    "id": "vard-aukra-site-aukra-ex-vard-aukra-maritime-bauta-maritime-aukra",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.vard.com/newsandmedia/news/Pages/VARD-secures-contract-for-two-offshore-fish-farming-operation-platforms-for-Cermaq-Norway.aspx"
-   ]
+   ],
+   "actif_source": "Chantier naval ferme. Le site d'Aukra (More og Romsdal) n'a plus realise de construction navale depuis 2019, date a laquelle Vard a decide de s'en separer. L'emprise a ete reprise par le groupe BAUTA sous le nom de Bauta Naeringspark, exploite comme parc industriel et non comme chantier naval. Arbitre le 15/08/2026 : la base portait actif=true SANS AUCUNE JUSTIFICATION, la vague apporte une source datee. Une affirmation non sourcee ne fait pas conflit avec une affirmation sourcee, elle cede. https://www.fishfarmingexpert.com/bauta-fishfarms-bauta-group-closed-containment/closed-fish-pen-project-brings-shuttered-shipyard-back-to-life/2115438"
   },
   {
    "nom": "Vard Brevik Shipbuilding (fermé 2020)",
@@ -95131,7 +95218,14 @@
     "https://www.multi-maritime.no/mm125fd"
    ],
    "confiance": "haute",
-   "id": "vard-brevik-shipbuilding-ferme-2020-brevik"
+   "id": "vard-brevik-shipbuilding-ferme-2020-brevik",
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "Porsgrunn, Telemark, Norvège (site fermé)"
+   },
+   "contact_source": "https://apps.eurofound.europa.eu/restructuring-events/detail/99022",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Ulstein Verft AS",
@@ -98850,7 +98944,14 @@
     "https://en.wikipedia.org/wiki/Ulstein_Group"
    ],
    "confiance": "haute",
-   "id": "ulstein-verft-as-ulsteinvik"
+   "id": "ulstein-verft-as-ulsteinvik",
+   "contact": {
+    "web": "https://ulstein.com/companies/ulstein-verft-as",
+    "telephone": "+47 70 00 80 00",
+    "adresse": "Osnesvegen 110, 6065 Ulsteinvik, Norvège (P.O. Box 158, NO-6067 Ulsteinvik). Org. nr 912447561"
+   },
+   "contact_source": "https://ulstein.com/companies/ulstein-verft-as",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Green Yard Kleven",
@@ -100973,7 +101074,14 @@
     "https://www.imarinenews.com/15257.html"
    ],
    "confiance": "haute",
-   "id": "green-yard-kleven-ulsteinvik"
+   "id": "green-yard-kleven-ulsteinvik",
+   "contact": {
+    "web": "https://en.greenyard.no/green-yard-kleven",
+    "telephone": "+47 70 01 91 00",
+    "adresse": "Klubbenesvegen 39, N-6065 Ulsteinvik, Norvege. Courriel : post.kleven@greenyard.no"
+   },
+   "contact_source": "https://en.greenyard.no/green-yard-kleven",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Tersan Havyard AS (ex-Havyard Leirvik)",
@@ -101186,7 +101294,7 @@
      "nom": "Åsværfjord (série Havtrans)",
      "imo": null,
      "type": "Wellboat / transporteur de poisson vivant (design Havtrans)",
-     "annee": 2021,
+     "annee": "2021",
      "longueur_m": null,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -103080,7 +103188,14 @@
     "https://www.shipandoffshore.net/news/shipbuilding/detail/news/havyard-delivers-sixth-wellboat-in-havtrans-series.html"
    ],
    "confiance": "haute",
-   "id": "tersan-havyard-as-ex-havyard-leirvik-leirvik"
+   "id": "tersan-havyard-as-ex-havyard-leirvik-leirvik",
+   "contact": {
+    "web": "https://www.tersanhavyard.no/kontakt",
+    "telephone": "+47 57 78 90 50",
+    "adresse": "Bofjordvegen 260, 6953 Leirvik i Sogn, Norvege. Courriel : service@tersanhavyard.no"
+   },
+   "contact_source": "https://www.tersanhavyard.no/kontakt",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Brødrene Aa",
@@ -103329,7 +103444,7 @@
      "nom": "Bard",
      "imo": null,
      "type": "catamaran sightseeing / whale-watching",
-     "annee": 2024,
+     "annee": "2024",
      "longueur_m": 26,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -103417,7 +103532,7 @@
      "nom": "Brisen",
      "imo": null,
      "type": "catamaran sightseeing",
-     "annee": 2022,
+     "annee": "2022",
      "longueur_m": 25.3,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -105768,7 +105883,14 @@
     "https://www.bairdmaritime.com/work-boat-world/passenger-vessel-world/maritime-tourism/vessel-review-legacy-of-the-fjords-second-all-electric-newbuild-joins-the-fjords-sightseeing-fleet"
    ],
    "confiance": "haute",
-   "id": "br-drene-aa-hyen"
+   "id": "br-drene-aa-hyen",
+   "contact": {
+    "web": "https://www.braa.no/",
+    "telephone": null,
+    "adresse": "Hyenvegen 1775, 6829 Hyen, Norvège. Courriel : post@braa.no. Org. NO 936 195 512 MVA"
+   },
+   "contact_source": "https://www.braa.no/contact-us",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Fjellstrand AS",
@@ -108119,7 +108241,14 @@
     "https://tramproject.eu/2022/07/14/the-worlds-first-zero-emission-fast-ferry-is-ready-for-operation/"
    ],
    "confiance": "haute",
-   "id": "fjellstrand-as-omastrand"
+   "id": "fjellstrand-as-omastrand",
+   "contact": {
+    "web": "https://fjellstrand.no",
+    "telephone": "+47 56 55 76 00",
+    "adresse": "Omavegen 225, 5632 Omastrand, Norvège"
+   },
+   "contact_source": "https://fjellstrand.no/contact/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Fiskerstrand Verft AS",
@@ -110858,7 +110987,14 @@
    "id": "fiskerstrand-verft-as-fiskarstranda",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.tradewindsnews.com/passengerships/1367486/norwegian-yard-owner-burns-for-hydrogen-future"
-   ]
+   ],
+   "contact": {
+    "web": "https://www.fiskerstrand.no/en/",
+    "telephone": "+47 70 19 93 00",
+    "adresse": "Risevegen 23, N-6035 Fiskarstrand, Norvège. Courriel : firmapost@fiskerstrand.no. Service 24/7 : +47 95 247 247 ; portail principal : +47 906 40 650"
+   },
+   "contact_source": "https://www.fiskerstrand.no/en/contact/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Westcon Yards AS (Ølensvåg)",
@@ -110946,7 +111082,7 @@
      "nom": "MF Hydra",
      "imo": "9887530",
      "type": "Ferry RoPax double-ender hydrogène",
-     "annee": 2021,
+     "annee": "2021",
      "longueur_m": 82.4,
      "jauge_gt": 2628,
      "port_lourd_dwt": null,
@@ -111918,7 +112054,14 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://english.westcon.no/companies/westcon-yards/facilities",
     "lien mort constate le 2026-08-03 : https://www.maritimeeconomy.com/post-details.php?post_id=a2duaQ==&post_name=Westcon+Yards+Announces+new+dry+dock+facility+in+Floro+&segment_name=Retrofit,+Repair++Ship+Management"
-   ]
+   ],
+   "contact": {
+    "web": "https://www.westconyards.no/en/about-westcon-group",
+    "telephone": "+47 53 77 56 60 (poste de garde principal, Olen)",
+    "adresse": "Jektevikvegen 45, 5582 Olensvag, commune de Vindafjord, Norvege. Courriel du poste de garde : vakt@westcon.no"
+   },
+   "contact_source": "https://data.brreg.no/enhetsregisteret/api/enheter/930720313",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Larsnes Mek. Verksted AS",
@@ -112204,7 +112347,7 @@
      "nom": "Zephyr",
      "imo": null,
      "type": "Chalutier pélagique",
-     "annee": 2019,
+     "annee": "2019",
      "longueur_m": 75.4,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -113205,7 +113348,14 @@
    "id": "larsnes-mek-verksted-as-larsnes",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.ntnu.edu/oceans/gunnerus"
-   ]
+   ],
+   "contact": {
+    "web": "https://www.larsnes-mek.no",
+    "telephone": "+47 70 02 64 00",
+    "adresse": "Larsnesvegen 119, 6084 Larsnes, Norvège"
+   },
+   "contact_source": "https://www.larsnes-mek.no/en/contact/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Aas Mek. Verksted AS",
@@ -113396,7 +113546,7 @@
      "nom": "Ronja Evolution",
      "imo": null,
      "type": "Live fish carrier (vivier)",
-     "annee": 2024,
+     "annee": "2024",
      "longueur_m": 77,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -113422,7 +113572,7 @@
      "nom": "Færøysund",
      "imo": null,
      "type": "Live fish carrier (vivier)",
-     "annee": 2021,
+     "annee": "2021",
      "longueur_m": 76.96,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -115046,7 +115196,14 @@
     "https://veranavis.com/aas-mek-delivered-newbuilding-no-208-ronja-princess/"
    ],
    "confiance": "haute",
-   "id": "aas-mek-verksted-as-vestnes"
+   "id": "aas-mek-verksted-as-vestnes",
+   "contact": {
+    "web": "https://www.aasmek.no",
+    "telephone": "+47 71 18 98 00",
+    "adresse": "Buktavegen 50, 6390 Vestnes, Norvège"
+   },
+   "contact_source": "https://www.aasmek.no/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Simek AS",
@@ -117484,7 +117641,14 @@
     "https://www.marinteknikk.no/news/austral-odyssey-christened-in-mauritius-now-heading-for-the-fishing-grounds/"
    ],
    "confiance": "haute",
-   "id": "batbygg-as-raudeberg"
+   "id": "batbygg-as-raudeberg",
+   "contact": {
+    "web": "https://www.baatbygg.no/",
+    "telephone": "+47 57 85 40 00",
+    "adresse": "Skoravegen 130, NO-6710 Raudeberg, Norvège"
+   },
+   "contact_source": "https://www.baatbygg.no/en/contact-us/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Stadyard AS",
@@ -119010,7 +119174,14 @@
     "https://www.bairdmaritime.com/fishing-boat-world/trawling/vessel-review-skar-senior-norwegian-seafood-companys-new-locally-built-48m-seiner-trawler"
    ],
    "confiance": "haute",
-   "id": "stadyard-as-raudeberg"
+   "id": "stadyard-as-raudeberg",
+   "contact": {
+    "web": "https://www.stadyard.no",
+    "telephone": "+47 57 84 99 00",
+    "adresse": "Nedrevegen 148, 6710 Raudeberg, Norvège"
+   },
+   "contact_source": "http://www.stadyard.no/no/kontakt-oss",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Grovfjord Mek. Verksted (GMV 2.0)",
@@ -120241,7 +120412,14 @@
     "https://www.intrafish.com/salmon/norwegian-salmon-farmer-acquires-stake-in-shipyard/2-1-1542175"
    ],
    "confiance": "haute",
-   "id": "grovfjord-mek-verksted-gmv-2-0-grovfjord"
+   "id": "grovfjord-mek-verksted-gmv-2-0-grovfjord",
+   "contact": {
+    "web": "https://www.gmv.no",
+    "telephone": "+47 77 08 96 00",
+    "adresse": "Astafjordveien 566, 9446 Grovfjord, Norvège"
+   },
+   "contact_source": "https://www.gmv.no/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Selfa Arctic AS",
@@ -124930,7 +125108,14 @@
     "https://www.marinteknikk.no/ship/skandi-buchan/"
    ],
    "confiance": "haute",
-   "id": "fitjar-mekaniske-verksted-as-fitjar"
+   "id": "fitjar-mekaniske-verksted-as-fitjar",
+   "contact": {
+    "web": "https://www.fmvas.no/",
+    "telephone": "+47 53 45 72 00",
+    "adresse": "Havnavegen 22, 5419 Fitjar, Norvège. Courriel : post@fmvas.no. Antenne : Avdeling Flekkefjord, Strandgaten 16, 4400 Flekkefjord"
+   },
+   "contact_source": "https://www.fmvas.no/kontakt",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Salthammer Båtbyggeri",
@@ -125613,7 +125798,14 @@
     "https://www.offshore-energy.biz/ssab-tibnor-to-supply-zero-emission-green-steel-to-salthammer-batbyggeri-shipyard/"
    ],
    "confiance": "haute",
-   "id": "salthammer-batbyggeri-vestnes"
+   "id": "salthammer-batbyggeri-vestnes",
+   "contact": {
+    "web": "https://www.salthammer.no/",
+    "telephone": "+47 71 18 82 88",
+    "adresse": "Remmemsvegen 85, 6390 Vestnes, Norvège (sites annexes : Sylte, 6391 Tresfjorden ; Vikvegen 55, 6393 Tomra)"
+   },
+   "contact_source": "https://www.salthammer.no/kontakt",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Vaagland Båtbyggeri AS",
@@ -125806,7 +125998,7 @@
      "nom": "FF Beret Paulsdatter",
      "imo": null,
      "type": "Navire de recherche",
-     "annee": 2022,
+     "annee": "2022",
      "longueur_m": 26.4,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -126965,7 +127157,14 @@
    "id": "vaagland-batbyggeri-as-vagland",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://maritimt.com/en/magasin/vaagland-batbyggeri-builds-research-vessel"
-   ]
+   ],
+   "contact": {
+    "web": "https://www.vaagland.no/",
+    "telephone": "+47 93 03 01 86",
+    "adresse": "Våglandsvegen 70, 6683 Vågland, Norvège"
+   },
+   "contact_source": "https://www.vaagland.no/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Maritime Partner AS",
@@ -127149,7 +127348,7 @@
      "nom": "Alusafe 1250 WF (Norwind Gale)",
      "imo": null,
      "type": "Workboat / daughter craft de parc éolien",
-     "annee": 2023,
+     "annee": "2023",
      "longueur_m": 13.15,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -128197,7 +128396,14 @@
     "https://www.maritimejournal.com/news101/security-and-alarm-systems/patrol-boat-delivered-for-norwegian-defence"
    ],
    "confiance": "haute",
-   "id": "maritime-partner-as-alesund"
+   "id": "maritime-partner-as-alesund",
+   "contact": {
+    "web": "https://www.maritime-partner.com/",
+    "telephone": "+47 70 17 15 00",
+    "adresse": "Breivika Industriveg 65, 6018 Ålesund, Norvège"
+   },
+   "contact_source": "https://www.maritime-partner.com/contact",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Helgeland Plast AS (Polarcirkel / AKVA group)",
@@ -129853,7 +130059,14 @@
     "https://www.salmonbusiness.com/fsv-group-and-sletta-verft-sign-record-contract-to-build-five-vessels/"
    ],
    "confiance": "haute",
-   "id": "sletta-verft-as-mj"
+   "id": "sletta-verft-as-mj",
+   "contact": {
+    "web": "https://slettaverft.no",
+    "telephone": "+47 71 64 77 50",
+    "adresse": "Mjosundvegen 294, 6693 Mjosundet, Norvège"
+   },
+   "contact_source": "https://slettaverft.no/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Hyke (Hydrolift Smart City Ferries)",
@@ -133926,7 +134139,14 @@
     "https://defence-industry.eu/kongsberg-opens-oslofjord-test-facility-for-maritime-critical-infrastructure-protection/"
    ],
    "confiance": "moyenne",
-   "id": "kongsberg-defence-aerospace-kongsberg-maritime-horten-horten"
+   "id": "kongsberg-defence-aerospace-kongsberg-maritime-horten-horten",
+   "contact": {
+    "web": "https://www.kongsberg.com/discovery/",
+    "telephone": null,
+    "adresse": "KONGSBERG DISCOVERY AS, Nedre vei 8, 3183 Horten, Norvege (site KONGSBERG a Horten). Entite KDA associee sur place : KONGSBERG NORCONTROL AS, Postboks 1024, 3194 Horten."
+   },
+   "contact_source": "https://data.brreg.no/enhetsregisteret/api/enheter/930770426",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Marinens Hovedverft / Horten Verft (Karljohansvern)",
@@ -134034,7 +134254,7 @@
      "nom": "HNoMS Oslo (F300)",
      "imo": null,
      "type": "Frégate (classe Oslo)",
-     "annee": 1966,
+     "annee": "1966",
      "longueur_m": 96.6,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -136653,7 +136873,7 @@
      "nom": "HNoMS Oslo (F300) - classe Oslo",
      "imo": null,
      "type": "Frégate (navire de défense)",
-     "annee": 1968,
+     "annee": "1968",
      "longueur_m": null,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -136975,7 +137195,14 @@
    "id": "westcon-yards-helgeland-nesna",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://english.westcon.no/companies/westcon-yards/facilities"
-   ]
+   ],
+   "contact": {
+    "web": "https://www.westconyards.no/",
+    "telephone": "+47 75 06 65 55",
+    "adresse": "Langsetvågen, 8700 Nesna, Norvège"
+   },
+   "contact_source": "https://www.westconyards.no/kontakt-oss",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Green Yard Feda",
@@ -139318,7 +139545,14 @@
     "https://www.offshore-energy.biz/farstad-shipping-sheds-supply-vessel/"
    ],
    "confiance": "haute",
-   "id": "vard-brattvag-brattvag"
+   "id": "vard-brattvag-brattvag",
+   "contact": {
+    "web": "https://www.vard.com/location/norway/vard-brattvaag",
+    "telephone": "+47 70 21 06 00",
+    "adresse": "Vard Brattvaag, P.O. Box 76, NO-6001 Alesund, Norvege (site situe a Brattvag, commune d'Alesund, More og Romsdal). Courriel du chantier : brattvaag@vard.com"
+   },
+   "contact_source": "https://www.vard.com/location/norway/vard-brattvaag",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "NorYards BMV",
@@ -139332,7 +139566,7 @@
    "fondation": 1855,
    "effectif": null,
    "superficie_ha": null,
-   "actif": true,
+   "actif": false,
    "perimetres": [
     "reparation-refit",
     "construction-neuve",
@@ -139397,7 +139631,7 @@
      "nom": "Statsraad Lehmkuhl",
      "imo": "5339248",
      "type": "Trois-mâts barque (voilier-école)",
-     "annee": 1914,
+     "annee": "1914",
      "longueur_m": 98,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -139437,7 +139671,7 @@
      "nom": "KV Nordkapp (W320)",
      "imo": null,
      "type": "Navire des garde-côtes norvégiens (Kystvakt)",
-     "annee": 1980,
+     "annee": "1980",
      "longueur_m": null,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -140221,7 +140455,8 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.vest24.no/nyheter/industri/skipsbygging/laksevag-verft-over-pa-lokale-hender-etter-konkurs/s/5-82-41282",
     "lien mort constate le 2026-08-03 : https://www.vest24.no/nyheter/okonomi-og-naringsliv/konkurs/noryards-bmv-er-konkurs/s/5-82-39861"
-   ]
+   ],
+   "actif_source": "Ferme. NorYards BMV, filiale de NorYards AS, a depose le bilan le 14 avril 2016 apres l'echec d'un concordat avec ses creanciers, faute de carnet de commandes dans la crise du parapetrolier ; 96 emplois supprimes. La societe soeur NorYards Fosen AS avait depose le bilan en octobre 2015. Arbitre le 15/08/2026 : la base portait actif=true SANS AUCUNE JUSTIFICATION, la vague apporte une source datee. https://www.offshore-energy.biz/noryards-bmv-goes-bankrupt/"
   },
   {
    "nom": "Mjellem & Karlsen Verft",
@@ -142068,7 +142303,7 @@
      "nom": "Dogger Bank B (plateforme convertisseuse HVDC)",
      "imo": null,
      "type": "Plateforme convertisseuse offshore HVDC (éolien)",
-     "annee": 2024,
+     "annee": "2024",
      "longueur_m": null,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -142893,7 +143128,14 @@
     "https://www.trusteddocks.com/shipyards/6165-drammen-yard-norway"
    ],
    "confiance": "moyenne",
-   "id": "drammen-yard-as-drammen"
+   "id": "drammen-yard-as-drammen",
+   "contact": {
+    "web": "https://www.drammenyard.no/",
+    "telephone": "+47 32 88 26 30",
+    "adresse": "Havnegata 83, 3040 Drammen, Norvège"
+   },
+   "contact_source": "https://www.drammenyard.no/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Slipen Mekaniske AS",
@@ -144936,7 +145178,14 @@
     "https://www.proff.no/selskap/slipen-mekaniske-as/sandnessj%C3%B8en/skip-og-b%C3%A5ter-reparasjon-og-vedlikehold/IG81Z0J10KM"
    ],
    "confiance": "moyenne",
-   "id": "slipen-mekaniske-as-sandnessj"
+   "id": "slipen-mekaniske-as-sandnessj",
+   "contact": {
+    "web": "https://slipen.no",
+    "telephone": "+47 75 07 61 00",
+    "adresse": "Kirkeveien 1, 8800 Sandnessjøen, Norvège (adresse postale : Postboks 1009, 8805 Sandnessjøen)"
+   },
+   "contact_source": "https://slipen.no/kontakt-oss",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Kimek AS",
@@ -145516,7 +145765,7 @@
      "nom": "RV Scotia",
      "imo": null,
      "type": "navire de recherche halieutique",
-     "annee": 1998,
+     "annee": "1998",
      "longueur_m": 68.6,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -147232,7 +147481,14 @@
     "https://www.maritimeindustries.org/directory/ferguson-marine-engineering-limited"
    ],
    "confiance": "haute",
-   "id": "ferguson-marine-port-glasgow-limited-port"
+   "id": "ferguson-marine-port-glasgow-limited-port",
+   "contact": {
+    "web": "https://www.fergusonmarine.com/",
+    "telephone": "+44 (0)1475 742300",
+    "adresse": "Newark Works, Castle Road, Port Glasgow, Scotland PA14 5NG"
+   },
+   "contact_source": "https://www.fergusonmarine.com/contact-us/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "BAE Systems Naval Ships - Govan",
@@ -149325,7 +149581,14 @@
     "https://www.navylookout.com/royal-navy-type-26-frigate-secures-record-export-success-with-norway/",
     "https://en.wikipedia.org/wiki/Type_26_frigate"
    ],
-   "id": "bae-systems-naval-ships-govan-glasgow"
+   "id": "bae-systems-naval-ships-govan-glasgow",
+   "contact": {
+    "web": "https://www.baesystems.com/en-uk/locations/govan",
+    "telephone": "+44 (0)141 959 1207",
+    "adresse": "1048 Govan Road, Govan, Glasgow, G51 4XP, Royaume-Uni"
+   },
+   "contact_source": "https://www.baesystems.com/en-uk/locations/govan",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Malin Marine / Scottish Marine Technology Park",
@@ -149498,7 +149761,7 @@
      "nom": "Naomi Jennifer",
      "imo": null,
      "type": "Navire de servitude aquacole (Aquaculture Support Vessel) hybride",
-     "annee": 2026,
+     "annee": "2026",
      "longueur_m": 25,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -150548,7 +150811,7 @@
      "nom": "Bradan an Eòlais",
      "imo": null,
      "type": "Catamaran de servitude (wellboat support)",
-     "annee": 2025,
+     "annee": "2025",
      "longueur_m": 18.5,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -151282,7 +151545,14 @@
     "https://www.maritimejournal.com/mj-directory/macduff-shipyard-limited/431726.supplier"
    ],
    "confiance": "haute",
-   "id": "macduff-shipyards-fraserburgh-fraserburgh"
+   "id": "macduff-shipyards-fraserburgh-fraserburgh",
+   "contact": {
+    "web": "https://www.macduffshipyards.co.uk/",
+    "telephone": "+44 1261 832234",
+    "adresse": "The Harbour, Macduff, Aberdeenshire AB44 1QT, Royaume-Uni"
+   },
+   "contact_source": "https://www.macduffshipyards.com/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Alexander Noble & Sons Ltd",
@@ -154329,7 +154599,14 @@
     "https://thehistorypress.co.uk/publication/built-by-nobles-of-girvan/"
    ],
    "confiance": "haute",
-   "id": "alexander-noble-sons-ltd-girvan"
+   "id": "alexander-noble-sons-ltd-girvan",
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "Newton Kennedy, Girvan, KA26 9HL, Ecosse (siege social au registre)"
+   },
+   "contact_source": "https://find-and-update.company-information.service.gov.uk/company/SC030858",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Ardmaleish Boatbuilding Company Ltd",
@@ -155039,7 +155316,14 @@
     "https://www.scottishfield.co.uk/uncategorized/historic-link-to-launch-new-majestic-line-ship/"
    ],
    "confiance": "haute",
-   "id": "ardmaleish-boatbuilding-company-ltd-rothesay"
+   "id": "ardmaleish-boatbuilding-company-ltd-rothesay",
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "Ardmaleish, Rothesay, Isle of Bute, PA20 0QY, Ecosse"
+   },
+   "contact_source": "https://find-and-update.company-information.service.gov.uk/company/SC058986 (siege social au registre Companies House)",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Coastal Workboats Scotland Ltd (Goat Island)",
@@ -155684,7 +155968,14 @@
     "https://www.navylookout.com/dry-docking-the-royal-navys-aircraft-carriers-what-are-the-options/"
    ],
    "confiance": "haute",
-   "id": "babcock-rosyth-royal-dockyard-rosyth"
+   "id": "babcock-rosyth-royal-dockyard-rosyth",
+   "contact": {
+    "web": "https://www.babcockinternational.com/locations/rosyth/",
+    "telephone": null,
+    "adresse": null
+   },
+   "contact_source": "https://www.babcockinternational.com/locations/rosyth/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Dales Marine Services - Greenock (Garvel Dry Dock)",
@@ -156643,7 +156934,14 @@
      "caractere_motif": "propriete: as"
     }
    ],
-   "id": "dales-marine-services-grangemouth-carron-dry-dock-grangemouth"
+   "id": "dales-marine-services-grangemouth-carron-dry-dock-grangemouth",
+   "contact": {
+    "web": "https://www.dalesmarine.co.uk/facilities",
+    "telephone": "+44 1475 725372",
+    "adresse": "James Watt Dock, Greenock PA15 2AJ, Écosse"
+   },
+   "contact_source": "https://www.dalesmarine.co.uk/contact",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Navantia UK - Methil (ex-Harland & Wolff / BiFab / Burntisland Fabrications)",
@@ -157256,7 +157554,14 @@
      "source_ref": "'The boom and bust years of Arnish' et page 'Drillmaster' ; stornowayfacilities.weebly.com (photo 1979 'conversion of the Drillmaster Rig to the BP Buchan Production Platform') ; offshore-energy.biz ; shetland.org ; repsolsinopecuk.com ; marinetraffic.com (BUCHAN ALPHA, MMSI 232004204, callsign GCBU, pavillon Royaume-Uni, sans IMO). CONVERSION au chantier (drilling rig 1973 -> unite de production), pas une construction neuve d'Arnish."
     }
    ],
-   "id": "navantia-uk-arnish-stornoway-isle-of-lewis-ex-harland-wolff--stornoway"
+   "id": "navantia-uk-arnish-stornoway-isle-of-lewis-ex-harland-wolff--stornoway",
+   "contact": {
+    "web": "https://navantia.co.uk/methil/",
+    "telephone": null,
+    "adresse": "Wellesley Rd, Methil, Leven KY8 3RA, Écosse"
+   },
+   "contact_source": "https://navantia.co.uk/contact-us/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Caley Marina",
@@ -159299,7 +159604,7 @@
      "nom": "HSwMS Halland (Hnd)",
      "imo": null,
      "type": "Sous-marin d'attaque (SSK, classe Gotland / A19)",
-     "annee": 1997,
+     "annee": "1997",
      "longueur_m": 60.4,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -160812,7 +161117,14 @@
     "https://se.linkedin.com/company/scanunit-ab"
    ],
    "confiance": "haute",
-   "id": "scanunit-ab-helsingborg"
+   "id": "scanunit-ab-helsingborg",
+   "contact": {
+    "web": "https://scanunit.se/",
+    "telephone": "+46 42 37 33 50",
+    "adresse": "Västra Tallgatan 32, 252 29 Helsingborg, Suède (site secondaire : Kalkbruksgatan 1, 417 07 Göteborg)"
+   },
+   "contact_source": "https://scanunit.se/contact/ ; https://www.hitta.se/f%C3%B6retagsinformation/scanunit+aktiebolag/5563181824 (org.nr 556318-1824)",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Ö-varvet AB",
@@ -161927,7 +162239,14 @@
     "https://monocle.com/business/transport/clean-maritime-travel-candela/"
    ],
    "confiance": "haute",
-   "id": "candela-technology-ab-rotebro"
+   "id": "candela-technology-ab-rotebro",
+   "contact": {
+    "web": "https://candela.com/",
+    "telephone": "+46 10 1300 810",
+    "adresse": "Frihamnsgatan 25, 115 56 Stockholm, Suède"
+   },
+   "contact_source": "https://candela.com/contact/ (téléphone) ; https://www.hitta.se/f%C3%B6retagsinformation/candela+technology+ab/5569853285 (org.nr 556985-3285, adresse)",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Arcona Yachts (Boo Marin AB)",
@@ -162397,7 +162716,14 @@
     "https://www.linkedin.com/company/nimbus-boats-ab"
    ],
    "confiance": "haute",
-   "id": "nimbus-group-ab-langedrag"
+   "id": "nimbus-group-ab-langedrag",
+   "contact": {
+    "web": "https://nimbusgroup.se/",
+    "telephone": "+46 31 726 77 00",
+    "adresse": "Box 5152, 426 05 Västra Frölunda (Göteborg), Suède ; adresse de visite enregistrée : Björnslyckevägen 8, 542 74 Mariestad"
+   },
+   "contact_source": "https://nimbusgroup.se/en/section/contact/ ; https://www.hitta.se/f%C3%B6retagsinformation/nimbus+group+ab+(publ)/5569036568 (org.nr 556903-6568)",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Windy Scandinavia AB",
@@ -162500,7 +162826,7 @@
      "nom": "Windy SR44",
      "imo": null,
      "type": "Sport cruiser / all-rounder de luxe",
-     "annee": 2019,
+     "annee": "2019",
      "longueur_m": 14.03,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -163004,7 +163330,7 @@
      "nom": "Ronja Vest",
      "imo": null,
      "type": "Wellboat / transporteur de poisson vivant",
-     "annee": 2021,
+     "annee": "2021",
      "longueur_m": null,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -167150,7 +167476,7 @@
      "nom": "Connector",
      "imo": "9435480",
      "type": "Navire câblier / poseur subsea (offshore construction / cable-lay vessel)",
-     "annee": 2011,
+     "annee": "2011",
      "longueur_m": 156.9,
      "jauge_gt": 20190,
      "port_lourd_dwt": null,
@@ -167228,7 +167554,7 @@
    "fondation": 1910,
    "effectif": null,
    "superficie_ha": null,
-   "actif": true,
+   "actif": false,
    "perimetres": [
     "reparation-refit",
     "plaisance",
@@ -167273,7 +167599,7 @@
      "nom": "Conidaw",
      "imo": null,
      "type": "Yacht à moteur classique (Silver)",
-     "annee": 1939,
+     "annee": "1939",
      "longueur_m": 24.38,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -167927,7 +168253,8 @@
     "http://www.silversmarine.co.uk/index2.html"
    ],
    "confiance": "moyenne",
-   "id": "silvers-marine-rosneath"
+   "id": "silvers-marine-rosneath",
+   "actif_source": "La societe nommee est morte, le site industriel vit. SILVERS MARINE LIMITED (SC084699) a ete dissoute le 2 octobre 2015 ; SILVERS MARINE SERVICES LTD (SC364439) dissoute le 31 mars 2020. L'emprise du chantier de Silverhills, Rosneath (Gareloch) est aujourd'hui exploitee par GSS Marine Services / Gareloch Support Services Plant Ltd, qui y a installe son siege (Silverhills, Rosneath, Argyll & Bute G84 0RW, tel. +44 1436 821277). Valeur precedente true non justifiee, remplacee le 2026-08-15. https://find-and-update.company-information.service.gov.uk/company/SC084699 (dissolution) ; https://gssplant.co.uk/ (exploitant actuel du site de Silverhills, Rosneath)"
   },
   {
    "nom": "Mackay Boatbuilders (Arbroath)",
@@ -168023,7 +168350,7 @@
      "nom": "Reaper (FR958)",
      "imo": null,
      "type": "Lougre harenguier à voile (Fifie) - réparation",
-     "annee": 1901,
+     "annee": "1901",
      "longueur_m": 21,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -168459,7 +168786,14 @@
    "id": "mackay-boatbuilders-arbroath-arbroath",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.skarvlines.com/cruises-around-scotland/"
-   ]
+   ],
+   "contact": {
+    "web": "https://www.mackayboatbuilders.co.uk/",
+    "telephone": "+44 1241 872879",
+    "adresse": "The Boatyard, Old Shore Head, Arbroath, DD11 1BB, Ecosse"
+   },
+   "contact_source": "https://www.mackayboatbuilders.co.uk/ (site officiel) ; https://find-and-update.company-information.service.gov.uk/company/SC127292 (siege social au registre)",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Peterson (base de Lerwick, Greenhead)",
@@ -169499,7 +169833,14 @@
     "https://swedeship.se/en/services/15m-electric-shuttle-ferry/"
    ],
    "confiance": "haute",
-   "id": "swede-ship-marine-ab-chantier-de-djupvik-fagerfjall"
+   "id": "swede-ship-marine-ab-chantier-de-djupvik-fagerfjall",
+   "contact": {
+    "web": "https://swedeship.se/",
+    "telephone": "+46 304-67 95 00",
+    "adresse": "Varvsvägen 14, 471 98 Fagerfjäll (Djupvik, Tjörn), Suède"
+   },
+   "contact_source": "https://swedeship.se/en/contact/ ; https://www.hitta.se/f%C3%B6retagsinformation/swede+ship+marine+aktiebolag/5565396909",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Swede Ship Composite AB",
@@ -169729,7 +170070,14 @@
     "https://en.wikipedia.org/wiki/Hunnebostrand"
    ],
    "confiance": "haute",
-   "id": "swede-ship-composite-ab-hunnebostrand"
+   "id": "swede-ship-composite-ab-hunnebostrand",
+   "contact": {
+    "web": "https://swedeship.se/",
+    "telephone": "+46 523-582 25",
+    "adresse": "Lökholmsvägen 16, 456 61 Hunnebostrand, Suède (siège social enregistré : Varvsvägen 14, 471 98 Fagerfjäll)"
+   },
+   "contact_source": "https://swedeship.se/en/contact/ ; https://www.hitta.se/f%C3%B6retagsinformation/swede+ship+composite+aktiebolag/5562595883 (org.nr 556259-5883)",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Öresundsvarvet / Oresund DryDocks AB",
@@ -169977,7 +170325,7 @@
      "nom": "M/F Hamlet",
      "imo": "9150030",
      "type": "Ferry RoPax converti tout-électrique à batterie (conversion achevée chez Öresund DryDocks, retour en service le 15/12/2025 ; diesels conservés en secours)",
-     "annee": 1997,
+     "annee": "1997",
      "longueur_m": 111.2,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -175410,7 +175758,7 @@
      "nom": "Rasmus 35",
      "imo": null,
      "type": "Voilier de croisière (modèle de série, 760 exemplaires 1967-1978)",
-     "annee": 1967,
+     "annee": "1967",
      "longueur_m": 10.5,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -178286,7 +178634,14 @@
     "https://fiskebatar.zaramis.se/varv/gotenius-varv/"
    ],
    "confiance": "haute",
-   "id": "ab-gotenius-varv-mekaniska-verkstad-goteborg"
+   "id": "ab-gotenius-varv-mekaniska-verkstad-goteborg",
+   "contact": {
+    "web": "http://www.gotenius.se/",
+    "telephone": "+46 31 23 52 00",
+    "adresse": "Manufakturgatan 3, 417 07 Göteborg, Suède"
+   },
+   "contact_source": "http://www.gotenius.se/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Stockholms Reparationsvarv AB (Stockholm Repairyard)",
@@ -178499,7 +178854,14 @@
    "id": "stockholms-reparationsvarv-ab-stockholm-repairyard-stockholm",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : http://www.srvab.com/en/the-shipyard/"
-   ]
+   ],
+   "contact": {
+    "web": "https://www.srvab.com/",
+    "telephone": "+46 730 66 71 85 (accueil)",
+    "adresse": "Beckholmen, SE-115 21 Stockholm, Suède"
+   },
+   "contact_source": "https://www.srvab.com/contact/",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Saab Kockums Dockstavarvet (ex-N. Sundin Dockstavarvet)",
@@ -178559,7 +178921,7 @@
      "nom": "Stridsbåt 90 H (CB90 H)",
      "imo": null,
      "type": "Embarcation d'assaut rapide (combat boat)",
-     "annee": 1990,
+     "annee": "1990",
      "longueur_m": 15.9,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -182974,7 +183336,14 @@
     "http://www.sverigesvarv.se/swede-ship-marine-ab.html"
    ],
    "confiance": "haute",
-   "id": "swede-ship-marine-ab-djupviks-varv-djupvik-shipyard-hakenaset"
+   "id": "swede-ship-marine-ab-djupviks-varv-djupvik-shipyard-hakenaset",
+   "contact": {
+    "web": "https://swedeship.se/",
+    "telephone": "+46 304-67 95 00",
+    "adresse": "Varvsvägen 14, 471 98 Fagerfjäll (Tjörn), Suède"
+   },
+   "contact_source": "https://swedeship.se/en/contact/ (adresse et téléphone Swede Ship Marine) ; https://www.hitta.se/f%C3%B6retagsinformation/swede+ship+marine+aktiebolag/5565396909 (org.nr 556539-6909, même adresse)",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Swede Ship Yachtservice AB",
@@ -183032,7 +183401,14 @@
     "https://oborgen.se/en/services/swede-ship-en/"
    ],
    "confiance": "haute",
-   "id": "swede-ship-yachtservice-ab-goteborg"
+   "id": "swede-ship-yachtservice-ab-goteborg",
+   "contact": {
+    "web": "https://swedeship.se/",
+    "telephone": "+46 31 350 24 73",
+    "adresse": "Nya Varvet Ankarhuset 85, 426 71 Västra Frölunda (Göteborg), Suède"
+   },
+   "contact_source": "https://www.hitta.se/swede+ship+yachtservice+ab/v%C3%A4stra+fr%C3%B6lunda/cmnryyze ; https://www.hitta.se/f%C3%B6retagsinformation/swede+ship+yachtservice+ab/5566920350 (org.nr 556692-0350)",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Delta Marine Scandinavia AB",
@@ -183081,7 +183457,14 @@
     "https://www.facebook.com/deltamarinescandinaviaabshiprepairs/"
    ],
    "confiance": "moyenne",
-   "id": "delta-marine-scandinavia-ab-laholm"
+   "id": "delta-marine-scandinavia-ab-laholm",
+   "contact": {
+    "web": "https://deltamarinesweden.com/",
+    "telephone": "+46 723 66 39 26",
+    "adresse": "Industrigatan 18, 312 34 Laholm, Suède (adresse du site officiel) ; siège enregistré : Krogshult 121 B, 312 98 Våxtorp"
+   },
+   "contact_source": "https://deltamarinesweden.com/about-us/ ; https://www.hitta.se/f%C3%B6retagsinformation/delta+marine+services+scandinavia+ab/5592574775",
+   "contact_maj": "2026-08-15"
   },
   {
    "nom": "Gryts Varv och Marina AB",
@@ -184023,7 +184406,7 @@
      "nom": "R/V Nils Strömcrona",
      "imo": null,
      "type": "navire de recherche / hydrographique",
-     "annee": 1985,
+     "annee": "1985",
      "longueur_m": null,
      "jauge_gt": null,
      "port_lourd_dwt": null,
@@ -186080,7 +186463,7 @@
      "nom": "Profesor K. Bohdanowicz",
      "imo": "7364091",
      "type": "petrolier-chimiquier",
-     "annee": 1974,
+     "annee": "1974",
      "longueur_m": 146,
      "jauge_gt": 6932,
      "port_lourd_dwt": null,
@@ -194946,7 +195329,14 @@
    ],
    "confiance": "sourcee",
    "actif": true,
-   "fondation": 1981
+   "fondation": 1981,
+   "contact": {
+    "web": "https://www.hollandshipyardsgroup.com/",
+    "telephone": "+31 (0) 184 630 516",
+    "adresse": "Rivierdijk 436, 3372 BW Hardinxveld-Giessendam, Pays-Bas (siège). Autres sites du groupe : Beatrixhaven 13, 4251 NK Werkendam ; Estlandweg 8, 4455 SV Nieuwdorp (Vlissingen)."
+   },
+   "contact_source": "https://www.hollandshipyardsgroup.com/contact",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "pa-yard-theclabodewes",
@@ -195423,7 +195813,19 @@
    ],
    "confiance": "sourcee",
    "actif": true,
-   "fondation": 1925
+   "fondation": 1925,
+   "contact": {
+    "web": "https://www.royaltshipyards.com/",
+    "telephone": "+31 38 303 23 00",
+    "adresse": "Haatlandhaven 1, 8263 AS Kampen, Pays-Bas"
+   },
+   "contact_source": "http://www.royaltshipyards.com/en/contact/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Navires de mer et de navigation interieure jusqu'a environ 7 280 tpl livres (MV Vertom Anette)",
+   "taille_max_source": "http://www.royaltshipyards.com/en/",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "pa-yard-bijlsma",
@@ -204340,7 +204742,19 @@
    ],
    "confiance": "sourcee",
    "actif": true,
-   "fondation": 1812
+   "fondation": 1812,
+   "contact": {
+    "web": "https://royalbodewes.com/",
+    "telephone": "+31 598 39 31 31",
+    "adresse": "Werfkade 22, 9601 LG Hoogezand, Pays-Bas (postal : Postbus 32, 9600 AA Hoogezand)"
+   },
+   "contact_source": "https://royalbodewes.com/contact/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Navires de charge de 1 500 a 15 000 tpl",
+   "taille_max_source": "https://royalbodewes.com/",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "pa-yard-tille",
@@ -206039,7 +206453,19 @@
    ],
    "confiance": "sourcee",
    "actif": true,
-   "fondation": 1901
+   "fondation": 1901,
+   "contact": {
+    "web": "https://www.niesternsander.com/",
+    "telephone": "+31 596 649 400",
+    "adresse": "Venjelaan 6, 9936 BR Farmsum, Pays-Bas (postal : Postbus 108, 9930 AC Delfzijl)"
+   },
+   "contact_source": "https://www.niesternsander.com/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Navires jusqu'a environ 14 000 tpl (serie EasyMax)",
+   "taille_max_source": "https://www.niesternsander.com/",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "pa-yard-barkmeijerstroobos",
@@ -208179,7 +208605,14 @@
    ],
    "confiance": "sourcee",
    "actif": true,
-   "fondation": 1994
+   "fondation": 1994,
+   "contact": {
+    "web": "https://scheepswerfbijlsma.nl/",
+    "telephone": null,
+    "adresse": null
+   },
+   "contact_source": "https://scheepswerfbijlsma.nl/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "pa-yard-volharding",
@@ -208635,7 +209068,16 @@
    ],
    "confiance": "sourcee",
    "actif": true,
-   "fondation": 2003
+   "fondation": 2003,
+   "contact": {
+    "web": "https://www.hartmanshipbuilding.com/",
+    "telephone": "+31 527 68 60 08",
+    "adresse": "Sluisweg 11, 8321 DX Urk, Pays-Bas"
+   },
+   "contact_source": "https://www.hartmanshipbuilding.com/ (site officiel du chantier) ; https://www.northdata.com/Hartman+Marine+Shipbuilding+B.V.,+Urk/Kamer+van+Koophandel+39083988 (adresse au registre KvK)",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Environ 108 metres (type R3 Carrier : 108 m x 14 m, 3 636 GT)",
+   "taille_max_source": "https://www.hartmanshipbuilding.com/"
   },
   {
    "id": "pa-yard-groningen",
@@ -209768,7 +210210,19 @@
    ],
    "confiance": "sourcee",
    "actif": true,
-   "fondation": 1889
+   "fondation": 1889,
+   "contact": {
+    "web": "https://www.dehoop.net/",
+    "telephone": null,
+    "adresse": "Bijlandseweg 17-19, 6916 BH Tolkamer (Lobith), Pays-Bas (BP 12, 6916 ZG Tolkamer)"
+   },
+   "contact_source": "https://www.dehoop.net/contact/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "La plus grande cale de lancement des Pays-Bas selon le chantier, sans dimension chiffree publiee",
+   "taille_max_source": "https://www.dehoop.net/facts-figures/",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "da-yard-hvidesande",
@@ -211813,7 +212267,20 @@
    ],
    "confiance": "sourcee",
    "actif": true,
-   "fondation": 1950
+   "fondation": 1950,
+   "contact": {
+    "web": "https://hvidesandeshipyard.com/",
+    "telephone": "+45 97 31 25 11",
+    "adresse": "Beddingsvej 2, 6960 Hvide Sande, Danemark"
+   },
+   "contact_source": "https://hvidesandeshipyard.com/",
+   "contact_maj": "2026-08-15",
+   "materiaux": [
+    "acier",
+    "aluminium",
+    "composite (fibre de verre)",
+    "bois"
+   ]
   },
   {
    "id": "da-yard-orskovchristensenstalskibsvarft",
@@ -212067,8 +212534,19 @@
     "https://da.wikipedia.org/wiki/Orskov_Yard"
    ],
    "confiance": "sourcee",
-   "actif": true,
-   "fondation": 1958
+   "actif": false,
+   "fondation": 1958,
+   "contact": {
+    "web": "https://www.orskov.dk/",
+    "telephone": "+45 96 20 85 00",
+    "adresse": "Havnepladsen 16, DK-9900 Frederikshavn, Danemark"
+   },
+   "contact_source": "https://www.orskov.dk/contact/",
+   "contact_maj": "2026-08-15",
+   "actif_source": "DENOMINATION HISTORIQUE. Orskov Christensens Staalskibsvaerft, fonde en 1958 par Arne Orskov Christensen, a ferme son activite de construction neuve en 2003 face a la concurrence de l'Est (plus de 200 navires construits de 1972 a 2003). L'emprise de Frederikshavn est exploitee aujourd'hui par ORSKOV YARD A/S (CVR 26694027), societe distincte creee en 2003 par Jeppe Orskov, orientee reparation et maintenance navale, environ 220 salaries pour le groupe Orskov. Le site vit, la maison nommee ici n'existe plus. Valeur precedente true non justifiee, remplacee le 2026-08-15. https://www.orskov.dk/news/",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "da-yard-karstensensskibsvaerft",
@@ -213562,7 +214040,19 @@
    ],
    "confiance": "sourcee",
    "actif": true,
-   "fondation": 1917
+   "fondation": 1917,
+   "contact": {
+    "web": "https://karstensens.dk/",
+    "telephone": "+45 98 44 13 11",
+    "adresse": "Vestre Strandvej 17, 9990 Skagen, Danemark. Courriel : drk@kaship.dk. CVR 10859581"
+   },
+   "contact_source": "https://karstensens.dk/contact.aspx",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Neuf : la plupart des types de navires jusqu'à environ 135 m de longueur",
+   "taille_max_source": "https://karstensens.dk/newbuildings.aspx",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "da-yard-helsingorskibsvarftogmaskinbyggeri",
@@ -215202,7 +215692,19 @@
     "https://en.wikipedia.org/wiki/HNLMS_Karel_Doorman_(A833)"
    ],
    "confiance": "sourcee",
-   "actif": true
+   "actif": true,
+   "contact": {
+    "web": "https://www.damen.com/companies/damen-schelde-naval-shipbuilding",
+    "telephone": "+31 118 48 50 00",
+    "adresse": "De Willem Ruysstraat 99, 4381 NK Vlissingen, Pays-Bas (BP 555, 4380 AN Vlissingen)"
+   },
+   "contact_source": "https://www.damen.com/companies/damen-schelde-naval-shipbuilding",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Cales couvertes jusqu'a 215 m de long et 29,8 m de large",
+   "taille_max_source": "https://nl.wikipedia.org/wiki/Damen_Schelde_Naval_Shipbuilding",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "pa-yard-ihc",
@@ -215532,7 +216034,16 @@
     "https://nl.wikipedia.org/wiki/J._%26_K._Smit"
    ],
    "confiance": "sourcee",
-   "actif": true
+   "actif": true,
+   "contact": {
+    "web": "https://www.royalihc.com",
+    "telephone": null,
+    "adresse": "Smitweg 6, 2961 AW Kinderdijk, Pays-Bas (siege)"
+   },
+   "contact_source": "https://nl.wikipedia.org/wiki/Koninklijke_IHC (siege Smitweg 6, Kinderdijk). Le site royalihc.com renvoie un HTTP 403 a toute consultation automatisee : aucun numero de telephone n'a pu etre verifie sur une page reellement lue, il est donc laisse a null.",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Au moins 178 metres x 38 metres (drague Seaway, 31 000 m3 de puits)",
+   "taille_max_source": "https://swzmaritime.nl/news/2026/08/13/ihc-delivers-dredging-giant-seaway-to-boskalis/"
   },
   {
    "id": "da-yard-sobyvarft",
@@ -216342,6 +216853,19 @@
    "actif": true,
    "sources_ref": [
     "coordonnees geocodees via Nominatim (OpenStreetMap), constat du 2026-08-03 : ce n'est pas une source sur le chantier"
+   ],
+   "contact": {
+    "web": "https://www.shipyard.dk/",
+    "telephone": "+45 62 58 11 23",
+    "adresse": "Dokvej 5, DK-5985 Søby Ærø, Danemark (CVR 34 60 42 15)"
+   },
+   "contact_source": "https://www.shipyard.dk/kontakt/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Navires jusqu'a 140 x 24 x 6 m (dok III, le plus grand des trois bassins)",
+   "taille_max_source": "https://www.shipyard.dk/",
+   "materiaux": [
+    "acier",
+    "bois"
    ]
   },
   {
@@ -218241,7 +218765,19 @@
     "https://de.wikipedia.org/wiki/Ferus_Smit"
    ],
    "confiance": "sourcee",
-   "actif": true
+   "actif": true,
+   "contact": {
+    "web": "https://www.ferussmit.com/",
+    "telephone": "+31 50 404 25 55",
+    "adresse": "Scheepswervenweg 7, 9608 PD Westerbroek, Pays-Bas (second site du groupe : Industriestraße 15, 26789 Leer, Allemagne)"
+   },
+   "contact_source": "https://www.ferussmit.com/find-us/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Cargos et tankers d'environ 7 500 a 9 700 tpl, longueur autour de 115 m",
+   "taille_max_source": "https://www.ferussmit.com/",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "da-yard-esbjerg",
@@ -218528,7 +219064,16 @@
     "https://commons.wikimedia.org/wiki/Category:Ships_built_at_De_Haas_Maassluis,_Maassluis"
    ],
    "confiance": "sourcee",
-   "actif": true
+   "actif": true,
+   "contact": {
+    "web": "https://dehaas.nl/contact/",
+    "telephone": "+31 10 591 35 11",
+    "adresse": "Govert van Wijnkade 1, 3144 ED Maassluis, Pays-Bas"
+   },
+   "contact_source": "https://dehaas.nl/contact/ (page contact officielle, entite nommee De Haas Maassluis B.V., mail maassluis@dehaas.nl)",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Navires de 10 a 65 metres, tirant d'eau jusqu'a environ 4 metres",
+   "taille_max_source": "https://nl.wikipedia.org/wiki/De_Haas_Maassluis"
   },
   {
    "id": "da-yard-assensskibsvarft",
@@ -218715,7 +219260,19 @@
     "https://da.wikipedia.org/wiki/Assens"
    ],
    "confiance": "sourcee",
-   "actif": true
+   "actif": true,
+   "contact": {
+    "web": "https://www.asyard.dk/",
+    "telephone": "+45 64 71 11 34",
+    "adresse": "Søndre Havnevej 2A, 5610 Assens, Danemark"
+   },
+   "contact_source": "https://www.asyard.dk/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Deux docks flottants jusqu'a 2 000 tonnes, tirant d'eau admissible 7,5 m",
+   "taille_max_source": "https://www.asyard.dk/",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "da-yard-faborgvarft",
@@ -219069,7 +219626,19 @@
     "https://en.wikipedia.org/wiki/Diana-class_patrol_vessel"
    ],
    "confiance": "sourcee",
-   "actif": true
+   "actif": true,
+   "contact": {
+    "web": "https://www.faaborg-vaerft.dk/",
+    "telephone": "+45 62 61 21 10",
+    "adresse": "Værftsvej 7, 5600 Faaborg, Danemark (CVR 82 73 56 15)"
+   },
+   "contact_source": "https://www.faaborg-vaerft.dk/kontakt/",
+   "contact_maj": "2026-08-15",
+   "materiaux": [
+    "composite",
+    "aluminium",
+    "acier"
+   ]
   },
   {
    "id": "pa-yard-verstockt-martenshoek",
@@ -219658,8 +220227,15 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1937",
-   "sources_ref": []
+   "fondation": 1937,
+   "sources_ref": [],
+   "contact": {
+    "web": "https://skaramangas.gr/",
+    "telephone": "+30 210 583 9000",
+    "adresse": "3 Palaska Str., 12462 Chaidari, Grèce"
+   },
+   "contact_source": "https://skaramangas.gr/contact/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "gr-yard-elefsis-elefsina",
@@ -220103,7 +220679,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1968"
+   "fondation": 1968
   },
   {
    "id": "gr-yard-neorion-ermoupoli",
@@ -220147,7 +220723,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1861",
+   "fondation": 1861,
    "sources_ref": []
   },
   {
@@ -220178,7 +220754,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1971",
+   "fondation": 1971,
    "sources_ref": []
   },
   {
@@ -220223,7 +220799,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1900"
+   "fondation": 1900
   },
   {
    "id": "es-yard-lanavalconstruccionesnavalesdelnorte-sestao",
@@ -220406,7 +220982,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1826"
+   "fondation": 1826
   },
   {
    "id": "es-yard-unionlevante-valence",
@@ -220804,7 +221380,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1892"
+   "fondation": 1892
   },
   {
    "id": "es-yard-factoriasvulcano-vigo",
@@ -220880,7 +221456,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1919"
+   "fondation": 1919
   },
   {
    "id": "es-yard-navantiaferrol-ferrol",
@@ -221353,7 +221929,14 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1730s (arsenal royal) ; Navantia depuis 2005"
+   "fondation": "1730s (arsenal royal) ; Navantia depuis 2005",
+   "contact": {
+    "web": "https://www.navantia.es/",
+    "telephone": null,
+    "adresse": null
+   },
+   "contact_source": "https://www.navantia.es/en/news/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "es-yard-navantiafene-fene",
@@ -221620,7 +222203,14 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1732 (arsenal) ; Navantia depuis 2005"
+   "fondation": "1732 (arsenal) ; Navantia depuis 2005",
+   "contact": {
+    "web": "https://www.navantia.es/en/product/cartagena-shipyard/",
+    "telephone": "+34 968 12 83 50",
+    "adresse": "Algameca, s/n, 30205 Cartagena (Murcia), Espagne"
+   },
+   "contact_source": "https://www.paginasamarillas.es/f/barrio-de-la-concepcion/navantia_200828648_000000004.html (adresse et telephone) ; https://www.navantia.es/en/product/cartagena-shipyard/ (page officielle du chantier)",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "es-yard-navantiasanfernando-sanfernando",
@@ -221982,7 +222572,14 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1752 (arsenal de La Carraca) ; Navantia depuis 2005"
+   "fondation": "1752 (arsenal de La Carraca) ; Navantia depuis 2005",
+   "contact": {
+    "web": "https://www.navantia.es/",
+    "telephone": null,
+    "adresse": null
+   },
+   "contact_source": "https://www.navantia.es/es/actualidad/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "es-yard-navantiapuertoreal-puertoreal",
@@ -222289,7 +222886,14 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1863 (Matagorda) ; forme inaugurée en 1878"
+   "fondation": "1863 (Matagorda) ; forme inaugurée en 1878",
+   "contact": {
+    "web": "https://www.navantia.es/",
+    "telephone": null,
+    "adresse": null
+   },
+   "contact_source": "https://www.navantia.es/es/actualidad/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "es-yard-navantiacadiz-cadix",
@@ -222390,7 +222994,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1962"
+   "fondation": 1962
   },
   {
    "id": "gr-yard-koutaliskostergias-perama",
@@ -222719,7 +223323,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1963"
+   "fondation": 1963
   },
   {
    "id": "es-yard-astillerosarmonburela-burela",
@@ -222809,7 +223413,19 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1992"
+   "fondation": 1992,
+   "contact": {
+    "web": "https://www.astillerosarmon.com/companies-en/armon-shipyards-burela-s-a.html",
+    "telephone": null,
+    "adresse": null
+   },
+   "contact_source": "https://www.astillerosarmon.com/companies-en/armon-shipyards-burela-s-a.html",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Navires jusqu'a 70 m ; jusqu'a six unites de 30 m en construction simultanee ; quai d'armement 250 m",
+   "taille_max_source": "https://www.astillerosarmon.com/companies-en/armon-shipyards-burela-s-a.html",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "es-yard-astillerosarmongijon-gijon",
@@ -222883,7 +223499,16 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "2011 (site industriel naval depuis 1911)"
+   "fondation": "2011 (site industriel naval depuis 1911)",
+   "contact": {
+    "web": "https://astillerosarmon.com/",
+    "telephone": "+34 984 190 099",
+    "adresse": "Montemayor, 2, 33212 Gijón, Asturies, Espagne"
+   },
+   "contact_source": "https://astillerosarmon.com/contact-information.html",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Ferry catamaran rapide de 1 200 passagers et 400 véhicules (Mercedes Pinto, mis à l'eau en 2025)",
+   "taille_max_source": "https://puentedemando.com/botadura-del-catamaran-mercedes-pinto-de-balearia-canarias-en-astilleros-armon-gijon/"
   },
   {
    "id": "es-yard-auxiliardelprincipado-puertodevega",
@@ -222922,7 +223547,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1991"
+   "fondation": 1991
   },
   {
    "id": "es-yard-astillerosgondan-figueras",
@@ -223044,7 +223669,18 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1925"
+   "fondation": 1925,
+   "contact": {
+    "web": "https://gondan.com/en/",
+    "telephone": "+34 985 636 250",
+    "adresse": "Puerto de Figueras, s/n, 33794 Castropol, Asturias, Espagne"
+   },
+   "contact_source": "https://gondan.com/en/contact/",
+   "contact_maj": "2026-08-15",
+   "materiaux": [
+    "acier",
+    "fibre / composite"
+   ]
   },
   {
    "id": "es-yard-astander-astillero",
@@ -223400,7 +224036,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1943"
+   "fondation": 1943
   },
   {
    "id": "es-yard-zamakonasanturtzi-santurtzi",
@@ -223542,7 +224178,12 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1946"
+   "fondation": 1946,
+   "taille_max": "499 000 tpl (T/T Nanny, 1978, plus grand navire jamais construit en Suède)",
+   "taille_max_source": "https://sv.wikipedia.org/wiki/Uddevallavarvet",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "se-yard-kalmar-kalmar",
@@ -223609,7 +224250,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1679"
+   "fondation": 1679
   },
   {
    "id": "se-yard-eriksbergsmekaniskaverkstads-goteborg",
@@ -223736,7 +224377,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1850"
+   "fondation": 1850
   },
   {
    "id": "se-yard-lindholmens-goteborg",
@@ -223858,7 +224499,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1848"
+   "fondation": 1848
   },
   {
    "id": "se-yard-arendalsvarvet-goteborg",
@@ -223901,7 +224542,12 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1963"
+   "fondation": 1963,
+   "taille_max": "Navires jusqu'à 240 000 tonnes ; moyens de levage jusqu'à 300 t",
+   "taille_max_source": "https://sv.wikipedia.org/wiki/Arendalsvarvet",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "es-yard-freire-vigo",
@@ -224082,7 +224728,18 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1895"
+   "fondation": 1895,
+   "contact": {
+    "web": "https://freireshipyard.com/en/",
+    "telephone": "+34 986 23 30 00",
+    "adresse": "Avenida da Beiramar 18, 36208 Vigo (Pontevedra), Espagne ; atelier d'armement Avenida da Beiramar 8"
+   },
+   "contact_source": "https://freireshipyard.com/en/contact/",
+   "contact_maj": "2026-08-15",
+   "materiaux": [
+    "acier",
+    "construction mixte acier-aluminium"
+   ]
   },
   {
    "id": "es-yard-astillerosarmonvigo-vigo",
@@ -224248,7 +224905,16 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1999"
+   "fondation": 1999,
+   "contact": {
+    "web": "https://astillerosarmon.com/es/armon-vigo.html",
+    "telephone": null,
+    "adresse": null
+   },
+   "contact_source": "https://astillerosarmon.com/es/armon-vigo.html (page officielle du chantier de Vigo ; seules les coordonnees du siege du groupe a Navia y figurent, aucune adresse ni ligne propre au site de Vigo n'a pu etre verifiee sur une page consultee)",
+   "contact_maj": "2026-08-15",
+   "taille_max": "120 metres de long x 18 metres de large (grande cale couverte) ; seconde cale de 70 m, quai d'armement de 180 m",
+   "taille_max_source": "https://astillerosarmon.com/es/armon-vigo.html"
   },
   {
    "id": "es-yard-astillerosfranciscocardama-vigo",
@@ -224300,7 +224966,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1916"
+   "fondation": 1916
   },
   {
    "id": "es-yard-metalshipsdocks-vigo",
@@ -224387,7 +225053,9 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "2000"
+   "fondation": 2000,
+   "taille_max": "Forme de radoub 162 m x 35,2 m, capacité 10 000 t de levage et jusqu'à 25 000 TPL ; deux cales couvertes de 150 m x 19 m (jumelables, largeur 38 m, 3 500 t) ; 700 m de quais",
+   "taille_max_source": "https://www.metalships.com/en/shipyard/"
   },
   {
    "id": "es-yard-astillerosarmada-vigo",
@@ -224460,7 +225128,19 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1924"
+   "fondation": 1924,
+   "contact": {
+    "web": "https://www.astillerosarmada.com/",
+    "telephone": "+34 986 29 13 00",
+    "adresse": "Avenida de Orillamar 14, 36208 Vigo, Pontevedra, Espagne"
+   },
+   "contact_source": "https://www.astillerosarmada.com/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Navires jusqu'a 70 m et 1 000 TRB ; yachts jusqu'a 50 m",
+   "taille_max_source": "https://www.astillerosarmada.com/",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "es-yard-astillerosjmarmada-vigo",
@@ -224490,7 +225170,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1940"
+   "fondation": 1940
   },
   {
    "id": "es-yard-aister-moana",
@@ -224571,7 +225251,17 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1987"
+   "fondation": 1987,
+   "contact": {
+    "web": "https://www.aister.com/",
+    "telephone": "+34 986 240 294",
+    "adresse": "Baixada do Cocho, 228, Moaña (Ría de Vigo) 36955, Espagne"
+   },
+   "contact_source": "https://www.aister.com/en/",
+   "contact_maj": "2026-08-15",
+   "materiaux": [
+    "aluminium"
+   ]
   },
   {
    "id": "es-yard-nodosa-bueu",
@@ -224616,7 +225306,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1982"
+   "fondation": 1982
   },
   {
    "id": "es-yard-nodosa-marin",
@@ -224669,7 +225359,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1974"
+   "fondation": 1974
   },
   {
    "id": "se-yard-westersmekaniska-hultas",
@@ -224798,7 +225488,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1967"
+   "fondation": 1967
   },
   {
    "id": "se-yard-tjornvarvet-ronnang",
@@ -224849,7 +225539,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1977"
+   "fondation": 1977
   },
   {
    "id": "se-yard-boghammarmarin-lidingo",
@@ -224905,8 +225595,23 @@
     "https://sv.wikipedia.org/wiki/Boghammar_Marin"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": "1906"
+   "actif": true,
+   "fondation": 1906,
+   "contact": {
+    "web": "http://www.boghammar.se/",
+    "telephone": "+46 8 766 01 90",
+    "adresse": "Nysätravägen 6-8, 181 61 Lidingö, Suède"
+   },
+   "contact_source": "https://www.boghammar.se/Verksamhet/Boghammar-Marins-Verksamhet.html (téléphone et localisation) ; https://www.hitta.se/f%C3%B6retagsinformation/boghammar+marin+aktiebolag/5561407957 (org.nr 556140-7957, adresse postale)",
+   "contact_maj": "2026-08-15",
+   "actif_source": "Société active (immatriculée depuis le 1er janvier 1972), derniers comptes clos au 30/04/2025 : 10 776 kSEK de chiffre d'affaires, résultat net 184 kSEK, 8 salariés. Activités déclarées : construction et réparation de navires civils. Vague contact-activite du 2026-08-15. https://www.hitta.se/f%C3%B6retagsinformation/boghammar+marin+aktiebolag/5561407957",
+   "taille_max": "halle chauffée jusqu'à 37 m de long et 7,10 m de large ; slipway jusqu'à 110 t",
+   "taille_max_source": "https://www.boghammar.se/Verksamhet/Boghammar-Marins-Verksamhet.html",
+   "materiaux": [
+    "aluminium",
+    "acier",
+    "acier inoxydable"
+   ]
   },
   {
    "id": "se-yard-nyadjurgardsvarvet-stockholm",
@@ -224932,7 +225637,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1712"
+   "fondation": 1712
   },
   {
    "id": "se-yard-smogensplatsvetsindustri-smogen",
@@ -224994,7 +225699,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1944"
+   "fondation": 1944
   },
   {
    "id": "es-yard-astillerosmallorca-palmademallorca",
@@ -225074,7 +225779,14 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1942"
+   "fondation": 1942,
+   "contact": {
+    "web": "https://astillerosdemallorca.com/",
+    "telephone": "+34 971 71 06 45",
+    "adresse": "Contramuelle-Mollet, 11, 07012 Palma de Mallorca, Espagne"
+   },
+   "contact_source": "https://astillerosdemallorca.com/",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "es-yard-stppalma-palmademallorca",
@@ -225160,7 +225872,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1984"
+   "fondation": 1984
   },
   {
    "id": "es-yard-astilleroscanarios-laspalmasdegrancanaria",
@@ -225313,7 +226025,10 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1874"
+   "fondation": 1874,
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "se-yard-ekensbergs-stockholm",
@@ -225400,7 +226115,12 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1873"
+   "fondation": 1873,
+   "taille_max": "12 860 tpl (M/S Vimeira, 1959, plus grand navire jamais construit par un chantier de Stockholm à l'époque)",
+   "taille_max_source": "https://sv.wikipedia.org/wiki/Ekensbergs_Varv",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "se-yard-bergsundsmekaniskaverkstad-stockholm",
@@ -225464,7 +226184,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1769"
+   "fondation": 1769
   },
   {
    "id": "se-yard-wlindbergsvarvsochverkstads-stockholm",
@@ -225533,7 +226253,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1687"
+   "fondation": 1687
   },
   {
    "id": "se-yard-gavle-gavle",
@@ -225605,7 +226325,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1873"
+   "fondation": 1873
   },
   {
    "id": "se-yard-hernosandsverkstadsvarfs-harnosand",
@@ -225668,7 +226388,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1871"
+   "fondation": 1871
   },
   {
    "id": "se-yard-marinteknikverkstads-oregrund",
@@ -225730,7 +226450,10 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1966"
+   "fondation": 1966,
+   "materiaux": [
+    "aluminium"
+   ]
   },
   {
    "id": "es-yard-astillerosmurueta-erandio",
@@ -225760,7 +226483,21 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": null
+   "fondation": null,
+   "contact": {
+    "web": "https://www.astillerosmurueta.com/",
+    "telephone": "+34 946 25 20 00",
+    "adresse": "Barrio Malloape s/n, Murueta, Bizkaia, Espagne"
+   },
+   "contact_source": "https://www.astillerosmurueta.com/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Deux formes de radoub : nord 90 x 18 m, sud 100 x 20 m ; grue de 40 t desservant les deux formes, blocs jusqu'à 40 t",
+   "taille_max_source": "https://www.astillerosmurueta.com/shipyards/shipyard-murueta.php",
+   "materiaux": [
+    "acier",
+    "acier inoxydable",
+    "aluminium"
+   ]
   },
   {
    "id": "es-yard-astillerosbalenciaga-zumaia",
@@ -225805,7 +226542,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1921"
+   "fondation": 1921
   },
   {
    "id": "gr-yard-olympic-lavrio",
@@ -226008,7 +226745,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1928"
+   "fondation": 1928
   },
   {
    "id": "gr-yard-anastasiadi-perama",
@@ -226109,7 +226846,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1881"
+   "fondation": 1881
   },
   {
    "id": "gr-yard-basileiadescalessechesdrapetsona-drapetsona",
@@ -226139,7 +226876,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1859",
+   "fondation": 1859,
    "sources_ref": []
   },
   {
@@ -226398,7 +227135,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1998"
+   "fondation": 1998
   },
   {
    "id": "ie-yard-mooneyboats-killybegs",
@@ -226488,7 +227225,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1980"
+   "fondation": 1980
   },
   {
    "id": "ie-yard-corkdockyard-cobh",
@@ -226662,7 +227399,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1861"
+   "fondation": 1861
   },
   {
    "id": "ni-yard-workman-belfast",
@@ -226688,7 +227425,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1879"
+   "fondation": 1879
   },
   {
    "id": "hr-yard-uljanik-pula",
@@ -226807,7 +227544,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1856"
+   "fondation": 1856
   },
   {
    "id": "hr-yard-3maj-rijeka",
@@ -226898,7 +227635,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1892"
+   "fondation": 1892
   },
   {
    "id": "hr-yard-brodosplit-split",
@@ -227135,7 +227872,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1922"
+   "fondation": 1922
   },
   {
    "id": "hr-yard-brodotrogir-trogir",
@@ -227308,7 +228045,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1729"
+   "fondation": 1729
   },
   {
    "id": "hr-yard-viktorlenac-rijeka",
@@ -227339,7 +228076,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1896"
+   "fondation": 1896
   },
   {
    "id": "ie-yard-verolmecorkdockyard-cobh",
@@ -227503,7 +228240,7 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "1960"
+   "fondation": 1960
   },
   {
    "id": "ie-yard-dublindockyardcompanyliffeydockyard-dublin",
@@ -227898,7 +228635,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1956"
+   "fondation": 1956
   },
   {
    "id": "hr-yard-greben-velaluka",
@@ -228032,7 +228769,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1944"
+   "fondation": 1944
   },
   {
    "id": "es-yard-astillerosechevarrietaylarrinaga-cadix",
@@ -228355,7 +229092,17 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": null
+   "fondation": null,
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "Industriestrasse 16, 26789 Leer, Allemagne"
+   },
+   "contact_source": "https://www.northdata.de/Ferus+Smit+Leer+GmbH,+Leer",
+   "contact_maj": "2026-08-15",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "pa-yard-maswaterhuizen-waterhuizen",
@@ -228415,7 +229162,19 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1806"
+   "fondation": 1806,
+   "contact": {
+    "web": "https://www.shipandsteelbuilding.com/",
+    "telephone": "+31 50 369 2100",
+    "adresse": "Waterhuizen 8, 9609 PA Waterhuizen, Pays-Bas"
+   },
+   "contact_source": "https://www.shipandsteelbuilding.com/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Caboteurs de série PMAX d'environ 6 000 tonnes ; coques de navires à passagers, remorqueurs et unités fluviales",
+   "taille_max_source": "https://www.shipandsteelbuilding.com/nieuws/",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "pa-yard-feadshipvries-alsmeer",
@@ -228829,7 +229588,14 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1906"
+   "fondation": 1906,
+   "contact": {
+    "web": "https://www.feadship.nl/",
+    "telephone": "+31 297 388 900",
+    "adresse": "Oosteinderweg 25, 1432 AC Aalsmeer, Pays-Bas"
+   },
+   "contact_source": "https://feadship.nl/en/contact",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "pa-yard-feadshipvanlent-kag",
@@ -229239,7 +230005,14 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1849"
+   "fondation": 1849,
+   "contact": {
+    "web": "https://www.feadship.nl/",
+    "telephone": "+31 252 547 123",
+    "adresse": "Julianalaan 3, 2159 LA Kaag, Pays-Bas"
+   },
+   "contact_source": "https://feadship.nl/en/contact",
+   "contact_maj": "2026-08-15"
   },
   {
    "id": "pa-yard-feadshipvriesmakkum-makkum",
@@ -229266,7 +230039,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "2005"
+   "fondation": 2005
   },
   {
    "id": "pa-yard-feadshipvanlentamsterdam-amsterdam",
@@ -229293,7 +230066,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "2019"
+   "fondation": 2019
   },
   {
    "id": "pa-yard-heesenyachts-oss",
@@ -230194,7 +230967,20 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1978"
+   "fondation": 1978,
+   "contact": {
+    "web": "https://www.heesenyachts.com/",
+    "telephone": "+31 412 66 55 44",
+    "adresse": "Rijnstraat 2, 5347 KL Oss, Pays-Bas (siege et chantier)"
+   },
+   "contact_source": "https://www.heesenyachts.com/contact/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Yachts jusqu'a 72,3 m (Project Ananda, YN 21872, devoile le 1er juin 2026)",
+   "taille_max_source": "https://www.heesenyachts.com/news/",
+   "materiaux": [
+    "acier",
+    "aluminium"
+   ]
   },
   {
    "id": "pa-yard-ihcgusto-schiedam",
@@ -231306,7 +232092,16 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1884"
+   "fondation": 1884,
+   "contact": {
+    "web": "https://www.royalhuisman.com/",
+    "telephone": "+31 527 24 31 31",
+    "adresse": "Flevoweg 1, 8325 PA Vollenhove, Pays-Bas"
+   },
+   "contact_source": "https://www.royalhuisman.com/en/contact/",
+   "contact_maj": "2026-08-15",
+   "taille_max": "Voiliers jusqu'a environ 81 m (sloop SKY 81 m annonce « ready to build »)",
+   "taille_max_source": "https://www.royalhuisman.com/en/news/"
   },
   {
    "id": "xx-yard-cemre-yalova",
@@ -232072,8 +232867,9 @@
     "https://nl.wikipedia.org/wiki/GS_Yard"
    ],
    "confiance": "moyenne",
-   "actif": true,
-   "fondation": "1806"
+   "actif": false,
+   "fondation": 1806,
+   "actif_source": "La société GS Yard, chantier de Waterhuizen sur le Winschoterdiep (Groningue), a été déclarée en faillite le 5 avril 2024. L'emprise a été reprise le 23 avril 2024 par le chantier voisin Ship and Steelbuilding (SaS), établi à Foxhol, qui l'exploite depuis : effectif passé de 20 à 100 personnes et retour proche de la rentabilité selon l'article du 18 décembre 2024. Le site industriel vit donc, mais sous SaS, pas sous la dénomination GS Yard. Le domaine gsyard.nl redirige aujourd'hui vers carlospin.nl, un site de jeux d'argent sans rapport. Valeur precedente true non justifiee, remplacee le 2026-08-15. https://www.schuttevaer.nl/nieuws/actueel/2024/04/23/kleine-sas-neemt-grote-buur-gs-yard-over/"
   },
   {
    "id": "pa-yard-vries-alsmeer",
@@ -232137,7 +232933,7 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": "1906"
+   "fondation": 1906
   },
   {
    "id": "xx-yard-sedef-tuzlaistanbul",
@@ -233997,8 +234793,19 @@
     "https://en.wikipedia.org/wiki/ADV_Reliant"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": null
+   "actif": false,
+   "fondation": null,
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "Adresse enregistree de l'entite en faillite : Klubbenesvegen 39, 6065 Ulsteinvik, commune d'Ulstein, Norvege. Aucun contact operationnel : la societe n'existe plus en exploitation."
+   },
+   "contact_source": "https://data.brreg.no/enhetsregisteret/api/enheter/923322132",
+   "contact_maj": "2026-08-15",
+   "actif_source": "DENOMINATION HISTORIQUE. KLEVEN VERFT AS, org. 923 322 132, est en faillite depuis le 3 juillet 2020 au registre norvegien Enhetsregisteret, avec un bo de faillite distinct (KLEVEN VERFT AS KONKURSBO, org. 925 297 143). L'emprise industrielle de Klubbenesvegen 39 a Ulsteinvik est aujourd'hui exploitee par GREEN YARD KLEVEN AS, org. 925 396 060, a la meme adresse. Il s'agit donc du meme site que la fiche Green Yard Kleven du present lot, a deux epoques : la fiche Kleven Verft AS ne doit pas etre comptee comme un chantier en activite. Vague contact-activite du 2026-08-15. https://data.brreg.no/enhetsregisteret/api/enheter/923322132",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "no-yard-havyardleirvik-leirvik",
@@ -234052,8 +234859,19 @@
     "https://www.marinteknikk.no/ship/havila-foresight/"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": null
+   "actif": true,
+   "fondation": null,
+   "contact": {
+    "web": "https://www.tersanhavyard.no/kontakt",
+    "telephone": "+47 57 78 90 50",
+    "adresse": "Bofjordvegen 260, 6953 Leirvik i Sogn, Norvege. Courriel : service@tersanhavyard.no"
+   },
+   "contact_source": "https://www.tersanhavyard.no/kontakt",
+   "contact_maj": "2026-08-15",
+   "actif_source": "Actif, mais ATTENTION DOUBLON DE FICHE. Au registre norvegien, la denomination legale HAVYARD LEIRVIK AS, org. 923 009 132, Bofjordvegen 260, 6953 Leirvik i Sogn, code NACE 30.110, 139 salaries, est toujours en vigueur et l'entite n'est ni en faillite ni en liquidation. C'est LE MEME numero d'organisation et LE MEME site que la fiche Tersan Havyard AS du present lot : le chantier a ete rachete par le turc Tersan Shipyard le 20 novembre 2023 et exploite commercialement sous le nom Tersan Havyard. Les deux fiches doivent etre fusionnees, avec Havyard Leirvik AS conserve en denomination historique. Vague contact-activite du 2026-08-15. https://data.brreg.no/enhetsregisteret/api/enheter/923009132",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "no-yard-havyardtomrefjord-tomrefjord",
@@ -234200,8 +235018,21 @@
     "https://www.marinteknikk.no/ship/skandi-rona/"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": null
+   "actif": true,
+   "fondation": null,
+   "contact": {
+    "web": "https://www.myklebustverft.com/",
+    "telephone": "+47 70 02 62 00",
+    "adresse": "Gurskevegen 68, 6082 Gursken, Norvège. Courriel : post@myklebustverft.no. Réception marchandises / sûreté portuaire : +47 918 33 802 ; permanence 24/7 : +47 907 83 950"
+   },
+   "contact_source": "https://www.myklebustverft.com/contact-us",
+   "contact_maj": "2026-08-15",
+   "actif_source": "Actif. Dernière actualité officielle datée sur le site du chantier : commande d'un navire par Rem Offshore le 21 mars 2024 (ESCV). Carnet de commandes couvrant également deux ferries à hydrogène pour Torghatten Nord et un chalutier pélagique pour Sunbeam Fishing (Écosse), contrat signé le 4 octobre 2023, 79e navire du chantier. Vague contact-activite du 2026-08-15. https://www.myklebustverft.com/news",
+   "taille_max": "Dock : capacité de levage 15 000 tonnes, largeur 28,9 m ; 420 m de quai",
+   "taille_max_source": "https://www.myklebustverft.no/",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "xx-yard-ptbatamec-batam",
@@ -234388,8 +235219,18 @@
     "https://www.marinteknikk.no/ship/skandi-patagonia/"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": null
+   "actif": false,
+   "fondation": null,
+   "contact": {
+    "web": "https://www.vard.com/location/norway/vard-brattvaag",
+    "telephone": "+47 70 21 06 00",
+    "adresse": "P.O. Box 76, NO-6001 Ålesund, Norvège (site de Brattvåg, commune d'Ålesund, Møre og Romsdal) — brattvaag@vard.com"
+   },
+   "contact_source": "https://www.vard.com/location/norway/vard-brattvaag",
+   "contact_maj": "2026-08-15",
+   "actif_source": "DÉNOMINATION HISTORIQUE. « Brattvaag Skipsverft » est le nom d'origine du chantier fondé en 1949 ; la page officielle VARD indique qu'il fait partie du groupe VARD depuis 1993. La même emprise industrielle opère aujourd'hui sous le nom Vard Brattvaag (filiale de Vard Group AS, groupe Fincantieri), et ce site-là est bien en activité : armement final et mise en service de coques venues de Roumanie, réparation et transformation, 115 salariés. L'entité « Brattvaag Skipsverft AS » comme telle n'existe plus. Vague contact-activite du 2026-08-15. https://www.vard.com/location/norway/vard-brattvaag",
+   "taille_max": "Quai principal 275 m (tirant d'eau 10-12 m), superficie 20 500 m², hall d'armement 1 672 m², grues 2x50 t et 1x60 t",
+   "taille_max_source": "https://www.vard.com/location/norway/vard-brattvaag"
   },
   {
    "id": "xx-yard-keppelsingmarinepte-singapour",
@@ -234465,8 +235306,18 @@
     "https://www.vesselfinder.com/vessels/details/9330680"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": null
+   "actif": false,
+   "fondation": null,
+   "contact": {
+    "web": "https://www.vard.com/location/norway/vard-s%C3%B8viknes",
+    "telephone": "+47 70 21 06 00",
+    "adresse": "Søvik, commune d'Ålesund, Møre og Romsdal, Norvège — soviknes@vard.com"
+   },
+   "contact_source": "https://www.vard.com/location/norway/vard-s%C3%B8viknes",
+   "contact_maj": "2026-08-15",
+   "actif_source": "DÉNOMINATION HISTORIQUE. Le chantier a été fondé en 1936 sous le nom Søviknes Verft ; la page officielle VARD indique qu'il appartient au groupe VARD depuis 1995. Le site opère aujourd'hui sous le nom Vard Søviknes (Vard Group AS, groupe Fincantieri) et reste en activité : armement final de coques roumaines, réparation et transformation, prototypes complexes dont brise-glaces et navires d'expédition, 160 salariés. L'entité « Søviknes Verft AS » comme telle n'existe plus. Vague contact-activite du 2026-08-15. https://www.vard.com/location/norway/vard-s%C3%B8viknes",
+   "taille_max": "Slipway 4 000 t : longueur maximale 120 m hors tout (90 m de quille), largeur 23 m. Trois quais : 150 m (10 m), 100 m (8 m), 75 m (8 m). Site de 57 000 m²",
+   "taille_max_source": "https://www.vard.com/location/norway/vard-s%C3%B8viknes"
   },
   {
    "id": "no-yard-bmvlaksevag-bergen",
@@ -234579,7 +235430,39 @@
      "pavillon": "France",
      "architecte": "Aker Arctic",
      "architecte_source": "Aker Arctic (page de reference du programme, source primaire du concepteur) : Aker Arctic a eu la responsabilite de tout ce qui est sous le pont principal, machines et carene comprises ; Stirling Design International a concu les ponts superieurs et les interieurs. Vard, dont la page de reference credite son propre bureau Vard Design, est le CONSTRUCTEUR : coque montee a Vard Tulcea (Roumanie) puis armement a Vard Soviknes (Norvege). Les deux fiches de chantier portent donc le meme navire a deux sites du groupe, et desormais le meme architecte, l'architecte etant une propriete du NAVIRE et non du site. Aligne le 15/08/2026 apres detection d'une attribution contradictoire entre les deux fiches. https://akerarctic.fi/reference/ponant-icebreaker/ et https://www.vard.com/shipbuilding/references/le-commandant-charcot-2",
-     "source": "https://en.wikipedia.org/wiki/Le_Commandant_Charcot"
+     "source": "https://en.wikipedia.org/wiki/Le_Commandant_Charcot",
+     "intervenants": [
+      {
+       "role": "architecture-navale",
+       "nom": "Aker Arctic",
+       "detail": "Responsable de tout ce qui est sous le pont principal, carene et machines comprises. Coque brise-glace Polar Class 2, principe Double Acting Ship.",
+       "source": "https://akerarctic.fi/reference/ponant-icebreaker/"
+      },
+      {
+       "role": "design-exterieur",
+       "nom": "Stirling Design International",
+       "detail": "A concu les ponts superieurs, avec Ponant, a partir du trace initial prepare en commun.",
+       "source": "https://akerarctic.fi/reference/ponant-icebreaker/"
+      },
+      {
+       "role": "design-interieur",
+       "nom": "Stirling Design International",
+       "detail": "Amenagements interieurs.",
+       "source": "https://akerarctic.fi/reference/ponant-icebreaker/"
+      },
+      {
+       "role": "construction-coque",
+       "nom": "Vard Tulcea",
+       "detail": "Coque acier montee en Roumanie.",
+       "source": "https://www.vard.com/shipbuilding/references/le-commandant-charcot-2"
+      },
+      {
+       "role": "armement",
+       "nom": "Vard Soviknes",
+       "detail": "Armement et parachevement en Norvege, livraison juillet 2021.",
+       "source": "https://www.vard.com/shipbuilding/references/le-commandant-charcot-2"
+      }
+     ]
     },
     {
      "nom": "Hanseatic nature",
@@ -234873,8 +235756,14 @@
     "https://en.wikipedia.org/wiki/Emma_M%C3%A6rsk"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": "1917-1918 par l'armateur A.P. Moller, initialement pres d'Odense puis extension du site vers Lindo/Munkebo"
+   "actif": false,
+   "fondation": "1917-1918 par l'armateur A.P. Moller, initialement pres d'Odense puis extension du site vers Lindo/Munkebo",
+   "actif_source": "Chantier ferme. La derniere unite, la fregate Niels Juel, a ete livree a la marine danoise le 12 janvier 2012, date de fermeture du chantier de Lindo par A.P. Moller-Maersk (annonce des aout 2009). L'emprise a ete convertie en parc industriel : Lindo Industripark, cree en 2012, rachete par le port d'Odense en 2014, fusionne en 2017 en une societe unique, Lindo port of ODENSE, aujourd'hui occupee par des entreprises de l'offshore et des composants lourds (Lindoe Offshore Renewables Centre). Le site industriel vit, la denomination Odense Staalskibsvaerft ne correspond plus a un constructeur. Vague contact-activite du 2026-08-15. https://en.wikipedia.org/wiki/Odense_Steel_Shipyard",
+   "taille_max": "Historique : porte-conteneurs Maersk E-class, 15 550 EVP (2006-2008)",
+   "taille_max_source": "https://en.wikipedia.org/wiki/Odense_Steel_Shipyard",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "pa-yard-damenshiprepairamsterdam-amsterdam",
@@ -235546,8 +236435,14 @@
     "https://de.wikipedia.org/wiki/Adler_Werft"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": "1946 (atelier de reparation depuis 1949 sur Stephanikirchenweide) ; GmbH constituee en 1952, propriete de la famille Adler"
+   "actif": false,
+   "fondation": "1946 (atelier de reparation depuis 1949 sur Stephanikirchenweide) ; GmbH constituee en 1952, propriete de la famille Adler",
+   "actif_source": "Chantier disparu. Adler-Werft GmbH, fondee en 1952 a Bremen sur la Stephanikirchenweide 30 (Ueberseeinsel), filiale d'Atlas-Werke AG, a ete arretee en 1963 apres les pertes sur deux ferries danois. Le site a ensuite ete loue a AG Weser comme atelier de reparation, vendu en 1973 a Ludwig Mueller (Stephani Werft), lequel a fait faillite en 1977. L'emprise de l'Ueberseeinsel est aujourd'hui en reconversion immobiliere, environ 290 logements, plus aucune activite navale. Vague contact-activite du 2026-08-15. https://de.wikipedia.org/wiki/Adler_Werft",
+   "taille_max": "Navires de mer jusqu'a environ 8 000 BRT (donnee historique)",
+   "taille_max_source": "https://de.wikipedia.org/wiki/Adler_Werft",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "xx-yard-stephaniludwigmullerco-bremen",
@@ -235646,8 +236541,9 @@
     "https://de.wikipedia.org/wiki/AG_Weser"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": "1902 (comme Norddeutsche Maschinen- und Armaturenfabrik, à Brême) ; installation sur le site du chantier AG Weser à Bremen-Gröpelingen en 1905 ; renommée Atlas-Werke en 1911."
+   "actif": false,
+   "fondation": "1902 (comme Norddeutsche Maschinen- und Armaturenfabrik, à Brême) ; installation sur le site du chantier AG Weser à Bremen-Gröpelingen en 1905 ; renommée Atlas-Werke en 1911.",
+   "actif_source": "Chantier naval de Brême définitivement arrêté : la construction navale a cessé en 1969, après plus de 400 navires livrés. L'entreprise avait été démembrée dès 1965, ses divisions machines et électronique intégrées à Friedrich Krupp, la branche électronique donnant naissance à Atlas Elektronik, qui n'est pas un chantier naval. Aucune activité de construction ou de réparation navale sous ce nom. Vague contact-activite du 2026-08-15. https://de.wikipedia.org/wiki/Atlas_Werke"
   },
   {
    "id": "xx-yard-weser-breme",
@@ -235708,8 +236604,9 @@
     "https://en.wikipedia.org/wiki/AG_Weser"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": "1872 (héritière d'une fonderie créée en 1843), sur le site de Bremen-Gröpelingen."
+   "actif": false,
+   "fondation": "1872 (héritière d'une fonderie créée en 1843), sur le site de Bremen-Gröpelingen.",
+   "actif_source": "Chantier fermé le 31 décembre 1983 à Brême-Gröpelingen. L'emprise n'est plus industrielle navale : elle accueille aujourd'hui le centre commercial Waterfront Bremen et la salle de spectacle Pier 2 (le Space Park Bremen y a fonctionné brièvement avant sa fermeture en septembre 2004). La rue Use Akschen traverse l'ancien terrain du chantier. Vague contact-activite du 2026-08-15. https://de.wikipedia.org/wiki/AG_Weser"
   },
   {
    "id": "xx-yard-bwencke-breme",
@@ -235732,7 +236629,7 @@
    ],
    "confiance": "moyenne",
    "actif": null,
-   "fondation": "1839"
+   "fondation": 1839
   },
   {
    "id": "xx-yard-bwenckesohne-hambourg",
@@ -235763,7 +236660,7 @@
    ],
    "confiance": "moyenne",
    "actif": null,
-   "fondation": "1851"
+   "fondation": 1851
   },
   {
    "id": "xx-yard-reiherstiegwerft-hambourg",
@@ -235805,7 +236702,7 @@
    ],
    "confiance": "moyenne",
    "actif": null,
-   "fondation": "1706"
+   "fondation": 1706
   },
   {
    "id": "xx-yard-schichauseebeck-bremerhaven",
@@ -235982,8 +236879,9 @@
     "https://de.wikipedia.org/wiki/Schiffswerft_Oberwinter"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": "1947"
+   "actif": false,
+   "fondation": 1947,
+   "actif_source": "Denomination historique d'un site toujours industriel. Schiffswerft in Oberwinter GmbH (Amtsgericht Koblenz HRB 12867) et Schiffswerft Oberwinter GmbH (HRB 10026) sont toutes deux radiees ; la maison d'origine avait depose son bilan des 1972 puis cesse en 1977, et la derniere societe portant le nom a depose son bilan en juin 2009. L'emprise de Bonner Strasse 6, 53424 Remagen-Oberwinter est exploitee aujourd'hui comme chantier de reparation par Werft und Servicezentrum Mittelrhein GmbH (tel. 02228 911013), reprise engagee en decembre 2009 par Stahlbau Mueller. Vague contact-activite du 2026-08-15. https://www.northdata.de/Schiffswerft+in+Oberwinter+GmbH,+Remagen/Amtsgericht+Koblenz+HRB+12867 (societe radiee) ; https://www.aw-wiki.de/index.php/Werft_und_Servicezentrum_Mittelrhein_GmbH_Oberwinter (exploitant actuel du site) ; https://de.wikipedia.org/wiki/Schiffswerft_Oberwinter (faillite 1972, arret 1977)"
   },
   {
    "id": "xx-yard-schiffswerftschmidt-bonn",
@@ -236014,7 +236912,7 @@
    ],
    "confiance": "moyenne",
    "actif": null,
-   "fondation": "1927"
+   "fondation": 1927
   },
   {
    "id": "xx-yard-schiffswerftschmidt-remagen",
@@ -236057,7 +236955,7 @@
    ],
    "confiance": "moyenne",
    "actif": null,
-   "fondation": "1977"
+   "fondation": 1977
   },
   {
    "id": "xx-yard-admiralitatswerfthamburg-hamburg",
@@ -236183,8 +237081,16 @@
     "https://en.wikipedia.org/wiki/List_of_yachts_built_by_Abeking_%26_Rasmussen"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": "1907"
+   "actif": true,
+   "fondation": 1907,
+   "contact": {
+    "web": "https://www.abeking.com/en/",
+    "telephone": "+49 421 6733 0",
+    "adresse": "An der Fähre 2, 27809 Lemwerder, Allemagne"
+   },
+   "contact_source": "https://www.abeking.com/en/legal-notice/",
+   "contact_maj": "2026-08-15",
+   "actif_source": "Abeking & Rasmussen Schiffs- und Yachtwerft SE (RC Oldenburg HRB 210774), Lemwerder, en pleine activité. Actualités datées sur le site officiel : livraison du yacht STARFIRE après refit (mai 2025), début de découpe de deux navires de transfert de pilotes SWATH@A&R (avril 2025), certifications ISO 14001 et ISO 50001 (octobre 2025), pose de quille (décembre 2024). Vague contact-activite du 2026-08-15. https://www.abeking.com/en/"
   },
   {
    "id": "xx-yard-arminiuswerft-bodenwerder",
@@ -236330,8 +237236,14 @@
     "https://de.wikipedia.org/wiki/Arminiuswerft"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": "1902 (sous le nom Firma C. Pape)"
+   "actif": false,
+   "fondation": "1902 (sous le nom Firma C. Pape)",
+   "actif_source": "Chantier ferme. L'Arminiuswerft de Bodenwerder sur la Weser a construit de 1902 a 2000 (fermeture en decembre 1988, reouverture au printemps 1989, arret definitif de la construction navale en 2000, la production ayant ete transferee a Emden a partir de la decision de 1996, l'ecluse de Hameln devenant un goulet). L'emprise est aujourd'hui exploitee par Arminius Metallbau & Industrieservice, environ 15 salaries, dirigee par Dirk Pfaff, qui ne realise plus que de petites reparations sur les bateaux presents sur la haute Weser. Le site vit encore industriellement, le chantier nomme n'existe plus. Vague contact-activite du 2026-08-15. https://de.wikipedia.org/wiki/Arminiuswerft",
+   "taille_max": "Unites jusqu'a 1 500 tonnes de port en lourd (donnee historique)",
+   "taille_max_source": "https://de.wikipedia.org/wiki/Arminiuswerft",
+   "materiaux": [
+    "acier"
+   ]
   },
   {
    "id": "xx-yard-szczecin-szczecin",
@@ -236417,7 +237329,7 @@
    ],
    "confiance": "moyenne",
    "actif": null,
-   "fondation": "1948"
+   "fondation": 1948
   },
   {
    "id": "xx-yard-ahlers-elsfleth",
@@ -236717,8 +237629,24 @@
     "https://de.wikipedia.org/wiki/Peene-Werft"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": "20 juin 1948, sous administration militaire soviétique"
+   "actif": true,
+   "fondation": "20 juin 1948, sous administration militaire soviétique",
+   "contact": {
+    "web": "https://www.nvl.de/en/shipyards-and-docks/peene-werft",
+    "telephone": "+49 3836 250 0",
+    "adresse": "Schiffbauerdamm 1, 17438 Wolgast, Allemagne"
+   },
+   "contact_source": "https://nvl.de/en/about-us/contact",
+   "contact_maj": "2026-08-15",
+   "actif_source": "Chantier de Wolgast en activite, construction neuve et reparation de navires militaires et de garde-cotes, plus de 330 salaries. Communiques de presse dates : prix Innovation et Technologie 2025 decerne a la Peene-Werft (fevrier 2026), visite du vice-chancelier Klingbeil saluant la performance de la Peene-Werft (novembre 2025). Le chantier releve desormais de Rheinmetall, Division Naval Systems, apres l'integration de NVL. Vague contact-activite du 2026-08-15. https://nvl.de/en/press",
+   "taille_max": "Cale seche 175 m x 30 m ; ascenseur a navires jusqu'a 15 m de largeur ; 250 000 m2, 950 m de quais",
+   "taille_max_source": "https://www.nvl.de/en/shipyards-and-docks/peene-werft",
+   "materiaux": [
+    "aluminium",
+    "aciers amagnetiques",
+    "acier inoxydable",
+    "acier"
+   ]
   },
   {
    "id": "xx-yard-friedrichkruppgermaniawerft-kiel",
@@ -236762,7 +237690,7 @@
    ],
    "confiance": "moyenne",
    "actif": null,
-   "fondation": "1867"
+   "fondation": 1867
   },
   {
    "id": "xx-yard-bayerischeschiffbaugesellschaft-erlenbachammain",

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Registre naval — sources, vérification et fiabilité</title>
+<meta name="description" content="Page de transparence du registre naval européen : intégralité des sources, méthode de vérification adversariale et indices de fiabilité, recalculés à chaque publication.">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+ .tr-wrap{max-width:56rem;margin:0 auto;padding:2rem 1.25rem 5rem;line-height:1.6}
+ .tr-wrap h1{margin:0 0 .25rem}
+ .tr-maj{color:#5c5c6e;font-size:.9rem;margin-bottom:2rem}
+ .tr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.75rem;margin:1.25rem 0 2rem}
+ .tr-kpi{border:1px solid #e4e4ea;border-radius:.5rem;padding:.85rem 1rem;background:#fff}
+ .tr-kpi b{display:block;font-size:1.6rem;line-height:1.2}
+ .tr-kpi span{color:#5c5c6e;font-size:.85rem}
+ .tr-wrap table{width:100%;border-collapse:collapse;margin:1rem 0 2rem;font-size:.92rem}
+ .tr-wrap th,.tr-wrap td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #e4e4ea;vertical-align:top}
+ .tr-wrap th{background:#f2f2f5;font-weight:600}
+ .tr-wrap td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+ .tr-note{border-left:3px solid #2A55B3;padding:.6rem 0 .6rem .9rem;margin:1.25rem 0;color:#2e2e3a}
+ .tr-alerte{border-left-color:#B32A55}
+ .tr-wrap details{margin:1rem 0}
+ .tr-wrap summary{cursor:pointer;font-weight:600}
+ @media(prefers-color-scheme:dark){
+  .tr-kpi{background:#1a1a2e;border-color:#2e2e3a}
+  .tr-wrap th{background:#1a1a2e}
+  .tr-wrap th,.tr-wrap td{border-color:#2e2e3a}
+  .tr-maj,.tr-kpi span{color:#9d9daf}
+  .tr-note{color:#e4e4ea}
+ }
+</style></head><body>
+<main class="tr-wrap">
+<h1>Sources, vérification et fiabilité</h1>
+<p class="tr-maj">Registre naval européen · chiffres recalculés depuis les données le 2026-08-15. Cette page est générée, pas rédigée : aucun de ses nombres n'est saisi à la main.</p>
+
+<div class="tr-grid">
+ <div class="tr-kpi"><b>502</b><span>chantiers, 25 pays</span></div>
+ <div class="tr-kpi"><b>6 923</b><span>entrées de navire</span></div>
+ <div class="tr-kpi"><b>6 687</b><span>plancher de coques distinctes</span></div>
+ <div class="tr-kpi"><b>16 412</b><span>URL sources, 1 426 domaines</span></div>
+</div>
+
+<h2>Ce que valent ces données</h2>
+<p>Un indice unique masquerait l'essentiel : cette base est solide sur le sourcing et faible
+sur la vérification indépendante. Les deux se lisent ensemble.</p>
+
+<table>
+<tr><th>Indice</th><th class="n">Valeur</th><th>Ce qu'il mesure, et ce qu'il ne mesure pas</th></tr>
+<tr><td>Navires portant une URL source</td><td class="n">91,6 %</td>
+<td>La présence d'une URL de page. Ne dit pas que la page a été relue, ni qu'elle est tierce.</td></tr>
+<tr><td>Attributions d'architecte justifiées</td><td class="n">86 %</td>
+<td>936 sur 1 088 disent <em>quel rôle</em> la maison a tenu. Sans cela, une attribution n'est pas explicable.</td></tr>
+<tr><td>Couverture IMO sur périmètre éligible</td><td class="n">68,7 %</td>
+<td>1 585 sur 2 307 éligibles. 672 navires n'y ont pas droit (moins de 100 UMS, plaisance, engins spéciaux) et 3 944 restent indéterminés faute de jauge.</td></tr>
+<tr><td>Chantiers joignables</td><td class="n">44,4 %</td>
+<td>223 portent un contact vérifié. Un chantier sans contact est documenté, pas consultable.</td></tr>
+<tr><td>Vérification adversariale</td><td class="n">sondage</td>
+<td><strong>Le point faible, affiché comme tel.</strong> Chaque vague fait relire un échantillon de ses affirmations par un second agent chargé de les <em>réfuter</em>. L'échantillon est de l'ordre de 10 %. Un sondage n'est pas une validation.</td></tr>
+</table>
+
+<div class="tr-note tr-alerte">
+<strong>Ce que nous ne prétendons pas.</strong> Le nombre de coques distinctes est un
+<em>plancher</em> : 5 338 entrées n'ont pas d'IMO, donc leur rapprochement repose sur
+le nom et l'année, qui fusionne parfois deux navires homonymes et en sépare parfois un seul.
+Le chiffre exact n'existera qu'avec la couverture IMO complète du périmètre éligible.
+</div>
+
+<h2>Comment la donnée est vérifiée</h2>
+<p>Quatre règles, appliquées sans exception, et chacune née d'une faute réellement commise
+sur ce corpus.</p>
+<ol>
+<li><strong>Une source est une URL de page, testée avant d'être écrite.</strong> Pas une page
+d'accueil, pas une page de résultats de recherche, pas une famille de sources («&nbsp;presse
+régionale&nbsp;»). Un lien mort est pire que l'absence de lien.</li>
+<li><strong>Une source citée n'est pas une source lue.</strong> Le contrôle adversarial ouvre
+la page citée et vérifie qu'elle dit bien ce qu'on lui prête. C'est le défaut le plus
+invisible : l'URL répond, elle est tierce, elle nomme le navire, et elle affirme le contraire.</li>
+<li><strong>Une affirmation non sourcée cède devant une affirmation sourcée</strong>, elle ne
+fait pas match nul avec elle. La valeur remplacée est conservée dans la justification.</li>
+<li><strong>Ce qui n'est pas su reste vide.</strong> Un champ vide est une lacune visible ;
+une valeur devinée est une erreur invisible.</li>
+</ol>
+
+<div class="tr-note">
+<strong>Ce qui n'a pas lieu d'être n'est pas compté comme manquant.</strong> Un chantier de
+réparation n'a pas de carnet de coques, un chantier fermé n'a pas de contact à trouver, un bac
+d'estuaire de 60&nbsp;UMS n'aura jamais de numéro IMO. Tout taux publié ici se calcule sur les
+seules entrées <em>éligibles</em> : un dénominateur qui inclut l'inéligible ne mesure pas une
+lacune, il fabrique un reproche.
+</div>
+
+<h2>D'où vient la donnée</h2>
+<p>16 412 URL réparties sur 1 426
+domaines. L'intégralité est consultable dans le jeu de données publié
+(<a href="data/chantiers.json">chantiers.json</a>) : chaque fait y porte sa source. Le tableau
+ci-dessous donne les cinquante domaines les plus cités, il résume et ne remplace pas.</p>
+<details open><summary>Cinquante premiers domaines</summary>
+<table><tr><th>Domaine</th><th class="n">Citations</th><th class="n">Part</th></tr>
+<tr><td>en.wikipedia.org</td><td class="n">2 366</td><td class="n">14,4&nbsp;%</td></tr>
+<tr><td>meretmarine.com</td><td class="n">770</td><td class="n">4,7&nbsp;%</td></tr>
+<tr><td>fr.wikipedia.org</td><td class="n">595</td><td class="n">3,6&nbsp;%</td></tr>
+<tr><td>sv.wikipedia.org</td><td class="n">541</td><td class="n">3,3&nbsp;%</td></tr>
+<tr><td>royalbodewes.com</td><td class="n">437</td><td class="n">2,7&nbsp;%</td></tr>
+<tr><td>vesselfinder.com</td><td class="n">411</td><td class="n">2,5&nbsp;%</td></tr>
+<tr><td>de.wikipedia.org</td><td class="n">305</td><td class="n">1,9&nbsp;%</td></tr>
+<tr><td>ulstein.com</td><td class="n">300</td><td class="n">1,8&nbsp;%</td></tr>
+<tr><td>es.wikipedia.org</td><td class="n">236</td><td class="n">1,4&nbsp;%</td></tr>
+<tr><td>skipet.no</td><td class="n">206</td><td class="n">1,3&nbsp;%</td></tr>
+<tr><td>nl.wikipedia.org</td><td class="n">205</td><td class="n">1,2&nbsp;%</td></tr>
+<tr><td>bairdmaritime.com</td><td class="n">188</td><td class="n">1,1&nbsp;%</td></tr>
+<tr><td>commons.wikimedia.org</td><td class="n">174</td><td class="n">1,1&nbsp;%</td></tr>
+<tr><td>maritimt.com</td><td class="n">154</td><td class="n">0,9&nbsp;%</td></tr>
+<tr><td>dockstavarvet.se</td><td class="n">144</td><td class="n">0,9&nbsp;%</td></tr>
+<tr><td>sailboatdata.com</td><td class="n">130</td><td class="n">0,8&nbsp;%</td></tr>
+<tr><td>vard.com</td><td class="n">126</td><td class="n">0,8&nbsp;%</td></tr>
+<tr><td>batomtaler.skipsrevyen.no</td><td class="n">122</td><td class="n">0,7&nbsp;%</td></tr>
+<tr><td>faktaomfartyg.se</td><td class="n">120</td><td class="n">0,7&nbsp;%</td></tr>
+<tr><td>da.wikipedia.org</td><td class="n">118</td><td class="n">0,7&nbsp;%</td></tr>
+<tr><td>offshore-energy.biz</td><td class="n">112</td><td class="n">0,7&nbsp;%</td></tr>
+<tr><td>marhisdata.nl</td><td class="n">111</td><td class="n">0,7&nbsp;%</td></tr>
+<tr><td>multi-maritime.no</td><td class="n">110</td><td class="n">0,7&nbsp;%</td></tr>
+<tr><td>boat-specs.com</td><td class="n">106</td><td class="n">0,6&nbsp;%</td></tr>
+<tr><td>karstensens.dk</td><td class="n">105</td><td class="n">0,6&nbsp;%</td></tr>
+<tr><td>bateaux.com</td><td class="n">104</td><td class="n">0,6&nbsp;%</td></tr>
+<tr><td>actunautique.com</td><td class="n">102</td><td class="n">0,6&nbsp;%</td></tr>
+<tr><td>vesseltracker.com</td><td class="n">90</td><td class="n">0,5&nbsp;%</td></tr>
+<tr><td>katamarans.com</td><td class="n">89</td><td class="n">0,5&nbsp;%</td></tr>
+<tr><td>stadyard.no</td><td class="n">89</td><td class="n">0,5&nbsp;%</td></tr>
+<tr><td>wikidata.org</td><td class="n">87</td><td class="n">0,5&nbsp;%</td></tr>
+<tr><td>multihulls-world.com</td><td class="n">84</td><td class="n">0,5&nbsp;%</td></tr>
+<tr><td>navalnews.com</td><td class="n">82</td><td class="n">0,5&nbsp;%</td></tr>
+<tr><td>hvidesandeshipyard.com</td><td class="n">81</td><td class="n">0,5&nbsp;%</td></tr>
+<tr><td>braa.no</td><td class="n">79</td><td class="n">0,5&nbsp;%</td></tr>
+<tr><td>rivieramm.com</td><td class="n">78</td><td class="n">0,5&nbsp;%</td></tr>
+<tr><td>marinteknikk.no</td><td class="n">77</td><td class="n">0,5&nbsp;%</td></tr>
+<tr><td>boatinternational.com</td><td class="n">76</td><td class="n">0,5&nbsp;%</td></tr>
+<tr><td>chantier-glehen.com</td><td class="n">75</td><td class="n">0,5&nbsp;%</td></tr>
+<tr><td>fiskebatar.zaramis.se</td><td class="n">66</td><td class="n">0,4&nbsp;%</td></tr>
+<tr><td>markprummel.nl</td><td class="n">63</td><td class="n">0,4&nbsp;%</td></tr>
+<tr><td>lmgmarin.no</td><td class="n">61</td><td class="n">0,4&nbsp;%</td></tr>
+<tr><td>directory.marinelink.com</td><td class="n">59</td><td class="n">0,4&nbsp;%</td></tr>
+<tr><td>ship-technology.com</td><td class="n">56</td><td class="n">0,3&nbsp;%</td></tr>
+<tr><td>hollandshipyardsgroup.com</td><td class="n">56</td><td class="n">0,3&nbsp;%</td></tr>
+<tr><td>pech-alu-international.com</td><td class="n">55</td><td class="n">0,3&nbsp;%</td></tr>
+<tr><td>boatindustry.fr</td><td class="n">54</td><td class="n">0,3&nbsp;%</td></tr>
+<tr><td>fjellstrand.no</td><td class="n">52</td><td class="n">0,3&nbsp;%</td></tr>
+<tr><td>marinetraffic.com</td><td class="n">51</td><td class="n">0,3&nbsp;%</td></tr>
+<tr><td>societe.com</td><td class="n">49</td><td class="n">0,3&nbsp;%</td></tr>
+</table>
+<p class="tr-maj">Les 1 376 autres domaines représentent
+39&nbsp;%
+des citations.</p>
+</details>
+
+<div class="tr-note">
+<strong>Une réserve sur l'encyclopédie collaborative.</strong> Les différentes éditions de
+Wikipédia pèsent une part notable des citations. Elles sont acceptables sur l'identité et les
+caractéristiques d'un navire, où elles sont elles-mêmes sourcées, et faibles sur l'attribution
+à un chantier, qui est justement l'objet de ce registre. Ces attributions-là appellent une
+source tierce, et c'est l'un des axes de travail en cours.
+</div>
+
+<h2>État de la couche industrielle</h2>
+<table>
+<tr><th>&nbsp;</th><th class="n">Chantiers</th></tr>
+<tr><td>Activité établie par une source datée</td><td class="n">218</td></tr>
+<tr><td>Fermeture ou cession documentée</td><td class="n">64</td></tr>
+<tr><td>Activité non renseignée</td><td class="n">220</td></tr>
+</table>
+<p>L'activité non renseignée n'est pas une hypothèse de vie&nbsp;: c'est une lacune, et elle est
+comptée comme telle. Tant qu'elle demeure, le taux de chantiers réellement consultables est
+encadré et non affirmé.</p>
+
+<p class="tr-maj">Méthode complète, journal des erreurs et outillage de contrôle&nbsp;:
+dépôt <code>colombanatsea/vaiata-naval</code>, fichiers <code>pipeline/METHODOLOGIE.md</code> et
+<code>pipeline/tools/OUTILLAGE.md</code>.</p>
+</main></body></html>

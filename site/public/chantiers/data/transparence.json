@@ -1,0 +1,37 @@
+{
+ "date": "2026-08-15",
+ "volumes": {
+  "chantiers": 502,
+  "entrees_navire": 6923,
+  "plancher_coques_distinctes": 6687,
+  "equipementiers": 23,
+  "pays": 25
+ },
+ "sources": {
+  "url_total": 16412,
+  "domaines_distincts": 1426,
+  "navires_avec_url": 6342,
+  "taux_navires_avec_url": 91.6
+ },
+ "explicabilite": {
+  "attributions_architecte": 1088,
+  "dont_justifiees": 936,
+  "taux": 86
+ },
+ "identite": {
+  "eligibles_imo": 2307,
+  "inegibles": 672,
+  "indetermines": 3944,
+  "porteurs_imo": 1585,
+  "taux_couverture_sur_eligible": 68.7
+ },
+ "sollicitation": {
+  "actifs": 218,
+  "fermes": 64,
+  "activite_indeterminee": 220,
+  "sollicitables_sur_actifs": 71,
+  "taux_haut": 32.6,
+  "joignables": 223,
+  "taux_joignables": 44.4
+ }
+}
