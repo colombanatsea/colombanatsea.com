@@ -1,11 +1,11 @@
-/* Chantiers navals français · charte GICAN
+/* Chantiers navals — charte du registre
    Bleu #004272, rouge #ff0030, blanc. Modern, institutionnel, sobre. */
 
 :root {
-  --blue:    #004272;   /* GICAN primaire */
+  --blue:    #004272;   /* bleu primaire */
   --blue-d:  #00314f;   /* bleu profond */
   --blue-l:  #5f9bd2;   /* bleu clair */
-  --red:     #ff0030;   /* accent GICAN */
+  --red:     #ff0030;   /* accent */
   --teal:    #1f9aa8;
 
   --ink:     #16242f;
