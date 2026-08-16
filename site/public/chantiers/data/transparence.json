@@ -28,8 +28,8 @@
   "chantiers_temoin_unique": 68,
   "navires_sous_temoin_unique": 140,
   "part_navires_sous_temoin_unique": 2.1,
-  "navires_corrobores": 0,
-  "taux_navires": 0
+  "navires_corrobores": 95,
+  "taux_navires": 1.4
  },
  "identite": {
   "eligibles_imo": 3383,
@@ -63,8 +63,7 @@
   },
   {
    "date": "2026-08-16",
-   "motif": "Arbitrage du 16/08 : 309 modeles de serie de plaisance verses de navires_references vers produits[]. Le compte de coques baisse de 7 015 a 6 706 et devient JUSTE, il comptait des modeles. Sourcing opposable au niveau du navire : 60,9 % -> 62,3 %.",
-   "rupture_de_mesure": true,
+   "motif": "Premiere campagne de corroboration au rang NAVIRE : 95 seconds temoins independants verses, coques a deux editeurs 2,5 % -> 3,9 %. La vague a aussi trouve 26 contradictions, dont 6 annees de livraison fausses corrigees sur deux editeurs concordants.",
    "chantiers": 528,
    "entrees": 6706,
    "coques_plancher": 6484,
