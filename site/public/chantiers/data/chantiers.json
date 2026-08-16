@@ -721,7 +721,17 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: ltd ; exploitation: yacht"
+     "caractere_motif": "propriete: ltd ; exploitation: yacht",
+     "sources": [
+      "https://www.cruisemapper.com/ships/Ritz-Carlton-Ilma-2101"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "CruiseMapper",
+      "confirme": "attribution",
+      "imo_confirme": "9967586",
+      "annee_confirmee": "2024"
+     }
     },
     {
      "nom": "Utopia of the Seas",
@@ -769,7 +779,17 @@
      ],
      "prix_acquisition": "≈ 1,2 milliard EUR (1,35 milliard USD, taux de commande 2019), coût de construction",
      "architecte": "Deltamarin",
-     "architecte_source": "Deltamarin (references classe Oasis : hull/basic design) ; navire classe Oasis comme Symphony ; design dirige par Harri Kulovaara (Royal Caribbean)"
+     "architecte_source": "Deltamarin (references classe Oasis : hull/basic design) ; navire classe Oasis comme Symphony ; design dirige par Harri Kulovaara (Royal Caribbean)",
+     "sources": [
+      "https://www.cruisemapper.com/ships/Utopia-Of-The-Seas-2180"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "CruiseMapper",
+      "confirme": "attribution",
+      "imo_confirme": "9880001",
+      "annee_confirmee": "2024"
+     }
     },
     {
      "nom": "Jacques Chevallier",
@@ -887,7 +907,17 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: as ; exploitation: cruise"
+     "caractere_motif": "propriete: as ; exploitation: cruise",
+     "sources": [
+      "https://www.cruisemapper.com/ships/Celebrity-Ascent-2194"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "CruiseMapper",
+      "confirme": "attribution",
+      "imo_confirme": "9838400",
+      "annee_confirmee": "2023"
+     }
     },
     {
      "nom": "MSC Euribia",
@@ -930,7 +960,17 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: groupe ; exploitation: croisiere"
+     "caractere_motif": "propriete: groupe ; exploitation: croisiere",
+     "sources": [
+      "https://www.cruisemapper.com/ships/MSC-Euribia-2204"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "CruiseMapper",
+      "confirme": "attribution",
+      "imo_confirme": "9901544",
+      "annee_confirmee": "2023"
+     }
     },
     {
      "nom": "MSC World Europa",
@@ -985,7 +1025,17 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: groupe ; exploitation: croisiere"
+     "caractere_motif": "propriete: groupe ; exploitation: croisiere",
+     "sources": [
+      "https://www.cruisemapper.com/ships/MSC-World-Europa-2183"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "CruiseMapper",
+      "confirme": "attribution",
+      "imo_confirme": "9837420",
+      "annee_confirmee": "2022"
+     }
     },
     {
      "nom": "Celebrity Beyond",
@@ -1035,7 +1085,17 @@
      "prix_acquisition": "≈ 1 Md$ (neuf, classe Edge ; reference 2014, ≈ 1,3 Md$ equiv. 2024)",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise"
+     "caractere_motif": "exploitation: cruise",
+     "sources": [
+      "https://www.cruisemapper.com/ships/Celebrity-Beyond-1690"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "CruiseMapper",
+      "confirme": "attribution",
+      "imo_confirme": "9838395",
+      "annee_confirmee": "2022"
+     }
     },
     {
      "nom": "Wonder of the Seas",
@@ -1081,7 +1141,17 @@
        "source": "https://www.cruisemapper.com/ships/Wonder-Of-The-Seas-2165"
       }
      ],
-     "prix_acquisition": "≈ 1,35 Md$ / 1,2 Md€ (2019, neuf)"
+     "prix_acquisition": "≈ 1,35 Md$ / 1,2 Md€ (2019, neuf)",
+     "sources": [
+      "https://www.cruisemapper.com/ships/Wonder-Of-The-Seas-2165"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "CruiseMapper",
+      "confirme": "attribution",
+      "imo_confirme": "9838345",
+      "annee_confirmee": "2022"
+     }
     },
     {
      "nom": "MSC Virtuosa",
@@ -1131,7 +1201,17 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: groupe ; exploitation: croisiere"
+     "caractere_motif": "propriete: groupe ; exploitation: croisiere",
+     "sources": [
+      "https://www.cruisemapper.com/ships/MSC-Virtuosa-1981"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "CruiseMapper",
+      "confirme": "attribution",
+      "imo_confirme": "9803625",
+      "annee_confirmee": "2021"
+     }
     },
     {
      "nom": "Celebrity Apex",
@@ -1194,7 +1274,17 @@
      "prix_acquisition": "≈ 1 Md$ (2014, neuf, classe Edge ; ≈ 1,3 Md$ equiv. 2024)",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise"
+     "caractere_motif": "exploitation: cruise",
+     "sources": [
+      "https://www.cruisemapper.com/ships/Celebrity-Apex-1587"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "CruiseMapper",
+      "confirme": "attribution",
+      "imo_confirme": "9838383",
+      "annee_confirmee": "2021"
+     }
     },
     {
      "nom": "MSC Grandiosa",
@@ -1245,7 +1335,17 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: groupe ; exploitation: croisiere"
+     "caractere_motif": "propriete: groupe ; exploitation: croisiere",
+     "sources": [
+      "https://www.cruisemapper.com/ships/MSC-Grandiosa-1008"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "CruiseMapper",
+      "confirme": "attribution",
+      "imo_confirme": "9803613",
+      "annee_confirmee": "2019"
+     }
     },
     {
      "nom": "MSC Bellissima",
@@ -1288,7 +1388,17 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: groupe ; exploitation: croisiere"
+     "caractere_motif": "propriete: groupe ; exploitation: croisiere",
+     "sources": [
+      "https://www.cruisemapper.com/ships/MSC-Bellissima-1359"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "CruiseMapper",
+      "confirme": "attribution",
+      "imo_confirme": "9760524",
+      "annee_confirmee": "2019"
+     }
     },
     {
      "nom": "Celebrity Edge",
@@ -1328,7 +1438,17 @@
      ],
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise"
+     "caractere_motif": "exploitation: cruise",
+     "sources": [
+      "https://www.cruisemapper.com/ships/Celebrity-Edge-1588"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "CruiseMapper",
+      "confirme": "attribution",
+      "imo_confirme": "9812705",
+      "annee_confirmee": "2018"
+     }
     },
     {
      "nom": "Symphony of the Seas",
@@ -1369,7 +1489,17 @@
      ],
      "prix_acquisition": "USD 1,35 milliard (prix 2016) - coût de construction",
      "architecte": "Deltamarin",
-     "architecte_source": "Deltamarin (deltamarin.com, references Oasis class) : hull detail design + basic design (coque et systemes) des navires classe Oasis ; design dirige par Harri Kulovaara (Royal Caribbean)"
+     "architecte_source": "Deltamarin (deltamarin.com, references Oasis class) : hull detail design + basic design (coque et systemes) des navires classe Oasis ; design dirige par Harri Kulovaara (Royal Caribbean)",
+     "sources": [
+      "https://www.cruisemapper.com/ships/Symphony-Of-The-Seas-1730"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "CruiseMapper",
+      "confirme": "attribution",
+      "imo_confirme": "9744001",
+      "annee_confirmee": "2018"
+     }
     },
     {
      "nom": "MSC Meraviglia",
@@ -1410,7 +1540,17 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: groupe ; exploitation: croisiere"
+     "caractere_motif": "propriete: groupe ; exploitation: croisiere",
+     "sources": [
+      "https://www.cruisemapper.com/ships/MSC-Meraviglia-1187"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "CruiseMapper",
+      "confirme": "attribution",
+      "imo_confirme": "9760512",
+      "annee_confirmee": "2017"
+     }
     },
     {
      "nom": "Harmony of the Seas",
@@ -1558,7 +1698,17 @@
      "prix_acquisition": "USD 360 M - coût de construction (2013)",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise"
+     "caractere_motif": "exploitation: cruise",
+     "sources": [
+      "https://www.cruisemapper.com/ships/ms-Europa-2-571"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "CruiseMapper",
+      "confirme": "attribution",
+      "imo_confirme": "9616230",
+      "annee_confirmee": "2013"
+     }
     },
     {
      "nom": "Dixmude (L9015)",
@@ -25784,106 +25934,6 @@
    "taille_max": "Forme de radoub n°3 : 420 m x 80 m (l'une des plus grandes d'Europe), capable d'accueillir les plus grands navires du monde (paquebots de 340 m comme le Disney Fantasy, FSRU/methaniers de ~294 m). Largeur de 80 m permettant le docking simultane de plusieurs unites.",
    "navires_references": [
     {
-     "nom": "Le Commandant Charcot",
-     "type": "navire_reference",
-     "annee": "2026",
-     "longueur_m": 150,
-     "jauge_gt": 31757,
-     "capacite": "paquebot d'expedition brise-glace ; 270 passagers",
-     "energie": "hybride GNL + batteries (5 MWh)",
-     "client": "Ponant",
-     "classification": "Bureau Veritas (Polar Class 2)",
-     "source": "https://cruiseindustrynews.com/cruise-news/2026/05/le-commandant-charcot-completes-upgrades-at-damen-shipyard/",
-     "propulsion": [
-      "gnl",
-      "electrique-batterie",
-      "hybride"
-     ],
-     "capacite_pax": 270,
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Vard Tulcea (Roumanie) pour la coque, armement et achèvement chez Vard Søviknes (Norvège)",
-      "source": "https://en.wikipedia.org/wiki/Le_Commandant_Charcot",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Saint-Malo",
-     "type": "navire_reference",
-     "annee": "2026",
-     "longueur_m": 194.7,
-     "capacite": "ferry ropax",
-     "energie": "hybride GNL + batterie (12 MWh)",
-     "client": "Brittany Ferries",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/marine-marchande/brittany-ferries-le-saint-malo-a-repris-son-service-apres-un-arret-technique-a-brest",
-     "propulsion": [
-      "gnl",
-      "electrique-batterie",
-      "hybride"
-     ],
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "CMJL (China Merchants Jinling), Weihai (Chine)",
-      "source": "https://fr.wikipedia.org/wiki/Saint-Malo_(ferry)",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Disney Fantasy",
-     "type": "navire_reference",
-     "annee": "2025",
-     "longueur_m": 340,
-     "capacite": "paquebot ; environ 4000 passagers ; 50e refit paquebot du chantier",
-     "energie": "diesel",
-     "client": "Disney Cruise Line",
-     "classification": null,
-     "source": "https://www.damen.com/services/shiprepair/projects/sea-cruise-disney-fantasy-refit",
-     "jauge_gt": 129690,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 4000,
-     "caractere": "prive",
-     "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Meyer Werft, Papenburg (Allemagne)",
-      "source": "https://en.wikipedia.org/wiki/Disney_Fantasy",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Disney Dream",
-     "type": "navire_reference",
-     "annee": "2024",
-     "longueur_m": 340,
-     "capacite": "paquebot ; environ 4000 passagers",
-     "energie": "diesel",
-     "client": "Disney Cruise Line",
-     "classification": null,
-     "source": "https://www.damen.com/services/shiprepair/projects/sea-cruise-disney-fantasy-refit",
-     "jauge_gt": 129690,
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 4000,
-     "caractere": "prive",
-     "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Meyer Werft, Papenburg (Allemagne)",
-      "source": "https://en.wikipedia.org/wiki/Disney_Dream",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "Les Alizes",
      "type": "navire_reference",
      "annee": "2024",
@@ -25906,103 +25956,6 @@
      }
     },
     {
-     "nom": "Norwegian Star",
-     "type": "navire_reference",
-     "annee": "2024",
-     "longueur_m": 294,
-     "jauge_gt": 91740,
-     "capacite": "paquebot ; 2348 passagers",
-     "energie": "diesel",
-     "client": "Norwegian Cruise Line",
-     "classification": null,
-     "source": "https://www.cruisemapper.com/news/14005-damen-shiprepair-begins-complex-maintenance-norwegian-star",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 2348,
-     "caractere": "prive",
-     "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Meyer Werft, Papenburg (Allemagne)",
-      "source": "https://en.wikipedia.org/wiki/Norwegian_Star",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Jewel of the Seas",
-     "type": "navire_reference",
-     "annee": "2024",
-     "longueur_m": 293,
-     "jauge_gt": 90090,
-     "capacite": "paquebot (classe Radiance) ; 2191 passagers",
-     "energie": "diesel",
-     "client": "Royal Caribbean International",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/dossiers/damen-shiprepair-brest",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 2191,
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Meyer Werft, Papenburg (Allemagne)",
-      "source": "https://en.wikipedia.org/wiki/Jewel_of_the_Seas",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Thalassa",
-     "type": "navire_reference",
-     "annee": "2023 (arret technique Damen Brest ; navire lance en 1996)",
-     "longueur_m": 74,
-     "capacite": "navire de recherche oceanographique et halieutique (multidisciplinaire)",
-     "energie": "diesel",
-     "client": "Ifremer (exploite par Genavir)",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/marine-marchande/le-thalassa-en-arret-technique-chez-damen-brest",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "caractere": "public",
-     "propriete": "publique",
-     "caractere_motif": "propriete: ifremer",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Manche Industrie Marine (Leroux et Lotz), Dieppe (France)",
-      "source": "https://fr.wikipedia.org/wiki/Thalassa_(navire)",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Seabourn Venture",
-     "type": "navire_reference",
-     "annee": "2023",
-     "longueur_m": 170,
-     "jauge_gt": 23000,
-     "capacite": "paquebot d'expedition ; 264 passagers ; reparation stabilisateurs",
-     "energie": "diesel-electrique",
-     "client": "Seabourn (Carnival)",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/dossiers/damen-shiprepair-brest",
-     "propulsion": [
-      "diesel-electrique",
-      "diesel-mdo"
-     ],
-     "capacite_pax": 264,
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "T. Mariotti, Genes, Italie (coque CIMAR, San Giorgio di Nogaro)",
-      "source": "https://en.wikipedia.org/wiki/Seabourn_Venture",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "Avenir Achievement",
      "type": "navire_reference",
      "annee": "2023",
@@ -26019,27 +25972,6 @@
       "statut": "douteux",
       "motif": "Le site de Brest repris par Damen est celui de la SOBRENA, Societe Bretonne de REPARATION NAVALE, creee en 1987 sur les formes de radoub de la CCI de Brest et specialisee en navettes petrolieres, methaniers et car-ferries, sans aucune activite de construction neuve. Une reference portee a ce chantier est donc un passage en forme, pas une construction. Mais je n'ai pu ouvrir aucune fiche tierce nommant Avenir Achievement : sans IMO ni dimensions en base, le navire n'est pas identifiable et je ne peux ni nommer le constructeur reel ni exclure une simple erreur de saisie. Manque : IMO, ou une fiche de registre, ou un communique tiers de passage en cale a Brest.",
       "source": "https://fr.wikipedia.org/wiki/Sobrena",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Hoegh Esperanza",
-     "type": "navire_reference",
-     "annee": "2022",
-     "longueur_m": 294,
-     "capacite": "FSRU (unite flottante de stockage et regazeification GNL)",
-     "energie": "GNL",
-     "client": "Hoegh LNG",
-     "classification": null,
-     "source": "https://www.damen.com/services/shiprepair/projects/hoeegh-lng-hattrick-for-brest",
-     "propulsion": [
-      "gnl"
-     ],
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Hyundai Heavy Industries, Ulsan, Coree du Sud",
-      "source": "https://en.wikipedia.org/wiki/H%C3%B6egh_Esperanza",
       "le": "2026-08-05",
       "confiance": "simple"
      }
@@ -26109,80 +26041,6 @@
       "statut": "douteux",
       "motif": "Reference non identifiable : le nom Renaissance est porte par plusieurs coques et la seule page ouverte (fr.wikipedia.org/wiki/Renaissance_(paquebot)) redirige vers le World Renaissance, Chantiers de l Atlantique 1966, IMO 6604834, demoli a Alang en 2010, qui ne peut pas etre a Brest en 2022. Sans IMO ni dimension, la ligne est un nom nu. L attribution a Damen Brest reste refutee sur le fond : le site est un centre de reparation navale, pas de construction.",
       "source": "https://fr.wikipedia.org/wiki/Port_de_Brest",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "AIDAnova",
-     "type": "navire_reference",
-     "annee": "2021",
-     "longueur_m": 337,
-     "jauge_gt": 183900,
-     "capacite": "paquebot GNL ; 5230 passagers ; premier paquebot GNL en arret technique a Brest",
-     "energie": "GNL",
-     "client": "AIDA Cruises (Carnival)",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/dossiers/damen-shiprepair-brest",
-     "propulsion": [
-      "gnl"
-     ],
-     "capacite_pax": 5230,
-     "caractere": "prive",
-     "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Meyer Werft, Papenburg, Allemagne",
-      "source": "https://en.wikipedia.org/wiki/AIDAnova",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Le Bougainville",
-     "type": "navire_reference",
-     "annee": "2021",
-     "longueur_m": 131,
-     "jauge_gt": 9900,
-     "capacite": "paquebot d'expedition (classe Explorers) ; 184 passagers",
-     "energie": "diesel-electrique",
-     "client": "Ponant",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/dossiers/damen-shiprepair-brest",
-     "propulsion": [
-      "diesel-electrique",
-      "diesel-mdo"
-     ],
-     "capacite_pax": 184,
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "VARD : coque a Tulcea (Roumanie), armement a Soviknes (Norvege)",
-      "source": "https://en.wikipedia.org/wiki/Le_Bougainville",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Anthem of the Seas",
-     "type": "navire_reference",
-     "annee": "2020",
-     "longueur_m": 348,
-     "jauge_gt": 168666,
-     "capacite": "paquebot (classe Quantum) ; 4180 passagers",
-     "energie": "diesel-electrique",
-     "client": "Royal Caribbean International",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/dossiers/damen-shiprepair-brest",
-     "propulsion": [
-      "diesel-electrique",
-      "diesel-mdo"
-     ],
-     "capacite_pax": 4180,
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Meyer Werft, Papenburg, Allemagne",
-      "source": "https://en.wikipedia.org/wiki/Anthem_of_the_Seas",
       "le": "2026-08-05",
       "confiance": "simple"
      }
@@ -26295,108 +26153,6 @@
      }
     },
     {
-     "nom": "Queen Elizabeth",
-     "type": "navire_reference",
-     "annee": "2018",
-     "longueur_m": 294,
-     "jauge_gt": 92000,
-     "capacite": "paquebot (classe Vista) ; environ 2081 passagers",
-     "energie": "diesel ; installation de deux scrubbers (systeme de lavage des fumees)",
-     "client": "Cunard Line",
-     "classification": null,
-     "source": "https://www.damenshiprepair.com/en/shipyards/damen-shiprepair-brest/projects/cruise-ship-queen-elizabeth-repair-refit",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 2081,
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Fincantieri, Monfalcone, Italie",
-      "source": "https://en.wikipedia.org/wiki/MS_Queen_Elizabeth",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Ventura",
-     "type": "navire_reference",
-     "annee": "2018",
-     "longueur_m": 290,
-     "capacite": null,
-     "energie": "diesel ; installation de deux scrubbers + sea chest concu et fabrique sur site",
-     "client": "P&O Cruises (Carnival)",
-     "classification": null,
-     "source": "https://www.marinelog.com/news/po-cruises-ventura-completes-two-week-docking-at-damen-brest/",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "caractere": "prive",
-     "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise",
-     "tracabilite": "url-non-verifiee",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Fincantieri, Monfalcone, Italie",
-      "source": "https://en.wikipedia.org/wiki/MS_Ventura",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Club Med 2",
-     "type": "navire_reference",
-     "annee": "2018",
-     "longueur_m": 194,
-     "jauge_gt": 14983,
-     "capacite": "voilier de croisiere a cinq mats ; 386 passagers",
-     "energie": "voile + diesel-electrique",
-     "client": "Club Med Croisieres",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/dossiers/damen-shiprepair-brest",
-     "propulsion": [
-      "diesel-electrique",
-      "diesel-mdo"
-     ],
-     "capacite_pax": 386,
-     "caractere": "prive",
-     "exploitation": "commerciale",
-     "caractere_motif": "exploitation: croisiere",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Societe Nouvelle des Ateliers et Chantiers du Havre (ACH), Le Havre, France",
-      "source": "https://en.wikipedia.org/wiki/Club_Med_2",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Norwegian Breakaway",
-     "type": "navire_reference",
-     "annee": "2018",
-     "longueur_m": 324,
-     "jauge_gt": 145655,
-     "capacite": "paquebot (classe Breakaway) ; environ 3963 passagers",
-     "energie": "diesel-electrique",
-     "client": "Norwegian Cruise Line",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/dossiers/damen-shiprepair-brest",
-     "propulsion": [
-      "diesel-electrique",
-      "diesel-mdo"
-     ],
-     "capacite_pax": 3963,
-     "caractere": "prive",
-     "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Meyer Werft, Papenburg, Allemagne",
-      "source": "https://en.wikipedia.org/wiki/Norwegian_Breakaway",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "Sallie Knutsen",
      "type": "navire_reference",
      "annee": "2017",
@@ -26495,55 +26251,6 @@
      }
     },
     {
-     "nom": "Emma Maersk",
-     "type": "navire_reference",
-     "annee": "2016",
-     "longueur_m": 397,
-     "jauge_gt": 170794,
-     "capacite": "porte-conteneurs (classe E) ; environ 15500 EVP",
-     "energie": "diesel",
-     "client": "Maersk Line",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/dossiers/damen-shiprepair-brest",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_fret": "15500 EVP",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Odense Steel Shipyard (Lindø, Odense, Danemark)",
-      "source": "https://en.wikipedia.org/wiki/Emma_M%C3%A6rsk",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Island Escape",
-     "type": "navire_reference",
-     "annee": "2015",
-     "longueur_m": 185,
-     "jauge_gt": 40171,
-     "capacite": "paquebot ; environ 1740 passagers (2009)",
-     "energie": "diesel",
-     "client": "Marella Cruises / Thomson",
-     "classification": null,
-     "source": "https://en.wikipedia.org/wiki/MS_Island_Escape",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 1740,
-     "caractere": "prive",
-     "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Dubigeon-Normandie S.A., Nantes (France), n° de coque 164",
-      "source": "https://en.wikipedia.org/wiki/MS_Island_Escape",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "Lord Star",
      "type": "navire_reference",
      "annee": "2014",
@@ -26630,6 +26337,168 @@
      "constructeur": "Chantiers de l'Atlantique",
      "source": "https://en.wikipedia.org/wiki/MSC_Euribia",
      "note": "descendu de navires_references le 2026-08-05 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. Construit à Saint-Nazaire, pas à Brest. Damen Brest est un site de réparation ; l'année 2024 en base est un arrêt technique."
+    },
+    {
+     "navire": "Island Escape",
+     "imo": null,
+     "annee": "2015",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Dubigeon-Normandie S.A., Nantes (France), n° de coque 164",
+     "source": "https://en.wikipedia.org/wiki/MS_Island_Escape",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Emma Maersk",
+     "imo": null,
+     "annee": "2016",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Odense Steel Shipyard (Lindø, Odense, Danemark)",
+     "source": "https://en.wikipedia.org/wiki/Emma_M%C3%A6rsk",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Norwegian Breakaway",
+     "imo": null,
+     "annee": "2018",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Meyer Werft, Papenburg, Allemagne",
+     "source": "https://en.wikipedia.org/wiki/Norwegian_Breakaway",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Club Med 2",
+     "imo": null,
+     "annee": "2018",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Societe Nouvelle des Ateliers et Chantiers du Havre (ACH), Le Havre, France",
+     "source": "https://en.wikipedia.org/wiki/Club_Med_2",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Ventura",
+     "imo": null,
+     "annee": "2018",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Fincantieri, Monfalcone, Italie",
+     "source": "https://en.wikipedia.org/wiki/MS_Ventura",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Queen Elizabeth",
+     "imo": null,
+     "annee": "2018",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Fincantieri, Monfalcone, Italie",
+     "source": "https://en.wikipedia.org/wiki/MS_Queen_Elizabeth",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Anthem of the Seas",
+     "imo": null,
+     "annee": "2020",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Meyer Werft, Papenburg, Allemagne",
+     "source": "https://en.wikipedia.org/wiki/Anthem_of_the_Seas",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Le Bougainville",
+     "imo": null,
+     "annee": "2021",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "VARD : coque a Tulcea (Roumanie), armement a Soviknes (Norvege)",
+     "source": "https://en.wikipedia.org/wiki/Le_Bougainville",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "AIDAnova",
+     "imo": null,
+     "annee": "2021",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Meyer Werft, Papenburg, Allemagne",
+     "source": "https://en.wikipedia.org/wiki/AIDAnova",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Hoegh Esperanza",
+     "imo": null,
+     "annee": "2022",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Hyundai Heavy Industries, Ulsan, Coree du Sud",
+     "source": "https://en.wikipedia.org/wiki/H%C3%B6egh_Esperanza",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Seabourn Venture",
+     "imo": null,
+     "annee": "2023",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "T. Mariotti, Genes, Italie (coque CIMAR, San Giorgio di Nogaro)",
+     "source": "https://en.wikipedia.org/wiki/Seabourn_Venture",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Thalassa",
+     "imo": null,
+     "annee": "2023 (arret technique Damen Brest ; navire lance en 1996)",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Manche Industrie Marine (Leroux et Lotz), Dieppe (France)",
+     "source": "https://fr.wikipedia.org/wiki/Thalassa_(navire)",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Jewel of the Seas",
+     "imo": null,
+     "annee": "2024",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Meyer Werft, Papenburg (Allemagne)",
+     "source": "https://en.wikipedia.org/wiki/Jewel_of_the_Seas",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Norwegian Star",
+     "imo": null,
+     "annee": "2024",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Meyer Werft, Papenburg (Allemagne)",
+     "source": "https://en.wikipedia.org/wiki/Norwegian_Star",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Disney Dream",
+     "imo": null,
+     "annee": "2024",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Meyer Werft, Papenburg (Allemagne)",
+     "source": "https://en.wikipedia.org/wiki/Disney_Dream",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Disney Fantasy",
+     "imo": null,
+     "annee": "2025",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Meyer Werft, Papenburg (Allemagne)",
+     "source": "https://en.wikipedia.org/wiki/Disney_Fantasy",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Saint-Malo",
+     "imo": null,
+     "annee": "2026",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "CMJL (China Merchants Jinling), Weihai (Chine)",
+     "source": "https://fr.wikipedia.org/wiki/Saint-Malo_(ferry)",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Le Commandant Charcot",
+     "imo": null,
+     "annee": "2026",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Vard Tulcea (Roumanie) pour la coque, armement et achèvement chez Vard Søviknes (Norvège)",
+     "source": "https://en.wikipedia.org/wiki/Le_Commandant_Charcot",
+     "note": "descendu de navires_references le 2026-08-16 : Damen Shiprepair Brest (ex-Sobrena) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
     }
    ],
    "actif": true,
@@ -26920,29 +26789,6 @@
       "le": "2026-08-05",
       "confiance": "simple"
      }
-    },
-    {
-     "nom": "Logica",
-     "type": "construction-neuve (coque construite par Compositeworks à La Ciotat, aujourd'hui MB92 ; aménagement/intérieur par Mondomarine Italie)",
-     "annee": "2002",
-     "longueur_m": 27.42,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "8 invités / 4 suites, 3 équipage",
-     "energie": "voilier (sloop carbone) + moteur diesel Yanmar 6LY-UTE 325 ch, vitesse max 12 nds, croisière 10 nds",
-     "client": null,
-     "classification": null,
-     "source": "https://www.equinoxeyachts.com/yacht/logica-yacht-27mt/",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Mondomarine (Savona, Italie)",
-      "source": "https://en.wikipedia.org/wiki/Mondomarine",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
     }
    ],
    "geo_source": "https://api-adresse.data.gouv.fr/search/?q=46+quai+Francois+Mitterrand+La+Ciotat",
@@ -26970,6 +26816,15 @@
      },
      "descendu_le": "2026-08-05",
      "motif": "type de refit : passage en chantier, pas une construction"
+    },
+    {
+     "navire": "Logica",
+     "imo": null,
+     "annee": "2002",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Mondomarine (Savona, Italie)",
+     "source": "https://en.wikipedia.org/wiki/Mondomarine",
+     "note": "descendu de navires_references le 2026-08-16 : MB92 La Ciotat n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
     }
    ],
    "actif": true,
@@ -27185,36 +27040,6 @@
      }
     },
     {
-     "nom": "Bijin (ex-Sibelle)",
-     "type": "motor-yacht",
-     "annee": "2015 (construction Heesen) ; 2025 (refit La Seyne)",
-     "longueur_m": 50,
-     "jauge_gt": 497,
-     "port_lourd_dwt": null,
-     "capacite": "10 invités",
-     "energie": "diesel (Fast Displacement Hull Form)",
-     "client": "armateur privé / charter Méditerranée occidentale",
-     "classification": null,
-     "source": "https://www.monacomarine.com/en/news/my-bijin-yacht-unveils-her-new-look-after-a-successful-refit-in-la-seyne",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 10,
-     "architecte": "Van Oossanen Naval Architects",
-     "architecte_source": "BoatInternational / SuperYachtTimes : architecture navale (Fast Displacement Hull Form) par Van Oossanen Naval Architects ; design extérieur Omega Architects, construction Heesen.",
-     "caractere": "prive",
-     "propriete": "privee",
-     "exploitation": "commerciale",
-     "caractere_motif": "propriete: armateur prive ; exploitation: charter",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Heesen Yachts, Oss, Pays-Bas (2015), à confirmer en registre",
-      "source": "https://fr.wikipedia.org/wiki/Monaco_Marine",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "Heerlijckheid (ex-Livadia, ex-Livia)",
      "type": "motor-yacht",
      "annee": "construit 2010 par Moonen ; 1re unite mise au sec a La Seyne (nov. 2018)",
@@ -27291,7 +27116,18 @@
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
    ],
    "actif": true,
-   "actif_source": "Le chantier de La Seyne-sur-Mer (Espace Grimaud) est exploite par la SAS immatriculee sous le SIREN 808 571 194, en activite, 26 salaries en 2025, chiffre d'affaires 15,3 M EUR, comptes de l'exercice 2025 deposes le 20/05/2026 et changement de president en juin 2026 au profit de Safe Harbor France ; la societe porte desormais la denomination SAFE HARBOR LA SEYNE-TOULON. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/808571194"
+   "actif_source": "Le chantier de La Seyne-sur-Mer (Espace Grimaud) est exploite par la SAS immatriculee sous le SIREN 808 571 194, en activite, 26 salaries en 2025, chiffre d'affaires 15,3 M EUR, comptes de l'exercice 2025 deposes le 20/05/2026 et changement de president en juin 2026 au profit de Safe Harbor France ; la societe porte desormais la denomination SAFE HARBOR LA SEYNE-TOULON. Vague contact-activite du 2026-08-15. https://www.pappers.fr/entreprise/808571194",
+   "interventions": [
+    {
+     "navire": "Bijin (ex-Sibelle)",
+     "imo": null,
+     "annee": "2015 (construction Heesen) ; 2025 (refit La Seyne)",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Heesen Yachts, Oss, Pays-Bas (2015), à confirmer en registre",
+     "source": "https://fr.wikipedia.org/wiki/Monaco_Marine",
+     "note": "descendu de navires_references le 2026-08-16 : Monaco Marine (La Seyne-sur-Mer) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    }
+   ]
   },
   {
    "id": "kership-lorient",
@@ -29599,7 +29435,17 @@
        "source": "https://chantier-glehen.com/fr,vedettes-passagers,9.html"
       }
      ],
-     "source_ref": "vedettes-passagers) ; nauticexpo.fr (fiche produit Glehen"
+     "source_ref": "vedettes-passagers) ; nauticexpo.fr (fiche produit Glehen",
+     "sources": [
+      "https://courriersdefrance.blogspot.com/2017/11/vedette-petrel-compagnie-du-golfe.html"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Les Ferries et Courriers de France (courriersdefrance.blogspot.com)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2002"
+     }
     },
     {
      "nom": "Rivage",
@@ -29698,7 +29544,17 @@
        "source": "https://chantier-glehen.com/fr,chevalier-arlequin,9,89.html"
       }
      ],
-     "source_ref": "vedettes-passagers, fiche Chevalier Arlequin) ; iledebrehat.fr"
+     "source_ref": "vedettes-passagers, fiche Chevalier Arlequin) ; iledebrehat.fr",
+     "sources": [
+      "https://commons.wikimedia.org/wiki/Category:Ships_built_at_Chantier_Naval_Glehen,_Douarnenez"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikimedia Commons",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2008"
+     }
     },
     {
      "nom": "Ty Nautilus",
@@ -29785,7 +29641,17 @@
        "source": "https://chantier-glehen.com/fr,transport-fret---passagers,10.html"
       }
      ],
-     "source_ref": "transport-fret-passagers, fiche Viga"
+     "source_ref": "transport-fret-passagers, fiche Viga",
+     "sources": [
+      "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Viga.htm"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Marine Marchande (marine-marchande.net)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2016"
+     }
     },
     {
      "nom": "Pilotine Amiral Muselier",
@@ -29919,7 +29785,17 @@
        "source": "https://chantier-glehen.com/fr,navires-de-servitude,8.html"
       }
      ],
-     "source_ref": "navires-de-servitude, fiche Avel Vor"
+     "source_ref": "navires-de-servitude, fiche Avel Vor",
+     "sources": [
+      "https://fr.linkedin.com/posts/societe-cooperative-de-lamanage-de-lorient_notre-navire-avel-vor-construit-par-activity-7236782684104970240-U4sr"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Société Coopérative de Lamanage de Lorient (armateur exploitant)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2010"
+     }
     },
     {
      "nom": "Helena",
@@ -29944,7 +29820,17 @@
        "source": "https://chantier-glehen.com/fr,navires-de-servitude,8.html"
       }
      ],
-     "source_ref": "navires-de-servitude, fiche Helena"
+     "source_ref": "navires-de-servitude, fiche Helena",
+     "sources": [
+      "https://www.architecture-navale.net/landing-craft-de-20m/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "H&T Architecture Navale (architecte du navire)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2013"
+     }
     },
     {
      "nom": "PC6 (pousseurs portuaires Marine Nationale)",
@@ -29974,7 +29860,17 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "sources": [
+      "https://www.corlobe.info/article46217.html"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Corlobe (Cols Bleus / actualité Marine nationale)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2019"
+     }
     },
     {
      "nom": "Bara Breizh",
@@ -30081,7 +29977,17 @@
        "source": "https://chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Tournevire II"
+     "source_ref": "peche, fiche Tournevire II",
+     "sources": [
+      "https://www.littoral-manche-atlantique.com/2021/09/tournevire-ii-mt.866255.html"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Littoral Manche Atlantique",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2001"
+     }
     },
     {
      "nom": "Ar Laeres",
@@ -30107,7 +30013,17 @@
        "source": "https://chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Ar Laeres"
+     "source_ref": "peche, fiche Ar Laeres",
+     "sources": [
+      "https://www.littoral-manche-atlantique.com/2021/01/ar-laeres-gv.898467-imo.8541476.html"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Littoral Manche Atlantique",
+      "confirme": "attribution",
+      "imo_confirme": "8541476",
+      "annee_confirmee": "2005"
+     }
     },
     {
      "nom": "Heracles",
@@ -30133,7 +30049,17 @@
        "source": "https://chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Heracles"
+     "source_ref": "peche, fiche Heracles",
+     "sources": [
+      "https://www.littoral-manche-atlantique.com/2021/01/sanaga-ii-cc.898445.html"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Littoral Manche Atlantique",
+      "confirme": "attribution",
+      "imo_confirme": "8590843",
+      "annee_confirmee": "2005"
+     }
     },
     {
      "nom": "Le Corail",
@@ -30159,7 +30085,17 @@
        "source": "https://chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Le Corail"
+     "source_ref": "peche, fiche Le Corail",
+     "sources": [
+      "https://www.littoral-manche-atlantique.com/2021/05/le-corail-i-gv.933859.html"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Littoral Manche Atlantique",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2017"
+     }
     },
     {
      "nom": "Kronos",
@@ -30185,7 +30121,17 @@
        "source": "https://chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Kronos"
+     "source_ref": "peche, fiche Kronos",
+     "sources": [
+      "https://www.littoral-manche-atlantique.com/2020/12/kronos-gv.933572.html"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Littoral Manche Atlantique",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2017"
+     }
     },
     {
      "nom": "Caraibes II",
@@ -30211,7 +30157,17 @@
        "source": "https://chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Caraibes II"
+     "source_ref": "peche, fiche Caraibes II",
+     "sources": [
+      "https://www.littoral-manche-atlantique.com/2021/01/caraibes-ii-gv.933655.html"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Littoral Manche Atlantique",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2017"
+     }
     },
     {
      "nom": "Alcor",
@@ -30237,7 +30193,17 @@
        "source": "https://chantier-glehen.com/fr,peche,7.html"
       }
      ],
-     "source_ref": "peche, fiche Alcor"
+     "source_ref": "peche, fiche Alcor",
+     "sources": [
+      "https://www.littoral-manche-atlantique.com/2021/03/alcor-gv.898466.html"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Littoral Manche Atlantique",
+      "confirme": "attribution",
+      "imo_confirme": "8586373",
+      "annee_confirmee": "2007"
+     }
     },
     {
      "nom": "Zubernoa",
@@ -47630,46 +47596,7 @@
     "acier"
    ],
    "taille_max": "Bassin de radoub: 180 m de longueur x 23,50 m de largeur; capacite jusqu'a environ 20 000 tonneaux (GT) en cale seche. Plus gros navire jamais accueilli a ce jour: Club Med 2 (194 m hors-tout, 14 983 GT), janvier 2026.",
-   "navires_references": [
-    {
-     "nom": "FS Germinal (F735, classe Floréal)",
-     "type": "Frégate de surveillance (Marine nationale)",
-     "annee": "carénage janvier-mai 2024",
-     "longueur_m": 93.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "déplacement ~2 950 t pleine charge",
-     "energie": "diesel (CODAD, 4 x SEMT Pielstick 6 PA6 L280), 2 lignes d'arbres, hélices à pales orientables",
-     "client": "Forces Armées aux Antilles (FAA) / Marine nationale",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/vie-portuaire/apres-trois-ans-de-fermeture-le-bassin-de-radoub-de-fort-de-france-a-repris-du-service",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "prix_acquisition": "Construction (classe Floreal) : ~400 millions de francs/unite (conditions avril 1988), ~142 M EUR equivalent 2022. Le carenage 2024 a Fort-de-France n'a pas de montant public.",
-     "timeline": [
-      {
-       "annee": "1988",
-       "role": "construction",
-       "nom": "FS Germinal (classe Floreal)",
-       "detail": "Cout unitaire de construction du programme des 6 fregates de surveillance Floreal estime a ~400 millions de francs/unite (conditions economiques avril 1988) ; ~142 M EUR en equivalent 2022. Germinal acheve avril 1994.",
-       "prix": "~400 MF (1988) / ~142 M EUR (eq. 2022)",
-       "source": "https://lefauteuildecolbert.blogspot.com/2021/02/marine-nationale-le-programme-fregates.html"
-      }
-     ],
-     "caractere": "public",
-     "propriete": "publique",
-     "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Chantiers de l'Atlantique, Saint-Nazaire (France)",
-      "source": "https://fr.wikipedia.org/wiki/Classe_Flor%C3%A9al",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    }
-   ],
+   "navires_references": [],
    "geo_source": "https://nominatim.openstreetmap.org/search?q=Bassin+de+radoub+Fort-de-France&format=json",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
@@ -47766,6 +47693,15 @@
      "caractere_motif": "exploitation: offshore",
      "descendu_le": "2026-08-05",
      "motif": "type de refit : passage en chantier, pas une construction"
+    },
+    {
+     "navire": "FS Germinal (F735, classe Floréal)",
+     "imo": null,
+     "annee": "carénage janvier-mai 2024",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Chantiers de l'Atlantique, Saint-Nazaire (France)",
+     "source": "https://fr.wikipedia.org/wiki/Classe_Flor%C3%A9al",
+     "note": "descendu de navires_references le 2026-08-16 : Chantier Naval de la Martinique n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
     }
    ]
   },
@@ -52201,7 +52137,17 @@
      "source": "https://www.pech-alu-international.com/realisations/vedette-de-surveillance-golf-du-lion/",
      "propulsion": [
       "diesel-mdo"
-     ]
+     ],
+     "sources": [
+      "https://parc-marin-golfe-lion.fr/editorial/mobula-0"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Parc naturel marin du golfe du Lion (OFB, armateur/exploitant)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2021"
+     }
     },
     {
      "nom": "Le Compagnon des Îles",
@@ -52239,7 +52185,17 @@
      "capacite_fret": "100 t",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: croisiere"
+     "caractere_motif": "exploitation: croisiere",
+     "sources": [
+      "https://www.ouest-france.fr/bretagne/hennebont-56700/le-dernier-ne-de-pech-alu-pret-prendre-la-mer-5507573"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Ouest-France",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2018"
+     }
     },
     {
      "nom": "Tuyuyu",
@@ -52356,7 +52312,17 @@
        "detail": "Barge de travail aluminium, 9 m x 3,50 m, 2 hors-bord Yamaha 80 CV, grue marine Guerra M40.90A 3,5 t/m. Client non précisé par le chantier ; année de livraison non indiquée.",
        "source": "https://www.pech-alu-international.com/realisations/le-vexin/"
       }
-     ]
+     ],
+     "sources": [
+      "https://www.meretmarine.com/fr/construction-navale/pech-alu-une-vedette-pour-le-parc-marin-du-golfe-du-lion"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Mer et Marine",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2020"
+     }
     },
     {
      "nom": "Le Pass'Partout III",
@@ -52432,7 +52398,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "capacite_pax": 4
+     "capacite_pax": 4,
+     "sources": [
+      "https://www.marine-moteurs.com/realisations,vedette-de-police--quot--politeia-ii-quot-,1,289.html"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Marine Moteurs (distributeur Volvo Penta, Morbihan)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2009"
+     }
     },
     {
      "nom": "Le Pass'Partout",
@@ -52587,7 +52563,17 @@
      "source": "https://www.pech-alu-international.com/realisations/mosaxona-chaland-multifonction/",
      "propulsion": [
       "diesel-mdo"
-     ]
+     ],
+     "sources": [
+      "https://www.architecture-navale.net/barges-multifonction-de-1180m/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "H&T Architecture navale (architecte du navire)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2021"
+     }
     },
     {
      "nom": "L'Ecum",
@@ -52603,7 +52589,17 @@
      "source": "https://www.pech-alu-international.com/realisations/ecum-transbordeur-pour-l-archipel-du-frioul/",
      "propulsion": [
       "diesel-mdo"
-     ]
+     ],
+     "sources": [
+      "https://www.shipphotos.co.uk/ship/?ship=lecum"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "ShipPhotos (base photographique de navires, Royaume-Uni)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": null
+     }
     },
     {
      "nom": "San Baïnzu",
@@ -78997,32 +78993,6 @@
      }
     },
     {
-     "nom": "Charlemagne (ex-Portus Canetus)",
-     "type": "barque-catalane-sardinal",
-     "annee": "1956 (selon brochure Departement 2024) ; une autre source indique 1948, chantiers Cammarota a Sete",
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "barque catalane sardinal a voile latine (chene, platane, pin)",
-     "energie": "voile latine",
-     "client": "achetee par un pecheur de Collioure dans les annees 1950, vendue a Canet-en-Roussillon en 1983 (renommee Portus Canetus), nom d'origine rendu en 2003 par l'association Les Amis de Charlemagne ; restauree a l'Atelier des Barques (charpentiers de marine du Departement)",
-     "classification": null,
-     "source": "https://www.ledepartement66.fr/wp-content/uploads/2024/09/AtelierBarques_Brochure_Septembre2024_WEB.pdf",
-     "propulsion": [
-      "autre"
-     ],
-     "caractere": "prive",
-     "exploitation": "commerciale",
-     "caractere_motif": "exploitation: peche",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Chantier non confirmé ; une source secondaire cite les chantiers Cammarota à Sète (1948)",
-      "source": "https://fr.wikipedia.org/wiki/Anse_de_Paulilles",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "Bressola (La Bressole)",
      "type": "mitja-barca",
      "annee": "1950",
@@ -79176,32 +79146,6 @@
      }
     },
     {
-     "nom": "Notre-Dame de Consolation",
-     "type": "barque-catalane-peche",
-     "annee": "1913 (construction, chantier Laurent Ferrer, Collioure)",
-     "longueur_m": 10.75,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "barque catalane (sardinal) de peche sardine/anchois a voile latine",
-     "energie": "voile latine + moteur (motorisation ajoutee)",
-     "client": "commandee par le patron pecheur Michel Aloujes au chantier Laurent Ferrer (rue du Temple, Collioure) ; aujourd'hui conservee a Port-Vendres",
-     "classification": "Monument Historique (classee le 21 mai 1992)",
-     "source": "https://fr.wikipedia.org/wiki/Notre-Dame_de_Consolation_(barque_catalane)",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "caractere": "prive",
-     "exploitation": "commerciale",
-     "caractere_motif": "exploitation: peche",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Chantier Laurent Ferrer, Collioure (France), 1913",
-      "source": "https://fr.wikipedia.org/wiki/Notre-Dame_de_Consolation_(barque_catalane)",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "Libre-Penseur (Libre Penseur)",
      "type": "barque-catalane-sardinal",
      "annee": "1904 (construction, Banyuls-sur-Mer)",
@@ -79295,7 +79239,27 @@
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
    ],
    "actif": true,
-   "actif_source": "Atelier départemental de restauration de barques catalanes installé depuis 2010 dans les anciens bâtiments Nobel de l'anse de Paulilles ; la fiche du Conseil départemental (dernière modification 20/09/2024 selon le sitemap du site) décrit deux agents à temps plein plus un apprenti charpentier de marine, un programme de restauration en cours et des visites guidées gratuites de mai à octobre. Aucune preuve datée de 2025 ou 2026 n'a pu être trouvée, aucun indice de cessation non plus. Vague contact-activite du 2026-08-15. https://www.ledepartement66.fr/dossier/latelier-des-barques/"
+   "actif_source": "Atelier départemental de restauration de barques catalanes installé depuis 2010 dans les anciens bâtiments Nobel de l'anse de Paulilles ; la fiche du Conseil départemental (dernière modification 20/09/2024 selon le sitemap du site) décrit deux agents à temps plein plus un apprenti charpentier de marine, un programme de restauration en cours et des visites guidées gratuites de mai à octobre. Aucune preuve datée de 2025 ou 2026 n'a pu être trouvée, aucun indice de cessation non plus. Vague contact-activite du 2026-08-15. https://www.ledepartement66.fr/dossier/latelier-des-barques/",
+   "interventions": [
+    {
+     "navire": "Notre-Dame de Consolation",
+     "imo": null,
+     "annee": "1913 (construction, chantier Laurent Ferrer, Collioure)",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Chantier Laurent Ferrer, Collioure (France), 1913",
+     "source": "https://fr.wikipedia.org/wiki/Notre-Dame_de_Consolation_(barque_catalane)",
+     "note": "descendu de navires_references le 2026-08-16 : Atelier des Barques (Conseil départemental des Pyrénées-Orientales) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Charlemagne (ex-Portus Canetus)",
+     "imo": null,
+     "annee": "1956 (selon brochure Departement 2024) ; une autre source indique 1948, chantiers Cammarota a Sete",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Chantier non confirmé ; une source secondaire cite les chantiers Cammarota à Sète (1948)",
+     "source": "https://fr.wikipedia.org/wiki/Anse_de_Paulilles",
+     "note": "descendu de navires_references le 2026-08-16 : Atelier des Barques (Conseil départemental des Pyrénées-Orientales) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    }
+   ]
   },
   {
    "id": "chantier-naval-gilbert-pasqui-villefranche-sur",
@@ -90646,7 +90610,17 @@
      "propriete": "privee",
      "exploitation": "commerciale",
      "caractere_motif": "propriete: ltd ; exploitation: offshore",
-     "source_ref": "https://ulstein.com/references/bourbon-orca — (design Ulstein AX104, X-BOW); premier AHTS à étrave inversée conçu par Ulstein"
+     "source_ref": "https://ulstein.com/references/bourbon-orca — (design Ulstein AX104, X-BOW); premier AHTS à étrave inversée conçu par Ulstein",
+     "sources": [
+      "https://no.wikipedia.org/wiki/Liste_over_skip_med_X-Bow"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia (norvégien)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2006"
+     }
     },
     {
      "nom": "Bourbon Dolphin",
@@ -90734,7 +90708,17 @@
      "caractere": "prive",
      "exploitation": "commerciale",
      "caractere_motif": "exploitation: offshore",
-     "source_ref": "https://ulstein.com/references/bourbon-mistral — (design Ulstein PX105, X-BOW); meretmarine"
+     "source_ref": "https://ulstein.com/references/bourbon-mistral — (design Ulstein PX105, X-BOW); meretmarine",
+     "sources": [
+      "https://no.wikipedia.org/wiki/Liste_over_skip_med_X-Bow"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia (norvégien)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2006"
+     }
     },
     {
      "nom": "Bourbon Monsoon",
@@ -90785,7 +90769,17 @@
      "caractere": "prive",
      "exploitation": "commerciale",
      "caractere_motif": "exploitation: offshore",
-     "source_ref": "https://ulstein.com/references/bourbon-monsoon — (design Ulstein PX105, X-BOW)"
+     "source_ref": "https://ulstein.com/references/bourbon-monsoon — (design Ulstein PX105, X-BOW)",
+     "sources": [
+      "https://no.wikipedia.org/wiki/Liste_over_skip_med_X-Bow"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia (norvégien)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2007"
+     }
     },
     {
      "nom": "Olympic Triton",
@@ -90832,7 +90826,17 @@
      "propriete": "privee",
      "exploitation": "commerciale",
      "caractere_motif": "propriete: as ; exploitation: fret",
-     "source_ref": "https://ulstein.com/references/olympic-triton — (design Ulstein)"
+     "source_ref": "https://ulstein.com/references/olympic-triton — (design Ulstein)",
+     "sources": [
+      "https://www.olympic.no/fleet-chartering/subsea-renewable/olympic-triton"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Olympic Subsea ASA (armateur du navire)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2007"
+     }
     },
     {
      "nom": "Island Constructor",
@@ -90874,7 +90878,17 @@
      "caractere": "prive",
      "exploitation": "commerciale",
      "caractere_motif": "exploitation: offshore",
-     "source_ref": "https://ulstein.com/references/island-constructor — : design « Ulstein SX 121 » (Ulstein Group)"
+     "source_ref": "https://ulstein.com/references/island-constructor — : design « Ulstein SX 121 » (Ulstein Group)",
+     "sources": [
+      "https://www.offshore-energy.biz/norway-island-offshore-receives-acknowledgement-of-compliance-for-island-constructor/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Offshore Energy (Navingo)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2008"
+     }
     },
     {
      "nom": "Olympic Zeus",
@@ -90915,7 +90929,17 @@
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: as",
-     "source_ref": "https://ulstein.com/references/olympic-zeus — (design Ulstein)"
+     "source_ref": "https://ulstein.com/references/olympic-zeus — (design Ulstein)",
+     "sources": [
+      "https://www.olympic.no/fleet-chartering/subsea-renewable/olympic-zeus"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Olympic Subsea ASA (armateur du navire)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": null
+     }
     },
     {
      "nom": "Sarah",
@@ -90959,7 +90983,17 @@
      ],
      "architecte": "Ulstein Design",
      "architecte_source": "https://ulstein.com/references/sarah",
-     "source_ref": "https://ulstein.com/references/sarah — (Ulstein SX121, designed by Ulstein Design AS)"
+     "source_ref": "https://ulstein.com/references/sarah — (Ulstein SX121, designed by Ulstein Design AS)",
+     "sources": [
+      "https://no.wikipedia.org/wiki/Liste_over_skip_med_X-Bow"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia (norvégien)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2009"
+     }
     },
     {
      "nom": "Normand Ranger",
@@ -91021,7 +91055,17 @@
      "architecte_source": "maritimeoptima.com / Ulstein references — design VS 490 (Vik Sandvik), coque Crist Gdansk, assemblage Ulstein Verft",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: offshore"
+     "caractere_motif": "exploitation: offshore",
+     "sources": [
+      "https://www.offshore-energy.biz/norwayulstein-verft-delivers-norman-ranger-to-solstad-offshore/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Offshore Energy (Navingo)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2010"
+     }
     },
     {
      "nom": "Rem Hrist",
@@ -91089,7 +91133,17 @@
      "architecte_source": "Ulstein.com / Ship-technology : Rem Hrist, PSV de design Ulstein PX105 (X-BOW) développé par Ulstein Design & Solutions, construit par Ulstein Verft",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "sources": [
+      "https://www.offshore-energy.biz/norway-ulstein-delivers-rem-hrist-psv-to-remoy-shipping/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Offshore Energy (Navingo)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2011"
+     }
     },
     {
      "nom": "Rem Mist",
@@ -91152,7 +91206,17 @@
      ],
      "prix_acquisition": "≈ 11,36 M USD (valorisation VesselsValue lors de la revente 2022 ; prix de transaction non divulgué)",
      "architecte": "Ulstein Design",
-     "architecte_source": "Ulstein.com / Ship-technology : Rem Mist, PSV de design Ulstein PX105 (X-BOW) développé par Ulstein Design & Solutions, construit par Ulstein Verft"
+     "architecte_source": "Ulstein.com / Ship-technology : Rem Mist, PSV de design Ulstein PX105 (X-BOW) développé par Ulstein Design & Solutions, construit par Ulstein Verft",
+     "sources": [
+      "https://www.offshore-energy.biz/norway-ulstein-verft-delivers-psv-rem-mist/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Offshore Energy (Navingo)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2011"
+     }
     },
     {
      "nom": "Blue Prosper -> NAO Prosper",
@@ -91313,7 +91377,17 @@
      ],
      "prix_acquisition": "≈ 45 M USD (≈ 270 M NOK) — rachat par Nordic American Offshore, nov. 2013",
      "architecte": "Ulstein Design",
-     "architecte_source": "ulstein.com (références Blue Thunder, design PX121) + Maritime Professional / World Maritime News (Ulstein PX121 series)"
+     "architecte_source": "ulstein.com (références Blue Thunder, design PX121) + Maritime Professional / World Maritime News (Ulstein PX121 series)",
+     "sources": [
+      "https://www.offshore-energy.biz/ulstein-delivers-blue-thunder-psv/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Offshore Energy (Navingo)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2013"
+     }
     },
     {
      "nom": "Blue Power -> NAO Power",
@@ -91465,7 +91539,17 @@
      "prix_acquisition": "≈ 45 M USD (≈ 270 M NOK) — rachat par Nordic American Offshore, nov. 2013",
      "architecte": "Ulstein Design",
      "architecte_source": "https://ulstein.com/references/blue-guardian",
-     "source_ref": "https://ulstein.com/references/blue-guardian — (PX121 design, Blue Ship Invest/Ulstein Group)"
+     "source_ref": "https://ulstein.com/references/blue-guardian — (PX121 design, Blue Ship Invest/Ulstein Group)",
+     "sources": [
+      "https://www.offshore-energy.biz/ulstein-delivers-psv-blue-guardian-to-blue-ship-invest-norway/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Offshore Energy (Navingo)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2013"
+     }
     },
     {
      "nom": "Blue Protector -> NAO Protector",
@@ -91540,7 +91624,17 @@
      "caractere": "prive",
      "exploitation": "commerciale",
      "caractere_motif": "exploitation: offshore",
-     "source_ref": "https://ulstein.com/references/blue-protector — (PX121 design)"
+     "source_ref": "https://ulstein.com/references/blue-protector — (PX121 design)",
+     "sources": [
+      "https://www.offshore-energy.biz/norway-ulstein-delivers-blue-protector/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Offshore Energy (Navingo)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2013"
+     }
     },
     {
      "nom": "Polar Onyx",
@@ -91614,7 +91708,17 @@
      "architecte_source": "ulstein.com / nauticexpo : conception ULSTEIN SX121 (X-Bow), Ulstein Design & Solutions, construit par Ulstein Verft 2014",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: offshore"
+     "caractere_motif": "exploitation: offshore",
+     "sources": [
+      "https://en.wikipedia.org/wiki/GC_Rieber_Shipping"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia (anglais), fiche de l'armateur GC Rieber Shipping",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2014"
+     }
     },
     {
      "nom": "Island Performer",
@@ -91654,7 +91758,17 @@
      "architecte_source": "ulstein.com / ship-technology.com (Ulstein X-bow SX121)",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: offshore"
+     "caractere_motif": "exploitation: offshore",
+     "sources": [
+      "https://www.offshore-energy.biz/island-offshore-takes-delivery-of-island-performer/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Offshore Energy (Navingo)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2014"
+     }
     },
     {
      "nom": "Blue Storm",
@@ -104512,6 +104626,16 @@
       "source": "https://no.wikipedia.org/wiki/MF_%C2%ABTidefjord%C2%BB",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://no.wikipedia.org/wiki/MF_%C2%ABTidefjord%C2%BB"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia (norvégien)",
+      "confirme": "attribution",
+      "imo_confirme": "9419204",
+      "annee_confirmee": "2008"
      }
     },
     {
@@ -104574,6 +104698,16 @@
       "source": "https://no.wikipedia.org/wiki/MF_%C2%ABOppedal%C2%BB",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://no.wikipedia.org/wiki/MF_%C2%ABOppedal%C2%BB"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia (norvégien)",
+      "confirme": "attribution",
+      "imo_confirme": "9419216",
+      "annee_confirmee": "2008"
      }
     },
     {
@@ -104622,6 +104756,16 @@
       "source": "https://no.wikipedia.org/wiki/MF_%C2%AB%C3%85rdal%C2%BB",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://no.wikipedia.org/wiki/MF_%C2%AB%C3%85rdal%C2%BB"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia (norvégien)",
+      "confirme": "attribution",
+      "imo_confirme": "9428803",
+      "annee_confirmee": "2008"
      }
     },
     {
@@ -104827,6 +104971,16 @@
       "source": "https://no.wikipedia.org/wiki/MF_%C2%ABDavik%C2%BB",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://no.wikipedia.org/wiki/MF_%C2%ABDavik%C2%BB_(2009)"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia (norvégien)",
+      "confirme": "attribution",
+      "imo_confirme": "9506849",
+      "annee_confirmee": "2009"
      }
     },
     {
@@ -104882,6 +105036,16 @@
       "source": "https://no.wikipedia.org/wiki/MF_%C2%ABNorangsfjord%C2%BB",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://no.wikipedia.org/wiki/MF_%C2%ABNorangsfjord%C2%BB"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia (norvégien)",
+      "confirme": "attribution",
+      "imo_confirme": "9521722",
+      "annee_confirmee": "2010"
      }
     },
     {
@@ -105025,6 +105189,16 @@
       "source": "https://www.vesselfinder.com/vessels/details/9553335",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://no.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=MF%20%C2%ABSelbj%C3%B8rnsfjord%C2%BB&redirects=1&format=json"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia (norvégien)",
+      "confirme": "attribution",
+      "imo_confirme": "9553335",
+      "annee_confirmee": "2010"
      }
     },
     {
@@ -105124,6 +105298,16 @@
       "source": "https://www.vesselfinder.com/vessels/details/9614713",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://no.wikipedia.org/wiki/MF_%C2%ABEd%C3%B8yfjord%C2%BB"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia (norvégien)",
+      "confirme": "attribution",
+      "imo_confirme": "9614713",
+      "annee_confirmee": "2012"
      }
     },
     {
@@ -105398,6 +105582,16 @@
       "source": "https://no.wikipedia.org/wiki/MS_%C2%ABWith_Harvest%C2%BB",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://no.wikipedia.org/wiki/MS_%C2%ABWith_Harvest%C2%BB"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia (norvégien)",
+      "confirme": "attribution",
+      "imo_confirme": "9692117",
+      "annee_confirmee": "2014"
      }
     },
     {
@@ -112951,7 +113145,17 @@
      "source_ref": "Baird Maritime « New seiner/trawler delivered to Norway's Alta Fiskeriselskap » ; VesselFinder/MarineTraffic IMO 9819545 ; Fiskeribladet (vente 2023, renommage Klara B.) ; stadyard.no/references bygg 44",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "sources": [
+      "https://maritimt.com/jens-kristian-09-2020"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2020"
+     }
     },
     {
      "nom": "Meløyfjord",
@@ -112993,7 +113197,17 @@
      "source_ref": "Hook and Net Magazine « Low energy seiner » 2021 ; Måløy Maritime Group ; stadyard.no/references bygg 45",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "sources": [
+      "https://maritimt.com/meloyfjord-10-2021"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2021"
+     }
     },
     {
      "nom": "Fay",
@@ -113047,7 +113261,17 @@
      "source_ref": "FiskerForum « Stadyard delivers netter/longliner to Kenfish II » ; NSIA/AIBN rapport 2021-01 ; Maritime Executive ; VesselTracker IMO 9827619 ; stadyard.no/references bygg 40",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "sources": [
+      "https://maritimt.com/fay-01-2019"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2018"
+     }
     },
     {
      "nom": "Katrine S",
@@ -113089,7 +113313,17 @@
      "source_ref": "Baird Maritime « Vessel Review Katrine S & Kalsoybas » ; Måløy Maritime Group « Stadyard has delivered two newbuilds » ; stadyard.no/references bygg 48",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "sources": [
+      "https://maritimt.com/katrine-s-2025-08"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     }
     },
     {
      "nom": "Kalsøybas",
@@ -113131,7 +113365,17 @@
      "source_ref": "Baird Maritime « Vessel Review Katrine S & Kalsoybas » ; Måløy Maritime Group « Stadyard has delivered two newbuilds » ; stadyard.no/references bygg 49",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "sources": [
+      "https://maritimt.com/kalsoybas-2025-08"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     }
     },
     {
      "nom": "T.A Senior",
@@ -113171,7 +113415,17 @@
        "source": "FiskerForum"
       }
      ],
-     "source_ref": "FiskerForum « TA Senior delivered » ; stadyard.no/references bygg 39 ; WebSearch 2026-06"
+     "source_ref": "FiskerForum « TA Senior delivered » ; stadyard.no/references bygg 39 ; WebSearch 2026-06",
+     "sources": [
+      "https://maritimt.com/t.a-senior-04-2017"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2017"
+     }
     },
     {
      "nom": "Torbas",
@@ -113205,7 +113459,17 @@
      "source_ref": "bygg 37 (année 2014, propriétaire Torbas AS). NB : IMO non confirmé pour CE navire (l'IMO 9686596 « Torbas » 2015 70 m semble être un autre navire, non rattaché à Stadyard avec certitude) — IMO donc omis.",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "sources": [
+      "https://maritimt.com/torbas-03-2015"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2015"
+     }
     },
     {
      "nom": "Voldnes",
@@ -113251,7 +113515,17 @@
      "source_ref": "bygg 34 (2011, Ryggefjord Fiskebåtrederi AS) ; VesselFinder IMO 9570553 (2011, 34.07 x 8.00 m, GT 498, pavillon Norvège, LKUB). Builder non renseigné sur VesselFinder ; rattachement Stadyard via la liste de référence du chantier.",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "sources": [
+      "https://maritimt.com/voldnes-07-2011"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2011"
+     }
     },
     {
      "nom": "Scanbio Haugfjord",
@@ -113310,7 +113584,17 @@
      "source_ref": "MyShipTracking / VesselFinder / FleetMon IMO 9622198 (built 2011 by Blaalid Slip & Mekaniske Verksted, opérateur Scanbio Logistics) ; stadyard.no/references bygg 35",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "sources": [
+      "https://maritimt.com/haugfjord-10-2011"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2011"
+     }
     },
     {
      "nom": "Ro Master",
@@ -113356,7 +113640,17 @@
      "source_ref": "no.wikipedia MS Ro Master ; marinelink directory IMO 9420679 ; Skipsrevyen / Maritimt.com (01/2008) ; stadyard.no/references bygg 33",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "sources": [
+      "https://no.wikipedia.org/wiki/MS_%C2%ABRo_Master%C2%BB"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (norvegien)",
+      "confirme": "attribution",
+      "imo_confirme": "9420679",
+      "annee_confirmee": "2007"
+     }
     },
     {
      "nom": "Utsira",
@@ -113406,7 +113700,17 @@
      "source_ref": "Wikipedia Rutebåten Utsira ; VesselFinder/VesselTracker IMO 9334507 (Passenger/Ro-Ro Cargo, built 2005 by Blaalid Slip & Mekaniske Verksted, Raudeberg) ; Maritimt.com (02/2005) ; stadyard.no/references bygg 32",
      "caractere": "public",
      "propriete": "publique",
-     "caractere_motif": "propriete: kommune"
+     "caractere_motif": "propriete: kommune",
+     "sources": [
+      "https://www.ferry-site.dk/ferry.php?id=9334507"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "The Ferry Site (ferry-site.dk)",
+      "confirme": "attribution",
+      "imo_confirme": "9334507",
+      "annee_confirmee": "2005"
+     }
     },
     {
      "nom": "Seljevær",
@@ -113478,7 +113782,17 @@
        "source_ref": "https://stadyard.no/references — (armateur féroïen)"
       }
      ],
-     "source_ref": "bygg 29 (1975, Alfred Olsen, Vestmanna, Faroe Islands"
+     "source_ref": "bygg 29 (1975, Alfred Olsen, Vestmanna, Faroe Islands",
+     "sources": [
+      "https://www.ferry-site.dk/ferry.php?id=7602168"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "The Ferry Site (ferry-site.dk)",
+      "confirme": "attribution",
+      "imo_confirme": "7602168",
+      "annee_confirmee": "1975"
+     }
     },
     {
      "nom": "Lauvøy",
@@ -113518,7 +113832,17 @@
      "source_ref": "bygg 22 (1970, Fosen Trafikklag AS) ; adressa.no / skipshistorie.net (liaison Lauvøy-Barøy",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "sources": [
+      "https://www.skipshistorie.net/Trondheim/TRH111FosenTrafikklag/Tekster/TRH11119690200000%20LAUVOY.htm"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "skipshistorie.net (Foreningen Skipet)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "1969"
+     }
     },
     {
      "nom": "Sam",
@@ -113556,7 +113880,17 @@
        "source_ref": "https://stadyard.no/references — (armateur féroïen)"
       }
      ],
-     "source_ref": "bygg 23 (1970, Alfred Olsen, Vestmanna, Faroe Islands"
+     "source_ref": "bygg 23 (1970, Alfred Olsen, Vestmanna, Faroe Islands",
+     "sources": [
+      "https://de.wikipedia.org/wiki/Sam_(Schiff)"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (allemand)",
+      "confirme": "attribution",
+      "imo_confirme": "7602168",
+      "annee_confirmee": "1975"
+     }
     },
     {
      "nom": "Tjörn",
@@ -137602,51 +137936,6 @@
    ],
    "navires_references": [
     {
-     "nom": "Sørlandet",
-     "imo": "5334561",
-     "type": "Trois-mâts carré (voilier-école)",
-     "annee": "1927",
-     "longueur_m": 64,
-     "jauge_gt": 499,
-     "port_lourd_dwt": null,
-     "capacite": "Voilier-école, ~30 stagiaires ; le plus ancien gréement carré encore en service",
-     "capacite_pax": null,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "Propulsion vélique (gréement carré) avec moteur d'appoint",
-     "propulsion": [
-      "velique"
-     ],
-     "client": "Construit à Kristiansand pour la formation de la marine marchande",
-     "operateur": "Stiftelsen Fullriggeren Sørlandet",
-     "proprietaire": "Stiftelsen Fullriggeren Sørlandet",
-     "classification": null,
-     "source": "https://en.wikipedia.org/wiki/S%C3%B8rlandet_(ship)",
-     "timeline": [
-      {
-       "annee": "1927",
-       "role": "construction",
-       "nom": "Høivolds Mek. Verksted (Kristiansand)",
-       "detail": "Livré le 28 mai 1927, 577 GT à l'origine (499 GT après convention OMI 1969)",
-       "source": "https://en.wikipedia.org/wiki/S%C3%B8rlandet_(ship)"
-      },
-      {
-       "annee": "2020",
-       "role": "evenement",
-       "nom": "OneCo Safe Yards",
-       "detail": "Mis en cale sèche à Kristiansand puis sorti avant l'arrivée du Boa Deep C (juin 2020)",
-       "source": "https://oneco.no/en/arkiv/storbesok-i-onecos-dok-pa-andoya/"
-      }
-     ],
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "P. Høivolds Mekaniske Verksted, Kristiansand (Norvège)",
-      "source": "https://en.wikipedia.org/wiki/S%C3%B8rlandet_(ship)",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "BoaBarge 36",
      "imo": null,
      "type": "Barge offshore",
@@ -137748,7 +138037,18 @@
     "adresse": "Andøyveien 27, 4623 Kristiansand S, Norvège"
    },
    "contact_source": "https://virksomhet.brreg.no/nb/oppslag/enheter/916997663 (fiche du registre des entités, Brønnøysundregistrene). Aucun site officiel vérifié : safeyards.no et gotsafeyards.no ne répondent pas (connexion refusée / HTTP 403), oneco.no ne mentionne aucune activité « Safe Yards ». Aucun téléphone publié sur une page consultée, donc null.",
-   "contact_maj": "2026-08-15"
+   "contact_maj": "2026-08-15",
+   "interventions": [
+    {
+     "navire": "Sørlandet",
+     "imo": "5334561",
+     "annee": "1927",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "P. Høivolds Mekaniske Verksted, Kristiansand (Norvège)",
+     "source": "https://en.wikipedia.org/wiki/S%C3%B8rlandet_(ship)",
+     "note": "descendu de navires_references le 2026-08-16 : OneCo Safe Yards AS (GOT SafeYards) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    }
+   ]
   },
   {
    "nom": "Bredalsholmen Dokk og Fartøyvernsenter",
@@ -137795,286 +138095,7 @@
      "source": "https://www.bredalsholmen.no/en/"
     }
    ],
-   "navires_references": [
-    {
-     "nom": "DS Hestmanden",
-     "imo": "5377525",
-     "type": "Vapeur cargo (navire-musée)",
-     "annee": "1911",
-     "longueur_m": 59,
-     "jauge_gt": 979,
-     "port_lourd_dwt": null,
-     "capacite": "Cargo à vapeur, navire-mémorial des marins de guerre (Norsk krigsseilermuseum)",
-     "capacite_pax": null,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "Machine à vapeur d'origine, encore opérationnelle",
-     "propulsion": [
-      "autre"
-     ],
-     "client": "Stiftelsen Hestmanden",
-     "operateur": "Stiftelsen Hestmanden / Vest-Agder-museet",
-     "proprietaire": "Stiftelsen Hestmanden",
-     "classification": null,
-     "source": "https://en.wikipedia.org/wiki/SS_Hestmanden",
-     "timeline": [
-      {
-       "annee": "1911",
-       "role": "construction",
-       "nom": "Laxevaags Maskin & Jernskibsbyggeri (Bergen)",
-       "detail": "Lancé le 23 septembre 1911, 979 GT, machine à vapeur",
-       "source": "https://en.wikipedia.org/wiki/SS_Hestmanden"
-      },
-      {
-       "annee": "1917",
-       "role": "evenement",
-       "nom": "British Shipping Controller",
-       "detail": "Réquisitionné par les Britanniques, convois vers la France et la Russie (1ère GM)",
-       "source": "https://en.wikipedia.org/wiki/SS_Hestmanden"
-      },
-      {
-       "annee": "1940",
-       "role": "evenement",
-       "nom": "Nortraship",
-       "detail": "Intégré à la flotte Nortraship après l'invasion allemande, convois côtiers britanniques (2nde GM)",
-       "source": "https://en.wikipedia.org/wiki/SS_Hestmanden"
-      },
-      {
-       "annee": "1996",
-       "role": "proprietaire",
-       "nom": "Stiftelsen Hestmanden",
-       "detail": "Acquisition par la fondation pour préservation",
-       "source": "https://en.wikipedia.org/wiki/SS_Hestmanden"
-      },
-      {
-       "annee": "1995",
-       "role": "conversion",
-       "nom": "Bredalsholmen Dokk og Fartøyvernsenter",
-       "detail": "Début de la restauration majeure (le plus grand projet de préservation de navire de Norvège) ; remise au client à l'automne 2011, plus de 19 ans sur le site",
-       "source": null,
-       "source_ref": "lien mort constate le 2026-08-03 : https://www.bredalsholmen.no/prosjekter/tidligere-prosjekter/d-s-hestmanden"
-      },
-      {
-       "annee": "2017",
-       "role": "evenement",
-       "nom": "Norsk krigsseilermuseum",
-       "detail": "Ouverture comme Musée national des marins de guerre, basé à Kristiansand",
-       "source": "https://en.wikipedia.org/wiki/SS_Hestmanden"
-      },
-      {
-       "annee": "1995-2011",
-       "role": "evenement",
-       "nom": "Restauration antiquaire a Bredalsholmen Dokk og Fartoyvernsenter (Kristiansand)",
-       "detail": "Le chantier verifie a bien restaure ce navire (lien refit legitime, attribution_ok=true). Lancement 23/09/2011, 100 ans apres le premier. Musee national des marins de guerre depuis 2017.",
-       "prix": "environ 140 000 000 NOK total (dont 80 000 000 NOK sur le seul budget Riksantikvaren)",
-       "source": "https://no.wikipedia.org/wiki/DS_%C2%ABHestmanden%C2%BB"
-      },
-      {
-       "annee": "2011",
-       "role": "evenement",
-       "nom": "Restauration navire-musee (Bredalsholmen / Riksantikvaren)",
-       "detail": "Cout de la restauration historique: ~80 M NOK sur le seul budget de Riksantikvaren ; cout total du projet (Riksantikvaren + ministeres + comtes + communes) ~140 M NOK. Navire relance en septembre 2011 a Bredalsholmen Dokk og Fartoyvernsenter, Kristiansand.",
-       "prix": "~80 M NOK (projet total ~140 M NOK)",
-       "source": "https://no.wikipedia.org/wiki/DS_%C2%ABHestmanden%C2%BB"
-      },
-      {
-       "annee": "2019",
-       "role": "evenement",
-       "nom": "Subvention de l'Etat norvegien",
-       "detail": "Le gouvernement norvegien alloue 5 M NOK a D/S Hestmanden pour entretien et certification, afin de rendre le navire operationnel pour le 75e anniversaire de la Liberation en 2020.",
-       "prix": "5 M NOK",
-       "source": "https://www.regjeringen.no/no/aktuelt/fem-millioner-kroner-til-ds-hestmanden/id2645000/"
-      }
-     ],
-     "prix_acquisition": "Prix de construction: 239 500 NOK (1911, contrat de construction, chantier Laxevaags Maskin- & Jernskibsbyggeri, n° de coque 104). Restauration en navire-musee: ~80 M NOK sur le budget de Riksantikvaren (cout total du projet ~140 M NOK), relancement 2011.",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Laxevaag Maskin & Jernskibsbyggeri, Bergen (Norvege), 1911, coque n 104",
-      "source": "https://no.wikipedia.org/wiki/DS_%C2%ABHestmanden%C2%BB",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "DS Kysten",
-     "imo": "5200021",
-     "type": "Vapeur passagers/cargo (navire-musée)",
-     "annee": "1909",
-     "longueur_m": 45.12,
-     "jauge_gt": 377,
-     "port_lourd_dwt": null,
-     "capacite": "Vapeur à passagers, croisières d'archipel (~4 h) autour de Tønsberg",
-     "capacite_pax": null,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "Machine à vapeur d'origine de 1909, opérationnelle",
-     "propulsion": [
-      "autre"
-     ],
-     "client": "DS Kysten AS / ville de Tønsberg",
-     "operateur": "DS Kysten AS",
-     "proprietaire": "DS Kysten AS",
-     "classification": null,
-     "source": "https://www.vesselfinder.com/vessels/details/5200021",
-     "timeline": [
-      {
-       "annee": "1909",
-       "role": "construction",
-       "nom": "Construit en 1909",
-       "detail": "Voyage inaugural novembre 1909, ligne Trondheim-Namsos (côte du Trøndelag)",
-       "source": "https://dskysten.no/en/",
-       "prix": "160 000 NOK"
-      },
-      {
-       "annee": "1971",
-       "role": "proprietaire",
-       "nom": "Ville de Tønsberg",
-       "detail": "Offert aux habitants et entreprises de Tønsberg pour le 1100e anniversaire de la ville (17 mai 1971)",
-       "source": "https://dskysten.no/en/"
-      },
-      {
-       "annee": "2003",
-       "role": "conversion",
-       "nom": "Bredalsholmen Dokk og Fartøyvernsenter",
-       "detail": "Restauration majeure du vapeur classé sur ~16 ans, retour en service en 2019",
-       "source": "https://dskysten.no/en/"
-      },
-      {
-       "annee": "2019",
-       "role": "evenement",
-       "nom": "DS Kysten AS",
-       "detail": "Remise en service ; croisières touristiques dans l'archipel de Tønsberg",
-       "source": "https://dskysten.no/en/"
-      },
-      {
-       "annee": "2003-2012",
-       "role": "evenement",
-       "nom": "Reparation/restauration a Bredalsholmen Dokk og Fartoyvernsenter (Kristiansand)",
-       "detail": "Le chantier verifie a bien restaure ce navire (lien refit legitime, attribution_ok=true). Ampleur accrue apres decouverte de gros degats de rouille. Operationnel a nouveau vers 2019.",
-       "source": null,
-       "source_ref": "lien mort constate le 2026-08-03 : https://www.bredalsholmen.no/prosjekter/tidligere-prosjekter/d-s-kysten"
-      }
-     ],
-     "prix_acquisition": "160 000 NOK (kroner) en 1909 (cout de construction neuve)",
-     "caractere": "public",
-     "propriete": "publique",
-     "caractere_motif": "propriete: ville de",
-     "tracabilite": "url-non-verifiee",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Trondhjems Mekaniske Verksted, Trondheim (Norvege), 1909, coque n 139",
-      "source": "https://no.wikipedia.org/wiki/DS_%C2%ABKysten%C2%BB",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Christian Radich",
-     "imo": "5071729",
-     "type": "Trois-mâts carré (voilier-école)",
-     "annee": "1937",
-     "longueur_m": 62.5,
-     "jauge_gt": 663,
-     "port_lourd_dwt": null,
-     "capacite": "Voilier-école : 88 passagers, équipage 18 ; longueur hors tout 73 m avec beaupré, hauteur 38 m sur l'eau",
-     "capacite_pax": 88,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "Propulsion vélique (gréement carré), 14 nœuds à la voile, moteur d'appoint 10 nœuds",
-     "propulsion": [
-      "velique"
-     ],
-     "client": "Construit comme voilier-école pour la marine marchande norvégienne",
-     "operateur": "Stiftelsen Christian Radich",
-     "proprietaire": "Stiftelsen Christian Radich",
-     "classification": null,
-     "timeline": [
-      {
-       "annee": "1937",
-       "role": "construction",
-       "nom": "Framnæs Mek. Værksted (Sandefjord)",
-       "detail": "Livré le 17 juin 1937, 663 GT, gréement carré",
-       "source": "https://en.wikipedia.org/wiki/Christian_Radich"
-      },
-      {
-       "annee": "2011",
-       "role": "evenement",
-       "nom": "Bredalsholmen Dokk og Fartøyvernsenter",
-       "detail": "Mis en cale sèche à Bredalsholmen (longueur 73 m beaupré inclus, hauteur 38 m sur l'eau dominant le dock)",
-       "source": null,
-       "source_ref": "lien mort constate le 2026-08-03 : https://www.bredalsholmen.no/dokkanlegg/bygninger/13-norsk/nyheter/12-christian-radich-i-dokk-pa-bredalsholmen"
-      },
-      {
-       "annee": "2023",
-       "role": "evenement",
-       "nom": "Christian Radich",
-       "detail": "Plus gros chantier de maintenance/renovation depuis 2000, investissement de 62 MNOK reparti entre GOT et Bredalsholmen (cale seche, 6 mois). Cout de refit, pas un prix d'acquisition.",
-       "prix": "62 millions NOK",
-       "source": "https://www.fvn.no/kultur/i/q6OKoo/radich-seks-maaneder-paa-bredalsholmen"
-      }
-     ],
-     "architecte": "Christian Blom",
-     "architecte_source": "Wikipedia Christian Radich : conçu par le Commander Christian Blom de la marine norvégienne",
-     "source_ref": "Coque construite en 1937 par Framnaes Mek. Vaerksted, Sandefjord. Bredalsholmen Dokk og Fartoyvernsenter (Kristiansand) = centre de conservation/refit, legitime au titre du refit mais PAS constructeur de coque.",
-     "tracabilite": "reference-sans-url",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Framnæs Mekaniske Værksted, Sandefjord, Norvège",
-      "source": "https://fr.wikipedia.org/wiki/Christian_Radich",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Statsraad Lehmkuhl",
-     "imo": null,
-     "type": "Trois-mâts barque (voilier-école)",
-     "annee": "1914",
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Grand voilier-école norvégien à coque acier",
-     "capacite_pax": null,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "Propulsion vélique (gréement de barque) avec moteur d'appoint",
-     "propulsion": [
-      "velique"
-     ],
-     "client": "Stiftelsen Seilskipet Statsraad Lehmkuhl",
-     "operateur": "Stiftelsen Seilskipet Statsraad Lehmkuhl",
-     "proprietaire": "Stiftelsen Seilskipet Statsraad Lehmkuhl",
-     "classification": null,
-     "source": null,
-     "timeline": [
-      {
-       "annee": "1914",
-       "role": "construction",
-       "nom": "Construit en 1914 (Allemagne)",
-       "detail": "Trois-mâts barque acier, voilier-école norvégien historique",
-       "source": null,
-       "source_ref": "lien mort constate le 2026-08-03 : https://www.bredalsholmen.no/en/"
-      },
-      {
-       "annee": "2010",
-       "role": "evenement",
-       "nom": "Bredalsholmen Dokk og Fartøyvernsenter",
-       "detail": "Contrôle d'état de la coque acier et plan de travaux de réparation au centre",
-       "source": null,
-       "source_ref": "lien mort constate le 2026-08-03 : https://docplayer.me/71425632-Seilskipet-statsraad-lehmkuhl-tilstandskontroll-av-stalskrog-med-plan-for-utbedringstiltak.html"
-      }
-     ],
-     "source_ref": "lien mort constate le 2026-08-03 : https://www.bredalsholmen.no/en/",
-     "tracabilite": "reference-sans-url",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Joh. C. Tecklenborg, Geestemünde/Bremerhaven, Allemagne",
-      "source": "https://fr.wikipedia.org/wiki/Statsraad_Lehmkuhl",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    }
-   ],
+   "navires_references": [],
    "sources": [
     "http://industrimuseum.no/bedrifter/bredalsholmen",
     "https://en.wikipedia.org/wiki/SS_Hestmanden"
@@ -138092,7 +138113,45 @@
     "adresse": "Andøyveien 188, 4623 Kristiansand S, Norvège"
    },
    "contact_source": "https://www.bredalsholmen.no/",
-   "contact_maj": "2026-08-15"
+   "contact_maj": "2026-08-15",
+   "interventions": [
+    {
+     "navire": "Statsraad Lehmkuhl",
+     "imo": null,
+     "annee": "1914",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Joh. C. Tecklenborg, Geestemünde/Bremerhaven, Allemagne",
+     "source": "https://fr.wikipedia.org/wiki/Statsraad_Lehmkuhl",
+     "note": "descendu de navires_references le 2026-08-16 : Bredalsholmen Dokk og Fartøyvernsenter n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "Christian Radich",
+     "imo": "5071729",
+     "annee": "1937",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Framnæs Mekaniske Værksted, Sandefjord, Norvège",
+     "source": "https://fr.wikipedia.org/wiki/Christian_Radich",
+     "note": "descendu de navires_references le 2026-08-16 : Bredalsholmen Dokk og Fartøyvernsenter n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "DS Kysten",
+     "imo": "5200021",
+     "annee": "1909",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Trondhjems Mekaniske Verksted, Trondheim (Norvege), 1909, coque n 139",
+     "source": "https://no.wikipedia.org/wiki/DS_%C2%ABKysten%C2%BB",
+     "note": "descendu de navires_references le 2026-08-16 : Bredalsholmen Dokk og Fartøyvernsenter n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "DS Hestmanden",
+     "imo": "5377525",
+     "annee": "1911",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Laxevaag Maskin & Jernskibsbyggeri, Bergen (Norvege), 1911, coque n 104",
+     "source": "https://no.wikipedia.org/wiki/DS_%C2%ABHestmanden%C2%BB",
+     "note": "descendu de navires_references le 2026-08-16 : Bredalsholmen Dokk og Fartøyvernsenter n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    }
+   ]
   },
   {
    "nom": "Drammen Yard AS",
@@ -151063,202 +151122,7 @@
      "source": "https://www.dalesmarine.co.uk/services"
     }
    ],
-   "navires_references": [
-    {
-     "nom": "MV Caledonian Isles",
-     "imo": "9051284",
-     "type": "Ferry RoPax (car-ferry)",
-     "annee": "1993",
-     "longueur_m": 94,
-     "jauge_gt": 5221,
-     "port_lourd_dwt": null,
-     "capacite": "1 000 passagers, 110 voitures (env. 90 voitures modernes), équipage 28",
-     "capacite_pax": 1000,
-     "capacite_vehicules": 110,
-     "capacite_fret": null,
-     "energie": "Propulsion diesel (deux lignes d'arbres)",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "Caledonian Maritime Assets Limited (CMAL)",
-     "operateur": "Caledonian MacBrayne (CalMac)",
-     "proprietaire": "Caledonian Maritime Assets Limited (CMAL)",
-     "classification": null,
-     "source": "https://en.wikipedia.org/wiki/MV_Caledonian_Isles",
-     "timeline": [
-      {
-       "annee": "1993",
-       "role": "construction",
-       "nom": "Richards (Shipbuilders) Ltd, Lowestoft",
-       "detail": "Lancé le 25 mai 1993, voyage inaugural le 25 août 1993 ; ligne Ardrossan - Brodick (Arran)",
-       "source": "https://en.wikipedia.org/wiki/MV_Caledonian_Isles",
-       "prix": "GBP 12 000 000"
-      },
-      {
-       "annee": "2024",
-       "role": "evenement",
-       "nom": "Dales Marine - Greenock (Garvel)",
-       "detail": "Entrée en cale sèche à Garvel le 4 janvier pour refit ; immobilisé depuis janvier 2024 pour une série de défauts (~11 M£), séjour prolongé en 2025 (problème de pression du système de propulsion)",
-       "source": "https://www.inverclydenow.com/repairs-saga-continues-for-calmac-ferry/",
-       "prix": "près de 11 M£ (réparations)"
-      }
-     ],
-     "prix_acquisition": "GBP 12 millions (1993, neuf, chantier Richards Shipbuilders, Lowestoft)",
-     "caractere": "prive",
-     "propriete": "privee",
-     "caractere_motif": "propriete: as",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Richards (Shipbuilders) Ltd, Lowestoft (Angleterre)",
-      "source": "https://en.wikipedia.org/wiki/MV_Caledonian_Isles",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "MV Coruisk",
-     "imo": "9274836",
-     "type": "Ferry RoPax (car-ferry)",
-     "annee": "2003",
-     "longueur_m": 65,
-     "jauge_gt": 1599,
-     "port_lourd_dwt": null,
-     "capacite": "250 passagers, 40 voitures, équipage 12",
-     "capacite_pax": 250,
-     "capacite_vehicules": 40,
-     "capacite_fret": null,
-     "energie": "Propulsion diesel",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "Caledonian Maritime Assets Limited (CMAL)",
-     "operateur": "CalMac Ferries (proprietaire Caledonian Maritime Assets, CMAL)",
-     "proprietaire": "Caledonian Maritime Assets Limited (CMAL)",
-     "classification": null,
-     "source": "https://en.wikipedia.org/wiki/MV_Coruisk",
-     "timeline": [
-      {
-       "annee": "2003",
-       "role": "construction",
-       "nom": "Appledore Shipbuilders, Bideford (Devon)",
-       "detail": "Lancé le 3 mai 2003, mise en service le 14 août 2003",
-       "source": "https://en.wikipedia.org/wiki/MV_Coruisk",
-       "prix": "GBP 6 750 000"
-      },
-      {
-       "annee": "2025",
-       "role": "evenement",
-       "nom": "Dales Marine - Greenock (Garvel)",
-       "detail": "Réparé à Garvel (l'un des quatre navires en chantier le 27 février, dont trois CalMac : Loch Fyne, Coruisk, Loch Portain)",
-       "source": "https://www.inverclydenow.com/repairs-saga-continues-for-calmac-ferry/"
-      }
-     ],
-     "prix_acquisition": "6 750 000 GBP (2003, contrat de construction neuve, coque construite par Appledore Shipbuilders)",
-     "pavillon": "Royaume-Uni",
-     "caractere": "prive",
-     "propriete": "privee",
-     "caractere_motif": "propriete: as",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Appledore Shipbuilders Ltd, Bideford, Devon (Angleterre)",
-      "source": "https://en.wikipedia.org/wiki/MV_Coruisk",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "MV Loch Fyne",
-     "imo": "9006411",
-     "type": "Ferry (car-ferry, classe Loch)",
-     "annee": "1991",
-     "longueur_m": 73.8,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "200 passagers, 36 voitures, équipage 4 ; longueur 54,2 m (coque) / 73,8 m hors-tout",
-     "capacite_pax": 200,
-     "capacite_vehicules": 36,
-     "capacite_fret": null,
-     "energie": "Propulsion diesel",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "Caledonian Maritime Assets Limited (CMAL)",
-     "operateur": "Caledonian MacBrayne (CalMac)",
-     "proprietaire": "Caledonian Maritime Assets Limited (CMAL)",
-     "classification": null,
-     "source": "https://en.wikipedia.org/wiki/MV_Loch_Fyne",
-     "timeline": [
-      {
-       "annee": "1991",
-       "role": "construction",
-       "nom": "Constructeur (1991)",
-       "detail": "Construit en 1991 pour la traversée de l'île de Skye, aujourd'hui ligne Mallaig - Armadale",
-       "source": "https://en.wikipedia.org/wiki/MV_Loch_Fyne"
-      },
-      {
-       "annee": "2025",
-       "role": "evenement",
-       "nom": "Dales Marine - Greenock (Garvel)",
-       "detail": "En réparation à Garvel (27 février, avec Coruisk et Loch Portain)",
-       "source": "https://www.inverclydenow.com/repairs-saga-continues-for-calmac-ferry/"
-      }
-     ],
-     "caractere": "prive",
-     "propriete": "privee",
-     "caractere_motif": "propriete: as",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Ferguson Shipbuilders, Port Glasgow (Écosse), n° de coque 602",
-      "source": "https://en.wikipedia.org/wiki/MV_Loch_Fyne",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "MV Hebridean Isles",
-     "imo": "8404812",
-     "type": "Ferry RoPax (car-ferry)",
-     "annee": "1985",
-     "longueur_m": 85.15,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "capacite_pax": null,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "Propulsion diesel",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "Caledonian Maritime Assets Limited (CMAL)",
-     "operateur": "Caledonian MacBrayne (CalMac)",
-     "proprietaire": "Caledonian Maritime Assets Limited (CMAL)",
-     "classification": null,
-     "source": null,
-     "timeline": [
-      {
-       "annee": "2019",
-       "role": "evenement",
-       "nom": "Dales Marine - Greenock (Garvel)",
-       "detail": "Carénée à Greenock dans le programme de refit CalMac 2019/2020 (avec Lochnevis, Isle of Arran, Loch Dunvegan, Ali Cat, Loch Striven)",
-       "source": null,
-       "source_ref": "lien mort constate le 2026-08-03 : https://inverclydechamber.co.uk/dales-marine-services-refit-programme-for-calmac/"
-      }
-     ],
-     "caractere": "prive",
-     "propriete": "privee",
-     "caractere_motif": "propriete: as",
-     "source_ref": "lien mort constate le 2026-08-03 : https://inverclydechamber.co.uk/dales-marine-services-refit-programme-for-calmac/",
-     "tracabilite": "reference-sans-url",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Cochrane Shipbuilders, Selby (Angleterre)",
-      "source": "https://en.wikipedia.org/wiki/MV_Hebridean_Isles",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    }
-   ],
+   "navires_references": [],
    "sources": [
     "https://en.wikipedia.org/wiki/Dales_Marine_Services",
     "https://www.dockyard-mag.com/single-post/2019/06/13/dales-marine-services-setting-the-pace-for-vessel-drydocking-and-upbeat-about-extending",
@@ -151270,6 +151134,44 @@
    "id": "dales-marine-services-greenock-garvel-dry-dock-greenock",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://inverclydechamber.co.uk/dales-marine-services-refit-programme-for-calmac/"
+   ],
+   "interventions": [
+    {
+     "navire": "MV Hebridean Isles",
+     "imo": "8404812",
+     "annee": "1985",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Cochrane Shipbuilders, Selby (Angleterre)",
+     "source": "https://en.wikipedia.org/wiki/MV_Hebridean_Isles",
+     "note": "descendu de navires_references le 2026-08-16 : Dales Marine Services - Greenock (Garvel Dry Dock) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "MV Loch Fyne",
+     "imo": "9006411",
+     "annee": "1991",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Ferguson Shipbuilders, Port Glasgow (Écosse), n° de coque 602",
+     "source": "https://en.wikipedia.org/wiki/MV_Loch_Fyne",
+     "note": "descendu de navires_references le 2026-08-16 : Dales Marine Services - Greenock (Garvel Dry Dock) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "MV Coruisk",
+     "imo": "9274836",
+     "annee": "2003",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Appledore Shipbuilders Ltd, Bideford, Devon (Angleterre)",
+     "source": "https://en.wikipedia.org/wiki/MV_Coruisk",
+     "note": "descendu de navires_references le 2026-08-16 : Dales Marine Services - Greenock (Garvel Dry Dock) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "MV Caledonian Isles",
+     "imo": "9051284",
+     "annee": "1993",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Richards (Shipbuilders) Ltd, Lowestoft (Angleterre)",
+     "source": "https://en.wikipedia.org/wiki/MV_Caledonian_Isles",
+     "note": "descendu de navires_references le 2026-08-16 : Dales Marine Services - Greenock (Garvel Dry Dock) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    }
    ]
   },
   {
@@ -151321,97 +151223,7 @@
      "source": "https://www.dalesmarine.co.uk/facilities"
     }
    ],
-   "navires_references": [
-    {
-     "nom": "MV Loch Frisa",
-     "imo": "9740720",
-     "type": "ferry ro-pax (ex-Utne, converti pour CalMac ; pas un double-ender)",
-     "annee": "2014",
-     "longueur_m": 49.9,
-     "jauge_gt": 1160,
-     "port_lourd_dwt": null,
-     "capacite": "195 passagers ; 34-40 voitures + 4 camions",
-     "capacite_pax": 195,
-     "capacite_vehicules": 40,
-     "capacite_fret": null,
-     "energie": "2 moteurs diesel Scania AB entraînant des propulseurs azimutaux",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "Norled (commande initiale, Norvège)",
-     "operateur": "Caledonian MacBrayne (CalMac)",
-     "proprietaire": "Caledonian Maritime Assets Ltd (CMAL)",
-     "classification": null,
-     "source": "https://en.wikipedia.org/wiki/MV_Loch_Frisa",
-     "timeline": [
-      {
-       "annee": "2014",
-       "role": "construction",
-       "nom": "Sefine Shipyard (Turquie)",
-       "detail": "Construit sur plans LMG Marin (Norvège) ; lancé en 2014",
-       "source": "https://en.wikipedia.org/wiki/MV_Loch_Frisa"
-      },
-      {
-       "annee": "2015",
-       "role": "operateur",
-       "nom": "Norled",
-       "detail": "Mis en service sur les fjords norvégiens sous le nom MV Utne",
-       "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/new-calmac-vessel-undergoing-modification-ahead-of-2022-deployment-69039"
-      },
-      {
-       "annee": "2021",
-       "role": "proprietaire",
-       "nom": "Caledonian Maritime Assets Ltd (CMAL)",
-       "detail": "Acheté à Norled en octobre 2021 pour 6,6 M€",
-       "source": "https://www.cmassets.co.uk/project/mv-loch-frisa/",
-       "prix": "6,6 M EUR (5,6 M GBP) [2021]"
-      },
-      {
-       "annee": "2021",
-       "role": "conversion",
-       "nom": "Dales Marine Services - Leith (Imperial Dock)",
-       "detail": "Modification/refit (~3,4-4,5 M£) : nouvelle rampe, plateformes d'amarrage, équipements de sauvetage, traitement des eaux usées, mise aux normes britanniques",
-       "source": "https://www.cmassets.co.uk/project/mv-loch-frisa/"
-      },
-      {
-       "annee": "2022",
-       "role": "renommage",
-       "nom": "MV Loch Frisa",
-       "detail": "Renommé le 6 juin 2022 (nom choisi par vote public) ; départ de Leith le 29 mai 2022",
-       "source": "https://en.wikipedia.org/wiki/MV_Loch_Frisa"
-      },
-      {
-       "annee": "2022",
-       "role": "operateur",
-       "nom": "Caledonian MacBrayne (CalMac)",
-       "detail": "Entré en service le 13 juin 2022 sur la ligne Oban-Craignure (île de Mull)",
-       "source": "https://en.wikipedia.org/wiki/MV_Loch_Frisa"
-      },
-      {
-       "annee": "2022",
-       "role": "evenement",
-       "nom": "MV Loch Frisa",
-       "detail": "Conversion/refit chez Dales Marine Services (Leith, Imperial Dock) avant mise en service Oban-Craignure (juin 2022): 3,4 M GBP (4,3 M USD). Investissement total ~9 M GBP (achat + refit) selon The Scotsman.",
-       "prix": "3,4 M GBP (refit) [2022]",
-       "source": "https://www.scotsman.com/news/politics/second-hand-ferry-bought-for-ps9m-to-offer-resilience-to-scottish-network-3407168"
-      }
-     ],
-     "prix_acquisition": "EUR 6,6 millions (GBP 5,6 millions), 2021 (achat a Norled)",
-     "architecte": "LMG Marin",
-     "architecte_source": "https://lmgmarin.no/reference/utne/",
-     "caractere": "prive",
-     "propriete": "privee",
-     "caractere_motif": "propriete: as",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Sefine Shipyard (Yalova, Turquie)",
-      "source": "https://en.wikipedia.org/wiki/MV_Loch_Frisa",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     },
-     "source_ref": "https://lmgmarin.no/reference/utne/ — (Loch Frisa ex-Utne, design LMG 40-DE, construit Sefine Shipyard Turquie 2015 pour Norled)"
-    }
-   ],
+   "navires_references": [],
    "sources": [
     "https://www.dalesmarine.co.uk/facilities",
     "https://en.wikipedia.org/wiki/Dales_Marine_Services",
@@ -151423,7 +151235,18 @@
     "https://www.rivieramm.com/news-content-hub/news-content-hub/new-calmac-vessel-undergoing-modification-ahead-of-2022-deployment-69039"
    ],
    "confiance": "haute",
-   "id": "dales-marine-services-leith-imperial-dock-edimbourg"
+   "id": "dales-marine-services-leith-imperial-dock-edimbourg",
+   "interventions": [
+    {
+     "navire": "MV Loch Frisa",
+     "imo": "9740720",
+     "annee": "2014",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Sefine Shipyard (Yalova, Turquie)",
+     "source": "https://en.wikipedia.org/wiki/MV_Loch_Frisa",
+     "note": "descendu de navires_references le 2026-08-16 : Dales Marine Services - Leith (Imperial Dock) n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    }
+   ]
   },
   {
    "nom": "Dales Marine Services - Aberdeen",
@@ -151475,110 +151298,6 @@
     }
    ],
    "navires_references": [
-    {
-     "nom": "MV Isle of Lewis",
-     "imo": "9085974",
-     "type": "ferry ro-pax",
-     "annee": "1995",
-     "longueur_m": 101.25,
-     "jauge_gt": 6753,
-     "port_lourd_dwt": null,
-     "capacite": "680 passagers ; 123 voitures",
-     "capacite_pax": 680,
-     "capacite_vehicules": 123,
-     "capacite_fret": null,
-     "energie": "2 moteurs diesel Mirrlees Blackstone K6 Major, 2 réducteurs Ulstein 1500 AGSC, ~18 nds",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "Caledonian MacBrayne",
-     "operateur": "Caledonian MacBrayne (CalMac)",
-     "proprietaire": "Caledonian Maritime Assets Ltd (CMAL)",
-     "classification": null,
-     "source": "https://en.wikipedia.org/wiki/MV_Isle_of_Lewis",
-     "timeline": [
-      {
-       "annee": "1995",
-       "role": "construction",
-       "nom": "Ferguson Shipbuilders, Port Glasgow",
-       "detail": "Numéro de coque 608, lancé le 18 avril 1995, achevé le 26 juillet 1995",
-       "source": "https://en.wikipedia.org/wiki/MV_Isle_of_Lewis"
-      },
-      {
-       "annee": "1995",
-       "role": "operateur",
-       "nom": "Caledonian MacBrayne (CalMac)",
-       "detail": "Mis en service (longtemps sur la ligne Ullapool-Stornoway)",
-       "source": "https://en.wikipedia.org/wiki/MV_Isle_of_Lewis"
-      },
-      {
-       "annee": "2021",
-       "role": "evenement",
-       "nom": "Dales Marine Services - Aberdeen",
-       "detail": "Radoub/maintenance à Aberdeen (navire référencé parmi les passages vérifiés du chantier)",
-       "source": "https://www.trusteddocks.com/shipyards/6949-dales-marine-services-aberdeen-ltd"
-      }
-     ],
-     "caractere": "prive",
-     "propriete": "privee",
-     "caractere_motif": "propriete: as",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Ferguson Shipbuilders, Port Glasgow (Ecosse)",
-      "source": "https://en.wikipedia.org/wiki/MV_Isle_of_Lewis",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "MV Clansman",
-     "imo": "9158953",
-     "type": "ferry ro-pax",
-     "annee": "1998",
-     "longueur_m": 99,
-     "jauge_gt": 5499,
-     "port_lourd_dwt": null,
-     "capacite": "navire à passagers ~101 m (capacité voitures/passagers CalMac)",
-     "capacite_pax": null,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "Propulsion diesel",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "Caledonian MacBrayne",
-     "operateur": "Caledonian MacBrayne (CalMac)",
-     "proprietaire": "Caledonian Maritime Assets Ltd (CMAL)",
-     "classification": null,
-     "source": "https://www.trusteddocks.com/shipyards/6949-dales-marine-services-aberdeen-ltd",
-     "timeline": [
-      {
-       "annee": "1998",
-       "role": "construction",
-       "nom": "Appledore Shipbuilders",
-       "detail": "Ferry CalMac des Hébrides ; mis en service en 1998",
-       "source": "https://www.shipsofcalmac.co.uk/ships-1/isle-of-lewis"
-      },
-      {
-       "annee": "2021",
-       "role": "evenement",
-       "nom": "Dales Marine Services - Aberdeen",
-       "detail": "Radoub/maintenance à Aberdeen (navire référencé parmi les passages vérifiés du chantier, ~101 m)",
-       "source": "https://www.trusteddocks.com/shipyards/6949-dales-marine-services-aberdeen-ltd"
-      }
-     ],
-     "caractere": "prive",
-     "propriete": "privee",
-     "caractere_motif": "propriete: as",
-     "tracabilite": "url-non-verifiee",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Appledore Shipbuilders, Appledore, Devon (Angleterre)",
-      "source": "https://en.wikipedia.org/wiki/MV_Clansman",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
     {
      "nom": "Skandi Caledonia",
      "imo": "9281657",
@@ -151652,45 +151371,6 @@
       "le": "2026-08-05",
       "chantier_reel": "Non identifie nominativement : chantier norvegien, coque sur plan Marin Teknikk MT 6000 (design norvegien), armateur DOF, pavillon norvegien"
      }
-    },
-    {
-     "nom": "Scotia",
-     "imo": null,
-     "type": "navire de recherche halieutique / pêche",
-     "annee": null,
-     "longueur_m": 68,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "navire de pêche/recherche ~68 m",
-     "capacite_pax": null,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "Propulsion diesel",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": null,
-     "operateur": null,
-     "proprietaire": null,
-     "classification": null,
-     "source": "https://www.trusteddocks.com/shipyards/6949-dales-marine-services-aberdeen-ltd",
-     "timeline": [
-      {
-       "annee": "2021",
-       "role": "evenement",
-       "nom": "Dales Marine Services - Aberdeen",
-       "detail": "Navire (~68 m) référencé parmi les passages vérifiés du chantier d'Aberdeen",
-       "source": "https://www.trusteddocks.com/shipyards/6949-dales-marine-services-aberdeen-ltd"
-      }
-     ],
-     "tracabilite": "url-non-verifiee",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Ferguson Shipbuilders Ltd, Port Glasgow (Écosse), n° de coque 704",
-      "source": "https://en.wikipedia.org/wiki/Ferguson_Marine",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
     }
    ],
    "sources": [
@@ -151702,7 +151382,36 @@
     "https://www.dalesmarine.co.uk/news/dales-marine-secures-contract-to-provide-fabrication-services-for-two-new-scottish-ferries"
    ],
    "confiance": "haute",
-   "id": "dales-marine-services-aberdeen-aberdeen"
+   "id": "dales-marine-services-aberdeen-aberdeen",
+   "interventions": [
+    {
+     "navire": "Scotia",
+     "imo": null,
+     "annee": null,
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Ferguson Shipbuilders Ltd, Port Glasgow (Écosse), n° de coque 704",
+     "source": "https://en.wikipedia.org/wiki/Ferguson_Marine",
+     "note": "descendu de navires_references le 2026-08-16 : Dales Marine Services - Aberdeen n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "MV Clansman",
+     "imo": "9158953",
+     "annee": "1998",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Appledore Shipbuilders, Appledore, Devon (Angleterre)",
+     "source": "https://en.wikipedia.org/wiki/MV_Clansman",
+     "note": "descendu de navires_references le 2026-08-16 : Dales Marine Services - Aberdeen n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    },
+    {
+     "navire": "MV Isle of Lewis",
+     "imo": "9085974",
+     "annee": "1995",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Ferguson Shipbuilders, Port Glasgow (Ecosse)",
+     "source": "https://en.wikipedia.org/wiki/MV_Isle_of_Lewis",
+     "note": "descendu de navires_references le 2026-08-16 : Dales Marine Services - Aberdeen n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    }
+   ]
   },
   {
    "nom": "Dales Marine Services - Troon",
@@ -151755,72 +151464,6 @@
     }
    ],
    "navires_references": [
-    {
-     "nom": "MV Catriona",
-     "imo": "9759862",
-     "type": "ferry hybride diesel-électrique + batteries",
-     "annee": "2016",
-     "longueur_m": 43.5,
-     "jauge_gt": 499,
-     "port_lourd_dwt": 135,
-     "capacite": "150 passagers ; 23 voitures ou 2 PL",
-     "capacite_pax": 150,
-     "capacite_vehicules": 23,
-     "energie": "Hybride diesel-électrique : 3 × Volvo Penta D13 MG + batteries lithium-ion ; 2 moteurs à aimants permanents 375 kW ; propulsion 2 × Voith ; réduction d'au moins 20% de carburant et de CO2",
-     "propulsion": [
-      "hybride",
-      "diesel-electrique",
-      "electrique-batterie"
-     ],
-     "client": "Caledonian Maritime Assets Ltd (CMAL)",
-     "operateur": "Caledonian MacBrayne (CalMac)",
-     "proprietaire": "Caledonian Maritime Assets Limited (CMAL)",
-     "classification": null,
-     "source": "https://en.wikipedia.org/wiki/MV_Catriona",
-     "timeline": [
-      {
-       "annee": "2015",
-       "role": "construction",
-       "nom": "Ferguson Marine Engineering, Port Glasgow",
-       "detail": "Troisième ferry hybride du programme Hybrid Ferries de CMAL ; lancé le 11 décembre 2015 ; coût ~12,3 M£",
-       "source": "https://en.wikipedia.org/wiki/MV_Catriona",
-       "prix": "12,3 M£"
-      },
-      {
-       "annee": "2016",
-       "role": "operateur",
-       "nom": "Caledonian MacBrayne (CalMac)",
-       "detail": "Mis en service en 2016 (Lochranza-Claonaig, puis ligne Tarbert-Portavadie)",
-       "source": "https://en.wikipedia.org/wiki/MV_Catriona"
-      },
-      {
-       "annee": "2021",
-       "role": "evenement",
-       "nom": "Dales Marine Services - Troon",
-       "detail": "Radoub/maintenance à Troon (navire référencé parmi les passages vérifiés du chantier)",
-       "source": "https://www.trusteddocks.com/shipyards/7862-dales-marine---troon"
-      },
-      {
-       "annee": "2014",
-       "role": "construction",
-       "nom": "MV Catriona",
-       "detail": "Commande par CMAL en sept. 2014 a Ferguson Marine Engineering (Port Glasgow), 3e ferry hybride diesel-electrique + batteries de la serie (apres Hallaig 2013 et Lochinvar 2014). Cout: 12,3 M GBP (chiffre confirme par CMAL, BBC 'New 12m ferry Catriona' et Wikipedia). Lance dec. 2015, en service ete 2016.",
-       "prix": "12,3 M GBP [2014]",
-       "source": "https://www.bbc.com/news/av/uk-scotland-35072390"
-      }
-     ],
-     "prix_acquisition": "12,3 M£ (construction neuve, 2015-2016)",
-     "caractere": "prive",
-     "propriete": "privee",
-     "caractere_motif": "propriete: as",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Ferguson Marine Engineering Ltd, Port Glasgow (Écosse), n° de coque 727",
-      "source": "https://en.wikipedia.org/wiki/MV_Catriona",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
     {
      "nom": "Grampian Fortress",
      "imo": null,
@@ -151877,7 +151520,18 @@
     "https://en.wikipedia.org/wiki/MV_Loch_Frisa"
    ],
    "confiance": "haute",
-   "id": "dales-marine-services-troon-troon"
+   "id": "dales-marine-services-troon-troon",
+   "interventions": [
+    {
+     "navire": "MV Catriona",
+     "imo": "9759862",
+     "annee": "2016",
+     "nature": "passage en chantier (refit ou reparation)",
+     "constructeur": "Ferguson Marine Engineering Ltd, Port Glasgow (Écosse), n° de coque 727",
+     "source": "https://en.wikipedia.org/wiki/MV_Catriona",
+     "note": "descendu de navires_references le 2026-08-16 : Dales Marine Services - Troon n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
+    }
+   ]
   },
   {
    "nom": "Dales Marine Services - Grangemouth (Carron Dry Dock)",
@@ -174546,7 +174200,17 @@
      ],
      "caractere": "public",
      "propriete": "publique",
-     "caractere_motif": "propriete: danpilot"
+     "caractere_motif": "propriete: danpilot",
+     "sources": [
+      "https://da.wikipedia.org/wiki/A545_Vikar_og_A546_Stella_Polaris"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (danois)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "1994"
+     }
     },
     {
      "nom": "Sirius (AP 14000)",
@@ -189552,6 +189216,16 @@
       "source": "https://www.hollandshipyardsgroup.com/references/survey-vessel",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://vlootschouw.nl/schip/ijsselvliet/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Vlootschouw (vlootschouw.nl)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
      }
     },
     {
@@ -189637,6 +189311,16 @@
       "source": "https://www.hollandshipyardsgroup.com/references/survey-vessel",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://swzmaritime.nl/tag/men-goe/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "SWZ|Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
      }
     },
     {
@@ -189728,7 +189412,17 @@
       "confiance": "simple"
      },
      "source_ref": "source complementaire (2026-08-05) : https://www.hydrauvision.com/en/project/hydrauvision-supplies-electrical-components-for-survey-vessel/",
-     "largeur_m": 4.9
+     "largeur_m": 4.9,
+     "sources": [
+      "https://www.bairdmaritime.com/work-boat-world/research-environment-training/vessel-review-meermin-iv-dutch-waterway-authority-welcomes-coastal-survey-vessel"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Baird Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2023"
+     }
     },
     {
      "nom": "Telstar",
@@ -189785,6 +189479,16 @@
       "source": "https://www.hollandshipyardsgroup.com/references/survey-vessel",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.maritime-pics.com/2024/09/22/vessel-renaming-ffs-athos-was-renamed-farmar-athos-17-september-2024/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritime-Pics",
+      "confirme": "attribution",
+      "imo_confirme": "9714575",
+      "annee_confirmee": "2014"
      }
     },
     {
@@ -189804,6 +189508,16 @@
       "source": "https://www.hollandshipyardsgroup.com/references/survey-vessel",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.offshore-energy.biz/the-netherlands-holland-shipyards-group-launches-tug-dutch-blue/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Offshore Energy (offshore-energy.biz)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2012"
      }
     },
     {
@@ -189824,6 +189538,16 @@
       "source": "https://nl.wikipedia.org/wiki/Holland_Shipyards_Group",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://binnenvaartlog.nl/amulet/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Binnenvaartlog",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2010"
      }
     },
     {
@@ -189844,6 +189568,16 @@
       "source": "https://nl.wikipedia.org/wiki/Holland_Shipyards_Group",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.dredgingtoday.com/2021/02/19/dredger-geertje-ready-for-delivery/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Dredging Today",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2021"
      }
     },
     {
@@ -189866,6 +189600,16 @@
       "source": "https://nl.wikipedia.org/wiki/Holland_Shipyards_Group",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.bairdmaritime.com/marine-projects/dredging/tv-dredging-delivers-fully-electric-dredger-to-royal-smals"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Baird Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2020"
      }
     },
     {
@@ -189892,6 +189636,16 @@
       "source": "https://de.wikipedia.org/wiki/Schlepp-_und_F%C3%A4hrgesellschaft_Kiel",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://de.wikipedia.org/wiki/Schlepp-_und_F%C3%A4hrgesellschaft_Kiel"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (allemand)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2020"
      }
     },
     {
@@ -189914,6 +189668,16 @@
       "source": "https://de.wikipedia.org/wiki/Schlepp-_und_F%C3%A4hrgesellschaft_Kiel",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://de.wikipedia.org/wiki/Schlepp-_und_F%C3%A4hrgesellschaft_Kiel"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (allemand)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2022"
      }
     },
     {
@@ -189936,6 +189700,16 @@
       "motif": "verdict « corrige » non reproduit par un second controle a l'aveugle le 2026-08-05. AUCUNE SOURCE TIERCE CONSULTABLE TROUVEE. Navire sans IMO, nom tres court et ambigu, aucune fiche de registre atteignable (VesselFinder et MarineTraffic indexent par IMO ou MMSI, absents ici ; Wikipedia sans article ; budget WebSearch epuise, donc impossible d'identifier la fiche d'arrivee). Ni l'existence du navire, ni son annee 2022, ni son attribution a Holland Shipyards Group ne sont recoupees",
       "source": "https://nl.wikipedia.org/wiki/IJveer",
       "le": "2026-08-05"
+     },
+     "sources": [
+      "https://de.wikipedia.org/wiki/Schlepp-_und_F%C3%A4hrgesellschaft_Kiel"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (allemand)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2022"
      }
     },
     {
@@ -189955,6 +189729,16 @@
       "source": "https://de.wikipedia.org/wiki/Schlepp-_und_F%C3%A4hrgesellschaft_Kiel",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://kielmobil.app/de/artikel/taufe-fuer-die-letzte-plug-in-hybridfaehre-der-sfk"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Kielmobil",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2026"
      }
     },
     {
@@ -190027,6 +189811,16 @@
       "source": "https://hollandshipyardsgroup.com/references/sandoy",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.ferry-site.dk/ferry.php?id=9894923"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "The Ferry Site (ferry-site.dk)",
+      "confirme": "attribution",
+      "imo_confirme": "9894923",
+      "annee_confirmee": "2021"
      }
     },
     {
@@ -190076,6 +189870,16 @@
       "source": "https://hollandshipyardsgroup.com/references/fully-electric-ferries-rosfjord-and-lafjord",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.ferry-site.dk/ferry.php?id=9913274"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "The Ferry Site (ferry-site.dk)",
+      "confirme": "attribution",
+      "imo_confirme": "9913274",
+      "annee_confirmee": "2021"
      }
     },
     {
@@ -190102,6 +189906,16 @@
       "source": "https://hollandshipyardsgroup.com/references/fully-electric-ferries-rosfjord-and-lafjord",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.ferry-site.dk/ferry.php?id=9913262"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "The Ferry Site (ferry-site.dk)",
+      "confirme": "attribution",
+      "imo_confirme": "9913262",
+      "annee_confirmee": "2022"
      }
     },
     {
@@ -192390,6 +192204,16 @@
       "source": "https://royalbodewes.com/vessel/mangen/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://markprummel.nl/nl/ship/mangen-djmj2-9923308/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Mark Prummel, registre de navires (markprummel.nl)",
+      "confirme": "attribution",
+      "imo_confirme": "9923308",
+      "annee_confirmee": "2024"
      }
     },
     {
@@ -192417,6 +192241,16 @@
       "source": "https://royalbodewes.com/vessel/arklow-rover/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.schuttevaer.nl/nieuws/actueel/2024/10/04/royal-bodewes-levert-arklow-rover-als-laatste-van-lange-serie-op/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Schuttevaer (presse maritime neerlandaise)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2024"
      }
     },
     {
@@ -192444,6 +192278,16 @@
       "source": "https://royalbodewes.com/vessel/scot-leader/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.scotline.co.uk/mv-scot-leader/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scotline / Intrada Ships Management (armateur-operateur)",
+      "confirme": "attribution",
+      "imo_confirme": "9963267",
+      "annee_confirmee": "2024"
      }
     },
     {
@@ -192471,6 +192315,16 @@
       "source": "https://royalbodewes.com/vessel/arklow-rose/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://markprummel.nl/ship/arklow-rose-eia658-9923267/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Mark Prummel, registre de navires (markprummel.nl)",
+      "confirme": "attribution",
+      "imo_confirme": "9923267",
+      "annee_confirmee": "2024"
      }
     },
     {
@@ -192498,6 +192352,16 @@
       "source": "https://royalbodewes.com/vessel/unden/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://markprummel.nl/ship/unden-dgtq2-9961910/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Mark Prummel, registre de navires (markprummel.nl)",
+      "confirme": "attribution",
+      "imo_confirme": "9961910",
+      "annee_confirmee": "2024"
      }
     },
     {
@@ -192520,6 +192384,16 @@
       "source": "https://royalbodewes.com/vessel/asia-cement-no-9/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.schuttevaer.nl/nieuws/actueel/2024/04/11/doop-met-taiwanese-drakendans-bij-royal-bodewes/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Schuttevaer (presse maritime neerlandaise)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2024"
      }
     },
     {
@@ -192547,6 +192421,16 @@
       "source": "https://royalbodewes.com/vessel/arklow-resolve/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://markprummel.nl/ship/arklow-resolve-eia2631-9923255/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Mark Prummel, registre de navires (markprummel.nl)",
+      "confirme": "attribution",
+      "imo_confirme": "9923255",
+      "annee_confirmee": "2024"
      }
     },
     {
@@ -192574,6 +192458,16 @@
       "source": "https://royalbodewes.com/vessel/arklow-ranger/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://markprummel.nl/ship/arklow-ranger-eia2572-9923243/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Mark Prummel, registre de navires (markprummel.nl)",
+      "confirme": "attribution",
+      "imo_confirme": "9923243",
+      "annee_confirmee": "2023 (lancement) / 2024 (livraison)"
      }
     },
     {
@@ -192600,6 +192494,16 @@
       "source": "https://markprummel.nl/ship/hagland-premier-laub8-9964077/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://markprummel.nl/ship/hagland-premier-laub8-9964077/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Mark Prummel, registre de navires (markprummel.nl)",
+      "confirme": "attribution",
+      "imo_confirme": "9964077",
+      "annee_confirmee": "2023"
      }
     },
     {
@@ -192627,6 +192531,16 @@
       "source": "https://royalbodewes.com/vessel/arklow-rambler/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://markprummel.nl/ship/arklow-rambler-eia2465-9923231/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Mark Prummel, registre de navires (markprummel.nl)",
+      "confirme": "attribution",
+      "imo_confirme": "9923231",
+      "annee_confirmee": "2023"
      }
     },
     {
@@ -192656,7 +192570,17 @@
      },
      "source_ref": "source complementaire (2026-08-05) : https://www.scotline.co.uk/fleet/mv-scot-trader/ ; source complementaire (2026-08-05) : https://www.royalbodewes.com/vessels/scot-trader/",
      "largeur_m": 15.2,
-     "capacite_fret": "240 000 pieds cubes en grain ; 75 EVP en pontee et 126 EVP en cale"
+     "capacite_fret": "240 000 pieds cubes en grain ; 75 EVP en pontee et 126 EVP en cale",
+     "sources": [
+      "https://markprummel.nl/ship/scot-trader-mnoy2-9728784/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Mark Prummel, registre de navires (markprummel.nl)",
+      "confirme": "attribution",
+      "imo_confirme": "9728784",
+      "annee_confirmee": "2023"
+     }
     },
     {
      "nom": "Arklow Rally",
@@ -192683,6 +192607,16 @@
       "source": "https://royalbodewes.com/vessel/arklow-rally/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://markprummel.nl/ship/arklow-rally-eia2288-9923229/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Mark Prummel, registre de navires (markprummel.nl)",
+      "confirme": "attribution",
+      "imo_confirme": "9923229",
+      "annee_confirmee": "2023"
      }
     },
     {
@@ -192709,6 +192643,16 @@
       "source": "https://royalbodewes.com/vessel/hagland-progress/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.marhisdata.nl/public/publicaties/publicatie_2023-03-12_db19397c609f70e80a4c4a64b8c45cc3.pdf"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Marhisdata, Maritiem-Historische Databank (bulletin du 12-03-2023)",
+      "confirme": "attribution",
+      "imo_confirme": "9936343",
+      "annee_confirmee": "2023"
      }
     },
     {
@@ -192735,6 +192679,16 @@
       "source": "https://royalbodewes.com/vessel/florvik/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.marhisdata.nl/public/publicaties/publicatie_2023-03-12_db19397c609f70e80a4c4a64b8c45cc3.pdf"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Marhisdata, Maritiem-Historische Databank (bulletin du 12-03-2023)",
+      "confirme": "attribution",
+      "imo_confirme": "9956331",
+      "annee_confirmee": "2023"
      }
     },
     {
@@ -192758,6 +192712,16 @@
       "source": "https://royalbodewes.com/vessel/arklow-racer/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.ship-db.de/nawbn.php?wbn_nr=rbwh821010"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "ship-db.de (base de donnees allemande de construction navale)",
+      "confirme": "attribution",
+      "imo_confirme": "9923217",
+      "annee_confirmee": "2023"
      }
     },
     {
@@ -200014,7 +199978,17 @@
       "le": "2026-08-03",
       "confiance": "simple"
      },
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "sources": [
+      "https://scheepvaartwest.be/CMS/index.php/general-cargo/1751-humberborg-imo-9321392"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9321392",
+      "annee_confirmee": "2006"
+     }
     },
     {
      "nom": "Dupuy-de-Lôme (A759)",
@@ -200040,6 +200014,16 @@
       "source": "https://en.wikipedia.org/wiki/French_ship_Dupuy_de_L%C3%B4me_(A759)",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://s7d2.scene7.com/is/content/Caterpillar/C10709809"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "HSB International (réimpression février 2005, hébergée par Caterpillar)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2004"
      }
     },
     {
@@ -200068,7 +200052,17 @@
       "le": "2026-08-03",
       "confiance": "simple"
      },
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/12532-clara-imo-6312676"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9312676",
+      "annee_confirmee": "2004"
+     }
     },
     {
      "nom": "Bélisaire",
@@ -200095,6 +200089,16 @@
       "source": "https://www.vesseltracker.com/en/Ships/Belisaire-9229025.html",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.conoship.com/portfolio-item/13000m3-product-tanker/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Conoship International (bureau d'architecture navale)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2001"
      }
     },
     {
@@ -200119,6 +200123,16 @@
       "source": "https://www.vesseltracker.com/en/Ships/Viscount-9147136.html",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.conoship.com/portfolio-item/general-cargo-vessel-m-v-viscount/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Conoship International (bureau d'architecture navale)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "1998"
      }
     },
     {
@@ -200145,6 +200159,16 @@
       "source": "https://www.vesseltracker.com/en/Ships/Kroonborg-9704867.html",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://vesselspecification.com/vessel/9704867/kroonborg"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "VesselSpecification",
+      "confirme": "attribution",
+      "imo_confirme": "9704867",
+      "annee_confirmee": "2015"
      }
     },
     {
@@ -200171,6 +200195,16 @@
       "source": "https://www.vesseltracker.com/en/Ships/Serkeborg-9621534.html",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://vesselspecification.com/vessel/9621534/statiaborg"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "VesselSpecification",
+      "confirme": "attribution",
+      "imo_confirme": "9621534",
+      "annee_confirmee": "2012"
      }
     },
     {
@@ -200190,7 +200224,17 @@
      "operateur": "Wagenborg Offshore (a l origine)",
      "proprietaire": "Royal Wagenborg (a l origine) ; armateur prive depuis la conversion",
      "pavillon": "Iles Marshall (apres conversion ; Pays-Bas a l origine)",
-     "source": "https://www.offshore-energy.biz/the-netherlands-royal-niestern-sander-hands-over-imsv-sanaborg/"
+     "source": "https://www.offshore-energy.biz/the-netherlands-royal-niestern-sander-hands-over-imsv-sanaborg/",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Ragnar_(yacht)"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia",
+      "confirme": "attribution",
+      "imo_confirme": "9621522",
+      "annee_confirmee": "2012"
+     }
     },
     {
      "nom": "Edenborg",
@@ -200217,6 +200261,16 @@
       "source": "https://www.vesseltracker.com/en/Ships/Edenborg-9463449.html",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/10348-edenborg-imo-9463449"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9463449",
+      "annee_confirmee": "2010"
      }
     },
     {
@@ -200245,7 +200299,17 @@
       "confiance": "simple"
      },
      "tracabilite": "url-non-verifiee",
-     "source_ref": "source complementaire (2026-08-05) : https://www.marhisdata.nl/schip?id=8697"
+     "source_ref": "source complementaire (2026-08-05) : https://www.marhisdata.nl/schip?id=8697",
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/1801-laganborg-imo-9407419"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9407419",
+      "annee_confirmee": "2008"
+     }
     },
     {
      "nom": "Lauwersborg",
@@ -200273,7 +200337,17 @@
       "confiance": "simple"
      },
      "tracabilite": "url-non-verifiee",
-     "source_ref": "source complementaire (2026-08-05) : https://www.marhisdata.nl/schip?id=7637"
+     "source_ref": "source complementaire (2026-08-05) : https://www.marhisdata.nl/schip?id=7637",
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/1806-lauwersborg-imo-9399387"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9399387",
+      "annee_confirmee": "2007"
+     }
     },
     {
      "nom": "Lingeborg",
@@ -200300,7 +200374,17 @@
       "le": "2026-08-03",
       "confiance": "simple"
      },
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/8951-lingeborg-imo-9399399"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9399399",
+      "annee_confirmee": "2007"
+     }
     },
     {
      "nom": "Loireborg",
@@ -200328,7 +200412,17 @@
       "confiance": "simple"
      },
      "tracabilite": "url-non-verifiee",
-     "source_ref": "source complementaire (2026-08-05) : https://www.marhisdata.nl/schip?id=8452"
+     "source_ref": "source complementaire (2026-08-05) : https://www.marhisdata.nl/schip?id=8452",
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/9058-loireborg-imo-9399404"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9399404",
+      "annee_confirmee": "2008"
+     }
     },
     {
      "nom": "Evans Spirit (ex Spavalda)",
@@ -200354,7 +200448,17 @@
       "le": "2026-08-05",
       "confiance": "simple"
      },
-     "source_ref": "source complementaire (2026-08-05) : https://commons.wikimedia.org/wiki/Category:Spavalda_(ship,_2007)"
+     "source_ref": "source complementaire (2026-08-05) : https://commons.wikimedia.org/wiki/Category:Spavalda_(ship,_2007)",
+     "sources": [
+      "https://www.wikidata.org/wiki/Q83638472"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikidata",
+      "confirme": "attribution",
+      "imo_confirme": "9327774",
+      "annee_confirmee": "2007"
+     }
     },
     {
      "nom": "McKeil Spirit (ex Ardita)",
@@ -201456,6 +201560,16 @@
       "source": "https://www.marhisdata.nl/werf&id=518",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://swzmaritime.nl/news/2019/12/12/electric-utility-vessel-enters-into-service-for-province-of-groningen/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "SWZ Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2019"
      }
     },
     {
@@ -201677,6 +201791,16 @@
       "source": "https://dredgepoint.org/equipment/andre-l",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://shipsio.com/public/ships/121294"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Ships IO",
+      "confirme": "attribution",
+      "imo_confirme": "9318632",
+      "annee_confirmee": "2005"
      }
     },
     {
@@ -201704,6 +201828,16 @@
       "motif": "verdict « corrige » non reproduit par un second controle a l'aveugle le 2026-08-05. Identite confirmee : cle OMI valide, navire de 1998, aujourd'hui COSTA VERDE sous pavillon bahreini, type registre Hopper Dredger, ce qui corrobore la conversion en drague. L'historique de noms tiers mentionne CONTENDER et MARY CHRISTINA (base : Marie Christina, orthographe a verifier). Constructeur non nomme par une source tierce : attribution a Barkmeijer Stroobos non recoupee. ATTENTION : si le",
       "source": "https://www.vesselfinder.com/vessels/details/9184665",
       "le": "2026-08-05"
+     },
+     "sources": [
+      "https://shipsio.com/public/ships/112032"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Ships IO",
+      "confirme": "attribution",
+      "imo_confirme": "9184665",
+      "annee_confirmee": "1998"
      }
     },
     {
@@ -201757,6 +201891,16 @@
       "source": "https://commons.wikimedia.org/wiki/Category:IMO_9496965",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://shipsio.com/public/ships/373771"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Ships IO",
+      "confirme": "attribution",
+      "imo_confirme": "9496965",
+      "annee_confirmee": "2014"
      }
     },
     {
@@ -201785,7 +201929,17 @@
       "source": "https://www.vesselfinder.com/vessels/details/9491355",
       "le": "2026-08-05"
      },
-     "source_ref": "source complementaire (2026-08-05) : https://dredgepoint.org/equipment/ukd-orca"
+     "source_ref": "source complementaire (2026-08-05) : https://dredgepoint.org/equipment/ukd-orca",
+     "sources": [
+      "https://shipsio.com/public/ships/134237"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Ships IO",
+      "confirme": "attribution",
+      "imo_confirme": "9491355",
+      "annee_confirmee": "2010"
+     }
     },
     {
      "nom": "Fri Bergen (ex Flinterrachel, ex Rachel)",
@@ -201813,7 +201967,17 @@
       "le": "2026-08-03",
       "confiance": "simple"
      },
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "sources": [
+      "https://shipsio.com/public/ships/124497"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Ships IO",
+      "confirme": "attribution",
+      "imo_confirme": "9361122",
+      "annee_confirmee": "2009"
+     }
     },
     {
      "nom": "Rebecca (ex Flinterrebecca, ex CRS Rebecca)",
@@ -201839,7 +202003,17 @@
       "le": "2026-08-03",
       "confiance": "simple"
      },
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "sources": [
+      "https://shipsio.com/public/ships/124495"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Ships IO",
+      "confirme": "attribution",
+      "imo_confirme": "9361108",
+      "annee_confirmee": "2008"
+     }
     },
     {
      "nom": "Marietje Andrea",
@@ -201867,7 +202041,17 @@
       "confiance": "simple"
      },
      "tracabilite": "url-non-verifiee",
-     "source_ref": "source complementaire (2026-08-05) : https://commons.wikimedia.org/wiki/Category:IMO_9361134"
+     "source_ref": "source complementaire (2026-08-05) : https://commons.wikimedia.org/wiki/Category:IMO_9361134",
+     "sources": [
+      "https://shipsio.com/public/ships/124498"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Ships IO",
+      "confirme": "attribution",
+      "imo_confirme": "9361134",
+      "annee_confirmee": "2009"
+     }
     },
     {
      "nom": "CL Atlas (ex Saffier)",
@@ -201895,7 +202079,17 @@
       "le": "2026-08-03",
       "confiance": "simple"
      },
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "sources": [
+      "https://shipsio.com/public/ships/124225"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Ships IO",
+      "confirme": "attribution",
+      "imo_confirme": "9357511",
+      "annee_confirmee": "2008"
+     }
     },
     {
      "nom": "Steven B",
@@ -201928,7 +202122,17 @@
       "confiance": "simple"
      },
      "source_ref": "source complementaire (2026-08-05) : https://commons.wikimedia.org/wiki/Category:IMO_7420936",
-     "pavillon": "Antigua-et-Barbuda"
+     "pavillon": "Antigua-et-Barbuda",
+     "sources": [
+      "https://shipsio.com/public/ships/74569"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Ships IO",
+      "confirme": "attribution",
+      "imo_confirme": "7420936",
+      "annee_confirmee": "1975"
+     }
     },
     {
      "nom": "Swalinge",
@@ -201944,6 +202148,16 @@
       "source": "https://commons.wikimedia.org/wiki/Category:IMO_7637448",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://shipsio.com/public/ships/78458"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Ships IO",
+      "confirme": "attribution",
+      "imo_confirme": "7637448",
+      "annee_confirmee": "1977"
      }
     },
     {
@@ -201961,7 +202175,17 @@
       "le": "2026-08-05",
       "confiance": "simple"
      },
-     "source_ref": "source complementaire (2026-08-05) : https://commons.wikimedia.org/wiki/Category:IMO_7808619"
+     "source_ref": "source complementaire (2026-08-05) : https://commons.wikimedia.org/wiki/Category:IMO_7808619",
+     "sources": [
+      "https://shipsio.com/public/ships/81391"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Ships IO",
+      "confirme": "attribution",
+      "imo_confirme": "7808619",
+      "annee_confirmee": "1978"
+     }
     },
     {
      "nom": "Bulktrader",
@@ -201978,7 +202202,17 @@
       "le": "2026-08-05",
       "confiance": "simple"
      },
-     "source_ref": "source complementaire (2026-08-05) : https://commons.wikimedia.org/wiki/Category:IMO_7819814"
+     "source_ref": "source complementaire (2026-08-05) : https://commons.wikimedia.org/wiki/Category:IMO_7819814",
+     "sources": [
+      "https://shipsio.com/public/ships/81886"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Ships IO",
+      "confirme": "attribution",
+      "imo_confirme": "7819814",
+      "annee_confirmee": "1979"
+     }
     },
     {
      "nom": "Eendracht",
@@ -201995,6 +202229,16 @@
       "source": "https://commons.wikimedia.org/wiki/Category:IMO_7922350",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.shipphotos.co.uk/ship/?ship=eendracht80"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "ShipPhotos.co.uk",
+      "confirme": "attribution",
+      "imo_confirme": "7922350",
+      "annee_confirmee": "1980"
      }
     },
     {
@@ -202014,6 +202258,16 @@
       "source": "https://www.vesseltracker.com/en/Ships/Arkaim-4-8121252.html",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.shipphotos.co.uk/ship/?ship=belugaperformer"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "ShipPhotos.co.uk",
+      "confirme": "attribution",
+      "imo_confirme": "8121252",
+      "annee_confirmee": "1982"
      }
     },
     {
@@ -204996,6 +205250,16 @@
       "source": "https://da.wikipedia.org/wiki/Ven%C3%B8",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://da.wikipedia.org/wiki/M/F_Ven%C3%B8_F%C3%A6rgen"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (version danoise)",
+      "confirme": "attribution",
+      "imo_confirme": "9564449",
+      "annee_confirmee": "2010"
      }
     },
     {
@@ -205024,6 +205288,16 @@
       "source": "https://ferry-site.dk/ferryname.php?lang=en",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://sv.wikipedia.org/wiki/M/S_Hakefjord"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (version suedoise)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "1998"
      }
     },
     {
@@ -205052,6 +205326,16 @@
       "source": "https://ferry-site.dk/ferryname.php?lang=en",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://da.wikipedia.org/wiki/M/F_Aar%C3%B8"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (version danoise)",
+      "confirme": "attribution",
+      "imo_confirme": "9191383",
+      "annee_confirmee": "1999"
      }
     },
     {
@@ -207449,7 +207733,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-472-havsnurp.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-472-havsnurp.aspx",
+     "sources": [
+      "https://fiskerforum.com/versatile-havsnurp-delivered-by-skagen-yard/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "FiskerForum",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2024"
+     }
     },
     {
      "nom": "Sille Marie",
@@ -207463,7 +207757,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-471-sille-marie.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-471-sille-marie.aspx",
+     "sources": [
+      "https://www.worldfishing.net/new-vessels/sille-marie-joins-norwegian-enterprise/1489910.article"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "World Fishing & Aquaculture",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2023"
+     }
     },
     {
      "nom": "Christina S",
@@ -207477,7 +207781,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-470-christina-s.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-470-christina-s.aspx",
+     "sources": [
+      "https://fiskerforum.com/new-generation-pelagic-catcher-for-fraserburgh/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "FiskerForum",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2023"
+     }
     },
     {
      "nom": "Altaire",
@@ -207491,7 +207805,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-469-altaire.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-469-altaire.aspx",
+     "sources": [
+      "https://fishingnews.co.uk/news/boat-review-altaire-lk-429/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Fishing News",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2023"
+     }
     },
     {
      "nom": "Gollenes",
@@ -207505,7 +207829,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-468-gollenes.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-468-gollenes.aspx",
+     "sources": [
+      "https://batomtaler.skipsrevyen.no/gollenes-gollenes-rederi-karstensens-skibsvaerft/ms-gollenes/1514436"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Skipsrevyen",
+      "confirme": "attribution",
+      "imo_confirme": "9943281",
+      "annee_confirmee": "2023"
+     }
     },
     {
      "nom": "Stødig",
@@ -207519,7 +207853,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/whitefish-trawlers/newbuilding-467-stoedig.aspx"
+     "source": "https://karstensens.dk/newbuildings/whitefish-trawlers/newbuilding-467-stoedig.aspx",
+     "sources": [
+      "https://maritimt.com/stodig-07-2023"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2023"
+     }
     },
     {
      "nom": "Christian í Grótinum",
@@ -207533,7 +207877,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-466-christian-i-grotinum.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-466-christian-i-grotinum.aspx",
+     "sources": [
+      "https://fiskerforum.dk/kg690-christian-i-grotinum-leveret-fra-karstensens-skibsvaerft/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "FiskerForum (DK)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2022"
+     }
     },
     {
      "nom": "Artemis",
@@ -207547,7 +207901,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-465-artemis.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-465-artemis.aspx",
+     "sources": [
+      "https://fiskerforum.com/artemis-delivered-to-pelagic-partnership/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "FiskerForum",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2022"
+     }
     },
     {
      "nom": "Myggenes",
@@ -207561,7 +207925,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/whitefish-trawlers/newbuilding-464-myggenes.aspx"
+     "source": "https://karstensens.dk/newbuildings/whitefish-trawlers/newbuilding-464-myggenes.aspx",
+     "sources": [
+      "https://batomtaler.kystmagasinet.no/danmark-karstensens-skibsvrft-lynge-fiskeri/ds-myggenes/1583741"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Kystmagasinet",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2022"
+     }
     },
     {
      "nom": "Ruth",
@@ -207575,7 +207949,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-463-ruth.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-463-ruth.aspx",
+     "sources": [
+      "https://www.worldfishing.net/new-vessels/ruth-delivered-to-hirtshals-owners/1431126.article"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "World Fishing & Aquaculture",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2021"
+     }
     },
     {
      "nom": "Monsun",
@@ -207589,7 +207973,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/whitefish-trawlers/newbuilding-462-monsun.aspx"
+     "source": "https://karstensens.dk/newbuildings/whitefish-trawlers/newbuilding-462-monsun.aspx",
+     "sources": [
+      "https://batomtaler.skipsrevyen.no/karstensen-skibsvaerft-monsun-setho-fiskeriselskap/ms-monsun/1448033"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Skipsrevyen",
+      "confirme": "attribution",
+      "imo_confirme": "9900356",
+      "annee_confirmee": "2022"
+     }
     },
     {
      "nom": "Ginneton",
@@ -207603,7 +207997,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-461-ginneton.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-461-ginneton.aspx",
+     "sources": [
+      "https://sv.wikipedia.org/wiki/GG_203_Ginneton"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (sv)",
+      "confirme": "attribution",
+      "imo_confirme": "9944314",
+      "annee_confirmee": "2023"
+     }
     },
     {
      "nom": "Havfjord",
@@ -207617,7 +208021,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/whitefish-trawlers/newbuilding-460-havfjord.aspx"
+     "source": "https://karstensens.dk/newbuildings/whitefish-trawlers/newbuilding-460-havfjord.aspx",
+     "sources": [
+      "https://maritimt.com/?nid=31184&lcid=1033"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin",
+      "confirme": "attribution",
+      "imo_confirme": "9897860",
+      "annee_confirmee": "2022"
+     }
     },
     {
      "nom": "Astrid Marie",
@@ -207631,7 +208045,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-459-astrid-marie.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-459-astrid-marie.aspx",
+     "sources": [
+      "https://fiske.zaramis.se/2026/02/09/de-storsta-fiskebatarna-gg-64-astrid-marie/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Fiskeri och fiskbloggen (zaramis.se)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2021"
+     }
     },
     {
      "nom": "Antarctic",
@@ -207645,7 +208069,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-458-antarctic.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-458-antarctic.aspx",
+     "sources": [
+      "https://maritimt.com/antarctic-09-2021"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2021"
+     }
     },
     {
      "nom": "Vingaskär",
@@ -211827,6 +212261,16 @@
       "motif": "constructeur non identifie en revue (phase3-revue-v2) : l'attribution actuelle n'est pas etablie. REFUTATION. Le navire n a pas ete construit par Ferus Smit. marhisdata publie la production integrale des trois entites du groupe : Scheepswerf Ferus Smit B.V. Westerbroek 1975-2025, 128 navires (https://www.marhisdata.nl/werf?id=308), Ferus Smit Leer GmbH 2000-2018 (https://www.marhisdata.nl/werf?id=845) et Ferus Smit Foxhol 1951-1957 (https://www",
       "source": "https://shipping-data.com/ship/nordanhav",
       "le": "2026-08-05"
+     },
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/1873-nordanhav-imo-8914130"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "8914130",
+      "annee_confirmee": "1992"
      }
     },
     {
@@ -211848,7 +212292,17 @@
       "le": "2026-08-05",
       "confiance": "simple"
      },
-     "source_ref": "source complementaire (2026-08-05) : https://www.marhisdata.nl/schip?id=3547"
+     "source_ref": "source complementaire (2026-08-05) : https://www.marhisdata.nl/schip?id=3547",
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/9930-azburg-imo-9102899"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9102899",
+      "annee_confirmee": "1995"
+     }
     },
     {
      "nom": "Morgenstond II",
@@ -211865,6 +212319,16 @@
       "source": "https://www.marhisdata.nl/schip?id=4394",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/1593-brilliante-imo-9142643"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9142643",
+      "annee_confirmee": "1997"
      }
     },
     {
@@ -211883,6 +212347,16 @@
       "source": "https://www.marhisdata.nl/schip?id=2236",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/1716-flinterzee-imo-9155896"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9155896",
+      "annee_confirmee": "1997"
      }
     },
     {
@@ -211901,6 +212375,16 @@
       "source": "https://www.marhisdata.nl/werf?id=308",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/5016-flinterhaven-imo-9155901"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9155901",
+      "annee_confirmee": "1997"
      }
     },
     {
@@ -211919,7 +212403,17 @@
       "le": "2026-08-05",
       "confiance": "simple"
      },
-     "source_ref": "source complementaire (2026-08-05) : https://markprummel.nl/ship/namai-pgaz-9155913/"
+     "source_ref": "source complementaire (2026-08-05) : https://markprummel.nl/ship/namai-pgaz-9155913/",
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/5850-namai-imo-9155913"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9155913",
+      "annee_confirmee": "1998"
+     }
     },
     {
      "nom": "Nina",
@@ -211936,6 +212430,16 @@
       "source": "https://www.marhisdata.nl/werf?id=308",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/11532-karoli-imo-9180841"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9180841",
+      "annee_confirmee": "1998"
      }
     },
     {
@@ -211953,6 +212457,16 @@
       "source": "https://www.marhisdata.nl/werf?id=308",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/12672-amber-trader-imo-9180853"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9180853",
+      "annee_confirmee": "1998"
      }
     },
     {
@@ -211971,6 +212485,16 @@
       "source": "https://www.marhisdata.nl/werf?id=308",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/1714-flintereems-imo-9180865"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9180865",
+      "annee_confirmee": "1999"
      }
     },
     {
@@ -211990,7 +212514,17 @@
       "le": "2026-08-05",
       "confiance": "simple"
      },
-     "source_ref": "source complementaire (2026-08-05) : https://www.marhisdata.nl/werf?id=308"
+     "source_ref": "source complementaire (2026-08-05) : https://www.marhisdata.nl/werf?id=308",
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/10416-felix-imo-9180877"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9180877",
+      "annee_confirmee": "1999"
+     }
     },
     {
      "nom": "Morgenstond III",
@@ -212012,6 +212546,16 @@
       "source": "https://www.marhisdata.nl/werf?id=845",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/8472-emsmoon-imo-9213894"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9213894",
+      "annee_confirmee": "2000"
      }
     },
     {
@@ -218566,7 +219110,17 @@
      "longueur_m": 87.7,
      "largeur_m": 20.6,
      "client": "FRØY",
-     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php"
+     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php",
+     "sources": [
+      "https://www.bairdmaritime.com/fishing/catching/froy-orders-new-advanced-wellboat-from-spains-murueta-shipyard"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Baird Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2027"
+     }
     },
     {
      "nom": "Bahia Candela",
@@ -218578,7 +219132,17 @@
      "client": "Mureloil",
      "proprietaire": "Mureloil",
      "pavillon": "Espagne",
-     "source": "https://www.astillerosmurueta.com/vessels/40/bahia-candela/"
+     "source": "https://www.astillerosmurueta.com/vessels/40/bahia-candela/",
+     "sources": [
+      "https://actualidadmp.com/astilleros-de-murueta-bota-un-buque-para-mureloil-con-quien-acaba-de-firmar-otro-contrato-para-construir-un-nuevo-buque/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Actualidad Marítima y Portuaria",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": null
+     }
     },
     {
      "nom": "Kaassassuk",
@@ -218587,7 +219151,17 @@
      "longueur_m": 82.3,
      "largeur_m": 18,
      "client": "Royal Greenland",
-     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php"
+     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php",
+     "sources": [
+      "https://visserij.nl/2025/08/04/laatste-van-royal-greenland-trawler-serie-afgeleverd/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Visserijnieuws (visserij.nl)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     }
     },
     {
      "nom": "Murueta 6200 DWT",
@@ -218596,7 +219170,17 @@
      "longueur_m": 103.4,
      "largeur_m": 15.6,
      "client": "Naviera Murueta",
-     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php"
+     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php",
+     "sources": [
+      "https://de.wikipedia.org/wiki/Murueta_6200_DWT"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (de)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2023"
+     }
     },
     {
      "nom": "Tuugaalik",
@@ -218605,7 +219189,17 @@
      "longueur_m": 82.3,
      "largeur_m": 18,
      "client": "Qaleralik",
-     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php"
+     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php",
+     "sources": [
+      "https://www.kystmagasinet.no/flott-avansert-fabrikktraler-levert/1537610"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Kystmagasinet",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2023"
+     }
     },
     {
      "nom": "Juan Pablo II",
@@ -218620,6 +219214,16 @@
       "motif": "verdict sans source consultable",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.diarioelcanal.com/astillero-murueta-entrega-atunero-juan-pablo-ii/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "El Canal Marítimo y Logístico (diarioelcanal.com)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2021"
      }
     },
     {
@@ -218629,7 +219233,17 @@
      "longueur_m": 82.3,
      "largeur_m": 18,
      "client": "Ice Trawl Greenland",
-     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php"
+     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php",
+     "sources": [
+      "https://fiskerforum.com/nataarnaq-arrives-in-greenland/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "FiskerForum",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2021"
+     }
     },
     {
      "nom": "Kristoffer Tronds",
@@ -218638,7 +219252,17 @@
      "longueur_m": 90.7,
      "largeur_m": 18.6,
      "client": "Alsaker Fjordbruk",
-     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php"
+     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php",
+     "sources": [
+      "https://www.diarioelcanal.com/astilleros-murueta-bota-un-buque-de-transporte-de-pescado-vivo/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "El Canal Marítimo y Logístico (diarioelcanal.com)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2020"
+     }
     },
     {
      "nom": "Bahia Levante",
@@ -218647,7 +219271,17 @@
      "longueur_m": 92.5,
      "largeur_m": 18,
      "client": "Mureloil",
-     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php"
+     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php",
+     "sources": [
+      "https://www.puentedemando.com/murueta-pone-a-flote-el-buque-hibrido-bahia-levante/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Puente de Mando",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2022"
+     }
     },
     {
      "nom": "Ibaizabal Quince",
@@ -218657,7 +219291,17 @@
      "largeur_m": 12,
      "energie": "GNL",
      "client": "Remolcadores Ibaizabal",
-     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php"
+     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php",
+     "sources": [
+      "https://www.puentedemando.com/ibaizabal-quince-primer-remolcador-hibrido-de-espana/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Puente de Mando",
+      "confirme": "attribution",
+      "imo_confirme": "9867346",
+      "annee_confirmee": "2020"
+     }
     },
     {
      "nom": "Avataq",
@@ -218666,7 +219310,17 @@
      "longueur_m": 82.3,
      "largeur_m": 18,
      "client": "Royal Greenland",
-     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php"
+     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php",
+     "sources": [
+      "https://fishfocus.co.uk/new-vessel-launched-for-greenland/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Fish Focus",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2020"
+     }
     },
     {
      "nom": "Sisimiut",
@@ -218675,7 +219329,17 @@
      "longueur_m": 82.05,
      "largeur_m": 17,
      "client": "Royal Greenland",
-     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php"
+     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php",
+     "sources": [
+      "https://fishfocus.co.uk/new-vessel-launched-for-greenland/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Fish Focus",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2019"
+     }
     },
     {
      "nom": "Oizmendi",
@@ -218700,7 +219364,17 @@
      "longueur_m": 25,
      "largeur_m": 12,
      "client": "Remolcadores Ibaizabal",
-     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php"
+     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php",
+     "sources": [
+      "https://commons.wikimedia.org/wiki/Category:IMO_9792838"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikimedia Commons",
+      "confirme": "attribution",
+      "imo_confirme": "9792838",
+      "annee_confirmee": "2017"
+     }
     },
     {
      "nom": "Green Cadiz",
@@ -218709,7 +219383,17 @@
      "longueur_m": 68,
      "largeur_m": 13,
      "client": "Greenbay Sur",
-     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php"
+     "source": "https://www.astillerosmurueta.com/vessels/vessels-list.php",
+     "sources": [
+      "https://www.eldiario.es/norte/euskadi/Astilleros-Murueta-residuos-Green-Cadiz_0_586542338.html"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "eldiario.es",
+      "confirme": "attribution",
+      "imo_confirme": "9810197",
+      "annee_confirmee": "2017"
+     }
     },
     {
      "nom": "Pendruc",

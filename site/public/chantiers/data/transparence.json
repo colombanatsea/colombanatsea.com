@@ -2,21 +2,21 @@
  "date": "2026-08-16",
  "volumes": {
   "chantiers": 528,
-  "entrees_navire": 6706,
-  "plancher_coques_distinctes": 6484,
+  "entrees_navire": 6669,
+  "plancher_coques_distinctes": 6450,
   "equipementiers": 23,
   "pays": 28
  },
  "sources": {
-  "url_total": 16281,
-  "domaines_distincts": 1522,
-  "navires_avec_url": 6128,
+  "url_total": 16206,
+  "domaines_distincts": 1518,
+  "navires_avec_url": 6094,
   "taux_navires_avec_url": 91.4
  },
  "explicabilite": {
-  "attributions_architecte": 1045,
-  "dont_justifiees": 893,
-  "taux": 85.5
+  "attributions_architecte": 1042,
+  "dont_justifiees": 890,
+  "taux": 85.4
  },
  "corroboration": {
   "chantiers_corrobores": 460,
@@ -28,15 +28,15 @@
   "chantiers_temoin_unique": 68,
   "navires_sous_temoin_unique": 140,
   "part_navires_sous_temoin_unique": 2.1,
-  "navires_corrobores": 95,
-  "taux_navires": 1.4
+  "navires_corrobores": 269,
+  "taux_navires": 4
  },
  "identite": {
-  "eligibles_imo": 3383,
-  "inegibles": 1256,
-  "indetermines": 2067,
-  "porteurs_imo": 1579,
-  "taux_couverture_sur_eligible": 46.7
+  "eligibles_imo": 3351,
+  "inegibles": 1254,
+  "indetermines": 2064,
+  "porteurs_imo": 1567,
+  "taux_couverture_sur_eligible": 46.8
  },
  "sollicitation": {
   "actifs": 361,
@@ -63,15 +63,15 @@
   },
   {
    "date": "2026-08-16",
-   "motif": "Premiere campagne de corroboration au rang NAVIRE : 95 seconds temoins independants verses, coques a deux editeurs 2,5 % -> 3,9 %. La vague a aussi trouve 26 contradictions, dont 6 annees de livraison fausses corrigees sur deux editeurs concordants.",
+   "motif": "Deuxieme vague de corroboration au rang navire : 174 seconds temoins, coques a deux editeurs 3,9 % -> 6,5 %. Et 37 coques marquees attribution_erronee depuis le 05/08, encore inscrites au carnet de chantiers qui ne construisent pas, sont descendues en interventions avec leur constructeur reel.",
    "chantiers": 528,
-   "entrees": 6706,
-   "coques_plancher": 6484,
-   "url": 16281,
+   "entrees": 6669,
+   "coques_plancher": 6450,
+   "url": 16206,
    "taux_navires_source": 91.4,
-   "taux_architecte_justifie": 85.5,
-   "eligibles_imo": 3383,
-   "taux_imo_sur_eligible": 46.7,
+   "taux_architecte_justifie": 85.4,
+   "eligibles_imo": 3351,
+   "taux_imo_sur_eligible": 46.8,
    "taux_joignables": 56.1
   }
  ]
