@@ -14,14 +14,15 @@
  },
  {
   "date": "2026-08-16",
-  "motif": "Arbitrages du 16/08 : fiche Catana Marans creee sur deux sources independantes, les 8 ex-batiments militaires de Bordeaux descendus en interventions (deconstruits, non construits), 85 URL glosees separees et redevenues testables, 1 source morte retiree.",
+  "motif": "Arbitrage du 16/08 : 309 modeles de serie de plaisance verses de navires_references vers produits[]. Le compte de coques baisse de 7 015 a 6 706 et devient JUSTE, il comptait des modeles. Sourcing opposable au niveau du navire : 60,9 % -> 62,3 %.",
+  "rupture_de_mesure": true,
   "chantiers": 528,
-  "entrees": 7015,
-  "coques_plancher": 6775,
-  "url": 16958,
-  "taux_navires_source": 91.7,
-  "taux_architecte_justifie": 86.4,
-  "eligibles_imo": 3384,
+  "entrees": 6706,
+  "coques_plancher": 6484,
+  "url": 16281,
+  "taux_navires_source": 91.4,
+  "taux_architecte_justifie": 85.5,
+  "eligibles_imo": 3383,
   "taux_imo_sur_eligible": 46.7,
   "taux_joignables": 56.1
  }
