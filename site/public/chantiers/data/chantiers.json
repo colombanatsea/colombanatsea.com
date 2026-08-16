@@ -336,7 +336,17 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: groupe ; exploitation: croisiere"
+     "caractere_motif": "propriete: groupe ; exploitation: croisiere",
+     "sources": [
+      "https://en.wikipedia.org/wiki/World-class_cruise_ship"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (en)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2026"
+     }
     },
     {
      "nom": "Orient Express Corinthian",
@@ -382,7 +392,17 @@
      "architecte_source": "Accor press release & Travel And Tour World (avril/mai 2026) : « designed by Stirling Design International and built by Chantiers de l'Atlantique » ; architecture/intérieurs Maxime d'Angeac, architecte naval Vianney Vautier",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: yacht"
+     "caractere_motif": "exploitation: yacht",
+     "sources": [
+      "https://cruiseindustrynews.com/cruise-news/2026/03/orient-express-corinthian-completes-sea-trials/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Cruise Industry News",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2026"
+     }
     },
     {
      "nom": "MSC World America",
@@ -447,7 +467,17 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: groupe ; exploitation: croisiere"
+     "caractere_motif": "propriete: groupe ; exploitation: croisiere",
+     "sources": [
+      "https://cruiseindustrynews.com/cruise-news/2025/03/msc-and-chantiers-celebrate-milestones-for-three-world-class-ships/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Cruise Industry News",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     }
     },
     {
      "nom": "Celebrity Xcel",
@@ -502,7 +532,17 @@
      "prix_acquisition": "≈ 770 M EUR (900 M USD), coût de construction du navire",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise"
+     "caractere_motif": "exploitation: cruise",
+     "sources": [
+      "https://cruiseindustrynews.com/cruise-news/2025/10/celebrity-takes-delivery-of-celebrity-xcel-introduces-celebrity-xcite/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Cruise Industry News",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     }
     },
     {
      "nom": "Luminara",
@@ -557,7 +597,17 @@
      "caractere": "prive",
      "exploitation": "commerciale",
      "caractere_motif": "exploitation: yacht",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "sources": [
+      "https://en.wikipedia.org/wiki/The_Ritz-Carlton_Yacht_Collection"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (en)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     }
     },
     {
      "nom": "Jacques Stosskopf",
@@ -606,7 +656,17 @@
      "propriete": "publique",
      "exploitation": "regalien",
      "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Jacques_Stosskopf_(p%C3%A9trolier-ravitailleur)"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (fr)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     }
     },
     {
      "nom": "Ilma",
@@ -766,7 +826,17 @@
      "propriete": "publique",
      "exploitation": "regalien",
      "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "sources": [
+      "https://www.defense.gouv.fr/dga/actualites/direction-generale-larmement-dga-receptionne-jacques-chevallier-premier-batiment-ravitailleur"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Ministere des Armees (DGA)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2023"
+     }
     },
     {
      "nom": "Celebrity Ascent",
@@ -1380,7 +1450,17 @@
      ],
      "architecte": "Chantiers de l'Atlantique",
      "architecte_source": "chantiers-atlantique.com (Oasis/Harmony class references) + en.wikipedia.org : la classe Oasis a été conçue par le bureau d'études du chantier (STX France / Chantiers de l'Atlantique) avec l'équipe newbuilding de Royal Caribbean ; Deltamarin a réalisé du basic design sur la tête de série Oasis of the Seas (deltamarin.com).",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/passengers-cruise/6454-harmony-of-the-seas-imo-9682875"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9682875",
+      "annee_confirmee": "2016"
+     }
     },
     {
      "nom": "Gamal Abdel Nasser (ex-Vladivostok)",
@@ -1624,7 +1704,17 @@
      "caractere": "prive",
      "exploitation": "commerciale",
      "caractere_motif": "exploitation: offshore",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "sources": [
+      "https://www.offshorewind.biz/2023/03/06/atlantique-offshore-energy-sends-off-calvados-substation/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "OffshoreWIND.biz",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2023"
+     }
     },
     {
      "nom": "Sous-station Gode Wind 3",
@@ -1659,7 +1749,17 @@
        "source": "https://www.offshorewind.biz/2023/09/01/gode-wind-3-offshore-substation-in-place/"
       }
      ],
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "sources": [
+      "https://www.offshorewind.biz/2021/02/11/chantiers-de-latlantique-to-build-gode-wind-3-offshore-substation/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "OffshoreWIND.biz",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2023"
+     }
     },
     {
      "nom": "MSC World Atlantic",
@@ -28798,7 +28898,17 @@
      "architecte_source": "Mer et Marine + coprexma.fr : plans réalisés par le bureau d'architecture navale Coprexma (Pont-l'Abbé) pour l'Armement Bigouden",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: armement"
+     "caractere_motif": "propriete: armement",
+     "sources": [
+      "https://www.pixels-evasion.com/navires/bara-an-arvoriz-gv-933213/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Pixels Évasion (photos de navires)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2019"
+     }
     },
     {
      "nom": "Oasis II",
@@ -28853,7 +28963,17 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Chantier_naval_Glehen"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia (fr)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2015 selon Wikipédia, 2016 selon la presse régionale"
+     }
     },
     {
      "nom": "Caouanne",
@@ -29001,7 +29121,17 @@
      "caractere": "delegue",
      "propriete": "publique",
      "exploitation": "service-public",
-     "caractere_motif": "propriete: conseil departemental ; exploitation: keolis"
+     "caractere_motif": "propriete: conseil departemental ; exploitation: keolis",
+     "sources": [
+      "https://cargos-paquebots.net/Correspondants/G-Justafre/ILE_D_AIX_II/Ile_d_Aix_II.htm"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Cargos-Paquebots (Marine Marchande)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2011"
+     }
     },
     {
      "nom": "Nevez Amzer",
@@ -29035,7 +29165,17 @@
        "source": "https://fr.wikipedia.org/wiki/Nevez_Amzer"
       }
      ],
-     "prix_acquisition": "1,5 M EUR (cout de construction, 2009)"
+     "prix_acquisition": "1,5 M EUR (cout de construction, 2009)",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Chantier_naval_Glehen"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia (fr)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2009"
+     }
     },
     {
      "nom": "Ile de Nantes",
@@ -29373,7 +29513,17 @@
        "source": "vedettes-odet.com"
       }
      ],
-     "source_ref": "vedettes-passagers, fiche Jacques de Thezac) ; nauticexpo.com (fiche produit Glehen) ; vedettes-odet.com (underwater vision catamaran"
+     "source_ref": "vedettes-passagers, fiche Jacques de Thezac) ; nauticexpo.com (fiche produit Glehen) ; vedettes-odet.com (underwater vision catamaran",
+     "sources": [
+      "https://fr-academic.com/dic.nsf/frwiki/2106381"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "fr-academic.com (Dictionnaires et Encyclopédies sur l'Académique)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2004"
+     }
     },
     {
      "nom": "Rose Here",
@@ -29600,7 +29750,17 @@
        "source": "https://chantier-glehen.com/fr,vedettes-passagers,9.html"
       }
      ],
-     "source_ref": "vedettes-passagers, fiche Zohar"
+     "source_ref": "vedettes-passagers, fiche Zohar",
+     "sources": [
+      "https://www.comcom-crozon.com/wp-content/uploads/2018/01/SEPTENTRION_29_web.pdf"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Communauté de communes de la presqu'île de Crozon, magazine Septentrion n° 29",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2012"
+     }
     },
     {
      "nom": "Viga",
@@ -89726,7 +89886,17 @@
      ],
      "prix_acquisition": "EUR 120 millions (USD 146 millions), 2019 (cout de construction)",
      "architecte": "Fosen Yard",
-     "architecte_source": "Wikipedia MS Color Hybrid : \"Color Hybrid was built to a Fosen Yard design\" (coque/design Fosen, construction Ulstein Verft)"
+     "architecte_source": "Wikipedia MS Color Hybrid : \"Color Hybrid was built to a Fosen Yard design\" (coque/design Fosen, construction Ulstein Verft)",
+     "sources": [
+      "https://en.wikipedia.org/wiki/MS_Color_Hybrid"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (anglais)",
+      "confirme": "attribution",
+      "imo_confirme": "9824289",
+      "annee_confirmee": "2019"
+     }
     },
     {
      "nom": "National Geographic Endurance",
@@ -89787,7 +89957,17 @@
      "architecte_source": "Ulstein.com (references) + Cadmatic : design Ulstein CX104/CX103 a X-BOW, architecte naval principal Terje Vage (Ulstein Design & Solutions AS).",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: holding"
+     "caractere_motif": "propriete: holding",
+     "sources": [
+      "https://en.wikipedia.org/wiki/National_Geographic_Endurance"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (anglais)",
+      "confirme": "attribution",
+      "imo_confirme": "9842554",
+      "annee_confirmee": "2020"
+     }
     },
     {
      "nom": "National Geographic Resolution",
@@ -89877,7 +90057,17 @@
      "architecte_source": "ulstein.com / Baird Maritime (design ULSTEIN SX222, TWIN X-STERN)",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "sources": [
+      "https://www.offshorewind.biz/2024/07/25/olympic-takes-delivery-of-its-first-ulstein-built-csov/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "OffshoreWIND.biz (Navingo)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2024"
+     }
     },
     {
      "nom": "Olympic Notos",
@@ -89928,7 +90118,17 @@
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: as",
-     "source_ref": "https://ulstein.com/references/olympic-notos — (design Ulstein SX222)"
+     "source_ref": "https://ulstein.com/references/olympic-notos — (design Ulstein SX222)",
+     "sources": [
+      "https://www.offshorewind.biz/2024/11/13/ulstein-delivers-second-csov-to-olympic/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "OffshoreWIND.biz (Navingo)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2024"
+     }
     },
     {
      "nom": "Windea Curie",
@@ -89980,7 +90180,17 @@
      "caractere": "prive",
      "exploitation": "commerciale",
      "caractere_motif": "exploitation: fret",
-     "source_ref": "https://ulstein.com/news/windea-curie-delivered-bernhard-schulte-offshore-received-their-latest-csov-from-ulstein-verft — (SX222, Ulstein Design & Solutions AS)"
+     "source_ref": "https://ulstein.com/news/windea-curie-delivered-bernhard-schulte-offshore-received-their-latest-csov-from-ulstein-verft — (SX222, Ulstein Design & Solutions AS)",
+     "sources": [
+      "https://www.offshore-mag.com/vessels/news/55299706/ulstein-ulstein-verft-delivers-windea-curie-offshore-service-vessel"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Offshore Magazine (Endeavor Business Media)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     }
     },
     {
      "nom": "Windea Clausius",
@@ -90032,7 +90242,17 @@
      "caractere": "prive",
      "exploitation": "commerciale",
      "caractere_motif": "exploitation: fret",
-     "source_ref": "https://ulstein.com/news/windea-clausius-delivered-bs-offshore-receives-second-twin-x-stern-csov-from-ulstein — (sister-ship SX222, designer Ulstein Design & Solutions AS)"
+     "source_ref": "https://ulstein.com/news/windea-clausius-delivered-bs-offshore-receives-second-twin-x-stern-csov-from-ulstein — (sister-ship SX222, designer Ulstein Design & Solutions AS)",
+     "sources": [
+      "https://www.offshorewind.biz/2025/09/08/bernhard-schulte-offshore-takes-delivery-of-csov-windea-clausius/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "OffshoreWIND.biz (Navingo)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     }
     },
     {
      "nom": "Windea Carnot",
@@ -90077,7 +90297,17 @@
      "propriete": "privee",
      "exploitation": "commerciale",
      "caractere_motif": "propriete: as ; exploitation: offshore",
-     "source_ref": "https://ulstein.com/references/windea-carnot — (ULSTEIN SX222 design, designer: Ulstein Design & Solutions AS)"
+     "source_ref": "https://ulstein.com/references/windea-carnot — (ULSTEIN SX222 design, designer: Ulstein Design & Solutions AS)",
+     "sources": [
+      "https://www.offshore-energy.biz/bernhard-schulte-offshore-takes-delivery-of-third-methanol-ready-csov/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Offshore Energy (Navingo)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2026"
+     }
     },
     {
      "nom": "Nexans Electra",
@@ -90212,7 +90442,17 @@
      "architecte_source": "ulstein.com / Offshore-energy / Rigzone : les Hermit Fighter et Hermit Prosper sont les deux premiers navires du design PX121 d'Ulstein Design & Solutions AS (construits à Ulstein Verft, livrés 2012, puis convertis en ERRV hybride par Ulstein)",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: a/s"
+     "caractere_motif": "propriete: a/s",
+     "sources": [
+      "https://maritimt.com/nb/batomtaler/blue-fighter-022012"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin (maritimt.com)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2012"
+     }
     },
     {
      "nom": "Olympic Hercules",
@@ -90264,7 +90504,17 @@
      "architecte_source": "ulstein.com : Ulstein A101, premier design ULSTEIN",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: sa"
+     "caractere_motif": "propriete: sa",
+     "sources": [
+      "https://maritimt.com/nb/batomtaler/olympic-hercules-022002"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin (maritimt.com)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2002"
+     }
     },
     {
      "nom": "Olympic Pegasus",
@@ -90327,7 +90577,17 @@
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: as",
-     "source_ref": "https://ulstein.com/references/olympic-pegasus — (design Ulstein A101)"
+     "source_ref": "https://ulstein.com/references/olympic-pegasus — (design Ulstein A101)",
+     "sources": [
+      "https://maritimt.com/nb/batomtaler/olympic-pegasus-012003"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin (maritimt.com)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2002"
+     }
     },
     {
      "nom": "Bourbon Orca",
@@ -100494,7 +100754,17 @@
      "prix_acquisition": "50 M NOK (coût de construction, 2008)",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "sources": [
+      "https://no.wikipedia.org/wiki/MS_%C2%ABMilj%C3%B8dronningen%C2%BB"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (norvegien)",
+      "confirme": "attribution",
+      "imo_confirme": "9419345",
+      "annee_confirmee": "2008"
+     }
     },
     {
      "nom": "Le Châtelet",
@@ -100654,7 +100924,17 @@
        "source": "https://fjellstrand.no/projects/nb-1698-kommandoren"
       }
      ],
-     "source_ref": "maritimt.com (02/2019"
+     "source_ref": "maritimt.com (02/2019",
+     "sources": [
+      "https://maritimt.com/nb/batomtaler/kommandoren-022019"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Maritimt Magasin",
+      "confirme": "attribution",
+      "imo_confirme": "9833981",
+      "annee_confirmee": "2018"
+     }
     },
     {
      "nom": "Barca",
@@ -100692,7 +100972,17 @@
      ],
      "architecte": "Fjellstrand (design maison)",
      "architecte_source": "https://fjellstrand.no/projects/nb-1624-barca",
-     "source_ref": "MarineTraffic IMO 9101780 ; turbojet.com.hk ; https://fjellstrand.no/projects/nb-1624-barca — + TRID : le FoilCat 35M (système de foils immergés, contrôle de vol automatique) a ete developpe et concu par Fjellstrand lui-meme ; concepteur = constructeur (pas de cabinet externe distinct)"
+     "source_ref": "MarineTraffic IMO 9101780 ; turbojet.com.hk ; https://fjellstrand.no/projects/nb-1624-barca — + TRID : le FoilCat 35M (système de foils immergés, contrôle de vol automatique) a ete developpe et concu par Fjellstrand lui-meme ; concepteur = constructeur (pas de cabinet externe distinct)",
+     "sources": [
+      "https://en.wikipedia.org/wiki/TurboJET"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (anglais)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "1995"
+     }
     },
     {
      "nom": "Penha",
@@ -100730,7 +101020,17 @@
      ],
      "architecte": "Fjellstrand (design maison)",
      "architecte_source": "fjellstrand.no (page foiling fast ferries) : « The FoilCat was developed and built by Fjellstrand », concept FoilCat 35m conçu en interne par Fjellstrand",
-     "source_ref": "MarineTraffic IMO 9101778 ; turbojet.com.hk"
+     "source_ref": "MarineTraffic IMO 9101778 ; turbojet.com.hk",
+     "sources": [
+      "https://en.wikipedia.org/wiki/TurboJET"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (anglais)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "1995"
+     }
     },
     {
      "nom": "Solidor 5",
@@ -100766,7 +101066,17 @@
        "source": "jerripedia.org ; ship-technology.com"
       }
      ],
-     "source_ref": "ship-technology.com ; jerripedia.org (Emeraude Ferries"
+     "source_ref": "ship-technology.com ; jerripedia.org (Emeraude Ferries",
+     "sources": [
+      "https://www.faergelejet.dk/faerge.php?id=2832"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Færgelejet (base danoise de ferries)",
+      "confirme": "attribution",
+      "imo_confirme": "9229740",
+      "annee_confirmee": "2000"
+     }
     },
     {
      "nom": "Akewa Jet",
@@ -100954,7 +101264,17 @@
        "source": "https://fjellstrand.no/projects/nb-1664-stavanger"
       }
      ],
-     "prix_acquisition": "200 M NOK (2003, contrat de construction Fjellstrand / Rogaland Trafikkselskap, navire unique)"
+     "prix_acquisition": "200 M NOK (2003, contrat de construction Fjellstrand / Rogaland Trafikkselskap, navire unique)",
+     "sources": [
+      "https://no.wikipedia.org/wiki/MF_%C2%ABStavanger%C2%BB_(2003)"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (norvegien)",
+      "confirme": "attribution",
+      "imo_confirme": "9263758",
+      "annee_confirmee": "2003"
+     }
     },
     {
      "nom": "Grip",
@@ -101038,7 +101358,17 @@
      "source_ref": "VesselFinder/MaritimeOptima IMO 9451422 ; skansi.fo ; https://fjellstrand.no/projects/nb-1680-eldborg/ — (Design By: Havyard AS, modèle Havyard 832 CD)",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: offshore"
+     "caractere_motif": "exploitation: offshore",
+     "sources": [
+      "https://skansi.fo/fleet/eldborg/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Skansi Offshore (armateur feroien du navire)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2009"
+     }
     },
     {
      "nom": "Geograph",
@@ -101130,7 +101460,17 @@
      "source_ref": "VesselFinder IMO 9533244 ; https://fjellstrand.no/projects/nb-1679-seabed-worker/ — (\"Design By: Sawicon / Fjellstrand\", type MM80)",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "sources": [
+      "https://www.bairdmaritime.com/offshore/multi-purpose-osv-seabed-worker"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Baird Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2009"
+     }
     },
     {
      "nom": "Vestland Cygnus",
@@ -101196,7 +101536,17 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: as ; exploitation: offshore"
+     "caractere_motif": "propriete: as ; exploitation: offshore",
+     "sources": [
+      "https://www.wartsila.com/marine/customer-segments/references/offshore/vestland-cygnus"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wärtsilä (concepteur de la carene, tiers du chantier)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2015"
+     }
     },
     {
      "nom": "Siem Moxie",
@@ -101306,7 +101656,17 @@
      "source_ref": "MarineTraffic/VesselFinder IMO 9671632 ; https://fjellstrand.no/projects/nb-1688-seabed-supporter/ — (\"Design By: Sawicon\", type Sawicon 440 MPSCV)",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "sources": [
+      "https://www.rivieramm.com/news-content-hub/swires-seabed-supporter-37827"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Riviera Maritime Media",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2013"
+     }
     },
     {
      "nom": "Restless Ocean",
@@ -102888,7 +103248,17 @@
      ],
      "pavillon": "Canada (ex-Estonie)",
      "architecte": "Multi Maritime",
-     "architecte_source": "Fiskerstrand Verft yard no.63 Muhumaa (Design: Multi Maritime AS MM 90 FC)"
+     "architecte_source": "Fiskerstrand Verft yard no.63 Muhumaa (Design: Multi Maritime AS MM 90 FC)",
+     "sources": [
+      "https://et.wikipedia.org/wiki/Muhumaa_(laev)"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia estonien",
+      "confirme": "attribution",
+      "imo_confirme": "9474060",
+      "annee_confirmee": "2010"
+     }
     },
     {
      "nom": "Kamutik W",
@@ -102943,7 +103313,17 @@
      ],
      "pavillon": "Canada (St. John's) ; ex-Estonie, ex-Marshall Islands",
      "architecte": "Multi Maritime",
-     "architecte_source": "Ex-Hiiumaa, construit a Fiskerstrand Verft sur design Multi Maritime MM 90 FC (serie avec Muhumaa/Grete) ; Ship & Offshore et fiches ferry-site."
+     "architecte_source": "Ex-Hiiumaa, construit a Fiskerstrand Verft sur design Multi Maritime MM 90 FC (serie avec Muhumaa/Grete) ; Ship & Offshore et fiches ferry-site.",
+     "sources": [
+      "https://et.wikipedia.org/wiki/Hiiumaa_(laev_2011)"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia estonien",
+      "confirme": "attribution",
+      "imo_confirme": "9481805",
+      "annee_confirmee": "2011"
+     }
     },
     {
      "nom": "HYBRIDship (projet de conversion hydrogene)",
@@ -103056,6 +103436,16 @@
       "source": "http://www.ferry-site.dk/ferry.php?id=9008794&lang=en",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.faergelejet.dk/faerge.php?id=2235"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Færgelejet.dk",
+      "confirme": "attribution",
+      "imo_confirme": "9008794",
+      "annee_confirmee": "1991"
      }
     },
     {
@@ -103402,6 +103792,16 @@
       "source": "https://www.vesselfinder.com/vessels/details/9219771",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://directory.marinelink.com/ships/companies-fiskerstrand_verft_as/port-~c5lesund"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "MarineLink (Maritime Reporter, New Wave Media)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": null
      }
     },
     {
@@ -103560,6 +103960,16 @@
       "source": "https://no.wikipedia.org/wiki/MF_%C2%ABLyngen%C2%BB",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://no.wikipedia.org/wiki/MF_%C2%ABLyngen%C2%BB"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia norvégien",
+      "confirme": "attribution",
+      "imo_confirme": "9260873",
+      "annee_confirmee": "2002"
      }
     },
     {
@@ -103670,6 +104080,16 @@
       "source": "http://www.ferry-site.dk/ferry.php?id=9321823&lang=en",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.faergelejet.dk/faerge.php?id=690"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Færgelejet.dk",
+      "confirme": "attribution",
+      "imo_confirme": "9321823",
+      "annee_confirmee": "2005"
      }
     },
     {
@@ -103766,6 +104186,16 @@
       "source": "https://no.wikipedia.org/wiki/MF_%C2%ABYtter%C3%B8yningen%C2%BB",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://no.wikipedia.org/wiki/MF_%C2%ABYtter%C3%B8yningen%C2%BB"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipédia norvégien",
+      "confirme": "attribution",
+      "imo_confirme": "9371531",
+      "annee_confirmee": "2006"
      }
     },
     {
@@ -103814,6 +104244,16 @@
       "source": "https://no.wikipedia.org/wiki/MF_%C2%AB%C3%98rland%C2%BB",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.faergelejet.dk/faerge.php?id=2211&n=1"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Færgelejet.dk",
+      "confirme": "attribution",
+      "imo_confirme": "9371543",
+      "annee_confirmee": "2006"
      }
     },
     {
@@ -173619,7 +174059,17 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat norvegien ; exploitation: marine royale"
+     "caractere_motif": "propriete: etat norvegien ; exploitation: marine royale",
+     "sources": [
+      "https://en.wikipedia.org/wiki/CB90-class_fast_assault_craft"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (anglais)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "1996-1999"
+     }
     },
     {
      "nom": "CB 90 HEX - Garde-côtes hellénique (Grèce)",
@@ -173657,7 +174107,17 @@
      "architecte_source": "Design CB90 concu par Dockstavarvet, qui l'a aussi construit (en.wikipedia.org/wiki/CB90-class_fast_assault_craft). ATTENTION : concepteur = constructeur (conception interne), pas de cabinet d'architecture navale tiers distinct.",
      "caractere": "public",
      "exploitation": "regalien",
-     "caractere_motif": "exploitation: garde-cote"
+     "caractere_motif": "exploitation: garde-cote",
+     "sources": [
+      "https://en.wikipedia.org/wiki/CB90-class_fast_assault_craft"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (anglais)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "1998"
+     }
     },
     {
      "nom": "CB 90 H / CB 90 HEX - Royal Malaysian Navy",
@@ -173717,7 +174177,17 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "sources": [
+      "https://en.wikipedia.org/wiki/CB90-class_fast_assault_craft"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (anglais)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "1996-2002"
+     }
     },
     {
      "nom": "Interceptor Craft 16M (IC 16M) - Royal Malaysian Customs",
@@ -188912,6 +189382,16 @@
       "source": "https://hollandshipyardsgroup.com/news/delivery-cable-recovery-vessel-maasvliet",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.bairdmaritime.com/offshore/exploration-development/offshore-decommissioning/vessel-review-maasvliet-cable-recovery-and-transport-ship-delivered-to-dutch-operator"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Baird Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
      }
     },
     {
@@ -188939,6 +189419,16 @@
       "source": "https://hollandshipyardsgroup.com/news/delivery-of-tamarack-marks-new-chapter-in-efficient-bulk-shipping",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.bairdmaritime.com/shipping/dry-cargo/bulkers/vessel-review-tamarack-cement-carrier-optimised-for-canadas-great-lakes"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Baird Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
      }
     },
     {
@@ -188964,6 +189454,16 @@
       "source": "https://hollandshipyardsgroup.com/news/delivery-multipurpose-coaster-scheldevliet",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.scheepvaartkrant.nl/nieuwbouw/scheldevliet-toonbeeld-van-modern-en-duurzaam-schip/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartkrant",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
      }
     },
     {
@@ -188989,6 +189489,16 @@
       "source": "https://hollandshipyardsgroup.com/news/holland-shipyards-group-celebrates-christening-of-mpp-coasters-waalvliet-and-rijnvliet",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.bairdmaritime.com/shipping/dry-cargo/vessel-review-waalvliet-rijnvliet-netherlands-hudig-and-veder-to-deploy-coaster-pair-for-european-shortsea-trade"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Baird Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
      }
     },
     {
@@ -189014,6 +189524,16 @@
       "source": "https://hollandshipyardsgroup.com/news/holland-shipyards-group-celebrates-christening-of-mpp-coasters-waalvliet-and-rijnvliet",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.bairdmaritime.com/shipping/dry-cargo/vessel-review-waalvliet-rijnvliet-netherlands-hudig-and-veder-to-deploy-coaster-pair-for-european-shortsea-trade"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Baird Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
      }
     },
     {
@@ -189053,6 +189573,16 @@
       "source": "https://hollandshipyardsgroup.com/news/christening-of-mv-olivijn-marks-third-coaster-delivery-to-de-bock-maritiem",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://swzmaritime.nl/news/2026/04/15/holland-shipyards-delivers-third-coaster-to-de-bock/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "SWZ Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2026"
      }
     },
     {
@@ -189078,6 +189608,16 @@
       "source": "https://hollandshipyardsgroup.com/news/delivery-multipurpose-support-vessel-men-cren",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.bairdmaritime.com/offshore/vessels-rigs/ahts/vessel-review-men-cren-netherlands-dixstone-to-operate-offshore-and-engineering-workboat-in-west-africa"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Baird Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
      }
     },
     {
@@ -189122,6 +189662,16 @@
       "source": "https://hollandshipyardsgroup.com/news/holland-shipyards-group-delivers-third-offshore-support-vessel-men-skey-to-dixstone",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://swzmaritime.nl/news/2026/03/25/holland-shipyards-delivers-third-osv-to-dixstone/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "SWZ Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2026"
      }
     },
     {
@@ -189146,6 +189696,16 @@
       "source": "https://hollandshipyardsgroup.com/references/coastal-research-vessel",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.hi.no/en/hi/about-us/facilities/our-vessels/prinsesse-ingrid-alexandra"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Havforskningsinstituttet (Institute of Marine Research, Norvege) — armateur du navire",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2023"
      }
     },
     {
@@ -189193,6 +189753,16 @@
       "source": "https://hollandshipyardsgroup.com/references/eddy-tug-type-24-75",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.vesseltracker.com/en/Ships/Telstar-9796066.html"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "vesseltracker.com",
+      "confirme": "attribution",
+      "imo_confirme": "9796066",
+      "annee_confirmee": "2016"
      }
     },
     {
@@ -191457,6 +192027,16 @@
       "source": "https://warshipsresearch.blogspot.com/2026/07/norwegian-aggregates-carrier-ex-bodewes.html",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://markprummel.nl/ship/aasvard-cq2455-1042718/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Mark Prummel (base de données navires, markprummel.nl)",
+      "confirme": "attribution",
+      "imo_confirme": "1042718",
+      "annee_confirmee": "2026"
      }
     },
     {
@@ -191482,6 +192062,16 @@
       "source": "https://markprummel.nl/ship/sofia-vg-ojwa-1074034/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://meriaura.fi/en/sofia-vg-launched/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Meriaura (armateur du navire, Finlande)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2026"
      }
     },
     {
@@ -191507,11 +192097,21 @@
       "source": "https://markprummel.nl/ship/hagland-polaris-layy8-1094149/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.hagland.com/post/hagland-polaris-naming-ceremony-and-launching"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Hagland Shipping (armateur du navire, Norvège)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2026"
      }
     },
     {
      "nom": "Aasland",
-     "annee": "2025",
+     "annee": "2026",
      "type": "General cargo",
      "longueur_m": 119.95,
      "jauge_gt": 5700,
@@ -191534,6 +192134,23 @@
       "source": "https://royalbodewes.com/vessel/aasland/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://markprummel.nl/ship/aasland-cq2456-1042706/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Mark Prummel (base de données navires, markprummel.nl)",
+      "confirme": "attribution",
+      "imo_confirme": "1042706",
+      "annee_confirmee": "2026"
+     },
+     "annee_avant_correction": "2025",
+     "annee_corrigee": {
+      "le": "2026-08-17",
+      "par": "Mark Prummel (base de données navires, markprummel.nl)",
+      "source": "https://markprummel.nl/ship/aasland-cq2456-1042706/",
+      "motif": "La base indique 2025 ; la fiche coque donne une livraison au 06/02/2026 (le site du chantier lui-même annonce le 09/02/2026). L'année de livraison est donc 2026, pas 2025."
      }
     },
     {
@@ -191561,6 +192178,16 @@
       "source": "https://royalbodewes.com/vessel/jorvik/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.bairdmaritime.com/amp/story/shipping/dry-cargo/bulkers/vessel-review-jorvik-self-discharging-cement-carrier-for-eureka-shippings-european-shortsea-routes"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Baird Maritime (presse maritime)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": null
      }
     },
     {
@@ -191582,6 +192209,16 @@
       "source": "https://www.schuttevaer.nl/nieuws/actueel/2025/06/23/cementcarrier-molvik-te-water-bij-royal-bodewes-foxhol/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://eurekashipping.com/fleet/m-v-molvik/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Eureka Shipping (armateur du navire)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
      }
     },
     {
@@ -191609,6 +192246,16 @@
       "source": "https://royalbodewes.com/vessel/aasvaer/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://markprummel.nl/ship/aasvaer-cq2457-1042691/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Mark Prummel (base de données navires, markprummel.nl)",
+      "confirme": "attribution",
+      "imo_confirme": "1042691",
+      "annee_confirmee": "2025"
      }
     },
     {
@@ -191634,6 +192281,16 @@
       "source": "https://royalbodewes.com/vessel/hawaikinui-2/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.alwenashipping.com/en/projet/hawaikinui2/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Alwena Shipping (assistance à maîtrise d'ouvrage du projet, France)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
      }
     },
     {
@@ -191661,6 +192318,16 @@
       "source": "https://royalbodewes.com/vessel/vissersbank/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://markprummel.nl/ship/vissersbank-pbzo-1024663/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Mark Prummel (base de données navires, markprummel.nl)",
+      "confirme": "attribution",
+      "imo_confirme": "1024663",
+      "annee_confirmee": "2025"
      }
     },
     {
@@ -191688,6 +192355,16 @@
       "source": "https://royalbodewes.com/vessel/marie-lehmann/",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://markprummel.nl/ship/marie-lehmann-v2ib7-9728772/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Mark Prummel (base de données navires, markprummel.nl)",
+      "confirme": "attribution",
+      "imo_confirme": "9728772",
+      "annee_confirmee": "2025"
      }
     },
     {
@@ -204145,6 +204822,16 @@
       "source": "https://da.wikipedia.org/wiki/%C3%86r%C3%B8xpressen",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://sv.wikipedia.org/wiki/E/S_Ellenor"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (suedois)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2026"
      }
     },
     {
@@ -204195,7 +204882,17 @@
      "capacite_fret": null,
      "port_lourd_dwt": null,
      "prix_acquisition": null,
-     "source": "https://hvidesandeshipyard.com/nb-137-aeroxpressen/"
+     "source": "https://hvidesandeshipyard.com/nb-137-aeroxpressen/",
+     "sources": [
+      "https://da.wikipedia.org/wiki/M/F_%C3%86r%C3%B8xpressen"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Wikipedia (danois)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2019"
+     }
     },
     {
      "nom": "Strynø",
@@ -204218,7 +204915,17 @@
      "prix_acquisition": null,
      "source": "https://hvidesandeshipyard.com/nb-129-stryno/",
      "imo_source": "https://de.wikipedia.org/wiki/Stryn%C3%B8_(Schiff)",
-     "source_registre": "https://de.wikipedia.org/wiki/Stryn%C3%B8_(Schiff)"
+     "source_registre": "https://de.wikipedia.org/wiki/Stryn%C3%B8_(Schiff)",
+     "sources": [
+      "https://www.ferry-site.dk/ferry.php?id=9664524&lang=da"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "The Ferry Site (ferry-site.dk)",
+      "confirme": "attribution",
+      "imo_confirme": "9664524",
+      "annee_confirmee": "2013"
+     }
     },
     {
      "nom": "Feggesund",
@@ -204251,7 +204958,17 @@
      "source_ref": "source complementaire (2026-08-05) : http://www.ferry-site.dk/ferry.php?id=9640918&lang=en",
      "largeur_m": 10.7,
      "capacite_pax": 98,
-     "capacite_vehicules": 22
+     "capacite_vehicules": 22,
+     "sources": [
+      "https://www.ferry-site.dk/ferry.php?id=9640918&lang=da"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "The Ferry Site (ferry-site.dk)",
+      "confirme": "attribution",
+      "imo_confirme": "9640918",
+      "annee_confirmee": "2012"
+     }
     },
     {
      "nom": "Venø",
@@ -204759,6 +205476,16 @@
       "source": "https://www.vesseltracker.com/en/Ships/Kattegat-Wind-9664512.html",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://faergegalleriet.dk/andre-skibe/offshore-support-fartoej/kattegat-wind-2013/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "FærgeGalleriet (faergegalleriet.dk)",
+      "confirme": "attribution",
+      "imo_confirme": "9664512",
+      "annee_confirmee": "2013"
      }
     },
     {
@@ -204789,6 +205516,16 @@
       "source": "https://www.myshiptracking.com/vessels/djurs-wind-mmsi-219001771-imo-9657569",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.faergelejet.dk/faerge.php?id=2670"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Færgelejet (faergelejet.dk)",
+      "confirme": "attribution",
+      "imo_confirme": "9657569",
+      "annee_confirmee": "2012"
      }
     },
     {
@@ -204819,6 +205556,16 @@
       "source": "https://www.myshiptracking.com/vessels/anholt-wind-mmsi-219016873-imo-9657557",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://n-o-s.eu/the-fleet/anholt-wind/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Northern Offshore Services (armateur-gestionnaire du navire)",
+      "confirme": "attribution",
+      "imo_confirme": "9657557",
+      "annee_confirmee": "2012"
      }
     },
     {
@@ -205033,6 +205780,16 @@
       "source": "https://www.vesseltracker.com/en/Ships/Ov-Bokfjord-9752228.html",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.scheepvaartwest.be/CMS/index.php/dredgers-workboats/7899-ov-bokfjord-imo-9752228"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Scheepvaartwest",
+      "confirme": "attribution",
+      "imo_confirme": "9752228",
+      "annee_confirmee": "2016"
      }
     },
     {
@@ -205090,6 +205847,16 @@
       "source": "https://www.vesseltracker.com/en/Ships/Skawlink-Iv-9707429.html",
       "le": "2026-08-03",
       "confiance": "simple"
+     },
+     "sources": [
+      "https://www.soefart.dk/article/view/278543/saga_shipping_far_fjerde_skawlink"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Søfart (soefart.dk), presse maritime danoise",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2013"
      }
     },
     {
@@ -206397,7 +207164,7 @@
     },
     {
      "nom": "Rogne",
-     "annee": "2025",
+     "annee": "2026",
      "type": "chalutier pélagique",
      "longueur_m": 83,
      "jauge_gt": 3500,
@@ -206407,7 +207174,24 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-482-rogne.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-482-rogne.aspx",
+     "sources": [
+      "https://www.bairdmaritime.com/fishing/catching/trawling/vessel-review-rogne-versatile-blue-whiting-trawlerseiner-delivered-to-norwegian-fishing-family"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Baird Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2026"
+     },
+     "annee_avant_correction": "2025",
+     "annee_corrigee": {
+      "le": "2026-08-17",
+      "par": "Baird Maritime",
+      "source": "https://www.bairdmaritime.com/fishing/catching/trawling/vessel-review-rogne-versatile-blue-whiting-trawlerseiner-delivered-to-norwegian-fishing-family",
+      "motif": "La base date la coque de 2025. Baird Maritime (article du 24 mars 2026) et The Fishing Daily (19 mars 2026) situent la livraison en mars 2026, pas 2025. Il s'agit du quatrieme navire portant le nom Rogne, coque n°482, a ne pas confondre avec la coque n°422 du meme chantier qui portait deja ce nom."
+     }
     },
     {
      "nom": "Hargun",
@@ -206421,7 +207205,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-481-hargun.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-481-hargun.aspx",
+     "sources": [
+      "https://thefishingdaily.com/business-features/new-builds/new-purse-seiner-trawler-hargun-delivered-by-karstensens-shipyard/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "The Fishing Daily",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2026"
+     }
     },
     {
      "nom": "Asgrimur Halldorsson",
@@ -206435,11 +207229,21 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-480-asgrimur-halldorsson.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-480-asgrimur-halldorsson.aspx",
+     "sources": [
+      "https://www.zevener-zeitung.de/nachrichten/skinney-thinganes-uebernimmt-neuen-trawler-asgrimur-halldorsson-374080.html"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Zevener Zeitung",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2026"
+     }
     },
     {
      "nom": "Knester",
-     "annee": "2024",
+     "annee": "2025",
      "type": "chalutier pélagique",
      "longueur_m": 75.2,
      "jauge_gt": 2900,
@@ -206449,11 +207253,28 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-479-knester.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-479-knester.aspx",
+     "sources": [
+      "https://www.bairdmaritime.com/fishing/catching/trawling/new-seinertrawler-delivered-to-norwegian-fishing-company-knester"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Baird Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     },
+     "annee_avant_correction": "2024",
+     "annee_corrigee": {
+      "le": "2026-08-17",
+      "par": "Baird Maritime",
+      "source": "https://www.bairdmaritime.com/fishing/catching/trawling/new-seinertrawler-delivered-to-norwegian-fishing-company-knester",
+      "motif": "La base date la coque de 2024. Baird Maritime situe la livraison au 26 septembre 2025, The Fishing Daily au 9 septembre 2025. Aucune source independante ne soutient 2024."
+     }
     },
     {
      "nom": "Herøyhav",
-     "annee": "2024",
+     "annee": "2025",
      "type": "chalutier pélagique",
      "longueur_m": 75,
      "jauge_gt": 3200,
@@ -206463,7 +207284,24 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-478-heroeyhav.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-478-heroeyhav.aspx",
+     "sources": [
+      "https://www.bairdmaritime.com/fishing/catching/trawling/norways-ervik-group-welcomes-new-pelagic-trawler-to-fleet"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Baird Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     },
+     "annee_avant_correction": "2024",
+     "annee_corrigee": {
+      "le": "2026-08-17",
+      "par": "Baird Maritime",
+      "source": "https://www.bairdmaritime.com/fishing/catching/trawling/norways-ervik-group-welcomes-new-pelagic-trawler-to-fleet",
+      "motif": "La base date la coque de 2024. Baird Maritime et The Fishing Daily situent la remise au 2 juillet 2025. Risque d'homonymie serieux : Karstensens a livre un premier Heroyhav de 69,95 m au meme armateur (famille Ervik, Fosnavag) en 2013, lui-meme remplacant un Heroyhav de 1999. La coque de 75 m et 3 2"
+     }
     },
     {
      "nom": "Havfisk",
@@ -206477,11 +207315,21 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-477-havfisk.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-477-havfisk.aspx",
+     "sources": [
+      "https://www.bairdmaritime.com/fishing/catching/trawling/vessel-review-havfisk-veibust-fiskeriselskap-welcomes-blue-whiting-and-mackerel-seinertrawler-to-fleet"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Baird Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     }
     },
     {
      "nom": "Høgaberg",
-     "annee": "2024",
+     "annee": "2025",
      "type": "chalutier pélagique",
      "longueur_m": 88,
      "jauge_gt": 4500,
@@ -206491,11 +207339,28 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-476-hoegaberg.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-476-hoegaberg.aspx",
+     "sources": [
+      "https://thefishingdaily.com/business-features/new-builds/karstensen-shipyard-delivers-purser-trawler-hogaberg-to-faroes/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "The Fishing Daily",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     },
+     "annee_avant_correction": "2024",
+     "annee_corrigee": {
+      "le": "2026-08-17",
+      "par": "The Fishing Daily",
+      "source": "https://thefishingdaily.com/business-features/new-builds/karstensen-shipyard-delivers-purser-trawler-hogaberg-to-faroes/",
+      "motif": "La base date la coque de 2024. Deux editeurs independants situent la livraison en janvier 2025 : The Fishing Daily donne le 20 janvier 2025, Faroe Business Report l'arrivee aux Feroe le 31 janvier 2025. 2024 correspond a l'arrivee de la coque nue a Skagen (avril 2024), pas a la livraison."
+     }
     },
     {
      "nom": "Hákon",
-     "annee": "2023",
+     "annee": "2024",
      "type": "chalutier pélagique",
      "longueur_m": 75.4,
      "jauge_gt": 2900,
@@ -206505,7 +207370,24 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-475-hakon.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-475-hakon.aspx",
+     "sources": [
+      "https://thefishingdaily.com/business-features/new-builds/karstensen-shipyard-delivers-hakon-to-icelandic-owners-gjogur-p-f/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "The Fishing Daily",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2024"
+     },
+     "annee_avant_correction": "2023",
+     "annee_corrigee": {
+      "le": "2026-08-17",
+      "par": "The Fishing Daily",
+      "source": "https://thefishingdaily.com/business-features/new-builds/karstensen-shipyard-delivers-hakon-to-icelandic-owners-gjogur-p-f/",
+      "motif": "La base date la coque de 2023. The Fishing Daily donne une livraison au 10 octobre 2024, confirmee indirectement par la Zevener Zeitung qui presente le Hakon comme livre en 2024 et sister-ship de l'Asgrimur Halldorsson. Aucune source ne soutient 2023."
+     }
     },
     {
      "nom": "Finnur Fridi",
@@ -206519,7 +207401,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-474-finnur-fridi.aspx"
+     "source": "https://karstensens.dk/newbuildings/pelagic-trawlers/newbuilding-474-finnur-fridi.aspx",
+     "sources": [
+      "https://thefishingdaily.com/business-features/new-builds/karstensens-shipyard-delivers-finnur-fridi-to-faroe-islands/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "The Fishing Daily",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2024"
+     }
     },
     {
      "nom": "Polarbris",
@@ -206533,7 +207425,17 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "source": "https://karstensens.dk/newbuildings/whitefish-trawlers/newbuilding-473-polarbris.aspx"
+     "source": "https://karstensens.dk/newbuildings/whitefish-trawlers/newbuilding-473-polarbris.aspx",
+     "sources": [
+      "https://www.bairdmaritime.com/fishing/fishing-boat-world-reviews/vessel-review-polarbris-hybrid-seiner-trawler-delivered-to-norways-atlantic-seafish"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Baird Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2024"
+     }
     },
     {
      "nom": "Havsnurp",
@@ -212479,7 +213381,17 @@
      "annee": "2023",
      "client": "Erik Thun AB",
      "operateur": "Thun Tankers",
-     "source": "https://www.ferussmit.com/news/"
+     "source": "https://www.ferussmit.com/news/",
+     "sources": [
+      "https://swzmaritime.nl/news/2023/11/14/ferus-smit-launches-first-tanker-of-new-class-thun-resource/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "SWZ|Maritime",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2023 (mise a l'eau) / 2024 (livraison)"
+     }
     },
     {
      "nom": "Thun Reliance",
@@ -212487,7 +213399,17 @@
      "annee": "2024",
      "client": "Erik Thun AB",
      "operateur": "Thun Tankers",
-     "source": "https://www.ferussmit.com/news/"
+     "source": "https://www.ferussmit.com/news/",
+     "sources": [
+      "https://www.offshore-energy.biz/thun-tankers-takes-delivery-of-eco-friendly-thun-reliance/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Offshore Energy",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2024"
+     }
     },
     {
      "nom": "Thun Renew",
@@ -212495,7 +213417,17 @@
      "annee": "2025",
      "client": "Erik Thun AB",
      "operateur": "Thun Tankers",
-     "source": "https://www.ferussmit.com/news/"
+     "source": "https://www.ferussmit.com/news/",
+     "sources": [
+      "https://thun.se/press/thun-tankers-launched-thun-renew/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Erik Thun Group / Thun Tankers (armateur, thun.se)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     }
     },
     {
      "nom": "Thun Resolve",
@@ -212503,7 +213435,17 @@
      "annee": "2026",
      "client": "Erik Thun AB",
      "operateur": "Thun Tankers",
-     "source": "https://www.ferussmit.com/news/"
+     "source": "https://www.ferussmit.com/news/",
+     "sources": [
+      "https://www.rivieramm.com/news-content-hub/news-content-hub/imo-secretary-general-attends-launch-of-thun-resolve-87772"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Riviera Maritime Media",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2026"
+     }
     },
     {
      "nom": "Thun Response",
@@ -212511,31 +213453,81 @@
      "annee": "2026",
      "client": "Erik Thun AB",
      "operateur": "Thun Tankers",
-     "source": "https://www.ferussmit.com/news/"
+     "source": "https://www.ferussmit.com/news/",
+     "sources": [
+      "https://www.mynewsdesk.com/erik-thun-ab/pressreleases/thun-resolve-delivered-thun-response-launched-3452362"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Erik Thun AB (armateur), via Mynewsdesk",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2026"
+     }
     },
     {
      "nom": "Nossan",
      "annee": "2025",
      "client": "Erik Thun AB",
-     "source": "https://www.ferussmit.com/news/"
+     "source": "https://www.ferussmit.com/news/",
+     "sources": [
+      "https://thun.se/press/erik-thun-group-launches-nossan-a-new-milestone-in-sustainable-shipping/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Erik Thun Group (armateur, thun.se)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     }
     },
     {
      "nom": "Tidan",
      "annee": "2025",
      "client": "Erik Thun AB",
-     "source": "https://www.ferussmit.com/news/"
+     "source": "https://www.ferussmit.com/news/",
+     "sources": [
+      "https://en.portnews.ru/news/376925/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "PortNews (IAA PortNews)",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     }
     },
     {
      "nom": "Kolland",
      "annee": "2025",
      "client": "Erik Thun AB",
-     "source": "https://www.ferussmit.com/news/"
+     "source": "https://www.ferussmit.com/news/",
+     "sources": [
+      "https://www.schuttevaer.nl/nieuws/actueel/2025/10/29/ferus-smit-levert-kolland-aan-zweedse-reder-thun/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Schuttevaer",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     }
     },
     {
      "nom": "Naven",
      "annee": "2025",
      "client": "Erik Thun AB",
-     "source": "https://www.ferussmit.com/news/"
+     "source": "https://www.ferussmit.com/news/",
+     "sources": [
+      "https://www.sjofartstidningen.se/thun-sjosatter-sista-fartyget-i-nya-serien/"
+     ],
+     "corroboration": {
+      "le": "2026-08-16",
+      "editeur": "Sjofartstidningen",
+      "confirme": "attribution",
+      "imo_confirme": null,
+      "annee_confirmee": "2025"
+     }
     }
    ],
    "sources": [
