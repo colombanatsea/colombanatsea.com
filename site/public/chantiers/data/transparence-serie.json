@@ -14,7 +14,8 @@
  },
  {
   "date": "2026-08-16",
-  "motif": "Troisieme vague de corroboration : coques a deux editeurs 6,5 % -> 8,3 %. Le controle de contenu a refuse 20 pages qui repondent 200 sans nommer la coque, dont 14 URL inventees par un agent. Et 66 sources remontees depuis la timeline, sans agent.",
+  "motif": "Definition unique de la corroboration au rang coque : la lecture stricte (source + sources) remplace deux definitions concurrentes. L'ancienne mesure de STATUT.md ajoutait architecte_source et affichait 8,3 % quand cette page servait 5,8 %.",
+  "rupture_de_mesure": true,
   "chantiers": 528,
   "entrees": 6669,
   "coques_plancher": 6450,
