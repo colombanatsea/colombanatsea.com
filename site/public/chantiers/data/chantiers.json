@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Registre naval européen",
   "version": "0.1.0-mvp",
-  "date_maj": "2026-08-15",
+  "date_maj": "2026-08-16",
   "note": "Registre des chantiers navals européens et de leurs navires. Chaque champ porte sa source ; les champs non sourcés restent vides. Le taux de sourcing OPPOSABLE (source tierce, recevable, vivante) est mesuré par audit-sourcing.js et vaut 61 % au niveau du navire : le taux de remplissage, plus élevé, ne le remplace pas.",
   "perimetres_ref": {
    "construction-neuve": "Construction neuve",
@@ -6726,8 +6726,8 @@
      ],
      "prix_acquisition": "1,77 milliard FRF (cond. 1996) = ~426,15 M EUR reactualises 2022 (cout unitaire FLF classe La Fayette, sister-ship F710)",
      "architecte": "Naval Group",
-     "architecte_source": "https://en.wikipedia.org/wiki/La_Fayette-class_frigate (classe La Fayette conçue par le bureau d'études de DCN/DCN International ; construite par DCN Lorient)",
-     "source_ref": "Wikipedia La Fayette-class frigate",
+     "architecte_source": "https://en.wikipedia.org/wiki/La_Fayette-class_frigate",
+     "source_ref": "Wikipedia La Fayette-class frigate ; https://en.wikipedia.org/wiki/La_Fayette-class_frigate — (classe La Fayette conçue par le bureau d'études de DCN/DCN International ; construite par DCN Lorient)",
      "source": "https://en.wikipedia.org/wiki/La_Fayette-class_frigate",
      "caractere": "public",
      "propriete": "publique",
@@ -33343,8 +33343,8 @@
       }
      ],
      "architecte": "Mauric",
-     "architecte_source": "https://fr.wikipedia.org/wiki/Coppet_(bateau) (conçu par le triplet Flahault Design / Bureau Mauric / S.E.E. Merré)",
-     "source_ref": "fr.wikipedia.org/wiki/Coppet_(bateau) ; fr.wikipedia.org Flotte CGN",
+     "architecte_source": "https://fr.wikipedia.org/wiki/Coppet_(bateau)",
+     "source_ref": "fr.wikipedia.org/wiki/Coppet_(bateau) ; fr.wikipedia.org Flotte CGN ; https://fr.wikipedia.org/wiki/Coppet_(bateau) — (conçu par le triplet Flahault Design / Bureau Mauric / S.E.E. Merré)",
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: compagnie",
@@ -38693,8 +38693,7 @@
     "https://www.multiplast.eu/newsletter-10-2024/",
     "https://www.meretmarine.com/fr/construction-navale/le-chantier-multiplast-s-agrandit-avec-un-nouveau-hall",
     "https://www.meretmarine.com/fr/construction-navale/le-chantier-multiplast-va-s-agrandir-a-vannes-et-continue-d-embaucher",
-    "https://www.mauric.com/news/jaric",
-    "https://www.multiplast.eu/fr/actualit%C3%A9s/newsletters/archives-composites/191-multiplast-s-agrandit-sur-le-port-de-vannes.html"
+    "https://www.mauric.com/news/jaric"
    ],
    "confiance": "moyenne",
    "pays": "France",
@@ -39074,7 +39073,8 @@
     "lien mort constate le 2026-08-03 : https://www.multiplast.eu/fr/actualit%C3%A9s/newsletters/archives-composites/226-maxi-trimaran-groupama-3-mis-%C3%A0-l-eau.html",
     "lien mort constate le 2026-08-03 : https://www.multiplast.eu/fr/actualit%C3%A9s/newsletters/actualit%C3%A9s-composite-yachts/256-multiplast-construit-le-vo70-groupama.html",
     "lien mort constate le 2026-08-03 : https://www.class40.com/fr/bateaux/167-happyvore---cafe-joyeux.htm",
-    "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
+    "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json",
+    "source retiree le 2026-08-16, 404 confirme au retest : https://www.multiplast.eu/fr/actualit%C3%A9s/newsletters/archives-composites/191-multiplast-s-agrandit-sur-le-port-de-vannes.html"
    ],
    "actif": true,
    "actif_methode": "deduction-livraison-recente",
@@ -46153,7 +46153,8 @@
      ],
      "capacite_pax": 10,
      "architecte": "Humphreys Yacht Design",
-     "architecte_source": "https://www.boatinternational.com/yachts/the-superyacht-directory/canoa--13886 et https://www.humphreysdesign.com/news/exterior-visuals-unveiled-for-50m-custom-explorer-yacht-designed-by-humphreys-yacht-design/ (architecture navale + design extérieur: Humphreys Yacht Design)"
+     "architecte_source": "https://www.boatinternational.com/yachts/the-superyacht-directory/canoa--13886",
+     "source_ref": "https://www.boatinternational.com/yachts/the-superyacht-directory/canoa--13886 — et https://www.humphreysdesign.com/news/exterior-visuals-unveiled-for-50m-custom-explorer-yacht-designed-by-humphreys-yacht-design/ (architecture navale + design extérieur: Humphreys Yacht Design)"
     },
     {
      "nom": "Long Island 87",
@@ -46313,7 +46314,8 @@
       "diesel-mdo"
      ],
      "architecte": "Vripack",
-     "architecte_source": "https://www.jfa-yachts.com/en/Yachts/bystander-escort-vessel-138-2/ (Naval architect: Vripack; design extérieur/intérieur: Rhoades Young Design)"
+     "architecte_source": "https://www.jfa-yachts.com/en/Yachts/bystander-escort-vessel-138-2/",
+     "source_ref": "https://www.jfa-yachts.com/en/Yachts/bystander-escort-vessel-138-2/ — (Naval architect: Vripack; design extérieur/intérieur: Rhoades Young Design)"
     },
     {
      "nom": "Atao (82' JFA Classic)",
@@ -46386,8 +46388,9 @@
       "velique"
      ],
      "architecte": "Barracuda Yacht Design",
-     "architecte_source": "http://www.jfa-yachts.com/en/Yachts/aldebaran-jfa-classic-70-2/ — fiche officielle JFA Yachts : 'Naval architect: Barracuda Yacht Design' (architecture interieure Franck Darnet).",
-     "tracabilite": "url-non-verifiee"
+     "architecte_source": "http://www.jfa-yachts.com/en/Yachts/aldebaran-jfa-classic-70-2/",
+     "tracabilite": "url-non-verifiee",
+     "source_ref": "http://www.jfa-yachts.com/en/Yachts/aldebaran-jfa-classic-70-2/ — — fiche officielle JFA Yachts : 'Naval architect: Barracuda Yacht Design' (architecture interieure Franck Darnet)."
     },
     {
      "nom": "Atalanta (82', cotre sloop haute performance ; ex, devenu Sejaa puis Ikigai)",
@@ -50593,200 +50596,7 @@
     "diesel-électrique"
    ],
    "taille_max": "Longueur jusqu'à 240 m et largeur 34/35 m (gabarit Panamax) en forme de radoub n°3 à Bassens; profondeur 18 m. C'est la plus grande forme de la façade atlantique française.",
-   "navires_references": [
-    {
-     "nom": "ex-Suffren",
-     "type": "déconstruction",
-     "annee": "2024",
-     "longueur_m": 158,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Frégate lance-missiles (en service 1967-2001) ; arrivée à Bassens le 24/11/2023, premier des 8 navires",
-     "energie": null,
-     "client": "Marine nationale (Service de Soutien de la Flotte)",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/defense/l-ex-fregate-suffren-est-arrivee-a-bordeaux-ou-elle-va-etre-deconstruite",
-     "caractere": "public",
-     "propriete": "publique",
-     "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Arsenal de Lorient (Marine nationale, futur DCN / Naval Group)",
-      "source": "https://fr.wikipedia.org/wiki/Suffren_(D602)",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "ex-Meuse",
-     "type": "déconstruction",
-     "annee": "2024",
-     "longueur_m": 157.2,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Pétrolier-ravitailleur (en service 1980-2015)",
-     "energie": null,
-     "client": "Marine nationale (Service de Soutien de la Flotte)",
-     "classification": null,
-     "source": "https://france.vinci-construction.com/fr/deconstruction-navires-nationale-grand-port-maritime-bordeaux/",
-     "caractere": "public",
-     "propriete": "publique",
-     "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "CNIM, La Seyne-sur-Mer",
-      "source": "https://fr.wikipedia.org/wiki/Classe_Durance",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "ex-Montcalm",
-     "type": "déconstruction",
-     "annee": "2024",
-     "longueur_m": 139,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Frégate anti-sous-marine type F70 (classe Georges Leygues), déplacement ~4 800 t",
-     "energie": null,
-     "client": "Marine nationale (Service de Soutien de la Flotte)",
-     "classification": null,
-     "source": "https://france.vinci-construction.com/fr/deconstruction-navires-nationale-grand-port-maritime-bordeaux/",
-     "caractere": "public",
-     "propriete": "publique",
-     "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "DCN Brest (aujourd hui Naval Group)",
-      "source": "https://fr.wikipedia.org/wiki/Classe_Georges_Leygues",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "ex-Georges Leygues",
-     "type": "déconstruction",
-     "annee": null,
-     "longueur_m": 139,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Frégate anti-sous-marine type F70 (tête de classe), déplacement ~4 800 t ; coque transférée depuis Brest",
-     "energie": null,
-     "client": "Marine nationale (Service de Soutien de la Flotte)",
-     "classification": null,
-     "source": "https://france.vinci-construction.com/fr/deconstruction-8-batiments-militaires-bordeaux/",
-     "caractere": "public",
-     "propriete": "publique",
-     "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Arsenal de Brest (Marine nationale)",
-      "source": "https://fr.wikipedia.org/wiki/Georges_Leygues_(fr%C3%A9gate)",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "ex-Jean de Vienne",
-     "type": "déconstruction",
-     "annee": null,
-     "longueur_m": 139,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Frégate anti-sous-marine type F70 (classe Georges Leygues), déplacement ~4 800 t",
-     "energie": null,
-     "client": "Marine nationale (Service de Soutien de la Flotte)",
-     "classification": null,
-     "source": "https://france.vinci-construction.com/fr/deconstruction-8-batiments-militaires-bordeaux/",
-     "caractere": "public",
-     "propriete": "publique",
-     "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Arsenal militaire de Brest",
-      "source": "https://fr.wikipedia.org/wiki/Jean_de_Vienne_(fr%C3%A9gate)",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "ex-Cassard",
-     "type": "déconstruction",
-     "annee": null,
-     "longueur_m": 139,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Frégate antiaérienne type F70 AA (en service 1988-2019)",
-     "energie": null,
-     "client": "Marine nationale (Service de Soutien de la Flotte)",
-     "classification": null,
-     "source": "https://france.vinci-construction.com/fr/deconstruction-8-batiments-militaires-bordeaux/",
-     "caractere": "public",
-     "propriete": "publique",
-     "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Arsenal de Lorient (Naval Group Lorient)",
-      "source": "https://fr.wikipedia.org/wiki/Cassard_(fr%C3%A9gate)",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "ex-Albatros",
-     "type": "déconstruction",
-     "annee": null,
-     "longueur_m": 85,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Aviso/patrouilleur austral (en service 1983-2015) ; coque transférée depuis Brest",
-     "energie": null,
-     "client": "Marine nationale (Service de Soutien de la Flotte)",
-     "classification": null,
-     "source": "https://fr.wikipedia.org/wiki/Albatros_(patrouilleur)",
-     "caractere": "public",
-     "propriete": "publique",
-     "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Societe navale caennaise (Caen), construit en 1966 comme chalutier congelateur Neve",
-      "source": "https://fr.wikipedia.org/wiki/Albatros_(patrouilleur)",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "ex-D'Entrecasteaux",
-     "type": "Bâtiment hydrographique et océanographique (ex-BH2)",
-     "annee": null,
-     "longueur_m": 96.6,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Bâtiment de la Marine nationale ; coque transférée depuis Lorient",
-     "energie": null,
-     "client": "Marine nationale (Service de Soutien de la Flotte)",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/defense/l-ex-batiment-oceanographique-d-entrecasteaux-part-se-faire-deconstruire-a-bordeaux",
-     "caractere": "public",
-     "propriete": "publique",
-     "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
-     "verification": {
-      "statut": "douteux",
-      "motif": "La page d'homonymie confirme l'existence d'un batiment hydrographique et oceanographique D'Entrecasteaux de 1971 (a ne pas confondre avec le B2M D'Entrecasteaux A621 de 2015, toujours en service). Aucun article dedie : ni chantier constructeur, ni date ni lieu de deconstruction verifiables. Manque une source tierce nommant le site de Bassens pour cette coque. Dans tous les cas le GPMB Bordeaux n'est pas constructeur.",
-      "source": "https://fr.wikipedia.org/wiki/D%27Entrecasteaux",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    }
-   ],
+   "navires_references": [],
    "geo_source": "https://fr.wikipedia.org/wiki/Formes_de_radoub_du_port_de_Bordeaux",
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.bordeaux-port.fr/en/node/2161",
@@ -50848,6 +50658,78 @@
      },
      "descendu_le": "2026-08-05",
      "motif": "type de refit : passage en chantier, pas une construction"
+    },
+    {
+     "navire": "ex-D'Entrecasteaux",
+     "imo": null,
+     "annee": null,
+     "nature": "deconstruction",
+     "constructeur": null,
+     "source": "https://www.bordeaux-port.fr/en/bordeaux-port-accueille-un-chantier-de-deconstruction-exceptionnel-de-8-batiments-militaires/",
+     "note": "descendu de navires_references le 2026-08-16 : Refit Bordeaux (Grand Port Maritime de Bordeaux) n'a pas construit cette coque. Batiment hydrographique et oceanographique, un des huit du chantier de deconstruction. Constructeur NON verifie : laisse null."
+    },
+    {
+     "navire": "ex-Albatros",
+     "imo": null,
+     "annee": null,
+     "nature": "deconstruction",
+     "constructeur": null,
+     "source": "https://www.bordeaux-port.fr/en/bordeaux-port-accueille-un-chantier-de-deconstruction-exceptionnel-de-8-batiments-militaires/",
+     "note": "descendu de navires_references le 2026-08-16 : Refit Bordeaux (Grand Port Maritime de Bordeaux) n'a pas construit cette coque. Un des huit batiments militaires du chantier de deconstruction de Bordeaux. Constructeur NON verifie : laisse null."
+    },
+    {
+     "navire": "ex-Cassard",
+     "imo": null,
+     "annee": null,
+     "nature": "deconstruction",
+     "constructeur": null,
+     "source": "https://www.bordeaux-port.fr/en/bordeaux-port-accueille-un-chantier-de-deconstruction-exceptionnel-de-8-batiments-militaires/",
+     "note": "descendu de navires_references le 2026-08-16 : Refit Bordeaux (Grand Port Maritime de Bordeaux) n'a pas construit cette coque. Un des huit batiments militaires du chantier de deconstruction de Bordeaux. Constructeur NON verifie : laisse null."
+    },
+    {
+     "navire": "ex-Jean de Vienne",
+     "imo": null,
+     "annee": null,
+     "nature": "deconstruction",
+     "constructeur": "DCN Brest",
+     "source": "https://fr.wikipedia.org/wiki/Classe_Georges_Leygues",
+     "note": "descendu de navires_references le 2026-08-16 : Refit Bordeaux (Grand Port Maritime de Bordeaux) n'a pas construit cette coque. Fregate de la classe Georges Leygues, lancee le 17 novembre 1981, construite par DCN a Brest."
+    },
+    {
+     "navire": "ex-Georges Leygues",
+     "imo": null,
+     "annee": null,
+     "nature": "deconstruction",
+     "constructeur": "DCN Brest",
+     "source": "https://fr.wikipedia.org/wiki/Classe_Georges_Leygues",
+     "note": "descendu de navires_references le 2026-08-16 : Refit Bordeaux (Grand Port Maritime de Bordeaux) n'a pas construit cette coque. Fregate de la classe Georges Leygues, lancee le 17 decembre 1976, construite par DCN a Brest."
+    },
+    {
+     "navire": "ex-Montcalm",
+     "imo": null,
+     "annee": "2024",
+     "nature": "deconstruction",
+     "constructeur": "DCN Brest",
+     "source": "https://fr.wikipedia.org/wiki/Classe_Georges_Leygues",
+     "note": "descendu de navires_references le 2026-08-16 : Refit Bordeaux (Grand Port Maritime de Bordeaux) n'a pas construit cette coque. Fregate de la classe Georges Leygues, lancee le 31 mai 1980, construite par DCN a Brest."
+    },
+    {
+     "navire": "ex-Meuse",
+     "imo": null,
+     "annee": "2024",
+     "nature": "deconstruction",
+     "constructeur": null,
+     "source": "https://www.meretmarine.com/fr/defense/l-ex-meuse-a-quitte-toulon-pour-rejoindre-bordeaux-afin-d-y-etre-deconstruite",
+     "note": "descendu de navires_references le 2026-08-16 : Refit Bordeaux (Grand Port Maritime de Bordeaux) n'a pas construit cette coque. Petrolier-ravitailleur arrive de Toulon pour deconstruction a Bordeaux. Constructeur NON verifie a ce stade : laisse null plutot que devine."
+    },
+    {
+     "navire": "ex-Suffren",
+     "imo": null,
+     "annee": "2024",
+     "nature": "deconstruction",
+     "constructeur": "Arsenal de Lorient",
+     "source": "https://fr.wikipedia.org/wiki/Suffren_(fr%C3%A9gate)",
+     "note": "descendu de navires_references le 2026-08-16 : Refit Bordeaux (Grand Port Maritime de Bordeaux) n'a pas construit cette coque. Fregate lance-missiles lancee en 1965 a l'arsenal de Lorient. Demantelement notifie a l'automne 2023 a Bassens (Gironde), desamiantage en avril 2024. Bordeaux DECONSTRUIT, ne construit pas."
     }
    ],
    "actif": true,
@@ -53322,10 +53204,11 @@
      ],
      "prix_acquisition": "2,2 M EUR (2019, construction neuve)",
      "architecte": "Mer et Design",
-     "architecte_source": "https://martinez-constructions-navales.fr/produits/corsaire-demeraude-vedette-de-transport-de-passagers (Plans: Bureau d'étude Mer et Design) ; https://meretdesign.fr/",
+     "architecte_source": "https://martinez-constructions-navales.fr/produits/corsaire-demeraude-vedette-de-transport-de-passagers",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: compagnie"
+     "caractere_motif": "propriete: compagnie",
+     "source_ref": "https://martinez-constructions-navales.fr/produits/corsaire-demeraude-vedette-de-transport-de-passagers — (Plans: Bureau d'étude Mer et Design) ; https://meretdesign.fr/"
     },
     {
      "nom": "Mahi Mahi III",
@@ -53384,10 +53267,11 @@
       "diesel-mdo"
      ],
      "architecte": "Mauric",
-     "architecte_source": "https://www.nauticexpo.com/prod/martinez-constructions-navales/product-58035-484063.html ; https://www.meretmarine.com/fr/construction-navale/bureau-mauric-l-innovation-a-tous-niveaux",
+     "architecte_source": "https://www.nauticexpo.com/prod/martinez-constructions-navales/product-58035-484063.html",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: armement"
+     "caractere_motif": "propriete: armement",
+     "source_ref": "https://www.nauticexpo.com/prod/martinez-constructions-navales/product-58035-484063.html — ; https://www.meretmarine.com/fr/construction-navale/bureau-mauric-l-innovation-a-tous-niveaux"
     },
     {
      "nom": "Navivoile",
@@ -53796,10 +53680,11 @@
       }
      ],
      "architecte": "Eric Jean",
-     "architecte_source": "https://www.eric-jean.com/en/travail/e-perla/ ; Mer et Marine (meretmarine.com) - vedette hybride conçue par l'architecte naval Eric Jean (avec Philippe Frasca / Jean & Frasca Design, PROFILS SARL)",
+     "architecte_source": "https://www.eric-jean.com/en/travail/e-perla/",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: croisiere"
+     "caractere_motif": "exploitation: croisiere",
+     "source_ref": "https://www.eric-jean.com/en/travail/e-perla/ — ; Mer et Marine (meretmarine.com) - vedette hybride conçue par l'architecte naval Eric Jean (avec Philippe Frasca / Jean & Frasca Design, PROFILS SARL)"
     },
     {
      "nom": "Planier",
@@ -59720,7 +59605,7 @@
   },
   {
    "id": "catana-group-canet-en-roussil",
-   "nom": "Catana Group",
+   "nom": "Catana Group (site de Canet-en-Roussillon)",
    "groupe": "Catana Group",
    "ville": "Canet-en-Roussillon",
    "region": "Occitanie",
@@ -68137,10 +68022,11 @@
       }
      ],
      "architecte": "Joseph Guédon",
-     "architecte_source": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/2021/08/12/le-cabin-cruiser-alice/ — 'Joseph Guédon en a réalisé les plans', construit sous sa supervision au chantier Bonnin ; architecte naval de reputation internationale a l'epoque.",
+     "architecte_source": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/2021/08/12/le-cabin-cruiser-alice/",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: yacht"
+     "caractere_motif": "exploitation: yacht",
+     "source_ref": "https://bassin-arcachon-patrimoine-naval-plaisance.fr/2021/08/12/le-cabin-cruiser-alice/ — — 'Joseph Guédon en a réalisé les plans', construit sous sa supervision au chantier Bonnin ; architecte naval de reputation internationale a l'epoque."
     },
     {
      "nom": "La Vague",
@@ -83902,10 +83788,11 @@
       "velique"
      ],
      "architecte": "Jean-Jacques Herbulot",
-     "architecte_source": "https://fr.wikipedia.org/wiki/Corsaire_(voilier) (dériveur dessiné par l'architecte naval Jean-Jacques Herbulot en 1954)",
+     "architecte_source": "https://fr.wikipedia.org/wiki/Corsaire_(voilier)",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: plaisancier"
+     "caractere_motif": "propriete: plaisancier",
+     "source_ref": "https://fr.wikipedia.org/wiki/Corsaire_(voilier) — (dériveur dessiné par l'architecte naval Jean-Jacques Herbulot en 1954)"
     }
    ],
    "geo_source": "https://firmania.fr/saint-herblain/chantier-brava-3011450",
@@ -87807,8 +87694,8 @@
      ],
      "prix_acquisition": "A$130 millions (mars 2012)",
      "architecte": "Vard Design",
-     "architecte_source": "https://en.wikipedia.org/wiki/ABFC_Ocean_Shield (basé sur le design STX OSCV 11, conçu par STX OSV / Vard Design)",
-     "source_ref": "reference Ocean Shield (former Skandi Bergen) ; en.wikipedia ABFC Ocean Shield ; vesselfinder IMO 9628374 ; naval-technology",
+     "architecte_source": "https://en.wikipedia.org/wiki/ABFC_Ocean_Shield",
+     "source_ref": "reference Ocean Shield (former Skandi Bergen) ; en.wikipedia ABFC Ocean Shield ; vesselfinder IMO 9628374 ; naval-technology ; https://en.wikipedia.org/wiki/ABFC_Ocean_Shield — (basé sur le design STX OSCV 11, conçu par STX OSV / Vard Design)",
      "tracabilite": "url-domaine-seul",
      "caractere": "public",
      "propriete": "publique",
@@ -89718,8 +89605,8 @@
       }
      ],
      "architecte": "Vard Design",
-     "architecte_source": "https://www.offshore-energy.biz/vard-delivers-hybrid-cable-layer-to-danish-subsea-specialist/ — Vard Design in Ålesund in charge of the design (VARD 9 01); hull Vard Tulcea, outfitting Vard Langsten",
-     "source_ref": "IMO 1017505); vard.com/shipbuilding/references/freja; bairdmaritime.com",
+     "architecte_source": "https://www.offshore-energy.biz/vard-delivers-hybrid-cable-layer-to-danish-subsea-specialist/",
+     "source_ref": "IMO 1017505); vard.com/shipbuilding/references/freja; bairdmaritime.com ; https://www.offshore-energy.biz/vard-delivers-hybrid-cable-layer-to-danish-subsea-specialist/ — — Vard Design in Ålesund in charge of the design (VARD 9 01); hull Vard Tulcea, outfitting Vard Langsten",
      "tracabilite": "url-non-verifiee",
      "caractere": "prive",
      "propriete": "privee",
@@ -90160,8 +90047,8 @@
      ],
      "prix_acquisition": "≈ 500 M NOK — contrat de construction neuve, commandé oct. 2005, livré 2007/2008 (Aker Yards Langsten)",
      "architecte": "Rolls-Royce Marine (UT design)",
-     "architecte_source": "https://fleetphoto.ru/vessel/38689/ et VesselsValue/Solstad (design UT 732 CD, Rolls-Royce Marine ; coque Vard Brăila, achèvement Aker Yards Langsten 2007)",
-     "source_ref": "directory.marinelink.com",
+     "architecte_source": "https://fleetphoto.ru/vessel/38689/",
+     "source_ref": "directory.marinelink.com ; https://fleetphoto.ru/vessel/38689/ — et VesselsValue/Solstad (design UT 732 CD, Rolls-Royce Marine ; coque Vard Brăila, achèvement Aker Yards Langsten 2007)",
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: as"
@@ -93008,8 +92895,8 @@
       }
      ],
      "architecte": "Vard Design",
-     "architecte_source": "https://www.vard.com/shipbuilding/references/demarest-tide (page Vard officielle : ship designer = Vard Design, design PSV 09 CD)",
-     "source_ref": "maritimeoptima IMO 9608740 ; gcaptain (Tidewater acquired STX Pan Ocean contracts"
+     "architecte_source": "https://www.vard.com/shipbuilding/references/demarest-tide",
+     "source_ref": "maritimeoptima IMO 9608740 ; gcaptain (Tidewater acquired STX Pan Ocean contracts ; https://www.vard.com/shipbuilding/references/demarest-tide — (page Vard officielle : ship designer = Vard Design, design PSV 09 CD)"
     },
     {
      "nom": "Normand Frontier",
@@ -93340,8 +93227,8 @@
      "jauge_gt": 2180,
      "prix_acquisition": "Revente 2021 (lot Carrick+Aberdour) : 6,6 M$ pour 2 sister-ships identiques -> ≈ 3,3 M$/unite (2021). Prix d'acquisition d'origine par Fletcher/Northern PSV non publie isolement.",
      "architecte": "Rolls-Royce Marine (UT design)",
-     "architecte_source": "https://safety4sea.com/rolls-royce-to-deliver-design-and-equipment-for-two-psv/ + UT 755 LN datasheet — UT 755 LN PSV design by Rolls-Royce Marine (UT-Design heritage)",
-     "source_ref": "vesselfinder/myshiptracking IMO 9395446 ; marinetraffic (ex E.R. Haugesund) ; offshore-energy.biz",
+     "architecte_source": "https://safety4sea.com/rolls-royce-to-deliver-design-and-equipment-for-two-psv/",
+     "source_ref": "vesselfinder/myshiptracking IMO 9395446 ; marinetraffic (ex E.R. Haugesund) ; offshore-energy.biz ; https://safety4sea.com/rolls-royce-to-deliver-design-and-equipment-for-two-psv/ — + UT 755 LN datasheet — UT 755 LN PSV design by Rolls-Royce Marine (UT-Design heritage)",
      "source": "https://www.vesselfinder.com/vessels/details/9395446",
      "caractere": "prive",
      "propriete": "privee",
@@ -94744,8 +94631,8 @@
      ],
      "prix_acquisition": "11,1 M USD (2017, revente d'occasion ; lot E.R. Athina + E.R. Georgina = 22,2 M USD pour 2 navires) ; prix de construction neuve cite ~ 57 M USD",
      "architecte": "Rolls-Royce Marine (UT design)",
-     "architecte_source": "https://www.ship-technology.com/news/newsrolls-royce-to-design-pair-of-supply-vessels-for-island-offshore/ + design UT 776 CD = Rolls-Royce Marine (ex-Ulstein UT design)",
-     "source_ref": "IMO 9448528 (E.R. Athina, 2009) ; offshore-energy.biz/standard-drilling-buys-platform-supplier-pair (E.R. Athina + E.R. Georgina, STX Brevik 2009/2010, UT 776 CD, 1000 m2) ; directory.marinelink.com/ships/companies-vard_brevik (Liberia/Monrovia",
+     "architecte_source": "https://www.ship-technology.com/news/newsrolls-royce-to-design-pair-of-supply-vessels-for-island-offshore/",
+     "source_ref": "IMO 9448528 (E.R. Athina, 2009) ; offshore-energy.biz/standard-drilling-buys-platform-supplier-pair (E.R. Athina + E.R. Georgina, STX Brevik 2009/2010, UT 776 CD, 1000 m2) ; directory.marinelink.com/ships/companies-vard_brevik (Liberia/Monrovia ; https://www.ship-technology.com/news/newsrolls-royce-to-design-pair-of-supply-vessels-for-island-offshore/ — + design UT 776 CD = Rolls-Royce Marine (ex-Ulstein UT design)",
      "caractere": "prive",
      "exploitation": "commerciale",
      "caractere_motif": "exploitation: offshore",
@@ -95098,8 +94985,8 @@
       }
      ],
      "architecte": "Rolls-Royce Marine (UT design)",
-     "architecte_source": "https://maritimt.com/nb/batomtaler/far-sabre-082008 : « design fra Rolls-Royce type UT 712L »",
-     "source_ref": "Aker Yards Brevik build 56, livre 12 juillet 2008, UT 712 L) ; vesselfinder.com IMO 9388962 (ex Far Sabre, Oceanicasub X, Bresil"
+     "architecte_source": "https://maritimt.com/nb/batomtaler/far-sabre-082008",
+     "source_ref": "Aker Yards Brevik build 56, livre 12 juillet 2008, UT 712 L) ; vesselfinder.com IMO 9388962 (ex Far Sabre, Oceanicasub X, Bresil ; https://maritimt.com/nb/batomtaler/far-sabre-082008 — : « design fra Rolls-Royce type UT 712L »"
     },
     {
      "nom": "OceanicaSub XV",
@@ -95401,8 +95288,8 @@
       }
      ],
      "architecte": "Vard Design",
-     "architecte_source": "https://www.shipphotos.co.uk/ship/?ship=klbarentsfjord3 et https://www.vard.com/shipbuilding/references/kl-barentsfjord (design Aker PSV 06 CD, série de design Aker Yards / STX OSV devenue Vard Design)",
-     "source_ref": "https://www.offshore-energy.biz/norway-k-line-offshore-receives-new-psv-kl-barentsfjord-2/ ; https://www.vesselfinder.com/vessels/KL-BARENTSFJORD-IMO-9482366-MMSI-209272000",
+     "architecte_source": "https://www.shipphotos.co.uk/ship/?ship=klbarentsfjord3",
+     "source_ref": "https://www.offshore-energy.biz/norway-k-line-offshore-receives-new-psv-kl-barentsfjord-2/ ; https://www.vesselfinder.com/vessels/KL-BARENTSFJORD-IMO-9482366-MMSI-209272000 ; https://www.shipphotos.co.uk/ship/?ship=klbarentsfjord3 — et https://www.vard.com/shipbuilding/references/kl-barentsfjord (design Aker PSV 06 CD, série de design Aker Yards / STX OSV devenue Vard Design)",
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
@@ -96023,10 +95910,11 @@
       }
      ],
      "architecte": "Ulstein Design",
-     "architecte_source": "https://ulstein.com/news/windea-curie-delivered-bernhard-schulte-offshore-received-their-latest-csov-from-ulstein-verft (SX222, Ulstein Design & Solutions AS)",
+     "architecte_source": "https://ulstein.com/news/windea-curie-delivered-bernhard-schulte-offshore-received-their-latest-csov-from-ulstein-verft",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: fret"
+     "caractere_motif": "exploitation: fret",
+     "source_ref": "https://ulstein.com/news/windea-curie-delivered-bernhard-schulte-offshore-received-their-latest-csov-from-ulstein-verft — (SX222, Ulstein Design & Solutions AS)"
     },
     {
      "nom": "Windea Clausius",
@@ -96074,10 +95962,11 @@
       }
      ],
      "architecte": "Ulstein Design",
-     "architecte_source": "https://ulstein.com/news/windea-clausius-delivered-bs-offshore-receives-second-twin-x-stern-csov-from-ulstein (sister-ship SX222, designer Ulstein Design & Solutions AS)",
+     "architecte_source": "https://ulstein.com/news/windea-clausius-delivered-bs-offshore-receives-second-twin-x-stern-csov-from-ulstein",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: fret"
+     "caractere_motif": "exploitation: fret",
+     "source_ref": "https://ulstein.com/news/windea-clausius-delivered-bs-offshore-receives-second-twin-x-stern-csov-from-ulstein — (sister-ship SX222, designer Ulstein Design & Solutions AS)"
     },
     {
      "nom": "Windea Carnot",
@@ -96117,11 +96006,12 @@
       }
      ],
      "architecte": "Ulstein Design",
-     "architecte_source": "https://ulstein.com/references/windea-carnot (ULSTEIN SX222 design, designer: Ulstein Design & Solutions AS)",
+     "architecte_source": "https://ulstein.com/references/windea-carnot",
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: as ; exploitation: offshore"
+     "caractere_motif": "propriete: as ; exploitation: offshore",
+     "source_ref": "https://ulstein.com/references/windea-carnot — (ULSTEIN SX222 design, designer: Ulstein Design & Solutions AS)"
     },
     {
      "nom": "Nexans Electra",
@@ -96742,7 +96632,8 @@
       }
      ],
      "architecte": "Ulstein Design",
-     "architecte_source": "https://ulstein.com/references/sarah (Ulstein SX121, designed by Ulstein Design AS)"
+     "architecte_source": "https://ulstein.com/references/sarah",
+     "source_ref": "https://ulstein.com/references/sarah — (Ulstein SX121, designed by Ulstein Design AS)"
     },
     {
      "nom": "Normand Ranger",
@@ -97016,10 +96907,11 @@
      "jauge_gt": 3644,
      "prix_acquisition": "≈ 45 M USD (≈ 270 M NOK) — rachat par Nordic American Offshore, nov. 2013",
      "architecte": "Ulstein Design",
-     "architecte_source": "https://www.ship-technology.com/projects/blue-ship-invests-px121-platform-supply-vessels-psvs/ (PX121 series Blue Ship Invest)",
+     "architecte_source": "https://www.ship-technology.com/projects/blue-ship-invests-px121-platform-supply-vessels-psvs/",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "source_ref": "https://www.ship-technology.com/projects/blue-ship-invests-px121-platform-supply-vessels-psvs/ — (PX121 series Blue Ship Invest)"
     },
     {
      "nom": "Blue Thunder -> NAO Thunder",
@@ -97166,7 +97058,8 @@
      ],
      "prix_acquisition": "≈ 45 M USD (≈ 270 M NOK) — rachat par Nordic American Offshore, nov. 2013",
      "architecte": "Ulstein Design",
-     "architecte_source": "https://gcaptain.com/blue-power-platform-supply/ + https://ulstein.com/vessel-design/px121-1 (PX121 design)"
+     "architecte_source": "https://gcaptain.com/blue-power-platform-supply/",
+     "source_ref": "https://gcaptain.com/blue-power-platform-supply/ — + https://ulstein.com/vessel-design/px121-1 (PX121 design)"
     },
     {
      "nom": "Blue Guardian -> NAO Guardian",
@@ -97245,7 +97138,8 @@
      ],
      "prix_acquisition": "≈ 45 M USD (≈ 270 M NOK) — rachat par Nordic American Offshore, nov. 2013",
      "architecte": "Ulstein Design",
-     "architecte_source": "https://ulstein.com/references/blue-guardian (PX121 design, Blue Ship Invest/Ulstein Group)"
+     "architecte_source": "https://ulstein.com/references/blue-guardian",
+     "source_ref": "https://ulstein.com/references/blue-guardian — (PX121 design, Blue Ship Invest/Ulstein Group)"
     },
     {
      "nom": "Blue Protector -> NAO Protector",
@@ -97316,10 +97210,11 @@
      "jauge_gt": 3636,
      "prix_acquisition": "USD 45 M (2013, prix de vente neuf a Nordic American Offshore, design PX121, sister-ship du lot Blue Ship Invest)",
      "architecte": "Ulstein Design",
-     "architecte_source": "https://ulstein.com/references/blue-protector (PX121 design)",
+     "architecte_source": "https://ulstein.com/references/blue-protector",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: offshore"
+     "caractere_motif": "exploitation: offshore",
+     "source_ref": "https://ulstein.com/references/blue-protector — (PX121 design)"
     },
     {
      "nom": "Polar Onyx",
@@ -97502,7 +97397,8 @@
      ],
      "prix_acquisition": "≈ NOK 250 M/unite (derive: lot de 8 PSV PX121 a NAO d'une valeur > NOK 2 milliards) ; comparables sister-ships vendus ~USD 45 M/unite",
      "architecte": "Ulstein Design",
-     "architecte_source": "https://ulstein.com/references/blue-storm (PX121 design, Yard 303 Ulstein Verft)"
+     "architecte_source": "https://ulstein.com/references/blue-storm",
+     "source_ref": "https://ulstein.com/references/blue-storm — (PX121 design, Yard 303 Ulstein Verft)"
     },
     {
      "nom": "Blue Viking",
@@ -97649,10 +97545,11 @@
      ],
      "prix_acquisition": "Prix propre non public ; comparable sister-ship: PSV PX121 du meme programme vendus neufs ~USD 45 M/unite (Blue Ship Invest -> NAO)",
      "architecte": "Ulstein Design",
-     "architecte_source": "https://ulstein.com/references/blue-queen (ULSTEIN PX121 design, livré par Ulstein Verft)",
+     "architecte_source": "https://ulstein.com/references/blue-queen",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: offshore"
+     "caractere_motif": "exploitation: offshore",
+     "source_ref": "https://ulstein.com/references/blue-queen — (ULSTEIN PX121 design, livré par Ulstein Verft)"
     },
     {
      "nom": "Windea La Cour",
@@ -97687,10 +97584,11 @@
       }
      ],
      "architecte": "Ulstein Design",
-     "architecte_source": "https://ulstein.com/references/windea-la-cour (SX175 design, designer Ulstein Design & Solutions AS)",
+     "architecte_source": "https://ulstein.com/references/windea-la-cour",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: offshore"
+     "caractere_motif": "exploitation: offshore",
+     "source_ref": "https://ulstein.com/references/windea-la-cour — (SX175 design, designer Ulstein Design & Solutions AS)"
     },
     {
      "nom": "Windea Leibniz",
@@ -97739,10 +97637,11 @@
       }
      ],
      "architecte": "Ulstein Design",
-     "architecte_source": "https://ulstein.com/references/windea-leibniz (ULSTEIN SX175 design from Ulstein Design & Solutions AS)",
+     "architecte_source": "https://ulstein.com/references/windea-leibniz",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: offshore"
+     "caractere_motif": "exploitation: offshore",
+     "source_ref": "https://ulstein.com/references/windea-leibniz — (ULSTEIN SX175 design from Ulstein Design & Solutions AS)"
     },
     {
      "nom": "Island Venture",
@@ -97874,8 +97773,9 @@
       }
      ],
      "architecte": "Ulstein Design",
-     "architecte_source": "https://ulstein.com/references/olivia-o + boatinternational.com (plateforme/architecture navale et coque X-Bow par Ulstein Design & Solutions ; design extérieur/GA par Espen Øino)",
-     "prix_acquisition": "≈ 200 M$ (2020, coût total à la livraison, yacht explorer X-BOW pour Eyal Ofer)"
+     "architecte_source": "https://ulstein.com/references/olivia-o",
+     "prix_acquisition": "≈ 200 M$ (2020, coût total à la livraison, yacht explorer X-BOW pour Eyal Ofer)",
+     "source_ref": "https://ulstein.com/references/olivia-o — + boatinternational.com (plateforme/architecture navale et coque X-Bow par Ulstein Design & Solutions ; design extérieur/GA par Espen Øino)"
     },
     {
      "nom": "Windea Jules Verne",
@@ -97912,10 +97812,11 @@
       }
      ],
      "architecte": "Ulstein Design",
-     "architecte_source": "https://ulstein.com/news/dedication-to-offshore-wind-designs (SX195 design, Ulstein Design & Solutions AS)",
+     "architecte_source": "https://ulstein.com/news/dedication-to-offshore-wind-designs",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: offshore"
+     "caractere_motif": "exploitation: offshore",
+     "source_ref": "https://ulstein.com/news/dedication-to-offshore-wind-designs — (SX195 design, Ulstein Design & Solutions AS)"
     },
     {
      "nom": "Nexans Aurora",
@@ -98555,10 +98456,11 @@
       }
      ],
      "architecte": "Ulstein Design",
-     "architecte_source": "https://ulstein.com/references/yno-248-fresnel — UT 736 Large PSV/Cable Laying Vessel design by Ulstein (Dept. Ulstein International), yard no 248",
+     "architecte_source": "https://ulstein.com/references/yno-248-fresnel",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: offshore"
+     "caractere_motif": "exploitation: offshore",
+     "source_ref": "https://ulstein.com/references/yno-248-fresnel — — UT 736 Large PSV/Cable Laying Vessel design by Ulstein (Dept. Ulstein International), yard no 248"
     },
     {
      "nom": "Normand Cutter",
@@ -98698,8 +98600,8 @@
       }
      ],
      "architecte": "Ulstein Design",
-     "architecte_source": "https://www.offshore-mag.com/vessels/article/16756654/ + https://www.wrk.ru/forums/attachment.php?item=133917 ; design UT 742 par Ulstein Ship Technology AS (ex-Normand Progress)",
-     "source_ref": "https://www.vesselfinder.com/vessels/details/9181510 ; https://gspholding.com/the-fleet/vessels/ahts/gsp-vega/",
+     "architecte_source": "https://www.offshore-mag.com/vessels/article/16756654/",
+     "source_ref": "https://www.vesselfinder.com/vessels/details/9181510 ; https://gspholding.com/the-fleet/vessels/ahts/gsp-vega/ ; https://www.offshore-mag.com/vessels/article/16756654/ — + https://www.wrk.ru/forums/attachment.php?item=133917 ; design UT 742 par Ulstein Ship Technology AS (ex-Normand Progress)",
      "caractere": "prive",
      "exploitation": "commerciale",
      "caractere_motif": "exploitation: offshore",
@@ -100138,8 +100040,8 @@
      ],
      "prix_acquisition": "~600 millions NOK (~100 M USD) construction neuve, livraison 2013",
      "architecte": "Marin Teknikk",
-     "architecte_source": "https://www.marinteknikk.no/news/ (design MT 6022 MkII) + http://www.marinteknikk.no/mt-design/scv/mt-6022-c37332l511/olympic-ares",
-     "source_ref": "Wikipedia Olympic Ares ; vesselfinder IMO 9665712 ; greenyard references",
+     "architecte_source": "https://www.marinteknikk.no/news/",
+     "source_ref": "Wikipedia Olympic Ares ; vesselfinder IMO 9665712 ; greenyard references ; https://www.marinteknikk.no/news/ — (design MT 6022 MkII) + http://www.marinteknikk.no/mt-design/scv/mt-6022-c37332l511/olympic-ares",
      "source": "https://www.vesselfinder.com/vessels/details/9665712",
      "caractere": "prive",
      "propriete": "privee",
@@ -103087,7 +102989,8 @@
       }
      ],
      "architecte": "Havyard Design",
-     "architecte_source": "https://www.rivieramm.com/news-content-hub/havyard-wins-fjord1-order-for-five-all-electric-ferries-28225 (Havyard Design & Solutions, série double-ender 111 m Fjord1)"
+     "architecte_source": "https://www.rivieramm.com/news-content-hub/havyard-wins-fjord1-order-for-five-all-electric-ferries-28225",
+     "source_ref": "https://www.rivieramm.com/news-content-hub/havyard-wins-fjord1-order-for-five-all-electric-ferries-28225 — (Havyard Design & Solutions, série double-ender 111 m Fjord1)"
     },
     {
      "nom": "Rovdehorn",
@@ -107064,8 +106967,8 @@
       }
      ],
      "architecte": "Havyard Design",
-     "architecte_source": "https://fjellstrand.no/projects/nb-1680-eldborg/ (Design By: Havyard AS, modèle Havyard 832 CD)",
-     "source_ref": "VesselFinder/MaritimeOptima IMO 9451422 ; skansi.fo",
+     "architecte_source": "https://fjellstrand.no/projects/nb-1680-eldborg/",
+     "source_ref": "VesselFinder/MaritimeOptima IMO 9451422 ; skansi.fo ; https://fjellstrand.no/projects/nb-1680-eldborg/ — (Design By: Havyard AS, modèle Havyard 832 CD)",
      "caractere": "prive",
      "exploitation": "commerciale",
      "caractere_motif": "exploitation: offshore"
@@ -107156,8 +107059,8 @@
       }
      ],
      "architecte": "Sawicon",
-     "architecte_source": "https://fjellstrand.no/projects/nb-1679-seabed-worker/ (\"Design By: Sawicon / Fjellstrand\", type MM80)",
-     "source_ref": "VesselFinder IMO 9533244",
+     "architecte_source": "https://fjellstrand.no/projects/nb-1679-seabed-worker/",
+     "source_ref": "VesselFinder IMO 9533244 ; https://fjellstrand.no/projects/nb-1679-seabed-worker/ — (\"Design By: Sawicon / Fjellstrand\", type MM80)",
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: as"
@@ -107332,8 +107235,8 @@
       }
      ],
      "architecte": "Sawicon",
-     "architecte_source": "https://fjellstrand.no/projects/nb-1688-seabed-supporter/ (\"Design By: Sawicon\", type Sawicon 440 MPSCV)",
-     "source_ref": "MarineTraffic/VesselFinder IMO 9671632",
+     "architecte_source": "https://fjellstrand.no/projects/nb-1688-seabed-supporter/",
+     "source_ref": "MarineTraffic/VesselFinder IMO 9671632 ; https://fjellstrand.no/projects/nb-1688-seabed-supporter/ — (\"Design By: Sawicon\", type Sawicon 440 MPSCV)",
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: as"
@@ -108796,14 +108699,15 @@
       }
      ],
      "architecte": "LMG Marin",
-     "architecte_source": "https://lmgmarin.no/reference/fannefjord/ (référence LMG Marin, design LMG 125-DEG, initial/basic/detail design ; construit par Remontowa 2009-2010)",
+     "architecte_source": "https://lmgmarin.no/reference/fannefjord/",
      "verification": {
       "statut": "attribution_erronee",
       "chantier_reel": "Gdansk Shiprepair Yard (Pologne)",
       "source": "https://no.wikipedia.org/wiki/MF_%C2%ABFannefjord%C2%BB",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "source_ref": "https://lmgmarin.no/reference/fannefjord/ — (référence LMG Marin, design LMG 125-DEG, initial/basic/detail design ; construit par Remontowa 2009-2010)"
     },
     {
      "nom": "Karlsoyfjord",
@@ -109312,8 +109216,8 @@
      ],
      "prix_acquisition": "≈ 100 millions NOK (2000, livraison nov. 1999)",
      "architecte": "Multi Maritime",
-     "architecte_source": "https://www.multi-maritime.no/melshorn (Design: Multi Maritime AS)",
-     "source_ref": "chantier no.44 ; VesselFinder IMO 9210610",
+     "architecte_source": "https://www.multi-maritime.no/melshorn",
+     "source_ref": "chantier no.44 ; VesselFinder IMO 9210610 ; https://www.multi-maritime.no/melshorn — (Design: Multi Maritime AS)",
      "tracabilite": "url-domaine-seul",
      "caractere": "prive",
      "propriete": "privee",
@@ -110360,8 +110264,8 @@
      ],
      "prix_acquisition": "≈ 29 M€/unite (derive: ~87-88 M€ pour 3 ferries identiques, Saaremaa+Hiiumaa+Muhumaa, contrat 2007, armateur Saaremaa Laevakompanii)",
      "architecte": "Multi Maritime",
-     "architecte_source": "https://www.fiskerstrand.no/en/product/new-construction/yard-no-63-muhumaa-2010/ (\"Design: Multi Maritime AS – MM 90 FC\" ; Saaremaa est l'un des trois sisters identiques Muhumaa/Saaremaa/Hiiumaa)",
-     "source_ref": "chantier no.64 ; faktaomfartyg saaremaa_2010 ; VesselFinder IMO 9474072 (devenu Saaremaa I",
+     "architecte_source": "https://www.fiskerstrand.no/en/product/new-construction/yard-no-63-muhumaa-2010/",
+     "source_ref": "chantier no.64 ; faktaomfartyg saaremaa_2010 ; VesselFinder IMO 9474072 (devenu Saaremaa I ; https://www.fiskerstrand.no/en/product/new-construction/yard-no-63-muhumaa-2010/ — (\"Design: Multi Maritime AS – MM 90 FC\" ; Saaremaa est l'un des trois sisters identiques Muhumaa/Saaremaa/Hiiumaa)",
      "tracabilite": "url-domaine-seul",
      "verification": {
       "statut": "confirme",
@@ -110553,8 +110457,8 @@
       }
      ],
      "architecte": "Skipsteknisk",
-     "architecte_source": "https://www.skipsteknisk.no/delivered-ships/geir-ii/29/226 (design ST-155 Skipsteknisk AS)",
-     "source_ref": "chantier no.69 ; MarineTraffic IMO 9535383",
+     "architecte_source": "https://www.skipsteknisk.no/delivered-ships/geir-ii/29/226",
+     "source_ref": "chantier no.69 ; MarineTraffic IMO 9535383 ; https://www.skipsteknisk.no/delivered-ships/geir-ii/29/226 — (design ST-155 Skipsteknisk AS)",
      "tracabilite": "url-domaine-seul",
      "caractere": "prive",
      "propriete": "privee",
@@ -111166,8 +111070,8 @@
      ],
      "prix_acquisition": "≈ 300 M NOK/unité (dérivé : investissement total ~600 M NOK pour les 2 wellboats identiques Gåsø Jarl + Gåsø Freyja ; corroboré par une 2e source estimant chaque contrat à 'près de 300 millions de couronnes')",
      "architecte": "Møre Maritime",
-     "architecte_source": "https://moremaritime.no/en/gaso-jarl/ (ship designer Møre Maritime, design M-3401)",
-     "source_ref": "chantier no.81 ; MarineTraffic IMO 9793650 ; moremaritime.no (design M-3401",
+     "architecte_source": "https://moremaritime.no/en/gaso-jarl/",
+     "source_ref": "chantier no.81 ; MarineTraffic IMO 9793650 ; moremaritime.no (design M-3401 ; https://moremaritime.no/en/gaso-jarl/ — (ship designer Møre Maritime, design M-3401)",
      "tracabilite": "url-domaine-seul",
      "caractere": "prive",
      "propriete": "privee",
@@ -111216,8 +111120,8 @@
      ],
      "prix_acquisition": "≈ 300 M NOK/unité (dérivé : investissement total ~600 M NOK pour les 2 wellboats identiques Gåsø Jarl + Gåsø Freyja ; corroboré par une 2e source estimant chaque contrat à 'près de 300 millions de couronnes')",
      "architecte": "Møre Maritime",
-     "architecte_source": "https://moremaritime.no/en/gaso-freyja/ (design M-3401 Møre Maritime AS)",
-     "source_ref": "chantier no.82 ; VesselFinder/MarineTraffic IMO 9793662 ; moremaritime.no (design M-3401",
+     "architecte_source": "https://moremaritime.no/en/gaso-freyja/",
+     "source_ref": "chantier no.82 ; VesselFinder/MarineTraffic IMO 9793662 ; moremaritime.no (design M-3401 ; https://moremaritime.no/en/gaso-freyja/ — (design M-3401 Møre Maritime AS)",
      "tracabilite": "url-domaine-seul",
      "caractere": "prive",
      "propriete": "privee",
@@ -111581,7 +111485,8 @@
      ],
      "prix_acquisition": "~29 000 000 EUR (cout de construction, 2021)",
      "architecte": "LMG Marin",
-     "architecte_source": "https://en.wikipedia.org/wiki/MF_Hydra ; bairdmaritime.com (built to a design developed by naval architects LMG Marin)"
+     "architecte_source": "https://en.wikipedia.org/wiki/MF_Hydra",
+     "source_ref": "https://en.wikipedia.org/wiki/MF_Hydra — ; bairdmaritime.com (built to a design developed by naval architects LMG Marin)"
     },
     {
      "nom": "MF Nesvik",
@@ -111632,8 +111537,9 @@
       }
      ],
      "architecte": "LMG Marin",
-     "architecte_source": "https://lmgmarin.no/reference/nesvik/ (designed by LMG Marin AS)",
-     "tracabilite": "url-non-verifiee"
+     "architecte_source": "https://lmgmarin.no/reference/nesvik/",
+     "tracabilite": "url-non-verifiee",
+     "source_ref": "https://lmgmarin.no/reference/nesvik/ — (designed by LMG Marin AS)"
     },
     {
      "nom": "Ecofive",
@@ -111674,7 +111580,8 @@
       }
      ],
      "architecte": "Ulstein Design",
-     "architecte_source": "https://ulstein.com/references/ecofive + https://www.bairdmaritime.com/fishing/catching/trawling/vessel-review-ecofive (designed by Ulstein Design & Solutions AS)"
+     "architecte_source": "https://ulstein.com/references/ecofive",
+     "source_ref": "https://ulstein.com/references/ecofive — + https://www.bairdmaritime.com/fishing/catching/trawling/vessel-review-ecofive (designed by Ulstein Design & Solutions AS)"
     },
     {
      "nom": "Ryfylke",
@@ -111938,8 +111845,8 @@
       }
      ],
      "architecte": "LMG Marin",
-     "architecte_source": "https://lmgmarin.no/hjellestad-delivered/ ; bairdmaritime.com vessel review (design LMG 16-DEH)",
-     "source_ref": "Baird Maritime VESSEL REVIEW Hjellestad; LMG Marin reference; MarineTraffic IMO 9857341; Corvus Energy; Skipsrevyen",
+     "architecte_source": "https://lmgmarin.no/hjellestad-delivered/",
+     "source_ref": "Baird Maritime VESSEL REVIEW Hjellestad; LMG Marin reference; MarineTraffic IMO 9857341; Corvus Energy; Skipsrevyen ; https://lmgmarin.no/hjellestad-delivered/ — ; bairdmaritime.com vessel review (design LMG 16-DEH)",
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: as",
@@ -112361,8 +112268,8 @@
       }
      ],
      "architecte": "Rolls-Royce Marine (UT design)",
-     "architecte_source": "https://www.marinelink.com/news/rollsroyce-fishing-design428894 + https://www.bairdmaritime.com/fishing-boat-world/trawling/gunnar-langva-orders-seiner-trawler/ ; design Rolls-Royce/Kongsberg NVC 353",
-     "source_ref": "'Gunnar Langva orders seiner/trawler' ; undercurrentnews.com ; VesselFinder/MarineTraffic IMO 9840489 ; mag.hookandnet.com",
+     "architecte_source": "https://www.marinelink.com/news/rollsroyce-fishing-design428894",
+     "source_ref": "'Gunnar Langva orders seiner/trawler' ; undercurrentnews.com ; VesselFinder/MarineTraffic IMO 9840489 ; mag.hookandnet.com ; https://www.marinelink.com/news/rollsroyce-fishing-design428894 — + https://www.bairdmaritime.com/fishing-boat-world/trawling/gunnar-langva-orders-seiner-trawler/ ; design Rolls-Royce/Kongsberg NVC 353",
      "tracabilite": "url-domaine-seul",
      "caractere": "prive",
      "propriete": "privee",
@@ -112879,8 +112786,8 @@
       }
      ],
      "architecte": "Rolls-Royce Marine (UT design)",
-     "architecte_source": "https://www.larsnes-mek.no/en/referanser/build-no-53-kings-bay/ (fiche chantier : Design: Rolls Royce Marine)",
-     "source_ref": "Larsnes Mek references (build no 53); VesselFinder IMO 9617985",
+     "architecte_source": "https://www.larsnes-mek.no/en/referanser/build-no-53-kings-bay/",
+     "source_ref": "Larsnes Mek references (build no 53); VesselFinder IMO 9617985 ; https://www.larsnes-mek.no/en/referanser/build-no-53-kings-bay/ — (fiche chantier : Design: Rolls Royce Marine)",
      "source": "https://www.vesselfinder.com/vessels/details/9617985",
      "caractere": "prive",
      "propriete": "privee",
@@ -113313,8 +113220,8 @@
      ],
      "prix_acquisition": "Revente ~140 M NOK (automne 2022) ; prix de construction neuve 2017 non public",
      "architecte": "Naval Consult",
-     "architecte_source": "https://www.larsnes-mek.no/en/referanser/build-no-58-sander-andre/ (fiche chantier : \"Design: Naval Consult AS\")",
-     "source_ref": "Larsnes Mek references (build no 58); ShipSpotting IMO 9813462; design Naval Consult",
+     "architecte_source": "https://www.larsnes-mek.no/en/referanser/build-no-58-sander-andre/",
+     "source_ref": "Larsnes Mek references (build no 58); ShipSpotting IMO 9813462; design Naval Consult ; https://www.larsnes-mek.no/en/referanser/build-no-58-sander-andre/ — (fiche chantier : \"Design: Naval Consult AS\")",
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: as",
@@ -113404,8 +113311,8 @@
       }
      ],
      "architecte": "Naval Consult",
-     "architecte_source": "https://www.bairdmaritime.com/fishing-boat-world/seining/naval-consult-awarded-seiner-design-contract/ + https://maritimt.com/?lcid=1033&nid=33090 ; design Naval Consult AS, type NC 126",
-     "source_ref": "Larsnes Mek references (build no 60); VesselFinder IMO 9818266; design Naval Consult",
+     "architecte_source": "https://www.bairdmaritime.com/fishing-boat-world/seining/naval-consult-awarded-seiner-design-contract/",
+     "source_ref": "Larsnes Mek references (build no 60); VesselFinder IMO 9818266; design Naval Consult ; https://www.bairdmaritime.com/fishing-boat-world/seining/naval-consult-awarded-seiner-design-contract/ — + https://maritimt.com/?lcid=1033&nid=33090 ; design Naval Consult AS, type NC 126",
      "tracabilite": "reference-sans-url",
      "caractere": "prive",
      "propriete": "privee",
@@ -113750,8 +113657,8 @@
       }
      ],
      "architecte": "Skipskompetanse",
-     "architecte_source": "https://www.larsnes-mek.no/en/ ; https://www.skipskompetanse.no/news/new-build-for-rostein/ (newbuilds Rostein LFC de Larsnes conçus par Skipskompetanse ; NB: la mention 'ropax' du jeu de données semble erronée, il s'agit d'un vivier/live fish carrier)",
-     "source_ref": "Larsnes Mek news (commande Rostein, build no 74); en construction, IMO/pavillon non confirmes",
+     "architecte_source": "https://www.larsnes-mek.no/en/",
+     "source_ref": "Larsnes Mek news (commande Rostein, build no 74); en construction, IMO/pavillon non confirmes ; https://www.larsnes-mek.no/en/ — ; https://www.skipskompetanse.no/news/new-build-for-rostein/ (newbuilds Rostein LFC de Larsnes conçus par Skipskompetanse ; NB: la mention 'ropax' du jeu de données semble erronée, il s'agit d'un vivier/live fish carrier)",
      "tracabilite": "reference-sans-url",
      "caractere": "prive",
      "propriete": "privee",
@@ -115005,8 +114912,8 @@
       }
      ],
      "architecte": "Aas Mek. Verksted",
-     "architecte_source": "https://veranavis.com/aas-mek-delivered-newbuilding-no-205-grotanger/ ; conception maison Aas Mek., type AAS 3002 ST (le chantier dessine ses propres brønnbåter)",
-     "source_ref": "bygg nr. 205, type AAS 3002 ST, livre 9 mars 2021 a Bronnbat Nord AS, 3000 m3) ; vesselfinder.com/marinetraffic.com IMO 9880788 (76,96 m, 2990 GT, well boat, port d attache Harstad",
+     "architecte_source": "https://veranavis.com/aas-mek-delivered-newbuilding-no-205-grotanger/",
+     "source_ref": "bygg nr. 205, type AAS 3002 ST, livre 9 mars 2021 a Bronnbat Nord AS, 3000 m3) ; vesselfinder.com/marinetraffic.com IMO 9880788 (76,96 m, 2990 GT, well boat, port d attache Harstad ; https://veranavis.com/aas-mek-delivered-newbuilding-no-205-grotanger/ — ; conception maison Aas Mek., type AAS 3002 ST (le chantier dessine ses propres brønnbåter)",
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: as",
@@ -115536,10 +115443,11 @@
       }
      ],
      "architecte": "Aas Mek. Verksted",
-     "architecte_source": "https://www.salmonbusiness.com/verksted-is-in-its-fourth-generation-we-are-looking-at-record-sales-this-year/ (Aas Mek. conçoit et construit ses propres wellboats, design maison)",
+     "architecte_source": "https://www.salmonbusiness.com/verksted-is-in-its-fourth-generation-we-are-looking-at-record-sales-this-year/",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "source_ref": "https://www.salmonbusiness.com/verksted-is-in-its-fourth-generation-we-are-looking-at-record-sales-this-year/ — (Aas Mek. conçoit et construit ses propres wellboats, design maison)"
     },
     {
      "nom": "Ro Fjell",
@@ -116526,8 +116434,8 @@
      ],
      "prix_acquisition": "≈ 150 millions NOK (2006, contrat de construction neuve)",
      "architecte": "Rolls-Royce Marine (UT design)",
-     "architecte_source": "https://www.rivieramm.com/news-content-hub/news-content-hub/simek-delivers-rem-star-47310 ; offshore-energy.biz (UT755 LC, Rolls-Royce design)",
-     "source_ref": "NauticExpo catalogue Simek (115 - Rem Provider) ; marinepublic IMO 9399155 ; Riviera (livraison oct. 2007)",
+     "architecte_source": "https://www.rivieramm.com/news-content-hub/news-content-hub/simek-delivers-rem-star-47310",
+     "source_ref": "NauticExpo catalogue Simek (115 - Rem Provider) ; marinepublic IMO 9399155 ; Riviera (livraison oct. 2007) ; https://www.rivieramm.com/news-content-hub/news-content-hub/simek-delivers-rem-star-47310 — ; offshore-energy.biz (UT755 LC, Rolls-Royce design)",
      "tracabilite": "reference-sans-url",
      "caractere": "prive",
      "propriete": "privee",
@@ -116713,8 +116621,8 @@
       }
      ],
      "architecte": "Rolls-Royce Marine (UT design)",
-     "architecte_source": "https://www.rivieramm.com/news-content-hub/news-content-hub/simek-delivers-rem-star-47310 (Rolls-Royce Marine design UT755 LC)",
-     "source_ref": "Skipsrevyen batomtaler M/S Rem Star (chantier n°120) ; IMO 9489481 ; Riviera (nommé 19 juin 2009)",
+     "architecte_source": "https://www.rivieramm.com/news-content-hub/news-content-hub/simek-delivers-rem-star-47310",
+     "source_ref": "Skipsrevyen batomtaler M/S Rem Star (chantier n°120) ; IMO 9489481 ; Riviera (nommé 19 juin 2009) ; https://www.rivieramm.com/news-content-hub/news-content-hub/simek-delivers-rem-star-47310 — (Rolls-Royce Marine design UT755 LC)",
      "tracabilite": "reference-sans-url",
      "caractere": "prive",
      "propriete": "privee",
@@ -116949,8 +116857,8 @@
      ],
      "prix_acquisition": "≈ 200 M NOK (livré juillet 2012, chantier Simek n°126, pour Duh Boats / Edison Chouest Offshore)",
      "architecte": "Rolls-Royce Marine (UT design)",
-     "architecte_source": "https://www.offshore-energy.biz/norway-simek-delivers-platform-supply-vessel-c-viking/ ; https://www.offshore-energy.biz/norway-rolls-royce-to-design-and-equip-ut755-lc-platform-supply-vessel-for-simek-as/ (PSV de design UT 755 LC, conception Rolls-Royce Marine; concept UT du au chef architecte Sigmund Borgundvag)",
-     "source_ref": "Skipsrevyen batomtaler M/S C-Viking (chantier n°126) ; IMO 9640231 ; offshore-energy ; recherche de source le 2026-08-05, sans resultat : IMO 9640231 connu mais toutes les fiches de registre à identifiant stable sont inaccessibles ce jour (MarineTraffic 403, VesselFinder connexion coupée, BalticShipping servi en JS, DNV Vessel Register en SPA vide, maritime-database et myshiptracking en 404). Aucune fiche Wikipedia. Aucune page ouverte ne nomme ce navire.",
+     "architecte_source": "https://www.offshore-energy.biz/norway-simek-delivers-platform-supply-vessel-c-viking/",
+     "source_ref": "Skipsrevyen batomtaler M/S C-Viking (chantier n°126) ; IMO 9640231 ; offshore-energy ; recherche de source le 2026-08-05, sans resultat : IMO 9640231 connu mais toutes les fiches de registre à identifiant stable sont inaccessibles ce jour (MarineTraffic 403, VesselFinder connexion coupée, BalticShipping servi en JS, DNV Vessel Register en SPA vide, maritime-database et myshiptracking en 404). Aucune fiche Wikipedia. Aucune page ouverte ne nomme ce navire. ; https://www.offshore-energy.biz/norway-simek-delivers-platform-supply-vessel-c-viking/ — ; https://www.offshore-energy.biz/norway-rolls-royce-to-design-and-equip-ut755-lc-platform-supply-vessel-for-simek-as/ (PSV de design UT 755 LC, conception Rolls-Royce Marine; concept UT du au chef architecte Sigmund Borgundvag)",
      "tracabilite": "non-tracee",
      "caractere": "prive",
      "exploitation": "commerciale",
@@ -117644,11 +117552,12 @@
       }
      ],
      "architecte": "Rolls-Royce Marine (UT design)",
-     "architecte_source": "https://batomtaler.skipsrevyen.no/ms-far-saga/ms-far-saga/1099375 (design UT 745 L) ; design UT d'origine Ulstein, droits détenus par Rolls-Royce Marine à la livraison 2001 (https://www.shipsandoil.co.uk/rolls-royce-ulstein/ut745)",
+     "architecte_source": "https://batomtaler.skipsrevyen.no/ms-far-saga/ms-far-saga/1099375",
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: as ; exploitation: supply"
+     "caractere_motif": "propriete: as ; exploitation: supply",
+     "source_ref": "https://batomtaler.skipsrevyen.no/ms-far-saga/ms-far-saga/1099375 — (design UT 745 L) ; design UT d'origine Ulstein, droits détenus par Rolls-Royce Marine à la livraison 2001 (https://www.shipsandoil.co.uk/rolls-royce-ulstein/ut745)"
     },
     {
      "nom": "Eldjarn (ex Libas / ex Börkur NK-122)",
@@ -117827,11 +117736,12 @@
       }
      ],
      "architecte": "Rolls-Royce Marine (UT design)",
-     "architecte_source": "https://www.offshore-energy.biz/norway-rolls-royce-to-design-and-equip-ut755-lc-platform-supply-vessel-for-simek-as/ ; https://www.marinelog.com/offshore/oil-gas/rolls-royce-to-design-power-and-equip-atlantic-offshore-newbuild-at-simek/ (titre: 'Rolls-Royce to Design and Equip UT755 LC PSV for Simek'; serie de PSV UT 755 LC Simek dont C-Warrior)",
+     "architecte_source": "https://www.offshore-energy.biz/norway-rolls-royce-to-design-and-equip-ut755-lc-platform-supply-vessel-for-simek-as/",
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: as ; exploitation: offshore"
+     "caractere_motif": "propriete: as ; exploitation: offshore",
+     "source_ref": "https://www.offshore-energy.biz/norway-rolls-royce-to-design-and-equip-ut755-lc-platform-supply-vessel-for-simek-as/ — ; https://www.marinelog.com/offshore/oil-gas/rolls-royce-to-design-power-and-equip-atlantic-offshore-newbuild-at-simek/ (titre: 'Rolls-Royce to Design and Equip UT755 LC PSV for Simek'; serie de PSV UT 755 LC Simek dont C-Warrior)"
     },
     {
      "nom": "Veidar",
@@ -118323,10 +118233,11 @@
       }
      ],
      "architecte": "Naval Consult",
-     "architecte_source": "https://www.bairdmaritime.com/fishing-boat-world/seining/naval-consult-awarded-seiner-design-contract/ ; https://www.bairdmaritime.com/fishing/fishing-boat-world-reviews/vessel-review-arnoytind-versatile-purse-seiner-boasts-environment-friendly-features",
+     "architecte_source": "https://www.bairdmaritime.com/fishing-boat-world/seining/naval-consult-awarded-seiner-design-contract/",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "source_ref": "https://www.bairdmaritime.com/fishing-boat-world/seining/naval-consult-awarded-seiner-design-contract/ — ; https://www.bairdmaritime.com/fishing/fishing-boat-world-reviews/vessel-review-arnoytind-versatile-purse-seiner-boasts-environment-friendly-features"
     },
     {
      "nom": "Skår Senior (Skaar Senior)",
@@ -118467,8 +118378,8 @@
       }
      ],
      "architecte": "Naval Consult",
-     "architecte_source": "https://www.nssm.no/nybyggprosjekter/fanoyvag-levert-fra-stadyard/ et https://www.skipsrevyen.no/ms-fanoyvag/1099840 (conçu par Naval Consult, type NC90)",
-     "source_ref": "Norske Skipsverft) « Fanøyvåg levert fra Stadyard » ; Fiskeriportalen SF-25-F ; WebSearch 2026-06",
+     "architecte_source": "https://www.nssm.no/nybyggprosjekter/fanoyvag-levert-fra-stadyard/",
+     "source_ref": "Norske Skipsverft) « Fanøyvåg levert fra Stadyard » ; Fiskeriportalen SF-25-F ; WebSearch 2026-06 ; https://www.nssm.no/nybyggprosjekter/fanoyvag-levert-fra-stadyard/ — et https://www.skipsrevyen.no/ms-fanoyvag/1099840 (conçu par Naval Consult, type NC90)",
      "tracabilite": "url-domaine-seul",
      "caractere": "prive",
      "propriete": "privee",
@@ -123488,10 +123399,11 @@
       }
      ],
      "architecte": "Sawicon",
-     "architecte_source": "https://maritimt.com/nb/batomtaler/kirsti-h-052017 et https://www.skipsrevyen.no/kirsti-h/1098807 (Design er av Sawicon AS)",
+     "architecte_source": "https://maritimt.com/nb/batomtaler/kirsti-h-052017",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "source_ref": "https://maritimt.com/nb/batomtaler/kirsti-h-052017 — et https://www.skipsrevyen.no/kirsti-h/1098807 (Design er av Sawicon AS)"
     },
     {
      "nom": "Fjon (Fjon-M)",
@@ -123886,7 +123798,8 @@
       }
      ],
      "architecte": "Heimli Ship Design",
-     "architecte_source": "https://heimli.com/referanser/ms-don-ole-ps60 (Fartøyet er designet av Heimli Ship Design og FMV AS)"
+     "architecte_source": "https://heimli.com/referanser/ms-don-ole-ps60",
+     "source_ref": "https://heimli.com/referanser/ms-don-ole-ps60 — (Fartøyet er designet av Heimli Ship Design og FMV AS)"
     },
     {
      "nom": "Skandi Commander",
@@ -129282,7 +129195,8 @@
       }
      ],
      "architecte": "Møre Maritime",
-     "architecte_source": "https://www.bairdmaritime.com/fishing/aquaculture/vessel-review-froy-leader-hybrid-support-catamaran-to-be-deployed-at-fish-farms-in-norway — MachoCat High design by Møre Maritime, collaboration Frøy/Møre Maritime, built by Sletta Verft"
+     "architecte_source": "https://www.bairdmaritime.com/fishing/aquaculture/vessel-review-froy-leader-hybrid-support-catamaran-to-be-deployed-at-fish-farms-in-norway",
+     "source_ref": "https://www.bairdmaritime.com/fishing/aquaculture/vessel-review-froy-leader-hybrid-support-catamaran-to-be-deployed-at-fish-farms-in-norway — — MachoCat High design by Møre Maritime, collaboration Frøy/Møre Maritime, built by Sletta Verft"
     },
     {
      "nom": "Multi Storfjord",
@@ -129988,8 +129902,8 @@
       }
      ],
      "architecte": "Møre Maritime",
-     "architecte_source": "https://moremaritime.no/en/machocat25/ — MachoCat25 design by Møre Maritime, collaboration Frøy/Møre Maritime, built by Sletta Verft (sister ship of Frøy Leader)",
-     "source_ref": "VesselFinder (IMO 9962744) ; iLaks (Sletta Verft ordrer til sommeren 2025) ; Workboat365",
+     "architecte_source": "https://moremaritime.no/en/machocat25/",
+     "source_ref": "VesselFinder (IMO 9962744) ; iLaks (Sletta Verft ordrer til sommeren 2025) ; Workboat365 ; https://moremaritime.no/en/machocat25/ — — MachoCat25 design by Møre Maritime, collaboration Frøy/Møre Maritime, built by Sletta Verft (sister ship of Frøy Leader)",
      "source": "https://www.vesselfinder.com/vessels/details/9962744",
      "tracabilite": "url-non-verifiee"
     },
@@ -130949,7 +130863,8 @@
       }
      ],
      "architecte": "Eker Design",
-     "architecte_source": "https://ekerdesign.com/work/hyke-shuttle-0001/ ; https://hykeelectricferries.com/ (design du navire et de la coque par Eker Design ; construction Herde Kompositt/Hydrolift)"
+     "architecte_source": "https://ekerdesign.com/work/hyke-shuttle-0001/",
+     "source_ref": "https://ekerdesign.com/work/hyke-shuttle-0001/ — ; https://hykeelectricferries.com/ (design du navire et de la coque par Eker Design ; construction Herde Kompositt/Hydrolift)"
     }
    ],
    "sources": [
@@ -138330,8 +138245,9 @@
      ],
      "prix_acquisition": "EUR 104 M (2023) — prêt vert (green corporate loan) Eksfin finançant le navire neuf ; pas le prix de contrat strict mais seul ordre de grandeur public sourcé (Eksfin EUR 72,8 M de risque + garantie DNB EUR 31,2 M). Commande passée fin 2020 chez Vard, livraison 29/08/2023.",
      "architecte": "Vard Design",
-     "architecte_source": "https://www.vard.com/articles/cable-laying-vessel-for-van-oord-delivered ; https://www.bairdmaritime.com/offshore/exploration-development/offshore-construction/vessel-review-calypso-hybrid-cable-layer-joins-van-oords-installation-fleet (cablier de design VARD 9 02, conception Vard Design Alesund)",
-     "pavillon": "Pays-Bas"
+     "architecte_source": "https://www.vard.com/articles/cable-laying-vessel-for-van-oord-delivered",
+     "pavillon": "Pays-Bas",
+     "source_ref": "https://www.vard.com/articles/cable-laying-vessel-for-van-oord-delivered — ; https://www.bairdmaritime.com/offshore/exploration-development/offshore-construction/vessel-review-calypso-hybrid-cable-layer-joins-van-oords-installation-fleet (cablier de design VARD 9 02, conception Vard Design Alesund)"
     },
     {
      "nom": "Windward Athens",
@@ -138943,8 +138859,8 @@
       }
      ],
      "architecte": "Skipsteknisk",
-     "architecte_source": "https://www.skipsteknisk.no/projects/offshore/rov-imr/st-255l-edda-fauna-2 (design Skipsteknisk ST-255L pour Østensjø Rederi)",
-     "source_ref": "bairdmaritime/ship-technology (acheve et arme aux chantiers Aker de Brattvag) ; vesselfinder/deepoceangroup IMO 9368948",
+     "architecte_source": "https://www.skipsteknisk.no/projects/offshore/rov-imr/st-255l-edda-fauna-2",
+     "source_ref": "bairdmaritime/ship-technology (acheve et arme aux chantiers Aker de Brattvag) ; vesselfinder/deepoceangroup IMO 9368948 ; https://www.skipsteknisk.no/projects/offshore/rov-imr/st-255l-edda-fauna-2 — (design Skipsteknisk ST-255L pour Østensjø Rederi)",
      "source": "https://www.vesselfinder.com/vessels/details/9368948",
      "caractere": "prive",
      "propriete": "privee",
@@ -139430,8 +139346,8 @@
      ],
      "prix_acquisition": "≈ 257 M NOK/unité (dérivé : contrat de ≈ 770 M NOK pour 3 chalutiers identiques, 2011)",
      "architecte": "Vard Design",
-     "architecte_source": "https://www.vard.com/shipbuilding/references/gadus-poseidon (Vard Design crédité comme ship designer, design FV 01)",
-     "source_ref": "vard.com/references/gadus-poseidon ; worldfishing.net (construit Vard Brattvag) ; maritimt.com ; vesselfinder IMO 9640968",
+     "architecte_source": "https://www.vard.com/shipbuilding/references/gadus-poseidon",
+     "source_ref": "vard.com/references/gadus-poseidon ; worldfishing.net (construit Vard Brattvag) ; maritimt.com ; vesselfinder IMO 9640968 ; https://www.vard.com/shipbuilding/references/gadus-poseidon — (Vard Design crédité comme ship designer, design FV 01)",
      "source": "https://www.vesselfinder.com/vessels/details/9640968",
      "caractere": "prive",
      "propriete": "privee",
@@ -140484,8 +140400,8 @@
       }
      ],
      "architecte": "Skipsteknisk",
-     "architecte_source": "https://www.skipsteknisk.no/projects/offshore/ocv/st-258-fugro-saltire (design ST-258, ex-Fugro Saltire)",
-     "source_ref": "'constructed at the Bergen Mekaniske Verksted shipyard in Bergen, delivered May 2008'), remoffshore.no, vesselfinder.com/vessels/details/9377016",
+     "architecte_source": "https://www.skipsteknisk.no/projects/offshore/ocv/st-258-fugro-saltire",
+     "source_ref": "'constructed at the Bergen Mekaniske Verksted shipyard in Bergen, delivered May 2008'), remoffshore.no, vesselfinder.com/vessels/details/9377016 ; https://www.skipsteknisk.no/projects/offshore/ocv/st-258-fugro-saltire — (design ST-258, ex-Fugro Saltire)",
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
@@ -150945,8 +150861,8 @@
       }
      ],
      "architecte": "Macduff Ship Design",
-     "architecte_source": "https://www.macduffshipdesign.com/news/34-00m-stern-trawler-endeavour-v/ ; Fishing News / Baird Maritime (design développé par Macduff Ship Design avec Macduff Shipyards)",
-     "source_ref": "https://www.bairdmaritime.com/fishing/fishing-boat-world-reviews/vessel-review-endeavour-v-whitehills-fishermans-newest-stern-trawler-is-built-for-the-north-atlantic ; https://fiskerforum.com/endeavour-v-latest-and-largest-macduff-build/ ; https://www.vesselfinder.com/vessels/details/9899753"
+     "architecte_source": "https://www.macduffshipdesign.com/news/34-00m-stern-trawler-endeavour-v/",
+     "source_ref": "https://www.bairdmaritime.com/fishing/fishing-boat-world-reviews/vessel-review-endeavour-v-whitehills-fishermans-newest-stern-trawler-is-built-for-the-north-atlantic ; https://fiskerforum.com/endeavour-v-latest-and-largest-macduff-build/ ; https://www.vesselfinder.com/vessels/details/9899753 ; https://www.macduffshipdesign.com/news/34-00m-stern-trawler-endeavour-v/ — ; Fishing News / Baird Maritime (design développé par Macduff Ship Design avec Macduff Shipyards)"
     },
     {
      "nom": "Excel",
@@ -151098,9 +151014,9 @@
       }
      ],
      "architecte": "Macduff Ship Design",
-     "architecte_source": "https://fishingnews.co.uk/tag/twin-rig-trawler/ + worldfishing.net (Macduff Ship Design, bureau de conception interne de Macduff Shipyards)",
+     "architecte_source": "https://fishingnews.co.uk/tag/twin-rig-trawler/",
      "tracabilite": "url-regroupement",
-     "source_ref": "https://fishingnews.co.uk/tag/ocean-vision-bf-190/ ; https://www.vesselfinder.com/vessels/OCEAN-VISION-IMO-9658757-MMSI-0 ; https://www.marinetraffic.com/en/ais/details/ships/shipid:5349355/mmsi:232012960/imo:0/vessel:OCEAN_VISION_BF190"
+     "source_ref": "https://fishingnews.co.uk/tag/ocean-vision-bf-190/ ; https://www.vesselfinder.com/vessels/OCEAN-VISION-IMO-9658757-MMSI-0 ; https://www.marinetraffic.com/en/ais/details/ships/shipid:5349355/mmsi:232012960/imo:0/vessel:OCEAN_VISION_BF190 ; https://fishingnews.co.uk/tag/twin-rig-trawler/ — + worldfishing.net (Macduff Ship Design, bureau de conception interne de Macduff Shipyards)"
     },
     {
      "nom": "Benarkle II",
@@ -151336,7 +151252,8 @@
       }
      ],
      "architecte": "Macduff Ship Design",
-     "architecte_source": "https://www.macduffshipdesign.com/ship-design/celestial-dawn-bf109/ ; https://www.bairdmaritime.com/fishing/catching/trawling/vessel-review-celestial-dawn-custom-designed-prawn-trawler-for-scottish-north-sea-fisherman"
+     "architecte_source": "https://www.macduffshipdesign.com/ship-design/celestial-dawn-bf109/",
+     "source_ref": "https://www.macduffshipdesign.com/ship-design/celestial-dawn-bf109/ — ; https://www.bairdmaritime.com/fishing/catching/trawling/vessel-review-celestial-dawn-custom-designed-prawn-trawler-for-scottish-north-sea-fisherman"
     },
     {
      "nom": "Crystal River",
@@ -156973,7 +156890,7 @@
      ],
      "prix_acquisition": "EUR 6,6 millions (GBP 5,6 millions), 2021 (achat a Norled)",
      "architecte": "LMG Marin",
-     "architecte_source": "https://lmgmarin.no/reference/utne/ (Loch Frisa ex-Utne, design LMG 40-DE, construit Sefine Shipyard Turquie 2015 pour Norled)",
+     "architecte_source": "https://lmgmarin.no/reference/utne/",
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: as",
@@ -156983,7 +156900,8 @@
       "source": "https://en.wikipedia.org/wiki/MV_Loch_Frisa",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "source_ref": "https://lmgmarin.no/reference/utne/ — (Loch Frisa ex-Utne, design LMG 40-DE, construit Sefine Shipyard Turquie 2015 pour Norled)"
     }
    ],
    "sources": [
@@ -162170,8 +162088,8 @@
       }
      ],
      "architecte": "JEA Marine",
-     "architecte_source": "https://mag.hookandnet.com/2022/09/01/2022-09carmona/content.html et fiske.zaramis.se (JEA Marine, Rönnäng, conception)",
-     "source_ref": "VesselFinder/MarineTraffic/MyShipTracking IMO 9921805 ; fiske.zaramis.se 2020-09-13 ; fiskerforum.com ; hookandnet.com 2022-09 ; issuu Svensk Fisknaring nr3/2022",
+     "architecte_source": "https://mag.hookandnet.com/2022/09/01/2022-09carmona/content.html",
+     "source_ref": "VesselFinder/MarineTraffic/MyShipTracking IMO 9921805 ; fiske.zaramis.se 2020-09-13 ; fiskerforum.com ; hookandnet.com 2022-09 ; issuu Svensk Fisknaring nr3/2022 ; https://mag.hookandnet.com/2022/09/01/2022-09carmona/content.html — et fiske.zaramis.se (JEA Marine, Rönnäng, conception)",
      "source": "https://www.vesselfinder.com/vessels/details/9921805",
      "caractere": "prive",
      "propriete": "privee",
@@ -163117,7 +163035,7 @@
       }
      ],
      "architecte": "Jeppesen & Pons",
-     "architecte_source": "https://arconayachts.se/boat/arcona-50/ ; https://www.boats.com/sailing-boats/2025-arcona-50-9586535/",
+     "architecte_source": "https://arconayachts.se/boat/arcona-50/",
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
@@ -163128,7 +163046,8 @@
       "source": "https://sv.wikipedia.org/wiki/Arcona_Yachts",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "source_ref": "https://arconayachts.se/boat/arcona-50/ — ; https://www.boats.com/sailing-boats/2025-arcona-50-9586535/"
     }
    ],
    "sources": [
@@ -164211,8 +164130,8 @@
      ],
      "prix_acquisition": "≈ 52 M£ (coût de construction neuve, 2018) — NB: navire construit au chantier Tersan (Turquie), pas Myklebust",
      "architecte": "Rolls-Royce Marine (UT design)",
-     "architecte_source": "https://en.wikipedia.org/wiki/Kirkella_trawler (designed by Rolls-Royce Marine AS, Ålesund ; coque CRIST, armement Myklebust Verft)",
-     "source_ref": "Wikipedia Kirkella trawler; Fishing News; myklebustverft.com (NVC 374 WP, BN 396)",
+     "architecte_source": "https://en.wikipedia.org/wiki/Kirkella_trawler",
+     "source_ref": "Wikipedia Kirkella trawler; Fishing News; myklebustverft.com (NVC 374 WP, BN 396) ; https://en.wikipedia.org/wiki/Kirkella_trawler — (designed by Rolls-Royce Marine AS, Ålesund ; coque CRIST, armement Myklebust Verft)",
      "source": "https://en.wikipedia.org/wiki/Kirkella_trawler",
      "caractere": "prive",
      "propriete": "privee",
@@ -164351,8 +164270,8 @@
       }
      ],
      "architecte": "Salt Ship Design",
-     "architecte_source": "https://www.saltship.com/references-collection/gitte-henning et marinelink.com (design Salt 1055, Salt Ship Design Stord)",
-     "source_ref": "BN 394, SALT 0155, livre 9 mai 2018); MyShipTracking IMO 9809265; Salt Ship Design",
+     "architecte_source": "https://www.saltship.com/references-collection/gitte-henning",
+     "source_ref": "BN 394, SALT 0155, livre 9 mai 2018); MyShipTracking IMO 9809265; Salt Ship Design ; https://www.saltship.com/references-collection/gitte-henning — et marinelink.com (design Salt 1055, Salt Ship Design Stord)",
      "tracabilite": "url-domaine-seul",
      "caractere": "prive",
      "propriete": "privee",
@@ -164868,8 +164787,8 @@
       }
      ],
      "architecte": "Wärtsilä Ship Design",
-     "architecte_source": "https://www.offshore-energy.biz/norway-myklebust-verft-holds-naming-ceremony-for-psv-evita/ : « The Evita type VS 485 MK II PSV vessel is designed by Wärtsila Ship Design Norway »",
-     "source_ref": "offshore-energy.biz (bapteme Geirangerfjord 30 juin 2012); maritimeoptima IMO 9649562 (Evita II); myklebustverft.com (VS 485 MkII)",
+     "architecte_source": "https://www.offshore-energy.biz/norway-myklebust-verft-holds-naming-ceremony-for-psv-evita/",
+     "source_ref": "offshore-energy.biz (bapteme Geirangerfjord 30 juin 2012); maritimeoptima IMO 9649562 (Evita II); myklebustverft.com (VS 485 MkII) ; https://www.offshore-energy.biz/norway-myklebust-verft-holds-naming-ceremony-for-psv-evita/ — : « The Evita type VS 485 MK II PSV vessel is designed by Wärtsila Ship Design Norway »",
      "tracabilite": "reference-sans-url",
      "caractere": "prive",
      "exploitation": "commerciale",
@@ -165430,8 +165349,8 @@
       }
      ],
      "architecte": "Skipsteknisk",
-     "architecte_source": "https://skipsteknisk.no/delivered-ships/edda-fonn/29/212 ; ship-technology.com - design ST-253 de Skipsteknisk AS, construit par Myklebust Verft pour Ostensjo Rederi",
-     "source_ref": "Ostensjo; ship-technology.com; Splash247 (vente RNZN); myklebustverft.com (ST 253, 2003) ; source complementaire (2026-08-05) : https://www.vesselfinder.com/vessels/details/9273662",
+     "architecte_source": "https://skipsteknisk.no/delivered-ships/edda-fonn/29/212",
+     "source_ref": "Ostensjo; ship-technology.com; Splash247 (vente RNZN); myklebustverft.com (ST 253, 2003) ; source complementaire (2026-08-05) : https://www.vesselfinder.com/vessels/details/9273662 ; https://skipsteknisk.no/delivered-ships/edda-fonn/29/212 — ; ship-technology.com - design ST-253 de Skipsteknisk AS, construit par Myklebust Verft pour Ostensjo Rederi",
      "caractere": "public",
      "exploitation": "regalien",
      "caractere_motif": "exploitation: marine royale",
@@ -166534,10 +166453,11 @@
       }
      ],
      "architecte": "Oma Baatbyggeri",
-     "architecte_source": "https://oma.no/history/ et Shippax (design Oma 45m eFerry, propre design du chantier Oma Baatbyggeri)",
+     "architecte_source": "https://oma.no/history/",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "source_ref": "https://oma.no/history/ — et Shippax (design Oma 45m eFerry, propre design du chantier Oma Baatbyggeri)"
     },
     {
      "nom": "Rygerstraum",
@@ -167349,9 +167269,9 @@
       }
      ],
      "architecte": "Oma Baatbyggeri",
-     "architecte_source": "https://www.bairdmaritime.com (design based on Oma's own combination catamaran concept ; conception interne du chantier, pas de cabinet externe nommé)",
+     "architecte_source": "https://www.bairdmaritime.com",
      "capacite_pax": 140,
-     "source_ref": "https://maritimt.com/nb/batomtaler/mjolner-072024 ; https://batomtaler.skipsrevyen.no/mjolner-norled-oma-baatbyggeri/ms-mjolner/1776101 ; https://hsc-norway.no/mjolner-2024.html ; https://www.nssm.no/nybyggprosjekter/mjolner-levert-fra-oma/ ; https://www.bairdmaritime.com/passenger/ferry/vessel-review-mjolner-hybrid-catamaran-ferry-for-express-routes-in-central-norway",
+     "source_ref": "https://maritimt.com/nb/batomtaler/mjolner-072024 ; https://batomtaler.skipsrevyen.no/mjolner-norled-oma-baatbyggeri/ms-mjolner/1776101 ; https://hsc-norway.no/mjolner-2024.html ; https://www.nssm.no/nybyggprosjekter/mjolner-levert-fra-oma/ ; https://www.bairdmaritime.com/passenger/ferry/vessel-review-mjolner-hybrid-catamaran-ferry-for-express-routes-in-central-norway ; https://www.bairdmaritime.com — (design based on Oma's own combination catamaran concept ; conception interne du chantier, pas de cabinet externe nommé)",
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: as"
@@ -177291,10 +177211,11 @@
       }
      ],
      "architecte": "Svekon",
-     "architecte_source": "https://svekon.se/en/svekon-wins-fmv-contract-for-new-workboat-for-the-swedish-armed-forces/ ; https://nimbusgroup.se/en/nimbus-groups-workboat-for-the-swedish-armed-forces-receives-fmv-design-approval/",
+     "architecte_source": "https://svekon.se/en/svekon-wins-fmv-contract-for-new-workboat-for-the-swedish-armed-forces/",
      "caractere": "public",
      "propriete": "publique",
-     "caractere_motif": "propriete: armee"
+     "caractere_motif": "propriete: armee",
+     "source_ref": "https://svekon.se/en/svekon-wins-fmv-contract-for-new-workboat-for-the-swedish-armed-forces/ — ; https://nimbusgroup.se/en/nimbus-groups-workboat-for-the-swedish-armed-forces-receives-fmv-design-approval/"
     },
     {
      "nom": "ALUKIN CW 850 (gamme Work)",
@@ -239567,7 +239488,8 @@
      "annee": 1961,
      "operateur": "Museumshafen Heiligenhafen (jusqu'en 2019), puis Grossenbrode",
      "pavillon": "Allemagne",
-     "source": "https://www.mh-heiligenhafen.de/der-hafen/die-boote/astarte-bj-1961/"
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft",
+     "source_remplacee": "https://www.mh-heiligenhafen.de/der-hafen/die-boote/astarte-bj-1961/"
     },
     {
      "nom": "Stor (DOR 5)",
@@ -239678,7 +239600,8 @@
      "type": "cotre de peche en bois, demoli a Heiligenhafen en mars 2026",
      "annee": 1975,
      "pavillon": "Allemagne",
-     "source": "https://www.kreiszeitung.de/lokales/schleswig-holstein/heiligenhafen/die-caroline-verlaesst-den-hafen-94204557.html"
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft",
+     "source_remplacee": "https://www.kreiszeitung.de/lokales/schleswig-holstein/heiligenhafen/die-caroline-verlaesst-den-hafen-94204557.html"
     },
     {
      "nom": "Thetis von Laboe",
@@ -239796,7 +239719,8 @@
      "type": "cotre du Groenland, transformation en cotre de plaisance",
      "annee": "1959 (construit chez Andersen & Ferdinansen, Gilleleje), refit Bieritz 1980-1981",
      "pavillon": "Allemagne",
-     "source": "https://www.takel-ing.de/kutter-islaborg.html"
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft",
+     "source_remplacee": "https://www.takel-ing.de/kutter-islaborg.html"
     }
    ],
    "sources": [
@@ -240016,7 +239940,6 @@
    ],
    "sources": [
     "https://www.trimarine.com/en/2024/01/30/gp70-catch-me/",
-    "https://www.trimarine.com/en/production-sites/",
     "https://www.multihulls-world.com/videos-catamaran-trimaran/gp70-an-eye-catching-vplp-design"
    ],
    "confiance": "moyenne",
@@ -240574,6 +240497,33 @@
    ],
    "sources": [
     "https://de.wikipedia.org/wiki/Schiffswerft_Hans_Boost,_Trier,_Maschinen-_und_Stahlbau"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null
+  },
+  {
+   "id": "fr-yard-catana-marans",
+   "nom": "Catana Group (site de Marans)",
+   "groupe": "Catana Group",
+   "ville": "Marans",
+   "region": "Charente-Maritime",
+   "pays": "France",
+   "lat": 46.30951,
+   "lon": -0.9937,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "plaisance"
+   ],
+   "types_navires": [
+    "catamaran de croisiere"
+   ],
+   "description": "",
+   "navires_references": [],
+   "sources": [
+    "https://www.actunautique.com/2024/06/nautisme-comment-construit-on-un-catamaran-visite-du-chantier-bali-marans-17.html",
+    "https://www.actunautique.com/2019/08/catana-group-catana-et-bali-accroit-sa-capacite-de-production.html"
    ],
    "confiance": "moyenne",
    "actif": true,
