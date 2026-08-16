@@ -2,21 +2,21 @@
  "date": "2026-08-16",
  "volumes": {
   "chantiers": 528,
-  "entrees_navire": 7015,
-  "plancher_coques_distinctes": 6775,
+  "entrees_navire": 6706,
+  "plancher_coques_distinctes": 6484,
   "equipementiers": 23,
   "pays": 28
  },
  "sources": {
-  "url_total": 16958,
-  "domaines_distincts": 1543,
-  "navires_avec_url": 6434,
-  "taux_navires_avec_url": 91.7
+  "url_total": 16281,
+  "domaines_distincts": 1522,
+  "navires_avec_url": 6128,
+  "taux_navires_avec_url": 91.4
  },
  "explicabilite": {
-  "attributions_architecte": 1120,
-  "dont_justifiees": 968,
-  "taux": 86.4
+  "attributions_architecte": 1045,
+  "dont_justifiees": 893,
+  "taux": 85.5
  },
  "corroboration": {
   "chantiers_corrobores": 460,
@@ -26,15 +26,15 @@
   "chantiers_un_seul_tiers": 103,
   "chantiers_sans_aucun_tiers": 31,
   "chantiers_temoin_unique": 68,
-  "navires_sous_temoin_unique": 141,
-  "part_navires_sous_temoin_unique": 2,
+  "navires_sous_temoin_unique": 140,
+  "part_navires_sous_temoin_unique": 2.1,
   "navires_corrobores": 0,
   "taux_navires": 0
  },
  "identite": {
-  "eligibles_imo": 3384,
-  "inegibles": 1490,
-  "indetermines": 2141,
+  "eligibles_imo": 3383,
+  "inegibles": 1256,
+  "indetermines": 2067,
   "porteurs_imo": 1579,
   "taux_couverture_sur_eligible": 46.7
  },
@@ -63,14 +63,15 @@
   },
   {
    "date": "2026-08-16",
-   "motif": "Arbitrages du 16/08 : fiche Catana Marans creee sur deux sources independantes, les 8 ex-batiments militaires de Bordeaux descendus en interventions (deconstruits, non construits), 85 URL glosees separees et redevenues testables, 1 source morte retiree.",
+   "motif": "Arbitrage du 16/08 : 309 modeles de serie de plaisance verses de navires_references vers produits[]. Le compte de coques baisse de 7 015 a 6 706 et devient JUSTE, il comptait des modeles. Sourcing opposable au niveau du navire : 60,9 % -> 62,3 %.",
+   "rupture_de_mesure": true,
    "chantiers": 528,
-   "entrees": 7015,
-   "coques_plancher": 6775,
-   "url": 16958,
-   "taux_navires_source": 91.7,
-   "taux_architecte_justifie": 86.4,
-   "eligibles_imo": 3384,
+   "entrees": 6706,
+   "coques_plancher": 6484,
+   "url": 16281,
+   "taux_navires_source": 91.4,
+   "taux_architecte_justifie": 85.5,
+   "eligibles_imo": 3383,
    "taux_imo_sur_eligible": 46.7,
    "taux_joignables": 56.1
   }
