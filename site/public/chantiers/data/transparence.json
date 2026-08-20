@@ -1,15 +1,15 @@
 {
  "date": "2026-08-20",
  "volumes": {
-  "chantiers": 530,
+  "chantiers": 531,
   "entrees_navire": 6682,
   "plancher_coques_distinctes": 6463,
   "equipementiers": 24,
   "pays": 29
  },
  "sources": {
-  "url_total": 16285,
-  "domaines_distincts": 1520,
+  "url_total": 16288,
+  "domaines_distincts": 1521,
   "navires_avec_url": 6166,
   "taux_navires_avec_url": 92.3
  },
@@ -20,17 +20,17 @@
  },
  "corroboration": {
   "chantiers_corrobores": 462,
-  "taux_chantiers": 87.2,
+  "taux_chantiers": 87,
   "chantiers_deux_tiers": 328,
-  "taux_deux_tiers": 61.9,
+  "taux_deux_tiers": 61.8,
   "chantiers_un_seul_tiers": 103,
   "chantiers_sans_aucun_tiers": 31,
-  "chantiers_temoin_unique": 68,
-  "navires_sous_temoin_unique": 138,
+  "chantiers_temoin_unique": 69,
+  "navires_sous_temoin_unique": 137,
   "part_navires_sous_temoin_unique": 2.1,
-  "navires_corrobores": 389,
-  "taux_navires": 5.8,
-  "navires_corrobores_large": 554,
+  "navires_corrobores": 391,
+  "taux_navires": 5.9,
+  "navires_corrobores_large": 556,
   "taux_navires_large": 8.3
  },
  "identite": {
@@ -43,11 +43,11 @@
  "sollicitation": {
   "actifs": 361,
   "fermes": 69,
-  "activite_indeterminee": 100,
+  "activite_indeterminee": 101,
   "sollicitables_sur_actifs": 221,
   "taux_haut": 61.2,
   "joignables": 296,
-  "taux_joignables": 55.8
+  "taux_joignables": 55.7
  },
  "serie": [
   {
@@ -79,16 +79,16 @@
   },
   {
    "date": "2026-08-20",
-   "motif": "Ouverture de Maurice et de Singapour (CNOI, Strategic Marine), versement des 7 CTV de LD Tide et du petrolier Anatife, fiche equipementier Wisamo. Correction du garde-fou d auto-reference qui confondait un titre de presse avec un chantier sur les mots generiques du metier. Balayage des 1634 domaines cites : 0 detourne, 10 domaines morts retrogrades. Quatre coques d adherents versees sans source publique, tracees comme telles.",
-   "chantiers": 530,
+   "motif": "Requalification des 17 declassements pour auto-reference : 2 confirmes, 15 requalifies au bon motif apres lecture de chaque page. Damen Singapour ouvert, le Granville est l'ex-Bornholm Express de 2006 et non un navire de 2014. Saint Nicolas rendu au quai de la Cabaude. Lien Alternatives Energies documente sur Volta et Ampere.",
+   "chantiers": 531,
    "entrees": 6682,
    "coques_plancher": 6463,
-   "url": 16285,
+   "url": 16288,
    "taux_navires_source": 92.3,
    "taux_architecte_justifie": 85.2,
    "eligibles_imo": 3350,
    "taux_imo_sur_eligible": 46.8,
-   "taux_joignables": 55.8
+   "taux_joignables": 55.7
   }
  ]
 }
