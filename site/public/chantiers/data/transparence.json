@@ -1,53 +1,53 @@
 {
- "date": "2026-08-16",
+ "date": "2026-08-20",
  "volumes": {
-  "chantiers": 528,
-  "entrees_navire": 6669,
-  "plancher_coques_distinctes": 6450,
-  "equipementiers": 23,
-  "pays": 28
+  "chantiers": 530,
+  "entrees_navire": 6682,
+  "plancher_coques_distinctes": 6463,
+  "equipementiers": 24,
+  "pays": 29
  },
  "sources": {
-  "url_total": 16272,
-  "domaines_distincts": 1518,
-  "navires_avec_url": 6160,
-  "taux_navires_avec_url": 92.4
+  "url_total": 16285,
+  "domaines_distincts": 1520,
+  "navires_avec_url": 6166,
+  "taux_navires_avec_url": 92.3
  },
  "explicabilite": {
-  "attributions_architecte": 1042,
+  "attributions_architecte": 1045,
   "dont_justifiees": 890,
-  "taux": 85.4
+  "taux": 85.2
  },
  "corroboration": {
-  "chantiers_corrobores": 460,
-  "taux_chantiers": 87.1,
-  "chantiers_deux_tiers": 326,
-  "taux_deux_tiers": 61.7,
+  "chantiers_corrobores": 462,
+  "taux_chantiers": 87.2,
+  "chantiers_deux_tiers": 328,
+  "taux_deux_tiers": 61.9,
   "chantiers_un_seul_tiers": 103,
   "chantiers_sans_aucun_tiers": 31,
   "chantiers_temoin_unique": 68,
-  "navires_sous_temoin_unique": 140,
+  "navires_sous_temoin_unique": 138,
   "part_navires_sous_temoin_unique": 2.1,
   "navires_corrobores": 389,
   "taux_navires": 5.8,
-  "navires_corrobores_large": 556,
+  "navires_corrobores_large": 554,
   "taux_navires_large": 8.3
  },
  "identite": {
-  "eligibles_imo": 3351,
-  "inegibles": 1254,
-  "indetermines": 2064,
+  "eligibles_imo": 3350,
+  "inegibles": 1258,
+  "indetermines": 2074,
   "porteurs_imo": 1567,
   "taux_couverture_sur_eligible": 46.8
  },
  "sollicitation": {
   "actifs": 361,
   "fermes": 69,
-  "activite_indeterminee": 98,
+  "activite_indeterminee": 100,
   "sollicitables_sur_actifs": 221,
   "taux_haut": 61.2,
   "joignables": 296,
-  "taux_joignables": 56.1
+  "taux_joignables": 55.8
  },
  "serie": [
   {
@@ -76,6 +76,19 @@
    "eligibles_imo": 3351,
    "taux_imo_sur_eligible": 46.8,
    "taux_joignables": 56.1
+  },
+  {
+   "date": "2026-08-20",
+   "motif": "Ouverture de Maurice et de Singapour (CNOI, Strategic Marine), versement des 7 CTV de LD Tide et du petrolier Anatife, fiche equipementier Wisamo. Correction du garde-fou d auto-reference qui confondait un titre de presse avec un chantier sur les mots generiques du metier. Balayage des 1634 domaines cites : 0 detourne, 10 domaines morts retrogrades. Quatre coques d adherents versees sans source publique, tracees comme telles.",
+   "chantiers": 530,
+   "entrees": 6682,
+   "coques_plancher": 6463,
+   "url": 16285,
+   "taux_navires_source": 92.3,
+   "taux_architecte_justifie": 85.2,
+   "eligibles_imo": 3350,
+   "taux_imo_sur_eligible": 46.8,
+   "taux_joignables": 55.8
   }
  ]
 }

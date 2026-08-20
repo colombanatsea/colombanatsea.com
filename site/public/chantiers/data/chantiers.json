@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Registre naval européen",
   "version": "0.1.0-mvp",
-  "date_maj": "2026-08-16",
+  "date_maj": "2026-08-20",
   "note": "Registre des chantiers navals européens et de leurs navires. Chaque champ porte sa source ; les champs non sourcés restent vides. Le taux de sourcing OPPOSABLE (source tierce, recevable, vivante) est mesuré par audit-sourcing.js et vaut 61 % au niveau du navire : le taux de remplissage, plus élevé, ne le remplace pas.",
   "perimetres_ref": {
    "construction-neuve": "Construction neuve",
@@ -18124,7 +18124,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (mauric.com), non recoupee sur un tiers",
       "source": "https://www.mauric.com/news/pcg-rozel",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.mauric.com/news/pcg-rozel"
     },
@@ -18141,7 +18142,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (mauric.com), non recoupee sur un tiers",
       "source": "https://www.mauric.com/news/pamng-steel-cutting",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.mauric.com/news/pamng-steel-cutting"
     }
@@ -20302,7 +20304,8 @@
     "https://www.boatinternational.com/yachts/news/ocea-yachts-108-model-araok-ii",
     "https://www.meretmarine.com/fr/construction-navale/ocea-fete-ses-30-ans-avec-une-activite-au-plus-haut",
     "https://www.meretmarine.com/fr/construction-navale/marseille-deux-nouvelles-vedettes-pour-frioul-if-express",
-    "https://lebateau-frioul-if.fr/la-flotte"
+    "https://lebateau-frioul-if.fr/la-flotte",
+    "https://www.meretmarine.com/fr/energies-marines/ld-tide-le-deuxieme-ctv-pour-le-parc-eolien-de-saint-nazaire-en-service"
    ],
    "confiance": "haute",
    "materiaux": [
@@ -22777,6 +22780,69 @@
      "source_ref": "lien mort constate le 2026-08-03 : https://seatosea.fr/actualites/interview-de-didier-corlouer-patron-des-vedettes-de-brehat-",
      "capacite": "255 passagers, 18 nœuds",
      "capacite_pax": 255
+    },
+    {
+     "nom": "Inno'Vent",
+     "type": "CTV (crew transfer vessel), coque semi-SWATH, plan Mauric",
+     "annee": "2022",
+     "longueur_m": 26.7,
+     "largeur_m": 9.4,
+     "capacite": "24 techniciens de maintenance, 10 tonnes de matériel, 3 membres d'équipage ; plus de 25 noeuds ; transfert par état de mer formée (2 m Hs)",
+     "capacite_pax": 24,
+     "energie": "Diesel et parc de batteries, plan porteur T-Foil, branchement au réseau électrique à quai, préfiguré pour l'hydrogène",
+     "client": "GE Renewable Energy",
+     "operateur": "LD Tide (Louis Dreyfus Armateurs et Tidal Transit)",
+     "pavillon": "France",
+     "architecte": "Mauric",
+     "source": "https://www.lda.fr/en/innovent-the-first-crew-transfer-vessel-designed-and-manufactured-in-france/",
+     "verification": {
+      "statut": "confirme",
+      "source": "https://www.meretmarine.com/fr/energies-marines/ld-tide-le-deuxieme-ctv-pour-le-parc-eolien-de-saint-nazaire-en-service",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Moti'Vent",
+     "type": "CTV (crew transfer vessel), coque semi-SWATH, plan Mauric",
+     "annee": "2022",
+     "longueur_m": 26.7,
+     "largeur_m": 9.4,
+     "capacite": "24 techniciens de maintenance, 10 tonnes de matériel, 3 membres d'équipage ; plus de 25 noeuds ; tirant d'eau 1,8 m",
+     "capacite_pax": 24,
+     "energie": "Diesel et parc de batteries, plan porteur T-Foil, branchement au réseau électrique à quai, préfiguré pour l'hydrogène",
+     "client": "Éolien Maritime France (EDF Renouvelables et Enbridge)",
+     "operateur": "LD Tide (Louis Dreyfus Armateurs et Tidal Transit)",
+     "pavillon": "France",
+     "architecte": "Mauric",
+     "source": "https://www.meretmarine.com/fr/energies-marines/ld-tide-le-deuxieme-ctv-pour-le-parc-eolien-de-saint-nazaire-en-service",
+     "verification": {
+      "statut": "confirme",
+      "source": "https://www.meretmarine.com/fr/energies-marines/ld-tide-le-deuxieme-ctv-pour-le-parc-eolien-de-saint-nazaire-en-service",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Capti'Vent",
+     "type": "CTV (crew transfer vessel), coque semi-SWATH, plan Mauric",
+     "annee": "2023",
+     "longueur_m": 26.7,
+     "largeur_m": 9.4,
+     "capacite": "24 techniciens de maintenance, 10 tonnes de matériel, 3 membres d'équipage",
+     "capacite_pax": 24,
+     "energie": "Diesel et parc de batteries, plan porteur T-Foil, branchement au réseau électrique à quai, préfiguré pour l'hydrogène",
+     "client": "GE Renewable Energy",
+     "operateur": "LD Tide (Louis Dreyfus Armateurs et Tidal Transit)",
+     "pavillon": "France",
+     "architecte": "Mauric",
+     "source": "https://www.lda.fr/en/delivery-of-the-3d-and-last-ctv-for-the-saint-nazaire-offshore-wind-farm/",
+     "verification": {
+      "statut": "confirme",
+      "source": "https://www.meretmarine.com/fr/energies-marines/ld-tide-le-deuxieme-ctv-pour-le-parc-eolien-de-saint-nazaire-en-service",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     }
     }
    ],
    "geo_source": "https://fr.mappy.com/plan/Quai-de-la-Cabaude---Port-Olona-85100-Les-Sables-d'Olonne",
@@ -25009,7 +25075,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (mauric.com), non recoupee sur un tiers",
       "source": "https://www.mauric.com/news/gendarmerie-maritilme-patrol-vessel-signature",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.mauric.com/news/gendarmerie-maritilme-patrol-vessel-signature"
     }
@@ -35292,7 +35359,7 @@
      "energie": "diesel in-bord",
      "client": "marché plaisance / charter (production série)",
      "classification": "CE plaisance",
-     "source": "https://sailboat.guide/dufour/382-grand-large",
+     "source": null,
      "propulsion": [
       "diesel-mdo"
      ],
@@ -35310,8 +35377,8 @@
      "caractere": "prive",
      "exploitation": "commerciale",
      "caractere_motif": "exploitation: plaisance",
-     "tracabilite": "url-non-verifiee",
-     "source_ref": "https://felciyachtdesign.com/yachts/cruiser/dufour-382-grand-large — ; sailboat.guide/dufour/382-grand-large (designed by Umberto Felci)"
+     "tracabilite": "reference-sans-url",
+     "source_ref": "https://felciyachtdesign.com/yachts/cruiser/dufour-382-grand-large — ; sailboat.guide/dufour/382-grand-large (designed by Umberto Felci) | domaine mort le 2026-08-20 (DNS ne resout plus, confirme au second passage) : https://sailboat.guide/dufour/382-grand-large"
     },
     {
      "nom": "Dufour 350 Grand Large",
@@ -35416,7 +35483,7 @@
      "energie": "diesel in-bord",
      "client": "marché plaisance / charter (production série)",
      "classification": "CE plaisance",
-     "source": "https://sailboat.guide/dufour/500-grand-large",
+     "source": null,
      "propulsion": [
       "diesel-mdo"
      ],
@@ -35434,7 +35501,8 @@
      "caractere": "prive",
      "exploitation": "commerciale",
      "caractere_motif": "exploitation: plaisance",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "reference-sans-url",
+     "source_ref": "domaine mort le 2026-08-20 (DNS ne resout plus, confirme au second passage) : https://sailboat.guide/dufour/500-grand-large"
     },
     {
      "nom": "Dufour 445 Grand Large",
@@ -38317,7 +38385,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (mauric.com), non recoupee sur un tiers",
       "source": "https://www.mauric.com/news/jaric",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.mauric.com/news/jaric"
     }
@@ -41129,7 +41198,6 @@
     "https://en.finot-conq.com/pogo-50",
     "https://en.finot-conq.com/pogo-12-50",
     "https://www.boat-specs.com/sailing/sailboats/pogo-structures/pogo-50-swing-keel",
-    "https://sailboat.guide/pogo",
     "https://fr.wikipedia.org/wiki/Pogo_(bateau)",
     "https://www.finot-conq.com/pogo",
     "https://www.finot-conq.com/pogo-44",
@@ -41582,7 +41650,10 @@
    "geo_source": "https://www.pogostructures.com/contact/",
    "actif": true,
    "actif_methode": "deduction-livraison-recente",
-   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Loxo 40 (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.bateaux.com/article/49769/loxo-40-les-avantages-d-un-poids-plume-pour-une-croisiere-confortable-et-sobre"
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Loxo 40 (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.bateaux.com/article/49769/loxo-40-les-avantages-d-un-poids-plume-pour-une-croisiere-confortable-et-sobre",
+   "sources_mortes": [
+    "domaine mort le 2026-08-20 (DNS ne resout plus, confirme au second passage) : https://sailboat.guide/pogo"
+   ]
   },
   {
    "id": "jpk-composites-larmor-plage",
@@ -50940,7 +51011,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (mauric.com), non recoupee sur un tiers",
       "source": "https://www.mauric.com/news/alba",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.mauric.com/news/alba"
     }
@@ -94145,7 +94217,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (ulstein.com), non recoupee sur un tiers",
       "source": "https://ulstein.com/references",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://ulstein.com/references"
     },
@@ -94160,7 +94233,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (ulstein.com), non recoupee sur un tiers",
       "source": "https://ulstein.com/references",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://ulstein.com/references"
     },
@@ -94174,7 +94248,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (ulstein.com), non recoupee sur un tiers",
       "source": "https://ulstein.com/references",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://ulstein.com/references"
     },
@@ -94188,7 +94263,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (ulstein.com), non recoupee sur un tiers",
       "source": "https://ulstein.com/references",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://ulstein.com/references"
     }
@@ -108952,7 +109028,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (skipskompetanse.no), non recoupee sur un tiers",
       "source": "https://www.skipskompetanse.no/delivered-vessels/ro-tbn-5/",
-      "le": "2026-08-15"
+      "le": "2026-08-15",
+      "confiance": "simple"
      },
      "source": "https://www.skipskompetanse.no/delivered-vessels/ro-tbn-5/"
     },
@@ -108970,7 +109047,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (skipskompetanse.no), non recoupee sur un tiers",
       "source": "https://www.skipskompetanse.no/delivered-vessels/ro-fjord-2/",
-      "le": "2026-08-15"
+      "le": "2026-08-15",
+      "confiance": "simple"
      },
      "source": "https://www.skipskompetanse.no/delivered-vessels/ro-fjord-2/"
     },
@@ -108989,7 +109067,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (skipskompetanse.no), non recoupee sur un tiers",
       "source": "https://www.skipskompetanse.no/delivered-vessels/straumberg-2/",
-      "le": "2026-08-15"
+      "le": "2026-08-15",
+      "confiance": "simple"
      },
      "source": "https://www.skipskompetanse.no/delivered-vessels/straumberg-2/"
     }
@@ -120932,7 +121011,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/skandi-olympia/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/skandi-olympia/"
     }
@@ -123019,7 +123099,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (skipskompetanse.no), non recoupee sur un tiers",
       "source": "https://www.skipskompetanse.no/delivered-vessels/beret-paulsdatter/",
-      "le": "2026-08-15"
+      "le": "2026-08-15",
+      "confiance": "simple"
      },
      "source": "https://www.skipskompetanse.no/delivered-vessels/beret-paulsdatter/"
     },
@@ -123038,7 +123119,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (skipskompetanse.no), non recoupee sur un tiers",
       "source": "https://www.skipskompetanse.no/delivered-vessels/bjorg-pauline-2/",
-      "le": "2026-08-15"
+      "le": "2026-08-15",
+      "confiance": "simple"
      },
      "source": "https://www.skipskompetanse.no/delivered-vessels/bjorg-pauline-2/"
     }
@@ -185109,198 +185191,6 @@
      "caractere_motif": "propriete: departement de ; exploitation: delegataire"
     },
     {
-     "nom": "Chatouilleuse",
-     "imo": null,
-     "type": "Bac amphidrome",
-     "annee": null,
-     "longueur_m": null,
-     "largeur_m": null,
-     "jauge_gt": 439,
-     "desserte": "Dzaoudzi (Petite-Terre) - Mamoudzou (Grande-Terre)",
-     "capacite": "3037 passagers",
-     "capacite_pax": 3037,
-     "energie": "Gazole (transmission électrique)",
-     "propulsion": [
-      "diesel-electrique"
-     ],
-     "client": "Département de Mayotte",
-     "operateur": "DTM (CD976)",
-     "proprietaire": "Département de Mayotte",
-     "pavillon": "France",
-     "classification": null,
-     "timeline": [
-      {
-       "annee": "",
-       "role": "operateur",
-       "nom": "DTM (CD976)",
-       "detail": "Régie directe (Direction des Transports Maritimes)",
-       "source": "mayotte.fr, service du CD créé en 1977"
-      },
-      {
-       "annee": "2023",
-       "role": "construction",
-       "nom": "Chatouilleuse + Imane (2 amphidromes identiques, 39 m x 13 m, 493 passagers, 6 camions + 24 vehicules)",
-       "detail": "Cout total de l'operation 14 480 000 EUR pour les DEUX amphidromes identiques (Chatouilleuse et sister-ship Imane), construits par le Chantier Naval de l'Ocean Indien (CNOI) a Port-Louis, Maurice ; financement FEDER 12 104 700,80 EUR (83 %) + Departement de Mayotte 2 375 299,20 EUR (17 %). Prix unitaire derive = 14 480 000 / 2 = ≈ 7 240 000 EUR/unite. Inauguration 19 juillet 2023.",
-       "prix": "≈ 7,24 M EUR/unite (derive : 14 480 000 EUR pour 2 amphidromes identiques)",
-       "source": null,
-       "source_ref": "lien mort constate le 2026-08-03 : https://www.mayotte.fr/actualite/lire/788/inauguration-des-deux-amphidromes-imane-et-chatouilleuse"
-      },
-      {
-       "annee": "2023",
-       "role": "evenement",
-       "nom": "Chatouilleuse + Imane (cout total, confirmation presse)",
-       "detail": "Confirmation independante du cout des deux amphidromes : ≈ 14,5 M EUR / 14 128 600 EUR pour la paire, finance a 83 % par le FEDER et 17 % par le Departement (CNOI Maurice).",
-       "prix": "≈ 14,1-14,5 M EUR (total, 2 navires)",
-       "source": "https://www.mayottehebdo.com/actualite/transport/la-barge-chatouilleuse-va-entrer-en-scene/"
-      }
-     ],
-     "prix_acquisition": "≈ 7,24 M EUR/unite (2023) (derive : 14 480 000 EUR pour 2 amphidromes identiques Chatouilleuse + Imane)",
-     "source_ref": "mayotte.fr, service du CD créé en 1977",
-     "tracabilite": "reference-sans-url",
-     "caractere": "public",
-     "propriete": "publique",
-     "caractere_motif": "propriete: departement de"
-    },
-    {
-     "nom": "Imane",
-     "imo": null,
-     "type": "Bac amphidrome",
-     "annee": null,
-     "longueur_m": null,
-     "largeur_m": null,
-     "jauge_gt": 439,
-     "desserte": "Dzaoudzi - Mamoudzou",
-     "capacite": "3100 passagers",
-     "capacite_pax": 3100,
-     "energie": "Gazole (transmission électrique)",
-     "propulsion": [
-      "diesel-electrique"
-     ],
-     "client": "Département de Mayotte",
-     "operateur": "DTM (CD976)",
-     "proprietaire": "Département de Mayotte",
-     "pavillon": "France",
-     "classification": null,
-     "timeline": [
-      {
-       "annee": "",
-       "role": "operateur",
-       "nom": "DTM (CD976)",
-       "detail": "Régie directe",
-       "source": "mayotte.fr"
-      },
-      {
-       "annee": "2023",
-       "role": "construction",
-       "nom": "Imane (+ Chatouilleuse, sister-ship identique)",
-       "detail": "Marché de construction CNOI (Chantier Naval de l'Océan Indien, Maurice) pour le Service des Transports Maritimes (STM) du Département de Mayotte. Coût total des 2 amphidromes identiques (39,2 m, 392-493 passagers, propulsion diesel-électrique) = 14 480 000 € (coût éligible 14 128 600 €), cofinancé FEDER 83% (12 104 700,80 €) + Conseil Départemental 17% (2 375 299,20 €). Prix unitaire dérivé = 14 480 000 / 2 ≈ 7,24 M€. Imane livré juin 2023, Chatouilleuse mars 2023, inauguration 19 juillet 2023.",
-       "prix": "≈ 7,24 M€/unité (dérivé du total 14 480 000 € pour 2 navires identiques)",
-       "source": null,
-       "source_ref": "lien mort constate le 2026-08-03 : https://www.mayotte.fr/actualite/lire/788/inauguration-des-deux-amphidromes-imane-et-chatouilleuse"
-      }
-     ],
-     "prix_acquisition": "≈ 7,24 M€/unité (dérivé : marché de 14 480 000 € pour 2 amphidromes identiques Imane + Chatouilleuse, CNOI pour le STM de Mayotte, 2023 ; coût éligible cité aussi à 14 128 600 €, FEDER 83% / Département 17%)",
-     "source_ref": "mayotte.fr",
-     "tracabilite": "reference-sans-url",
-     "caractere": "public",
-     "propriete": "publique",
-     "caractere_motif": "propriete: departement de"
-    },
-    {
-     "nom": "Karihani",
-     "imo": null,
-     "type": "Bac amphidrome",
-     "annee": null,
-     "longueur_m": null,
-     "largeur_m": null,
-     "jauge_gt": 470,
-     "desserte": "Dzaoudzi - Mamoudzou",
-     "capacite": "4075 passagers",
-     "capacite_pax": 4075,
-     "energie": "Gazole / MGO",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "Département de Mayotte",
-     "operateur": "DTM (CD976)",
-     "proprietaire": "Département de Mayotte",
-     "pavillon": "France",
-     "classification": null,
-     "timeline": [
-      {
-       "annee": "",
-       "role": "operateur",
-       "nom": "DTM (CD976)",
-       "detail": "Régie directe",
-       "source": "mayotte.fr"
-      },
-      {
-       "annee": "2017",
-       "role": "construction",
-       "nom": "Karihani (+ Polé, sister-ship identique)",
-       "detail": "Marché de construction CNOI (Chantier Naval de l'Océan Indien, Maurice) pour le Service des Transports Maritimes (STM) du Département de Mayotte. Coût total des 2 amphidromes identiques (67 m, 590 passagers, 33 véhicules, 4 moteurs Baudouin 331 kW) = 18 407 000 € (presse : ~18,3 M€), cofinancé FEDER à 65% = 11 964 550 €, reste ~35% Département. Prix unitaire dérivé = 18 407 000 / 2 ≈ 9,2 M€. Karihani livré 26 avril 2017 (entrée en service mai 2017), Polé livré octobre 2016.",
-       "prix": "≈ 9,2 M€/unité (dérivé du total 18 407 000 € pour 2 navires identiques)",
-       "source": "https://www.europe-a-mayotte.fr/projets/modernisation-et-renouvellement-des-navires-rouliers-mixtes-type-amphidrome-a-mayotte/"
-      }
-     ],
-     "prix_acquisition": "≈ 9,2 M€/unité (dérivé : marché de 18 407 000 € pour 2 amphidromes identiques Polé + Karihani, CNOI pour le STM de Mayotte, 2016-2017 ; FEDER 65% = 11 964 550 €)",
-     "source_ref": "mayotte.fr",
-     "caractere": "public",
-     "propriete": "publique",
-     "caractere_motif": "propriete: departement de",
-     "source": "https://www.europe-a-mayotte.fr/projets/modernisation-et-renouvellement-des-navires-rouliers-mixtes-type-amphidrome-a-mayotte/",
-     "source_origine": {
-      "le": "2026-08-16",
-      "depuis": "timeline[role=construction]",
-      "etape": "Karihani (+ Polé, sister-ship identique)"
-     }
-    },
-    {
-     "nom": "Polé",
-     "imo": null,
-     "type": "Bac amphidrome",
-     "annee": null,
-     "longueur_m": null,
-     "largeur_m": null,
-     "jauge_gt": 470,
-     "desserte": "Dzaoudzi - Mamoudzou",
-     "capacite": "8337 passagers",
-     "capacite_pax": 8337,
-     "energie": "Gazole / MGO",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "Département de Mayotte",
-     "operateur": "DTM (CD976)",
-     "proprietaire": "Département de Mayotte",
-     "pavillon": "France",
-     "classification": null,
-     "timeline": [
-      {
-       "annee": "",
-       "role": "operateur",
-       "nom": "DTM (CD976)",
-       "detail": "Régie directe",
-       "source": "mayotte.fr"
-      },
-      {
-       "annee": "2016",
-       "role": "construction",
-       "nom": "Polé (+ Karihani, sister-ship identique)",
-       "detail": "Marché de construction CNOI (Chantier Naval de l'Océan Indien, Maurice) pour le Service des Transports Maritimes (STM) du Département de Mayotte. Source officielle Mayotte : « Le montant total de l'acquisition des deux amphidrômes s'élève à 18.407 millions d'euros cofinancé à 65% par le FEDER soit 11.964 millions d'euros. » 2 navires identiques (67 m, 590 passagers, 33 véhicules, 4 moteurs Baudouin 331 kW). Prix unitaire dérivé = 18 407 000 / 2 ≈ 9,2 M€. Polé livré et inauguré le 26 octobre 2016 (plus grand navire jamais construit à Port-Louis, Maurice), Karihani livré avril 2017.",
-       "prix": "≈ 9,2 M€/unité (dérivé du total 18 407 000 € pour 2 navires identiques)",
-       "source": null,
-       "source_ref": "lien mort constate le 2026-08-03 : https://www.mayotte.fr/actualite/lire/472/le-pole-nouvel-amphidrome-du-service-des-transports-maritimes-stm-inaugure-"
-      }
-     ],
-     "prix_acquisition": "≈ 9,2 M€/unité (dérivé : marché de 18 407 000 € pour 2 amphidromes identiques Polé + Karihani, CNOI pour le STM de Mayotte, 2016-2017 ; FEDER 65% = 11 964 550 €)",
-     "source_ref": "mayotte.fr",
-     "tracabilite": "reference-sans-url",
-     "caractere": "public",
-     "propriete": "publique",
-     "caractere_motif": "propriete: departement de"
-    },
-    {
      "nom": "Capo Rosso 1",
      "imo": null,
      "type": "Vedette à passagers",
@@ -186190,6 +186080,47 @@
      "caractere": "public",
      "propriete": "publique",
      "caractere_motif": "propriete: collectivite"
+    },
+    {
+     "nom": "Ile d'Or",
+     "type": "Navire a passagers",
+     "annee": "1972",
+     "longueur_m": 22.6,
+     "desserte": "Golfe du Morbihan, desserte de l'Ile-d'Arz",
+     "operateur": "BreizhGo Ile d'Arz",
+     "pavillon": "France",
+     "note": "Constructeur INCONNU. Placee en attente d'attribution, pas attribuee par defaut.",
+     "imo": null,
+     "source": null,
+     "source_ref": "declaration de flotte de l'armateur, transmise par le delegue general des Armateurs Cotiers Francais et validee a la main le 2026-08-20 ; aucune source publique consultable trouvee a cette date",
+     "tracabilite": "document-non-public",
+     "verification": {
+      "statut": "non_verifie",
+      "motif": "versee sans source publique, sur validation manuelle du commanditaire",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Le Jalilo",
+     "type": "Navire a passagers",
+     "annee": "2012",
+     "longueur_m": 14.35,
+     "energie": "Gazole",
+     "propulsion_detail": "Moteurs Caterpillar a gestion electronique (ACERT)",
+     "operateur": "Jalilo",
+     "pavillon": "France",
+     "note": "Constructeur INCONNU. Placee en attente d'attribution, pas attribuee par defaut.",
+     "imo": null,
+     "source": null,
+     "source_ref": "declaration de flotte de l'armateur, transmise par le delegue general des Armateurs Cotiers Francais et validee a la main le 2026-08-20 ; aucune source publique consultable trouvee a cette date",
+     "tracabilite": "document-non-public",
+     "verification": {
+      "statut": "non_verifie",
+      "motif": "versee sans source publique, sur validation manuelle du commanditaire",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     }
     }
    ],
    "sources": [
@@ -187979,12 +187910,35 @@
      "propriete": "publique",
      "exploitation": "service-public",
      "caractere_motif": "propriete: region ; exploitation: transdev"
+    },
+    {
+     "nom": "Anatife (pétrolier)",
+     "type": "Pétrolier caboteur double coque, ravitaillement des îles",
+     "annee": "2006",
+     "longueur_m": 41.5,
+     "largeur_m": 8,
+     "capacite": "Plus de 300 mètres cubes de combustible",
+     "energie": "Gazole, puis HVO depuis 2024",
+     "client": "Syndicat Mixte de Transport d'Hydrocarbure vers les Îles",
+     "operateur": "Marine Energie (à la livraison)",
+     "proprietaire": "Syndicat Mixte de Transport d'Hydrocarbure vers les Îles (Régions Bretagne et Pays de la Loire)",
+     "pavillon": "France",
+     "prix_acquisition": "6 M EUR (2006, coût de construction)",
+     "source": "https://www.meretmarine.com/fr/construction-navale/aker-yards-lorient-livre-le-petrolier-anatife",
+     "verification": {
+      "statut": "confirme",
+      "source": "https://www.meretmarine.com/fr/construction-navale/aker-yards-lorient-livre-le-petrolier-anatife",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     },
+     "note": "HOMONYME. Ne pas confondre avec l'Anatife chalutier-thonier de 1970 (17,88 m, Chantier Naval Henaff, Le Guilvinec) egalement present dans cette base. Un rapprochement par le nom seul confondrait les deux coques."
     }
    ],
    "sources": [
     "https://fr.wikipedia.org/wiki/%C3%8Ele_de_Groix_(navire)",
     "https://fr.wikipedia.org/wiki/Bangor_(navire)",
-    "https://www.meretmarine.com/fr/construction-navale/aker-lorient-signe-pour-un-transbordeur-et-espere-des-anneaux-de-fregates"
+    "https://www.meretmarine.com/fr/construction-navale/aker-lorient-signe-pour-un-transbordeur-et-espere-des-anneaux-de-fregates",
+    "https://www.meretmarine.com/fr/construction-navale/aker-yards-lorient-livre-le-petrolier-anatife"
    ],
    "confiance": "a_verifier",
    "actif": null,
@@ -188663,6 +188617,46 @@
       "statut": "non_verifie",
       "motif": "verdict sans source consultable",
       "le": "2026-08-05",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Archipel III",
+     "type": "Navire a passagers",
+     "annee": "2002",
+     "longueur_m": 26.26,
+     "desserte": "Rade d'Hyeres et iles d'Or",
+     "operateur": "Compagnie Maritime TLV (TLV-TVM)",
+     "pavillon": "France",
+     "note": "Rattachement au SNRTM etabli par la SERIE et l'operateur, l'Archipel V du meme armateur y etant deja fiche : attribution PLAUSIBLE, non documentee. A confirmer.",
+     "imo": null,
+     "source": null,
+     "source_ref": "declaration de flotte de l'armateur, transmise par le delegue general des Armateurs Cotiers Francais et validee a la main le 2026-08-20 ; aucune source publique consultable trouvee a cette date",
+     "tracabilite": "document-non-public",
+     "verification": {
+      "statut": "non_verifie",
+      "motif": "versee sans source publique, sur validation manuelle du commanditaire",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Mediterranee XVII",
+     "type": "Navire a passagers",
+     "annee": "2010",
+     "longueur_m": 26.35,
+     "desserte": "Rade de Toulon et iles d'Or",
+     "operateur": "Compagnie Maritime TLV (TLV-TVM)",
+     "pavillon": "France",
+     "note": "Rattachement au SNRTM etabli par la SERIE, l'operateur et la longueur, identique au metre pres a celle du Mediterranee VIII (26,35 m) deja fiche ici : attribution PLAUSIBLE, non documentee. A confirmer.",
+     "imo": null,
+     "source": null,
+     "source_ref": "declaration de flotte de l'armateur, transmise par le delegue general des Armateurs Cotiers Francais et validee a la main le 2026-08-20 ; aucune source publique consultable trouvee a cette date",
+     "tracabilite": "document-non-public",
+     "verification": {
+      "statut": "non_verifie",
+      "motif": "versee sans source publique, sur validation manuelle du commanditaire",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     }
@@ -189386,7 +189380,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (skipsteknisk.no), non recoupee sur un tiers",
       "source": "https://www.skipsteknisk.no/projects/fishing/pelagic-trawlers/st-125-antarctic-ii",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.skipsteknisk.no/projects/fishing/pelagic-trawlers/st-125-antarctic-ii"
     }
@@ -221771,7 +221766,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (skipsteknisk.no), non recoupee sur un tiers",
       "source": "https://www.skipsteknisk.no/projects/fishing/stern-trawlers/st-118-saputi-ii",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.skipsteknisk.no/projects/fishing/stern-trawlers/st-118-saputi-ii"
     }
@@ -230937,7 +230933,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (skipsteknisk.no), non recoupee sur un tiers",
       "source": "https://www.skipsteknisk.no/projects/fishing/stern-trawlers/st-119-inuksuk-ii",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.skipsteknisk.no/projects/fishing/stern-trawlers/st-119-inuksuk-ii"
     },
@@ -230954,7 +230951,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (skipsteknisk.no), non recoupee sur un tiers",
       "source": "https://www.skipsteknisk.no/projects/fishing/stern-trawlers/st-116xl-yury-matochkin",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.skipsteknisk.no/projects/fishing/stern-trawlers/st-116xl-yury-matochkin"
     }
@@ -232397,7 +232395,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/dina-star/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/dina-star/"
     },
@@ -232413,7 +232412,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/olympic-taurus/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/olympic-taurus/"
     },
@@ -232429,7 +232429,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/siem-mariner/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/siem-mariner/"
     },
@@ -232445,7 +232446,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/rem-fortune/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/rem-fortune/"
     },
@@ -232535,7 +232537,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/havila-foresight/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/havila-foresight/"
     }
@@ -232588,7 +232591,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/havila-fortune/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/havila-fortune/"
     },
@@ -232604,7 +232608,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/havila-aurora/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/havila-aurora/"
     }
@@ -232658,7 +232663,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/olympic-electra/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/olympic-electra/"
     },
@@ -232674,7 +232680,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/skandi-captain/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/skandi-captain/"
     },
@@ -232690,7 +232697,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/skandi-sotra/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/skandi-sotra/"
     },
@@ -232706,7 +232714,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/skandi-rona/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/skandi-rona/"
     }
@@ -232763,7 +232772,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/otto-explorer/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/otto-explorer/"
     }
@@ -232804,7 +232814,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/stril-odin/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/stril-odin/"
     },
@@ -232820,7 +232831,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/strilmoy/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/strilmoy/"
     }
@@ -232875,7 +232887,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/skandi-chieftain/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/skandi-chieftain/"
     },
@@ -232891,7 +232904,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/olympic-princess/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/olympic-princess/"
     },
@@ -232907,7 +232921,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/skandi-marstein/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/skandi-marstein/"
     },
@@ -232923,7 +232938,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/skandi-patagonia/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/skandi-patagonia/"
     }
@@ -233013,7 +233029,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (marinteknikk.no), non recoupee sur un tiers",
       "source": "https://www.marinteknikk.no/ship/skandi-barra/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.marinteknikk.no/ship/skandi-barra/"
     }
@@ -233264,7 +233281,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (mauric.com), non recoupee sur un tiers",
       "source": "https://www.mauric.com/news/salavatorep-delivery",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.mauric.com/news/salavatorep-delivery"
     }
@@ -233308,7 +233326,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (mauric.com), non recoupee sur un tiers",
       "source": "https://www.mauric.com/news/news21-206",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.mauric.com/news/news21-206"
     }
@@ -233350,7 +233369,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (mauric.com), non recoupee sur un tiers",
       "source": "https://www.mauric.com/news/neoliner-origin-launch",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.mauric.com/news/neoliner-origin-launch"
     }
@@ -233580,7 +233600,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (skipsteknisk.no), non recoupee sur un tiers",
       "source": "https://www.skipsteknisk.no/projects/research/fishery-oceanographic/st-368-for-ispra-italy",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.skipsteknisk.no/projects/research/fishery-oceanographic/st-368-for-ispra-italy"
     }
@@ -233671,7 +233692,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (ulstein.com), non recoupee sur un tiers",
       "source": "https://ulstein.com/references",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://ulstein.com/references"
     }
@@ -233736,7 +233758,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (felciyachtdesign.com), non recoupee sur un tiers",
       "source": "https://www.felciyachtdesign.com/yachts/multihull/dufour-48-catamaran/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.felciyachtdesign.com/yachts/multihull/dufour-48-catamaran/"
     }
@@ -233814,7 +233837,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (iceyachts.it), non recoupee sur un tiers",
       "source": "https://www.iceyachts.it/ice-62-targa/?lang=en",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.iceyachts.it/ice-62-targa/?lang=en"
     },
@@ -233830,7 +233854,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (felciyachtdesign.com), non recoupee sur un tiers",
       "source": "https://www.felciyachtdesign.com/yachts/fast-cruiser/ice-64-explorer/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.felciyachtdesign.com/yachts/fast-cruiser/ice-64-explorer/"
     }
@@ -233882,7 +233907,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (felciyachtdesign.com), non recoupee sur un tiers",
       "source": "https://www.felciyachtdesign.com/yachts/fast-cruiser/felci-65-by-persico-punto-g/",
-      "le": "2026-08-06"
+      "le": "2026-08-06",
+      "confiance": "simple"
      },
      "source": "https://www.felciyachtdesign.com/yachts/fast-cruiser/felci-65-by-persico-punto-g/"
     }
@@ -235920,7 +235946,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (macduffshipdesign.com), non recoupee sur un tiers",
       "source": "https://www.macduffshipdesign.com/news/cheoy-lee-shipyard-saam-towage-canada/",
-      "le": "2026-08-15"
+      "le": "2026-08-15",
+      "confiance": "simple"
      },
      "source": "https://www.macduffshipdesign.com/news/cheoy-lee-shipyard-saam-towage-canada/"
     },
@@ -235939,7 +235966,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (macduffshipdesign.com), non recoupee sur un tiers",
       "source": "https://www.macduffshipdesign.com/news/cheoy-lee-shipyard-saam-towage-canada/",
-      "le": "2026-08-15"
+      "le": "2026-08-15",
+      "confiance": "simple"
      },
      "source": "https://www.macduffshipdesign.com/news/cheoy-lee-shipyard-saam-towage-canada/"
     }
@@ -236240,7 +236268,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (skipskompetanse.no), non recoupee sur un tiers",
       "source": "https://www.skipskompetanse.no/delivered-vessels/lindesnes-2/",
-      "le": "2026-08-15"
+      "le": "2026-08-15",
+      "confiance": "simple"
      },
      "source": "https://www.skipskompetanse.no/delivered-vessels/lindesnes-2/"
     }
@@ -236344,7 +236373,8 @@
       "statut": "douteux",
       "motif": "attribution issue du portfolio du concepteur (skipskompetanse.no), non recoupee sur un tiers",
       "source": "https://www.skipskompetanse.no/delivered-vessels/komandor-2/",
-      "le": "2026-08-15"
+      "le": "2026-08-15",
+      "confiance": "simple"
      },
      "source": "https://www.skipskompetanse.no/delivered-vessels/komandor-2/"
     }
@@ -237538,6 +237568,394 @@
    "confiance": "moyenne",
    "actif": true,
    "fondation": null
+  },
+  {
+   "id": "xx-yard-loceanindien-portlouis",
+   "nom": "Chantier Naval de l'Océan Indien (CNOI)",
+   "groupe": "Piriou",
+   "ville": "Port-Louis",
+   "region": "Port-Louis",
+   "pays": "Maurice",
+   "lat": -20.16245,
+   "lon": 57.5028,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit"
+   ],
+   "types_navires": [
+    "ferry-ropax",
+    "servitude-soutien",
+    "navire-technique",
+    "peche"
+   ],
+   "description": "Chantier naval mauricien de Port-Louis, filiale du groupe finistérien Piriou. Construction neuve et réparation pour l'océan Indien. Constructeur des cinq amphidromes du Service des transports maritimes (STM) du Département de Mayotte, qui assurent la traversée entre Grande-Terre et Petite-Terre : Georges Nahouda (2014), Polé (2016), Karihani (2017), puis Chatouilleuse et Imane (2023), ces deux dernières à propulsion diesel-électrique.",
+   "navires_references": [
+    {
+     "nom": "Georges Nahouda",
+     "type": "Amphidrome (barge à passagers et véhicules)",
+     "annee": "2014",
+     "longueur_m": 39,
+     "capacite": "233 passagers, 24 à 27 véhicules légers",
+     "capacite_pax": 233,
+     "capacite_vehicules": 24,
+     "energie": "Gazole / GO marine",
+     "client": "Département de Mayotte",
+     "operateur": "Service des transports maritimes (STM) de Mayotte",
+     "proprietaire": "Département de Mayotte",
+     "pavillon": "France",
+     "source": "https://www.mayotte.fr/actualite/lire/172/le-stm-receptionne-ce-vendredi-13-juin-son-nouvel-amphidrome-le-georges-nahouda",
+     "verification": {
+      "statut": "confirme",
+      "source": "https://www.meretmarine.com/fr/construction-navale/mayotte-cnoi-livre-le-deuxieme-ferry-pour-stm",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Polé",
+     "imo": null,
+     "type": "Amphidrome (barge à passagers et véhicules)",
+     "annee": "2016",
+     "longueur_m": 67.1,
+     "largeur_m": 13,
+     "jauge_gt": 470,
+     "desserte": "Dzaoudzi - Mamoudzou",
+     "capacite": "590 passagers et 33 véhicules ; longueur hors tout 67,10 m, largeur 13 m, tirant d'eau en charge 1,55 m",
+     "capacite_pax": 590,
+     "energie": "Gazole / MGO",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "client": "Département de Mayotte",
+     "operateur": "Service des transports maritimes (STM) de Mayotte",
+     "proprietaire": "Département de Mayotte",
+     "pavillon": "France",
+     "classification": null,
+     "timeline": [
+      {
+       "annee": "",
+       "role": "operateur",
+       "nom": "DTM (CD976)",
+       "detail": "Régie directe",
+       "source": "mayotte.fr"
+      },
+      {
+       "annee": "2016",
+       "role": "construction",
+       "nom": "Polé (+ Karihani, sister-ship identique)",
+       "detail": "Marché de construction CNOI (Chantier Naval de l'Océan Indien, Maurice) pour le Service des Transports Maritimes (STM) du Département de Mayotte. Source officielle Mayotte : « Le montant total de l'acquisition des deux amphidrômes s'élève à 18.407 millions d'euros cofinancé à 65% par le FEDER soit 11.964 millions d'euros. » 2 navires identiques (67 m, 590 passagers, 33 véhicules, 4 moteurs Baudouin 331 kW). Prix unitaire dérivé = 18 407 000 / 2 ≈ 9,2 M€. Polé livré et inauguré le 26 octobre 2016 (plus grand navire jamais construit à Port-Louis, Maurice), Karihani livré avril 2017.",
+       "prix": "≈ 9,2 M€/unité (dérivé du total 18 407 000 € pour 2 navires identiques)",
+       "source": null,
+       "source_ref": "lien mort constate le 2026-08-03 : https://www.mayotte.fr/actualite/lire/472/le-pole-nouvel-amphidrome-du-service-des-transports-maritimes-stm-inaugure-"
+      }
+     ],
+     "prix_acquisition": "≈ 9,2 M€/unité (dérivé : marché de 18 407 000 € pour 2 amphidromes identiques Polé + Karihani, CNOI pour le STM de Mayotte, 2016-2017 ; FEDER 65% = 11 964 550 €)",
+     "source_ref": "mayotte.fr ; re-rattache le 2026-08-20 : attribue a tort a « Flotte de service public (chantier non documenté) », construit par « Chantier Naval de l'Océan Indien (CNOI) » — Chantier documenté : amphidrome du STM de Mayotte construit par le Chantier Naval de l'Océan Indien à Port-Louis, entré en service en 2016. Sortie de la fiche fourre-tout sans localisation. (https://www.meretmarine.com/fr/construction-navale/mayotte-cnoi-livre-le-deuxieme-ferry-pour-stm)",
+     "tracabilite": "reference-sans-url",
+     "caractere": "public",
+     "propriete": "publique",
+     "caractere_motif": "propriete: departement de",
+     "verification": {
+      "statut": "corrige",
+      "champs": 5,
+      "source": "https://www.mayotte.fr/actualite/lire/472/le-pole-nouvel-amphidrome-du-service-des-transports-maritimes-stm-inaugure",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     },
+     "capacite_vehicules": 33
+    },
+    {
+     "nom": "Karihani",
+     "imo": null,
+     "type": "Amphidrome (barge à passagers et véhicules)",
+     "annee": "2017",
+     "longueur_m": 67.1,
+     "largeur_m": 13,
+     "jauge_gt": 470,
+     "desserte": "Dzaoudzi - Mamoudzou",
+     "capacite": "590 passagers et 33 véhicules ; sistership identique du Polé, caractéristiques établies sur celui-ci par le Département de Mayotte",
+     "capacite_pax": 590,
+     "energie": "Gazole / MGO",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "client": "Département de Mayotte",
+     "operateur": "Service des transports maritimes (STM) de Mayotte",
+     "proprietaire": "Département de Mayotte",
+     "pavillon": "France",
+     "classification": null,
+     "timeline": [
+      {
+       "annee": "",
+       "role": "operateur",
+       "nom": "DTM (CD976)",
+       "detail": "Régie directe",
+       "source": "mayotte.fr"
+      },
+      {
+       "annee": "2017",
+       "role": "construction",
+       "nom": "Karihani (+ Polé, sister-ship identique)",
+       "detail": "Marché de construction CNOI (Chantier Naval de l'Océan Indien, Maurice) pour le Service des Transports Maritimes (STM) du Département de Mayotte. Coût total des 2 amphidromes identiques (67 m, 590 passagers, 33 véhicules, 4 moteurs Baudouin 331 kW) = 18 407 000 € (presse : ~18,3 M€), cofinancé FEDER à 65% = 11 964 550 €, reste ~35% Département. Prix unitaire dérivé = 18 407 000 / 2 ≈ 9,2 M€. Karihani livré 26 avril 2017 (entrée en service mai 2017), Polé livré octobre 2016.",
+       "prix": "≈ 9,2 M€/unité (dérivé du total 18 407 000 € pour 2 navires identiques)",
+       "source": null,
+       "source_ref": "source retiree le 2026-08-20 : https://www.europe-a-mayotte.fr/projets/modernisation-et-renouvellement-des-navires-rouliers-mixtes-type-amphidrome-a-mayotte/ repond 200 mais sert une page d affiliation de casinos"
+      }
+     ],
+     "prix_acquisition": "≈ 9,2 M€/unité (dérivé : marché de 18 407 000 € pour 2 amphidromes identiques Polé + Karihani, CNOI pour le STM de Mayotte, 2016-2017 ; FEDER 65% = 11 964 550 €)",
+     "source_ref": "mayotte.fr ; re-rattache le 2026-08-20 : attribue a tort a « Flotte de service public (chantier non documenté) », construit par « Chantier Naval de l'Océan Indien (CNOI) » — Chantier documenté : amphidrome du STM de Mayotte construit par le Chantier Naval de l'Océan Indien à Port-Louis, entré en service en 2017. Sortie de la fiche fourre-tout sans localisation. (https://www.meretmarine.com/fr/construction-navale/mayotte-cnoi-livre-le-deuxieme-ferry-pour-stm) | source retiree le 2026-08-20 : https://www.europe-a-mayotte.fr/projets/modernisation-et-renouvellement-des-navires-rouliers-mixtes-type-amphidrome-a-mayotte/ repond 200 mais sert une page d affiliation de casinos, domaine recupere apres expiration",
+     "caractere": "public",
+     "propriete": "publique",
+     "caractere_motif": "propriete: departement de",
+     "source": null,
+     "source_origine": {
+      "le": "2026-08-16",
+      "depuis": "timeline[role=construction]",
+      "etape": "Karihani (+ Polé, sister-ship identique)"
+     },
+     "verification": {
+      "statut": "corrige",
+      "champs": 5,
+      "source": "https://www.mayotte.fr/actualite/lire/472/le-pole-nouvel-amphidrome-du-service-des-transports-maritimes-stm-inaugure",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     },
+     "capacite_vehicules": 33,
+     "tracabilite": "reference-sans-url"
+    },
+    {
+     "nom": "Imane",
+     "imo": null,
+     "type": "Amphidrome diesel-électrique, sistership de la Chatouilleuse",
+     "annee": "2023",
+     "longueur_m": 39,
+     "largeur_m": 13,
+     "jauge_gt": 439,
+     "desserte": "Dzaoudzi - Mamoudzou",
+     "capacite": "493 passagers, 24 véhicules et 6 camions (Département de Mayotte, propriétaire). Mer et Marine annonce 392 passagers, 24 voitures ou 4 poids lourds pour 39,2 m : écart non résolu.",
+     "capacite_pax": 493,
+     "energie": "Diesel-électrique",
+     "propulsion": [
+      "diesel-electrique"
+     ],
+     "client": "Département de Mayotte",
+     "operateur": "Service des transports maritimes (STM) de Mayotte",
+     "proprietaire": "Département de Mayotte",
+     "pavillon": "France",
+     "classification": null,
+     "timeline": [
+      {
+       "annee": "",
+       "role": "operateur",
+       "nom": "DTM (CD976)",
+       "detail": "Régie directe",
+       "source": "mayotte.fr"
+      },
+      {
+       "annee": "2023",
+       "role": "construction",
+       "nom": "Imane (+ Chatouilleuse, sister-ship identique)",
+       "detail": "Marché de construction CNOI (Chantier Naval de l'Océan Indien, Maurice) pour le Service des Transports Maritimes (STM) du Département de Mayotte. Coût total des 2 amphidromes identiques (39,2 m, 392-493 passagers, propulsion diesel-électrique) = 14 480 000 € (coût éligible 14 128 600 €), cofinancé FEDER 83% (12 104 700,80 €) + Conseil Départemental 17% (2 375 299,20 €). Prix unitaire dérivé = 14 480 000 / 2 ≈ 7,24 M€. Imane livré juin 2023, Chatouilleuse mars 2023, inauguration 19 juillet 2023.",
+       "prix": "≈ 7,24 M€/unité (dérivé du total 14 480 000 € pour 2 navires identiques)",
+       "source": null,
+       "source_ref": "lien mort constate le 2026-08-03 : https://www.mayotte.fr/actualite/lire/788/inauguration-des-deux-amphidromes-imane-et-chatouilleuse"
+      }
+     ],
+     "prix_acquisition": "≈ 7,24 M€/unité (dérivé : marché de 14 480 000 € pour 2 amphidromes identiques Imane + Chatouilleuse, CNOI pour le STM de Mayotte, 2023 ; coût éligible cité aussi à 14 128 600 €, FEDER 83% / Département 17%)",
+     "source_ref": "mayotte.fr ; re-rattache le 2026-08-20 : attribue a tort a « Flotte de service public (chantier non documenté) », construit par « Chantier Naval de l'Océan Indien (CNOI) » — Chantier documenté : amphidrome diesel-électrique du STM de Mayotte construit par le Chantier Naval de l'Océan Indien à Port-Louis, livré en 2023. Sortie de la fiche fourre-tout sans localisation. (https://www.meretmarine.com/fr/construction-navale/mayotte-cnoi-livre-le-deuxieme-ferry-pour-stm)",
+     "tracabilite": "reference-sans-url",
+     "caractere": "public",
+     "propriete": "publique",
+     "caractere_motif": "propriete: departement de",
+     "verification": {
+      "statut": "corrige",
+      "champs": 9,
+      "source": "https://www.mayotte.fr/actualite/lire/788/inauguration-des-deux-amphidromes-imane-et-chatouilleuse",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     },
+     "capacite_vehicules": 24
+    },
+    {
+     "nom": "Chatouilleuse",
+     "imo": null,
+     "type": "Amphidrome diesel-électrique, version optimisée du Georges Nahouda",
+     "annee": "2023",
+     "longueur_m": 39,
+     "largeur_m": 13,
+     "jauge_gt": 439,
+     "desserte": "Dzaoudzi (Petite-Terre) - Mamoudzou (Grande-Terre)",
+     "capacite": "493 passagers, 24 véhicules et 6 camions (Département de Mayotte, propriétaire). Mer et Marine annonce 392 passagers, 24 voitures ou 4 poids lourds pour 39,2 m : écart non résolu.",
+     "capacite_pax": 493,
+     "energie": "Diesel-électrique",
+     "propulsion": [
+      "diesel-electrique"
+     ],
+     "client": "Département de Mayotte",
+     "operateur": "Service des transports maritimes (STM) de Mayotte",
+     "proprietaire": "Département de Mayotte",
+     "pavillon": "France",
+     "classification": null,
+     "timeline": [
+      {
+       "annee": "",
+       "role": "operateur",
+       "nom": "DTM (CD976)",
+       "detail": "Régie directe (Direction des Transports Maritimes)",
+       "source": "mayotte.fr, service du CD créé en 1977"
+      },
+      {
+       "annee": "2023",
+       "role": "construction",
+       "nom": "Chatouilleuse + Imane (2 amphidromes identiques, 39 m x 13 m, 493 passagers, 6 camions + 24 vehicules)",
+       "detail": "Cout total de l'operation 14 480 000 EUR pour les DEUX amphidromes identiques (Chatouilleuse et sister-ship Imane), construits par le Chantier Naval de l'Ocean Indien (CNOI) a Port-Louis, Maurice ; financement FEDER 12 104 700,80 EUR (83 %) + Departement de Mayotte 2 375 299,20 EUR (17 %). Prix unitaire derive = 14 480 000 / 2 = ≈ 7 240 000 EUR/unite. Inauguration 19 juillet 2023.",
+       "prix": "≈ 7,24 M EUR/unite (derive : 14 480 000 EUR pour 2 amphidromes identiques)",
+       "source": null,
+       "source_ref": "lien mort constate le 2026-08-03 : https://www.mayotte.fr/actualite/lire/788/inauguration-des-deux-amphidromes-imane-et-chatouilleuse"
+      },
+      {
+       "annee": "2023",
+       "role": "evenement",
+       "nom": "Chatouilleuse + Imane (cout total, confirmation presse)",
+       "detail": "Confirmation independante du cout des deux amphidromes : ≈ 14,5 M EUR / 14 128 600 EUR pour la paire, finance a 83 % par le FEDER et 17 % par le Departement (CNOI Maurice).",
+       "prix": "≈ 14,1-14,5 M EUR (total, 2 navires)",
+       "source": "https://www.mayottehebdo.com/actualite/transport/la-barge-chatouilleuse-va-entrer-en-scene/"
+      }
+     ],
+     "prix_acquisition": "≈ 7,24 M EUR/unite (2023) (derive : 14 480 000 EUR pour 2 amphidromes identiques Chatouilleuse + Imane)",
+     "source_ref": "mayotte.fr, service du CD créé en 1977 ; re-rattache le 2026-08-20 : attribue a tort a « Flotte de service public (chantier non documenté) », construit par « Chantier Naval de l'Océan Indien (CNOI) » — Chantier documenté : amphidrome diesel-électrique du STM de Mayotte construit par le Chantier Naval de l'Océan Indien à Port-Louis, livré en mars 2023. Sortie de la fiche fourre-tout sans localisation. (https://www.mayotte.fr/actualite/lire/788/inauguration-des-deux-amphidromes-imane-et-chatouilleuse)",
+     "tracabilite": "reference-sans-url",
+     "caractere": "public",
+     "propriete": "publique",
+     "caractere_motif": "propriete: departement de",
+     "verification": {
+      "statut": "corrige",
+      "champs": 9,
+      "source": "https://www.mayotte.fr/actualite/lire/788/inauguration-des-deux-amphidromes-imane-et-chatouilleuse",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     },
+     "capacite_vehicules": 24
+    }
+   ],
+   "sources": [
+    "https://www.meretmarine.com/fr/construction-navale/mayotte-cnoi-livre-le-deuxieme-ferry-pour-stm",
+    "https://www.mayotte.fr/actualite/lire/172/le-stm-receptionne-ce-vendredi-13-juin-son-nouvel-amphidrome-le-georges-nahouda"
+   ],
+   "confiance": "moyenne",
+   "actif": null,
+   "fondation": 2005
+  },
+  {
+   "id": "xx-yard-strategic-singapour",
+   "nom": "Strategic Marine",
+   "groupe": "",
+   "ville": "Singapour",
+   "region": "Singapour",
+   "pays": "Singapour",
+   "lat": 1.2962,
+   "lon": 103.7769,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "catamaran",
+    "servitude-soutien",
+    "offshore-emr",
+    "navire-technique"
+   ],
+   "description": "Constructeur singapourien de navires en aluminium, spécialisé dans les catamarans rapides de transfert de techniciens (crew transfer vessels) pour l'éolien en mer, gamme StratCat. Le StratCat 27 est un catamaran aluminium rapide de 26,7 mètres hors tout pour 9,1 mètres de large, offrant 81,7 m2 de surface de pont, armé par trois marins et pouvant embarquer 24 passagers. Quatre unités de ce type ont été livrées à LD Tide, coentreprise de Louis Dreyfus Armateurs et du britannique Tidal Transit, pour les parcs éoliens français.",
+   "navires_references": [
+    {
+     "nom": "Acti'Vent",
+     "type": "CTV (crew transfer vessel), catamaran aluminium StratCat 27",
+     "annee": "2023",
+     "longueur_m": 26.7,
+     "largeur_m": 9.1,
+     "capacite": "24 passagers, 3 membres d'équipage, 81,7 m2 de surface de pont",
+     "capacite_pax": 24,
+     "energie": "Gazole / MDO",
+     "client": "LD Tide (Louis Dreyfus Armateurs et Tidal Transit)",
+     "operateur": "LD Tide",
+     "pavillon": "France",
+     "source": "https://www.lda.fr/arrivee-de-lactivent-sur-le-parc-eolien-en-mer-de-fecamp/",
+     "verification": {
+      "statut": "confirme",
+      "source": "https://www.lda.fr/arrivee-de-lactivent-sur-le-parc-eolien-en-mer-de-fecamp/",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Esti'Vent",
+     "type": "CTV (crew transfer vessel), catamaran aluminium StratCat 27",
+     "annee": "2024",
+     "longueur_m": 26.7,
+     "largeur_m": 9.1,
+     "capacite": "24 passagers, 3 membres d'équipage, 81,7 m2 de surface de pont",
+     "capacite_pax": 24,
+     "energie": "Gazole / MDO",
+     "client": "LD Tide (Louis Dreyfus Armateurs et Tidal Transit)",
+     "operateur": "LD Tide",
+     "pavillon": "France",
+     "source": "https://www.meretmarine.com/fr/construction-navale/le-ctv-esti-vent-a-la-turballe",
+     "verification": {
+      "statut": "confirme",
+      "source": "https://www.lda.fr/avec-lestivent-lda-entend-sinscrire-dans-la-dynamique-du-marche-de-leolien-francais/",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Opti'Vent",
+     "type": "CTV (crew transfer vessel), catamaran aluminium StratCat 27",
+     "annee": "2025",
+     "longueur_m": 26.7,
+     "largeur_m": 9.1,
+     "capacite": "24 passagers, 3 membres d'équipage",
+     "capacite_pax": 24,
+     "energie": "Gazole / MDO",
+     "client": "LD Tide (Louis Dreyfus Armateurs et Tidal Transit)",
+     "operateur": "LD Tide",
+     "pavillon": "Royaume-Uni",
+     "source": "https://www.meretmarine.com/fr/energies-marines/les-deux-nouveaux-ctv-de-ld-tide-sont-arrives-a-saint-nazaire",
+     "verification": {
+      "statut": "confirme",
+      "source": "https://www.meretmarine.com/fr/energies-marines/les-deux-nouveaux-ctv-de-ld-tide-sont-arrives-a-saint-nazaire",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     }
+    },
+    {
+     "nom": "Fer'Vent",
+     "type": "CTV (crew transfer vessel), catamaran aluminium StratCat 27",
+     "annee": "2025",
+     "longueur_m": 26.7,
+     "largeur_m": 9.1,
+     "capacite": "24 passagers, 3 membres d'équipage",
+     "capacite_pax": 24,
+     "energie": "Gazole / MDO",
+     "client": "LD Tide (Louis Dreyfus Armateurs et Tidal Transit)",
+     "operateur": "LD Tide",
+     "pavillon": "Royaume-Uni",
+     "source": "https://www.meretmarine.com/fr/energies-marines/les-deux-nouveaux-ctv-de-ld-tide-sont-arrives-a-saint-nazaire",
+     "verification": {
+      "statut": "confirme",
+      "source": "https://www.meretmarine.com/fr/energies-marines/les-deux-nouveaux-ctv-de-ld-tide-sont-arrives-a-saint-nazaire",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     }
+    }
+   ],
+   "sources": [
+    "https://www.strategicmarine.com/vessels/stratcat-27/",
+    "https://www.meretmarine.com/fr/energies-marines/les-deux-nouveaux-ctv-de-ld-tide-sont-arrives-a-saint-nazaire"
+   ],
+   "confiance": "moyenne",
+   "actif": null,
+   "fondation": null
   }
  ],
  "equipementiers": [
@@ -237625,6 +238043,34 @@
     "adresse": "410 avenue Aldo Eriani, 38430 Moirans, France"
    },
    "contact_source": "https://www.wattalps.com/contact/",
+   "contact_maj": "2026-08-15"
+  },
+  {
+   "id": "eq-bluefins",
+   "nom": "Bluefins",
+   "raison_sociale": "Bluefins",
+   "ville": "Brest",
+   "region": "Bretagne",
+   "pays": "France",
+   "lat": 48.39,
+   "lon": -4.486,
+   "geo_precision": "ville",
+   "levier": "foils",
+   "levier_libelle": "Foils et sustentation",
+   "produit": "Start-up fondée en 2021 par l'architecte naval et ingénieur hydrodynamicien Olivier Giusti, incubée par l'Ifremer. Appendice inspiré de la nageoire de baleine, conçu avec l'Ifremer, transformant l'énergie de houle en énergie mécanique de propulsion. Objectif annoncé jusqu'à 20% d'économie sur grands navires. Foil assemblé à Brest, installation prévue sur le TSM Alizé.",
+   "confiance": "haute",
+   "note": "Le levier exploite l'énergie de houle : peu pertinent sur les traversées abritées (estuaires, rades, passages d'eau) qui constituent l'essentiel de la flotte côtière à passagers.",
+   "sources": [
+    "https://www.meretmarine.com/fr/construction-navale/bluefins-a-assemble-a-brest-son-foil-de-propulsion-et-va-l-installer-sur-le-tsm-alize",
+    "https://www.actunautique.com/2021/03/un-foil-nageoire-de-baleine-pour-reduire-la-consommation-d-energie-des-navires.html"
+   ],
+   "navires_equipes": [],
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "130 cours Aimé Césaire, 29000 Brest, France"
+   },
+   "contact_source": null,
    "contact_maj": "2026-08-15"
   },
   {
@@ -237773,6 +238219,63 @@
    "contact_maj": "2026-08-15"
   },
   {
+   "id": "eq-ehm",
+   "nom": "EHM (Efficient Hydrogen Motors)",
+   "raison_sociale": "Efficient Hydrogen Motors",
+   "ville": "Châteaulin",
+   "region": "Bretagne",
+   "pays": "France",
+   "lat": 48.198,
+   "lon": -4.088,
+   "geo_precision": "ville",
+   "levier": "moteurs-hydrogene",
+   "levier_libelle": "Moteurs à combustion hydrogène",
+   "produit": "Conception, fabrication et distribution de moteurs à combustion interne à hydrogène à haut rendement, cycles de combustion repensés et matériaux adaptés. Société créée en 2022. Premiers moteurs de 265 kW installés sur démonstrateurs (autocars, camions, bus, navettes maritimes, groupes électrogènes) sur 2024-2025. Adhérent GICAN.",
+   "confiance": "moyenne",
+   "note": "Stade démonstrateur, aucun navire en service équipé identifié au 14/08/2026.",
+   "sources": [
+    "https://gican.asso.fr/annuaire-des-adherents-du-gican-lindustrie-navale-francaise/ehm-efficient-hydrogen-motors/",
+    "https://hydrogene-renouvelable.bzh/ehm-efficient-hydrogen-motors-precurseur-retrofit-mobilite-lourde/",
+    "https://www.ehm.bzh/contact-us"
+   ],
+   "navires_equipes": [],
+   "contact": {
+    "web": "https://www.ehm.bzh",
+    "telephone": null,
+    "adresse": "Pépinière d'entreprises, 9 ZA de Ty Nevez Pouillot, 29150 Châteaulin, France"
+   },
+   "contact_source": "https://www.ehm.bzh",
+   "contact_maj": "2026-08-15"
+  },
+  {
+   "id": "eq-solution-f",
+   "nom": "Solution F",
+   "raison_sociale": "Solution F (groupe GCK)",
+   "ville": "Venelles",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "pays": "France",
+   "lat": 43.59,
+   "lon": 5.48,
+   "geo_precision": "ville",
+   "levier": "moteurs-hydrogene",
+   "levier_libelle": "Moteurs à combustion hydrogène",
+   "produit": "Ingénierie automobile fondée en 1985, filiale du groupe GCK, repositionnée sur le développement et la fabrication de moteurs à combustion hydrogène et le rétrofit de moteurs thermiques vers l'hydrogène. Moteur V8 hydrogène de 6,2 L orienté engins hors route et compétition.",
+   "confiance": "moyenne",
+   "note": "Le maritime est une ambition sectorielle affichée par GCK, sans référence de navire identifiée au 14/08/2026. Citée par le GICAN parmi les équipementiers du levier hydrogène thermique.",
+   "sources": [
+    "https://www.solutionf.com/en/hydrogen-combustion-engine/",
+    "https://hydrogentoday.info/gck-moteur-hydrogene/"
+   ],
+   "navires_equipes": [],
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "299 allée du Verdon, 13770 Venelles, France"
+   },
+   "contact_source": null,
+   "contact_maj": "2026-08-15"
+  },
+  {
    "id": "eq-eodev",
    "nom": "EODev",
    "raison_sociale": "Energy Observer Developments (EODev)",
@@ -237893,6 +238396,123 @@
    "contact_maj": "2026-08-15"
   },
   {
+   "id": "eq-symbio",
+   "nom": "Symbio",
+   "raison_sociale": "Symbio (ex-Symbio FCell)",
+   "ville": "Saint-Fons",
+   "region": "Auvergne-Rhône-Alpes",
+   "pays": "France",
+   "lat": 45.706,
+   "lon": 4.855,
+   "geo_precision": "ville",
+   "levier": "piles-a-combustible",
+   "levier_libelle": "Piles à combustible et hydrogène",
+   "produit": "Concepteur et fabricant de systèmes pile à combustible hydrogène. Sous le nom Symbio FCell, la société a fourni les piles du Navibus H2 de Nantes, première navette à pile à combustible homologuée en France. Adapte aujourd'hui sa technologie aux ports et aux navires avec le singapourien Proteus, solution modulaire visant navires côtiers, navires de service offshore et bateaux fluviaux.",
+   "confiance": "haute",
+   "note": null,
+   "sources": [
+    "https://www.avem.fr/2017/08/03/une-navette-fluviale-hydrogene-a-nantes-avec-symbio-fcell-et-navalu/",
+    "https://www.h2-mobile.fr/actus/pile-hydrogene-symbio-premier-projet-maritime/",
+    "https://www.symbio.one/en/legal-statements/"
+   ],
+   "navires_equipes": [
+    "Navibus H2 / Jules Verne 2 (projet Navhybus)"
+   ],
+   "contact": {
+    "web": "https://www.symbio.one",
+    "telephone": "+33 9 72 64 15 33",
+    "adresse": "SYMPHONHY, 10 rue Specia, 69190 Saint-Fons, France"
+   },
+   "contact_source": "https://www.symbio.one/en/legal-statements/",
+   "contact_maj": "2026-08-15"
+  },
+  {
+   "id": "eq-enogia",
+   "nom": "Enogia",
+   "raison_sociale": "Enogia",
+   "ville": "Marseille",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "pays": "France",
+   "lat": 43.296,
+   "lon": 5.37,
+   "geo_precision": "ville",
+   "levier": "recuperation-chaleur",
+   "levier_libelle": "Récupération de chaleur (ORC)",
+   "produit": "PME marseillaise spécialiste du cycle organique de Rankine, modules compacts de 10 à 180 kW convertissant la chaleur fatale des moteurs et des circuits de refroidissement en électricité.",
+   "confiance": "haute",
+   "note": "Réserve à connaître avant tout usage du levier : le consortium réuni par VNF avec Enogia, l'IFPEN et Naviwatt, sur le navire d'essai Eridan (110 m), conclut que l'intégration d'un ORC en RÉTROFIT de bateaux existants ne semble pas pertinente (coût lié au déplacement du moteur, absence de solution du marché pour l'injection directe sur ligne d'arbre). Seule application jugée viable, le bateau hybride électrique neuf.",
+   "sources": [
+    "https://enogia.com/en/en-orc/",
+    "https://www.vnf.fr/vnf/dossiers-actualitess/recuperation-de-chaleur-orc-les-conditions-restrictives-pour-un-deploiement-dans-le-secteur-fluvial/",
+    "https://enogia.com/mentions-legales/"
+   ],
+   "navires_equipes": [],
+   "contact": {
+    "web": "https://enogia.com",
+    "telephone": "+33 4 84 25 60 17",
+    "adresse": "43 avenue de Boisbaudran, 13015 Marseille, France"
+   },
+   "contact_source": "https://enogia.com/mentions-legales/",
+   "contact_maj": "2026-08-15"
+  },
+  {
+   "id": "eq-nautix",
+   "nom": "Nautix",
+   "raison_sociale": "Nautix",
+   "ville": "Guidel",
+   "region": "Bretagne",
+   "pays": "France",
+   "lat": 47.789,
+   "lon": -3.49,
+   "geo_precision": "ville",
+   "levier": "revetements",
+   "levier_libelle": "Revêtements et peintures de carène",
+   "produit": "Fabricant français de peintures marines créé en 1980, développement, formulation et fabrication en France à Guidel. Antifoulings professionnels, laques, primaires, revêtements antidérapants. Donnée publiée par le fabricant : une carène encrassée génère une surconsommation de carburant de 5 à 20% selon le navire et le profil de navigation.",
+   "confiance": "haute",
+   "note": null,
+   "sources": [
+    "https://www.nautix.com/",
+    "https://www.nautix.com/antifouling-consommation-de-carburant/",
+    "https://www.nautix.com/mentions-legales/"
+   ],
+   "navires_equipes": [],
+   "contact": {
+    "web": "https://www.nautix.com",
+    "telephone": null,
+    "adresse": "Parc d'activités des Cinq Chemins, 24 rue Nicolas Appert, 56520 Guidel, France"
+   },
+   "contact_source": "https://www.nautix.com/mentions-legales/",
+   "contact_maj": "2026-08-15"
+  },
+  {
+   "id": "eq-solar-cloth",
+   "nom": "Solar Cloth",
+   "raison_sociale": "Solar Cloth System",
+   "ville": "Cannes",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "pays": "France",
+   "lat": 43.552,
+   "lon": 7.017,
+   "geo_precision": "ville",
+   "levier": "solaire",
+   "levier_libelle": "Solaire embarqué",
+   "produit": "Panneaux photovoltaïques souples, légers et résistants en technologie CIGS sans verre, films de 25 à 65 microns intégrés à des textiles renforcés de fibres techniques. Conçus pour les cas où le poids, l'ombrage, les formes complexes, les vibrations et les chocs rendent le photovoltaïque classique inapplicable.",
+   "confiance": "moyenne",
+   "note": "Références identifiées en course au large (Vendée Globe, Ultim, IMOCA). Aucune référence sur navire côtier à passagers identifiée au 14/08/2026.",
+   "sources": [
+    "https://www.solar-cloth.fr/",
+    "https://www.solar-cloth.fr/voiles-solaires-navires/"
+   ],
+   "navires_equipes": [],
+   "contact": {
+    "web": null,
+    "telephone": null,
+    "adresse": "141 avenue Jean Mermoz, 06210 Mandelieu-la-Napoule, France"
+   },
+   "contact_source": null,
+   "contact_maj": "2026-08-15"
+  },
+  {
    "id": "eq-airseas",
    "nom": "Airseas",
    "raison_sociale": "Airseas",
@@ -238008,206 +238628,33 @@
    "contact_maj": "2026-08-15"
   },
   {
-   "id": "eq-ehm",
-   "nom": "EHM (Efficient Hydrogen Motors)",
-   "raison_sociale": "Efficient Hydrogen Motors",
-   "ville": "Châteaulin",
+   "id": "eq-wisamo",
+   "nom": "Wisamo",
+   "raison_sociale": "Wisamo (groupe Michelin)",
+   "ville": "Vannes",
    "region": "Bretagne",
    "pays": "France",
-   "lat": 48.198,
-   "lon": -4.088,
+   "lat": 47.6587,
+   "lon": -2.7599,
    "geo_precision": "ville",
-   "levier": "moteurs-hydrogene",
-   "levier_libelle": "Moteurs à combustion hydrogène",
-   "produit": "Conception, fabrication et distribution de moteurs à combustion interne à hydrogène à haut rendement, cycles de combustion repensés et matériaux adaptés. Société créée en 2022. Premiers moteurs de 265 kW installés sur démonstrateurs (autocars, camions, bus, navettes maritimes, groupes électrogènes) sur 2024-2025. Adhérent GICAN.",
-   "confiance": "moyenne",
-   "note": "Stade démonstrateur, aucun navire en service équipé identifié au 14/08/2026.",
-   "sources": [
-    "https://gican.asso.fr/annuaire-des-adherents-du-gican-lindustrie-navale-francaise/ehm-efficient-hydrogen-motors/",
-    "https://hydrogene-renouvelable.bzh/ehm-efficient-hydrogen-motors-precurseur-retrofit-mobilite-lourde/",
-    "https://www.ehm.bzh/contact-us"
-   ],
-   "navires_equipes": [],
-   "contact": {
-    "web": "https://www.ehm.bzh",
-    "telephone": null,
-    "adresse": "Pépinière d'entreprises, 9 ZA de Ty Nevez Pouillot, 29150 Châteaulin, France"
-   },
-   "contact_source": "https://www.ehm.bzh",
-   "contact_maj": "2026-08-15"
-  },
-  {
-   "id": "eq-solution-f",
-   "nom": "Solution F",
-   "raison_sociale": "Solution F (groupe GCK)",
-   "ville": "Venelles",
-   "region": "Provence-Alpes-Côte d'Azur",
-   "pays": "France",
-   "lat": 43.59,
-   "lon": 5.48,
-   "geo_precision": "ville",
-   "levier": "moteurs-hydrogene",
-   "levier_libelle": "Moteurs à combustion hydrogène",
-   "produit": "Ingénierie automobile fondée en 1985, filiale du groupe GCK, repositionnée sur le développement et la fabrication de moteurs à combustion hydrogène et le rétrofit de moteurs thermiques vers l'hydrogène. Moteur V8 hydrogène de 6,2 L orienté engins hors route et compétition.",
-   "confiance": "moyenne",
-   "note": "Le maritime est une ambition sectorielle affichée par GCK, sans référence de navire identifiée au 14/08/2026. Citée par le GICAN parmi les équipementiers du levier hydrogène thermique.",
-   "sources": [
-    "https://www.solutionf.com/en/hydrogen-combustion-engine/",
-    "https://hydrogentoday.info/gck-moteur-hydrogene/"
-   ],
-   "navires_equipes": [],
-   "contact": {
-    "web": null,
-    "telephone": null,
-    "adresse": "299 allée du Verdon, 13770 Venelles, France"
-   },
-   "contact_source": null,
-   "contact_maj": "2026-08-15"
-  },
-  {
-   "id": "eq-symbio",
-   "nom": "Symbio",
-   "raison_sociale": "Symbio (ex-Symbio FCell)",
-   "ville": "Saint-Fons",
-   "region": "Auvergne-Rhône-Alpes",
-   "pays": "France",
-   "lat": 45.706,
-   "lon": 4.855,
-   "geo_precision": "ville",
-   "levier": "piles-a-combustible",
-   "levier_libelle": "Piles à combustible et hydrogène",
-   "produit": "Concepteur et fabricant de systèmes pile à combustible hydrogène. Sous le nom Symbio FCell, la société a fourni les piles du Navibus H2 de Nantes, première navette à pile à combustible homologuée en France. Adapte aujourd'hui sa technologie aux ports et aux navires avec le singapourien Proteus, solution modulaire visant navires côtiers, navires de service offshore et bateaux fluviaux.",
+   "levier": "velique",
+   "levier_libelle": "Propulsion vélique",
+   "produit": "Aile de propulsion vélique gonflable pour navires, développée par le groupe Michelin. Modèle W170 de 170 metres carres. L'aile se gonfle pour se deployer et se degonfle pour s'effacer, ce qui autorise le passage sous les ponts et les manoeuvres portuaires. Atelier d'assemblage de 1 000 metres carres installe dans l'ancienne usine Michelin de Vannes, dans le Morbihan ; activites commerciales a Nantes.",
    "confiance": "haute",
-   "note": null,
+   "note": "Premier contrat commercial signe avec la Direction generale des affaires maritimes, de la peche et de l'aquaculture (DGAMPA). La deuxieme aile W170 equipera le patrouilleur des affaires maritimes nouvelle generation, environ 54 metres, en construction chez Socarenam a Boulogne-sur-Mer, deja fiche dans cette base. La premiere aile est destinee a un navire en retrofit.",
    "sources": [
-    "https://www.avem.fr/2017/08/03/une-navette-fluviale-hydrogene-a-nantes-avec-symbio-fcell-et-navalu/",
-    "https://www.h2-mobile.fr/actus/pile-hydrogene-symbio-premier-projet-maritime/",
-    "https://www.symbio.one/en/legal-statements/"
+    "https://www.michelin.com/en/publications/group/first-commercial-contract-michelin-wisamo-wingsail-and-french-directorate-general-for-maritime-affairs/",
+    "https://www.meretmarine.com/fr/construction-navale/velique-wisamo-debute-l-assemblage-de-sa-premiere-aile-de-170-m2",
+    "https://www.meretmarine.com/fr/marine-marchande/wisamo-a-vannes-la-start-de-michelin-assemble-sa-premiere-voile-gonflable"
    ],
    "navires_equipes": [
-    "Navibus H2 / Jules Verne 2 (projet Navhybus)"
-   ],
-   "contact": {
-    "web": "https://www.symbio.one",
-    "telephone": "+33 9 72 64 15 33",
-    "adresse": "SYMPHONHY, 10 rue Specia, 69190 Saint-Fons, France"
-   },
-   "contact_source": "https://www.symbio.one/en/legal-statements/",
-   "contact_maj": "2026-08-15"
-  },
-  {
-   "id": "eq-bluefins",
-   "nom": "Bluefins",
-   "raison_sociale": "Bluefins",
-   "ville": "Brest",
-   "region": "Bretagne",
-   "pays": "France",
-   "lat": 48.39,
-   "lon": -4.486,
-   "geo_precision": "ville",
-   "levier": "foils",
-   "levier_libelle": "Foils et sustentation",
-   "produit": "Start-up fondée en 2021 par l'architecte naval et ingénieur hydrodynamicien Olivier Giusti, incubée par l'Ifremer. Appendice inspiré de la nageoire de baleine, conçu avec l'Ifremer, transformant l'énergie de houle en énergie mécanique de propulsion. Objectif annoncé jusqu'à 20% d'économie sur grands navires. Foil assemblé à Brest, installation prévue sur le TSM Alizé.",
-   "confiance": "haute",
-   "note": "Le levier exploite l'énergie de houle : peu pertinent sur les traversées abritées (estuaires, rades, passages d'eau) qui constituent l'essentiel de la flotte côtière à passagers.",
-   "sources": [
-    "https://www.meretmarine.com/fr/construction-navale/bluefins-a-assemble-a-brest-son-foil-de-propulsion-et-va-l-installer-sur-le-tsm-alize",
-    "https://www.actunautique.com/2021/03/un-foil-nageoire-de-baleine-pour-reduire-la-consommation-d-energie-des-navires.html"
-   ],
-   "navires_equipes": [],
-   "contact": {
-    "web": null,
-    "telephone": null,
-    "adresse": "130 cours Aimé Césaire, 29000 Brest, France"
-   },
-   "contact_source": null,
-   "contact_maj": "2026-08-15"
-  },
-  {
-   "id": "eq-nautix",
-   "nom": "Nautix",
-   "raison_sociale": "Nautix",
-   "ville": "Guidel",
-   "region": "Bretagne",
-   "pays": "France",
-   "lat": 47.789,
-   "lon": -3.49,
-   "geo_precision": "ville",
-   "levier": "revetements",
-   "levier_libelle": "Revêtements et peintures de carène",
-   "produit": "Fabricant français de peintures marines créé en 1980, développement, formulation et fabrication en France à Guidel. Antifoulings professionnels, laques, primaires, revêtements antidérapants. Donnée publiée par le fabricant : une carène encrassée génère une surconsommation de carburant de 5 à 20% selon le navire et le profil de navigation.",
-   "confiance": "haute",
-   "note": null,
-   "sources": [
-    "https://www.nautix.com/",
-    "https://www.nautix.com/antifouling-consommation-de-carburant/",
-    "https://www.nautix.com/mentions-legales/"
-   ],
-   "navires_equipes": [],
-   "contact": {
-    "web": "https://www.nautix.com",
-    "telephone": null,
-    "adresse": "Parc d'activités des Cinq Chemins, 24 rue Nicolas Appert, 56520 Guidel, France"
-   },
-   "contact_source": "https://www.nautix.com/mentions-legales/",
-   "contact_maj": "2026-08-15"
-  },
-  {
-   "id": "eq-enogia",
-   "nom": "Enogia",
-   "raison_sociale": "Enogia",
-   "ville": "Marseille",
-   "region": "Provence-Alpes-Côte d'Azur",
-   "pays": "France",
-   "lat": 43.296,
-   "lon": 5.37,
-   "geo_precision": "ville",
-   "levier": "recuperation-chaleur",
-   "levier_libelle": "Récupération de chaleur (ORC)",
-   "produit": "PME marseillaise spécialiste du cycle organique de Rankine, modules compacts de 10 à 180 kW convertissant la chaleur fatale des moteurs et des circuits de refroidissement en électricité.",
-   "confiance": "haute",
-   "note": "Réserve à connaître avant tout usage du levier : le consortium réuni par VNF avec Enogia, l'IFPEN et Naviwatt, sur le navire d'essai Eridan (110 m), conclut que l'intégration d'un ORC en RÉTROFIT de bateaux existants ne semble pas pertinente (coût lié au déplacement du moteur, absence de solution du marché pour l'injection directe sur ligne d'arbre). Seule application jugée viable, le bateau hybride électrique neuf.",
-   "sources": [
-    "https://enogia.com/en/en-orc/",
-    "https://www.vnf.fr/vnf/dossiers-actualitess/recuperation-de-chaleur-orc-les-conditions-restrictives-pour-un-deploiement-dans-le-secteur-fluvial/",
-    "https://enogia.com/mentions-legales/"
-   ],
-   "navires_equipes": [],
-   "contact": {
-    "web": "https://enogia.com",
-    "telephone": "+33 4 84 25 60 17",
-    "adresse": "43 avenue de Boisbaudran, 13015 Marseille, France"
-   },
-   "contact_source": "https://enogia.com/mentions-legales/",
-   "contact_maj": "2026-08-15"
-  },
-  {
-   "id": "eq-solar-cloth",
-   "nom": "Solar Cloth",
-   "raison_sociale": "Solar Cloth System",
-   "ville": "Cannes",
-   "region": "Provence-Alpes-Côte d'Azur",
-   "pays": "France",
-   "lat": 43.552,
-   "lon": 7.017,
-   "geo_precision": "ville",
-   "levier": "solaire",
-   "levier_libelle": "Solaire embarqué",
-   "produit": "Panneaux photovoltaïques souples, légers et résistants en technologie CIGS sans verre, films de 25 à 65 microns intégrés à des textiles renforcés de fibres techniques. Conçus pour les cas où le poids, l'ombrage, les formes complexes, les vibrations et les chocs rendent le photovoltaïque classique inapplicable.",
-   "confiance": "moyenne",
-   "note": "Références identifiées en course au large (Vendée Globe, Ultim, IMOCA). Aucune référence sur navire côtier à passagers identifiée au 14/08/2026.",
-   "sources": [
-    "https://www.solar-cloth.fr/",
-    "https://www.solar-cloth.fr/voiles-solaires-navires/"
-   ],
-   "navires_equipes": [],
-   "contact": {
-    "web": null,
-    "telephone": null,
-    "adresse": "141 avenue Jean Mermoz, 06210 Mandelieu-la-Napoule, France"
-   },
-   "contact_source": null,
-   "contact_maj": "2026-08-15"
+    {
+     "nom": "Patrouilleur DGAMPA (remplacement de l'Iris)",
+     "chantier": "Socarenam",
+     "detail": "Aile gonflable W170 de 170 metres carres, deuxieme exemplaire assemble a Vannes. Livraison du navire prevue au second semestre 2027.",
+     "source": "https://www.meretmarine.com/fr/construction-navale/velique-wisamo-debute-l-assemblage-de-sa-premiere-aile-de-170-m2"
+    }
+   ]
   }
  ],
  "bureaux_etudes": [
