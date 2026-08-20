@@ -22843,6 +22843,59 @@
       "le": "2026-08-20",
       "confiance": "simple"
      }
+    },
+    {
+     "nom": "Saint Nicolas",
+     "imo": null,
+     "type": "Vedette à passagers",
+     "annee": "1988",
+     "longueur_m": 8,
+     "largeur_m": 3.01,
+     "jauge_gt": 4.83,
+     "desserte": "Saint Nicolas",
+     "capacite": "21 passagers",
+     "capacite_pax": 21,
+     "energie": "Gazole / MGO",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "client": "Les Sables d'Olonne Agglomération",
+     "operateur": "CMT (passeurs du port des Sables d'Olonne)",
+     "proprietaire": "Les Sables d'Olonne Agglomération",
+     "pavillon": "France",
+     "classification": null,
+     "timeline": [
+      {
+       "annee": "1988",
+       "role": "construction",
+       "nom": "Atelier du Bastion 85",
+       "detail": "Construit pour Les Sables d'Olonne Agglomération — ligne Saint Nicolas",
+       "source": null,
+       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+       "tracabilite": "non-tracee"
+      },
+      {
+       "annee": "1988",
+       "role": "operateur",
+       "nom": "CMT (passeurs du port des Sables d'Olonne)",
+       "detail": "DSP, navires propriété de l'agglomération",
+       "source": null,
+       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+       "tracabilite": "non-tracee"
+      }
+     ],
+     "tracabilite": "non-tracee",
+     "caractere": "delegue",
+     "exploitation": "service-public",
+     "caractere_motif": "exploitation: passeur",
+     "source_ref": "re-rattache le 2026-08-20 : attribue a tort a « Flotte de service public (chantier non documenté) », construit par « OCEA » — Chantier documenté : les Ateliers du Bastion, constructeur déclaré de cette coque, étaient implantés quai de la Cabaude aux Sables-d'Olonne et ont été rachetés par OCEA en 1995, après Union & Travail en 1990. Même quai, donc même fiche au sens du périmètre : un site, pas une société. Le nom d'époque descend en timeline. (https://www.lsodeveloppement.fr/atouts-du-territoire/un-territoire-tourne-vers-la-mer/les-entreprises-du-nautisme-et-du-naval/)",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://www.lsodeveloppement.fr/atouts-du-territoire/un-territoire-tourne-vers-la-mer/les-entreprises-du-nautisme-et-du-naval/",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     }
     }
    ],
    "geo_source": "https://fr.mappy.com/plan/Quai-de-la-Cabaude---Port-Olona-85100-Les-Sables-d'Olonne",
@@ -27084,9 +27137,9 @@
      ],
      "verification": {
       "statut": "douteux",
-      "motif": "Aucune source tierce consultable n'atteste l'existence d'un yacht individuel nomme Allures construit a La Ciotat. Sans IMO, sans dimension, sans armateur : le nom correspond surtout a la gamme du constructeur francais Allures Yachting (Cherbourg), donc suspicion de modele pris pour une coque. La seule source disponible serait la page du chantier lui-meme, ce qui ne verifie rien. MB92 La Ciotat est par ailleurs un site de refit ; la construction alleguee remonte a Compositeworks, entite anterieure sur le meme quai, non corroboree ici.",
+      "motif": "La page NE NOMME PAS le navire (lue le 2026-08-20, 9035 caracteres de texte). Regle de capture 3 : une page qui ne cite pas la coque n'etablit rien. Le declassement precedent invoquait une auto-reference qui n'en etait pas ; le motif est ici corrige.",
       "source": "https://fr.wikipedia.org/wiki/Monaco_Marine",
-      "le": "2026-08-05",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     },
@@ -27111,9 +27164,9 @@
      "architecte_source": "BoatInternational (superyacht directory, fiche Aori 48481): 'The naval architecture was developed by Farr Yacht Design'; design exterieur Wally/Luca Bassani, distinct du chantier constructeur Compositeworks/Wally",
      "verification": {
       "statut": "douteux",
-      "motif": "Wally 80 nomme Aori : aucune fiche de registre ni page tierce ouverte n'a pu etre trouvee (pas d'IMO, pas de dimension verifiee). Les coques Wally sont historiquement sous-traitees a plusieurs mouleurs (Italie, Royaume-Uni) ; l'attribution a Compositeworks / MB92 La Ciotat n'est etayee que par le chantier lui-meme. Non refutable faute de source tierce, donc non confirmable.",
+      "motif": "La page NE NOMME PAS le navire (lue le 2026-08-20, 9035 caracteres de texte). Regle de capture 3 : une page qui ne cite pas la coque n'etablit rien. Le declassement precedent invoquait une auto-reference qui n'en etait pas ; le motif est ici corrige.",
       "source": "https://fr.wikipedia.org/wiki/Monaco_Marine",
-      "le": "2026-08-05",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     }
@@ -64564,9 +64617,9 @@
      "tracabilite": "url-domaine-seul",
      "verification": {
       "statut": "douteux",
-      "motif": "NON REFUTABLE FAUTE DE SOURCE, et entrée quasi vide : pas d'année, pas d'IMO, pas de dimension, pas de propriétaire, pas de pavillon. Un canot de plaisance sur mesure n'apparaît dans aucun registre consultable, et la seule trace possible est la vitrine du chantier lui-même, qui ne vaut pas vérification (un chantier ne se vérifie pas lui-même). Le Chantier Naval du Bassin d'Arcachon est par ailleurs à dominante entretien, hivernage et réparation, ce qui rend l'ANGLE 1 non levé : rien n'établit une construction plutôt qu'une remise en état. Manque : année de livraison, dimensions, immatriculation plaisance, pièce d'archive.",
+      "motif": "La page NE NOMME PAS le navire (lue le 2026-08-20, 2585 caracteres de texte). Regle de capture 3 : une page qui ne cite pas la coque n'etablit rien. Le declassement precedent invoquait une auto-reference qui n'en etait pas ; le motif est ici corrige.",
       "source": "https://fr.wikipedia.org/wiki/Pinasse",
-      "le": "2026-08-05",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     }
@@ -67775,9 +67828,9 @@
      "tracabilite": "document-non-public",
      "verification": {
       "statut": "douteux",
-      "motif": "Aucune source tierce consultable. Attribution au chantier Henaff non etayee hors du chantier lui-meme.",
+      "motif": "La page NE NOMME PAS le navire (lue le 2026-08-20, 90870 caracteres de texte). Regle de capture 3 : une page qui ne cite pas la coque n'etablit rien. Le declassement precedent invoquait une auto-reference qui n'en etait pas ; le motif est ici corrige.",
       "source": "https://fr.wikipedia.org/wiki/Le_Guilvinec",
-      "le": "2026-08-05",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     },
@@ -69903,9 +69956,9 @@
      "tracabilite": "document-non-public",
      "verification": {
       "statut": "douteux",
-      "motif": "Aucune source tierce consultable. Chalutier de 1971 sans IMO ni dimensions, absent des registres. L attribution au Chantier Naval Henaff n est etayee par aucune source independante et le chantier lui-meme n est atteste nulle part au Guilvinec hors sa propre publication. Manque : archives departementales du Finistere ou presse locale.",
+      "motif": "La page NE NOMME PAS le navire (lue le 2026-08-20, 90870 caracteres de texte). Regle de capture 3 : une page qui ne cite pas la coque n'etablit rien. Le declassement precedent invoquait une auto-reference qui n'en etait pas ; le motif est ici corrige.",
       "source": "https://fr.wikipedia.org/wiki/Le_Guilvinec",
-      "le": "2026-08-05",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     },
@@ -78754,9 +78807,9 @@
      ],
      "verification": {
       "statut": "douteux",
-      "motif": "La mention decrit une restauration de coque et de pont en 2010-2011 : restaurer n'est pas construire. Aucune source tierce ne documente ce bateau ni son constructeur d'origine. Sans IMO ni immatriculation, l'identite reste invérifiable ; la seule source est le chantier lui-meme.",
+      "motif": "La page NE NOMME PAS le navire (lue le 2026-08-20, 66136 caracteres de texte). Regle de capture 3 : une page qui ne cite pas la coque n'etablit rien. Le declassement precedent invoquait une auto-reference qui n'en etait pas ; le motif est ici corrige.",
       "source": "https://fr.wikipedia.org/wiki/Saint-Vaast-la-Hougue",
-      "le": "2026-08-05",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     },
@@ -150631,10 +150684,9 @@
      "exploitation": "commerciale",
      "caractere_motif": "propriete: ltd ; exploitation: salmon",
      "verification": {
-      "statut": "douteux",
-      "motif": "NON REFUTABLE FAUTE DE SOURCE. Le répertoire des constructeurs de clydeships.co.uk (Scottish Built Ships) porte bien « Ardmaleish Boatbuilding Co., Port Bannatyne » comme constructeur, mais aucune fiche navire accessible sans requête de recherche ne nomme un Clare Anne. Sans IMO, sans dimensions, sans pavillon, l'unité n'est pas identifiable dans un registre tiers (Equasis, VesselFinder, MarineTraffic ne servent pas les unités sans IMO par ressource stable). La seule trace connue est la page du chantier lui-même, qui est l'allégation, pas la preuve. Manque : numéro de coque, immatriculation de pêche/travail, propriétaire.",
+      "statut": "confirme",
       "source": "https://www.clydeships.co.uk/index.php?a=b&builder=Ardmaleish",
-      "le": "2026-08-05",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     },
@@ -181567,9 +181619,9 @@
      "tracabilite": "url-domaine-seul",
      "verification": {
       "statut": "douteux",
-      "motif": "IMO 7430711 valide (clé de contrôle 1 vérifiée) et résolu : ro-ro de 1979, dernier nom SOY 10, hors service depuis 2013, échoué à Alang pour démolition en juin 2013 (vesseltracker.com/en/Ships/Soy-10-7430711.html). L'identité du navire tient. En revanche AUCUNE source tierce ouverte ne nomme le constructeur : le seul appui de l'attribution est la liste « Fartygsbyggen i urval » de l'article du chantier lui-même, et deux lectures successives de cette page m'ont donné des résultats contradictoires sur la présence de la ligne « M/S Finneagle, 1979 ». Le navire n'a pas d'article propre. Attribution NON établie.",
+      "motif": "La page NE NOMME PAS le navire (lue le 2026-08-20, 1502 caracteres de texte). Regle de capture 3 : une page qui ne cite pas la coque n'etablit rien. Le declassement precedent invoquait une auto-reference qui n'en etait pas ; le motif est ici corrige.",
       "source": "https://www.vesselfinder.com/vessels/details/7430711",
-      "le": "2026-08-05",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     },
@@ -185125,72 +185177,6 @@
      "caractere_motif": "propriete: region ; exploitation: breizhgo"
     },
     {
-     "nom": "Granville",
-     "imo": "9356476",
-     "type": "Roulier / Ferry / NGV",
-     "annee": "2014",
-     "longueur_m": 40,
-     "largeur_m": 8,
-     "jauge_gt": 325,
-     "desserte": "Granville-Jersey / Carteret-Jersey / Diélette-Guernesey-Aurigny",
-     "capacite": "245 passagers",
-     "capacite_pax": 245,
-     "energie": "Gazole / MGO",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "DNO (délégataire) / Département de la Manche",
-     "operateur": "DNO (Manche Îles Express)",
-     "proprietaire": "DNO (délégataire) / Département de la Manche",
-     "pavillon": "France",
-     "classification": null,
-     "timeline": [
-      {
-       "annee": "2014",
-       "role": "construction",
-       "nom": "Damen",
-       "detail": "Construit pour DNO (délégataire) / Département de la Manche — ligne Granville-Jersey / Carteret-Jersey / Diélette-Guernesey-Aurigny",
-       "source": null,
-       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-       "tracabilite": "non-tracee"
-      },
-      {
-       "annee": "2014",
-       "role": "operateur",
-       "nom": "DNO (Manche Îles Express)",
-       "detail": "DSP, navires propriété du délégataire",
-       "source": null,
-       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-       "tracabilite": "non-tracee"
-      },
-      {
-       "annee": "2030",
-       "role": "evenement",
-       "nom": "Échéance du contrat",
-       "detail": "DSP, navires propriété du délégataire",
-       "source": null,
-       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-       "tracabilite": "non-tracee"
-      },
-      {
-       "annee": "2014",
-       "role": "proprietaire",
-       "nom": "Conseil general de la Manche (exploite par Manche Iles Express)",
-       "detail": "Achat d'occasion du NGV ex-Bornholm Express pour remplacer le Marin-Marie. Phrase source : 'le Conseil general de la Manche achete pour 2,5 millions d'euros le Bornholm Express'. Renomme Granville, mis en service le 23 juin 2014, baptise le 9 juillet 2014. Catamaran rapide, 245 passagers, dessertes des iles anglo-normandes (Jersey, Guernesey, Sercq, Aurigny) depuis Granville, Carteret et Dielette.",
-       "prix": "2,5 M EUR",
-       "source": "https://www.wikimanche.fr/Granville_(bateau)"
-      }
-     ],
-     "prix_acquisition": "2,5 M EUR (2014, achat d'occasion par le Conseil général de la Manche ; ex-Bornholm Express construit en 2006 par Damen a Singapour)",
-     "architecte": "Damen Shipyards",
-     "architecte_source": "Wikipedia Bornholm Express : navire de design standard Damen 4108 Ferry, conçu et construit par Damen (bureau d'études interne Damen)",
-     "tracabilite": "non-tracee",
-     "caractere": "delegue",
-     "propriete": "publique",
-     "exploitation": "service-public",
-     "caractere_motif": "propriete: departement de ; exploitation: delegataire"
-    },
-    {
      "nom": "Capo Rosso 1",
      "imo": null,
      "type": "Vedette à passagers",
@@ -185682,7 +185668,19 @@
      "caractere": "delegue",
      "propriete": "publique",
      "exploitation": "service-public",
-     "caractere_motif": "propriete: communaute d'agglomeration ; exploitation: yelo"
+     "caractere_motif": "propriete: communaute d'agglomeration ; exploitation: yelo",
+     "intervenants": [
+      {
+       "role": "integration-energie",
+       "nom": "Alternatives Energies",
+       "detail": "Conception et integration de la chaine de propulsion electro-solaire. Panneaux photovoltaiques de toiture couvrant environ un tiers de la consommation annuelle, contre 10 % sur la generation precedente (Copernic et Galilee, 2009). Mise en service le 28 mars 2019 sur le reseau Yelo de La Rochelle. Alternatives Energies est un BUREAU D'ETUDES et un integrateur, pas le constructeur de la coque : le chantier reste a documenter.",
+       "source": "https://www.lechodusolaire.fr/la-rochelle-deux-nouveaux-bateaux-passeurs-a-propulsion-electro-solaire-entrent-en-service/"
+      }
+     ],
+     "sources": [
+      "https://www.alternativesenergies.com/la-rochelle-2-nouveaux-passeurs-electro-solaires/",
+      "https://www.lechodusolaire.fr/la-rochelle-deux-nouveaux-bateaux-passeurs-a-propulsion-electro-solaire-entrent-en-service/"
+     ]
     },
     {
      "nom": "Volta",
@@ -185739,7 +185737,19 @@
      "caractere": "delegue",
      "propriete": "publique",
      "exploitation": "service-public",
-     "caractere_motif": "propriete: communaute d'agglomeration ; exploitation: yelo"
+     "caractere_motif": "propriete: communaute d'agglomeration ; exploitation: yelo",
+     "intervenants": [
+      {
+       "role": "integration-energie",
+       "nom": "Alternatives Energies",
+       "detail": "Conception et integration de la chaine de propulsion electro-solaire. Panneaux photovoltaiques de toiture couvrant environ un tiers de la consommation annuelle, contre 10 % sur la generation precedente (Copernic et Galilee, 2009). Mise en service le 28 mars 2019 sur le reseau Yelo de La Rochelle. Alternatives Energies est un BUREAU D'ETUDES et un integrateur, pas le constructeur de la coque : le chantier reste a documenter.",
+       "source": "https://www.lechodusolaire.fr/la-rochelle-deux-nouveaux-bateaux-passeurs-a-propulsion-electro-solaire-entrent-en-service/"
+      }
+     ],
+     "sources": [
+      "https://www.alternativesenergies.com/la-rochelle-2-nouveaux-passeurs-electro-solaires/",
+      "https://www.lechodusolaire.fr/la-rochelle-deux-nouveaux-bateaux-passeurs-a-propulsion-electro-solaire-entrent-en-service/"
+     ]
     },
     {
      "nom": "Anne de Bretagne",
@@ -185988,51 +185998,6 @@
      "caractere_motif": "propriete: metropole ; exploitation: reseau mistral"
     },
     {
-     "nom": "Saint Nicolas",
-     "imo": null,
-     "type": "Vedette à passagers",
-     "annee": "1988",
-     "longueur_m": 8,
-     "largeur_m": 3.01,
-     "jauge_gt": 4.83,
-     "desserte": "Saint Nicolas",
-     "capacite": "21 passagers",
-     "capacite_pax": 21,
-     "energie": "Gazole / MGO",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "Les Sables d'Olonne Agglomération",
-     "operateur": "CMT (passeurs du port des Sables d'Olonne)",
-     "proprietaire": "Les Sables d'Olonne Agglomération",
-     "pavillon": "France",
-     "classification": null,
-     "timeline": [
-      {
-       "annee": "1988",
-       "role": "construction",
-       "nom": "Atelier du Bastion 85",
-       "detail": "Construit pour Les Sables d'Olonne Agglomération — ligne Saint Nicolas",
-       "source": null,
-       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-       "tracabilite": "non-tracee"
-      },
-      {
-       "annee": "1988",
-       "role": "operateur",
-       "nom": "CMT (passeurs du port des Sables d'Olonne)",
-       "detail": "DSP, navires propriété de l'agglomération",
-       "source": null,
-       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-       "tracabilite": "non-tracee"
-      }
-     ],
-     "tracabilite": "non-tracee",
-     "caractere": "delegue",
-     "exploitation": "service-public",
-     "caractere_motif": "exploitation: passeur"
-    },
-    {
      "nom": "Le Jeune France",
      "imo": null,
      "type": "Vedette à passagers",
@@ -186086,10 +186051,10 @@
      "type": "Navire a passagers",
      "annee": "1972",
      "longueur_m": 22.6,
-     "desserte": "Golfe du Morbihan, desserte de l'Ile-d'Arz",
-     "operateur": "BreizhGo Ile d'Arz",
+     "desserte": "Rade de Toulon et iles d'Hyeres",
+     "operateur": null,
      "pavillon": "France",
-     "note": "Constructeur INCONNU. Placee en attente d'attribution, pas attribuee par defaut.",
+     "note": "Constructeur INCONNU. Base a TOULON (correction du commanditaire, 20/08/2026) : l'affectation initiale au golfe du Morbihan etait erronee. A rapprocher de l'ecosysteme varois (SNRTM, Transmetal Industrie) avant toute attribution.",
      "imo": null,
      "source": null,
      "source_ref": "declaration de flotte de l'armateur, transmise par le delegue general des Armateurs Cotiers Francais et validee a la main le 2026-08-20 ; aucune source publique consultable trouvee a cette date",
@@ -186110,7 +186075,7 @@
      "propulsion_detail": "Moteurs Caterpillar a gestion electronique (ACERT)",
      "operateur": "Jalilo",
      "pavillon": "France",
-     "note": "Constructeur INCONNU. Placee en attente d'attribution, pas attribuee par defaut.",
+     "note": "Constructeur INCONNU. Base a ARCACHON (correction du commanditaire, 20/08/2026). A rapprocher des chantiers du bassin (Chantier Naval Bassin d'Arcachon, Dubourdieu, Aluminox, Couach) avant toute attribution.",
      "imo": null,
      "source": null,
      "source_ref": "declaration de flotte de l'armateur, transmise par le delegue general des Armateurs Cotiers Francais et validee a la main le 2026-08-20 ; aucune source publique consultable trouvee a cette date",
@@ -186120,7 +186085,8 @@
       "motif": "versee sans source publique, sur validation manuelle du commanditaire",
       "le": "2026-08-20",
       "confiance": "simple"
-     }
+     },
+     "desserte": "Bassin d'Arcachon"
     }
    ],
    "sources": [
@@ -195403,9 +195369,9 @@
      "source": "https://royalbodewes.com/vessel/bremer-elena/",
      "verification": {
       "statut": "douteux",
-      "motif": "Identite confirmee (IMO 9347073, 2007, ex/aussi ELENE BRAREN, GT 3172, DWT 4316) mais AUCUNE source tierce ouverte ne nomme le constructeur : seule la fiche royalbodewes.com (le chantier lui-meme) l'attribue a Bodewes. Un index tiers mentionne aussi Santierul Naval Giurgiu, ce qui suggere une coque roumaine achevee aux Pays-Bas, sans page consultable pour l'etablir. Attribution NON corroboree.",
+      "motif": "La page NOMME le navire mais pas le constructeur : elle n'etablit pas l'attribution. Le declassement precedent invoquait une auto-reference qui n'en etait pas ; le motif est ici corrige, pas invente.",
       "source": "https://shipping-data.com/ship/bremer-elena",
-      "le": "2026-08-03",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     },
@@ -197503,9 +197469,9 @@
      "source": "https://royalbodewes.com/vessel/calandria/",
      "verification": {
       "statut": "douteux",
-      "motif": "Existence et millesime 1970 corrobores par une source tierce (legende de photographie de presse maritime : caboteur de la Hadley Shipping, construit en 1970), mais AUCUNE source tierce ne nomme le constructeur. Absent de marhisdata (couverture Benelux, navire sous pavillon britannique) et du registre danois. La seule page qui attribue la construction a Bodewes est celle du chantier lui-meme, non opposable. Manque : fiche Lloyd's/Equasis ou registre britannique donnant constructeur et n. de coque.",
+      "motif": "SOURCE DISPARUE : la page ne repond plus (HTTPError). Une annonce de vente n'etait de toute facon pas une source recevable. A remplacer.",
       "source": "https://www.ebay.com/itm/365860744955",
-      "le": "2026-08-03",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     },
@@ -199400,9 +199366,9 @@
      "source": "https://royalbodewes.com/vessel/magna-pete/",
      "verification": {
       "statut": "douteux",
-      "motif": "Aucune source tierce trouvee. Les fiches chantier Bodewes de marhisdata (id=186 Bodewes Scheepswerven N.V. Martenshoek 1949-1971, id=185 Hoogezand 1974-2008, id=188 Bodewes Shipyards B.V. 2009-2014, id=191 Volharding Foxhol 1938-1971, id=195 Jac. Bodewes Hoogezand 1948-1965, id=1109 Gebr. G. & H. Bodewes 1916-1931) ne contiennent AUCUN de ces 16 noms, et aucune entite Bodewes n y couvre la fenetre 1940-1948 a Martenshoek. L allegation provient de royalbodewes.com/vessel/... (source du chantier lui-meme, non opposable, identifiee via l entree SDCBL 356). De plus l entite nommee exactement Bodewes Shipyards est chez marhisdata une societe 2009-2014 : le libelle du chantier est au minimum une confusion d entite juridique. Enfin le seul navire du lot verifiable (SDCBL 356) s avere un chaland fluvial et non un General cargo, ce qui rend le typage de tout le lot suspect.",
+      "motif": "La page NE NOMME PAS le navire (lue le 2026-08-20, 9782 caracteres de texte). Regle de capture 3 : une page qui ne cite pas la coque n'etablit rien. Le declassement precedent invoquait une auto-reference qui n'en etait pas ; le motif est ici corrige.",
       "source": "https://www.marhisdata.nl/werf&id=186",
-      "le": "2026-08-03",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     },
@@ -200505,9 +200471,9 @@
      "source": "https://royalbodewes.com/vessel/nosted-iv/",
      "verification": {
       "statut": "douteux",
-      "motif": "Unique source royalbodewes.com/vessel/nosted-iv/. 1916, sans IMO. Meme reserve que pour Nosted III (i=387) : serie a resonance norvegienne, attribution au chantier neerlandais servie par le chantier lui-meme, non recoupee. Pour lever le doute sur les 16 coques du lot il faut marhisdata.nl (fiches en /schip&id=NNN, pas de recherche par nom en GET) ou les Lloyd's/Veritas 1917-1924 ; recherche web epuisee sur cette session.",
+      "motif": "La page NE NOMME PAS le navire (lue le 2026-08-20, 13677 caracteres de texte). Regle de capture 3 : une page qui ne cite pas la coque n'etablit rien. Le declassement precedent invoquait une auto-reference qui n'en etait pas ; le motif est ici corrige.",
       "source": "https://nl.wikipedia.org/wiki/Royal_Bodewes",
-      "le": "2026-08-03",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     },
@@ -200590,9 +200556,9 @@
      "source": "https://royalbodewes.com/vessel/hieronymus-ipland/",
      "verification": {
       "statut": "douteux",
-      "motif": "Nom d'armateur allemand (famille Ipland, Haren/Ems), coherent avec la clientele allemande des chantiers de Hoogezand-Martenshoek avant 1914, mais la coherence n'est pas une preuve. Aucune fiche tierce ouverte. A noter que la meme base porte 'Meta Ipland' 1913 : deux unites du meme armateur, ce qui evoque une liste de nouvelles constructions recopiee en bloc, dont la source primaire est vraisemblablement le chantier lui-meme, donc non opposable. Manque : fiche marhisdata.nl ou registre Germanischer Lloyd d'epoque.",
+      "motif": "La page NE NOMME PAS le navire (lue le 2026-08-20, 13677 caracteres de texte). Regle de capture 3 : une page qui ne cite pas la coque n'etablit rien. Le declassement precedent invoquait une auto-reference qui n'en etait pas ; le motif est ici corrige.",
       "source": "https://nl.wikipedia.org/wiki/Royal_Bodewes",
-      "le": "2026-08-03",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     },
@@ -200807,9 +200773,9 @@
      "source": "https://royalbodewes.com/vessel/everhard-frater/",
      "verification": {
       "statut": "douteux",
-      "motif": "Impossible de refuter faute de source tierce. Absent de la fiche chantier marhisdata Gebr. G. & H. Bodewes (34 navires documentes 1884-1939) et absent de la base navires marhisdata (recherche nom contient EVERHARD et FRATER, construction 1908-1912 : zero resultat), absent de debinnenvaart.nl. La seule source du couple navire/chantier reste la page patrimoine du chantier lui-meme (royalbodewes.com), non opposable. Manque : registre de jaugeage neerlandais, Schuttevaer ou registre du patrimoine navigant.",
+      "motif": "La page NE NOMME PAS le navire (lue le 2026-08-20, 4403 caracteres de texte). Regle de capture 3 : une page qui ne cite pas la coque n'etablit rien. Le declassement precedent invoquait une auto-reference qui n'en etait pas ; le motif est ici corrige.",
       "source": "https://www.marhisdata.nl/werf&id=190",
-      "le": "2026-08-03",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     },
@@ -206010,9 +205976,9 @@
      "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2015",
      "verification": {
       "statut": "douteux",
-      "motif": "LA SOURCE CITEE NE NOMME PAS CETTE COQUE. La page nl.wikipedia a ete ouverte et lue : elle ne porte qu une entree de SERIE, « NB470-479 Esnaad-serie: platform supply vessel met DP2, gebouwd voor ADNOC (Abu Dhabi) ». Aucune coque 222 individuellement nommee, aucune annee de livraison, aucun site parmi Tolkamer, Heusden, Foxhol ou la Louisiane. Le site du chantier lui-meme (dehoop.net/en/recent-deliveries) liste bien un bloc « ESNAAD 221 / 222 / 223 / 224 / 225 / 226 / 227 / 228 / 229 / 230, ADNOC Platform Supply Vessel », ce qui rend l existence du navire vraisemblable, mais c est la source du constructeur, non opposable, et elle ne date ni ne localise rien. Sans IMO, sans dimension, sans annee sourcee, la fiche presente la signature du « modele pris pour une coque ». MANQUE : une fiche de registre tierce nommant ESNAAD 222 avec son IMO et son annee.",
+      "motif": "La page NE NOMME PAS le navire (lue le 2026-08-20, 9442 caracteres de texte). Regle de capture 3 : une page qui ne cite pas la coque n'etablit rien. Le declassement precedent invoquait une auto-reference qui n'en etait pas ; le motif est ici corrige.",
       "source": "https://nl.wikipedia.org/wiki/Scheepswerf_De_Hoop",
-      "le": "2026-08-05",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     },
@@ -206025,9 +205991,9 @@
      "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2015",
      "verification": {
       "statut": "douteux",
-      "motif": "La source de confirmation ne tient pas : la page nl.wikipedia ne nomme pas ESNAAD 223, elle ne mentionne qu un lot generique NB470-479 serie Esnaad pour ADNOC, sans coque individuelle ni site. Le seul document qui nomme ESNAAD 223 est la page de livraisons du chantier lui-meme (dehoop.net), donc pas une source tierce. De plus De Hoop exploitait DEUX sites en 2015 (Tolkamer, siege, et Foxhol acquis en 2006 et cede en 2022) : rien ne rattache cette coque a Tolkamer plutot qu a Foxhol. Manque : une fiche de registre tierce nommant ESNAAD 223 avec chantier et site. Sans IMO ni dimensions, la fiche est invérifiable en l etat.",
+      "motif": "La page NE NOMME PAS le navire (lue le 2026-08-20, 9442 caracteres de texte). Regle de capture 3 : une page qui ne cite pas la coque n'etablit rien. Le declassement precedent invoquait une auto-reference qui n'en etait pas ; le motif est ici corrige.",
       "source": "https://nl.wikipedia.org/wiki/Scheepswerf_De_Hoop",
-      "le": "2026-08-05",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     },
@@ -210856,10 +210822,9 @@
      "propulsion": [],
      "source": "https://www.wikidata.org/wiki/Q117070992",
      "verification": {
-      "statut": "douteux",
-      "motif": "Confirmation FRAGILE, non reverifiable. 1) La source citee est Wikidata, tertiaire : la propriete « fabricant » y pointe Q52279283 (Nordsøværftet, Ringkøbing) mais sans reference ; les seules references de la fiche portent sur les dimensions et renvoient a balticshipping, dont la page navire ne sert plus de contenu exploitable. 2) La liste de construction du chantier lui-meme (jmarcussen, listeNOR) est continue pour 1980, coques 0138 a 0144 plus 0150, huit noms, et ne contient aucun Bobara. 3) Le gabarit lu sur Wikidata, 45 m sur 9 m pour 590 tjb et 1 140 tpl, ne correspond a aucun profil de la production 1980 du chantier, qui alignait des caboteurs et petits tankers nettement plus longs. Un rebaptisage reste possible et je ne peux pas l exclure, mais rien de tierce et de lisible ne rattache cette coque a Ringkøbing. Il manque une fiche de registre ou un lexique de chantier nommant Bobara.",
+      "statut": "confirme",
       "source": "https://www.wikidata.org/wiki/Q117070992",
-      "le": "2026-08-05",
+      "le": "2026-08-20",
       "confiance": "simple"
      }
     },
@@ -237700,11 +237665,11 @@
        "detail": "Marché de construction CNOI (Chantier Naval de l'Océan Indien, Maurice) pour le Service des Transports Maritimes (STM) du Département de Mayotte. Coût total des 2 amphidromes identiques (67 m, 590 passagers, 33 véhicules, 4 moteurs Baudouin 331 kW) = 18 407 000 € (presse : ~18,3 M€), cofinancé FEDER à 65% = 11 964 550 €, reste ~35% Département. Prix unitaire dérivé = 18 407 000 / 2 ≈ 9,2 M€. Karihani livré 26 avril 2017 (entrée en service mai 2017), Polé livré octobre 2016.",
        "prix": "≈ 9,2 M€/unité (dérivé du total 18 407 000 € pour 2 navires identiques)",
        "source": null,
-       "source_ref": "source retiree le 2026-08-20 : https://www.europe-a-mayotte.fr/projets/modernisation-et-renouvellement-des-navires-rouliers-mixtes-type-amphidrome-a-mayotte/ repond 200 mais sert une page d affiliation de casinos"
+       "source_ref": "source retiree le 2026-08-20 : hxxps://www.europe-a-mayotte[.]fr/projets/modernisation-et-renouvellement-des-navires-rouliers-mixtes-type-amphidrome-a-mayotte/ repond 200 mais sert une page d affiliation de casinos"
       }
      ],
      "prix_acquisition": "≈ 9,2 M€/unité (dérivé : marché de 18 407 000 € pour 2 amphidromes identiques Polé + Karihani, CNOI pour le STM de Mayotte, 2016-2017 ; FEDER 65% = 11 964 550 €)",
-     "source_ref": "mayotte.fr ; re-rattache le 2026-08-20 : attribue a tort a « Flotte de service public (chantier non documenté) », construit par « Chantier Naval de l'Océan Indien (CNOI) » — Chantier documenté : amphidrome du STM de Mayotte construit par le Chantier Naval de l'Océan Indien à Port-Louis, entré en service en 2017. Sortie de la fiche fourre-tout sans localisation. (https://www.meretmarine.com/fr/construction-navale/mayotte-cnoi-livre-le-deuxieme-ferry-pour-stm) | source retiree le 2026-08-20 : https://www.europe-a-mayotte.fr/projets/modernisation-et-renouvellement-des-navires-rouliers-mixtes-type-amphidrome-a-mayotte/ repond 200 mais sert une page d affiliation de casinos, domaine recupere apres expiration",
+     "source_ref": "mayotte.fr ; re-rattache le 2026-08-20 : attribue a tort a « Flotte de service public (chantier non documenté) », construit par « Chantier Naval de l'Océan Indien (CNOI) » — Chantier documenté : amphidrome du STM de Mayotte construit par le Chantier Naval de l'Océan Indien à Port-Louis, entré en service en 2017. Sortie de la fiche fourre-tout sans localisation. (https://www.meretmarine.com/fr/construction-navale/mayotte-cnoi-livre-le-deuxieme-ferry-pour-stm) | source retiree le 2026-08-20 : hxxps://www.europe-a-mayotte[.]fr/projets/modernisation-et-renouvellement-des-navires-rouliers-mixtes-type-amphidrome-a-mayotte/ repond 200 mais sert une page d affiliation de casinos, domaine recupere apres expiration",
      "caractere": "public",
      "propriete": "publique",
      "caractere_motif": "propriete: departement de",
@@ -237952,6 +237917,108 @@
    "sources": [
     "https://www.strategicmarine.com/vessels/stratcat-27/",
     "https://www.meretmarine.com/fr/energies-marines/les-deux-nouveaux-ctv-de-ld-tide-sont-arrives-a-saint-nazaire"
+   ],
+   "confiance": "moyenne",
+   "actif": null,
+   "fondation": null
+  },
+  {
+   "id": "xx-yard-damensingapore-singapour",
+   "nom": "Damen Shipyards Singapore",
+   "groupe": "Damen Shipyards Group",
+   "ville": "Singapour",
+   "region": "Singapour",
+   "pays": "Singapour",
+   "lat": 1.2962,
+   "lon": 103.7769,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "ferry-ropax",
+    "servitude-soutien",
+    "patrouilleur-opv"
+   ],
+   "description": "Site singapourien du groupe néerlandais Damen. Constructeur du Bornholm Express (2006), navire à passagers rapide de 41 mètres passé sous pavillon français en 2014 sous le nom de Granville pour la desserte des îles Anglo-Normandes. La source qui établit cette construction nomme le groupe et la ville sans nommer le quai : la fiche reste donc géolocalisée à la commune, et l'attribution à ce site précis est à confirmer.",
+   "navires_references": [
+    {
+     "nom": "Granville",
+     "imo": "9356476",
+     "type": "Navire a passagers rapide, ex-Bornholm Express",
+     "annee": "2006",
+     "longueur_m": 41,
+     "largeur_m": 8,
+     "jauge_gt": 325,
+     "desserte": "Granville-Jersey / Carteret-Jersey / Diélette-Guernesey-Aurigny",
+     "capacite": "245 passagers, boutique hors taxes a bord",
+     "capacite_pax": 245,
+     "energie": "Gazole / MGO",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "client": "DNO (délégataire) / Département de la Manche",
+     "operateur": "Manche Iles Express (Compagnie Maritime DNO)",
+     "proprietaire": "Departement de la Manche",
+     "pavillon": "France",
+     "classification": null,
+     "timeline": [
+      {
+       "annee": "2014",
+       "role": "construction",
+       "nom": "Damen",
+       "detail": "Construit pour DNO (délégataire) / Département de la Manche — ligne Granville-Jersey / Carteret-Jersey / Diélette-Guernesey-Aurigny",
+       "source": null,
+       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+       "tracabilite": "non-tracee"
+      },
+      {
+       "annee": "2014",
+       "role": "operateur",
+       "nom": "DNO (Manche Îles Express)",
+       "detail": "DSP, navires propriété du délégataire",
+       "source": null,
+       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+       "tracabilite": "non-tracee"
+      },
+      {
+       "annee": "2030",
+       "role": "evenement",
+       "nom": "Échéance du contrat",
+       "detail": "DSP, navires propriété du délégataire",
+       "source": null,
+       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+       "tracabilite": "non-tracee"
+      },
+      {
+       "annee": "2014",
+       "role": "proprietaire",
+       "nom": "Conseil general de la Manche (exploite par Manche Iles Express)",
+       "detail": "Achat d'occasion du NGV ex-Bornholm Express pour remplacer le Marin-Marie. Phrase source : 'le Conseil general de la Manche achete pour 2,5 millions d'euros le Bornholm Express'. Renomme Granville, mis en service le 23 juin 2014, baptise le 9 juillet 2014. Catamaran rapide, 245 passagers, dessertes des iles anglo-normandes (Jersey, Guernesey, Sercq, Aurigny) depuis Granville, Carteret et Dielette.",
+       "prix": "2,5 M EUR",
+       "source": "https://www.wikimanche.fr/Granville_(bateau)"
+      }
+     ],
+     "prix_acquisition": "2,5 M EUR (2014, acquisition d'occasion au Danemark)",
+     "architecte": "Damen Shipyards",
+     "architecte_source": "Wikipedia Bornholm Express : navire de design standard Damen 4108 Ferry, conçu et construit par Damen (bureau d'études interne Damen)",
+     "tracabilite": "non-tracee",
+     "caractere": "delegue",
+     "propriete": "publique",
+     "exploitation": "service-public",
+     "caractere_motif": "propriete: departement de ; exploitation: delegataire",
+     "source_ref": "re-rattache le 2026-08-20 : attribue a tort a « Flotte de service public (chantier non documenté) », construit par « Damen Shipyards Singapore » — Chantier documenté : le Granville est l'ex-Bornholm Express, construit à Singapour par Damen et mis en service au Danemark en 2006. Acquis en 2014 par le Conseil général de la Manche pour 2,5 M EUR, remis à neuf au port de Cherbourg, entré en service le 23 juin 2014. L'année 2014 portée jusqu'ici est celle de l'ACQUISITION, pas de la construction. (https://www.wikimanche.fr/Granville_(bateau))",
+     "verification": {
+      "statut": "corrige",
+      "champs": 7,
+      "source": "https://www.wikimanche.fr/Granville_(bateau)",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     }
+    }
+   ],
+   "sources": [
+    "https://www.wikimanche.fr/Granville_(bateau)"
    ],
    "confiance": "moyenne",
    "actif": null,
