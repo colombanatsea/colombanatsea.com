@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nathalie Julita, psychopraticienne · Direction visuelle et maquette du site</title>
+<meta name="description" content="Restitution de l'atelier du 20 août 2026 : décisions arrêtées, maquette du futur site, palette retenue et éléments restant à fournir.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="author" content="Colomban Monnier">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233E6FA3'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='white' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Jetons de la direction retenue : bleus doux, blanc, formes rondes */
+:root{
+  --encre:#14293F;
+  --bleu:#3E6FA3;
+  --bleu-clair:#7FB0D4;
+  --brume:#E9F1F7;
+  --brume-2:#F5F9FC;
+  --blanc:#FFFFFF;
+  --sable:#F3EFE9;
+  --gris:#5D6B7A;
+  --gris-clair:#DCE4EC;
+  --ombre:0 18px 44px rgba(20,41,63,.10);
+  --ombre-douce:0 8px 22px rgba(20,41,63,.06);
+  --rond:22px;
+  --rond-plein:999px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:16px;line-height:1.65;color:var(--encre);background:var(--blanc);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.5rem}
+.serif{font-family:'Fraunces',Georgia,serif;font-weight:400;line-height:1.15}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* Bandeau de cadrage, couche cabinet hors maquette */
+.cadre-top{background:var(--encre);color:#CFE0EE;padding:.7rem 0;font-size:.78rem}
+.cadre-top .wrap{display:flex;gap:1rem;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.cadre-top strong{color:#fff;font-weight:500}
+
+.entete{padding:4.5rem 0 3.5rem;background:linear-gradient(180deg,var(--brume-2),var(--blanc));border-bottom:1px solid var(--gris-clair)}
+.oeil{font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--bleu);margin-bottom:1rem}
+.entete h1{font-size:clamp(2.1rem,4.6vw,3.4rem)}
+.entete h1 em{font-style:italic;color:var(--bleu)}
+.entete p.chapo{margin-top:1.2rem;max-width:660px;color:var(--gris);font-size:1.06rem}
+
+.sommaire{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--gris-clair)}
+.sommaire .wrap{display:flex;gap:.25rem;overflow-x:auto;scrollbar-width:none}
+.sommaire .wrap::-webkit-scrollbar{display:none}
+.sommaire a{padding:1rem .95rem;text-decoration:none;color:var(--gris);font-size:.86rem;font-weight:500;white-space:nowrap;border-bottom:2px solid transparent;transition:.2s}
+.sommaire a:hover{color:var(--bleu);border-bottom-color:var(--bleu)}
+
+section.bloc{padding:4.5rem 0}
+section.bloc.alt{background:var(--brume-2)}
+.titre-bloc{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:.6rem}
+.sous-titre-bloc{color:var(--gris);max-width:680px;margin-bottom:2.6rem}
+
+.grille{display:grid;gap:1.1rem}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.carte{background:var(--blanc);border:1px solid var(--gris-clair);border-radius:var(--rond);padding:1.5rem 1.6rem;box-shadow:var(--ombre-douce)}
+.carte h3{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bleu);font-weight:600;margin-bottom:.7rem}
+.carte p{font-size:.95rem;color:var(--gris)}
+.carte p strong{color:var(--encre);font-weight:600}
+
+.fenetre{border:1px solid var(--gris-clair);border-radius:var(--rond);overflow:hidden;box-shadow:var(--ombre);background:var(--blanc)}
+.fenetre-barre{display:flex;align-items:center;gap:.5rem;padding:.7rem 1rem;background:var(--brume);border-bottom:1px solid var(--gris-clair)}
+.pastille{width:10px;height:10px;border-radius:50%;background:#C9D6E2}
+.fenetre-url{margin-left:.6rem;font-size:.76rem;color:var(--gris);background:var(--blanc);border-radius:var(--rond-plein);padding:.28rem .9rem;border:1px solid var(--gris-clair)}
+
+/* La maquette */
+.m{font-size:15.5px;color:var(--encre)}
+.m .m-wrap{max-width:900px;margin:0 auto;padding:0 1.8rem}
+.m-nav{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 0;border-bottom:1px solid var(--gris-clair);flex-wrap:wrap;gap:.8rem}
+.m-marque{font-family:'Fraunces',Georgia,serif;font-size:1.15rem}
+.m-marque span{display:block;font-family:'Inter',sans-serif;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bleu);margin-top:.15rem}
+.m-liens{display:flex;gap:1.4rem;font-size:.86rem;color:var(--gris);flex-wrap:wrap}
+.m-hero{display:grid;grid-template-columns:1fr 260px;gap:2.6rem;align-items:center;padding:3.4rem 0 3rem}
+.m-hero h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:400;line-height:1.14}
+.m-hero h1 em{font-style:italic;color:var(--bleu)}
+.m-hero .accroche{margin-top:1.1rem;color:var(--gris);font-size:1.02rem;max-width:460px}
+.m-boutons{display:flex;gap:.7rem;margin-top:1.8rem;flex-wrap:wrap}
+.btn{display:inline-block;border-radius:var(--rond-plein);padding:.8rem 1.7rem;font-size:.9rem;font-weight:500;text-decoration:none;transition:.2s}
+.btn-plein{background:var(--bleu);color:#fff;box-shadow:0 10px 24px rgba(62,111,163,.28)}
+.btn-plein:hover{background:#33608f}
+.btn-vide{border:1px solid var(--bleu-clair);color:var(--bleu)}
+.btn-vide:hover{background:var(--brume)}
+.m-portrait{aspect-ratio:4/5;border-radius:120px 120px 26px 26px;background:linear-gradient(160deg,var(--brume),var(--sable));display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.2rem;border:1px dashed var(--bleu-clair)}
+.m-portrait .ph{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bleu);font-weight:600}
+.m-portrait .ph-note{font-size:.78rem;color:var(--gris);margin-top:.5rem;line-height:1.4}
+
+.m-section{padding:3rem 0;border-top:1px solid var(--gris-clair)}
+.m-section h2{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:1.55rem;margin-bottom:.5rem}
+.m-section .intro{color:var(--gris);max-width:640px;margin-bottom:1.8rem}
+.m-liste{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.m-item{background:var(--brume-2);border-radius:18px;padding:1.2rem 1.3rem}
+.m-item h4{font-size:.95rem;font-weight:600;margin-bottom:.35rem}
+.m-item p{font-size:.88rem;color:var(--gris)}
+.m-deux{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}
+.m-lieu{background:var(--blanc);border:1px solid var(--gris-clair);border-radius:18px;padding:1.3rem 1.4rem}
+.m-lieu .ville{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bleu);font-weight:600;margin-bottom:.5rem}
+.m-lieu .adresse{font-size:1rem;font-weight:500}
+.m-horaires{margin-top:1.6rem;background:var(--brume);border-radius:18px;padding:1.2rem 1.4rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center}
+.m-horaires .h-jours{font-weight:500}
+.m-horaires .h-note{font-size:.86rem;color:var(--gris);max-width:420px}
+.m-avis{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.m-avis .avis{border:1px dashed var(--bleu-clair);border-radius:18px;padding:1.2rem 1.3rem;background:var(--blanc)}
+.m-avis .etoiles{color:var(--bleu-clair);letter-spacing:.15em;font-size:.9rem}
+.m-avis .creux{color:var(--gris);font-size:.88rem;font-style:italic;margin-top:.6rem}
+.m-contact{background:linear-gradient(150deg,var(--bleu),#2C5580);color:#fff;border-radius:26px;padding:2.4rem 2rem;text-align:center;margin-top:1rem}
+.m-contact h2{color:#fff;margin-bottom:.6rem}
+.m-contact p{color:#D6E6F3;max-width:520px;margin:0 auto 1.6rem;font-size:.96rem}
+.m-contact .coord{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;align-items:center}
+.m-contact .coord a,.m-contact .coord span.pilule{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:var(--rond-plein);padding:.75rem 1.5rem;font-size:.92rem;text-decoration:none;color:#fff}
+.m-pied{border-top:1px solid var(--gris-clair);padding:1.8rem 0 2.4rem;font-size:.78rem;color:var(--gris);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+
+/* Marqueur des éléments encore absents */
+.attente{display:inline-flex;align-items:center;gap:.4rem;background:var(--sable);color:#8A6A3B;border-radius:var(--rond-plein);padding:.18rem .7rem;font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;vertical-align:middle}
+.attente::before{content:'';width:6px;height:6px;border-radius:50%;background:#C79A54}
+.attente.claire{background:rgba(255,255,255,.22);color:#fff}
+.attente.claire::before{background:#fff}
+
+.nuancier{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.9rem}
+.teinte{border-radius:16px;overflow:hidden;border:1px solid var(--gris-clair);background:#fff}
+.teinte .aplat{height:78px}
+.teinte .info{padding:.7rem .85rem}
+.teinte .nom{font-size:.82rem;font-weight:600}
+.teinte .hex{font-size:.74rem;color:var(--gris)}
+.echantillon{background:#fff;border:1px solid var(--gris-clair);border-radius:var(--rond);padding:1.6rem 1.7rem}
+.echantillon .grand{font-family:'Fraunces',Georgia,serif;font-size:2rem;font-weight:400;line-height:1.2}
+.echantillon .moyen{font-size:.95rem;color:var(--gris);margin-top:.7rem}
+.echantillon .label{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bleu);font-weight:600;margin-bottom:.9rem}
+
+.tableau{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--gris-clair);border-radius:var(--rond);overflow:hidden}
+.tableau th{text-align:left;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bleu);font-weight:600;padding:.95rem 1.1rem;background:var(--brume);border-bottom:1px solid var(--gris-clair)}
+.tableau td{padding:1rem 1.1rem;font-size:.92rem;border-bottom:1px solid var(--gris-clair);vertical-align:top}
+.tableau tr:last-child td{border-bottom:none}
+.tableau td.qui{white-space:nowrap;font-weight:500}
+.badge{display:inline-block;border-radius:var(--rond-plein);padding:.2rem .7rem;font-size:.72rem;font-weight:600}
+.b-attente{background:var(--sable);color:#8A6A3B}
+.b-fait{background:#E4F1E8;color:#3B7A4E}
+.b-ecarte{background:var(--brume);color:var(--gris)}
+.scroll-x{overflow-x:auto}
+
+.note{border-left:3px solid var(--bleu-clair);background:var(--brume-2);border-radius:0 14px 14px 0;padding:1.1rem 1.3rem;color:var(--gris);font-size:.93rem;margin-top:1.4rem}
+section.bloc.alt .note{background:var(--blanc)}
+.note strong{color:var(--encre)}
+
+.pied-page{background:var(--encre);color:#A9BFD3;padding:2.6rem 0;font-size:.82rem}
+.pied-page .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.pied-page strong{color:#fff;font-weight:500}
+
+@media (max-width:760px){
+  .m-hero{grid-template-columns:1fr;gap:1.8rem}
+  .m-portrait{max-width:230px}
+  .m-deux{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="cadre-top">
+  <div class="wrap">
+    <span><strong>Document de travail</strong>, atelier du 20 août 2026</span>
+    <span class="mono">colombanatsea.com/nathalie-design</span>
+  </div>
+</div>
+
+<header class="entete">
+  <div class="wrap">
+    <div class="oeil">Nathalie Julita · psychopraticienne à Annecy</div>
+    <h1 class="serif">Direction visuelle et <em>maquette du site</em></h1>
+    <p class="chapo">Cette page restitue l'atelier du 20 août 2026 : ce que nous avons arrêté, la maquette du futur site, la palette retenue et la liste de ce qui reste à fournir. La page n'est pas référencée sur les moteurs de recherche, elle sert de support de validation.</p>
+  </div>
+</header>
+
+<nav class="sommaire">
+  <div class="wrap">
+    <a href="#arrete">Ce qui est arrêté</a>
+    <a href="#maquette">La maquette</a>
+    <a href="#palette">Palette et typographie</a>
+    <a href="#suites">Ce qui reste à fournir</a>
+    <a href="#ecarte">Ce qui a été écarté</a>
+  </div>
+</nav>
+
+<section class="bloc" id="arrete">
+  <div class="wrap">
+    <h2 class="titre-bloc serif">Ce que nous avons arrêté</h2>
+    <p class="sous-titre-bloc">Huit points sortis de l'atelier, sans interprétation ajoutée.</p>
+    <div class="grille g2">
+      <div class="carte">
+        <h3>Intitulé professionnel</h3>
+        <p><strong>Psychopraticienne généraliste.</strong> Pas de mention de psychanalyse, pas de rattachement à une école ni à un courant unique, puisque la pratique ne repose pas sur une méthode exclusive.</p>
+      </div>
+      <div class="carte">
+        <h3>Ce que le visiteur doit trouver</h3>
+        <p>Un <strong>visage</strong>, une <strong>présentation courte</strong>, une <strong>description de la façon de travailler</strong>. Quelqu'un qui va confier ses secrets a besoin de reconnaître la personne avant d'appeler.</p>
+      </div>
+      <div class="carte">
+        <h3>Registre visuel</h3>
+        <p>Bleus doux et blanc, dans l'esprit du bureau. Angles arrondis, aucune arête, aucun aplat électrique. Le bleu outremer est écarté, trop agressif pour ce métier.</p>
+      </div>
+      <div class="carte">
+        <h3>Prise de contact</h3>
+        <p><strong>Contact direct</strong>, téléphone et adresse électronique. Les demandes arrivent le plus souvent dans l'urgence, un agenda de réservation en ligne ne correspond pas à cette pratique.</p>
+      </div>
+      <div class="carte">
+        <h3>Lieux de consultation</h3>
+        <p>Deux adresses à Annecy, <strong>38 avenue de France</strong> et <strong>55 avenue de la Maveria</strong>, à deux rues l'une de l'autre.</p>
+      </div>
+      <div class="carte">
+        <h3>Horaires affichés</h3>
+        <p><strong>8 h à 20 h, du lundi au vendredi.</strong> Pas de calendrier de disponibilités en ligne, les créneaux se calent au téléphone.</p>
+      </div>
+      <div class="carte">
+        <h3>Témoignages</h3>
+        <p>Les avis viendront de la <strong>fiche Google</strong> à récupérer, cinq ou six existaient. Ils remonteront sur le site sans ressaisie une fois l'accès rétabli.</p>
+      </div>
+      <div class="carte">
+        <h3>Mentions légales</h3>
+        <p>Entreprise individuelle Nathalie Julita, <strong>SIRET 800 426 124 00015</strong>. La dénomination « Salon Renaissance » n'apparaît nulle part, elle ne correspond plus à l'activité.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc alt" id="maquette">
+  <div class="wrap">
+    <h2 class="titre-bloc serif">La maquette</h2>
+    <p class="sous-titre-bloc">Une page unique, lue de haut en bas. Les textes sont une proposition, ils se réécrivent librement. Les mentions en sable signalent un élément encore absent.</p>
+
+    <div class="fenetre">
+      <div class="fenetre-barre">
+        <span class="pastille"></span><span class="pastille"></span><span class="pastille"></span>
+        <span class="fenetre-url mono">nom-de-domaine-à-récupérer.fr</span>
+      </div>
+
+      <div class="m">
+        <div class="m-wrap">
+
+          <div class="m-nav">
+            <div class="m-marque">Nathalie Julita<span>Psychopraticienne · Annecy</span></div>
+            <div class="m-liens">
+              <span>Mon approche</span><span>Vous accompagner</span><span>Consultations</span><span>Me joindre</span>
+            </div>
+          </div>
+
+          <div class="m-hero">
+            <div>
+              <h1>Prendre le temps de <em>se poser</em>, avec quelqu'un en face.</h1>
+              <p class="accroche">Je reçois à Annecy, en entretien individuel. On avance à votre rythme, sur ce qui vous encombre aujourd'hui, sans grille de lecture imposée.</p>
+              <div class="m-boutons">
+                <a class="btn btn-plein" href="tel:+33685977592">06 85 97 75 92</a>
+                <a class="btn btn-vide" href="#">Écrire un message</a>
+              </div>
+            </div>
+            <div class="m-portrait">
+              <div class="ph">Portrait</div>
+              <div class="ph-note">Photo à fournir. Cadrage buste, regard vers l'objectif, sourire bienveillant, lumière naturelle.</div>
+            </div>
+          </div>
+
+          <div class="m-section">
+            <h2>Mon approche</h2>
+            <p class="intro">Bloc décisif pour la confiance et pour le référencement. Le texte ci-dessous est un canevas, il attend les mots de Nathalie sur sa façon de travailler. <span class="attente">Contenu à préciser</span></p>
+            <div class="m-liste">
+              <div class="m-item">
+                <h4>Généraliste, par choix</h4>
+                <p>Je ne travaille pas avec une seule méthode. J'ajuste selon la personne, ce qu'elle apporte, et ce dont elle a besoin à ce moment.</p>
+              </div>
+              <div class="m-item">
+                <h4>Un cadre simple</h4>
+                <p>Des entretiens en face à face, une durée régulière, un rythme convenu ensemble. Rien de figé au-delà.</p>
+              </div>
+              <div class="m-item">
+                <h4>Ce que je ne fais pas</h4>
+                <p>Je ne suis pas psychanalyste et je ne prescris pas. Quand une situation appelle un médecin ou un psychiatre, je le dis.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="m-section">
+            <h2>Ce sur quoi je peux vous accompagner</h2>
+            <p class="intro">Les motifs affichés servent aux personnes qui cherchent, et au référencement. Liste à valider et à compléter. <span class="attente">À valider</span></p>
+            <div class="m-liste">
+              <div class="m-item"><h4>Épisodes dépressifs</h4><p>Perte d'élan, fatigue qui dure, sentiment que rien ne bouge.</p></div>
+              <div class="m-item"><h4>Souffrance au travail</h4><p>Pression, conflit, perte de sens, retour d'arrêt.</p></div>
+              <div class="m-item"><h4>Relations familiales</h4><p>Parents, fratrie, place prise ou jamais donnée.</p></div>
+              <div class="m-item"><h4>Vie de couple</h4><p>Séparation, répétitions, ce qui se rejoue d'une histoire à l'autre.</p></div>
+            </div>
+          </div>
+
+          <div class="m-section">
+            <h2>Consultations</h2>
+            <p class="intro">Deux adresses à Annecy, à deux rues l'une de l'autre.</p>
+            <div class="m-deux">
+              <div class="m-lieu">
+                <div class="ville">Annecy</div>
+                <div class="adresse">38 avenue de France</div>
+              </div>
+              <div class="m-lieu">
+                <div class="ville">Annecy</div>
+                <div class="adresse">55 avenue de la Maveria</div>
+              </div>
+            </div>
+            <div class="m-horaires">
+              <div class="h-jours">Du lundi au vendredi, 8 h à 20 h</div>
+              <div class="h-note">Une demande urgente se cale souvent dès le lendemain. Le plus simple reste d'appeler.</div>
+            </div>
+          </div>
+
+          <div class="m-section">
+            <h2>Ce qu'en disent les personnes reçues</h2>
+            <p class="intro">Les avis remonteront de la fiche Google, sans ressaisie. <span class="attente">Fiche Google à récupérer</span></p>
+            <div class="m-avis">
+              <div class="avis"><div class="etoiles">★★★★★</div><div class="creux">Avis Google, affiché dès que la fiche est récupérée.</div></div>
+              <div class="avis"><div class="etoiles">★★★★★</div><div class="creux">Avis Google, affiché dès que la fiche est récupérée.</div></div>
+              <div class="avis"><div class="etoiles">★★★★★</div><div class="creux">Avis Google, affiché dès que la fiche est récupérée.</div></div>
+            </div>
+          </div>
+
+          <div class="m-section" style="border-top:none;padding-bottom:2rem">
+            <div class="m-contact">
+              <h2 class="serif">Me joindre</h2>
+              <p>Un appel ou un message suffit. Si je ne réponds pas, je rappelle dans la journée.</p>
+              <div class="coord">
+                <a href="tel:+33685977592">06 85 97 75 92</a>
+                <span class="pilule">Adresse professionnelle <span class="attente claire">à créer</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="m-pied">
+            <span>Nathalie Julita, entreprise individuelle · SIRET 800 426 124 00015</span>
+            <span>Mentions légales · Politique de confidentialité</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="note"><strong>Nom de domaine.</strong> La barre d'adresse reste volontairement vide. Le domaine du site précédent, de mémoire proche de « psychopraticien Annecy », fait partie des accès à récupérer. Sa reprise vaut mieux qu'un nom neuf, il porte le référencement déjà acquis et l'ancienneté compte pour Google.</div>
+  </div>
+</section>
+
+<section class="bloc" id="palette">
+  <div class="wrap">
+    <h2 class="titre-bloc serif">Palette et typographie</h2>
+    <p class="sous-titre-bloc">Le bleu porte la confiance, le blanc porte le calme, une touche sable réchauffe l'ensemble. Les teintes se règlent au ton près, rien n'est figé.</p>
+
+    <div class="nuancier">
+      <div class="teinte"><div class="aplat" style="background:#14293F"></div><div class="info"><div class="nom">Encre</div><div class="hex mono">#14293F</div></div></div>
+      <div class="teinte"><div class="aplat" style="background:#3E6FA3"></div><div class="info"><div class="nom">Bleu de confiance</div><div class="hex mono">#3E6FA3</div></div></div>
+      <div class="teinte"><div class="aplat" style="background:#7FB0D4"></div><div class="info"><div class="nom">Bleu clair</div><div class="hex mono">#7FB0D4</div></div></div>
+      <div class="teinte"><div class="aplat" style="background:#E9F1F7"></div><div class="info"><div class="nom">Brume</div><div class="hex mono">#E9F1F7</div></div></div>
+      <div class="teinte"><div class="aplat" style="background:#F3EFE9"></div><div class="info"><div class="nom">Sable</div><div class="hex mono">#F3EFE9</div></div></div>
+      <div class="teinte"><div class="aplat" style="background:#FFFFFF;border-bottom:1px solid #DCE4EC"></div><div class="info"><div class="nom">Blanc</div><div class="hex mono">#FFFFFF</div></div></div>
+    </div>
+
+    <div class="grille g2" style="margin-top:1.6rem">
+      <div class="echantillon">
+        <div class="label">Titres · Fraunces</div>
+        <div class="grand">Prendre le temps de se poser</div>
+        <div class="moyen">Serif douce, terminaisons rondes, lisible en grand comme en petit.</div>
+      </div>
+      <div class="echantillon">
+        <div class="label">Textes · Inter</div>
+        <div class="grand" style="font-family:'Inter',sans-serif;font-size:1.35rem;font-weight:400">Je reçois à Annecy, en entretien individuel.</div>
+        <div class="moyen">Neutre, très lisible sur écran, sans effet de style.</div>
+      </div>
+    </div>
+
+    <div class="grille g3" style="margin-top:1.6rem">
+      <div class="carte"><h3>Formes</h3><p>Rayons de 18 à 26 pixels sur les blocs, boutons entièrement arrondis. Aucune arête vive, aucun angle droit visible.</p></div>
+      <div class="carte"><h3>Ombres</h3><p>Diffuses et bleutées, jamais de contour noir. L'ombre pose le bloc, elle ne le détoure pas.</p></div>
+      <div class="carte"><h3>Photographie</h3><p>Lumière naturelle, cadrage aéré, tons froids adoucis. Le portrait est l'image la plus importante du site.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc alt" id="suites">
+  <div class="wrap">
+    <h2 class="titre-bloc serif">Ce qui reste à fournir</h2>
+    <p class="sous-titre-bloc">La maquette tient debout, le site ne peut pas partir sans ces éléments. Chaque ligne porte son responsable.</p>
+    <div class="scroll-x">
+      <table class="tableau">
+        <thead><tr><th>Élément</th><th>Qui</th><th>Pourquoi il bloque</th><th>Statut</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Accès au nom de domaine</td><td class="qui">Nathalie</td>
+            <td>À demander au développeur précédent. Le domaine porte le référencement déjà acquis, un nom neuf repart de zéro.</td>
+            <td><span class="badge b-attente">En attente</span></td>
+          </tr>
+          <tr>
+            <td>Accès à la fiche Google</td><td class="qui">Nathalie</td>
+            <td>Cinq ou six avis y sont attachés. Sans la fiche, ni les avis ni la présence sur la carte ne remontent.</td>
+            <td><span class="badge b-attente">En attente</span></td>
+          </tr>
+          <tr>
+            <td>Adresse électronique professionnelle</td><td class="qui">Nathalie</td>
+            <td>Une adresse dédiée, séparée de la messagerie personnelle. Elle s'affiche sur le site et reçoit les demandes.</td>
+            <td><span class="badge b-attente">En attente</span></td>
+          </tr>
+          <tr>
+            <td>Photo de portrait</td><td class="qui">Nathalie</td>
+            <td>Premier élément de confiance de la page d'accueil. Sourire bienveillant, regard vers l'objectif.</td>
+            <td><span class="badge b-attente">En attente</span></td>
+          </tr>
+          <tr>
+            <td>Photos des deux bureaux</td><td class="qui">Nathalie</td>
+            <td>Le visiteur se projette dans le lieu avant d'appeler. Le bureau porte déjà les tons bleus retenus.</td>
+            <td><span class="badge b-attente">En attente</span></td>
+          </tr>
+          <tr>
+            <td>Rectification du profil psychologue.net</td><td class="qui">Nathalie</td>
+            <td>Le profil attribue une certification en Gestalt-thérapie délivrée par l'école humaniste de Gestalt, jamais suivie. Une qualification fausse en ligne engage la responsabilité de la praticienne.</td>
+            <td><span class="badge b-attente">En attente</span></td>
+          </tr>
+          <tr>
+            <td>Texte sur la façon de travailler</td><td class="qui">Nathalie</td>
+            <td>Quelques paragraphes sur le déroulé d'un entretien et les motifs traités. Sans ce contenu, le site ne remonte pas dans les recherches.</td>
+            <td><span class="badge b-attente">En attente</span></td>
+          </tr>
+          <tr>
+            <td>Direction visuelle et maquette</td><td class="qui">Colomban</td>
+            <td>Palette, typographie, structure de la page, textes de canevas.</td>
+            <td><span class="badge b-fait">Livré le 20/08</span></td>
+          </tr>
+          <tr>
+            <td>Développement et mise en ligne</td><td class="qui">Colomban</td>
+            <td>Démarre dès que le domaine et les photos sont disponibles.</td>
+            <td><span class="badge b-attente">Après les accès</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note"><strong>Si le développeur reste injoignable.</strong> Les deux sujets se traitent séparément. La fiche Google se réclame auprès de Google par une demande de propriété, avec vérification de l'adresse, et la main revient même sans l'accord du gestionnaire actuel : les avis suivent la fiche. Le domaine, lui, dépend du bureau d'enregistrement où il a été payé, à retrouver sur les relevés bancaires ou les courriels de renouvellement, puis à récupérer sur justificatif. À défaut, un nom voisin se dépose en quelques minutes et le référencement se reconstruit avec le contenu.</div>
+  </div>
+</section>
+
+<section class="bloc" id="ecarte">
+  <div class="wrap">
+    <h2 class="titre-bloc serif">Ce qui a été écarté</h2>
+    <p class="sous-titre-bloc">Écrit ici pour que la question ne se repose pas dans trois semaines.</p>
+    <div class="grille g2">
+      <div class="carte">
+        <h3><span class="badge b-ecarte">Écarté</span> Bloquer une personne</h3>
+        <p>Un navigateur ne connaît pas l'adresse électronique du visiteur, il n'y a rien à filtrer dessus. Le blocage par adresse IP existe, il tombe dès que la personne se connecte ailleurs, et il coupe au passage des visiteurs légitimes.</p>
+      </div>
+      <div class="carte">
+        <h3><span class="badge b-ecarte">Écarté</span> Réservation en ligne</h3>
+        <p>Les demandes arrivent dans l'urgence, elles se traitent au téléphone. Un agenda public afficherait des créneaux qui ne correspondent pas à la réalité de la pratique.</p>
+      </div>
+      <div class="carte">
+        <h3><span class="badge b-ecarte">Écarté</span> Mention « Salon Renaissance »</h3>
+        <p>Dénomination sans lien avec l'activité actuelle. Les mentions légales portent l'entreprise individuelle et le SIRET, rien d'autre.</p>
+      </div>
+      <div class="carte">
+        <h3><span class="badge b-ecarte">Écarté</span> Mention de psychanalyse</h3>
+        <p>La pratique est celle d'une psychopraticienne généraliste. Aucune école, aucun courant, aucune certification n'est revendiquée sur le site.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="pied-page">
+  <div class="wrap">
+    <span><strong>Atelier Nathalie Julita et Colomban Monnier</strong>, 20 août 2026</span>
+    <span class="mono">Document de travail, non référencé</span>
+  </div>
+</footer>
+
+</body>
+</html>
