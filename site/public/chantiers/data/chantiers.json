@@ -33273,13 +33273,23 @@
        "detail": "Bac de Loire exploite par le Departement de Loire-Atlantique (service public de franchissement de la Loire).",
        "prix": "8 000 000 EUR",
        "source": "https://www.meretmarine.com/fr/content/lile-dumet-nouveau-bac-de-loire-fait-ses-essais-en-mer"
+      },
+      {
+       "annee": "2013",
+       "role": "construction-coque",
+       "nom": "Mecasoud, Saint-Nazaire",
+       "detail": "Coque construite en sous-traitance par les chantiers Mecasoud a Saint-Nazaire, achevement chez Merre a Nort-sur-Erdre. Convention des registres de branche : la coque est attribuee au site d'ACHEVEMENT, la sous-traitance descend en timeline.",
+       "source": "https://fr.wikipedia.org/wiki/Bacs_de_Loire"
       }
      ],
      "prix_acquisition": "8 M EUR (cout de construction unitaire, 2013) ; total serie 15,7 M EUR pour 2 sister-ships (Île Dumet + Lola)",
      "caractere": "delegue",
      "propriete": "publique",
      "exploitation": "service-public",
-     "caractere_motif": "propriete: departement de ; exploitation: bacs"
+     "caractere_motif": "propriete: departement de ; exploitation: bacs",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Bacs_de_Loire"
+     ]
     },
     {
      "nom": "Lola",
@@ -33327,13 +33337,23 @@
        "detail": "Bac de Loire exploite par le Departement de Loire-Atlantique (service public de franchissement de la Loire).",
        "prix": "8 000 000 EUR",
        "source": "https://www.meretmarine.com/fr/content/lile-dumet-nouveau-bac-de-loire-fait-ses-essais-en-mer"
+      },
+      {
+       "annee": "2012",
+       "role": "construction-coque",
+       "nom": "Mecasoud, Saint-Nazaire",
+       "detail": "Coque construite en sous-traitance par les chantiers Mecasoud a Saint-Nazaire, achevement chez Merre a Nort-sur-Erdre. Convention des registres de branche : la coque est attribuee au site d'ACHEVEMENT, la sous-traitance descend en timeline.",
+       "source": "https://fr.wikipedia.org/wiki/Bacs_de_Loire"
       }
      ],
      "prix_acquisition": "8 M EUR (cout de construction unitaire, 2012) ; total serie 15,7 M EUR pour 2 sister-ships (Lola + Île Dumet)",
      "caractere": "delegue",
      "propriete": "publique",
      "exploitation": "service-public",
-     "caractere_motif": "propriete: departement de ; exploitation: bacs"
+     "caractere_motif": "propriete: departement de ; exploitation: bacs",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Bacs_de_Loire"
+     ]
     },
     {
      "nom": "Fort Boyard",
@@ -185369,57 +185389,6 @@
      "source_ref": "recherche de source le 2026-08-05, sans resultat : Cherche sur Wikipedia fr et en (pages de flottes de service public, vedettes a passagers). Aucune page ne nomme cette coque. Le champ chantier de la base est lui-meme un aveu (chantier non documente) : sans constructeur ni port d'exploitation, il n'y a pas de point d'entree a la fetch, et WebSearch est indisponible."
     },
     {
-     "nom": "Goulphar",
-     "imo": null,
-     "type": "Fret côtier",
-     "annee": "2018",
-     "longueur_m": 36,
-     "largeur_m": 7.75,
-     "jauge_gt": 299,
-     "desserte": "îles de Bretagne Sud",
-     "capacite": "12 passagers, 6 véhicules, 180 t fret",
-     "capacite_pax": 12,
-     "capacite_vehicules": 6,
-     "capacite_fret": "180 t",
-     "energie": "Gazole / MGO",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "TMC (privé)",
-     "operateur": "TMC",
-     "proprietaire": "TMC (privé)",
-     "pavillon": "France",
-     "classification": null,
-     "timeline": [
-      {
-       "annee": "2018",
-       "role": "construction",
-       "nom": "DE KAAP",
-       "detail": "Construit pour TMC (privé) — ligne îles de Bretagne Sud",
-       "source": null,
-       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-       "tracabilite": "non-tracee"
-      },
-      {
-       "annee": "2018",
-       "role": "operateur",
-       "nom": "TMC",
-       "detail": "Contrat de transport de déchets pour les îles de Bretagne Sud",
-       "source": null,
-       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-       "tracabilite": "non-tracee"
-      }
-     ],
-     "tracabilite": "non-tracee",
-     "imo_ecarte": {
-      "valeur": "9344115",
-      "raison": "cle de controle OMI invalide"
-     },
-     "caractere": "prive",
-     "propriete": "privee",
-     "caractere_motif": "propriete: prive"
-    },
-    {
      "nom": "Le Nouch",
      "imo": null,
      "type": "Vedette à passagers",
@@ -185754,13 +185723,13 @@
     {
      "nom": "Anne de Bretagne",
      "imo": null,
-     "type": "Bac / passage d'eau",
-     "annee": "1978",
+     "type": "Bac amphidrome de reserve, traversee Le Pellerin - Couëron",
+     "annee": "1977",
      "longueur_m": 50,
      "largeur_m": 10.5,
      "jauge_gt": 212,
      "desserte": "Réserve",
-     "capacite": "297 passagers, 18 véhicules",
+     "capacite": "18 voitures",
      "capacite_pax": 297,
      "capacite_vehicules": 18,
      "energie": "Gazole / MGO",
@@ -185768,8 +185737,8 @@
       "diesel-mdo"
      ],
      "client": "Département de Loire-Atlantique (CD44)",
-     "operateur": "Bacs de Loire",
-     "proprietaire": "Département de Loire-Atlantique (CD44)",
+     "operateur": "Compagnie des bacs de Loire (Transdev), pour le Departement de Loire-Atlantique",
+     "proprietaire": "Departement de Loire-Atlantique",
      "pavillon": "France",
      "classification": null,
      "timeline": [
@@ -185793,59 +185762,14 @@
      "caractere": "delegue",
      "propriete": "publique",
      "exploitation": "service-public",
-     "caractere_motif": "propriete: departement de ; exploitation: bacs"
-    },
-    {
-     "nom": "Bac 13",
-     "imo": null,
-     "type": "Bac / passage d'eau",
-     "annee": "1969",
-     "longueur_m": 30,
-     "largeur_m": 15.7,
-     "jauge_gt": 236,
-     "desserte": "en réserve",
-     "capacite": "130 passagers, 28 véhicules, 150 t fret",
-     "capacite_pax": 130,
-     "capacite_vehicules": 28,
-     "capacite_fret": "150 t",
-     "energie": "Gazole / MGO",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "Département de la Seine-Maritime (CD76)",
-     "operateur": "CD76 bacs de Seine",
-     "proprietaire": "Département de la Seine-Maritime (CD76)",
-     "pavillon": "France",
-     "classification": null,
-     "timeline": [
-      {
-       "annee": "1969",
-       "role": "construction",
-       "nom": "de Normandie",
-       "detail": "Construit pour Département de la Seine-Maritime (CD76) — ligne en réserve",
-       "source": null,
-       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-       "tracabilite": "non-tracee"
-      },
-      {
-       "annee": "1969",
-       "role": "operateur",
-       "nom": "CD76 bacs de Seine",
-       "detail": "Régie directe",
-       "source": null,
-       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
-       "tracabilite": "non-tracee"
-      }
-     ],
-     "tracabilite": "non-tracee",
-     "imo_ecarte": {
-      "valeur": "302102",
-      "raison": "cle de controle OMI invalide"
-     },
-     "caractere": "delegue",
-     "propriete": "publique",
-     "exploitation": "service-public",
-     "caractere_motif": "propriete: departement de ; exploitation: bacs"
+     "caractere_motif": "propriete: departement de ; exploitation: bacs",
+     "verification": {
+      "statut": "corrige",
+      "champs": 5,
+      "source": "https://fr.wikipedia.org/wiki/Bacs_de_Loire",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     }
     },
     {
      "nom": "Fort de la Pré",
@@ -238023,6 +237947,98 @@
    "confiance": "moyenne",
    "actif": null,
    "fondation": null
+  },
+  {
+   "id": "fr-yard-normandie-grandquevilly",
+   "nom": "Chantiers de Normandie",
+   "groupe": "",
+   "ville": "Le Grand-Quevilly",
+   "region": "Normandie",
+   "pays": "France",
+   "lat": 49.4069,
+   "lon": 1.05079,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit"
+   ],
+   "types_navires": [
+    "ferry-ropax",
+    "servitude-soutien",
+    "navire-technique"
+   ],
+   "description": "Chantier naval des bords de Seine au Grand-Quevilly, en Seine-Maritime, ouvert en 1893 à l'initiative de l'ingénieur Jean Laporte, entouré du négociant Gaston Boulet et de l'armateur Henri Prentout-Leblond. Le chantier Laporte lance le Quevilly en 1897. En 1968-1969, les Chantiers de Normandie absorbent les établissements Varnier installés sur l'île Lacroix à Rouen. SITE DISPARU : l'activité cesse en 1987, la société est close le 20 juillet 1993, et le terrain est occupé depuis 2000 par l'incinérateur VESTA.",
+   "navires_references": [
+    {
+     "nom": "Bac 13",
+     "imo": null,
+     "type": "Bac / passage d'eau",
+     "annee": "1969",
+     "longueur_m": 30,
+     "largeur_m": 15.7,
+     "jauge_gt": 236,
+     "desserte": "en réserve",
+     "capacite": "130 passagers, 28 véhicules, 150 t fret",
+     "capacite_pax": 130,
+     "capacite_vehicules": 28,
+     "capacite_fret": "150 t",
+     "energie": "Gazole / MGO",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "client": "Département de la Seine-Maritime (CD76)",
+     "operateur": "CD76 bacs de Seine",
+     "proprietaire": "Département de la Seine-Maritime (CD76)",
+     "pavillon": "France",
+     "classification": null,
+     "timeline": [
+      {
+       "annee": "1969",
+       "role": "construction",
+       "nom": "de Normandie",
+       "detail": "Construit pour Département de la Seine-Maritime (CD76) — ligne en réserve",
+       "source": null,
+       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+       "tracabilite": "non-tracee"
+      },
+      {
+       "annee": "1969",
+       "role": "operateur",
+       "nom": "CD76 bacs de Seine",
+       "detail": "Régie directe",
+       "source": null,
+       "source_ref": "Sites des collectivités et délégataires, presse régionale, registres maritimes publics (Equasis/MarineTraffic)",
+       "tracabilite": "non-tracee"
+      }
+     ],
+     "tracabilite": "document-non-public",
+     "imo_ecarte": {
+      "valeur": "302102",
+      "raison": "cle de controle OMI invalide"
+     },
+     "caractere": "delegue",
+     "propriete": "publique",
+     "exploitation": "service-public",
+     "caractere_motif": "propriete: departement de ; exploitation: bacs",
+     "source_ref": "re-rattache le 2026-08-20 : attribue a tort a « Flotte de service public (chantier non documenté) », construit par « Chantiers de Normandie » — Constructeur déclaré par l'armateur : Chantiers de Normandie, Le Grand-Quevilly. Le chantier était en activité en 1969, année de mise en service du bac, et a fermé en 1987. Le lien coque-chantier n'est pas établi par une source publique : il est versé sur validation manuelle du commanditaire et tracé comme tel. (https://fr.wikipedia.org/wiki/Chantiers_de_Normandie)",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://fr.wikipedia.org/wiki/Chantiers_de_Normandie",
+      "le": "2026-08-20",
+      "confiance": "simple"
+     },
+     "source": null,
+     "note": "Attribution declaree par l'armateur, versee sur validation manuelle du commanditaire le 20/08/2026. Le chantier est documente et sa periode d'activite (1893-1987) couvre l'annee de mise en service, mais AUCUNE source publique ne relie cette coque a ce chantier. A confirmer."
+    }
+   ],
+   "sources": [
+    "https://fr.wikipedia.org/wiki/Chantiers_de_Normandie",
+    "https://www.societe.com/societe/chantiers-de-normandie-332495548.html"
+   ],
+   "confiance": "moyenne",
+   "actif": null,
+   "fondation": 1893
   }
  ],
  "equipementiers": [
