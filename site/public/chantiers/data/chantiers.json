@@ -238037,8 +238037,34 @@
     "https://www.societe.com/societe/chantiers-de-normandie-332495548.html"
    ],
    "confiance": "moyenne",
-   "actif": null,
-   "fondation": 1893
+   "actif": false,
+   "fondation": 1893,
+   "historique": [
+    {
+     "annee": "1893",
+     "fait": "Ouverture du chantier sur les bords de Seine, a l'initiative de l'ingenieur Jean Laporte, entoure du negociant Gaston Boulet et de l'armateur Henri Prentout-Leblond."
+    },
+    {
+     "annee": "1897",
+     "fait": "Lancement du Quevilly."
+    },
+    {
+     "annee": "1968-1969",
+     "fait": "Absorption des etablissements Varnier, installes sur l'ile Lacroix a Rouen."
+    },
+    {
+     "annee": "1987",
+     "fait": "FERMETURE : cessation de l'activite de construction navale."
+    },
+    {
+     "annee": "1993",
+     "fait": "Cloture de la societe le 20 juillet."
+    },
+    {
+     "annee": "2000",
+     "fait": "Le site est occupe par l'incinerateur VESTA."
+    }
+   ]
   }
  ],
  "equipementiers": [
