@@ -1,14 +1,14 @@
 {
  "date": "2026-08-20",
  "volumes": {
-  "chantiers": 531,
-  "entrees_navire": 6682,
-  "plancher_coques_distinctes": 6463,
+  "chantiers": 532,
+  "entrees_navire": 6681,
+  "plancher_coques_distinctes": 6462,
   "equipementiers": 24,
   "pays": 29
  },
  "sources": {
-  "url_total": 16288,
+  "url_total": 16292,
   "domaines_distincts": 1521,
   "navires_avec_url": 6166,
   "taux_navires_avec_url": 92.3
@@ -19,22 +19,22 @@
   "taux": 85.2
  },
  "corroboration": {
-  "chantiers_corrobores": 462,
+  "chantiers_corrobores": 463,
   "taux_chantiers": 87,
   "chantiers_deux_tiers": 328,
-  "taux_deux_tiers": 61.8,
-  "chantiers_un_seul_tiers": 103,
+  "taux_deux_tiers": 61.7,
+  "chantiers_un_seul_tiers": 104,
   "chantiers_sans_aucun_tiers": 31,
   "chantiers_temoin_unique": 69,
-  "navires_sous_temoin_unique": 137,
-  "part_navires_sous_temoin_unique": 2.1,
+  "navires_sous_temoin_unique": 135,
+  "part_navires_sous_temoin_unique": 2,
   "navires_corrobores": 391,
   "taux_navires": 5.9,
   "navires_corrobores_large": 556,
   "taux_navires_large": 8.3
  },
  "identite": {
-  "eligibles_imo": 3350,
+  "eligibles_imo": 3349,
   "inegibles": 1258,
   "indetermines": 2074,
   "porteurs_imo": 1567,
@@ -43,11 +43,11 @@
  "sollicitation": {
   "actifs": 361,
   "fermes": 69,
-  "activite_indeterminee": 101,
+  "activite_indeterminee": 102,
   "sollicitables_sur_actifs": 221,
   "taux_haut": 61.2,
   "joignables": 296,
-  "taux_joignables": 55.7
+  "taux_joignables": 55.6
  },
  "serie": [
   {
@@ -79,16 +79,16 @@
   },
   {
    "date": "2026-08-20",
-   "motif": "Requalification des 17 declassements pour auto-reference : 2 confirmes, 15 requalifies au bon motif apres lecture de chaque page. Damen Singapour ouvert, le Granville est l'ex-Bornholm Express de 2006 et non un navire de 2014. Saint Nicolas rendu au quai de la Cabaude. Lien Alternatives Energies documente sur Volta et Ampere.",
-   "chantiers": 531,
-   "entrees": 6682,
-   "coques_plancher": 6463,
-   "url": 16288,
+   "motif": "Chantiers de Normandie ouvert, site DISPARU (1893-1987), et le Bac 13 lui est rendu. Doublon du Goulphar retire : la coque etait fichee deux fois, l entree conservee porte l IMO valide. Anne de Bretagne corrigee de 1978 a 1977. Sous-traitance Mecasoud posee sur le Lola et l Ile Dumet.",
+   "chantiers": 532,
+   "entrees": 6681,
+   "coques_plancher": 6462,
+   "url": 16292,
    "taux_navires_source": 92.3,
    "taux_architecte_justifie": 85.2,
-   "eligibles_imo": 3350,
+   "eligibles_imo": 3349,
    "taux_imo_sur_eligible": 46.8,
-   "taux_joignables": 55.7
+   "taux_joignables": 55.6
   }
  ]
 }
