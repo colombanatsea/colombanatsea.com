@@ -81483,11 +81483,11 @@
      "architecte_source": "Boat International (superyacht directory, fiche REV Ocean) et Robb Report : Espen Oino a concu les lignes de coque effilees, le bulbe brise-lame et l'etrave elancee destines au rendement, en plus du design exterieur ; l'amenagement interieur est de H2 Yacht Design. Le role depasse donc le styling et releve bien de l'architecture navale au sens de la doctrine. Coque acier construite a Vard Tulcea (Roumanie) en 18 mois puis remorquee en Norvege pour l'armement. Justificatif complete le 15/08/2026 apres revue du signalement ARCHITECTE-STYLING-SEUL, qui etait un FAUX POSITIF. https://www.boatinternational.com/yachts/the-superyacht-directory/rev-ocean--90675",
      "prix_acquisition": "~350 M USD (budget de construction rapporte a la commande, nov. 2018 ; cout final non publie)",
      "verification": {
-      "statut": "douteux",
+      "statut": "corrige",
       "confiance": "simple",
-      "motif": "constructeur non identifie en revue (phase3-revue-v3b) : l'attribution actuelle n'est pas etablie. Vard Soviknes n apparait a aucune etape. La coque sort de Vard Tulcea, l armement a commence a Vard Brattvaag, s est poursuivi chez Fosen Yard puis chez Damen Vlissingen. Livraison encore attendue fin 2026 : l annee 2026 en base decrit une livraison future, pas une construction achevee. Longueur portee a 194,9 m apres allongement en Norvege.",
+      "motif": "coque sous-traitee, achevement sur ce site : l'attribution au site d'achevement est la convention du registre (phase3-revue-v3b) ; le constructeur de la coque descend en timeline. Vard Soviknes n apparait a aucune etape. La coque sort de Vard Tulcea, l armement a commence a Vard Brattvaag, s est poursuivi chez Fosen Yard puis chez Damen Vlissingen. Livraison encore attendue fin 2026 : l annee 2026 en base decrit une livraison future, pas une construction achevee. Longueur portee a 194,9 m apres allongement en Norvege.",
       "source": "https://en.wikipedia.org/wiki/REV_Ocean",
-      "le": "2026-08-05",
+      "le": "2026-08-21",
       "chantier_reel": "Vard Tulcea (coque, Roumanie), puis armement a Vard Brattvaag et Fosen Yard (Norvege), achevement chez Damen Shiprepair Vlissingen (Pays-Bas)"
      },
      "intervenants": [
@@ -103870,53 +103870,6 @@
       "confirme": "attribution",
       "imo_confirme": "9008794",
       "annee_confirmee": "1991"
-     }
-    },
-    {
-     "nom": "Tysfjord",
-     "type": "ferry",
-     "imo": "9056301",
-     "annee": "1993",
-     "longueur_m": 84,
-     "jauge_gt": 3695,
-     "energie": "Diesel",
-     "propulsion": [
-      "diesel-electrique"
-     ],
-     "client": "Ofoten og Vesterålen Dampskibsselskap ASA",
-     "operateur": "Torghatten Nord AS (route Bognes-Lodingen, RN85)",
-     "proprietaire": "Torghatten Nord AS ; construit a l'origine pour OVDS",
-     "pavillon": "Norvège",
-     "classification": "DNV +1A1, Car Ferry B, R2, E0, MCDK-PWDK-TMON, NMD Trade Area 4 (EU-C)",
-     "port_lourd_dwt": null,
-     "source": "https://fiskerstrand.no",
-     "timeline": [
-      {
-       "annee": "1993",
-       "role": "construction",
-       "nom": "Fiskerstrand Verft (chantier no.40)",
-       "detail": "Bil- og passasjerferge, design Polarkonsult AS, sister-ship du Hamarøy",
-       "source": "fiskerstrand.no chantier no.40"
-      },
-      {
-       "annee": "1993",
-       "role": "proprietaire",
-       "nom": "Ofoten og Vesterålen Dampskibsselskap ASA (devenu Torghatten Nord)",
-       "detail": null,
-       "source": "fiskerstrand.no chantier no.40"
-      }
-     ],
-     "source_ref": "chantier no.40 ; VesselFinder IMO 9056301",
-     "tracabilite": "url-domaine-seul",
-     "caractere": "prive",
-     "propriete": "privee",
-     "caractere_motif": "propriete: as",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Myklebust Mekaniske Verksted, Sande (Møre og Romsdal, Norvège)",
-      "source": "https://no.wikipedia.org/wiki/MF_%C2%ABTysfjord%C2%BB",
-      "le": "2026-08-05",
-      "confiance": "simple"
      }
     },
     {
@@ -154735,7 +154688,58 @@
      "exploitation": "regalien",
      "caractere_motif": "propriete: etat suedois ; exploitation: garde-cote",
      "source": "https://sv.wikipedia.org/wiki/KBV_301",
-     "largeur_m": 4.7
+     "largeur_m": 4.7,
+     "verification": {
+      "statut": "douteux",
+      "confiance": "simple",
+      "le": "2026-08-21",
+      "motif": "ENTREE DE SERIE, PAS UNE COQUE. Elle designe onze unites du garde-cotes suedois, KBV 301 en tete de serie et dix de serie, livrees entre 1993 et 1997. Le compte de coques la lit pour une, la realite en porte onze. La source ne date pas les unites une par une : les eclater exigerait onze annees inventees, ce que la premiere regle du depot interdit. Arbitrage a rendre : chercher un referentiel par unite, ou verser l entree en produits.",
+      "source": "https://sv.wikipedia.org/wiki/%C3%96vervakningsfartyg_301-serien"
+     }
+    },
+    {
+     "nom": "Coast Guard 20M (KBV 301-311)",
+     "type": "patrouilleur",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "annee": null,
+     "client": "Swedish Coast Guard (Kustbevakningen)",
+     "operateur": "Garde-côtes suédois (Kustbevakningen)",
+     "proprietaire": "État suédois (Kustbevakningen)",
+     "pavillon": "Suède",
+     "energie": "Diesel (2 x 735 kW, propulsion water-jet)",
+     "capacite": "Équipage de 4 ; 11 unités en service autour de la Suède ; vitesse 34 nœuds",
+     "longueur_m": 19.95,
+     "classification": null,
+     "source": "https://dockstavarvet.se/products/combat-and-patrol-boats/coast-guard-20-m/",
+     "timeline": [
+      {
+       "annee": "1990s",
+       "role": "construction",
+       "nom": "Patrouilleur 20 m conçu par la FMV pour le Garde-côtes suédois, construit par Dockstavarvet ; 11 unités (n° 301-311) en service",
+       "detail": "Coque entièrement en aluminium soudé ; numéros KBV 301-311. ATTENTION : certaines sources attribuent la première série KBV 301 (1993) au chantier de Karlskrona ; attribution Docksta selon page produit du chantier",
+       "source": "https://dockstavarvet.se/products/combat-and-patrol-boats/coast-guard-20-m/"
+      },
+      {
+       "annee": "1990s",
+       "role": "pavillon",
+       "nom": "Suède",
+       "detail": "Pavillon suédois (Garde-côtes / Kustbevakningen)",
+       "source": "https://dockstavarvet.se/products/combat-and-patrol-boats/coast-guard-20-m/"
+      }
+     ],
+     "caractere": "public",
+     "propriete": "publique",
+     "exploitation": "regalien",
+     "caractere_motif": "propriete: etat suedois ; exploitation: garde-cote",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://sv.wikipedia.org/wiki/%C3%96vervakningsfartyg_301-serien",
+      "le": "2026-08-21"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Saab Kockums Dockstavarvet (ex-N. Sundin Dockstavarvet) », construit par « Saab Kockums AB — chantier de Karlskrona (Karlskronavarvet) » — La serie 301, KBV 301 a KBV 311, a ete LIVREE PAR KARLSKRONAVARVET entre 1993 et 1997, pas par Dockstavarvet. ENTREE DE SERIE : elle designe onze unites, KBV 301 en tete de serie et dix de serie, et non une coque unique. La source ne date pas les unites une par une : les eclater exigerait onze annees inventees. (https://sv.wikipedia.org/wiki/%C3%96vervakningsfartyg_301-serien)"
     }
    ],
    "sources": [
@@ -161122,6 +161126,52 @@
      "caractere": "prive",
      "exploitation": "commerciale",
      "caractere_motif": "exploitation: cargo"
+    },
+    {
+     "nom": "Tysfjord",
+     "type": "ferry",
+     "imo": "9056301",
+     "annee": "1993",
+     "longueur_m": 84,
+     "jauge_gt": 3695,
+     "energie": "Diesel",
+     "propulsion": [
+      "diesel-electrique"
+     ],
+     "client": "Ofoten og Vesterålen Dampskibsselskap ASA",
+     "operateur": "Torghatten Nord AS (route Bognes-Lodingen, RN85)",
+     "proprietaire": "Torghatten Nord AS ; construit a l'origine pour OVDS",
+     "pavillon": "Norvège",
+     "classification": "DNV +1A1, Car Ferry B, R2, E0, MCDK-PWDK-TMON, NMD Trade Area 4 (EU-C)",
+     "port_lourd_dwt": null,
+     "source": "https://fiskerstrand.no",
+     "timeline": [
+      {
+       "annee": "1993",
+       "role": "construction",
+       "nom": "Fiskerstrand Verft (chantier no.40)",
+       "detail": "Bil- og passasjerferge, design Polarkonsult AS, sister-ship du Hamarøy",
+       "source": "fiskerstrand.no chantier no.40"
+      },
+      {
+       "annee": "1993",
+       "role": "proprietaire",
+       "nom": "Ofoten og Vesterålen Dampskibsselskap ASA (devenu Torghatten Nord)",
+       "detail": null,
+       "source": "fiskerstrand.no chantier no.40"
+      }
+     ],
+     "source_ref": "chantier no.40 ; VesselFinder IMO 9056301 ; re-rattache le 2026-08-21 : attribue a tort a « Fiskerstrand Verft AS », construit par « Myklebust Verft AS » — IMO 9056301, identifiant concordant. La source tierce norvegienne attribue la construction 1993 a Myklebust Mekaniske Verksted, a Sande dans le More og Romsdal. Aucune trace de Fiskerstrand dans l historique du navire. (https://no.wikipedia.org/wiki/MF_%C2%ABTysfjord%C2%BB)",
+     "tracabilite": "url-domaine-seul",
+     "caractere": "prive",
+     "propriete": "privee",
+     "caractere_motif": "propriete: as",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://no.wikipedia.org/wiki/MF_%C2%ABTysfjord%C2%BB",
+      "le": "2026-08-21"
+     }
     }
    ],
    "sources": [
@@ -165497,6 +165547,51 @@
       }
      ],
      "source_ref": "registre des navires construits par Swede Ship Composite AB, n° de chantier 88, 2006, type motorfartyg"
+    },
+    {
+     "nom": "Rescue Stenhammar (classe Rausing, 20-02)",
+     "imo": null,
+     "type": "Vedette de sauvetage hauturière auto-redressable (classe Rausing)",
+     "annee": "2003",
+     "longueur_m": 19.4,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Deuxième unité de la classe Rausing, 30 t, auto-redressable",
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "2 diesels Scania DI 16M V8 (2 x 1000 ch) + 2 hydrojets KaMeWa FF-jet 550 ; 36 nœuds",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "client": "Sjöräddningssällskapet (SSRS)",
+     "operateur": "Sjöräddningssällskapet (SSRS)",
+     "proprietaire": "Sjöräddningssällskapet (SSRS)",
+     "classification": null,
+     "source": "https://sv.wikipedia.org/wiki/Rausingklass",
+     "timeline": [
+      {
+       "annee": "2003",
+       "role": "construction",
+       "nom": "Swede Ship Composite (Hunnebostrand, groupe Swede Ship)",
+       "detail": "Deuxième unité de la classe Rausing",
+       "source": "https://sv.wikipedia.org/wiki/Rausingklass"
+      },
+      {
+       "annee": "2021",
+       "role": "operateur",
+       "nom": "SSRS - station de Fårösund",
+       "detail": "Stationné à Fårösund depuis décembre 2021",
+       "source": "https://sv.wikipedia.org/wiki/Rausingklass"
+      }
+     ],
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://sv.wikipedia.org/wiki/Rausingklass",
+      "le": "2026-08-21"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Swede Ship Marine AB (Djupviks Varv / Djupvik Shipyard) », construit par « Swede Ship Composite AB » — Les trois unites de la classe Rausing ont ete construites par Swede Ship Composite a Hunnebostrand, pas par Djupviks varv. Meme groupe, chantier different, coque composite et non aluminium. (https://sv.wikipedia.org/wiki/Rausingklass)"
     }
    ],
    "sources": [
@@ -175025,50 +175120,6 @@
      "caractere_motif": "propriete: etat suedois ; exploitation: marine royale"
     },
     {
-     "nom": "Coast Guard 20M (KBV 301-311)",
-     "type": "patrouilleur",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "annee": null,
-     "client": "Swedish Coast Guard (Kustbevakningen)",
-     "operateur": "Garde-côtes suédois (Kustbevakningen)",
-     "proprietaire": "État suédois (Kustbevakningen)",
-     "pavillon": "Suède",
-     "energie": "Diesel (2 x 735 kW, propulsion water-jet)",
-     "capacite": "Équipage de 4 ; 11 unités en service autour de la Suède ; vitesse 34 nœuds",
-     "longueur_m": 19.95,
-     "classification": null,
-     "source": "https://dockstavarvet.se/products/combat-and-patrol-boats/coast-guard-20-m/",
-     "timeline": [
-      {
-       "annee": "1990s",
-       "role": "construction",
-       "nom": "Patrouilleur 20 m conçu par la FMV pour le Garde-côtes suédois, construit par Dockstavarvet ; 11 unités (n° 301-311) en service",
-       "detail": "Coque entièrement en aluminium soudé ; numéros KBV 301-311. ATTENTION : certaines sources attribuent la première série KBV 301 (1993) au chantier de Karlskrona ; attribution Docksta selon page produit du chantier",
-       "source": "https://dockstavarvet.se/products/combat-and-patrol-boats/coast-guard-20-m/"
-      },
-      {
-       "annee": "1990s",
-       "role": "pavillon",
-       "nom": "Suède",
-       "detail": "Pavillon suédois (Garde-côtes / Kustbevakningen)",
-       "source": "https://dockstavarvet.se/products/combat-and-patrol-boats/coast-guard-20-m/"
-      }
-     ],
-     "caractere": "public",
-     "propriete": "publique",
-     "exploitation": "regalien",
-     "caractere_motif": "propriete: etat suedois ; exploitation: garde-cote",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Karlskronavarvet (Karlskrona, Suède)",
-      "source": "https://sv.wikipedia.org/wiki/%C3%96vervakningsfartyg_301-serien",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "Interceptor Craft 20M (Docksta IC 20M)",
      "type": "patrouilleur / vedette d'interception rapide (classe, aluminium)",
      "propulsion": [
@@ -177292,51 +177343,6 @@
        "source": "https://sv.wikipedia.org/wiki/Rausingklass"
       }
      ]
-    },
-    {
-     "nom": "Rescue Stenhammar (classe Rausing, 20-02)",
-     "imo": null,
-     "type": "Vedette de sauvetage hauturière auto-redressable (classe Rausing)",
-     "annee": "2003",
-     "longueur_m": 19.4,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Deuxième unité de la classe Rausing, 30 t, auto-redressable",
-     "capacite_pax": null,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "2 diesels Scania DI 16M V8 (2 x 1000 ch) + 2 hydrojets KaMeWa FF-jet 550 ; 36 nœuds",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "Sjöräddningssällskapet (SSRS)",
-     "operateur": "Sjöräddningssällskapet (SSRS)",
-     "proprietaire": "Sjöräddningssällskapet (SSRS)",
-     "classification": null,
-     "source": "https://sv.wikipedia.org/wiki/Rausingklass",
-     "timeline": [
-      {
-       "annee": "2003",
-       "role": "construction",
-       "nom": "Swede Ship Composite (Hunnebostrand, groupe Swede Ship)",
-       "detail": "Deuxième unité de la classe Rausing",
-       "source": "https://sv.wikipedia.org/wiki/Rausingklass"
-      },
-      {
-       "annee": "2021",
-       "role": "operateur",
-       "nom": "SSRS - station de Fårösund",
-       "detail": "Stationné à Fårösund depuis décembre 2021",
-       "source": "https://sv.wikipedia.org/wiki/Rausingklass"
-      }
-     ],
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Swede Ship Composite AB, Hunnebostrand",
-      "source": "https://sv.wikipedia.org/wiki/Rausingklass",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
     },
     {
      "nom": "Rescue Björn Christer (classe Rausing, 20-03)",
@@ -184095,93 +184101,6 @@
      "capacite_pax": 14,
      "architecte": "Per Fagerlund",
      "architecte_source": "Boat International (superyacht directory, Blue Clipper): 'Naval Architect: Per Fagerlund' et 'Exterior Designer: Per Fagerlund'. boatinternational.com/yachts/the-superyacht-directory/blue-clipper--45653"
-    },
-    {
-     "nom": "Saga Star (etrave/section avant)",
-     "imo": "7931997",
-     "type": "RoPax (ferry roulier a passagers) - construction partielle (etrave)",
-     "annee": "1981",
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Ferry RoPax ; Marstrandsverken a construit l'etrave, Kalmar la poupe, assemblage final a Eriksberg (Goteborg)",
-     "capacite_pax": null,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "Diesel",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": null,
-     "operateur": "E60 Shipping Line LLC, Tbilissi",
-     "proprietaire": "E60 Shipping Line LLC, Tbilissi",
-     "classification": null,
-     "source": "https://sv.wikipedia.org/wiki/Marstrands_Mekaniska_Verkstad",
-     "timeline": [
-      {
-       "annee": "1981",
-       "role": "construction",
-       "nom": "Sections multiples (Kalmar Varv arrière, FEAB Marstrandsverken avant, Götaverken Cityvarvet milieu, Eriksberg assemblage)",
-       "detail": "RoPax construit en sections : arrière par Kalmar Varv (quille 10/06/1980, lancé 16/01/1981), AVANT par Fartygsentreprenader AB Marstrand (lancé 03/05/1981), section centrale Götaverken Cityvarvet, assemblage final en cale sèche Eriksberg (incendie salle des machines, retard 2 mois). Lancé sous le nom SAGALAND. IMO 7931997, indicatif SKAR.",
-       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
-      },
-      {
-       "annee": "1981",
-       "role": "proprietaire",
-       "nom": "Johnson Line AB / Svelast, Helsingborg",
-       "detail": "Livré le 15 décembre 1981 sous le nom SAGA STAR ; co-propriété Svelast AB / Rederi AB Svea avec Johnson Line.",
-       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
-      },
-      {
-       "annee": "1983",
-       "role": "proprietaire",
-       "nom": "Svenska Lastbil AB, Stockholm",
-       "detail": "Johnson Line se retire ; navire à Svenska Lastbil AB (1983), puis Swedcarrier Rederi AB, Helsingborg (1984).",
-       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
-      },
-      {
-       "annee": "1988",
-       "role": "renommage",
-       "nom": "Girolata",
-       "detail": "Vendu à la Compagnie Méridionale de Navigation (Bastia) en avril 1988 ; renommé GIROLATA (1989-1993).",
-       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
-      },
-      {
-       "annee": "1993",
-       "role": "renommage",
-       "nom": "Saga Star",
-       "detail": "Repris le nom SAGA STAR (1993-2001) ; vendu à Star Ferry Ltd, Nassau (août 1993) ; affrété TT-Line 1997-2001.",
-       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
-      },
-      {
-       "annee": "2002",
-       "role": "renommage",
-       "nom": "Dieppe",
-       "detail": "À la Syndicat Mixte de Promotion de l'Activité Transmanche / Conseil Général de Seine-Maritime (Dieppe) en janvier 2002 ; renommé DIEPPE (2002-2006), ligne Dieppe-Newhaven.",
-       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
-      },
-      {
-       "annee": "2006",
-       "role": "renommage",
-       "nom": "Baltivia",
-       "detail": "Vendu à Polska Żegluga Bałtycka (Polferries), Kołobrzeg, en novembre 2006 ; renommé BALTIVIA (2006-2024).",
-       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
-      },
-      {
-       "annee": "2024",
-       "role": "renommage",
-       "nom": "Dioscuria",
-       "detail": "À E60 Shipping Line LLC, Tbilissi (Géorgie), novembre 2024 ; renommé DIOSCURIA.",
-       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
-      }
-     ],
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Kalmar Varv (n° de coque 453) ; montage final a Goteborg ; Marstrandsverken n'a fourni que l'etrave",
-      "source": "http://www.ferry-site.dk/ferry.php?id=7931997&lang=en",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
     },
     {
      "nom": "GG 376 Götaland (ex-Danö, puis Themis)",
@@ -195375,11 +195294,11 @@
      "capacite": "cales 336 000 pieds cubes (fiche constructeur Royal Bodewes, coque 780)",
      "source_registre": "https://shipping-data.com/ship/vikingdiep",
      "verification": {
-      "statut": "douteux",
+      "statut": "corrige",
       "confiance": "simple",
-      "motif": "constructeur non identifie en revue (sourcing-revue-v2) : l'attribution actuelle n'est pas etablie. La source citee en confirmation refute l attribution : elle enumere trois chantiers successifs et place la construction de la coque en Chine. Bodewes n intervient qu en troisieme position, pour la finition. Le navire a porte Vikingdiep de 01/2008 a 07/2015, puis Tip Emden, puis Pindo, puis Karoliina (07/2022).",
+      "motif": "coque sous-traitee, achevement sur ce site : l'attribution au site d'achevement est la convention du registre (sourcing-revue-v2) ; le constructeur de la coque descend en timeline. La source citee en confirmation refute l attribution : elle enumere trois chantiers successifs et place la construction de la coque en Chine. Bodewes n intervient qu en troisieme position, pour la finition. Le navire a porte Vikingdiep de 01/2008 a 07/2015, puis Tip Emden, puis Pindo, puis Karoliina (07/2022).",
       "source": "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/10570-pindo-imo-9381380",
-      "le": "2026-08-05",
+      "le": "2026-08-21",
       "chantier_reel": "Hangzhou Dongfeng Shipbuilding Company Ltd., Hangzhou (Chine) pour la coque, chantier n 2004-50 ; equipement chez All Ships Outfitting & Repairs, Krimpen a/d Lek (n 260) ; achevement chez Bodewes Shipyards B.V., Hoogezand (n 780)"
      }
     },
@@ -201175,6 +201094,67 @@
       "le": "2026-08-03",
       "confiance": "simple"
      }
+    },
+    {
+     "nom": "Barentszdiep",
+     "annee": "2010",
+     "type": "General cargo",
+     "longueur_m": 106.78,
+     "jauge_gt": 4102,
+     "port_lourd_dwt": 5489,
+     "propulsion": [],
+     "source": "https://royalbodewes.com/vessel/barentszdiep/",
+     "verification": {
+      "statut": "corrige",
+      "confiance": "simple",
+      "motif": "coque sous-traitee, achevement sur ce site : l'attribution au site d'achevement est la convention du registre (sourcing-revue-v2) ; le constructeur de la coque descend en timeline. La page citee en confirmation ne dit pas ce qu on lui prete. Interrogee sur la totalite des chantiers, la fiche Marhisdata donne deux intervenants : coque mise sur cale le 12/12/2004 par Severnav a Drobeta-Turnu Severin (Roumanie), puis lancement 17/12/2009 et livraison 22/07/2010 par Bodewes Shipyards B.V. Hoogezand, numero de chantier 663. Cinq a",
+      "source": "https://www.marhisdata.nl/schip?id=9053&onderdeel=algemeen",
+      "le": "2026-08-21",
+      "chantier_reel": "Societatea Comerciala Severnav S.A., Drobeta-Turnu Severin (Roumanie) pour la coque ; achevement seul chez Bodewes Shipyards B.V., Hoogezand"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Bodewes Shipyards », construit par « Severnav S.A. » — Coque mise sur cale par Severnav a Drobeta-Turnu Severin (Roumanie) le 12/12/2004 ; Bodewes n a fait que l achevement. La page citee en confirmation ne dit pas ce qu on lui prete. Interrogee sur la totalite des chantiers, la fiche Marhisdata donne deux intervenants : coque mise sur cale le 12/12/2004 par Severnav a Dr (https://www.marhisdata.nl/schip?id=9053&onderdeel=algemeen) ; re-rattache le 2026-08-21 : attribue a tort a « Severnav S.A. », construit par « Bodewes Shipyards » — RETOUR AU SITE D ACHEVEMENT. PERIMETRE.md section 5 : une coque construite par un sous-traitant et achevee sur le site est attribuee au site D ACHEVEMENT, la sous-traitance descendant en timeline. C est la convention des registres de branche. Coque mise sur cale le 12/12/2004 par Severnav a Drobeta-Turnu Severin, lancement 17/12/2009 et livraison 22/07/2010 par Bodewes Hoogezand, chantier n 663. Le lancement a eu lieu chez Bodewes. (https://www.marhisdata.nl/schip?id=9053&onderdeel=algemeen)",
+     "timeline": [
+      {
+       "annee": "2004",
+       "role": "construction-coque",
+       "nom": "Severnav S.A.",
+       "detail": "Coque mise sur cale le 12/12/2004 par Severnav a Drobeta-Turnu Severin (Roumanie). Lancement 17/12/2009 et livraison 22/07/2010 par Bodewes Hoogezand, chantier n 663. Cinq ans separent la mise sur cale roumaine du lancement neerlandais.",
+       "source": "https://www.marhisdata.nl/schip?id=9053&onderdeel=algemeen"
+      }
+     ],
+     "imo": "9507130"
+    },
+    {
+     "nom": "OSC Victoriadiep",
+     "annee": "2007",
+     "type": "General cargo",
+     "longueur_m": 119.98,
+     "jauge_gt": 5000,
+     "port_lourd_dwt": 7750,
+     "propulsion": [],
+     "source": "https://royalbodewes.com/vessel/osc-victoriadiep/",
+     "imo": "9351153",
+     "imo_source": "https://shipping-data.com/ship/osc-victoriadiep",
+     "pavillon": "Pays-Bas",
+     "source_registre": "https://shipping-data.com/ship/osc-victoriadiep",
+     "verification": {
+      "statut": "corrige",
+      "confiance": "simple",
+      "motif": "coque sous-traitee, achevement sur ce site : l'attribution au site d'achevement est la convention du registre (sourcing-revue-v2) ; le constructeur de la coque descend en timeline. Page citee ouverte et lue : elle distingue explicitement hull (Zaliv, Kertch, Ukraine) et completion (Bodewes, Hoogezand), livraison 17/12/2007. Cas identique a l OSC Vlistdiep : la coque vient de l Est, Bodewes n a fait que l achever.",
+      "source": "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/6379-victoriadiep-imo-9351153",
+      "le": "2026-08-21",
+      "chantier_reel": "Zaliv Shipyard, Kertch (Ukraine) pour la coque ; achevement chez Bodewes Scheepswerven B.V., Hoogezand, chantier n 658"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Bodewes Shipyards », construit par « Zaliv Shipyard » — Re-rattachement etabli en revue adversariale : construit par Zaliv Shipyard, et non par Bodewes Shipyards. Page citee ouverte et lue : elle distingue explicitement hull (Zaliv, Kertch, Ukraine) et completion (Bodewes, Hoogezand), livraison 17/12/2007. Cas identique a l OSC Vlistdiep : la coque vient de l Est, Bodewes n a fait (https://www.scheepvaartwest.be/CMS/index.php/general-cargo/6379-victoriadiep-imo-9351153) ; re-rattache le 2026-08-21 : attribue a tort a « Zaliv Shipyard », construit par « Bodewes Shipyards » — RETOUR AU SITE D ACHEVEMENT. PERIMETRE.md section 5, meme convention. La source distingue hull (Zaliv, Kertch) et completion (Bodewes, Hoogezand, chantier n 658), livraison 17/12/2007. La coque vient de l Est, l achevement est neerlandais, et le registre attribue a l achevement. (https://www.scheepvaartwest.be/CMS/index.php/general-cargo/6379-victoriadiep-imo-9351153)",
+     "timeline": [
+      {
+       "annee": "2007",
+       "role": "construction-coque",
+       "nom": "Zaliv Shipyard",
+       "detail": "La source distingue explicitement hull (Zaliv Shipyard, Kertch) et completion (Bodewes Scheepswerven B.V., Hoogezand, chantier n 658). Livraison 17/12/2007.",
+       "source": "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/6379-victoriadiep-imo-9351153"
+      }
+     ]
     }
    ],
    "sources": [
@@ -221459,6 +221439,100 @@
      "nom": "Kalmarsund VI",
      "annee": "1951",
      "source": "https://sv.wikipedia.org/wiki/Kalmar_varv"
+    },
+    {
+     "nom": "Saga Star",
+     "imo": "7931997",
+     "type": "RoPax (ferry roulier a passagers) - construction partielle (etrave)",
+     "annee": "1981",
+     "longueur_m": null,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Ferry RoPax ; Marstrandsverken a construit l'etrave, Kalmar la poupe, assemblage final a Eriksberg (Goteborg)",
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "Diesel",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "client": null,
+     "operateur": "E60 Shipping Line LLC, Tbilissi",
+     "proprietaire": "E60 Shipping Line LLC, Tbilissi",
+     "classification": null,
+     "source": "https://sv.wikipedia.org/wiki/Marstrands_Mekaniska_Verkstad",
+     "timeline": [
+      {
+       "annee": "1981",
+       "role": "section-sous-traitee",
+       "nom": "FEAB Marstrandsverken",
+       "detail": "Etrave et section avant construites a Marstrand, puis integrees a la coque montee par Kalmar Varv. Une section sous-traitee n est pas une construction : elle descend en timeline.",
+       "source": "http://www.ferry-site.dk/ferry.php?id=7931997&lang=en"
+      },
+      {
+       "annee": "1981",
+       "role": "construction",
+       "nom": "Sections multiples (Kalmar Varv arrière, FEAB Marstrandsverken avant, Götaverken Cityvarvet milieu, Eriksberg assemblage)",
+       "detail": "RoPax construit en sections : arrière par Kalmar Varv (quille 10/06/1980, lancé 16/01/1981), AVANT par Fartygsentreprenader AB Marstrand (lancé 03/05/1981), section centrale Götaverken Cityvarvet, assemblage final en cale sèche Eriksberg (incendie salle des machines, retard 2 mois). Lancé sous le nom SAGALAND. IMO 7931997, indicatif SKAR.",
+       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
+      },
+      {
+       "annee": "1981",
+       "role": "proprietaire",
+       "nom": "Johnson Line AB / Svelast, Helsingborg",
+       "detail": "Livré le 15 décembre 1981 sous le nom SAGA STAR ; co-propriété Svelast AB / Rederi AB Svea avec Johnson Line.",
+       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
+      },
+      {
+       "annee": "1983",
+       "role": "proprietaire",
+       "nom": "Svenska Lastbil AB, Stockholm",
+       "detail": "Johnson Line se retire ; navire à Svenska Lastbil AB (1983), puis Swedcarrier Rederi AB, Helsingborg (1984).",
+       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
+      },
+      {
+       "annee": "1988",
+       "role": "renommage",
+       "nom": "Girolata",
+       "detail": "Vendu à la Compagnie Méridionale de Navigation (Bastia) en avril 1988 ; renommé GIROLATA (1989-1993).",
+       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
+      },
+      {
+       "annee": "1993",
+       "role": "renommage",
+       "nom": "Saga Star",
+       "detail": "Repris le nom SAGA STAR (1993-2001) ; vendu à Star Ferry Ltd, Nassau (août 1993) ; affrété TT-Line 1997-2001.",
+       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
+      },
+      {
+       "annee": "2002",
+       "role": "renommage",
+       "nom": "Dieppe",
+       "detail": "À la Syndicat Mixte de Promotion de l'Activité Transmanche / Conseil Général de Seine-Maritime (Dieppe) en janvier 2002 ; renommé DIEPPE (2002-2006), ligne Dieppe-Newhaven.",
+       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
+      },
+      {
+       "annee": "2006",
+       "role": "renommage",
+       "nom": "Baltivia",
+       "detail": "Vendu à Polska Żegluga Bałtycka (Polferries), Kołobrzeg, en novembre 2006 ; renommé BALTIVIA (2006-2024).",
+       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
+      },
+      {
+       "annee": "2024",
+       "role": "renommage",
+       "nom": "Dioscuria",
+       "detail": "À E60 Shipping Line LLC, Tbilissi (Géorgie), novembre 2024 ; renommé DIOSCURIA.",
+       "source": "https://www.faktaomfartyg.se/sagaland_1981.htm"
+      }
+     ],
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "http://www.ferry-site.dk/ferry.php?id=7931997&lang=en",
+      "le": "2026-08-21"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « FEAB Marstrandsverken (ex-Marstrands Mekaniska Verkstad / Marstrandsverken) », construit par « Kalmar varv » — IMO 7931997, cle OMI valide. Deux sources tierces attribuent la CONSTRUCTION a Kalmar Varv. L etrave construite a Marstrand est une section sous-traitee : elle descend en timeline, la coque va au constructeur. (http://www.ferry-site.dk/ferry.php?id=7931997&lang=en)"
     }
    ],
    "sources": [
@@ -238962,9 +239036,9 @@
       {
        "annee": "2022",
        "role": "construction",
-       "nom": "Piriou Concarneau",
-       "detail": "Premier voilier construit par Piriou ; mise sur cale avril 2022, architecte VPLP (Olivier Petit / Simon Watin)",
-       "source": "Bretagne Economique ; bateaux.com"
+       "nom": "Piriou Vietnam (Ho Chi Minh-Ville)",
+       "detail": "Construite a Ho Chi Minh-Ville au Vietnam, dans une filiale des chantiers francais Piriou (phrase litterale de la source). Premier voilier construit par le groupe Piriou, architecte VPLP (Olivier Petit / Simon Watin). Mise a l eau le 28 novembre 2022, mise en service le 14 juin 2023 par un bapteme a Marseille.",
+       "source": "https://fr.wikipedia.org/wiki/Pers%C3%A9v%C3%A9rance_(2022)"
       },
       {
        "annee": "2023",
@@ -239735,7 +239809,16 @@
       "source": "https://www.marhisdata.nl/werf&id=842",
       "le": "2026-08-21"
      },
-     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Hartman Marine Shipbuilding B.V. », construit par « Partner Stocznia Sp. z o.o. » — Re-rattachement etabli en revue adversariale : construit par Partner Stocznia Sp. z o.o., et non par Hartman Marine Shipbuilding B.V.. Marhisdata designe Partner Stocznia Sp. z o.o. comme SCHEEPSBOUWER de l Oceanic, et la fiche du chantier polonais liste explicitement OCEANIC (2012, bouwnummer 5). Symetriquement, la fiche du chantier Hartman Marine Ship (https://www.marhisdata.nl/werf&id=842)"
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Hartman Marine Shipbuilding B.V. », construit par « Partner Stocznia Sp. z o.o. » — Re-rattachement etabli en revue adversariale : construit par Partner Stocznia Sp. z o.o., et non par Hartman Marine Shipbuilding B.V.. Marhisdata designe Partner Stocznia Sp. z o.o. comme SCHEEPSBOUWER de l Oceanic, et la fiche du chantier polonais liste explicitement OCEANIC (2012, bouwnummer 5). Symetriquement, la fiche du chantier Hartman Marine Ship (https://www.marhisdata.nl/werf&id=842)",
+     "timeline": [
+      {
+       "annee": "2012",
+       "role": "achevement",
+       "nom": "Hartman Marine Shipbuilding B.V. (Urk)",
+       "detail": "Coque et navire construits a Szczecin par Partner Stocznia, bouwnummer 5, remorques par le canal de Kiel, arrives a IJmuiden le 20/04/2012 puis conduits a Urk pour l achevement, livraison le 23/07/2012. La fiche de chantier de Hartman, qui enumere ses 17 constructions, ne contient PAS l Oceanic.",
+       "source": "https://www.marhisdata.nl/werf&id=842"
+      }
+     ]
     }
    ],
    "sources": [
@@ -239857,25 +239940,7 @@
     "coques et blocs de coque acier"
    ],
    "description": "Chantier roumain de Drobeta-Turnu Severin, sur la rive gauche du Danube, fonde en 1852 et reconstruit en 1965-1966. Superficie totale de 29,98 hectares en deux sections, 18,36 hectares couverts, 44 619 m2 d'aire de pre-montage. Production de coques acier de 9 600 tonnes par an, cales de 136 m et 128 m, quais d'armement de 456 m et 136 m, portiques de 1,6 a 100 tonnes. Construit des navires de mer et des navires fluviaux, repare, transforme et convertit. Fournit aussi des coques a d'autres chantiers europeens, ce qui est precisement le cas releve par la revue.",
-   "navires_references": [
-    {
-     "nom": "Barentszdiep",
-     "annee": "2010",
-     "type": "General cargo",
-     "longueur_m": 106.86,
-     "jauge_gt": 4102,
-     "port_lourd_dwt": 5400,
-     "propulsion": [],
-     "source": "https://royalbodewes.com/vessel/barentszdiep/",
-     "verification": {
-      "statut": "douteux",
-      "motif": "re-rattache, attribution a re-verifier",
-      "source": "https://www.marhisdata.nl/schip?id=9053&onderdeel=algemeen",
-      "le": "2026-08-21"
-     },
-     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Bodewes Shipyards », construit par « Severnav S.A. » — Coque mise sur cale par Severnav a Drobeta-Turnu Severin (Roumanie) le 12/12/2004 ; Bodewes n a fait que l achevement. La page citee en confirmation ne dit pas ce qu on lui prete. Interrogee sur la totalite des chantiers, la fiche Marhisdata donne deux intervenants : coque mise sur cale le 12/12/2004 par Severnav a Dr (https://www.marhisdata.nl/schip?id=9053&onderdeel=algemeen)"
-    }
-   ],
+   "navires_references": [],
    "sources": [
     "https://www.severnav.ro/about-us",
     "https://www.marhisdata.nl/schip?id=9053&onderdeel=algemeen"
@@ -239922,29 +239987,7 @@
     "brise-glace"
    ],
    "description": "Chantier de Kertch, sur le detroit de Kertch entre la mer Noire et la mer d'Azov, fonde en 1938. Occupe 350 acres. Forme de radoub de 360 m sur 60 m acceptant 13 m de tirant d'eau, deux portiques de 200 tonnes. Environ 600 navires construits entre 1945 et 1980, chalutiers et vedettes lance-torpilles ; depuis les annees 1960, petroliers, porte-conteneurs et reparation. A produit des fregates de type Krivak et le porte-conteneurs a propulsion nucleaire Sevmorput. La Crimee est un territoire ukrainien sous controle russe de fait depuis 2014 ; le pays porte ici est celui de la souverainete reconnue.",
-   "navires_references": [
-    {
-     "nom": "OSC Victoriadiep",
-     "annee": "2007",
-     "type": "General cargo",
-     "longueur_m": 119.98,
-     "jauge_gt": 5000,
-     "port_lourd_dwt": 7750,
-     "propulsion": [],
-     "source": "https://royalbodewes.com/vessel/osc-victoriadiep/",
-     "imo": "9351153",
-     "imo_source": "https://shipping-data.com/ship/osc-victoriadiep",
-     "pavillon": "Pays-Bas",
-     "source_registre": "https://shipping-data.com/ship/osc-victoriadiep",
-     "verification": {
-      "statut": "douteux",
-      "motif": "re-rattache, attribution a re-verifier",
-      "source": "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/6379-victoriadiep-imo-9351153",
-      "le": "2026-08-21"
-     },
-     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Bodewes Shipyards », construit par « Zaliv Shipyard » — Re-rattachement etabli en revue adversariale : construit par Zaliv Shipyard, et non par Bodewes Shipyards. Page citee ouverte et lue : elle distingue explicitement hull (Zaliv, Kertch, Ukraine) et completion (Bodewes, Hoogezand), livraison 17/12/2007. Cas identique a l OSC Vlistdiep : la coque vient de l Est, Bodewes n a fait (https://www.scheepvaartwest.be/CMS/index.php/general-cargo/6379-victoriadiep-imo-9351153)"
-    }
-   ],
+   "navires_references": [],
    "sources": [
     "https://en.wikipedia.org/wiki/Zaliv_Shipyard",
     "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/6379-victoriadiep-imo-9351153"
