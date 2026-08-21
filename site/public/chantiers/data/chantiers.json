@@ -5736,6 +5736,45 @@
       "confiance": "simple"
      },
      "source_ref": "re-rattache le 2026-08-05 : attribue a tort a « Damen Shiprepair Brest (ex-Sobrena) », construit par « Chantiers de l'Atlantique » — Le Gaselys, rebaptisé LNG Alliance, a été construit par les Chantiers de l'Atlantique à Saint-Nazaire : lancé le 25 mai 2006, achevé le 5 mars 2007. D (https://en.wikipedia.org/wiki/Gaselys)"
+    },
+    {
+     "nom": "Sidi-Ferruch",
+     "type": "sous-marin",
+     "propulsion": [
+      "diesel-electrique"
+     ],
+     "imo": null,
+     "annee": "1937",
+     "longueur_m": null,
+     "jauge_gt": null,
+     "energie": "diesel-electrique",
+     "capacite": "type 1500 tonnes",
+     "client": "Marine nationale (France)",
+     "operateur": "Marine nationale",
+     "proprietaire": "Marine nationale (Etat francais)",
+     "pavillon": "France",
+     "classification": null,
+     "source": "https://fr.wikipedia.org/wiki/Liste_des_sous-marins_construits_%C3%A0_Cherbourg",
+     "timeline": [
+      {
+       "annee": "1937",
+       "role": "construction",
+       "nom": "Lancement, Arsenal de Cherbourg",
+       "source": "fr.wikipedia.org/wiki/Liste_des_sous-marins_construits_a_Cherbourg",
+       "detail": "Sous-marin de 1re classe type 1500 tonnes"
+      }
+     ],
+     "caractere": "public",
+     "propriete": "publique",
+     "exploitation": "regalien",
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://en.wikipedia.org/wiki/Redoutable-class_submarine_(1928)",
+      "le": "2026-08-21"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Naval Group · Cherbourg », construit par « Chantiers de l'Atlantique » — Construit par les Ateliers et Chantiers de Saint-Nazaire Penhoet, dont les Chantiers de l Atlantique sont le successeur sur le meme site nazairien, et non a Cherbourg. (https://en.wikipedia.org/wiki/Redoutable-class_submarine_(1928))"
     }
    ],
    "sources_ref": [
@@ -5770,7 +5809,12 @@
    ],
    "actif": true,
    "actif_methode": "deduction-livraison-recente",
-   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : MSC World Asia (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/saint-nazaire-l-assemblage-du-msc-world-asia-presque-termine-a-un-mois-de-sa-mise-a-l-eau"
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : MSC World Asia (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/saint-nazaire-l-assemblage-du-msc-world-asia-presque-termine-a-un-mois-de-sa-mise-a-l-eau",
+   "alias": [
+    "Ateliers et Chantiers de Saint-Nazaire Penhoet",
+    "Chantiers de Penhoët",
+    "ACSN Penhoët"
+   ]
   },
   {
    "id": "naval-group-lorient",
@@ -9010,6 +9054,45 @@
      "architecte_source": "Wikipedia : aviso A69 / classe d'Estienne d'Orves conçu et construit par l'Arsenal de Lorient (DCN, devenu Naval Group).",
      "source_ref": "Wikipedia ARA Granville ; Drummond-class corvette",
      "source": "https://en.wikipedia.org/wiki/ARA_Granville"
+    },
+    {
+     "nom": "Le Glorieux",
+     "type": "sous-marin",
+     "propulsion": [
+      "diesel-electrique"
+     ],
+     "imo": null,
+     "annee": "1931",
+     "longueur_m": null,
+     "jauge_gt": null,
+     "energie": "diesel-electrique",
+     "capacite": "type 1500 tonnes",
+     "client": "Marine nationale (France)",
+     "operateur": "Marine nationale",
+     "proprietaire": "Marine nationale (Etat francais)",
+     "pavillon": "France",
+     "classification": null,
+     "source": "https://fr.wikipedia.org/wiki/Liste_des_sous-marins_construits_%C3%A0_Cherbourg",
+     "timeline": [
+      {
+       "annee": "1931",
+       "role": "construction",
+       "nom": "Lancement, Arsenal de Cherbourg",
+       "source": "fr.wikipedia.org/wiki/Liste_des_sous-marins_construits_a_Cherbourg",
+       "detail": "Sous-marin de 1re classe type 1500 tonnes (classe Redoutable 1928)"
+      }
+     ],
+     "caractere": "public",
+     "propriete": "publique",
+     "exploitation": "regalien",
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://en.wikipedia.org/wiki/Redoutable-class_submarine_(1928)",
+      "le": "2026-08-21"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Naval Group · Cherbourg », construit par « Naval Group · Lorient » — Construit a l Arsenal de Lorient, dont Naval Group Lorient est le successeur sur le meme site (Arsenal, DCAN, DCN 1991, DCNS 2007, Naval Group 2017), et non a Cherbourg. (https://en.wikipedia.org/wiki/Redoutable-class_submarine_(1928))"
     }
    ],
    "sources_ref": [
@@ -9018,7 +9101,12 @@
    ],
    "actif": true,
    "actif_methode": "deduction-livraison-recente",
-   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Nearchos (F602) (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.naval-group.com/en/launching-hs-nearchos-second-defence-and-intervention-frigate-fdi-hellenic-navy"
+   "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Nearchos (F602) (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.naval-group.com/en/launching-hs-nearchos-second-defence-and-intervention-frigate-fdi-hellenic-navy",
+   "alias": [
+    "Arsenal de Lorient",
+    "DCN Lorient",
+    "DCNS Lorient"
+   ]
   },
   {
    "id": "naval-group-cherbourg",
@@ -11584,84 +11672,6 @@
       "source": "https://en.wikipedia.org/wiki/French_submarine_Surcouf",
       "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
-    },
-    {
-     "nom": "Le Glorieux",
-     "type": "sous-marin",
-     "propulsion": [
-      "diesel-electrique"
-     ],
-     "imo": null,
-     "annee": "1931",
-     "longueur_m": null,
-     "jauge_gt": null,
-     "energie": "diesel-electrique",
-     "capacite": "type 1500 tonnes",
-     "client": "Marine nationale (France)",
-     "operateur": "Marine nationale",
-     "proprietaire": "Marine nationale (Etat francais)",
-     "pavillon": "France",
-     "classification": null,
-     "source": "https://fr.wikipedia.org/wiki/Liste_des_sous-marins_construits_%C3%A0_Cherbourg",
-     "timeline": [
-      {
-       "annee": "1931",
-       "role": "construction",
-       "nom": "Lancement, Arsenal de Cherbourg",
-       "source": "fr.wikipedia.org/wiki/Liste_des_sous-marins_construits_a_Cherbourg",
-       "detail": "Sous-marin de 1re classe type 1500 tonnes (classe Redoutable 1928)"
-      }
-     ],
-     "caractere": "public",
-     "propriete": "publique",
-     "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Arsenal de Lorient (aujourd'hui Naval Group Lorient)",
-      "source": "https://en.wikipedia.org/wiki/Redoutable-class_submarine_(1928)",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Sidi-Ferruch",
-     "type": "sous-marin",
-     "propulsion": [
-      "diesel-electrique"
-     ],
-     "imo": null,
-     "annee": "1937",
-     "longueur_m": null,
-     "jauge_gt": null,
-     "energie": "diesel-electrique",
-     "capacite": "type 1500 tonnes",
-     "client": "Marine nationale (France)",
-     "operateur": "Marine nationale",
-     "proprietaire": "Marine nationale (Etat francais)",
-     "pavillon": "France",
-     "classification": null,
-     "source": "https://fr.wikipedia.org/wiki/Liste_des_sous-marins_construits_%C3%A0_Cherbourg",
-     "timeline": [
-      {
-       "annee": "1937",
-       "role": "construction",
-       "nom": "Lancement, Arsenal de Cherbourg",
-       "source": "fr.wikipedia.org/wiki/Liste_des_sous-marins_construits_a_Cherbourg",
-       "detail": "Sous-marin de 1re classe type 1500 tonnes"
-      }
-     ],
-     "caractere": "public",
-     "propriete": "publique",
-     "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Ateliers et Chantiers de Saint-Nazaire Penhoet",
-      "source": "https://en.wikipedia.org/wiki/Redoutable-class_submarine_(1928)",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
     }
    ],
    "geo_source": "https://fr.wikipedia.org/wiki/Arsenal_de_Cherbourg",
@@ -14063,66 +14073,6 @@
    "taille_max": "Navires acier et aluminium jusqu'à environ 110-120 m de long ; coques jusqu'à 95 m manipulables via l'élévateur synchrolift (2 000 t de levage) ; forme de radoub de 140 m accueillant des navires jusqu'à 115 m.",
    "navires_references": [
     {
-     "nom": "Scillonian IV",
-     "type": "Ferry à passagers et fret (desserte insulaire, construit au chantier Piriou Vietnam)",
-     "annee": "Mise en service visée 2027",
-     "longueur_m": 74.85,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "600 passagers + jusqu'à 20 conteneurs 10 pieds sur 2 niveaux, charge utile max 90 t",
-     "energie": null,
-     "client": "Isles of Scilly Steamship Group (commande janvier 2024)",
-     "classification": null,
-     "source": "https://en.wikipedia.org/wiki/Scillonian_IV",
-     "capacite_pax": 600,
-     "operateur": "Isles of Scilly Steamship Company (Isles of Scilly Steamship Group)",
-     "proprietaire": "Isles of Scilly Steamship Group",
-     "timeline": [
-      {
-       "annee": "2023",
-       "role": "evenement",
-       "nom": "PIRIOU (commande)",
-       "detail": "L'Isles of Scilly Steamship Group choisit le chantier PIRIOU (Concarneau) comme constructeur du nouveau ferry, dans le cadre d'un programme d'investissement de 40 M£.",
-       "source": "https://islesofscillysteamshipgroup.co.uk/corporate/latest-news/piriou/",
-       "source_ref": "role corrige le 2026-08-03 : construction -> evenement (acte contractuel, 2023, antérieur à la coque 2027)"
-      },
-      {
-       "annee": "2024",
-       "role": "construction",
-       "nom": "PIRIOU (Ho Chi Minh, Vietnam)",
-       "detail": "Pose de quille le 6 novembre 2024 sur le site PIRIOU de Hô Chi Minh-Ville (Vietnam).",
-       "source": "https://en.wikipedia.org/wiki/Scillonian_IV",
-       "prix": "40 M GBP pour 2 navires (Scillonian IV + Menawethan)"
-      },
-      {
-       "annee": "2026",
-       "role": "evenement",
-       "nom": "Mise à l'eau",
-       "detail": "Lancement / mise à l'eau le 28 mars 2026 au chantier PIRIOU de Hô Chi Minh-Ville. 74,85 m, 2200 GT, 600 passagers.",
-       "source": "https://www.shippax.com/en/news/scillonian-iv-takes-to-the-water-for-the-first-time.aspx"
-      },
-      {
-       "annee": "2027",
-       "role": "operateur",
-       "nom": "Isles of Scilly Steamship Company",
-       "detail": "Mise en service prévue en mars 2027 sur la ligne Penzance - Îles Scilly, en remplacement du Scillonian III.",
-       "source": "https://islesofscillysteamshipgroup.co.uk/new-vessels/scillonian-4/"
-      }
-     ],
-     "imo": "1056355",
-     "capacite_fret": "90 t",
-     "prix_acquisition": "compris dans un programme de 40 M GBP (≈ 50 M USD) couvrant 2 navires : le ferry passagers Scillonian IV + le cargo Menawethan (repartition unitaire non publiee)",
-     "architecte": "BMT",
-     "architecte_source": "BMT.org / MarineLink / Wikipedia : BMT a remporte le contrat de conception (2020) et a produit les designs concept du Scillonian IV (Sylvain Julien, Director of Naval Architecture, BMT) ; Van Oossanen cite en appui sur l'optimisation de coque avec Piriou",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Piriou Vietnam (Mỹ Tho / Hô Chi Minh-Ville, Viêt Nam)",
-      "source": "https://en.wikipedia.org/wiki/Scillonian_IV",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "Trolley de Prévaux (1er PH)",
      "type": "Patrouilleur hauturier (OPV de défense)",
      "annee": "Mis à l'eau 02/2026 ; admission au service actif visée 2028",
@@ -14701,11 +14651,12 @@
      "exploitation": "regalien",
      "caractere_motif": "propriete: as ; exploitation: naval",
      "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "DCNS / Naval Group puis Kership (Naval Group-Piriou), Lorient ; ARA Bouchard = ex-L'Adroit construit par DCNS en 2010-2011",
+      "statut": "corrige",
+      "confiance": "simple",
+      "motif": "construit par DCNS / Naval Group puis Kership (Naval Group-Piriou), raison sociale anterieure de Piriou sur le meme site (phase3-revue-v3b) ; attribution deja juste, nom d'origine a porter en alias. Refutation en deux temps. 1) ARA BOUCHARD n'est pas une construction 2019-2022 : c'est l'ex-L'ADROIT, demonstrateur Gowind lance en mai 2010 et arme en juin 2011, vendu a l'Argentine en novembre 2018 et admis sous son nouveau nom en decembre 2019. La coque est anterieure de neuf ans a la plage annoncee, et elle sort de DCNS (aujourd'hui Kership), p",
       "source": "https://en.wikipedia.org/wiki/ARA_Bouchard_(P-51)",
-      "le": "2026-08-05",
-      "confiance": "simple"
+      "le": "2026-08-21",
+      "chantier_reel": "DCNS / Naval Group puis Kership (Naval Group-Piriou), Lorient ; ARA Bouchard = ex-L'Adroit construit par DCNS en 2010-2011"
      }
     },
     {
@@ -15501,50 +15452,6 @@
      "source_ref": "Wikipedia FR Drennec (thonier) ; VesselFinder IMO 9359703 (ex-DRENNEC renomme NOUR, pavillon Oman 2011)",
      "source": "https://www.vesselfinder.com/vessels/details/9359703",
      "tracabilite": "url-non-verifiee"
-    },
-    {
-     "nom": "Persévérance",
-     "type": "voilier scientifique / ravitailleur polaire",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ],
-     "imo": null,
-     "annee": "2023",
-     "longueur_m": 42,
-     "capacite_pax": 12,
-     "capacite": "8 membres d'equipage + 12 passagers ; coque alu renforcee navigation polaire ; 2 mats de 33 m",
-     "energie": "velique + propulsion diesel d'appoint",
-     "client": "Septieme Continent (Jean-Louis Etienne)",
-     "operateur": "Septieme Continent (expedition Polar Pod)",
-     "proprietaire": "Septieme Continent",
-     "pavillon": "France",
-     "classification": null,
-     "timeline": [
-      {
-       "annee": "2022",
-       "role": "construction",
-       "nom": "Piriou Concarneau",
-       "detail": "Premier voilier construit par Piriou ; mise sur cale avril 2022, architecte VPLP (Olivier Petit / Simon Watin)",
-       "source": "Bretagne Economique ; bateaux.com"
-      },
-      {
-       "annee": "2023",
-       "role": "operateur",
-       "nom": "Septieme Continent / Jean-Louis Etienne",
-       "detail": "Livre mars 2023 ; goelette ravitailleur de la station derivante Polar Pod autour de l'Antarctique ; immat. RIF",
-       "source": "Piriou.com ; actu-transport-logistique.fr"
-      }
-     ],
-     "source_ref": "Mer et Marine (le voilier Persévérance a Concarneau) ; Piriou.com (livraison a Jean-Louis Etienne, Polar Pod) ; Bretagne Economique (premier voilier livre par Piriou)",
-     "tracabilite": "reference-sans-url",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Piriou Vietnam, Hô Chi Minh-Ville (filiale du groupe Piriou)",
-      "source": "https://fr.wikipedia.org/wiki/Pers%C3%A9v%C3%A9rance_(2022)",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
     },
     {
      "nom": "Almak",
@@ -18190,11 +18097,12 @@
      "exploitation": "regalien",
      "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
      "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Socarenam, site de Saint-Malo (conception et maîtrise d'œuvre CNIM, La Seyne-sur-Mer)",
+      "statut": "corrige",
+      "confiance": "simple",
+      "motif": "construit par Socarenam, site de Saint-Malo, raison sociale anterieure de Socarenam sur le meme site (phase3-revue-v3b) ; attribution deja juste, nom d'origine a porter en alias. Le groupe n'est pas le site : la page Wikipédia ouverte indique une conception CNIM et une construction par Socarenam à Saint-Malo, pas à Boulogne-sur-Mer. Les quatre unités de la Marine nationale portent bien les numéros L9092 à L9095, première livraison le 24 novembre 2011 puis janvier, avril et novembre 2012 ; l'année 2012 en base ne couvre donc",
       "source": "https://fr.wikipedia.org/wiki/Engin_de_d%C3%A9barquement_amphibie_rapide",
-      "le": "2026-08-05",
-      "confiance": "simple"
+      "le": "2026-08-21",
+      "chantier_reel": "Socarenam, site de Saint-Malo (conception et maîtrise d'œuvre CNIM, La Seyne-sur-Mer)"
      }
     },
     {
@@ -36422,11 +36330,12 @@
      "propriete": "privee",
      "caractere_motif": "propriete: plaisancier",
      "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Chantier de MARSEILLE racheté par Henri Amel (avant la création du chantier de La Rochelle en 1965)",
+      "statut": "douteux",
+      "confiance": "simple",
+      "motif": "constructeur non identifie en revue (phase3-revue-v3b) : l'attribution actuelle n'est pas etablie. REFUTE. La page Amel Yachts est explicite : « The company's first boat was the Super Mistral Sport, built in Marseille after Amel acquired a struggling shipyard ». Le lieu de construction est donc MARSEILLE, pas La Rochelle, et l'affaire marseillaise a fait faillite avant la fondation du chantier de La Rochelle (1965, après installation de Henri Am",
       "source": "https://en.wikipedia.org/wiki/Amel_Yachts",
-      "le": "2026-08-05",
-      "confiance": "simple"
+      "le": "2026-08-21",
+      "chantier_reel": "Chantier de MARSEILLE racheté par Henri Amel (avant la création du chantier de La Rochelle en 1965)"
      }
     }
    ],
@@ -51651,61 +51560,6 @@
      }
     },
     {
-     "nom": "Gwengaero II (ex-Ulysse)",
-     "type": "fileyeur",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "annee": "1981",
-     "longueur_m": 20.5,
-     "jauge_gt": 49.91,
-     "energie": "diesel",
-     "capacite": "383 kW (Caterpillar)",
-     "client": "Armement local (Le Guilvinec)",
-     "pavillon": "Tunisie",
-     "source": "https://littoral-manche-atlantique.com",
-     "timeline": [
-      {
-       "annee": "1981",
-       "role": "construction",
-       "nom": "Gléhen Léon Pont l'Abbé (chantier de Pors-Moro)",
-       "detail": "Fileyeur acier, LOA 20,50 m, larg. 6,54 m, 49,91 Tx, Caterpillar 383 kW. Lancé sous le nom Ulysse (GV.514584, Le Guilvinec)",
-       "source": "littoral-manche-atlantique.com"
-      },
-      {
-       "annee": "1989",
-       "role": "pavillon",
-       "nom": "Ulysse (MX.514584, Morlaix)",
-       "detail": "Changement de quartier maritime",
-       "source": "littoral-manche-atlantique.com"
-      },
-      {
-       "annee": "1991",
-       "role": "renommage",
-       "nom": "Gwengaero II (LO.514584, Lorient)",
-       "source": "littoral-manche-atlantique.com"
-      },
-      {
-       "annee": "2004",
-       "role": "pavillon",
-       "nom": "Exporté en Tunisie",
-       "source": "littoral-manche-atlantique.com"
-      }
-     ],
-     "source_ref": "fiche Gwengaero II LO.514584",
-     "tracabilite": "url-domaine-seul",
-     "caractere": "prive",
-     "propriete": "privee",
-     "caractere_motif": "propriete: armement",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Chantier Leon Glehen, Pont-l'Abbe (Finistere)",
-      "source": "https://www.littoral-manche-atlantique.com/2023/03/gwengaero-ii-lo.514584.html",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "Cyriaque (ex-Tritonia)",
      "type": "chalutier",
      "propulsion": [
@@ -51999,56 +51853,6 @@
       "annee": "2023",
       "source": "littoral-manche-atlantique.com",
       "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
-     }
-    },
-    {
-     "nom": "Lorelei (ex-La Soupape I)",
-     "type": "chalutier",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "imo": "8543967",
-     "annee": "1989",
-     "longueur_m": 15.9,
-     "jauge_gt": 66.23,
-     "energie": "diesel",
-     "capacite": "257 kW",
-     "client": "Armement local (Le Guilvinec)",
-     "pavillon": "France",
-     "source": "https://littoral-manche-atlantique.com",
-     "timeline": [
-      {
-       "annee": "1989",
-       "role": "construction",
-       "nom": "Gléhen Léon Pont l'Abbé (chantier de Pors-Moro)",
-       "detail": "Chalutier de fond coquillier acier, LOA 15,90 m, larg. 6,00 m, 66,23 UMS, 257 kW. Lancé Lorelei (GV.730708, Le Guilvinec)",
-       "source": "littoral-manche-atlantique.com"
-      },
-      {
-       "annee": "2012",
-       "role": "renommage",
-       "nom": "La Soupape I (CH.730708, Cherbourg)",
-       "source": "littoral-manche-atlantique.com"
-      },
-      {
-       "annee": "2012",
-       "role": "proprietaire",
-       "nom": "La Soupape I (CH.730708, Cherbourg)",
-       "detail": "Changement d'armement/quartier maritime (Guilvinec -> Cherbourg). Aucun prix de cession publié pour cette transaction.",
-       "source": "https://www.littoral-manche-atlantique.com/2021/03/la-soupape-i-ch.730708-imo.8543667.html"
-      }
-     ],
-     "source_ref": "fiche Lorelei GV.730708 / IMO 8543967",
-     "tracabilite": "url-domaine-seul",
-     "caractere": "prive",
-     "propriete": "privee",
-     "caractere_motif": "propriete: armement",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Chantier Leon Glehen, Pont-l'Abbe (Finistere)",
-      "source": "https://www.littoral-manche-atlantique.com/2021/03/lorelei-gv.730708-imo.8543967.html",
-      "le": "2026-08-05",
-      "confiance": "simple"
      }
     },
     {
@@ -77204,29 +77008,6 @@
      ]
     },
     {
-     "nom": "Notre-Dame de Rumengol (restauration)",
-     "type": "Inconnu",
-     "annee": "1945 (construction) ; 1996 = restauration Guip",
-     "longueur_m": 21.7,
-     "jauge_gt": 57,
-     "port_lourd_dwt": null,
-     "capacite": "gabare/dundée de l'Aulne, Monument historique ; restauration par le Chantier du Guip",
-     "energie": "vélique",
-     "client": "Association An Test (Brest)",
-     "classification": null,
-     "source": "https://fr.wikipedia.org/wiki/Notre-Dame_de_Rumengol_(bateau)",
-     "propulsion": [
-      "velique"
-     ],
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Chantier Keraudren, Camaret-sur-Mer (France)",
-      "source": "https://fr.wikipedia.org/wiki/Notre-Dame_de_Rumengol_(bateau)",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "La Recouvrance",
      "type": "Inconnu",
      "annee": "1992",
@@ -77406,110 +77187,6 @@
      ]
     },
     {
-     "nom": "Marie-Fernand",
-     "type": "cotre-pilote",
-     "propulsion": [
-      "velique"
-     ],
-     "annee": "1894",
-     "longueur_m": 15.3,
-     "capacite": "coque 15,30 m (24 m hors-tout) ; bau 4,25 m ; tirant d'eau 2,50 m ; ~35 Tx",
-     "jauge_gt": 35,
-     "energie": "velique (voile aurique, moteur auxiliaire)",
-     "classification": "Monument historique (classe 09/06/1986)",
-     "client": "Association L'Hirondelle de la Manche (commanditaire de la restauration)",
-     "operateur": "Association L'Hirondelle de la Manche",
-     "proprietaire": "Association L'Hirondelle de la Manche",
-     "pavillon": "France",
-     "source": "https://fr.wikipedia.org/wiki/Marie-Fernand",
-     "timeline": [
-      {
-       "annee": "1894",
-       "role": "construction",
-       "nom": "Chantier Abel Le Marchand, Le Havre",
-       "detail": "cotre-pilote du port du Havre ; PAS construit par le Guip",
-       "source": "https://fr.wikipedia.org/wiki/Marie-Fernand"
-      },
-      {
-       "annee": "1986",
-       "role": "evenement",
-       "nom": "Classement Monument historique",
-       "detail": "classé le 9 juin 1986",
-       "source": "https://fr.wikipedia.org/wiki/Marie-Fernand"
-      },
-      {
-       "annee": "2004",
-       "role": "conversion",
-       "nom": "Restauration Chantier du Guip (Brest)",
-       "detail": "restauration lourde débutée en 2004 (étrave, étambot, quille, membrures, bordés ; ~70% bois d'origine conservé ; coût ~370 000 €)",
-       "source": "https://fr.wikipedia.org/wiki/Marie-Fernand",
-       "source_ref": "https://fr.wikipedia.org/wiki/Marie-Fernand — ; lehavreseine-patrimoine.fr"
-      },
-      {
-       "annee": "2008",
-       "role": "evenement",
-       "nom": "Remise à l'eau",
-       "detail": "lancée le 13 juillet 2008 lors des fêtes maritimes de Brest 2008",
-       "source": "https://fr.wikipedia.org/wiki/Marie-Fernand",
-       "source_ref": "https://fr.wikipedia.org/wiki/Marie-Fernand — ; seine-maritime-tourisme.com"
-      }
-     ],
-     "source_ref": "lehavreseine-patrimoine.fr ; piloteslehavre.fr",
-     "caractere": "prive",
-     "propriete": "privee",
-     "caractere_motif": "propriete: as",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Chantiers Abel Le Marchand, Le Havre (France)",
-      "source": "https://fr.wikipedia.org/wiki/Marie-Fernand",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "La Neptune",
-     "type": "barque du Léman",
-     "propulsion": [
-      "velique"
-     ],
-     "annee": "1904",
-     "longueur_m": 27.3,
-     "capacite": "27,30 m de long ; 8,50 m de large ; ~120 t de charge utile",
-     "capacite_fret": "120 t",
-     "energie": "velique (voiles latines, moteur auxiliaire)",
-     "classification": "Patrimoine historique suisse",
-     "client": "propriétaire genevois (commanditaire restauration)",
-     "operateur": null,
-     "proprietaire": null,
-     "pavillon": "Suisse",
-     "source": "https://fr.wikipedia.org/wiki/Chantier_du_Guip",
-     "timeline": [
-      {
-       "annee": "1904",
-       "role": "construction",
-       "nom": "Construction d'origine (lac Léman)",
-       "detail": "barque de charge à voiles latines armée à Genève ; PAS construite par le Guip",
-       "source": "https://fr.wikipedia.org/wiki/Chantier_du_Guip"
-      },
-      {
-       "annee": "2006",
-       "role": "conversion",
-       "nom": "Restauration complète par le Chantier du Guip (Brest) à Genève",
-       "detail": "restauration complète menée à Genève par le Chantier du Guip ; remise à l'eau en 2006",
-       "source": "https://fr.wikipedia.org/wiki/Chantier_du_Guip",
-       "source_ref": "https://fr.wikipedia.org/wiki/Chantier_du_Guip — ; bateaux-du-leman.ch"
-      }
-     ],
-     "source_ref": "bateaux-du-leman.ch",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Chantier de Locum, Meillerie (Haute-Savoie, France)",
-      "source": "https://fr.wikipedia.org/wiki/La_Neptune",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "Seagull",
      "type": "cotre (yacht classique écossais)",
      "propulsion": [
@@ -77556,47 +77233,6 @@
       "statut": "douteux",
       "motif": "Aucune fiche tierce trouvee (clydeships.co.uk n'est interrogeable que par reference de fiche, et la recherche web est indisponible ; les references testees pointent d'autres navires). Forte presomption d'erreur : un yacht classique ECOSSAIS de 1903 ne sort pas d'un chantier de l'Ile-aux-Moines, et le Chantier du Guip a ete fonde en 1976 par Francis Duwez comme maison de restauration. Attribution non refutee formellement faute de source, donc douteux et non attribution_erronee.",
       "source": "https://fr.wikipedia.org/wiki/Chantier_du_Guip",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Fée de l'Aulne",
-     "type": "gabare (caboteur à voiles)",
-     "propulsion": [
-      "velique"
-     ],
-     "annee": "1957",
-     "longueur_m": 22.7,
-     "capacite": "gabare de ~200 t, 22,70 m de long",
-     "energie": "velique (moteur auxiliaire)",
-     "classification": null,
-     "client": "association propriétaire (commanditaire restauration)",
-     "operateur": null,
-     "proprietaire": null,
-     "pavillon": "France",
-     "source": "https://fr.wikipedia.org/wiki/Chantier_du_Guip",
-     "timeline": [
-      {
-       "annee": "1957",
-       "role": "construction",
-       "nom": "Chantier Kéraudren, Camaret",
-       "detail": "gabare de 200 t construite en 1957 ; l'un des plus grands voiliers de travail en bois encore en service ; PAS construite par le Guip",
-       "source": "recherche web fiche Fée de l'Aulne"
-      },
-      {
-       "annee": "2000",
-       "role": "conversion",
-       "nom": "Restauration par le Chantier du Guip",
-       "detail": "remplacement des préceintes et reclouage intégral, recalfatage, remise à l'eau",
-       "source": "recherche web fiche Fée de l'Aulne ; fr.wikipedia.org/wiki/Chantier_du_Guip"
-      }
-     ],
-     "source_ref": "résultat recherche) ; fiche Fée de l'Aulne",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Chantier Keraudren, Camaret-sur-Mer (France)",
-      "source": "https://fr.wikipedia.org/wiki/F%C3%A9e_de_l%27Aulne",
       "le": "2026-08-05",
       "confiance": "simple"
      }
@@ -80175,29 +79811,6 @@
       "le": "2026-08-05",
       "confiance": "simple"
      }
-    },
-    {
-     "nom": "Sumurun",
-     "type": "espars (mât 28,40 m)",
-     "annee": "1914",
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Ketch classique (dessin Fife III) ; mât bois de 28,40 m fabriqué par le chantier",
-     "energie": "vélique",
-     "client": null,
-     "classification": null,
-     "source": "https://www.chantiernavalpasqui.com/references-de-travaux-de-1994-a-2022",
-     "propulsion": [
-      "velique"
-     ],
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "William Fife & Son, Fairlie (Ecosse)",
-      "source": "https://en.wikipedia.org/wiki/William_Fife",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
     }
    ],
    "geo_source": "https://ports-villefranche.departement06.fr/annuaire-general/chantier-naval-pasqui",
@@ -82189,213 +81802,6 @@
      "source_ref": "vesselfinder IMO 9924261 ; maritimeoptima",
      "source": "https://www.vesselfinder.com/vessels/details/9924261",
      "tracabilite": "url-non-verifiee"
-    },
-    {
-     "nom": "Armada 7804",
-     "type": "OSV",
-     "imo": "9924273",
-     "annee": "2023",
-     "longueur_m": 78,
-     "jauge_gt": 2051,
-     "port_lourd_dwt": 1490,
-     "capacite": "USV multi-role ; DP2 ; 2 moonpools 9 x 4 m",
-     "energie": "diesel-electrique batterie hybride, ammoniac-ready",
-     "propulsion": [
-      "diesel-electrique",
-      "hybride"
-     ],
-     "client": "Ocean Infinity",
-     "operateur": "Ocean Infinity",
-     "proprietaire": "Ocean Infinity",
-     "pavillon": "Singapour",
-     "classification": "DNV",
-     "timeline": [
-      {
-       "annee": "2023",
-       "role": "construction",
-       "nom": "Vard Vung Tau (Vietnam) - coque/construction",
-       "detail": "Construit a Vard Vung Tau, Vietnam",
-       "source": "vesselfinder ; marinetraffic"
-      },
-      {
-       "annee": "2023",
-       "role": "construction",
-       "nom": "Vard Soviknes - integration/livraison",
-       "detail": "Outfitting, commissioning et livraison depuis Vard Soviknes (serie Armada A78)",
-       "source": "maritime-executive ; vard.com"
-      },
-      {
-       "annee": "2023",
-       "role": "pavillon",
-       "nom": "Singapour",
-       "detail": "Immatricule Singapour",
-       "source": "vesselfinder IMO 9924273"
-      },
-      {
-       "annee": "2020",
-       "role": "construction",
-       "nom": "Armada 78 (serie de 8) - commande Vard / Ocean Infinity",
-       "detail": "Contrat de novembre 2020, 8 navires de 78 m, valeur non divulguee, non ventilee par navire. Armada 7804 a passe ses essais en mer en octobre 2023.",
-       "source": "https://www.fincantieri.com/en/newsroom/press-releases/2020/fincantieri-vard-secures-contract-for-eight-marine-robotic-vessels"
-      },
-      {
-       "annee": "2023",
-       "role": "proprietaire",
-       "nom": "Armada 78 04 (IMO 9924273)",
-       "detail": "Livre a Ocean Infinity (pavillon Singapour) ; toujours detenu et exploite par Ocean Infinity, aucune revente connue.",
-       "source": "https://gcaptain.com/ocean-infinity-completes-ambitious-14-vessel-armada-fleet/"
-      }
-     ],
-     "architecte": "Vard Design",
-     "architecte_source": "VARD/Riviera/Ship-Technology : la série A78 (78 m) d'Ocean Infinity a été conçue par Vard Design, filiale de VARD, qui assure design et construction",
-     "source_ref": "vesselfinder IMO 9924273 ; marinetraffic",
-     "source": "https://www.vesselfinder.com/vessels/details/9924273",
-     "tracabilite": "url-non-verifiee",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Vard Vung Tau (Vietnam)",
-      "source": "https://en.wikipedia.org/wiki/Ocean_Infinity",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Armada 7805",
-     "type": "OSV",
-     "imo": "9924285",
-     "annee": "2023",
-     "longueur_m": 78,
-     "jauge_gt": 2051,
-     "port_lourd_dwt": 1490,
-     "capacite": "USV multi-role ; DP2 ; 2 moonpools 9 x 4 m",
-     "energie": "diesel-electrique batterie hybride, ammoniac-ready",
-     "propulsion": [
-      "diesel-electrique",
-      "hybride"
-     ],
-     "client": "Ocean Infinity",
-     "operateur": "Ocean Infinity",
-     "proprietaire": "Ocean Infinity",
-     "pavillon": "Singapour",
-     "classification": "DNV",
-     "timeline": [
-      {
-       "annee": "2023",
-       "role": "construction",
-       "nom": "Vard Vung Tau (Vietnam) - coque/construction",
-       "detail": "Construit a Vard Vung Tau, Vietnam",
-       "source": "vesselfinder"
-      },
-      {
-       "annee": "2023",
-       "role": "construction",
-       "nom": "Vard Soviknes - integration/livraison",
-       "detail": "Outfitting, commissioning et livraison depuis Vard Soviknes (serie Armada A78)",
-       "source": "maritime-executive ; vard.com"
-      },
-      {
-       "annee": "2023",
-       "role": "pavillon",
-       "nom": "Singapour",
-       "detail": "Immatricule Singapour",
-       "source": "vesselfinder IMO 9924285"
-      },
-      {
-       "annee": "2020",
-       "role": "construction",
-       "nom": "Armada 78 (serie de 8) - commande Vard / Ocean Infinity",
-       "detail": "Contrat de novembre 2020, 8 navires de 78 m, valeur non divulguee, non ventilee par navire. Armada 7805 a passe ses essais en mer en octobre 2023.",
-       "source": "https://www.fincantieri.com/en/newsroom/press-releases/2020/fincantieri-vard-secures-contract-for-eight-marine-robotic-vessels"
-      },
-      {
-       "annee": "2023",
-       "role": "proprietaire",
-       "nom": "Armada 78 05 (IMO 9924285)",
-       "detail": "Livre a Ocean Infinity (pavillon Singapour) ; toujours detenu et exploite par Ocean Infinity, aucune revente connue.",
-       "source": "https://gcaptain.com/ocean-infinity-completes-ambitious-14-vessel-armada-fleet/"
-      }
-     ],
-     "architecte": "Vard Design",
-     "architecte_source": "VARD/Riviera/Ship-Technology : série A78 Ocean Infinity conçue par Vard Design (subsidiary de VARD)",
-     "source_ref": "vesselfinder IMO 9924285",
-     "source": "https://www.vesselfinder.com/vessels/details/9924285",
-     "tracabilite": "url-non-verifiee",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Vard Vung Tau (Vietnam)",
-      "source": "https://en.wikipedia.org/wiki/Ocean_Infinity",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "Armada 7806",
-     "type": "OSV",
-     "imo": "9924297",
-     "annee": "2023",
-     "longueur_m": 78,
-     "jauge_gt": 2051,
-     "port_lourd_dwt": 1490,
-     "capacite": "USV multi-role ; DP2 ; 2 moonpools 9 x 4 m",
-     "energie": "diesel-electrique batterie hybride, ammoniac-ready",
-     "propulsion": [
-      "diesel-electrique",
-      "hybride"
-     ],
-     "client": "Ocean Infinity",
-     "operateur": "Ocean Infinity",
-     "proprietaire": "Ocean Infinity",
-     "pavillon": "Singapour",
-     "classification": "DNV",
-     "timeline": [
-      {
-       "annee": "2023",
-       "role": "construction",
-       "nom": "Vard Vung Tau (Vietnam) - coque/construction",
-       "detail": "Construit a Vard Vung Tau, Vietnam",
-       "source": "vesselfinder ; vesseltracker"
-      },
-      {
-       "annee": "2023",
-       "role": "construction",
-       "nom": "Vard Soviknes - integration/livraison",
-       "detail": "Outfitting, commissioning et livraison depuis Vard Soviknes (serie Armada A78)",
-       "source": "maritime-executive ; vard.com"
-      },
-      {
-       "annee": "2023",
-       "role": "pavillon",
-       "nom": "Singapour",
-       "detail": "Immatricule Singapour (MMSI 563198900)",
-       "source": "vesseltracker IMO 9924297"
-      },
-      {
-       "annee": "2020",
-       "role": "construction",
-       "nom": "Armada 78 (serie de 8) - commande Vard / Ocean Infinity",
-       "detail": "Contrat de novembre 2020, 8 navires de 78 m, valeur non divulguee, non ventilee par navire. Armada 7806 remis au capitaine / livre en octobre 2023 (6e des 8 navires).",
-       "source": "https://www.offshore-energy.biz/sixth-ammonia-ready-armada-vessel-joins-ocean-infinitys-fleet/"
-      },
-      {
-       "annee": "2023",
-       "role": "proprietaire",
-       "nom": "Armada 78 06 (IMO 9924297)",
-       "detail": "Livre a Ocean Infinity (pavillon Singapour) ; toujours detenu et exploite par Ocean Infinity, aucune revente connue.",
-       "source": "https://www.vesseltracker.com/en/Ships/Armada-78-06-9924297.html"
-      }
-     ],
-     "architecte": "Vard Design",
-     "architecte_source": "VARD/Riviera/Ship-Technology : série A78 Ocean Infinity conçue par Vard Design (subsidiary de VARD)",
-     "source_ref": "vesselfinder IMO 9924297 ; vesseltracker (callsign 9V8703)",
-     "source": "https://www.vesselfinder.com/vessels/details/9924297",
-     "tracabilite": "url-non-verifiee",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Vard Vung Tau (Vietnam)",
-      "source": "https://en.wikipedia.org/wiki/Ocean_Infinity",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
     },
     {
      "nom": "Armada 7807",
@@ -104154,70 +103560,6 @@
     }
    ],
    "navires_references": [
-    {
-     "nom": "Fannefjord",
-     "imo": "9477127",
-     "type": "ferry transbordeur (car/passagers) - conversion",
-     "annee": "2010",
-     "longueur_m": 122.8,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": null,
-     "capacite_pax": null,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "Hybride GNL-batterie : systeme de stockage 410 kWh / 1050 V (63 batteries Corvus AT6500 lithium-polymere) integre aux entrainements Siemens existants, alimente par 2 generateurs GNL ; ~80 pour cent du temps en mode gaz + batterie",
-     "propulsion": [
-      "gnl",
-      "hybride",
-      "electrique-batterie"
-     ],
-     "client": "Fjord1",
-     "operateur": "Boreal Sjo AS (route Molde-Vestnes depuis janvier 2021 ; ex-Fjord1)",
-     "proprietaire": "Fjord1",
-     "classification": "DNV",
-     "source": "https://www.fiskerstrand.no/en/product/conversion/conversion-of-mf-fannefjord/",
-     "timeline": [
-      {
-       "annee": "2010",
-       "role": "construction",
-       "nom": "Remontowa (Gdansk, Pologne)",
-       "detail": "Ferry RoPax GNL ~123 m x 16 m, GT 2971, construit par Remontowa et non par Fiskerstrand. Deuxieme d'une serie de quatre pour Fjord1, sur la liaison Molde-Vestnes.",
-       "source": "https://www.vesselfinder.com/vessels/FANNEFJORD-IMO-9477127-MMSI-258328500"
-      },
-      {
-       "annee": "2010",
-       "role": "proprietaire",
-       "nom": "Fjord1",
-       "detail": "Armateur-exploitant ; gestion Fjord1 Fylkesbaatane (Floro), propriete Fjord1 Group (Molde).",
-       "source": "https://www.vesseltracker.com/en/Ships/Fannefjord-9477127.html"
-      },
-      {
-       "annee": "2015",
-       "role": "conversion",
-       "nom": "Fiskerstrand Verft (conversion GNL-batterie hybride)",
-       "detail": "Premier ferry hybride GNL-batterie au monde : Fiskerstrand installe (mars/avril 2015) un ESS 1050V 410 kWh (63 batteries Corvus AT6500) integre aux entrainements Siemens existants. Conception de la conversion par LMG Marin + Fiskerstrand. Reduit le methane slip et les emissions.",
-       "source": "https://www.fiskerstrand.no/en/product/conversion/conversion-of-mf-fannefjord/"
-      },
-      {
-       "annee": "2007",
-       "role": "construction",
-       "nom": "Fjord1 (commande) / Remontowa Gdansk Shiprepair Yard (coque)",
-       "detail": "Contrat mai 2007 pour une serie de 4 ferries identiques (Fannefjord, Moldefjord, Romsdalsfjord, Korsfjord), design LMG 125-DEG, livraisons decembre 2009 a aout 2010. Citation source : 'Prisen for fire ferger ligger trolig naermere en milliard kroner' (le prix des quatre ferries est probablement proche d'un milliard de couronnes). Prix unitaire derive ≈ 250 M NOK (1 mrd NOK / 4 navires identiques). NB : coque construite a Gdansk (Remontowa), pas a Fiskerstrand ; Fiskerstrand a realise la conversion batterie en 2015.",
-       "source": "https://batomtaler.skipsrevyen.no/mf-fannefjord/1112127"
-      }
-     ],
-     "architecte": "LMG Marin",
-     "architecte_source": "https://lmgmarin.no/reference/fannefjord/",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Gdansk Shiprepair Yard (Pologne)",
-      "source": "https://no.wikipedia.org/wiki/MF_%C2%ABFannefjord%C2%BB",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     },
-     "source_ref": "https://lmgmarin.no/reference/fannefjord/ — (référence LMG Marin, design LMG 125-DEG, initial/basic/detail design ; construit par Remontowa 2009-2010)"
-    },
     {
      "nom": "Karlsoyfjord",
      "imo": "9662710",
@@ -129527,11 +128869,12 @@
      "source_ref": "byggenr 136, Concordia Star, 4 701 brt, 1952 ; recherche de source le 2026-08-05, sans resultat : Cherché sans succès : no.wikipedia.org/wiki/Horten_verft (page lue, ne nomme aucune coque construite), Kategori:Skip_bygget_ved_Horten_verft (16 titres lus, aucun ne correspond), en.wikipedia.org/wiki/Horten_Verft 404 ; pas d'IMO donc aucune fiche de registre ouvrable. RÉSERVE : Kongsberg Defence & Aerospace est un industriel de l'électronique de défense, l'attribution d'un cargo de 1952 à cette entité est douteuse, mais je n'ai aucune page pour nommer le chantier réel.",
      "tracabilite": "url-domaine-seul",
      "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Horten Verft (ex-Marinens Hovedverft / Karljohansvern verft), Horten, Norvège",
+      "statut": "corrige",
+      "confiance": "simple",
+      "motif": "construit par Horten Verft (ex-Marinens Hovedverft / Karljohansvern verft), Horten, raison sociale anterieure de Kongsberg Defence & Aerospace / Kongsberg Maritime (Horten) sur le meme site (phase3-revue-v3b) ; attribution deja juste, nom d'origine a porter en alias. Kongsberg Defence & Aerospace / Kongsberg Maritime n a JAMAIS construit de coque a Horten : c est un electronicien de defense et de systemes maritimes, implante comme locataire sur l ancien terrain du chantier. Le seul constructeur de navires de Horten est Horten Verft, station navale creee en 1820, chantier principal de la Marine a partir de 1850",
       "source": "https://no.wikipedia.org/wiki/Horten_Verft",
-      "le": "2026-08-05",
-      "confiance": "simple"
+      "le": "2026-08-21",
+      "chantier_reel": "Horten Verft (ex-Marinens Hovedverft / Karljohansvern verft), Horten, Norvège"
      },
      "fin_de_vie": {
       "statut": "demoli",
@@ -129826,11 +129169,12 @@
      "source_ref": "byggenr 185, Ardmore, 19 144 brt, 1975, P&O Lines London ; recherche de source le 2026-08-05, sans resultat : Cherché sans succès : no.wikipedia.org/wiki/Horten_verft et sa catégorie Skip_bygget_ved_Horten_verft (16 titres, aucun ne correspond), en.wikipedia.org/wiki/Horten_Verft 404 ; sans IMO aucune fiche de registre n'est ouvrable. Même réserve que ci-dessus sur l'attribution à Kongsberg Defence & Aerospace pour un tanker de 1975.",
      "tracabilite": "url-domaine-seul",
      "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Horten Verft (ex-Marinens Hovedverft / Karljohansvern verft), Horten, Norvège",
+      "statut": "corrige",
+      "confiance": "simple",
+      "motif": "construit par Horten Verft (ex-Marinens Hovedverft / Karljohansvern verft), Horten, raison sociale anterieure de Kongsberg Defence & Aerospace / Kongsberg Maritime (Horten) sur le meme site (phase3-revue-v3b) ; attribution deja juste, nom d'origine a porter en alias. Meme refutation structurelle que pour les autres coques rattachees a cette fiche : Kongsberg Defence & Aerospace / Kongsberg Maritime n est pas un constructeur de navires et n a jamais exploite de cale a Horten. Le chantier de Horten est Horten Verft (Karljohansvern), en activite de 1820 a la faillite de 1987 ; le site est ensuite devenu Horten Ind",
       "source": "https://no.wikipedia.org/wiki/Horten_Verft",
-      "le": "2026-08-05",
-      "confiance": "simple"
+      "le": "2026-08-21",
+      "chantier_reel": "Horten Verft (ex-Marinens Hovedverft / Karljohansvern verft), Horten, Norvège"
      }
     },
     {
@@ -130121,11 +129465,12 @@
      "source_ref": "byggenr 168, Baron Maclay, 13 543 brt, 1971 ; recherche de source le 2026-08-05, sans resultat : Cherché sans succès : no.wikipedia.org/wiki/Horten_verft et Kategori:Skip_bygget_ved_Horten_verft (aucune correspondance), en.wikipedia.org/wiki/Horten_Verft 404 ; sans IMO, ni VesselFinder ni BalticShipping ne s'ouvrent. Le nom relève de la série des Baron de Hogarth (Glasgow) : l'attribution à Kongsberg Defence & Aerospace demande confirmation, que je n'ai pas obtenue.",
      "tracabilite": "url-domaine-seul",
      "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Horten Verft (ex-Marinens Hovedverft / Karljohansvern verft), Horten, Norvège",
+      "statut": "corrige",
+      "confiance": "simple",
+      "motif": "construit par Horten Verft (ex-Marinens Hovedverft / Karljohansvern verft), Horten, raison sociale anterieure de Kongsberg Defence & Aerospace / Kongsberg Maritime (Horten) sur le meme site (phase3-revue-v3b) ; attribution deja juste, nom d'origine a porter en alias. Attribution a Kongsberg impossible : Kongsberg n a jamais construit de navire a Horten, seul Horten Verft (Karljohansvern, 1820-1987) y a eu des cales, et le terrain est devenu Horten Industripark apres la faillite de 1987. Reserve supplementaire sur ce navire precis : «Baron Maclay» est un nom de la serie des Baron de l armement ecossais H. Hogart",
       "source": "https://no.wikipedia.org/wiki/Horten_Verft",
-      "le": "2026-08-05",
-      "confiance": "simple"
+      "le": "2026-08-21",
+      "chantier_reel": "Horten Verft (ex-Marinens Hovedverft / Karljohansvern verft), Horten, Norvège"
      }
     },
     {
@@ -130451,11 +129796,12 @@
      "source_ref": "byggenr 197, Viking Tern, 30 814 brt, 1979, Independent Shipping Singapore ; recherche de source le 2026-08-05, sans resultat : Cherché sans succès : no.wikipedia.org/wiki/Horten_verft et sa catégorie de coques construites, en.wikipedia.org/wiki/Horten_Verft 404 ; sans IMO aucune fiche de registre ouvrable. Aucune page rencontrée ne nomme ce tanker de 1979.",
      "tracabilite": "url-domaine-seul",
      "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Horten Verft (ex-Marinens Hovedverft / Karljohansvern verft), Horten, Norvège",
+      "statut": "corrige",
+      "confiance": "simple",
+      "motif": "construit par Horten Verft (ex-Marinens Hovedverft / Karljohansvern verft), Horten, raison sociale anterieure de Kongsberg Defence & Aerospace / Kongsberg Maritime (Horten) sur le meme site (phase3-revue-v3b) ; attribution deja juste, nom d'origine a porter en alias. Meme refutation : le titulaire de la fiche, Kongsberg Defence & Aerospace / Kongsberg Maritime (Horten), n est pas un constructeur naval et n a jamais eu de cale a Horten ; le chantier de la ville etait Horten Verft (Karljohansvern), disparu par faillite en 1987, terrain repris par Horten Industripark. Un petrolier de 1979 ne peut donc pas etre por",
       "source": "https://no.wikipedia.org/wiki/Horten_Verft",
-      "le": "2026-08-05",
-      "confiance": "simple"
+      "le": "2026-08-21",
+      "chantier_reel": "Horten Verft (ex-Marinens Hovedverft / Karljohansvern verft), Horten, Norvège"
      }
     },
     {
@@ -157281,76 +156627,6 @@
    ],
    "navires_references": [
     {
-     "nom": "Älvsnabben 4",
-     "imo": null,
-     "type": "Ferry / bac a passagers (electrifie)",
-     "annee": "1994",
-     "longueur_m": 32,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "environ 448 passagers",
-     "capacite_pax": 448,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "Retrofit propulsion 100% electrique sur batteries Echandia 496 kWh (16 strings), conçu pour 18 cycles/jour, 365 j/an, duree de vie >=17 ans",
-     "propulsion": [
-      "electrique-batterie"
-     ],
-     "client": "Styrsöbolaget",
-     "operateur": "Styrsöbolaget (groupe Transdev), pour le compte de Västtrafik",
-     "proprietaire": "Styrsöbolaget / Transdev Sverige AB",
-     "classification": null,
-     "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/o-varvet-places-order-for-battery-systems-78181",
-     "timeline": [
-      {
-       "annee": "1994",
-       "role": "construction",
-       "nom": "Båtservice Holding A/S, Mandal (Norvège)",
-       "detail": "Construit en 1994-1995 par le chantier norvegien Båtservice Holding A/S a Mandal pour le developpement du trafic Älvsnabben a Göteborg ; ferry passagers 448 places. Chantier constructeur reel = Båtservice (et non Ö-varvet, qui n'a fait que la conversion ulterieure).",
-       "source": "https://www.sjofartstidningen.se/passagerarsjoefart/aelvsnabben-5-redo-foer-nytt-stroemmande-liv/119632"
-      },
-      {
-       "annee": "1994",
-       "role": "operateur",
-       "nom": "Styrsöbolaget",
-       "detail": "Mis en service sur la ligne Älvsnabben (Göta älv, Göteborg), exploite par Styrsöbolaget pour le compte de Västtrafik.",
-       "source": "https://en.wikipedia.org/wiki/%C3%84lvsnabben_(ferry_line)"
-      },
-      {
-       "annee": "2004",
-       "role": "proprietaire",
-       "nom": "Connex / Veolia / Transdev",
-       "detail": "Styrsöbolaget, prive depuis 2000, rachete par le groupe francais Connex en janvier 2004 (devient Veolia Transport, puis Transdev Sverige AB en 2015). Le navire passe sous propriete/operation Transdev.",
-       "source": "https://en.wikipedia.org/wiki/Styrs%C3%B6bolaget"
-      },
-      {
-       "annee": "2023",
-       "role": "conversion",
-       "nom": "Ö-varvet AB, Öckerö (avec Mets Technology)",
-       "detail": "Conversion en ferry hybride electrique (electrification) demarree a l'automne 2023 au chantier Ö-varvet AB a Öckerö, en collaboration avec Mets Technology ; systeme hybride parallele PHT, batteries Echandia, motorisation diesel-electrique.",
-       "source": "https://www.sjofartstidningen.se/passagerarsjoefart/aelvsnabben-5-redo-foer-nytt-stroemmande-liv/119632"
-      },
-      {
-       "annee": "2019",
-       "role": "evenement",
-       "nom": "Prototype electrique Volvo Penta",
-       "detail": "Älvsnabben 4 utilise des 2019 comme prototype d'electrification par Volvo Penta avec Styrsöbolaget (Transdev) / Västtrafik, avant la conversion serie de 2023.",
-       "source": "https://afloat.ie/port-news/ferry-news/item/41662-electric-ferry-takes-to-the-water-with-volvo-penta-in-sweden"
-      }
-     ],
-     "caractere": "mixte",
-     "propriete": "privee",
-     "exploitation": "service-public",
-     "caractere_motif": "propriete: ab ; exploitation: transdev",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Båtservice Holding AS, Mandal (Norvège)",
-      "source": "https://sv.wikipedia.org/wiki/Styrsöbolaget",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "Älvsnabben 5",
      "imo": null,
      "type": "Ferry / bac a passagers (electrifie)",
@@ -164632,57 +163908,6 @@
       "source": "https://en.wikipedia.org/wiki/Category:Individual_sailing_vessels",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
-    },
-    {
-     "nom": "RRS Discovery",
-     "imo": null,
-     "type": "Navire de recherche historique (réparation/restauration)",
-     "annee": "1901",
-     "longueur_m": 52,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Navire d'exploration polaire à coque bois (expédition Discovery 1901-1904)",
-     "capacite_pax": null,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "Voile + vapeur à l'origine ; aujourd'hui navire-musée à quai",
-     "propulsion": [
-      "velique"
-     ],
-     "client": "Dundee Heritage Trust",
-     "operateur": "Dundee Heritage Trust (Discovery Point, Dundee)",
-     "proprietaire": "Dundee Heritage Trust",
-     "classification": null,
-     "source": "https://www.nationalhistoricships.org.uk/ship-shape/company/mackay-boatbuilders-arbroath-ltd",
-     "timeline": [
-      {
-       "annee": "1901",
-       "role": "construction",
-       "nom": "Dundee Shipbuilders Company",
-       "detail": "Construit à Dundee pour l'expédition antarctique britannique (Scott)",
-       "source": "https://www.nationalhistoricships.org.uk/ship-shape/company/mackay-boatbuilders-arbroath-ltd"
-      },
-      {
-       "annee": "2020",
-       "role": "evenement",
-       "nom": "Mackay Boatbuilders (Arbroath)",
-       "detail": "Projet de restauration de 18 mois auquel Mackay Boatbuilders a participé à Dundee",
-       "source": "https://www.nationalhistoricships.org.uk/ship-shape/company/mackay-boatbuilders-arbroath-ltd"
-      }
-     ],
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Dundee Shipbuilders Company, Dundee (Ecosse)",
-      "source": "https://en.wikipedia.org/wiki/RRS_Discovery",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     },
-     "fin_de_vie": {
-      "statut": "desarme",
-      "annee": null,
-      "source": "https://www.nationalhistoricships.org.uk/ship-shape/company/mackay-boatbuilders-arbroath-ltd",
-      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -191558,11 +190783,12 @@
      ],
      "source": "https://hollandshipyardsgroup.com/news/third-hybrid-ferry-for-schlepp-und-fahrgesellschaft-kiel-delivered",
      "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Chantier allemand des annees 1980, non confirme (la serie SFK 1981-1984 a ete construite par Lindenau Werft, Kiel)",
+      "statut": "douteux",
+      "confiance": "simple",
+      "motif": "constructeur non identifie en revue (phase3-revue-v3) : l'attribution actuelle n'est pas etablie. REFUTATION. La serie de ferries SFK construite par Holland Shipyards est identifiee nommement : Gaarden 2020, Dusternbrook 2021, Friedrichsort 2022, Wik 2022, Wellingdorf 2022, Laboe 2023, Dietrichsdorf 2024. Schilksee n en fait pas partie : c est une unite ancienne du parc des annees 1980, 246 passagers, vendue a Adler-Reederei et exploitee sous l",
       "source": "https://de.wikipedia.org/wiki/Schlepp-_und_F%C3%A4hrgesellschaft_Kiel",
-      "le": "2026-08-03",
-      "confiance": "simple"
+      "le": "2026-08-21",
+      "chantier_reel": "Chantier allemand des annees 1980, non confirme (la serie SFK 1981-1984 a ete construite par Lindenau Werft, Kiel)"
      },
      "sources": [
       "https://kielmobil.app/de/artikel/taufe-fuer-die-letzte-plug-in-hybridfaehre-der-sfk"
@@ -192250,11 +191476,12 @@
      "capacite": "serie LABRAX, 118,60 x 14,30 m",
      "source_registre": "https://royaltshipyards.com/en/publications/thecla-bodewes-shipyards-successfully-delivered-7280dwt-vessel-vertom-anette-to-vertom-group/81/",
      "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Thecla Bodewes Shipyards, site de Kampen (Pays-Bas), aujourd'hui Royal T Shipyards",
+      "statut": "corrige",
+      "confiance": "simple",
+      "motif": "construit par Thecla Bodewes Shipyards, site de Kampen, raison sociale anterieure de Thecla Bodewes Shipyards sur le meme site (sourcing-revue-v1) ; attribution deja juste, nom d'origine a porter en alias. CASSE sur l'angle 2 : le groupe n'est pas le site. La confirmation precedente disait Harlingen. Deux constats. 1) La source citee, vertom.nl/vertom-anette, ne NOMME AUCUN chantier : elle donne l'armateur, le pavillon NL, le port d'attache Rotterdam et les dimensions, rien d'autre. Elle ne pouvait donc pas confirmer Harlingen. 2) L'annonce de livrai",
       "source": "https://royaltshipyards.com/en/publications/thecla-bodewes-shipyards-successfully-delivered-7280dwt-vessel-vertom-anette-to-vertom-group/81/",
-      "le": "2026-08-05",
-      "confiance": "simple"
+      "le": "2026-08-21",
+      "chantier_reel": "Thecla Bodewes Shipyards, site de Kampen (Pays-Bas), aujourd'hui Royal T Shipyards"
      },
      "sources": [
       "https://www.vertom.com/thecla-bodewes-shipyards-successfully-launches-7-280dwt-vessel-vertom-anette-for-vertom-group/"
@@ -195836,23 +195063,6 @@
      }
     },
     {
-     "nom": "Barentszdiep",
-     "annee": "2010",
-     "type": "General cargo",
-     "longueur_m": 106.86,
-     "jauge_gt": 4102,
-     "port_lourd_dwt": 5400,
-     "propulsion": [],
-     "source": "https://royalbodewes.com/vessel/barentszdiep/",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Societatea Comerciala Severnav S.A., Drobeta-Turnu Severin (Roumanie) pour la coque ; achevement seul chez Bodewes Shipyards B.V., Hoogezand",
-      "source": "https://www.marhisdata.nl/schip?id=9053&onderdeel=algemeen",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "Sun Bird",
      "annee": "2009",
      "type": "General cargo",
@@ -196275,27 +195485,6 @@
       "statut": "confirme",
       "source": "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/13071-emscarrier-imo-9342164",
       "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
-     "nom": "OSC Victoriadiep",
-     "annee": "2007",
-     "type": "General cargo",
-     "longueur_m": 119.98,
-     "jauge_gt": 5000,
-     "port_lourd_dwt": 7750,
-     "propulsion": [],
-     "source": "https://royalbodewes.com/vessel/osc-victoriadiep/",
-     "imo": "9351153",
-     "imo_source": "https://shipping-data.com/ship/osc-victoriadiep",
-     "pavillon": "Pays-Bas",
-     "source_registre": "https://shipping-data.com/ship/osc-victoriadiep",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Zaliv Shipyard, Kertch (Ukraine) pour la coque ; achevement chez Bodewes Scheepswerven B.V., Hoogezand, chantier n 658",
-      "source": "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/6379-victoriadiep-imo-9351153",
-      "le": "2026-08-05",
       "confiance": "simple"
      }
     },
@@ -206320,32 +205509,6 @@
    "description": "Hartman Marine Shipbuilding, division construction du Hartman Marine Group, etablie a Urk (Pays-Bas). Conçoit, etudie et construit une gamme de cargos polyvalents open-top et rouliers (Trader 18, M2 Runner, R2 Carrier, R3 Carrier), exploites principalement par Hartman Seatrade. Assure egalement du refit. Societe creee en 2003, racines familiales revendiquees jusqu en 1775.",
    "navires_references": [
     {
-     "nom": "Oceanic",
-     "type": "Cargo polyvalent (type Hartman M2 Runner)",
-     "annee": "2012",
-     "imo": "9624550",
-     "longueur_m": 92.9,
-     "largeur_m": 14.75,
-     "jauge_gt": 2989,
-     "port_lourd_dwt": 3000,
-     "capacite": "Creux 5,91 m ; tirant d eau 5,60 m ; jauge nette 896",
-     "energie": "diesel",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "operateur": "Amasus Shipping B.V., Delfzijl (gestionnaire)",
-     "proprietaire": "Hartman Beheer 003 B.V., Urk",
-     "pavillon": "Pays-Bas",
-     "source": "https://www.marhisdata.nl/schip&id=9556",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Partner Stocznia Sp. z o.o., Szczecin / Police (Pologne), bouwnummer 5 ; achevement seul chez Hartman Marine Shipbuilding B.V., Urk",
-      "source": "https://www.marhisdata.nl/werf&id=842",
-      "le": "2026-08-03",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "Deo Volente",
      "type": "Cargo polyvalent lourd, 2 grues Liebherr de 120 t (bouwnummer 1 ; coque sous-traitee a Partner Stocznia Sp. z o.o., Police, Pologne)",
      "annee": "2007",
@@ -213365,29 +212528,6 @@
      }
     },
     {
-     "nom": "Congo River",
-     "annee": "2011",
-     "imo": "9574523",
-     "type": "drague aspiratrice en marche (TSHD)",
-     "longueur_m": 168,
-     "port_lourd_dwt": 34674,
-     "proprietaire": "DEME NV",
-     "operateur": "DEME NV",
-     "pavillon": "Belgique",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "energie": "23 200 kW, 16,6 nœuds",
-     "source": "https://nl.wikipedia.org/wiki/Congo_River_(schip,_2011)",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "IHC Merwede, chantier de Krimpen aan den IJssel (Pays-Bas), et non le site de Kinderdijk",
-      "source": "https://nl.wikipedia.org/wiki/Congo_River_(schip,_2011)",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "D'Artagnan",
      "annee": "2005",
      "imo": "9312963",
@@ -218696,19 +217836,6 @@
      "source": "https://es.wikipedia.org/wiki/La_Naval_de_Sestao"
     },
     {
-     "nom": "Vizcaya",
-     "type": "croiseur",
-     "annee": "1891",
-     "source": "https://es.wikipedia.org/wiki/La_Naval_de_Sestao",
-     "verification": {
-      "statut": "attribution_erronee",
-      "chantier_reel": "Sociedad Astilleros del Nervion, Sestao",
-      "source": "https://en.wikipedia.org/wiki/Spanish_cruiser_Vizcaya",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     }
-    },
-    {
      "nom": "Alfonso XIII",
      "type": "paquebot transatlantique",
      "annee": "1920",
@@ -218800,6 +217927,21 @@
      "type": "Petrolier",
      "annee": "1975",
      "source": "https://es.wikipedia.org/wiki/Construcciones_Navales_del_Norte"
+    },
+    {
+     "nom": "Vizcaya",
+     "type": "croiseur",
+     "annee": "1891",
+     "source": "https://es.wikipedia.org/wiki/La_Naval_de_Sestao",
+     "verification": {
+      "statut": "corrige",
+      "chantier_reel": "Sociedad Astilleros del Nervion, Sestao",
+      "source": "https://en.wikipedia.org/wiki/Spanish_cruiser_Vizcaya",
+      "le": "2026-08-21",
+      "confiance": "simple",
+      "motif": "Construit par la Sociedad Astilleros del Nervion, societe anterieure sur le meme quai de Sestao que La Naval. Le rattachement a la fiche de Sestao est donc juste, et le nom du constructeur d origine est porte en alias de la fiche."
+     },
+     "source_ref": "Coque retiree par erreur le 21/08/2026 par un mouvement dont la source et la destination etaient la meme fiche, puis restauree depuis la version poussee. Voir OBSTACLES.md."
     }
    ],
    "sources": [
@@ -218811,7 +217953,11 @@
    ],
    "confiance": "moyenne",
    "actif": false,
-   "fondation": "années 1870 (tradition navale de Sestao) ; société Construcciones Navales del Norte constituée en 2005"
+   "fondation": "années 1870 (tradition navale de Sestao) ; société Construcciones Navales del Norte constituée en 2005",
+   "alias": [
+    "Sociedad Astilleros del Nervion",
+    "Astilleros del Nervión"
+   ]
   },
   {
    "id": "es-yard-nuevovulcano-barcelone",
@@ -231307,6 +230453,69 @@
      "architecte": "LMG Marin",
      "architecte_source": "https://www.lmgmarin.no/references/",
      "source": "https://www.lmgmarin.no/reference/toll/"
+    },
+    {
+     "nom": "Fannefjord",
+     "imo": "9477127",
+     "type": "ferry transbordeur (car/passagers) - conversion",
+     "annee": "2010",
+     "longueur_m": 122.8,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "Hybride GNL-batterie : systeme de stockage 410 kWh / 1050 V (63 batteries Corvus AT6500 lithium-polymere) integre aux entrainements Siemens existants, alimente par 2 generateurs GNL ; ~80 pour cent du temps en mode gaz + batterie",
+     "propulsion": [
+      "gnl",
+      "hybride",
+      "electrique-batterie"
+     ],
+     "client": "Fjord1",
+     "operateur": "Boreal Sjo AS (route Molde-Vestnes depuis janvier 2021 ; ex-Fjord1)",
+     "proprietaire": "Fjord1",
+     "classification": "DNV",
+     "source": "https://www.fiskerstrand.no/en/product/conversion/conversion-of-mf-fannefjord/",
+     "timeline": [
+      {
+       "annee": "2010",
+       "role": "construction",
+       "nom": "Remontowa (Gdansk, Pologne)",
+       "detail": "Ferry RoPax GNL ~123 m x 16 m, GT 2971, construit par Remontowa et non par Fiskerstrand. Deuxieme d'une serie de quatre pour Fjord1, sur la liaison Molde-Vestnes.",
+       "source": "https://www.vesselfinder.com/vessels/FANNEFJORD-IMO-9477127-MMSI-258328500"
+      },
+      {
+       "annee": "2010",
+       "role": "proprietaire",
+       "nom": "Fjord1",
+       "detail": "Armateur-exploitant ; gestion Fjord1 Fylkesbaatane (Floro), propriete Fjord1 Group (Molde).",
+       "source": "https://www.vesseltracker.com/en/Ships/Fannefjord-9477127.html"
+      },
+      {
+       "annee": "2015",
+       "role": "conversion",
+       "nom": "Fiskerstrand Verft (conversion GNL-batterie hybride)",
+       "detail": "Premier ferry hybride GNL-batterie au monde : Fiskerstrand installe (mars/avril 2015) un ESS 1050V 410 kWh (63 batteries Corvus AT6500) integre aux entrainements Siemens existants. Conception de la conversion par LMG Marin + Fiskerstrand. Reduit le methane slip et les emissions.",
+       "source": "https://www.fiskerstrand.no/en/product/conversion/conversion-of-mf-fannefjord/"
+      },
+      {
+       "annee": "2007",
+       "role": "construction",
+       "nom": "Fjord1 (commande) / Remontowa Gdansk Shiprepair Yard (coque)",
+       "detail": "Contrat mai 2007 pour une serie de 4 ferries identiques (Fannefjord, Moldefjord, Romsdalsfjord, Korsfjord), design LMG 125-DEG, livraisons decembre 2009 a aout 2010. Citation source : 'Prisen for fire ferger ligger trolig naermere en milliard kroner' (le prix des quatre ferries est probablement proche d'un milliard de couronnes). Prix unitaire derive ≈ 250 M NOK (1 mrd NOK / 4 navires identiques). NB : coque construite a Gdansk (Remontowa), pas a Fiskerstrand ; Fiskerstrand a realise la conversion batterie en 2015.",
+       "source": "https://batomtaler.skipsrevyen.no/mf-fannefjord/1112127"
+      }
+     ],
+     "architecte": "LMG Marin",
+     "architecte_source": "https://lmgmarin.no/reference/fannefjord/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://no.wikipedia.org/wiki/MF_%C2%ABFannefjord%C2%BB",
+      "le": "2026-08-21"
+     },
+     "source_ref": "https://lmgmarin.no/reference/fannefjord/ — (référence LMG Marin, design LMG 125-DEG, initial/basic/detail design ; construit par Remontowa 2009-2010) ; re-rattache le 2026-08-21 : attribue a tort a « Fiskerstrand Verft AS », construit par « Remontowa Shipbuilding » — Construit en 2010 par le groupe Remontowa a Gdansk. Les sources divergent sur l entite exacte, « Gdansk Shiprepair Yard » pour la fiche norvegienne du navire et « Remontowa Shipyard » pour l architecte LMG Marin : le rattachement se fait a la maison de Gdansk, la distinction entre les deux societes du groupe n etant pas etablie pour cette coque. (https://no.wikipedia.org/wiki/MF_%C2%ABFannefjord%C2%BB)"
     }
    ],
    "sources": [
@@ -231327,6 +230536,11 @@
    "contact_maj": "2026-08-15",
    "materiaux": [
     "acier"
+   ],
+   "alias": [
+    "Gdansk Shiprepair Yard",
+    "Gdańska Stocznia Remontowa",
+    "Remontowa"
    ]
   },
   {
@@ -237305,6 +236519,76 @@
       "confiance": "simple"
      },
      "source": "https://www.skipskompetanse.no/delivered-vessels/lindesnes-2/"
+    },
+    {
+     "nom": "Älvsnabben 4",
+     "imo": null,
+     "type": "Ferry / bac a passagers (electrifie)",
+     "annee": "1994",
+     "longueur_m": 32,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "environ 448 passagers",
+     "capacite_pax": 448,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "Retrofit propulsion 100% electrique sur batteries Echandia 496 kWh (16 strings), conçu pour 18 cycles/jour, 365 j/an, duree de vie >=17 ans",
+     "propulsion": [
+      "electrique-batterie"
+     ],
+     "client": "Styrsöbolaget",
+     "operateur": "Styrsöbolaget (groupe Transdev), pour le compte de Västtrafik",
+     "proprietaire": "Styrsöbolaget / Transdev Sverige AB",
+     "classification": null,
+     "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/o-varvet-places-order-for-battery-systems-78181",
+     "timeline": [
+      {
+       "annee": "1994",
+       "role": "construction",
+       "nom": "Båtservice Holding A/S, Mandal (Norvège)",
+       "detail": "Construit en 1994-1995 par le chantier norvegien Båtservice Holding A/S a Mandal pour le developpement du trafic Älvsnabben a Göteborg ; ferry passagers 448 places. Chantier constructeur reel = Båtservice (et non Ö-varvet, qui n'a fait que la conversion ulterieure).",
+       "source": "https://www.sjofartstidningen.se/passagerarsjoefart/aelvsnabben-5-redo-foer-nytt-stroemmande-liv/119632"
+      },
+      {
+       "annee": "1994",
+       "role": "operateur",
+       "nom": "Styrsöbolaget",
+       "detail": "Mis en service sur la ligne Älvsnabben (Göta älv, Göteborg), exploite par Styrsöbolaget pour le compte de Västtrafik.",
+       "source": "https://en.wikipedia.org/wiki/%C3%84lvsnabben_(ferry_line)"
+      },
+      {
+       "annee": "2004",
+       "role": "proprietaire",
+       "nom": "Connex / Veolia / Transdev",
+       "detail": "Styrsöbolaget, prive depuis 2000, rachete par le groupe francais Connex en janvier 2004 (devient Veolia Transport, puis Transdev Sverige AB en 2015). Le navire passe sous propriete/operation Transdev.",
+       "source": "https://en.wikipedia.org/wiki/Styrs%C3%B6bolaget"
+      },
+      {
+       "annee": "2023",
+       "role": "conversion",
+       "nom": "Ö-varvet AB, Öckerö (avec Mets Technology)",
+       "detail": "Conversion en ferry hybride electrique (electrification) demarree a l'automne 2023 au chantier Ö-varvet AB a Öckerö, en collaboration avec Mets Technology ; systeme hybride parallele PHT, batteries Echandia, motorisation diesel-electrique.",
+       "source": "https://www.sjofartstidningen.se/passagerarsjoefart/aelvsnabben-5-redo-foer-nytt-stroemmande-liv/119632"
+      },
+      {
+       "annee": "2019",
+       "role": "evenement",
+       "nom": "Prototype electrique Volvo Penta",
+       "detail": "Älvsnabben 4 utilise des 2019 comme prototype d'electrification par Volvo Penta avec Styrsöbolaget (Transdev) / Västtrafik, avant la conversion serie de 2023.",
+       "source": "https://afloat.ie/port-news/ferry-news/item/41662-electric-ferry-takes-to-the-water-with-volvo-penta-in-sweden"
+      }
+     ],
+     "caractere": "mixte",
+     "propriete": "privee",
+     "exploitation": "service-public",
+     "caractere_motif": "propriete: ab ; exploitation: transdev",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://sv.wikipedia.org/wiki/Styrsöbolaget",
+      "le": "2026-08-21"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Ö-varvet AB », construit par « Båtservice Mandal Verft AS » — Construit en 1994 par Batservice Holding a Mandal, meme maison que Batservice Mandal Verft sur le meme quai (Westermoen 1948, Batservice Verft 1964). (https://sv.wikipedia.org/wiki/Styrsöbolaget)"
     }
    ],
    "sources": [
@@ -237313,7 +236597,12 @@
    ],
    "confiance": "moyenne",
    "actif": true,
-   "fondation": null
+   "fondation": null,
+   "alias": [
+    "Båtservice Holding AS",
+    "Båtservice Verft AS",
+    "Westermoen Båtbyggeri"
+   ]
   },
   {
    "id": "xx-yard-projectsspzoo-gdansk",
@@ -239371,6 +238660,1315 @@
    "effectif": 2500,
    "actif_source": "https://fr.wikipedia.org/wiki/Ateliers_et_chantiers_du_Havre",
    "actif_methode": "fiche historique : cessation d'activite documentee en 1999"
+  },
+  {
+   "id": "xx-yard-vardvungtau-vungtau",
+   "nom": "Vard Vung Tau",
+   "groupe": "",
+   "ville": "Vung Tau",
+   "region": "Ba Ria-Vung Tau",
+   "pays": "Vietnam",
+   "lat": 10.37741,
+   "lon": 107.11224,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "navire de soutien offshore",
+    "CSOV",
+    "navire d'expedition",
+    "navire de peche"
+   ],
+   "description": "Chantier vietnamien du groupe Vard, filiale de Fincantieri, etabli en 2006 comme site neuf, en production depuis 2008 et officiellement ouvert en 2010. Site integre couvrant tout le processus, de la construction de coque a l'armement final. Superficie totale de 154 900 m2 (terre et eau), environ 1 263 employes permanents, dock flottant de 8 000 tonnes recevant des navires jusqu'a 120 m, 620 m de quais sur 4 a 10 m de tirant d'eau, 5 500 m2 d'entrepots. Capacite portee de 4 a 7 navires par an en 2024. Construit des navires offshore et specialises, des navires de peche et des navires d'expedition.",
+   "navires_references": [
+    {
+     "nom": "Armada 7804",
+     "type": "OSV",
+     "imo": "9924273",
+     "annee": "2023",
+     "longueur_m": 78,
+     "jauge_gt": 2051,
+     "port_lourd_dwt": 1490,
+     "capacite": "USV multi-role ; DP2 ; 2 moonpools 9 x 4 m",
+     "energie": "diesel-electrique batterie hybride, ammoniac-ready",
+     "propulsion": [
+      "diesel-electrique",
+      "hybride"
+     ],
+     "client": "Ocean Infinity",
+     "operateur": "Ocean Infinity",
+     "proprietaire": "Ocean Infinity",
+     "pavillon": "Singapour",
+     "classification": "DNV",
+     "timeline": [
+      {
+       "annee": "2023",
+       "role": "construction",
+       "nom": "Vard Vung Tau (Vietnam) - coque/construction",
+       "detail": "Construit a Vard Vung Tau, Vietnam",
+       "source": "vesselfinder ; marinetraffic"
+      },
+      {
+       "annee": "2023",
+       "role": "construction",
+       "nom": "Vard Soviknes - integration/livraison",
+       "detail": "Outfitting, commissioning et livraison depuis Vard Soviknes (serie Armada A78)",
+       "source": "maritime-executive ; vard.com"
+      },
+      {
+       "annee": "2023",
+       "role": "pavillon",
+       "nom": "Singapour",
+       "detail": "Immatricule Singapour",
+       "source": "vesselfinder IMO 9924273"
+      },
+      {
+       "annee": "2020",
+       "role": "construction",
+       "nom": "Armada 78 (serie de 8) - commande Vard / Ocean Infinity",
+       "detail": "Contrat de novembre 2020, 8 navires de 78 m, valeur non divulguee, non ventilee par navire. Armada 7804 a passe ses essais en mer en octobre 2023.",
+       "source": "https://www.fincantieri.com/en/newsroom/press-releases/2020/fincantieri-vard-secures-contract-for-eight-marine-robotic-vessels"
+      },
+      {
+       "annee": "2023",
+       "role": "proprietaire",
+       "nom": "Armada 78 04 (IMO 9924273)",
+       "detail": "Livre a Ocean Infinity (pavillon Singapour) ; toujours detenu et exploite par Ocean Infinity, aucune revente connue.",
+       "source": "https://gcaptain.com/ocean-infinity-completes-ambitious-14-vessel-armada-fleet/"
+      }
+     ],
+     "architecte": "Vard Design",
+     "architecte_source": "VARD/Riviera/Ship-Technology : la série A78 (78 m) d'Ocean Infinity a été conçue par Vard Design, filiale de VARD, qui assure design et construction",
+     "source_ref": "vesselfinder IMO 9924273 ; marinetraffic ; re-rattache le 2026-08-21 : attribue a tort a « Vard Søviknes », construit par « Vard Vung Tau » — Re-rattachement etabli en revue adversariale : construit par Vard Vung Tau, et non par Vard Søviknes. Wikipedia indique que la flotte Armada d Ocean Infinity a ete lancee au Vietnam (« the first of 23 Armada surface vessels had recently been launched in Vietnam »), c est-a-dire au chantier Vard Vung Tau, et non a Vard So (https://en.wikipedia.org/wiki/Ocean_Infinity)",
+     "source": "https://www.vesselfinder.com/vessels/details/9924273",
+     "tracabilite": "url-non-verifiee",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://en.wikipedia.org/wiki/Ocean_Infinity",
+      "le": "2026-08-21"
+     }
+    },
+    {
+     "nom": "Armada 7805",
+     "type": "OSV",
+     "imo": "9924285",
+     "annee": "2023",
+     "longueur_m": 78,
+     "jauge_gt": 2051,
+     "port_lourd_dwt": 1490,
+     "capacite": "USV multi-role ; DP2 ; 2 moonpools 9 x 4 m",
+     "energie": "diesel-electrique batterie hybride, ammoniac-ready",
+     "propulsion": [
+      "diesel-electrique",
+      "hybride"
+     ],
+     "client": "Ocean Infinity",
+     "operateur": "Ocean Infinity",
+     "proprietaire": "Ocean Infinity",
+     "pavillon": "Singapour",
+     "classification": "DNV",
+     "timeline": [
+      {
+       "annee": "2023",
+       "role": "construction",
+       "nom": "Vard Vung Tau (Vietnam) - coque/construction",
+       "detail": "Construit a Vard Vung Tau, Vietnam",
+       "source": "vesselfinder"
+      },
+      {
+       "annee": "2023",
+       "role": "construction",
+       "nom": "Vard Soviknes - integration/livraison",
+       "detail": "Outfitting, commissioning et livraison depuis Vard Soviknes (serie Armada A78)",
+       "source": "maritime-executive ; vard.com"
+      },
+      {
+       "annee": "2023",
+       "role": "pavillon",
+       "nom": "Singapour",
+       "detail": "Immatricule Singapour",
+       "source": "vesselfinder IMO 9924285"
+      },
+      {
+       "annee": "2020",
+       "role": "construction",
+       "nom": "Armada 78 (serie de 8) - commande Vard / Ocean Infinity",
+       "detail": "Contrat de novembre 2020, 8 navires de 78 m, valeur non divulguee, non ventilee par navire. Armada 7805 a passe ses essais en mer en octobre 2023.",
+       "source": "https://www.fincantieri.com/en/newsroom/press-releases/2020/fincantieri-vard-secures-contract-for-eight-marine-robotic-vessels"
+      },
+      {
+       "annee": "2023",
+       "role": "proprietaire",
+       "nom": "Armada 78 05 (IMO 9924285)",
+       "detail": "Livre a Ocean Infinity (pavillon Singapour) ; toujours detenu et exploite par Ocean Infinity, aucune revente connue.",
+       "source": "https://gcaptain.com/ocean-infinity-completes-ambitious-14-vessel-armada-fleet/"
+      }
+     ],
+     "architecte": "Vard Design",
+     "architecte_source": "VARD/Riviera/Ship-Technology : série A78 Ocean Infinity conçue par Vard Design (subsidiary de VARD)",
+     "source_ref": "vesselfinder IMO 9924285 ; re-rattache le 2026-08-21 : attribue a tort a « Vard Søviknes », construit par « Vard Vung Tau » — Re-rattachement etabli en revue adversariale : construit par Vard Vung Tau, et non par Vard Søviknes. Meme refutation que pour l Armada 7804 : serie lancee au Vietnam (Vard Vung Tau), pas a Vard Soviknes. Identite confirmee par VesselTracker (IMO 9924285, MMSI 563185400, 78 m, Singapour). (https://en.wikipedia.org/wiki/Ocean_Infinity)",
+     "source": "https://www.vesselfinder.com/vessels/details/9924285",
+     "tracabilite": "url-non-verifiee",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://en.wikipedia.org/wiki/Ocean_Infinity",
+      "le": "2026-08-21"
+     }
+    },
+    {
+     "nom": "Armada 7806",
+     "type": "OSV",
+     "imo": "9924297",
+     "annee": "2023",
+     "longueur_m": 78,
+     "jauge_gt": 2051,
+     "port_lourd_dwt": 1490,
+     "capacite": "USV multi-role ; DP2 ; 2 moonpools 9 x 4 m",
+     "energie": "diesel-electrique batterie hybride, ammoniac-ready",
+     "propulsion": [
+      "diesel-electrique",
+      "hybride"
+     ],
+     "client": "Ocean Infinity",
+     "operateur": "Ocean Infinity",
+     "proprietaire": "Ocean Infinity",
+     "pavillon": "Singapour",
+     "classification": "DNV",
+     "timeline": [
+      {
+       "annee": "2023",
+       "role": "construction",
+       "nom": "Vard Vung Tau (Vietnam) - coque/construction",
+       "detail": "Construit a Vard Vung Tau, Vietnam",
+       "source": "vesselfinder ; vesseltracker"
+      },
+      {
+       "annee": "2023",
+       "role": "construction",
+       "nom": "Vard Soviknes - integration/livraison",
+       "detail": "Outfitting, commissioning et livraison depuis Vard Soviknes (serie Armada A78)",
+       "source": "maritime-executive ; vard.com"
+      },
+      {
+       "annee": "2023",
+       "role": "pavillon",
+       "nom": "Singapour",
+       "detail": "Immatricule Singapour (MMSI 563198900)",
+       "source": "vesseltracker IMO 9924297"
+      },
+      {
+       "annee": "2020",
+       "role": "construction",
+       "nom": "Armada 78 (serie de 8) - commande Vard / Ocean Infinity",
+       "detail": "Contrat de novembre 2020, 8 navires de 78 m, valeur non divulguee, non ventilee par navire. Armada 7806 remis au capitaine / livre en octobre 2023 (6e des 8 navires).",
+       "source": "https://www.offshore-energy.biz/sixth-ammonia-ready-armada-vessel-joins-ocean-infinitys-fleet/"
+      },
+      {
+       "annee": "2023",
+       "role": "proprietaire",
+       "nom": "Armada 78 06 (IMO 9924297)",
+       "detail": "Livre a Ocean Infinity (pavillon Singapour) ; toujours detenu et exploite par Ocean Infinity, aucune revente connue.",
+       "source": "https://www.vesseltracker.com/en/Ships/Armada-78-06-9924297.html"
+      }
+     ],
+     "architecte": "Vard Design",
+     "architecte_source": "VARD/Riviera/Ship-Technology : série A78 Ocean Infinity conçue par Vard Design (subsidiary de VARD)",
+     "source_ref": "vesselfinder IMO 9924297 ; vesseltracker (callsign 9V8703) ; re-rattache le 2026-08-21 : attribue a tort a « Vard Søviknes », construit par « Vard Vung Tau » — Re-rattachement etabli en revue adversariale : construit par Vard Vung Tau, et non par Vard Søviknes. Meme serie que les Armada 7804 et 7805, construite au Vietnam chez Vard Vung Tau. Attribution a Vard Soviknes refutee. La fiche individuelle de cette unite n a pas ete ouverte, seule la source de serie l a ete. (https://en.wikipedia.org/wiki/Ocean_Infinity)",
+     "source": "https://www.vesselfinder.com/vessels/details/9924297",
+     "tracabilite": "url-non-verifiee",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://en.wikipedia.org/wiki/Ocean_Infinity",
+      "le": "2026-08-21"
+     }
+    }
+   ],
+   "sources": [
+    "https://www.vard.com/location/vietnam/vard-vung-tau",
+    "https://en.wikipedia.org/wiki/Ocean_Infinity"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": 2006,
+   "historique": [
+    {
+     "annee": "2006",
+     "fait": "Etablissement du chantier, site neuf (greenfield)."
+    },
+    {
+     "annee": "2008",
+     "fait": "Debut des operations de production."
+    },
+    {
+     "annee": "2010",
+     "fait": "Ouverture officielle du chantier."
+    },
+    {
+     "annee": "2024",
+     "fait": "Extension du site, capacite portee de 4 a 7 navires par an."
+    }
+   ],
+   "materiaux": [
+    "acier"
+   ],
+   "effectif": 1263
+  },
+  {
+   "id": "xx-yard-piriouvietnam-hochiminhville",
+   "nom": "Piriou Vietnam",
+   "groupe": "",
+   "ville": "Ho Chi Minh-Ville",
+   "region": "District de Nha Be",
+   "pays": "Vietnam",
+   "lat": 10.72708,
+   "lon": 106.72021,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit"
+   ],
+   "types_navires": [
+    "chalutier et navire de peche",
+    "remorqueur",
+    "navire de soutien offshore",
+    "navire de servitude",
+    "patrouilleur"
+   ],
+   "description": "Site vietnamien du groupe Piriou, ne South East Asia Shipyard avec une premiere implantation a Ben Luc en 2006 et le site de Nha Be en 2008, devenu Piriou Vietnam en juin 2015. Construit des navires acier et aluminium de taille moyenne jusqu'a 100 m aux standards europeens. 25 000 m2 de surface a quai, 5 000 m2 d'ateliers, cale seche de 120 m sur 21 m avec portique de 240 tonnes, synchrolift de 90 sur 20 m d'une capacite de levage de 2 300 tonnes, 400 m de quai d'armement. Certifie ISO 9001. C'est ce site, et non Concarneau, qui construit plusieurs coques portees au catalogue du groupe.",
+   "navires_references": [
+    {
+     "nom": "Persévérance",
+     "type": "voilier scientifique / ravitailleur polaire",
+     "propulsion": [
+      "velique",
+      "diesel-mdo"
+     ],
+     "imo": null,
+     "annee": "2023",
+     "longueur_m": 42,
+     "capacite_pax": 12,
+     "capacite": "8 membres d'equipage + 12 passagers ; coque alu renforcee navigation polaire ; 2 mats de 33 m",
+     "energie": "velique + propulsion diesel d'appoint",
+     "client": "Septieme Continent (Jean-Louis Etienne)",
+     "operateur": "Septieme Continent (expedition Polar Pod)",
+     "proprietaire": "Septieme Continent",
+     "pavillon": "France",
+     "classification": null,
+     "timeline": [
+      {
+       "annee": "2022",
+       "role": "construction",
+       "nom": "Piriou Concarneau",
+       "detail": "Premier voilier construit par Piriou ; mise sur cale avril 2022, architecte VPLP (Olivier Petit / Simon Watin)",
+       "source": "Bretagne Economique ; bateaux.com"
+      },
+      {
+       "annee": "2023",
+       "role": "operateur",
+       "nom": "Septieme Continent / Jean-Louis Etienne",
+       "detail": "Livre mars 2023 ; goelette ravitailleur de la station derivante Polar Pod autour de l'Antarctique ; immat. RIF",
+       "source": "Piriou.com ; actu-transport-logistique.fr"
+      }
+     ],
+     "source_ref": "Mer et Marine (le voilier Persévérance a Concarneau) ; Piriou.com (livraison a Jean-Louis Etienne, Polar Pod) ; Bretagne Economique (premier voilier livre par Piriou) ; re-rattache le 2026-08-21 : attribue a tort a « Piriou », construit par « Piriou Vietnam » — Re-rattachement etabli en revue adversariale : construit par Piriou Vietnam, et non par Piriou. La goelette Perseverance, destinee a l'avitaillement de la station oceanographique Polar Pod de Jean-Louis Etienne, a ete construite dans la filiale vietnamienne du groupe Piriou a Hô Chi Minh-Ville, pas a Concarneau. Le (https://fr.wikipedia.org/wiki/Pers%C3%A9v%C3%A9rance_(2022))",
+     "tracabilite": "reference-sans-url",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://fr.wikipedia.org/wiki/Pers%C3%A9v%C3%A9rance_(2022)",
+      "le": "2026-08-21"
+     }
+    },
+    {
+     "nom": "Scillonian IV",
+     "type": "Ferry à passagers et fret (desserte insulaire, construit au chantier Piriou Vietnam)",
+     "annee": "Mise en service visée 2027",
+     "longueur_m": 74.85,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "600 passagers + jusqu'à 20 conteneurs 10 pieds sur 2 niveaux, charge utile max 90 t",
+     "energie": null,
+     "client": "Isles of Scilly Steamship Group (commande janvier 2024)",
+     "classification": null,
+     "source": "https://en.wikipedia.org/wiki/Scillonian_IV",
+     "capacite_pax": 600,
+     "operateur": "Isles of Scilly Steamship Company (Isles of Scilly Steamship Group)",
+     "proprietaire": "Isles of Scilly Steamship Group",
+     "timeline": [
+      {
+       "annee": "2023",
+       "role": "evenement",
+       "nom": "PIRIOU (commande)",
+       "detail": "L'Isles of Scilly Steamship Group choisit le chantier PIRIOU (Concarneau) comme constructeur du nouveau ferry, dans le cadre d'un programme d'investissement de 40 M£.",
+       "source": "https://islesofscillysteamshipgroup.co.uk/corporate/latest-news/piriou/",
+       "source_ref": "role corrige le 2026-08-03 : construction -> evenement (acte contractuel, 2023, antérieur à la coque 2027)"
+      },
+      {
+       "annee": "2024",
+       "role": "construction",
+       "nom": "PIRIOU (Ho Chi Minh, Vietnam)",
+       "detail": "Pose de quille le 6 novembre 2024 sur le site PIRIOU de Hô Chi Minh-Ville (Vietnam).",
+       "source": "https://en.wikipedia.org/wiki/Scillonian_IV",
+       "prix": "40 M GBP pour 2 navires (Scillonian IV + Menawethan)"
+      },
+      {
+       "annee": "2026",
+       "role": "evenement",
+       "nom": "Mise à l'eau",
+       "detail": "Lancement / mise à l'eau le 28 mars 2026 au chantier PIRIOU de Hô Chi Minh-Ville. 74,85 m, 2200 GT, 600 passagers.",
+       "source": "https://www.shippax.com/en/news/scillonian-iv-takes-to-the-water-for-the-first-time.aspx"
+      },
+      {
+       "annee": "2027",
+       "role": "operateur",
+       "nom": "Isles of Scilly Steamship Company",
+       "detail": "Mise en service prévue en mars 2027 sur la ligne Penzance - Îles Scilly, en remplacement du Scillonian III.",
+       "source": "https://islesofscillysteamshipgroup.co.uk/new-vessels/scillonian-4/"
+      }
+     ],
+     "imo": "1056355",
+     "capacite_fret": "90 t",
+     "prix_acquisition": "compris dans un programme de 40 M GBP (≈ 50 M USD) couvrant 2 navires : le ferry passagers Scillonian IV + le cargo Menawethan (repartition unitaire non publiee)",
+     "architecte": "BMT",
+     "architecte_source": "BMT.org / MarineLink / Wikipedia : BMT a remporte le contrat de conception (2020) et a produit les designs concept du Scillonian IV (Sylvain Julien, Director of Naval Architecture, BMT) ; Van Oossanen cite en appui sur l'optimisation de coque avec Piriou",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://en.wikipedia.org/wiki/Scillonian_IV",
+      "le": "2026-08-21"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Piriou », construit par « Piriou Vietnam » — Re-rattachement etabli en revue adversariale : construit par Piriou Vietnam, et non par Piriou. Cas d'ecole du groupe pris pour le site. La page dediee Wikipedia est explicite : la coque est construite chez PIRIOU VIETNAM, pas a Concarneau. Piriou est bien le constructeur au sens du groupe (la page Isles of Scilly  (https://en.wikipedia.org/wiki/Scillonian_IV)"
+    }
+   ],
+   "sources": [
+    "https://www.piriou.com/en/implantations/piriou-vietnam-2/",
+    "https://fr.wikipedia.org/wiki/Pers%C3%A9v%C3%A9rance_(2022)",
+    "https://en.wikipedia.org/wiki/Scillonian_IV"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": 2006,
+   "historique": [
+    {
+     "annee": "2006",
+     "fait": "Premiere implantation a Ben Luc, sous le nom South East Asia Shipyard."
+    },
+    {
+     "annee": "2008",
+     "fait": "Ouverture du site de Nha Be, district de Ho Chi Minh-Ville."
+    },
+    {
+     "annee": "2015",
+     "fait": "Le chantier devient Piriou Vietnam en juin."
+    }
+   ],
+   "materiaux": [
+    "acier",
+    "aluminium"
+   ]
+  },
+  {
+   "id": "fr-yard-keraudren-camaretsurmer",
+   "nom": "Chantier Keraudren",
+   "groupe": "",
+   "ville": "Camaret-sur-Mer",
+   "region": "Bretagne",
+   "pays": "France",
+   "lat": 48.27727,
+   "lon": -4.5969,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "gabare",
+    "navire en bois",
+    "caboteur"
+   ],
+   "description": "Chantier naval de Camaret-sur-Mer, en presqu'ile de Crozon, constructeur de gabares en bois pour le cabotage et le transport de sable vers les iles du Ponant. La Fee de l'Aulne, construite en 1958 pour l'armement Le Bot, est designee par sa source comme la plus grande unite sortie du chantier. Etat d'activite actuel non etabli par une source publique.",
+   "navires_references": [
+    {
+     "nom": "Notre-Dame de Rumengol (restauration)",
+     "type": "Inconnu",
+     "annee": "1945 (construction) ; 1996 = restauration Guip",
+     "longueur_m": 21.7,
+     "jauge_gt": 57,
+     "port_lourd_dwt": null,
+     "capacite": "gabare/dundée de l'Aulne, Monument historique ; restauration par le Chantier du Guip",
+     "energie": "vélique",
+     "client": "Association An Test (Brest)",
+     "classification": null,
+     "source": "https://fr.wikipedia.org/wiki/Notre-Dame_de_Rumengol_(bateau)",
+     "propulsion": [
+      "velique"
+     ],
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://fr.wikipedia.org/wiki/Notre-Dame_de_Rumengol_(bateau)",
+      "le": "2026-08-21"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Chantier du Guip (site Île-aux-Moines) », construit par « Chantier Keraudren » — Re-rattachement etabli en revue adversariale : construit par Chantier Keraudren, et non par Chantier du Guip (site Île-aux-Moines). Source tierce : construite en 1945 au chantier Keraudren de Camaret-sur-Mer. Restauration majeure en 1996 au Chantier du Guip de BREST, et non au site de l'Ile-aux-Moines. Double erreur : reparation comptee comme constru (https://fr.wikipedia.org/wiki/Notre-Dame_de_Rumengol_(bateau))"
+    },
+    {
+     "nom": "Fée de l'Aulne",
+     "type": "gabare (caboteur à voiles)",
+     "propulsion": [
+      "velique"
+     ],
+     "annee": "1957",
+     "longueur_m": 22.7,
+     "capacite": "gabare de ~200 t, 22,70 m de long",
+     "energie": "velique (moteur auxiliaire)",
+     "classification": null,
+     "client": "association propriétaire (commanditaire restauration)",
+     "operateur": null,
+     "proprietaire": null,
+     "pavillon": "France",
+     "source": "https://fr.wikipedia.org/wiki/Chantier_du_Guip",
+     "timeline": [
+      {
+       "annee": "1957",
+       "role": "construction",
+       "nom": "Chantier Kéraudren, Camaret",
+       "detail": "gabare de 200 t construite en 1957 ; l'un des plus grands voiliers de travail en bois encore en service ; PAS construite par le Guip",
+       "source": "recherche web fiche Fée de l'Aulne"
+      },
+      {
+       "annee": "2000",
+       "role": "conversion",
+       "nom": "Restauration par le Chantier du Guip",
+       "detail": "remplacement des préceintes et reclouage intégral, recalfatage, remise à l'eau",
+       "source": "recherche web fiche Fée de l'Aulne ; fr.wikipedia.org/wiki/Chantier_du_Guip"
+      }
+     ],
+     "source_ref": "résultat recherche) ; fiche Fée de l'Aulne ; re-rattache le 2026-08-21 : attribue a tort a « Chantier du Guip (site Île-aux-Moines) », construit par « Chantier Keraudren » — Re-rattachement etabli en revue adversariale : construit par Chantier Keraudren, et non par Chantier du Guip (site Île-aux-Moines). Source tierce : construite en 1958 (et non 1957) au chantier Keraudren de Camaret-sur-Mer pour l'armement Le Bot. Restauration au chantier Pacalet de Saint-Quay-Portrieux, puis en 2012 au Chantier du Guip de BREST pour l (https://fr.wikipedia.org/wiki/F%C3%A9e_de_l%27Aulne)",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://fr.wikipedia.org/wiki/F%C3%A9e_de_l%27Aulne",
+      "le": "2026-08-21"
+     }
+    }
+   ],
+   "sources": [
+    "https://fr.wikipedia.org/wiki/Notre-Dame_de_Rumengol_(bateau)",
+    "https://fr.wikipedia.org/wiki/F%C3%A9e_de_l%27Aulne"
+   ],
+   "confiance": "moyenne",
+   "actif": false,
+   "fondation": null,
+   "historique": [
+    {
+     "annee": "1945",
+     "fait": "Construction de la gabare Notre-Dame de Rumengol."
+    },
+    {
+     "annee": "1958",
+     "fait": "Construction de la gabare Fee de l'Aulne pour l'armement Le Bot, plus grande unite du chantier selon sa source."
+    }
+   ],
+   "materiaux": [
+    "bois"
+   ]
+  },
+  {
+   "id": "fr-yard-leonglehen-pontlabbe",
+   "nom": "Chantier Leon Glehen",
+   "groupe": "",
+   "ville": "Pont-l'Abbe",
+   "region": "Bretagne",
+   "pays": "France",
+   "lat": 47.86592,
+   "lon": -4.22085,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "navire de peche",
+    "chalutier",
+    "fileyeur"
+   ],
+   "description": "Chantier de Pont-l'Abbe, dans le Finistere, constructeur de navires de peche cotiers. A ne pas confondre avec le Chantier Naval de Pors-Moro, egalement a Pont-l'Abbe : meme commune, entites distinctes, et l'attribution des deux coques ci-dessous a Pors-Moro etait une erreur etablie par les fiches nommees des navires. A ne pas confondre non plus avec les Chantiers Glehen de Douarnenez.",
+   "navires_references": [
+    {
+     "nom": "Gwengaero II (ex-Ulysse)",
+     "type": "fileyeur",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "annee": "1981",
+     "longueur_m": 20.5,
+     "jauge_gt": 49.91,
+     "energie": "diesel",
+     "capacite": "383 kW (Caterpillar)",
+     "client": "Armement local (Le Guilvinec)",
+     "pavillon": "Tunisie",
+     "source": "https://littoral-manche-atlantique.com",
+     "timeline": [
+      {
+       "annee": "1981",
+       "role": "construction",
+       "nom": "Gléhen Léon Pont l'Abbé (chantier de Pors-Moro)",
+       "detail": "Fileyeur acier, LOA 20,50 m, larg. 6,54 m, 49,91 Tx, Caterpillar 383 kW. Lancé sous le nom Ulysse (GV.514584, Le Guilvinec)",
+       "source": "littoral-manche-atlantique.com"
+      },
+      {
+       "annee": "1989",
+       "role": "pavillon",
+       "nom": "Ulysse (MX.514584, Morlaix)",
+       "detail": "Changement de quartier maritime",
+       "source": "littoral-manche-atlantique.com"
+      },
+      {
+       "annee": "1991",
+       "role": "renommage",
+       "nom": "Gwengaero II (LO.514584, Lorient)",
+       "source": "littoral-manche-atlantique.com"
+      },
+      {
+       "annee": "2004",
+       "role": "pavillon",
+       "nom": "Exporté en Tunisie",
+       "source": "littoral-manche-atlantique.com"
+      }
+     ],
+     "source_ref": "fiche Gwengaero II LO.514584 ; re-rattache le 2026-08-21 : attribue a tort a « Chantier Naval de Pors-Moro », construit par « Chantier Leon Glehen » — Re-rattachement etabli en revue adversariale : construit par Chantier Leon Glehen, et non par Chantier Naval de Pors-Moro. La fiche nommee du navire, immatricule LO.514584, attribue la construction a Glehen Leon a Pont-l'Abbe, et non au Chantier Naval de Pors-Moro. Les deux chantiers sont bien tous deux de Pont-l'Abbe, mais ce sont deux enti (https://www.littoral-manche-atlantique.com/2023/03/gwengaero-ii-lo.514584.html)",
+     "tracabilite": "url-domaine-seul",
+     "caractere": "prive",
+     "propriete": "privee",
+     "caractere_motif": "propriete: armement",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://www.littoral-manche-atlantique.com/2023/03/gwengaero-ii-lo.514584.html",
+      "le": "2026-08-21"
+     }
+    },
+    {
+     "nom": "Lorelei (ex-La Soupape I)",
+     "type": "chalutier",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "imo": "8543967",
+     "annee": "1989",
+     "longueur_m": 15.9,
+     "jauge_gt": 66.23,
+     "energie": "diesel",
+     "capacite": "257 kW",
+     "client": "Armement local (Le Guilvinec)",
+     "pavillon": "France",
+     "source": "https://littoral-manche-atlantique.com",
+     "timeline": [
+      {
+       "annee": "1989",
+       "role": "construction",
+       "nom": "Gléhen Léon Pont l'Abbé (chantier de Pors-Moro)",
+       "detail": "Chalutier de fond coquillier acier, LOA 15,90 m, larg. 6,00 m, 66,23 UMS, 257 kW. Lancé Lorelei (GV.730708, Le Guilvinec)",
+       "source": "littoral-manche-atlantique.com"
+      },
+      {
+       "annee": "2012",
+       "role": "renommage",
+       "nom": "La Soupape I (CH.730708, Cherbourg)",
+       "source": "littoral-manche-atlantique.com"
+      },
+      {
+       "annee": "2012",
+       "role": "proprietaire",
+       "nom": "La Soupape I (CH.730708, Cherbourg)",
+       "detail": "Changement d'armement/quartier maritime (Guilvinec -> Cherbourg). Aucun prix de cession publié pour cette transaction.",
+       "source": "https://www.littoral-manche-atlantique.com/2021/03/la-soupape-i-ch.730708-imo.8543667.html"
+      }
+     ],
+     "source_ref": "fiche Lorelei GV.730708 / IMO 8543967 ; re-rattache le 2026-08-21 : attribue a tort a « Chantier Naval de Pors-Moro », construit par « Chantier Leon Glehen » — Re-rattachement etabli en revue adversariale : construit par Chantier Leon Glehen, et non par Chantier Naval de Pors-Moro. Fiche nommee, immatriculation GV.730708, IMO 8543967 conforme a la base. Elle attribue la construction a Glehen Leon a Pont-l'Abbe, et non au Chantier Naval de Pors-Moro : meme ville, chantier different. Longueur hors to (https://www.littoral-manche-atlantique.com/2021/03/lorelei-gv.730708-imo.8543967.html)",
+     "tracabilite": "url-domaine-seul",
+     "caractere": "prive",
+     "propriete": "privee",
+     "caractere_motif": "propriete: armement",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://www.littoral-manche-atlantique.com/2021/03/lorelei-gv.730708-imo.8543967.html",
+      "le": "2026-08-21"
+     }
+    }
+   ],
+   "sources": [
+    "https://www.littoral-manche-atlantique.com/2023/03/gwengaero-ii-lo.514584.html",
+    "https://www.littoral-manche-atlantique.com/2021/03/lorelei-gv.730708-imo.8543967.html"
+   ],
+   "confiance": "moyenne",
+   "actif": false,
+   "fondation": null,
+   "historique": [
+    {
+     "annee": "1981",
+     "fait": "Construction du fileyeur Ulysse, devenu Gwengaero II, immatricule LO.514584."
+    },
+    {
+     "annee": "1989",
+     "fait": "Construction de La Soupape I, devenue Lorelei, immatriculee GV.730708, IMO 8543967."
+    }
+   ],
+   "materiaux": [
+    "bois",
+    "acier"
+   ]
+  },
+  {
+   "id": "fr-yard-abelmarchand-havre",
+   "nom": "Chantiers Abel Le Marchand",
+   "groupe": "",
+   "ville": "Le Havre",
+   "region": "Normandie",
+   "pays": "France",
+   "lat": 49.4939,
+   "lon": 0.10797,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "bateau-pilote",
+    "navire en bois"
+   ],
+   "description": "Chantier naval du Havre, constructeur de cotres-pilotes en bois a la fin du XIXe siecle. Le Marie-Fernand, lance le 7 juillet 1894, est aujourd'hui un navire patrimonial. Sa refonte de 2004 a 2008, de 370 000 euros, a ete conduite par le Chantier du Guip a Brest : elle ne fait pas du Guip son constructeur.",
+   "navires_references": [
+    {
+     "nom": "Marie-Fernand",
+     "type": "cotre-pilote",
+     "propulsion": [
+      "velique"
+     ],
+     "annee": "1894",
+     "longueur_m": 15.3,
+     "capacite": "coque 15,30 m (24 m hors-tout) ; bau 4,25 m ; tirant d'eau 2,50 m ; ~35 Tx",
+     "jauge_gt": 35,
+     "energie": "velique (voile aurique, moteur auxiliaire)",
+     "classification": "Monument historique (classe 09/06/1986)",
+     "client": "Association L'Hirondelle de la Manche (commanditaire de la restauration)",
+     "operateur": "Association L'Hirondelle de la Manche",
+     "proprietaire": "Association L'Hirondelle de la Manche",
+     "pavillon": "France",
+     "source": "https://fr.wikipedia.org/wiki/Marie-Fernand",
+     "timeline": [
+      {
+       "annee": "1894",
+       "role": "construction",
+       "nom": "Chantier Abel Le Marchand, Le Havre",
+       "detail": "cotre-pilote du port du Havre ; PAS construit par le Guip",
+       "source": "https://fr.wikipedia.org/wiki/Marie-Fernand"
+      },
+      {
+       "annee": "1986",
+       "role": "evenement",
+       "nom": "Classement Monument historique",
+       "detail": "classé le 9 juin 1986",
+       "source": "https://fr.wikipedia.org/wiki/Marie-Fernand"
+      },
+      {
+       "annee": "2004",
+       "role": "conversion",
+       "nom": "Restauration Chantier du Guip (Brest)",
+       "detail": "restauration lourde débutée en 2004 (étrave, étambot, quille, membrures, bordés ; ~70% bois d'origine conservé ; coût ~370 000 €)",
+       "source": "https://fr.wikipedia.org/wiki/Marie-Fernand",
+       "source_ref": "https://fr.wikipedia.org/wiki/Marie-Fernand — ; lehavreseine-patrimoine.fr"
+      },
+      {
+       "annee": "2008",
+       "role": "evenement",
+       "nom": "Remise à l'eau",
+       "detail": "lancée le 13 juillet 2008 lors des fêtes maritimes de Brest 2008",
+       "source": "https://fr.wikipedia.org/wiki/Marie-Fernand",
+       "source_ref": "https://fr.wikipedia.org/wiki/Marie-Fernand — ; seine-maritime-tourisme.com"
+      }
+     ],
+     "source_ref": "lehavreseine-patrimoine.fr ; piloteslehavre.fr ; re-rattache le 2026-08-21 : attribue a tort a « Chantier du Guip (site Île-aux-Moines) », construit par « Chantiers Abel Le Marchand » — Re-rattachement etabli en revue adversariale : construit par Chantiers Abel Le Marchand, et non par Chantier du Guip (site Île-aux-Moines). Source tierce : lance le 7 juillet 1894 aux chantiers Abel Le Marchand du Havre. Le Chantier du Guip est intervenu en refonte 2004-2008, a BREST (370 000 euros), pas a l'Ile-aux-Moines. Reparation comptee comme construct (https://fr.wikipedia.org/wiki/Marie-Fernand)",
+     "caractere": "prive",
+     "propriete": "privee",
+     "caractere_motif": "propriete: as",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://fr.wikipedia.org/wiki/Marie-Fernand",
+      "le": "2026-08-21"
+     }
+    }
+   ],
+   "sources": [
+    "https://fr.wikipedia.org/wiki/Marie-Fernand"
+   ],
+   "confiance": "moyenne",
+   "actif": false,
+   "fondation": null,
+   "historique": [
+    {
+     "annee": "1894",
+     "fait": "Lancement du cotre-pilote Marie-Fernand, le 7 juillet."
+    }
+   ],
+   "materiaux": [
+    "bois"
+   ]
+  },
+  {
+   "id": "fr-yard-locum-meillerie",
+   "nom": "Chantier de Locum",
+   "groupe": "",
+   "ville": "Meillerie",
+   "region": "Auvergne-Rhone-Alpes",
+   "pays": "France",
+   "lat": 46.40726,
+   "lon": 6.7196,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "barque du Leman",
+    "navire en bois",
+    "navire de charge"
+   ],
+   "description": "Chantier du hameau de Locum, sur la commune de Meillerie, rive francaise du lac Leman, en Haute-Savoie. Constructeur de barques du Leman destinees au transport de materiaux de construction vers Geneve : pierres de Meillerie, graviers du Rhone, bois. La Neptune, construite en 1904, motorisee en 1931, retiree du commerce en 1969, est aujourd'hui classee monument historique. Un bateau du Leman ne sort pas d'un chantier maritime breton, et c'est ce qui a permis de refuter son attribution anterieure.",
+   "navires_references": [
+    {
+     "nom": "La Neptune",
+     "type": "barque du Léman",
+     "propulsion": [
+      "velique"
+     ],
+     "annee": "1904",
+     "longueur_m": 27.3,
+     "capacite": "27,30 m de long ; 8,50 m de large ; ~120 t de charge utile",
+     "capacite_fret": "120 t",
+     "energie": "velique (voiles latines, moteur auxiliaire)",
+     "classification": "Patrimoine historique suisse",
+     "client": "propriétaire genevois (commanditaire restauration)",
+     "operateur": null,
+     "proprietaire": null,
+     "pavillon": "Suisse",
+     "source": "https://fr.wikipedia.org/wiki/Chantier_du_Guip",
+     "timeline": [
+      {
+       "annee": "1904",
+       "role": "construction",
+       "nom": "Construction d'origine (lac Léman)",
+       "detail": "barque de charge à voiles latines armée à Genève ; PAS construite par le Guip",
+       "source": "https://fr.wikipedia.org/wiki/Chantier_du_Guip"
+      },
+      {
+       "annee": "2006",
+       "role": "conversion",
+       "nom": "Restauration complète par le Chantier du Guip (Brest) à Genève",
+       "detail": "restauration complète menée à Genève par le Chantier du Guip ; remise à l'eau en 2006",
+       "source": "https://fr.wikipedia.org/wiki/Chantier_du_Guip",
+       "source_ref": "https://fr.wikipedia.org/wiki/Chantier_du_Guip — ; bateaux-du-leman.ch"
+      }
+     ],
+     "source_ref": "bateaux-du-leman.ch ; re-rattache le 2026-08-21 : attribue a tort a « Chantier du Guip (site Île-aux-Moines) », construit par « Chantier de Locum » — Re-rattachement etabli en revue adversariale : construit par Chantier de Locum, et non par Chantier du Guip (site Île-aux-Moines). Source tierce : construite en 1904 a Locum (Meillerie), rive francaise du Leman, pour le transport de pierres et graviers. Restaurations 1972-1976 puis 2004-2005. Un bateau du lac Leman ne sort pas d'un chantier de l'Ile (https://fr.wikipedia.org/wiki/La_Neptune)",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://fr.wikipedia.org/wiki/La_Neptune",
+      "le": "2026-08-21"
+     }
+    }
+   ],
+   "sources": [
+    "https://fr.wikipedia.org/wiki/La_Neptune"
+   ],
+   "confiance": "moyenne",
+   "actif": false,
+   "fondation": null,
+   "historique": [
+    {
+     "annee": "1904",
+     "fait": "Construction de la barque La Neptune, pour le transport de materiaux vers Geneve."
+    }
+   ],
+   "materiaux": [
+    "bois"
+   ]
+  },
+  {
+   "id": "ec-yard-williamfifeson-fairlie",
+   "nom": "William Fife & Son",
+   "groupe": "",
+   "ville": "Fairlie",
+   "region": "North Ayrshire",
+   "pays": "Écosse",
+   "lat": 55.75189,
+   "lon": -4.85319,
+   "geo_precision": "ville",
+   "perimetres": [
+    "plaisance",
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "yacht a voile",
+    "voilier de course",
+    "yacht a voile en bois"
+   ],
+   "description": "Chantier de yachts de la plage de Fairlie, dans le North Ayrshire, sur le Firth of Clyde. Trois generations de la famille Fife s'y succedent : William Fyfe (1785-1865), William Fife Sr. (1821-1902) et William Fife Jr. dit Fife III (1857-1944). Environ 600 dessins sortent du chantier, dont les jauges metriques 15mR, 19mR et 23mR. William Fife III dessine deux challengers de la Coupe de l'America. Un tiers des dessins Fife existe encore et une cinquantaine navigue toujours. Les interventions contemporaines de chantiers mediterraneens sur ces coques sont des restaurations et des travaux d'espars, pas des constructions.",
+   "navires_references": [
+    {
+     "nom": "Sumurun",
+     "type": "espars (mât 28,40 m)",
+     "annee": "1914",
+     "longueur_m": null,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Ketch classique (dessin Fife III) ; mât bois de 28,40 m fabriqué par le chantier",
+     "energie": "vélique",
+     "client": null,
+     "classification": null,
+     "source": "https://www.chantiernavalpasqui.com/references-de-travaux-de-1994-a-2022",
+     "propulsion": [
+      "velique"
+     ],
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://en.wikipedia.org/wiki/William_Fife",
+      "le": "2026-08-21"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Chantier Naval Gilbert Pasqui », construit par « William Fife & Son » — Re-rattachement etabli en revue adversariale : construit par William Fife & Son, et non par Chantier Naval Gilbert Pasqui. Sumurun (1914) est un ketch de William Fife, cite comme tel dans l'article Wikipedia consacre a Fife. L'intervention de Pasqui porte sur les espars (mat de 28,40 m), pas sur la construction de la coque. (https://en.wikipedia.org/wiki/William_Fife)"
+    }
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/William_Fife"
+   ],
+   "confiance": "moyenne",
+   "actif": false,
+   "fondation": null,
+   "historique": [
+    {
+     "annee": "1903",
+     "fait": "Construction du Moonbeam III."
+    },
+    {
+     "annee": "1909",
+     "fait": "Construction du Tuiga."
+    },
+    {
+     "annee": "1911",
+     "fait": "Construction du Mariquita."
+    },
+    {
+     "annee": "1914",
+     "fait": "Construction du ketch Sumurun."
+    },
+    {
+     "annee": "1920",
+     "fait": "Construction du Moonbeam IV."
+    },
+    {
+     "annee": "1938",
+     "fait": "Derniers dessins de William Fife III."
+    },
+    {
+     "annee": "1944",
+     "fait": "Mort de William Fife III ; le chantier est poursuivi brievement par son neveu."
+    }
+   ],
+   "materiaux": [
+    "bois"
+   ]
+  },
+  {
+   "id": "ec-yard-dundeeshipbuilderscompany-dundee",
+   "nom": "Dundee Shipbuilders Company",
+   "groupe": "",
+   "ville": "Dundee",
+   "region": "Dundee",
+   "pays": "Écosse",
+   "lat": 56.46059,
+   "lon": -2.97019,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit"
+   ],
+   "types_navires": [
+    "navire de recherche",
+    "chalutier",
+    "remorqueur",
+    "yacht a moteur",
+    "navire en bois"
+   ],
+   "description": "Chantier du Panmure Yard, sur Marine Parade a Dundee, repris a Alexander Stephen and Sons au milieu des annees 1890. Constructeur du RRS Discovery, mis en chantier le 16 mars 1900 et lance dans le Firth of Tay le 21 mars 1901 pour l'expedition antarctique de Robert Falcon Scott. Le chantier construit aussi des chalutiers, des remorqueurs, des yachts a vapeur, des trois-mats en acier et des docks flottants en acier. La perte financiere de l'Adventure entraine la liquidation en 1906. Les sources divergent sur l'annee de reprise du site, 1893 pour l'une et 1894 pour l'autre : la fiche ne tranche pas.",
+   "navires_references": [
+    {
+     "nom": "RRS Discovery",
+     "imo": null,
+     "type": "Navire de recherche historique (réparation/restauration)",
+     "annee": "1901",
+     "longueur_m": 52,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": "Navire d'exploration polaire à coque bois (expédition Discovery 1901-1904)",
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "Voile + vapeur à l'origine ; aujourd'hui navire-musée à quai",
+     "propulsion": [
+      "velique"
+     ],
+     "client": "Dundee Heritage Trust",
+     "operateur": "Dundee Heritage Trust (Discovery Point, Dundee)",
+     "proprietaire": "Dundee Heritage Trust",
+     "classification": null,
+     "source": "https://www.nationalhistoricships.org.uk/ship-shape/company/mackay-boatbuilders-arbroath-ltd",
+     "timeline": [
+      {
+       "annee": "1901",
+       "role": "construction",
+       "nom": "Dundee Shipbuilders Company",
+       "detail": "Construit à Dundee pour l'expédition antarctique britannique (Scott)",
+       "source": "https://www.nationalhistoricships.org.uk/ship-shape/company/mackay-boatbuilders-arbroath-ltd"
+      },
+      {
+       "annee": "2020",
+       "role": "evenement",
+       "nom": "Mackay Boatbuilders (Arbroath)",
+       "detail": "Projet de restauration de 18 mois auquel Mackay Boatbuilders a participé à Dundee",
+       "source": "https://www.nationalhistoricships.org.uk/ship-shape/company/mackay-boatbuilders-arbroath-ltd"
+      }
+     ],
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://en.wikipedia.org/wiki/RRS_Discovery",
+      "le": "2026-08-21"
+     },
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": null,
+      "source": "https://www.nationalhistoricships.org.uk/ship-shape/company/mackay-boatbuilders-arbroath-ltd",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Mackay Boatbuilders (Arbroath) », construit par « Dundee Shipbuilders Company » — Re-rattachement etabli en revue adversariale : construit par Dundee Shipbuilders Company, et non par Mackay Boatbuilders (Arbroath). Refutation nette : la construction du Discovery a debute le 16 mars 1900 chez la Dundee Shipbuilders Company a Dundee, et le navire a ete lance dans le Firth of Tay le 21 mars 1901. La page ne mentionne ni Arbroath ni Ma (https://en.wikipedia.org/wiki/RRS_Discovery)"
+    }
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Dundee_Shipbuilders_Company",
+    "https://www.gracesguide.co.uk/Dundee_Shipbuilding_Co",
+    "https://en.wikipedia.org/wiki/RRS_Discovery"
+   ],
+   "confiance": "moyenne",
+   "actif": false,
+   "fondation": null,
+   "historique": [
+    {
+     "annee": "1893-1894",
+     "fait": "Reprise des cales de Dundee a Alexander Stephen and Sons ; les deux sources consultees divergent sur l'annee."
+    },
+    {
+     "annee": "1894",
+     "fait": "Lancement du Terra Nova, herite inacheve de la reprise."
+    },
+    {
+     "annee": "1901",
+     "fait": "Lancement du RRS Discovery, le 21 mars, dans le Firth of Tay."
+    },
+    {
+     "annee": "1906",
+     "fait": "Liquidation de la societe, apres la perte financiere de l'Adventure."
+    },
+    {
+     "annee": "1923",
+     "fait": "Fermeture du chantier, exploite depuis 1906 par Craggs."
+    }
+   ],
+   "materiaux": [
+    "bois",
+    "acier"
+   ]
+  },
+  {
+   "id": "xx-yard-partnerspzoo-police",
+   "nom": "Partner Stocznia Sp. z o.o.",
+   "groupe": "",
+   "ville": "Police",
+   "region": "Pomeranie occidentale",
+   "pays": "Pologne",
+   "lat": 53.54864,
+   "lon": 14.56574,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "cargo general",
+    "cargo polyvalent"
+   ],
+   "description": "Chantier polonais de Police, pres de Szczecin, actif de 2009 a 2018 selon la base de reference maritime neerlandaise Marhisdata, qui le designe comme constructeur de cargos generaux. Deux coques y sont enregistrees : l'Oceanic, numero de coque 5, en 2012, et l'Abis Esbjerg, numero de coque 123, en 2015.",
+   "navires_references": [
+    {
+     "nom": "Oceanic",
+     "type": "Cargo polyvalent (type Hartman M2 Runner)",
+     "annee": "2012",
+     "imo": "9624550",
+     "longueur_m": 92.9,
+     "largeur_m": 14.75,
+     "jauge_gt": 2989,
+     "port_lourd_dwt": 3000,
+     "capacite": "Creux 5,91 m ; tirant d eau 5,60 m ; jauge nette 896",
+     "energie": "diesel",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "operateur": "Amasus Shipping B.V., Delfzijl (gestionnaire)",
+     "proprietaire": "Hartman Beheer 003 B.V., Urk",
+     "pavillon": "Pays-Bas",
+     "source": "https://www.marhisdata.nl/schip&id=9556",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://www.marhisdata.nl/werf&id=842",
+      "le": "2026-08-21"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Hartman Marine Shipbuilding B.V. », construit par « Partner Stocznia Sp. z o.o. » — Re-rattachement etabli en revue adversariale : construit par Partner Stocznia Sp. z o.o., et non par Hartman Marine Shipbuilding B.V.. Marhisdata designe Partner Stocznia Sp. z o.o. comme SCHEEPSBOUWER de l Oceanic, et la fiche du chantier polonais liste explicitement OCEANIC (2012, bouwnummer 5). Symetriquement, la fiche du chantier Hartman Marine Ship (https://www.marhisdata.nl/werf&id=842)"
+    }
+   ],
+   "sources": [
+    "https://www.marhisdata.nl/werf&id=842"
+   ],
+   "confiance": "moyenne",
+   "actif": false,
+   "fondation": 2009,
+   "historique": [
+    {
+     "annee": "2009",
+     "fait": "Debut de la periode d'activite enregistree par Marhisdata."
+    },
+    {
+     "annee": "2012",
+     "fait": "Construction de l'Oceanic, coque numero 5."
+    },
+    {
+     "annee": "2015",
+     "fait": "Construction de l'Abis Esbjerg, coque numero 123."
+    },
+    {
+     "annee": "2018",
+     "fait": "Fin de la periode d'activite enregistree par Marhisdata."
+    }
+   ],
+   "materiaux": [
+    "acier"
+   ]
+  },
+  {
+   "id": "pa-yard-ihcmerwede-krimpenaandenijssel",
+   "nom": "IHC Merwede, site de Krimpen aan den IJssel",
+   "groupe": "",
+   "ville": "Krimpen aan den IJssel",
+   "region": "Hollande-Meridionale",
+   "pays": "Pays-Bas",
+   "lat": 51.9144,
+   "lon": 4.58879,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit"
+   ],
+   "types_navires": [
+    "drague aspiratrice en marche (TSHD)",
+    "navire de construction offshore",
+    "ferry"
+   ],
+   "description": "Site de Krimpen aan den IJssel, pres de Rotterdam, exploite par IHC Merwede puis par Koninklijke IHC apres l'octroi du titre royal en 2014. Le site est celui de l'ancien chantier Van der Giessen-de Noord, fonde en 1820, constructeur de ferries pour Stena Line, Irish Ferries, P&O Ferries et Brittany Ferries, liquide en octobre 2003 faute de commandes depuis 2000. Le hall couvert de Krimpen est presente comme le plus grand chantier couvert d'Europe. C'est un site DISTINCT de Kinderdijk, et la confusion entre les deux est precisement l'erreur que la revue a relevee.",
+   "navires_references": [
+    {
+     "nom": "Congo River",
+     "annee": "2011",
+     "imo": "9574523",
+     "type": "drague aspiratrice en marche (TSHD)",
+     "longueur_m": 168,
+     "port_lourd_dwt": 34674,
+     "proprietaire": "DEME NV",
+     "operateur": "DEME NV",
+     "pavillon": "Belgique",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "energie": "23 200 kW, 16,6 nœuds",
+     "source": "https://nl.wikipedia.org/wiki/Congo_River_(schip,_2011)",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://nl.wikipedia.org/wiki/Congo_River_(schip,_2011)",
+      "le": "2026-08-21"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Koninklijke IHC B.V. (Royal IHC) », construit par « IHC Merwede, site de Krimpen aan den IJssel » — Re-rattachement etabli en revue adversariale : construit par IHC Merwede, site de Krimpen aan den IJssel, et non par Koninklijke IHC B.V. (Royal IHC). LA SOURCE CITÉE DIT AUTRE CHOSE QUE CE QU'ON LUI FAIT DIRE. La page nl.wikipedia donnée en confirmation écrit « IHC Merwede's scheepswerf in Krimpen aan den IJssel », pas Kinderdijk. Or Royal IHC exploitait trois sites D (https://nl.wikipedia.org/wiki/Congo_River_(schip,_2011))"
+    }
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Van_der_Giessen_de_Noord",
+    "https://nl.wikipedia.org/wiki/Koninklijke_IHC",
+    "https://nl.wikipedia.org/wiki/Congo_River_(schip,_2011)"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": 1820,
+   "historique": [
+    {
+     "annee": "1820",
+     "fait": "Fondation du chantier Van der Giessen-de Noord sur le site."
+    },
+    {
+     "annee": "2003",
+     "fait": "Liquidation de Van der Giessen-de Noord en octobre, faute de commandes depuis 2000."
+    },
+    {
+     "annee": "2014",
+     "fait": "IHC Merwede recoit le titre royal et devient Koninklijke IHC."
+    }
+   ],
+   "materiaux": [
+    "acier"
+   ]
+  },
+  {
+   "id": "xx-yard-severnav-drobetaturnuseverin",
+   "nom": "Severnav S.A.",
+   "groupe": "",
+   "ville": "Drobeta-Turnu Severin",
+   "region": "Mehedinti",
+   "pays": "Roumanie",
+   "lat": 44.62578,
+   "lon": 22.6532,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit"
+   ],
+   "types_navires": [
+    "cargo polyvalent",
+    "navire fluvial",
+    "coques et blocs de coque acier"
+   ],
+   "description": "Chantier roumain de Drobeta-Turnu Severin, sur la rive gauche du Danube, fonde en 1852 et reconstruit en 1965-1966. Superficie totale de 29,98 hectares en deux sections, 18,36 hectares couverts, 44 619 m2 d'aire de pre-montage. Production de coques acier de 9 600 tonnes par an, cales de 136 m et 128 m, quais d'armement de 456 m et 136 m, portiques de 1,6 a 100 tonnes. Construit des navires de mer et des navires fluviaux, repare, transforme et convertit. Fournit aussi des coques a d'autres chantiers europeens, ce qui est precisement le cas releve par la revue.",
+   "navires_references": [
+    {
+     "nom": "Barentszdiep",
+     "annee": "2010",
+     "type": "General cargo",
+     "longueur_m": 106.86,
+     "jauge_gt": 4102,
+     "port_lourd_dwt": 5400,
+     "propulsion": [],
+     "source": "https://royalbodewes.com/vessel/barentszdiep/",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://www.marhisdata.nl/schip?id=9053&onderdeel=algemeen",
+      "le": "2026-08-21"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Bodewes Shipyards », construit par « Severnav S.A. » — Coque mise sur cale par Severnav a Drobeta-Turnu Severin (Roumanie) le 12/12/2004 ; Bodewes n a fait que l achevement. La page citee en confirmation ne dit pas ce qu on lui prete. Interrogee sur la totalite des chantiers, la fiche Marhisdata donne deux intervenants : coque mise sur cale le 12/12/2004 par Severnav a Dr (https://www.marhisdata.nl/schip?id=9053&onderdeel=algemeen)"
+    }
+   ],
+   "sources": [
+    "https://www.severnav.ro/about-us",
+    "https://www.marhisdata.nl/schip?id=9053&onderdeel=algemeen"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": 1852,
+   "historique": [
+    {
+     "annee": "1852",
+     "fait": "Fondation du chantier."
+    },
+    {
+     "annee": "1965-1966",
+     "fait": "Reconstruction du chantier."
+    }
+   ],
+   "materiaux": [
+    "acier"
+   ],
+   "superficie_ha": 29.98
+  },
+  {
+   "id": "xx-yard-zaliv-kertch",
+   "nom": "Zaliv Shipyard",
+   "groupe": "",
+   "ville": "Kertch",
+   "region": "Crimee",
+   "pays": "Ukraine",
+   "lat": 45.35634,
+   "lon": 36.46706,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit",
+    "naval-defense"
+   ],
+   "types_navires": [
+    "cargo general",
+    "petrolier",
+    "porte-conteneurs",
+    "chalutier",
+    "corvette",
+    "brise-glace"
+   ],
+   "description": "Chantier de Kertch, sur le detroit de Kertch entre la mer Noire et la mer d'Azov, fonde en 1938. Occupe 350 acres. Forme de radoub de 360 m sur 60 m acceptant 13 m de tirant d'eau, deux portiques de 200 tonnes. Environ 600 navires construits entre 1945 et 1980, chalutiers et vedettes lance-torpilles ; depuis les annees 1960, petroliers, porte-conteneurs et reparation. A produit des fregates de type Krivak et le porte-conteneurs a propulsion nucleaire Sevmorput. La Crimee est un territoire ukrainien sous controle russe de fait depuis 2014 ; le pays porte ici est celui de la souverainete reconnue.",
+   "navires_references": [
+    {
+     "nom": "OSC Victoriadiep",
+     "annee": "2007",
+     "type": "General cargo",
+     "longueur_m": 119.98,
+     "jauge_gt": 5000,
+     "port_lourd_dwt": 7750,
+     "propulsion": [],
+     "source": "https://royalbodewes.com/vessel/osc-victoriadiep/",
+     "imo": "9351153",
+     "imo_source": "https://shipping-data.com/ship/osc-victoriadiep",
+     "pavillon": "Pays-Bas",
+     "source_registre": "https://shipping-data.com/ship/osc-victoriadiep",
+     "verification": {
+      "statut": "douteux",
+      "motif": "re-rattache, attribution a re-verifier",
+      "source": "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/6379-victoriadiep-imo-9351153",
+      "le": "2026-08-21"
+     },
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Bodewes Shipyards », construit par « Zaliv Shipyard » — Re-rattachement etabli en revue adversariale : construit par Zaliv Shipyard, et non par Bodewes Shipyards. Page citee ouverte et lue : elle distingue explicitement hull (Zaliv, Kertch, Ukraine) et completion (Bodewes, Hoogezand), livraison 17/12/2007. Cas identique a l OSC Vlistdiep : la coque vient de l Est, Bodewes n a fait (https://www.scheepvaartwest.be/CMS/index.php/general-cargo/6379-victoriadiep-imo-9351153)"
+    }
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Zaliv_Shipyard",
+    "https://www.scheepvaartwest.be/CMS/index.php/general-cargo/6379-victoriadiep-imo-9351153"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": 1938,
+   "historique": [
+    {
+     "annee": "1938",
+     "fait": "Fondation du chantier."
+    },
+    {
+     "annee": "1945-1980",
+     "fait": "Environ 600 navires construits, chalutiers et vedettes lance-torpilles."
+    },
+    {
+     "annee": "2017",
+     "fait": "Propriete repartie entre OOO Vesta (60 %) et OOO Enkor (40 %), en avril."
+    }
+   ],
+   "materiaux": [
+    "acier"
+   ]
   }
  ],
  "equipementiers": [
