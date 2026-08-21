@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Registre naval européen",
   "version": "0.1.0-mvp",
-  "date_maj": "2026-08-20",
+  "date_maj": "2026-08-21",
   "note": "Registre des chantiers navals européens et de leurs navires. Chaque champ porte sa source ; les champs non sourcés restent vides. Le taux de sourcing OPPOSABLE (source tierce, recevable, vivante) est mesuré par audit-sourcing.js et vaut 61 % au niveau du navire : le taux de remplissage, plus élevé, ne le remplace pas.",
   "perimetres_ref": {
    "construction-neuve": "Construction neuve",
@@ -3473,7 +3473,13 @@
      "source": "https://en.wikipedia.org/wiki/MS_Sovereign",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise"
+     "caractere_motif": "exploitation: cruise",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2020",
+      "source": "https://en.wikipedia.org/wiki/MS_Sovereign",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Monarch of the Seas",
@@ -3525,7 +3531,13 @@
      "source": "https://en.wikipedia.org/wiki/Sovereign-class_cruise_ship",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise"
+     "caractere_motif": "exploitation: cruise",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2020",
+      "source": "https://en.wikipedia.org/wiki/Sovereign-class_cruise_ship",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Majesty of the Seas",
@@ -3579,7 +3591,13 @@
      "source": "https://en.wikipedia.org/wiki/Sovereign-class_cruise_ship",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise"
+     "caractere_motif": "exploitation: cruise",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2020",
+      "source": "https://en.wikipedia.org/wiki/Sovereign-class_cruise_ship",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Nordic Empress (Empress)",
@@ -3686,7 +3704,13 @@
      "caractere_motif": "exploitation: cruise",
      "source": "https://en.wikipedia.org/wiki/MV_Pacific_Pearl",
      "longueur_m": 247,
-     "largeur_m": 32
+     "largeur_m": 32,
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2021",
+      "source": "https://en.wikipedia.org/wiki/MV_Columbus",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Insignia (R One)",
@@ -4283,7 +4307,13 @@
      "source": "https://en.wikipedia.org/wiki/MS_Windward",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise"
+     "caractere_motif": "exploitation: cruise",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2022",
+      "source": "https://en.wikipedia.org/wiki/MS_Windward",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Bretagne",
@@ -4567,6 +4597,12 @@
       "le": "2026-08-16",
       "depuis": "timeline[role=construction]",
       "etape": "Methanier Petronas livre 1995, Saint-Nazaire"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2023",
+      "source": "lngprime.com",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -4631,6 +4667,12 @@
       "le": "2026-08-16",
       "depuis": "timeline[role=construction]",
       "etape": "Methanier Petronas livre 1995, Saint-Nazaire"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2023",
+      "source": "lngprime.com",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -7770,7 +7812,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": "1988",
+      "source": "meretmarine.com ; pop.culture.gouv.fr",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Kersaint (escorteur T47, D622)",
@@ -8164,7 +8212,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2015",
+      "source": "Wikipedia D'Estienne d'Orves-class aviso",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Jean Moulin (F785)",
@@ -8219,7 +8273,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2015",
+      "source": "Wikipedia D'Estienne d'Orves-class aviso",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Quartier-Maître Anquetil (F786)",
@@ -9881,7 +9941,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "fin_de_vie": {
+      "statut": "deconstruit",
+      "annee": "2026",
+      "source": "https://www.meretmarine.com/fr/defense/marine-nationale-le-sna-perle-a-fait-ses-adieux-a-toulon-cap-sur-cherbourg-pour-y-etre-desarme",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Améthyste",
@@ -10002,7 +10068,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": null,
+      "source": "https://fr.wikipedia.org/wiki/Le_Redoutable_(S611)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Orka",
@@ -10823,7 +10895,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": "1989",
+      "source": "https://en.wikipedia.org/wiki/Daphn%C3%A9-class_submarine",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Galatee",
@@ -10910,7 +10988,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "1970",
+      "source": "https://en.wikipedia.org/wiki/Daphn%C3%A9-class_submarine",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Junon",
@@ -11281,7 +11365,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": "1991",
+      "source": "https://en.wikipedia.org/wiki/French_submarine_Argonaute_(S636)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Amazone",
@@ -11487,6 +11577,12 @@
       "source": "https://fr.wikipedia.org/wiki/Surcouf_(sous-marin)",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "1942",
+      "source": "https://en.wikipedia.org/wiki/French_submarine_Surcouf",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -12042,7 +12138,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "fin_de_vie": {
+      "statut": "deconstruit",
+      "annee": "2014",
+      "source": "https://www.veolia.fr/medias/communiques-de-presse/veolia-lance-les-operations-de-demantelement-de-lex-jeanne-darc-au",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Clemenceau (R98)",
@@ -12115,7 +12217,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2003",
+      "source": "https://fr.wikipedia.org/wiki/Clemenceau_(porte-avions)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     }
    ],
    "geo_source": "https://patrimoine.bzh/gertrude-diffusion/dossier/IA29001878",
@@ -19862,7 +19970,13 @@
      "architecte": "Constructions Mécaniques de Normandie",
      "architecte_source": "Wikipedia (La Combattante II / Kaman-class): commande passee au constructeur francais CMN a Cherbourg ; type La Combattante II conçu par CMN apres rejet du projet Lürssen initial par la France. Architecte naval = constructeur (bureau de design integre CMN).",
      "source_ref": "en.wikipedia La Combattante II type / Kaman-class fast attack craft ; Wikimanche (Khadang lance le 15 juillet 1976, Joshan le 21 fevrier 1977)",
-     "tracabilite": "reference-sans-url"
+     "tracabilite": "reference-sans-url",
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "1980",
+      "source": "en.wikipedia Kaman-class",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Classe Sa'ar 3 / projet de Cherbourg (vedettes lance-missiles Israel)",
@@ -22896,6 +23010,35 @@
       "le": "2026-08-20",
       "confiance": "simple"
      }
+    },
+    {
+     "nom": "Kahouanne",
+     "type": "baliseur côtier",
+     "annee": "2001",
+     "longueur_m": 27.3,
+     "largeur_m": 7.7,
+     "capacite": "Déplacement 73 tonnes ; équipage 10 personnes",
+     "energie": "2 moteurs diesel de 297 kW, soit 594 kW au total, vitesse 12 nœuds",
+     "client": "Armement des phares et balises (APB), direction de la mer de Guadeloupe",
+     "operateur": "Armement des phares et balises (APB)",
+     "proprietaire": "État français",
+     "pavillon": "France",
+     "source": "https://fr.wikipedia.org/wiki/Kahouanne_(navire)",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "caractere": "public",
+     "exploitation": "service-public",
+     "caractere_motif": "propriete: etat francais ; exploitation: phares et balises",
+     "timeline": [
+      {
+       "annee": "2001",
+       "role": "mise-en-service",
+       "nom": "Kahouanne",
+       "detail": "Mis en service en avril 2001, basé à Pointe-à-Pitre. Il pose et entretient les bouées lumineuses et maintient les établissements de signalisation maritime sur supports fixes dans les Antilles. Son nom est celui de l'îlet Kahouanne, au nord de Basse-Terre.",
+       "source": "https://fr.wikipedia.org/wiki/Kahouanne_(navire)"
+      }
+     ]
     }
    ],
    "geo_source": "https://fr.mappy.com/plan/Quai-de-la-Cabaude---Port-Olona-85100-Les-Sables-d'Olonne",
@@ -33231,10 +33374,10 @@
      "nom": "Île Dumet",
      "type": "bac SEEM 46-1250ST",
      "annee": "2013",
-     "longueur_m": 46,
+     "longueur_m": 68.8,
      "jauge_gt": null,
      "port_lourd_dwt": null,
-     "capacite": "Bac amphidrome ; 296 passagers, 40 véhicules ; coques de Mecasoud (Saint-Nazaire)",
+     "capacite": "Bac amphidrome ; 297 passagers, 40 véhicules ; coques de Mecasoud (Saint-Nazaire)",
      "energie": "Diesel-électrique, 2 propulseurs Voith Schneider",
      "client": "Département de Loire-Atlantique (Compagnie des Bacs de Loire / Transdev)",
      "classification": "Bureau Veritas",
@@ -33243,7 +33386,7 @@
       "diesel-electrique",
       "diesel-mdo"
      ],
-     "capacite_pax": 296,
+     "capacite_pax": 297,
      "capacite_vehicules": 40,
      "largeur_m": 12.5,
      "desserte": "Le Pellerin - Couëron",
@@ -33289,16 +33432,23 @@
      "caractere_motif": "propriete: departement de ; exploitation: bacs",
      "sources": [
       "https://fr.wikipedia.org/wiki/Bacs_de_Loire"
-     ]
+     ],
+     "verification": {
+      "statut": "corrige",
+      "champs": 1,
+      "source": "https://inforoutes.loire-atlantique.fr/44/bacs-de-loire/portrait-des-bacs-de-loire/info_60245",
+      "le": "2026-08-21",
+      "confiance": "simple"
+     }
     },
     {
      "nom": "Lola",
      "type": "bac SEEM 46-1250ST",
      "annee": "2012",
-     "longueur_m": 46,
+     "longueur_m": 68.8,
      "jauge_gt": null,
      "port_lourd_dwt": null,
-     "capacite": "Bac amphidrome ; 296 passagers, 40 véhicules ; coques de Mecasoud (Saint-Nazaire)",
+     "capacite": "Bac amphidrome ; 297 passagers, 40 véhicules ; coques de Mecasoud (Saint-Nazaire)",
      "energie": "Diesel-électrique, 2 propulseurs Voith Schneider",
      "client": "Département de Loire-Atlantique (Compagnie des Bacs de Loire / Transdev)",
      "classification": "Bureau Veritas",
@@ -33307,7 +33457,7 @@
       "diesel-electrique",
       "diesel-mdo"
      ],
-     "capacite_pax": 296,
+     "capacite_pax": 297,
      "capacite_vehicules": 40,
      "largeur_m": 12.5,
      "desserte": "Basse-Indre - Indret",
@@ -33353,7 +33503,14 @@
      "caractere_motif": "propriete: departement de ; exploitation: bacs",
      "sources": [
       "https://fr.wikipedia.org/wiki/Bacs_de_Loire"
-     ]
+     ],
+     "verification": {
+      "statut": "corrige",
+      "champs": 1,
+      "source": "https://inforoutes.loire-atlantique.fr/44/bacs-de-loire/portrait-des-bacs-de-loire/info_60245",
+      "le": "2026-08-21",
+      "confiance": "simple"
+     }
     },
     {
      "nom": "Fort Boyard",
@@ -34816,7 +34973,13 @@
      "source": "https://www.efinorseacleaner.com/actualites-realisations/un-navire-de-nettoyage-pour-aider-lile-maurice-a-lutter-contre-la-maree-noire-sur-ses-cotes",
      "propulsion": [
       "diesel-mdo"
-     ]
+     ],
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": null,
+      "source": "https://www.efinorseacleaner.com/actualites-realisations/un-navire-de-nettoyage-pour-aider-lile-maurice-a-lutter-contre-la-maree-noire-sur-ses-cotes",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Spill Cleaner 250",
@@ -43644,7 +43807,13 @@
      "source": "https://www.pagesjaunes.fr/pros/62856092"
     }
    ],
-   "historique": [],
+   "historique": [
+    {
+     "annee": "2023",
+     "fait": "Entite active au registre (SIREN 982189383), etat administratif « A » a l'annuaire des entreprises, siege a CHAILLE-LES-MARAIS, 1 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/982189383"
+    }
+   ],
    "contact": null,
    "sources": [
     "https://www.chantier-nautique-vendee.fr",
@@ -43655,7 +43824,8 @@
     "https://www.societe.com/societe/chantier-nautique-vendee-982189383.html",
     "https://www.pagesjaunes.fr/pros/62856092",
     "https://foirevirtuelle.fr/chantier-nautique-vendee/",
-    "https://www.bateaux.com/plaisance/annuaire-nautisme/chantier-nautique-vendee-REFwGNIDXMuyQk"
+    "https://www.bateaux.com/plaisance/annuaire-nautisme/chantier-nautique-vendee-REFwGNIDXMuyQk",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/982189383"
    ],
    "confiance": "moyenne",
    "materiaux": [
@@ -43687,7 +43857,11 @@
    "geo_source": "https://annuaire-entreprises.data.gouv.fr/etablissement/98218938300010",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "siren": "982189383",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/982189383",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21"
   },
   {
    "id": "jfa-yachts-concarneau",
@@ -44541,7 +44715,13 @@
      "dimensions": null
     }
    ],
-   "historique": [],
+   "historique": [
+    {
+     "annee": "2017",
+     "fait": "Entite active au registre (SIREN 834275976), etat administratif « A » a l'annuaire des entreprises, siege a GUJAN-MESTRAS, 1 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/834275976"
+    }
+   ],
    "contact": null,
    "sources": [
     "https://www.beacher-nautique.com/",
@@ -44561,7 +44741,8 @@
     "https://hallnautique.fr/?wdk-listing=beacher-v9",
     "https://www.xboat.fr/6029-3C-COMPOSITES_BEACHER-V8-OPEN.html",
     "https://www.usinenouvelle.com/article/communique-gironde-activite-de-conception-nautique-durable-de-la-societe-beacher-a-gujan-mestras.N2231954",
-    "https://www.bateaux.com/plaisance/bateaux-a-moteur/beacher-v10-REFk8L1D6Vt7vQ"
+    "https://www.bateaux.com/plaisance/bateaux-a-moteur/beacher-v10-REFk8L1D6Vt7vQ",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/834275976"
    ],
    "confiance": "haute",
    "materiaux": [
@@ -44658,7 +44839,11 @@
     "https://www.xboat.fr/6029-3C-COMPOSITES_BEACHER-V8-OPEN.html — (Beacher V8 Open construit par 3C Composites, 2006)",
     "https://www.usinenouvelle.com/article/communique-gironde-activite-de-conception-nautique-durable-de-la-societe-beacher-a-gujan-mestras.N2231954 — (L'Usine Nouvelle, communiqué)",
     "https://www.bateaux.com/plaisance/bateaux-a-moteur/beacher-v10-REFk8L1D6Vt7vQ — (Bateaux.com, fiche V10)"
-   ]
+   ],
+   "actif": true,
+   "siren": "834275976",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/834275976",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21"
   },
   {
    "id": "b2-marine-latresne",
@@ -45237,7 +45422,13 @@
      "source": "https://www.ribwest.fr/lentreprise/"
     }
    ],
-   "historique": [],
+   "historique": [
+    {
+     "annee": "2013",
+     "fait": "Entite active au registre (SIREN 791834229), etat administratif « A » a l'annuaire des entreprises, siege a BADEN, 1 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/791834229"
+    }
+   ],
    "contact": null,
    "sources": [
     "https://www.ribwest.fr/qui-sommes-nous/",
@@ -45254,7 +45445,8 @@
     "https://www.bateaux.com/plaisance/semi-rigide/ribwest-rs-7-50-REFKMqQvn7gv4g",
     "https://www.bateaux.com/article/44698/ribwest-rs-6-99-un-semi-rigide-sur-mesure-fabrique-en-france",
     "https://www.hypenautic.fr/bateaux/ribwest-rs-fish-7-5/",
-    "https://www.hypenautic.fr/bateaux/ribwest-fish-9/"
+    "https://www.hypenautic.fr/bateaux/ribwest-fish-9/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/791834229"
    ],
    "confiance": "haute",
    "materiaux": [
@@ -45362,7 +45554,11 @@
      "source": "https://www.hypenautic.fr/bateaux/ribwest-fish-9/",
      "origine": "modele de production, anciennement compte comme navire"
     }
-   ]
+   ],
+   "actif": true,
+   "siren": "791834229",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/791834229",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21"
   },
   {
    "id": "sillinger-mer",
@@ -45752,6 +45948,11 @@
      "fait": "Creation de la societe Alu Acier Service Marine (SARL), inscrite en decembre 2002 ; fiche communale de Longueville indiquant une fondation en 2003"
     },
     {
+     "annee": "2002",
+     "fait": "Entite active au registre (SIREN 444421010), etat administratif « A » a l'annuaire des entreprises, siege a LONGUEVILLE, 1 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/444421010"
+    },
+    {
      "annee": "2012",
      "fait": "Livraison en juillet d'une vedette de sauvetage a l'organisation suisse de Belotte-Bellerive (lac Leman)"
     }
@@ -45779,7 +45980,8 @@
     "https://aasm50.com/listings/snsm-granville-chausey/",
     "https://aasm50.com/listings/peche-polyvalent-catamaran/",
     "https://www.vedettesjoliefrance.com/infos-pratiques/notre-flotte/",
-    "https://normandie.ccibusiness.fr/alu-acier-service-marine"
+    "https://normandie.ccibusiness.fr/alu-acier-service-marine",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/444421010"
    ],
    "confiance": "moyenne",
    "produits": [
@@ -46054,7 +46256,11 @@
     "https://longueville-manche.fr/la-vie-economique/aasm-alu-acier-service-marine/ — (fiche communale)",
     "https://www.vedettesjoliefrance.com/infos-pratiques/notre-flotte/ — (controle negatif : flotte Granville-Chausey non construite par AASM)",
     "https://normandie.ccibusiness.fr/alu-acier-service-marine — (fiche entreprise)"
-   ]
+   ],
+   "actif": true,
+   "siren": "444421010",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/444421010",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21"
   },
   {
    "id": "cmh-industrie-marseille",
@@ -46968,6 +47174,11 @@
      "fait": "Création du chantier de réparation navale à Dunkerque (expérience navale du site remontant au XIXe siècle)"
     },
     {
+     "annee": "1986",
+     "fait": "Entite active au registre (SIREN 340061654), etat administratif « A » a l'annuaire des entreprises, siege a DUNKERQUE, 3 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/340061654"
+    },
+    {
      "annee": "2012",
      "fait": "Damen Shipyards Group rachète le chantier Arno Dunkerque, alors en difficulté financière (impayés de SeaFrance), avec environ 160 salariés ; seul opérateur de réparation et conversion du port de Dunkerque"
     },
@@ -47014,7 +47225,8 @@
     "https://archive.damen.com/en/news/2018/05/preparations_for_conversion_to_create_europes_first_lng_dredger_get_underway_at_dsdu",
     "https://www.new-ships.com/ns/shipbuilders/7701-damen-shiprepair-dunkerque",
     "https://www.trusteddocks.com/shipyards/7701-damen-shiprepair-dunkerque",
-    "https://medialibrary.damen.com/m/66468129f59490c/original/Damen-Shiprepair-Dunkerque-yard-brochure.pdf"
+    "https://medialibrary.damen.com/m/66468129f59490c/original/Damen-Shiprepair-Dunkerque-yard-brochure.pdf",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/340061654"
    ],
    "confiance": "haute",
    "produits": [
@@ -47332,118 +47544,11 @@
      "descendu_le": "2026-08-05",
      "motif": "type de refit : passage en chantier, pas une construction"
     }
-   ]
-  },
-  {
-   "id": "le-havre-shipyard-le-havre",
-   "nom": "Le Havre Shipyard",
-   "groupe": "Le Havre Naval Projects",
-   "ville": "Le Havre",
-   "region": "Normandie",
-   "pays": "France",
-   "lat": 49.4944,
-   "lon": 0.1079,
-   "geo_precision": "ville",
-   "fondation": 2018,
-   "superficie_ha": null,
-   "effectif": null,
-   "perimetres": [
-    "reparation-refit",
-    "plaisance"
    ],
-   "types_navires": [
-    "motor-yacht",
-    "navire-technique",
-    "ferry-ropax"
-   ],
-   "description": "Le Havre Shipyard est une structure de réparation, maintenance et refit naval implantée au Quai Renaud au Havre, spécialisée à l'origine dans les grands yachts de plus de 24 mètres et opérant aussi sur navires maritimes et fluviaux via l'entité Le Havre Naval Projects. Elle s'appuie sur les formes de radoub (Formes de l'Eure) du port du Havre et un réseau de sous-traitants normands, sans activité de construction neuve avérée.",
-   "capacites": [
-    {
-     "type": "forme de radoub",
-     "capacite": "Yachts de 30 à 110 mètres",
-     "dimensions": "3 formes de radoub (Formes de l'Eure, GPMH) de 180 m × 24 m"
-    },
-    {
-     "type": "forme de radoub",
-     "capacite": "3 formes de radoub mutualisées du port du Havre (Formes de l'Eure, GPMH/HAROPA), accueil de yachts et navires de 30 à 110 m",
-     "dimensions": "180 m × 24 m (par forme)"
-    },
-    {
-     "type": "Forme de radoub n4 (Formes de l'Eure)",
-     "dimensions": "181 m x 17,5 m, tirant d'eau 7,8 m",
-     "capacite": null,
-     "source": "https://www.lehavreseinedeveloppement.com/fr/le-mag-eco/le-havre-shipyard-pour-la-reparation-et-maintenance-de-bateaux"
-    },
-    {
-     "type": "Forme de radoub n5 (Formes de l'Eure)",
-     "dimensions": "164 m",
-     "capacite": null,
-     "source": "https://www.haropaport.com/fr/reparation-navale"
-    },
-    {
-     "type": "Forme de radoub n6 (Formes de l'Eure)",
-     "dimensions": "127 m x 14,5 m, tirant d'eau 7 m",
-     "capacite": null,
-     "source": "https://www.haropaport.com/fr/reparation-navale"
-    },
-    {
-     "type": "Taille max de navire (acces bassin a flot via ecluse 24/7)",
-     "dimensions": "180 m x 24 m",
-     "capacite": "navires jusqu'a 180 m x 24 m",
-     "source": "https://www.haropaport.com/fr/reparation-navale"
-    },
-    {
-     "type": "Site dedie (3 formes, quartier des Docks)",
-     "dimensions": null,
-     "capacite": "4,5 hectares",
-     "source": "https://www.haropaport.com/fr/reparation-navale"
-    }
-   ],
-   "historique": [
-    {
-     "annee": "2017",
-     "fait": "Lancement de Le Havre Naval Projects par Florence Vareilles, fin 2017, pour développer la maintenance et le refit de yachts en Normandie en s'appuyant sur les infrastructures du Grand Port Maritime du Havre."
-    }
-   ],
-   "contact": {
-    "adresse": "125 boulevard Clemenceau, Capitainerie du port de plaisance, 76600 Le Havre, France",
-    "interlocuteur": "Florence Vareilles (f.vareilles@navalprojects.com)",
-    "telephone": "+33 (0)7 83 14 64 01",
-    "web": "https://www.navalprojects.com"
-   },
-   "sources": [
-    "https://www.boatindustry.com/news/27420/yacht-refit-settles-in-le-havre",
-    "https://www.navalprojects.com/en",
-    "https://www.normandie-maritime.fr/actualite/le-refit-de-yacht-s-installe-au-havre/722",
-    "https://fr.linkedin.com/in/florence-vareilles-99071669",
-    "https://www.yachting-pages.com/listing/naval-projects.html",
-    "https://www.linkedin.com/company/le-havre-shipyard",
-    "https://www.haropaport.com/fr/reparation-navale"
-   ],
-   "confiance": "moyenne",
-   "produits": [
-    {
-     "type": "Réparation, maintenance et refit de grands yachts",
-     "details": "Superyachts de 30 à 110 m (arrêts techniques, refit complet, suivi et coordination de chantier, assistance équipages)"
-    },
-    {
-     "type": "Réparation et maintenance navale maritime et fluviale",
-     "details": "Navires de croisière fluviale et petits navires à passagers, via l'entité Le Havre Naval Projects"
-    }
-   ],
-   "personnes": [
-    {
-     "nom": "Florence Vareilles",
-     "titre": "Fondatrice et dirigeante (15 ans d'expérience dans l'exploitation de superyachts)"
-    }
-   ],
-   "taille_max": "Yachts et navires jusqu'à 110 m de longueur, accueillis dans des formes de radoub de 180 m × 24 m (Formes de l'Eure, GPMH/HAROPA Le Havre). Jauge GT non documentée.",
-   "navires_references": [],
-   "sources_ref": [
-    "lien mort constate le 2026-08-03 : https://www.lehavreseinedeveloppement.com/fr/le-mag-eco/le-havre-shipyard-pour-la-reparation-et-maintenance-de-bateaux",
-    "lien mort constate le 2026-08-03 : https://normandie.ccibusiness.fr/le-havre-naval-projects",
-    "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   "actif": true,
+   "siren": "340061654",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/340061654",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21"
   },
   {
    "id": "le-havre-naval-projects-le-havre",
@@ -47518,6 +47623,10 @@
     {
      "annee": "2017",
      "fait": "Création de Le Havre Naval Projects (fin 2017), opérateur de réparation, maintenance et refit naval exploitant les trois Formes de l'Eure."
+    },
+    {
+     "annee": "2018",
+     "fait": "Le Havre Naval Projects exploite le site sous la marque de chantier « Le Havre Shipyard », au Quai Renaud, pour la réparation et le refit de yachts de plus de 24 mètres."
     }
    ],
    "contact": {
@@ -47534,7 +47643,9 @@
     "https://www.haropaport.com/fr/reparation-navale",
     "https://fr.linkedin.com/in/florence-vareilles-99071669",
     "https://www.boatindustry.com/news/27420/yacht-refit-settles-in-le-havre",
-    "https://www.yachting-pages.com/listing/naval-projects.html"
+    "https://www.yachting-pages.com/listing/naval-projects.html",
+    "https://www.normandie-maritime.fr/actualite/le-refit-de-yacht-s-installe-au-havre/722",
+    "https://www.linkedin.com/company/le-havre-shipyard"
    ],
    "confiance": "haute",
    "produits": [
@@ -47563,7 +47674,11 @@
     "lien mort constate le 2026-08-03 : https://www.navalprojects.com/en/contact",
     "lien mort constate le 2026-08-03 : https://www.lehavreseinedeveloppement.com/fr/le-mag-eco/le-havre-shipyard-pour-la-reparation-et-maintenance-de-bateaux",
     "lien mort constate le 2026-08-03 : https://www.lehavrenavalprojects.com/infrastructures",
-    "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
+    "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json",
+    "lien mort constate le 2026-08-03 : https://normandie.ccibusiness.fr/le-havre-naval-projects"
+   ],
+   "alias": [
+    "Le Havre Shipyard"
    ]
   },
   {
@@ -47986,7 +48101,13 @@
      "source": "https://tdcmartinique-lemag.com/le-bassin-radoub-vieux-de-160-ans-et-toujours-dactualite/"
     }
    ],
-   "historique": [],
+   "historique": [
+    {
+     "annee": "2023",
+     "fait": "Entite active au registre (SIREN 979459898), etat administratif « A » a l'annuaire des entreprises, siege a FORT-DE-FRANCE, 2 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/979459898"
+    }
+   ],
    "contact": null,
    "sources": [
     "https://martiniqueshipyard.fr/en/company/",
@@ -48014,7 +48135,8 @@
     "https://www.cruisemapper.com/ships/Le-Champlain-1505",
     "https://rci.fm/deuxiles/node/5457473",
     "https://www.vesselfinder.com/vessels/details/9007491",
-    "https://tdcmartinique-lemag.com/le-bassin-radoub-vieux-de-160-ans-et-toujours-dactualite/"
+    "https://tdcmartinique-lemag.com/le-bassin-radoub-vieux-de-160-ans-et-toujours-dactualite/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/979459898"
    ],
    "confiance": "haute",
    "materiaux": [
@@ -48128,7 +48250,11 @@
      "source": "https://fr.wikipedia.org/wiki/Classe_Flor%C3%A9al",
      "note": "descendu de navires_references le 2026-08-16 : Chantier Naval de la Martinique n'a pas construit cette coque. attribution_erronee tranchee le 2026-08-05 : ce site REPARE et ne construit pas."
     }
-   ]
+   ],
+   "actif": true,
+   "siren": "979459898",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/979459898",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21"
   },
   {
    "id": "ocea-site-de-fontenay-le-comte-fontenay-le-comt",
@@ -50571,6 +50697,42 @@
      ],
      "source_ref": "https://martinez-constructions-navales.fr/produits/the-privateer-ii (fiche produit du chantier intitulée 'LE CORSAIRE II', vedette 27,50 m)",
      "tracabilite": "url-non-verifiee"
+    },
+    {
+     "nom": "Capitaine Pesqui",
+     "type": "navire-école (navire pédagogique de lycée maritime)",
+     "annee": "2024",
+     "longueur_m": null,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "capacite": null,
+     "energie": "Propulsion hybride thermique et électrique. Longueur d'environ 10 mètres selon Mer et Marine, valeur approchée non confirmée par une fiche technique.",
+     "client": "Lycée professionnel maritime Paul Bousquet (Lycée de la mer), Sète. Financement plan France Relance.",
+     "classification": null,
+     "source": "https://lyceedelamer.mon-ent-occitanie.fr/actualites/nouveau-navire-pedagogique-1061.htm",
+     "propulsion": [
+      "hybride"
+     ],
+     "caractere": "public",
+     "exploitation": "service-public",
+     "caractere_motif": "propriete: lycee maritime public ; exploitation: formation",
+     "operateur": "Lycée de la mer Paul Bousquet (Sète)",
+     "timeline": [
+      {
+       "annee": "2024",
+       "role": "construction",
+       "nom": "Martinez Constructions Navales, Saint-Cyprien (66)",
+       "detail": "Navire pédagogique conçu dans une approche « éco-responsable, durable et préfiguratrice des transformations à venir », arrivé au port de Sète la semaine du 26 janvier 2024. Premiers élèves embarqués : CAP1 Matelot et 2e année EMM. Il sert les filières Pêche, Commerce, Cultures marines et Électromécanique.",
+       "source": "https://lyceedelamer.mon-ent-occitanie.fr/actualites/nouveau-navire-pedagogique-1061.htm"
+      },
+      {
+       "annee": "2024",
+       "role": "evenement",
+       "nom": "Capitaine Pesqui",
+       "detail": "Environ 10 mètres, propulsion thermique et électrique, utilisé par les élèves de toutes les filières. Le navire a porté la flamme olympique des Jeux de Paris 2024. Construit par le chantier Martinez à Saint-Cyprien sur financement du plan France Relance, livré en janvier 2024.",
+       "source": "https://www.meretmarine.com/fr/formation-et-emploi/lycee-de-la-mer-de-sete-la-force-tranquille-du-plus-grand-lycee-maritime-francais"
+      }
+     ]
     }
    ],
    "geo_source": "https://nominatim.openstreetmap.org/search?q=1+Rue+Maurice+Ravel+66750+Saint-Cyprien&format=json",
@@ -51081,10 +51243,9 @@
      "architecte": "Mauric",
      "architecte_source": "https://www.mauric.com/design/zero-emission-fishing-training-vessel-200",
      "verification": {
-      "statut": "douteux",
-      "motif": "attribution issue du portfolio du concepteur (mauric.com), non recoupee sur un tiers",
-      "source": "https://www.mauric.com/news/alba",
-      "le": "2026-08-06",
+      "statut": "confirme",
+      "source": "https://www.france-hydrogene.org/magazine/mise-a-leau-de-lalba-le-navire-ecole-a-lhydrogene-du-lycee-maritime-de-bastia/",
+      "le": "2026-08-21",
       "confiance": "simple"
      },
      "source": "https://www.mauric.com/news/alba"
@@ -51832,6 +51993,12 @@
       "source": "https://www.vesselfinder.com/vessels/details/8228854",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "deconstruit",
+      "annee": "2023",
+      "source": "littoral-manche-atlantique.com",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -52010,6 +52177,12 @@
       "source": "https://www.vesselfinder.com/vessels/details/8743971",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "deconstruit",
+      "annee": "2010",
+      "source": "littoral-manche-atlantique.com",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -58442,6 +58615,11 @@
      "fait": "Création de la SARL Bizzari Nautic (12 août 1986), forme SARL unipersonnelle, SIRET 339 428 484"
     },
     {
+     "annee": "1986",
+     "fait": "Entite active au registre (SIREN 339428484), etat administratif « A » a l'annuaire des entreprises, siege a AJACCIO, 3 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/339428484"
+    },
+    {
      "annee": "1996",
      "fait": "Acquisition de la SA Chantier Naval d'Ajaccio, donnant un accès direct à la mer ; Bizzari Nautic devient le seul chantier naval privé de Corse"
     }
@@ -58457,7 +58635,8 @@
     "https://www.bizzarinautic.com/",
     "https://www.communiti.corsica/organisations/bizzari-nautic-sarl",
     "https://www.pagesjaunes.fr/pros/01543707",
-    "https://www.bandofboats.com/en/professionals/sarl-bizzari-nautic-ajaccio"
+    "https://www.bandofboats.com/en/professionals/sarl-bizzari-nautic-ajaccio",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/339428484"
    ],
    "confiance": "haute",
    "produits": [
@@ -58476,7 +58655,11 @@
    ],
    "taille_max": "Bateaux de plaisance de 5 à 25 m (manutention/mise à sec) ; levage jusqu'à 75 tonnes",
    "geo_source": "https://nominatim.openstreetmap.org/search?q=Port+Charles+Ornano+Ajaccio&format=json",
-   "navires_references": []
+   "navires_references": [],
+   "actif": true,
+   "siren": "339428484",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/339428484",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21. Plusieurs entites du meme nom et de la meme commune portent cet etat, toutes concordantes : 417799921. Le SIREN cite est celui qui porte le plus d'etablissements ouverts."
   },
   {
    "id": "uni-bateaux-union-nautique-insulaire-sarrola-carcopin",
@@ -60518,6 +60701,11 @@
      "fait": "Création de l'entité Chantier Naval de la Passagère (unité légale, immatriculation 1er octobre 1981)."
     },
     {
+     "annee": "2010",
+     "fait": "Entite active au registre (SIREN 528326812), etat administratif « A » a l'annuaire des entreprises, siege a SAINT-MALO, 1 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/528326812"
+    },
+    {
      "annee": "2015",
      "fait": "Établissement actif au 97 rue de la Passagère rattaché à la société CARBO INDUSTRIE (date d'établissement 28 septembre 2015)."
     }
@@ -60541,7 +60729,8 @@
     "https://soundcloud.com/radio-parole-de-vie/saint-malo-julien-reemers-au-chantier-naval-la-passagere",
     "https://www.histoiremaritimebretagnenord.fr/activit%C3%A9s-maritimes/constructions-navales/architecture-navale-2/",
     "https://www.saintmalo-cancale.port.bzh/page/cnr",
-    "https://www.saintmalo-cancale.port.bzh/page/infrastructures-facilities"
+    "https://www.saintmalo-cancale.port.bzh/page/infrastructures-facilities",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/528326812"
    ],
    "confiance": "haute",
    "produits": [
@@ -60558,7 +60747,11 @@
    "navires_references": [],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "siren": "528326812",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/528326812",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21"
   },
   {
    "id": "chemineau-composite-naval-saint-malo",
@@ -63135,6 +63328,16 @@
      "fait": "Creation du Chantier Naval Laly le 1er fevrier 1988 par Michel Laly, specialise en charpente navale bois, avec un departement polyester pour les unites de moins de 12 metres"
     },
     {
+     "annee": "2020",
+     "fait": "Cloture de LALY PLAISANCE (SIREN 531463131, Bourcefranc-le-Chapus) le 30 janvier 2020.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/531463131"
+    },
+    {
+     "annee": "2023",
+     "fait": "Cessation d'activite : l'etablissement siege MARIANNICK LALY (MOUSSION), SIREN 521565721, est ferme le 30 septembre 2023, etat administratif C. Aucun successeur du meme nom au registre dans la commune.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/521565721"
+    },
+    {
      "annee": "depuis 1988",
      "fait": "Renovation (jumboisation/allongement) et reparation de plus de 100 bateaux, ainsi que conception et construction de navires neufs"
     }
@@ -63146,23 +63349,25 @@
     "web": "https://www.chantier-naval-laly.fr/"
    },
    "sources": [
-    "https://www.chantier-naval-laly.fr/lactivite/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/521565721",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/531463131",
+    "https://fr.linkedin.com/posts/lemarin_%C3%A0-bourcefranc-un-p%C3%AAcheur-reprend-le-chantier-activity-7025808330505777153-K1Bk",
     "https://fr.mappy.com/poi/558f18e3e4b0f14951d604fe",
-    "https://www.facebook.com/chantier.naval.laly/",
-    "https://www.chantier-naval-laly.fr/",
-    "https://www.fin.fr/app/annuaire/entreprise/construction-navale-michel-laly",
     "https://www.allbiz.fr/chantier-naval-laly-05-46-85-50-16",
-    "https://www.pagesjaunes.fr/pros/07819118",
-    "https://www.chantier-naval-laly.fr/realisations/bateau-neuf/",
+    "https://www.chantier-naval-laly.fr/",
+    "https://www.chantier-naval-laly.fr/lactivite/",
     "https://www.chantier-naval-laly.fr/le-bateau-neree-en-video/",
-    "https://www.littoral-manche-atlantique.com/2021/05/belouga-ii-io.934786.html",
-    "https://www.littoral-manche-atlantique.com/2024/04folly-foot-lr.936327.html",
-    "https://www.facebook.com/chantier.naval.laly/videos/battant-ii/423154901583898/",
     "https://www.chantier-naval-laly.fr/realisations/",
-    "https://www.littoral-manche-atlantique.com/tag/io%20:%20ile%20d'oleron/",
-    "https://www.littoral-manche-atlantique.com/2022/04/menbrial-ls.900322.html",
+    "https://www.chantier-naval-laly.fr/realisations/bateau-neuf/",
+    "https://www.facebook.com/chantier.naval.laly/",
+    "https://www.facebook.com/chantier.naval.laly/videos/battant-ii/423154901583898/",
+    "https://www.fin.fr/app/annuaire/entreprise/construction-navale-michel-laly",
+    "https://www.littoral-manche-atlantique.com/2021/05/belouga-ii-io.934786.html",
     "https://www.littoral-manche-atlantique.com/2022/03/badtemper-io.522880.html",
-    "https://fr.linkedin.com/posts/lemarin_%C3%A0-bourcefranc-un-p%C3%AAcheur-reprend-le-chantier-activity-7025808330505777153-K1Bk"
+    "https://www.littoral-manche-atlantique.com/2022/04/menbrial-ls.900322.html",
+    "https://www.littoral-manche-atlantique.com/2024/04folly-foot-lr.936327.html",
+    "https://www.littoral-manche-atlantique.com/tag/io%20:%20ile%20d'oleron/",
+    "https://www.pagesjaunes.fr/pros/07819118"
    ],
    "confiance": "moyenne",
    "produits": [
@@ -63313,7 +63518,11 @@
    "geo_source": "http://www.chantier-naval-laly.fr/nous-localiser/",
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": false,
+   "siren": "521565721",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/521565721",
+   "actif_methode": "Cessation etablie : les deux entites du registre a Bourcefranc-le-Chapus sont closes, 521565721 le 30/09/2023 et LALY PLAISANCE 531463131 le 30/01/2020. Aucune entite successeur de ce nom n'est active dans la commune. Releve le 2026-08-21."
   },
   {
    "id": "chantier-naval-bonnin-la-teste-de-buch",
@@ -65157,6 +65366,14 @@
     },
     {
      "annee": "2013",
+     "fait": "Sous la raison sociale ALU MARINE (SIREN 339628208, Couëron), le chantier livre la navette fluviale Majest'in au SITAC de Calais, construite en sept mois. Vingt-cinq salariés, spécialité aluminium professionnel."
+    },
+    {
+     "annee": "2013",
+     "fait": "Redressement judiciaire d'ALU MARINE le 4 septembre 2013, pour difficultés de trésorerie. L'entité sera radiée."
+    },
+    {
+     "annee": "2013",
      "fait": "Reprise par le groupe Grand Large Yachting (président depuis le 04/12/2013) ; constitution de la SAS Alumarine Shipyard (SIREN 798807236, capital 100 000 €)."
     },
     {
@@ -65958,6 +66175,20 @@
      ],
      "capacite_pax": 230,
      "tracabilite": "url-non-verifiee"
+    },
+    {
+     "nom": "Majest'in",
+     "type": "Navette fluviale a passagers",
+     "annee": "2013",
+     "longueur_m": 19.7,
+     "largeur_m": 5.8,
+     "materiau": "Aluminium",
+     "client": "SITAC, syndicat intercommunal des transports du Calaisis",
+     "operateur": "SITAC (reseau Imag'in), Calais",
+     "energie": "Thermique, 125 ch, propulseur d'etrave hydraulique",
+     "capacite": "Navette du canal de Calais, centre-ville vers Coulogne, cinq arrets sur pontons flottants ; tirant d'eau 1,2 m en charge ; construite en sept mois sous la raison sociale ALU MARINE (SIREN 339628208), avant le redressement judiciaire du 04/09/2013 et la reprise du site par Grand Large Yachting",
+     "source": "https://meretmarine.com/fr/content/alu-marine-livre-la-nouvelle-vedette-fluviale-de-calais",
+     "propulsion": []
     }
    ],
    "geo_source": "https://nominatim.openstreetmap.org/search?q=20+boulevard+de+l%27Oc%C3%A9an+Cou%C3%ABron&format=json",
@@ -67045,6 +67276,11 @@
      "fait": "Implantation du chantier a Brest sur le quai Malbert (societe immatriculee le 11 fevrier 1991)"
     },
     {
+     "annee": "1991",
+     "fait": "Entite active au registre (SIREN 380808550), etat administratif « A » a l'annuaire des entreprises, siege a BREST, 2 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/380808550"
+    },
+    {
      "annee": "1992",
      "fait": "Livraison de la goelette Recouvrance (41 m)"
     },
@@ -67088,7 +67324,8 @@
     "https://mersetbateaux.com/pogo-50%E2%82%82/",
     "https://www.bateaux.com/article/51825/pogo-50-evolution-d-un-voilier-de-15-m-dedie-a-la-grande-croisiere-rapide",
     "https://www.lejournaldesentreprises.com/france/article/brest-le-chantier-du-guip-et-navtis-pour-le-maintien-en-condition-operationnelle-des-voiliers-de-la-102207",
-    "https://www.vivierboats.com/en/la-belle-angele-chasse-maree/"
+    "https://www.vivierboats.com/en/la-belle-angele-chasse-maree/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/380808550"
    ],
    "confiance": "haute",
    "produits": [
@@ -67336,7 +67573,11 @@
    "sources_ref": [
     "lien mort constate le 2026-08-03 : https://www.vieuxgreement.com/la-recouvrance-est-un-aviso-goelette-92.html",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "siren": "380808550",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/380808550",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21"
   },
   {
    "id": "chantier-naval-henaff-le-guilvinec",
@@ -74514,6 +74755,11 @@
      "fait": "Création de la SARL Mayotte Marine Service (immatriculation au 01/06/1993), activité de réparation et maintenance navale (code APE 33.15Z) en zone industrielle de Kawéni à Mamoudzou."
     },
     {
+     "annee": "1993",
+     "fait": "Entite active au registre (SIREN 094120367), etat administratif « A » a l'annuaire des entreprises, siege a MAMOUDZOU, 1 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/094120367"
+    },
+    {
      "annee": "2002",
      "fait": "Eric Crocomo et Jonathan Wayne Pieterse deviennent cogérants (25/11/2002)."
     }
@@ -74532,7 +74778,8 @@
     "https://annuaire.petitesaffiches.fr/reparation-et-maintenance-navale/mayotte-marine-service-09412036700019/",
     "https://www.meretmarine.com/fr/construction-navale/ship-st-et-cnoi-deux-nouveaux-bacs-pour-mayotte",
     "https://www.meretmarine.com/fr/marine-marchande/cnoi-livre-une-nouvelle-barge-pour-mayotte",
-    "https://ecoaustral.com/le-cnoi-livre-mayotte-le-pole-le-plus-grand-navire-jamais-construit-jusquici-port-louis/"
+    "https://ecoaustral.com/le-cnoi-livre-mayotte-le-pole-le-plus-grand-navire-jamais-construit-jusquici-port-louis/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/094120367"
    ],
    "confiance": "moyenne",
    "produits": [
@@ -74560,7 +74807,11 @@
     "lien mort constate le 2026-08-03 : https://www.mayotte.fr/actualite/lire/472/le-pole-nouvel-amphidrome-du-service-des-transports-maritimes-stm-inaugure",
     "lien mort constate le 2026-08-03 : https://www.mer-et-marine.com",
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "siren": "094120367",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/094120367",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21"
   },
   {
    "id": "chantier-naval-rousseau-etablissements-rousseau-saint-mammes",
@@ -78646,6 +78897,11 @@
      "fait": "Gilles Auger, charpentier de marine, reprend le chantier en février 2001 et poursuit l'activité de restauration et de construction navale bois."
     },
     {
+     "annee": "2001",
+     "fait": "Entite active au registre (SIREN 434342531), etat administratif « A » a l'annuaire des entreprises, siege a SAINT-VAAST-LA-HOUGUE, 3 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/434342531"
+    },
+    {
      "annee": "2004-2006",
      "fait": "Restauration complète du voilier Fleur de Lampaul."
     },
@@ -78678,7 +78934,8 @@
     "https://fr.wikipedia.org/wiki/Fleur_de_Lampaul",
     "https://www.chantier-naval-bernard.com/actualites-chantier-naval-bernard.php",
     "https://france3-regions.franceinfo.fr/normandie/manche/c-normand-chantiers-navals-bernard-saint-vaast-tradition-du-bois-837737.html",
-    "https://www.chantier-naval-bernard.com/plan-contact.php"
+    "https://www.chantier-naval-bernard.com/plan-contact.php",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/434342531"
    ],
    "confiance": "haute",
    "produits": [
@@ -79101,7 +79358,11 @@
    ],
    "sources_ref": [
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
-   ]
+   ],
+   "actif": true,
+   "siren": "434342531",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/434342531",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21"
   },
   {
    "id": "centre-technique-du-patrimoine-maritime-de-la-co-calais",
@@ -85536,7 +85797,13 @@
      "source_ref": "directory.marinelink.com",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: offshore"
+     "caractere_motif": "exploitation: offshore",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2000",
+      "source": "https://www.rivieramm.com/news-content-hub/news-content-hub/solstad-sells-seven-vessels-for-green-recycling-67807",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Normand Arctic",
@@ -85667,7 +85934,13 @@
      "source_ref": "shipphotos.co.uk (yard 189",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: supply"
+     "caractere_motif": "exploitation: supply",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2022",
+      "source": "https://commons.wikimedia.org/wiki/Category:IMO_9246736",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Sophie Siem",
@@ -86055,7 +86328,13 @@
        "source": "https://commons.wikimedia.org/wiki/Category:IMO_8216019"
       }
      ],
-     "source_ref": "directory.marinelink.com"
+     "source_ref": "directory.marinelink.com",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2021",
+      "source": "https://commons.wikimedia.org/wiki/Category:IMO_8216019",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Ramform Challenger",
@@ -87330,7 +87609,13 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: as ; exploitation: offshore"
+     "caractere_motif": "propriete: as ; exploitation: offshore",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2023",
+      "source": "https://www.dof.com/fleet/skandi-carla",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Connector Express",
@@ -91158,7 +91443,13 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: as ; exploitation: offshore"
+     "caractere_motif": "propriete: as ; exploitation: offshore",
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "2007",
+      "source": "https://en.wikipedia.org/wiki/AHTS_Bourbon_Dolphin",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Bourbon Mistral",
@@ -93445,7 +93736,13 @@
      "port_lourd_dwt": 4640,
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: supply"
+     "caractere_motif": "exploitation: supply",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1995",
+      "source": "https://veson.com/blog/2024-half-year-review-offshore-sector/",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Normand Vester",
@@ -111864,6 +112161,12 @@
       "le": "2026-08-16",
       "depuis": "timeline[role=construction]",
       "etape": "Simek AS (hull 115) pour Rem Offshore ASA"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2021",
+      "source": "https://solstad.com/sale-of-vessel-6/",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -113999,6 +114302,12 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "2018"
+     },
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "2019",
+      "source": "NSIA rapport 2021-01 ; Maritime Executive ; Fiskeribladet « Fay-saken »",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -116787,7 +117096,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2022",
+      "source": "https://en.wikipedia.org/wiki/Alta-class_minesweeper",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "MHO Falcon",
@@ -117287,7 +117602,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2022",
+      "source": "military-history.fandom.com Oksoy-class",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "KNM Måløy (M342)",
@@ -118211,7 +118532,13 @@
      "tracabilite": "reference-sans-url",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "2021",
+      "source": "fishfarmingexpert.com / Heavy Lift News, avril-mai 2021",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Fakstind",
@@ -128975,6 +129302,12 @@
       "source": "https://no.wikipedia.org/wiki/Kongsberg_Maritime",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1984",
+      "source": "https://skipshistorie.net/Oslo/OSL323HarryBorthen/Tekster/OSL32319640100000%20HARRY%20BORTHEN.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -129019,6 +129352,12 @@
       "source": "https://no.wikipedia.org/wiki/Kongsberg_Maritime",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1986",
+      "source": "https://skipshistorie.net/Oslo/OSL323HarryBorthen/Tekster/OSL32319660100000%20JENNY.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -129071,6 +129410,12 @@
       "source": "https://no.wikipedia.org/wiki/Kongsberg_Maritime",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1985",
+      "source": "https://skipshistorie.net/Oslo/OSL323HarryBorthen/Tekster/OSL32319620100000%20NINA%20BORTHEN.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -129187,6 +129532,12 @@
       "source": "https://no.wikipedia.org/wiki/Horten_Verft",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1973",
+      "source": "https://skipshistorie.net/Haugesund/HAU201ChristianHaaland/Tekster/HAU20119520100000%20CONCORDIA%20STAR.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -130338,7 +130689,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1945",
+      "source": "https://en.wikipedia.org/wiki/HNoMS_Olav_Tryggvason",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "HNoMS Oslo (F300)",
@@ -130621,7 +130978,13 @@
      "tracabilite": "url-domaine-seul",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: armement"
+     "caractere_motif": "propriete: armement",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1975",
+      "source": "skipshistorie.net",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Concordia Sun",
@@ -130949,7 +131312,13 @@
      "tracabilite": "reference-sans-url",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: a/s"
+     "caractere_motif": "propriete: a/s",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1985",
+      "source": "shipsnostalgia",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Lovland",
@@ -131276,7 +131645,13 @@
      ],
      "prix_acquisition": "USD 615 000 (1993, vente pour démolition, USD 157/LDT ; aucun prix de construction 1968 public). ATTENTION : ce Golar Freeze (IMO 6828741) est le navire frigorifique/reefer construit en 1968 à Horten, à ne pas confondre avec le méthanier homonyme Golar Freeze IMO 7361922 de 1977 (chantier Howaldtswerke Kiel) financé par DM 208 M.",
      "source_ref": "balticshipping/fotoflite + skipet.no - chantier no 164",
-     "tracabilite": "reference-sans-url"
+     "tracabilite": "reference-sans-url",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1993",
+      "source": "fotoflite",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Baron Cawdor",
@@ -132239,7 +132614,13 @@
       }
      ],
      "source_ref": "DigitaltMuseum (Telemark Museum) + skipet.no - chantier no 197",
-     "tracabilite": "reference-sans-url"
+     "tracabilite": "reference-sans-url",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2002",
+      "source": "DigitaltMuseum",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Viking Snipe",
@@ -132575,7 +132956,13 @@
      "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
      "jauge_gt": null,
      "port_lourd_dwt": null,
-     "capacite": "Deplacement 1 735 t standard / 2 100 t pleine charge ; equipage 120 (129 max)"
+     "capacite": "Deplacement 1 735 t standard / 2 100 t pleine charge ; equipage 120 (129 max)",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2013",
+      "source": "Wikipedia",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "HNoMS Trondheim (F302)",
@@ -133071,7 +133458,13 @@
       "le": "2026-08-05",
       "confiance": "simple"
      },
-     "source_ref": "re-rattache le 2026-08-05 : attribue a tort a « Kongsberg Defence & Aerospace / Kongsberg Maritime (Horten) », construit par « Marinens Hovedverft / Horten Verft (Karljohansvern) » — Même refutation que pour l'Oslo : construction au Navy Main Yard de Horten (Marinens Hovedverft), pas chez Kongsberg, qui est un équipementier et non  (https://en.wikipedia.org/wiki/Oslo-class_frigate)"
+     "source_ref": "re-rattache le 2026-08-05 : attribue a tort a « Kongsberg Defence & Aerospace / Kongsberg Maritime (Horten) », construit par « Marinens Hovedverft / Horten Verft (Karljohansvern) » — Même refutation que pour l'Oslo : construction au Navy Main Yard de Horten (Marinens Hovedverft), pas chez Kongsberg, qui est un équipementier et non  (https://en.wikipedia.org/wiki/Oslo-class_frigate)",
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": null,
+      "source": "https://en.wikipedia.org/wiki/HNoMS_Narvik_(F304)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Sous-marins classe B (licence)",
@@ -134663,7 +135056,13 @@
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: a/s",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2018",
+      "source": "https://www.vesselfinder.com/vessels/details/9048689",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Senja",
@@ -136395,7 +136794,13 @@
        "prix": null,
        "source": "https://en.wikipedia.org/wiki/Skomv%C3%A6r_(barque)"
       }
-     ]
+     ],
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1924",
+      "source": "https://en.wikipedia.org/wiki/Skomv%C3%A6r_(barque)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Britannia",
@@ -136541,7 +136946,13 @@
        "prix": "1 320 180,70 NOK",
        "source": "https://lokalhistoriewiki.no/index.php?title=DS_%C2%ABStord%C2%BB"
       }
-     ]
+     ],
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": "1984",
+      "source": "https://www.veteranskipslaget.no/d-s-stord-i/",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     }
    ],
    "sources": [
@@ -137312,7 +137723,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2020",
+      "source": "vesselfinder.com IMO 7504249",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Antares",
@@ -138193,7 +138610,13 @@
      ],
      "source_ref": "2026 HDW Herkules ship breakers Esbjerg ; commons.wikimedia.org categorie M&K (IMO 5148754 ; source complementaire (2026-08-05) : https://www.vesseltracker.com/en/Ships/Hdw-Herkules-5148754.html",
      "largeur_m": 9.96,
-     "port_lourd_dwt": 554
+     "port_lourd_dwt": 554,
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2026",
+      "source": "https://maritime-pics.com/2026/05/11/to-be-broken-up-hdw-herkules",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Brand VII",
@@ -139666,6 +140089,12 @@
       "source": "https://www.skipet.no/skipsbygging/stalskipsverft/sandnessjoen-slip-mek-verksted-as-sandnessjoen",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "2005",
+      "source": "https://skipshistorie.net/Bronnoysund/BRN104TorghattenTrafikkselskap/Tekster/BRN10419650100000%20VELFJORD.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -139902,6 +140331,12 @@
       "source": "https://www.skipet.no/skipsbygging/stalskipsverft/sandnessjoen-slip-mek-verksted-as-sandnessjoen",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2015",
+      "source": "skipshistorie.net",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -143233,7 +143668,13 @@
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: ltd",
-     "largeur_m": 16.6
+     "largeur_m": 16.6,
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1999",
+      "source": "https://en.wikipedia.org/wiki/Ferguson_Marine_Engineering",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Zgorzelec, renomme Defne Y, demoli en 2011",
@@ -144256,7 +144697,13 @@
       }
      ],
      "source_ref": "Wikipedia MS Norsea ; niferry.co.uk ; shipsmonthly.com",
-     "source": "https://en.wikipedia.org/wiki/MS_Norsea"
+     "source": "https://en.wikipedia.org/wiki/MS_Norsea",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2025",
+      "source": "Wikipedia MS Norsea ; shipsmonthly.com",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Havfrost",
@@ -144506,7 +144953,13 @@
      "source": "https://en.wikipedia.org/wiki/MV_Algonorth",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ltd"
+     "caractere_motif": "propriete: ltd",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2012",
+      "source": "Wikipedia MV Algonorth",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Tai He",
@@ -144563,7 +145016,13 @@
        "source": "https://www.freightwaves.com/news/cosco-scraps-16-ships"
       }
      ],
-     "source_ref": "https://clydeships.co.uk/list.php?builder=149 ; https://magazines.marinelink.com/Magazines/MaritimeReporter/199012/content/outstanding-oceangoing-ships-200328 ; https://www.vesselfinder.com/vessels/details/8705230"
+     "source_ref": "https://clydeships.co.uk/list.php?builder=149 ; https://magazines.marinelink.com/Magazines/MaritimeReporter/199012/content/outstanding-oceangoing-ships-200328 ; https://www.vesselfinder.com/vessels/details/8705230",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2014",
+      "source": "https://www.freightwaves.com/news/cosco-scraps-16-ships",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Pu He",
@@ -144620,7 +145079,13 @@
        "source": "https://www.vesselfinder.com/vessels/details/8705242"
       }
      ],
-     "source_ref": "https://clydeships.co.uk/list.php?builder=149 ; https://www.vesselfinder.com/vessels/details/8705242 ; https://www.marinepublic.com/vessels/imo/8705242"
+     "source_ref": "https://clydeships.co.uk/list.php?builder=149 ; https://www.vesselfinder.com/vessels/details/8705242 ; https://www.marinepublic.com/vessels/imo/8705242",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2014",
+      "source": "https://www.vesselfinder.com/vessels/details/8705242",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Helice",
@@ -144698,7 +145163,13 @@
      "source_ref": "https://clydeships.co.uk/list.php?builder=149 ; https://www.yumpu.com/en/document/view/18160737/helice-imo8814756-cargo-vessels-international ; https://www.marinetraffic.com/se/ais/details/ships/shipid:656273/imo:8814756/vessel:MAHARSHI_VAMADEVA",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ltd"
+     "caractere_motif": "propriete: ltd",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2019",
+      "source": "https://www.tradewindsnews.com/gas/bw-lpg-sells-veteran-vessel-for-demolition-in-india/2-1-534110",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Helios",
@@ -144759,7 +145230,13 @@
      "source_ref": "https://clydeships.co.uk/list.php?builder=149 ; https://www.balticshipping.com/vessel/imo/8912182 ; https://www.tradewindsnews.com/gas/1694052/bw-lpg-pushes-back-over-talk-of-exit-from-large-gas-carriers",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ltd"
+     "caractere_motif": "propriete: ltd",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2019",
+      "source": "https://clydeships.co.uk/list.php?builder=149",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Bow Flower",
@@ -148724,7 +149201,13 @@
      "source": "https://www.clydeships.co.uk/view.php?ref=23328",
      "largeur_m": 5.94,
      "jauge_gt": 45,
-     "pavillon": "GBR"
+     "pavillon": "GBR",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1971",
+      "source": "offscotland.plus.com",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Vigilant",
@@ -149555,7 +150038,13 @@
      "source": "https://www.clydeships.co.uk/view.php?ref=23320",
      "largeur_m": 5.33,
      "jauge_gt": 31,
-     "pavillon": "Ile de Man"
+     "pavillon": "Ile de Man",
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "1960",
+      "source": "offscotland.plus.com",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Boy Ken",
@@ -154032,7 +154521,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale"
+     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2013",
+      "source": "https://en.wikipedia.org/wiki/HSwMS_Visborg",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "HSwMS Arholma (M72)",
@@ -154090,6 +154585,12 @@
       "source": "https://sv.wikipedia.org/wiki/Landsort-klass",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2024",
+      "source": "https://sv.wikipedia.org/wiki/HMS_Arholma_(M72)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -154530,7 +155031,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": null,
+      "source": "https://en.wikipedia.org/wiki/Norrk%C3%B6ping-class_missile_boat",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "HSwMS Umeå (T137)",
@@ -155347,7 +155854,13 @@
        "source": null,
        "source_ref": "lien mort constate le 2026-08-03 : https://coasters-remembered.net/showthread.php?t=1863"
       }
-     ]
+     ],
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1976",
+      "source": "https://www.kockums.nl/history.html",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "HSwMS Östergötland",
@@ -155543,7 +156056,13 @@
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: ab",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1982",
+      "source": "Wikipedia MT Frans Suell",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Salem",
@@ -155614,7 +156133,13 @@
      "prix_acquisition": "≈ 11,5 M USD (achat du navire, ex Sea Sovereign / South Sun, novembre 1979)",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ab"
+     "caractere_motif": "propriete: ab",
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": null,
+      "source": "https://en.wikipedia.org/wiki/Salem_(supertanker)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Star Clipper",
@@ -155672,7 +156197,13 @@
        "detail": "demolition",
        "source": "Wikipedia MS Star Clipper"
       }
-     ]
+     ],
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1986",
+      "source": "Wikipedia MS Star Clipper",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Polar Alaska",
@@ -155739,7 +156270,13 @@
      ],
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ltd"
+     "caractere_motif": "propriete: ltd",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2014",
+      "source": "https://www.alangtoday.com/all-demolition.aspx",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Arctic Tokyo",
@@ -155831,6 +156368,12 @@
       "source": "https://en.wikipedia.org/wiki/MS_Zenobia",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "1980",
+      "source": "https://en.wikipedia.org/wiki/MS_Zenobia",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -155921,7 +156464,13 @@
      ],
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ab"
+     "caractere_motif": "propriete: ab",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2011",
+      "source": "https://en.wikipedia.org/wiki/MS_SeaFrance_C%C3%A9zanne",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Wawel",
@@ -156082,7 +156631,13 @@
      "source_ref": "https://www.scheepvaartwest.be/CMS/index.php/car-carriers-ro-ro/315-madame-butterfly-imo-7917551 ; https://magazines.marinelink.com/Magazines/MaritimeReporter/198109/content/delivers-butterfly-wallenius-205015 ; http://varvshistoria.com/kockums/nybyggen/ (nr 581)",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ab"
+     "caractere_motif": "propriete: ab",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2014",
+      "source": "https://www.scheepvaartwest.be/CMS/index.php/car-carriers-ro-ro/315-madame-butterfly-imo-7917551",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Figaro",
@@ -156135,7 +156690,13 @@
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: ab",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2013",
+      "source": "https://www.faktaomfartyg.se/wallenius.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Atlantic Companion",
@@ -156203,7 +156764,13 @@
      ],
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: groupe"
+     "caractere_motif": "propriete: groupe",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2015",
+      "source": "https://www.faktaomfartyg.se/atlantic_companion_1984.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Atlantic Concert",
@@ -156270,7 +156837,13 @@
      ],
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: groupe"
+     "caractere_motif": "propriete: groupe",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2016",
+      "source": "http://www.faktaomfartyg.se/atlantic_concert_1984.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Atlantic Compass",
@@ -156328,6 +156901,12 @@
       "source": "https://www.vesselfinder.com/vessels/details/8214176",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2016",
+      "source": "https://www.scheepvaartwest.be/CMS/index.php/car-carriers-ro-ro/57-atlantic-compass-imo-8214176",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -156411,7 +156990,13 @@
      "prix_acquisition": "134 000 000 USD (contrat de construction, livraison 1986)",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise"
+     "caractere_motif": "exploitation: cruise",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2017",
+      "source": "https://en.wikipedia.org/wiki/MS_Jubilee",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Celebration",
@@ -156487,7 +157072,13 @@
      "source_ref": "https://en.wikipedia.org/wiki/MS_Celebration ; http://varvshistoria.com/kockums/nybyggen/ (nr 597)",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: cruise"
+     "caractere_motif": "exploitation: cruise",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2021",
+      "source": "https://en.wikipedia.org/wiki/MS_Celebration",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     }
    ],
    "sources": [
@@ -163990,6 +164581,12 @@
       "motif": "constructeur non identifie en revue (phase3-revue-frnoec) : l'attribution actuelle n'est pas etablie. Reparer et restaurer n'est pas construire : le Reaper est un Fifie preserve, propriete du Scottish Fisheries Museum d'Anstruther, qui l'a RESTAURE et le fait encore naviguer. Le champ « type » de la base porte lui-meme la mention « reparation ». L'intervention de Mackay Boatbuilders a Arbroath releve de la restauration du patrimoine, pas de la cons",
       "source": "https://en.wikipedia.org/wiki/Fifie",
       "le": "2026-08-05"
+     },
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": "2000",
+      "source": "https://www.scotfishmuseum.org/reaper.php",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -164080,6 +164677,12 @@
       "source": "https://en.wikipedia.org/wiki/RRS_Discovery",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": null,
+      "source": "https://www.nationalhistoricships.org.uk/ship-shape/company/mackay-boatbuilders-arbroath-ltd",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -164196,6 +164799,12 @@
       "source": "https://en.wikipedia.org/wiki/Arbroath",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "2006",
+      "source": "Scottish Fisheries Museum Photo Library item 5325",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -166069,7 +166678,13 @@
        "source": "https://digitaltmuseum.se/021018825134/oresundsvarvet-m-s-nihon-nybygge-234-sjosatt-den-26-november-1971-levererad"
       }
      ],
-     "prix_acquisition": "109 950 000 SEK (1972, coût de construction, nybygge 234 Öresundsvarvet)"
+     "prix_acquisition": "109 950 000 SEK (1972, coût de construction, nybygge 234 Öresundsvarvet)",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1998",
+      "source": "https://digitaltmuseum.se/021018825134/oresundsvarvet-m-s-nihon-nybygge-234-sjosatt-den-26-november-1971-levererad",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Visby",
@@ -166415,6 +167030,12 @@
      "imo_ecarte": {
       "valeur": "5607733",
       "raison": "cle de controle OMI invalide"
+     },
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "1958",
+      "source": "https://en.wikipedia.org/wiki/MS_Skaubryn",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -166596,6 +167217,12 @@
       "source": "https://sv.wikipedia.org/wiki/Lista_över_byggda_fartyg_på_Öresundsvarvet",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1970",
+      "source": "https://digitaltmuseum.se/021018824926",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -166652,6 +167279,12 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "1957"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1979",
+      "source": "https://shipspotting.com/photos/75586",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -166728,7 +167361,13 @@
      "exploitation": "regalien",
      "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
      "source": "https://en.wikipedia.org/wiki/Mode-class_destroyer",
-     "largeur_m": 8
+     "largeur_m": 8,
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1969",
+      "source": "https://en.wikipedia.org/wiki/HSwMS_Munin_(31)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "HMS Kullen",
@@ -166899,6 +167538,12 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "1979"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2012",
+      "source": "varv100.se",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -167281,6 +167926,12 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "1982"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2011",
+      "source": "varv100.se",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -167390,6 +168041,12 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "1977"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2002",
+      "source": "varv100.se",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -167541,6 +168198,12 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "1977"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2001",
+      "source": "varv100.se",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -167603,7 +168266,13 @@
      "tracabilite": "url-domaine-seul",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: a/s"
+     "caractere_motif": "propriete: a/s",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1993",
+      "source": "varv100.se",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Johanna Thordén",
@@ -167654,7 +168323,13 @@
       }
      ],
      "source_ref": "n° 41",
-     "tracabilite": "url-domaine-seul"
+     "tracabilite": "url-domaine-seul",
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "1937",
+      "source": "varv100.se",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Canton",
@@ -167688,7 +168363,13 @@
       }
      ],
      "source_ref": "n° 21",
-     "tracabilite": "url-domaine-seul"
+     "tracabilite": "url-domaine-seul",
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "1940",
+      "source": "varv100.se",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Torild",
@@ -167775,6 +168456,12 @@
       "source": "https://sv.wikipedia.org/wiki/Lista_över_byggda_fartyg_på_Öresundsvarvet",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": "2002",
+      "source": "sjohistoriska.se",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -168112,7 +168799,13 @@
      "tracabilite": "url-domaine-seul",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ab"
+     "caractere_motif": "propriete: ab",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1979",
+      "source": "varv100.se",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Saga",
@@ -168378,7 +169071,13 @@
      ],
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ab"
+     "caractere_motif": "propriete: ab",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2010",
+      "source": "https://commons.wikimedia.org/wiki/Category:IMO_6600462",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Atlantic Saga",
@@ -168426,7 +169125,13 @@
        "source": "https://commons.wikimedia.org/wiki/Category:IMO_6717813"
       }
      ],
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1987",
+      "source": "https://commons.wikimedia.org/wiki/Category:IMO_6717813",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Citadel / Fidelio",
@@ -168477,7 +169182,13 @@
      "source_ref": "https://commons.wikimedia.org/wiki/Category:IMO_6610065 ; https://www.shipsnostalgia.com/media/angelburg.360971/",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: fret"
+     "caractere_motif": "exploitation: fret",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1976",
+      "source": "https://commons.wikimedia.org/wiki/Category:IMO_6610065",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Sonette / Faust",
@@ -168529,7 +169240,13 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: ab ; exploitation: fret"
+     "caractere_motif": "propriete: ab ; exploitation: fret",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1985",
+      "source": "https://commons.wikimedia.org/wiki/Category:IMO_6721230",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Daphne / Falstaff",
@@ -168639,7 +169356,13 @@
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: ab",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2010",
+      "source": "https://commons.wikimedia.org/wiki/Category:IMO_7800746",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Anna Oden",
@@ -168697,7 +169420,13 @@
      ],
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ab"
+     "caractere_motif": "propriete: ab",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2011",
+      "source": "https://www.faktaomfartyg.se/anna_oden_1979.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Eva Oden",
@@ -168756,7 +169485,13 @@
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: ab",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2010",
+      "source": "https://www.faktaomfartyg.se/eva_oden_1979.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Stove Campbell",
@@ -168811,7 +169546,13 @@
        "prix": null,
        "source": "https://commons.wikimedia.org/wiki/Category:IMO_6416079"
       }
-     ]
+     ],
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1980",
+      "source": "https://commons.wikimedia.org/wiki/Category:IMO_6416079",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Gustaf Brodin",
@@ -168983,7 +169724,13 @@
        "prix": null,
        "source": "https://commons.wikimedia.org/wiki/Category:IMO_5378050"
       }
-     ]
+     ],
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1984",
+      "source": "https://commons.wikimedia.org/wiki/Category:IMO_5378050",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Lena Christina Brodin",
@@ -169034,7 +169781,13 @@
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: groupe",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1984",
+      "source": "https://commons.wikimedia.org/wiki/Category:IMO_5205992",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Lisa Brodin",
@@ -169081,7 +169834,13 @@
        "prix": null,
        "source": "https://commons.wikimedia.org/wiki/Category:IMO_5209467"
       }
-     ]
+     ],
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1982",
+      "source": "https://commons.wikimedia.org/wiki/Category:IMO_5209467",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Antonina",
@@ -169120,7 +169879,13 @@
        "prix": null,
        "source": "https://commons.wikimedia.org/wiki/Category:IMO_5020160"
       }
-     ]
+     ],
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "1981",
+      "source": "https://commons.wikimedia.org/wiki/Category:IMO_5020160",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Atlantier",
@@ -169174,7 +169939,13 @@
      },
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: cie"
+     "caractere_motif": "propriete: cie",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1972",
+      "source": "https://commons.wikimedia.org/wiki/Category:IMO_5283744",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Waria",
@@ -169224,7 +169995,13 @@
      ],
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ab"
+     "caractere_motif": "propriete: ab",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1985",
+      "source": "https://commons.wikimedia.org/wiki/Category:IMO_5279694",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Jag Leela",
@@ -169303,6 +170080,12 @@
       "source": "https://sv.wikipedia.org/wiki/Lista_över_byggda_fartyg_på_Öresundsvarvet",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2000",
+      "source": "varv100.se",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -172345,6 +173128,12 @@
       "source": "https://sv.wikipedia.org/wiki/PD-50",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "2018",
+      "source": "https://en.wikipedia.org/wiki/PD-50",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -172475,6 +173264,12 @@
       "le": "2026-08-16",
       "depuis": "timeline[role=construction]",
       "etape": "Stockholm"
+     },
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "1956",
+      "source": "https://en.wikipedia.org/wiki/MS_Stockholm_(1946)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -172589,7 +173384,13 @@
       }
      ],
      "prix_acquisition": "USD 41 millions (1988, vente a Sealink sous le nom St Nicholas)",
-     "source_ref": "chantier Gotaverken Goteborg n. de coque 909 ; navire-jumeau du Stena Europe (ex-Kronprinsessan Victoria, coque 908, deja en base"
+     "source_ref": "chantier Gotaverken Goteborg n. de coque 909 ; navire-jumeau du Stena Europe (ex-Kronprinsessan Victoria, coque 908, deja en base",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2012",
+      "source": "https://en.wikipedia.org/wiki/MS_Normandy",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Winter Sea",
@@ -172650,7 +173451,13 @@
      "source_ref": "AB Gotaverken-Arendal, Goteborg, coque 914 ; navire frigorifique classe Winter (plus grands reefers du monde a l'epoque",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ab"
+     "caractere_motif": "propriete: ab",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2009",
+      "source": "https://doverferryphotosforums.co.uk/mv-segovia-carrier-cargo-from-the-past",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Winter Star",
@@ -172711,7 +173518,13 @@
      "source_ref": "AB Gotaverken-Arendal, Goteborg, coque 915",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ab"
+     "caractere_motif": "propriete: ab",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2009",
+      "source": "https://doverferryphotosforums.co.uk/mv-winter-star-cargo-from-the-past",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Winter Moon",
@@ -172832,6 +173645,12 @@
       "source": "https://sv.wikipedia.org/wiki/G%C3%B6taverken",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1962",
+      "source": "faktaomfartyg.se/annie_johnson_1925.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -172887,7 +173706,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1968",
+      "source": "https://en.wikipedia.org/wiki/Tre_Kronor-class_cruiser",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Amorina (ex-Fyrskepp nr 33)",
@@ -173006,7 +173831,13 @@
        "source": "https://www.cruiseshipodyssey.com/stella-polaris-1927-bergen-line/"
       }
      ],
-     "source_ref": "https://www.cruiseshipodyssey.com/stella-polaris-1927-bergen-line/ ; https://digitaltmuseum.no/011012665276/ ; varvshistoriska.se"
+     "source_ref": "https://www.cruiseshipodyssey.com/stella-polaris-1927-bergen-line/ ; https://digitaltmuseum.no/011012665276/ ; varvshistoriska.se",
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "2006",
+      "source": "https://www.cruiseshipodyssey.com/stella-polaris-1927-bergen-line/",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Erik Frisell",
@@ -173085,7 +173916,13 @@
      ],
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: a/s"
+     "caractere_motif": "propriete: a/s",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1964",
+      "source": "https://www.benjidog.co.uk/allen/Bakke%20Line.php",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Anna Knudsen",
@@ -173148,7 +173985,13 @@
        "source": "https://uboat.net/allies/merchants/ship/1325.html"
       }
      ],
-     "source_ref": "https://skipshistorie.net/Haugesund/HAU203KnutKnutsenOAS/Tekster/HAU20319310200000%20ANNA%20KNUDSEN.htm ; https://uboat.net/allies/merchants/ship/1325.html"
+     "source_ref": "https://skipshistorie.net/Haugesund/HAU203KnutKnutsenOAS/Tekster/HAU20319310200000%20ANNA%20KNUDSEN.htm ; https://uboat.net/allies/merchants/ship/1325.html",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1960",
+      "source": "https://uboat.net/allies/merchants/ship/1325.html",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Talabot",
@@ -173234,7 +174077,13 @@
      ],
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: a/s"
+     "caractere_motif": "propriete: a/s",
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "1963",
+      "source": "https://www.benjidog.co.uk/allen/Bakke%20Line.php",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Elisabeth Bakke",
@@ -173288,7 +174137,13 @@
        "prix": null,
        "source": "https://en.wikipedia.org/wiki/MS_Elisabeth_Bakke"
       }
-     ]
+     ],
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1974",
+      "source": "https://en.wikipedia.org/wiki/MS_Elisabeth_Bakke",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Akka",
@@ -173375,7 +174230,13 @@
      ],
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: a/s"
+     "caractere_motif": "propriete: a/s",
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "1959",
+      "source": "https://skipshistorie.net/Haugesund/HAU203KnutKnutsenOAS/Tekster/HAU20319450400000%20OLAV%20BAKKE.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Anna Bakke",
@@ -173413,7 +174274,13 @@
        "prix": null,
        "source": "https://www.benjidog.co.uk/allen/Bakke%20Line.php"
       }
-     ]
+     ],
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1978",
+      "source": "https://www.benjidog.co.uk/allen/Bakke%20Line.php",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Gjertrud Bakke",
@@ -173451,7 +174318,13 @@
        "prix": null,
        "source": "https://www.benjidog.co.uk/allen/Bakke%20Line.php"
       }
-     ]
+     ],
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1978",
+      "source": "https://www.benjidog.co.uk/allen/Bakke%20Line.php",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Greta Thulin",
@@ -173512,6 +174385,12 @@
       "source": "https://www.balticshipping.com/vessel/imo/6814075",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1986",
+      "source": "https://www.shipspotting.com/photos/1061135",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -174307,6 +175186,12 @@
      "imo_ecarte": {
       "valeur": "5511110",
       "raison": "cle de controle OMI invalide"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1968",
+      "source": "https://www.faktaomfartyg.se/norrtelje_1900.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -179260,6 +180145,12 @@
       "source": "https://sv.wikipedia.org/wiki/Asta_av_Sm%C3%B6gen",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": null,
+      "source": "https://sjohistoriska.se/fartyg-kulturmiljoer/k-markning-av-fartyg/lista-pa-k-markta-fartyg/asta-av-smogen",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -179706,6 +180597,12 @@
       "source": "https://sv.wikipedia.org/wiki/S/S_Drotten",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1978",
+      "source": "https://www.faktaomfartyg.se/drotten_1928.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -179807,7 +180704,13 @@
        "source": "https://sv.wikipedia.org/wiki/S/S_Stockholm_(1931)"
       }
      ],
-     "prix_acquisition": "Construction 310 000 SEK (1931) ; derniere vente connue 4,2 M SEK (1998, achat Stromma Kanalbolaget)"
+     "prix_acquisition": "Construction 310 000 SEK (1931) ; derniere vente connue 4,2 M SEK (1998, achat Stromma Kanalbolaget)",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1998",
+      "source": "https://sv.wikipedia.org/wiki/S/S_Stockholm_(1931)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "M/S Bore",
@@ -179869,7 +180772,13 @@
      ],
      "caractere": "public",
      "propriete": "publique",
-     "caractere_motif": "propriete: ville de"
+     "caractere_motif": "propriete: ville de",
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": "2010",
+      "source": "https://en.wikipedia.org/wiki/MS_Bore",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "M/S Malmö Link",
@@ -180246,6 +181155,12 @@
       "source": "https://sv.wikipedia.org/wiki/S/S_Visby",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1968",
+      "source": "faktaomfartyg.se/visby_1924.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -180301,7 +181216,13 @@
      "tracabilite": "url-non-verifiee",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ab"
+     "caractere_motif": "propriete: ab",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1967",
+      "source": "faktaomfartyg.se/ragne_1919.htm ; commons.wikimedia.org/wiki/Category:Ragne_(ship,_1919)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "S/S Jarl",
@@ -180343,6 +181264,12 @@
       "le": "2026-08-16",
       "depuis": "timeline[role=construction]",
       "etape": "Oskarshamns Varv"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1907",
+      "source": "https://commons.wikimedia.org/wiki/Category:Jarl_(ship,_1907)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -180385,6 +181312,12 @@
       "le": "2026-08-16",
       "depuis": "timeline[role=construction]",
       "etape": "Oskarshamnsvarvet"
+     },
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "1938",
+      "source": "https://commons.wikimedia.org/wiki/Category:Fermia_(ship,_1928)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -180431,7 +181364,13 @@
      ],
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ab"
+     "caractere_motif": "propriete: ab",
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "1917",
+      "source": "https://commons.wikimedia.org/wiki/Category:Fernebo_(ship,_1912)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "M/S Gustafsberg VII",
@@ -180604,7 +181543,13 @@
        "detail": "Devient un musee vivant (arbetslivsmuseum) a Oskarshamn ; classe navire historique de Suede",
        "source": "https://commons.wikimedia.org/wiki/Category:Nalle_(ship,_1923)"
       }
-     ]
+     ],
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": "1965",
+      "source": "https://commons.wikimedia.org/wiki/Category:Nalle_(ship,_1923)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "M/S Thorbjørn",
@@ -180814,7 +181759,13 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": "1986",
+      "source": "sv.wikipedia.org/wiki/HMS_Karlso_(M59)",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Vaxö",
@@ -180961,7 +181912,13 @@
        "source": "https://sv.wikipedia.org/wiki/S/S_Stockholm_(1931)"
       }
      ],
-     "prix_acquisition": "Acquisition par Strömma Kanalbolaget en 1998 : 4,2 M SEK (avant renovation totale). Historique anterieur sous les noms Öland (1931) puis Korsholm III : ventes documentees de 120 000 FIM (1967) a 800 000 SEK (1996)."
+     "prix_acquisition": "Acquisition par Strömma Kanalbolaget en 1998 : 4,2 M SEK (avant renovation totale). Historique anterieur sous les noms Öland (1931) puis Korsholm III : ventes documentees de 120 000 FIM (1967) a 800 000 SEK (1996).",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1998",
+      "source": "https://www.stromma.com/en-se/stockholm/blog/ss-stockholm/",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Enköping",
@@ -181084,6 +182041,12 @@
       "source": "https://sv.wikipedia.org/wiki/Athenian_Venture",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "naufrage",
+      "annee": "1988",
+      "source": "https://de.wikipedia.org/wiki/Athenian_Venture",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -181493,7 +182456,13 @@
        "source": "https://skargardsbatar.se/oskarshamnsvarv.shtml"
       }
      ],
-     "source_ref": "Gustafsberg VII 1912, angfartyg, n de coque 243) ; sv.wikipedia.org Kategori:Fartyg byggda i Oskarshamn (M/S Gustafsberg VII"
+     "source_ref": "Gustafsberg VII 1912, angfartyg, n de coque 243) ; sv.wikipedia.org Kategori:Fartyg byggda i Oskarshamn (M/S Gustafsberg VII",
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": null,
+      "source": "https://skargardsbatar.se/oskarshamnsvarv.shtml",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Ostersund",
@@ -182046,6 +183015,12 @@
       "source": "https://en.wikipedia.org/wiki/MV_Faina",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2014",
+      "source": "https://en.wikipedia.org/wiki/MV_Faina",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -182274,7 +183249,13 @@
        "detail": "Livré à Dortel Ltd en Turquie pour démolition en 2000.",
        "source": "https://www.faktaomfartyg.se/vallann_1972.htm"
       }
-     ]
+     ],
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2000",
+      "source": "https://www.faktaomfartyg.se/vallann_1972.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "M/S Akleja",
@@ -182601,7 +183582,13 @@
      "tracabilite": "url-non-verifiee",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ab"
+     "caractere_motif": "propriete: ab",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1986",
+      "source": "faktaomfartyg.se/aniara_1963.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Oberon",
@@ -182799,7 +183786,13 @@
        "source": "faktaomfartyg.se/otaru_1969.htm"
       }
      ],
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2004",
+      "source": "faktaomfartyg.se/otaru_1969.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Otelia",
@@ -183052,7 +184045,13 @@
        "source": "faktaomfartyg.se/otoni_1970.htm"
       }
      ],
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2005",
+      "source": "faktaomfartyg.se/otoni_1970.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Venern",
@@ -183177,7 +184176,13 @@
       }
      ],
      "source_ref": "varvsnr 158) ; sister Venern",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2002",
+      "source": "faktaomfartyg.se/melaren_1971.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Valerie",
@@ -183238,7 +184243,13 @@
      "caractere": "public",
      "propriete": "publique",
      "caractere_motif": "propriete: royaume-uni",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "1999",
+      "source": "faktaomfartyg.se/valerie_1972.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Inga",
@@ -183403,6 +184414,12 @@
       "source": "http://www.ferry-site.dk/ferry.php?id=7504524",
       "le": "2026-08-05",
       "confiance": "simple"
+     },
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2003",
+      "source": "faktaomfartyg.se/kaprifol_1977.htm",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
      }
     },
     {
@@ -188038,6 +189055,64 @@
      "propriete": "publique",
      "exploitation": "service-public",
      "caractere_motif": "propriete: region ; exploitation: penn ar bed"
+    },
+    {
+     "nom": "Valbelle (PM 509)",
+     "type": "vedette de surveillance d'aire marine protégée",
+     "annee": "2015",
+     "longueur_m": 11,
+     "largeur_m": 3.2,
+     "capacite": "8 personnes au maximum ; déplacement 5 tonnes ; autonomie 300 milles nautiques à 15 nœuds",
+     "energie": "2 moteurs Mercury de 250 ch chacun. Coque aluminium.",
+     "client": "Agence des aires marines protégées, pour le Parc naturel marin d'Iroise",
+     "operateur": "Parc naturel marin d'Iroise (Office français de la biodiversité)",
+     "proprietaire": "État français",
+     "pavillon": "France",
+     "source": "http://presqu-ile-de-crozon.com/histoire-locale/pm509-pm510-001.php",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "caractere": "public",
+     "exploitation": "service-public",
+     "caractere_motif": "propriete: etat francais ; exploitation: aire marine protegee",
+     "timeline": [
+      {
+       "annee": "2015",
+       "role": "construction",
+       "nom": "Chaudronnerie industrielle de Bretagne (CIB), Brest",
+       "detail": "Construite en cinq mois en 2015, mise à l'eau en mai 2015. Longueur publiée variant de 10,40 à 11,5 mètres selon les sources ; 11 mètres au relevé de la fiche de référence retenue. Équipements : treuil hydraulique à filets, mât de charge de 150 kg, pont arrière calculé pour 500 kg. Port d'attache Le Conquet. Missions de recherche scientifique, surveillance, sauvetage et police des pratiques de pêche. Marraine : Irène Frachon. Le nom est celui d'une basse rocheuse du chenal du Four.",
+       "source": "http://presqu-ile-de-crozon.com/histoire-locale/pm509-pm510-001.php"
+      }
+     ]
+    },
+    {
+     "nom": "Augustine (PM 510)",
+     "type": "vedette de surveillance d'aire marine protégée",
+     "annee": "2015",
+     "longueur_m": 11,
+     "largeur_m": 3.2,
+     "capacite": "8 personnes au maximum ; déplacement 5 tonnes ; autonomie 300 milles nautiques à 15 nœuds",
+     "energie": "2 moteurs Mercury de 250 ch chacun. Coque aluminium.",
+     "client": "Agence des aires marines protégées, pour le Parc naturel marin d'Iroise",
+     "operateur": "Parc naturel marin d'Iroise (Office français de la biodiversité)",
+     "proprietaire": "État français",
+     "pavillon": "France",
+     "source": "http://presqu-ile-de-crozon.com/histoire-locale/pm509-pm510-001.php",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "caractere": "public",
+     "exploitation": "service-public",
+     "caractere_motif": "propriete: etat francais ; exploitation: aire marine protegee",
+     "timeline": [
+      {
+       "annee": "2015",
+       "role": "construction",
+       "nom": "Chaudronnerie industrielle de Bretagne (CIB), Brest",
+       "detail": "Sister-ship du Valbelle, construite en cinq mois en 2015 et mise à l'eau en mai 2015. Port d'attache Douarnenez. Marraine : Ségolène Royal. Le nom est celui d'une basse rocheuse de la baie de Douarnenez.",
+       "source": "http://presqu-ile-de-crozon.com/histoire-locale/pm509-pm510-001.php"
+      }
+     ]
     }
    ],
    "sources": [
@@ -189379,7 +190454,13 @@
      "source_ref": "https://www.shipspotting.com/photos/259857 ; https://www.odt.co.nz/business/27-years-tarihiko-first-called-lpg-terminal ; https://maritimeradio.org/ship-stations/tarihiko-zmlp/ ; https://en.wikipedia.org/wiki/Ailsa_Shipbuilding_Company (Yard No 559, site de Troon)",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ltd"
+     "caractere_motif": "propriete: ltd",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2016",
+      "source": "https://www.odt.co.nz/business/27-years-tarihiko-first-called-lpg-terminal",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "MV Fivla",
@@ -189484,7 +190565,8 @@
    "description": "Chantier de La Seyne-sur-Mer, constructeur de vedettes a passagers.",
    "sources": [
     "http://courriersdefrance.blogspot.com/2018/08/vedette-star-cote-dazur-izenah.html",
-    "https://annuaire-entreprises.data.gouv.fr/entreprise/sud-navires-industries-403702459"
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/sud-navires-industries-403702459",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/403702459"
    ],
    "groupe": null,
    "navires_references": [
@@ -189501,6 +190583,17 @@
        "source": "http://courriersdefrance.blogspot.com/2018/08/vedette-star-cote-dazur-izenah.html"
       }
      ]
+    }
+   ],
+   "actif": true,
+   "siren": "403702459",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/403702459",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21",
+   "historique": [
+    {
+     "annee": "1996",
+     "fait": "Entite active au registre (SIREN 403702459), etat administratif « A » a l'annuaire des entreprises, siege a LA SEYNE-SUR-MER, 1 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/403702459"
     }
    ]
   },
@@ -220278,6 +221371,45 @@
      "operateur": "Baleària",
      "pavillon": "Espagne",
      "source": "https://astillerosarmon.com/ferries-en/item/2923-margarita-salas.html"
+    },
+    {
+     "nom": "Daniel Laval",
+     "type": "drague aspiratrice en marche (trailing suction hopper dredger)",
+     "annee": "2002",
+     "imo": "9234393",
+     "longueur_m": 104.45,
+     "largeur_m": 22,
+     "jauge_gt": 5353,
+     "capacite": "Trémie de 5 000 m3 ; tirant d'eau maximum 5,69 m ; jauge nette 1 605 UMS ; équipage 18 personnes",
+     "energie": "2 moteurs Wärtsilä 9L26 de 2 925 kW chacun, vitesse 13 nœuds. La pompe de dragage est entraînée par un des moteurs de propulsion via un réducteur.",
+     "client": "GIE Dragages-Ports",
+     "operateur": "Grand port fluvio-maritime de l'axe Seine (HAROPA)",
+     "proprietaire": "GIE Dragages-Ports",
+     "pavillon": "France",
+     "source": "https://www.dragages-ports.fr/daniel-laval/",
+     "propulsion": [
+      "diesel-electrique"
+     ],
+     "caractere": "public",
+     "exploitation": "service-public",
+     "caractere_motif": "propriete: gie dragages ports ; exploitation: grand port maritime",
+     "timeline": [
+      {
+       "annee": "2000",
+       "role": "commande",
+       "nom": "GIE Dragages-Ports",
+       "detail": "Commande passée le 24 mai 2000 à IZAR Construcciones Navales, usine de Gijón, sous le numéro de coque C365. Vingt et un mois de construction.",
+       "source": "https://dredgepoint.org/dredging-database/equipment/daniel-laval"
+      },
+      {
+       "annee": "2002",
+       "role": "mise-en-service",
+       "nom": "Daniel Laval",
+       "detail": "Mise en service le 24 mai 2002. Drague conçue pour travailler par 1 à 3 mètres d'eau sous quille, affectée principalement à l'estuaire de la Seine et à Dunkerque. Elle est exploitée en continu par le grand port fluvio-maritime de l'axe Seine.",
+       "source": "https://www.dragages-ports.fr/daniel-laval/"
+      }
+     ],
+     "capacite_fret": "5000 m3"
     }
    ],
    "sources": [
@@ -235600,7 +236732,13 @@
      "largeur_m": 3.8,
      "operateur": "Museumshafen Büsum e.V.",
      "pavillon": "Allemagne",
-     "source": "https://museumshafen-buesum.de/margaretha/"
+     "source": "https://museumshafen-buesum.de/margaretha/",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2022",
+      "source": "https://museumshafen-buesum.de/margaretha/",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Wilma (HF 329)",
@@ -235652,7 +236790,13 @@
      "client": "Hermann Behrens (armateur d'origine)",
      "operateur": "Alter Hafen Stade e.V.",
      "pavillon": "Allemagne",
-     "source": "https://de.wikipedia.org/wiki/Greundiek"
+     "source": "https://de.wikipedia.org/wiki/Greundiek",
+     "fin_de_vie": {
+      "statut": "desarme",
+      "annee": null,
+      "source": "https://de.wikipedia.org/wiki/Greundiek",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     }
    ],
    "sources": [
@@ -236530,7 +237674,13 @@
      "annee": 1975,
      "pavillon": "Allemagne",
      "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft",
-     "source_remplacee": "https://www.kreiszeitung.de/lokales/schleswig-holstein/heiligenhafen/die-caroline-verlaesst-den-hafen-94204557.html"
+     "source_remplacee": "https://www.kreiszeitung.de/lokales/schleswig-holstein/heiligenhafen/die-caroline-verlaesst-den-hafen-94204557.html",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2026",
+      "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Thetis von Laboe",
@@ -236602,7 +237752,13 @@
      "type": "cotre de peche en bois, coule a Moltenort le 2 janvier 2025 et demoli",
      "annee": 1984,
      "pavillon": "Allemagne",
-     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft"
+     "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": null,
+      "source": "https://de.wikipedia.org/wiki/Bauliste_der_Bieritz-Werft",
+      "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
+     }
     },
     {
      "nom": "Achat (SC 36)",
@@ -238065,6 +239221,156 @@
      "fait": "Le site est occupe par l'incinerateur VESTA."
     }
    ]
+  },
+  {
+   "id": "fr-yard-bretagnesud-belz",
+   "nom": "Chantier Bretagne Sud (CBS)",
+   "groupe": "",
+   "ville": "Belz",
+   "region": "Bretagne",
+   "pays": "France",
+   "lat": 47.67597,
+   "lon": -3.16872,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve",
+    "reparation-refit",
+    "plaisance"
+   ],
+   "types_navires": [
+    "navire-technique",
+    "navire-ecole"
+   ],
+   "description": "Chantier naval du groupe Chantier Bretagne Sud, implanté au lieu-dit Manebras à Belz, sur la ria d'Étel (Morbihan). Spécialiste de l'aluminium, il travaille aussi le PEHD et le rotomoulé. Il produit des semi-rigides, des embarcations de servitude et des navires de travail, dont une série d'unités PEHD pour la police et la gendarmerie fluviale. Le groupe réunit deux entités, le chantier CBS et le distributeur Kenkiz Marine. Effectif de l'ordre de dix salariés.",
+   "navires_references": [
+    {
+     "nom": "Lymaret II",
+     "type": "navire-école (bateau-école de lycée professionnel maritime)",
+     "annee": "2025",
+     "longueur_m": 11.8,
+     "capacite": "8 élèves embarqués",
+     "energie": "Propulsion hybride diesel-électrique de 184 kW, panneaux solaires et parc de batteries donnant environ cinq heures d'autonomie électrique. Coque en aluminium recyclable.",
+     "client": "Lycée professionnel maritime et aquacole Jacques de Thézac, Étel. Financement de l'État, 1,37 million d'euros au titre du plan de relance pêche et aquaculture et de France 2030, opéré par FranceAgriMer.",
+     "operateur": "Lycée professionnel maritime Jacques de Thézac (Étel)",
+     "architecte": "Coprexma",
+     "architecte_source": "https://www.coprexma.fr/actualite/le-lymaret-ii-nouveau-navire-ecole-du-lycee-maritime-detel-vient/",
+     "source": "https://www.meretmarine.com/fr/construction-navale/le-lycee-professionnel-maritime-d-etel-inaugure-son-nouveau-bateau-ecole-le-lymaret-ii"
+    }
+   ],
+   "sources": [
+    "https://www.meretmarine.com/fr/construction-navale/le-lycee-professionnel-maritime-d-etel-inaugure-son-nouveau-bateau-ecole-le-lymaret-ii",
+    "https://www.uimm35-56.com/adherent/chantier-bretagne-sud-cbs/",
+    "https://maritimementvotre.fr/2022/03/17/27-vmv-yannick-bian-directeur-cbs-chantier-bretagne-sud/",
+    "https://www.coprexma.fr/actualite/le-lymaret-ii-nouveau-navire-ecole-du-lycee-maritime-detel-vient/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/316548957"
+   ],
+   "confiance": "moyenne",
+   "actif": true,
+   "fondation": null,
+   "contact": {
+    "adresse": "Manebras, 56550 Belz, France",
+    "interlocuteur": "Yannick Bian (directeur)",
+    "web": "https://groupe-chantier-bretagne-sud.fr/chantier-bretagne-sud/"
+   },
+   "effectif": 10,
+   "siren": "316548957",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/316548957",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21",
+   "historique": [
+    {
+     "annee": "1979",
+     "fait": "Entite active au registre (SIREN 316548957), etat administratif « A » a l'annuaire des entreprises, siege a BELZ. Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/316548957"
+    }
+   ]
+  },
+  {
+   "id": "fr-yard-havre-havre",
+   "nom": "Ateliers et Chantiers du Havre (ACH)",
+   "groupe": "",
+   "ville": "Le Havre",
+   "region": "Normandie",
+   "pays": "France",
+   "lat": 49.4939,
+   "lon": 0.10797,
+   "geo_precision": "ville",
+   "perimetres": [
+    "construction-neuve"
+   ],
+   "types_navires": [
+    "ferry-ropax",
+    "paquebot",
+    "navire-technique"
+   ],
+   "description": "Chantier de construction navale du Havre, fondé en 1965, exploité en fin de vie sous la raison sociale Société nouvelle des Ateliers et Chantiers du Havre (SNACH). Deuxième chantier civil français à son apogée, avec de l'ordre de 2 500 emplois. Spécialisé dans la marine marchande : transbordeurs, transporteurs de véhicules, navires de recherche et paquebots, construits de 1965 à 1995. Mis en faillite, il cesse toute activité de construction en 1999. La société est radiée bien plus tard, le 8 août 2014.",
+   "navires_references": [
+    {
+     "nom": "Marion Dufresne II",
+     "type": "navire ravitailleur et navire océanographique",
+     "annee": "1995",
+     "longueur_m": 120.5,
+     "largeur_m": 20.6,
+     "capacite": "Tirant d'eau 6,95 m ; déplacement 4 900 tonnes lège et 10 380 tonnes en pleine charge",
+     "client": "Terres australes et antarctiques françaises (TAAF)",
+     "operateur": "TAAF, armement délégué",
+     "proprietaire": "Terres australes et antarctiques françaises",
+     "pavillon": "France",
+     "imo": "9050814",
+     "source": "https://en.wikipedia.org/wiki/Marion_Dufresne_(1994)"
+    },
+    {
+     "nom": "Club Med 2",
+     "type": "paquebot à voiles (goélette à voiles d'étai, cinq mâts)",
+     "annee": "1992",
+     "longueur_m": 194,
+     "largeur_m": 20,
+     "capacite": "386 passagers et 214 membres d'équipage ; sept voiles pilotées par ordinateur sur cinq mâts",
+     "capacite_pax": 386,
+     "energie": "Propulsion diesel-électrique, assistée de sept voiles à commande informatisée",
+     "client": "Club Méditerranée",
+     "operateur": "Club Med",
+     "proprietaire": "Club Méditerranée",
+     "pavillon": "Wallis-et-Futuna (port d'immatriculation Mata-Utu)",
+     "source": "https://en.wikipedia.org/wiki/Club_Med_2"
+    },
+    {
+     "nom": "Monte d'Oro",
+     "type": "transbordeur (ferry)",
+     "annee": "1991",
+     "client": "Société nationale maritime Corse-Méditerranée (SNCM)",
+     "operateur": "SNCM",
+     "pavillon": "France",
+     "source": "https://fr.wikipedia.org/wiki/Ateliers_et_chantiers_du_Havre"
+    }
+   ],
+   "sources": [
+    "https://fr.wikipedia.org/wiki/Ateliers_et_chantiers_du_Havre",
+    "http://axymeca.free.fr/page/histoire.htm"
+   ],
+   "confiance": "moyenne",
+   "actif": false,
+   "fondation": 1965,
+   "historique": [
+    {
+     "annee": "1965",
+     "fait": "Création des Ateliers et Chantiers du Havre."
+    },
+    {
+     "annee": "1995",
+     "fait": "Livraison du Marion Dufresne II aux Terres australes et antarctiques françaises, dernière grande unité du chantier."
+    },
+    {
+     "annee": "1999",
+     "fait": "Faillite et cessation d'activité. Le chantier, deuxième site civil français, employait de l'ordre de 2 500 personnes à son apogée. Il ne sera pas repris."
+    },
+    {
+     "annee": "2014",
+     "fait": "Radiation de la Société nouvelle des Ateliers et Chantiers du Havre (SNACH) du registre du commerce, le 8 août 2014, quinze ans après l'arrêt de la production."
+    }
+   ],
+   "effectif": 2500,
+   "actif_source": "https://fr.wikipedia.org/wiki/Ateliers_et_chantiers_du_Havre",
+   "actif_methode": "fiche historique : cessation d'activite documentee en 1999"
   }
  ],
  "equipementiers": [
@@ -238081,7 +239387,8 @@
    "note": "Positionnement dominant defense / services speciaux / mobilite electrique. La reference marine explicite est le produit sous-marin liste sur la fiche GICAN. Pas de reference de navire de surface identifiee.",
    "sources": [
     "https://www.accuwatt-technologies.com/en/about-us",
-    "https://gican.asso.fr/annuaire-des-adherents-du-gican-lindustrie-navale-francaise/accuwatt-technologies/"
+    "https://gican.asso.fr/annuaire-des-adherents-du-gican-lindustrie-navale-francaise/accuwatt-technologies/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/878595560"
    ],
    "navires_equipes": [],
    "adresse": "Aiton (Savoie), 56 rue Aristide Berges / Parc d'activites Arc'Alp, 73220",
@@ -238095,7 +239402,18 @@
     "adresse": "56 rue Aristide Bergès, 73220 Aiton, France"
    },
    "contact_source": "https://www.accuwatt-technologies.com/",
-   "contact_maj": "2026-08-15"
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "siren": "878595560",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/878595560",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21",
+   "historique": [
+    {
+     "annee": "2019",
+     "fait": "Entite active au registre (SIREN 878595560), etat administratif « A » a l'annuaire des entreprises, siege a AITON, 1 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/878595560"
+    }
+   ]
   },
   {
    "id": "eq-saft",
@@ -238109,7 +239427,8 @@
    "confiance": "haute",
    "note": "Le site officiel saft.com n'a pas pu etre ouvert depuis cet environnement (echec de validation du certificat TLS). Source retenue : reprise integrale du communique Saft par Batteries News. A recouper sur saft.com depuis un poste normal.",
    "sources": [
-    "https://batteriesnews.com/saft-new-seanergy-2-0-li-ion-battery-drive-decarbonization-marine-industry/"
+    "https://batteriesnews.com/saft-new-seanergy-2-0-li-ion-battery-drive-decarbonization-marine-industry/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/403274731"
    ],
    "navires_equipes": [],
    "adresse": "Poitiers (site de production des batteries marine) ; siege groupe en region parisienne",
@@ -238123,7 +239442,18 @@
     "adresse": "26 quai Charles Pasqua, 92300 Levallois-Perret, France (siège social Saft Groupe, SIREN 481480465)"
    },
    "contact_source": "https://www.saftbatteries.com",
-   "contact_maj": "2026-08-15"
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "siren": "403274731",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/403274731",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21. Plusieurs entites du meme nom et de la meme commune portent cet etat, toutes concordantes : 432000859. Le SIREN cite est celui qui porte le plus d'etablissements ouverts.",
+   "historique": [
+    {
+     "annee": "1995",
+     "fait": "Entite active au registre (SIREN 403274731), etat administratif « A » a l'annuaire des entreprises, siege a POITIERS, 1 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/403274731"
+    }
+   ]
   },
   {
    "id": "eq-wattalps",
@@ -238138,7 +239468,8 @@
    "note": "Pas de nom de navire publie sur le site : la reference workboat est anonyme.",
    "sources": [
     "https://www.wattalps.com/",
-    "https://www.wattalps.com/contact/"
+    "https://www.wattalps.com/contact/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/837650795"
    ],
    "navires_equipes": [],
    "adresse": "Moirans (Isere), 410 avenue Aldo Eriani, 38430",
@@ -238152,7 +239483,18 @@
     "adresse": "410 avenue Aldo Eriani, 38430 Moirans, France"
    },
    "contact_source": "https://www.wattalps.com/contact/",
-   "contact_maj": "2026-08-15"
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "siren": "837650795",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/837650795",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21",
+   "historique": [
+    {
+     "annee": "2018",
+     "fait": "Entite active au registre (SIREN 837650795), etat administratif « A » a l'annuaire des entreprises, siege a MOIRANS, 1 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/837650795"
+    }
+   ]
   },
   {
    "id": "eq-bluefins",
@@ -238171,7 +239513,8 @@
    "note": "Le levier exploite l'énergie de houle : peu pertinent sur les traversées abritées (estuaires, rades, passages d'eau) qui constituent l'essentiel de la flotte côtière à passagers.",
    "sources": [
     "https://www.meretmarine.com/fr/construction-navale/bluefins-a-assemble-a-brest-son-foil-de-propulsion-et-va-l-installer-sur-le-tsm-alize",
-    "https://www.actunautique.com/2021/03/un-foil-nageoire-de-baleine-pour-reduire-la-consommation-d-energie-des-navires.html"
+    "https://www.actunautique.com/2021/03/un-foil-nageoire-de-baleine-pour-reduire-la-consommation-d-energie-des-navires.html",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/892357575"
    ],
    "navires_equipes": [],
    "contact": {
@@ -238180,7 +239523,18 @@
     "adresse": "130 cours Aimé Césaire, 29000 Brest, France"
    },
    "contact_source": null,
-   "contact_maj": "2026-08-15"
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "siren": "892357575",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/892357575",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21",
+   "historique": [
+    {
+     "annee": "2020",
+     "fait": "Entite active au registre (SIREN 892357575), etat administratif « A » a l'annuaire des entreprises, siege a BREST, 1 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/892357575"
+    }
+   ]
   },
   {
    "id": "eq-seair",
@@ -238195,7 +239549,8 @@
    "note": "La ville de Lorient et l'annee 2016 ne figurent pas sur seair-platforms.com, seule page officielle ouverte ; elles proviennent de la presse economique (Maddyness, 7jours) non ouverte. ATTENTION au positionnement : SEAir a pivote de la plaisance a foils vers les plateformes de defense et les drones navals. Ce n'est plus un equipementier de decarbonation au sens strict.",
    "sources": [
     "https://seair-platforms.com/",
-    "https://seair-platforms.com/mentions-legales/"
+    "https://seair-platforms.com/mentions-legales/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/819778838"
    ],
    "navires_equipes": [],
    "adresse": "Lorient (Morbihan)",
@@ -238209,7 +239564,18 @@
     "adresse": "10 rue Chalutier Les 2 Anges, 56100 Lorient, France (SEAir Solutions SAS, RCS Lorient 819 778 838)"
    },
    "contact_source": "https://seair-platforms.com/mentions-legales/",
-   "contact_maj": "2026-08-15"
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "siren": "819778838",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/819778838",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21. Plusieurs entites du meme nom et de la meme commune portent cet etat, toutes concordantes : 981189301. Le SIREN cite est celui qui porte le plus d'etablissements ouverts.",
+   "historique": [
+    {
+     "annee": "2016",
+     "fait": "Entite active au registre (SIREN 819778838), etat administratif « A » a l'annuaire des entreprises, siege a LORIENT, 1 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/819778838"
+    }
+   ]
   },
   {
    "id": "eq-bluenav",
@@ -238224,7 +239590,8 @@
    "note": null,
    "sources": [
     "https://www.bluenav.com/",
-    "https://www.bluenav.com/contact"
+    "https://www.bluenav.com/contact",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/881583850"
    ],
    "navires_equipes": [],
    "adresse": "La Teste-de-Buch (Gironde), 80 avenue du General Leclerc, 33260 ; conception et assemblage a Arcachon",
@@ -238238,7 +239605,18 @@
     "adresse": "80 avenue du Général Leclerc, Pôle nautique de la Pointe, 33260 La Teste-de-Buch, France"
    },
    "contact_source": "https://www.bluenav.com/contact",
-   "contact_maj": "2026-08-15"
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "siren": "881583850",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/881583850",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21",
+   "historique": [
+    {
+     "annee": "2020",
+     "fait": "Entite active au registre (SIREN 881583850), etat administratif « A » a l'annuaire des entreprises, siege a LA TESTE-DE-BUCH, 1 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/881583850"
+    }
+   ]
   },
   {
    "id": "eq-enag",
@@ -238282,7 +239660,8 @@
    "note": "Le coeur de metier FAPMO reste la pompe centrifuge navale ; les moteurs electriques viennent de l'entite EN Moteurs. Le classer en levier « moteurs electriques » de decarbonation est un raccourci a arbitrer : ce n'est pas un motoriste de propulsion.",
    "sources": [
     "https://www.fapmo.com/",
-    "https://www.fapmo.com/en/contact/"
+    "https://www.fapmo.com/en/contact/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/300514254"
    ],
    "navires_equipes": [],
    "adresse": "Outreau (Pas-de-Calais), 35-37 rue Roger Salengro, 62230",
@@ -238296,7 +239675,18 @@
     "adresse": "35-37 rue Roger Salengro, 62230 Outreau, France (site EN Moteurs : 24 bis rue Jan Palach, 44220 Couëron)"
    },
    "contact_source": "https://www.fapmo.com/en/contact/",
-   "contact_maj": "2026-08-15"
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "siren": "300514254",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/300514254",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21. Plusieurs entites du meme nom et de la meme commune portent cet etat, toutes concordantes : 490279304. Le SIREN cite est celui qui porte le plus d'etablissements ouverts.",
+   "historique": [
+    {
+     "annee": "1973",
+     "fait": "Entite active au registre (SIREN 300514254), etat administratif « A » a l'annuaire des entreprises, siege a OUTREAU, 2 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/300514254"
+    }
+   ]
   },
   {
    "id": "eq-jeumont-electric",
@@ -238311,7 +239701,8 @@
    "note": "Le site officiel jeumontelectric.com n'a pas pu etre resolu depuis cet environnement (DNS). Fiche GICAN retenue.",
    "sources": [
     "https://gican.asso.fr/annuaire-des-adherents-du-gican-lindustrie-navale-francaise/jeumont-electric/",
-    "https://www.jeumontelectric.com/mentions-legales/"
+    "https://www.jeumontelectric.com/mentions-legales/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/444571772"
    ],
    "navires_equipes": [],
    "adresse": "Jeumont (Nord), 367 rue de l'Industrie, 59572",
@@ -238325,7 +239716,18 @@
     "adresse": "367 rue de l'Industrie, BP 20109, 59572 Jeumont, France"
    },
    "contact_source": "https://www.jeumontelectric.com/mentions-legales/",
-   "contact_maj": "2026-08-15"
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "siren": "444571772",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/444571772",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21. Plusieurs entites du meme nom et de la meme commune portent cet etat, toutes concordantes : 497858050. Le SIREN cite est celui qui porte le plus d'etablissements ouverts.",
+   "historique": [
+    {
+     "annee": "2002",
+     "fait": "Entite active au registre (SIREN 444571772), etat administratif « A » a l'annuaire des entreprises, siege a JEUMONT, 4 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/444571772"
+    }
+   ]
   },
   {
    "id": "eq-ehm",
@@ -238488,7 +239890,8 @@
    "note": "Le site officiel inocel.com ouvert ce jour ne mentionne AUCUNE application maritime : il cible data centers, chantiers, aeroports, microgrids. Le debouche maritime n'est atteste que par la presse regionale. Le demonstrateur « Poseidon » cite en recherche n'a pas ete confirme par une page ouverte : non retenu.",
    "sources": [
     "https://www.presences-grenoble.fr/actualites-start-grenoble/inocel-leve-64-meu-pour-industrialiser-sa-pile-hydrogene-modulaire.htm",
-    "https://inocel.com/fr/inocel-installe-sa-gigafactory-a-belfort-une-nouvelle-etape-franchie-pour-les-piles-a-combustible-de-tres-forte-puissance/"
+    "https://inocel.com/fr/inocel-installe-sa-gigafactory-a-belfort-une-nouvelle-etape-franchie-pour-les-piles-a-combustible-de-tres-forte-puissance/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/913584991"
    ],
    "navires_equipes": [],
    "adresse": "Saint-Egreve (agglomeration de Grenoble) pour le centre de developpement ; usine de plus de 15 000 m2 a Belfort",
@@ -238502,7 +239905,18 @@
     "adresse": "INOCEL DEVELOPMENT, 9 rue Louis Néel, 38120 Saint-Égrève, France"
    },
    "contact_source": "https://www.inocel.com/",
-   "contact_maj": "2026-08-15"
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "siren": "913584991",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/913584991",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21",
+   "historique": [
+    {
+     "annee": "2022",
+     "fait": "Entite active au registre (SIREN 913584991), etat administratif « A » a l'annuaire des entreprises, siege a SAINT-EGREVE, 2 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/913584991"
+    }
+   ]
   },
   {
    "id": "eq-symbio",
@@ -238522,7 +239936,8 @@
    "sources": [
     "https://www.avem.fr/2017/08/03/une-navette-fluviale-hydrogene-a-nantes-avec-symbio-fcell-et-navalu/",
     "https://www.h2-mobile.fr/actus/pile-hydrogene-symbio-premier-projet-maritime/",
-    "https://www.symbio.one/en/legal-statements/"
+    "https://www.symbio.one/en/legal-statements/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/521148890"
    ],
    "navires_equipes": [
     "Navibus H2 / Jules Verne 2 (projet Navhybus)"
@@ -238533,7 +239948,18 @@
     "adresse": "SYMPHONHY, 10 rue Specia, 69190 Saint-Fons, France"
    },
    "contact_source": "https://www.symbio.one/en/legal-statements/",
-   "contact_maj": "2026-08-15"
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "siren": "521148890",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/521148890",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21. Plusieurs entites du meme nom et de la meme commune portent cet etat, toutes concordantes : 903045607, 902962661, 894404870, 937722072. Le SIREN cite est celui qui porte le plus d'etablissements ouverts.",
+   "historique": [
+    {
+     "annee": "2010",
+     "fait": "Entite active au registre (SIREN 521148890), etat administratif « A » a l'annuaire des entreprises, siege a SAINT-FONS, 2 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/521148890"
+    }
+   ]
   },
   {
    "id": "eq-enogia",
@@ -238553,7 +239979,8 @@
    "sources": [
     "https://enogia.com/en/en-orc/",
     "https://www.vnf.fr/vnf/dossiers-actualitess/recuperation-de-chaleur-orc-les-conditions-restrictives-pour-un-deploiement-dans-le-secteur-fluvial/",
-    "https://enogia.com/mentions-legales/"
+    "https://enogia.com/mentions-legales/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/514692045"
    ],
    "navires_equipes": [],
    "contact": {
@@ -238562,7 +239989,18 @@
     "adresse": "43 avenue de Boisbaudran, 13015 Marseille, France"
    },
    "contact_source": "https://enogia.com/mentions-legales/",
-   "contact_maj": "2026-08-15"
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "siren": "514692045",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/514692045",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21. Plusieurs entites du meme nom et de la meme commune portent cet etat, toutes concordantes : 908771744, 914623665. Le SIREN cite est celui qui porte le plus d'etablissements ouverts.",
+   "historique": [
+    {
+     "annee": "2009",
+     "fait": "Entite active au registre (SIREN 514692045), etat administratif « A » a l'annuaire des entreprises, siege a MARSEILLE, 1 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/514692045"
+    }
+   ]
   },
   {
    "id": "eq-nautix",
@@ -238582,7 +240020,8 @@
    "sources": [
     "https://www.nautix.com/",
     "https://www.nautix.com/antifouling-consommation-de-carburant/",
-    "https://www.nautix.com/mentions-legales/"
+    "https://www.nautix.com/mentions-legales/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/318731593"
    ],
    "navires_equipes": [],
    "contact": {
@@ -238591,7 +240030,18 @@
     "adresse": "Parc d'activités des Cinq Chemins, 24 rue Nicolas Appert, 56520 Guidel, France"
    },
    "contact_source": "https://www.nautix.com/mentions-legales/",
-   "contact_maj": "2026-08-15"
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "siren": "318731593",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/318731593",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21",
+   "historique": [
+    {
+     "annee": "1980",
+     "fait": "Entite active au registre (SIREN 318731593), etat administratif « A » a l'annuaire des entreprises, siege a GUIDEL, 1 etablissement(s) ouvert(s). Releve le 2026-08-21.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/318731593"
+    }
+   ]
   },
   {
    "id": "eq-solar-cloth",
@@ -238633,6 +240083,8 @@
    "confiance": "haute",
    "note": null,
    "sources": [
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/822983052",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/983168592",
     "https://www.airseas.com/",
     "https://www.airseas.com/contact"
    ],
@@ -238648,7 +240100,31 @@
     "adresse": "8 allée de la Centrale Électrique de Chantenay, 44100 Nantes, France"
    },
    "contact_source": "https://www.airseas.com/contact",
-   "contact_maj": "2026-08-15"
+   "contact_maj": "2026-08-15",
+   "actif": true,
+   "siren": "983168592",
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/983168592",
+   "actif_methode": "Le SIREN historique 822983052 est clos au 19/12/2025, mais la maison vit : l'activite a ete reprise le 15/02/2024 par OceanicWing (983168592, Nantes, etat administratif A), filiale de Kawasaki Kisen Kaisha. Une cession d'actifs ferme une personne morale sans arreter l'activite. Releve le 2026-08-21.",
+   "historique": [
+    {
+     "annee": "2016",
+     "fait": "Creation d'Airseas (SIREN 822983052) a Nantes, essaimage d'Airbus, pour industrialiser l'aile de traction automatisee Seawing.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/822983052"
+    },
+    {
+     "annee": "2024",
+     "fait": "Redressement judiciaire en janvier 2024 puis reprise : Kawasaki Kisen Kaisha cree OceanicWing (SIREN 983168592, Nantes, le 28/12/2023), qui acquiert l'activite le 15 fevrier 2024. La marque Seawing est poursuivie.",
+     "source": "https://www.actu-transport-logistique.fr/journal-de-la-marine-marchande/shipping/larmateur-japonais-k-line-acquiert-le-fabricant-nantais-dailes-airseas-891556.php"
+    },
+    {
+     "annee": "2025",
+     "fait": "Cloture de l'ancienne personne morale Airseas (SIREN 822983052) au 19 decembre 2025, etat administratif C. La maison poursuit sous OceanicWing.",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/822983052"
+    }
+   ],
+   "alias": [
+    "OceanicWing"
+   ]
   },
   {
    "id": "eq-cws-computed-wing-sail",

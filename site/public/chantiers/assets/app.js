@@ -225,6 +225,81 @@
     return `<span class="tag tag--${p}">${perimLabel(p)}</span>`;
   }
 
+  /* ---------- État d'un item : vivant, terminé, ou inconnu ---------- */
+  // TROIS ÉTATS, PAS DEUX. Un chantier fermé et un chantier dont on ignore l'état
+  // ne se disent pas de la même manière. La base porte 361 chantiers actifs, 70
+  // fermés et 101 sans information ; les 24 équipementiers n'en portent aucune.
+  // Afficher un item d'état inconnu comme s'il était vivant serait un instrument
+  // faux, et un instrument faux est pire qu'aucun instrument.
+  //
+  // Côté navires, la lecture est asymétrique et c'est voulu : `fin_de_vie` établit
+  // une fin, mais son absence n'établit PAS que le navire navigue. 137 coques sur
+  // 6 691 portent une fin prouvée, les autres sont inconnues, jamais « en service ».
+  //
+  // UNE SEULE DÉFINITION POUR TOUTES LES SURFACES. Si la carte, la tuile et la
+  // fiche décidaient chacune de leur côté, elles finiraient par se contredire.
+  //
+  // OÙ CHAQUE ÉTAT SE VOIT. `termine` se voit partout, y compris en simple mention
+  // dans une autre page : c'est la demande. `inconnu` ne se voit QUE sur la fiche,
+  // là où l'affirmation est faite ; le marquer sur les listes couvrirait 98 % du
+  // corpus d'un badge sans information et noierait le signal utile.
+  const ETATS = {
+    termine: { cle: "termine", mot: "Fermé", titre: "Site fermé, ne construit plus" },
+    inconnu: { cle: "inconnu", mot: "État non documenté", titre: "Activité non vérifiée à ce jour" },
+    actif: { cle: "actif", mot: "En activité", titre: "Site en activité" },
+  };
+  // « Désarmé » n'est pas « Démoli » : le navire-musée existe, il ne navigue
+  // plus. Arbitrage du 21/08, sur le Maillé-Brézé et Le Redoutable.
+  const FINS = { demoli: "Démoli", deconstruit: "Déconstruit", naufrage: "Naufragé",
+    desarme: "Désarmé" };
+  const PHRASES = { desarme: "ne navigue plus, conservé à quai" };
+
+  /** État d'un chantier, d'un équipementier ou d'un bureau d'études. */
+  function etatSite(o) {
+    if (!o) return ETATS.inconnu;
+    if (o.actif === false) return ETATS.termine;
+    if (o.actif === true) return ETATS.actif;
+    return ETATS.inconnu;
+  }
+
+  /** État d'un navire. Une fin prouvée, ou rien : on ne déduit jamais « en service ». */
+  function etatNavire(n) {
+    if (!n || !n.fin_de_vie || !n.fin_de_vie.statut) return ETATS.inconnu;
+    const f = n.fin_de_vie;
+    const mot = FINS[f.statut] || "Hors flotte";
+    return { cle: "termine", mot: f.annee ? mot + " en " + f.annee : mot,
+      titre: "Navire " + mot.toLowerCase() + (f.annee ? " en " + f.annee : "")
+        + ", " + (PHRASES[f.statut] || "il ne navigue plus") };
+  }
+
+  const estTermine = (e) => !!e && e.cle === "termine";
+
+  /** Index nom de chantier -> fiche, pour les panneaux qui ne manipulent que des noms. */
+  let _parNom = null;
+  function siteParNom(nom) {
+    if (!_parNom) {
+      _parNom = new Map();
+      (state.all || []).forEach((c) => { if (c.nom) _parNom.set(c.nom, c); });
+    }
+    return _parNom.get(nom) || null;
+  }
+  /** Rend une liste de NOMS de chantiers en marquant ceux qui sont fermés. */
+  function listeSitesHtml(noms) {
+    return [...noms].map((n) => {
+      const e = etatSite(siteParNom(n));
+      return estTermine(e)
+        ? `<span class="is-termine">${esc(n)} ${badgeEtat(e)}</span>`
+        : esc(n);
+    }).join(", ");
+  }
+  /** Classe à poser sur une tuile, une ligne ou une mention. */
+  const clsEtat = (e) => (estTermine(e) ? " is-termine" : "");
+  /** Pastille visible. `force` l'affiche même pour un état inconnu (usage : fiche). */
+  function badgeEtat(e, force) {
+    if (!e || e.cle === "actif" || (e.cle === "inconnu" && !force)) return "";
+    return '<span class="etat etat--' + e.cle + '" title="' + e.titre + '">' + e.mot + "</span>";
+  }
+
   /* ---------- Data ---------- */
   async function load() {
     const res = await fetch("data/chantiers.json", { cache: "no-cache" });
@@ -241,6 +316,7 @@
       if (n && (n.nom || n.type)) {
         n._idx = state.navires.length; n._cid = c.id; n._cnom = c.nom; n._cville = c.ville; n._cregion = c.region; n._cpays = c.pays;
         n._cperims = c.perimetres || []; n._ctypes = c.types_navires || [];
+        n._cactif = c.actif;   // pour griser la MENTION du chantier depuis un navire
         state.navires.push(n);
       }
     }));
@@ -856,12 +932,17 @@
     // Outre-mer (hors emprise) et chantiers sans coordonnées : non placés sur la carte
     // (ils restent dans l'annuaire, la recherche et les navires).
     list.filter((c) => !isOutremer(c) && c.lat != null && c.lon != null).forEach((c) => {
-      const color = PERIM_COLORS[primaryPerim(c)];
+      const et = etatSite(c);
+      // UN SITE FERMÉ PERD SA COULEUR DE PÉRIMÈTRE. Le remplir de la même teinte
+      // qu'un site vivant, c'est le déclarer vivant sur la seule surface que la
+      // plupart des visiteurs regardent.
+      const color = estTermine(et) ? "#9aa4ad" : PERIM_COLORS[primaryPerim(c)];
       const m = L.circleMarker([c.lat, c.lon], {
-        radius: 8, color: "#ffffff", weight: 2, fillColor: color, fillOpacity: 1,
+        radius: estTermine(et) ? 6 : 8, color: "#ffffff", weight: 2,
+        fillColor: color, fillOpacity: estTermine(et) ? 0.75 : 1,
       });
       m.bindPopup(
-        `<div class="pp-nom">${c.nom}</div>
+        `<div class="pp-nom">${c.nom} ${badgeEtat(et)}</div>
          <div class="pp-meta">${c.ville} · ${c.region}</div>
          <div class="card__perims">${c.perimetres.map(tag).join("")}</div>
          <div class="pp-btn" data-open="${c.id}">Voir la fiche →</div>`
@@ -880,10 +961,10 @@
     const el = $("#results");
     if (!list.length) { el.innerHTML = `<p class="empty">Aucun site ne correspond à ces critères.</p>`; return; }
     el.innerHTML = list.map((c, i) => `
-      <div class="card${c.id === state.activeId ? " is-active" : ""}" data-id="${c.id}">
+      <div class="card${c.id === state.activeId ? " is-active" : ""}${clsEtat(etatSite(c))}" data-id="${c.id}">
         <div class="card__no">${String(i + 1).padStart(2, "0")}</div>
         <div class="card__body">
-          <div class="card__nom">${c.nom}</div>
+          <div class="card__nom">${c.nom} ${badgeEtat(etatSite(c))}</div>
           <div class="card__meta">${c.ville} · ${c.region}</div>
           <div class="card__perims">${c.perimetres.map(tag).join("")}</div>
         </div>
@@ -906,8 +987,8 @@
     });
     const body = $("#table-body");
     body.innerHTML = list.map((c) => `
-      <tr data-id="${c.id}">
-        <td><div class="t-nom">${c.nom}</div><div class="t-sub">${c.types_navires.map(typeLabel).slice(0,3).join(", ")}</div></td>
+      <tr data-id="${c.id}" class="${clsEtat(etatSite(c)).trim()}">
+        <td><div class="t-nom">${c.nom} ${badgeEtat(etatSite(c))}</div><div class="t-sub">${c.types_navires.map(typeLabel).slice(0,3).join(", ")}</div></td>
         <td>${c.ville}<div class="t-sub">${c.region}</div></td>
         <td class="t-year">${c.fondation || "n.c."}</td>
         <td><div class="cellperims">${c.perimetres.map(tag).join("")}</div></td>
@@ -973,7 +1054,7 @@
       ? `<div class="d-section"><h3>Navires de référence</h3>
           <ul class="d-list">${c.navires_references.map((n) => `
             <li class="ref-li" ${n._idx != null ? `data-open-vessel="${n._idx}"` : ""} style="flex-direction:column;gap:3px;align-items:flex-start">
-              <span><b>${n.nom || n.type || "Navire"}</b>${n.type && n.nom ? ` <span style="color:var(--muted)">· ${n.type}</span>` : ""}${n.annee ? ` <span style="color:var(--muted)">· ${n.annee}</span>` : ""}${n._idx != null ? ` <span class="ref-go">→</span>` : ""}</span>
+              <span class="${clsEtat(etatNavire(n)).trim()}"><b>${n.nom || n.type || "Navire"}</b> ${badgeEtat(etatNavire(n))}${n.type && n.nom ? ` <span style="color:var(--muted)">· ${n.type}</span>` : ""}${n.annee ? ` <span style="color:var(--muted)">· ${n.annee}</span>` : ""}${n._idx != null ? ` <span class="ref-go">→</span>` : ""}</span>
               ${refSpecs(n) ? `<span style="color:var(--muted);font-size:13px">${refSpecs(n)}</span>` : ""}
             </li>`).join("")}</ul></div>` : "";
 
@@ -1003,7 +1084,7 @@
 
     $("#drawer-body").innerHTML = `
       <div class="d-eyebrow">${c.region} · ${c.pays}</div>
-      <h2 class="d-nom" id="d-nom">${c.nom}</h2>
+      <h2 class="d-nom${clsEtat(etatSite(c))}" id="d-nom">${c.nom} ${badgeEtat(etatSite(c), true)}</h2>
       <div class="d-loc">${c.ville}</div>
       <div class="d-perims">${c.perimetres.map(tag).join("")}</div>
       <p class="d-desc">${c.description}</p>
@@ -1275,7 +1356,7 @@
       : "";
     $("#drawer-body").innerHTML = `
       <div class="d-eyebrow">Navire de référence</div>
-      <h2 class="d-nom" id="d-nom">${v.nom || v.type}</h2>
+      <h2 class="d-nom${clsEtat(etatNavire(v))}" id="d-nom">${v.nom || v.type} ${badgeEtat(etatNavire(v), true)}</h2>
       <div class="d-loc">${[v.type, v.annee, v.imo ? "IMO " + v.imo : null].filter(Boolean).join(" · ")}</div>
       ${(v.propulsion && v.propulsion.length) ? `<div class="d-perims" style="margin:14px 0 4px">${propChips(v.propulsion)}</div>` : ""}
       ${photoHtml}
@@ -1287,7 +1368,7 @@
           `<div class="d-fact"><div class="d-fact__k">${k}</div><div class="d-fact__v">${x}</div></div>`).join("")}</div></div>` : ""}
       <div class="d-section"><h3>Conception &amp; construction</h3>
         ${v.architecte ? `<button class="ves-yard ves-yard--arch" data-open-arch="${esc(v.architecte)}"><span class="ves-yard__role">Architecte / ensemblier</span><b>${esc(v.architecte)}</b><span>voir l'architecte →</span></button>` : ""}
-        <button class="ves-yard" data-open-chantier="${v._cid}"><span class="ves-yard__role">${roleChantier(v)}</span><b>${esc(v._cnom)}</b><span>${esc(v._cville)} · voir la fiche du chantier →</span></button>
+        <button class="ves-yard${v._cactif === false ? " is-termine" : ""}" data-open-chantier="${v._cid}"><span class="ves-yard__role">${roleChantier(v)}</span><b>${esc(v._cnom)}</b> ${v._cactif === false ? badgeEtat(ETATS.termine) : ""}<span>${esc(v._cville)} · voir la fiche du chantier →</span></button>
       </div>
       ${timelineHtml}
       ${sim.length ? `<div class="d-section"><h3>Navires similaires</h3>
@@ -1319,10 +1400,10 @@
     const el = $("#nav-list");
     if (!list.length) { el.innerHTML = `<p class="empty">Aucun navire ne correspond à ces critères.</p>`; return; }
     el.innerHTML = list.map((n) => `
-      <div class="card nav-card" data-vid="${n._idx}">
+      <div class="card nav-card${clsEtat(etatNavire(n))}" data-vid="${n._idx}">
         <div class="card__body">
           <div class="nav-card__top">
-            <div class="card__nom">${n.nom || n.type}</div>
+            <div class="card__nom">${n.nom || n.type} ${badgeEtat(etatNavire(n))}</div>
             ${n.prix_acquisition ? `<div class="nav-prix" title="Prix : ${String(n.prix_acquisition).replace(/"/g, "&quot;")}">${priceEur(n.prix_acquisition)}</div>` : ""}
           </div>
           <div class="card__meta">${[n.type, n.annee].filter(Boolean).join(" · ")}</div>
@@ -1330,7 +1411,7 @@
           ${vesselSpecs(n) ? `<div class="nav-specs">${vesselSpecs(n)}</div>` : ""}
           ${n.operateur ? `<div class="nav-op">Opérateur : <b>${n.operateur}</b></div>` : ""}
           ${n.architecte ? `<div class="nav-yard">Architecte : <b>${n.architecte}</b></div>` : ""}
-          <div class="nav-yard">Chantier : <b>${n._cnom}</b> <span>· ${n._cville}</span></div>
+          <div class="nav-yard${n._cactif === false ? " is-termine" : ""}">Chantier : <b>${n._cnom}</b> ${n._cactif === false ? badgeEtat(ETATS.termine) : ""}<span>· ${n._cville}</span></div>
         </div>
       </div>`).join("");
     el.querySelectorAll(".nav-card[data-vid]").forEach((card) =>
@@ -1477,7 +1558,7 @@
           <div class="d-fact"><div class="d-fact__k">Opérateur(s)</div><div class="d-fact__v">${esc([...d.operateurs].join(", ") || "n.c.")}</div></div>
           <div class="d-fact"><div class="d-fact__k">Navires</div><div class="d-fact__v">${d.navires.length}</div></div>
           ${d.regions.size ? `<div class="d-fact"><div class="d-fact__k">Région(s)</div><div class="d-fact__v">${esc([...d.regions].join(", "))}</div></div>` : ""}
-          ${d.chantiers.size ? `<div class="d-fact"><div class="d-fact__k">Chantier(s)</div><div class="d-fact__v">${esc([...d.chantiers].join(", "))}</div></div>` : ""}
+          ${d.chantiers.size ? `<div class="d-fact"><div class="d-fact__k">Chantier(s)</div><div class="d-fact__v">${listeSitesHtml(d.chantiers)}</div></div>` : ""}
         </div>
       </div>
       <div class="d-section"><h3>Navires affectés</h3>
@@ -1552,7 +1633,7 @@
       <div class="d-section"><h3>Informations</h3>
         <div class="d-grid">
           <div class="d-fact"><div class="d-fact__k">Navires conçus</div><div class="d-fact__v">${a.navires.length}</div></div>
-          ${a.chantiers.size ? `<div class="d-fact"><div class="d-fact__k">Chantier(s) constructeur(s)</div><div class="d-fact__v">${esc([...a.chantiers].join(", "))}</div></div>` : ""}
+          ${a.chantiers.size ? `<div class="d-fact"><div class="d-fact__k">Chantier(s) constructeur(s)</div><div class="d-fact__v">${listeSitesHtml(a.chantiers)}</div></div>` : ""}
           ${a.operateurs.size ? `<div class="d-fact"><div class="d-fact__k">Opérateur(s)</div><div class="d-fact__v">${esc([...a.operateurs].join(", "))}</div></div>` : ""}
         </div>
       </div>
@@ -1659,7 +1740,8 @@
     };
     $("#drawer-body").innerHTML =
       '<div class="d-eyebrow">Équipementier &middot; ' + esc(e.levier_libelle || "") + "</div>"
-      + '<h2 class="d-nom" id="d-nom">' + esc(e.nom) + "</h2>"
+      + '<h2 class="d-nom' + clsEtat(etatSite(e)) + '" id="d-nom">' + esc(e.nom)
+        + " " + badgeEtat(etatSite(e), true) + "</h2>"
       + '<div class="d-loc">'
       + esc([e.ville, e.region, e.pays].filter(Boolean).join(" \u00b7 ")
             || "Localisation à préciser") + "</div>"
@@ -1768,7 +1850,7 @@
           <div class="d-fact"><div class="d-fact__k">Flotte</div><div class="d-fact__v">${o.navires.length} navire${o.navires.length > 1 ? "s" : ""}</div></div>
           ${o.dessertes.size ? `<div class="d-fact"><div class="d-fact__k">Dessertes</div><div class="d-fact__v">${o.dessertes.size}</div></div>` : ""}
           ${o.basePts.length ? `<div class="d-fact"><div class="d-fact__k">Base(s)</div><div class="d-fact__v">${esc(o.basePts.map(([n]) => n).join(", "))}</div></div>` : ""}
-          ${o.chantiers.size ? `<div class="d-fact"><div class="d-fact__k">Chantier(s)</div><div class="d-fact__v">${esc([...o.chantiers].slice(0, 6).join(", "))}${o.chantiers.size > 6 ? "…" : ""}</div></div>` : ""}
+          ${o.chantiers.size ? `<div class="d-fact"><div class="d-fact__k">Chantier(s)</div><div class="d-fact__v">${listeSitesHtml([...o.chantiers].slice(0, 6))}${o.chantiers.size > 6 ? "…" : ""}</div></div>` : ""}
         </div>
       </div>
       ${o.dessertes.size ? `<div class="d-section"><h3>Dessertes exploitées</h3>

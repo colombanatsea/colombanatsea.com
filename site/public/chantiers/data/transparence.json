@@ -1,53 +1,53 @@
 {
- "date": "2026-08-20",
+ "date": "2026-08-21",
  "volumes": {
-  "chantiers": 532,
-  "entrees_navire": 6681,
-  "plancher_coques_distinctes": 6462,
+  "chantiers": 533,
+  "entrees_navire": 6691,
+  "plancher_coques_distinctes": 6472,
   "equipementiers": 24,
   "pays": 29
  },
  "sources": {
-  "url_total": 16292,
-  "domaines_distincts": 1521,
-  "navires_avec_url": 6166,
+  "url_total": 16355,
+  "domaines_distincts": 1526,
+  "navires_avec_url": 6176,
   "taux_navires_avec_url": 92.3
  },
  "explicabilite": {
-  "attributions_architecte": 1045,
-  "dont_justifiees": 890,
+  "attributions_architecte": 1046,
+  "dont_justifiees": 891,
   "taux": 85.2
  },
  "corroboration": {
-  "chantiers_corrobores": 463,
-  "taux_chantiers": 87,
+  "chantiers_corrobores": 464,
+  "taux_chantiers": 87.1,
   "chantiers_deux_tiers": 328,
-  "taux_deux_tiers": 61.7,
-  "chantiers_un_seul_tiers": 104,
+  "taux_deux_tiers": 61.5,
+  "chantiers_un_seul_tiers": 105,
   "chantiers_sans_aucun_tiers": 31,
   "chantiers_temoin_unique": 69,
-  "navires_sous_temoin_unique": 135,
+  "navires_sous_temoin_unique": 137,
   "part_navires_sous_temoin_unique": 2,
   "navires_corrobores": 391,
-  "taux_navires": 5.9,
-  "navires_corrobores_large": 556,
+  "taux_navires": 5.8,
+  "navires_corrobores_large": 557,
   "taux_navires_large": 8.3
  },
  "identite": {
-  "eligibles_imo": 3349,
-  "inegibles": 1258,
-  "indetermines": 2074,
-  "porteurs_imo": 1567,
+  "eligibles_imo": 3352,
+  "inegibles": 1262,
+  "indetermines": 2077,
+  "porteurs_imo": 1569,
   "taux_couverture_sur_eligible": 46.8
  },
  "sollicitation": {
-  "actifs": 361,
-  "fermes": 69,
-  "activite_indeterminee": 102,
-  "sollicitables_sur_actifs": 221,
+  "actifs": 374,
+  "fermes": 72,
+  "activite_indeterminee": 87,
+  "sollicitables_sur_actifs": 229,
   "taux_haut": 61.2,
   "joignables": 296,
-  "taux_joignables": 55.6
+  "taux_joignables": 55.5
  },
  "serie": [
   {
@@ -89,6 +89,19 @@
    "eligibles_imo": 3349,
    "taux_imo_sur_eligible": 46.8,
    "taux_joignables": 55.6
+  },
+  {
+   "date": "2026-08-21",
+   "motif": null,
+   "chantiers": 533,
+   "entrees": 6691,
+   "coques_plancher": 6472,
+   "url": 16355,
+   "taux_navires_source": 92.3,
+   "taux_architecte_justifie": 85.2,
+   "eligibles_imo": 3352,
+   "taux_imo_sur_eligible": 46.8,
+   "taux_joignables": 55.5
   }
  ]
 }
