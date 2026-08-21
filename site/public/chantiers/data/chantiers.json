@@ -346,7 +346,8 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "2026"
-     }
+     },
+     "modele": "World"
     },
     {
      "nom": "Orient Express Corinthian",
@@ -477,7 +478,8 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "2025"
-     }
+     },
+     "modele": "World"
     },
     {
      "nom": "Celebrity Xcel",
@@ -542,7 +544,8 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "2025"
-     }
+     },
+     "modele": "Edge"
     },
     {
      "nom": "Luminara",
@@ -789,7 +792,8 @@
       "confirme": "attribution",
       "imo_confirme": "9880001",
       "annee_confirmee": "2024"
-     }
+     },
+     "modele": "Oasis"
     },
     {
      "nom": "Jacques Chevallier",
@@ -917,7 +921,8 @@
       "confirme": "attribution",
       "imo_confirme": "9838400",
       "annee_confirmee": "2023"
-     }
+     },
+     "modele": "Edge"
     },
     {
      "nom": "MSC Euribia",
@@ -970,7 +975,8 @@
       "confirme": "attribution",
       "imo_confirme": "9901544",
       "annee_confirmee": "2023"
-     }
+     },
+     "modele": "Meraviglia-Plus"
     },
     {
      "nom": "MSC World Europa",
@@ -1035,7 +1041,8 @@
       "confirme": "attribution",
       "imo_confirme": "9837420",
       "annee_confirmee": "2022"
-     }
+     },
+     "modele": "World"
     },
     {
      "nom": "Celebrity Beyond",
@@ -1095,7 +1102,8 @@
       "confirme": "attribution",
       "imo_confirme": "9838395",
       "annee_confirmee": "2022"
-     }
+     },
+     "modele": "Edge"
     },
     {
      "nom": "Wonder of the Seas",
@@ -1151,7 +1159,8 @@
       "confirme": "attribution",
       "imo_confirme": "9838345",
       "annee_confirmee": "2022"
-     }
+     },
+     "modele": "Oasis"
     },
     {
      "nom": "MSC Virtuosa",
@@ -1211,7 +1220,8 @@
       "confirme": "attribution",
       "imo_confirme": "9803625",
       "annee_confirmee": "2021"
-     }
+     },
+     "modele": "Meraviglia-Plus"
     },
     {
      "nom": "Celebrity Apex",
@@ -1284,7 +1294,8 @@
       "confirme": "attribution",
       "imo_confirme": "9838383",
       "annee_confirmee": "2021"
-     }
+     },
+     "modele": "Edge"
     },
     {
      "nom": "MSC Grandiosa",
@@ -1345,7 +1356,8 @@
       "confirme": "attribution",
       "imo_confirme": "9803613",
       "annee_confirmee": "2019"
-     }
+     },
+     "modele": "Meraviglia-Plus"
     },
     {
      "nom": "MSC Bellissima",
@@ -1398,7 +1410,8 @@
       "confirme": "attribution",
       "imo_confirme": "9760524",
       "annee_confirmee": "2019"
-     }
+     },
+     "modele": "Meraviglia"
     },
     {
      "nom": "Celebrity Edge",
@@ -1448,7 +1461,8 @@
       "confirme": "attribution",
       "imo_confirme": "9812705",
       "annee_confirmee": "2018"
-     }
+     },
+     "modele": "Edge"
     },
     {
      "nom": "Symphony of the Seas",
@@ -1499,7 +1513,8 @@
       "confirme": "attribution",
       "imo_confirme": "9744001",
       "annee_confirmee": "2018"
-     }
+     },
+     "modele": "Oasis"
     },
     {
      "nom": "MSC Meraviglia",
@@ -1550,7 +1565,8 @@
       "confirme": "attribution",
       "imo_confirme": "9760512",
       "annee_confirmee": "2017"
-     }
+     },
+     "modele": "Meraviglia"
     },
     {
      "nom": "Harmony of the Seas",
@@ -1600,7 +1616,8 @@
       "confirme": "attribution",
       "imo_confirme": "9682875",
       "annee_confirmee": "2016"
-     }
+     },
+     "modele": "Oasis"
     },
     {
      "nom": "Gamal Abdel Nasser (ex-Vladivostok)",
@@ -1656,7 +1673,8 @@
        "detail": "Livraison en 2016, mise en service le 2 juin 2016 ; port d'attache Alexandrie.",
        "source": "https://www.militaryfactory.com/ships/detail.php?ship_id=ens-gamal-abdel-nasser-l1010"
       }
-     ]
+     ],
+     "modele": "Mistral"
     },
     {
      "nom": "Europa 2",
@@ -1754,7 +1772,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Mistral"
     },
     {
      "nom": "Queen Mary 2 (QM2)",
@@ -5637,7 +5656,8 @@
       "le": "2026-08-05",
       "confiance": "simple"
      },
-     "source_ref": "re-rattache le 2026-08-05 : attribue a tort a « Chantier Naval de la Martinique », construit par « Chantiers de l'Atlantique » — Refutation nette. La fregate Ventose a ete construite par les Chantiers de l'Atlantique a Saint-Nazaire, quille posee le 28 juin 1991, lancee le 14 ma (https://en.wikipedia.org/wiki/French_frigate_Vent%C3%B4se)"
+     "source_ref": "re-rattache le 2026-08-05 : attribue a tort a « Chantier Naval de la Martinique », construit par « Chantiers de l'Atlantique » — Refutation nette. La fregate Ventose a ete construite par les Chantiers de l'Atlantique a Saint-Nazaire, quille posee le 28 juin 1991, lancee le 14 ma (https://en.wikipedia.org/wiki/French_frigate_Vent%C3%B4se)",
+     "modele": "Flor"
     },
     {
      "nom": "LNG Alliance (ex-Gaselys)",
@@ -6002,7 +6022,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Amiral Ronarc'h"
     },
     {
      "nom": "Amiral Nomy (D663)",
@@ -6051,7 +6072,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Amiral Ronarc'h"
     },
     {
      "nom": "Amiral Castex (D662)",
@@ -6100,7 +6122,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Amiral Ronarc'h"
     },
     {
      "nom": "Formion (F603)",
@@ -6143,7 +6166,8 @@
        "source": "https://en.wikipedia.org/wiki/Amiral_Ronarc%27h-class_frigate"
       }
      ],
-     "prix_acquisition": "≈ 753,3 M€/unite (derive : contrat FDI HN Grece de mars 2022 d'environ 2,26 Md€ pour 3 fregates identiques, MCO 3 ans inclus)"
+     "prix_acquisition": "≈ 753,3 M€/unite (derive : contrat FDI HN Grece de mars 2022 d'environ 2,26 Md€ pour 3 fregates identiques, MCO 3 ans inclus)",
+     "modele": "Kimon"
     },
     {
      "nom": "Nearchos (F602)",
@@ -6194,7 +6218,8 @@
        "source": "https://www.navalnews.com/naval-news/2025/09/greece-commits-to-4th-fdi-frigate-procurement/"
       }
      ],
-     "prix_acquisition": "≈ 753,3 M€/unite (derive : contrat FDI HN Grece de mars 2022 d'environ 2,26 Md€ pour 3 fregates identiques, MCO 3 ans inclus)"
+     "prix_acquisition": "≈ 753,3 M€/unite (derive : contrat FDI HN Grece de mars 2022 d'environ 2,26 Md€ pour 3 fregates identiques, MCO 3 ans inclus)",
+     "modele": "Kimon"
     },
     {
      "nom": "Amiral Louzeau (D661)",
@@ -6250,7 +6275,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Amiral Ronarc'h"
     },
     {
      "nom": "Amiral Ronarc'h (D660)",
@@ -6314,7 +6340,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Amiral Ronarc'h"
     },
     {
      "nom": "Kimon (F601)",
@@ -6373,7 +6400,8 @@
        "source": "https://www.usinenouvelle.com/article/defense-la-grece-commande-a-naval-group-une-quatrieme-fregate-fdi-pour-pres-d-un-milliard-d-euros.N2241486"
       }
      ],
-     "prix_acquisition": "≈ 1 Md€ / unité (dérivé : contrat initial de 3 Md€ pour 3 FDI grecques, 2021, MCO 3 ans + armement Aster 30/Exocet/MU-90 inclus ; confirmé par la 4e FDI commandée 982 M€ en nov. 2025)"
+     "prix_acquisition": "≈ 1 Md€ / unité (dérivé : contrat initial de 3 Md€ pour 3 FDI grecques, 2021, MCO 3 ans + armement Aster 30/Exocet/MU-90 inclus ; confirmé par la 4e FDI commandée 982 M€ en nov. 2025)",
+     "modele": "Kimon"
     },
     {
      "nom": "Lorraine (D657)",
@@ -6519,7 +6547,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Aquitaine"
     },
     {
      "nom": "Bretagne (D655)",
@@ -6574,7 +6603,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Aquitaine"
     },
     {
      "nom": "ENS El Fateh",
@@ -6630,7 +6660,8 @@
      ],
      "prix_acquisition": "≈ 250 M€/unité plateforme (dérivé : contrat de 1 Md€ pour 4 corvettes Gowind 2500, 2014, hors systèmes d'armes) ; coût programme global 1,5 à 1,7 Md€ armement MBDA et torpilles inclus",
      "architecte": "Naval Group",
-     "architecte_source": "Corvette de type Gowind 2500, design développé par Naval Group (ex-DCNS) (Wikipedia 'Gowind-class design', naval-technology.com, Wikipedia 'ENS El Fateh')"
+     "architecte_source": "Corvette de type Gowind 2500, design développé par Naval Group (ex-DCNS) (Wikipedia 'Gowind-class design', naval-technology.com, Wikipedia 'ENS El Fateh')",
+     "modele": "El Fateh"
     },
     {
      "nom": "Auvergne (D654)",
@@ -6680,7 +6711,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Aquitaine"
     },
     {
      "nom": "Languedoc (D653)",
@@ -6735,7 +6767,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Aquitaine"
     },
     {
      "nom": "Provence (D652)",
@@ -6783,7 +6816,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Aquitaine"
     },
     {
      "nom": "Tahya Misr",
@@ -6840,7 +6874,8 @@
        "detail": "FREMM française Normandie déjà construite, cédée à l'Égypte avant livraison à la Marine nationale et renommée Tahya Misr (livrée 23 juin 2015). Prix de la frégate seule jamais ventilé officiellement par DCNS ; estimation presse d'environ 800 M€ par navire, au sein d'un package d'armement franco-égyptien de 5,2 Md€ (5,9 Md USD) incluant 24 Rafale et des missiles (Aster 15, Mica, Scalp, AASM), contrats signés au Caire le 16 février 2015. Paiement au comptant à la livraison.",
        "source": "https://www.defensenews.com/naval/2015/02/21/dcns-exports-pegged-to-egypt-frigate-order/"
       }
-     ]
+     ],
+     "modele": "Aquitaine"
     },
     {
      "nom": "Mohammed VI",
@@ -6904,7 +6939,8 @@
      "propriete": "publique",
      "exploitation": "regalien",
      "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "modele": "Aquitaine"
     },
     {
      "nom": "Aquitaine (D650)",
@@ -6955,7 +6991,8 @@
      "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
      "source_ref": "lien mort constate le 2026-08-03 : https://www.navyrecognition.com/index.php/newsb/defence-news/year-2012-news/november/748-fremm-aquitaine-leaves-dcns-shipyard-in-lorient-to-join-her-homeport-french-naval-base-in-brest.html",
      "largeur_m": 19.7,
-     "pavillon": "France"
+     "pavillon": "France",
+     "modele": "Aquitaine"
     },
     {
      "nom": "Bani Yas",
@@ -9626,7 +9663,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "modele": "Scorp"
     },
     {
      "nom": "KD Tunku Abdul Rahman",
@@ -9784,7 +9822,8 @@
        "source": "https://www.infodefensa.com/texto-diario/mostrar/5697283/armada-chile-conmemora-20-anos-arribo-submarino-ss-23-general-ohiggins-valparaiso"
       }
      ],
-     "prix_acquisition": "≈ 210 M USD/unité (dérivé : contrat de 420 M USD signé en déc. 1997 pour 2 Scorpène identiques pour le Chili : O'Higgins + General Carrera)"
+     "prix_acquisition": "≈ 210 M USD/unité (dérivé : contrat de 420 M USD signé en déc. 1997 pour 2 Scorpène identiques pour le Chili : O'Higgins + General Carrera)",
+     "modele": "Scorp"
     },
     {
      "nom": "Le Vigilant",
@@ -10202,7 +10241,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: ministere ; exploitation: marine royale"
+     "caractere_motif": "propriete: ministere ; exploitation: marine royale",
+     "modele": "Orka"
     },
     {
      "nom": "Rubis",
@@ -12507,7 +12547,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Horizon"
     },
     {
      "nom": "Charles de Gaulle (R91)",
@@ -12590,7 +12631,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Rubis puis Suffren"
     },
     {
      "nom": "Chevalier Paul (D621)",
@@ -12642,7 +12684,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Horizon"
     },
     {
      "nom": "Lorraine (D657)",
@@ -13063,7 +13106,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Suffren"
     },
     {
      "nom": "Casabianca (S640) - 6e et dernier SNA Barracuda",
@@ -13119,7 +13163,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Suffren"
     },
     {
      "nom": "De Grasse (S638) - 4e SNA Barracuda",
@@ -13182,7 +13227,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Suffren"
     },
     {
      "nom": "Sous-marins nucléaires lanceurs d'engins de 3e génération (SNLE 3G), 4 unités prévues - SNLE",
@@ -13328,7 +13374,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Suffren"
     },
     {
      "nom": "SNLE 3G L'Invincible - 1re unité (programme 4 SNLE 3G)",
@@ -13488,7 +13535,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Suffren"
     },
     {
      "nom": "Tourville (S637) - 3e SNA Barracuda",
@@ -13559,7 +13607,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Suffren"
     },
     {
      "nom": "Suffren (S635) - 1er SNA Barracuda",
@@ -13581,7 +13630,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "modele": "Suffren"
     },
     {
      "nom": "Le Terrible (S619) - 4e SNLE classe Le Triomphant",
@@ -13643,7 +13693,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Le Triomphant"
     },
     {
      "nom": "Le Triomphant (S616), Le Téméraire (S617), Le Vigilant (S618) - 3 premiers SNLE classe Le Triomphant",
@@ -13726,7 +13777,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Le Triomphant"
     },
     {
      "nom": "Porte-avions Charles de Gaulle (R91) et SNLE classe Le Triomphant - propulsion K15",
@@ -13771,7 +13823,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "Le Triomphant"
     },
     {
      "nom": "Charles de Gaulle (R91) - porte-avions nucléaire (révision K15 à Indret)",
@@ -14873,7 +14926,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale"
+     "caractere_motif": "propriete: etat francais ; exploitation: marine nationale",
+     "modele": "D'Entrecasteaux / B2M"
     },
     {
      "nom": "Yersin",
@@ -16342,7 +16396,8 @@
      "architecte_source": "Naval News (avril 2026) / mauric.com : 3e unité de la classe Castor (OPV 530), design Mauric, construite par Socarenam.",
      "caractere": "public",
      "exploitation": "regalien",
-     "caractere_motif": "exploitation: navy"
+     "caractere_motif": "exploitation: navy",
+     "modele": "Castor"
     },
     {
      "nom": "Auguste Techer (P781)",
@@ -16648,7 +16703,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "modele": "La Confiance"
     },
     {
      "nom": "La Confiance (P733)",
@@ -16681,7 +16737,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "modele": "La Confiance"
     },
     {
      "nom": "La Résolue (P734)",
@@ -16714,7 +16771,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "modele": "La Confiance"
     },
     {
      "nom": "Breizh",
@@ -16764,7 +16822,8 @@
      "architecte_source": "mauric.com / Naval News / Wikipedia : OPV 530 (classe Castor) conçu par Mauric, construit par Socarenam.",
      "caractere": "public",
      "exploitation": "regalien",
-     "caractere_motif": "exploitation: navy"
+     "caractere_motif": "exploitation: navy",
+     "modele": "Castor"
     },
     {
      "nom": "Jean-François Deniau (DF P3)",
@@ -16827,7 +16886,8 @@
      "architecte_source": "mauric.com / Naval News : OPV 530 (classe Castor) conçu par le bureau d'architecture navale Mauric, construit par Socarenam.",
      "caractere": "public",
      "exploitation": "regalien",
-     "caractere_motif": "exploitation: navy"
+     "caractere_motif": "exploitation: navy",
+     "modele": "Castor"
     },
     {
      "nom": "Bourbon Enterprise",
@@ -16891,7 +16951,8 @@
      "propriete": "privee",
      "exploitation": "commerciale",
      "caractere_motif": "propriete: groupe ; exploitation: offshore",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "modele": "MPSV75"
     },
     {
      "nom": "Bourbon Supporter",
@@ -16960,7 +17021,8 @@
      "architecte_source": "meretmarine.com (BOURBON commande deux navires à Socarenam / Socarenam livre le Bourbon Supporter): concept Marine Assistance développé par le Bureau d'Études Mauric, type MPSV75",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: offshore"
+     "caractere_motif": "exploitation: offshore",
+     "modele": "MPSV75"
     },
     {
      "nom": "Kermorvan (DF P2)",
@@ -18500,7 +18562,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "modele": "Patrouilleur Hauturier de la Marine n"
     },
     {
      "nom": "UHSI32 MkII (plus grand drone de combat de surface construit en France)",
@@ -18686,7 +18749,8 @@
        "prix": "820 M$ (2009) pour 6 navires ; ≈ 137 M$/unité",
        "source": "https://en.wikipedia.org/wiki/Baynunah-class_corvette"
       }
-     ]
+     ],
+     "modele": "Baynunah"
     },
     {
      "nom": "Bella Vita (ex-Lady Barbaretta)",
@@ -18799,7 +18863,8 @@
       }
      ],
      "architecte": "CMN (design maison)",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "modele": "Um Al Maradim"
     },
     {
      "nom": "3 patrouilleurs Vigilante de la marine omanaise",
@@ -21238,7 +21303,8 @@
      "source": "https://www.meretmarine.com/fr/defense/ocea-acheve-la-serie-des-20-patrouilleurs-commandes-par-l-algerie",
      "propulsion": [
       "diesel-mdo"
-     ]
+     ],
+     "modele": "Alg"
     },
     {
      "nom": "Patrouilleurs côtiers FPB 72 MkII (classe Boracay : Boracay, Panglao, Malamawi, Kalanggaman)",
@@ -21268,7 +21334,8 @@
      ],
      "caractere": "public",
      "exploitation": "regalien",
-     "caractere_motif": "exploitation: garde-cote"
+     "caractere_motif": "exploitation: garde-cote",
+     "modele": "Boracay"
     },
     {
      "nom": "Fouladou, type OPV 190 MkII",
@@ -21286,7 +21353,8 @@
       "diesel-mdo"
      ],
      "architecte": "OCEA",
-     "architecte_source": "Mer et Marine (meretmarine.com/fr/defense/ocea-delivers-all-aluminium-opv) : l'OPV 190 conçu par le bureau d'études interne d'OCEA"
+     "architecte_source": "Mer et Marine (meretmarine.com/fr/defense/ocea-delivers-all-aluminium-opv) : l'OPV 190 conçu par le bureau d'études interne d'OCEA",
+     "modele": "OPV 190 MkII"
     },
     {
      "nom": "Patrouilleur hauturier du Guyana, type OPV 190",
@@ -21318,7 +21386,8 @@
      ],
      "caractere": "public",
      "exploitation": "regalien",
-     "caractere_motif": "exploitation: defence"
+     "caractere_motif": "exploitation: defence",
+     "modele": "OPV 190"
     },
     {
      "nom": "Kerpont",
@@ -24097,7 +24166,8 @@
      ],
      "caractere": "public",
      "exploitation": "regalien",
-     "caractere_motif": "exploitation: garde-cote"
+     "caractere_motif": "exploitation: garde-cote",
+     "modele": "de 12"
     },
     {
      "nom": "Jacob Frederiksen (basée à Anholt, dérivée NSH ~17 m)",
@@ -24396,7 +24466,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: douane ; exploitation: douane"
+     "caractere_motif": "propriete: douane ; exploitation: douane",
+     "modele": "Couach 28"
     },
     {
      "nom": "Belongers (ex / renommee Rebels)",
@@ -25182,7 +25253,8 @@
       "le": "2026-08-06",
       "confiance": "simple"
      },
-     "source": "https://www.mauric.com/news/gendarmerie-maritilme-patrol-vessel-signature"
+     "source": "https://www.mauric.com/news/gendarmerie-maritilme-patrol-vessel-signature",
+     "modele": "de 24"
     }
    ],
    "sources_ref": [
@@ -27718,7 +27790,8 @@
      "propulsion": [
       "diesel-electrique",
       "diesel-mdo"
-     ]
+     ],
+     "modele": "City"
     },
     {
      "nom": "PETAR I et PETAR II, patrouilleurs hauturiers OPV 60M",
@@ -27798,7 +27871,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "modele": "City"
     },
     {
      "nom": "Programme rMCM classe City, 12 chasseurs de mines (Oostende, Tournai, Brugge, Liège, Antwerpen, Rochefort, Vlissingen, Scheveningen, IJmuiden, Harlingen, Delfzijl, Schiedam)",
@@ -27815,7 +27889,8 @@
      "propulsion": [
       "diesel-electrique",
       "diesel-mdo"
-     ]
+     ],
+     "modele": "City"
     },
     {
      "nom": "Niani, patrouilleur lance-missiles OPV 58S (coque réalisée à Kership Lanester)",
@@ -27910,7 +27985,8 @@
       }
      ],
      "architecte": "Naval Group",
-     "architecte_source": "Naval News / armyrecognition : OPV 87 classe Bouchard de conception Naval Group (ex-DCNS, classe Gowind), construit par Kership."
+     "architecte_source": "Naval News / armyrecognition : OPV 87 classe Bouchard de conception Naval Group (ex-DCNS, classe Gowind), construit par Kership.",
+     "modele": "Bouchard"
     },
     {
      "nom": "ARA Storni, patrouilleur hauturier OPV 87 classe Bouchard",
@@ -27941,7 +28017,8 @@
       }
      ],
      "architecte": "Naval Group",
-     "architecte_source": "naval-technology.com et Naval Group : meme design OPV 87 que Piedrabuena/Bouchard, conception Naval Group (Gowind)"
+     "architecte_source": "naval-technology.com et Naval Group : meme design OPV 87 que Piedrabuena/Bouchard, conception Naval Group (Gowind)",
+     "modele": "Bouchard"
     },
     {
      "nom": "ARA Piedrabuena, patrouilleur hauturier OPV 87 classe Bouchard (construit entierement a Concarneau par Piriou ; coque NON realisee a Kership Lanester contrairement aux Storni et Cordero)",
@@ -27971,7 +28048,8 @@
       }
      ],
      "architecte": "Naval Group",
-     "architecte_source": "naval-technology.com et Naval Group : OPV 87 'Kership offshore patrol vessel', tete de serie issue d'un Gowind OPV concu par Naval Group"
+     "architecte_source": "naval-technology.com et Naval Group : OPV 87 'Kership offshore patrol vessel', tete de serie issue d'un Gowind OPV concu par Naval Group",
+     "modele": "Bouchard"
     },
     {
      "nom": "Patrouilleur hauturier OPV 87 classe Bouchard (ARA Bouchard, Piedrabuena, Storni, Contraalmirante Cordero)",
@@ -27998,7 +28076,8 @@
        "prix": "319 M€ (380 M$) pour 4 navires ; ≈ 79,75 M€/unité",
        "source": "https://www.janes.com/osint-insights/defence-news/naval-group-delivers-second-opv-to-argentine-navy"
       }
-     ]
+     ],
+     "modele": "Bouchard"
     },
     {
      "nom": "ARA Bouchard, patrouilleur hauturier OPV 87 (tête de série, ex-L'Adroit/Gowind)",
@@ -28038,7 +28117,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "modele": "Loire"
     },
     {
      "nom": "Seine (A604), bâtiment de soutien et d'assistance métropolitain (BSAM) classe Loire",
@@ -28058,7 +28138,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "modele": "Loire"
     },
     {
      "nom": "Bâtiments de soutien et d'assistance métropolitains (BSAM) classe Loire (Loire, Rhône, Seine, Garonne)",
@@ -28078,7 +28159,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "modele": "Loire"
     },
     {
      "nom": "Rhône (A603), bâtiment de soutien et d'assistance métropolitain (BSAM) classe Loire",
@@ -28098,7 +28180,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "modele": "Loire"
     },
     {
      "nom": "Loire (A602), bâtiment de soutien et d'assistance métropolitain (BSAM) classe Loire (tête de série)",
@@ -28118,7 +28201,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "modele": "Loire"
     },
     {
      "nom": "Dar al Beida, bâtiment hydro-océanographique multi-missions (BHO2M / HOSV 72)",
@@ -33012,7 +33096,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "modele": "Ophrys"
     },
     {
      "nom": "VSP - vedettes de soutien à la plongée (8 unités : Ophrys, Acacia, Iris, Yucca, Pétunia, Azalée, Zinnia, Hysope)",
@@ -34619,7 +34704,8 @@
      ],
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: offshore"
+     "caractere_motif": "exploitation: offshore",
+     "modele": "Bourbon"
     },
     {
      "nom": "DYNAMIC 29 (et sisterships)",
@@ -42942,6 +43028,15 @@
      "largeur_m": null,
      "source": "https://www.giornaledellavela.com/2024/12/13/orc-52-2-light-fast-and-stylish/?lang=en",
      "note": "verse depuis navires_references le 2026-08-16 : modele de serie, pas une coque individuelle"
+    },
+    {
+     "nom": "EOS 54",
+     "type": "modele-serie",
+     "annee_lancement": "2016",
+     "longueur_m": 16.45,
+     "largeur_m": null,
+     "source": "https://www.boatnews.com/story/23760/eos-54-a-fast-catamaran-a-la-carte",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
     }
    ],
    "personnes": [
@@ -42969,23 +43064,6 @@
    ],
    "taille_max": "Catamarans de voile jusqu'à environ 18 m de longueur hors-tout (modèle ORC 57). Pas de jauge GT commerciale (navires de plaisance non jaugés en GT).",
    "navires_references": [
-    {
-     "nom": "EOS 54",
-     "type": "modele-serie",
-     "annee": "2016",
-     "longueur_m": 16.45,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Croisière/sport familial ; version location jusqu'à 6 cabines et 12 couchages",
-     "energie": "Vélique (grand-voile 101 m², génois 64 m², spi 185 m²) + 2 moteurs diesel 55 ch ; architecte Christophe Barreau ; construction sandwich mousse / polyester",
-     "client": "Commandé par la marque EOS Catamaran ; moules et première unité construits au chantier Marsaudon Composites à Lorient",
-     "classification": "Norme ISO plaisance (déplacement lège 13,8 t)",
-     "source": "https://www.boatnews.com/story/23760/eos-54-a-fast-catamaran-a-la-carte",
-     "propulsion": [
-      "velique",
-      "diesel-mdo"
-     ]
-    },
     {
      "nom": "IDEC 2",
      "type": "navire-unitaire",
@@ -45626,6 +45704,33 @@
      "largeur_m": null,
      "source": "https://www.meretmarine.com/fr/defense/sillinger-livre-5-semi-rigides-a-la-forfusco",
      "note": "verse depuis navires_references le 2026-08-16 : modele de serie, pas une coque individuelle"
+    },
+    {
+     "nom": "1200 RIB UM (export Libye, 50 embarcations)",
+     "type": "modele-contrat",
+     "annee_lancement": "2013",
+     "longueur_m": 11.6,
+     "largeur_m": null,
+     "source": "https://www.meretmarine.com/fr/content/sillinger-vend-50-embarcations-rapides-la-libye",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
+    },
+    {
+     "nom": "650 PRORAID / EFR (Gendarmerie maritime)",
+     "type": "modele-contrat",
+     "annee_lancement": "2020",
+     "longueur_m": 6.5,
+     "largeur_m": null,
+     "source": "https://www.meretmarine.com/fr/defense/plus-de-25-semi-rigides-sillinger-650-livres-a-la-gendarmerie-maritime",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
+    },
+    {
+     "nom": "PRORAID (renouvellement contrat-cadre Marine nationale)",
+     "type": "modele-contrat",
+     "annee_lancement": "2025",
+     "longueur_m": null,
+     "largeur_m": null,
+     "source": "https://sillinger.fr/actualites/la-marine-nationale-renouvelle-sa-confiance-envers-sillinger",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
     }
    ],
    "personnes": [
@@ -45654,26 +45759,6 @@
    ],
    "taille_max": "Embarcations de 2,4 m à 16 m (gamme Rafale jusqu'à 16 m) ; pas de notion de jauge GT pertinente (semi-rigides et pneumatiques). Production 150 à 200 unités/an.",
    "navires_references": [
-    {
-     "nom": "PRORAID (renouvellement contrat-cadre Marine nationale)",
-     "type": "modele-contrat",
-     "annee": "2025",
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Marché de 7 ans, plus de 60 embarcations de 6-7 m, valeur > 15 M€ ; fourniture exclusive de semi-rigides dans cette catégorie de taille",
-     "energie": "Moteurs hors-bord",
-     "client": "Marine nationale (Service de soutien de la flotte)",
-     "classification": null,
-     "source": "https://sillinger.fr/actualites/la-marine-nationale-renouvelle-sa-confiance-envers-sillinger",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "caractere": "public",
-     "propriete": "publique",
-     "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
-    },
     {
      "nom": "1200 RAFALE (Gendarmerie nationale Antilles)",
      "type": "modele-contrat",
@@ -45731,26 +45816,6 @@
      ]
     },
     {
-     "nom": "650 PRORAID / EFR (Gendarmerie maritime)",
-     "type": "modele-contrat",
-     "annee": "2020",
-     "longueur_m": 6.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Plus de 25 embarcations a fond rigide (EFR) de 6,5 m livrees depuis 2015 ; equipent 9 pelotons de surete maritime et portuaire (PSMP : Marseille-Fos, Le Havre, Dunkerque, Nantes Saint-Nazaire, Calais) et les bases navales de Toulon, Brest, Cherbourg",
-     "energie": "Moteurs hors-bord",
-     "client": "Gendarmerie maritime (pelotons de surete maritime et portuaire)",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/defense/plus-de-25-semi-rigides-sillinger-650-livres-a-la-gendarmerie-maritime",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "caractere": "public",
-     "propriete": "publique",
-     "exploitation": "regalien",
-     "caractere_motif": "propriete: gendarmerie ; exploitation: gendarmerie"
-    },
-    {
      "nom": "1200 RAFALE (Douane, Antilles)",
      "type": "modele-contrat",
      "annee": "2017",
@@ -45769,25 +45834,6 @@
      "propriete": "publique",
      "exploitation": "regalien",
      "caractere_motif": "propriete: douane ; exploitation: douane"
-    },
-    {
-     "nom": "1200 RIB UM (export Libye, 50 embarcations)",
-     "type": "modele-contrat",
-     "annee": "2013",
-     "longueur_m": 11.6,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Contrat de 50 semi-rigides militaires de 3,8 à 12 m dont 13 du type 1200 RIB UM ; coque en V profond à redan, étrave droite, missions de surveillance/intervention au large et opérations commando",
-     "energie": "Moteurs hors-bord",
-     "client": "Marine et garde-côtes libyens (export)",
-     "classification": null,
-     "source": "https://www.meretmarine.com/fr/content/sillinger-vend-50-embarcations-rapides-la-libye",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "caractere": "public",
-     "exploitation": "regalien",
-     "caractere_motif": "exploitation: garde-cote"
     }
    ],
    "geo_source": "https://api-adresse.data.gouv.fr/search/?q=14+rue+de+buray+Mer&postcode=41500",
@@ -48544,7 +48590,8 @@
      ],
      "caractere": "public",
      "exploitation": "regalien",
-     "caractere_motif": "exploitation: garde-cote"
+     "caractere_motif": "exploitation: garde-cote",
+     "modele": "Boracay"
     },
     {
      "nom": "BRP Panglao",
@@ -48574,7 +48621,8 @@
      ],
      "caractere": "public",
      "exploitation": "regalien",
-     "caractere_motif": "exploitation: garde-cote"
+     "caractere_motif": "exploitation: garde-cote",
+     "modele": "Boracay"
     },
     {
      "nom": "NNS Gongola (P189)",
@@ -49748,7 +49796,8 @@
      ],
      "caractere": "delegue",
      "exploitation": "service-public",
-     "caractere_motif": "exploitation: rtm"
+     "caractere_motif": "exploitation: rtm",
+     "modele": "ECO 50 PB"
     },
     {
      "nom": "Abdullah",
@@ -49764,7 +49813,8 @@
      "source": "https://www.meretmarine.com/fr/construction-navale/ocea-a-construit-une-pilotine-pour-le-guyana",
      "propulsion": [
       "diesel-mdo"
-     ]
+     ],
+     "modele": "ECO 50 PB"
     },
     {
      "nom": "Petro Craft (Combi 60-40, 11e et 12e unités de la série Petro Services)",
@@ -49785,7 +49835,8 @@
      "capacite_fret": "5 t",
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: offshore"
+     "caractere_motif": "exploitation: offshore",
+     "modele": "Petro Services"
     },
     {
      "nom": "Petro Craft 1909 et 1910 (Combi 60-40, 9e et 10e unités) - mis à l'eau le 28 oct. 2020 au site OCEA de La Rochelle",
@@ -49823,7 +49874,8 @@
      "capacite_pax": 30,
      "capacite_fret": "5 t",
      "architecte": "OCEA",
-     "architecte_source": "Mer et Marine : série Combi 60 « entièrement conçue et construite par OCEA » (conception interne du chantier, pas de cabinet externe) — https://www.meretmarine.com/fr/construction-navale/ocea-livre-deux-nouveaux-crew-boats-a-petro-services"
+     "architecte_source": "Mer et Marine : série Combi 60 « entièrement conçue et construite par OCEA » (conception interne du chantier, pas de cabinet externe) — https://www.meretmarine.com/fr/construction-navale/ocea-livre-deux-nouveaux-crew-boats-a-petro-services",
+     "modele": "Petro Services"
     },
     {
      "nom": "Palétuvier",
@@ -49839,7 +49891,8 @@
      "source": "https://www.meretmarine.com/fr/construction-navale/ocea-acheve-deux-nouvelles-pilotines-pour-le-guyana",
      "propulsion": [
       "diesel-mdo"
-     ]
+     ],
+     "modele": "ECO 50 PB"
     }
    ],
    "sources_ref": [
@@ -50264,7 +50317,8 @@
      "tracabilite": "url-regroupement",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: armement"
+     "caractere_motif": "propriete: armement",
+     "modele": "Deux Freres"
     },
     {
      "nom": "Deux Freres VII",
@@ -50422,7 +50476,8 @@
      "architecte_source": "Martinez Constructions Navales (martinez-constructions-navales.fr) et mag.hookandnet.com : les plans de la serie de catamarans de peche Deux Freres (programme Avallone, 4 unites 2019-2021) ont ete etablis par le cabinet Mauric, qui a realise les simulations CFD du foil.",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: armement"
+     "caractere_motif": "propriete: armement",
+     "modele": "Deux Freres"
     },
     {
      "nom": "Chrisderic V",
@@ -54144,7 +54199,8 @@
      ],
      "caractere": "public",
      "exploitation": "regalien",
-     "caractere_motif": "exploitation: garde-cote"
+     "caractere_motif": "exploitation: garde-cote",
+     "modele": "Boracay"
     },
     {
      "nom": "Dervenn",
@@ -54463,7 +54519,8 @@
      "capacite_pax": 3,
      "caractere": "public",
      "exploitation": "regalien",
-     "caractere_motif": "exploitation: lamanage"
+     "caractere_motif": "exploitation: lamanage",
+     "modele": "EMB 26"
     },
     {
      "nom": "Alibori (P109)",
@@ -55891,7 +55948,8 @@
      "source_ref": "lien mort constate le 2026-08-03 : https://www.navyrecognition.com/index.php/naval-news/naval-news-archive/2020/october/9205-french-navy-receives-luciole-last-of-8-multi-mission-hybrid-diesel-electric-propulsion-barges.html",
      "largeur_m": 8,
      "operateur": "Marine nationale",
-     "pavillon": "France"
+     "pavillon": "France",
+     "modele": "Cigale"
     },
     {
      "nom": "Criquet (Y623), Grillon (Y624), Fourmi (Y625), Scarabee (Y626), Araignee (Y627)",
@@ -55915,7 +55973,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "modele": "Cigale"
     },
     {
      "nom": "Speed of Hope",
@@ -56019,7 +56078,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale"
+     "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
+     "modele": "Cigale"
     },
     {
      "nom": "DriX H-8",
@@ -57683,7 +57743,8 @@
      "propulsion": [
       "electrique-batterie",
       "diesel-mdo"
-     ]
+     ],
+     "modele": "Windelo 54 Yachting"
     },
     {
      "nom": "Hakuna Matata",
@@ -64281,6 +64342,15 @@
     {
      "type": "Botham (via Bo Yachting / chantiers Bonnin-Bossuet)",
      "details": "Realisation conjointe des chantiers Bonnin et Bossuet ; pas de specifications confirmees."
+    },
+    {
+     "nom": "Bo 28",
+     "type": "Inconnu",
+     "annee_lancement": "2011",
+     "longueur_m": 8.5,
+     "largeur_m": null,
+     "source": "https://www.boyachting.fr/la-gamme",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
     }
    ],
    "personnes": [
@@ -64385,25 +64455,6 @@
      "propriete": "privee",
      "caractere_motif": "propriete: prive",
      "tracabilite": "url-non-verifiee"
-    },
-    {
-     "nom": "Bo 28",
-     "type": "Inconnu",
-     "annee": "2011",
-     "longueur_m": 8.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Voilier deriveur integral ; longueur flottaison 7,10 m ; bau 2,60 m ; te 0,35/1,80 m ; menable en solitaire ou equipage reduit, regate de bateaux traditionnels",
-     "energie": "voile",
-     "client": "Bo Yachting (premier modele de la coentreprise Bonnin-Bossuet)",
-     "classification": "Construction bois moderne, esthetique belle plaisance",
-     "source": "https://www.boyachting.fr/la-gamme",
-     "propulsion": [
-      "autre"
-     ],
-     "caractere": "prive",
-     "exploitation": "commerciale",
-     "caractere_motif": "exploitation: yacht"
     },
     {
      "nom": "La Legeote",
@@ -64578,6 +64629,15 @@
     {
      "type": "Aménagement intérieur",
      "details": "Aménagements intérieurs sur mesure et optimisation des espaces à bord. Source: site officiel."
+    },
+    {
+     "nom": "Modèle 'Pinasse' (Constructions Lacaze) - pas un navire individuel",
+     "type": "Pinasse de transport de passagers (modèle de série)",
+     "annee_lancement": null,
+     "longueur_m": 11.18,
+     "largeur_m": null,
+     "source": "https://www.constructions-lacaze.fr/",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
     }
    ],
    "materiaux": [
@@ -64586,41 +64646,6 @@
     "aluminium"
    ],
    "navires_references": [
-    {
-     "nom": "Modèle 'Pinasse' (Constructions Lacaze) - pas un navire individuel",
-     "type": "Pinasse de transport de passagers (modèle de série)",
-     "annee": null,
-     "longueur_m": 11.18,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "12 à 16 passagers",
-     "energie": "Moteur in-bord essence/diesel, max 100 CV",
-     "client": "Constructions navales Lacaze (Andernos-les-Bains), constructeur",
-     "classification": "Catégorie de navigation C et D - NUC (navire à utilisation commerciale)",
-     "source": "https://www.constructions-lacaze.fr/",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 16,
-     "timeline": [
-      {
-       "annee": "n/a",
-       "role": "construction",
-       "nom": "Lacaze, constructions navales (Andernos-les-Bains / Arès)",
-       "detail": "Il ne s'agit pas d'un navire individuel mais d'un modèle de série : pinasse de transport de passagers, coque polyester 11,18 m x 3,08 m, tirant d'eau 0,67 m, jusqu'à 12 passagers, personnalisable. Exemple connu : Pinasse Ohana construite en 2023 à Arès. Aucun exploitant ou propriétaire unique attribuable à ce modèle générique sans inventer.",
-       "source": "https://www.constructions-lacaze.fr/transport-passagers/pinasse/"
-      }
-     ],
-     "tracabilite": "url-domaine-seul",
-     "verification": {
-      "statut": "douteux",
-      "confiance": "simple",
-      "motif": "constructeur non identifie en revue (phase3-revue-v3b) : l'attribution actuelle n'est pas etablie. ENTREE A RETIRER. Double défaut. ANGLE 4 d'abord : la « pinasse du bassin d'Arcachon » est un TYPE de bateau attesté comme tel, pas un navire individuel ; l'intitulé de l'entrée le reconnaît lui-même (« pas un navire individuel »), sans année, sans IMO, sans dimension. ANGLE 2 ensuite : l'entrée est rattachée au Chantier Naval Bassin d'Arcachon alo",
-      "source": "https://fr.wikipedia.org/wiki/Pinasse",
-      "le": "2026-08-05",
-      "chantier_reel": "Constructions Lacaze (nommé dans l'intitulé même de l'entrée), et plus largement les chantiers traditionnels du Bassin (Dubourdieu, Bossuet, Raba)"
-     }
-    },
     {
      "nom": "Luzen II",
      "type": "Canot de plaisance sur mesure",
@@ -66558,6 +66583,69 @@
     {
      "type": "Vedette à moteur",
      "details": "Première vedette à moteur construite en 1994"
+    },
+    {
+     "nom": "Lagoon 620",
+     "type": "Catamaran a voile de croisiere (vaisseau amiral)",
+     "annee_lancement": "2010",
+     "longueur_m": 18.9,
+     "largeur_m": null,
+     "source": "https://www.actunautique.com/2016/03/le-chantier-bordelais-cnb-lagoon-fete-son-100e-lagoon-620.html",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
+    },
+    {
+     "nom": "CNB 76",
+     "type": "Voilier monocoque de luxe (semi-custom)",
+     "annee_lancement": "2013",
+     "longueur_m": 23.17,
+     "largeur_m": null,
+     "source": "https://www.charterworld.com/news/majestic-cnb-76-sailing-yacht-leo-to-be-displayed-at-cannes-yachting-festival-2015",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
+    },
+    {
+     "nom": "CNB 66",
+     "type": "Voilier monocoque de luxe (semi-custom)",
+     "annee_lancement": "2017",
+     "longueur_m": 20.61,
+     "largeur_m": null,
+     "source": "https://www.actunautique.com/2017/06/premiere-mise-a-l-eau-du-cnb-66-a-bordeaux.html",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
+    },
+    {
+     "nom": "Excess 15",
+     "type": "Catamaran a voile sportif (croisiere rapide)",
+     "annee_lancement": "2019",
+     "longueur_m": 14.76,
+     "largeur_m": null,
+     "source": "https://www.excess-catamarans.com/our-catamarans/excess-15",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
+    },
+    {
+     "nom": "Lagoon 51",
+     "type": "Catamaran a voile de croisiere",
+     "annee_lancement": "2021",
+     "longueur_m": 15.35,
+     "largeur_m": null,
+     "source": "https://tmgyachts.com/lagoon-shipyard-bordeaux/",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
+    },
+    {
+     "nom": "Lagoon 55",
+     "type": "Catamaran a voile de croisiere",
+     "annee_lancement": "2021",
+     "longueur_m": 18.38,
+     "largeur_m": null,
+     "source": "https://www.multihulls-world.com/technical-specifications/lagoon-catamarans/lagoon-55-2021",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
+    },
+    {
+     "nom": "Lagoon 60",
+     "type": "Catamaran a voile de croisiere",
+     "annee_lancement": "2024",
+     "longueur_m": 18.27,
+     "largeur_m": null,
+     "source": "https://tmgyachts.com/lagoon-shipyard-bordeaux/",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
     }
    ],
    "personnes": [
@@ -66588,31 +66676,6 @@
    "taille_max": "Environ 29 m (catamarans/motor cats Lagoon SEVENTY 7 et SEVENTY 8 jusqu'a 23,80 m en composite ; superyachts CNB monocoques en aluminium jusqu'a 29 m, ex. Grand Bleu Vintage)",
    "navires_references": [
     {
-     "nom": "Lagoon 60",
-     "type": "Catamaran a voile de croisiere",
-     "annee": "2024",
-     "longueur_m": 18.27,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "8 a 14 couchages ; deplacement ~32 t ; categorie CE A:14",
-     "energie": "Diesel, 2 x 150 ch, gazole 1300 L",
-     "client": "Architecture VPLP Design, design exterieur Patrick le Quement, interieur Nauta Design ; construit a Bordeaux",
-     "classification": null,
-     "source": "https://tmgyachts.com/lagoon-shipyard-bordeaux/",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "timeline": [
-      {
-       "annee": "2024",
-       "role": "construction",
-       "nom": "Construction Navale Bordeaux (CNB), Groupe Bénéteau",
-       "detail": "Modèle de série, pas un navire unique. Catamaran de croisière 18,27 m, architecture navale VPLP Design, design extérieur Patrick le Quément, intérieur Nauta Design. Construit sur le site CNB de Bordeaux (grands multicoques Lagoon/Excess). Premiere mondiale privee aux Exclusive Days de Bordeaux 7-9 mars 2024, puis salon International Multihull Show de La Grande Motte 3-7 avril 2024. 3e plus grand catamaran a voile de la marque derriere le Sixty 5 et le Seventy 7.",
-       "source": "https://www.yachtingworld.com/yachts-and-gear/lagoon-60-first-look-new-catamaran-with-several-innovations-151115"
-      }
-     ]
-    },
-    {
      "nom": "Lagoon SEVENTY 8 (Lagoon 78)",
      "type": "Catamaran a moteur (power catamaran) de luxe",
      "annee": "2017",
@@ -66630,56 +66693,6 @@
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: groupe"
-    },
-    {
-     "nom": "Lagoon 55",
-     "type": "Catamaran a voile de croisiere",
-     "annee": "2021",
-     "longueur_m": 18.38,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Deplacement lege 29,2 t ; categorie CE A:14/B:14/C:20/D:30",
-     "energie": "Diesel, 2 x 110 ch sur sail-drive, gazole 1100 L",
-     "client": "Architecture VPLP Design, ext. Patrick le Quement, interieur Nauta Design ; premiere coque mise a l'eau en 2021 ; construit a Bordeaux",
-     "classification": null,
-     "source": "https://www.multihulls-world.com/technical-specifications/lagoon-catamarans/lagoon-55-2021",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "timeline": [
-      {
-       "annee": "2021",
-       "role": "construction",
-       "nom": "Construction Navale Bordeaux (CNB), Groupe Bénéteau",
-       "detail": "Modèle de série, pas un navire unique. Catamaran de croisière 18,38 m, architecture VPLP Design, extérieur Patrick le Quément, intérieur Nauta Design. Lance en 2021, premieres images devoilees en mars 2021. Construit au chantier Lagoon (Groupe Beneteau).",
-       "source": "https://en.wikipedia.org/wiki/Lagoon_55"
-      }
-     ]
-    },
-    {
-     "nom": "Lagoon 51",
-     "type": "Catamaran a voile de croisiere",
-     "annee": "2021",
-     "longueur_m": 15.35,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "4 a 6 cabines, jusqu'a 12 couchages, 3 a 4 salles d'eau ; deplacement 19,9 t",
-     "energie": "Diesel, 2 x 80 ch, gazole 1040 L",
-     "client": "Architecture VPLP Design ; construit au chantier CNB-Lagoon de Bordeaux (modeles 50 pieds et plus)",
-     "classification": null,
-     "source": "https://tmgyachts.com/lagoon-shipyard-bordeaux/",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "timeline": [
-      {
-       "annee": "2021",
-       "role": "construction",
-       "nom": "Construction Navale Bordeaux (CNB), Groupe Bénéteau",
-       "detail": "Modèle de série, pas un navire unique. Catamaran de croisière 15,35 m, architecture VPLP Design. Annee de design 2021 (Wikipedia), premiere mise a l'eau effective 2022. Marque Lagoon, Groupe Beneteau.",
-       "source": "https://en.wikipedia.org/wiki/Lagoon_51"
-      }
-     ]
     },
     {
      "nom": "Lagoon SIXTY 5 (Lagoon 65)",
@@ -66724,46 +66737,6 @@
      "capacite_pax": 16
     },
     {
-     "nom": "Excess 15",
-     "type": "Catamaran a voile sportif (croisiere rapide)",
-     "annee": "2019",
-     "longueur_m": 14.76,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "3 a 6 cabines ; LOA ~48 pieds 5 ; version sportive du Lagoon 50",
-     "energie": "Diesel (motorisation jumelle sur sail-drive)",
-     "client": "Marque Excess (Groupe Beneteau), architecte VPLP Design ; produit sur le site CNB de Bordeaux depuis 2019",
-     "classification": null,
-     "source": "https://www.excess-catamarans.com/our-catamarans/excess-15",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "timeline": [
-      {
-       "annee": "2019",
-       "role": "construction",
-       "nom": "Groupe Bénéteau (marque Excess)",
-       "detail": "Modèle de série, pas un navire unique. Catamaran a voile sportif 14,76 m, marque Excess lancee par le Groupe Beneteau. Devoile au Cannes Yachting Festival 2019. Partage le chassis du Lagoon 50, produit par la division catamarans du groupe (CNB Bordeaux).",
-       "source": "https://www.yachtingart.com/2019/09/excess-15-first-photos-of-the-new-catamaran-of-the-beneteau-group.html"
-      },
-      {
-       "annee": "2020",
-       "role": "construction",
-       "nom": "Excess 15",
-       "detail": "Prix de base neuf du modele de serie Excess 15 (marque Excess / groupe Beneteau, construit par Construction Navale Bordeaux) : 625 000 EUR HT. Version Pulse fortement optionnee : 925 000 EUR.",
-       "prix": "625 000 € HT (base) ; jusqu'a ≈ 925 000 € optionnee",
-       "source": "https://www.bateaux.com/article/34777/tarification-et-alternatives-face-a-l-excess-15-un-prix-de-base-pour-naviguer"
-      }
-     ],
-     "prix_acquisition": "625 000 € HT (prix de base neuf, modele de serie, 2019-2020)",
-     "architecte": "VPLP Design",
-     "architecte_source": "https://vplp.fr/en/cruising/excess15",
-     "caractere": "prive",
-     "propriete": "privee",
-     "caractere_motif": "propriete: groupe",
-     "source_ref": "https://vplp.fr/en/cruising/excess15 — + excess-catamarans.com : « The Excess 15 has been designed by VPLP design » ; extérieur Patrick le Quément, intérieur Nauta Design"
-    },
-    {
      "nom": "Lagoon SEVENTY 7 (Lagoon 77)",
      "type": "Catamaran a voile de croisiere (vaisseau amiral voile)",
      "annee": "2017",
@@ -66785,69 +66758,6 @@
        "nom": "Construction Navale Bordeaux (CNB), Groupe Bénéteau",
        "detail": "Modèle de série, pas un navire unique. Plus grand catamaran construit par Lagoon, 23,25 m, vaisseau amiral. Architecture VPLP Design (Marc Van Peteghem / Vincent Lauriot-Prevost), extérieur Patrick le Quément, intérieur Nauta Design. Construit par CNB (division Groupe Beneteau) et lance a Bordeaux. Multiples prix 2017 (Asia Boating Awards, Adriatic Boat of the Year).",
        "source": "https://en.wikipedia.org/wiki/Lagoon_77"
-      }
-     ]
-    },
-    {
-     "nom": "CNB 66",
-     "type": "Voilier monocoque de luxe (semi-custom)",
-     "annee": "2017",
-     "longueur_m": 20.61,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "3 cabines, jusqu'a 6 invites ; deplacement ~31,1 t ; ~23 unites livrees",
-     "energie": "Diesel Volvo D4-180 (180 ch), gazole 1300 L",
-     "client": "Architecte Philippe Briand ; premiere coque mise a l'eau a Bordeaux le 30 mai 2017",
-     "classification": null,
-     "source": "https://www.actunautique.com/2017/06/premiere-mise-a-l-eau-du-cnb-66-a-bordeaux.html",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 6,
-     "architecte": "Philippe Briand",
-     "architecte_source": "philippebriand.com et cnbyachts.com : architecture navale Philippe Briand (aménagement intérieur Jean-Marc Piaton / Rafaël Bonet). Studios Briand La Rochelle (FR) et Londres (UK)."
-    },
-    {
-     "nom": "CNB 76",
-     "type": "Voilier monocoque de luxe (semi-custom)",
-     "annee": "2013",
-     "longueur_m": 23.17,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "4 cabines, jusqu'a 6 invites ; premiere unite LEO ; 32 unites construites",
-     "energie": "Diesel (composite infuse ; groupe electrogene, clim, dessalinisateur, propulseur d'etrave)",
-     "client": "Architecte Philippe Briand ; premiere unite LEO lancee 2013 ; construit par CNB a Bordeaux",
-     "classification": null,
-     "source": "https://www.charterworld.com/news/majestic-cnb-76-sailing-yacht-leo-to-be-displayed-at-cannes-yachting-festival-2015",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "capacite_pax": 6,
-     "architecte": "Philippe Briand",
-     "architecte_source": "philippebriand.com et cnbyachts.com : architecte naval Philippe Briand (intérieur Piaton/Bonet)."
-    },
-    {
-     "nom": "Lagoon 620",
-     "type": "Catamaran a voile de croisiere (vaisseau amiral)",
-     "annee": "2010",
-     "longueur_m": 18.9,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "3 a 5 cabines doubles ; vaisseau amiral voile de la gamme ; 100e unite sortie de Bordeaux en fevrier 2016",
-     "energie": "Diesel (motorisation jumelle)",
-     "client": "Architecte VPLP Design (Marc Van Peteghem / Vincent Lauriot-Prevost) ; lance en 2009-2010, construit au chantier CNB-Lagoon de Bordeaux (succes commercial majeur)",
-     "classification": null,
-     "source": "https://www.actunautique.com/2016/03/le-chantier-bordelais-cnb-lagoon-fete-son-100e-lagoon-620.html",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "timeline": [
-      {
-       "annee": "2009",
-       "role": "construction",
-       "nom": "Construction Navale Bordeaux (CNB), Groupe Bénéteau",
-       "detail": "Modèle de série, pas un navire unique. Catamaran de croisière 18,9 m, vaisseau amiral a son lancement (plus grand catamaran de serie Lagoon de l'epoque). Architecture VPLP Design. Developpe en 2009, produit de 2009 a 2019, presente au Salon de Cannes. Construit au chantier CNB, division du Groupe Beneteau.",
-       "source": "https://en.wikipedia.org/wiki/Lagoon_620"
       }
      ]
     },
@@ -67284,7 +67194,8 @@
      ],
      "caractere": "public",
      "propriete": "publique",
-     "caractere_motif": "propriete: ville de"
+     "caractere_motif": "propriete: ville de",
+     "modele": "Iris 1817"
     },
     {
      "nom": "La Belle Angèle",
@@ -71950,7 +71861,8 @@
      "source": "https://fr.wikipedia.org/wiki/Joshua_(ketch)",
      "propulsion": [
       "diesel-mdo"
-     ]
+     ],
+     "modele": "META"
     },
     {
      "nom": "JN 56 Long Range",
@@ -74029,6 +73941,15 @@
     {
      "type": "Prototypes à hydrofoils (power foils)",
      "details": "Technologie de foils pour faible tirant d'eau et efficacité énergétique. Source : en.catamarine.net, neocean.nc."
+    },
+    {
+     "nom": "KAORA 850",
+     "type": "produit",
+     "annee_lancement": null,
+     "longueur_m": 8.5,
+     "largeur_m": null,
+     "source": "https://en.catamarine.net/kaora-850",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
     }
    ],
    "personnes": [
@@ -74169,22 +74090,6 @@
       "le": "2026-08-05",
       "confiance": "simple"
      }
-    },
-    {
-     "nom": "KAORA 850",
-     "type": "produit",
-     "annee": null,
-     "longueur_m": 8.5,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "3 cabines doubles, 6 couchages, 12 personnes à bord",
-     "energie": "2 hors-bord essence 115 CV (croisière 20 nœuds, ~15 L/h par moteur) ; pas de version électrique documentée",
-     "client": "Thomas Seivert (associé/cogérant Catamarine), propriétaire d'un exemplaire",
-     "classification": null,
-     "source": "https://en.catamarine.net/kaora-850",
-     "propulsion": [
-      "diesel-mdo"
-     ]
     },
     {
      "nom": "KAORA 1000",
@@ -83453,7 +83358,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat norvegien ; exploitation: marine royale"
+     "caractere_motif": "propriete: etat norvegien ; exploitation: marine royale",
+     "modele": "Jan Mayen"
     },
     {
      "nom": "KV Bjørnøya (W311)",
@@ -83511,7 +83417,8 @@
       "motif": "verdict sans source consultable",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Jan Mayen"
     },
     {
      "nom": "KV Hopen (W312)",
@@ -83571,7 +83478,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat norvegien ; exploitation: marine royale"
+     "caractere_motif": "propriete: etat norvegien ; exploitation: marine royale",
+     "modele": "Jan Mayen"
     },
     {
      "nom": "Polonia",
@@ -94424,7 +94332,8 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: a/s ; exploitation: supply"
+     "caractere_motif": "propriete: a/s ; exploitation: supply",
+     "modele": "Starfish"
     },
     {
      "nom": "Maersk Master",
@@ -96328,7 +96237,8 @@
       "motif": "verdict sans source consultable",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Stokkvågen"
     },
     {
      "nom": "Ferry Norled n°156 (sister-ship Stokkvågen)",
@@ -96464,7 +96374,8 @@
       }
      ],
      "architecte": "Havyard Design",
-     "architecte_source": "shipandoffshore.net ; havyard.com - la serie Havtrans est une serie de design de Hav Design (design Havyard 587) ; bureau distinct du chantier constructeur (Havyard Leirvik / Tersan Havyard)"
+     "architecte_source": "shipandoffshore.net ; havyard.com - la serie Havtrans est une serie de design de Hav Design (design Havyard 587) ; bureau distinct du chantier constructeur (Havyard Leirvik / Tersan Havyard)",
+     "modele": "Havtrans"
     },
     {
      "nom": "Norled n°154 (classe Stokkvågen)",
@@ -96513,7 +96424,8 @@
       "motif": "verdict sans source consultable",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Stokkvågen"
     },
     {
      "nom": "Norled n°155 (classe Stokkvågen)",
@@ -96562,7 +96474,8 @@
       "motif": "verdict sans source consultable",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Stokkvågen"
     },
     {
      "nom": "Raften",
@@ -110703,7 +110616,8 @@
      "exploitation": "commerciale",
      "caractere_motif": "propriete: as ; exploitation: offshore",
      "tracabilite": "url-non-verifiee",
-     "source_ref": "https://skipsteknisk.no/projects/offshore/psv/st-216-arctic-north-cruys — - design ST-216 Arctic"
+     "source_ref": "https://skipsteknisk.no/projects/offshore/psv/st-216-arctic-north-cruys — - design ST-216 Arctic",
+     "modele": "Arctique"
     },
     {
      "nom": "North Barents",
@@ -110749,7 +110663,8 @@
      "caractere": "prive",
      "propriete": "privee",
      "exploitation": "commerciale",
-     "caractere_motif": "propriete: as ; exploitation: offshore"
+     "caractere_motif": "propriete: as ; exploitation: offshore",
+     "modele": "Arctique"
     },
     {
      "nom": "Zeus of Finland",
@@ -116283,7 +116198,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "modele": "Skjold"
     },
     {
      "nom": "KNM Oksøy (M340)",
@@ -116325,7 +116241,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "modele": "Oks"
     },
     {
      "nom": "KNM Alta (M350)",
@@ -116397,7 +116314,8 @@
       "annee": "2022",
       "source": "https://en.wikipedia.org/wiki/Alta-class_minesweeper",
       "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
-     }
+     },
+     "modele": "Alta"
     },
     {
      "nom": "MHO Falcon",
@@ -116552,7 +116470,8 @@
      ],
      "caractere": "prive",
      "exploitation": "commerciale",
-     "caractere_motif": "exploitation: fret"
+     "caractere_motif": "exploitation: fret",
+     "modele": "WAVECRAFT"
     },
     {
      "nom": "KNM Skudd (P962)",
@@ -118960,7 +118879,8 @@
      ],
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "modele": "Bjarkøy"
     },
     {
      "nom": "Don Ole",
@@ -130043,7 +129963,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "modele": "Oslo"
     },
     {
      "nom": "HNoMS Narvik (F304)",
@@ -130085,7 +130006,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "modele": "Oslo"
     },
     {
      "nom": "HNoMS Stavanger (F303)",
@@ -130129,7 +130051,8 @@
      "exploitation": "regalien",
      "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
      "pavillon": "Norvege",
-     "source_ref": "liste de construction Marinens Hovedverft/Horten Verft) ; en.wikipedia.org/wiki/Oslo-class_frigate ; re-rattache le 2026-08-05 : attribue a tort a « Kongsberg Defence & Aerospace / Kongsberg Maritime (Horten) », construit par « Marinens Hovedverft / Horten Verft (Karljohansvern) » — les cinq frégates de la classe Oslo ont été construites au Marinens Hovedverft de Horten (https://en.wikipedia.org/wiki/Oslo-class_frigate)"
+     "source_ref": "liste de construction Marinens Hovedverft/Horten Verft) ; en.wikipedia.org/wiki/Oslo-class_frigate ; re-rattache le 2026-08-05 : attribue a tort a « Kongsberg Defence & Aerospace / Kongsberg Maritime (Horten) », construit par « Marinens Hovedverft / Horten Verft (Karljohansvern) » — les cinq frégates de la classe Oslo ont été construites au Marinens Hovedverft de Horten (https://en.wikipedia.org/wiki/Oslo-class_frigate)",
+     "modele": "Oslo"
     },
     {
      "nom": "Herøya",
@@ -132693,7 +132616,8 @@
       "le": "2026-08-05",
       "confiance": "simple"
      },
-     "source_ref": "re-rattache le 2026-08-05 : attribue a tort a « Kongsberg Defence & Aerospace / Kongsberg Maritime (Horten) », construit par « Marinens Hovedverft / Horten Verft (Karljohansvern) » — Les frégates de classe Oslo ont été construites au Navy Main Yard de Horten (Marinens Hovedverft, base de Karljohansvern), entre 1964 et 1966. Ce chan (https://en.wikipedia.org/wiki/Oslo-class_frigate)"
+     "source_ref": "re-rattache le 2026-08-05 : attribue a tort a « Kongsberg Defence & Aerospace / Kongsberg Maritime (Horten) », construit par « Marinens Hovedverft / Horten Verft (Karljohansvern) » — Les frégates de classe Oslo ont été construites au Navy Main Yard de Horten (Marinens Hovedverft, base de Karljohansvern), entre 1964 et 1966. Ce chan (https://en.wikipedia.org/wiki/Oslo-class_frigate)",
+     "modele": "Oslo"
     },
     {
      "nom": "HNoMS Narvik (F304) - classe Oslo",
@@ -132763,7 +132687,8 @@
       "annee": null,
       "source": "https://en.wikipedia.org/wiki/HNoMS_Narvik_(F304)",
       "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
-     }
+     },
+     "modele": "Oslo"
     },
     {
      "nom": "Sous-marins classe B (licence)",
@@ -143179,7 +143104,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: royal navy ; exploitation: royal navy"
+     "caractere_motif": "propriete: royal navy ; exploitation: royal navy",
+     "modele": "26 / City class"
     },
     {
      "nom": "HMS Cardiff",
@@ -143222,7 +143148,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: royal navy ; exploitation: royal navy"
+     "caractere_motif": "propriete: royal navy ; exploitation: royal navy",
+     "modele": "26 / City class"
     },
     {
      "nom": "HMS Belfast",
@@ -143258,7 +143185,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: royal navy ; exploitation: royal navy"
+     "caractere_motif": "propriete: royal navy ; exploitation: royal navy",
+     "modele": "26 / City class"
     },
     {
      "nom": "HMS Birmingham",
@@ -143294,7 +143222,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: royal navy ; exploitation: royal navy"
+     "caractere_motif": "propriete: royal navy ; exploitation: royal navy",
+     "modele": "26 / City class"
     },
     {
      "nom": "HMS Sheffield",
@@ -143330,7 +143259,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: royal navy ; exploitation: royal navy"
+     "caractere_motif": "propriete: royal navy ; exploitation: royal navy",
+     "modele": "26 / City class"
     },
     {
      "nom": "Type 26 (export Norvège) - 5 frégates",
@@ -143373,7 +143303,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat norvegien ; exploitation: navy"
+     "caractere_motif": "propriete: etat norvegien ; exploitation: navy",
+     "modele": "26"
     },
     {
      "nom": "HMS Spey",
@@ -147388,7 +147319,8 @@
      ],
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ltd"
+     "caractere_motif": "propriete: ltd",
+     "modele": "~7"
     },
     {
      "nom": "Spanish John II",
@@ -151313,7 +151245,8 @@
       "source": "https://en.wikipedia.org/wiki/Type_31_frigate",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Inspiration"
     },
     {
      "nom": "HMS Active",
@@ -151361,7 +151294,8 @@
       "source": "https://en.wikipedia.org/wiki/Type_31_frigate",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Inspiration"
     },
     {
      "nom": "HMS Campbeltown",
@@ -151403,7 +151337,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: royal navy ; exploitation: royal navy"
+     "caractere_motif": "propriete: royal navy ; exploitation: royal navy",
+     "modele": "Inspiration"
     },
     {
      "nom": "HMS Queen Elizabeth (R08)",
@@ -151460,7 +151395,8 @@
       "source": "https://en.wikipedia.org/wiki/HMS_Queen_Elizabeth_(R08)",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Queen Elizabeth"
     },
     {
      "nom": "HMS Prince of Wales",
@@ -153013,7 +152949,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale"
+     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale",
+     "modele": "Blekinge"
     },
     {
      "nom": "HSwMS Skåne",
@@ -153055,7 +152992,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale"
+     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale",
+     "modele": "Blekinge"
     },
     {
      "nom": "HSwMS Visby (K31)",
@@ -153103,7 +153041,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale"
+     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale",
+     "modele": "Visby"
     },
     {
      "nom": "HSwMS Helsingborg (K32)",
@@ -153144,7 +153083,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale"
+     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale",
+     "modele": "Visby"
     },
     {
      "nom": "HSwMS Härnösand (K33)",
@@ -153191,7 +153131,8 @@
       "source": "https://en.wikipedia.org/wiki/Visby-class_corvette",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Visby"
     },
     {
      "nom": "HSwMS Nyköping (K34)",
@@ -153232,7 +153173,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale"
+     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale",
+     "modele": "Visby"
     },
     {
      "nom": "HSwMS Karlstad (K35)",
@@ -153280,7 +153222,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale"
+     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale",
+     "modele": "Visby"
     },
     {
      "nom": "HSwMS Landsort (M71)",
@@ -153322,7 +153265,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "modele": "Landsort"
     },
     {
      "nom": "HSwMS Koster (M73)",
@@ -153371,7 +153315,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale"
+     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale",
+     "modele": "Landsort"
     },
     {
      "nom": "HSwMS Stockholm (P11)",
@@ -154182,7 +154127,8 @@
       "source": "https://en.wikipedia.org/wiki/Norrk%C3%B6ping-class_missile_boat",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Norrk"
     },
     {
      "nom": "HSwMS Norrtälje (T133)",
@@ -154454,7 +154400,8 @@
       "source": "https://en.wikipedia.org/wiki/Norrk%C3%B6ping-class_missile_boat",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Norrk"
     },
     {
      "nom": "HSwMS Halmstad (T140)",
@@ -154874,7 +154821,8 @@
       "confiance": "simple"
      },
      "source_ref": "source complementaire (2026-08-05) : https://en.wikipedia.org/wiki/HSwMS_Gotland_(Gtd) ; source complementaire (2026-08-05) : https://en.wikipedia.org/wiki/Gotland-class_submarine",
-     "pavillon": "Suède"
+     "pavillon": "Suède",
+     "modele": "Gotland"
     },
     {
      "nom": "HSwMS Uppland (Upd)",
@@ -154930,7 +154878,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale"
+     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale",
+     "modele": "Gotland"
     },
     {
      "nom": "HSwMS Halland (Hnd)",
@@ -154979,7 +154928,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale"
+     "caractere_motif": "propriete: etat suedois ; exploitation: marine royale",
+     "modele": "Gotland"
     },
     {
      "nom": "RSS Archer (ex-HSwMS Hälsingland)",
@@ -155035,7 +154985,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "modele": "Archer"
     },
     {
      "nom": "RSS Swordsman (ex-HSwMS Västergötland)",
@@ -155091,7 +155042,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: marine royale ; exploitation: marine royale"
+     "caractere_motif": "propriete: marine royale ; exploitation: marine royale",
+     "modele": "Archer"
     },
     {
      "nom": "HSwMS Södermanland (Söd)",
@@ -155724,7 +155676,8 @@
       "annee": "1980",
       "source": "https://en.wikipedia.org/wiki/MS_Zenobia",
       "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
-     }
+     },
+     "modele": "Challenger"
     },
     {
      "nom": "SeaFrance Cézanne",
@@ -156346,7 +156299,8 @@
       "annee": "2017",
       "source": "https://en.wikipedia.org/wiki/MS_Jubilee",
       "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
-     }
+     },
+     "modele": "Holiday"
     },
     {
      "nom": "Celebration",
@@ -156428,7 +156382,8 @@
       "annee": "2021",
       "source": "https://en.wikipedia.org/wiki/MS_Celebration",
       "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
-     }
+     },
+     "modele": "Holiday"
     }
    ],
    "sources": [
@@ -157699,45 +157654,6 @@
      "caractere_motif": "propriete: prive ; exploitation: yacht"
     },
     {
-     "nom": "Arcona 415",
-     "imo": null,
-     "type": "Voilier de croisière-régate, propulsion électrique de série",
-     "annee": "2021",
-     "longueur_m": 12.6,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Premier voilier de série au monde avec propulsion électrique en standard ; conçu pour navigation en équipage réduit",
-     "capacite_pax": null,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "Saildrive à pas variable Oceanvolt ServoProp 15 kW + parc batteries 19 kWh ; hydrogénération dès 3,3 nœuds",
-     "propulsion": [
-      "electrique-batterie",
-      "velique"
-     ],
-     "client": "Arcona Yachts",
-     "operateur": "Arcona Yachts (modele de serie de plaisance)",
-     "proprietaire": "Arcona Yachts (constructeur) / proprietaires prives",
-     "classification": null,
-     "source": "https://plugboats.com/new-arcona-first-sailing-yacht-electric-propulsion/",
-     "timeline": [
-      {
-       "annee": "2021",
-       "role": "construction",
-       "nom": "Arcona Yachts (Boo Marin AB), Gustavsberg",
-       "detail": "Voilier de croisiere-regate Arcona 415, modele de serie produit par Arcona Yachts a Gustavsberg (Värmdö). Modele de gamme, pas une coque nommee/exploitee unique avec IMO ; details d'historique individuel non sourcables.",
-       "source": "https://seyachts.com/new-yachts/arcona-380z-electric/"
-      }
-     ],
-     "architecte": "Stefan Qviberg",
-     "architecte_source": "https://arconayachts.se/boat/arcona-415/",
-     "caractere": "prive",
-     "propriete": "privee",
-     "exploitation": "commerciale",
-     "caractere_motif": "propriete: prive ; exploitation: plaisance",
-     "source_ref": "https://arconayachts.se/boat/arcona-415/ — (« Design: Stefan Qviberg/Arcona Design Team »)"
-    },
-    {
      "nom": "Arcona 435Z",
      "imo": null,
      "type": "Voilier de croisière-régate électrique zéro émission",
@@ -157813,52 +157729,6 @@
      "exploitation": "commerciale",
      "caractere_motif": "propriete: prive ; exploitation: plaisance",
      "source_ref": "https://arconayachts.se/boat/arcona435/ — (champ « Design: Stefan Qviberg »)"
-    },
-    {
-     "nom": "Arcona 50",
-     "imo": null,
-     "type": "Voilier de croisière de luxe (luxury cruiser)",
-     "annee": "2024",
-     "longueur_m": 15.8,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "LHT 15,80 m, longueur coque 14,99 m, bau 4,60 m, tirant d'eau 2,95 / 2,50 / 2,20 m, déplacement 13,9 t ; Luxury Cruiser of the Year 2024 (European Yacht of the Year)",
-     "capacite_pax": null,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "Diesel Yanmar 4 cylindres 4JH80 (80 ch) saildrive, hélice repliable, option 4JH100 (100 ch) ; propulseurs étrave/poupe Sleipner en option ; pas d'option électrique mentionnée",
-     "propulsion": [
-      "diesel-mdo",
-      "velique"
-     ],
-     "client": "Arcona Yachts",
-     "operateur": "Arcona Yachts (modele de serie de luxe)",
-     "proprietaire": "Arcona Yachts (constructeur) / proprietaires prives",
-     "classification": null,
-     "source": "https://www.yacht.de/en/yachts/cruising-yachts/arcona-50-the-luxury-cruiser-of-the-year-2024/",
-     "timeline": [
-      {
-       "annee": "2024",
-       "role": "construction",
-       "nom": "Arcona Yachts (Boo Marin AB), Gustavsberg",
-       "detail": "Voilier de croisiere de luxe Arcona 50, modele de serie produit par Arcona Yachts a Gustavsberg (Värmdö). Modele de gamme recent ; pas de coque nommee/exploitee individuelle sourcable, pas d'IMO.",
-       "source": "https://seyachts.com/new-yachts/arcona-380z-electric/"
-      }
-     ],
-     "architecte": "Jeppesen & Pons",
-     "architecte_source": "https://arconayachts.se/boat/arcona-50/",
-     "caractere": "prive",
-     "propriete": "privee",
-     "exploitation": "commerciale",
-     "caractere_motif": "propriete: prive ; exploitation: yacht",
-     "verification": {
-      "statut": "douteux",
-      "motif": "L'article tiers sur Arcona Yachts confirme un constructeur suedois de voiliers a Gustavsberg, mais il ne mentionne AUCUN modele Arcona 50 (liste : 40 DS, 430, 435). Il contredit surtout le rattachement a Boo Marin AB : depuis 2018 la societe appartient a Orust Quality Yachts AB, filiale de Hexiron AB (Lund). Le modele 50 est peut-etre posterieur a la redaction de l'article, donc non refutable, mais rien de tiers ne l'atteste ni ne date sa mise a l'eau a 2024. Manque : essai ou annonce dans une revue nautique tierce.",
-      "source": "https://sv.wikipedia.org/wiki/Arcona_Yachts",
-      "le": "2026-08-05",
-      "confiance": "simple"
-     },
-     "source_ref": "https://arconayachts.se/boat/arcona-50/ — ; https://www.boats.com/sailing-boats/2025-arcona-50-9586535/"
     }
    ],
    "sources": [
@@ -157881,7 +157751,26 @@
    },
    "contact_source": "https://arconayachts.se/",
    "contact_maj": "2026-08-15",
-   "produits": []
+   "produits": [
+    {
+     "nom": "Arcona 50",
+     "type": "Voilier de croisière de luxe (luxury cruiser)",
+     "annee_lancement": "2024",
+     "longueur_m": 15.8,
+     "largeur_m": null,
+     "source": "https://www.yacht.de/en/yachts/cruising-yachts/arcona-50-the-luxury-cruiser-of-the-year-2024/",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
+    },
+    {
+     "nom": "Arcona 415",
+     "type": "Voilier de croisière-régate, propulsion électrique de série",
+     "annee_lancement": "2021",
+     "longueur_m": 12.6,
+     "largeur_m": null,
+     "source": "https://plugboats.com/new-arcona-first-sailing-yacht-electric-propulsion/",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
+    }
+   ]
   },
   {
    "nom": "Nimbus Group AB",
@@ -158028,51 +157917,6 @@
        "source": "https://www.nimbusgroup.se/en/history/"
       }
      ]
-    },
-    {
-     "nom": "Nimbus 26",
-     "imo": null,
-     "type": "Bateau à moteur de croisière (premier modèle de série)",
-     "annee": "1969",
-     "longueur_m": null,
-     "jauge_gt": null,
-     "port_lourd_dwt": null,
-     "capacite": "Premier bateau de série du chantier, élu bateau de l'année 1969",
-     "capacite_pax": null,
-     "capacite_vehicules": null,
-     "capacite_fret": null,
-     "energie": "Motorisation thermique (premier modèle, fin des années 1960)",
-     "propulsion": [
-      "diesel-mdo"
-     ],
-     "client": "Nimbus Boats",
-     "operateur": null,
-     "proprietaire": null,
-     "classification": null,
-     "source": "https://www.nimbusgroup.se/en/history/",
-     "timeline": [
-      {
-       "annee": "1968",
-       "role": "evenement",
-       "nom": "Fondation de Nimbus Boats",
-       "detail": "Société créée en 1968 à Långedrag (banlieue de Göteborg), à l'initiative de Harald Wiklund, alors DG de Volvo Penta, pour créer un bateau de plaisance adapté aux nouveaux diesels 6 cylindres Volvo Penta.",
-       "source": "https://nimbus.se/our-history/"
-      },
-      {
-       "annee": "1969",
-       "role": "construction",
-       "nom": "Nimbus Boats",
-       "detail": "Premier modèle du chantier, le Nimbus 26 (aft-cabin) dessiné par le navigateur olympique Pelle Petterson ; premières coques construites à Lugnås, premier essai en septembre 1969 sur le lac Vänern. Modèle de série de plaisance : pas d'IMO ni d'armateur attribuable à une coque.",
-       "source": "https://www.nimbusgroup.se/en/history/"
-      },
-      {
-       "annee": "1970",
-       "role": "evenement",
-       "nom": "European Boat of the Year",
-       "detail": "Le Nimbus 26 remporte le prix European Boat of the Year 1970, établissant la réputation du chantier.",
-       "source": "https://boattest.com/article/history-nimbus-boats"
-      }
-     ]
     }
    ],
    "sources": [
@@ -158093,7 +157937,17 @@
    },
    "contact_source": "https://nimbusgroup.se/en/section/contact/ ; https://www.hitta.se/f%C3%B6retagsinformation/nimbus+group+ab+(publ)/5569036568 (org.nr 556903-6568)",
    "contact_maj": "2026-08-15",
-   "produits": []
+   "produits": [
+    {
+     "nom": "Nimbus 26",
+     "type": "Bateau à moteur de croisière (premier modèle de série)",
+     "annee_lancement": "1969",
+     "longueur_m": null,
+     "largeur_m": null,
+     "source": "https://www.nimbusgroup.se/en/history/",
+     "note": "verse depuis navires_references le 2026-08-21 : modele de serie, pas une coque individuelle"
+    }
+   ]
   },
   {
    "nom": "Windy Scandinavia AB",
@@ -162349,7 +162203,8 @@
      ],
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "modele": "F-15"
     }
    ],
    "sources": [
@@ -164556,7 +164411,8 @@
       "source": "https://no.wikipedia.org/wiki/RS_158_%C2%ABIdar_Ulstein%C2%BB",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Ulstein"
     },
     {
      "nom": "HMS Astrea (A505)",
@@ -164618,7 +164474,8 @@
        "detail": "Patrouilleur de la classe Tapper pour la Marine suédoise",
        "source": "https://en.wikipedia.org/wiki/Tapper-class_patrol_boat"
       }
-     ]
+     ],
+     "modele": "Tapper"
     },
     {
      "nom": "Polisbåt 59-3730 Tryggve",
@@ -164805,7 +164662,8 @@
       "source": "https://no.wikipedia.org/wiki/Redningsselskapets_redningssk%C3%B8yter",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Ulstein"
     },
     {
      "nom": "Go'vakker Thora",
@@ -165131,7 +164989,8 @@
       "source": "https://sv.wikipedia.org/wiki/HMS_Argo_(A504)",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Altair"
     },
     {
      "nom": "Latt trossbat (classe, 16 unites, ex. coque 671)",
@@ -165421,7 +165280,8 @@
        "detail": "Première unité de la classe Emblad, baptisée 3 février 2024, affectée à Skärhamn",
        "source": "https://www.batliv.se/2024/02/03/ssrs-namnger-ny-raddningsbat-den-forsta-i-sitt-slag/"
       }
-     ]
+     ],
+     "modele": "Emblad"
     },
     {
      "nom": "Catamaran composite de prospection sismique",
@@ -165591,7 +165451,8 @@
       "source": "https://sv.wikipedia.org/wiki/Rausingklass",
       "le": "2026-08-21"
      },
-     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Swede Ship Marine AB (Djupviks Varv / Djupvik Shipyard) », construit par « Swede Ship Composite AB » — Les trois unites de la classe Rausing ont ete construites par Swede Ship Composite a Hunnebostrand, pas par Djupviks varv. Meme groupe, chantier different, coque composite et non aluminium. (https://sv.wikipedia.org/wiki/Rausingklass)"
+     "source_ref": "re-rattache le 2026-08-21 : attribue a tort a « Swede Ship Marine AB (Djupviks Varv / Djupvik Shipyard) », construit par « Swede Ship Composite AB » — Les trois unites de la classe Rausing ont ete construites par Swede Ship Composite a Hunnebostrand, pas par Djupviks varv. Meme groupe, chantier different, coque composite et non aluminium. (https://sv.wikipedia.org/wiki/Rausingklass)",
+     "modele": "Rausing"
     }
    ],
    "sources": [
@@ -172194,7 +172055,8 @@
      "caractere": "public",
      "propriete": "publique",
      "caractere_motif": "propriete: armee",
-     "source_ref": "https://svekon.se/en/svekon-wins-fmv-contract-for-new-workboat-for-the-swedish-armed-forces/ — ; https://nimbusgroup.se/en/nimbus-groups-workboat-for-the-swedish-armed-forces-receives-fmv-design-approval/"
+     "source_ref": "https://svekon.se/en/svekon-wins-fmv-contract-for-new-workboat-for-the-swedish-armed-forces/ — ; https://nimbusgroup.se/en/nimbus-groups-workboat-for-the-swedish-armed-forces-receives-fmv-design-approval/",
+     "modele": "200"
     },
     {
      "nom": "ALUKIN CW 850 (gamme Work)",
@@ -172777,7 +172639,8 @@
       "annee": "2009",
       "source": "https://doverferryphotosforums.co.uk/mv-segovia-carrier-cargo-from-the-past",
       "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
-     }
+     },
+     "modele": "Winter de Sal"
     },
     {
      "nom": "Winter Star",
@@ -172844,7 +172707,8 @@
       "annee": "2009",
       "source": "https://doverferryphotosforums.co.uk/mv-winter-star-cargo-from-the-past",
       "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
-     }
+     },
+     "modele": "Winter de Sal"
     },
     {
      "nom": "Winter Moon",
@@ -172910,7 +172774,8 @@
      "tracabilite": "url-domaine-seul",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: ab"
+     "caractere_motif": "propriete: ab",
+     "modele": "Winter de Sal"
     },
     {
      "nom": "Annie Johnson",
@@ -176845,7 +176710,8 @@
      ],
      "caractere": "public",
      "propriete": "publique",
-     "caractere_motif": "propriete: sjofartsverket"
+     "caractere_motif": "propriete: sjofartsverket",
+     "modele": "11"
     },
     {
      "nom": "Workboats Sea Truck (15 m et 18 m)",
@@ -177342,7 +177208,8 @@
        "detail": "Affecté à la station de sauvetage de Skillinge",
        "source": "https://sv.wikipedia.org/wiki/Rausingklass"
       }
-     ]
+     ],
+     "modele": "Rausing"
     },
     {
      "nom": "Rescue Björn Christer (classe Rausing, 20-03)",
@@ -177380,7 +177247,8 @@
        "detail": "Affecté à la station de sauvetage de Dalarö",
        "source": "https://sv.wikipedia.org/wiki/Rausingklass"
       }
-     ]
+     ],
+     "modele": "Rausing"
     },
     {
      "nom": "15M Fast Self-righting Rescue Craft (8 unités)",
@@ -180836,7 +180704,8 @@
       "source": "https://sv.wikipedia.org/wiki/M/S_Thorbj%C3%B8rn",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "L-50"
     },
     {
      "nom": "Wikingen",
@@ -182024,7 +181893,8 @@
       "source": "https://sv.wikipedia.org/wiki/M/S_Thorbj%C3%B8rn",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "L-50"
     },
     {
      "nom": "HMS Sandön",
@@ -191298,7 +191168,8 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "2022"
-     }
+     },
+     "modele": "LABRAX"
     },
     {
      "nom": "Vertom Cyta",
@@ -191334,7 +191205,8 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "2023"
-     }
+     },
+     "modele": "LABRAX"
     },
     {
      "nom": "Vertom Anne Marit",
@@ -191374,7 +191246,8 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "2023"
-     }
+     },
+     "modele": "LABRAX"
     },
     {
      "nom": "Vertom Anette",
@@ -191411,7 +191284,8 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "2024"
-     }
+     },
+     "modele": "LABRAX"
     },
     {
      "nom": "Vertom Lisa",
@@ -191446,7 +191320,8 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "2024"
-     }
+     },
+     "modele": "LABRAX"
     },
     {
      "nom": "Vertom Joyce",
@@ -191477,7 +191352,8 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "2025"
-     }
+     },
+     "modele": "LABRAX"
     },
     {
      "nom": "Vertom Tula",
@@ -191515,7 +191391,8 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "2025"
-     }
+     },
+     "modele": "LABRAX"
     },
     {
      "nom": "Vertom Quina",
@@ -191546,7 +191423,8 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "2026"
-     }
+     },
+     "modele": "LABRAX"
     },
     {
      "nom": "Iana",
@@ -191584,7 +191462,8 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "2025"
-     }
+     },
+     "modele": "SALMO"
     },
     {
      "nom": "Sueve",
@@ -191621,7 +191500,8 @@
       "confirme": "attribution",
       "imo_confirme": null,
       "annee_confirmee": "2025"
-     }
+     },
+     "modele": "SALMO"
     },
     {
      "nom": "Tenacious",
@@ -191641,7 +191521,8 @@
       "source": "https://nl.wikipedia.org/wiki/Thecla_Bodewes",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "KP1250"
     },
     {
      "nom": "Anchorage",
@@ -192787,7 +192668,8 @@
       "le": "2026-08-03",
       "confiance": "simple"
      },
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "modele": "Bijlsma Trader 2500"
     },
     {
      "nom": "Coastal Challenger",
@@ -194391,7 +194273,8 @@
       "source": "https://markprummel.nl/ship/arklow-villa-pcho-9772618/",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "V d'Arklow"
     },
     {
      "nom": "Arklow Viking",
@@ -194543,7 +194426,8 @@
       "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2017",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "V d'Arklow"
     },
     {
      "nom": "Furuvik",
@@ -194581,7 +194465,8 @@
       "source": "https://markprummel.nl/ship/arklow-valour-pcfp-9772565/",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "V d'Arklow"
     },
     {
      "nom": "Eeva VG",
@@ -202228,7 +202113,8 @@
      },
      "tracabilite": "url-non-verifiee",
      "source_ref": "source complementaire (2026-08-05) : https://www.marhisdata.nl/schip?id=1392",
-     "largeur_m": 15.88
+     "largeur_m": 15.88,
+     "modele": "HCC-5000"
     },
     {
      "nom": "Christina",
@@ -202835,7 +202721,8 @@
       "confiance": "simple"
      },
      "tracabilite": "url-non-verifiee",
-     "largeur_m": 15.9
+     "largeur_m": 15.9,
+     "modele": "EasyMax"
     },
     {
      "nom": "PW18",
@@ -203686,7 +203573,8 @@
       "source": "https://commons.wikimedia.org/wiki/Category:IMO_8521464",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Smit Nigeria"
     },
     {
      "nom": "Prime",
@@ -204486,7 +204374,8 @@
       "source": "https://warshipsresearch.blogspot.com/2026/04/dutch-pilot-boat-lynx-2013.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Lynx"
     },
     {
      "nom": "Lyra",
@@ -204505,7 +204394,8 @@
      },
      "source_ref": "source complementaire (2026-08-05) : https://www.binnenvaart.eu/loodstender/66565-lyra.html",
      "largeur_m": 6.8,
-     "proprietaire": "Nederlands Loodswezen BV, Eemshaven"
+     "proprietaire": "Nederlands Loodswezen BV, Eemshaven",
+     "modele": "Lynx"
     },
     {
      "nom": "Lacerta",
@@ -204526,7 +204416,8 @@
      "source_ref": "source complementaire (2026-08-05) : https://www.scheepvaartwest.be/CMS/index.php/other/6187-lacerta",
      "largeur_m": 6.8,
      "capacite_pax": 12,
-     "proprietaire": "Nederlands Loodswezen B.V., Hoek van Holland"
+     "proprietaire": "Nederlands Loodswezen B.V., Hoek van Holland",
+     "modele": "Lynx"
     },
     {
      "nom": "Libra",
@@ -204543,7 +204434,8 @@
       "source": "https://www.binnenvaart.eu/loodstender/33671-libra.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Lynx"
     },
     {
      "nom": "Lesath",
@@ -204561,7 +204453,8 @@
       "le": "2026-08-05",
       "confiance": "simple"
      },
-     "source_ref": "source complementaire (2026-08-05) : https://www.debinnenvaart.nl/schip_detail/lesath/"
+     "source_ref": "source complementaire (2026-08-05) : https://www.debinnenvaart.nl/schip_detail/lesath/",
+     "modele": "Lynx"
     },
     {
      "nom": "Luna",
@@ -204600,7 +204493,8 @@
      },
      "source_ref": "source complementaire (2026-08-05) : https://www.scheepvaartwest.be/CMS/index.php/other/9780-lucida",
      "largeur_m": 6.8,
-     "proprietaire": "Nederlandse Loodsencorporatie, Hoek van Holland"
+     "proprietaire": "Nederlandse Loodsencorporatie, Hoek van Holland",
+     "modele": "Lynx"
     },
     {
      "nom": "Sudwesthoek",
@@ -204892,7 +204786,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Moezelborg-9180839.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Bijlsma Trader 9000"
     },
     {
      "nom": "Morraborg",
@@ -204948,7 +204843,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Michiganborg-9190286.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Bijlsma Trader 9000"
     },
     {
      "nom": "Missouriborg",
@@ -205032,7 +204928,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Arklow-Rambler-9250426.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Bijlsma 4500"
     },
     {
      "nom": "Arklow Ranger",
@@ -205060,7 +204957,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Arklow-Ranger-9250438.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Bijlsma 4500"
     },
     {
      "nom": "Vantage",
@@ -205088,7 +204986,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Vantage-9375111.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Bijlsma BCF 350"
     },
     {
      "nom": "Helenic",
@@ -205116,7 +205015,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Helenic-9356490.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Bijlsma Trader 3250"
     },
     {
      "nom": "Hekla",
@@ -205144,7 +205044,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Hekla-9356505.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Bijlsma Trader 3250"
     },
     {
      "nom": "Alana Evita",
@@ -205172,7 +205073,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Alana-Evita-9356529.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Bijlsma Trader 3250"
     },
     {
      "nom": "Priscilla",
@@ -205200,7 +205102,8 @@
       "source": "https://assets.publishing.service.gov.uk/media/5d93631a40f0b65e5ec0dd35/2019-12-Priscilla.pdf",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Bijlsma Trader 3250"
     },
     {
      "nom": "Elsborg",
@@ -205228,7 +205131,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Elsborg-9411771.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Bijlsma Trader 3250"
     },
     {
      "nom": "Sagasbank",
@@ -205313,7 +205217,8 @@
       "source": "https://www.marhisdata.nl/schip&id=9455",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Bijlsma Trader 3250"
     },
     {
      "nom": "Eastern Virage",
@@ -205342,7 +205247,8 @@
       "source": "https://www.marhisdata.nl/schip&id=10564",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Bijlsma Trader 3250"
     },
     {
      "nom": "Bijlsma 758 (Longbay)",
@@ -205369,7 +205275,8 @@
       "source": "https://www.marhisdata.nl/schip&id=18117",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Bijlsma Trader 3250"
     },
     {
      "nom": "Bijlsma 764 (Wilson Saturn)",
@@ -205396,7 +205303,8 @@
       "source": "https://markprummel.nl/nl/ship/wilson-saturn-9411757/",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Bijlsma Trader 3250"
     }
    ],
    "sources": [
@@ -205688,7 +205596,8 @@
       "source": "https://fleetphoto.ru/vessel/96267/?lang=en",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Baltic"
     },
     {
      "nom": "Western Rock",
@@ -205735,7 +205644,8 @@
       "source": "https://fleetphoto.ru/vessel/120500/?lang=en",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Baltic"
     },
     {
      "nom": "Celtic",
@@ -208777,7 +208687,8 @@
       "champs": [
        "type : « navire antipollution et de servitu » -> « Navire danois de lutte antipolluti »"
       ]
-     }
+     },
+     "modele": "Supply"
     },
     {
      "nom": "Gunnar Seidenfaden (A561)",
@@ -208805,7 +208716,8 @@
       "le": "2026-08-05",
       "confiance": "simple"
      },
-     "largeur_m": 12.3
+     "largeur_m": 12.3,
+     "modele": "Supply"
     }
    ],
    "sources": [
@@ -211880,7 +211792,8 @@
       "source": "https://en.wikipedia.org/wiki/HNLMS_Java_(1921)",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Java"
     },
     {
      "nom": "Orzeł",
@@ -211930,7 +211843,8 @@
       "source": "https://en.wikipedia.org/wiki/HNLMS_Tromp_(F801)",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Tromp"
     },
     {
      "nom": "Elli",
@@ -211958,7 +211872,8 @@
       "source": "https://en.wikipedia.org/wiki/Greek_frigate_Elli_(F450)",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Elli"
     },
     {
      "nom": "Karel Doorman (F827), aujourd'hui Leopold I",
@@ -211979,7 +211894,8 @@
      "architecte": null,
      "prix_acquisition": null,
      "capacite": "déplacement 2 800 tonnes ; lancée le 20 avril 1988, admise le 31 mai 1991 par la Koninklijke Marine",
-     "source": "https://en.wikipedia.org/wiki/Belgian_frigate_Leopold_I"
+     "source": "https://en.wikipedia.org/wiki/Belgian_frigate_Leopold_I",
+     "modele": "Karel Doorman"
     },
     {
      "nom": "Van Galen (F803), aujourd'hui Dom Francisco de Almeida",
@@ -212001,7 +211917,8 @@
      "architecte": null,
      "prix_acquisition": null,
      "capacite": "déplacement 3 373 tonnes pleine charge ; lancée le 21 novembre 1992, admise le 1er décembre 1994",
-     "source": "https://en.wikipedia.org/wiki/NRP_Dom_Francisco_de_Almeida"
+     "source": "https://en.wikipedia.org/wiki/NRP_Dom_Francisco_de_Almeida",
+     "modele": "Karel Doorman"
     },
     {
      "nom": "Amsterdam (A836), aujourd'hui BAP Tacna",
@@ -212634,7 +212551,8 @@
       "source": "https://nl.wikipedia.org/wiki/Aalsmeergracht",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "A de Spliethoff"
     },
     {
      "nom": "De Zonnebloem",
@@ -213229,7 +213147,8 @@
      "client": "Hjemmeværnet (garde territoriale danoise)",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Carina (MHV 802)",
@@ -213240,7 +213159,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Aries (MHV 803)",
@@ -213251,7 +213171,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Andromeda (MHV 804)",
@@ -213262,7 +213183,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Gemini (MHV 805)",
@@ -213273,7 +213195,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Dubhe (MHV 806)",
@@ -213284,7 +213207,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Jupiter (MHV 807)",
@@ -213295,7 +213219,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Lyra (MHV 808)",
@@ -213306,7 +213231,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Antares (MHV 809)",
@@ -213317,7 +213243,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Luna (MHV 810)",
@@ -213328,7 +213255,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Apollo (MHV 811)",
@@ -213339,7 +213267,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Hercules (MHV 812)",
@@ -213350,7 +213279,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Baunen (MHV 813)",
@@ -213361,7 +213291,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Budstikken (MHV 814)",
@@ -213372,7 +213303,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Kureren (MHV 815)",
@@ -213383,7 +213315,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Patrioten (MHV 816)",
@@ -213394,7 +213327,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Partisan (MHV 817)",
@@ -213405,7 +213339,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Sabotøren (MHV 851)",
@@ -213416,7 +213351,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_800-klassen",
+     "modele": "MHV 800"
     },
     {
      "nom": "Enø (MHV 901)",
@@ -213427,7 +213363,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen",
+     "modele": "MHV 900"
     },
     {
      "nom": "Manø (MHV 902)",
@@ -213438,7 +213375,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen",
+     "modele": "MHV 900"
     },
     {
      "nom": "Hjortø (MHV 903)",
@@ -213449,7 +213387,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen",
+     "modele": "MHV 900"
     },
     {
      "nom": "Lyø (MHV 904)",
@@ -213460,7 +213399,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen",
+     "modele": "MHV 900"
     },
     {
      "nom": "Fænø (MHV 906)",
@@ -213471,7 +213411,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen",
+     "modele": "MHV 900"
     },
     {
      "nom": "Hvidsten (MHV 907)",
@@ -213482,7 +213423,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen",
+     "modele": "MHV 900"
     },
     {
      "nom": "Brigaden (MHV 908)",
@@ -213493,7 +213435,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen",
+     "modele": "MHV 900"
     },
     {
      "nom": "Speditøren (MHV 909)",
@@ -213504,7 +213447,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen",
+     "modele": "MHV 900"
     },
     {
      "nom": "Ringen (MHV 910)",
@@ -213515,7 +213459,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen",
+     "modele": "MHV 900"
     },
     {
      "nom": "Bopa (MHV 911)",
@@ -213526,7 +213471,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen",
+     "modele": "MHV 900"
     },
     {
      "nom": "Holger Danske (MHV 912)",
@@ -213537,7 +213483,8 @@
      "client": "Hjemmeværnet",
      "operateur": "Marinehjemmeværnet",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen"
+     "source": "https://da.wikipedia.org/wiki/MHV_900-klassen",
+     "modele": "MHV 900"
     }
    ],
    "sources": [
@@ -215455,7 +215402,8 @@
      "type": "vraquier serie Lake Vanern Max",
      "proprietaire": "Erik Thun",
      "propulsion": [],
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2024"
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2024",
+     "modele": "Lake Vanern Max"
     },
     {
      "nom": "Spiken",
@@ -215464,7 +215412,8 @@
      "type": "vraquier serie Lake Vanern Max",
      "proprietaire": "Erik Thun",
      "propulsion": [],
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2024"
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2024",
+     "modele": "Lake Vanern Max"
     },
     {
      "nom": "Symphony Sky",
@@ -216213,7 +216162,8 @@
      ],
      "proprietaire": "Søværnet (Marine royale danoise)",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/Balder-klassen"
+     "source": "https://da.wikipedia.org/wiki/Balder-klassen",
+     "modele": "Balder"
     },
     {
      "nom": "Hermod",
@@ -216226,7 +216176,8 @@
      ],
      "proprietaire": "Søværnet (Marine royale danoise)",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/Balder-klassen"
+     "source": "https://da.wikipedia.org/wiki/Balder-klassen",
+     "modele": "Balder"
     }
    ],
    "sources": [
@@ -216374,7 +216325,8 @@
      "proprietaire": "Udviklingsselskabet By & Havn I/S",
      "operateur": "By & Havn, port de Copenhague",
      "pavillon": "Danemark",
-     "source": "https://www.faaborg-vaerft.dk/e-cat-leveret-til-by-havn/"
+     "source": "https://www.faaborg-vaerft.dk/e-cat-leveret-til-by-havn/",
+     "modele": "Faaborg E-Cat"
     },
     {
      "nom": "Birkholmposten",
@@ -216389,7 +216341,8 @@
      "proprietaire": "Ærø Kommune",
      "operateur": "Marstal Havn, ligne Marstal-Birkholm",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/M/S_Birkholmposten"
+     "source": "https://da.wikipedia.org/wiki/M/S_Birkholmposten",
+     "modele": "Faaborg 900"
     },
     {
      "nom": "Phönix",
@@ -216402,7 +216355,8 @@
      "proprietaire": "Wasser- und Schifffahrtsverwaltung des Bundes",
      "operateur": "administration federale allemande des voies navigables",
      "pavillon": "Allemagne",
-     "source": "https://www.fiskerbladet.dk/faaborg-vaerft-jan-mortensen-phonix/fynsk-vaerft-taet-pa-levering-af-52-nybygning-til-tyskland/1912827"
+     "source": "https://www.fiskerbladet.dk/faaborg-vaerft-jan-mortensen-phonix/fynsk-vaerft-taet-pa-levering-af-52-nybygning-til-tyskland/1912827",
+     "modele": "Spatz"
     },
     {
      "nom": "Marie Emilie VA-24-LS",
@@ -216426,7 +216380,8 @@
      ],
      "proprietaire": "Søværnet (Marine royale danoise)",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/P520_Diana"
+     "source": "https://da.wikipedia.org/wiki/P520_Diana",
+     "modele": "Diana / Standardfartøj Mk"
     },
     {
      "nom": "P521 Freja",
@@ -216439,7 +216394,8 @@
      ],
      "proprietaire": "Søværnet (Marine royale danoise)",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/P521_Freja"
+     "source": "https://da.wikipedia.org/wiki/P521_Freja",
+     "modele": "Diana"
     },
     {
      "nom": "P522 Havfruen",
@@ -216452,7 +216408,8 @@
      ],
      "proprietaire": "Søværnet (Marine royale danoise)",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/P522_Havfruen"
+     "source": "https://da.wikipedia.org/wiki/P522_Havfruen",
+     "modele": "Diana"
     },
     {
      "nom": "P523 Najaden",
@@ -216465,7 +216422,8 @@
      ],
      "proprietaire": "Søværnet (Marine royale danoise)",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/P523_Najaden"
+     "source": "https://da.wikipedia.org/wiki/P523_Najaden",
+     "modele": "Diana"
     },
     {
      "nom": "P524 Nymfen",
@@ -216478,7 +216436,8 @@
      ],
      "proprietaire": "Søværnet (Marine royale danoise)",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/P524_Nymfen"
+     "source": "https://da.wikipedia.org/wiki/P524_Nymfen",
+     "modele": "Diana"
     },
     {
      "nom": "P525 Rota",
@@ -216491,7 +216450,8 @@
      ],
      "proprietaire": "Søværnet (Marine royale danoise)",
      "pavillon": "Danemark",
-     "source": "https://da.wikipedia.org/wiki/P525_Rota"
+     "source": "https://da.wikipedia.org/wiki/P525_Rota",
+     "modele": "Diana"
     },
     {
      "nom": "Diana (P520)",
@@ -216746,7 +216706,8 @@
       "source": "https://en.wikipedia.org/wiki/Hydra-class_frigate",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Hydra"
     },
     {
      "nom": "Psara (F-454)",
@@ -216755,7 +216716,8 @@
      "longueur_m": 117.5,
      "largeur_m": 14.8,
      "client": "Marine hellénique",
-     "source": "https://en.wikipedia.org/wiki/Hydra-class_frigate"
+     "source": "https://en.wikipedia.org/wiki/Hydra-class_frigate",
+     "modele": "Hydra"
     },
     {
      "nom": "Salamis (F-455)",
@@ -216764,7 +216726,8 @@
      "longueur_m": 117.5,
      "largeur_m": 14.8,
      "client": "Marine hellénique",
-     "source": "https://en.wikipedia.org/wiki/Hydra-class_frigate"
+     "source": "https://en.wikipedia.org/wiki/Hydra-class_frigate",
+     "modele": "Hydra"
     },
     {
      "nom": "Pipinos (S-121)",
@@ -216980,7 +216943,8 @@
      "largeur_m": 14.8,
      "client": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Greek_frigate_Psara"
+     "source": "https://en.wikipedia.org/wiki/Greek_frigate_Psara",
+     "modele": "Hydra"
     },
     {
      "nom": "Spetsai (F-453), classe Hydra",
@@ -216990,7 +216954,8 @@
      "largeur_m": 14.8,
      "client": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Hydra-class_frigate"
+     "source": "https://en.wikipedia.org/wiki/Hydra-class_frigate",
+     "modele": "Hydra"
     },
     {
      "nom": "Salamis (F-455), classe Hydra",
@@ -217000,7 +216965,8 @@
      "largeur_m": 14.8,
      "client": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Hydra-class_frigate"
+     "source": "https://en.wikipedia.org/wiki/Hydra-class_frigate",
+     "modele": "Hydra"
     },
     {
      "nom": "HS Kasos (P-57, ex Pyrpolitis)",
@@ -217011,7 +216977,8 @@
      "client": "Marine hellénique",
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/HSY-55-class_gunboat"
+     "source": "https://en.wikipedia.org/wiki/HSY-55-class_gunboat",
+     "modele": "HSY-55"
     },
     {
      "nom": "HS Polemistis (P-61)",
@@ -217022,7 +216989,8 @@
      "client": "Marine hellénique",
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/HSY-55-class_gunboat"
+     "source": "https://en.wikipedia.org/wiki/HSY-55-class_gunboat",
+     "modele": "HSY-55"
     },
     {
      "nom": "HS Machitis (P-266)",
@@ -217178,7 +217146,8 @@
      "largeur_m": 5,
      "client": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://el.wikipedia.org/wiki/%CE%9A%CE%BD%CF%89%CF%83%CF%8C%CF%82_(%CE%B1%CE%B5%CF%81%CE%BF%CE%BD%CE%B1%CF%85%CE%B1%CE%B3%CE%BF%CF%83%CF%89%CF%83%CF%84%CE%B9%CE%BA%CF%8C)"
+     "source": "https://el.wikipedia.org/wiki/%CE%9A%CE%BD%CF%89%CF%83%CF%8C%CF%82_(%CE%B1%CE%B5%CF%81%CE%BF%CE%BD%CE%B1%CF%85%CE%B1%CE%B3%CE%BF%CF%83%CF%89%CF%83%CF%84%CE%B9%CE%BA%CF%8C)",
+     "modele": "Abeking"
     },
     {
      "nom": "Lindos",
@@ -217188,7 +217157,8 @@
      "largeur_m": 5,
      "client": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://el.wikipedia.org/wiki/%CE%9B%CE%AF%CE%BD%CE%B4%CE%BF%CF%82_(%CE%B1%CE%B5%CF%81%CE%BF%CE%BD%CE%B1%CF%85%CE%B1%CE%B3%CE%BF%CF%83%CF%89%CF%83%CF%84%CE%B9%CE%BA%CF%8C)"
+     "source": "https://el.wikipedia.org/wiki/%CE%9B%CE%AF%CE%BD%CE%B4%CE%BF%CF%82_(%CE%B1%CE%B5%CF%81%CE%BF%CE%BD%CE%B1%CF%85%CE%B1%CE%B3%CE%BF%CF%83%CF%89%CF%83%CF%84%CE%B9%CE%BA%CF%8C)",
+     "modele": "Abeking"
     }
    ],
    "sources": [
@@ -217266,7 +217236,8 @@
      "longueur_m": 116,
      "largeur_m": 15.3,
      "client": "Marine hellénique",
-     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship"
+     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship",
+     "modele": "Jason"
     },
     {
      "nom": "Samos (L-174)",
@@ -217284,7 +217255,8 @@
       "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Jason"
     },
     {
      "nom": "Ikaria (L-175)",
@@ -217293,7 +217265,8 @@
      "longueur_m": 116,
      "largeur_m": 15.3,
      "client": "Marine hellénique",
-     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship"
+     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship",
+     "modele": "Jason"
     },
     {
      "nom": "Lesvos (L-176)",
@@ -217302,7 +217275,8 @@
      "longueur_m": 116,
      "largeur_m": 15.3,
      "client": "Marine hellénique",
-     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship"
+     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship",
+     "modele": "Jason"
     },
     {
      "nom": "Rodos (L-177)",
@@ -217311,7 +217285,8 @@
      "longueur_m": 116,
      "largeur_m": 15.3,
      "client": "Marine hellénique",
-     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship"
+     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship",
+     "modele": "Jason"
     },
     {
      "nom": "Promitheus (A-374)",
@@ -217404,7 +217379,8 @@
      "largeur_m": 21,
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Etna-class_replenishment_oiler"
+     "source": "https://en.wikipedia.org/wiki/Etna-class_replenishment_oiler",
+     "modele": "Etna"
     },
     {
      "nom": "HS Samos (L-174)",
@@ -217414,7 +217390,8 @@
      "largeur_m": 15.3,
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship"
+     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship",
+     "modele": "Jason"
     },
     {
      "nom": "HS Chios (L-173)",
@@ -217430,7 +217407,8 @@
       "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Jason"
     },
     {
      "nom": "HS Ikaria (L-175)",
@@ -217440,7 +217418,8 @@
      "largeur_m": 15.3,
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship"
+     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship",
+     "modele": "Jason"
     },
     {
      "nom": "HS Lesvos (L-176)",
@@ -217450,7 +217429,8 @@
      "largeur_m": 15.3,
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship"
+     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship",
+     "modele": "Jason"
     },
     {
      "nom": "HS Rodos (L-177)",
@@ -217460,7 +217440,8 @@
      "largeur_m": 15.3,
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship"
+     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship",
+     "modele": "Jason"
     },
     {
      "nom": "HS Roussen (P-67)",
@@ -217470,7 +217451,8 @@
      "largeur_m": 9.5,
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft"
+     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft",
+     "modele": "Roussen"
     },
     {
      "nom": "HS Daniolos (P-68)",
@@ -217480,7 +217462,8 @@
      "largeur_m": 9.5,
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft"
+     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft",
+     "modele": "Roussen"
     },
     {
      "nom": "HS Krystallidis (P-69)",
@@ -217490,7 +217473,8 @@
      "largeur_m": 9.5,
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft"
+     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft",
+     "modele": "Roussen"
     },
     {
      "nom": "HS Grigoropoulos (P-70)",
@@ -217506,7 +217490,8 @@
       "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Roussen"
     },
     {
      "nom": "HS Ritsos (P-71)",
@@ -217516,7 +217501,8 @@
      "largeur_m": 9.5,
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft"
+     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft",
+     "modele": "Roussen"
     },
     {
      "nom": "HS Karathanasis (P-78)",
@@ -217526,7 +217512,8 @@
      "largeur_m": 9.5,
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft"
+     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft",
+     "modele": "Roussen"
     },
     {
      "nom": "HS Vlachakos (P-79)",
@@ -217536,7 +217523,8 @@
      "largeur_m": 9.5,
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft"
+     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft",
+     "modele": "Roussen"
     },
     {
      "nom": "Chios (L173), classe Jason",
@@ -217546,7 +217534,8 @@
      "largeur_m": 15.3,
      "client": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship"
+     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship",
+     "modele": "Jason"
     },
     {
      "nom": "Samos (L174), classe Jason",
@@ -217556,7 +217545,8 @@
      "largeur_m": 15.3,
      "client": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship"
+     "source": "https://en.wikipedia.org/wiki/Jason-class_tank_landing_ship",
+     "modele": "Jason"
     },
     {
      "nom": "HS Ypoploiarchos Roussen (P-67)",
@@ -217567,7 +217557,8 @@
      "client": "Marine hellénique",
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft"
+     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft",
+     "modele": "Roussen"
     },
     {
      "nom": "HS Ypoploiarchos Daniolos (P-68)",
@@ -217578,7 +217569,8 @@
      "client": "Marine hellénique",
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft"
+     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft",
+     "modele": "Roussen"
     },
     {
      "nom": "HS Ypoploiarchos Krystallidis (P-69)",
@@ -217589,7 +217581,8 @@
      "client": "Marine hellénique",
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft"
+     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft",
+     "modele": "Roussen"
     },
     {
      "nom": "HS Ypoploiarchos Grigoropoulos (P-70)",
@@ -217600,7 +217593,8 @@
      "client": "Marine hellénique",
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft"
+     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft",
+     "modele": "Roussen"
     },
     {
      "nom": "HS Ypoploiarchos Ritsos (P-71)",
@@ -217611,7 +217605,8 @@
      "client": "Marine hellénique",
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft"
+     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft",
+     "modele": "Roussen"
     },
     {
      "nom": "HS Ypoploiarchos Karathanasis (P-78)",
@@ -217622,7 +217617,8 @@
      "client": "Marine hellénique",
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft"
+     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft",
+     "modele": "Roussen"
     },
     {
      "nom": "HS Ypoploiarchos Vlachakos (P-79)",
@@ -217633,7 +217629,8 @@
      "client": "Marine hellénique",
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft"
+     "source": "https://en.wikipedia.org/wiki/Roussen-class_fast_attack_craft",
+     "modele": "Roussen"
     },
     {
      "nom": "HS Prometheus (A-374)",
@@ -217644,7 +217641,8 @@
      "client": "Marine hellénique",
      "operateur": "Marine hellénique",
      "pavillon": "Grèce",
-     "source": "https://en.wikipedia.org/wiki/Etna-class_replenishment_oiler"
+     "source": "https://en.wikipedia.org/wiki/Etna-class_replenishment_oiler",
+     "modele": "Etna"
     }
    ],
    "sources": [
@@ -218351,7 +218349,8 @@
      "capacite": "26 cuves de congélation à -65 °C, environ 3 250 m3, capacité de congélation 140 t par jour",
      "operateur": "Albacora",
      "proprietaire": "Albacora (Bermeo)",
-     "source": "https://es.wikipedia.org/wiki/Clase_Albatun"
+     "source": "https://es.wikipedia.org/wiki/Clase_Albatun",
+     "modele": "Albatun"
     },
     {
      "nom": "Albatun Tres",
@@ -218361,7 +218360,8 @@
      "capacite": "26 cuves de congélation à -65 °C, environ 3 250 m3",
      "operateur": "Albacora",
      "proprietaire": "Albacora (Bermeo)",
-     "source": "https://es.wikipedia.org/wiki/Clase_Albatun"
+     "source": "https://es.wikipedia.org/wiki/Clase_Albatun",
+     "modele": "Albatun"
     }
    ],
    "sources": [
@@ -218556,7 +218556,8 @@
       "source": "https://en.wikipedia.org/wiki/HMAS_Canberra_(L02)",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "Canberra"
     },
     {
      "nom": "HMAS Adelaide (L01)",
@@ -218617,7 +218618,8 @@
      "client": "Marine royale norvégienne",
      "operateur": "Marine royale norvégienne",
      "pavillon": "Norvège",
-     "source": "https://en.wikipedia.org/wiki/Fridtjof_Nansen-class_frigate"
+     "source": "https://en.wikipedia.org/wiki/Fridtjof_Nansen-class_frigate",
+     "modele": "Fridtjof Nansen"
     },
     {
      "nom": "Roald Amundsen (F311)",
@@ -218628,7 +218630,8 @@
      "client": "Marine royale norvégienne",
      "operateur": "Marine royale norvégienne",
      "pavillon": "Norvège",
-     "source": "https://en.wikipedia.org/wiki/Fridtjof_Nansen-class_frigate"
+     "source": "https://en.wikipedia.org/wiki/Fridtjof_Nansen-class_frigate",
+     "modele": "Fridtjof Nansen"
     },
     {
      "nom": "Otto Sverdrup (F312)",
@@ -218639,7 +218642,8 @@
      "client": "Marine royale norvégienne",
      "operateur": "Marine royale norvégienne",
      "pavillon": "Norvège",
-     "source": "https://en.wikipedia.org/wiki/Fridtjof_Nansen-class_frigate"
+     "source": "https://en.wikipedia.org/wiki/Fridtjof_Nansen-class_frigate",
+     "modele": "Fridtjof Nansen"
     },
     {
      "nom": "Helge Ingstad (F313)",
@@ -218650,7 +218654,8 @@
      "client": "Marine royale norvégienne",
      "operateur": "Marine royale norvégienne",
      "pavillon": "Norvège",
-     "source": "https://en.wikipedia.org/wiki/Fridtjof_Nansen-class_frigate"
+     "source": "https://en.wikipedia.org/wiki/Fridtjof_Nansen-class_frigate",
+     "modele": "Fridtjof Nansen"
     },
     {
      "nom": "Thor Heyerdahl (F314)",
@@ -218661,7 +218666,8 @@
      "client": "Marine royale norvégienne",
      "operateur": "Marine royale norvégienne",
      "pavillon": "Norvège",
-     "source": "https://en.wikipedia.org/wiki/Fridtjof_Nansen-class_frigate"
+     "source": "https://en.wikipedia.org/wiki/Fridtjof_Nansen-class_frigate",
+     "modele": "Fridtjof Nansen"
     },
     {
      "nom": "HMAS Supply (A195)",
@@ -218672,7 +218678,8 @@
      "client": "Royal Australian Navy",
      "operateur": "Royal Australian Navy",
      "pavillon": "Australie",
-     "source": "https://en.wikipedia.org/wiki/Supply-class_replenishment_oiler"
+     "source": "https://en.wikipedia.org/wiki/Supply-class_replenishment_oiler",
+     "modele": "Supply"
     },
     {
      "nom": "HMAS Stalwart (A304)",
@@ -218683,7 +218690,8 @@
      "client": "Royal Australian Navy",
      "operateur": "Royal Australian Navy",
      "pavillon": "Australie",
-     "source": "https://en.wikipedia.org/wiki/Supply-class_replenishment_oiler"
+     "source": "https://en.wikipedia.org/wiki/Supply-class_replenishment_oiler",
+     "modele": "Supply"
     },
     {
      "nom": "HTMS Chakri Naruebet",
@@ -218847,7 +218855,8 @@
      "largeur_m": 10.4,
      "operateur": "Armada Española",
      "pavillon": "Espagne",
-     "source": "https://en.wikipedia.org/wiki/Descubierta-class_corvette"
+     "source": "https://en.wikipedia.org/wiki/Descubierta-class_corvette",
+     "modele": "Descubierta"
     },
     {
      "nom": "Vencedora (F-36)",
@@ -218857,7 +218866,8 @@
      "largeur_m": 10.4,
      "operateur": "Armada Española",
      "pavillon": "Espagne",
-     "source": "https://en.wikipedia.org/wiki/Descubierta-class_corvette"
+     "source": "https://en.wikipedia.org/wiki/Descubierta-class_corvette",
+     "modele": "Descubierta"
     },
     {
      "nom": "Príncipe Alfonso",
@@ -218869,7 +218879,8 @@
      "pavillon": "Espagne",
      "architecte": "Sir Philip Watts",
      "architecte_source": "https://en.wikipedia.org/wiki/Almirante_Cervera-class_cruiser",
-     "source": "https://en.wikipedia.org/wiki/Almirante_Cervera-class_cruiser"
+     "source": "https://en.wikipedia.org/wiki/Almirante_Cervera-class_cruiser",
+     "modele": "Almirante Cervera"
     },
     {
      "nom": "Almirante Cervera",
@@ -219053,7 +219064,8 @@
      "client": "Armada española",
      "operateur": "Armada española",
      "pavillon": "Espagne",
-     "source": "https://en.wikipedia.org/wiki/Galerna-class_submarine"
+     "source": "https://en.wikipedia.org/wiki/Galerna-class_submarine",
+     "modele": "Galerna"
     },
     {
      "nom": "Siroco (S-72)",
@@ -219063,7 +219075,8 @@
      "client": "Armada española",
      "operateur": "Armada española",
      "pavillon": "Espagne",
-     "source": "https://en.wikipedia.org/wiki/Galerna-class_submarine"
+     "source": "https://en.wikipedia.org/wiki/Galerna-class_submarine",
+     "modele": "Galerna"
     },
     {
      "nom": "Mistral (S-73)",
@@ -219073,7 +219086,8 @@
      "client": "Armada española",
      "operateur": "Armada española",
      "pavillon": "Espagne",
-     "source": "https://en.wikipedia.org/wiki/Galerna-class_submarine"
+     "source": "https://en.wikipedia.org/wiki/Galerna-class_submarine",
+     "modele": "Galerna"
     },
     {
      "nom": "Tramontana (S-74)",
@@ -219083,7 +219097,8 @@
      "client": "Armada española",
      "operateur": "Armada española",
      "pavillon": "Espagne",
-     "source": "https://en.wikipedia.org/wiki/Galerna-class_submarine"
+     "source": "https://en.wikipedia.org/wiki/Galerna-class_submarine",
+     "modele": "Galerna"
     },
     {
      "nom": "Descubierta (F-31)",
@@ -219284,7 +219299,8 @@
      "client": "Armada española",
      "operateur": "Armada española",
      "pavillon": "Espagne",
-     "source": "https://es.wikipedia.org/wiki/Clase_Meteoro"
+     "source": "https://es.wikipedia.org/wiki/Clase_Meteoro",
+     "modele": "Meteoro"
     },
     {
      "nom": "Poseidón (A-21)",
@@ -219295,7 +219311,8 @@
      "client": "Armada española",
      "operateur": "Armada española",
      "pavillon": "Espagne",
-     "source": "https://es.wikipedia.org/wiki/Clase_Meteoro"
+     "source": "https://es.wikipedia.org/wiki/Clase_Meteoro",
+     "modele": "Meteoro"
     },
     {
      "nom": "Guaiquerí (PC-21)",
@@ -219306,7 +219323,8 @@
      "client": "Armada bolivarienne du Venezuela",
      "operateur": "Armada bolivarienne du Venezuela",
      "pavillon": "Venezuela",
-     "source": "https://es.wikipedia.org/wiki/Clase_Guaiquer%C3%AD"
+     "source": "https://es.wikipedia.org/wiki/Clase_Guaiquer%C3%AD",
+     "modele": "Guaiquer"
     },
     {
      "nom": "Warao (PC-22)",
@@ -219317,7 +219335,8 @@
      "client": "Armada bolivarienne du Venezuela",
      "operateur": "Armada bolivarienne du Venezuela",
      "pavillon": "Venezuela",
-     "source": "https://es.wikipedia.org/wiki/Clase_Guaiquer%C3%AD"
+     "source": "https://es.wikipedia.org/wiki/Clase_Guaiquer%C3%AD",
+     "modele": "Guaiquer"
     },
     {
      "nom": "Yekuana (PC-23)",
@@ -219328,7 +219347,8 @@
      "client": "Armada bolivarienne du Venezuela",
      "operateur": "Armada bolivarienne du Venezuela",
      "pavillon": "Venezuela",
-     "source": "https://es.wikipedia.org/wiki/Clase_Guaiquer%C3%AD"
+     "source": "https://es.wikipedia.org/wiki/Clase_Guaiquer%C3%AD",
+     "modele": "Guaiquer"
     },
     {
      "nom": "Kariña (PC-24)",
@@ -219339,7 +219359,8 @@
      "client": "Armada bolivarienne du Venezuela",
      "operateur": "Armada bolivarienne du Venezuela",
      "pavillon": "Venezuela",
-     "source": "https://es.wikipedia.org/wiki/Clase_Guaiquer%C3%AD"
+     "source": "https://es.wikipedia.org/wiki/Clase_Guaiquer%C3%AD",
+     "modele": "Guaiquer"
     },
     {
      "nom": "Guaicamacuto (GC-21)",
@@ -219350,7 +219371,8 @@
      "client": "Armada bolivarienne du Venezuela",
      "operateur": "Armada bolivarienne du Venezuela",
      "pavillon": "Venezuela",
-     "source": "https://es.wikipedia.org/wiki/Clase_Guaicamacuto"
+     "source": "https://es.wikipedia.org/wiki/Clase_Guaicamacuto",
+     "modele": "Guaicamacuto"
     },
     {
      "nom": "Yaviré (GC-22)",
@@ -219361,7 +219383,8 @@
      "client": "Armada bolivarienne du Venezuela",
      "operateur": "Armada bolivarienne du Venezuela",
      "pavillon": "Venezuela",
-     "source": "https://es.wikipedia.org/wiki/Clase_Guaicamacuto"
+     "source": "https://es.wikipedia.org/wiki/Clase_Guaicamacuto",
+     "modele": "Guaicamacuto"
     },
     {
      "nom": "Naiguatá (GC-23)",
@@ -219372,7 +219395,8 @@
      "client": "Armada bolivarienne du Venezuela",
      "operateur": "Armada bolivarienne du Venezuela",
      "pavillon": "Venezuela",
-     "source": "https://es.wikipedia.org/wiki/Clase_Guaicamacuto"
+     "source": "https://es.wikipedia.org/wiki/Clase_Guaicamacuto",
+     "modele": "Guaicamacuto"
     },
     {
      "nom": "Al Jubail (828)",
@@ -219383,7 +219407,8 @@
      "client": "Royal Saudi Navy",
      "operateur": "Royal Saudi Navy",
      "pavillon": "Arabie saoudite",
-     "source": "https://en.wikipedia.org/wiki/Saudi_corvette_Al_Jubail"
+     "source": "https://en.wikipedia.org/wiki/Saudi_corvette_Al_Jubail",
+     "modele": "Al Jubail"
     },
     {
      "nom": "Al Diriyah (830)",
@@ -219394,7 +219419,8 @@
      "client": "Royal Saudi Navy",
      "operateur": "Royal Saudi Navy",
      "pavillon": "Arabie saoudite",
-     "source": "https://en.wikipedia.org/wiki/Saudi_corvette_Al_Diriyah"
+     "source": "https://en.wikipedia.org/wiki/Saudi_corvette_Al_Diriyah",
+     "modele": "Al Jubail"
     },
     {
      "nom": "Hail (832)",
@@ -219405,7 +219431,8 @@
      "client": "Royal Saudi Navy",
      "operateur": "Royal Saudi Navy",
      "pavillon": "Arabie saoudite",
-     "source": "https://en.wikipedia.org/wiki/Al_Jubail-class_corvette"
+     "source": "https://en.wikipedia.org/wiki/Al_Jubail-class_corvette",
+     "modele": "Al Jubail"
     },
     {
      "nom": "Jazan (834)",
@@ -219416,7 +219443,8 @@
      "client": "Royal Saudi Navy",
      "operateur": "Royal Saudi Navy",
      "pavillon": "Arabie saoudite",
-     "source": "https://en.wikipedia.org/wiki/Al_Jubail-class_corvette"
+     "source": "https://en.wikipedia.org/wiki/Al_Jubail-class_corvette",
+     "modele": "Al Jubail"
     },
     {
      "nom": "Unayzah (836)",
@@ -219427,7 +219455,8 @@
      "client": "Royal Saudi Navy",
      "operateur": "Royal Saudi Navy",
      "pavillon": "Arabie saoudite",
-     "source": "https://en.wikipedia.org/wiki/Al_Jubail-class_corvette"
+     "source": "https://en.wikipedia.org/wiki/Al_Jubail-class_corvette",
+     "modele": "Al Jubail"
     },
     {
      "nom": "Smyril",
@@ -221632,7 +221661,8 @@
      "client": "Marine royale suédoise",
      "operateur": "Marine royale suédoise puis marine chilienne (Almirante Latorre) à partir de 1971",
      "pavillon": "Suède",
-     "source": "https://en.wikipedia.org/wiki/HSwMS_G%C3%B6ta_Lejon"
+     "source": "https://en.wikipedia.org/wiki/HSwMS_G%C3%B6ta_Lejon",
+     "modele": "Tre Kronor"
     },
     {
      "nom": "HSwMS Småland (J19)",
@@ -221642,7 +221672,8 @@
      "largeur_m": 12.1,
      "client": "Marine royale suédoise",
      "pavillon": "Suède",
-     "source": "https://en.wikipedia.org/wiki/HSwMS_Sm%C3%A5land_(J19)"
+     "source": "https://en.wikipedia.org/wiki/HSwMS_Sm%C3%A5land_(J19)",
+     "modele": "Halland"
     },
     {
      "nom": "M/T Atland",
@@ -221982,7 +222013,8 @@
      "largeur_m": 11,
      "operateur": "Armada española",
      "pavillon": "Espagne",
-     "source": "https://es.wikipedia.org/wiki/Clase_Chilreu"
+     "source": "https://es.wikipedia.org/wiki/Clase_Chilreu",
+     "modele": "Chilreu"
     },
     {
      "nom": "Tarifa (P-64)",
@@ -221992,7 +222024,8 @@
      "largeur_m": 11,
      "operateur": "Armada española",
      "pavillon": "Espagne",
-     "source": "https://es.wikipedia.org/wiki/Clase_Chilreu"
+     "source": "https://es.wikipedia.org/wiki/Clase_Chilreu",
+     "modele": "Chilreu"
     },
     {
      "nom": "Saputi II",
@@ -222430,7 +222463,8 @@
      "nom": "Galicia 93-Pescanova",
      "type": "voilier de course classe Whitbread 60",
      "annee": "1993",
-     "source": "https://es.wikipedia.org/wiki/Astilleros_Armada"
+     "source": "https://es.wikipedia.org/wiki/Astilleros_Armada",
+     "modele": "Whitbread 60"
     },
     {
      "nom": "Mytilus",
@@ -223323,7 +223357,8 @@
      "largeur_m": 14.62,
      "operateur": "Marine royale suédoise",
      "pavillon": "Suède",
-     "source": "https://sv.wikipedia.org/wiki/Thule_(1893)"
+     "source": "https://sv.wikipedia.org/wiki/Thule_(1893)",
+     "modele": "Svea"
     },
     {
      "nom": "HMS Fylgia",
@@ -223425,7 +223460,8 @@
       "source": "https://sv.wikipedia.org/wiki/HMS_M1_(1937)",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "M1"
     },
     {
      "nom": "HMS Unden (A216)",
@@ -224480,7 +224516,8 @@
      "nom": "T-2000 Voyager",
      "type": "Yacht à moteur de série T-2000",
      "annee": "2024",
-     "source": "https://en.wikipedia.org/wiki/Safehaven_Marine"
+     "source": "https://en.wikipedia.org/wiki/Safehaven_Marine",
+     "modele": "T-2000"
     }
    ],
    "sources": [
@@ -224700,7 +224737,8 @@
      "client": "Admiraute britannique",
      "operateur": "Royal Navy",
      "pavillon": "Royaume-Uni",
-     "source": "https://en.wikipedia.org/wiki/HMS_Belfast"
+     "source": "https://en.wikipedia.org/wiki/HMS_Belfast",
+     "modele": "Town"
     },
     {
      "nom": "SS Canberra",
@@ -224750,7 +224788,8 @@
      "client": "Ministere de la Defense britannique",
      "operateur": "Foreland Shipping Ltd",
      "pavillon": "Royaume-Uni",
-     "source": "https://en.wikipedia.org/wiki/MV_Hurst_Point"
+     "source": "https://en.wikipedia.org/wiki/MV_Hurst_Point",
+     "modele": "Point"
     },
     {
      "nom": "MV Anvil Point",
@@ -224763,7 +224802,8 @@
      "client": "Ministere de la Defense britannique",
      "operateur": "Foreland Shipping Ltd",
      "pavillon": "Royaume-Uni",
-     "source": "https://en.wikipedia.org/wiki/MV_Anvil_Point"
+     "source": "https://en.wikipedia.org/wiki/MV_Anvil_Point",
+     "modele": "Point"
     }
    ],
    "sources": [
@@ -224911,7 +224951,8 @@
      "annee": "2017",
      "client": "Algoma Central",
      "operateur": "Algoma Central",
-     "source": "https://en.wikipedia.org/wiki/Equinox-class_freighter"
+     "source": "https://en.wikipedia.org/wiki/Equinox-class_freighter",
+     "modele": "Equinox"
     },
     {
      "nom": "Kaiser",
@@ -224965,7 +225006,8 @@
      "annee": "2020",
      "client": "Algoma Central (Canada)",
      "operateur": "Algoma Central",
-     "source": "https://en.wikipedia.org/wiki/Equinox-class_freighter"
+     "source": "https://en.wikipedia.org/wiki/Equinox-class_freighter",
+     "modele": "Equinox"
     },
     {
      "nom": "SMS Szent Istvan",
@@ -224975,7 +225017,8 @@
      "largeur_m": 28,
      "capacite": "20 008 t en charge normale, 21 689 t a pleine charge",
      "operateur": "Marine austro-hongroise",
-     "source": "https://en.wikipedia.org/wiki/SMS_Szent_Istv%C3%A1n"
+     "source": "https://en.wikipedia.org/wiki/SMS_Szent_Istv%C3%A1n",
+     "modele": "Tegetthoff"
     },
     {
      "nom": "SMS Velebit",
@@ -224985,7 +225028,8 @@
      "largeur_m": 6.25,
      "capacite": "390 t en charge normale, 420 t a pleine charge",
      "operateur": "Marine austro-hongroise, cede a l'Italie en 1920",
-     "source": "https://en.wikipedia.org/wiki/SMS_Velebit"
+     "source": "https://en.wikipedia.org/wiki/SMS_Velebit",
+     "modele": "Huszar"
     },
     {
      "nom": "Szent István",
@@ -224996,7 +225040,8 @@
      "capacite": "déplacement 20 008 t (standard), 21 689 t en charge de combat",
      "client": "Marine austro-hongroise",
      "architecte_source": "https://en.wikipedia.org/wiki/SMS_Szent_Istv%C3%A1n",
-     "source": "https://en.wikipedia.org/wiki/SMS_Szent_Istv%C3%A1n"
+     "source": "https://en.wikipedia.org/wiki/SMS_Szent_Istv%C3%A1n",
+     "modele": "Tegetthoff"
     },
     {
      "nom": "Chaleur Bay",
@@ -225138,7 +225183,8 @@
      "proprietaire": "CM P-Max 1",
      "pavillon": "Bermudes",
      "imo": "9299123",
-     "source": "https://en.wikipedia.org/wiki/Stena_Paris"
+     "source": "https://en.wikipedia.org/wiki/Stena_Paris",
+     "modele": "P-Max"
     },
     {
      "nom": "Sava (P-831)",
@@ -225147,7 +225193,8 @@
      "longueur_m": 55.9,
      "capacite": "770 t en surface, 964 t en plongee",
      "operateur": "Marine yougoslave",
-     "source": "https://en.wikipedia.org/wiki/Sava-class_submarine"
+     "source": "https://en.wikipedia.org/wiki/Sava-class_submarine",
+     "modele": "Sava"
     },
     {
      "nom": "Drava (P-832)",
@@ -225156,7 +225203,8 @@
      "longueur_m": 55.9,
      "capacite": "770 t en surface, 964 t en plongee",
      "operateur": "Marine yougoslave",
-     "source": "https://en.wikipedia.org/wiki/Sava-class_submarine"
+     "source": "https://en.wikipedia.org/wiki/Sava-class_submarine",
+     "modele": "Sava"
     },
     {
      "nom": "Cetina (DBM-81)",
@@ -225167,7 +225215,8 @@
      "capacite": "152 mines DBM-241/81, six chars moyens ou 300 hommes equipes, equipage 32",
      "capacite_fret": "460 tonnes de charge utile",
      "operateur": "Marine croate",
-     "source": "https://en.wikipedia.org/wiki/Silba-class_landing_ship-minelayer"
+     "source": "https://en.wikipedia.org/wiki/Silba-class_landing_ship-minelayer",
+     "modele": "Silba"
     },
     {
      "nom": "Krka (DBM-82)",
@@ -225178,7 +225227,8 @@
      "capacite": "114 mines DBM-82, 230 tonnes d'eau douce",
      "capacite_fret": "460 tonnes de charge utile",
      "operateur": "Marine croate",
-     "source": "https://en.wikipedia.org/wiki/Silba-class_landing_ship-minelayer"
+     "source": "https://en.wikipedia.org/wiki/Silba-class_landing_ship-minelayer",
+     "modele": "Silba"
     },
     {
      "nom": "Omis (OOB-31)",
@@ -225188,7 +225238,8 @@
      "capacite": "environ 220 tonnes de deplacement, plus de 28 noeuds",
      "client": "Republique de Croatie",
      "operateur": "Marine croate",
-     "source": "https://en.wikipedia.org/wiki/Croatian_Navy"
+     "source": "https://en.wikipedia.org/wiki/Croatian_Navy",
+     "modele": "Omis"
     },
     {
      "nom": "Mega Victoria (ex Amorella)",
@@ -225233,7 +225284,8 @@
      "client": "Marine croate",
      "operateur": "Marine croate",
      "pavillon": "Croatie",
-     "source": "https://en.wikipedia.org/wiki/Croatian_Navy"
+     "source": "https://en.wikipedia.org/wiki/Croatian_Navy",
+     "modele": "Omis"
     },
     {
      "nom": "Donat",
@@ -225405,7 +225457,8 @@
      "proprietaire": "Far Eastern Shipping Company (Vladivostok) 1976-1996, puis Lubov Orlova Shipping Co Ltd",
      "pavillon": "URSS puis Russie, iles Cook a partir de 1999",
      "imo": "7391434",
-     "source": "https://en.wikipedia.org/wiki/MV_Lyubov_Orlova"
+     "source": "https://en.wikipedia.org/wiki/MV_Lyubov_Orlova",
+     "modele": "1A finno-suedoise"
     },
     {
      "nom": "Kralj Petar Kresimir IV (RTOP-11)",
@@ -225416,7 +225469,8 @@
      "capacite": "390 tonnes de deplacement, equipage 32",
      "client": "Republique de Croatie",
      "operateur": "Marine croate",
-     "source": "https://en.wikipedia.org/wiki/Kralj-class_missile_boat"
+     "source": "https://en.wikipedia.org/wiki/Kralj-class_missile_boat",
+     "modele": "Kralj"
     },
     {
      "nom": "Kralj Dmitar Zvonimir (RTOP-12)",
@@ -225426,7 +225480,8 @@
      "capacite": "390 tonnes de deplacement, mis en service en 2002",
      "client": "Republique de Croatie",
      "operateur": "Marine croate",
-     "source": "https://en.wikipedia.org/wiki/Kralj-class_missile_boat"
+     "source": "https://en.wikipedia.org/wiki/Kralj-class_missile_boat",
+     "modele": "Kralj"
     },
     {
      "nom": "Rade Koncar (RTOP-401)",
@@ -225436,7 +225491,8 @@
      "largeur_m": 8.4,
      "capacite": "271 tonnes a pleine charge",
      "operateur": "Marine yougoslave",
-     "source": "https://en.wikipedia.org/wiki/Kon%C4%8Dar-class_missile_boat"
+     "source": "https://en.wikipedia.org/wiki/Kon%C4%8Dar-class_missile_boat",
+     "modele": "Koncar"
     },
     {
      "nom": "Sibenik (ex-Vlado Cetkovic, RTOP-21)",
@@ -225446,7 +225502,8 @@
      "largeur_m": 8.4,
      "capacite": "271 tonnes a pleine charge",
      "operateur": "Marine croate",
-     "source": "https://en.wikipedia.org/wiki/Kon%C4%8Dar-class_missile_boat"
+     "source": "https://en.wikipedia.org/wiki/Kon%C4%8Dar-class_missile_boat",
+     "modele": "Koncar"
     },
     {
      "nom": "JoyMe",
@@ -225611,7 +225668,8 @@
      "largeur_m": 10.5,
      "client": "Irish Naval Service",
      "operateur": "Irish Naval Service puis Nigerian Navy (NNS Prosperity, 2015)",
-     "source": "https://en.wikipedia.org/wiki/L%C3%89_Emer"
+     "source": "https://en.wikipedia.org/wiki/L%C3%89_Emer",
+     "modele": "Emer"
     },
     {
      "nom": "LÉ Aoife (P22)",
@@ -225621,7 +225679,8 @@
      "largeur_m": 10.5,
      "client": "Irish Naval Service",
      "operateur": "Irish Naval Service puis Maritime Squadron des forces armées de Malte (P62)",
-     "source": "https://en.wikipedia.org/wiki/L%C3%89_Aoife"
+     "source": "https://en.wikipedia.org/wiki/L%C3%89_Aoife",
+     "modele": "Emer"
     },
     {
      "nom": "LÉ Aisling (P23)",
@@ -225631,7 +225690,8 @@
      "largeur_m": 10.5,
      "client": "Irish Naval Service",
      "operateur": "Irish Naval Service (1980-2016), puis Al-Karama",
-     "source": "https://en.wikipedia.org/wiki/L%C3%89_Aisling"
+     "source": "https://en.wikipedia.org/wiki/L%C3%89_Aisling",
+     "modele": "Emer"
     },
     {
      "nom": "LÉ Eithne (P31)",
@@ -226689,13 +226749,15 @@
      "nom": "Georg Burmester",
      "type": "cargo classe Sunrise",
      "annee": "2012",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2012"
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2012",
+     "modele": "Sunrise"
     },
     {
      "nom": "Piz Bever",
      "type": "cargo classe Sunrise",
      "annee": "2012",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2012"
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2012",
+     "modele": "Sunrise"
     },
     {
      "nom": "Judith",
@@ -226785,7 +226847,8 @@
      "type": "cargo sec classe Sunrise",
      "annee": "2016",
      "operateur": "Wijnne Barends",
-     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2016"
+     "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2016",
+     "modele": "Sunrise"
     },
     {
      "nom": "Scot Navigator",
@@ -226819,7 +226882,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Lady-Ariette-9760378.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Sea-River Liner 3700"
     },
     {
      "nom": "Lady Astrid",
@@ -226847,7 +226911,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Lady-Astrid-9760419.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Sea-River Liner 3700"
     },
     {
      "nom": "Alma",
@@ -226875,7 +226940,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Alma-9969429.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Eco Freighter 3700"
     },
     {
      "nom": "Alinda",
@@ -226903,7 +226969,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Alinda-9969431.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Eco Freighter 3700"
     },
     {
      "nom": "Mark D",
@@ -226931,7 +226998,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Mark-D-9969443.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Eco Freighter 3700"
     },
     {
      "nom": "CL Flanders",
@@ -226959,7 +227027,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/CL-Flanders-9969455.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Eco Freighter 3700"
     },
     {
      "nom": "Greetje",
@@ -226987,7 +227056,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Greetje-9969467.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Eco Freighter 3700"
     },
     {
      "nom": "Longsun",
@@ -227015,7 +227085,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Longsun-9969479.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Eco Freighter 3700"
     },
     {
      "nom": "Meine Fahre 1",
@@ -227078,7 +227149,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Cl-Nogaro-9969493.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Eco Freighter 3700"
     },
     {
      "nom": "Jan D",
@@ -227106,7 +227178,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Jan-D-9969510.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Eco Freighter 3700"
     },
     {
      "nom": "Baltic Dream",
@@ -227134,7 +227207,8 @@
       "source": "https://www.vesseltracker.com/en/Ships/Baltic-Dream-9969522.html",
       "le": "2026-08-03",
       "confiance": "simple"
-     }
+     },
+     "modele": "Eco Freighter 3700"
     }
    ],
    "sources": [
@@ -236985,7 +237059,8 @@
      "type": "yacht a voile en bois (type Peter Bieritz 40)",
      "annee": 1967,
      "pavillon": "Royaume-Uni",
-     "source": "https://brighton.boatshed.com/peter_bieritz_40-boat-312465.html"
+     "source": "https://brighton.boatshed.com/peter_bieritz_40-boat-312465.html",
+     "modele": "Peter Bieritz 40"
     },
     {
      "nom": "Marschenland (FRI 23), puis Godewind, puis King of the North",
@@ -237135,7 +237210,8 @@
      "type": "yacht a moteur en bois (type Peter Bieritz trawler)",
      "annee": 1988,
      "pavillon": "Croatie",
-     "source": "https://dailyboats.com/de/boat/223007-buy-peter-bieritz-trawler-for-sale"
+     "source": "https://dailyboats.com/de/boat/223007-buy-peter-bieritz-trawler-for-sale",
+     "modele": "Peter Bieritz trawler"
     },
     {
      "nom": "Skua",
@@ -237623,7 +237699,8 @@
      "nom": "Sonnenland 2 (puis Becks, puis Odin)",
      "type": "yacht cotre aurique a deux mats (type Kambala)",
      "annee": 1967,
-     "source": "https://de.wikipedia.org/wiki/B%C3%B6hmewerft"
+     "source": "https://de.wikipedia.org/wiki/B%C3%B6hmewerft",
+     "modele": "Kambala"
     }
    ],
    "sources": [
@@ -239818,7 +239895,8 @@
        "detail": "Coque et navire construits a Szczecin par Partner Stocznia, bouwnummer 5, remorques par le canal de Kiel, arrives a IJmuiden le 20/04/2012 puis conduits a Urk pour l achevement, livraison le 23/07/2012. La fiche de chantier de Hartman, qui enumere ses 17 constructions, ne contient PAS l Oceanic.",
        "source": "https://www.marhisdata.nl/werf&id=842"
       }
-     ]
+     ],
+     "modele": "Hartman M2 Runner"
     }
    ],
    "sources": [
