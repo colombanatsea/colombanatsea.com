@@ -25051,7 +25051,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: douane"
+     "caractere_motif": "propriete: etat francais ; exploitation: douane",
+     "modele": "DF46"
     },
     {
      "nom": "DF36 Kan An Avel",
@@ -25085,7 +25086,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: douane"
+     "caractere_motif": "propriete: etat francais ; exploitation: douane",
+     "modele": "DF36"
     },
     {
      "nom": "DF47 Lissero",
@@ -25119,7 +25121,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: douane"
+     "caractere_motif": "propriete: etat francais ; exploitation: douane",
+     "modele": "DF47"
     },
     {
      "nom": "DF31 Pitera",
@@ -25160,7 +25163,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: douane"
+     "caractere_motif": "propriete: etat francais ; exploitation: douane",
+     "modele": "DF31"
     },
     {
      "nom": "DF44 Rakawa",
@@ -25201,7 +25205,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: douane"
+     "caractere_motif": "propriete: etat francais ; exploitation: douane",
+     "modele": "DF44"
     },
     {
      "nom": "DF30 Marinada",
@@ -25235,7 +25240,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat francais ; exploitation: douane"
+     "caractere_motif": "propriete: etat francais ; exploitation: douane",
+     "modele": "DF30"
     },
     {
      "nom": "VGMAR (série de 24, 4 fermes)",
@@ -32435,7 +32441,8 @@
       "le": "2026-08-16",
       "depuis": "timeline[role=construction]",
       "etape": "DF 61 Touloubre (Chantiers Navals Bernard, Douane)"
-     }
+     },
+     "modele": "DF 61"
     },
     {
      "nom": "Les Océanes",
@@ -42052,7 +42059,8 @@
        "source": "https://www.bateaux.com/article/32933/tarif-du-jpk-1030-l-irc-une-concurrence-acharnee"
       }
      ],
-     "prix_acquisition": "À partir de 135 900 € TTC (2020)"
+     "prix_acquisition": "À partir de 135 900 € TTC (2020)",
+     "modele": "JPK 1030"
     },
     {
      "nom": "JPK 1180",
@@ -42544,7 +42552,8 @@
      "prix_acquisition": "RM 1370 (modèle 13m de la gamme en 2017) : ~400 000 € TTC prêt à naviguer (voiles + électronique + à l'eau). Successeur RM 1380 (depuis 2022) : ~480 000 €.",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: plaisancier"
+     "caractere_motif": "propriete: plaisancier",
+     "modele": "RM 1370"
     },
     {
      "nom": "RM 1280 / RM 1270",
@@ -42620,7 +42629,8 @@
      "prix_acquisition": "Modèle 2015 = RM 1070 : prix neuf de base à partir de 227 880 € TTC (départ chantier), ~270 000–280 000 € en version équipée. Modèle RM 1080 (nouvelle génération inspirée Class40, depuis 2021) : 250 000 € HT / 297 500 € de base.",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: plaisancier"
+     "caractere_motif": "propriete: plaisancier",
+     "modele": "RM 1080"
     },
     {
      "nom": "RM 890 / RM 890+",
@@ -48374,7 +48384,8 @@
        "prix": "39,5 M EUR (2024)",
        "source": "https://www.opex360.com/2024/04/11/le-venezuela-critique-la-commande-dun-patrouilleur-francais-ocea-opv-190-par-le-guyana/"
       }
-     ]
+     ],
+     "modele": "OPV 190"
     },
     {
      "nom": "FPB 110 Mk II",
@@ -48962,7 +48973,8 @@
      ],
      "caractere": "public",
      "exploitation": "regalien",
-     "caractere_motif": "exploitation: defence"
+     "caractere_motif": "exploitation: defence",
+     "modele": "OPV 190"
     },
     {
      "nom": "BRP Malamawi",
@@ -54733,7 +54745,8 @@
      "tracabilite": "reference-sans-url",
      "caractere": "public",
      "exploitation": "regalien",
-     "caractere_motif": "exploitation: garde-cote"
+     "caractere_motif": "exploitation: garde-cote",
+     "modele": "FPB 98"
     },
     {
      "nom": "El Ramy (397)",
@@ -54777,7 +54790,8 @@
      "tracabilite": "non-tracee",
      "caractere": "public",
      "exploitation": "regalien",
-     "caractere_motif": "exploitation: garde-cote"
+     "caractere_motif": "exploitation: garde-cote",
+     "modele": "FPB 98"
     },
     {
      "nom": "BG 201 (garde-frontieres Ukraine)",
@@ -55007,7 +55021,8 @@
      "tracabilite": "non-tracee",
      "caractere": "public",
      "exploitation": "regalien",
-     "caractere_motif": "exploitation: garde-cote"
+     "caractere_motif": "exploitation: garde-cote",
+     "modele": "FPB 110"
     },
     {
      "nom": "Haras 12",
@@ -55048,7 +55063,8 @@
       }
      ],
      "source_ref": "Mer et Marine 'Ocea : deux nouvelles unites omanaises sur le depart' ; 'Un nouveau patrouilleur construit par Ocea a quitte Saint-Nazaire'",
-     "tracabilite": "reference-sans-url"
+     "tracabilite": "reference-sans-url",
+     "modele": "FPB 110"
     },
     {
      "nom": "Haras 13",
@@ -55089,7 +55105,8 @@
       }
      ],
      "source_ref": "Mer et Marine 'Un nouveau patrouilleur construit par Ocea a quitte Saint-Nazaire' (nov. 2022) ; MarineTraffic HARAS 13 (MMSI 461000022, Oman)",
-     "tracabilite": "reference-sans-url"
+     "tracabilite": "reference-sans-url",
+     "modele": "FPB 110"
     },
     {
      "nom": "Alize (DF 39)",
@@ -154561,7 +154578,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat suedois ; exploitation: garde-cote"
+     "caractere_motif": "propriete: etat suedois ; exploitation: garde-cote",
+     "modele": "KBV 201"
     },
     {
      "nom": "KBV 202",
@@ -156860,7 +156878,8 @@
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: ab",
-     "tracabilite": "url-non-verifiee"
+     "tracabilite": "url-non-verifiee",
+     "modele": "GG 330"
     },
     {
      "nom": "GG 744 Clupea",
@@ -156940,7 +156959,8 @@
      "source_ref": "chantier Ö-varvet/Backmans Slip, construction n0 103, numero officiel 14303",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: as"
+     "caractere_motif": "propriete: as",
+     "modele": "GG 744"
     },
     {
      "nom": "GG 787 Skandia (1988)",
@@ -156977,7 +156997,8 @@
       "source": "https://sv.wikipedia.org/wiki/Ö-varvet",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "GG 787"
     },
     {
      "nom": "GG 39 Rossö (1988)",
@@ -157007,7 +157028,8 @@
      "tracabilite": "url-regroupement",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: armement"
+     "caractere_motif": "propriete: armement",
+     "modele": "GG 39"
     },
     {
      "nom": "GG 237 Marika",
@@ -157044,7 +157066,8 @@
      "tracabilite": "url-regroupement",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: armement"
+     "caractere_motif": "propriete: armement",
+     "modele": "GG 237"
     },
     {
      "nom": "GG 981 Ocean",
@@ -157081,7 +157104,8 @@
      "tracabilite": "url-regroupement",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: armement"
+     "caractere_motif": "propriete: armement",
+     "modele": "GG 981"
     },
     {
      "nom": "GG 73 Ingun",
@@ -157111,7 +157135,8 @@
      "tracabilite": "url-regroupement",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: armement"
+     "caractere_motif": "propriete: armement",
+     "modele": "GG 73"
     },
     {
      "nom": "GG 392 Strannefjord",
@@ -157148,7 +157173,8 @@
      "tracabilite": "url-regroupement",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: armement"
+     "caractere_motif": "propriete: armement",
+     "modele": "GG 392"
     },
     {
      "nom": "GG 781 Sandefjord",
@@ -157178,7 +157204,8 @@
      "tracabilite": "url-regroupement",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: armement"
+     "caractere_motif": "propriete: armement",
+     "modele": "GG 781"
     },
     {
      "nom": "GG 32 Danavik",
@@ -157222,7 +157249,8 @@
       "source": "https://sv.wikipedia.org/wiki/Ö-varvet",
       "le": "2026-08-05",
       "confiance": "simple"
-     }
+     },
+     "modele": "GG 32"
     },
     {
      "nom": "GG 70 Marie",
@@ -157252,7 +157280,8 @@
      "tracabilite": "url-regroupement",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: armement"
+     "caractere_motif": "propriete: armement",
+     "modele": "GG 70"
     },
     {
      "nom": "GG 29 Tristan",
@@ -157289,7 +157318,8 @@
      "tracabilite": "url-regroupement",
      "caractere": "prive",
      "propriete": "privee",
-     "caractere_motif": "propriete: armement"
+     "caractere_motif": "propriete: armement",
+     "modele": "GG 29"
     }
    ],
    "sources": [
@@ -172572,7 +172602,8 @@
       "annee": "2012",
       "source": "https://en.wikipedia.org/wiki/MS_Normandy",
       "methode": "deduit du texte de la fiche par deduire-fin-de-vie.js, releve le 2026-08-21"
-     }
+     },
+     "modele": "GV 909"
     },
     {
      "nom": "Winter Sea",
@@ -176429,7 +176460,8 @@
      "caractere": "public",
      "propriete": "publique",
      "exploitation": "regalien",
-     "caractere_motif": "propriete: etat norvegien ; exploitation: pilotage"
+     "caractere_motif": "propriete: etat norvegien ; exploitation: pilotage",
+     "modele": "LOS115"
     },
     {
      "nom": "Pilotines aluminium - Swedish Maritime Administration (séries 11,5 m / 14,4 m)",
