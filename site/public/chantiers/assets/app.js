@@ -342,18 +342,18 @@
         });
       }
     } catch (e) { console.warn("Contours outre-mer indisponibles", e); }
-    // Fond des pays étrangers (registre naval européen), servi en local.
-    state.foreignGeo = null;
+    // FOND DU MONDE ENTIER, servi en local, dérivé de Natural Earth par
+    // `pipeline/tools/gen-fond-monde.js`. Il remplace les deux fichiers tenus à la
+    // main, `foreign-countries` (9 pays) et `foreign-countries-extra` (2) : tout pays
+    // qui entrait par le parcours de graphe arrivait sur du VIDE, et un marqueur posé
+    // sur du blanc ne se lit pas comme « fond manquant » mais comme « donnée fausse ».
+    // Mesure du 21/08/2026 avant correction : 18 pays sans contour, 102 fiches
+    // concernées, dont l'Allemagne et ses 38 chantiers.
+    state.worldGeo = null;
     try {
-      const fr = await fetch("data/foreign-countries.geojson", { cache: "force-cache" });
-      if (fr.ok) state.foreignGeo = await fr.json();
-    } catch (e) { console.warn("Fond pays étrangers indisponible", e); }
-    // Pays hors emprise européenne (Chine, Roumanie) : dessinés mais hors emprise par défaut.
-    state.foreignGeoExtra = null;
-    try {
-      const fe = await fetch("data/foreign-countries-extra.geojson", { cache: "force-cache" });
-      if (fe.ok) state.foreignGeoExtra = await fe.json();
-    } catch (e) { console.warn("Fond pays hors-emprise indisponible", e); }
+      const wr = await fetch("data/world-countries.geojson", { cache: "force-cache" });
+      if (wr.ok) state.worldGeo = await wr.json();
+    } catch (e) { console.warn("Fond mondial indisponible", e); }
     buildControls();
     try { initMap(geo); } catch (e) { console.error("Carte indisponible", e); showMapFallback(); }
     syncViews();
@@ -843,20 +843,18 @@
       const layer = L.geoJSON(geo, { style: landStyle, interactive: false }).addTo(map);
       try { bounds = layer.getBounds(); } catch (e) { /* noop */ }
     }
-    // Fond des pays étrangers (registre européen) : même style, par-dessous les marqueurs.
-    if (state.foreignGeo) {
-      try {
-        const fl = L.geoJSON(state.foreignGeo, { style: landStyle, interactive: false }).addTo(map);
-        bounds = bounds ? bounds.extend(fl.getBounds()) : fl.getBounds();
-      } catch (e) { /* noop */ }
-    }
-    // Pays hors emprise (Chine, Roumanie) : dessinés, mais sans étendre l'emprise par défaut.
-    // L'Espagne en a été RETIRÉE le 05/08/2026 : elle portait 26 chantiers et restait
-    // hors du cadrage d'accueil, donc invisible à l'ouverture. Un pays du registre
-    // n'est pas un pays de la périphérie.
-    // (sinon la vue se dézoome jusqu'en Asie). On y accède par le filtre Pays ou en dézoomant.
-    if (state.foreignGeoExtra) {
-      try { L.geoJSON(state.foreignGeoExtra, { style: landStyle, interactive: false }).addTo(map); }
+    // Fond mondial : même style, par-dessous les marqueurs, et SANS étendre l'emprise.
+    // Le distinguo « pays du registre » / « pays de la périphérie » n'a plus lieu
+    // d'être : tous les pays sont dessinés, et le cadrage d'accueil se calcule sur les
+    // CHANTIERS, jamais sur le décor. Étendre l'emprise au fond dézoomerait la vue
+    // jusqu'aux antipodes, ce qui est précisément la faute que le calcul sur les
+    // chantiers a corrigée le 05/08/2026.
+    if (state.worldGeo) {
+      // La classe est ce qui rend la couche MESURABLE. Sans elle, un test qui compte
+      // les chemins du SVG compte aussi les regions de France, qui en peignent deja
+      // plus de deux cents : le fond mondial pouvait disparaitre sans que le seuil
+      // bouge. Constate en faisant echouer le temoin volontairement, le 21/08/2026.
+      try { L.geoJSON(state.worldGeo, { style: { ...landStyle, className: "fond-monde" }, interactive: false }).addTo(map); }
       catch (e) { /* noop */ }
     }
     // L'emprise d'accueil se calcule sur les CHANTIERS, pas sur les fonds de carte.
