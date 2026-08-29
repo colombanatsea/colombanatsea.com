@@ -1,0 +1,37 @@
+---
+/**
+ * Banc d'essai du service de flux de la maison, flux.colombanatsea.com.
+ *
+ * Cette page existe pour MESURER le flux en production sans toucher a la page
+ * d'accueil, qui est en cours de modification par ailleurs. Elle est exclue
+ * des moteurs par robots.txt : ce n'est pas une page du site, c'est un
+ * instrument. BaseLayout n'expose pas de slot "head", un <Fragment slot="head">
+ * y serait un branchement mort et silencieux.
+ *
+ * Une fois le jeton depose et le rendu constate ici, le composant se pose ou
+ * Colomban le veut, et cette page se retire.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InstagramFeed from '../../components/InstagramFeed.astro';
+---
+
+<BaseLayout
+  lang="fr"
+  frSlug="flux-instagram"
+  title="Flux Instagram | Colomban at Sea"
+  description="Banc d'essai du flux Instagram."
+  navLight
+>
+  <section class="contact-page">
+    <div class="container">
+      <p class="mono text-bleu">Banc d'essai</p>
+      <h1>Flux Instagram<span style="color: var(--bleu);">.</span></h1>
+      <p class="subtitle">
+        Page de mesure du service de flux de la maison. Elle n'est pas r&eacute;f&eacute;renc&eacute;e et se
+        retire une fois le rendu constat&eacute;.
+      </p>
+
+      <InstagramFeed compte="colombanatsea" limite={9} />
+    </div>
+  </section>
+</BaseLayout>
