@@ -1,0 +1,133 @@
+---
+/**
+ * InstagramFeed — flux @colombanatsea, servi par flux.colombanatsea.com.
+ *
+ * DIFFERENCE ASSUMEE AVEC LinkedInFeed. Celui-ci est cure a la main, au build,
+ * parce que LinkedIn n'expose pas de flux exploitable pour un profil personnel.
+ * Instagram, si : le flux est donc VIVANT, appele par le navigateur, et il n'y
+ * a rien a maintenir a la main. Meme grammaire visuelle, deux sources de nature
+ * differente.
+ *
+ * Le service est le meme pour tous les sites de la maison : brancher un site
+ * neuf, c'est deux ecritures dans son espace KV, zero deploiement.
+ * Voir le depot colombanatsea/flux-social.
+ *
+ * La CSP du domaine doit nommer https://flux.colombanatsea.com en connect-src :
+ * un sous-domaine n'est PAS couvert par 'self'. Pose le 29 aout 2026.
+ */
+interface Props {
+  compte?: string;
+  limite?: number;
+  titre?: string;
+}
+const { compte = 'colombanatsea', limite = 9, titre } = Astro.props;
+const profil = `https://www.instagram.com/${compte}/`;
+---
+
+<section class="ig-feed" data-compte={compte} data-limite={limite}>
+  {titre && <h2 class="ig-feed__titre">{titre}</h2>}
+
+  <ul class="ig-feed__grid" role="list" data-ig-grid>
+    <li class="ig-feed__attente" data-ig-attente>Chargement des publications&hellip;</li>
+  </ul>
+
+  <p class="ig-feed__suite">
+    <a href={profil} target="_blank" rel="noopener noreferrer">Suivre @{compte} sur Instagram</a>
+  </p>
+</section>
+
+<script>
+  // Rendu cote navigateur : le flux est vivant, il n'a pas a figer au build.
+  // Aucun etat blanc : si le service ne rend rien, la grille disparait et il
+  // reste la phrase et le lien vers le profil, ce qui est deja une reponse.
+  const SERVICE = 'https://flux.colombanatsea.com/instagram';
+
+  function echapper(s: string): string {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  document.querySelectorAll<HTMLElement>('.ig-feed').forEach((bloc) => {
+    const grille = bloc.querySelector<HTMLElement>('[data-ig-grid]');
+    if (!grille) return;
+    const compte = bloc.dataset.compte || 'colombanatsea';
+    const limite = bloc.dataset.limite || '9';
+
+    fetch(`${SERVICE}?compte=${encodeURIComponent(compte)}&limite=${encodeURIComponent(limite)}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (!d || !d.items || !d.items.length) {
+          bloc.dataset.etat = d && d.erreur ? d.erreur : 'vide';
+          grille.remove();
+          return;
+        }
+        bloc.dataset.etat = 'ok';
+        grille.innerHTML = d.items
+          .map((it: any) => {
+            const alt = echapper((it.caption || `Publication de @${compte}`).slice(0, 120));
+            const badge = it.type === 'VIDEO' ? '<span class="ig-feed__video" aria-hidden="true">&#9654;</span>' : '';
+            return `<li class="ig-feed__case"><a class="ig-feed__lien" href="${echapper(it.permalink)}" target="_blank" rel="noopener noreferrer">${badge}<img src="${echapper(it.image)}" alt="${alt}" loading="lazy" decoding="async"></a></li>`;
+          })
+          .join('');
+      })
+      .catch(() => {
+        bloc.dataset.etat = 'erreur';
+        grille.remove();
+      });
+  });
+</script>
+
+<style>
+  .ig-feed__titre {
+    margin: 0 0 var(--space-md, 1rem);
+  }
+  .ig-feed__grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--space-sm, 0.75rem);
+  }
+  .ig-feed__attente {
+    grid-column: 1 / -1;
+    color: var(--gris-500, #6b7280);
+    font-size: 0.9rem;
+  }
+  .ig-feed__case { display: flex; }
+  .ig-feed__lien {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid var(--gris-200, #e6e8ee);
+    background: var(--gris-100, #f2f4f8);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .ig-feed__lien:hover {
+    transform: translateY(-3px);
+    border-color: var(--bleu);
+    box-shadow: 0 8px 24px rgba(42, 85, 179, 0.1);
+  }
+  .ig-feed__lien:focus-visible { outline: 2px solid var(--bleu); outline-offset: 2px; }
+  .ig-feed__lien img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ig-feed__video {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    z-index: 1;
+    color: #fff;
+    font-size: 0.8rem;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+  }
+  .ig-feed__suite {
+    margin: var(--space-md, 1rem) 0 0;
+    font-size: 0.95rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ig-feed__lien { transition: none; }
+    .ig-feed__lien:hover { transform: none; }
+  }
+</style>

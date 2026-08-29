@@ -11,6 +11,7 @@ User-agent: *
 Allow: /
 Disallow: /tools/
 Disallow: /bunkering/
+Disallow: /fr/flux-instagram
 
 # Crawlers IA - accès interdit
 User-agent: GPTBot
