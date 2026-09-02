@@ -54,7 +54,7 @@
  },
  {
   "date": "2026-09-02",
-  "motif": "Capacites aberrantes : 226 coques dont le champ des passagers portait un volume de cargaison, une puissance ou un nombre de conteneurs sont corrigees sur leur source.",
+  "motif": null,
   "chantiers": 539,
   "entrees": 7842,
   "coques_plancher": 7644,
