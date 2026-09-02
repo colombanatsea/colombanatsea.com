@@ -344455,7 +344455,7 @@
    "port_lourd_dwt": 24556,
    "desserte": null,
    "capacite": null,
-   "capacite_pax": 1740,
+   "capacite_pax": null,
    "capacite_vehicules": null,
    "capacite_fret": "1 911 evp dont 230 reefers",
    "energie": "MAN-B&W 6S60ME-C10-HPSCR ; puissance 10 3850 kW ; propulsion 1 hélice",
@@ -344500,7 +344500,17 @@
      "capacite_pax"
     ]
    },
-   "sortie_pavillon": "dépavilloné"
+   "sortie_pavillon": "dépavilloné",
+   "champs_corriges": [
+    {
+     "champ": "capacite_pax",
+     "avant": 1740,
+     "apres": null,
+     "source": "https://www.marine-marchande.net/Flotte/A-E/Durande.htm",
+     "le": "2026-09-02",
+     "motif": "1 740 est une capacite en EVP, pas des passagers. Porte-conteneurs de 172,11 m. Liste et fiche de la source divergent, 1 740 contre 1 911 EVP : l EVP reste non ecrit, la divergence s instruit."
+    }
+   ]
   },
   {
    "nom": "FERRYMAR",
