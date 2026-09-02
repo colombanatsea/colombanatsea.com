@@ -296664,29 +296664,6 @@
    "uuid": "87159219-c55a-45bd-90d8-8203f65a9858"
   },
   {
-   "id": "ope-demoli",
-   "cle": "demoli",
-   "nom": "Démoli (retiré du service)",
-   "alias": [
-    "Démoli (retiré du service)",
-    "demoli (1982)",
-    "demoli (1986)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "773d074a-485a-461f-b422-7fc53aef7fa0",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Démoli (retiré du service) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "sans_exploitant",
-    "le": "2026-09-02"
-   }
-  },
-  {
    "id": "ope-escal-ouest",
    "cle": "escal ouest",
    "nom": "Escal Ouest",
@@ -296716,29 +296693,6 @@
    ],
    "uuid": "2eddbd22-22e1-475b-9ea8-83eeb9673883",
    "nature_du_point": "siege"
-  },
-  {
-   "id": "ope-exploitant-prive",
-   "cle": "exploitant prive",
-   "nom": "exploitant prive (devenu Hui Chuan)",
-   "alias": [
-    "exploitant prive (devenu Hui Chuan)",
-    "exploitant prive",
-    "exploitant prive (apres reforme)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "3cbd812c-08c0-4729-b93e-4f7531b4c522",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « exploitant prive (devenu Hui Chuan) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_prive_non_nomme",
-    "le": "2026-09-02"
-   }
   },
   {
    "id": "ope-forsvarsmakten",
@@ -297645,29 +297599,6 @@
    "uuid": "5a49f33d-4fe5-457a-bc45-2f284c9566fc"
   },
   {
-   "id": "ope-armateur-prive",
-   "cle": "armateur prive",
-   "nom": "Armateur prive (yacht prive, gestion Sailoe/management prive)",
-   "alias": [
-    "Armateur prive (yacht prive, gestion Sailoe/management prive)",
-    "Armateur prive (yacht prive, charter occasionnel)",
-    "armateur prive (yacht d'exploration)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "e1eecbea-2ffb-4951-b14f-8cb878fb56d0",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Armateur prive (yacht prive, gestion Sailoe/management prive) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_prive_non_nomme",
-    "le": "2026-09-02"
-   }
-  },
-  {
    "id": "ope-armement-des-phares-et-balises",
    "cle": "armement des phares et balises",
    "nom": "Armement des Phares et Balises",
@@ -297683,49 +297614,6 @@
    "geo_precision": null,
    "source": null,
    "uuid": "38483624-9104-47b7-b7ba-2c66fae723ba"
-  },
-  {
-   "id": "ope-armement-norvegien",
-   "cle": "armement norvegien",
-   "nom": "armement norvégien (reefer)",
-   "alias": [
-    "armement norvégien (reefer)",
-    "armement norvégien"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "41dd6908-3911-4768-bac4-8cb23bf3f3dc",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armement norvégien (reefer) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-armement-omanais",
-   "cle": "armement omanais",
-   "nom": "armement omanais (apres revente)",
-   "alias": [
-    "armement omanais (apres revente)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "7ca2642c-bb21-458f-8b6e-463fcc24f0b4",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armement omanais (apres revente) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
   },
   {
    "id": "ope-atlantic-container-line",
@@ -300088,27 +299976,6 @@
    "uuid": "68214d4f-97f6-40b8-a184-e3e1a346ffe2"
   },
   {
-   "id": "ope-demoli-2009",
-   "cle": "demoli 2009",
-   "nom": "demoli 2009",
-   "alias": [
-    "demoli 2009"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "a9d8687a-bbee-437c-8b75-1928028cbf2b",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « demoli 2009 ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "sans_exploitant",
-    "le": "2026-09-02"
-   }
-  },
-  {
    "id": "ope-dof-subsea",
    "cle": "dof subsea",
    "nom": "DOF Subsea",
@@ -301539,28 +301406,6 @@
    "uuid": "b34a08be-e5c1-4a7a-8c7c-288fca6d46ee"
   },
   {
-   "id": "ope-proprietaire-prive",
-   "cle": "proprietaire prive",
-   "nom": "Proprietaire prive (plaisance patrimoniale)",
-   "alias": [
-    "Proprietaire prive (plaisance patrimoniale)",
-    "Proprietaire prive (yacht)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "da5c0540-d41e-4544-972b-c06c75dc89b1",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Proprietaire prive (plaisance patrimoniale) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_prive_non_nomme",
-    "le": "2026-09-02"
-   }
-  },
-  {
    "id": "ope-pullmantur-cruises",
    "cle": "pullmantur cruises",
    "nom": "Pullmantur Cruises (jusqu'a 2020)",
@@ -302583,27 +302428,6 @@
    "uuid": "dbcd4ee7-a845-4f18-b9ae-23e6cc354238"
   },
   {
-   "id": "ope-acheteur-international",
-   "cle": "acheteur international",
-   "nom": "Acheteur international (vendu Q1 2024 par DOF)",
-   "alias": [
-    "Acheteur international (vendu Q1 2024 par DOF)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "c3d120ef-d280-44b5-990d-d022e44406f6",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Acheteur international (vendu Q1 2024 par DOF) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
    "id": "ope-acta-marine-den-helder",
    "cle": "acta marine den helder",
    "nom": "Acta Marine B.V., Den Helder",
@@ -303285,90 +303109,6 @@
    "uuid": "1b05c475-8b2d-4a94-9b27-4f4c7b9436eb"
   },
   {
-   "id": "ope-armateur-feroien",
-   "cle": "armateur feroien",
-   "nom": "Armateur féroïen (pavillon îles Féroé)",
-   "alias": [
-    "Armateur féroïen (pavillon îles Féroé)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "1d55916d-70da-4d35-8037-2c8362476e67",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Armateur féroïen (pavillon îles Féroé) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-armateur-russe",
-   "cle": "armateur russe",
-   "nom": "armateur russe (voir timeline)",
-   "alias": [
-    "armateur russe (voir timeline)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "74a20803-2522-4a1b-ada0-7fadf4506540",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armateur russe (voir timeline) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-armateur-russe-non-divulgue",
-   "cle": "armateur russe non divulgue",
-   "nom": "Armateur russe non divulgue (ex Bourbon Offshore Norway)",
-   "alias": [
-    "Armateur russe non divulgue (ex Bourbon Offshore Norway)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "ea59e419-b021-4208-a69d-24fa488511c7",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Armateur russe non divulgue (ex Bourbon Offshore Norway) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-armateur-successif",
-   "cle": "armateur successif",
-   "nom": "armateur successif (voir timeline)",
-   "alias": [
-    "armateur successif (voir timeline)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "0dd51ebf-8f8a-4c35-a0d8-5e78b5df7c60",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armateur successif (voir timeline) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
    "id": "ope-armement-alexis-hagnere",
    "cle": "armement alexis hagnere",
    "nom": "Armement Alexis Hagneré",
@@ -303399,132 +303139,6 @@
    "geo_precision": null,
    "source": null,
    "uuid": "4956bc70-5ade-4902-b984-2e13905e96c6"
-  },
-  {
-   "id": "ope-armement-de-foto",
-   "cle": "armement de foto",
-   "nom": "armement de Fotö (sous le nom GG 773 Signora)",
-   "alias": [
-    "armement de Fotö (sous le nom GG 773 Signora)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "755c7776-7ab6-4bd8-893c-365aedb429de",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armement de Fotö (sous le nom GG 773 Signora) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-armement-de-hono",
-   "cle": "armement de hono",
-   "nom": "armement de Hönö (sous le nom GG 580 Marina)",
-   "alias": [
-    "armement de Hönö (sous le nom GG 580 Marina)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "fa27d9a1-4c9d-4c4f-926c-df25b1b3fca2",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armement de Hönö (sous le nom GG 580 Marina) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-armement-de-peche",
-   "cle": "armement de peche",
-   "nom": "Armement de peche (Troon)",
-   "alias": [
-    "Armement de peche (Troon)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "7bd3dbb7-5d50-472f-ae2e-8f629010402e",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Armement de peche (Troon) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-armement-de-roro",
-   "cle": "armement de roro",
-   "nom": "armement de Rörö (sous le nom GG 32 Tristan)",
-   "alias": [
-    "armement de Rörö (sous le nom GG 32 Tristan)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "811ae326-a12b-4bfb-b092-0df39a13a302",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armement de Rörö (sous le nom GG 32 Tristan) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-armement-de-simrishamn",
-   "cle": "armement de simrishamn",
-   "nom": "armement de Simrishamn (sous le nom SIN 37 Linzy)",
-   "alias": [
-    "armement de Simrishamn (sous le nom SIN 37 Linzy)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "91c5478d-4c38-4ff5-9a86-8c7b4e9240eb",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armement de Simrishamn (sous le nom SIN 37 Linzy) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-armement-de-traslovslage",
-   "cle": "armement de traslovslage",
-   "nom": "armement de Träslövsläge (sous le nom VG 392 Strannefjord)",
-   "alias": [
-    "armement de Träslövsläge (sous le nom VG 392 Strannefjord)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "76860f4b-37ef-428c-a2d3-eb39d46f49ab",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armement de Träslövsläge (sous le nom VG 392 Strannefjord) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
   },
   {
    "id": "ope-armement-des-phares-et-balises-direction-19fw3gx",
@@ -305028,27 +304642,6 @@
    "uuid": "b177ae74-de7e-4526-aa82-ef89834a6f9b"
   },
   {
-   "id": "ope-clients-prives",
-   "cle": "clients prives",
-   "nom": "Clients prives (modele de serie de plaisance)",
-   "alias": [
-    "Clients prives (modele de serie de plaisance)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "fd292cf3-1974-48bd-8055-1f8738a2a114",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Clients prives (modele de serie de plaisance) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_prive_non_nomme",
-    "le": "2026-09-02"
-   }
-  },
-  {
    "id": "ope-clipper-line",
    "cle": "clipper line",
    "nom": "Clipper Line (1951-1969)",
@@ -305857,27 +305450,6 @@
    "uuid": "2d8b450d-5629-42db-bded-611edd0f5701"
   },
   {
-   "id": "ope-demantele",
-   "cle": "demantele",
-   "nom": "démantelé",
-   "alias": [
-    "démantelé"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "35c7bd96-3726-4f38-ad03-4bd75e79f6c4",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « démantelé ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "sans_exploitant",
-    "le": "2026-09-02"
-   }
-  },
-  {
    "id": "ope-demlane",
    "cle": "demlane",
    "nom": "Demlane",
@@ -305892,48 +305464,6 @@
    "geo_precision": null,
    "source": null,
    "uuid": "66bcd45c-d416-4a0a-9fc3-b536e6e6552a"
-  },
-  {
-   "id": "ope-demoli-1962",
-   "cle": "demoli 1962",
-   "nom": "demoli 1962",
-   "alias": [
-    "demoli 1962"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "0608c6d8-7cc7-47ee-aedd-07678334e567",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « demoli 1962 ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "sans_exploitant",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-demoli-2012",
-   "cle": "demoli 2012",
-   "nom": "demoli 2012 (dernier nom Normandy)",
-   "alias": [
-    "demoli 2012 (dernier nom Normandy)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "a38daeda-5cca-4a62-a23c-800078da1d65",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « demoli 2012 (dernier nom Normandy) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "sans_exploitant",
-    "le": "2026-09-02"
-   }
   },
   {
    "id": "ope-departement-de-lot-et-garonne-1eqhs2l",
@@ -306877,132 +306407,6 @@
    "geo_precision": null,
    "source": null,
    "uuid": "5f1eca34-c5e3-49bc-9899-286bb6766499"
-  },
-  {
-   "id": "ope-exploitant-aquacole",
-   "cle": "exploitant aquacole",
-   "nom": "exploitant aquacole (Chili)",
-   "alias": [
-    "exploitant aquacole (Chili)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "44e03e4b-9782-4cf1-8203-f1f1d5097055",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « exploitant aquacole (Chili) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-exploitant-bresilien",
-   "cle": "exploitant bresilien",
-   "nom": "exploitant bresilien (apres renommage Antares)",
-   "alias": [
-    "exploitant bresilien (apres renommage Antares)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "4b761902-c584-4a53-a981-56cb6eb95284",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « exploitant bresilien (apres renommage Antares) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-exploitant-de-charter",
-   "cle": "exploitant de charter",
-   "nom": "exploitant de charter (Loth Loriën)",
-   "alias": [
-    "exploitant de charter (Loth Loriën)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "15450aa6-b893-43bf-a694-3e16c0ac1083",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « exploitant de charter (Loth Loriën) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-exploitant-en-gambie",
-   "cle": "exploitant en gambie",
-   "nom": "exploitant en Gambie (non identifie)",
-   "alias": [
-    "exploitant en Gambie (non identifie)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "4c8cb443-2008-4d7d-8076-aedb7522c24e",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « exploitant en Gambie (non identifie) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-exploitant-norvegien",
-   "cle": "exploitant norvegien",
-   "nom": "exploitant norvegien",
-   "alias": [
-    "exploitant norvegien"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "1a50b3b5-6148-4ac8-b19b-2fb7a8c51166",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « exploitant norvegien ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-exploitant-suedois",
-   "cle": "exploitant suedois",
-   "nom": "exploitant suedois",
-   "alias": [
-    "exploitant suedois"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "64864698-c633-4342-91cd-ecfda4d51e93",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « exploitant suedois ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
   },
   {
    "id": "ope-exploitation-aux-canaries",
@@ -308883,27 +308287,6 @@
    "geo_precision": null,
    "source": null,
    "uuid": "e6e0f68e-3258-44c5-acc1-005c203cd781"
-  },
-  {
-   "id": "ope-hors-service-depuis-2020",
-   "cle": "hors service depuis 2020",
-   "nom": "hors service depuis 2020",
-   "alias": [
-    "hors service depuis 2020"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "1946836c-8ff7-4fe8-af94-f196249346d9",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « hors service depuis 2020 ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "sans_exploitant",
-    "le": "2026-09-02"
-   }
   },
   {
    "id": "ope-hovden-senior",
@@ -311614,27 +310997,6 @@
    "uuid": "6e14bef4-8116-47c1-9440-0d7023e28b8c"
   },
   {
-   "id": "ope-modele-de-serie",
-   "cle": "modele de serie",
-   "nom": "Modele de serie (proprietaires individuels selon chaque unite)",
-   "alias": [
-    "Modele de serie (proprietaires individuels selon chaque unite)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "1825436d-e06a-445d-aeb5-7a52e697849d",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Modele de serie (proprietaires individuels selon chaque unite) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_prive_non_nomme",
-    "le": "2026-09-02"
-   }
-  },
-  {
    "id": "ope-modx-catamarans",
    "cle": "modx catamarans",
    "nom": "MODX Catamarans",
@@ -311942,27 +311304,6 @@
    "uuid": "6a77d10f-f802-44b8-a1fb-d98b206418fd"
   },
   {
-   "id": "ope-mytiliculteur-de-la-baie-du-mont-saint-m-8t1r60",
-   "cle": "mytiliculteur de la baie du mont-saint-michel",
-   "nom": "Mytiliculteur de la baie du Mont-Saint-Michel (exploitant, identite precise non publiee)",
-   "alias": [
-    "Mytiliculteur de la baie du Mont-Saint-Michel (exploitant, identite precise non publiee)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "319c1aba-e19b-4c2e-bed0-b2122aae89db",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Mytiliculteur de la baie du Mont-Saint-Michel (exploitant, identite precise non publiee) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_prive_non_nomme",
-    "le": "2026-09-02"
-   }
-  },
-  {
    "id": "ope-n-r-ysund-aquaservice-dl65rf",
    "cle": "nærøysund aquaservice",
    "nom": "Nærøysund Aquaservice",
@@ -312107,69 +311448,6 @@
    "uuid": "e3b38fc5-5e08-458d-8ada-8bc9935af61a"
   },
   {
-   "id": "ope-navire-demoli-en-1999",
-   "cle": "navire demoli en 1999",
-   "nom": "Navire démoli en 1999 (ex-A.R.C. Marine Ltd / Hanson Aggregates Marine)",
-   "alias": [
-    "Navire démoli en 1999 (ex-A.R.C. Marine Ltd / Hanson Aggregates Marine)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "47802190-04c9-4df1-a50e-874207f7d00c",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Navire démoli en 1999 (ex-A.R.C. Marine Ltd / Hanson Aggregates Marine) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "sans_exploitant",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-navire-demoli-en-2016-en-turquie",
-   "cle": "navire demoli en 2016 en turquie",
-   "nom": "Navire démoli en 2016 en Turquie (ex-Kilgas Centurion, ex-Sigas Centurion, ex-Angas)",
-   "alias": [
-    "Navire démoli en 2016 en Turquie (ex-Kilgas Centurion, ex-Sigas Centurion, ex-Angas)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "987d11c5-406d-4a0c-bf09-bc04591f9687",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Navire démoli en 2016 en Turquie (ex-Kilgas Centurion, ex-Sigas Centurion, ex-Angas) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "sans_exploitant",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-navire-musee-1oxh8h0",
-   "cle": "navire-musee",
-   "nom": "Navire-musee",
-   "alias": [
-    "Navire-musee"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "4668f7fb-ff31-421f-a61d-37a70932ab91",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Navire-musee ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
    "id": "ope-navire-musee-bore-turku-18z7uvn",
    "cle": "navire-musee bore turku",
    "nom": "Navire-musée Bore (Forum Marinum), Turku",
@@ -312184,27 +311462,6 @@
    "geo_precision": null,
    "source": null,
    "uuid": "0178c59a-8a2c-49f1-bab1-b0d244a8f57b"
-  },
-  {
-   "id": "ope-navire-musee-nantes-1i3w0tj",
-   "cle": "navire-musee nantes",
-   "nom": "Navire-musée, Nantes (association)",
-   "alias": [
-    "Navire-musée, Nantes (association)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "42040ebd-9923-4a43-91d0-996898fd5c70",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Navire-musée, Nantes (association) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
   },
   {
    "id": "ope-navix-armateur-proprietaire-compagnie-na-byvn8y",
@@ -313527,27 +312784,6 @@
    "uuid": "ea561396-9de1-495b-997f-f3d1bf41bd12"
   },
   {
-   "id": "ope-port-algerien",
-   "cle": "port algerien",
-   "nom": "port algérien",
-   "alias": [
-    "port algérien"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "6218647d-22b1-4112-be05-09fcfe95b70c",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « port algérien ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
    "id": "ope-port-d-aarhus-13gwug3",
    "cle": "port d'aarhus",
    "nom": "Port d'Aarhus",
@@ -313821,27 +313057,6 @@
    "uuid": "cde2b653-6dcf-4d60-b687-233129875e48"
   },
   {
-   "id": "ope-proprietaire-commercial-prive",
-   "cle": "proprietaire commercial prive",
-   "nom": "Propriétaire commercial privé (depuis mai 2025)",
-   "alias": [
-    "Propriétaire commercial privé (depuis mai 2025)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "04070efa-745e-4a5d-af4d-859de21a68da",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Propriétaire commercial privé (depuis mai 2025) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_prive_non_nomme",
-    "le": "2026-09-02"
-   }
-  },
-  {
    "id": "ope-proprietaire-gc-rieber-shipping-manager-o5ij90",
    "cle": "proprietaire gc rieber shipping ; manager geofield shipmanagement services ; flotte shearwater; pavillon france/norvege selon periode",
    "nom": "Propriétaire GC Rieber Shipping (Bergen); manager Geofield Shipmanagement Services (Suresnes, FR); flotte Shearwater; pavillon France/Norvège selon période",
@@ -313856,27 +313071,6 @@
    "geo_precision": null,
    "source": null,
    "uuid": "0ae761f9-b19d-43d1-9b84-eac469c1ef46"
-  },
-  {
-   "id": "ope-proprietaires-prives",
-   "cle": "proprietaires prives",
-   "nom": "Propriétaires privés (par exemplaire, non nominativement publics)",
-   "alias": [
-    "Propriétaires privés (par exemplaire, non nominativement publics)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "3d294ea1-2213-4ebd-899d-fdeecb8a92ab",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Propriétaires privés (par exemplaire, non nominativement publics) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_prive_non_nomme",
-    "le": "2026-09-02"
-   }
   },
   {
    "id": "ope-provence-grand-large",
@@ -313989,27 +313183,6 @@
    "geo_precision": null,
    "source": null,
    "uuid": "84a6d442-bb19-4143-947d-f9a722d17f1c"
-  },
-  {
-   "id": "ope-raye-des-effectifs-1964-demoli-1968",
-   "cle": "raye des effectifs 1964 demoli 1968",
-   "nom": "raye des effectifs 1964, demoli 1968",
-   "alias": [
-    "raye des effectifs 1964, demoli 1968"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "b14539ae-14c5-434c-bcf2-558f1019071d",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « raye des effectifs 1964, demoli 1968 ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "sans_exploitant",
-    "le": "2026-09-02"
-   }
   },
   {
    "id": "ope-raymond-bj-rkas-wlsw3g",
@@ -314483,27 +313656,6 @@
    "geo_precision": null,
    "source": null,
    "uuid": "a09c9a8b-5e21-42ae-a96e-8815dbe95053"
-  },
-  {
-   "id": "ope-revendu-en-croatie-2014-renomme-krilo-st-r9srnn",
-   "cle": "revendu en croatie 2014 renomme krilo star puis new angel",
-   "nom": "Revendu en Croatie 2014, renomme Krilo Star puis New Angel (2016)",
-   "alias": [
-    "Revendu en Croatie 2014, renomme Krilo Star puis New Angel (2016)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "6ff9b996-d8f3-4279-bcc5-9c0509b9023a",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Revendu en Croatie 2014, renomme Krilo Star puis New Angel (2016) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
   },
   {
    "id": "ope-rheinfahre-landskrone-rudesheim-am-rhein",
@@ -317774,69 +316926,6 @@
    "geo_precision": null,
    "source": null,
    "uuid": "01268caa-ed1c-4dec-9eeb-7f6ed1adc8a3"
-  },
-  {
-   "id": "ope-vendu-en-2009",
-   "cle": "vendu en 2009",
-   "nom": "Vendu en 2009 (acquereur non confirme)",
-   "alias": [
-    "Vendu en 2009 (acquereur non confirme)"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "2d017f9e-2144-477b-9848-9f51b7d37558",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Vendu en 2009 (acquereur non confirme) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-vendu-enbloc-2021-ex-nom-ulterieur-murat-mwq0i2",
-   "cle": "vendu enbloc 2021 ; ex-nom ulterieur murat ilhan",
-   "nom": "vendu enbloc 2021 (ex-Fletcher/Northern Supply) ; ex-nom ultérieur Murat Ilhan",
-   "alias": [
-    "vendu enbloc 2021 (ex-Fletcher/Northern Supply) ; ex-nom ultérieur Murat Ilhan"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "76c7ca06-ca9b-4604-b8ef-d36d10890232",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « vendu enbloc 2021 (ex-Fletcher/Northern Supply) ; ex-nom ultérieur Murat Ilhan ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
-  },
-  {
-   "id": "ope-vendu-enbloc-2021-ex-noms-ulterieurs-kut-xs6mdh",
-   "cle": "vendu enbloc 2021 ; ex-noms ulterieurs kutsi ilhan",
-   "nom": "vendu enbloc 2021 (ex-Fletcher/Northern Supply) ; ex-noms ultérieurs Kutsi Ilhan",
-   "alias": [
-    "vendu enbloc 2021 (ex-Fletcher/Northern Supply) ; ex-noms ultérieurs Kutsi Ilhan"
-   ],
-   "navires": 0,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "052e52c4-e322-485f-b289-c84929cdc1a6",
-   "a_arbitrer": {
-    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « vendu enbloc 2021 (ex-Fletcher/Northern Supply) ; ex-noms ultérieurs Kutsi Ilhan ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
-    "etat": "exploitant_non_identifie",
-    "le": "2026-09-02"
-   }
   },
   {
    "id": "ope-ventouris-ferries",
