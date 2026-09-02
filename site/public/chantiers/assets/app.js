@@ -320,6 +320,17 @@
         state.navires.push(n);
       }
     }));
+    // Bloc racine `navires[]`, ouvert le 02/09/2026 : coques rattachées à un opérateur
+    // dont le constructeur n'est pas documenté. Elles n'ont pas de fiche chantier, donc
+    // pas de _cid : l'index plat les porte pour la recherche, la vue navires et la couche
+    // opérateurs, et la fiche navire n'affiche pas de bouton vers un chantier.
+    (data.navires || []).forEach((n) => {
+      if (n && n.nom) {
+        n._idx = state.navires.length; n._cid = null; n._cnom = null; n._cville = null; n._cregion = null; n._cpays = null;
+        n._cperims = []; n._ctypes = []; n._cactif = null;
+        state.navires.push(n);
+      }
+    });
     buildDerived();
     // Fond de carte France, servi en local (aucune dépendance externe).
     let geo = null;
@@ -1366,7 +1377,8 @@
           `<div class="d-fact"><div class="d-fact__k">${k}</div><div class="d-fact__v">${x}</div></div>`).join("")}</div></div>` : ""}
       <div class="d-section"><h3>Conception &amp; construction</h3>
         ${v.architecte ? `<button class="ves-yard ves-yard--arch" data-open-arch="${esc(v.architecte)}"><span class="ves-yard__role">Architecte / ensemblier</span><b>${esc(v.architecte)}</b><span>voir l'architecte →</span></button>` : ""}
-        <button class="ves-yard${v._cactif === false ? " is-termine" : ""}" data-open-chantier="${v._cid}"><span class="ves-yard__role">${roleChantier(v)}</span><b>${esc(v._cnom)}</b> ${v._cactif === false ? badgeEtat(ETATS.termine) : ""}<span>${esc(v._cville)} · voir la fiche du chantier →</span></button>
+        ${v._cid ? `<button class="ves-yard${v._cactif === false ? " is-termine" : ""}" data-open-chantier="${v._cid}"><span class="ves-yard__role">${roleChantier(v)}</span><b>${esc(v._cnom)}</b> ${v._cactif === false ? badgeEtat(ETATS.termine) : ""}<span>${esc(v._cville)} · voir la fiche du chantier →</span></button>`
+          : `<div class="ves-yard"><span class="ves-yard__role">Chantier constructeur</span><span style="color:var(--muted)">non documenté par une source publique</span></div>`}
       </div>
       ${timelineHtml}
       ${sim.length ? `<div class="d-section"><h3>Navires similaires</h3>
@@ -1374,7 +1386,7 @@
           <li style="flex-direction:column;gap:4px;align-items:flex-start">
             <span><b>${s.nom || s.type}</b>${s.annee ? ` <span style="color:var(--muted)">· ${s.annee}</span>` : ""}</span>
             ${vesselSpecs(s) ? `<span style="color:var(--muted);font-size:13px">${vesselSpecs(s)}</span>` : ""}
-            <button class="ves-link" data-open-vessel="${s._idx}">${s._cnom} · ${s._cville} →</button>
+            <button class="ves-link" data-open-vessel="${s._idx}">${s._cnom ? `${s._cnom} · ${s._cville}` : (s.operateur || "chantier non documenté")} →</button>
           </li>`).join("")}</ul></div>` : ""}
       ${v.source ? `<div class="d-section"><h3>Source</h3><div class="d-sources"><a href="${v.source}" target="_blank" rel="noopener">${v.source}</a></div></div>` : ""}
       <div class="d-section d-corr">
@@ -1388,7 +1400,7 @@
     const cvTrig = $("#drawer-body").querySelector("[data-corr-vessel]");
     if (cvTrig) cvTrig.addEventListener("click", () => openCorrForm({
       type: "navire", cible_nom: v.nom || v.type || "Navire",
-      cible_contexte: [v.type, v.annee, "construit par " + v._cnom].filter(Boolean).join(" · "),
+      cible_contexte: [v.type, v.annee, v._cnom ? "construit par " + v._cnom : null, v.operateur ? "exploité par " + v.operateur : null].filter(Boolean).join(" · "),
       cid: v._cid, vimo: v.imo || null, vnom: v.nom || null,
     }));
     $("#drawer").setAttribute("aria-hidden", "false");
@@ -1409,7 +1421,8 @@
           ${vesselSpecs(n) ? `<div class="nav-specs">${vesselSpecs(n)}</div>` : ""}
           ${n.operateur ? `<div class="nav-op">Opérateur : <b>${n.operateur}</b></div>` : ""}
           ${n.architecte ? `<div class="nav-yard">Architecte : <b>${n.architecte}</b></div>` : ""}
-          <div class="nav-yard${n._cactif === false ? " is-termine" : ""}">Chantier : <b>${n._cnom}</b> ${n._cactif === false ? badgeEtat(ETATS.termine) : ""}<span>· ${n._cville}</span></div>
+          ${n._cnom ? `<div class="nav-yard${n._cactif === false ? " is-termine" : ""}">Chantier : <b>${n._cnom}</b> ${n._cactif === false ? badgeEtat(ETATS.termine) : ""}<span>· ${n._cville}</span></div>`
+            : `<div class="nav-yard">Chantier : <span style="color:var(--muted)">non documenté</span>${n.operateur ? ` · exploité par <b>${esc(n.operateur)}</b>` : ""}</div>`}
         </div>
       </div>`).join("");
     el.querySelectorAll(".nav-card[data-vid]").forEach((card) =>

@@ -51,5 +51,18 @@
   "eligibles_imo": 3352,
   "taux_imo_sur_eligible": 46.8,
   "taux_joignables": 54.3
+ },
+ {
+  "date": "2026-09-02",
+  "motif": null,
+  "chantiers": 539,
+  "entrees": 6637,
+  "coques_plancher": 6447,
+  "url": 16295,
+  "taux_navires_source": 92.6,
+  "taux_architecte_justifie": 85.4,
+  "eligibles_imo": 3344,
+  "taux_imo_sur_eligible": 47.3,
+  "taux_joignables": 54.4
  }
 ]
