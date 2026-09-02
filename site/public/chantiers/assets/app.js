@@ -153,8 +153,31 @@
     "degrad-des-cannes": [4.852, -52.275], "saint-mandrier-sur-mer": [43.078, 5.929],
   };
   // Opérateurs : normalisation déterministe (suffixes juridiques + accents + parenthèses) puis fusions curées.
-  // OP_EXCLUDE = libellés qui ne désignent pas un exploitant réel (statut / placeholder).
-  const OP_EXCLUDE = /^(desarme|inconnu|en construction|en essais|yacht prive|charter|prive|particulier|non |reserve|aucun|divers|n\/?a$|a definir|loue|location)/;
+  //
+  // ÉTAT D'EXPLOITATION D'UNE COQUE, ouvert le 02/09/2026. Jusque-là, 92 coques portaient
+  // dans `operateur` un état de vie ou une absence au lieu d'une maison, et un filtre
+  // nommé OP_EXCLUDE les faisait simplement DISPARAÎTRE de la couche exploitants. La page
+  // taisait donc une information vraie : une coque désarmée n'est pas une coque dont on
+  // ignore l'exploitant. La donnée est désormais séparée, le champ `etat_exploitation`
+  // porte l'état et la page le MONTRE au lieu de l'escamoter.
+  //
+  // PORTÉ VERBATIM depuis `pipeline/tools/canon.js`, qui est la seule autorité. Les deux
+  // copies doivent rester identiques : le contrôle 5 d'`identifiants.test.js` rougit si
+  // elles divergent. Ce qui suit ne se modifie donc jamais ici seul.
+  const ETATS_EXPLOITATION = ["sans_exploitant", "exploitant_prive_non_nomme", "exploitant_non_identifie"];
+  const OP_ETAT = [
+    { etat: "sans_exploitant", re: /^(desarmee?|demolie?|demantelee?|deconstruite?|naufragee?|sabordee?|epave|hors service|hors flotte|raye des effectifs|aucun|neant|sans (exploitant|armateur|operateur)|navire (demoli|desarme|perdu))\b/ },
+    { etat: "exploitant_prive_non_nomme", re: /^((yacht|armateur|armement|exploitant|proprietaire|proprietaires|client|clients) (prive|prives|privee|privees|commercial prive)\b|particuliers?$|prives?$|modele de serie\b)/ },
+    { etat: "exploitant_non_identifie", re: /^(inconnu|non identifie|non |a definir|a preciser|charter|loue|location|reserve|divers|en construction|en essais|n\/?a$)/ },
+  ];
+  // Libellés d'affichage. Chacun dit ce que la valeur affirme, et le titre dit ce
+  // qu'elle N'affirme PAS : « sans exploitant » n'est pas « fin de vie », et l'absence
+  // du champ n'est pas « en exploitation ». La lecture reste asymétrique.
+  const ETATS_EXP_LABEL = {
+    sans_exploitant: { mot: "Sans exploitant", titre: "Aucune maison n'exploite cette coque, la source le dit et n'en nomme aucune. N'établit aucune fin de vie." },
+    exploitant_prive_non_nomme: { mot: "Exploitant privé non nommé", titre: "Un particulier ou un armateur privé exploite la coque, la source ne le nomme pas." },
+    exploitant_non_identifie: { mot: "Exploitant non identifié", titre: "Une exploitation existe, aucune source ouverte ne nomme la maison." },
+  };
   // OP_ALIAS = fusions explicites (clé après strip → libellé canonique). Ne JAMAIS fusionner deux marines d'État
   // distinctes : seules les variantes de la marine FRANÇAISE sont regroupées (les marines étrangères gardent leur clé).
   const OP_ALIAS = [
@@ -166,10 +189,25 @@
     .replace(/\b(a\/s|asa|as|ab|sa|sas|sarl|ltd|limited|gmbh|b\.?v|n\.?v|plc|inc|llc|co|spa|ag|oy|oyj|aps|kg)\b\.?/g, " ")
     .replace(/[.,]/g, " ").replace(/\s+/g, " ").trim();
   // Renvoie {key, label} canonique pour un opérateur brut, ou null si non-exploitant.
+  // Code d'état qu'un libellé d'exploitant porte à lui seul, ou null s'il nomme une maison.
+  function etatDansOperateur(raw) {
+    if (!raw || !String(raw).trim()) return null;
+    const s = opStrip(raw);
+    if (!s) return null;
+    for (const o of OP_ETAT) if (o.re.test(s)) return o.etat;
+    return null;
+  }
+  // État d'exploitation d'une coque, UNE SEULE DÉFINITION pour toutes les surfaces.
+  // Le champ fait foi ; le garde lexical ne sert que de repli sur une donnée non migrée.
+  function etatExploitation(n) {
+    if (!n) return null;
+    const code = n.etat_exploitation || etatDansOperateur(n.operateur);
+    return ETATS_EXP_LABEL[code] ? Object.assign({ cle: code }, ETATS_EXP_LABEL[code]) : null;
+  }
   function canonOperator(raw) {
     if (!raw || !raw.trim()) return null;
     const stripped = opStrip(raw);
-    if (!stripped || OP_EXCLUDE.test(stripped)) return null;
+    if (!stripped || etatDansOperateur(raw)) return null;
     for (const a of OP_ALIAS) if (a.re.test(stripped)) return { key: a.key, label: a.label };
     // Libellé d'affichage : variante brute débarrassée du suffixe juridique de fin, casse/accents conservés.
     const label = raw.trim().replace(/\s+(AS|ASA|AB|A\/S|SA|SAS|SARL|Ltd\.?|Limited|GmbH|B\.?V\.?|N\.?V\.?|PLC|Inc\.?|LLC|Co\.?|SpA|AG|Oy|Oyj|ApS|KG)\.?$/i, "").trim();
@@ -201,7 +239,7 @@
     perimRef: {},
     typesRef: {},
     filters: { q: "", perims: new Set(), type: "", region: "", pays: "",
-      navProps: new Set(), navCapTypes: new Set(), navCapMin: 0, navLenMin: 0, navLenMax: 0, navPriceMin: 0, navPriceMax: 0 },
+      navProps: new Set(), navEtats: new Set(), navCapTypes: new Set(), navCapMin: 0, navLenMin: 0, navLenMax: 0, navPriceMin: 0, navPriceMax: 0 },
     sort: { key: "nom", dir: 1 },
     entity: "chantiers", // chantiers | navires | dessertes | operateurs | architectes | equipementiers
     mode: "carte",       // annuaire | carte (navires = annuaire seul)
@@ -447,6 +485,13 @@
       if (type && !n._ctypes.includes(type)) return false;
       // Propulsion : facette multi-valeurs (le navire doit porter au moins une famille cochée).
       if (navProps.size && !(n.propulsion || []).some((p) => navProps.has(p))) return false;
+      // Filtre par etat d'exploitation. Il porte sur le CHAMP, pas sur le libelle :
+      // c'est tout l'interet de la migration du 02/09/2026. Une coque sans etat n'est
+      // pas « exploitee », elle est d'etat inconnu, et le filtre ne la retient donc pas.
+      if (state.filters.navEtats.size) {
+        const e = etatExploitation(n);
+        if (!e || !state.filters.navEtats.has(e.cle)) return false;
+      }
       // Capacité : types cumulables (le navire doit porter TOUTES les capacités cochées), seuil min commun.
       if (navCapTypes.size) {
         for (const t of navCapTypes) {
@@ -465,7 +510,7 @@
       // Taille : longueur hors-tout dans la fourchette.
       if (navLenMin && !(n.longueur_m >= navLenMin)) return false;
       if (navLenMax && !(n.longueur_m <= navLenMax)) return false;
-      if (nq && !(norm(n.nom).includes(nq) || norm(n.type).includes(nq) || norm(n.client).includes(nq) || norm(n.operateur).includes(nq) || norm(n.proprietaire).includes(nq) || norm(n.architecte).includes(nq) || norm(n._cnom).includes(nq))) return false;
+      if (nq && !(norm(n.nom).includes(nq) || norm(n.type).includes(nq) || norm(n.client).includes(nq) || norm(n.operateur).includes(nq) || norm((etatExploitation(n) || {}).mot).includes(nq) || norm(n.proprietaire).includes(nq) || norm(n.architecte).includes(nq) || norm(n._cnom).includes(nq))) return false;
       return true;
     });
   }
@@ -561,11 +606,15 @@
     state.architectes.forEach((e, i) => { e._idx = i; });
 
     // Opérateurs : couche normalisée, DERIVEE des libellés `operateur` portés par les coques.
-    // CE QU'ELLE COMPTE, ET CE QU'ELLE NE COMPTE PAS. Au 02/09/2026 la page affiche 1 726
-    // exploitants quand le fichier porte 1 794 fiches dans `operateurs[]`. Les deux chiffres
+    // CE QU'ELLE COMPTE, ET CE QU'ELLE NE COMPTE PAS. Au 02/09/2026, après la migration de
+    // l'état d'exploitation, la page affiche 1 683 exploitants quand le fichier porte 1 795
+    // fiches dans `operateurs[]`. Elle en affichait 1 726 le matin même : les 43 clés parties
+    // sont TOUTES des états de vie (« Démoli (retiré du service) », « armement omanais »), et
+    // aucune maison n'a disparu du compte, mesuré clé par clé contre le fichier de verdicts.
+    // Les deux chiffres
     // sont justes et ne mesurent pas la même chose : ici on groupe les libellés bruts des
     // 7 842 coques par clé canonique, donc un exploitant n'apparaît que si une coque le
-    // NOMME ; le bloc racine porte en plus 146 fiches sans aucune coque, armements établis
+    // NOMME ; le bloc racine porte en plus des fiches sans aucune coque, armements établis
     // depuis un annuaire public avant que le registre nomme une de leurs coques, et
     // exploitants qui déclarent une flotte à l'ACF sans que le registre la nomme. L'écart
     // déclaré contre nommé est voulu et doit rester lisible. Le libellé du compte le dit.
@@ -695,6 +744,23 @@
         render();
       });
     }
+    // Etat d'exploitation : chips cumulables. Seules les valeurs REELLEMENT portees par
+    // la base sont proposees, avec leur compte : une facette vide ferait croire a une
+    // recherche possible qui ne rend rien.
+    const fEtat = $("#f-etatexp");
+    if (fEtat) {
+      const compte = new Map();
+      state.navires.forEach((n) => { const e = etatExploitation(n); if (e) compte.set(e.cle, (compte.get(e.cle) || 0) + 1); });
+      fEtat.innerHTML = ETATS_EXPLOITATION.filter((k) => compte.has(k)).map((k) =>
+        `<button class="cap-chip" data-etatexp="${k}" title="${esc(ETATS_EXP_LABEL[k].titre)}">${ETATS_EXP_LABEL[k].mot} <span style="opacity:.6">${compte.get(k)}</span></button>`).join("");
+      fEtat.addEventListener("click", (ev) => {
+        const b = ev.target.closest("[data-etatexp]"); if (!b) return;
+        const k = b.dataset.etatexp;
+        if (state.filters.navEtats.has(k)) { state.filters.navEtats.delete(k); b.classList.remove("is-on"); }
+        else { state.filters.navEtats.add(k); b.classList.add("is-on"); }
+        render();
+      });
+    }
     const onNum = (sel, key, float) => { const el = $(sel); if (el) el.addEventListener("input", () => { state.filters[key] = (float ? parseFloat(el.value) : parseInt(el.value, 10)) || 0; render(); }); };
     // Capacité : chips cumulables (passagers + véhicules + fret combinables).
     const CAP_TYPES = [["pax", "Passagers"], ["veh", "Véhicules"], ["fret", "Fret"]];
@@ -716,8 +782,8 @@
     onNum("#f-price-max", "navPriceMax", true);
     const fNavReset = $("#f-nav-reset");
     if (fNavReset) fNavReset.addEventListener("click", () => {
-      state.filters.navProps = new Set(); state.filters.navCapTypes = new Set(); state.filters.navCapMin = 0; state.filters.navLenMin = 0; state.filters.navLenMax = 0; state.filters.navPriceMin = 0; state.filters.navPriceMax = 0;
-      document.querySelectorAll("#f-prop .is-on, #f-cap-types .is-on").forEach((c) => c.classList.remove("is-on"));
+      state.filters.navProps = new Set(); state.filters.navEtats = new Set(); state.filters.navCapTypes = new Set(); state.filters.navCapMin = 0; state.filters.navLenMin = 0; state.filters.navLenMax = 0; state.filters.navPriceMin = 0; state.filters.navPriceMax = 0;
+      document.querySelectorAll("#f-prop .is-on, #f-etatexp .is-on, #f-cap-types .is-on").forEach((c) => c.classList.remove("is-on"));
       ["#f-cap-min", "#f-len-min", "#f-len-max", "#f-price-min", "#f-price-max"].forEach((s) => { const el = $(s); if (el) el.value = ""; });
       render();
     });
@@ -726,11 +792,11 @@
     // revient à la carte et la recentre sur la France.
     function resetAll() {
       state.filters = { q: "", perims: new Set(), type: "", region: "", pays: "",
-        navProps: new Set(), navCapTypes: new Set(), navCapMin: 0, navLenMin: 0, navLenMax: 0, navPriceMin: 0, navPriceMax: 0 };
+        navProps: new Set(), navEtats: new Set(), navCapTypes: new Set(), navCapMin: 0, navLenMin: 0, navLenMax: 0, navPriceMin: 0, navPriceMax: 0 };
       state.sort = { key: "nom", dir: 1 };
       state.activeId = null;
       $("#search").value = ""; selT.value = ""; selR.value = ""; if ($("#f-pays")) $("#f-pays").value = "";
-      document.querySelectorAll(".chip.is-on, #f-prop .is-on, #f-cap-types .is-on").forEach((c) => c.classList.remove("is-on"));
+      document.querySelectorAll(".chip.is-on, #f-prop .is-on, #f-etatexp .is-on, #f-cap-types .is-on").forEach((c) => c.classList.remove("is-on"));
       ["#f-cap-min", "#f-len-min", "#f-len-max", "#f-price-min", "#f-price-max"].forEach((s) => { const el = $(s); if (el) el.value = ""; });
       $("#drawer").setAttribute("aria-hidden", "true");
       state.entity = "chantiers"; state.mode = "carte"; syncViews();
@@ -1329,7 +1395,13 @@
     ].filter(([, x]) => x != null && x !== "");
     // Exploitation : commanditaire (client), opérateur, propriétaire, pavillon actuels.
     const expRows = [
-      ["Commanditaire", v.client], ["Opérateur", v.operateur], ["Propriétaire", v.proprietaire], ["Pavillon", v.pavillon],
+      // L'ÉTAT SE MONTRE, IL NE FAIT PLUS DISPARAÎTRE LA COQUE. Quand aucune maison
+      // n'est nommée mais que la source dit pourquoi, la ligne « Opérateur » porte
+      // l'état plutôt que de rester vide : une case vide se lit « on n'a pas cherché ».
+      ["Commanditaire", v.client],
+      ["Opérateur", v.operateur || (etatExploitation(v)
+        ? `<span class="etat etat--exp" title="${esc(etatExploitation(v).titre)}">${etatExploitation(v).mot}</span>` : null)],
+      ["Propriétaire", v.proprietaire], ["Pavillon", v.pavillon],
     ].filter(([, x]) => x != null && x !== "");
     // Photo : affichée seulement si l'identité du navire est sûre (source canonique, idéalement IMO). Jamais de photo devinée.
     const photoHtml = (v.photo && v.photo.url) ? `
@@ -1428,7 +1500,8 @@
           <div class="card__meta">${[n.type, n.annee].filter(Boolean).join(" · ")}</div>
           ${(n.propulsion && n.propulsion.length) ? `<div class="nav-props">${propChips(n.propulsion)}</div>` : ""}
           ${vesselSpecs(n) ? `<div class="nav-specs">${vesselSpecs(n)}</div>` : ""}
-          ${n.operateur ? `<div class="nav-op">Opérateur : <b>${n.operateur}</b></div>` : ""}
+          ${n.operateur ? `<div class="nav-op">Opérateur : <b>${n.operateur}</b></div>`
+            : (etatExploitation(n) ? `<div class="nav-op">Opérateur : <span class="etat etat--exp" title="${esc(etatExploitation(n).titre)}">${etatExploitation(n).mot}</span></div>` : "")}
           ${n.architecte ? `<div class="nav-yard">Architecte : <b>${n.architecte}</b></div>` : ""}
           ${n._cnom ? `<div class="nav-yard${n._cactif === false ? " is-termine" : ""}">Chantier : <b>${n._cnom}</b> ${n._cactif === false ? badgeEtat(ETATS.termine) : ""}<span>· ${n._cville}</span></div>`
             : `<div class="nav-yard">Chantier : <span style="color:var(--muted)">non documenté</span>${n.operateur ? ` · exploité par <b>${esc(n.operateur)}</b>` : ""}</div>`}

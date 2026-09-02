@@ -9099,7 +9099,7 @@
      "longueur_m": 128,
      "energie": "Propulsion vapeur (turbines)",
      "client": "Marine nationale française",
-     "operateur": "Navire-musée, Nantes (association)",
+     "operateur": null,
      "proprietaire": "France (ex-État) ; aujourd'hui navire-musée à Nantes",
      "pavillon": "France",
      "classification": null,
@@ -9145,8 +9145,19 @@
      "cotier_motif": "longueur 128 m, au-delà du gabarit côtier (120 m)",
      "id": "nav-c9fbc8bb186c",
      "chantier_id": "naval-group-lorient",
-     "operateur_id": "ope-navire-musee-nantes-1i3w0tj",
-     "uuid": "623642f0-856f-488e-9055-3dff0eae8ccd"
+     "operateur_id": null,
+     "uuid": "623642f0-856f-488e-9055-3dff0eae8ccd",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Navire-musée, Nantes (association)",
+       "apres": null,
+       "source": "https://fr.wikipedia.org/wiki/Escorteur_d'escadre",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Kersaint (escorteur T47, D622)",
@@ -9159,7 +9170,7 @@
      "longueur_m": 128,
      "energie": "Propulsion vapeur (turbines)",
      "client": "Marine nationale française",
-     "operateur": "Désarmé (retiré du service)",
+     "operateur": null,
      "proprietaire": "France (ex-État)",
      "pavillon": "France",
      "classification": null,
@@ -9192,7 +9203,18 @@
      "cotier_motif": "longueur 128 m, au-delà du gabarit côtier (120 m)",
      "id": "nav-f3fa5daddf2d",
      "chantier_id": "naval-group-lorient",
-     "uuid": "a444294c-f4c0-4567-93eb-fa386fc47d12"
+     "uuid": "a444294c-f4c0-4567-93eb-fa386fc47d12",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Désarmé (retiré du service)",
+       "apres": null,
+       "source": "https://fr.wikipedia.org/wiki/Escorteur_d'escadre",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Bouvet (escorteur T47, D624)",
@@ -9205,7 +9227,7 @@
      "longueur_m": 128,
      "energie": "Propulsion vapeur (turbines)",
      "client": "Marine nationale française",
-     "operateur": "Désarmé (retiré du service)",
+     "operateur": null,
      "proprietaire": "France (ex-État)",
      "pavillon": "France",
      "classification": null,
@@ -9238,7 +9260,18 @@
      "cotier_motif": "longueur 128 m, au-delà du gabarit côtier (120 m)",
      "id": "nav-b68ae631695e",
      "chantier_id": "naval-group-lorient",
-     "uuid": "c74592d8-d908-4f2d-a2f7-5e89aa191c12"
+     "uuid": "c74592d8-d908-4f2d-a2f7-5e89aa191c12",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Désarmé (retiré du service)",
+       "apres": null,
+       "source": "https://fr.wikipedia.org/wiki/Escorteur_d'escadre",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Vauquelin (escorteur T47, D628)",
@@ -9251,7 +9284,7 @@
      "longueur_m": 128,
      "energie": "Propulsion vapeur (turbines)",
      "client": "Marine nationale française",
-     "operateur": "Désarmé (retiré du service)",
+     "operateur": null,
      "proprietaire": "France (ex-État)",
      "pavillon": "France",
      "classification": null,
@@ -9284,7 +9317,18 @@
      "cotier_motif": "longueur 128 m, au-delà du gabarit côtier (120 m)",
      "id": "nav-7cde7f35906d",
      "chantier_id": "naval-group-lorient",
-     "uuid": "bcec0450-9696-4296-94a5-41b15d2595cb"
+     "uuid": "bcec0450-9696-4296-94a5-41b15d2595cb",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Désarmé (retiré du service)",
+       "apres": null,
+       "source": "https://fr.wikipedia.org/wiki/Escorteur_d'escadre",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Le Brestois (escorteur rapide E50, F762)",
@@ -9488,7 +9532,7 @@
      "longueur_m": 80,
      "energie": "Diesel",
      "client": "Marine nationale française",
-     "operateur": "Désarmé (ex-Marine turque)",
+     "operateur": null,
      "proprietaire": "Turquie (État) après cession",
      "pavillon": "Turquie",
      "classification": null,
@@ -9537,7 +9581,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : patrouilleur)",
      "id": "nav-3f28bf4db2b2",
      "chantier_id": "naval-group-lorient",
-     "uuid": "0939cb82-e2fc-4b3a-aed4-29b8475e43f8"
+     "uuid": "0939cb82-e2fc-4b3a-aed4-29b8475e43f8",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Désarmé (ex-Marine turque)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/D'Estienne_d'Orves-class_aviso",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Détroyat (F784)",
@@ -9550,7 +9605,7 @@
      "longueur_m": 80,
      "energie": "Diesel",
      "client": "Marine nationale française",
-     "operateur": "Démoli (retiré du service)",
+     "operateur": null,
      "proprietaire": "France (ex-État)",
      "pavillon": "France",
      "classification": null,
@@ -9605,8 +9660,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : patrouilleur)",
      "id": "nav-f28772647752",
      "chantier_id": "naval-group-lorient",
-     "operateur_id": "ope-demoli",
-     "uuid": "0241c0c4-6020-4412-8478-d8ad15682c73"
+     "operateur_id": null,
+     "uuid": "0241c0c4-6020-4412-8478-d8ad15682c73",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Démoli (retiré du service)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/D'Estienne_d'Orves-class_aviso",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Jean Moulin (F785)",
@@ -9619,7 +9685,7 @@
      "longueur_m": 80,
      "energie": "Diesel",
      "client": "Marine nationale française",
-     "operateur": "Démoli (retiré du service)",
+     "operateur": null,
      "proprietaire": "France (ex-État)",
      "pavillon": "France",
      "classification": null,
@@ -9674,8 +9740,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : patrouilleur)",
      "id": "nav-fbe471646640",
      "chantier_id": "naval-group-lorient",
-     "operateur_id": "ope-demoli",
-     "uuid": "80a72cd6-884d-4188-8517-10cc8ed9af75"
+     "operateur_id": null,
+     "uuid": "80a72cd6-884d-4188-8517-10cc8ed9af75",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Démoli (retiré du service)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/D'Estienne_d'Orves-class_aviso",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Quartier-Maître Anquetil (F786)",
@@ -9875,7 +9952,7 @@
      "longueur_m": 80,
      "energie": "Diesel",
      "client": "Marine nationale française",
-     "operateur": "Désarmé (retiré du service 2020)",
+     "operateur": null,
      "proprietaire": "France (ex-État)",
      "pavillon": "France",
      "classification": null,
@@ -9923,7 +10000,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : patrouilleur)",
      "id": "nav-4b05029c2e3e",
      "chantier_id": "naval-group-lorient",
-     "uuid": "91ba39b7-59a5-478d-8168-ddae1faf1b00"
+     "uuid": "91ba39b7-59a5-478d-8168-ddae1faf1b00",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Désarmé (retiré du service 2020)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/D'Estienne_d'Orves-class_aviso",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Lieutenant de vaisseau Lavallée (F790)",
@@ -9936,7 +10024,7 @@
      "longueur_m": 80,
      "energie": "Diesel",
      "client": "Marine nationale française",
-     "operateur": "Désarmé (retiré du service 2018)",
+     "operateur": null,
      "proprietaire": "France (ex-État)",
      "pavillon": "France",
      "classification": null,
@@ -9984,7 +10072,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : patrouilleur)",
      "id": "nav-f9ae67ed4c4d",
      "chantier_id": "naval-group-lorient",
-     "uuid": "b4ba272f-adb3-4c30-81fc-d86e520721bb"
+     "uuid": "b4ba272f-adb3-4c30-81fc-d86e520721bb",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Désarmé (retiré du service 2018)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/D'Estienne_d'Orves-class_aviso",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Commandant L'Herminier (F791)",
@@ -9997,7 +10096,7 @@
      "longueur_m": 80,
      "energie": "Diesel",
      "client": "Marine nationale française",
-     "operateur": "Désarmé (retiré du service 2018)",
+     "operateur": null,
      "proprietaire": "France (ex-État)",
      "pavillon": "France",
      "classification": null,
@@ -10045,7 +10144,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : patrouilleur)",
      "id": "nav-96e6a9c1f0ad",
      "chantier_id": "naval-group-lorient",
-     "uuid": "f44e0c4e-ff35-41af-b82a-b378aae8d2c8"
+     "uuid": "f44e0c4e-ff35-41af-b82a-b378aae8d2c8",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Désarmé (retiré du service 2018)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/D'Estienne_d'Orves-class_aviso",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Premier-Maître L'Her (F792)",
@@ -10058,7 +10168,7 @@
      "longueur_m": 80,
      "energie": "Diesel",
      "client": "Marine nationale française",
-     "operateur": "Désarmé (retiré du service 2024)",
+     "operateur": null,
      "proprietaire": "France (ex-État)",
      "pavillon": "France",
      "classification": null,
@@ -10106,7 +10216,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : patrouilleur)",
      "id": "nav-fe389dd10ba9",
      "chantier_id": "naval-group-lorient",
-     "uuid": "4f072a6d-2d8c-46a8-801e-17e0e1ba602a"
+     "uuid": "4f072a6d-2d8c-46a8-801e-17e0e1ba602a",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Désarmé (retiré du service 2024)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/D'Estienne_d'Orves-class_aviso",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Commandant Blaison (F793)",
@@ -10223,7 +10344,7 @@
      "longueur_m": 80,
      "energie": "Diesel",
      "client": "Marine nationale française",
-     "operateur": "Désarmé (retiré du service 2025)",
+     "operateur": null,
      "proprietaire": "France (ex-État)",
      "pavillon": "France",
      "classification": null,
@@ -10263,7 +10384,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : patrouilleur)",
      "id": "nav-8eceef2479c4",
      "chantier_id": "naval-group-lorient",
-     "uuid": "aa0c88c2-abe6-4501-b4cb-0469a255393a"
+     "uuid": "aa0c88c2-abe6-4501-b4cb-0469a255393a",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Désarmé (retiré du service 2025)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/D'Estienne_d'Orves-class_aviso",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Commandant Birot (F796)",
@@ -10276,7 +10408,7 @@
      "longueur_m": 80,
      "energie": "Diesel",
      "client": "Marine nationale française",
-     "operateur": "Désarmé (retiré du service 2025)",
+     "operateur": null,
      "proprietaire": "France (ex-État)",
      "pavillon": "France",
      "classification": null,
@@ -10316,7 +10448,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : patrouilleur)",
      "id": "nav-31311ee26a1e",
      "chantier_id": "naval-group-lorient",
-     "uuid": "6b0426ac-900f-41e5-b9b7-6ccd7c8625ab"
+     "uuid": "6b0426ac-900f-41e5-b9b7-6ccd7c8625ab",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Désarmé (retiré du service 2025)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/D'Estienne_d'Orves-class_aviso",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Commandant Bouan (F797)",
@@ -10376,7 +10519,7 @@
      "longueur_m": 80,
      "energie": "Diesel",
      "client": "Marine sud-africaine (commande initiale, annulée) puis Marine argentine",
-     "operateur": "Désarmé (ex-Marine argentine)",
+     "operateur": null,
      "proprietaire": "Argentine (ex-État)",
      "pavillon": "Argentine",
      "classification": null,
@@ -10414,7 +10557,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : corvette)",
      "id": "nav-52bcefccf46a",
      "chantier_id": "naval-group-lorient",
-     "uuid": "73cb1785-25d4-4f4e-ab5d-b4d0882b5b71"
+     "uuid": "73cb1785-25d4-4f4e-ab5d-b4d0882b5b71",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Désarmé (ex-Marine argentine)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/Drummond-class_corvette",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "ARA Guerrico (P-32)",
@@ -10479,7 +10633,7 @@
      "longueur_m": 80,
      "energie": "Diesel",
      "client": "Marine argentine",
-     "operateur": "Désarmé (retiré du service 2024)",
+     "operateur": null,
      "proprietaire": "Argentine (ex-État)",
      "pavillon": "Argentine",
      "classification": null,
@@ -10517,7 +10671,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : corvette)",
      "id": "nav-1213cc05d393",
      "chantier_id": "naval-group-lorient",
-     "uuid": "06d04c94-8058-4d7a-a021-ec231f6d61e5"
+     "uuid": "06d04c94-8058-4d7a-a021-ec231f6d61e5",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Désarmé (retiré du service 2024)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/ARA_Granville",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Le Glorieux",
@@ -11519,7 +11684,7 @@
      "propulsion": [
       "nucleaire"
      ],
-     "operateur": "Aucun (désarmé, en démantèlement à Cherbourg depuis juin 2026)",
+     "operateur": null,
      "proprietaire": "État français (Marine nationale)",
      "timeline": [
       {
@@ -11588,7 +11753,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : sous-marin)",
      "id": "nav-8be4ba065f2e",
      "chantier_id": "naval-group-cherbourg",
-     "uuid": "7b168003-09a9-48df-9d11-d7976c7c16db"
+     "uuid": "7b168003-09a9-48df-9d11-d7976c7c16db",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Aucun (désarmé, en démantèlement à Cherbourg depuis juin 2026)",
+       "apres": null,
+       "source": "https://fr.wikipedia.org/wiki/Classe_Rubis",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Améthyste",
@@ -17466,7 +17642,7 @@
      "jauge_gt": 2319,
      "energie": "diesel (MDO), 4 000 kW",
      "client": "Cobrecaf",
-     "operateur": "armement omanais (apres revente)",
+     "operateur": null,
      "proprietaire": "armateur omanais (apres revente)",
      "pavillon": "Oman",
      "classification": null,
@@ -17525,8 +17701,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : thonier senneur)",
      "id": "nav-348ff2e727f1",
      "chantier_id": "piriou-concarneau",
-     "operateur_id": "ope-armement-omanais",
-     "uuid": "d46c9e1e-e091-4f52-9403-20921f4ebe2a"
+     "operateur_id": null,
+     "uuid": "d46c9e1e-e091-4f52-9403-20921f4ebe2a",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "armement omanais (apres revente)",
+       "apres": null,
+       "source": "https://www.vesselfinder.com/vessels/details/9322669",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Trévignon",
@@ -17540,7 +17727,7 @@
      "jauge_gt": 2319,
      "energie": "diesel (MDO), 4 000 kW",
      "client": "Cobrecaf",
-     "operateur": "armement omanais (apres revente)",
+     "operateur": null,
      "proprietaire": "armateur omanais (apres revente)",
      "pavillon": "Oman",
      "classification": null,
@@ -17599,8 +17786,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : thonier senneur)",
      "id": "nav-4588d5d587e2",
      "chantier_id": "piriou-concarneau",
-     "operateur_id": "ope-armement-omanais",
-     "uuid": "df977363-6965-4363-bf04-520eda371382"
+     "operateur_id": null,
+     "uuid": "df977363-6965-4363-bf04-520eda371382",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "armement omanais (apres revente)",
+       "apres": null,
+       "source": "https://www.vesselfinder.com/vessels/details/9359698",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Drennec",
@@ -17614,7 +17812,7 @@
      "jauge_gt": 2319,
      "energie": "diesel (MDO), 4 000 kW",
      "client": "Cobrecaf",
-     "operateur": "armement omanais (apres revente)",
+     "operateur": null,
      "proprietaire": "armateur omanais (apres revente)",
      "pavillon": "Oman",
      "classification": null,
@@ -17666,8 +17864,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : thonier senneur)",
      "id": "nav-00ada9ee0556",
      "chantier_id": "piriou-concarneau",
-     "operateur_id": "ope-armement-omanais",
-     "uuid": "c5297631-94d9-4de2-8d57-e080b371817f"
+     "operateur_id": null,
+     "uuid": "c5297631-94d9-4de2-8d57-e080b371817f",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "armement omanais (apres revente)",
+       "apres": null,
+       "source": "https://www.vesselfinder.com/vessels/details/9359703",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Almak",
@@ -24415,7 +24624,7 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "operateur": "Armateur prive (yacht prive, gestion Sailoe/management prive)",
+     "operateur": null,
      "proprietaire": "Armateur prive (non divulgue)",
      "timeline": [
       {
@@ -24452,8 +24661,19 @@
      "cotier_segment": "Vedette à passagers",
      "id": "nav-9e32c8fcb644",
      "chantier_id": "ocea-les-sables",
-     "operateur_id": "ope-armateur-prive",
-     "uuid": "57e596ce-26d8-4955-a043-25f2735ad4a6"
+     "operateur_id": null,
+     "uuid": "57e596ce-26d8-4955-a043-25f2735ad4a6",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Armateur prive (yacht prive, gestion Sailoe/management prive)",
+       "apres": null,
+       "source": "https://www.superyachttimes.com/yacht-news/ocea-yacht-araok-ii-delivered",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "NNS Chalawa (FPB 98 MkI)",
@@ -25195,7 +25415,7 @@
       "diesel-mdo"
      ],
      "imo": "9617727",
-     "operateur": "Armateur prive (yacht prive, charter occasionnel)",
+     "operateur": null,
      "proprietaire": "Armateur prive europeen (non divulgue publiquement)",
      "timeline": [
       {
@@ -25223,8 +25443,19 @@
      "cotier_segment": "Vedette à passagers",
      "id": "nav-84bc222b4eb8",
      "chantier_id": "ocea-les-sables",
-     "operateur_id": "ope-armateur-prive",
-     "uuid": "01f65847-bea6-4292-9ee1-ff10479eb069"
+     "operateur_id": null,
+     "uuid": "01f65847-bea6-4292-9ee1-ff10479eb069",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Armateur prive (yacht prive, charter occasionnel)",
+       "apres": null,
+       "source": "https://www.boatinternational.com/yachts/the-superyacht-directory/elisabet--55777",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Kerdonis",
@@ -29273,7 +29504,7 @@
      "capacite": "12 invites en 6 cabines",
      "energie": "Diesel (2x MTU 20V 4000 M93, 5230 ch)",
      "client": "Client prive (commande decembre 2012)",
-     "operateur": "Yacht prive / charter",
+     "operateur": null,
      "proprietaire": "Prive",
      "pavillon": "Iles Caimans",
      "classification": null,
@@ -29332,7 +29563,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : yacht)",
      "id": "nav-e8ce14934587",
      "chantier_id": "couach-gujan-mestras",
-     "uuid": "2c3ff055-2c55-4c15-b073-683d7e5da7c3"
+     "uuid": "2c3ff055-2c55-4c15-b073-683d7e5da7c3",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Yacht prive / charter",
+       "apres": null,
+       "source": "https://www.vesselfinder.com/vessels/details/9740677",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Tosca",
@@ -29347,7 +29589,7 @@
      "capacite": "10 invites en 5 cabines",
      "energie": "Diesel (2x MTU, 4185 ch)",
      "client": "Client fidele de Couach",
-     "operateur": "Yacht prive",
+     "operateur": null,
      "proprietaire": "Prive",
      "pavillon": null,
      "classification": null,
@@ -29379,7 +29621,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : yacht)",
      "id": "nav-9e9c06bbe512",
      "chantier_id": "couach-gujan-mestras",
-     "uuid": "1d77cd69-ed69-46ea-a22e-2c7464ad192d"
+     "uuid": "1d77cd69-ed69-46ea-a22e-2c7464ad192d",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Yacht prive",
+       "apres": null,
+       "source": null,
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, absente sur cette coque, donc laissee vide."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Ascension (renommee Mayama)",
@@ -29394,7 +29647,7 @@
      "capacite": "10 invites en 5 cabines",
      "energie": "Diesel (2x MTU, ~2700 ch)",
      "client": "Prive",
-     "operateur": "Yacht prive / charter",
+     "operateur": null,
      "proprietaire": "Prive",
      "pavillon": null,
      "classification": null,
@@ -29426,7 +29679,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : yacht)",
      "id": "nav-690ca75cbbb3",
      "chantier_id": "couach-gujan-mestras",
-     "uuid": "bfbb030f-105a-42d4-9928-55814f9b9fc0"
+     "uuid": "bfbb030f-105a-42d4-9928-55814f9b9fc0",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Yacht prive / charter",
+       "apres": null,
+       "source": null,
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, absente sur cette coque, donc laissee vide."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Hakuna Matata",
@@ -29441,7 +29705,7 @@
      "capacite": "12 invites en 6 cabines",
      "energie": "Diesel (2x MTU)",
      "client": "Prive",
-     "operateur": "Yacht prive / charter",
+     "operateur": null,
      "proprietaire": "Prive",
      "pavillon": null,
      "classification": null,
@@ -29466,7 +29730,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : yacht)",
      "id": "nav-6de20f6a5415",
      "chantier_id": "couach-gujan-mestras",
-     "uuid": "b81378b9-f349-4199-b64e-1acf83adb511"
+     "uuid": "b81378b9-f349-4199-b64e-1acf83adb511",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Yacht prive / charter",
+       "apres": null,
+       "source": null,
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, absente sur cette coque, donc laissee vide."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Dragon",
@@ -29481,7 +29756,7 @@
      "capacite": "12 invites en 6 cabines",
      "energie": "Diesel (2x MTU 12V 4000 M90, 2732 ch)",
      "client": "Prive",
-     "operateur": "Yacht prive / charter",
+     "operateur": null,
      "proprietaire": "Prive",
      "pavillon": null,
      "classification": null,
@@ -29528,7 +29803,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : yacht)",
      "id": "nav-2eeafcfd0f29",
      "chantier_id": "couach-gujan-mestras",
-     "uuid": "6a2e21f6-17a2-4364-9fae-a529419ccd78"
+     "uuid": "6a2e21f6-17a2-4364-9fae-a529419ccd78",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Yacht prive / charter",
+       "apres": null,
+       "source": null,
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, absente sur cette coque, donc laissee vide."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Apmonia (ex Nyota, ex Tosca)",
@@ -29543,7 +29829,7 @@
      "capacite": "8 invites en 4 cabines",
      "energie": "Diesel (2x MTU, 2735 ch)",
      "client": "Prive",
-     "operateur": "Yacht prive / charter (Mediterranee)",
+     "operateur": null,
      "proprietaire": "Prive",
      "pavillon": null,
      "classification": null,
@@ -29582,7 +29868,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : yacht)",
      "id": "nav-0946b5a592e8",
      "chantier_id": "couach-gujan-mestras",
-     "uuid": "bb42f826-3883-43ef-b40d-c3b75aaed6a4"
+     "uuid": "bb42f826-3883-43ef-b40d-c3b75aaed6a4",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Yacht prive / charter (Mediterranee)",
+       "apres": null,
+       "source": null,
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, absente sur cette coque, donc laissee vide."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Parenthesis",
@@ -29597,7 +29894,7 @@
      "capacite": "12 invites en 6 cabines (master, 3 doubles, 2 twins)",
      "energie": "Diesel (2x MTU, 2735 ch)",
      "client": "Prive",
-     "operateur": "Yacht prive / charter",
+     "operateur": null,
      "proprietaire": "Prive",
      "pavillon": null,
      "classification": null,
@@ -29622,7 +29919,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : yacht)",
      "id": "nav-4d3a65b33f04",
      "chantier_id": "couach-gujan-mestras",
-     "uuid": "0325ba47-de2a-4418-a192-071fb9db8b49"
+     "uuid": "0325ba47-de2a-4418-a192-071fb9db8b49",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Yacht prive / charter",
+       "apres": null,
+       "source": null,
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, absente sur cette coque, donc laissee vide."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Sheleila",
@@ -29637,7 +29945,7 @@
      "capacite": "8 invites en 4 cabines",
      "energie": "Diesel (2x MTU)",
      "client": "Prive",
-     "operateur": "Yacht prive / charter (base Dubai)",
+     "operateur": null,
      "proprietaire": "Prive",
      "pavillon": "Iles Caimans",
      "classification": null,
@@ -29671,7 +29979,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : yacht)",
      "id": "nav-7c78154f8dc4",
      "chantier_id": "couach-gujan-mestras",
-     "uuid": "041d417a-65a0-4a41-b63c-58a3a55bc80d"
+     "uuid": "041d417a-65a0-4a41-b63c-58a3a55bc80d",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Yacht prive / charter (base Dubai)",
+       "apres": null,
+       "source": null,
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, absente sur cette coque, donc laissee vide."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Water Toy III",
@@ -29686,7 +30005,7 @@
      "capacite": null,
      "energie": "Diesel",
      "client": "Prive",
-     "operateur": "Yacht prive / charter",
+     "operateur": null,
      "proprietaire": "Prive",
      "pavillon": null,
      "classification": null,
@@ -29710,7 +30029,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : yacht)",
      "id": "nav-b9a90f2cf941",
      "chantier_id": "couach-gujan-mestras",
-     "uuid": "ce4c9a64-4a06-46f1-a42b-9d58b47d99ce"
+     "uuid": "ce4c9a64-4a06-46f1-a42b-9d58b47d99ce",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Yacht prive / charter",
+       "apres": null,
+       "source": null,
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, absente sur cette coque, donc laissee vide."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Lady Amanda",
@@ -29725,7 +30055,7 @@
      "capacite": "4 cabines",
      "energie": "Diesel",
      "client": "Prive",
-     "operateur": "Yacht prive / charter",
+     "operateur": null,
      "proprietaire": "Prive",
      "pavillon": null,
      "classification": null,
@@ -29756,7 +30086,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : yacht)",
      "id": "nav-9ed720683518",
      "chantier_id": "couach-gujan-mestras",
-     "uuid": "785e6808-df5a-4b53-addb-26b85baf61a3"
+     "uuid": "785e6808-df5a-4b53-addb-26b85baf61a3",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Yacht prive / charter",
+       "apres": null,
+       "source": null,
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, absente sur cette coque, donc laissee vide."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Atalanti",
@@ -29771,7 +30112,7 @@
      "capacite": null,
      "energie": "Diesel",
      "client": "Prive",
-     "operateur": "Yacht prive / charter (Grece)",
+     "operateur": null,
      "proprietaire": "Prive",
      "pavillon": null,
      "classification": null,
@@ -29797,7 +30138,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : yacht)",
      "id": "nav-7ccb41760578",
      "chantier_id": "couach-gujan-mestras",
-     "uuid": "d386d54c-bffe-4e03-9a5c-3f6a531ec75c"
+     "uuid": "d386d54c-bffe-4e03-9a5c-3f6a531ec75c",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Yacht prive / charter (Grece)",
+       "apres": null,
+       "source": "https://boatinternational.com/yachts/the-superyacht-directory/atalanti--45055",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Noe",
@@ -29812,7 +30164,7 @@
      "capacite": "8 invites en 4 cabines",
      "energie": "Diesel (2x MTU 16V2000 M93)",
      "client": "Prive",
-     "operateur": "Yacht prive / charter (base Saint-Mandrier-sur-Mer)",
+     "operateur": null,
      "proprietaire": "Prive",
      "pavillon": null,
      "classification": null,
@@ -29837,7 +30189,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : yacht)",
      "id": "nav-85871cccfb44",
      "chantier_id": "couach-gujan-mestras",
-     "uuid": "f2a65ace-d22a-4905-8051-fd1cada2895d"
+     "uuid": "f2a65ace-d22a-4905-8051-fd1cada2895d",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Yacht prive / charter (base Saint-Mandrier-sur-Mer)",
+       "apres": null,
+       "source": null,
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, absente sur cette coque, donc laissee vide."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Ocram Dos",
@@ -29852,7 +30215,7 @@
      "capacite": "8 invites en 4 suites (dont 1 VIP)",
      "energie": "Diesel",
      "client": "Prive",
-     "operateur": "Yacht prive / charter",
+     "operateur": null,
      "proprietaire": "Prive",
      "pavillon": null,
      "classification": null,
@@ -29877,7 +30240,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : yacht)",
      "id": "nav-9143d13b5d14",
      "chantier_id": "couach-gujan-mestras",
-     "uuid": "7880f2cc-84cc-4d05-87aa-8afbcbb16f8a"
+     "uuid": "7880f2cc-84cc-4d05-87aa-8afbcbb16f8a",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Yacht prive / charter",
+       "apres": null,
+       "source": null,
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, absente sur cette coque, donc laissee vide."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "DF46 Avel Sterenn",
@@ -40115,7 +40489,7 @@
       "diesel-mdo"
      ],
      "client": "Compagnie Générale de Navigation sur le lac Léman (CGN)",
-     "operateur": "désarmé",
+     "operateur": null,
      "proprietaire": "CGN (jusqu'à désarmement)",
      "pavillon": "Suisse",
      "classification": null,
@@ -40155,7 +40529,18 @@
      "cotier_motif": "type non couvert par la typologie de l'atelier (navibus (vedette rapide à passagers))",
      "id": "nav-f2e6c65ee14e",
      "chantier_id": "merre-nort-sur-erdre",
-     "uuid": "cb08cdbe-5d4a-4d9d-a684-e73c3e7a81d3"
+     "uuid": "cb08cdbe-5d4a-4d9d-a684-e73c3e7a81d3",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "désarmé",
+       "apres": null,
+       "source": "https://fr.wikipedia.org/wiki/Compagnie_g%C3%A9n%C3%A9rale_de_navigation_sur_le_lac_L%C3%A9man",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Genève",
@@ -40172,7 +40557,7 @@
       "diesel-mdo"
      ],
      "client": "Compagnie Générale de Navigation sur le lac Léman (CGN)",
-     "operateur": "démantelé",
+     "operateur": null,
      "proprietaire": "CGN (jusqu'à démantèlement)",
      "pavillon": "Suisse",
      "classification": null,
@@ -40211,8 +40596,19 @@
      "cotier_motif": "type non couvert par la typologie de l'atelier (navibus (vedette rapide à passagers))",
      "id": "nav-cbbf2e2f3a02",
      "chantier_id": "merre-nort-sur-erdre",
-     "operateur_id": "ope-demantele",
-     "uuid": "e1f2d3fd-256c-4d8c-8bec-439fa7eba9b4"
+     "operateur_id": null,
+     "uuid": "e1f2d3fd-256c-4d8c-8bec-439fa7eba9b4",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "démantelé",
+       "apres": null,
+       "source": "https://fr.wikipedia.org",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "BC Corse",
@@ -40594,7 +40990,7 @@
       "diesel-mdo"
      ],
      "client": "Algérie (autorité/port algérien)",
-     "operateur": "port algérien",
+     "operateur": null,
      "proprietaire": "Algérie",
      "pavillon": "Algérie",
      "classification": null,
@@ -40616,8 +41012,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : remorqueur portuaire)",
      "id": "nav-5659ee74f6fa",
      "chantier_id": "merre-nort-sur-erdre",
-     "operateur_id": "ope-port-algerien",
-     "uuid": "59f42daf-ff92-49d5-9fa6-b8afc3c0bf46"
+     "operateur_id": null,
+     "uuid": "59f42daf-ff92-49d5-9fa6-b8afc3c0bf46",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "port algérien",
+       "apres": null,
+       "source": "https://merre.fr",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Ahmed Ben Bella",
@@ -70275,7 +70682,7 @@
      "propulsion": [
       "diesel-mdo"
      ],
-     "operateur": "Mytiliculteur de la baie du Mont-Saint-Michel (exploitant, identite precise non publiee)",
+     "operateur": null,
      "proprietaire": "Mytiliculteur de la baie du Mont-Saint-Michel (armateur, identite precise non publiee)",
      "timeline": [
       {
@@ -70297,8 +70704,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : barge amphibie mytilicole)",
      "id": "nav-7dbcc0bdfde4",
      "chantier_id": "pole-naval-jacques-cartier-pnjc-saint-malo",
-     "operateur_id": "ope-mytiliculteur-de-la-baie-du-mont-saint-m-8t1r60",
-     "uuid": "3618d77b-ebde-4a2e-89fa-d8c63407ab06"
+     "operateur_id": null,
+     "uuid": "3618d77b-ebde-4a2e-89fa-d8c63407ab06",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Mytiliculteur de la baie du Mont-Saint-Michel (exploitant, identite precise non publiee)",
+       "apres": null,
+       "source": "https://www.cmv-amphibie.com/en/",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "ESTEBAM",
@@ -73522,7 +73940,7 @@
      "capacite": "Voilier de course de la jauge internationale 8 metres JI ; structure (membrures) en acacia, bordes en acajou de Honduras ; deplacement ~8 t ; longueur flottaison ~9,5 m, largeur 2,48 m, tirant d'eau 2,00 m, mat alu en greement actuel",
      "energie": "Voile",
      "client": "Roi Alphonse XIII d'Espagne",
-     "operateur": "Proprietaire prive (plaisance patrimoniale)",
+     "operateur": null,
      "proprietaire": "Tanneguy Raffray (depuis 1978)",
      "pavillon": "France",
      "classification": null,
@@ -73578,8 +73996,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : voilier de course (8 m JI))",
      "id": "nav-b4f6fd60c1a4",
      "chantier_id": "chantier-naval-bonnin-la-teste-de-buch",
-     "operateur_id": "ope-proprietaire-prive",
-     "uuid": "ede44bfc-0abd-42c7-9ab4-5e7c62681ad9"
+     "operateur_id": null,
+     "uuid": "ede44bfc-0abd-42c7-9ab4-5e7c62681ad9",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Proprietaire prive (plaisance patrimoniale)",
+       "apres": null,
+       "source": "https://patrimoine-maritime-fluvial.org/navires/hispania-iv",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Pourquoi-Pas? (I)",
@@ -75290,7 +75719,7 @@
      "propulsion": [
       "velique"
      ],
-     "operateur": "Propriétaires privés (par exemplaire, non nominativement publics)",
+     "operateur": null,
      "proprietaire": "Garcia Yachts (constructeur, groupe Grand Large Yachting)",
      "timeline": [
       {
@@ -75336,8 +75765,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : catamaran-a-voile-de-croisiere)",
      "id": "nav-113f24f97a30",
      "chantier_id": "alumarine-shipyard-coueron",
-     "operateur_id": "ope-proprietaires-prives",
-     "uuid": "dbe3f891-8069-4ae0-bae8-3c8a8b1591f0"
+     "operateur_id": null,
+     "uuid": "dbe3f891-8069-4ae0-bae8-3c8a8b1591f0",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Propriétaires privés (par exemplaire, non nominativement publics)",
+       "apres": null,
+       "source": "https://www.meretmarine.com/fr/construction-navale/alumarine-bateaux-professionnels-et-plaisance-les-deux-piliers-du-chantier",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "SNS 277 Président Charles Pilorget",
@@ -89238,7 +89678,7 @@
       "velique",
       "diesel-mdo"
      ],
-     "operateur": "Particulier (non divulgue)",
+     "operateur": null,
      "proprietaire": "Particulier (non divulgue)",
      "timeline": [
       {
@@ -89256,7 +89696,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : voilier de croisière (croiseur-coureur))",
      "id": "nav-6d9e269c875f",
      "chantier_id": "chantier-naval-des-ileaux-noirmoutier-en-l",
-     "uuid": "5a55d5ad-dfef-4211-b1fa-a0c0b4aa2c48"
+     "uuid": "5a55d5ad-dfef-4211-b1fa-a0c0b4aa2c48",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Particulier (non divulgue)",
+       "apres": null,
+       "source": "https://www.chantierdesileaux.com/rosso-35-evo-2/",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Rosso 35 Nomade II",
@@ -89274,7 +89725,7 @@
       "velique",
       "diesel-mdo"
      ],
-     "operateur": "Particulier (non divulgue)",
+     "operateur": null,
      "proprietaire": "Particulier (non divulgue)",
      "timeline": [
       {
@@ -89292,7 +89743,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : voilier de croisière (croiseur-coureur))",
      "id": "nav-7370fd4996c2",
      "chantier_id": "chantier-naval-des-ileaux-noirmoutier-en-l",
-     "uuid": "8c1e290e-dc5e-42af-87ab-d0ae93dd5196"
+     "uuid": "8c1e290e-dc5e-42af-87ab-d0ae93dd5196",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Particulier (non divulgue)",
+       "apres": null,
+       "source": "https://www.boatindustry.fr/article/44817/chantier-des-ileaux",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Rosso 28 EVO",
@@ -97331,7 +97793,7 @@
       "diesel-mdo"
      ],
      "client": "Bourbon",
-     "operateur": "Armateur russe non divulgue (ex Bourbon Offshore Norway)",
+     "operateur": null,
      "pavillon": "Russie (ex Norvege/Bahamas/Chypre) ; navire sous sanctions OFAC",
      "capacite": "Anchor handling fire-fighting (ex Bourbon Surf)",
      "source": "https://commons.wikimedia.org/wiki/Category:IMO_9272412",
@@ -97388,8 +97850,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : OSV (AHTS / lutte incendie))",
      "id": "nav-d9bc22b5dd9f",
      "chantier_id": "vard-langsten-as-tomrefjord",
-     "operateur_id": "ope-armateur-russe-non-divulgue",
-     "uuid": "181ec728-672c-47a0-8aaa-37842187c0da"
+     "operateur_id": null,
+     "uuid": "181ec728-672c-47a0-8aaa-37842187c0da",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Armateur russe non divulgue (ex Bourbon Offshore Norway)",
+       "apres": null,
+       "source": "https://commons.wikimedia.org/wiki/Category:IMO_9272412",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Bourbon Crown",
@@ -98309,7 +98782,7 @@
       "diesel-electrique"
      ],
      "client": "PGS (Petroleum Geo-Services)",
-     "operateur": "aucun — navire démoli en 2019 (dernier opérateur PGS ; retiré du service/cold-stacked dès 2015)",
+     "operateur": null,
      "pavillon": "aucun — démoli ; dernier pavillon Comores pour le voyage final vers la démolition",
      "capacite": "Navire sismique a coque Ramform (large poupe), recherche geophysique",
      "source": "https://commons.wikimedia.org/wiki/Category:IMO_9141455",
@@ -98329,7 +98802,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : navire sismique (recherche/exploration))",
      "id": "nav-74fd4dc947c1",
      "chantier_id": "vard-langsten-as-tomrefjord",
-     "uuid": "c3593c25-6620-43ae-bc95-afce75109f4a"
+     "uuid": "c3593c25-6620-43ae-bc95-afce75109f4a",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "aucun — navire démoli en 2019 (dernier opérateur PGS ; retiré du service/cold-stacked dès 2015)",
+       "apres": null,
+       "source": "https://commons.wikimedia.org/wiki/Category:IMO_9141455",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Ramform Vanguard",
@@ -100362,7 +100846,7 @@
       "diesel-mdo"
      ],
      "client": "E.R. Offshore (à la livraison)",
-     "operateur": "vendu enbloc 2021 (ex-Fletcher/Northern Supply) ; ex-noms ultérieurs Kutsi Ilhan",
+     "operateur": null,
      "proprietaire": "Northern Supply AS (groupe S.D. Standard Drilling)",
      "pavillon": "Royaume-Uni",
      "classification": null,
@@ -100440,8 +100924,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : OSV (PSV - Platform Supply Vessel, UT 755 LN))",
      "id": "nav-fc98494a8d78",
      "chantier_id": "vard-aukra-site-aukra-ex-vard-aukra-maritime-bauta-maritime-aukra",
-     "operateur_id": "ope-vendu-enbloc-2021-ex-noms-ulterieurs-kut-xs6mdh",
-     "uuid": "06593de1-6d60-41ad-8fe8-dc55ea0f7340"
+     "operateur_id": null,
+     "uuid": "06593de1-6d60-41ad-8fe8-dc55ea0f7340",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "vendu enbloc 2021 (ex-Fletcher/Northern Supply) ; ex-noms ultérieurs Kutsi Ilhan",
+       "apres": null,
+       "source": "https://www.shipspotting.com/photos/3078621",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "FS Aberdour (ex E.R. Haugesund)",
@@ -100455,7 +100950,7 @@
       "diesel-mdo"
      ],
      "client": "E.R. Offshore (à la livraison)",
-     "operateur": "vendu enbloc 2021 (ex-Fletcher/Northern Supply) ; ex-nom ultérieur Murat Ilhan",
+     "operateur": null,
      "proprietaire": "Northern Supply AS (groupe S.D. Standard Drilling)",
      "pavillon": "Royaume-Uni",
      "classification": null,
@@ -100514,8 +101009,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : OSV (PSV - Platform Supply Vessel, UT 755 LN))",
      "id": "nav-687d87f9ff8d",
      "chantier_id": "vard-aukra-site-aukra-ex-vard-aukra-maritime-bauta-maritime-aukra",
-     "operateur_id": "ope-vendu-enbloc-2021-ex-nom-ulterieur-murat-mwq0i2",
-     "uuid": "adcdca12-375f-4a58-95b5-caadd0a87e3f"
+     "operateur_id": null,
+     "uuid": "adcdca12-375f-4a58-95b5-caadd0a87e3f",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "vendu enbloc 2021 (ex-Fletcher/Northern Supply) ; ex-nom ultérieur Murat Ilhan",
+       "apres": null,
+       "source": "https://www.vesselfinder.com/vessels/details/9395446",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "FS Abergeldie (ex E.R. Tromsoe, depuis 2025 ACE Abergeldie)",
@@ -108548,7 +109054,7 @@
      "capacite": "OCV / subsea support, type MT 6022 MkII ; grue AHC 250 t, moonpool, 102 personnes",
      "energie": "diesel-electrique",
      "client": "Olympic Shipping AS",
-     "operateur": "armateur successif (voir timeline)",
+     "operateur": null,
      "proprietaire": "armateur successif (voir timeline)",
      "pavillon": "Taiwan",
      "classification": "DNV",
@@ -108609,8 +109115,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : OCV subsea construction (MT 6022 MkII), grue 250 t)",
      "id": "nav-5c93eaef4eb5",
      "chantier_id": "green-yard-kleven-ulsteinvik",
-     "operateur_id": "ope-armateur-successif",
-     "uuid": "11eb76e8-66f6-43f8-9f3e-a84d0a774c96"
+     "operateur_id": null,
+     "uuid": "11eb76e8-66f6-43f8-9f3e-a84d0a774c96",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "armateur successif (voir timeline)",
+       "apres": null,
+       "source": "https://fr.wikipedia.org/wiki/Seabed_Constructor",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Olympic Delta",
@@ -108892,7 +109409,7 @@
      "capacite": "Exploration / yacht de soutien (yacht support / expedition yacht), type MT 5006 MkIII ESV",
      "energie": "diesel-electrique",
      "client": "Felham",
-     "operateur": "yacht prive",
+     "operateur": null,
      "proprietaire": "Yuri Milner (acheteur 10/2018, ex-Graeme Hart), navire renomme Multiverse",
      "pavillon": "Iles Caiman",
      "classification": null,
@@ -108969,7 +109486,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : Yacht d'expedition de luxe (superyacht 116 m))",
      "id": "nav-0f75278d2ffb",
      "chantier_id": "green-yard-kleven-ulsteinvik",
-     "uuid": "ee2bada6-f5a9-4e9f-ab36-ba17d03dcd39"
+     "uuid": "ee2bada6-f5a9-4e9f-ab36-ba17d03dcd39",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "yacht prive",
+       "apres": null,
+       "source": "https://en.greenyard.no/references/tbn",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "SS Nujoma",
@@ -109214,7 +109742,7 @@
      "capacite": "Chalutier de peche arriere / senneur ; moteur Wartsila 5 520 kW",
      "energie": "diesel (MDO)",
      "client": "Samherji HF",
-     "operateur": "armateur russe (voir timeline)",
+     "operateur": null,
      "proprietaire": "armateur russe (voir timeline)",
      "pavillon": "Russie",
      "classification": null,
@@ -109252,8 +109780,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : chalutier)",
      "id": "nav-e9573f4e9b53",
      "chantier_id": "green-yard-kleven-ulsteinvik",
-     "operateur_id": "ope-armateur-russe",
-     "uuid": "ba4c87d5-394e-4494-8539-2a44ff30ff20"
+     "operateur_id": null,
+     "uuid": "ba4c87d5-394e-4494-8539-2a44ff30ff20",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "armateur russe (voir timeline)",
+       "apres": null,
+       "source": "https://www.vesselfinder.com/vessels/details/9223136",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Brage Atlantic",
@@ -118617,7 +119156,7 @@
       "diesel-mdo"
      ],
      "client": null,
-     "operateur": "Revendu en Croatie 2014, renomme Krilo Star puis New Angel (2016)",
+     "operateur": null,
      "proprietaire": null,
      "pavillon": "Norvège",
      "classification": null,
@@ -118659,8 +119198,19 @@
      "cotier_segment": "Roulier / Ferry / NGV",
      "id": "nav-cdb14df94e31",
      "chantier_id": "fjellstrand-as-omastrand",
-     "operateur_id": "ope-revendu-en-croatie-2014-renomme-krilo-st-r9srnn",
-     "uuid": "119baf03-b8d6-42ab-a9ed-dc48f68dbe20"
+     "operateur_id": null,
+     "uuid": "119baf03-b8d6-42ab-a9ed-dc48f68dbe20",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Revendu en Croatie 2014, renomme Krilo Star puis New Angel (2016)",
+       "apres": null,
+       "source": "https://commons.wikimedia.org/wiki/Category:IMO_9257450",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Aashi 1",
@@ -134835,7 +135385,7 @@
      "classification": null,
      "pavillon": "Norvege",
      "proprietaire": "Vendu a l'exterieur de la marine en 2009 (acquereur non confirme)",
-     "operateur": "Vendu en 2009 (acquereur non confirme)",
+     "operateur": null,
      "client": "Marine royale norvegienne",
      "source": "https://en.wikipedia.org/wiki/HNoMS_Glomma",
      "timeline": [
@@ -134875,8 +135425,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : dragueur de mines)",
      "id": "nav-bd172c4486e3",
      "chantier_id": "umoe-mandal-as-mandal",
-     "operateur_id": "ope-vendu-en-2009",
-     "uuid": "7624c56f-b711-4122-8145-1af31da8c494"
+     "operateur_id": null,
+     "uuid": "7624c56f-b711-4122-8145-1af31da8c494",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Vendu en 2009 (acquereur non confirme)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/HNoMS_Glomma",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     }
    ],
    "sources": [
@@ -140478,7 +141039,7 @@
       "diesel-mdo"
      ],
      "client": "rederiet With",
-     "operateur": "armement norvégien (reefer)",
+     "operateur": null,
      "proprietaire": "armement norvégien",
      "pavillon": "Norvège",
      "capacite": "cargo frigorifique (reefer / refrigerated cargo)",
@@ -140532,8 +141093,19 @@
      "cotier_motif": "fret non rattaché à une desserte insulaire ou portuaire (type : Cargo frigorifique (reefer), capacite additionnelle 48 EVP)",
      "id": "nav-61906874dd20",
      "chantier_id": "vaagland-batbyggeri-as-vagland",
-     "operateur_id": "ope-armement-norvegien",
-     "uuid": "72b21a87-ddca-4e7c-aad6-21a49c40d602"
+     "operateur_id": null,
+     "uuid": "72b21a87-ddca-4e7c-aad6-21a49c40d602",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "armement norvégien (reefer)",
+       "apres": null,
+       "source": "https://vesselfinder.com",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Rotsund (ex-Storfoss, ex-Nordkinn)",
@@ -140605,7 +141177,7 @@
       "diesel-mdo"
      ],
      "client": "armement aquacole norvégien",
-     "operateur": "exploitant aquacole (Chili)",
+     "operateur": null,
      "proprietaire": "armateur (Chili)",
      "pavillon": "Chili (actuel, sous le nom Grip Nord ; ex-Norvege sous Inter Nord)",
      "capacite": "brønnbåt (wellboat / transporteur de poisson vivant), 2 cuves séparées, circulation fermée ; l'un des plus grands wellboats au monde à sa livraison",
@@ -140653,8 +141225,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : navire vivier (well boat / brønnbåt - transporteur de poisson vivant))",
      "id": "nav-68d006249137",
      "chantier_id": "vaagland-batbyggeri-as-vagland",
-     "operateur_id": "ope-exploitant-aquacole",
-     "uuid": "fc49260d-4d7a-4f34-973c-2572765559b3"
+     "operateur_id": null,
+     "uuid": "fc49260d-4d7a-4f34-973c-2572765559b3",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "exploitant aquacole (Chili)",
+       "apres": null,
+       "source": "https://shipspotting.com",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Seivest (ex-Fugløyfjord)",
@@ -140668,7 +141251,7 @@
       "diesel-mdo"
      ],
      "client": "Norvège",
-     "operateur": "armement norvégien",
+     "operateur": null,
      "proprietaire": "armement norvégien (Skarsjø, Ballstad pour Fugløyfjord)",
      "pavillon": "Norvège",
      "capacite": "navire de pêche",
@@ -140702,8 +141285,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : chalutier)",
      "id": "nav-4c531102b2b8",
      "chantier_id": "vaagland-batbyggeri-as-vagland",
-     "operateur_id": "ope-armement-norvegien",
-     "uuid": "14321f60-bf82-4182-a436-1287a68eb5ba"
+     "operateur_id": null,
+     "uuid": "14321f60-bf82-4182-a436-1287a68eb5ba",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "armement norvégien",
+       "apres": null,
+       "source": "https://vesselfinder.com",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Geir",
@@ -140754,7 +141348,7 @@
       "diesel-mdo"
      ],
      "client": "armement aquacole norvégien",
-     "operateur": "armement norvégien",
+     "operateur": null,
      "pavillon": "Norvège",
      "capacite": "brønnbåt (transporteur de poisson vivant / live fish carrier) ; IMO non confirmé, année à confirmer (1997-1998 selon source armateur)",
      "source": "https://directory.marinelink.com",
@@ -140778,8 +141372,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : tanker)",
      "id": "nav-de3afa967709",
      "chantier_id": "vaagland-batbyggeri-as-vagland",
-     "operateur_id": "ope-armement-norvegien",
-     "uuid": "2d31948e-6e34-4f5c-ae00-0b1483e468fb"
+     "operateur_id": null,
+     "uuid": "2d31948e-6e34-4f5c-ae00-0b1483e468fb",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "armement norvégien",
+       "apres": null,
+       "source": "https://directory.marinelink.com",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Liaholm",
@@ -145763,7 +146368,7 @@
       "diesel-mdo"
      ],
      "client": "Armement de peche norvegien (origine)",
-     "operateur": "Proprietaire prive (yacht)",
+     "operateur": null,
      "proprietaire": "Proprietaire prive (yacht, refit Front Street Shipyard 2016)",
      "pavillon": null,
      "classification": null,
@@ -145813,8 +146418,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : chalutier)",
      "id": "nav-f364fb3d718d",
      "chantier_id": "a-eidsvik-skipsbyggeri-as-uskedalen",
-     "operateur_id": "ope-proprietaire-prive",
-     "uuid": "a99acee1-b95b-40f9-9991-f9fb8a688ded"
+     "operateur_id": null,
+     "uuid": "a99acee1-b95b-40f9-9991-f9fb8a688ded",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Proprietaire prive (yacht)",
+       "apres": null,
+       "source": null,
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, absente sur cette coque, donc laissee vide."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Birita",
@@ -145829,7 +146445,7 @@
      ],
      "capacite": "Cale RSW (eau de mer réfrigérée), capacité thermique 81 200 kcal/t selon Skipsrevyen",
      "client": "Havskjer AS",
-     "operateur": "Armateur féroïen (pavillon îles Féroé)",
+     "operateur": null,
      "proprietaire": "Armateur féroïen (pavillon îles Féroé)",
      "pavillon": "Îles Féroé",
      "classification": "DNV 1A1 Fishing Vessel Ice C",
@@ -145889,8 +146505,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : Navire de pêche (senneur / chalutier pélagique RSW))",
      "id": "nav-b79130a54a99",
      "chantier_id": "a-eidsvik-skipsbyggeri-as-uskedalen",
-     "operateur_id": "ope-armateur-feroien",
-     "uuid": "bc695a4a-65b3-408c-a0c3-bfbba71e9d1a"
+     "operateur_id": null,
+     "uuid": "bc695a4a-65b3-408c-a0c3-bfbba71e9d1a",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Armateur féroïen (pavillon îles Féroé)",
+       "apres": null,
+       "source": "https://batomtaler.skipsrevyen.no/ms-havskjer/ms-havskjer/1098215",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Grimsholm",
@@ -157315,7 +157942,7 @@
       "diesel-mdo"
      ],
      "client": null,
-     "operateur": "exploitant en Gambie (non identifie)",
+     "operateur": null,
      "proprietaire": "armateur en Gambie (non identifie)",
      "classification": null,
      "source": "https://digitaltmuseum.no/011014231158/m-f-bergen-b-1984-a-s-mjellem-karlsen-bergen",
@@ -157368,8 +157995,19 @@
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-65e408fe6db9",
      "chantier_id": "mjellem-karlsen-verft-bergen",
-     "operateur_id": "ope-exploitant-en-gambie",
-     "uuid": "4c2f88fc-1af2-4238-92fa-2d52d536cf7a"
+     "operateur_id": null,
+     "uuid": "4c2f88fc-1af2-4238-92fa-2d52d536cf7a",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "exploitant en Gambie (non identifie)",
+       "apres": null,
+       "source": "https://digitaltmuseum.no/011014231158/m-f-bergen-b-1984-a-s-mjellem-karlsen-bergen",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Michael Sars",
@@ -157675,7 +158313,7 @@
       "diesel-mdo"
      ],
      "client": "National Taiwan University",
-     "operateur": "exploitant prive (devenu Hui Chuan)",
+     "operateur": null,
      "proprietaire": "armateur prive (Honduras)",
      "pavillon": "Honduras",
      "classification": null,
@@ -157721,8 +158359,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : navire de recherche)",
      "id": "nav-21b0c8a5a0c4",
      "chantier_id": "mjellem-karlsen-verft-bergen",
-     "operateur_id": "ope-exploitant-prive",
-     "uuid": "da9f8c8c-ed9d-47ea-ab38-210c6ff1a4f1"
+     "operateur_id": null,
+     "uuid": "da9f8c8c-ed9d-47ea-ab38-210c6ff1a4f1",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "exploitant prive (devenu Hui Chuan)",
+       "apres": null,
+       "source": "https://vesselfinder.com",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Sea Explorer",
@@ -157813,7 +158462,7 @@
       "diesel-mdo"
      ],
      "client": "Racal Group (Racal Geophysics Ltd), Royaume-Uni",
-     "operateur": "exploitant bresilien (apres renommage Antares)",
+     "operateur": null,
      "proprietaire": "Marine brésilienne (Government of Brazil)",
      "pavillon": "Brésil",
      "classification": null,
@@ -157858,8 +158507,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : navire de recherche)",
      "id": "nav-84afe1c986c5",
      "chantier_id": "mjellem-karlsen-verft-bergen",
-     "operateur_id": "ope-exploitant-bresilien",
-     "uuid": "2981f7b9-95b7-4ae0-9248-e1d207199768"
+     "operateur_id": null,
+     "uuid": "2981f7b9-95b7-4ae0-9248-e1d207199768",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "exploitant bresilien (apres renommage Antares)",
+       "apres": null,
+       "source": "https://trid.trb.org/view/418545",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Prof. W. Besnard",
@@ -157919,7 +158579,7 @@
       "diesel-mdo"
      ],
      "client": "Gouvernement norvegien (navire d'inspection des peches)",
-     "operateur": "armateur prive (yacht d'exploration)",
+     "operateur": null,
      "proprietaire": "armateur prive",
      "pavillon": null,
      "classification": null,
@@ -157964,8 +158624,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : navire de recherche)",
      "id": "nav-9dbe86e707cd",
      "chantier_id": "mjellem-karlsen-verft-bergen",
-     "operateur_id": "ope-armateur-prive",
-     "uuid": "5b025b63-b0be-47dd-9c9d-ccd2cf1261b3"
+     "operateur_id": null,
+     "uuid": "5b025b63-b0be-47dd-9c9d-ccd2cf1261b3",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "armateur prive (yacht d'exploration)",
+       "apres": null,
+       "source": "https://superyachttimes.com/yachts/sarsen",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Hydrograf",
@@ -157980,7 +158651,7 @@
       "diesel-mdo"
      ],
      "client": "Optinor (1967)",
-     "operateur": "exploitant prive",
+     "operateur": null,
      "proprietaire": "armateur prive",
      "pavillon": "Allemagne",
      "classification": null,
@@ -158032,8 +158703,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : navire de recherche)",
      "id": "nav-064178586ed4",
      "chantier_id": "mjellem-karlsen-verft-bergen",
-     "operateur_id": "ope-exploitant-prive",
-     "uuid": "d4131999-b06a-4588-a8a0-ea13fee37003"
+     "operateur_id": null,
+     "uuid": "d4131999-b06a-4588-a8a0-ea13fee37003",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "exploitant prive",
+       "apres": null,
+       "source": null,
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, absente sur cette coque, donc laissee vide."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Jetliner",
@@ -158201,7 +158883,7 @@
       "diesel-mdo"
      ],
      "client": "Hardanger Sunnhordlandske Dampskipsselskap (HSD)",
-     "operateur": "exploitant norvegien",
+     "operateur": null,
      "proprietaire": null,
      "pavillon": "Norvège",
      "classification": null,
@@ -158238,8 +158920,19 @@
      "cotier_segment": "Roulier / Ferry / NGV",
      "id": "nav-20bd3f4b030c",
      "chantier_id": "mjellem-karlsen-verft-bergen",
-     "operateur_id": "ope-exploitant-norvegien",
-     "uuid": "5fe8bd7f-d80a-47af-bd98-07bc6b1e4ccd"
+     "operateur_id": null,
+     "uuid": "5fe8bd7f-d80a-47af-bd98-07bc6b1e4ccd",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "exploitant norvegien",
+       "apres": null,
+       "source": "https://vesseltracker.com",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Herlaug",
@@ -158299,7 +158992,7 @@
       "diesel-mdo"
      ],
      "client": "Rutelaget Askøy-Bergen",
-     "operateur": "hors service depuis 2020",
+     "operateur": null,
      "proprietaire": null,
      "pavillon": "Norvège",
      "classification": null,
@@ -158353,8 +159046,19 @@
      "cotier_segment": "Roulier / Ferry / NGV",
      "id": "nav-9dd3fa4fa472",
      "chantier_id": "mjellem-karlsen-verft-bergen",
-     "operateur_id": "ope-hors-service-depuis-2020",
-     "uuid": "acfc0ae1-d4bb-498a-8717-8107e6bc84ed"
+     "operateur_id": null,
+     "uuid": "acfc0ae1-d4bb-498a-8717-8107e6bc84ed",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "hors service depuis 2020",
+       "apres": null,
+       "source": "https://vesselfinder.com",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Vidar",
@@ -158563,7 +159267,7 @@
       "diesel-mdo"
      ],
      "client": "Marine royale norvegienne (KNM Maursund)",
-     "operateur": "exploitant prive (apres reforme)",
+     "operateur": null,
      "proprietaire": "armateur prive",
      "pavillon": "Norvège",
      "classification": null,
@@ -158603,8 +159307,19 @@
      "cotier_motif": "type non couvert par la typologie de l'atelier (engin de debarquement)",
      "id": "nav-8ee9734de466",
      "chantier_id": "mjellem-karlsen-verft-bergen",
-     "operateur_id": "ope-exploitant-prive",
-     "uuid": "4979e991-34bc-4c31-8607-6cdfcf585a58"
+     "operateur_id": null,
+     "uuid": "4979e991-34bc-4c31-8607-6cdfcf585a58",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "exploitant prive (apres reforme)",
+       "apres": null,
+       "source": "https://vesselfinder.com",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Sørøysund",
@@ -158619,7 +159334,7 @@
       "diesel-mdo"
      ],
      "client": "Marine royale norvegienne (KNM Sørøysund)",
-     "operateur": "exploitant prive (apres reforme)",
+     "operateur": null,
      "proprietaire": "armateur prive",
      "pavillon": "Norvège",
      "classification": null,
@@ -158659,8 +159374,19 @@
      "cotier_motif": "type non couvert par la typologie de l'atelier (engin de debarquement)",
      "id": "nav-bcfc69b7cd33",
      "chantier_id": "mjellem-karlsen-verft-bergen",
-     "operateur_id": "ope-exploitant-prive",
-     "uuid": "e9b82a53-b634-475d-9d13-31b39901c523"
+     "operateur_id": null,
+     "uuid": "e9b82a53-b634-475d-9d13-31b39901c523",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "exploitant prive (apres reforme)",
+       "apres": null,
+       "source": "https://vesselfinder.com",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Reinøysund",
@@ -158836,7 +159562,7 @@
       "diesel-mdo"
      ],
      "client": "Hardanger Sunnhordlandske Dampskipsselskap",
-     "operateur": "exploitant suedois",
+     "operateur": null,
      "proprietaire": null,
      "pavillon": "Suède",
      "classification": null,
@@ -158871,8 +159597,19 @@
      "cotier_motif": "fret non rattaché à une desserte insulaire ou portuaire (type : cargo)",
      "id": "nav-78ba34dee6f4",
      "chantier_id": "mjellem-karlsen-verft-bergen",
-     "operateur_id": "ope-exploitant-suedois",
-     "uuid": "fae5b276-68fd-4518-a32e-b8841faaa627"
+     "operateur_id": null,
+     "uuid": "fae5b276-68fd-4518-a32e-b8841faaa627",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "exploitant suedois",
+       "apres": null,
+       "source": null,
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, absente sur cette coque, donc laissee vide."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Loth Loriën",
@@ -158887,7 +159624,7 @@
       "velique"
      ],
      "client": null,
-     "operateur": "exploitant de charter (Loth Loriën)",
+     "operateur": null,
      "proprietaire": "armateur prive",
      "pavillon": "Pays-Bas",
      "classification": null,
@@ -158920,8 +159657,19 @@
      "cotier_motif": "type non couvert par la typologie de l'atelier (voilier (barquentine depuis 2008, ex-lougre harenguier puis ketch a voiles d'etai))",
      "id": "nav-868e0bd1c049",
      "chantier_id": "mjellem-karlsen-verft-bergen",
-     "operateur_id": "ope-exploitant-de-charter",
-     "uuid": "b64bfb5a-5259-4d6e-837c-866585e32c47"
+     "operateur_id": null,
+     "uuid": "b64bfb5a-5259-4d6e-837c-866585e32c47",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "exploitant de charter (Loth Loriën)",
+       "apres": null,
+       "source": "https://www.vesselfinder.com/vessels/details/5254151",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     }
    ],
    "sources": [
@@ -163386,7 +164134,7 @@
      ],
      "capacite": "baliseur / navire de servitude phares et balises ; positionnement dynamique, 2 propulseurs azimutaux",
      "client": "Northern Lighthouse Board",
-     "operateur": "Propriétaire commercial privé (depuis mai 2025)",
+     "operateur": null,
      "proprietaire": "Armateur commercial privé (depuis mai 2025)",
      "pavillon": null,
      "classification": "Lloyd's Register +100A1 LA +LMC UMS",
@@ -163431,8 +164179,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : baliseur)",
      "id": "nav-f7a8fd24d20a",
      "chantier_id": "ferguson-marine-port-glasgow-limited-port",
-     "operateur_id": "ope-proprietaire-commercial-prive",
-     "uuid": "db7c8999-50f1-4473-a807-57dd8951be52"
+     "operateur_id": null,
+     "uuid": "db7c8999-50f1-4473-a807-57dd8951be52",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Propriétaire commercial privé (depuis mai 2025)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/NLV_Pole_Star",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "RV Cefas Endeavour",
@@ -164577,7 +165336,7 @@
       "diesel-mdo"
      ],
      "client": "Civil & Marine Ltd",
-     "operateur": "Navire démoli en 1999 (ex-A.R.C. Marine Ltd / Hanson Aggregates Marine)",
+     "operateur": null,
      "proprietaire": "Civil & Marine Ltd",
      "pavillon": "Royaume-Uni",
      "prix_acquisition": null,
@@ -164619,8 +165378,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : drague aspiratrice en marche (TSHD))",
      "id": "nav-f57759942379",
      "chantier_id": "ferguson-marine-port-glasgow-limited-port",
-     "operateur_id": "ope-navire-demoli-en-1999",
-     "uuid": "7f34d14d-268c-4759-ac64-43c134e9dd90"
+     "operateur_id": null,
+     "uuid": "7f34d14d-268c-4759-ac64-43c134e9dd90",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Navire démoli en 1999 (ex-A.R.C. Marine Ltd / Hanson Aggregates Marine)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/Ferguson_Marine_Engineering",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Zgorzelec, renomme Defne Y, demoli en 2011",
@@ -173616,7 +174386,7 @@
      "capacite": "Chalutier / coquillier, 32 GT (52 GT a l origine)",
      "energie": "Gasoil marin (MDO)",
      "client": "Robin & Donald Gibson (Dunure)",
-     "operateur": "Armement de peche (Troon)",
+     "operateur": null,
      "proprietaire": "Robin & Donald Gibson (Dunure)",
      "pavillon": "Royaume-Uni",
      "classification": null,
@@ -173662,8 +174432,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : chalutier)",
      "id": "nav-3205f11256f0",
      "chantier_id": "ardmaleish-boatbuilding-company-ltd-rothesay",
-     "operateur_id": "ope-armement-de-peche",
-     "uuid": "3a345e7c-4651-40a7-95f8-fa86729649a6"
+     "operateur_id": null,
+     "uuid": "3a345e7c-4651-40a7-95f8-fa86729649a6",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Armement de peche (Troon)",
+       "apres": null,
+       "source": "https://www.clydeships.co.uk/view.php?ref=792",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Guide Them",
@@ -177591,7 +178372,7 @@
      "capacite": "Deplacement 220/255 t ; vedette (Spica II), aujourd'hui navire-musee",
      "energie": "Turbines a gaz (3x Bristol Proteus)",
      "client": "Marine royale suedoise",
-     "operateur": "Navire-musee",
+     "operateur": null,
      "proprietaire": null,
      "pavillon": "Suede",
      "classification": null,
@@ -177628,8 +178409,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : patrouilleur)",
      "id": "nav-efca40d106f1",
      "chantier_id": "saab-kockums-ab-chantier-de-karlskrona-karlskronavarvet-karlskrona",
-     "operateur_id": "ope-navire-musee-1oxh8h0",
-     "uuid": "06ffbef4-c90e-4af6-8986-d54afca549d4"
+     "operateur_id": null,
+     "uuid": "06ffbef4-c90e-4af6-8986-d54afca549d4",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Navire-musee",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/Norrk%C3%B6ping-class_missile_boat",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "HSwMS Umeå (T137)",
@@ -178792,7 +179584,7 @@
      "classification": null,
      "pavillon": "Pakistan (demolition, dernier mouvement)",
      "client": "Rederi AB Malmoil (Suede)",
-     "operateur": "demoli (1982)",
+     "operateur": null,
      "proprietaire": "demoli (1982)",
      "annee_": null,
      "source": "http://www.faktaomfartyg.se/frans_suell_1958.htm",
@@ -178856,8 +179648,19 @@
      "cotier_motif": "longueur 170.01 m, au-delà du gabarit côtier (120 m)",
      "id": "nav-01e97a6c74c1",
      "chantier_id": "saab-kockums-ab-siege-et-chantier-de-malmo-malmo",
-     "operateur_id": "ope-demoli",
-     "uuid": "1f2fbea4-887b-4cd7-8038-afb2f533549f"
+     "operateur_id": null,
+     "uuid": "1f2fbea4-887b-4cd7-8038-afb2f533549f",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "demoli (1982)",
+       "apres": null,
+       "source": "http://www.faktaomfartyg.se/frans_suell_1958.htm",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Salem",
@@ -178960,7 +179763,7 @@
      "classification": null,
      "pavillon": "Norvege (sous propriete norvegienne)",
      "client": "armateur norvegien",
-     "operateur": "demoli (1986)",
+     "operateur": null,
      "proprietaire": "demoli (1986)",
      "annee_": null,
      "source": "https://en.wikipedia.org/wiki/MS_Star_Clipper",
@@ -179013,8 +179816,19 @@
      "cotier_motif": "longueur 171.9 m, au-delà du gabarit côtier (120 m)",
      "id": "nav-5c678dbbfb44",
      "chantier_id": "saab-kockums-ab-siege-et-chantier-de-malmo-malmo",
-     "operateur_id": "ope-demoli",
-     "uuid": "fc938eb0-cf38-4ba3-acb8-6cbe97d305ec"
+     "operateur_id": null,
+     "uuid": "fc938eb0-cf38-4ba3-acb8-6cbe97d305ec",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "demoli (1986)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/MS_Star_Clipper",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Polar Alaska",
@@ -180696,7 +181510,7 @@
      "annee": "1997",
      "energie": "Diesel",
      "client": "Armement de Hönö",
-     "operateur": "armement de Simrishamn (sous le nom SIN 37 Linzy)",
+     "operateur": null,
      "proprietaire": null,
      "pavillon": "Suede",
      "classification": null,
@@ -180729,8 +181543,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : chalutier)",
      "id": "nav-d7ea46cbfa0a",
      "chantier_id": "o-varvet-ab-ockero",
-     "operateur_id": "ope-armement-de-simrishamn",
-     "uuid": "43d284b5-adfb-44da-8a29-332e7160ef81"
+     "operateur_id": null,
+     "uuid": "43d284b5-adfb-44da-8a29-332e7160ef81",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "armement de Simrishamn (sous le nom SIN 37 Linzy)",
+       "apres": null,
+       "source": "https://fiskebatar.zaramis.se/varv/o-varvet-backmans-slip",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "GG 981 Ocean",
@@ -180742,7 +181567,7 @@
      "annee": "1999",
      "energie": "Diesel",
      "client": "Armement de Fotö",
-     "operateur": "armement de Hönö (sous le nom GG 580 Marina)",
+     "operateur": null,
      "proprietaire": null,
      "pavillon": "Suede",
      "classification": null,
@@ -180775,8 +181600,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : chalutier)",
      "id": "nav-5bb8ebf7f7ff",
      "chantier_id": "o-varvet-ab-ockero",
-     "operateur_id": "ope-armement-de-hono",
-     "uuid": "1889e298-9a09-4431-a40e-e4edaac4684e"
+     "operateur_id": null,
+     "uuid": "1889e298-9a09-4431-a40e-e4edaac4684e",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "armement de Hönö (sous le nom GG 580 Marina)",
+       "apres": null,
+       "source": "https://fiskebatar.zaramis.se/varv/o-varvet-backmans-slip",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "GG 73 Ingun",
@@ -180826,7 +181662,7 @@
      "annee": "2000",
      "energie": "Diesel",
      "client": "Armement de Öckerö",
-     "operateur": "armement de Träslövsläge (sous le nom VG 392 Strannefjord)",
+     "operateur": null,
      "proprietaire": null,
      "pavillon": "Suede",
      "classification": null,
@@ -180859,8 +181695,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : chalutier)",
      "id": "nav-2c140f4962c9",
      "chantier_id": "o-varvet-ab-ockero",
-     "operateur_id": "ope-armement-de-traslovslage",
-     "uuid": "973fbc35-d78a-4723-919b-7044113530c2"
+     "operateur_id": null,
+     "uuid": "973fbc35-d78a-4723-919b-7044113530c2",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "armement de Träslövsläge (sous le nom VG 392 Strannefjord)",
+       "apres": null,
+       "source": "https://fiskebatar.zaramis.se/varv/o-varvet-backmans-slip",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "GG 781 Sandefjord",
@@ -180910,7 +181757,7 @@
      "annee": "2001",
      "energie": "Diesel",
      "client": "Armement de Öckerö",
-     "operateur": "armement de Rörö (sous le nom GG 32 Tristan)",
+     "operateur": null,
      "proprietaire": null,
      "pavillon": "Suede",
      "classification": null,
@@ -180950,8 +181797,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : chalutier)",
      "id": "nav-c7d7ad613311",
      "chantier_id": "o-varvet-ab-ockero",
-     "operateur_id": "ope-armement-de-roro",
-     "uuid": "e689394b-d6a0-421f-aafa-4270f5ae3e23"
+     "operateur_id": null,
+     "uuid": "e689394b-d6a0-421f-aafa-4270f5ae3e23",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "armement de Rörö (sous le nom GG 32 Tristan)",
+       "apres": null,
+       "source": "https://fiskebatar.zaramis.se/varv/o-varvet-backmans-slip",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "GG 70 Marie",
@@ -181001,7 +181859,7 @@
      "annee": "2005",
      "energie": "Diesel",
      "client": "Armement de Rörö",
-     "operateur": "armement de Fotö (sous le nom GG 773 Signora)",
+     "operateur": null,
      "proprietaire": null,
      "pavillon": "Suede",
      "classification": null,
@@ -181034,8 +181892,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : chalutier)",
      "id": "nav-f16ba366402e",
      "chantier_id": "o-varvet-ab-ockero",
-     "operateur_id": "ope-armement-de-foto",
-     "uuid": "05c73062-a3c1-49f0-a746-9a96b8c98508"
+     "operateur_id": null,
+     "uuid": "05c73062-a3c1-49f0-a746-9a96b8c98508",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "armement de Fotö (sous le nom GG 773 Signora)",
+       "apres": null,
+       "source": "https://fiskebatar.zaramis.se/varv/o-varvet-backmans-slip",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     }
    ],
    "sources": [
@@ -181243,7 +182112,7 @@
       "electrique-batterie"
      ],
      "client": "Clients prives (marche de la plaisance)",
-     "operateur": "Clients prives (modele de serie de plaisance)",
+     "operateur": null,
      "proprietaire": "Proprietaires prives (>150 unites vendues)",
      "classification": "DNV",
      "source": "https://candela.com/leisure-boats/candela-c-8/",
@@ -181271,8 +182140,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : Bateau de plaisance a hydrofoil electrique (day-cruiser))",
      "id": "nav-9345c476fa44",
      "chantier_id": "candela-technology-ab-rotebro",
-     "operateur_id": "ope-clients-prives",
-     "uuid": "f728b30c-81b6-49aa-bd7b-bcbcb24351f5"
+     "operateur_id": null,
+     "uuid": "f728b30c-81b6-49aa-bd7b-bcbcb24351f5",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Clients prives (modele de serie de plaisance)",
+       "apres": null,
+       "source": "https://candela.com/leisure-boats/candela-c-8/",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     },
     {
      "nom": "Candela C-8 Polestar Edition",
@@ -184050,7 +184930,7 @@
       "diesel-electrique"
      ],
      "client": "DOF",
-     "operateur": "Acheteur international (vendu Q1 2024 par DOF)",
+     "operateur": null,
      "proprietaire": "Acheteur international (ex-DOF Rederi)",
      "pavillon": "Norvege",
      "classification": "DNV",
@@ -184089,8 +184969,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : OSV)",
      "id": "nav-0c9a17b24c34",
      "chantier_id": "myklebust-verft-as-gurskebotn",
-     "operateur_id": "ope-acheteur-international",
-     "uuid": "f6f769a2-0272-44f2-9d55-0bedc7e3470f"
+     "operateur_id": null,
+     "uuid": "f6f769a2-0272-44f2-9d55-0bedc7e3470f",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Acheteur international (vendu Q1 2024 par DOF)",
+       "apres": null,
+       "source": "https://www.vesselfinder.com/vessels/details/9284324",
+       "le": "2026-09-02",
+       "motif": "le libelle qualifie une exploitation (nationalite, port, activite, revente) sans nommer la maison. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_non_identifie"
     },
     {
      "nom": "Skandi Sotra",
@@ -190868,7 +191759,7 @@
       "diesel-mdo"
      ],
      "client": null,
-     "operateur": "Aucun (navire perdu en mer le 24 novembre 1997)",
+     "operateur": null,
      "proprietaire": "Epave (demolie 1998) — dernier proprietaire Mediterranean Shipping Co.",
      "classification": null,
      "source": "https://en.wikipedia.org/wiki/%C3%96resundsvarvet",
@@ -190970,7 +191861,18 @@
      "cotier_motif": "longueur 257.6 m, au-delà du gabarit côtier (120 m)",
      "id": "nav-91af220a7a31",
      "chantier_id": "oresund-drydocks-ab-oresundsvarvet-landskrona",
-     "uuid": "4a3a5fd9-208d-4d97-a016-c113fa47347c"
+     "uuid": "4a3a5fd9-208d-4d97-a016-c113fa47347c",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Aucun (navire perdu en mer le 24 novembre 1997)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/%C3%96resundsvarvet",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Visby",
@@ -197879,7 +198781,7 @@
       "diesel-mdo"
      ],
      "client": null,
-     "operateur": "Modele de serie (proprietaires individuels selon chaque unite)",
+     "operateur": null,
      "proprietaire": "Hallberg-Rassy Varvs AB (constructeur de la serie)",
      "classification": null,
      "source": "https://www.hallberg-rassy.com/yachts/hallberg-rassy-40c",
@@ -197899,8 +198801,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : voilier de croisière hauturière (cockpit central))",
      "id": "nav-182752911af9",
      "chantier_id": "hallberg-rassy-varvs-ab-ellos",
-     "operateur_id": "ope-modele-de-serie",
-     "uuid": "758bd53f-c708-4b77-8161-33fcae392a6e"
+     "operateur_id": null,
+     "uuid": "758bd53f-c708-4b77-8161-33fcae392a6e",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Modele de serie (proprietaires individuels selon chaque unite)",
+       "apres": null,
+       "source": "https://www.hallberg-rassy.com/yachts/hallberg-rassy-40c",
+       "le": "2026-09-02",
+       "motif": "le libelle designe un particulier ou un armateur prive que la source ne nomme pas. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "exploitant_prive_non_nomme"
     }
    ],
    "sources": [
@@ -199081,7 +199994,7 @@
      "energie": "diesel (MDO/HFO)",
      "classification": null,
      "client": "Swedish American Line (Svenska Amerika Linien)",
-     "operateur": "desarme/vendu a la demolition 2025 (ex-Astoria, Cruise & Maritime Voyages / Brock Pierce)",
+     "operateur": null,
      "proprietaire": "Galloo (demolition, Gand, Belgique) depuis 2025",
      "pavillon": "Portugal (Madere) en fin de carriere comme Astoria",
      "timeline": [
@@ -199206,7 +200119,18 @@
      "cotier_motif": "longueur 160.08 m, au-delà du gabarit côtier (120 m)",
      "id": "nav-427c4e562dea",
      "chantier_id": "gotaverken-chantier-historique-goteborg",
-     "uuid": "5bbea1c7-093e-44eb-83ba-b3a84cec916b"
+     "uuid": "5bbea1c7-093e-44eb-83ba-b3a84cec916b",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "desarme/vendu a la demolition 2025 (ex-Astoria, Cruise & Maritime Voyages / Brock Pierce)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/MS_Stockholm_(1946)",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Prinsessan Birgitta",
@@ -199225,7 +200149,7 @@
      "energie": "diesel (MDO/HFO)",
      "classification": null,
      "client": "Sessanlinjen / Stena Sessan Line (commande 15 fevrier 1979)",
-     "operateur": "demoli 2012 (dernier nom Normandy)",
+     "operateur": null,
      "proprietaire": "demoli a Alang (Inde) 2012",
      "pavillon": "Bahamas / Chypre en fin de carriere",
      "source": "https://en.wikipedia.org/wiki/MS_Normandy",
@@ -199334,8 +200258,19 @@
      "cotier_motif": "longueur 149.03 m, au-delà du gabarit côtier (120 m)",
      "id": "nav-8ddcb45f0836",
      "chantier_id": "gotaverken-chantier-historique-goteborg",
-     "operateur_id": "ope-demoli-2012",
-     "uuid": "5f44ab6f-fc72-4a9a-a0a3-278a34b9e9f4"
+     "operateur_id": null,
+     "uuid": "5f44ab6f-fc72-4a9a-a0a3-278a34b9e9f4",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "demoli 2012 (dernier nom Normandy)",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/MS_Normandy",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Winter Sea",
@@ -199352,7 +200287,7 @@
      "energie": "diesel (HFO)",
      "classification": null,
      "client": "Salenrederierna AB / Zenit Kylfinans AB, Stockholm",
-     "operateur": "demoli 2009",
+     "operateur": null,
      "proprietaire": "demoli a Gadani (Pakistan) 2009 (dernier nom Segovia Carrier)",
      "pavillon": "Bahamas en fin de carriere",
      "source": "https://doverferryphotosforums.co.uk/mv-segovia-carrier-cargo-from-the-past",
@@ -199410,8 +200345,19 @@
      "cotier_motif": "longueur 169.22 m, au-delà du gabarit côtier (120 m)",
      "id": "nav-9876de5a10ed",
      "chantier_id": "gotaverken-chantier-historique-goteborg",
-     "operateur_id": "ope-demoli-2009",
-     "uuid": "1f68dc3c-ab0e-4189-9609-b9d2c8f342ce"
+     "operateur_id": null,
+     "uuid": "1f68dc3c-ab0e-4189-9609-b9d2c8f342ce",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "demoli 2009",
+       "apres": null,
+       "source": "https://doverferryphotosforums.co.uk/mv-segovia-carrier-cargo-from-the-past",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Winter Star",
@@ -199428,7 +200374,7 @@
      "energie": "diesel (HFO)",
      "classification": null,
      "client": "Salenrederierna AB / Zenit Kylfinans AB, Stockholm",
-     "operateur": "demoli 2009",
+     "operateur": null,
      "proprietaire": "demoli a Gadani (Pakistan) 2009 (dernier nom Alicante Carrier)",
      "pavillon": "Bahamas en fin de carriere",
      "source": "https://doverferryphotosforums.co.uk/mv-winter-star-cargo-from-the-past",
@@ -199486,8 +200432,19 @@
      "cotier_motif": "longueur 169.22 m, au-delà du gabarit côtier (120 m)",
      "id": "nav-1110e67a2440",
      "chantier_id": "gotaverken-chantier-historique-goteborg",
-     "operateur_id": "ope-demoli-2009",
-     "uuid": "20128ef1-430c-4cd4-bdfa-de894df52a6a"
+     "operateur_id": null,
+     "uuid": "20128ef1-430c-4cd4-bdfa-de894df52a6a",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "demoli 2009",
+       "apres": null,
+       "source": "https://doverferryphotosforums.co.uk/mv-winter-star-cargo-from-the-past",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Winter Moon",
@@ -199581,7 +200538,7 @@
      "energie": "diesel (premier age du moteur)",
      "classification": null,
      "client": "Rederi AB Nordstjernan (Johnson Line), Stockholm",
-     "operateur": "demoli 1962",
+     "operateur": null,
      "proprietaire": "vendu a Perslöner AB (Ystad) pour demolition 1962",
      "pavillon": "Suede",
      "source": "https://faktaomfartyg.se/annie_johnson_1925.htm",
@@ -199632,8 +200589,19 @@
      "cotier_motif": "fret non rattaché à une desserte insulaire ou portuaire (type : cargo)",
      "id": "nav-480a42f2f005",
      "chantier_id": "gotaverken-chantier-historique-goteborg",
-     "operateur_id": "ope-demoli-1962",
-     "uuid": "9e8b7b5c-d384-420f-bc0d-8d2973e3abad"
+     "operateur_id": null,
+     "uuid": "9e8b7b5c-d384-420f-bc0d-8d2973e3abad",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "demoli 1962",
+       "apres": null,
+       "source": "https://faktaomfartyg.se/annie_johnson_1925.htm",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "HSwMS Tre Kronor",
@@ -199650,7 +200618,7 @@
      "energie": "vapeur (chaudieres + turbines a engrenages)",
      "classification": null,
      "client": "Marine royale suedoise (Svenska marinen)",
-     "operateur": "raye des effectifs 1964, demoli 1968",
+     "operateur": null,
      "proprietaire": "Marine royale suedoise (jusqu'en 1964)",
      "pavillon": "Suede",
      "source": "https://en.wikipedia.org/wiki/Tre_Kronor-class_cruiser",
@@ -199701,8 +200669,19 @@
      "cotier_motif": "longueur 182 m, au-delà du gabarit côtier (120 m)",
      "id": "nav-93a4f3826bac",
      "chantier_id": "gotaverken-chantier-historique-goteborg",
-     "operateur_id": "ope-raye-des-effectifs-1964-demoli-1968",
-     "uuid": "1c1a8dfb-d5ac-4df1-a819-2328f0d30acb"
+     "operateur_id": null,
+     "uuid": "1c1a8dfb-d5ac-4df1-a819-2328f0d30acb",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "raye des effectifs 1964, demoli 1968",
+       "apres": null,
+       "source": "https://en.wikipedia.org/wiki/Tre_Kronor-class_cruiser",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Amorina (ex-Fyrskepp nr 33)",
@@ -212887,7 +213866,7 @@
      "longueur_m": 25,
      "energie": "Diesel",
      "client": "Marine suédoise (Kungliga Flottan)",
-     "operateur": "Désarmé (1955)",
+     "operateur": null,
      "proprietaire": null,
      "pavillon": "Suède (jusqu'au désarmement)",
      "capacite": "Déplacement 51 t ; 25 x 5,1 m ; 13 noeuds ; équipage 12",
@@ -212922,7 +213901,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : patrouilleur)",
      "id": "nav-1812c6b6c84f",
      "chantier_id": "feab-marstrandsverken-ex-marstrands-mekaniska-verkstad-marst-marstrand",
-     "uuid": "b563ae0c-485d-4a11-8619-fad4062e0422"
+     "uuid": "b563ae0c-485d-4a11-8619-fad4062e0422",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Désarmé (1955)",
+       "apres": null,
+       "source": null,
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, absente sur cette coque, donc laissee vide."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "HMS M4",
@@ -212935,7 +213925,7 @@
      "longueur_m": 25,
      "energie": "Diesel",
      "client": "Marine suédoise (Kungliga Flottan)",
-     "operateur": "Désarmé (1955)",
+     "operateur": null,
      "proprietaire": null,
      "pavillon": "Suède (jusqu'au désarmement)",
      "capacite": "Déplacement 51 t ; 25 x 5,1 m ; 13 noeuds ; équipage 12 ; dragueur de mines",
@@ -212971,7 +213961,18 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : patrouilleur)",
      "id": "nav-0f61b5a33e16",
      "chantier_id": "feab-marstrandsverken-ex-marstrands-mekaniska-verkstad-marst-marstrand",
-     "uuid": "c89f976d-9828-4e5e-a7a6-80be9a45a191"
+     "uuid": "c89f976d-9828-4e5e-a7a6-80be9a45a191",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Désarmé (1955)",
+       "apres": null,
+       "source": "https://sv.wikipedia.org/wiki/HMS_M4",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "Kolåstind",
@@ -218930,7 +219931,7 @@
       "diesel-mdo"
      ],
      "client": "Liquigas Ltd (Nouvelle-Zélande)",
-     "operateur": "Navire démoli en 2016 en Turquie (ex-Kilgas Centurion, ex-Sigas Centurion, ex-Angas)",
+     "operateur": null,
      "proprietaire": "Navire démoli en 2016 en Turquie ; dernier nom Angas (ex-Sigas Centurion, ex-Kilgas Centurion), pavillon Saint-Kitts-et-Nevis depuis mars 2010",
      "pavillon": "Nouvelle-Zélande",
      "prix_acquisition": null,
@@ -218985,8 +219986,19 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : gazier (LPG tanker))",
      "id": "nav-842202985c15",
      "chantier_id": "ailsa-shipbuilding-company-troon",
-     "operateur_id": "ope-navire-demoli-en-2016-en-turquie",
-     "uuid": "c9002a00-42e5-4bfd-8ef8-1c12f0a0355b"
+     "operateur_id": null,
+     "uuid": "c9002a00-42e5-4bfd-8ef8-1c12f0a0355b",
+     "champs_corriges": [
+      {
+       "champ": "operateur",
+       "avant": "Navire démoli en 2016 en Turquie (ex-Kilgas Centurion, ex-Sigas Centurion, ex-Angas)",
+       "apres": null,
+       "source": "https://www.shipspotting.com/photos/259857",
+       "le": "2026-09-02",
+       "motif": "le libelle enonce qu'aucune maison n'exploite la coque et n'en nomme aucune. Valeur d'origine conservee en trace ; la source est celle de la coque, la page qui portait l'affirmation."
+      }
+     ],
+     "etat_exploitation": "sans_exploitant"
     },
     {
      "nom": "MV Fivla",
@@ -295660,14 +296672,19 @@
     "demoli (1982)",
     "demoli (1986)"
    ],
-   "navires": 4,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "773d074a-485a-461f-b422-7fc53aef7fa0"
+   "uuid": "773d074a-485a-461f-b422-7fc53aef7fa0",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Démoli (retiré du service) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "sans_exploitant",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-escal-ouest",
@@ -295709,14 +296726,19 @@
     "exploitant prive",
     "exploitant prive (apres reforme)"
    ],
-   "navires": 4,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "3cbd812c-08c0-4729-b93e-4f7531b4c522"
+   "uuid": "3cbd812c-08c0-4729-b93e-4f7531b4c522",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « exploitant prive (devenu Hui Chuan) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_prive_non_nomme",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-forsvarsmakten",
@@ -296631,14 +297653,19 @@
     "Armateur prive (yacht prive, charter occasionnel)",
     "armateur prive (yacht d'exploration)"
    ],
-   "navires": 3,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "e1eecbea-2ffb-4951-b14f-8cb878fb56d0"
+   "uuid": "e1eecbea-2ffb-4951-b14f-8cb878fb56d0",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Armateur prive (yacht prive, gestion Sailoe/management prive) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_prive_non_nomme",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-armement-des-phares-et-balises",
@@ -296665,14 +297692,19 @@
     "armement norvégien (reefer)",
     "armement norvégien"
    ],
-   "navires": 3,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "41dd6908-3911-4768-bac4-8cb23bf3f3dc"
+   "uuid": "41dd6908-3911-4768-bac4-8cb23bf3f3dc",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armement norvégien (reefer) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-armement-omanais",
@@ -296681,14 +297713,19 @@
    "alias": [
     "armement omanais (apres revente)"
    ],
-   "navires": 3,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "7ca2642c-bb21-458f-8b6e-463fcc24f0b4"
+   "uuid": "7ca2642c-bb21-458f-8b6e-463fcc24f0b4",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armement omanais (apres revente) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-atlantic-container-line",
@@ -299057,14 +300094,19 @@
    "alias": [
     "demoli 2009"
    ],
-   "navires": 2,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "a9d8687a-bbee-437c-8b75-1928028cbf2b"
+   "uuid": "a9d8687a-bbee-437c-8b75-1928028cbf2b",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « demoli 2009 ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "sans_exploitant",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-dof-subsea",
@@ -300504,14 +301546,19 @@
     "Proprietaire prive (plaisance patrimoniale)",
     "Proprietaire prive (yacht)"
    ],
-   "navires": 2,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "da5c0540-d41e-4544-972b-c06c75dc89b1"
+   "uuid": "da5c0540-d41e-4544-972b-c06c75dc89b1",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Proprietaire prive (plaisance patrimoniale) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_prive_non_nomme",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-pullmantur-cruises",
@@ -301542,14 +302589,19 @@
    "alias": [
     "Acheteur international (vendu Q1 2024 par DOF)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "c3d120ef-d280-44b5-990d-d022e44406f6"
+   "uuid": "c3d120ef-d280-44b5-990d-d022e44406f6",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Acheteur international (vendu Q1 2024 par DOF) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-acta-marine-den-helder",
@@ -302239,14 +303291,19 @@
    "alias": [
     "Armateur féroïen (pavillon îles Féroé)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "1d55916d-70da-4d35-8037-2c8362476e67"
+   "uuid": "1d55916d-70da-4d35-8037-2c8362476e67",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Armateur féroïen (pavillon îles Féroé) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-armateur-russe",
@@ -302255,14 +303312,19 @@
    "alias": [
     "armateur russe (voir timeline)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "74a20803-2522-4a1b-ada0-7fadf4506540"
+   "uuid": "74a20803-2522-4a1b-ada0-7fadf4506540",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armateur russe (voir timeline) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-armateur-russe-non-divulgue",
@@ -302271,14 +303333,19 @@
    "alias": [
     "Armateur russe non divulgue (ex Bourbon Offshore Norway)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "ea59e419-b021-4208-a69d-24fa488511c7"
+   "uuid": "ea59e419-b021-4208-a69d-24fa488511c7",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Armateur russe non divulgue (ex Bourbon Offshore Norway) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-armateur-successif",
@@ -302287,14 +303354,19 @@
    "alias": [
     "armateur successif (voir timeline)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "0dd51ebf-8f8a-4c35-a0d8-5e78b5df7c60"
+   "uuid": "0dd51ebf-8f8a-4c35-a0d8-5e78b5df7c60",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armateur successif (voir timeline) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-armement-alexis-hagnere",
@@ -302335,14 +303407,19 @@
    "alias": [
     "armement de Fotö (sous le nom GG 773 Signora)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "755c7776-7ab6-4bd8-893c-365aedb429de"
+   "uuid": "755c7776-7ab6-4bd8-893c-365aedb429de",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armement de Fotö (sous le nom GG 773 Signora) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-armement-de-hono",
@@ -302351,14 +303428,19 @@
    "alias": [
     "armement de Hönö (sous le nom GG 580 Marina)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "fa27d9a1-4c9d-4c4f-926c-df25b1b3fca2"
+   "uuid": "fa27d9a1-4c9d-4c4f-926c-df25b1b3fca2",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armement de Hönö (sous le nom GG 580 Marina) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-armement-de-peche",
@@ -302367,14 +303449,19 @@
    "alias": [
     "Armement de peche (Troon)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "7bd3dbb7-5d50-472f-ae2e-8f629010402e"
+   "uuid": "7bd3dbb7-5d50-472f-ae2e-8f629010402e",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Armement de peche (Troon) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-armement-de-roro",
@@ -302383,14 +303470,19 @@
    "alias": [
     "armement de Rörö (sous le nom GG 32 Tristan)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "811ae326-a12b-4bfb-b092-0df39a13a302"
+   "uuid": "811ae326-a12b-4bfb-b092-0df39a13a302",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armement de Rörö (sous le nom GG 32 Tristan) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-armement-de-simrishamn",
@@ -302399,14 +303491,19 @@
    "alias": [
     "armement de Simrishamn (sous le nom SIN 37 Linzy)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "91c5478d-4c38-4ff5-9a86-8c7b4e9240eb"
+   "uuid": "91c5478d-4c38-4ff5-9a86-8c7b4e9240eb",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armement de Simrishamn (sous le nom SIN 37 Linzy) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-armement-de-traslovslage",
@@ -302415,14 +303512,19 @@
    "alias": [
     "armement de Träslövsläge (sous le nom VG 392 Strannefjord)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "76860f4b-37ef-428c-a2d3-eb39d46f49ab"
+   "uuid": "76860f4b-37ef-428c-a2d3-eb39d46f49ab",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « armement de Träslövsläge (sous le nom VG 392 Strannefjord) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-armement-des-phares-et-balises-direction-19fw3gx",
@@ -303932,14 +305034,19 @@
    "alias": [
     "Clients prives (modele de serie de plaisance)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "fd292cf3-1974-48bd-8055-1f8738a2a114"
+   "uuid": "fd292cf3-1974-48bd-8055-1f8738a2a114",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Clients prives (modele de serie de plaisance) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_prive_non_nomme",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-clipper-line",
@@ -304756,14 +305863,19 @@
    "alias": [
     "démantelé"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "35c7bd96-3726-4f38-ad03-4bd75e79f6c4"
+   "uuid": "35c7bd96-3726-4f38-ad03-4bd75e79f6c4",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « démantelé ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "sans_exploitant",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-demlane",
@@ -304788,14 +305900,19 @@
    "alias": [
     "demoli 1962"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "0608c6d8-7cc7-47ee-aedd-07678334e567"
+   "uuid": "0608c6d8-7cc7-47ee-aedd-07678334e567",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « demoli 1962 ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "sans_exploitant",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-demoli-2012",
@@ -304804,14 +305921,19 @@
    "alias": [
     "demoli 2012 (dernier nom Normandy)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "a38daeda-5cca-4a62-a23c-800078da1d65"
+   "uuid": "a38daeda-5cca-4a62-a23c-800078da1d65",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « demoli 2012 (dernier nom Normandy) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "sans_exploitant",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-departement-de-lot-et-garonne-1eqhs2l",
@@ -305763,14 +306885,19 @@
    "alias": [
     "exploitant aquacole (Chili)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "44e03e4b-9782-4cf1-8203-f1f1d5097055"
+   "uuid": "44e03e4b-9782-4cf1-8203-f1f1d5097055",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « exploitant aquacole (Chili) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-exploitant-bresilien",
@@ -305779,14 +306906,19 @@
    "alias": [
     "exploitant bresilien (apres renommage Antares)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "4b761902-c584-4a53-a981-56cb6eb95284"
+   "uuid": "4b761902-c584-4a53-a981-56cb6eb95284",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « exploitant bresilien (apres renommage Antares) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-exploitant-de-charter",
@@ -305795,14 +306927,19 @@
    "alias": [
     "exploitant de charter (Loth Loriën)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "15450aa6-b893-43bf-a694-3e16c0ac1083"
+   "uuid": "15450aa6-b893-43bf-a694-3e16c0ac1083",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « exploitant de charter (Loth Loriën) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-exploitant-en-gambie",
@@ -305811,14 +306948,19 @@
    "alias": [
     "exploitant en Gambie (non identifie)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "4c8cb443-2008-4d7d-8076-aedb7522c24e"
+   "uuid": "4c8cb443-2008-4d7d-8076-aedb7522c24e",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « exploitant en Gambie (non identifie) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-exploitant-norvegien",
@@ -305827,14 +306969,19 @@
    "alias": [
     "exploitant norvegien"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "1a50b3b5-6148-4ac8-b19b-2fb7a8c51166"
+   "uuid": "1a50b3b5-6148-4ac8-b19b-2fb7a8c51166",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « exploitant norvegien ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-exploitant-suedois",
@@ -305843,14 +306990,19 @@
    "alias": [
     "exploitant suedois"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "64864698-c633-4342-91cd-ecfda4d51e93"
+   "uuid": "64864698-c633-4342-91cd-ecfda4d51e93",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « exploitant suedois ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-exploitation-aux-canaries",
@@ -307739,14 +308891,19 @@
    "alias": [
     "hors service depuis 2020"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "1946836c-8ff7-4fe8-af94-f196249346d9"
+   "uuid": "1946836c-8ff7-4fe8-af94-f196249346d9",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « hors service depuis 2020 ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "sans_exploitant",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-hovden-senior",
@@ -310463,14 +311620,19 @@
    "alias": [
     "Modele de serie (proprietaires individuels selon chaque unite)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "1825436d-e06a-445d-aeb5-7a52e697849d"
+   "uuid": "1825436d-e06a-445d-aeb5-7a52e697849d",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Modele de serie (proprietaires individuels selon chaque unite) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_prive_non_nomme",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-modx-catamarans",
@@ -310786,14 +311948,19 @@
    "alias": [
     "Mytiliculteur de la baie du Mont-Saint-Michel (exploitant, identite precise non publiee)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "319c1aba-e19b-4c2e-bed0-b2122aae89db"
+   "uuid": "319c1aba-e19b-4c2e-bed0-b2122aae89db",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Mytiliculteur de la baie du Mont-Saint-Michel (exploitant, identite precise non publiee) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_prive_non_nomme",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-n-r-ysund-aquaservice-dl65rf",
@@ -310946,14 +312113,19 @@
    "alias": [
     "Navire démoli en 1999 (ex-A.R.C. Marine Ltd / Hanson Aggregates Marine)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "47802190-04c9-4df1-a50e-874207f7d00c"
+   "uuid": "47802190-04c9-4df1-a50e-874207f7d00c",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Navire démoli en 1999 (ex-A.R.C. Marine Ltd / Hanson Aggregates Marine) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "sans_exploitant",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-navire-demoli-en-2016-en-turquie",
@@ -310962,14 +312134,19 @@
    "alias": [
     "Navire démoli en 2016 en Turquie (ex-Kilgas Centurion, ex-Sigas Centurion, ex-Angas)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "987d11c5-406d-4a0c-bf09-bc04591f9687"
+   "uuid": "987d11c5-406d-4a0c-bf09-bc04591f9687",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Navire démoli en 2016 en Turquie (ex-Kilgas Centurion, ex-Sigas Centurion, ex-Angas) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "sans_exploitant",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-navire-musee-1oxh8h0",
@@ -310978,14 +312155,19 @@
    "alias": [
     "Navire-musee"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "4668f7fb-ff31-421f-a61d-37a70932ab91"
+   "uuid": "4668f7fb-ff31-421f-a61d-37a70932ab91",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Navire-musee ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-navire-musee-bore-turku-18z7uvn",
@@ -311010,14 +312192,19 @@
    "alias": [
     "Navire-musée, Nantes (association)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "42040ebd-9923-4a43-91d0-996898fd5c70"
+   "uuid": "42040ebd-9923-4a43-91d0-996898fd5c70",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Navire-musée, Nantes (association) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-navix-armateur-proprietaire-compagnie-na-byvn8y",
@@ -312346,14 +313533,19 @@
    "alias": [
     "port algérien"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "6218647d-22b1-4112-be05-09fcfe95b70c"
+   "uuid": "6218647d-22b1-4112-be05-09fcfe95b70c",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « port algérien ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-port-d-aarhus-13gwug3",
@@ -312635,14 +313827,19 @@
    "alias": [
     "Propriétaire commercial privé (depuis mai 2025)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "04070efa-745e-4a5d-af4d-859de21a68da"
+   "uuid": "04070efa-745e-4a5d-af4d-859de21a68da",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Propriétaire commercial privé (depuis mai 2025) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_prive_non_nomme",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-proprietaire-gc-rieber-shipping-manager-o5ij90",
@@ -312667,14 +313864,19 @@
    "alias": [
     "Propriétaires privés (par exemplaire, non nominativement publics)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "3d294ea1-2213-4ebd-899d-fdeecb8a92ab"
+   "uuid": "3d294ea1-2213-4ebd-899d-fdeecb8a92ab",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Propriétaires privés (par exemplaire, non nominativement publics) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_prive_non_nomme",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-provence-grand-large",
@@ -312795,14 +313997,19 @@
    "alias": [
     "raye des effectifs 1964, demoli 1968"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "b14539ae-14c5-434c-bcf2-558f1019071d"
+   "uuid": "b14539ae-14c5-434c-bcf2-558f1019071d",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « raye des effectifs 1964, demoli 1968 ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "sans_exploitant",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-raymond-bj-rkas-wlsw3g",
@@ -313284,14 +314491,19 @@
    "alias": [
     "Revendu en Croatie 2014, renomme Krilo Star puis New Angel (2016)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "6ff9b996-d8f3-4279-bcc5-9c0509b9023a"
+   "uuid": "6ff9b996-d8f3-4279-bcc5-9c0509b9023a",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Revendu en Croatie 2014, renomme Krilo Star puis New Angel (2016) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-rheinfahre-landskrone-rudesheim-am-rhein",
@@ -316570,14 +317782,19 @@
    "alias": [
     "Vendu en 2009 (acquereur non confirme)"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "2d017f9e-2144-477b-9848-9f51b7d37558"
+   "uuid": "2d017f9e-2144-477b-9848-9f51b7d37558",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « Vendu en 2009 (acquereur non confirme) ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-vendu-enbloc-2021-ex-nom-ulterieur-murat-mwq0i2",
@@ -316586,14 +317803,19 @@
    "alias": [
     "vendu enbloc 2021 (ex-Fletcher/Northern Supply) ; ex-nom ultérieur Murat Ilhan"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "76c7ca06-ca9b-4604-b8ef-d36d10890232"
+   "uuid": "76c7ca06-ca9b-4604-b8ef-d36d10890232",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « vendu enbloc 2021 (ex-Fletcher/Northern Supply) ; ex-nom ultérieur Murat Ilhan ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-vendu-enbloc-2021-ex-noms-ulterieurs-kut-xs6mdh",
@@ -316602,14 +317824,19 @@
    "alias": [
     "vendu enbloc 2021 (ex-Fletcher/Northern Supply) ; ex-noms ultérieurs Kutsi Ilhan"
    ],
-   "navires": 1,
+   "navires": 0,
    "ville": null,
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "052e52c4-e322-485f-b289-c84929cdc1a6"
+   "uuid": "052e52c4-e322-485f-b289-c84929cdc1a6",
+   "a_arbitrer": {
+    "motif": "Le nom de cette fiche est un etat de vie, pas une maison : « vendu enbloc 2021 (ex-Fletcher/Northern Supply) ; ex-noms ultérieurs Kutsi Ilhan ». Les coques qui le portaient ont ete migrees vers `etat_exploitation` le 2026-09-02 (arbitrage de Colomban). La fiche ne porte plus aucune coque. Sa suppression demande l'accord explicite du commanditaire (AGENTS.md) : elle est marquee, pas detruite.",
+    "etat": "exploitant_non_identifie",
+    "le": "2026-09-02"
+   }
   },
   {
    "id": "ope-ventouris-ferries",
