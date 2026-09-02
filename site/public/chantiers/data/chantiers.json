@@ -3165,7 +3165,7 @@
      "client": "Radisson Seven Seas Cruises",
      "operateur": "Regent Seven Seas Cruises",
      "proprietaire": "Norwegian Cruise Line Holdings",
-     "pavillon": "Bahamas",
+     "pavillon": null,
      "classification": null,
      "timeline": [
       {
@@ -3180,6 +3180,13 @@
        "role": "pavillon",
        "nom": "Pavillon Bahamas",
        "source": "vesseltracker.com"
+      },
+      {
+       "annee": "2006",
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "(dépavillonné) ; Passé sous pavillon Bahamas en 2006",
+       "source": "https://www.marine-marchande.net/Flotte/P-T/SevenSeasMariner.htm"
       }
      ],
      "prix_acquisition": "240 M USD (2001, construction neuve pour Radisson Seven Seas Cruises)",
@@ -3207,7 +3214,8 @@
       "champs": [
        "largeur_m"
       ]
-     }
+     },
+     "sortie_pavillon": "(dépavillonné) ; Passé sous pavillon Bahamas en 2006"
     },
     {
      "nom": "Crystal Serenity",
@@ -4883,7 +4891,7 @@
      "client": "Brittany Ferries",
      "operateur": "Brittany Ferries",
      "proprietaire": "Brittany Ferries (BAI)",
-     "pavillon": "France",
+     "pavillon": null,
      "classification": null,
      "timeline": [
       {
@@ -4905,6 +4913,13 @@
        "nom": "Rosalind Franklin (Balearia)",
        "detail": "Annonce le 5 mars 2025 du rachat par Balearia (renomme Rosalind Franklin) apres 35 ans de service Brittany Ferries. Montant de la vente non divulgue.",
        "source": "https://en.wikipedia.org/wiki/MV_Bretagne"
+      },
+      {
+       "annee": "2024",
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "vendu en 2024 ; Vendu en 2024, devenu ROSALIND FRANKLIN",
+       "source": "https://www.marine-marchande.net/Flotte/A-E/Bretagne.htm"
       }
      ],
      "prix_acquisition": "GB£55 M (cout de construction, commande 1986) ; 437 millions de francs (montant du contrat, 1987), Chantiers de l'Atlantique",
@@ -4938,7 +4953,8 @@
        "largeur_m",
        "port_lourd_dwt"
       ]
-     }
+     },
+     "sortie_pavillon": "vendu en 2024 ; Vendu en 2024, devenu ROSALIND FRANKLIN"
     },
     {
      "nom": "Méditerranée",
@@ -5048,7 +5064,7 @@
      "client": "SNCM",
      "operateur": "Grandi Navi Veloci",
      "proprietaire": "Grandi Navi Veloci (groupe MSC)",
-     "pavillon": "France",
+     "pavillon": null,
      "classification": null,
      "timeline": [
       {
@@ -5079,6 +5095,13 @@
        "detail": "Rachete par le groupe MSC le 10 avril 2014 pour 7 millions d'euros, renomme Rhapsody. Integre ensuite a la filiale GNV (Grandi Navi Veloci) apres reparations en cale seche a Genes (juillet 2015), sans montant additionnel publie.",
        "prix": "7 M EUR (2014)",
        "source": "https://fr.wikipedia.org/wiki/Rhapsody_(cruise-ferry)"
+      },
+      {
+       "annee": "2014",
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "vendu en 2014 ; Vendu à SNAV, Italie, en 2014",
+       "source": "https://www.marine-marchande.net/Flotte/K-O/NapoleonBonaparte.htm"
       }
      ],
      "source_ref": "Wikipedia Napoleon Bonaparte (ferry) (IMO 9104835)",
@@ -5108,7 +5131,8 @@
        "port_lourd_dwt",
        "pavillon"
       ]
-     }
+     },
+     "sortie_pavillon": "vendu en 2014 ; Vendu à SNAV, Italie, en 2014"
     },
     {
      "nom": "Puteri Intan (American Energy)",
@@ -5517,7 +5541,7 @@
      "client": "Gaz de France",
      "operateur": "Gazocean (TotalEnergies)",
      "proprietaire": "TotalEnergies",
-     "pavillon": "France",
+     "pavillon": null,
      "classification": null,
      "timeline": [
       {
@@ -5548,6 +5572,13 @@
        "prix": ">200 M EUR",
        "source": "https://fr.wikipedia.org/wiki/Provalys",
        "source_ref": "role corrige le 2026-08-03 : construction -> evenement (acte contractuel, 2003, antérieur à la coque 2007)"
+      },
+      {
+       "annee": "2023",
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "vendu en 2023",
+       "source": "https://www.marine-marchande.net/Flotte/K-O/LNG-Alliance.htm"
       }
      ],
      "prix_acquisition": "150 a 200 M EUR (sister-ship direct du Provalys, coute >200 M EUR ; les trois methaniers GDF de Saint-Nazaire etaient annonces dans une fourchette de 150 a 200 M EUR chacun)",
@@ -5585,7 +5616,8 @@
        "port_lourd_dwt",
        "capacite_pax"
       ]
-     }
+     },
+     "sortie_pavillon": "vendu en 2023"
     },
     {
      "nom": "Gaz de France Energy (Energy Spirit)",
@@ -6639,6 +6671,115 @@
      "sortie_pavillon": "pavillon SGP en 2023 ; Passé sous pavillon de Singapour en 2023",
      "id": "nav-b9f16d045346",
      "uuid": "18572ebc-9bef-4834-a301-329812bcf494"
+    },
+    {
+     "nom": "CGG Alizé",
+     "imo": "9178159",
+     "type": "Recherche sismique",
+     "annee": "1999",
+     "longueur_m": 99.9,
+     "largeur_m": 23,
+     "jauge_gt": 11407,
+     "port_lourd_dwt": 5984,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "2 hélices",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "Geofield Ship Management",
+     "proprietaire": "CGG",
+     "pavillon": null,
+     "timeline": [],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/A-E/CGC%20Alize.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://www.wikidata.org/wiki/Q2931401 (IMO 9178159 et nom sur l'element Wikidata (CGG Alizé)), moisson services du 2026-09-02 | rattachee au chantier Chantiers de l'Atlantique le 2026-09-02 depuis le bloc racine, libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+     "chantier_id": "chantiers-atlantique-saint-nazaire",
+     "operateur_id": "ope-geofield-ship-management",
+     "sources_tierces": [
+      "https://www.wikidata.org/wiki/Q2931401"
+     ],
+     "chantier_declare": {
+      "nom": "Chantiers de l'Atlantique",
+      "pays": null,
+      "source_ref": "https://www.marine-marchande.net/Flotte/A-E/CGC%20Alize.htm"
+     },
+     "note": "puissance 21 600 kW ; vitesse 14,5 nds ; libelles non lus : Motrorisation",
+     "id": "nav-15574bb0f5a7",
+     "uuid": "111d2c96-bd29-4be5-aea8-6043b6db2226",
+     "chantier_declare_resolu": {
+      "vers": "chantiers-atlantique-saint-nazaire",
+      "par": "libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+      "libelle": "Chantiers de l'Atlantique",
+      "le": "2026-09-02"
+     }
+    },
+    {
+     "nom": "Descartes",
+     "imo": "7039074",
+     "type": "Gazier",
+     "annee": "1971",
+     "longueur_m": 220,
+     "largeur_m": 31.85,
+     "jauge_gt": 32.702,
+     "port_lourd_dwt": 2008,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "turbine Stal Laval AP17",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "GAZOCEAN (GAZOCEAN)",
+     "proprietaire": "Messigaz",
+     "pavillon": null,
+     "timeline": [
+      {
+       "annee": "2008",
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "CHARM JUNIOR (01/2008) démoli PRINCE CHARMING (09/2007)",
+       "source": "https://www.marine-marchande.net/Flotte/A-E/Descartes.htm"
+      }
+     ],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/A-E/Descartes.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://fr.wikipedia.org/wiki/Ren%C3%A9_Descartes (nom et constructeur « atlantique » sur la page), moisson services du 2026-09-02 | rattachee au chantier Chantiers de l'Atlantique le 2026-09-02 depuis le bloc racine, libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+     "chantier_id": "chantiers-atlantique-saint-nazaire",
+     "operateur_id": "ope-gazocean",
+     "sources_tierces": [
+      "https://fr.wikipedia.org/wiki/Ren%C3%A9_Descartes"
+     ],
+     "chantier_declare": {
+      "nom": "Chantiers de l'Atlantique",
+      "pays": null,
+      "source_ref": "https://www.marine-marchande.net/Flotte/A-E/Descartes.htm"
+     },
+     "note": "puissance 13.030 kW ; vitesse 17 nds ; libelles non lus : Volume cargaison",
+     "sortie_pavillon": "CHARM JUNIOR (01/2008) démoli PRINCE CHARMING (09/2007)",
+     "fin_de_vie": {
+      "statut": "demoli",
+      "annee": "2007",
+      "source": "https://www.marine-marchande.net/Flotte/A-E/Descartes.htm",
+      "methode": "liste des navires sortis de flotte de marine-marchande.net et entete de la fiche, releve le 2026-09-02"
+     },
+     "id": "nav-d4fe975bfacd",
+     "uuid": "6289ab3f-85b4-4ddb-8600-c33ff27e4854",
+     "chantier_declare_resolu": {
+      "vers": "chantiers-atlantique-saint-nazaire",
+      "par": "libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+      "libelle": "Chantiers de l'Atlantique",
+      "le": "2026-09-02"
+     }
     }
    ],
    "sources_ref": [
@@ -33863,7 +34004,7 @@
      "chantier_id": "glehen-douarnenez",
      "uuid": "20535171-f16b-4583-8985-d34f9ffd3aa3",
      "largeur_m": 4.6,
-     "operateur": "Muséum National d'Histoire Naturelle",
+     "operateur": "Museum national d'Histoire naturelle",
      "pavillon": "France",
      "sources_tierces": [
       "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/la-Korrigane.html"
@@ -33876,7 +34017,8 @@
        "operateur",
        "pavillon"
       ]
-     }
+     },
+     "operateur_id": "ope-museum-national-d-histoire-naturelle-ni5q6d"
     },
     {
      "nom": "Le Baliste",
@@ -34732,7 +34874,7 @@
      "cotier_motif": "type non couvert par la typologie de l'atelier (catamaran à passagers panoramique (transport public))",
      "id": "nav-0daacd3c4456",
      "chantier_id": "glehen-douarnenez",
-     "operateur_id": "ope-finist-mer-1khlb93",
+     "operateur_id": "ope-kersea",
      "uuid": "cae7d1fe-bd13-4bbd-a927-a7e4f0b75eed",
      "pavillon": "France",
      "sources_tierces": [
@@ -35240,7 +35382,7 @@
      "cotier_segment": "Vedette à passagers",
      "id": "nav-eced6c17341f",
      "chantier_id": "glehen-douarnenez",
-     "operateur_id": "ope-finist-mer-1khlb93",
+     "operateur_id": "ope-kersea",
      "uuid": "d92ba39a-79cb-4517-84bc-0142d7be8afd",
      "sources_tierces": [
       "https://www.marine-marchande.net/Flotte/Vedettes/Rose-Here.html"
@@ -36799,6 +36941,58 @@
      "note": "puissance 2 x 597 kW ; vitesse 11,5 nds ; traction 23 t ; libelles non lus : Photo Le Télégramme",
      "id": "nav-db64fb3750c8",
      "uuid": "05c2a7ce-8fca-485f-b6bd-10cd3e6502a0"
+    },
+    {
+     "nom": "Langilea",
+     "imo": null,
+     "type": "bateau de travail portuaire",
+     "annee": "2024",
+     "longueur_m": 19,
+     "largeur_m": 7.5,
+     "jauge_gt": null,
+     "port_lourd_dwt": null,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "2 moteurs Volvo",
+     "propulsion": [],
+     "architecte": null,
+     "client": null,
+     "operateur": "Societe portuaire du port de Bayonne",
+     "proprietaire": null,
+     "pavillon": "France",
+     "timeline": [],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Langilea.htm",
+     "source_ref": "Coque etablie par OSINT le 2026-09-02 sur la page citee en source | rattachee au chantier Chantiers Gléhen le 2026-09-02 depuis le bloc racine, cle canonique exacte et lieu accorde (« douarnenez, france »)",
+     "chantier_id": "glehen-douarnenez",
+     "operateur_id": "ope-societe-portuaire-du-port-de-bayonne",
+     "chantier_declare": {
+      "nom": "Glehen, Douarnenez",
+      "pays": "France",
+      "source_ref": "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Langilea.htm"
+     },
+     "note": "MMSI 228201020 ; la liste du GT porte 2023",
+     "id": "nav-4c3f5674a28b",
+     "cotier": "non",
+     "cotier_motif": "type non couvert par la typologie de l'atelier (bateau de travail portuaire)",
+     "uuid": "bdfc9689-f28a-4e01-b7ac-90c8cafd6e55",
+     "enrichissement": {
+      "le": "2026-09-02",
+      "source": "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Langilea.htm",
+      "champs": [
+       "energie",
+       "pavillon"
+      ]
+     },
+     "chantier_declare_resolu": {
+      "vers": "glehen-douarnenez",
+      "par": "cle canonique exacte et lieu accorde (« douarnenez, france »)",
+      "libelle": "Glehen, Douarnenez",
+      "le": "2026-09-02"
+     }
     }
    ],
    "geo_source": "https://api-adresse.data.gouv.fr/search/?q=port+du+rosmeur+douarnenez",
@@ -40919,6 +41113,54 @@
      "sortie_pavillon": "vendu en 2015 ; Vendu en juillet 2015 à l'Anglais Severn Sands, il a conservé son nom.",
      "id": "nav-9262e2bfe1f0",
      "uuid": "a47ed0e3-b046-44e4-bf04-4a4ce5da42ba"
+    },
+    {
+     "nom": "Gribi",
+     "imo": null,
+     "type": "Remorqueur de port",
+     "annee": "1994",
+     "longueur_m": 16,
+     "largeur_m": 5.06,
+     "jauge_gt": 48,
+     "port_lourd_dwt": null,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "2 moteurs GM",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "Socnore",
+     "proprietaire": "Socnore",
+     "pavillon": "France",
+     "timeline": [],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/remorqueurs/Gribi.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://xn--snr-mditeranne-fkbi.com/navires/gribi/ (nom et exploitant complet « Socnore » sur la page (garde stricte du 2026-09-02)), moisson services du 2026-09-02 | rattachee au chantier Chantier Merré le 2026-09-02 depuis le bloc racine, libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+     "chantier_id": "merre-nort-sur-erdre",
+     "operateur_id": "ope-socnore",
+     "sources_tierces": [
+      "https://xn--snr-mditeranne-fkbi.com/navires/gribi/"
+     ],
+     "port_attache": "Pt La Nouvelle",
+     "chantier_declare": {
+      "nom": "Merré",
+      "pays": null,
+      "source_ref": "https://www.marine-marchande.net/Flotte/remorqueurs/Gribi.htm"
+     },
+     "note": "puissance 650 kW ; vitesse 12 nds ; traction 13 t ; libelles non lus : Creux",
+     "id": "nav-189d84d3d6a2",
+     "uuid": "db8253bf-e36b-455a-8b15-6e7ab3ef83d9",
+     "chantier_declare_resolu": {
+      "vers": "merre-nort-sur-erdre",
+      "par": "libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+      "libelle": "Merré",
+      "le": "2026-09-02"
+     }
     }
    ],
    "sources_ref": [
@@ -59046,6 +59288,53 @@
      "note": "vitesse 9 nds ; libelles non lus : Equipements",
      "id": "nav-9fffdd4ae970",
      "uuid": "97f94b23-b51c-46d2-a46c-8003cdd41641"
+    },
+    {
+     "nom": "Romy des Slops",
+     "imo": null,
+     "type": "Mini-supply polyvalent.",
+     "annee": "2008",
+     "longueur_m": null,
+     "largeur_m": null,
+     "jauge_gt": null,
+     "port_lourd_dwt": 5,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "Doosan",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "SERMAP SHIPPING FRANCE",
+     "proprietaire": null,
+     "pavillon": "France",
+     "timeline": [],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Romy-des-slops.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://www.cargos-paquebots.net/Revue%20de%20presse/59_RP-Marine_marchande.htm (nom et exploitant complet « SERMAP » sur la page (garde stricte du 2026-09-02)), moisson services du 2026-09-02 | rattachee au chantier Chantier Naval Gatto le 2026-09-02 depuis le bloc racine, libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+     "chantier_id": "chantier-naval-gatto-martigues",
+     "operateur_id": "ope-sermap",
+     "sources_tierces": [
+      "https://www.cargos-paquebots.net/Revue%20de%20presse/59_RP-Marine_marchande.htm"
+     ],
+     "chantier_declare": {
+      "nom": "Chantier Naval Gatto.",
+      "pays": null,
+      "source_ref": "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Romy-des-slops.htm"
+     },
+     "note": "puissance 232 kW ; vitesse 15 nds ; libelles non lus : Equipements",
+     "id": "nav-bc6d04978345",
+     "uuid": "70fdd870-0577-4daa-94d9-9605114f1f8c",
+     "chantier_declare_resolu": {
+      "vers": "chantier-naval-gatto-martigues",
+      "par": "libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+      "libelle": "Chantier Naval Gatto.",
+      "le": "2026-09-02"
+     }
     }
    ],
    "geo_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/chantier-naval-gatto-441625019",
@@ -60713,7 +61002,7 @@
      "chantier_id": "pech-alu-international-inzinzac-lochris",
      "uuid": "4a3780bb-2c34-4c55-aa4b-dd85091719e6",
      "capacite_pax": 12,
-     "operateur": "DCNS Brest",
+     "operateur": "Naval Group (etablissement de Brest, ex-DCNS)",
      "pavillon": "France",
      "sources_tierces": [
       "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Skravig.htm"
@@ -60726,7 +61015,8 @@
        "operateur",
        "pavillon"
       ]
-     }
+     },
+     "operateur_id": "ope-naval-group"
     },
     {
      "nom": "Donator",
@@ -63828,7 +64118,7 @@
      "chantier_id": "navalu-bouin",
      "uuid": "88be3911-09f3-4a3e-a5b1-5623a0160821",
      "largeur_m": 4,
-     "operateur": "Université de Caen.",
+     "operateur": "Universite de Caen Normandie",
      "pavillon": "France",
      "sources_tierces": [
       "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Normandsea.htm"
@@ -63841,7 +64131,8 @@
        "operateur",
        "pavillon"
       ]
-     }
+     },
+     "operateur_id": "ope-universite-de-caen-normandie"
     },
     {
      "nom": "Chaland / remorque de mise à l'eau Jeux Olympiques Paris 2024",
@@ -64471,7 +64762,7 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : Vedette de servitude eolien offshore (composite))",
      "id": "nav-646789a26283",
      "chantier_id": "h2x-la-ciotat",
-     "operateur_id": "ope-louis-dreyfus-armateurs-navire-fille-du-1wyxy3x",
+     "operateur_id": "ope-louis-dreyfus-armateurs",
      "uuid": "148a7b96-d1da-4e7f-b351-286bcbfe20cf"
     },
     {
@@ -64516,7 +64807,7 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : Vedette de servitude eolien offshore (composite))",
      "id": "nav-bab82de35b5b",
      "chantier_id": "h2x-la-ciotat",
-     "operateur_id": "ope-louis-dreyfus-armateurs-navire-fille-du-v7gs2h",
+     "operateur_id": "ope-louis-dreyfus-armateurs",
      "uuid": "018d688d-2778-4382-9eb0-17ff5d5abbcf"
     },
     {
@@ -64591,7 +64882,7 @@
      "chantier_id": "h2x-la-ciotat",
      "uuid": "832462e3-0e88-4137-9f57-8d05883b105d",
      "largeur_m": 8,
-     "operateur": "IxSurvey SAS",
+     "operateur": "iXSurvey (division d'iXblue)",
      "proprietaire": "IxCore SAS",
      "pavillon": "France",
      "imo": "9811139",
@@ -64611,7 +64902,8 @@
        "pavillon",
        "imo"
       ]
-     }
+     },
+     "operateur_id": "ope-ixsurvey"
     },
     {
      "nom": "Nahaura",
@@ -64819,7 +65111,8 @@
       ]
      },
      "pavillon_pays": "France",
-     "pavillon_zone": "France"
+     "pavillon_zone": "France",
+     "operateur_id": "ope-genavir"
     },
     {
      "nom": "Actinaute 2",
@@ -83997,7 +84290,55 @@
     "diesel"
    ],
    "taille_max": "Coques acier neuves d'environ 28 m de long (plus grand neuf documente) ; pontons acier jusqu'a 30 m. Pas de jauge GT publiee.",
-   "navires_references": [],
+   "navires_references": [
+    {
+     "nom": "Tahiti Nui VII",
+     "imo": "9028380",
+     "type": "Ferry passagers",
+     "annee": "1982",
+     "longueur_m": 30.4,
+     "largeur_m": 6.54,
+     "jauge_gt": 155,
+     "port_lourd_dwt": 233,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "2 mot. Wartsila",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "Direction de l'Equipement en Polynésie",
+     "proprietaire": "Direction de l'Equipement de Polynesie",
+     "pavillon": null,
+     "timeline": [],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/P-T/TahitiNuiVII.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://www.marinetraffic.org/vessels/TAHITI-NUI-VII/9028380/1/current-position (nom et IMO 9028380 sur la page), moisson services du 2026-09-02 | rattachee au chantier Chantier Naval du Pacifique Sud (CNPS) le 2026-09-02 depuis le bloc racine, libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+     "chantier_id": "chantier-naval-du-pacifique-sud-cnps-papeete",
+     "operateur_id": "ope-direction-de-l-equipement-en-polynesie-hatyxc",
+     "sources_tierces": [
+      "https://www.marinetraffic.org/vessels/TAHITI-NUI-VII/9028380/1/current-position"
+     ],
+     "chantier_declare": {
+      "nom": "Chantier Naval du Pacifique Sud",
+      "pays": null,
+      "source_ref": "https://www.marine-marchande.net/Flotte/P-T/TahitiNuiVII.htm"
+     },
+     "note": "puissance 1 760 kW ; vitesse 21 nds",
+     "id": "nav-2bbc1ff59b7d",
+     "uuid": "bb17637f-29ad-4282-a35d-62ebe2c28aa8",
+     "chantier_declare_resolu": {
+      "vers": "chantier-naval-du-pacifique-sud-cnps-papeete",
+      "par": "libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+      "libelle": "Chantier Naval du Pacifique Sud",
+      "le": "2026-09-02"
+     }
+    }
+   ],
    "geo_source": "https://fr.pf.yellowflagguides.com/directory/listing/chantier-naval-du-pacific-sud-cnps",
    "pays_zone": "France",
    "uuid": "dc469b88-1c3f-4d51-8b8b-78abc927fa4e"
@@ -97411,7 +97752,8 @@
        "operateur",
        "proprietaire"
       ]
-     }
+     },
+     "operateur_id": "ope-seaowl"
     },
     {
      "nom": "Maersk Helper",
@@ -116278,7 +116620,7 @@
      "client": null,
      "operateur": "Akewa Jet (NSNT, pavillon Gabon) actuellement; historiquement Cie des Iles de la Manche (proprietaire Conseil General de la Manche, pavillon France); a l'origine Aremiti (Tahiti-Moorea)",
      "proprietaire": "Conseil Général de la Manche",
-     "pavillon": "Gabon (actuel, depuis 2014); ex France",
+     "pavillon": null,
      "capacite": "Catamaran rapide a passagers (Flying Cat 40M)",
      "timeline": [
       {
@@ -116301,6 +116643,13 @@
        "nom": "France (Cherbourg)",
        "detail": null,
        "source": "Wikimedia Commons Category:Marin Marie (ship, 1994)"
+      },
+      {
+       "annee": "2014",
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "devenu Akewa Jet (Gabon) ; Devenu AKEWA JET en septembre 2014, pavillon Gabon ?",
+       "source": "https://www.marine-marchande.net/Flotte/K-O/MarinMarie.htm"
       }
      ],
      "architecte": "Fjellstrand (design maison)",
@@ -116332,7 +116681,8 @@
        "capacite_pax",
        "proprietaire"
       ]
-     }
+     },
+     "sortie_pavillon": "devenu Akewa Jet (Gabon) ; Devenu AKEWA JET en septembre 2014, pavillon Gabon ?"
     },
     {
      "nom": "Federica M",
@@ -118135,7 +118485,7 @@
      "client": "Nordic Jet Line",
      "operateur": "FRS Iberia SL",
      "proprietaire": "Express Ferries Ltd / FRS Iberia",
-     "pavillon": "Chypre",
+     "pavillon": null,
      "classification": null,
      "capacite": null,
      "prix_acquisition": null,
@@ -118156,6 +118506,13 @@
        "detail": "Septembre 2008 ; pavillon Chypre (Limassol), flotte FRS Iberia (Tarifa/Algésiras)",
        "prix": null,
        "source": "https://commons.wikimedia.org/wiki/Category:IMO_9198551"
+      },
+      {
+       "annee": "2025",
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "repris son ancien nom ; 2025, repris son nom précédent",
+       "source": "https://www.marine-marchande.net/Flotte/P-T/Ruby-Express.htm"
       }
      ],
      "architecte": "Fjellstrand (design maison)",
@@ -118187,7 +118544,8 @@
        "port_lourd_dwt",
        "capacite_pax"
       ]
-     }
+     },
+     "sortie_pavillon": "repris son ancien nom ; 2025, repris son nom précédent"
     },
     {
      "nom": "San Giorgio",
@@ -155776,7 +156134,7 @@
      "client": "Fugro (commande BMV)",
      "operateur": "Flotte Shearwater GeoServices (ex-CGG/Eidesvik puis venture 2017); pavillon Norvège",
      "proprietaire": "Shearwater GeoServices (ex-CGG, ex-Fugro)",
-     "pavillon": "Norvege",
+     "pavillon": null,
      "source": "https://energy-oil-gas.com",
      "timeline": [
       {
@@ -155821,6 +156179,13 @@
        "detail": "Benchmark de classe seulement: GC Rieber a acquis le sister-ship Geo Atlantic de PGS pour 58 M USD en 2009, charte Fugro incluse. PAS le prix du Geo Caribbean lui-même.",
        "prix": "58 M USD",
        "source": "https://www.offshore-mag.com/rigs-vessels/article/16788444/gc-rieber-shipping-to-acquire-seismic-vessel"
+      },
+      {
+       "annee": "2017",
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "Passé sous pavillon norvégien en décembre 2017",
+       "source": "https://www.marine-marchande.net/Flotte/F-J/Geo-Carribean.html"
       }
      ],
      "source_ref": "Bergen Group Shipbuilding), search Fugro/offshore-mag (commande Bergen Mekaniske Verksted BMV, coque Szczecin), vesselfinder.com/vessels/GEO-CARIBBEAN-IMO-9401219",
@@ -155843,7 +156208,8 @@
       "champs": [
        "largeur_m"
       ]
-     }
+     },
+     "sortie_pavillon": "Passé sous pavillon norvégien en décembre 2017"
     },
     {
      "nom": "Rem Saltire",
@@ -155943,7 +156309,7 @@
      "client": "Fugro",
      "operateur": "Exploité par Shearwater GeoServices (navire multi-capteurs); pavillon Norvège",
      "proprietaire": "Shearwater GeoServices (ex-CGG, ex-Fugro)",
-     "pavillon": "Norvege",
+     "pavillon": null,
      "source": "https://www.marine-marchande.net/Flotte/F-J/Geo-Coral.html",
      "timeline": [
       {
@@ -155980,6 +156346,13 @@
        "nom": "Norvege",
        "detail": "Pavillon actuel ; historique Marshall Islands (2011), France (2014), Norvege (2016+)",
        "source": "https://vesselfinder.com/vessels/details/9492579"
+      },
+      {
+       "annee": "2017",
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "dépavillonné 03/2017 ; Passé sous pavillon norvégien NIS en mars 2017",
+       "source": "https://www.marine-marchande.net/Flotte/F-J/Geo-Coral.html"
       }
      ],
      "source_ref": "'Fugro takes delivery of Geo Coral' (outfitted at Bergen Yards), tu.no/251209 (Laksevag, livre aout 2010), vesselfinder.com/vessels/details/9492579",
@@ -156008,7 +156381,8 @@
       "champs": [
        "largeur_m"
       ]
-     }
+     },
+     "sortie_pavillon": "dépavillonné 03/2017 ; Passé sous pavillon norvégien NIS en mars 2017"
     },
     {
      "nom": "Mermaid Endurer",
@@ -216428,6 +216802,181 @@
      "sortie_pavillon": "vendu en 2020 PULLMOOR ; Vendu en 2020 à Whitstable Marine Services, renommé PULLMOOR , pavillon GBR",
      "id": "nav-20bdc68b4a4f",
      "uuid": "15f5c33c-3fcd-4784-9da3-3c7e4574be3f"
+    },
+    {
+     "nom": "Guerveur",
+     "imo": "6700561",
+     "type": "ferry",
+     "annee": "1966",
+     "longueur_m": 45.01,
+     "largeur_m": 10,
+     "jauge_gt": 457,
+     "port_lourd_dwt": null,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": 600,
+     "capacite_vehicules": 20,
+     "capacite_fret": null,
+     "energie": "2 moteurs Crepelle",
+     "propulsion": [],
+     "architecte": null,
+     "client": null,
+     "operateur": "Morbihannaise de Navigation",
+     "proprietaire": "Conseil general du Morbihan",
+     "pavillon": null,
+     "timeline": [
+      {
+       "annee": null,
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "(sorti de flotte)",
+       "source": "https://www.marine-marchande.net/Flotte/F-J/Guerveur.htm"
+      }
+     ],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/F-J/Guerveur.htm",
+     "source_ref": "Coque etablie par OSINT le 2026-09-02 sur la page citee en source | rattachee au chantier Chantiers et ateliers de la Perrière le 2026-09-02 depuis le bloc racine, cle canonique exacte et lieu accorde (« lorient, france »)",
+     "chantier_id": "fr-yard-la-perriere-lorient",
+     "operateur_id": "ope-morbihannaise-de-navigation",
+     "chantier_declare": {
+      "nom": "La Perriere, Lorient",
+      "pays": "France",
+      "source_ref": "https://www.marine-marchande.net/Flotte/F-J/Guerveur.htm"
+     },
+     "note": "En reserve pour les indisponibilites des autres ferries (marine-marchande.net)",
+     "id": "nav-edb83b9cf154",
+     "cotier": "oui",
+     "cotier_motif": "ferry avec capacité véhicules",
+     "cotier_segment": "Roulier / Ferry / NGV",
+     "pavillon_pays": "France",
+     "pavillon_zone": "France",
+     "uuid": "545a198e-594e-46d7-8661-2f4ba2d1f6a3",
+     "enrichissement": {
+      "le": "2026-09-02",
+      "source": "https://www.marine-marchande.net/Flotte/F-J/Guerveur.htm",
+      "champs": [
+       "energie"
+      ]
+     },
+     "sortie_pavillon": "(sorti de flotte)",
+     "chantier_declare_resolu": {
+      "vers": "fr-yard-la-perriere-lorient",
+      "par": "cle canonique exacte et lieu accorde (« lorient, france »)",
+      "libelle": "La Perriere, Lorient",
+      "le": "2026-09-02"
+     }
+    },
+    {
+     "nom": "Provençal 2",
+     "imo": "7503489",
+     "type": "Remorqueur de port",
+     "annee": "1976",
+     "longueur_m": 31.64,
+     "largeur_m": 8.8,
+     "jauge_gt": 287,
+     "port_lourd_dwt": null,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "moteur Crepelle 8 PSN SR",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "Les Abeilles International",
+     "proprietaire": "Abeilles",
+     "pavillon": null,
+     "timeline": [
+      {
+       "annee": null,
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "(VB Cabo Rojo) ; Devenu VB CABO ROJO",
+       "source": "https://www.marine-marchande.net/Flotte/remorqueurs/Provencal2.htm"
+      }
+     ],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/remorqueurs/Provencal2.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://shipping-data.com/ship/provencal-2 (nom et IMO 7503489 sur la page), moisson services du 2026-09-02 | rattachee au chantier Chantiers et ateliers de la Perrière le 2026-09-02 depuis le bloc racine, libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+     "chantier_id": "fr-yard-la-perriere-lorient",
+     "operateur_id": "ope-les-abeilles-international",
+     "sources_tierces": [
+      "https://shipping-data.com/ship/provencal-2"
+     ],
+     "chantier_declare": {
+      "nom": "La Perrière",
+      "pays": null,
+      "source_ref": "https://www.marine-marchande.net/Flotte/remorqueurs/Provencal2.htm"
+     },
+     "note": "puissance 1 914 kW ; vitesse 11,6 nds ; libelles non lus : Propulseurs",
+     "sortie_pavillon": "(VB Cabo Rojo) ; Devenu VB CABO ROJO",
+     "id": "nav-b0129aadc63a",
+     "uuid": "52c71e60-f1b7-4d86-b892-61bb3516d97b",
+     "chantier_declare_resolu": {
+      "vers": "fr-yard-la-perriere-lorient",
+      "par": "libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+      "libelle": "La Perrière",
+      "le": "2026-09-02"
+     }
+    },
+    {
+     "nom": "Marseillais 17",
+     "imo": "7503477",
+     "type": "Remorqueur de port",
+     "annee": "1976",
+     "longueur_m": 31.64,
+     "largeur_m": 8.8,
+     "jauge_gt": 248,
+     "port_lourd_dwt": null,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "moteur Crepelle 8 PSN SR",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "Marseille Remorqueurs",
+     "proprietaire": "Boluda France",
+     "pavillon": null,
+     "timeline": [
+      {
+       "annee": null,
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "Devenu VB KARITE , sous pav VCT",
+       "source": "https://www.marine-marchande.net/Flotte/remorqueurs/Marseillais17.htm"
+      }
+     ],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/remorqueurs/Marseillais17.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://shipping-data.com/ship/marseillais-17 (nom et IMO 7503477 sur la page), moisson services du 2026-09-02 | rattachee au chantier Chantiers et ateliers de la Perrière le 2026-09-02 depuis le bloc racine, libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+     "chantier_id": "fr-yard-la-perriere-lorient",
+     "operateur_id": "ope-marseille-remorqueurs",
+     "sources_tierces": [
+      "https://shipping-data.com/ship/marseillais-17"
+     ],
+     "chantier_declare": {
+      "nom": "La Perrière",
+      "pays": null,
+      "source_ref": "https://www.marine-marchande.net/Flotte/remorqueurs/Marseillais17.htm"
+     },
+     "note": "puissance 1 914 kW ; vitesse 11,6 nds ; libelles non lus : Propulseurs",
+     "sortie_pavillon": "Devenu VB KARITE , sous pav VCT",
+     "id": "nav-2dbf09250ae8",
+     "uuid": "aa234c6b-737c-4794-aef5-fea1a7530f72",
+     "chantier_declare_resolu": {
+      "vers": "fr-yard-la-perriere-lorient",
+      "par": "libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+      "libelle": "La Perrière",
+      "le": "2026-09-02"
+     }
     }
    ],
    "sources": [
@@ -218531,6 +219080,13 @@
        "nom": "Dubigeon-Normandie",
        "detail": "Attribution du chantier constructeur etablie sur source publique.",
        "source": "https://www.cargos-paquebots.net/Flotte_francaise/FICHES/COTES_DE_BLAYE.htm"
+      },
+      {
+       "annee": null,
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "devenu Owendo ; Vendu au Gabon, nommé OWENDO",
+       "source": "https://www.marine-marchande.net/Flotte/A-E/CotesdeBlaye.htm"
       }
      ],
      "cotier": "non",
@@ -218545,9 +219101,9 @@
      "port_lourd_dwt": 152,
      "capacite_pax": 350,
      "energie": "2 diesels Duvant , 2 Voith Schneider",
-     "operateur": "Conseil Général de Gironde",
+     "operateur": "Departement de la Gironde (DTMD)",
      "proprietaire": "Conseil Général de Gironde",
-     "pavillon": "France",
+     "pavillon": null,
      "imo": "7119513",
      "sources_tierces": [
       "https://www.marine-marchande.net/Flotte/A-E/CotesdeBlaye.htm"
@@ -218568,6 +219124,64 @@
        "pavillon",
        "imo"
       ]
+     },
+     "sortie_pavillon": "devenu Owendo ; Vendu au Gabon, nommé OWENDO",
+     "operateur_id": "ope-dtmd-cd33"
+    },
+    {
+     "nom": "Corse",
+     "imo": "8003620",
+     "type": "Car Ferry",
+     "annee": "1983",
+     "longueur_m": 145,
+     "largeur_m": 23.8,
+     "jauge_gt": 12.686,
+     "port_lourd_dwt": 2286,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": 2198,
+     "capacite_vehicules": 700,
+     "capacite_fret": null,
+     "energie": "4 moteurs Pielstick",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "SNCM",
+     "proprietaire": "S.N.C.M.",
+     "pavillon": null,
+     "timeline": [
+      {
+       "annee": "2016",
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "vendu en 2016 ; vendu en 2016",
+       "source": "https://www.marine-marchande.net/Flotte/A-E/Corse.htm"
+      }
+     ],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/A-E/Corse.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://www.wikidata.org/wiki/Q2998018 (IMO 8003620 et nom sur l'element Wikidata (Corse)), moisson services du 2026-09-02 | rattachee au chantier Dubigeon-Normandie le 2026-09-02 depuis le bloc racine, libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+     "chantier_id": "fr-yard-dubigeon-normandie",
+     "operateur_id": "ope-sncm",
+     "sources_tierces": [
+      "https://www.wikidata.org/wiki/Q2998018"
+     ],
+     "chantier_declare": {
+      "nom": "Dubigeon Normandie",
+      "pays": null,
+      "source_ref": "https://www.marine-marchande.net/Flotte/A-E/Corse.htm"
+     },
+     "note": "puissance 27.560 kW ; vitesse 23,5 nds",
+     "sortie_pavillon": "vendu en 2016 ; vendu en 2016",
+     "id": "nav-80abe5d06625",
+     "uuid": "e7954b97-55ee-4d30-8b1b-745da4983f53",
+     "chantier_declare_resolu": {
+      "vers": "fr-yard-dubigeon-normandie",
+      "par": "libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+      "libelle": "Dubigeon Normandie",
+      "le": "2026-09-02"
      }
     }
    ],
@@ -218718,7 +219332,8 @@
       ]
      },
      "pavillon_pays": "France",
-     "pavillon_zone": "France"
+     "pavillon_zone": "France",
+     "operateur_id": "ope-l-express-des-iles-1p348wl"
     },
     {
      "nom": "Liberty",
@@ -218746,7 +219361,7 @@
      "port_lourd_dwt": 60,
      "capacite": "437 passagers assis",
      "energie": "2 M.T.U. 16V4000M71 ",
-     "operateur": "FRS (Allemagne)",
+     "operateur": "L'Express des Iles",
      "proprietaire": "FRS (Allemagne)",
      "pavillon": "France",
      "imo": "9592915",
@@ -218768,7 +219383,8 @@
       ]
      },
      "pavillon_pays": "France",
-     "pavillon_zone": "France"
+     "pavillon_zone": "France",
+     "operateur_id": "ope-l-express-des-iles-1p348wl"
     },
     {
      "nom": "AREMITI 5",
@@ -223270,7 +223886,7 @@
      "chantier_id": "pa-yard-bodewes",
      "uuid": "665abf6a-40f8-48d8-a635-1c1b9edab03a",
      "largeur_m": 15.8,
-     "operateur": "Redwise Maritime Services (Pays-Bas)",
+     "operateur": "Redwise Maritime Services",
      "proprietaire": "Navigation Polynésienne",
      "enrichissement": {
       "le": "2026-09-02",
@@ -223280,7 +223896,8 @@
        "operateur",
        "proprietaire"
       ]
-     }
+     },
+     "operateur_id": "ope-redwise-maritime-services"
     },
     {
      "nom": "Vissersbank",
@@ -233828,7 +234445,7 @@
      ],
      "operateur": "Petromarine",
      "proprietaire": "Petromarine",
-     "pavillon": "Belgique",
+     "pavillon": null,
      "source": "https://www.marine-marchande.net/Flotte/A-E/Belisaire.htm",
      "capacite_fret": "12 392 m3 de cuve",
      "verification": {
@@ -233864,7 +234481,17 @@
        "capacite_pax",
        "proprietaire"
       ]
-     }
+     },
+     "timeline": [
+      {
+       "annee": null,
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "(dépavillonné)",
+       "source": "https://www.marine-marchande.net/Flotte/A-E/Belisaire.htm"
+      }
+     ],
+     "sortie_pavillon": "(dépavillonné)"
     },
     {
      "nom": "Viscount (aujourd'hui Aastind)",
@@ -235884,6 +236511,180 @@
      "chantier_id": "pa-yard-niesternsander",
      "operateur_id": "ope-wagenborg-shipping",
      "uuid": "a75c29fc-9da6-464b-9703-805632ef4e6c"
+    },
+    {
+     "nom": "Adour",
+     "imo": "9256652",
+     "type": "Chimiquier/produits",
+     "annee": "2003",
+     "longueur_m": 139.95,
+     "largeur_m": 21,
+     "jauge_gt": 8602,
+     "port_lourd_dwt": 15267,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": 15680,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "MAK 6M43",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "Sea Tankers",
+     "proprietaire": "Sea Tankers",
+     "pavillon": null,
+     "timeline": [
+      {
+       "annee": "2015",
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "Wimpole, pav MHL 2015/12 ; Vendu en décembre 2015 à Union Maritime (UK), renommé WIMPOLE , pavillon MHL",
+       "source": "https://www.marine-marchande.net/Flotte/A-E/Adour.htm"
+      }
+     ],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/A-E/Adour.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://www.myshiptracking.com/fr/vessels/adour-mmsi-226298000-imo-9256652 (nom et IMO 9256652 sur la page), moisson services du 2026-09-02 | rattachee au chantier Niestern Sander le 2026-09-02 depuis le bloc racine, libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+     "chantier_id": "pa-yard-niesternsander",
+     "operateur_id": "ope-sea-tankers",
+     "sources_tierces": [
+      "https://www.myshiptracking.com/fr/vessels/adour-mmsi-226298000-imo-9256652"
+     ],
+     "chantier_declare": {
+      "nom": "Niestern Sander",
+      "pays": null,
+      "source_ref": "https://www.marine-marchande.net/Flotte/A-E/Adour.htm"
+     },
+     "note": "puissance 5.400 kW ; vitesse 13,5 nds ; libelles non lus : caractéristiques complètes ; homonyme_distinct : nav-e53b94868349 Öresundsvarvet / Oresund DryDocks AB/? 1921",
+     "arbitrage_homonyme": {
+      "verdict": "distinct",
+      "motif": "homonyme distinct par annee, longueur ou exploitant connu different : nav-e53b94868349 Öresundsvarvet / Oresund DryDocks AB/? 1921",
+      "source": "https://www.marine-marchande.net/Flotte/A-E/Adour.htm",
+      "le": "2026-09-02"
+     },
+     "sortie_pavillon": "Wimpole, pav MHL 2015/12 ; Vendu en décembre 2015 à Union Maritime (UK), renommé WIMPOLE , pavillon MHL",
+     "id": "nav-bf6e0e25ccc7",
+     "uuid": "a2433ea7-f94a-4772-95dd-dfd9254de252",
+     "chantier_declare_resolu": {
+      "vers": "pa-yard-niesternsander",
+      "par": "libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+      "libelle": "Niestern Sander",
+      "le": "2026-09-02"
+     }
+    },
+    {
+     "nom": "Cape Limboh",
+     "imo": "9265378",
+     "type": "Chemical/Oil Products",
+     "annee": "2003",
+     "longueur_m": 139.95,
+     "largeur_m": 21,
+     "jauge_gt": 8.634,
+     "port_lourd_dwt": 15.34,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": 15746,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "MAK 6M43 1",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "Sea Tankers",
+     "proprietaire": "Sea Tankers",
+     "pavillon": null,
+     "timeline": [
+      {
+       "annee": null,
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "pavillon LUX ; Pavillon LUX",
+       "source": "https://www.marine-marchande.net/Flotte/A-E/CapeLimboh.htm"
+      }
+     ],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/A-E/CapeLimboh.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://www.wikidata.org/wiki/Q117103120 (IMO 9265378 et nom sur l'element Wikidata («Cape Limboh»)), moisson services du 2026-09-02 | rattachee au chantier Niestern Sander le 2026-09-02 depuis le bloc racine, libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+     "chantier_id": "pa-yard-niesternsander",
+     "operateur_id": "ope-sea-tankers",
+     "sources_tierces": [
+      "https://www.wikidata.org/wiki/Q117103120"
+     ],
+     "chantier_declare": {
+      "nom": "Niestern Sander",
+      "pays": null,
+      "source_ref": "https://www.marine-marchande.net/Flotte/A-E/CapeLimboh.htm"
+     },
+     "note": "puissance 5.400 kW ; vitesse 14,0 nds ; libelles non lus : Ancien nom:",
+     "sortie_pavillon": "pavillon LUX ; Pavillon LUX",
+     "id": "nav-8b23ffc6ac21",
+     "uuid": "a921cd18-9187-442a-9c84-e91e8f4f8a45",
+     "chantier_declare_resolu": {
+      "vers": "pa-yard-niesternsander",
+      "par": "libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+      "libelle": "Niestern Sander",
+      "le": "2026-09-02"
+     }
+    },
+    {
+     "nom": "Chassiron",
+     "imo": "9196656",
+     "type": "Chemical/Oil Products Tanker",
+     "annee": "2000",
+     "longueur_m": 119,
+     "largeur_m": 17.8,
+     "jauge_gt": 5.1,
+     "port_lourd_dwt": 9.995,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": 9926,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "MaK 8M32",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "Fouquet Sacop",
+     "proprietaire": "Fouquet Sacop Maritime",
+     "pavillon": null,
+     "timeline": [
+      {
+       "annee": "2017",
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "(vendu 2017)",
+       "source": "https://www.marine-marchande.net/Flotte/A-E/Chassiron.htm"
+      }
+     ],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/A-E/Chassiron.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://www.wikidata.org/wiki/Q52347582 (IMO 9196656 et nom sur l'element Wikidata («Chassiron»)), moisson services du 2026-09-02 | rattachee au chantier Niestern Sander le 2026-09-02 depuis le bloc racine, libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+     "chantier_id": "pa-yard-niesternsander",
+     "operateur_id": "ope-fouquet-sacop",
+     "sources_tierces": [
+      "https://www.wikidata.org/wiki/Q52347582"
+     ],
+     "chantier_declare": {
+      "nom": "Niestern Sander",
+      "pays": null,
+      "source_ref": "https://www.marine-marchande.net/Flotte/A-E/Chassiron.htm"
+     },
+     "note": "puissance 3.840 kW ; vitesse 14,2 nds ; libelles non lus : Visite du navire",
+     "sortie_pavillon": "(vendu 2017)",
+     "id": "nav-96f6925c15ba",
+     "uuid": "722bed4a-7c01-402b-ba4a-1bb6bab9bd26",
+     "chantier_declare_resolu": {
+      "vers": "pa-yard-niesternsander",
+      "par": "libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+      "libelle": "Niestern Sander",
+      "le": "2026-09-02"
+     }
     }
    ],
    "sources": [
@@ -235984,7 +236785,7 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : Drague aspiratrice en marche (trailing suction hopper dredger))",
      "id": "nav-1a004a6b4c9a",
      "chantier_id": "pa-yard-barkmeijerstroobos",
-     "operateur_id": "ope-dragages-transports-travaux-maritimes-5woben",
+     "operateur_id": "ope-dtm-dragage-transports-et-travaux-maritimes",
      "uuid": "9563bab3-118d-4ab1-9c62-297a40a601b5",
      "capacite_pax": 2500,
      "sources_tierces": [
@@ -258934,7 +259735,8 @@
       ]
      },
      "pavillon_pays": "France",
-     "pavillon_zone": "France"
+     "pavillon_zone": "France",
+     "operateur_id": "ope-corsica-linea"
     },
     {
      "nom": "Fortuny",
@@ -260693,7 +261495,7 @@
      "jauge_gt": 1378,
      "port_lourd_dwt": 1950,
      "energie": "2 Guascor SF480TA-SP",
-     "operateur": "CCI de Bayonne",
+     "operateur": "CCI Bayonne Pays Basque",
      "proprietaire": "CCI de Bayonne",
      "pavillon": "France",
      "imo": "9741114",
@@ -260712,7 +261514,8 @@
        "pavillon",
        "imo"
       ]
-     }
+     },
+     "operateur_id": "ope-cci-bayonne"
     },
     {
      "nom": "Txori Zuri",
@@ -260827,7 +261630,8 @@
        "pavillon",
        "imo"
       ]
-     }
+     },
+     "operateur_id": "ope-dragages-ports-1b2ljhe"
     },
     {
      "nom": "Jean Ango",
@@ -260866,7 +261670,8 @@
        "pavillon",
        "imo"
       ]
-     }
+     },
+     "operateur_id": "ope-dragages-ports-1b2ljhe"
     },
     {
      "nom": "Stellamaris",
@@ -260884,7 +261689,7 @@
      "jauge_gt": 3664,
      "port_lourd_dwt": 5000,
      "energie": "moteur Wartsila 8L32",
-     "operateur": "Dragages Transports et Travaux",
+     "operateur": "Dragage Transports et Travaux Maritimes (DTM)",
      "proprietaire": "Dragages Transports et Travaux",
      "pavillon": "France",
      "imo": "9614751",
@@ -260903,7 +261708,8 @@
        "pavillon",
        "imo"
       ]
-     }
+     },
+     "operateur_id": "ope-dtm-dragage-transports-et-travaux-maritimes"
     },
     {
      "nom": "Playa de Azkorri",
@@ -264688,6 +265494,53 @@
      "chantier_id": "es-yard-astillerosbalenciaga-zumaia",
      "operateur_id": "ope-pesqueria-vasco-montanesa",
      "uuid": "09795d34-ebe1-45eb-9e42-b641b737e248"
+    },
+    {
+     "nom": "Goelo Enabler",
+     "imo": "9914137",
+     "type": "Support éoliennes",
+     "annee": "2024",
+     "longueur_m": 82.85,
+     "largeur_m": 18.6,
+     "jauge_gt": 5427,
+     "port_lourd_dwt": null,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "3 Caterpillar 3512E",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "North Star Shipping (Craig Group)",
+     "proprietaire": null,
+     "pavillon": "France",
+     "timeline": [],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/Supplies/Goelo-Enabler.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://www.myshiptracking.com/fr/vessels/goelo-enabler-mmsi-257100000-imo-9914137 (nom et IMO 9914137 sur la page), moisson services du 2026-09-02 | rattachee au chantier Astilleros Balenciaga le 2026-09-02 depuis le bloc racine, libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+     "chantier_id": "es-yard-astillerosbalenciaga-zumaia",
+     "operateur_id": "ope-north-star-shipping",
+     "sources_tierces": [
+      "https://www.myshiptracking.com/fr/vessels/goelo-enabler-mmsi-257100000-imo-9914137"
+     ],
+     "chantier_declare": {
+      "nom": "Astilleros Balenciaga",
+      "pays": null,
+      "source_ref": "https://www.marine-marchande.net/Flotte/Supplies/Goelo-Enabler.htm"
+     },
+     "note": "puissance 5 028 kW ; libelles non lus : Grue 20 t / Coupée / Cabines pour 60 personnes",
+     "id": "nav-6ff3073ed70e",
+     "uuid": "b8ffcaeb-196f-42e2-84b0-eb6eb9914c26",
+     "chantier_declare_resolu": {
+      "vers": "es-yard-astillerosbalenciaga-zumaia",
+      "par": "libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+      "libelle": "Astilleros Balenciaga",
+      "le": "2026-09-02"
+     }
     }
    ],
    "sources": [
@@ -274298,6 +275151,56 @@
      "chantier_id": "xx-yard-crist-gdynia",
      "operateur_id": "ope-finferries",
      "uuid": "8d687028-9b93-45f5-874e-41f72f99b12b"
+    },
+    {
+     "nom": "L'Ostrea",
+     "imo": "9879569",
+     "type": "Drague par injection d'eau",
+     "annee": "2020",
+     "longueur_m": 52.42,
+     "largeur_m": 11,
+     "jauge_gt": 868,
+     "port_lourd_dwt": null,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "2 azipods",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "DRAGAGES PORTS",
+     "proprietaire": "Dragages Ports",
+     "pavillon": "France",
+     "timeline": [],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/Dragues/Lostrea.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://www.dragages-ports.fr/ (nom et exploitant « dragages » sur la page), moisson services du 2026-09-02 | rattachee au chantier Crist S.A. le 2026-09-02 depuis le bloc racine, cle canonique exacte et lieu accorde (« pologne, gdansk »)",
+     "chantier_id": "xx-yard-crist-gdynia",
+     "operateur_id": "ope-dragages-ports-1b2ljhe",
+     "chantier_declare": {
+      "nom": "Crist, Gdansk (Pologne)",
+      "pays": "Pologne",
+      "source_ref": "https://www.marine-marchande.net/Flotte/Dragues/Lostrea.htm"
+     },
+     "note": "puissance 4 440 kW ; vitesse 12 nds ; libelles non lus : N° IMO / Photo Fabien Montreuil ; homonyme_distinct : nav-8558333ec0ab Socarenam/Grand Port Maritime de Bordeaux 2020 52.4 m",
+     "arbitrage_homonyme": {
+      "verdict": "distinct",
+      "motif": "homonyme distinct par annee, longueur ou exploitant connu different : nav-8558333ec0ab Socarenam/Grand Port Maritime de Bordeaux 2020 52.4 m",
+      "source": "https://www.marine-marchande.net/Flotte/Dragues/Lostrea.htm",
+      "le": "2026-09-02"
+     },
+     "id": "nav-5e7dd2ec05ea",
+     "uuid": "dd225820-1ddd-4d8f-b6e3-5e4b0638694e",
+     "chantier_declare_resolu": {
+      "vers": "xx-yard-crist-gdynia",
+      "par": "cle canonique exacte et lieu accorde (« pologne, gdansk »)",
+      "libelle": "Crist, Gdansk (Pologne)",
+      "le": "2026-09-02"
+     }
     }
    ],
    "sources": [
@@ -279544,7 +280447,8 @@
        "pavillon",
        "imo"
       ]
-     }
+     },
+     "operateur_id": "ope-acta-marine"
     }
    ],
    "sources": [
@@ -282017,6 +282921,118 @@
      "id": "nav-458679621584",
      "chantier_id": "xx-yard-peene-wolgast",
      "uuid": "99f5ad3f-1754-43a7-8028-22fbef341666"
+    },
+    {
+     "nom": "La Paimpolaise",
+     "imo": "9144457",
+     "type": "RoRo (renommé PAIMPOL)",
+     "annee": "1997",
+     "longueur_m": 101.3,
+     "largeur_m": 18.8,
+     "jauge_gt": 5.752,
+     "port_lourd_dwt": null,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "Man B&W",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "AMO AGENCE MARITIME DE L OUEST (AMO)",
+     "proprietaire": "Palamos",
+     "pavillon": null,
+     "timeline": [
+      {
+       "annee": null,
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "(devenu Paimpol)",
+       "source": "https://www.marine-marchande.net/Flotte/K-O/Lapaimpolaise.htm"
+      }
+     ],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/K-O/Lapaimpolaise.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://shipping-data.com/ship/paimpol (nom et IMO 9144457 sur la page), moisson services du 2026-09-02 | rattachee au chantier Peene-Werft le 2026-09-02 depuis le bloc racine, libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+     "chantier_id": "xx-yard-peene-wolgast",
+     "operateur_id": "ope-agence-maritime-de-l-ouest-jxcqse",
+     "sources_tierces": [
+      "https://shipping-data.com/ship/paimpol"
+     ],
+     "chantier_declare": {
+      "nom": "Peene Werft",
+      "pays": null,
+      "source_ref": "https://www.marine-marchande.net/Flotte/K-O/Lapaimpolaise.htm"
+     },
+     "note": "ex France - Antigua et Bermuda ; puissance 5.280 kw ; vitesse 16 nds ; libelles non lus : Ancien nom:",
+     "sortie_pavillon": "(devenu Paimpol)",
+     "id": "nav-f0000bcfc0f7",
+     "uuid": "ea1dfbb2-8af7-4070-b795-bc95b564e38e",
+     "chantier_declare_resolu": {
+      "vers": "xx-yard-peene-wolgast",
+      "par": "libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+      "libelle": "Peene Werft",
+      "le": "2026-09-02"
+     }
+    },
+    {
+     "nom": "Marfret Douce France",
+     "imo": "9292448",
+     "type": "Porte conteneurs",
+     "annee": "2004",
+     "longueur_m": 155,
+     "largeur_m": 24.5,
+     "jauge_gt": 14.067,
+     "port_lourd_dwt": 17,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": 1200,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "moteur MAN B&W",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "CIE MARITIME MARFRET",
+     "proprietaire": "inconnu",
+     "pavillon": null,
+     "timeline": [
+      {
+       "annee": "2012",
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "Vendu Turquie ; Vendu en 2012 à l'armement turc Arkas, rebaptisé MATILDE A",
+       "source": "https://www.marine-marchande.net/Flotte/K-O/MarfretDouceFrance.htm"
+      }
+     ],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/K-O/MarfretDouceFrance.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://shipsio.com/public/ships/119242 (nom et IMO 9292448 sur la page), moisson services du 2026-09-02 | rattachee au chantier Peene-Werft le 2026-09-02 depuis le bloc racine, libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+     "chantier_id": "xx-yard-peene-wolgast",
+     "operateur_id": "ope-marfret",
+     "sources_tierces": [
+      "https://shipsio.com/public/ships/119242"
+     ],
+     "chantier_declare": {
+      "nom": "Peene Werft",
+      "pays": null,
+      "source_ref": "https://www.marine-marchande.net/Flotte/K-O/MarfretDouceFrance.htm"
+     },
+     "note": "puissance 11.060 kw ; vitesse 19 nds",
+     "sortie_pavillon": "Vendu Turquie ; Vendu en 2012 à l'armement turc Arkas, rebaptisé MATILDE A",
+     "id": "nav-60890a0c16f6",
+     "uuid": "ed4343c4-730e-4dfc-baff-1d08ba790089",
+     "chantier_declare_resolu": {
+      "vers": "xx-yard-peene-wolgast",
+      "par": "libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+      "libelle": "Peene Werft",
+      "le": "2026-09-02"
+     }
     }
    ],
    "sources": [
@@ -282211,6 +283227,53 @@
      "chantier_id": "chantier-naval-delavergne-avrille",
      "operateur_id": "ope-station-de-pilotage-de-la-seine",
      "uuid": "85ab6a47-bf61-4c45-b561-556d7742fc03"
+    },
+    {
+     "nom": "TSM Penzer",
+     "imo": "8789676",
+     "type": "Support de travaux",
+     "annee": "2016",
+     "longueur_m": 27.5,
+     "largeur_m": 8.4,
+     "jauge_gt": 140,
+     "port_lourd_dwt": null,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "2 Scania DI13",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "THOMAS SERVICES MARITIMES",
+     "proprietaire": "Thomas Services Maritimes",
+     "pavillon": "France",
+     "timeline": [],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/Supplies/TSM_Penzer.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://marinas-yachting.fr/de-retour-de-corse-le-tsm-penzer-livre-du-fret-aux-glenan/ (nom et exploitant « thomas services maritimes » sur la page), moisson services du 2026-09-02 | rattachee au chantier Chantier Naval Delavergne le 2026-09-02 depuis le bloc racine, libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+     "chantier_id": "chantier-naval-delavergne-avrille",
+     "operateur_id": "ope-thomas-services-maritimes",
+     "sources_tierces": [
+      "https://marinas-yachting.fr/de-retour-de-corse-le-tsm-penzer-livre-du-fret-aux-glenan/"
+     ],
+     "chantier_declare": {
+      "nom": "Delavergne",
+      "pays": null,
+      "source_ref": "https://www.marine-marchande.net/Flotte/Supplies/TSM_Penzer.htm"
+     },
+     "note": "puissance 600 kW ; vitesse 13 nds ; libelles non lus : Grue / Photo TSM",
+     "id": "nav-199e243a9eaa",
+     "uuid": "42c80eb2-d1ab-4d51-b9df-1f36e67d74e0",
+     "chantier_declare_resolu": {
+      "vers": "chantier-naval-delavergne-avrille",
+      "par": "libelle sans lieu contre une fiche UNIQUE de meme cle canonique, sans site frere, mots distinctifs identiques",
+      "libelle": "Delavergne",
+      "le": "2026-09-02"
+     }
     }
    ],
    "actif": true,
@@ -286983,6 +288046,198 @@
      "note": "puissance 3 356 kW ; vitesse 12 nds ; traction 55 t ; libelles non lus : Photo Piriou",
      "id": "nav-8bd060717f72",
      "uuid": "2a255de6-3a6d-46ba-b3cd-fd0124b50dc3"
+    },
+    {
+     "nom": "V.B. Ouragan",
+     "imo": "9746906",
+     "type": "Remorqueur de port",
+     "annee": "2015",
+     "longueur_m": 30.3,
+     "largeur_m": 10.4,
+     "jauge_gt": 345,
+     "port_lourd_dwt": null,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "2 A.B.C. 8DZC",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "Boluda France",
+     "proprietaire": "Boluda France",
+     "pavillon": "France",
+     "timeline": [],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/remorqueurs/VB-Ouragan.html",
+     "source_ref": "Fiche marine-marchande.net, validee par https://www.boluda.com.es/fr/caracteristiques-du-bateau/VB+OURAGAN/ (nom et IMO 9746906 sur la page (garde stricte du 2026-09-02)), moisson services du 2026-09-02 | rattachee au chantier Piriou Vietnam le 2026-09-02 depuis le bloc racine, site frere dont le nom PORTE le lieu ecrit (« piriouvietnam »)",
+     "chantier_id": "xx-yard-piriouvietnam-hochiminhville",
+     "operateur_id": "ope-boluda-france",
+     "sources_tierces": [
+      "https://www.boluda.com.es/fr/caracteristiques-du-bateau/VB+OURAGAN/"
+     ],
+     "port_attache": "Saint Nazaire",
+     "chantier_declare": {
+      "nom": "Piriou (Vietnam)",
+      "pays": "Vietnam",
+      "source_ref": "https://www.marine-marchande.net/Flotte/remorqueurs/VB-Ouragan.html"
+     },
+     "note": "puissance 3 836 kW ; traction 70 t",
+     "id": "nav-d609742620ec",
+     "uuid": "ae9339a3-6a29-47d9-8956-a8f91281fb62",
+     "chantier_declare_resolu": {
+      "vers": "xx-yard-piriouvietnam-hochiminhville",
+      "par": "site frere dont le nom PORTE le lieu ecrit (« piriouvietnam »)",
+      "libelle": "Piriou (Vietnam)",
+      "le": "2026-09-02"
+     }
+    },
+    {
+     "nom": "V.B. Tempête",
+     "imo": "9774953",
+     "type": "Remorqueur de port",
+     "annee": "2015",
+     "longueur_m": 30.3,
+     "largeur_m": 10.4,
+     "jauge_gt": 345,
+     "port_lourd_dwt": null,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "2 A.B.C. 8DZC",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "Boluda France",
+     "proprietaire": "Boluda France",
+     "pavillon": "France",
+     "timeline": [],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/remorqueurs/VB-Tempete.html",
+     "source_ref": "Fiche marine-marchande.net, validee par https://ships25.com/fr/vessel/detail/228072900 (nom et IMO 9774953 sur la page), moisson services du 2026-09-02 | rattachee au chantier Piriou Vietnam le 2026-09-02 depuis le bloc racine, site frere dont le nom PORTE le lieu ecrit (« piriouvietnam »)",
+     "chantier_id": "xx-yard-piriouvietnam-hochiminhville",
+     "operateur_id": "ope-boluda-france",
+     "sources_tierces": [
+      "https://ships25.com/fr/vessel/detail/228072900"
+     ],
+     "port_attache": "Dunkerque",
+     "chantier_declare": {
+      "nom": "Piriou (Vietnam)",
+      "pays": "Vietnam",
+      "source_ref": "https://www.marine-marchande.net/Flotte/remorqueurs/VB-Tempete.html"
+     },
+     "note": "puissance 3 836 kW ; traction 70 t",
+     "id": "nav-0ffb9ae1af50",
+     "uuid": "9810c9f0-a4a1-4bcb-82dc-5bac26c673ae",
+     "chantier_declare_resolu": {
+      "vers": "xx-yard-piriouvietnam-hochiminhville",
+      "par": "site frere dont le nom PORTE le lieu ecrit (« piriouvietnam »)",
+      "libelle": "Piriou (Vietnam)",
+      "le": "2026-09-02"
+     }
+    },
+    {
+     "nom": "V.B. Typhon",
+     "imo": "9774941",
+     "type": "Remorqueur de port",
+     "annee": "2015",
+     "longueur_m": 30.3,
+     "largeur_m": 10.4,
+     "jauge_gt": 345,
+     "port_lourd_dwt": null,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "2 A.B.C. 8DZC",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "Boluda France",
+     "proprietaire": "Boluda France",
+     "pavillon": "France",
+     "timeline": [],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/remorqueurs/VB-Typhon.html",
+     "source_ref": "Fiche marine-marchande.net, validee par https://www.wikidata.org/wiki/Q83650135 (IMO 9774941 et nom sur l'element Wikidata (VB Typhon)), moisson services du 2026-09-02 | rattachee au chantier Piriou Vietnam le 2026-09-02 depuis le bloc racine, site frere dont le nom PORTE le lieu ecrit (« piriouvietnam »)",
+     "chantier_id": "xx-yard-piriouvietnam-hochiminhville",
+     "operateur_id": "ope-boluda-france",
+     "sources_tierces": [
+      "https://www.wikidata.org/wiki/Q83650135"
+     ],
+     "port_attache": "Saint Nazaire",
+     "chantier_declare": {
+      "nom": "Piriou (Vietnam)",
+      "pays": "Vietnam",
+      "source_ref": "https://www.marine-marchande.net/Flotte/remorqueurs/VB-Typhon.html"
+     },
+     "note": "puissance 3 836 kW ; traction 70 t",
+     "id": "nav-220a945a1486",
+     "uuid": "3e1a3650-c56b-4376-9695-acabf45ac76e",
+     "chantier_declare_resolu": {
+      "vers": "xx-yard-piriouvietnam-hochiminhville",
+      "par": "site frere dont le nom PORTE le lieu ecrit (« piriouvietnam »)",
+      "libelle": "Piriou (Vietnam)",
+      "le": "2026-09-02"
+     }
+    },
+    {
+     "nom": "Pointe Vigie 2",
+     "imo": "9943425",
+     "type": "Remorqueur de port",
+     "annee": "2022",
+     "longueur_m": 30.3,
+     "largeur_m": 10.4,
+     "jauge_gt": 375,
+     "port_lourd_dwt": null,
+     "desserte": null,
+     "capacite": null,
+     "capacite_pax": null,
+     "capacite_vehicules": null,
+     "capacite_fret": null,
+     "energie": "2 moteurs Caterpillar 3512C",
+     "propulsion": [
+      "diesel-mdo"
+     ],
+     "architecte": null,
+     "client": null,
+     "operateur": "Caraibes Remorquage",
+     "proprietaire": "Caraibes Remorquage",
+     "pavillon": "France",
+     "timeline": [],
+     "classification": null,
+     "source": "https://www.marine-marchande.net/Flotte/remorqueurs/Pointe-Vigie2.htm",
+     "source_ref": "Fiche marine-marchande.net, validee par https://la1ere.franceinfo.fr/guadeloupe/le-pointe-vigie-2-un-nouveau-remorqueur-au-port-de-pointe-a-pitre-1332816.html (nom et exploitant « caraibes remorquage » sur la page), moisson services du 2026-09-02 | rattachee au chantier Piriou Vietnam le 2026-09-02 depuis le bloc racine, site frere dont le nom PORTE le lieu ecrit (« piriouvietnam »)",
+     "chantier_id": "xx-yard-piriouvietnam-hochiminhville",
+     "operateur_id": "ope-caraibes-remorquage",
+     "sources_tierces": [
+      "https://la1ere.franceinfo.fr/guadeloupe/le-pointe-vigie-2-un-nouveau-remorqueur-au-port-de-pointe-a-pitre-1332816.html"
+     ],
+     "port_attache": "Pointe à Pitre",
+     "chantier_declare": {
+      "nom": "Piriou (Vietnam)",
+      "pays": "Vietnam",
+      "source_ref": "https://www.marine-marchande.net/Flotte/remorqueurs/Pointe-Vigie2.htm"
+     },
+     "note": "puissance 3 824 kW ; traction 60 t ; libelles non lus : Photo Anthony Vella",
+     "id": "nav-a5c9f8ff4b3d",
+     "uuid": "dcb2c315-2af8-48e1-9d17-dafd56be09ee",
+     "chantier_declare_resolu": {
+      "vers": "xx-yard-piriouvietnam-hochiminhville",
+      "par": "site frere dont le nom PORTE le lieu ecrit (« piriouvietnam »)",
+      "libelle": "Piriou (Vietnam)",
+      "le": "2026-09-02"
+     }
     }
    ],
    "sources": [
@@ -287916,8 +289171,16 @@
      "client": null,
      "operateur": "Compagnie Polynesienne de Transport Maritime",
      "proprietaire": "SNC Wagram",
-     "pavillon": "France",
-     "timeline": [],
+     "pavillon": null,
+     "timeline": [
+      {
+       "annee": "2016",
+       "role": "pavillon",
+       "nom": "Sortie du pavillon francais",
+       "detail": "\"M2\" pav CYM en 2016 ; Devenu M2 en 2016, pavillon des Iles Caymans. Propriétaire inconnu.",
+       "source": "https://www.marine-marchande.net/Flotte/A-E/Aranui3.htm"
+      }
+     ],
      "classification": null,
      "source": "https://www.marine-marchande.net/Flotte/A-E/Aranui3.htm",
      "source_ref": "Fiche marine-marchande.net lue le 2026-09-02, confirmee par wikidata",
@@ -287932,7 +289195,8 @@
      "cotier_motif": "capacités passagers ET fret renseignées",
      "cotier_segment": "Mixte passagers + fret",
      "pavillon_pays": "France",
-     "pavillon_zone": "France"
+     "pavillon_zone": "France",
+     "sortie_pavillon": "\"M2\" pav CYM en 2016 ; Devenu M2 en 2016, pavillon des Iles Caymans. Propriétaire inconnu."
     },
     {
      "nom": "Maido",
@@ -292321,7 +293585,7 @@
    "alias": [
     "Lamanage Huchet Desmars"
    ],
-   "navires": 9,
+   "navires": 10,
    "ville": "Donges",
    "pays": "France",
    "lat": 47.318,
@@ -293882,19 +295146,20 @@
    "id": "ope-icard-maritime",
    "cle": "icard maritime",
    "nom": "Icard Maritime",
-   "nom_officiel": "Icard Maritime",
+   "nom_officiel": "ICARD MARITIME",
    "alias": [
-    "Icard Maritime"
+    "Icard Maritime",
+    "ICARD MARITIME"
    ],
    "navires": 5,
-   "ville": "Marseille",
+   "ville": "Marseille 7eme",
    "pays": "France",
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
+   "lat": 43.292733,
+   "lon": 5.363717,
+   "geo_precision": "site",
    "site": null,
-   "source": null,
-   "confiance": null,
+   "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/812808681",
+   "confiance": "moyenne",
    "flotte_declaree": {
     "nombre": null,
     "coques_nommees": 5,
@@ -293905,7 +295170,12 @@
    "appartenance": [
     "ARMAM"
    ],
-   "uuid": "ced8b30e-0e8b-400d-9363-5a72035277a8"
+   "uuid": "ced8b30e-0e8b-400d-9363-5a72035277a8",
+   "siren": "812808681",
+   "adresse": "1 QUAI MARCEL PAGNOL 13007 MARSEILLE 7EME",
+   "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/812808681",
+   "nature_du_point": "siege",
+   "note": "Registre SIRENE (API Recherche d'entreprises, 2026-09-02) : ICARD MARITIME, SIREN 812808681, etat A, siege 1 QUAI MARCEL PAGNOL 13007 MARSEILLE 7EME. Accord sur le nom ET la commune. Geocodage BAN de l'adresse du siege : type locality, score 0.72, « Quai marcel pagnol 13007 Marseille », point de siege au lieu-dit, pas au numero."
   },
   {
    "id": "ope-lotsbetrieb",
@@ -295818,9 +297088,10 @@
    "nom": "DTMD CD33",
    "alias": [
     "DTMD CD33",
-    "Direction des Transports Maritimes de la Gironde"
+    "Direction des Transports Maritimes de la Gironde",
+    "Conseil Général de Gironde"
    ],
-   "navires": 4,
+   "navires": 5,
    "ville": "Le Verdon-sur-Mer",
    "pays": "France",
    "lat": 45.541,
@@ -297128,9 +298399,10 @@
    "nom": "Acta Marine",
    "alias": [
     "Acta Marine B.V.",
-    "Acta Marine"
+    "Acta Marine",
+    "Acta Marine (France)"
    ],
-   "navires": 2,
+   "navires": 3,
    "ville": null,
    "pays": null,
    "lat": null,
@@ -297935,29 +299207,6 @@
    "uuid": "04cb6ca2-3439-440a-98c4-ec2d342c7940"
   },
   {
-   "id": "ope-finist-mer-1khlb93",
-   "cle": "finist'mer",
-   "nom": "Finist'mer (liaisons Brest / Île Longue ; Île de Sein l'été)",
-   "alias": [
-    "Finist'mer (liaisons Brest / Île Longue ; Île de Sein l'été)",
-    "Finist'mer",
-    "Finist'Mer"
-   ],
-   "navires": 2,
-   "ville": "Le Conquet",
-   "pays": "France",
-   "lat": 48.343177,
-   "lon": -4.761882,
-   "geo_precision": "site",
-   "source": "https://www.marine-marchande.net/compagnies/compagnies.htm",
-   "nom_officiel": "Kersea (SAS), marque commerciale Finist'mer",
-   "nature_du_point": "siege",
-   "site": "http://www.finist-mer.fr/",
-   "confiance": "moyenne",
-   "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification site : http://www.finist-mer.fr/ ; SIRENE : aucun accord nom + commune ; 1 resultats lus",
-   "uuid": "c79836c0-582b-4ed2-b521-08ec07b14b48"
-  },
-  {
    "id": "ope-flinter-management-barendrecht",
    "cle": "flinter management barendrecht",
    "nom": "Flinter Management B.V., Barendrecht (a la livraison)",
@@ -298122,22 +299371,27 @@
    "alias": [
     "Gazocean (TotalEnergies)",
     "Gazocéan",
-    "GAZOCEAN (GAZOCEAN)"
+    "GAZOCEAN (GAZOCEAN)",
+    "GAZOCEAN"
    ],
    "navires": 13,
    "ville": "Marseille",
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
+   "pays": "France",
+   "lat": 43.266199,
+   "lon": 5.394565,
+   "geo_precision": "site",
+   "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/682014071",
    "uuid": "3178c49c-63cc-4233-9961-0f5af9a40553",
    "siren": "682014071",
    "adresse": "132 BOULEVARD MICHELET 13008 MARSEILLE",
    "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/682014071",
    "nom_officiel": "GAZOCEAN (GAZOCEAN)",
    "fondation": 1984,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/682014071"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/682014071",
+   "nature_du_point": "siege",
+   "site": null,
+   "confiance": "haute",
+   "note": "Registre SIRENE (API Recherche d'entreprises, 2026-09-02) : GAZOCEAN (GAZOCEAN), SIREN 682014071, etat A, siege 132 BOULEVARD MICHELET 13008 MARSEILLE. Accord sur le nom ET la commune. Geocodage BAN de l'adresse du siege : type housenumber, score 0.97, « 132 Boulevard michelet 13008 Marseille », point de siege."
   },
   {
    "id": "ope-geiranger-fjordservice",
@@ -303175,9 +304429,10 @@
    "alias": [
     "Corsica Linea (ex-SNCM 1989-2016)",
     "Corsica Linea",
-    "CORSICA LINEA (CORSICA LINEA)"
+    "CORSICA LINEA (CORSICA LINEA)",
+    "Corsica Linea (France)"
    ],
-   "navires": 9,
+   "navires": 10,
    "ville": "Marseille",
    "pays": "France",
    "lat": 41.921087,
@@ -303905,22 +305160,6 @@
    "geo_precision": null,
    "source": null,
    "uuid": "5ef2c876-a008-462a-a050-39b37f001fcf"
-  },
-  {
-   "id": "ope-dragages-transports-travaux-maritimes-5woben",
-   "cle": "dragages transports & travaux maritimes",
-   "nom": "Dragages Transports & Travaux Maritimes (DTM)",
-   "alias": [
-    "Dragages Transports & Travaux Maritimes (DTM)"
-   ],
-   "navires": 1,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "afec256c-4096-4e4b-8cc7-e48f8e55f721"
   },
   {
    "id": "ope-dublin-shipping",
@@ -308170,38 +309409,6 @@
    "geo_precision": null,
    "source": null,
    "uuid": "056df283-139e-41d2-b6f2-179b9192294f"
-  },
-  {
-   "id": "ope-louis-dreyfus-armateurs-navire-fille-du-v7gs2h",
-   "cle": "louis dreyfus armateurs navire-fille du sov wind of change",
-   "nom": "Louis Dreyfus Armateurs (LDA), navire-fille du SOV Wind of Change (affrete par Orsted)",
-   "alias": [
-    "Louis Dreyfus Armateurs (LDA), navire-fille du SOV Wind of Change (affrete par Orsted)"
-   ],
-   "navires": 1,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "b0ca2d49-ff64-4c73-b2da-4e5da17b1ed3"
-  },
-  {
-   "id": "ope-louis-dreyfus-armateurs-navire-fille-du-1wyxy3x",
-   "cle": "louis dreyfus armateurs navire-fille du sov wind of hope",
-   "nom": "Louis Dreyfus Armateurs (LDA), navire-fille du SOV Wind of Hope (affrete par Orsted)",
-   "alias": [
-    "Louis Dreyfus Armateurs (LDA), navire-fille du SOV Wind of Hope (affrete par Orsted)"
-   ],
-   "navires": 1,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "0ecb3216-9c28-4fdc-bb54-2259e7f26c63"
   },
   {
    "id": "ope-lunar-fishing",
@@ -316247,7 +317454,7 @@
     "Genavir",
     "GENAVIR"
    ],
-   "navires": 10,
+   "navires": 11,
    "ville": "Plouzane",
    "pays": "France",
    "lat": 48.36205,
@@ -316436,25 +317643,6 @@
    "source": null,
    "confiance": null,
    "uuid": "3be43f06-667b-4b3b-a752-3dba082c37d0"
-  },
-  {
-   "id": "ope-jiffmar-offshore-services",
-   "cle": "jiffmar offshore services",
-   "nom": "Jiffmar Offshore Services",
-   "nom_officiel": "Jiffmar Offshore Services",
-   "alias": [
-    "Jiffmar Offshore Services"
-   ],
-   "navires": 1,
-   "ville": null,
-   "pays": "France",
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "site": null,
-   "source": null,
-   "confiance": null,
-   "uuid": "913b986a-7788-42b0-bc5e-0acb2b2d3429"
   },
   {
    "id": "ope-maritima",
@@ -317234,9 +318422,10 @@
    "nom_officiel": "L'EXPRESS DES ILES",
    "alias": [
     "L'Express des Iles",
-    "L'EXPRESS DES ILES"
+    "L'EXPRESS DES ILES",
+    "FRS (Allemagne)"
    ],
-   "navires": 5,
+   "navires": 7,
    "ville": "Pointe à Pitre",
    "pays": "France",
    "lat": 16.245921,
@@ -318511,7 +319700,7 @@
     "Dragages-Ports",
     "DRAGAGES PORTS"
    ],
-   "navires": 4,
+   "navires": 6,
    "ville": "Rouen",
    "pays": "France",
    "lat": 49.442053,
@@ -318542,9 +319731,12 @@
    "nom_officiel": "DRAGAGE TRANSPORTS ET TRAVAUX MARITIMES (DTM)",
    "alias": [
     "DTM Dragage Transports et Travaux Maritimes",
-    "DRAGAGE TRANSPORTS ET TRAVAUX MARITIMES (DTM)"
+    "DRAGAGE TRANSPORTS ET TRAVAUX MARITIMES (DTM)",
+    "DRAGAGE TRANSPORTS ET TRAVAUX MARITIMES",
+    "Dragages Transports & Travaux Maritimes (DTM)",
+    "Dragages Transports et Travaux"
    ],
-   "navires": 0,
+   "navires": 2,
    "ville": "La Rochelle",
    "pays": "France",
    "lat": null,
@@ -318564,7 +319756,15 @@
    "adresse": "QUAI NORD HANGAR N1 PORT LA ROCHELLE PALLICE 17000 LA ROCHELLE",
    "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/304516420",
    "fondation": 1975,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/304516420"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/304516420",
+   "fusions": [
+    {
+     "absorbe": "ope-dragages-transports-travaux-maritimes-5woben",
+     "nom": "Dragages Transports & Travaux Maritimes (DTM)",
+     "coques": 2,
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/304516420"
+    }
+   ]
   },
   {
    "id": "ope-erasme",
@@ -318729,12 +319929,12 @@
    "navires": 0,
    "ville": "Marseille",
    "pays": "France",
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
+   "lat": 43.266199,
+   "lon": 5.394565,
+   "geo_precision": "site",
    "site": null,
-   "source": null,
-   "confiance": null,
+   "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/852924539",
+   "confiance": "haute",
    "annuaire": {
     "source": "https://www.marine-marchande.net/compagnies/compagnies.htm",
     "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/852924539",
@@ -318746,7 +319946,9 @@
    "adresse": "132 BOULEVARD MICHELET 13008 MARSEILLE",
    "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/852924539",
    "fondation": 2019,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/852924539"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/852924539",
+   "nature_du_point": "siege",
+   "note": "Registre SIRENE (API Recherche d'entreprises, 2026-09-02) : FRANCE LNG SHIPPING, SIREN 852924539, etat A, siege 132 BOULEVARD MICHELET 13008 MARSEILLE. Accord sur le nom ET la commune. Geocodage BAN de l'adresse du siege : type housenumber, score 0.97, « 132 Boulevard michelet 13008 Marseille », point de siege."
   },
   {
    "id": "ope-ixblue",
@@ -318779,19 +319981,21 @@
    "id": "ope-jifmar-offshores-services",
    "cle": "jifmar offshores services",
    "nom": "Jifmar Offshores Services",
-   "nom_officiel": null,
+   "nom_officiel": "JIFMAR OFFSHORE SERVICES (JIFMAR GROUP)",
    "alias": [
-    "Jifmar Offshores Services"
+    "Jifmar Offshores Services",
+    "Jiffmar Offshore Services",
+    "Jifmar Offshore Services"
    ],
-   "navires": 11,
-   "ville": "Marseille",
+   "navires": 12,
+   "ville": "Aix-en-Provence",
    "pays": "France",
-   "lat": 43.360682,
-   "lon": 5.33037,
+   "lat": 43.526946,
+   "lon": 5.443706,
    "geo_precision": "site",
-   "site": "http://www.jifmar.fr/index.php",
-   "source": "https://www.marine-marchande.net/compagnies/compagnies.htm",
-   "confiance": "moyenne",
+   "site": "https://jifmar.com/",
+   "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/483596391",
+   "confiance": "haute",
    "annuaire": {
     "source": "https://www.marine-marchande.net/compagnies/compagnies.htm",
     "source_externe": "http://www.jifmar.fr/index.php",
@@ -318800,7 +320004,18 @@
    },
    "uuid": "3943e594-f67c-437c-8783-00e08c1a99d5",
    "nature_du_point": "siege",
-   "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification site : http://www.jifmar.fr/index.php ; SIRENE : aucun accord nom + commune ; 51 resultats lus"
+   "note": "Registre SIRENE (API Recherche d'entreprises, 2026-09-02) : JIFMAR OFFSHORE SERVICES (JIFMAR GROUP), SIREN 483 596 391, siege 120 avenue Napoleon Bonaparte 13100 Aix-en-Provence, NAF 52.22Z, president Jean-Michel Berud ; confirme par les mentions legales du site officiel, jifmar.com/legal-notice/. La recherche « Jiffmar » avec deux f rend ZERO resultat en France : la fiche a une seule coque etait une graphie, pas une maison. CORRECTION DE SIEGE : le point precedent placait la maison a Marseille, ce que le registre contredit. Geocodage BAN de l'adresse du siege : type housenumber, score 0,96.",
+   "siren": "483596391",
+   "adresse": "120 AVENUE NAPOLEON BONAPARTE 13100 AIX-EN-PROVENCE",
+   "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/483596391",
+   "fusions": [
+    {
+     "absorbe": "ope-jiffmar-offshore-services",
+     "nom": "Jiffmar Offshore Services",
+     "coques": 1,
+     "source": "https://jifmar.com/legal-notice/"
+    }
+   ]
   },
   {
    "id": "ope-kalliste-marine-service",
@@ -318809,7 +320024,8 @@
    "nom_officiel": "SARL KALLISTE MARINE SERVICE (SARL KMS)",
    "alias": [
     "Kalliste Marine Service",
-    "SARL KALLISTE MARINE SERVICE (SARL KMS)"
+    "SARL KALLISTE MARINE SERVICE (SARL KMS)",
+    "SARL KALLISTE MARINE SERVICE"
    ],
    "navires": 0,
    "ville": "Bastia",
@@ -319046,9 +320262,10 @@
    "nom": "Seaowl",
    "nom_officiel": null,
    "alias": [
-    "Seaowl"
+    "Seaowl",
+    "SeaOwl (France)"
    ],
-   "navires": 4,
+   "navires": 5,
    "ville": "Levallois-Perret",
    "pays": "France",
    "lat": 48.892151,
@@ -319460,7 +320677,8 @@
    "nom_officiel": "AGNIERAY ET COMPAGNIE (DORY II)",
    "alias": [
     "Agnieray et Cie",
-    "AGNIERAY ET COMPAGNIE (DORY II)"
+    "AGNIERAY ET COMPAGNIE (DORY II)",
+    "AGNIERAY ET COMPAGNIE"
    ],
    "navires": 0,
    "ville": "Papeete",
@@ -320071,19 +321289,23 @@
    "id": "ope-louis-dreyfus-armateurs",
    "cle": "louis dreyfus armateurs",
    "nom": "Louis Dreyfus Armateurs",
-   "nom_officiel": null,
+   "nom_officiel": "LD ARMATEURS",
    "alias": [
-    "Louis Dreyfus Armateurs"
+    "Louis Dreyfus Armateurs",
+    "LD Armateurs",
+    "LDA",
+    "Louis Dreyfus Armateurs (LDA), navire-fille du SOV Wind of Change (affrete par Orsted)",
+    "Louis Dreyfus Armateurs (LDA), navire-fille du SOV Wind of Hope (affrete par Orsted)"
    ],
-   "navires": 11,
+   "navires": 13,
    "ville": "Suresnes",
    "pays": "France",
-   "lat": 48.871816,
-   "lon": 2.23278,
+   "lat": 48.8693,
+   "lon": 2.229983,
    "geo_precision": "site",
-   "site": "http://www.lda.fr/",
-   "source": "https://www.marine-marchande.net/compagnies/compagnies.htm",
-   "confiance": "moyenne",
+   "site": "https://www.lda.fr/",
+   "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/652012311",
+   "confiance": "haute",
    "annuaire": {
     "source": "https://www.marine-marchande.net/compagnies/compagnies.htm",
     "source_externe": "http://www.lda.fr/",
@@ -320091,7 +321313,25 @@
     "le": "2026-09-02"
    },
    "uuid": "6ba374e1-6dd1-4106-8e30-da8f7e88fee6",
-   "nature_du_point": "siege"
+   "nature_du_point": "siege",
+   "siren": "652012311",
+   "adresse": "21 QUAI GALLIENI 92150 SURESNES",
+   "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/652012311",
+   "note": "Mentions legales officielles, lda.fr/mentions-legales : « LD ARMATEURS S.A.S. », « SIREN/RCS 652 012 311 », « 21 Quai Gallieni, 92158 Suresnes cedex », TVA FR 32 652 012 311, directeur de publication Edouard Louis-Dreyfus. SIRENE confirme, LD ARMATEURS, sigle LDA, SAS, creee en 1965. Les deux fiches absorbees, « Louis Dreyfus Armateurs (LDA), navire-fille du SOV Wind of Change » et « ... du SOV Wind of Hope », etaient des DESCRIPTIONS DE COQUE et non des raisons sociales : le Wind of Hope est le sister-ship du Wind of Change, tous deux SOV de la maison, chacun dote d'un daughter craft (schottel.de et bairdmaritime.com). Geocodage BAN de l'adresse du siege : type housenumber, score 0,97.",
+   "fusions": [
+    {
+     "absorbe": "ope-louis-dreyfus-armateurs-navire-fille-du-v7gs2h",
+     "nom": "Louis Dreyfus Armateurs (LDA), navire-fille du SOV Wind of Change (affrete par Orsted)",
+     "coques": 1,
+     "source": "https://www.lda.fr/mentions-legales"
+    },
+    {
+     "absorbe": "ope-louis-dreyfus-armateurs-navire-fille-du-1wyxy3x",
+     "nom": "Louis Dreyfus Armateurs (LDA), navire-fille du SOV Wind of Hope (affrete par Orsted)",
+     "coques": 1,
+     "source": "https://www.lda.fr/mentions-legales"
+    }
+   ]
   },
   {
    "id": "ope-nta-navigation-transport-affretement",
@@ -323014,9 +324254,12 @@
    "nom_officiel": "KERSEA",
    "alias": [
     "Kersea",
-    "KERSEA"
+    "KERSEA",
+    "Finist'mer (liaisons Brest / Île Longue ; Île de Sein l'été)",
+    "Finist'mer",
+    "Finist'Mer"
    ],
-   "navires": 2,
+   "navires": 4,
    "ville": "Nantes",
    "pays": "France",
    "lat": 47.205466,
@@ -323030,7 +324273,15 @@
    "adresse": "GARE MARITIME QUAI ERNEST RENAUD 44300 NANTES",
    "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/395139652",
    "nature_du_point": "siege",
-   "note": "Registre SIRENE (API Recherche d'entreprises, 2026-09-02) : KERSEA, SIREN 395139652, etat A, siege GARE MARITIME QUAI ERNEST RENAUD 44300 NANTES. Accord sur le nom ET la commune. Geocodage BAN de l'adresse du siege : type street, score 0.56, « Quai Ernest Renaud 44100 Nantes », point de siege."
+   "note": "Registre SIRENE (API Recherche d'entreprises, 2026-09-02) : KERSEA, SIREN 395139652, etat A, siege GARE MARITIME QUAI ERNEST RENAUD 44300 NANTES. Accord sur le nom ET la commune. Geocodage BAN de l'adresse du siege : type street, score 0.56, « Quai Ernest Renaud 44100 Nantes », point de siege.",
+   "fusions": [
+    {
+     "absorbe": "ope-finist-mer-1khlb93",
+     "nom": "Finist'mer (liaisons Brest / Île Longue ; Île de Sein l'été)",
+     "coques": 2,
+     "source": "https://www.finist-mer.fr/mentions-legales/"
+    }
+   ]
   },
   {
    "id": "ope-vedettes-de-chausey",
@@ -324038,9 +325289,10 @@
    "nom": "CCI Bayonne",
    "nom_officiel": "CCI Bayonne",
    "alias": [
-    "CCI Bayonne"
+    "CCI Bayonne",
+    "CCI de Bayonne"
    ],
-   "navires": 1,
+   "navires": 2,
    "ville": null,
    "pays": "France",
    "lat": null,
@@ -325722,6 +326974,148 @@
    "source": null,
    "confiance": null,
    "uuid": "e2a6ad68-9456-470b-aeb8-373b79f85ad9"
+  },
+  {
+   "id": "ope-charles-masson",
+   "cle": "charles masson",
+   "nom": "Charles Masson",
+   "nom_officiel": "Charles Masson",
+   "alias": [
+    "Charles Masson"
+   ],
+   "navires": 1,
+   "ville": "Saint-Valery-en-Caux",
+   "pays": "France",
+   "lat": null,
+   "lon": null,
+   "geo_precision": null,
+   "site": null,
+   "source": null,
+   "confiance": null,
+   "uuid": "1f3eea3e-2308-41d4-958d-461ba101eecf"
+  },
+  {
+   "id": "ope-museum-national-d-histoire-naturelle-ni5q6d",
+   "cle": "museum national d'histoire naturelle",
+   "nom": "Museum national d'Histoire naturelle",
+   "nom_officiel": "MUSEUM NATIONAL D'HISTOIRE NATURELLE",
+   "alias": [
+    "Museum national d'Histoire naturelle",
+    "Muséum National d'Histoire Naturelle"
+   ],
+   "navires": 1,
+   "ville": "Paris",
+   "pays": "France",
+   "lat": null,
+   "lon": null,
+   "geo_precision": null,
+   "site": null,
+   "source": null,
+   "confiance": "haute",
+   "uuid": "e0c03d4e-9ad5-4476-8a1c-a5db8db49be1",
+   "siren": "180044174",
+   "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/180044174",
+   "adresse": "57 rue Cuvier, 75005 Paris",
+   "note": "Etablissement public a caractere scientifique, culturel et professionnel (nature juridique 7383). La Korrigane est le navire de recherche construit par le chantier Glehen a Douarnenez pour le MNHN, affecte a la station marine de Dinard, port d'attache Saint-Malo, inaugure le 8 novembre 2024 (banquepopulaire.fr/cmgo/votre-banque/actualites/la-korrigane-un-navire-de-recherche-innovant-au-service-de-la-connaissance-des-oceans/)."
+  },
+  {
+   "id": "ope-naval-group",
+   "cle": "naval group",
+   "nom": "Naval Group",
+   "nom_officiel": "NAVAL GROUP",
+   "alias": [
+    "Naval Group",
+    "DCNS Brest"
+   ],
+   "navires": 1,
+   "ville": "Paris",
+   "pays": "France",
+   "lat": null,
+   "lon": null,
+   "geo_precision": null,
+   "site": null,
+   "source": null,
+   "confiance": "haute",
+   "uuid": "af64073c-0dfc-49ba-9a82-dc0d3cf96761",
+   "siren": "441133808",
+   "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/441133808",
+   "adresse": "40-42 rue du Docteur Finlay, 75015 Paris",
+   "note": "Le libelle de la coque disait « DCNS Brest ». DCNS a change de nom le 28 juin 2017 pour devenir Naval Group (fr.wikipedia.org/wiki/Naval_Group). L'etablissement de Brest existe au registre, SIRET 44113380800036, CSPC Arsenal 29200 Brest, NAF 33.15Z, actif : c'est un etablissement, pas une maison distincte, il n'a donc pas de fiche a lui."
+  },
+  {
+   "id": "ope-universite-de-caen-normandie",
+   "cle": "universite de caen normandie",
+   "nom": "Universite de Caen Normandie",
+   "nom_officiel": "UNIVERSITE DE CAEN NORMANDIE",
+   "alias": [
+    "Universite de Caen Normandie",
+    "Université de Caen."
+   ],
+   "navires": 1,
+   "ville": "Caen",
+   "pays": "France",
+   "lat": null,
+   "lon": null,
+   "geo_precision": null,
+   "site": null,
+   "source": null,
+   "confiance": "moyenne",
+   "uuid": "866e2dc6-1e81-44e8-b895-48e8fd3f605f",
+   "siren": "191414085",
+   "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/191414085",
+   "adresse": "Esplanade de la Paix, 14000 Caen",
+   "note": "Etablissement public a caractere scientifique, culturel et professionnel (nature juridique 7383). Le Normandsea est le navire de station du CREC, Centre de recherches en environnement cotier de l'universite, 54 rue du Docteur Charcot a Luc-sur-Mer, construit par Navalu au titre du CPER NormandSea. Reserve assumee : aucune page officielle ouverte ne nomme explicitement l'universite comme ARMATEUR ; l'identite legale et le SIREN sont etablis, le lien de propriete ne l'est que par la source de la coque, d'ou une confiance moyenne."
+  },
+  {
+   "id": "ope-ixsurvey",
+   "cle": "ixsurvey",
+   "nom": "iXSurvey (division d'iXblue)",
+   "nom_officiel": "IXBLUE DIVISION IXSURVEY",
+   "alias": [
+    "iXSurvey (division d'iXblue)",
+    "IxSurvey SAS",
+    "IXBLUE DIVISION IXSURVEY"
+   ],
+   "navires": 1,
+   "ville": "Saint-Germain-En-Laye",
+   "pays": "France",
+   "lat": 48.898981,
+   "lon": 2.067891,
+   "geo_precision": "site",
+   "site": null,
+   "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/478950504",
+   "confiance": "haute",
+   "uuid": "551a02b3-e888-42c4-91bf-ab0731a6dfa0",
+   "siren": "478950504",
+   "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/478950504",
+   "adresse": "34 RUE DE LA CROIX DE FER 78100 SAINT-GERMAIN-EN-LAYE",
+   "note": "Registre SIRENE (API Recherche d'entreprises, 2026-09-02) : IXBLUE DIVISION IXSURVEY, SIREN 478950504, etat C, siege 34 RUE DE LA CROIX DE FER 78100 SAINT-GERMAIN-EN-LAYE. Accord sur le nom ET la commune. Geocodage BAN de l'adresse du siege : type housenumber, score 0.97, « 34 Rue de la Croix de Fer 78100 Saint-Germain-en-Laye », point de siege.",
+   "actif": false,
+   "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/478950504",
+   "actif_methode": "API publique Recherche d'entreprises (SIRENE) : personne morale IXBLUE DIVISION IXSURVEY, SIREN 478 950 504, creee le 30/09/2004, cessee le 01/09/2016. Une cessation de personne morale ne tue pas la maison : l'activite a ete reprise par l'entite de tete du groupe, aujourd'hui EXAIL, SIREN 433 185 121, meme adresse, active (ECA Group et iXblue sont devenus Exail en octobre 2022).",
+   "nature_du_point": "siege"
+  },
+  {
+   "id": "ope-redwise-maritime-services",
+   "cle": "redwise maritime services",
+   "nom": "Redwise Maritime Services",
+   "nom_officiel": "Redwise Maritime Services B.V.",
+   "alias": [
+    "Redwise Maritime Services",
+    "Redwise Maritime Services (Pays-Bas)"
+   ],
+   "navires": 1,
+   "ville": "Huizen",
+   "pays": "Pays-Bas",
+   "lat": null,
+   "lon": null,
+   "geo_precision": null,
+   "site": null,
+   "source": null,
+   "confiance": "moyenne",
+   "uuid": "90ccfc7b-92e4-4979-b8ed-591b25296ee8",
+   "adresse": "Energieweg 4, 1271 ED Huizen",
+   "note": "Convoyage de navires : « Ship Delivery, Crewing, Deep Sea Pilotage and Offshore VTS ». Numero KVK non trouve, le site officiel ne le publie pas. PIEGE ECARTE : le registre francais SIRENE porte une REDWISE MARITIME RECRUITMENT BV, SIREN 821 096 021, Amersfoortseweg 12E a Bunschoten Spakenburg, nom voisin et adresse differente ; rien ne prouve que ce soit la meme societe, elle n'est donc pas rattachee ici."
   }
  ],
  "navires": [
@@ -338503,8 +339897,16 @@
    "client": null,
    "operateur": "Transdev Océane SAS (enseigne BreizhGo Océane, ex-Compagnie Océane)",
    "proprietaire": "Conseil general du Morbihan",
-   "pavillon": "France",
-   "timeline": [],
+   "pavillon": null,
+   "timeline": [
+    {
+     "annee": "2016",
+     "role": "pavillon",
+     "nom": "Sortie du pavillon francais",
+     "detail": "vendu en 2016, à qui ?",
+     "source": "https://www.marine-marchande.net/Flotte/A-E/Dravanteg.htm"
+    }
+   ],
    "classification": null,
    "source": "https://www.marine-marchande.net/Flotte/A-E/Dravanteg.htm",
    "source_ref": "Coque etablie par OSINT le 2026-09-02 sur la page citee en source",
@@ -338531,55 +339933,8 @@
     "champs": [
      "energie"
     ]
-   }
-  },
-  {
-   "nom": "Guerveur",
-   "imo": "6700561",
-   "type": "ferry",
-   "annee": "1966",
-   "longueur_m": 45.01,
-   "largeur_m": 10,
-   "jauge_gt": 457,
-   "port_lourd_dwt": null,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": 600,
-   "capacite_vehicules": 20,
-   "capacite_fret": null,
-   "energie": "2 moteurs Crepelle",
-   "propulsion": [],
-   "architecte": null,
-   "client": null,
-   "operateur": "Morbihannaise de Navigation",
-   "proprietaire": "Conseil general du Morbihan",
-   "pavillon": "France",
-   "timeline": [],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/F-J/Guerveur.htm",
-   "source_ref": "Coque etablie par OSINT le 2026-09-02 sur la page citee en source",
-   "chantier_id": null,
-   "operateur_id": "ope-morbihannaise-de-navigation",
-   "chantier_declare": {
-    "nom": "La Perriere, Lorient",
-    "pays": "France",
-    "source_ref": "https://www.marine-marchande.net/Flotte/F-J/Guerveur.htm"
    },
-   "note": "En reserve pour les indisponibilites des autres ferries (marine-marchande.net)",
-   "id": "nav-edb83b9cf154",
-   "cotier": "oui",
-   "cotier_motif": "ferry avec capacité véhicules",
-   "cotier_segment": "Roulier / Ferry / NGV",
-   "pavillon_pays": "France",
-   "pavillon_zone": "France",
-   "uuid": "545a198e-594e-46d7-8661-2f4ba2d1f6a3",
-   "enrichissement": {
-    "le": "2026-09-02",
-    "source": "https://www.marine-marchande.net/Flotte/F-J/Guerveur.htm",
-    "champs": [
-     "energie"
-    ]
-   }
+   "sortie_pavillon": "vendu en 2016, à qui ?"
   },
   {
    "nom": "Eudes d'Aquitaine",
@@ -338916,52 +340271,6 @@
    "enrichissement": {
     "le": "2026-09-02",
     "source": "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Alka-Bullshark.htm",
-    "champs": [
-     "energie",
-     "pavillon"
-    ]
-   }
-  },
-  {
-   "nom": "Langilea",
-   "imo": null,
-   "type": "bateau de travail portuaire",
-   "annee": "2024",
-   "longueur_m": 19,
-   "largeur_m": 7.5,
-   "jauge_gt": null,
-   "port_lourd_dwt": null,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "2 moteurs Volvo",
-   "propulsion": [],
-   "architecte": null,
-   "client": null,
-   "operateur": "Societe portuaire du port de Bayonne",
-   "proprietaire": null,
-   "pavillon": "France",
-   "timeline": [],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Langilea.htm",
-   "source_ref": "Coque etablie par OSINT le 2026-09-02 sur la page citee en source",
-   "chantier_id": null,
-   "operateur_id": "ope-societe-portuaire-du-port-de-bayonne",
-   "chantier_declare": {
-    "nom": "Glehen, Douarnenez",
-    "pays": "France",
-    "source_ref": "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Langilea.htm"
-   },
-   "note": "MMSI 228201020 ; la liste du GT porte 2023",
-   "id": "nav-4c3f5674a28b",
-   "cotier": "non",
-   "cotier_motif": "type non couvert par la typologie de l'atelier (bateau de travail portuaire)",
-   "uuid": "bdfc9689-f28a-4e01-b7ac-90c8cafd6e55",
-   "enrichissement": {
-    "le": "2026-09-02",
-    "source": "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Langilea.htm",
     "champs": [
      "energie",
      "pavillon"
@@ -340265,7 +341574,7 @@
    "source": "https://www.marine-marchande.net/Flotte/A-E/Canopee.htm",
    "source_ref": "Fiche marine-marchande.net lue le 2026-09-02, confirmee par vesselfinder",
    "chantier_id": null,
-   "operateur_id": "ope-jiffmar-offshore-services",
+   "operateur_id": "ope-jifmar-offshores-services",
    "sources_tierces": [
     "https://www.vesselfinder.com/vessels/details/9924120"
    ],
@@ -342310,8 +343619,16 @@
    "client": null,
    "operateur": "Marfret",
    "proprietaire": "CIC",
-   "pavillon": "France",
-   "timeline": [],
+   "pavillon": null,
+   "timeline": [
+    {
+     "annee": null,
+     "role": "pavillon",
+     "nom": "Sortie du pavillon francais",
+     "detail": "dépavilloné",
+     "source": "https://www.marine-marchande.net/Flotte/A-E/Durande.htm"
+    }
+   ],
    "classification": null,
    "source": "https://www.marine-marchande.net/Flotte/A-E/Durande.htm",
    "source_ref": "Fiche marine-marchande.net lue le 2026-09-02, confirmee par vesselfinder",
@@ -342337,7 +343654,8 @@
     "champs": [
      "capacite_pax"
     ]
-   }
+   },
+   "sortie_pavillon": "dépavilloné"
   },
   {
    "nom": "FERRYMAR",
@@ -347695,8 +349013,16 @@
    "client": null,
    "operateur": "Fonds Tara",
    "proprietaire": "Fonds Tara",
-   "pavillon": "France rif",
-   "timeline": [],
+   "pavillon": null,
+   "timeline": [
+    {
+     "annee": null,
+     "role": "pavillon",
+     "nom": "Sortie du pavillon francais",
+     "detail": "dépavilloné",
+     "source": "https://www.marine-marchande.net/Flotte/P-T/Tahiti-Nui-II.htm"
+    }
+   ],
    "classification": null,
    "source": "https://www.marine-marchande.net/Flotte/P-T/Tara.htm",
    "source_ref": "Fiche marine-marchande.net lue le 2026-09-02, confirmee par vesselfinder",
@@ -347723,7 +349049,8 @@
     "champs": [
      "port_lourd_dwt"
     ]
-   }
+   },
+   "sortie_pavillon": "dépavilloné"
   },
   {
    "nom": "TATIANA B",
@@ -352834,47 +354161,6 @@
    "uuid": "7ac99dec-c625-4d32-ab4d-9677c8336408"
   },
   {
-   "nom": "Romy des Slops",
-   "imo": null,
-   "type": "Mini-supply polyvalent.",
-   "annee": "2008",
-   "longueur_m": null,
-   "largeur_m": null,
-   "jauge_gt": null,
-   "port_lourd_dwt": 5,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "Doosan",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "SERMAP SHIPPING FRANCE",
-   "proprietaire": null,
-   "pavillon": "France",
-   "timeline": [],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Romy-des-slops.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://www.cargos-paquebots.net/Revue%20de%20presse/59_RP-Marine_marchande.htm (nom et exploitant complet « SERMAP » sur la page (garde stricte du 2026-09-02)), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-sermap",
-   "sources_tierces": [
-    "https://www.cargos-paquebots.net/Revue%20de%20presse/59_RP-Marine_marchande.htm"
-   ],
-   "chantier_declare": {
-    "nom": "Chantier Naval Gatto.",
-    "pays": null,
-    "source_ref": "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Romy-des-slops.htm"
-   },
-   "note": "puissance 232 kW ; vitesse 15 nds ; libelles non lus : Equipements",
-   "id": "nav-bc6d04978345",
-   "uuid": "70fdd870-0577-4daa-94d9-9605114f1f8c"
-  },
-  {
    "nom": "Thalia des Slops",
    "imo": null,
    "type": "Support de travaux",
@@ -353040,47 +354326,6 @@
    "uuid": "7e307cdf-2a4c-4de5-b8ea-f254e752935c"
   },
   {
-   "nom": "TSM Penzer",
-   "imo": "8789676",
-   "type": "Support de travaux",
-   "annee": "2016",
-   "longueur_m": 27.5,
-   "largeur_m": 8.4,
-   "jauge_gt": 140,
-   "port_lourd_dwt": null,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "2 Scania DI13",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "THOMAS SERVICES MARITIMES",
-   "proprietaire": "Thomas Services Maritimes",
-   "pavillon": "France",
-   "timeline": [],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/Supplies/TSM_Penzer.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://marinas-yachting.fr/de-retour-de-corse-le-tsm-penzer-livre-du-fret-aux-glenan/ (nom et exploitant « thomas services maritimes » sur la page), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-thomas-services-maritimes",
-   "sources_tierces": [
-    "https://marinas-yachting.fr/de-retour-de-corse-le-tsm-penzer-livre-du-fret-aux-glenan/"
-   ],
-   "chantier_declare": {
-    "nom": "Delavergne",
-    "pays": null,
-    "source_ref": "https://www.marine-marchande.net/Flotte/Supplies/TSM_Penzer.htm"
-   },
-   "note": "puissance 600 kW ; vitesse 13 nds ; libelles non lus : Grue / Photo TSM",
-   "id": "nav-199e243a9eaa",
-   "uuid": "42c80eb2-d1ab-4d51-b9df-1f36e67d74e0"
-  },
-  {
    "nom": "Yeu Express",
    "imo": null,
    "type": "Navire de service",
@@ -353158,50 +354403,6 @@
    "note": "puissance 776 kW ; vitesse 8,0 nds ; libelles non lus : Volume : / Creux",
    "id": "nav-64276ca2c455",
    "uuid": "2be6a01a-28e2-403c-a930-3499bc5c7301"
-  },
-  {
-   "nom": "L'Ostrea",
-   "imo": "9879569",
-   "type": "Drague par injection d'eau",
-   "annee": "2020",
-   "longueur_m": 52.42,
-   "largeur_m": 11,
-   "jauge_gt": 868,
-   "port_lourd_dwt": null,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "2 azipods",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "DRAGAGES PORTS",
-   "proprietaire": "Dragages Ports",
-   "pavillon": "France",
-   "timeline": [],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/Dragues/Lostrea.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://www.dragages-ports.fr/ (nom et exploitant « dragages » sur la page), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-dragages-ports-1b2ljhe",
-   "chantier_declare": {
-    "nom": "Crist, Gdansk (Pologne)",
-    "pays": "Pologne",
-    "source_ref": "https://www.marine-marchande.net/Flotte/Dragues/Lostrea.htm"
-   },
-   "note": "puissance 4 440 kW ; vitesse 12 nds ; libelles non lus : N° IMO / Photo Fabien Montreuil ; homonyme_distinct : nav-8558333ec0ab Socarenam/Grand Port Maritime de Bordeaux 2020 52.4 m",
-   "arbitrage_homonyme": {
-    "verdict": "distinct",
-    "motif": "homonyme distinct par annee, longueur ou exploitant connu different : nav-8558333ec0ab Socarenam/Grand Port Maritime de Bordeaux 2020 52.4 m",
-    "source": "https://www.marine-marchande.net/Flotte/Dragues/Lostrea.htm",
-    "le": "2026-09-02"
-   },
-   "id": "nav-5e7dd2ec05ea",
-   "uuid": "dd225820-1ddd-4d8f-b6e3-5e4b0638694e"
   },
   {
    "nom": "Samuel de Champlain",
@@ -355446,48 +356647,6 @@
    "uuid": "c508ab96-523d-4fec-8e65-5b60c0c5cb5d"
   },
   {
-   "nom": "Gribi",
-   "imo": null,
-   "type": "Remorqueur de port",
-   "annee": "1994",
-   "longueur_m": 16,
-   "largeur_m": 5.06,
-   "jauge_gt": 48,
-   "port_lourd_dwt": null,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "2 moteurs GM",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "Socnore",
-   "proprietaire": "Socnore",
-   "pavillon": "France",
-   "timeline": [],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/remorqueurs/Gribi.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://xn--snr-mditeranne-fkbi.com/navires/gribi/ (nom et exploitant complet « Socnore » sur la page (garde stricte du 2026-09-02)), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-socnore",
-   "sources_tierces": [
-    "https://xn--snr-mditeranne-fkbi.com/navires/gribi/"
-   ],
-   "port_attache": "Pt La Nouvelle",
-   "chantier_declare": {
-    "nom": "Merré",
-    "pays": null,
-    "source_ref": "https://www.marine-marchande.net/Flotte/remorqueurs/Gribi.htm"
-   },
-   "note": "puissance 650 kW ; vitesse 12 nds ; traction 13 t ; libelles non lus : Creux",
-   "id": "nav-189d84d3d6a2",
-   "uuid": "db8253bf-e36b-455a-8b15-6e7ab3ef83d9"
-  },
-  {
    "nom": "Hmagat",
    "imo": "9770050",
    "type": "Remorqueur de port",
@@ -356544,48 +357703,6 @@
    "uuid": "e05150c9-fa2d-4e5e-9ab9-21277335b786"
   },
   {
-   "nom": "V.B. Ouragan",
-   "imo": "9746906",
-   "type": "Remorqueur de port",
-   "annee": "2015",
-   "longueur_m": 30.3,
-   "largeur_m": 10.4,
-   "jauge_gt": 345,
-   "port_lourd_dwt": null,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "2 A.B.C. 8DZC",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "Boluda France",
-   "proprietaire": "Boluda France",
-   "pavillon": "France",
-   "timeline": [],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/remorqueurs/VB-Ouragan.html",
-   "source_ref": "Fiche marine-marchande.net, validee par https://www.boluda.com.es/fr/caracteristiques-du-bateau/VB+OURAGAN/ (nom et IMO 9746906 sur la page (garde stricte du 2026-09-02)), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-boluda-france",
-   "sources_tierces": [
-    "https://www.boluda.com.es/fr/caracteristiques-du-bateau/VB+OURAGAN/"
-   ],
-   "port_attache": "Saint Nazaire",
-   "chantier_declare": {
-    "nom": "Piriou (Vietnam)",
-    "pays": "Vietnam",
-    "source_ref": "https://www.marine-marchande.net/Flotte/remorqueurs/VB-Ouragan.html"
-   },
-   "note": "puissance 3 836 kW ; traction 70 t",
-   "id": "nav-d609742620ec",
-   "uuid": "ae9339a3-6a29-47d9-8956-a8f91281fb62"
-  },
-  {
    "nom": "V.B. Provence",
    "imo": "9032123",
    "type": "Remorqueur de port",
@@ -356670,90 +357787,6 @@
    "uuid": "5aa9191f-b1ad-49d1-adb7-41c78c1e56e2"
   },
   {
-   "nom": "V.B. Tempête",
-   "imo": "9774953",
-   "type": "Remorqueur de port",
-   "annee": "2015",
-   "longueur_m": 30.3,
-   "largeur_m": 10.4,
-   "jauge_gt": 345,
-   "port_lourd_dwt": null,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "2 A.B.C. 8DZC",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "Boluda France",
-   "proprietaire": "Boluda France",
-   "pavillon": "France",
-   "timeline": [],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/remorqueurs/VB-Tempete.html",
-   "source_ref": "Fiche marine-marchande.net, validee par https://ships25.com/fr/vessel/detail/228072900 (nom et IMO 9774953 sur la page), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-boluda-france",
-   "sources_tierces": [
-    "https://ships25.com/fr/vessel/detail/228072900"
-   ],
-   "port_attache": "Dunkerque",
-   "chantier_declare": {
-    "nom": "Piriou (Vietnam)",
-    "pays": "Vietnam",
-    "source_ref": "https://www.marine-marchande.net/Flotte/remorqueurs/VB-Tempete.html"
-   },
-   "note": "puissance 3 836 kW ; traction 70 t",
-   "id": "nav-0ffb9ae1af50",
-   "uuid": "9810c9f0-a4a1-4bcb-82dc-5bac26c673ae"
-  },
-  {
-   "nom": "V.B. Typhon",
-   "imo": "9774941",
-   "type": "Remorqueur de port",
-   "annee": "2015",
-   "longueur_m": 30.3,
-   "largeur_m": 10.4,
-   "jauge_gt": 345,
-   "port_lourd_dwt": null,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "2 A.B.C. 8DZC",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "Boluda France",
-   "proprietaire": "Boluda France",
-   "pavillon": "France",
-   "timeline": [],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/remorqueurs/VB-Typhon.html",
-   "source_ref": "Fiche marine-marchande.net, validee par https://www.wikidata.org/wiki/Q83650135 (IMO 9774941 et nom sur l'element Wikidata (VB Typhon)), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-boluda-france",
-   "sources_tierces": [
-    "https://www.wikidata.org/wiki/Q83650135"
-   ],
-   "port_attache": "Saint Nazaire",
-   "chantier_declare": {
-    "nom": "Piriou (Vietnam)",
-    "pays": "Vietnam",
-    "source_ref": "https://www.marine-marchande.net/Flotte/remorqueurs/VB-Typhon.html"
-   },
-   "note": "puissance 3 836 kW ; traction 70 t",
-   "id": "nav-220a945a1486",
-   "uuid": "3e1a3650-c56b-4376-9695-acabf45ac76e"
-  },
-  {
    "nom": "Persevero",
    "imo": "9462110",
    "type": "Remorqueur de port",
@@ -356836,48 +357869,6 @@
    "note": "puissance 2 298 kW ; vitesse 12 nds ; traction 45 t",
    "id": "nav-b4e5a5ef7efd",
    "uuid": "8adf8a8a-7855-4d97-ab4e-a3a08d4ecb71"
-  },
-  {
-   "nom": "Pointe Vigie 2",
-   "imo": "9943425",
-   "type": "Remorqueur de port",
-   "annee": "2022",
-   "longueur_m": 30.3,
-   "largeur_m": 10.4,
-   "jauge_gt": 375,
-   "port_lourd_dwt": null,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "2 moteurs Caterpillar 3512C",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "Caraibes Remorquage",
-   "proprietaire": "Caraibes Remorquage",
-   "pavillon": "France",
-   "timeline": [],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/remorqueurs/Pointe-Vigie2.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://la1ere.franceinfo.fr/guadeloupe/le-pointe-vigie-2-un-nouveau-remorqueur-au-port-de-pointe-a-pitre-1332816.html (nom et exploitant « caraibes remorquage » sur la page), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-caraibes-remorquage",
-   "sources_tierces": [
-    "https://la1ere.franceinfo.fr/guadeloupe/le-pointe-vigie-2-un-nouveau-remorqueur-au-port-de-pointe-a-pitre-1332816.html"
-   ],
-   "port_attache": "Pointe à Pitre",
-   "chantier_declare": {
-    "nom": "Piriou (Vietnam)",
-    "pays": "Vietnam",
-    "source_ref": "https://www.marine-marchande.net/Flotte/remorqueurs/Pointe-Vigie2.htm"
-   },
-   "note": "puissance 3 824 kW ; traction 60 t ; libelles non lus : Photo Anthony Vella",
-   "id": "nav-a5c9f8ff4b3d",
-   "uuid": "dcb2c315-2af8-48e1-9d17-dafd56be09ee"
   },
   {
    "nom": "Tamanou",
@@ -357642,47 +358633,6 @@
    }
   },
   {
-   "nom": "Goelo Enabler",
-   "imo": "9914137",
-   "type": "Support éoliennes",
-   "annee": "2024",
-   "longueur_m": 82.85,
-   "largeur_m": 18.6,
-   "jauge_gt": 5427,
-   "port_lourd_dwt": null,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "3 Caterpillar 3512E",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "North Star Shipping (Craig Group)",
-   "proprietaire": null,
-   "pavillon": "France",
-   "timeline": [],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/Supplies/Goelo-Enabler.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://www.myshiptracking.com/fr/vessels/goelo-enabler-mmsi-257100000-imo-9914137 (nom et IMO 9914137 sur la page), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-north-star-shipping",
-   "sources_tierces": [
-    "https://www.myshiptracking.com/fr/vessels/goelo-enabler-mmsi-257100000-imo-9914137"
-   ],
-   "chantier_declare": {
-    "nom": "Astilleros Balenciaga",
-    "pays": null,
-    "source_ref": "https://www.marine-marchande.net/Flotte/Supplies/Goelo-Enabler.htm"
-   },
-   "note": "puissance 5 028 kW ; libelles non lus : Grue 20 t / Coupée / Cabines pour 60 personnes",
-   "id": "nav-6ff3073ed70e",
-   "uuid": "b8ffcaeb-196f-42e2-84b0-eb6eb9914c26"
-  },
-  {
    "nom": "JIF Alizé",
    "imo": "9639919",
    "type": "Supply AHTS",
@@ -358427,56 +359377,6 @@
    "note": "puissance 971 kW ; vitesse 12,5 noeuds ; libelles non lus : Creux",
    "id": "nav-216e8abb8343",
    "uuid": "7a4f9add-05ab-4fa8-b436-753d291e81ff"
-  },
-  {
-   "nom": "Provençal 2",
-   "imo": "7503489",
-   "type": "Remorqueur de port",
-   "annee": "1976",
-   "longueur_m": 31.64,
-   "largeur_m": 8.8,
-   "jauge_gt": 287,
-   "port_lourd_dwt": null,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "moteur Crepelle 8 PSN SR",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "Les Abeilles International",
-   "proprietaire": "Abeilles",
-   "pavillon": null,
-   "timeline": [
-    {
-     "annee": null,
-     "role": "pavillon",
-     "nom": "Sortie du pavillon francais",
-     "detail": "(VB Cabo Rojo) ; Devenu VB CABO ROJO",
-     "source": "https://www.marine-marchande.net/Flotte/remorqueurs/Provencal2.htm"
-    }
-   ],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/remorqueurs/Provencal2.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://shipping-data.com/ship/provencal-2 (nom et IMO 7503489 sur la page), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-les-abeilles-international",
-   "sources_tierces": [
-    "https://shipping-data.com/ship/provencal-2"
-   ],
-   "chantier_declare": {
-    "nom": "La Perrière",
-    "pays": null,
-    "source_ref": "https://www.marine-marchande.net/Flotte/remorqueurs/Provencal2.htm"
-   },
-   "note": "puissance 1 914 kW ; vitesse 11,6 nds ; libelles non lus : Propulseurs",
-   "sortie_pavillon": "(VB Cabo Rojo) ; Devenu VB CABO ROJO",
-   "id": "nav-b0129aadc63a",
-   "uuid": "52c71e60-f1b7-4d86-b892-61bb3516d97b"
   },
   {
    "nom": "Saint Denis",
@@ -359277,112 +360177,6 @@
    "note": "puissance 25.478 kW ; vitesse 16 nds",
    "id": "nav-65784919b6b2",
    "uuid": "52d41b56-3521-490f-b852-11c9fe687207"
-  },
-  {
-   "nom": "Adour",
-   "imo": "9256652",
-   "type": "Chimiquier/produits",
-   "annee": "2003",
-   "longueur_m": 139.95,
-   "largeur_m": 21,
-   "jauge_gt": 8602,
-   "port_lourd_dwt": 15267,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": 15680,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "MAK 6M43",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "Sea Tankers",
-   "proprietaire": "Sea Tankers",
-   "pavillon": null,
-   "timeline": [
-    {
-     "annee": "2015",
-     "role": "pavillon",
-     "nom": "Sortie du pavillon francais",
-     "detail": "Wimpole, pav MHL 2015/12 ; Vendu en décembre 2015 à Union Maritime (UK), renommé WIMPOLE , pavillon MHL",
-     "source": "https://www.marine-marchande.net/Flotte/A-E/Adour.htm"
-    }
-   ],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/A-E/Adour.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://www.myshiptracking.com/fr/vessels/adour-mmsi-226298000-imo-9256652 (nom et IMO 9256652 sur la page), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-sea-tankers",
-   "sources_tierces": [
-    "https://www.myshiptracking.com/fr/vessels/adour-mmsi-226298000-imo-9256652"
-   ],
-   "chantier_declare": {
-    "nom": "Niestern Sander",
-    "pays": null,
-    "source_ref": "https://www.marine-marchande.net/Flotte/A-E/Adour.htm"
-   },
-   "note": "puissance 5.400 kW ; vitesse 13,5 nds ; libelles non lus : caractéristiques complètes ; homonyme_distinct : nav-e53b94868349 Öresundsvarvet / Oresund DryDocks AB/? 1921",
-   "arbitrage_homonyme": {
-    "verdict": "distinct",
-    "motif": "homonyme distinct par annee, longueur ou exploitant connu different : nav-e53b94868349 Öresundsvarvet / Oresund DryDocks AB/? 1921",
-    "source": "https://www.marine-marchande.net/Flotte/A-E/Adour.htm",
-    "le": "2026-09-02"
-   },
-   "sortie_pavillon": "Wimpole, pav MHL 2015/12 ; Vendu en décembre 2015 à Union Maritime (UK), renommé WIMPOLE , pavillon MHL",
-   "id": "nav-bf6e0e25ccc7",
-   "uuid": "a2433ea7-f94a-4772-95dd-dfd9254de252"
-  },
-  {
-   "nom": "Cape Limboh",
-   "imo": "9265378",
-   "type": "Chemical/Oil Products",
-   "annee": "2003",
-   "longueur_m": 139.95,
-   "largeur_m": 21,
-   "jauge_gt": 8.634,
-   "port_lourd_dwt": 15.34,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": 15746,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "MAK 6M43 1",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "Sea Tankers",
-   "proprietaire": "Sea Tankers",
-   "pavillon": null,
-   "timeline": [
-    {
-     "annee": null,
-     "role": "pavillon",
-     "nom": "Sortie du pavillon francais",
-     "detail": "pavillon LUX ; Pavillon LUX",
-     "source": "https://www.marine-marchande.net/Flotte/A-E/CapeLimboh.htm"
-    }
-   ],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/A-E/CapeLimboh.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://www.wikidata.org/wiki/Q117103120 (IMO 9265378 et nom sur l'element Wikidata («Cape Limboh»)), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-sea-tankers",
-   "sources_tierces": [
-    "https://www.wikidata.org/wiki/Q117103120"
-   ],
-   "chantier_declare": {
-    "nom": "Niestern Sander",
-    "pays": null,
-    "source_ref": "https://www.marine-marchande.net/Flotte/A-E/CapeLimboh.htm"
-   },
-   "note": "puissance 5.400 kW ; vitesse 14,0 nds ; libelles non lus : Ancien nom:",
-   "sortie_pavillon": "pavillon LUX ; Pavillon LUX",
-   "id": "nav-8b23ffc6ac21",
-   "uuid": "a921cd18-9187-442a-9c84-e91e8f4f8a45"
   },
   {
    "nom": "FS Diane",
@@ -361388,6 +362182,27 @@
      "nom": "Sortie du pavillon francais",
      "detail": "vendu en 2026 ; Devenu en 2026 ILE ROUGE, pour la compagnie canadienne Marine Atlantique, sous pavillon chypriote.",
      "source": "https://www.marine-marchande.net/Flotte/A-E/A-Nepita.htm"
+    },
+    {
+     "annee": "2012",
+     "role": "renommage",
+     "nom": "Moliere",
+     "detail": "« Devenu MOLIERE, sous pavillon de Malte en juillet 2012 » (fiche Seafrance Moliere, IMO 9211511)",
+     "source": "https://www.marine-marchande.net/Flotte/P-T/SeafranceMoliere.htm"
+    },
+    {
+     "annee": "2012",
+     "role": "renommage",
+     "nom": "Dieppe Seaways",
+     "detail": "« puis Dieppe Seaway en novembre, operateur DFDS » (fiche Dieppe Seaways, IMO 9211511)",
+     "source": "https://www.marine-marchande.net/Flotte/A-E/Dieppe-Seaways.htm"
+    },
+    {
+     "annee": "2014",
+     "role": "renommage",
+     "nom": "Stena Superfast X",
+     "detail": "« Rachete par Stena en 2014, devenu STENA SUPERFAST X, pav GBR » (fiche Dieppe Seaways, IMO 9211511)",
+     "source": "https://www.marine-marchande.net/Flotte/A-E/Dieppe-Seaways.htm"
     }
    ],
    "classification": null,
@@ -361406,7 +362221,13 @@
    "note": "puissance 48 000 kW ; vitesse 22 nds ; libelles non lus : Photo: Emmanuel Bonici",
    "sortie_pavillon": "vendu en 2026 ; Devenu en 2026 ILE ROUGE, pour la compagnie canadienne Marine Atlantique, sous pavillon chypriote.",
    "id": "nav-0f11930f77ab",
-   "uuid": "fe8307ad-4c64-4f07-baae-5807f4d62d23"
+   "uuid": "fe8307ad-4c64-4f07-baae-5807f4d62d23",
+   "alias_noms": [
+    "Seafrance Moliere",
+    "Moliere",
+    "Dieppe Seaways",
+    "Stena Superfast X"
+   ]
   },
   {
    "nom": "Antigoon",
@@ -365560,47 +366381,6 @@
    "uuid": "eaae7abe-cef6-40ab-82aa-1171c6149232"
   },
   {
-   "nom": "CGG Alizé",
-   "imo": "9178159",
-   "type": "Recherche sismique",
-   "annee": "1999",
-   "longueur_m": 99.9,
-   "largeur_m": 23,
-   "jauge_gt": 11407,
-   "port_lourd_dwt": 5984,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "2 hélices",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "Geofield Ship Management",
-   "proprietaire": "CGG",
-   "pavillon": null,
-   "timeline": [],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/A-E/CGC%20Alize.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://www.wikidata.org/wiki/Q2931401 (IMO 9178159 et nom sur l'element Wikidata (CGG Alizé)), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-geofield-ship-management",
-   "sources_tierces": [
-    "https://www.wikidata.org/wiki/Q2931401"
-   ],
-   "chantier_declare": {
-    "nom": "Chantiers de l'Atlantique",
-    "pays": null,
-    "source_ref": "https://www.marine-marchande.net/Flotte/A-E/CGC%20Alize.htm"
-   },
-   "note": "puissance 21 600 kW ; vitesse 14,5 nds ; libelles non lus : Motrorisation",
-   "id": "nav-15574bb0f5a7",
-   "uuid": "111d2c96-bd29-4be5-aea8-6043b6db2226"
-  },
-  {
    "nom": "Oceanic Challenger",
    "imo": "9194115",
    "type": "Recherche sismique",
@@ -366589,56 +367369,6 @@
    "uuid": "660ec116-ad51-431c-bb66-453e53b7c578"
   },
   {
-   "nom": "Chassiron",
-   "imo": "9196656",
-   "type": "Chemical/Oil Products Tanker",
-   "annee": "2000",
-   "longueur_m": 119,
-   "largeur_m": 17.8,
-   "jauge_gt": 5.1,
-   "port_lourd_dwt": 9.995,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": 9926,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "MaK 8M32",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "Fouquet Sacop",
-   "proprietaire": "Fouquet Sacop Maritime",
-   "pavillon": null,
-   "timeline": [
-    {
-     "annee": "2017",
-     "role": "pavillon",
-     "nom": "Sortie du pavillon francais",
-     "detail": "(vendu 2017)",
-     "source": "https://www.marine-marchande.net/Flotte/A-E/Chassiron.htm"
-    }
-   ],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/A-E/Chassiron.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://www.wikidata.org/wiki/Q52347582 (IMO 9196656 et nom sur l'element Wikidata («Chassiron»)), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-fouquet-sacop",
-   "sources_tierces": [
-    "https://www.wikidata.org/wiki/Q52347582"
-   ],
-   "chantier_declare": {
-    "nom": "Niestern Sander",
-    "pays": null,
-    "source_ref": "https://www.marine-marchande.net/Flotte/A-E/Chassiron.htm"
-   },
-   "note": "puissance 3.840 kW ; vitesse 14,2 nds ; libelles non lus : Visite du navire",
-   "sortie_pavillon": "(vendu 2017)",
-   "id": "nav-96f6925c15ba",
-   "uuid": "722bed4a-7c01-402b-ba4a-1bb6bab9bd26"
-  },
-  {
    "nom": "FS Kazet",
    "imo": "8711875",
    "type": "Pétrolier",
@@ -367140,56 +367870,6 @@
    "uuid": "9e667cdf-640a-4a84-9b96-f924a48483e1"
   },
   {
-   "nom": "Corse",
-   "imo": "8003620",
-   "type": "Car Ferry",
-   "annee": "1983",
-   "longueur_m": 145,
-   "largeur_m": 23.8,
-   "jauge_gt": 12.686,
-   "port_lourd_dwt": 2286,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": 2198,
-   "capacite_vehicules": 700,
-   "capacite_fret": null,
-   "energie": "4 moteurs Pielstick",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "SNCM",
-   "proprietaire": "S.N.C.M.",
-   "pavillon": null,
-   "timeline": [
-    {
-     "annee": "2016",
-     "role": "pavillon",
-     "nom": "Sortie du pavillon francais",
-     "detail": "vendu en 2016 ; vendu en 2016",
-     "source": "https://www.marine-marchande.net/Flotte/A-E/Corse.htm"
-    }
-   ],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/A-E/Corse.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://www.wikidata.org/wiki/Q2998018 (IMO 8003620 et nom sur l'element Wikidata (Corse)), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-sncm",
-   "sources_tierces": [
-    "https://www.wikidata.org/wiki/Q2998018"
-   ],
-   "chantier_declare": {
-    "nom": "Dubigeon Normandie",
-    "pays": null,
-    "source_ref": "https://www.marine-marchande.net/Flotte/A-E/Corse.htm"
-   },
-   "note": "puissance 27.560 kW ; vitesse 23,5 nds",
-   "sortie_pavillon": "vendu en 2016 ; vendu en 2016",
-   "id": "nav-80abe5d06625",
-   "uuid": "e7954b97-55ee-4d30-8b1b-745da4983f53"
-  },
-  {
    "nom": "NGV Asco",
    "imo": "9108049",
    "type": "Navire à Grande Vitesse",
@@ -367329,62 +368009,6 @@
    "sortie_pavillon": "vendu au Venezuela en 2012 ; Vendu en 2012 au Vénézuela",
    "id": "nav-e605c797660d",
    "uuid": "5b42354d-071c-4452-882b-f0976975a3b4"
-  },
-  {
-   "nom": "Descartes",
-   "imo": "7039074",
-   "type": "Gazier",
-   "annee": "1971",
-   "longueur_m": 220,
-   "largeur_m": 31.85,
-   "jauge_gt": 32.702,
-   "port_lourd_dwt": 2008,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "turbine Stal Laval AP17",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "GAZOCEAN (GAZOCEAN)",
-   "proprietaire": "Messigaz",
-   "pavillon": null,
-   "timeline": [
-    {
-     "annee": "2008",
-     "role": "pavillon",
-     "nom": "Sortie du pavillon francais",
-     "detail": "CHARM JUNIOR (01/2008) démoli PRINCE CHARMING (09/2007)",
-     "source": "https://www.marine-marchande.net/Flotte/A-E/Descartes.htm"
-    }
-   ],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/A-E/Descartes.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://fr.wikipedia.org/wiki/Ren%C3%A9_Descartes (nom et constructeur « atlantique » sur la page), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-gazocean",
-   "sources_tierces": [
-    "https://fr.wikipedia.org/wiki/Ren%C3%A9_Descartes"
-   ],
-   "chantier_declare": {
-    "nom": "Chantiers de l'Atlantique",
-    "pays": null,
-    "source_ref": "https://www.marine-marchande.net/Flotte/A-E/Descartes.htm"
-   },
-   "note": "puissance 13.030 kW ; vitesse 17 nds ; libelles non lus : Volume cargaison",
-   "sortie_pavillon": "CHARM JUNIOR (01/2008) démoli PRINCE CHARMING (09/2007)",
-   "fin_de_vie": {
-    "statut": "demoli",
-    "annee": "2007",
-    "source": "https://www.marine-marchande.net/Flotte/A-E/Descartes.htm",
-    "methode": "liste des navires sortis de flotte de marine-marchande.net et entete de la fiche, releve le 2026-09-02"
-   },
-   "id": "nav-d4fe975bfacd",
-   "uuid": "6289ab3f-85b4-4ddb-8600-c33ff27e4854"
   },
   {
    "nom": "LNG Unity",
@@ -369168,56 +369792,6 @@
    "uuid": "7ca8dd54-2325-4443-a795-db5bdb0fd7f4"
   },
   {
-   "nom": "La Paimpolaise",
-   "imo": "9144457",
-   "type": "RoRo (renommé PAIMPOL)",
-   "annee": "1997",
-   "longueur_m": 101.3,
-   "largeur_m": 18.8,
-   "jauge_gt": 5.752,
-   "port_lourd_dwt": null,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "Man B&W",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "AMO AGENCE MARITIME DE L OUEST (AMO)",
-   "proprietaire": "Palamos",
-   "pavillon": null,
-   "timeline": [
-    {
-     "annee": null,
-     "role": "pavillon",
-     "nom": "Sortie du pavillon francais",
-     "detail": "(devenu Paimpol)",
-     "source": "https://www.marine-marchande.net/Flotte/K-O/Lapaimpolaise.htm"
-    }
-   ],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/K-O/Lapaimpolaise.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://shipping-data.com/ship/paimpol (nom et IMO 9144457 sur la page), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-agence-maritime-de-l-ouest-jxcqse",
-   "sources_tierces": [
-    "https://shipping-data.com/ship/paimpol"
-   ],
-   "chantier_declare": {
-    "nom": "Peene Werft",
-    "pays": null,
-    "source_ref": "https://www.marine-marchande.net/Flotte/K-O/Lapaimpolaise.htm"
-   },
-   "note": "ex France - Antigua et Bermuda ; puissance 5.280 kw ; vitesse 16 nds ; libelles non lus : Ancien nom:",
-   "sortie_pavillon": "(devenu Paimpol)",
-   "id": "nav-f0000bcfc0f7",
-   "uuid": "ea1dfbb2-8af7-4070-b795-bc95b564e38e"
-  },
-  {
    "nom": "LAURA II",
    "imo": "8210596",
    "type": "RoRo",
@@ -369669,56 +370243,6 @@
    "sortie_pavillon": "hors service en 2025",
    "id": "nav-69cee93a24a7",
    "uuid": "936f3334-e95d-47bb-b579-19a94fe2b49b"
-  },
-  {
-   "nom": "Marfret Douce France",
-   "imo": "9292448",
-   "type": "Porte conteneurs",
-   "annee": "2004",
-   "longueur_m": 155,
-   "largeur_m": 24.5,
-   "jauge_gt": 14.067,
-   "port_lourd_dwt": 17,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": 1200,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "moteur MAN B&W",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "CIE MARITIME MARFRET",
-   "proprietaire": "inconnu",
-   "pavillon": null,
-   "timeline": [
-    {
-     "annee": "2012",
-     "role": "pavillon",
-     "nom": "Sortie du pavillon francais",
-     "detail": "Vendu Turquie ; Vendu en 2012 à l'armement turc Arkas, rebaptisé MATILDE A",
-     "source": "https://www.marine-marchande.net/Flotte/K-O/MarfretDouceFrance.htm"
-    }
-   ],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/K-O/MarfretDouceFrance.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://shipsio.com/public/ships/119242 (nom et IMO 9292448 sur la page), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-marfret",
-   "sources_tierces": [
-    "https://shipsio.com/public/ships/119242"
-   ],
-   "chantier_declare": {
-    "nom": "Peene Werft",
-    "pays": null,
-    "source_ref": "https://www.marine-marchande.net/Flotte/K-O/MarfretDouceFrance.htm"
-   },
-   "note": "puissance 11.060 kw ; vitesse 19 nds",
-   "sortie_pavillon": "Vendu Turquie ; Vendu en 2012 à l'armement turc Arkas, rebaptisé MATILDE A",
-   "id": "nav-60890a0c16f6",
-   "uuid": "ed4343c4-730e-4dfc-baff-1d08ba790089"
   },
   {
    "nom": "Marfret Marajo",
@@ -371043,47 +371567,6 @@
    "uuid": "b11d3810-70bb-4c47-bba7-c62b96229fd0"
   },
   {
-   "nom": "Tahiti Nui VII",
-   "imo": "9028380",
-   "type": "Ferry passagers",
-   "annee": "1982",
-   "longueur_m": 30.4,
-   "largeur_m": 6.54,
-   "jauge_gt": 155,
-   "port_lourd_dwt": 233,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "2 mot. Wartsila",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "Direction de l'Equipement en Polynésie",
-   "proprietaire": "Direction de l'Equipement de Polynesie",
-   "pavillon": null,
-   "timeline": [],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/P-T/TahitiNuiVII.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://www.marinetraffic.org/vessels/TAHITI-NUI-VII/9028380/1/current-position (nom et IMO 9028380 sur la page), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-direction-de-l-equipement-en-polynesie-hatyxc",
-   "sources_tierces": [
-    "https://www.marinetraffic.org/vessels/TAHITI-NUI-VII/9028380/1/current-position"
-   ],
-   "chantier_declare": {
-    "nom": "Chantier Naval du Pacifique Sud",
-    "pays": null,
-    "source_ref": "https://www.marine-marchande.net/Flotte/P-T/TahitiNuiVII.htm"
-   },
-   "note": "puissance 1 760 kW ; vitesse 21 nds",
-   "id": "nav-2bbc1ff59b7d",
-   "uuid": "bb17637f-29ad-4282-a35d-62ebe2c28aa8"
-  },
-  {
    "nom": "Terevau",
    "imo": "9336529",
    "type": "Ferry catamaran rapide",
@@ -371779,56 +372262,6 @@
    "sortie_pavillon": "devenu VB Gorée, pav ATG",
    "id": "nav-26b16291e2ae",
    "uuid": "d068f7a6-3d93-498a-a040-10bab28fc07b"
-  },
-  {
-   "nom": "Marseillais 17",
-   "imo": "7503477",
-   "type": "Remorqueur de port",
-   "annee": "1976",
-   "longueur_m": 31.64,
-   "largeur_m": 8.8,
-   "jauge_gt": 248,
-   "port_lourd_dwt": null,
-   "desserte": null,
-   "capacite": null,
-   "capacite_pax": null,
-   "capacite_vehicules": null,
-   "capacite_fret": null,
-   "energie": "moteur Crepelle 8 PSN SR",
-   "propulsion": [
-    "diesel-mdo"
-   ],
-   "architecte": null,
-   "client": null,
-   "operateur": "Marseille Remorqueurs",
-   "proprietaire": "Boluda France",
-   "pavillon": null,
-   "timeline": [
-    {
-     "annee": null,
-     "role": "pavillon",
-     "nom": "Sortie du pavillon francais",
-     "detail": "Devenu VB KARITE , sous pav VCT",
-     "source": "https://www.marine-marchande.net/Flotte/remorqueurs/Marseillais17.htm"
-    }
-   ],
-   "classification": null,
-   "source": "https://www.marine-marchande.net/Flotte/remorqueurs/Marseillais17.htm",
-   "source_ref": "Fiche marine-marchande.net, validee par https://shipping-data.com/ship/marseillais-17 (nom et IMO 7503477 sur la page), moisson services du 2026-09-02",
-   "chantier_id": null,
-   "operateur_id": "ope-marseille-remorqueurs",
-   "sources_tierces": [
-    "https://shipping-data.com/ship/marseillais-17"
-   ],
-   "chantier_declare": {
-    "nom": "La Perrière",
-    "pays": null,
-    "source_ref": "https://www.marine-marchande.net/Flotte/remorqueurs/Marseillais17.htm"
-   },
-   "note": "puissance 1 914 kW ; vitesse 11,6 nds ; libelles non lus : Propulseurs",
-   "sortie_pavillon": "Devenu VB KARITE , sous pav VCT",
-   "id": "nav-2dbf09250ae8",
-   "uuid": "aa234c6b-737c-4794-aef5-fea1a7530f72"
   },
   {
    "nom": "BON SECOURS III",
@@ -372541,6 +372974,20 @@
      "nom": "Sortie du pavillon francais",
      "detail": "devenu VB Impala, pav VCT ; Devenu VB IMPALA, pavillon VCT, en 2019",
      "source": "https://www.marine-marchande.net/Flotte/remorqueurs/Kianda.htm"
+    },
+    {
+     "annee": "2019",
+     "role": "evenement",
+     "nom": "Bourbon Offshore Surf (SAS)",
+     "detail": "« Bourbon Offshore surf s'est separe de plusieurs petits navires ce semestre. D'autres suivront, notamment des navires de type surfer, mais aussi l'ANTENOR, le KIANDA et le LUEGI », Flotte de commerce sous pavillon francais au 1er janvier 2019, DGITM",
+     "source": "https://www.ecologie.gouv.fr/sites/default/files/documents/Flotte%20de%20commerce%20au%20premier%20janvier%202019-1.pdf"
+    },
+    {
+     "annee": "2001",
+     "role": "renommage",
+     "nom": "VB Impala",
+     "detail": "Meme IMO 9236391, 33 m hors tout, 12 m de large, 2001 ; armateur Boluda, pavillon Saint-Vincent-et-les-Grenadines",
+     "source": "https://www.vesseltracker.com/en/Ships/Vb-Impala-9236391.html"
     }
    ],
    "classification": null,
@@ -372559,7 +373006,11 @@
    "note": "puissance 4060 kW ; vitesse 13 noeuds ; libelles non lus : Système / Caractéristiques complètes",
    "sortie_pavillon": "devenu VB Impala, pav VCT ; Devenu VB IMPALA, pavillon VCT, en 2019",
    "id": "nav-091152c79ab4",
-   "uuid": "a50e64c5-5143-45ee-abe9-8d3dcb891f34"
+   "uuid": "a50e64c5-5143-45ee-abe9-8d3dcb891f34",
+   "alias_noms": [
+    "Kianda",
+    "VB Impala"
+   ]
   },
   {
    "nom": "Luegi",
@@ -372591,6 +373042,20 @@
      "nom": "Sortie du pavillon francais",
      "detail": "VB Baobab, pav VCT ; Devenu VB BAOBAB, pavillon VCT, en 2019",
      "source": "https://www.marine-marchande.net/Flotte/remorqueurs/Luegi.htm"
+    },
+    {
+     "annee": "2019",
+     "role": "evenement",
+     "nom": "Bourbon Offshore Surf (SAS)",
+     "detail": "« Bourbon Offshore surf s'est separe de plusieurs petits navires ce semestre. D'autres suivront, notamment des navires de type surfer, mais aussi l'ANTENOR, le KIANDA et le LUEGI », Flotte de commerce sous pavillon francais au 1er janvier 2019, DGITM",
+     "source": "https://www.ecologie.gouv.fr/sites/default/files/documents/Flotte%20de%20commerce%20au%20premier%20janvier%202019-1.pdf"
+    },
+    {
+     "annee": "2019",
+     "role": "renommage",
+     "nom": "VB Baobab",
+     "detail": "« ex-Luegi jusqu'en avril 2019 », meme IMO 9236406 ; armateur Boluda, pavillon Saint-Vincent-et-les-Grenadines",
+     "source": "https://www.vesseltracker.com/en/Ships/Vb-Baobab-9236406.html"
     }
    ],
    "classification": null,
@@ -372609,7 +373074,11 @@
    "note": "puissance 4060 kW ; vitesse 13 noeuds ; libelles non lus : Système / Caractéristiques complètes (pdf 425 Ko)",
    "sortie_pavillon": "VB Baobab, pav VCT ; Devenu VB BAOBAB, pavillon VCT, en 2019",
    "id": "nav-a26165fd5fdf",
-   "uuid": "131cb6d0-9182-4a31-8a53-43c5c035e192"
+   "uuid": "131cb6d0-9182-4a31-8a53-43c5c035e192",
+   "alias_noms": [
+    "Luegi",
+    "VB Baobab"
+   ]
   },
   {
    "nom": "Ailette",
@@ -375236,7 +375705,15 @@
    "operateur": "SNRH",
    "proprietaire": "Kotug International",
    "pavillon": null,
-   "timeline": [],
+   "timeline": [
+    {
+     "annee": "2016",
+     "role": "renommage",
+     "nom": "VB Joal",
+     "detail": "« Devenu VB JOAL (Dakar) en mars 2016 » (fiche V.B. Bretagne, IMO 9357341) ; le registre porte cette coque sous le nom SD Seine, chaine non refermee par cette source",
+     "source": "https://www.marine-marchande.net/Flotte/remorqueurs/VB%20Bretagne.htm"
+    }
+   ],
    "classification": null,
    "source": "https://www.marine-marchande.net/Flotte/remorqueurs/SD-Seine.htm",
    "source_ref": "Fiche marine-marchande.net, validee par https://shipping-data.com/ship/sd-seine (nom et IMO 9357341 sur la page), moisson services du 2026-09-02",
@@ -375252,7 +375729,11 @@
    },
    "note": "puissance 2 x 1800 kW ; vitesse 13 nds",
    "id": "nav-98e591d675da",
-   "uuid": "2e8e927a-970c-46d9-92dc-4418f971a9a6"
+   "uuid": "2e8e927a-970c-46d9-92dc-4418f971a9a6",
+   "alias_noms": [
+    "V.B. Bretagne",
+    "VB Joal"
+   ]
   },
   {
    "nom": "RT-Pioneer",
@@ -375318,7 +375799,15 @@
    "operateur": "Kotug",
    "proprietaire": "Elisaberh Ltd (Malte)",
    "pavillon": null,
-   "timeline": [],
+   "timeline": [
+    {
+     "annee": "2016",
+     "role": "renommage",
+     "nom": "VB Sangomar",
+     "detail": "« Affecte a Dakar aout 2016, sous pavillon senegalais, renomme VB SANGOMAR » (fiche V.B. Nantes, IMO 9357274) ; le registre porte cette coque sous le nom SD Loire, chaine non refermee par cette source",
+     "source": "https://www.marine-marchande.net/Flotte/remorqueurs/VB%20Nantes.htm"
+    }
+   ],
    "classification": null,
    "source": "https://www.marine-marchande.net/Flotte/remorqueurs/SD-Loire.htm",
    "source_ref": "Fiche marine-marchande.net, validee par https://shipping-data.com/ship/sd-loire (nom et IMO 9357274 sur la page), moisson services du 2026-09-02",
@@ -375334,7 +375823,11 @@
    },
    "note": "puissance 2 x 1800 kW ; vitesse 13 nds",
    "id": "nav-851104360c89",
-   "uuid": "56e78036-9dbb-44b8-aa3f-7ed738deb598"
+   "uuid": "56e78036-9dbb-44b8-aa3f-7ed738deb598",
+   "alias_noms": [
+    "V.B. Nantes",
+    "VB Sangomar"
+   ]
   },
   {
    "nom": "Sirocco II",
@@ -375691,6 +376184,95 @@
    "sortie_pavillon": "(vendu)",
    "id": "nav-626f330ef65e",
    "uuid": "08375aed-3c31-4a7c-b8c2-8ef2f0cf0105"
+  },
+  {
+   "nom": "Eros",
+   "imo": null,
+   "type": "Vedette a passagers",
+   "annee": "1977",
+   "longueur_m": 22,
+   "largeur_m": null,
+   "jauge_gt": null,
+   "port_lourd_dwt": null,
+   "desserte": null,
+   "capacite": null,
+   "capacite_pax": 116,
+   "capacite_vehicules": null,
+   "capacite_fret": null,
+   "energie": null,
+   "propulsion": [
+    "diesel-mdo"
+   ],
+   "architecte": null,
+   "client": null,
+   "operateur": "Charles Masson",
+   "proprietaire": null,
+   "pavillon": "France",
+   "timeline": [],
+   "classification": null,
+   "source": "https://www.marine-marchande.net/Flotte/Vedettes/Eros.html",
+   "source_ref": "Vedette a passagers etablie le 2026-09-02 sur la fiche marine-marchande.net, validee par le site de l'exploitant qui donne la meme capacite et le meme armateur : « Spacieux, l'Eros peut accueillir 116 passagers » et « Marin depuis son enfance, Charles Masson, le capitaine » (bateau-eros-saint-valery-en-caux.mystrikingly.com). L'exploitation etait au Treport de 1998 a 2019, a Saint-Valery-en-Caux depuis 2021.",
+   "chantier_id": null,
+   "operateur_id": "ope-charles-masson",
+   "sources_tierces": [
+    "https://cote-albatre-tourisme.fr/loisirs-equipements/417-bateau-eros/",
+    "https://www.cirkwi.com/fr/point-interet/2505606-promenade-a-bord-du-bateau-eros"
+   ],
+   "port_attache": "Saint-Valery-en-Caux",
+   "note": "Le millesime 1977 et la longueur de 22 m ne viennent que de la fiche marine-marchande.net ; la page de l'exploitant ne les porte pas.",
+   "arbitrage_homonyme": {
+    "verdict": "distinct",
+    "motif": "Vedette a passagers de 22 m et 116 places, exploitee par Charles Masson a Saint-Valery-en-Caux, distincte des deux Eros du registre : nav-f238a50228ec est l'Eros AS de 77 m livre en 2012 par Larsnes Mek. Verksted, nav-153c40bcd60e un chalutier de 917 GT sorti de Horten Verft en 1978. Type, taille et exploitant separent les trois. « Masson » de la fiche du site n'est pas un constructeur, c'est l'exploitant : le constructeur reste inconnu et n'est pas declare.",
+    "source": "https://www.marine-marchande.net/Flotte/Vedettes/Eros.html",
+    "le": "2026-09-02"
+   },
+   "id": "nav-1573cf41328b",
+   "uuid": "0caf5372-dd2a-43f0-a648-ed096c4c003e"
+  },
+  {
+   "nom": "Bellatrix",
+   "imo": null,
+   "type": "Crew boat, transport de personnel, surveillance, avitaillement",
+   "annee": "1989",
+   "longueur_m": 11.68,
+   "largeur_m": 3.79,
+   "jauge_gt": null,
+   "port_lourd_dwt": null,
+   "desserte": null,
+   "capacite": null,
+   "capacite_pax": 8,
+   "capacite_vehicules": null,
+   "capacite_fret": null,
+   "energie": null,
+   "propulsion": [
+    "diesel-mdo"
+   ],
+   "architecte": null,
+   "client": null,
+   "operateur": "Lamanage Huchet Desmars",
+   "proprietaire": null,
+   "pavillon": "France",
+   "timeline": [],
+   "classification": null,
+   "source": "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Bellatrix.htm",
+   "source_ref": "Coque etablie le 2026-09-02 sur la fiche marine-marchande.net, validee par la fiche technique du navire publiee par Atlantique Maritime Services (groupe LHD) : « crew boat », « Reg. number 750743 », « Flag French », « Homeport Saint-Nazaire », « Built 1989 - polyester », « Call Sign FG7450 », « MMSI 228 143 000 », « LoA 11.68 m », « Beam 3.79 m », « Max person on board 2 crew + 8 pax ».",
+   "chantier_id": null,
+   "operateur_id": "ope-lamanage-huchet-desmars",
+   "sources_tierces": [
+    "https://atlantique-maritime-services.com/wp-content/uploads/2025/12/LHD_Fiches_BELLATRIX.pdf",
+    "https://atlantique-maritime-services.com/en/our-fleet/",
+    "https://www.journalmarinemarchande.fr/magazines/2010/09/societes-privees-et-publiques-se-partagent-les-quais/"
+   ],
+   "port_attache": "Saint-Nazaire",
+   "note": "Deux sources exterieures divergent sur le millesime : la fiche technique du groupe donne « Built 1989 », l'article du Journal de la Marine Marchande de septembre 2010 donne « un bateau de 12 m mis en service en fevrier 2006 ». L'annee retenue est celle de la fiche technique de l'armateur, la contradiction est conservee ici. Identifiants complementaires non portes par le schema : immatriculation 750743, MMSI 228143000, indicatif FG7450.",
+   "arbitrage_homonyme": {
+    "verdict": "distinct",
+    "motif": "Crew boat en polyester de 11,68 m base a Saint-Nazaire, exploite par le groupe Lamanage Huchet Desmars, distinct du petrolier Bellatrix sorti d'Oresundsvarvet en 1935 (nav-357558c95d55) : type, taille et epoque separent les deux.",
+    "source": "https://www.marine-marchande.net/Flotte/Bateaux%20-de-travail/Bellatrix.htm",
+    "le": "2026-09-02"
+   },
+   "id": "nav-e1b431e5dd11",
+   "uuid": "4b3bb3b0-36d9-4e88-98ef-80661f905069"
   }
  ]
 }
