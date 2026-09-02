@@ -54,7 +54,7 @@
  },
  {
   "date": "2026-09-02",
-  "motif": "Champ d etat de coque : 92 coques dont le champ operateur portait un etat de vie sont migrees vers etat_exploitation",
+  "motif": null,
   "chantiers": 539,
   "entrees": 7842,
   "coques_plancher": 7644,
