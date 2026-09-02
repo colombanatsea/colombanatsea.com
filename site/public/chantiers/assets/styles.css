@@ -520,6 +520,14 @@ a { color: var(--blue); }
   background: transparent; color: var(--muted); border-color: var(--line);
   font-weight: 600; text-transform: none; letter-spacing: 0;
 }
+/* État d'exploitation. Il ne dit PAS une fin de vie, il dit qui exploite la coque
+   ou que personne ne l'exploite : il ne porte donc ni le gris plein de `termine`,
+   qui signifie « c'est fini », ni le vide de `inconnu`, qui signifie « on ne sait
+   pas ». Sa forme lui est propre pour que les trois ne se confondent pas à l'œil. */
+.etat--exp {
+  background: transparent; color: var(--muted); border-color: var(--line);
+  border-style: dashed; font-weight: 600; text-transform: none; letter-spacing: 0;
+}
 
 /* Le grisé porte sur le CONTENU, jamais sur l'interaction : une fiche fermée
    reste cliquable, lisible et copiable. On baisse le contraste, on ne masque pas.
