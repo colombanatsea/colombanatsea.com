@@ -54,15 +54,15 @@
  },
  {
   "date": "2026-09-02",
-  "motif": null,
+  "motif": "Lot services marine-marchande.net",
   "chantiers": 539,
-  "entrees": 7162,
-  "coques_plancher": 6970,
-  "url": 17465,
-  "taux_navires_source": 93.2,
+  "entrees": 7840,
+  "coques_plancher": 7642,
+  "url": 19438,
+  "taux_navires_source": 94.1,
   "taux_architecte_justifie": 84.9,
-  "eligibles_imo": 3566,
-  "taux_imo_sur_eligible": 50.8,
+  "eligibles_imo": 4128,
+  "taux_imo_sur_eligible": 57.2,
   "taux_joignables": 54.4
  }
 ]
