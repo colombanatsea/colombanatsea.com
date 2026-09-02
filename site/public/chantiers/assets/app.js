@@ -560,7 +560,16 @@
       .sort((a, b) => b.navires.length - a.navires.length || norm(a.nom).localeCompare(norm(b.nom)));
     state.architectes.forEach((e, i) => { e._idx = i; });
 
-    // Opérateurs : couche normalisée (1191 libellés bruts → ~970 exploitants canoniques). Source unique = chantiers.json.
+    // Opérateurs : couche normalisée, DERIVEE des libellés `operateur` portés par les coques.
+    // CE QU'ELLE COMPTE, ET CE QU'ELLE NE COMPTE PAS. Au 02/09/2026 la page affiche 1 726
+    // exploitants quand le fichier porte 1 794 fiches dans `operateurs[]`. Les deux chiffres
+    // sont justes et ne mesurent pas la même chose : ici on groupe les libellés bruts des
+    // 7 842 coques par clé canonique, donc un exploitant n'apparaît que si une coque le
+    // NOMME ; le bloc racine porte en plus 146 fiches sans aucune coque, armements établis
+    // depuis un annuaire public avant que le registre nomme une de leurs coques, et
+    // exploitants qui déclarent une flotte à l'ACF sans que le registre la nomme. L'écart
+    // déclaré contre nommé est voulu et doit rester lisible. Le libellé du compte le dit.
+    // Source unique = chantiers.json.
     const omap = new Map();
     state.navires.forEach((n) => {
       const c = canonOperator(n.operateur);
@@ -1788,8 +1797,8 @@
   function renderOperateursAnnuaire() {
     const list = filteredOperateurs();
     $("#count").innerHTML = list.length === state.operateurs.length
-      ? `<b>${state.operateurs.length}</b> opérateurs (flottes normalisées)`
-      : `<b>${list.length}</b> sur ${state.operateurs.length} opérateurs`;
+      ? `<b>${state.operateurs.length}</b> exploitants nommés par au moins une coque (flottes normalisées)`
+      : `<b>${list.length}</b> sur ${state.operateurs.length} exploitants nommés par au moins une coque`;
     const el = $("#operateurs-list");
     if (!list.length) { el.innerHTML = `<p class="empty">Aucun opérateur ne correspond.</p>`; return; }
     el.innerHTML = list.map((o) => `
