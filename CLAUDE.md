@@ -1,5 +1,12 @@
 # Colomban at Sea, Specifications Techniques
 
+> 🚧 **CHANTIER EN COURS (22/07/2026)** — Avant de travailler sur le bloc LinkedIn
+> (accueil) ou la constellation « Timeline Médias » (`/fr/medias`), lire
+> **`docs/CHANTIER-publications-palantiri.md`** : alimenter ces surfaces depuis
+> Palantíri (`positions`) en continu. Backlog non démarré. Des changements locaux
+> **non poussés** existent (bloc LinkedIn statique + retrait Elfsight), à arbitrer
+> (§7 du chantier). Ne pas re-livrer ou écraser ce travail sans lire le backlog.
+
 ## Stack
 - **Framework** : Astro 5.x (SSG), `site/`
 - **3D** : Three.js (npm) + earcut (polygon triangulation)

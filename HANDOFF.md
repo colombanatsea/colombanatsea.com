@@ -1,5 +1,12 @@
 # HANDOFF, Session 5 mars 2026
 
+> ⏭️ **Chantier ouvert (22/07/2026)** : alimenter les publications du site depuis
+> Palantíri (`positions`), en continu, pour le bloc LinkedIn (accueil) et la
+> constellation Timeline Médias (`/fr/medias`). Backlog complet :
+> `docs/CHANTIER-publications-palantiri.md`. Statut : non démarré, en attente des
+> décisions du Lot 0. Des changements locaux non poussés existent (bloc LinkedIn
+> statique + retrait Elfsight), à arbitrer, voir §7 du chantier.
+
 ## Actions realisees cette session
 
 ### 1. Kit media telechargeable (CDC #2)

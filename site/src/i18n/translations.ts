@@ -31,6 +31,7 @@ export const ui = {
     // LinkedIn feed
     'linkedin.title': 'Sur LinkedIn',
     'linkedin.subtitle': 'Les dernières publications de Colomban',
+    'linkedin.cta': 'Voir la publication',
 
     // Common
     'common.readMore': 'En savoir plus',
@@ -59,6 +60,7 @@ export const ui = {
     // LinkedIn feed
     'linkedin.title': 'On LinkedIn',
     'linkedin.subtitle': 'Latest posts from Colomban',
+    'linkedin.cta': 'View post',
 
     // Common
     'common.readMore': 'Read more',

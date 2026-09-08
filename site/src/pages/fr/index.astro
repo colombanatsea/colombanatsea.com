@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Globe from '../../components/Globe.astro';
 import Matrice from '../../components/Matrice.astro';
+import LinkedInFeed from '../../components/LinkedInFeed.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
@@ -371,7 +372,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <h2 id="linkedin-feed-title" class="linkedin-feed__title">Sur LinkedIn</h2>
         <p class="linkedin-feed__subtitle subtitle">Les derni&egrave;res publications de Colomban</p>
       </header>
-      <div class="elfsight-app-5a290de1-10b1-4fe3-bf54-5b67895bed36" data-elfsight-app-lazy></div>
+      <LinkedInFeed lang="fr" />
     </div>
   </section>
 

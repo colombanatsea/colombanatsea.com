@@ -1,0 +1,32 @@
+[
+  {
+    "id": "li-2026-06-marine-oceans",
+    "url": "https://www.linkedin.com/in/colombanatsea/",
+    "image": "/medias/marine-oceans-291-preview.jpg",
+    "alt": "Tribune de Colomban dans Marine & Oceans n°291",
+    "excerpt": "Tribune dans Marine & Oceans : le maritime cotier francais ne doit pas rater sa double transition, environnementale et sociale.",
+    "postedAt": "2026-06-15",
+    "order": 0,
+    "published": true
+  },
+  {
+    "id": "li-2026-05-culture",
+    "url": "https://www.linkedin.com/in/colombanatsea/",
+    "image": null,
+    "alt": "",
+    "excerpt": "Les transitions environnementale et technologique du maritime sont avant tout une revolution culturelle. On ne change pas une filiere par la seule technique.",
+    "postedAt": "2026-05-20",
+    "order": 1,
+    "published": true
+  },
+  {
+    "id": "li-2026-04-data",
+    "url": "https://www.linkedin.com/in/colombanatsea/",
+    "image": null,
+    "alt": "",
+    "excerpt": "Il est plus efficient de suivre 4 donnees bien ciblees en sachant ce qu'on veut en faire, que de courir apres des millions de donnees sans objectif.",
+    "postedAt": "2026-04-10",
+    "order": 2,
+    "published": true
+  }
+]

@@ -1,0 +1,169 @@
+---
+/**
+ * LinkedInFeed — carrousel LinkedIn auto-heberge, au design colombanatsea.com.
+ * Remplace le widget tiers Elfsight : plus de script externe, plus de dependance
+ * CSP, images servies depuis notre propre domaine.
+ *
+ * Source de verite : src/data/linkedin.json (posts cures). Pour ajouter un post,
+ * voir site/LINKEDIN.md. Aucun backend : rendu au build.
+ */
+import postsData from '../data/linkedin.json';
+import { useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/translations';
+
+interface LinkedInPost {
+  id: string;
+  url: string;
+  image?: string | null;
+  alt?: string;
+  excerpt: string;
+  postedAt?: string;
+  order?: number;
+  published?: boolean;
+}
+
+interface Props {
+  lang?: Lang;
+  limit?: number;
+}
+
+const { lang = 'fr', limit = 6 } = Astro.props;
+const t = useTranslations(lang);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const posts = (postsData as LinkedInPost[])
+  .filter((p) => p.published !== false)
+  .sort((a, b) => {
+    const o = (a.order ?? 0) - (b.order ?? 0);
+    if (o !== 0) return o;
+    return (b.postedAt ?? '').localeCompare(a.postedAt ?? '');
+  })
+  .slice(0, limit);
+
+const dateFmt = new Intl.DateTimeFormat(lang === 'fr' ? 'fr-FR' : 'en-GB', {
+  year: 'numeric',
+  month: 'long',
+});
+function fmtDate(iso?: string): string {
+  if (!iso) return '';
+  const d = new Date(iso.length === 7 ? `${iso}-01` : iso);
+  return isNaN(d.getTime()) ? '' : dateFmt.format(d);
+}
+function resolveImg(src: string): string {
+  return src.startsWith('http') ? src : `${base}${src}`;
+}
+const cta = t('linkedin.cta');
+const profileUrl = 'https://www.linkedin.com/in/colombanatsea/';
+const followLabel = lang === 'fr' ? 'Suivre sur LinkedIn' : 'Follow on LinkedIn';
+---
+
+<ul class="li-feed__grid" role="list">
+  {posts.map((p) => (
+    <li class="li-feed__card">
+      <a class="li-feed__link" href={p.url} target="_blank" rel="noopener noreferrer">
+        {p.image ? (
+          <div class="li-feed__media">
+            <img src={resolveImg(p.image)} alt={p.alt ?? ''} loading="lazy" width="600" height="400" />
+          </div>
+        ) : (
+          <div class="li-feed__media li-feed__media--brand" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="44" height="44">
+              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
+            </svg>
+          </div>
+        )}
+        <div class="li-feed__body">
+          {p.postedAt && <time class="li-feed__date mono" datetime={p.postedAt}>{fmtDate(p.postedAt)}</time>}
+          <p class="li-feed__excerpt">{p.excerpt}</p>
+          <span class="li-feed__cta">
+            {cta}
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true">
+              <path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </div>
+      </a>
+    </li>
+  ))}
+</ul>
+
+<div class="li-feed__foot">
+  <a class="btn btn-outline" href={profileUrl} target="_blank" rel="noopener noreferrer">{followLabel}</a>
+</div>
+
+<style>
+  .li-feed__grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-lg);
+  }
+  .li-feed__card { display: flex; }
+  .li-feed__link {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    border: 1px solid var(--gris-200, #e6e8ee);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .li-feed__link:hover {
+    transform: translateY(-3px);
+    border-color: var(--bleu);
+    box-shadow: 0 8px 24px rgba(42, 85, 179, 0.1);
+  }
+  .li-feed__link:focus-visible { outline: 2px solid var(--bleu); outline-offset: 2px; }
+  .li-feed__media {
+    aspect-ratio: 3 / 2;
+    background: var(--gris-100, #f2f4f8);
+    overflow: hidden;
+  }
+  .li-feed__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .li-feed__media--brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.92);
+    background: linear-gradient(135deg, var(--bleu), var(--bleu-dark));
+  }
+  .li-feed__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    flex: 1;
+  }
+  .li-feed__date {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gris-500, #6b7280);
+  }
+  .li-feed__excerpt {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--gris-800, #1f2937);
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .li-feed__cta {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--bleu);
+  }
+  .li-feed__foot { text-align: center; margin-top: var(--space-xl); }
+</style>
