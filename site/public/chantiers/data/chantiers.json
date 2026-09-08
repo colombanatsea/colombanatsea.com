@@ -72291,7 +72291,7 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : remorqueur-pousseur)",
      "id": "nav-cc5dd0a6ecaf",
      "chantier_id": "lecamus-la-rochelle",
-     "operateur_id": "ope-departement-de-la-charente-maritime-b1kt0l",
+     "operateur_id": "ope-conseil-departemental-de-la-charente-mar-1livxo9",
      "uuid": "acbe9cd5-382e-40e2-b509-cf66e993b3b5"
     },
     {
@@ -72324,7 +72324,7 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : annexe / servitude)",
      "id": "nav-578b54debba4",
      "chantier_id": "lecamus-la-rochelle",
-     "operateur_id": "ope-departement-de-la-charente-maritime-b1kt0l",
+     "operateur_id": "ope-conseil-departemental-de-la-charente-mar-1livxo9",
      "uuid": "06a7b9c8-4393-414e-a21e-7079ce7c1be0"
     },
     {
@@ -72375,7 +72375,7 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : drague)",
      "id": "nav-42a390c1e2e9",
      "chantier_id": "lecamus-la-rochelle",
-     "operateur_id": "ope-departement-de-la-charente-maritime-b1kt0l",
+     "operateur_id": "ope-conseil-departemental-de-la-charente-mar-1livxo9",
      "uuid": "f9d75b3a-18ba-4d92-8e09-61c6464443ec"
     },
     {
@@ -372973,24 +372973,6 @@
    "uuid": "34401d11-6cc2-4acd-8c66-d9cb6c17e61a"
   },
   {
-   "id": "ope-departement-de-la-charente-maritime-b1kt0l",
-   "cle": "departement de la charente-maritime",
-   "nom": "Departement de la Charente-Maritime (regie portuaire departementale)",
-   "alias": [
-    "Departement de la Charente-Maritime (regie portuaire departementale)",
-    "Departement de la Charente-Maritime (service departemental de dragage des ports)"
-   ],
-   "navires": 3,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "ded1b89e-dc4f-4b86-ac99-1e5827a74628",
-   "note": "Doublon probable avec « Conseil departemental de la Charente-Maritime (CD17) » (ope-conseil-departemental-de-la-charente-mar-1livxo9) : même personne morale, la régie portuaire est un service du département. Fusion à instruire avec source SIRENE, jamais déduite du nom."
-  },
-  {
    "id": "ope-dixstone",
    "cle": "dixstone",
    "nom": "Dixstone",
@@ -380007,16 +379989,32 @@
    "cle": "conseil departemental de la charente-maritime",
    "nom": "Conseil departemental de la Charente-Maritime (CD17)",
    "alias": [
-    "Conseil departemental de la Charente-Maritime (CD17)"
+    "Conseil departemental de la Charente-Maritime (CD17)",
+    "Département de la Charente-Maritime",
+    "Conseil départemental de la Charente-Maritime",
+    "Departement de la Charente-Maritime (regie portuaire departementale)",
+    "Departement de la Charente-Maritime (service departemental de dragage des ports)"
    ],
-   "navires": 4,
-   "ville": null,
+   "navires": 7,
+   "ville": "La Rochelle",
    "pays": null,
    "lat": null,
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "b5426e1c-15f1-4b77-8d71-1887db88878f"
+   "uuid": "b5426e1c-15f1-4b77-8d71-1887db88878f",
+   "siren": "221700016",
+   "adresse": "85 boulevard de la Republique, 17000 La Rochelle",
+   "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/221700016",
+   "nom_officiel": "DEPARTEMENT DE LA CHARENTE-MARITIME",
+   "fusions": [
+    {
+     "absorbe": "ope-departement-de-la-charente-maritime-b1kt0l",
+     "nom": "Departement de la Charente-Maritime (regie portuaire departementale)",
+     "coques": 3,
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/221700016 (DEPARTEMENT DE LA CHARENTE-MARITIME, SIREN 221700016, actif, La Rochelle : une seule personne morale, la regie portuaire est un service de la collectivite ; confirmation de Colomban Monnier le 2026-09-08)"
+    }
+   ]
   },
   {
    "id": "ope-consortium-estebam-exploitation-conchyli-ulpum7",
@@ -457898,7 +457896,7 @@
    "secteur": "maritime côtier",
    "site": "https://armateurscotiers.fr",
    "source": "https://armateurscotiers.fr",
-   "note": "Compagnies listées sur armateurscotiers.fr. Instruction de Colomban Monnier du 2026-09-08.",
+   "note": "Fondée en 1951 (30 compagnies adhérentes, 7 membres associés, 1 500 marins à l'été 2026, Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). La dualité patronale française a cinq équivalents en Europe : Norvège (NHO Sjøfart), Suède (Skärgårdsredarna), Danemark (Færgerederierne + Færgesekretariatet), Grèce (SEEN), Italie (Assarmatori/Fedarlinea). Compagnies listées sur armateurscotiers.fr. Instruction de Colomban Monnier du 2026-09-08.",
    "uuid": "e67bcfcf-5149-48a5-8e14-62c928e2b943"
   },
   {
@@ -457973,7 +457971,7 @@
    "secteur": "transport maritime",
    "site": "https://rederi.no",
    "source": "https://rederi.no",
-   "note": null,
+   "note": "Long cours et offshore ; le domestique norvégien est NHO Sjøfart (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
    "uuid": "f2abf3e3-5fb3-4786-a4f6-bca712e67cdd"
   },
   {
@@ -457988,7 +457986,7 @@
    "secteur": "transport maritime",
    "site": "https://sweship.se",
    "source": "https://sweship.se",
-   "note": null,
+   "note": "Svensk Sjöfart, pendant généraliste et international ; le domestique suédois est Skärgårdsredarna (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
    "uuid": "ce21816f-9540-4c04-a7b0-ba90f429f589"
   },
   {
@@ -458003,7 +458001,7 @@
    "secteur": "transport maritime",
    "site": "https://www.danishshipping.dk",
    "source": "https://www.danishshipping.dk",
-   "note": null,
+   "note": "Généraliste ; héberge le secrétariat de Færgerederierne, l'organisation des ferries domestiques (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
    "uuid": "6941323e-56e0-433a-b8e2-7a93fc1b1f49"
   },
   {
@@ -458018,7 +458016,7 @@
    "secteur": "transport maritime",
    "site": "https://kvnr.nl",
    "source": "https://kvnr.nl",
-   "note": null,
+   "note": "Association unique de type Armateurs de France ; les trois armements Wadden n'y forment qu'une coopération informelle (Zoute Veren) (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
    "uuid": "369491d7-1ff4-4e8a-926f-f83e6157f8e0"
   },
   {
@@ -458033,7 +458031,7 @@
    "secteur": "transport maritime",
    "site": "https://www.reederverband.de",
    "source": "https://www.reederverband.de",
-   "note": null,
+   "note": "Généraliste ; pas de fédération dédiée à la navigation domestique identifiée (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
    "uuid": "98c77ab3-e6d8-4b87-a6e2-53a074edbe23"
   },
   {
@@ -458048,7 +458046,7 @@
    "secteur": "transport maritime",
    "site": "https://shipowners.fi",
    "source": "https://shipowners.fi",
-   "note": null,
+   "note": "Généraliste ; pas d'organisation domestique distincte (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
    "uuid": "bfa6667d-9fac-454c-8109-810a8d67c3fd"
   },
   {
@@ -458063,7 +458061,7 @@
    "secteur": "transport maritime",
    "site": "https://www.anave.es",
    "source": "https://www.anave.es",
-   "note": null,
+   "note": "Unique en Espagne ; pas d'organisation domestique distincte identifiée (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
    "uuid": "d6f7f754-b7dd-49eb-989e-05e738c3fca1"
   },
   {
@@ -458078,7 +458076,7 @@
    "secteur": "transport maritime",
    "site": "https://www.confitarma.it",
    "source": "https://www.confitarma.it",
-   "note": null,
+   "note": "Fondée 1901 (Confindustria), signataire des conventions collectives ; dualité conflictuelle avec Assarmatori depuis la scission de 2018 (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
    "uuid": "20e891e9-9a22-42f1-91f3-1926654ef1fe"
   },
   {
@@ -458093,8 +458091,143 @@
    "secteur": "transport maritime",
    "site": "https://www.ukchamberofshipping.com",
    "source": "https://www.ukchamberofshipping.com",
-   "note": "Site joignable mais filtrant les robots (403 vérifié le 2026-09-08).",
+   "note": "Environ 200 membres ; aucune fédération des opérateurs domestiques au Royaume-Uni (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). Site joignable mais filtrant les robots (403 vérifié le 2026-09-08).",
    "uuid": "4e18bbfe-1bf9-45a1-a38f-4af31b4c7d85"
+  },
+  {
+   "id": "org-nho-sjofart",
+   "nom": "NHO Sjøfart",
+   "nom_complet": "Federation of Norwegian Coastal Shipping",
+   "type": "organisation d'armateurs domestiques",
+   "pays": "Norvège",
+   "represente": [
+    "operateurs"
+   ],
+   "secteur": "navigation domestique",
+   "site": "https://www.nho.no",
+   "source": "https://en.wikipedia.org/wiki/Federation_of_Norwegian_Coastal_Shipping",
+   "note": "30 compagnies, signataire des conventions collectives, environ 5 500 marins (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). Pendant domestique de Norges Rederiforbund : la dualité patronale norvégienne est bâtie sur la distinction des métiers, comme en France. L'étude ACF le cite comme l'analogue le plus proche du groupement.",
+   "uuid": "a9a237a9-a375-460e-89b1-0b3c1a4f1447"
+  },
+  {
+   "id": "org-skargardsredarna",
+   "nom": "Skärgårdsredarna",
+   "nom_complet": null,
+   "type": "organisation d'armateurs domestiques",
+   "pays": "Suède",
+   "represente": [
+    "operateurs"
+   ],
+   "secteur": "navigation domestique d'archipel",
+   "site": "https://skargardsredarna.se",
+   "source": "https://skargardsredarna.se/om-oss/vad-ar-skargardsredarna",
+   "note": "Fondée en 1988 sous le nom SWEREF. Environ 110 armements membres, publics ou privés, 330 à 350 navires, plus de 35 M passagers et 12 M véhicules par an (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). Adhésion large incluant les régies publiques : modèle cité par l'étude ACF. Pendant généraliste : Svensk Sjöfart (Sveriges Redareförening).",
+   "uuid": "c4005ef6-a80f-47f5-9912-51032bbb53c1"
+  },
+  {
+   "id": "org-faergerederierne",
+   "nom": "Færgerederierne",
+   "nom_complet": null,
+   "type": "organisation professionnelle de ferries",
+   "pays": "Danemark",
+   "represente": [
+    "operateurs"
+   ],
+   "secteur": "ferries domestiques",
+   "site": null,
+   "source": null,
+   "note": "Organisation professionnelle des ferries ; secrétariat hébergé par Danske Rederier (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
+   "uuid": "05abd622-b25b-4930-88ce-9d0ed1ce129e"
+  },
+  {
+   "id": "org-faergesekretariatet",
+   "nom": "Færgesekretariatet",
+   "nom_complet": "Det Fælles Færgesekretariat",
+   "type": "fédération de collectivités",
+   "pays": "Danemark",
+   "represente": [
+    "operateurs"
+   ],
+   "secteur": "ferries communaux (maîtres d'ouvrage)",
+   "site": "https://faergesekr.dk",
+   "source": "https://faergesekr.dk",
+   "note": "Créé le 1.3.2015 par les 18 communes à îles, siège à Ærøskøbing. Projet de ferry standardisé électrique (~1 Md DKK) avec Odense Maritime Technology et PensionDanmark. Miroir des Départements et Régions françaises propriétaires (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
+   "uuid": "15c00693-e28b-4044-bea5-91f80d778368"
+  },
+  {
+   "id": "org-seen",
+   "nom": "SEEN",
+   "nom_complet": "Association of Passenger Shipping Companies",
+   "type": "organisation d'armateurs domestiques",
+   "pays": "Grèce",
+   "represente": [
+    "operateurs"
+   ],
+   "secteur": "navigation domestique et insulaire",
+   "site": null,
+   "source": null,
+   "note": "Fondée en 1921, signataire de la convention collective des équipages et partenaire officiel du gouvernement sur la politique insulaire (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). Pendant long cours : Union of Greek Shipowners.",
+   "uuid": "9137519b-8805-4a97-a7d2-5bd131fa53d5"
+  },
+  {
+   "id": "org-assarmatori",
+   "nom": "Assarmatori",
+   "nom_complet": null,
+   "type": "organisation d'armateurs",
+   "pays": "Italie",
+   "represente": [
+    "operateurs"
+   ],
+   "secteur": "cabotage insulaire (via Fedarlinea)",
+   "site": "https://assarmatori.eu",
+   "source": "https://it.wikipedia.org/wiki/Assarmatori",
+   "note": "Créée le 15.1.2018 sous Confcommercio (président Stefano Messina) d'une scission de Confitarma ; intègre Fedarlinea, l'association du cabotage insulaire (Moby, Tirrenia, SNAV, Delcomar, Maddalena Lines, Toremar, Caremar). Dualité par scission politique (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). Site filtrant les robots (403 vérifié le 08/09/2026).",
+   "uuid": "c481692b-05a0-4d44-bc7c-dc01a38941f2"
+  },
+  {
+   "id": "org-mare-nostrum",
+   "nom": "Mare Nostrum",
+   "nom_complet": "Croatian Shipowners' Association Mare Nostrum",
+   "type": "organisation d'armateurs",
+   "pays": "Croatie",
+   "represente": [
+    "operateurs"
+   ],
+   "secteur": "transport maritime",
+   "site": "https://csamarenostrum.hr",
+   "source": "https://csamarenostrum.hr/en/o_nama",
+   "note": "9 membres dont Jadrolinija, signataire de la convention collective des marins croates, membre de l'ECSA depuis le 1.1.2023 (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). Pas d'organisation domestique distincte en Croatie.",
+   "uuid": "6f0e2516-0a93-4eb4-8598-020f10d28da3"
+  },
+  {
+   "id": "org-irish-chamber",
+   "nom": "Irish Chamber of Shipping",
+   "nom_complet": null,
+   "type": "organisation d'armateurs",
+   "pays": "Irlande",
+   "represente": [
+    "operateurs"
+   ],
+   "secteur": "transport maritime",
+   "site": null,
+   "source": "https://ics-shipping.org/organisation/irish-chamber-of-shipping",
+   "note": "Orientée grands armements ; les petits opérateurs insulaires irlandais ne sont pas fédérés : c'est l'État qui structure (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). Site propre injoignable au 08/09/2026.",
+   "uuid": "d10d9517-35ab-4d68-b534-4031f0c66c70"
+  },
+  {
+   "id": "org-ugs",
+   "nom": "Union of Greek Shipowners",
+   "nom_complet": null,
+   "type": "organisation d'armateurs",
+   "pays": "Grèce",
+   "represente": [
+    "operateurs"
+   ],
+   "secteur": "long cours",
+   "site": "https://www.ugs.gr",
+   "source": "https://www.ugs.gr",
+   "note": "Pendant long cours de la SEEN (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
+   "uuid": "95888ae3-f4ac-4a80-8e13-34262a69cbeb"
   }
  ]
 }
