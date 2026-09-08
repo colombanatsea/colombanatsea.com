@@ -63,3 +63,5 @@ User-agent: Omgilibot
 Disallow: /
 
 Sitemap: https://colombanatsea.com/sitemap.xml
+
+Disallow: /sauvegarde-interne/
