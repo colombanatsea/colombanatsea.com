@@ -53350,7 +53350,7 @@
      "cotier_motif": "hors périmètre de la flotte côtière (type : pilotine)",
      "id": "nav-47b211dc0b98",
      "chantier_id": "jfa-yachts-concarneau",
-     "operateur_id": "ope-station-de-pilotage-du-havre-fecamp-121i317",
+     "operateur_id": "ope-station-de-pilotage-du-havre-fecamp-532qrf",
      "uuid": "ee60e0f7-e93c-48e8-a32c-8066bbabf111",
      "pavillon_registre": "France"
     },
@@ -372523,9 +372523,11 @@
    "nom": "Station de pilotage du Havre-Fécamp",
    "alias": [
     "Station de pilotage du Havre-Fécamp",
-    "Pilotage du Havre-Fécamp"
+    "Pilotage du Havre-Fécamp",
+    "Station de pilotage du Havre-Fecamp",
+    "Station de pilotage du Havre - Fecamp"
    ],
-   "navires": 4,
+   "navires": 5,
    "ville": "Le Havre",
    "pays": "France",
    "lat": 49.483742,
@@ -372536,7 +372538,19 @@
    "nom_officiel": null,
    "nature_du_point": "siege",
    "site": null,
-   "confiance": "moyenne"
+   "confiance": "moyenne",
+   "appartenance": [
+    "FFPM",
+    "AdF"
+   ],
+   "fusions": [
+    {
+     "absorbe": "ope-station-de-pilotage-du-havre-fecamp-121i317",
+     "nom": "Station de pilotage du Havre - Fecamp",
+     "coques": 1,
+     "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (la FFPM porte une seule station du Havre-Fécamp ; les deux fiches portaient le même nom)"
+    }
+   ]
   },
   {
    "id": "ope-stirling-shipping",
@@ -376946,7 +376960,8 @@
    "nom": "Station de pilotage de la Seine (Rouen/Caen/Dieppe)",
    "alias": [
     "Station de pilotage de la Seine (Rouen/Caen/Dieppe)",
-    "Station de pilotage de la Seine"
+    "Station de pilotage de la Seine",
+    "Pilotage de La Seine"
    ],
    "navires": 2,
    "ville": null,
@@ -376955,7 +376970,11 @@
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "57af7eee-4c5b-4469-aedd-8750e7475b67"
+   "uuid": "57af7eee-4c5b-4469-aedd-8750e7475b67",
+   "appartenance": [
+    "FFPM",
+    "AdF"
+   ]
   },
   {
    "id": "ope-stewart-buchan-et-david-cardno",
@@ -387932,7 +387951,8 @@
    "cle": "pilotes de toulon",
    "nom": "Pilotes de Toulon",
    "alias": [
-    "Pilotes de Toulon"
+    "Pilotes de Toulon",
+    "Station de pilotage de Toulon-La Seyne"
    ],
    "navires": 1,
    "ville": null,
@@ -387941,7 +387961,10 @@
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "fe8042e8-8283-45ac-81e2-a9765d83272d"
+   "uuid": "fe8042e8-8283-45ac-81e2-a9765d83272d",
+   "appartenance": [
+    "FFPM"
+   ]
   },
   {
    "id": "ope-plaisanciers",
@@ -390665,7 +390688,11 @@
    "nom_officiel": null,
    "nature_du_point": "siege",
    "site": null,
-   "confiance": "moyenne"
+   "confiance": "moyenne",
+   "appartenance": [
+    "FFPM",
+    "AdF"
+   ]
   },
   {
    "id": "ope-station-de-pilotage-de-la-loire",
@@ -390702,7 +390729,10 @@
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "4b9d854b-4a5b-41ee-b1a8-ae7ff5bcf348"
+   "uuid": "4b9d854b-4a5b-41ee-b1a8-ae7ff5bcf348",
+   "appartenance": [
+    "FFPM"
+   ]
   },
   {
    "id": "ope-station-de-pilotage-de-sete",
@@ -390718,30 +390748,18 @@
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "e7b52656-23e4-48aa-9dc2-7833e55d175c"
-  },
-  {
-   "id": "ope-station-de-pilotage-du-havre-fecamp-121i317",
-   "cle": "station de pilotage du havre - fecamp",
-   "nom": "Station de pilotage du Havre - Fecamp",
-   "alias": [
-    "Station de pilotage du Havre - Fecamp"
-   ],
-   "navires": 1,
-   "ville": null,
-   "pays": null,
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "source": null,
-   "uuid": "5a3fb4c8-f11a-4f10-a585-024cb6c45ffd"
+   "uuid": "e7b52656-23e4-48aa-9dc2-7833e55d175c",
+   "appartenance": [
+    "FFPM"
+   ]
   },
   {
    "id": "ope-station-de-pilotage-nice-cannes-villefra-hqzdqh",
    "cle": "station de pilotage nice-cannes-villefranche",
    "nom": "Station de Pilotage Nice-Cannes-Villefranche",
    "alias": [
-    "Station de Pilotage Nice-Cannes-Villefranche"
+    "Station de Pilotage Nice-Cannes-Villefranche",
+    "Station de pilotage de Nice-Cannes-Villefranche"
    ],
    "navires": 1,
    "ville": null,
@@ -390750,7 +390768,10 @@
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "a32186b8-2aaf-49fc-ac89-8a330bd7b511"
+   "uuid": "a32186b8-2aaf-49fc-ac89-8a330bd7b511",
+   "appartenance": [
+    "FFPM"
+   ]
   },
   {
    "id": "ope-stavanger-dampskipsselskap",
@@ -395479,36 +395500,6 @@
    "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/930005228"
   },
   {
-   "id": "ope-federation-francaise-des-pilotes-maritimes",
-   "cle": "federation francaise des pilotes maritimes",
-   "nom": "Federation Française des Pilotes Maritimes",
-   "nom_officiel": null,
-   "alias": [
-    "Federation Française des Pilotes Maritimes"
-   ],
-   "navires": 0,
-   "ville": "Paris",
-   "pays": "France",
-   "lat": 48.87967,
-   "lon": 2.318179,
-   "geo_precision": "site",
-   "site": "https://pilotes-maritimes.com/",
-   "source": "https://www.marine-marchande.net/compagnies/compagnies.htm",
-   "confiance": "moyenne",
-   "annuaire": {
-    "source": "https://www.marine-marchande.net/compagnies/compagnies.htm",
-    "source_externe": "https://pilotes-maritimes.com/",
-    "validation": "site",
-    "le": "2026-09-02"
-   },
-   "uuid": "f0c886df-b850-4810-b99a-bc53bbd8af11",
-   "nature_du_point": "siege",
-   "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification site : https://pilotes-maritimes.com/ ; SIRENE : aucun accord nom + commune ; 31 resultats lus",
-   "appartenance": [
-    "AdF"
-   ]
-  },
-  {
    "id": "ope-france-lng-shipping",
    "cle": "france lng shipping",
    "nom": "France LNG Shipping",
@@ -395758,7 +395749,8 @@
    "nom_officiel": "PILOTAGE DE LA GIRONDE",
    "alias": [
     "Pilotage de la Gironde",
-    "PILOTAGE DE LA GIRONDE"
+    "PILOTAGE DE LA GIRONDE",
+    "Pilotage Gegironde Bordeaux"
    ],
    "navires": 0,
    "ville": "Bassens",
@@ -395782,7 +395774,11 @@
    "nature_du_point": "siege",
    "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification sirene : https://annuaire-entreprises.data.gouv.fr/entreprise/775582927 ; SIRENE : creation de la personne morale le 1985-04-01",
    "fondation": 1985,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/775582927"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/775582927",
+   "appartenance": [
+    "FFPM",
+    "AdF"
+   ]
   },
   {
    "id": "ope-sdi-societe-de-dragage-international",
@@ -396095,7 +396091,8 @@
    "nom_officiel": "THOMAS SERVICES MARITIMES",
    "alias": [
     "Thomas Services Maritimes",
-    "THOMAS SERVICES MARITIMES"
+    "THOMAS SERVICES MARITIMES",
+    "TSM"
    ],
    "navires": 22,
    "ville": "Rouen",
@@ -396119,7 +396116,10 @@
    "nature_du_point": "siege",
    "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification sirene : https://annuaire-entreprises.data.gouv.fr/entreprise/442176749 ; SIRENE : creation de la personne morale le 2002-06-01 ; adresse de la page : 8 Bd Ferdinand de Lesseps 76000 Rouen",
    "fondation": 2002,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/442176749"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/442176749",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-towt-trans-oceanic-wind-transport",
@@ -402899,6 +402899,487 @@
    "source": null,
    "confiance": null,
    "uuid": "ec0247e6-a589-42fe-81ec-ca51ad73dcd9"
+  },
+  {
+   "id": "ope-pilotage-de-port-la-nouvelle-&-port-vendres-f53096",
+   "cle": "pilotage de port la nouvelle & port vendres",
+   "nom": "Pilotage de Port La Nouvelle & Port Vendres",
+   "nom_officiel": "STATION PILOTAGE PORT NOUV PORT VENDRES",
+   "alias": [
+    "Pilotage de Port La Nouvelle & Port Vendres",
+    "PILOTAGE DE PORT LA NOUVELLE & PORT VENDRES"
+   ],
+   "navires": 0,
+   "ville": "Port-la-Nouvelle",
+   "pays": "France",
+   "lat": 42.51976990000001,
+   "lon": 3.1105072,
+   "nature_du_point": "siege",
+   "geo_precision": "site",
+   "site": "https://sites.google.com/site/pilonov",
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+   "confiance": "moyenne",
+   "siren": "343708970",
+   "adresse": "1246, avenue de la Mer 11210 PORT LA NOUVELLE",
+   "annuaire": {
+    "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+    "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/343708970",
+    "validation": "sirene",
+    "le": "2026-09-09"
+   },
+   "appartenance": [
+    "FFPM"
+   ],
+   "uuid": "e8f1e49f-964a-4ff6-bd73-c291bd83ede9"
+  },
+  {
+   "id": "ope-pilotage-ports-boulogne-calais-881603",
+   "cle": "pilotage ports boulogne calais",
+   "nom": "Pilotage Ports Boulogne Calais",
+   "nom_officiel": "SYNDICAT PILOTES STATION DE BOULOGNE-MER",
+   "alias": [
+    "Pilotage Ports Boulogne Calais",
+    "PILOTAGE PORTS BOULOGNE CALAIS"
+   ],
+   "navires": 0,
+   "ville": "Boulogne-sur-Mer",
+   "pays": "France",
+   "lat": 50.9606076,
+   "lon": 1.8509278,
+   "nature_du_point": "siege",
+   "geo_precision": "site",
+   "site": null,
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+   "confiance": "moyenne",
+   "siren": "783945918",
+   "adresse": "28, rue Jean-Noël Dubout 62100 CALAIS",
+   "annuaire": {
+    "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+    "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/783945918",
+    "validation": "sirene",
+    "le": "2026-09-09"
+   },
+   "appartenance": [
+    "FFPM"
+   ],
+   "uuid": "79a2f96f-f533-4a7c-b84e-8b1a310c91db"
+  },
+  {
+   "id": "ope-pilotage-de-cherbourg-4756c0",
+   "cle": "pilotage de cherbourg",
+   "nom": "Pilotage de Cherbourg",
+   "nom_officiel": "SYND DES PILOTES DE CHERBOURG",
+   "alias": [
+    "Pilotage de Cherbourg",
+    "PILOTAGE DE CHERBOURG"
+   ],
+   "navires": 0,
+   "ville": "Cherbourg-en-Cotentin",
+   "pays": "France",
+   "lat": 49.6406864,
+   "lon": -1.6183897,
+   "nature_du_point": "siege",
+   "geo_precision": "site",
+   "site": "http://pilotagecherbourg.e-monsite.com/",
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+   "confiance": "moyenne",
+   "siren": "780871406",
+   "adresse": "Quai Général Lawton Collins, 50100 Cherbourg-en-Cotentin",
+   "annuaire": {
+    "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+    "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/780871406",
+    "validation": "sirene",
+    "le": "2026-09-09"
+   },
+   "appartenance": [
+    "FFPM"
+   ],
+   "uuid": "8e0cc4d5-810d-446b-81a6-6ede41fb2063"
+  },
+  {
+   "id": "ope-station-de-pilotage-du-treport-43c406",
+   "cle": "station de pilotage du treport",
+   "nom": "Station de pilotage du Treport",
+   "nom_officiel": "SYND DES PILOTES MARITIMES DU TREPORT",
+   "alias": [
+    "Station de pilotage du Treport",
+    "STATION DE PILOTAGE DU TREPORT"
+   ],
+   "navires": 0,
+   "ville": "Le Tréport",
+   "pays": "France",
+   "lat": 50.05916999999999,
+   "lon": 1.382472,
+   "nature_du_point": "siege",
+   "geo_precision": "site",
+   "site": null,
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+   "confiance": "moyenne",
+   "siren": "402282552",
+   "adresse": "8 Lotissement le Clos 76260 ETALONDES",
+   "annuaire": {
+    "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+    "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/402282552",
+    "validation": "sirene",
+    "le": "2026-09-09"
+   },
+   "appartenance": [
+    "FFPM"
+   ],
+   "uuid": "545a8edc-1557-4133-b492-24f26ab8ad43"
+  },
+  {
+   "id": "ope-station-de-pilotage-de-brest-concarneau-odet-071b6d",
+   "cle": "station de pilotage de brest-concarneau-odet",
+   "nom": "Station de pilotage de Brest-Concarneau-Odet",
+   "nom_officiel": "SYNDICAT DES PILOTES STATION DE BREST",
+   "alias": [
+    "Station de pilotage de Brest-Concarneau-Odet",
+    "STATION DE PILOTAGE DE BREST-CONCARNEAU-ODET"
+   ],
+   "navires": 0,
+   "ville": "Brest",
+   "pays": "France",
+   "lat": 48.390394,
+   "lon": -4.486076,
+   "nature_du_point": "siege",
+   "geo_precision": "site",
+   "site": null,
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+   "confiance": "moyenne",
+   "siren": "777497611",
+   "adresse": "3, rue Aldéric Lecomte 29200 BREST",
+   "annuaire": {
+    "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+    "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/777497611",
+    "validation": "sirene",
+    "le": "2026-09-09"
+   },
+   "appartenance": [
+    "FFPM"
+   ],
+   "uuid": "e4311cc9-04b4-46c6-9333-3993e84e856d"
+  },
+  {
+   "id": "ope-station-de-pilotage-de-lorient-e101d7",
+   "cle": "station de pilotage de lorient",
+   "nom": "Station de pilotage de Lorient",
+   "nom_officiel": "SYNDICAT DES PILOTES STATION DE LORIENT",
+   "alias": [
+    "Station de pilotage de Lorient",
+    "STATION DE PILOTAGE DE LORIENT"
+   ],
+   "navires": 0,
+   "ville": "Lorient",
+   "pays": "France",
+   "lat": 47.7352603,
+   "lon": -3.3712814,
+   "nature_du_point": "siege",
+   "geo_precision": "site",
+   "site": null,
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+   "confiance": "moyenne",
+   "siren": "777842287",
+   "adresse": "6, rue Didier Bestin 56100 LORIENT",
+   "annuaire": {
+    "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+    "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/777842287",
+    "validation": "sirene",
+    "le": "2026-09-09"
+   },
+   "appartenance": [
+    "FFPM"
+   ],
+   "uuid": "a6082555-6c39-469d-8da0-37a613b1fbee"
+  },
+  {
+   "id": "ope-station-de-pilotage-de-marseille-fos-e4a5cf",
+   "cle": "station de pilotage de marseille-fos",
+   "nom": "Station de pilotage de Marseille-Fos",
+   "nom_officiel": "SYNDICAT DES PILOTES DE MARSEILLE",
+   "alias": [
+    "Station de pilotage de Marseille-Fos",
+    "STATION DE PILOTAGE DE MARSEILLE-FOS"
+   ],
+   "navires": 0,
+   "ville": "Marseille",
+   "pays": "France",
+   "lat": 43.29572659999999,
+   "lon": 5.366113899999999,
+   "nature_du_point": "siege",
+   "geo_precision": "site",
+   "site": "http://www.pilotage-mrs.fr",
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+   "confiance": "moyenne",
+   "siren": "775558471",
+   "adresse": "190, quai du Port 13002 MARSEILLE",
+   "annuaire": {
+    "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+    "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/775558471",
+    "validation": "sirene",
+    "le": "2026-09-09"
+   },
+   "appartenance": [
+    "FFPM",
+    "AdF"
+   ],
+   "uuid": "ff6c6a3e-1334-48ff-97ed-d4a7df2a19fd"
+  },
+  {
+   "id": "ope-station-de-pilotage-de-haute-corse-9ed59a",
+   "cle": "station de pilotage de haute corse",
+   "nom": "Station de pilotage de Haute Corse",
+   "nom_officiel": "SYNDICAT PILOTES STATION BASTIA",
+   "alias": [
+    "Station de pilotage de Haute Corse",
+    "STATION DE PILOTAGE DE HAUTE CORSE"
+   ],
+   "navires": 0,
+   "ville": "Bastia",
+   "pays": "France",
+   "lat": 42.704458,
+   "lon": 9.456053,
+   "nature_du_point": "siege",
+   "geo_precision": "site",
+   "site": null,
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+   "confiance": "moyenne",
+   "siren": "329023766",
+   "adresse": "Capitainerie du Port de Commerce 20200 BASTIA",
+   "annuaire": {
+    "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+    "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/329023766",
+    "validation": "sirene",
+    "le": "2026-09-09"
+   },
+   "appartenance": [
+    "FFPM"
+   ],
+   "uuid": "1aaae0e1-fb42-4402-8710-ba57fe80a720"
+  },
+  {
+   "id": "ope-station-de-pilotage-de-corse-du-sud-21e563",
+   "cle": "station de pilotage de corse du sud",
+   "nom": "Station de pilotage de Corse du Sud",
+   "nom_officiel": "SERVICE PILOTAGE DU PORT (Ajaccio)",
+   "alias": [
+    "Station de pilotage de Corse du Sud",
+    "STATION DE PILOTAGE DE CORSE DU SUD"
+   ],
+   "navires": 0,
+   "ville": "Ajaccio",
+   "pays": "France",
+   "lat": 41.9187484,
+   "lon": 8.7435371,
+   "nature_du_point": "siege",
+   "geo_precision": "site",
+   "site": null,
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+   "confiance": "moyenne",
+   "siren": "782985311",
+   "adresse": "Jetée de la Citadelle 20000 AJACCIO",
+   "annuaire": {
+    "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+    "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/782985311",
+    "validation": "sirene",
+    "le": "2026-09-09"
+   },
+   "appartenance": [
+    "FFPM"
+   ],
+   "uuid": "87a4d47e-9fef-45f0-8ac5-03a8ac772f32"
+  },
+  {
+   "id": "ope-station-de-pilotage-de-la-rochelle-charente-34d78c",
+   "cle": "station de pilotage de la rochelle charente",
+   "nom": "Station de pilotage de La Rochelle Charente",
+   "nom_officiel": "SYNDICAT PROFESSIONNEL DES PILOTES MARITIMES (La Rochelle)",
+   "alias": [
+    "Station de pilotage de La Rochelle Charente",
+    "STATION DE PILOTAGE DE LA ROCHELLE CHARENTE"
+   ],
+   "navires": 0,
+   "ville": "La Rochelle",
+   "pays": "France",
+   "lat": 46.160329,
+   "lon": -1.151139,
+   "nature_du_point": "siege",
+   "geo_precision": "site",
+   "site": "https://lrpilots.com/",
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+   "confiance": "moyenne",
+   "siren": "781333364",
+   "adresse": "160 rue du Sénégal 17000 La Rochelle",
+   "annuaire": {
+    "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+    "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/781333364",
+    "validation": "sirene",
+    "le": "2026-09-09"
+   },
+   "appartenance": [
+    "FFPM"
+   ],
+   "uuid": "271a2adf-4db3-4aae-ac8d-cb87f1cc60c5"
+  },
+  {
+   "id": "ope-station-de-pilotage-de-la-guyane-port-du-degrad-des-cannes-b8604a",
+   "cle": "station de pilotage de la guyane port du degrad-des cannes",
+   "nom": "Station de pilotage de La Guyane Port du Degrad-Des Cannes",
+   "nom_officiel": "SYNDICAT DES PILOTES MARITIMES DES PORTS ET RIVIÈRES DE GUYANE (Remire-Montjoly)",
+   "alias": [
+    "Station de pilotage de La Guyane Port du Degrad-Des Cannes",
+    "STATION DE PILOTAGE DE LA GUYANE PORT DU DEGRAD-DES CANNES"
+   ],
+   "navires": 0,
+   "ville": "Remire-Montjoly",
+   "pays": "France",
+   "lat": 4.855395,
+   "lon": -52.272337,
+   "nature_du_point": "siege",
+   "geo_precision": "site",
+   "site": null,
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+   "confiance": "moyenne",
+   "siren": "418627741",
+   "adresse": "Dégrad des Cannes , 97354 REMIRE MONTJOLY",
+   "annuaire": {
+    "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+    "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/418627741",
+    "validation": "sirene",
+    "le": "2026-09-09"
+   },
+   "appartenance": [
+    "FFPM"
+   ],
+   "uuid": "4af85a2e-ff38-40c8-b42e-68d99c51b282"
+  },
+  {
+   "id": "ope-station-de-pilotage-de-la-martinique-fc7939",
+   "cle": "station de pilotage de la martinique",
+   "nom": "Station de pilotage de La Martinique",
+   "nom_officiel": "SYNDICAT PILOTES STATION DE MARTINIQUE (Fort-de-France)",
+   "alias": [
+    "Station de pilotage de La Martinique",
+    "STATION DE PILOTAGE DE LA MARTINIQUE"
+   ],
+   "navires": 0,
+   "ville": "Fort-de-France",
+   "pays": "France",
+   "lat": 14.608652,
+   "lon": -61.083065,
+   "nature_du_point": "siege",
+   "geo_precision": "site",
+   "site": null,
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+   "confiance": "moyenne",
+   "siren": "312826720",
+   "adresse": "22 rue Ernest DEPROGE 97200  Fort-de-France 97200",
+   "annuaire": {
+    "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+    "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/312826720",
+    "validation": "sirene",
+    "le": "2026-09-09"
+   },
+   "appartenance": [
+    "FFPM"
+   ],
+   "uuid": "f2ae920d-04f8-4392-b7ef-9590103d5c3c"
+  },
+  {
+   "id": "ope-station-de-pilotage-de-mayotte-81f90e",
+   "cle": "station de pilotage de mayotte",
+   "nom": "Station de pilotage de Mayotte",
+   "nom_officiel": "SYNDIC PROFES PILOTES MARITIMES MAYOTTE",
+   "alias": [
+    "Station de pilotage de Mayotte",
+    "STATION DE PILOTAGE DE MAYOTTE"
+   ],
+   "navires": 0,
+   "ville": "Mamoudzou",
+   "pays": "France",
+   "lat": -12.724246,
+   "lon": 45.166557,
+   "nature_du_point": "siege",
+   "geo_precision": "site",
+   "site": "http://www.pilotage.net/fr/index.html",
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+   "confiance": "moyenne",
+   "siren": "435393822",
+   "adresse": "BP 426 KAWENI 97600 MAMOUDZOU",
+   "annuaire": {
+    "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+    "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/435393822",
+    "validation": "sirene",
+    "le": "2026-09-09"
+   },
+   "appartenance": [
+    "FFPM"
+   ],
+   "uuid": "4444e88e-d477-42bb-8ca3-e7d021e3d375"
+  },
+  {
+   "id": "ope-station-de-pilotage-de-la-guadeloupe-26062c",
+   "cle": "station de pilotage de la guadeloupe",
+   "nom": "Station de pilotage de La Guadeloupe",
+   "nom_officiel": "PILOT SERVICES GUADELOUPE",
+   "alias": [
+    "Station de pilotage de La Guadeloupe",
+    "STATION DE PILOTAGE DE LA GUADELOUPE"
+   ],
+   "navires": 0,
+   "ville": "Pointe-à-Pitre",
+   "pays": "France",
+   "lat": 16.2350002,
+   "lon": -61.53634649999999,
+   "nature_du_point": "siege",
+   "geo_precision": "site",
+   "site": "pilotage.guadeloupe@gmail.com ",
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+   "confiance": "moyenne",
+   "siren": "814827804",
+   "adresse": "31, Centre Saint John Perse 97110 POINTE A PITRE GUADELOUPE",
+   "annuaire": {
+    "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+    "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/814827804",
+    "validation": "sirene",
+    "le": "2026-09-09"
+   },
+   "appartenance": [
+    "FFPM"
+   ],
+   "uuid": "f1f674e1-8efd-462b-b220-da4614bbd459"
+  },
+  {
+   "id": "ope-station-de-pilotage-de-saint-pierre-et-miquelon-0bc531",
+   "cle": "station de pilotage de saint-pierre et miquelon",
+   "nom": "Station de pilotage de Saint-Pierre Et Miquelon",
+   "nom_officiel": "SYNDICAT PROFESSIONNELS DES PILOTES MARITIMES DE L'ARCHIPEL",
+   "alias": [
+    "Station de pilotage de Saint-Pierre Et Miquelon",
+    "STATION DE PILOTAGE DE SAINT-PIERRE ET MIQUELON"
+   ],
+   "navires": 0,
+   "ville": "Saint-Pierre",
+   "pays": "France",
+   "lat": 46.77887618026544,
+   "lon": -56.17213701938986,
+   "nature_du_point": "siege",
+   "geo_precision": "site",
+   "site": null,
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+   "confiance": "moyenne",
+   "siren": "812856722",
+   "adresse": "BD CONSTANT COLMAY BP4457 97500 SAINT PIERRE",
+   "annuaire": {
+    "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (carte des stations, 22 marqueurs)",
+    "source_externe": "https://annuaire-entreprises.data.gouv.fr/entreprise/812856722",
+    "validation": "sirene",
+    "le": "2026-09-09"
+   },
+   "appartenance": [
+    "FFPM"
+   ],
+   "uuid": "fe9df651-38df-4d1b-b9f4-39043e5a463c"
   }
  ],
  "navires": [
@@ -458513,6 +458994,28 @@
    "source": "https://www.ugs.gr",
    "note": "Pendant long cours de la SEEN.",
    "uuid": "95888ae3-f4ac-4a80-8e13-34262a69cbeb"
+  },
+  {
+   "id": "org-ffpm",
+   "nom": "FFPM",
+   "nom_complet": "Fédération Française des Pilotes Maritimes",
+   "type": "fédération professionnelle",
+   "pays": "France",
+   "represente": [
+    "operateurs"
+   ],
+   "secteur": "pilotage maritime",
+   "site": "https://pilotes-maritimes.com",
+   "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/",
+   "adresse": "74 rue du Rocher, 75008 Paris",
+   "cles_appartenance": [
+    "FFPM"
+   ],
+   "membre_de": [
+    "AdF"
+   ],
+   "uuid": "f0c886df-b850-4810-b99a-bc53bbd8af11",
+   "note": "Fédère les stations de pilotage de France (22 stations métropolitaines à sa carte, plus l'outre-mer). Adhérente d'Armateurs de France. Sa page « Stations de Pilotage France » est la graine de moisson des stations et de leurs bateaux pilotes."
   }
  ]
 }
