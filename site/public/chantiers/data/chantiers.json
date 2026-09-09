@@ -458621,7 +458621,12 @@
    "uuid": "7500be71-e429-4910-a6cc-e045b3bcdf63",
    "cles_appartenance": [
     "GICAN"
-   ]
+   ],
+   "lat": 48.8781,
+   "lon": 2.3113,
+   "geo_precision": "site",
+   "nature_du_point": "siege",
+   "adresse": "47 rue de Monceau, 75008 Paris"
   },
   {
    "id": "org-acf",
@@ -458657,7 +458662,12 @@
    "uuid": "ec55b81c-a6c2-4098-a5ce-fa1a0cdbf282",
    "cles_appartenance": [
     "AdF"
-   ]
+   ],
+   "lat": 48.8762,
+   "lon": 2.311,
+   "geo_precision": "site",
+   "nature_du_point": "siege",
+   "adresse": "13 rue du Docteur Lancereaux, 75008 Paris"
   },
   {
    "id": "org-aperma",
@@ -459000,7 +459010,11 @@
     "AdF"
    ],
    "uuid": "f0c886df-b850-4810-b99a-bc53bbd8af11",
-   "note": "Fédère les stations de pilotage de France (22 stations métropolitaines à sa carte, plus l'outre-mer). Adhérente d'Armateurs de France. Sa page « Stations de Pilotage France » est la graine de moisson des stations et de leurs bateaux pilotes."
+   "note": "Fédère les stations de pilotage de France (22 stations métropolitaines à sa carte, plus l'outre-mer). Adhérente d'Armateurs de France. Sa page « Stations de Pilotage France » est la graine de moisson des stations et de leurs bateaux pilotes.",
+   "lat": 48.8797,
+   "lon": 2.3182,
+   "geo_precision": "site",
+   "nature_du_point": "siege"
   }
  ]
 }
