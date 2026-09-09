@@ -372540,8 +372540,7 @@
    "site": null,
    "confiance": "moyenne",
    "appartenance": [
-    "FFPM",
-    "AdF"
+    "FFPM"
    ],
    "fusions": [
     {
@@ -376972,8 +376971,7 @@
    "source": null,
    "uuid": "57af7eee-4c5b-4469-aedd-8750e7475b67",
    "appartenance": [
-    "FFPM",
-    "AdF"
+    "FFPM"
    ]
   },
   {
@@ -390690,19 +390688,19 @@
    "site": null,
    "confiance": "moyenne",
    "appartenance": [
-    "FFPM",
-    "AdF"
+    "FFPM"
    ]
   },
   {
    "id": "ope-station-de-pilotage-de-la-loire",
    "cle": "station de pilotage de la loire",
-   "nom": "Station de Pilotage de la Loire (Les Sables-d'Olonne)",
+   "nom": "Pilotage de la Loire",
    "alias": [
+    "Pilotage de la Loire",
     "Station de Pilotage de la Loire (Les Sables-d'Olonne)",
-    "Pilotage de la Loire"
+    "Pilotes de la Loire"
    ],
-   "navires": 1,
+   "navires": 2,
    "ville": "Saint-Nazaire",
    "pays": "France",
    "lat": 47.271115,
@@ -390713,7 +390711,18 @@
    "nom_officiel": null,
    "nature_du_point": "siege",
    "site": null,
-   "confiance": "moyenne"
+   "confiance": "moyenne",
+   "appartenance": [
+    "FFPM"
+   ],
+   "fusions": [
+    {
+     "absorbe": "ope-pilotes-de-la-loire",
+     "nom": "Pilotes de la Loire",
+     "coques": 1,
+     "source": "https://pilotes-maritimes.com/contact/stations-de-pilotage-en-france/ (une seule station de la Loire à la carte FFPM) ; confirmation de l'opérateur, 2026-09-09"
+    }
+   ]
   },
   {
    "id": "ope-station-de-pilotage-de-papeete",
@@ -393848,28 +393857,6 @@
    ]
   },
   {
-   "id": "ope-pilotes-de-la-loire",
-   "cle": "pilotes de la loire",
-   "nom": "Pilotes de la Loire",
-   "nom_officiel": "Pilotes de la Loire",
-   "alias": [
-    "Pilotes de la Loire"
-   ],
-   "navires": 1,
-   "ville": null,
-   "pays": "France",
-   "lat": null,
-   "lon": null,
-   "geo_precision": null,
-   "site": null,
-   "source": null,
-   "confiance": null,
-   "uuid": "715505ed-dd65-429c-affd-ee9edc966982",
-   "appartenance": [
-    "AdF"
-   ]
-  },
-  {
    "id": "ope-st-management",
    "cle": "st management",
    "nom": "ST Management",
@@ -395776,8 +395763,7 @@
    "fondation": 1985,
    "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/775582927",
    "appartenance": [
-    "FFPM",
-    "AdF"
+    "FFPM"
    ]
   },
   {
@@ -403120,8 +403106,7 @@
     "le": "2026-09-09"
    },
    "appartenance": [
-    "FFPM",
-    "AdF"
+    "FFPM"
    ],
    "uuid": "ff6c6a3e-1334-48ff-97ed-d4a7df2a19fd"
   },
@@ -423507,7 +423492,7 @@
    "propulsion": [],
    "architecte": null,
    "client": null,
-   "operateur": "Pilotes de la Loire",
+   "operateur": "Pilotage de la Loire",
    "proprietaire": "Pilotes de la Loire",
    "pavillon": "France",
    "timeline": [],
@@ -423515,7 +423500,7 @@
    "source": "https://www.marine-marchande.net/Flotte/K-O/LaCouronneeIV.htm",
    "source_ref": "Fiche marine-marchande.net lue le 2026-09-02, confirmee par wikidata",
    "chantier_id": null,
-   "operateur_id": "ope-pilotes-de-la-loire",
+   "operateur_id": "ope-station-de-pilotage-de-la-loire",
    "sources_tierces": [
     "https://www.wikidata.org/wiki/Q52378424"
    ],
