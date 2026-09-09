@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Registre naval européen",
   "version": "0.1.0-mvp",
-  "date_maj": "2026-09-08",
+  "date_maj": "2026-09-09",
   "note": "Registre des chantiers navals européens et de leurs navires. Chaque champ porte sa source ; les champs non sourcés restent vides. Le taux de sourcing OPPOSABLE (source tierce, recevable, vivante) est mesuré par audit-sourcing.js et vaut 61 % au niveau du navire : le taux de remplissage, plus élevé, ne le remplace pas.",
   "perimetres_ref": {
    "construction-neuve": "Construction neuve",
@@ -368784,8 +368784,7 @@
    "appartenance": [
     "SPLMNA"
    ],
-   "uuid": "0e47b4ed-aa58-48dc-9614-ac1bc5b68061",
-   "note": "Le SPLMNA est une association : l'exploitant est la station de lamanage adhérente, pas le syndicat. Libellé « SPLMNA - Port de … » corrigé le 2026-09-08 (instruction de Colomban Monnier), ancien libellé conservé en alias."
+   "uuid": "0e47b4ed-aa58-48dc-9614-ac1bc5b68061"
   },
   {
    "id": "ope-douane-francaise",
@@ -369816,8 +369815,7 @@
    "appartenance": [
     "SPLMNA"
    ],
-   "uuid": "8705a05d-0b63-473c-a76b-5df3d92f8465",
-   "note": "Le SPLMNA est une association : l'exploitant est la station de lamanage adhérente, pas le syndicat. Libellé « SPLMNA - Port de … » corrigé le 2026-09-08 (instruction de Colomban Monnier), ancien libellé conservé en alias."
+   "uuid": "8705a05d-0b63-473c-a76b-5df3d92f8465"
   },
   {
    "id": "ope-tlv-tvm",
@@ -371375,8 +371373,7 @@
    "appartenance": [
     "SPLMNA"
    ],
-   "uuid": "db6a8070-d5ec-4b1c-aa52-4323f57f1a44",
-   "note": "Le SPLMNA est une association : l'exploitant est la station de lamanage adhérente, pas le syndicat. Libellé « SPLMNA - Port de … » corrigé le 2026-09-08 (instruction de Colomban Monnier), ancien libellé conservé en alias."
+   "uuid": "db6a8070-d5ec-4b1c-aa52-4323f57f1a44"
   },
   {
    "id": "ope-splmna-port-de-la-rochelle-wded9i",
@@ -371406,8 +371403,7 @@
    "appartenance": [
     "SPLMNA"
    ],
-   "uuid": "d34d2b6a-6d45-4bb9-8d59-383d56b332e7",
-   "note": "Le SPLMNA est une association : l'exploitant est la station de lamanage adhérente, pas le syndicat. Libellé « SPLMNA - Port de … » corrigé le 2026-09-08 (instruction de Colomban Monnier), ancien libellé conservé en alias."
+   "uuid": "d34d2b6a-6d45-4bb9-8d59-383d56b332e7"
   },
   {
    "id": "ope-subsea-7",
@@ -374058,8 +374054,7 @@
    "appartenance": [
     "SPLMNA"
    ],
-   "uuid": "edaff438-13e7-4d2e-ac1b-8f1e2f6ebba9",
-   "note": "Le SPLMNA est une association : l'exploitant est la station de lamanage adhérente, pas le syndicat. Libellé « SPLMNA - Port de … » corrigé le 2026-09-08 (instruction de Colomban Monnier), ancien libellé conservé en alias."
+   "uuid": "edaff438-13e7-4d2e-ac1b-8f1e2f6ebba9"
   },
   {
    "id": "ope-splmna-port-de-lorient-1f2j2sa",
@@ -374089,8 +374084,7 @@
    "appartenance": [
     "SPLMNA"
    ],
-   "uuid": "4fc1a9c0-5507-4203-8a1e-b7bd5e751855",
-   "note": "Le SPLMNA est une association : l'exploitant est la station de lamanage adhérente, pas le syndicat. Libellé « SPLMNA - Port de … » corrigé le 2026-09-08 (instruction de Colomban Monnier), ancien libellé conservé en alias."
+   "uuid": "4fc1a9c0-5507-4203-8a1e-b7bd5e751855"
   },
   {
    "id": "ope-spm-ferries",
@@ -380012,7 +380006,7 @@
      "absorbe": "ope-departement-de-la-charente-maritime-b1kt0l",
      "nom": "Departement de la Charente-Maritime (regie portuaire departementale)",
      "coques": 3,
-     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/221700016 (DEPARTEMENT DE LA CHARENTE-MARITIME, SIREN 221700016, actif, La Rochelle : une seule personne morale, la regie portuaire est un service de la collectivite ; confirmation de Colomban Monnier le 2026-09-08)"
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/221700016 (DEPARTEMENT DE LA CHARENTE-MARITIME, SIREN 221700016, actif, La Rochelle : une seule personne morale, la régie portuaire est un service de la collectivité)"
     }
    ]
   },
@@ -390469,8 +390463,7 @@
    "appartenance": [
     "SPLMNA"
    ],
-   "uuid": "8c6ca3bd-ab75-4c73-8e53-107a21546638",
-   "note": "Le SPLMNA est une association : l'exploitant est la station de lamanage adhérente, pas le syndicat. Libellé « SPLMNA - Port de … » corrigé le 2026-09-08 (instruction de Colomban Monnier), ancien libellé conservé en alias."
+   "uuid": "8c6ca3bd-ab75-4c73-8e53-107a21546638"
   },
   {
    "id": "ope-station-de-pilotage-de-dunkerque",
@@ -457803,7 +457796,7 @@
    "timeline": [],
    "classification": null,
    "source": null,
-   "source_ref": "Déclaration de Colomban Monnier du 2026-09-08, qui le sait de l'opérateur (Département de la Charente-Maritime, collectivité publique) : Babelsea, 113 UMS, 24,3 m. IMO communiqué « 929405 » NON RETENU : six chiffres, et la clé de contrôle calculée (9294056) appartient au remorqueur OLEG STRASHNOV (vérifié VesselFinder le 2026-09-08) ; aucun navire « Babelsea » n'est recensé par VesselFinder. IMO à reconfirmer auprès du CD17. Correction du 2026-09-08, jour meme : le declarant s est trompe de departement, ces deux coques sont du Departement des Pyrenees-Atlantiques (le64.fr), pas de la Charente-Maritime. Le libelle et la rattachement sont corriges, la trace reste ici.",
+   "source_ref": "Flotte déclarée par l'exploitant (Département des Pyrénées-Atlantiques), relevée le 2026-09-08 : Babelsea, 113 UMS, 24,3 m. IMO communiqué « 929405 » NON RETENU : six chiffres, et la clé de contrôle calculée (9294056) appartient au remorqueur OLEG STRASHNOV (vérifié VesselFinder le 2026-09-08) ; aucun navire « Babelsea » n'est recensé par VesselFinder. IMO à confirmer auprès du CD64. Première affectation à la Charente-Maritime, corrigée le jour même.",
    "chantier_id": null,
    "operateur_id": "ope-departement-des-pyrenees-atlantiques-92ny69",
    "caractere": "public",
@@ -457839,7 +457832,7 @@
    "timeline": [],
    "classification": null,
    "source": null,
-   "source_ref": "Déclaration de Colomban Monnier du 2026-09-08, qui le sait de l'opérateur (Département de la Charente-Maritime, collectivité publique) : Artha, 2,06 UMS, 7,99 m. IMO communiqué « 940030 » NON RETENU : six chiffres, et la clé de contrôle calculée (9400306) appartient au porte-conteneurs GIALOVA (vérifié VesselFinder le 2026-09-08). IMO à reconfirmer auprès du CD17. Correction du 2026-09-08, jour meme : le declarant s est trompe de departement, ces deux coques sont du Departement des Pyrenees-Atlantiques (le64.fr), pas de la Charente-Maritime. Le libelle et la rattachement sont corriges, la trace reste ici.",
+   "source_ref": "Flotte déclarée par l'exploitant (Département des Pyrénées-Atlantiques), relevée le 2026-09-08 : Artha, 2,06 UMS, 7,99 m. IMO communiqué « 940030 » NON RETENU : six chiffres, et la clé de contrôle calculée (9400306) appartient au porte-conteneurs GIALOVA (vérifié VesselFinder le 2026-09-08). IMO à confirmer auprès du CD64. Première affectation à la Charente-Maritime, corrigée le jour même.",
    "chantier_id": null,
    "operateur_id": "ope-departement-des-pyrenees-atlantiques-92ny69",
    "caractere": "public",
@@ -457865,8 +457858,11 @@
    "secteur": "lamanage",
    "site": null,
    "source": null,
-   "note": "Association dont dépendent les stations de lamanage adhérentes (appartenance: SPLMNA). Ce n'est PAS une société exploitante : les stations sont les opérateurs. Instruction de Colomban Monnier du 2026-09-08. Sigle non expansé au registre, à confirmer auprès de la maison.",
-   "uuid": "0fbfc7dc-0666-4812-918a-0b11f62a3140"
+   "note": "Association dont dépendent les stations de lamanage adhérentes (appartenance: SPLMNA). Ce n'est pas une société exploitante : les stations sont les opérateurs. Sigle non expansé au registre, à confirmer auprès de la maison.",
+   "uuid": "0fbfc7dc-0666-4812-918a-0b11f62a3140",
+   "cles_appartenance": [
+    "SPLMNA"
+   ]
   },
   {
    "id": "org-gican",
@@ -457881,7 +457877,7 @@
    "secteur": "construction navale",
    "site": "https://gican.asso.fr",
    "source": "https://gican.asso.fr",
-   "note": "Organisation des chantiers et équipementiers français. Instruction de Colomban Monnier du 2026-09-08.",
+   "note": "Organisation des chantiers et équipementiers français.",
    "uuid": "7500be71-e429-4910-a6cc-e045b3bcdf63"
   },
   {
@@ -457896,8 +457892,11 @@
    "secteur": "maritime côtier",
    "site": "https://armateurscotiers.fr",
    "source": "https://armateurscotiers.fr",
-   "note": "Fondée en 1951 (30 compagnies adhérentes, 7 membres associés, 1 500 marins à l'été 2026, Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). La dualité patronale française a cinq équivalents en Europe : Norvège (NHO Sjøfart), Suède (Skärgårdsredarna), Danemark (Færgerederierne + Færgesekretariatet), Grèce (SEEN), Italie (Assarmatori/Fedarlinea). Compagnies listées sur armateurscotiers.fr. Instruction de Colomban Monnier du 2026-09-08.",
-   "uuid": "e67bcfcf-5149-48a5-8e14-62c928e2b943"
+   "note": "Fondée en 1951. Compagnies listées sur armateurscotiers.fr.",
+   "uuid": "e67bcfcf-5149-48a5-8e14-62c928e2b943",
+   "cles_appartenance": [
+    "ACF"
+   ]
   },
   {
    "id": "org-armateurs-de-france",
@@ -457911,7 +457910,7 @@
    "secteur": "transport maritime",
    "site": "https://www.armateursdefrance.org",
    "source": "https://www.armateursdefrance.org",
-   "note": "Compagnies adhérentes listées sur leur site. Instruction de Colomban Monnier du 2026-09-08.",
+   "note": "Compagnies adhérentes listées sur son site.",
    "uuid": "ec55b81c-a6c2-4098-a5ce-fa1a0cdbf282"
   },
   {
@@ -457926,7 +457925,7 @@
    "secteur": "remorquage maritime",
    "site": null,
    "source": null,
-   "note": "Branche du remorquage (CCN IDCC 5554 et 5555). Instruction de Colomban Monnier du 2026-09-08.",
+   "note": "Branche du remorquage (CCN IDCC 5554 et 5555).",
    "uuid": "187206d5-fe45-43ba-b5dd-616ae511f51e"
   },
   {
@@ -457941,8 +457940,11 @@
    "secteur": "navires à passagers côtiers, activité majoritairement saisonnière",
    "site": "https://www.armam.net",
    "source": "https://www.armam.net",
-   "note": "Adhérents ARMAM au registre via appartenance: ARMAM. Instruction de Colomban Monnier du 2026-09-08.",
-   "uuid": "63820cbe-22ca-4411-9325-a18a985372b8"
+   "note": "Adhérents ARMAM au registre via appartenance: ARMAM.",
+   "uuid": "63820cbe-22ca-4411-9325-a18a985372b8",
+   "cles_appartenance": [
+    "ARMAM"
+   ]
   },
   {
    "id": "org-comite-marseillais-armateurs",
@@ -457956,7 +457958,7 @@
    "secteur": "transport maritime",
    "site": null,
    "source": null,
-   "note": "Instruction de Colomban Monnier du 2026-09-08.",
+   "note": "Comité territorial des armateurs de France à Marseille.",
    "uuid": "275a6a83-5e90-4022-a6fb-3e6c99a4664d"
   },
   {
@@ -457971,7 +457973,7 @@
    "secteur": "transport maritime",
    "site": "https://rederi.no",
    "source": "https://rederi.no",
-   "note": "Long cours et offshore ; le domestique norvégien est NHO Sjøfart (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
+   "note": "Long cours et offshore ; le domestique norvégien est NHO Sjøfart.",
    "uuid": "f2abf3e3-5fb3-4786-a4f6-bca712e67cdd"
   },
   {
@@ -457986,7 +457988,7 @@
    "secteur": "transport maritime",
    "site": "https://sweship.se",
    "source": "https://sweship.se",
-   "note": "Svensk Sjöfart, pendant généraliste et international ; le domestique suédois est Skärgårdsredarna (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
+   "note": "Svensk Sjöfart, pendant généraliste et international ; le domestique suédois est Skärgårdsredarna.",
    "uuid": "ce21816f-9540-4c04-a7b0-ba90f429f589"
   },
   {
@@ -458001,7 +458003,7 @@
    "secteur": "transport maritime",
    "site": "https://www.danishshipping.dk",
    "source": "https://www.danishshipping.dk",
-   "note": "Généraliste ; héberge le secrétariat de Færgerederierne, l'organisation des ferries domestiques (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
+   "note": "Généraliste ; héberge le secrétariat de Færgerederierne, l'organisation des ferries domestiques.",
    "uuid": "6941323e-56e0-433a-b8e2-7a93fc1b1f49"
   },
   {
@@ -458016,7 +458018,7 @@
    "secteur": "transport maritime",
    "site": "https://kvnr.nl",
    "source": "https://kvnr.nl",
-   "note": "Association unique de type Armateurs de France ; les trois armements Wadden n'y forment qu'une coopération informelle (Zoute Veren) (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
+   "note": "Association unique des armateurs néerlandais ; les armements des Wadden n'y forment qu'une coopération informelle (Zoute Veren).",
    "uuid": "369491d7-1ff4-4e8a-926f-f83e6157f8e0"
   },
   {
@@ -458031,7 +458033,7 @@
    "secteur": "transport maritime",
    "site": "https://www.reederverband.de",
    "source": "https://www.reederverband.de",
-   "note": "Généraliste ; pas de fédération dédiée à la navigation domestique identifiée (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
+   "note": "Généraliste ; pas de fédération dédiée à la navigation domestique identifiée.",
    "uuid": "98c77ab3-e6d8-4b87-a6e2-53a074edbe23"
   },
   {
@@ -458046,7 +458048,7 @@
    "secteur": "transport maritime",
    "site": "https://shipowners.fi",
    "source": "https://shipowners.fi",
-   "note": "Généraliste ; pas d'organisation domestique distincte (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
+   "note": "Généraliste ; pas d'organisation domestique distincte.",
    "uuid": "bfa6667d-9fac-454c-8109-810a8d67c3fd"
   },
   {
@@ -458061,7 +458063,7 @@
    "secteur": "transport maritime",
    "site": "https://www.anave.es",
    "source": "https://www.anave.es",
-   "note": "Unique en Espagne ; pas d'organisation domestique distincte identifiée (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
+   "note": "Association unique en Espagne ; pas d'organisation domestique distincte identifiée.",
    "uuid": "d6f7f754-b7dd-49eb-989e-05e738c3fca1"
   },
   {
@@ -458076,7 +458078,7 @@
    "secteur": "transport maritime",
    "site": "https://www.confitarma.it",
    "source": "https://www.confitarma.it",
-   "note": "Fondée 1901 (Confindustria), signataire des conventions collectives ; dualité conflictuelle avec Assarmatori depuis la scission de 2018 (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
+   "note": "Fondée en 1901 (Confindustria), signataire des conventions collectives ; dualité avec Assarmatori depuis la scission de 2018.",
    "uuid": "20e891e9-9a22-42f1-91f3-1926654ef1fe"
   },
   {
@@ -458091,7 +458093,7 @@
    "secteur": "transport maritime",
    "site": "https://www.ukchamberofshipping.com",
    "source": "https://www.ukchamberofshipping.com",
-   "note": "Environ 200 membres ; aucune fédération des opérateurs domestiques au Royaume-Uni (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). Site joignable mais filtrant les robots (403 vérifié le 2026-09-08).",
+   "note": "Autour de 200 membres ; aucune fédération des opérateurs domestiques au Royaume-Uni. Site filtrant les robots (403 vérifié le 08/09/2026).",
    "uuid": "4e18bbfe-1bf9-45a1-a38f-4af31b4c7d85"
   },
   {
@@ -458106,7 +458108,7 @@
    "secteur": "navigation domestique",
    "site": "https://www.nho.no",
    "source": "https://en.wikipedia.org/wiki/Federation_of_Norwegian_Coastal_Shipping",
-   "note": "30 compagnies, signataire des conventions collectives, environ 5 500 marins (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). Pendant domestique de Norges Rederiforbund : la dualité patronale norvégienne est bâtie sur la distinction des métiers, comme en France. L'étude ACF le cite comme l'analogue le plus proche du groupement.",
+   "note": "Une trentaine de compagnies, signataire des conventions collectives. Pendant domestique de Norges Rederiforbund : la représentation y est distincte par métier.",
    "uuid": "a9a237a9-a375-460e-89b1-0b3c1a4f1447"
   },
   {
@@ -458121,7 +458123,7 @@
    "secteur": "navigation domestique d'archipel",
    "site": "https://skargardsredarna.se",
    "source": "https://skargardsredarna.se/om-oss/vad-ar-skargardsredarna",
-   "note": "Fondée en 1988 sous le nom SWEREF. Environ 110 armements membres, publics ou privés, 330 à 350 navires, plus de 35 M passagers et 12 M véhicules par an (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). Adhésion large incluant les régies publiques : modèle cité par l'étude ACF. Pendant généraliste : Svensk Sjöfart (Sveriges Redareförening).",
+   "note": "Fondée en 1988 sous le nom SWEREF. Une centaine d'armements membres, publics ou privés, autour de 330 navires (chiffres de l'organisation). Pendant généraliste : Svensk Sjöfart (Sveriges Redareförening).",
    "uuid": "c4005ef6-a80f-47f5-9912-51032bbb53c1"
   },
   {
@@ -458136,7 +458138,7 @@
    "secteur": "ferries domestiques",
    "site": null,
    "source": null,
-   "note": "Organisation professionnelle des ferries ; secrétariat hébergé par Danske Rederier (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
+   "note": "Organisation professionnelle des ferries ; secrétariat hébergé par Danske Rederier.",
    "uuid": "05abd622-b25b-4930-88ce-9d0ed1ce129e"
   },
   {
@@ -458151,7 +458153,7 @@
    "secteur": "ferries communaux (maîtres d'ouvrage)",
    "site": "https://faergesekr.dk",
    "source": "https://faergesekr.dk",
-   "note": "Créé le 1.3.2015 par les 18 communes à îles, siège à Ærøskøbing. Projet de ferry standardisé électrique (~1 Md DKK) avec Odense Maritime Technology et PensionDanmark. Miroir des Départements et Régions françaises propriétaires (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
+   "note": "Créé en 2015 par les communes danoises à îles, siège à Ærøskøbing. Projet de ferry standardisé électrique avec Odense Maritime Technology et PensionDanmark.",
    "uuid": "15c00693-e28b-4044-bea5-91f80d778368"
   },
   {
@@ -458166,7 +458168,7 @@
    "secteur": "navigation domestique et insulaire",
    "site": null,
    "source": null,
-   "note": "Fondée en 1921, signataire de la convention collective des équipages et partenaire officiel du gouvernement sur la politique insulaire (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). Pendant long cours : Union of Greek Shipowners.",
+   "note": "Fondée en 1921, signataire de la convention collective des équipages, interlocuteur du gouvernement sur la politique insulaire. Pendant long cours : Union of Greek Shipowners.",
    "uuid": "9137519b-8805-4a97-a7d2-5bd131fa53d5"
   },
   {
@@ -458181,7 +458183,7 @@
    "secteur": "cabotage insulaire (via Fedarlinea)",
    "site": "https://assarmatori.eu",
    "source": "https://it.wikipedia.org/wiki/Assarmatori",
-   "note": "Créée le 15.1.2018 sous Confcommercio (président Stefano Messina) d'une scission de Confitarma ; intègre Fedarlinea, l'association du cabotage insulaire (Moby, Tirrenia, SNAV, Delcomar, Maddalena Lines, Toremar, Caremar). Dualité par scission politique (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). Site filtrant les robots (403 vérifié le 08/09/2026).",
+   "note": "Créée en 2018 sous Confcommercio d'une scission de Confitarma ; intègre Fedarlinea, l'association du cabotage insulaire. Site filtrant les robots (403 vérifié le 08/09/2026).",
    "uuid": "c481692b-05a0-4d44-bc7c-dc01a38941f2"
   },
   {
@@ -458196,7 +458198,7 @@
    "secteur": "transport maritime",
    "site": "https://csamarenostrum.hr",
    "source": "https://csamarenostrum.hr/en/o_nama",
-   "note": "9 membres dont Jadrolinija, signataire de la convention collective des marins croates, membre de l'ECSA depuis le 1.1.2023 (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). Pas d'organisation domestique distincte en Croatie.",
+   "note": "Neuf membres dont Jadrolinija, signataire de la convention collective des marins croates, membre de l'ECSA depuis 2023.",
    "uuid": "6f0e2516-0a93-4eb4-8598-020f10d28da3"
   },
   {
@@ -458211,7 +458213,7 @@
    "secteur": "transport maritime",
    "site": null,
    "source": "https://ics-shipping.org/organisation/irish-chamber-of-shipping",
-   "note": "Orientée grands armements ; les petits opérateurs insulaires irlandais ne sont pas fédérés : c'est l'État qui structure (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées). Site propre injoignable au 08/09/2026.",
+   "note": "Orientée grands armements ; les petits opérateurs insulaires irlandais ne sont pas fédérés. Site propre injoignable au 08/09/2026.",
    "uuid": "d10d9517-35ab-4d68-b534-4031f0c66c70"
   },
   {
@@ -458226,7 +458228,7 @@
    "secteur": "long cours",
    "site": "https://www.ugs.gr",
    "source": "https://www.ugs.gr",
-   "note": "Pendant long cours de la SEEN (Étude ACF « Modèles européens de desserte maritime de service public », 13 pays, 11/06/2026, sources publiques croisées).",
+   "note": "Pendant long cours de la SEEN.",
    "uuid": "95888ae3-f4ac-4a80-8e13-34262a69cbeb"
   }
  ]
