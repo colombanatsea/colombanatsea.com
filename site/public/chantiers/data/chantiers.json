@@ -6907,7 +6907,10 @@
     "ACSN Penhoët"
    ],
    "pays_zone": "France",
-   "uuid": "6ed4737b-6cf4-4ddf-a3c8-5d0068ae8d8a"
+   "uuid": "6ed4737b-6cf4-4ddf-a3c8-5d0068ae8d8a",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "naval-group-lorient",
@@ -10899,7 +10902,10 @@
     "DCNS Lorient"
    ],
    "pays_zone": "France",
-   "uuid": "9954609b-d6cd-4e73-bfa9-9c5ef8355f77"
+   "uuid": "9954609b-d6cd-4e73-bfa9-9c5ef8355f77",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "naval-group-cherbourg",
@@ -13843,7 +13849,10 @@
    "actif_methode": "deduction-livraison-recente",
    "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Tourville (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://fr.wikipedia.org/wiki/Classe_Suffren_(sous-marin)",
    "pays_zone": "France",
-   "uuid": "3cd8e9a1-1657-42b4-a635-3bdc776bd18c"
+   "uuid": "3cd8e9a1-1657-42b4-a635-3bdc776bd18c",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "naval-group-brest",
@@ -14442,7 +14451,10 @@
    "actif": true,
    "actif_source": "Article du 21/07/2026 sur la fregate Amiral Ronarc'h indiquant Brest comme port-base et annonçant son arret technique majeur de septembre a decembre 2026 ; l'etablissement Naval Group de Brest (SIRET 441 133 808 00036, NAF 33.15Z reparation navale) est ouvert au repertoire SIRENE et le site assure le MCO et la modernisation des batiments. Vague contact-activite du 2026-08-15. https://naval-group.com/fr/actualites/lamiral-ronarch-lepreuve-du-large",
    "pays_zone": "France",
-   "uuid": "e9cbb280-4504-4015-9236-ae7faade4d20"
+   "uuid": "e9cbb280-4504-4015-9236-ae7faade4d20",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "naval-group-toulon",
@@ -15063,7 +15075,10 @@
    "actif": true,
    "actif_source": "Communique du 26/06/2026 sur la livraison du 4e SNA Barracuda precisant que Naval Group assure l'entretien de ces sous-marins a Toulon ; l'etablissement Naval Group de Toulon (SIRET 441 133 808 00077, NAF 30.11Z) est ouvert au repertoire SIRENE. Vague contact-activite du 2026-08-15. https://naval-group.com/fr/presse/naval-group-livre-le-4-e-sous-marin-nucleaire-dattaque-sna-du-programme-barracuda",
    "pays_zone": "France",
-   "uuid": "6442d7ae-9ef9-4d7b-a80a-d4f5a45f867e"
+   "uuid": "6442d7ae-9ef9-4d7b-a80a-d4f5a45f867e",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "naval-group-nantes-indret",
@@ -16187,7 +16202,10 @@
    "actif_methode": "deduction-livraison-recente",
    "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Sous-marins nucléaires d'attaque classe Suffren (programme Barracuda), 6 unités dont Suffren - sous-marin nucléaire d'attaque (SNA) (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/defense/naval-group-indret-livre-son-dernier-bloc-moteur-de-barracuda",
    "pays_zone": "France",
-   "uuid": "e3d92b3e-1fb0-48e8-9d2f-c4c29b00415e"
+   "uuid": "e3d92b3e-1fb0-48e8-9d2f-c4c29b00415e",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "piriou-concarneau",
@@ -19464,7 +19482,10 @@
    "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Trolley de Prévaux (1er PH) (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/defense/piriou-met-a-l-eau-le-premier-des-nouveaux-patrouilleurs-hauturiers-francais",
    "pays_zone": "France",
    "cotier_coques": 7,
-   "uuid": "9c32d936-0885-4a27-ae08-0f81daf905c0"
+   "uuid": "9c32d936-0885-4a27-ae08-0f81daf905c0",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "socarenam-boulogne",
@@ -22152,7 +22173,10 @@
    "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : BNS Vega (P903) (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.navalnews.com/naval-news/2026/04/socarenam-launches-third-patrol-vessel-for-belgian-navy/",
    "pays_zone": "France",
    "cotier_coques": 2,
-   "uuid": "bdd63868-a562-4662-9183-0b24c7a12f8f"
+   "uuid": "bdd63868-a562-4662-9183-0b24c7a12f8f",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "cmn-cherbourg",
@@ -24668,7 +24692,10 @@
    "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : NRA Ekuikui II (F300), 1re de 3 corvettes Angola (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.navalnews.com/naval-news/2026/03/video-first-br71-mkii-corvette-for-angola-launched-by-cmn/",
    "pays_zone": "France",
    "cotier_coques": 1,
-   "uuid": "48ada19f-1785-474c-99a7-826f67b3526f"
+   "uuid": "48ada19f-1785-474c-99a7-826f67b3526f",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "ocea-les-sables",
@@ -31075,7 +31102,10 @@
    "actif_methode": "deduction-livraison-recente",
    "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : VGMAR (série de 24, 4 fermes) (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.mauric.com/news/gendarmerie-maritilme-patrol-vessel-signature",
    "pays_zone": "France",
-   "uuid": "a999b153-d509-4ccf-8792-5ef758a2bfcb"
+   "uuid": "a999b153-d509-4ccf-8792-5ef758a2bfcb",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "cndm-marseille",
@@ -32118,7 +32148,10 @@
    "actif": true,
    "actif_source": "Accueil du paquebot AIDA Bella pour six semaines de modernisation, annonce datee du 30/01/2026, et participation a Euromaritime le 06/02/2026 ; depot des comptes de l'exercice 2025 publie au BODACC le 23/06/2026, 175 salaries et 106 M EUR de chiffre d'affaires 2025. Vague contact-activite du 2026-08-15. https://cndm.fr/en/2026-01-30/welcome-in-marseille-aida-bella",
    "pays_zone": "France",
-   "uuid": "d81d9b4f-b4af-411b-8ad6-0c0cd1d256f0"
+   "uuid": "d81d9b4f-b4af-411b-8ad6-0c0cd1d256f0",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "damen-brest",
@@ -32892,7 +32925,10 @@
    "actif_methode": "deduction-livraison-recente",
    "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Le Commandant Charcot (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://cruiseindustrynews.com/cruise-news/2026/05/le-commandant-charcot-completes-upgrades-at-damen-shipyard/",
    "pays_zone": "France",
-   "uuid": "e9164e1c-0157-4a4a-9f56-6ffb07f9fd03"
+   "uuid": "e9164e1c-0157-4a4a-9f56-6ffb07f9fd03",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "mb92-la-ciotat",
@@ -33550,7 +33586,10 @@
     }
    ],
    "pays_zone": "France",
-   "uuid": "6bd640fb-3264-4536-9dcb-c877bde7550c"
+   "uuid": "6bd640fb-3264-4536-9dcb-c877bde7550c",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "kership-lorient",
@@ -34660,7 +34699,10 @@
    "actif_methode": "deduction-livraison-recente",
    "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Brugge (M942), chasseur de mines classe City / programme rMCM (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/defense/kership-met-a-l-eau-le-brugge-5eme-des-12-nouveaux-chasseurs-de-mines-belgo-neerlandais",
    "pays_zone": "France",
-   "uuid": "5a1a19de-8874-4ebc-866b-5d3b5a940d5c"
+   "uuid": "5a1a19de-8874-4ebc-866b-5d3b5a940d5c",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "glehen-douarnenez",
@@ -37956,7 +37998,10 @@
    "actif_source": "Ouest-France du 03/04/2026 décrit un chantier en activité à Douarnenez, en construction et réparation navale, confronté à un manque de visibilité et à un outil de levage inadapté au Rosmeur ; Le Télégramme du 26/10/2025 indique une quarantaine de salariés sur Douarnenez, Le Guilvinec et Loctudy. Vague contact-activite du 2026-08-15. https://www.ouest-france.fr/economie/chantiers-navals/on-se-bat-pour-notre-territoire-a-douarnenez-le-chantier-glehen-navigue-dans-un-contexte-incertain-52bf6984-2f60-11f1-b6ef-35cf984fdd2d",
    "pays_zone": "France",
    "cotier_coques": 13,
-   "uuid": "2eaffc3a-ae7e-4eac-87b5-133cca55d62d"
+   "uuid": "2eaffc3a-ae7e-4eac-87b5-133cca55d62d",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "chantiers-bernard-lorient",
@@ -54816,7 +54861,10 @@
    "actif_methode": "deduction-livraison-recente",
    "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : PRORAID (renouvellement contrat-cadre Marine nationale) (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://sillinger.fr/actualites/la-marine-nationale-renouvelle-sa-confiance-envers-sillinger",
    "pays_zone": "France",
-   "uuid": "c5cce1df-07b0-4068-a4ab-2bc80cccee6f"
+   "uuid": "c5cce1df-07b0-4068-a4ab-2bc80cccee6f",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "aasm-alu-acier-service-marine-longueville",
@@ -55953,7 +56001,10 @@
    "actif": true,
    "actif_source": "Actualite du 29/06/2026 sur la premiere Matinee de l'Emploi aux Chantiers navals de La Ciotat (plus de 500 candidats recus par les entreprises du refit) ; entite LA CIOTAT SHIPYARDS (ex-SEMIDEP-Ciotat, SIREN 401 974 555) en activite, CA 18,6 M EUR, comptes 2024 deposes le 22/01/2026. Vague contact-activite du 2026-08-15. https://www.laciotat-shipyards.com/fr/succes-pour-la-premiere-edition-de-la-matinee-de-lemploi-aux-chantiers-navals-de-la-ciotat/",
    "pays_zone": "France",
-   "uuid": "24d3c068-90f1-49e7-929c-b86c65604033"
+   "uuid": "24d3c068-90f1-49e7-929c-b86c65604033",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "ims-shipyard-saint-mandrier-s",
@@ -56665,7 +56716,10 @@
    "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/340061654",
    "actif_methode": "API publique Recherche d'entreprises (SIRENE) : etat administratif A, accord sur la commune et sur le nom, releve le 2026-08-21",
    "pays_zone": "France",
-   "uuid": "c9b1a350-542e-4abf-a953-54a73534bc78"
+   "uuid": "c9b1a350-542e-4abf-a953-54a73534bc78",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "le-havre-naval-projects-le-havre",
@@ -58557,7 +58611,10 @@
    "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : OPV 190 Mk II (commande Guyana) (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/defense/ocea-debute-la-construction-d-un-patrouilleur-de-58-metres-pour-le-guyana",
    "pays_zone": "France",
    "cotier_coques": 1,
-   "uuid": "fcbdde7a-8696-4549-868a-7caaedd64c6e"
+   "uuid": "fcbdde7a-8696-4549-868a-7caaedd64c6e",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "ocea-site-de-la-rochelle-la-rochelle",
@@ -58855,7 +58912,10 @@
    "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Haiakwa et Haiama (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/ocea-acheve-deux-nouvelles-pilotines-pour-le-guyana",
    "pays_zone": "France",
    "cotier_coques": 3,
-   "uuid": "b6f522f3-2b53-43bd-8634-5f24bf49ff59"
+   "uuid": "b6f522f3-2b53-43bd-8634-5f24bf49ff59",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "snsm-pole-de-soutien-de-la-flotte-chantier-naval-saint-malo",
@@ -64998,7 +65058,10 @@
    "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Lam Elec I (2026). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/a-saint-nazaire-ocea-met-a-l-eau-une-vedette-de-lamanage-100-electrique",
    "pays_zone": "France",
    "cotier_coques": 2,
-   "uuid": "410841fe-6a14-41d6-bcd1-b287157d082d"
+   "uuid": "410841fe-6a14-41d6-bcd1-b287157d082d",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "navalu-bouin",
@@ -65694,7 +65757,10 @@
    "actif_source": "Deduit d'une livraison recente attribuee a ce chantier : Eros III (2025). Deduction du 2026-08-15, non confirmee par une declaration du chantier. https://www.meretmarine.com/fr/construction-navale/navalu-mise-a-l-eau-d-eros-iii-ctv-pour-le-parc-eolien-offshore-eolmed",
    "pays_zone": "France",
    "cotier_coques": 2,
-   "uuid": "c21cf8a8-d1c5-4e9d-97b3-f9494d3339cf"
+   "uuid": "c21cf8a8-d1c5-4e9d-97b3-f9494d3339cf",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "h2x-la-ciotat",
@@ -86811,7 +86877,10 @@
     "autoreference retiree le 2026-08-03 : https://colombanatsea.com/chantiers/data/chantiers.json"
    ],
    "pays_zone": "France",
-   "uuid": "d454dea1-7e4e-4bdb-9cb8-c55c26781eda"
+   "uuid": "d454dea1-7e4e-4bdb-9cb8-c55c26781eda",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "chantier-neptune-noumea",
@@ -291405,7 +291474,10 @@
    "actif": true,
    "actif_source": "Rubrique actualite du chantier mentionnant le lancement d'un nouveau navire mytilicole classe en 2026, page mise a jour le 27/01/2026 ; societe SAS active au registre national (SIREN 390 284 222, NAF 30.12Z), 11 salaries au millesime 2023. Vague contact-activite du 2026-08-15. https://chantierdelavergne.com/actualite/",
    "pays_zone": "France",
-   "uuid": "4394fcf6-ac49-4d72-879c-da2d980abd43"
+   "uuid": "4394fcf6-ac49-4d72-879c-da2d980abd43",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "xx-yard-behrensschiffsundschweisstechnik-hambourg",
@@ -295202,7 +295274,10 @@
    ],
    "pays_zone": "France",
    "cotier_coques": 1,
-   "uuid": "fe89cc79-c7d6-4e53-9018-d278e32e0763"
+   "uuid": "fe89cc79-c7d6-4e53-9018-d278e32e0763",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "fr-yard-bretagnesud-belz",
@@ -358821,7 +358896,10 @@
     "refit de yachts"
    ],
    "uuid": "c60415b5-1d73-46b1-bf64-0e99ca3f3e3b",
-   "pays_zone": "Europe"
+   "pays_zone": "Europe",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "fr-yard-composite-arzon",
@@ -360185,7 +360263,10 @@
     }
    ],
    "uuid": "f1363244-941c-4a30-87b4-12aee57ac1ea",
-   "pays_zone": "France"
+   "pays_zone": "France",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "fr-yard-jcomposites-sablesdolonne",
@@ -363105,7 +363186,10 @@
     "furtivité"
    ],
    "uuid": "68ccb668-8449-491a-baec-6a617d293d55",
-   "pays_zone": "France"
+   "pays_zone": "France",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "fr-yard-navalgroupchantierdebrest-brest",
@@ -363247,7 +363331,10 @@
     "entretien de flotte armée"
    ],
    "uuid": "22891b7e-40c4-4091-8f2b-c579352d1e2c",
-   "pays_zone": "France"
+   "pays_zone": "France",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "gr-yard-hellenic-skaramangas",
@@ -365440,7 +365527,10 @@
     }
    ],
    "pays_zone": "France",
-   "uuid": "2ec9ff8a-3979-4dae-85d2-6f2aa25b4a2c"
+   "uuid": "2ec9ff8a-3979-4dae-85d2-6f2aa25b4a2c",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "eq-wattalps",
@@ -365525,7 +365615,10 @@
     }
    ],
    "pays_zone": "France",
-   "uuid": "205978ce-3d91-4f02-9307-435d77fae2c9"
+   "uuid": "205978ce-3d91-4f02-9307-435d77fae2c9",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "eq-seair",
@@ -365611,7 +365704,10 @@
     }
    ],
    "pays_zone": "France",
-   "uuid": "5e05f244-9615-4321-981f-95691c3cff88"
+   "uuid": "5e05f244-9615-4321-981f-95691c3cff88",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "eq-enag",
@@ -365685,7 +365781,10 @@
     }
    ],
    "pays_zone": "France",
-   "uuid": "7d15039f-8c36-46a3-81e6-ed193ffd0f82"
+   "uuid": "7d15039f-8c36-46a3-81e6-ed193ffd0f82",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "eq-jeumont-electric",
@@ -365728,7 +365827,10 @@
     }
    ],
    "pays_zone": "France",
-   "uuid": "6d5a90e2-df88-4c1a-a917-849270c58a60"
+   "uuid": "6d5a90e2-df88-4c1a-a917-849270c58a60",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "eq-ehm",
@@ -365759,7 +365861,10 @@
    "contact_source": "https://www.ehm.bzh",
    "contact_maj": "2026-08-15",
    "pays_zone": "France",
-   "uuid": "1ca0d5a9-01b2-466a-816c-3f2e8cf96339"
+   "uuid": "1ca0d5a9-01b2-466a-816c-3f2e8cf96339",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "eq-solution-f",
@@ -365822,7 +365927,10 @@
    "contact_source": "https://www.societe.com/societe/energy-observer-developments-848756227.html",
    "contact_maj": "2026-08-15",
    "pays_zone": "France",
-   "uuid": "9ecf07f9-adac-4b08-a70a-4e362cbfde42"
+   "uuid": "9ecf07f9-adac-4b08-a70a-4e362cbfde42",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "eq-genevos",
@@ -365854,7 +365962,10 @@
    "contact_source": "https://genevos.com/contact/",
    "contact_maj": "2026-08-15",
    "pays_zone": "France",
-   "uuid": "99718d91-4612-423d-aa4c-d3a74fc9efe3"
+   "uuid": "99718d91-4612-423d-aa4c-d3a74fc9efe3",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "eq-helion",
@@ -366188,7 +366299,10 @@
    "contact_source": "https://www.computedwingsail.com/",
    "contact_maj": "2026-08-15",
    "pays_zone": "France",
-   "uuid": "d5190cd8-c8d5-4b3e-8494-f4937fc0b0fc"
+   "uuid": "d5190cd8-c8d5-4b3e-8494-f4937fc0b0fc",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "eq-oceanwings-ex-ayro",
@@ -366218,7 +366332,10 @@
    "contact_source": null,
    "contact_maj": "2026-08-15",
    "pays_zone": "France",
-   "uuid": "eb70cac3-1779-4050-9f44-79e97d6ce1b1"
+   "uuid": "eb70cac3-1779-4050-9f44-79e97d6ce1b1",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "eq-solidsail",
@@ -366349,7 +366466,10 @@
     "https://switchsas.fr/mentions-legales/",
     "https://annuaire-entreprises.data.gouv.fr/entreprise/978269819"
    ],
-   "uuid": "2261b1a0-c526-4479-b04a-b562af95ad80"
+   "uuid": "2261b1a0-c526-4479-b04a-b562af95ad80",
+   "appartenance": [
+    "GICAN"
+   ]
   }
  ],
  "bureaux_etudes": [
@@ -366743,7 +366863,10 @@
      "interlocuteur": "Fabrice Ghozlan"
     }
    ],
-   "uuid": "579bbbc5-20ed-4f50-b56b-8b2a42cbd59b"
+   "uuid": "579bbbc5-20ed-4f50-b56b-8b2a42cbd59b",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "be-skipskompetanse",
@@ -366859,7 +366982,10 @@
     "https://www.pappers.fr/entreprise/vplp-design-paris-429420094"
    ],
    "pays_zone": "France",
-   "uuid": "b9f5831d-3322-4b8a-a437-4f599549eb0b"
+   "uuid": "b9f5831d-3322-4b8a-a437-4f599549eb0b",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "be-saltshipdesign",
@@ -367184,7 +367310,10 @@
      "interlocuteur": "Frederic Neuman"
     }
    ],
-   "uuid": "583e280c-2d3c-4885-892d-08240b675bb3"
+   "uuid": "583e280c-2d3c-4885-892d-08240b675bb3",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "be-tomraengineering",
@@ -367561,7 +367690,10 @@
      "interlocuteur": "Laurent Mermier"
     }
    ],
-   "uuid": "e5030240-83d6-42bb-9d27-a4f51003308a"
+   "uuid": "e5030240-83d6-42bb-9d27-a4f51003308a",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "be-pantocarene",
@@ -367720,7 +367852,10 @@
    ],
    "pays_zone": "France",
    "cotier_coques": 2,
-   "uuid": "8a334fed-2505-4e41-8512-865a92d4f140"
+   "uuid": "8a334fed-2505-4e41-8512-865a92d4f140",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "be-marclombard",
@@ -370219,7 +370354,10 @@
     "le": "2026-09-02"
    },
    "acf_id": "org-ldtide",
-   "uuid": "16dc16e9-384a-49f1-839b-bb3cbe27aad0"
+   "uuid": "16dc16e9-384a-49f1-839b-bb3cbe27aad0",
+   "appartenance": [
+    "ACF"
+   ]
   },
   {
    "id": "ope-marine-croate",
@@ -373798,7 +373936,10 @@
    "adresse": "408 AVENUE DU PRADO 13008 MARSEILLE",
    "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/344497011",
    "fondation": 1987,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/344497011"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/344497011",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-red-funnel",
@@ -374092,7 +374233,8 @@
    "nom": "SPM Ferries",
    "alias": [
     "SPM Ferries",
-    "Saint-Pierre et Miquelon Ferries (SPM Ferries)"
+    "Saint-Pierre et Miquelon Ferries (SPM Ferries)",
+    "Régie des Transports de Saint-Pierre-et-Miquelon"
    ],
    "navires": 3,
    "ville": "Saint Pierre",
@@ -374114,7 +374256,8 @@
    },
    "acf_id": "org-spm",
    "appartenance": [
-    "ACF"
+    "ACF",
+    "AdF"
    ],
    "uuid": "a87feb19-bde4-42d4-8913-4a6445e03c08"
   },
@@ -374679,7 +374822,10 @@
    "site": "http://www.bourbonoffshore.com/fr",
    "confiance": "moyenne",
    "note": "Les mentions légales du site du groupe donnent l'éditeur BOURBON Maritime, société par actions simplifiée, RCS Marseille 055 802 540, siège \"50, Rue de Forbin - CS 60703 - 13235 Marseille Cedex 02, France\". Le BODACC confirme BOURBON MARINE & LOGISTICS, SAS, à la même adresse (dépôt des comptes publié le 21 juillet 2026) ; le registre public donne le SIREN 451 273 361 au 50 rue de Forbin, 13002 Marseille. L'alias \"Bourbon (pour Pemex)\" est retenu parce qu'il désigne le même exploitant, Bourbon, Pemex étant le client et non l'armateur. Nuance à ne pas effacer : au Mexique les navires servant Pemex sont exploités par Naviera Bourbon Tamaulipas, présentée sur le site du groupe comme \"created in Mexico in 2005\", 25 navires, servant \"our historical customer Pemex\". C'est une société distincte du groupe, pas la SAS marseillaise. Le point de Marseille est donc le siège du groupe, en aucun cas la zone d'exploitation. À signaler : le BODACC du 22 juillet 2025 publie une procédure de conciliation visant Bourbon Marine & Logistics, élément de situation à vérifier avant toute publication.",
-   "uuid": "7adf7881-c0ba-4b0a-b425-939c22e27fde"
+   "uuid": "7adf7881-c0ba-4b0a-b425-939c22e27fde",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-bronnbat-nord",
@@ -375311,7 +375457,10 @@
    "nature_du_point": "siege",
    "site": null,
    "confiance": "haute",
-   "note": "Registre SIRENE (API Recherche d'entreprises, 2026-09-02) : GAZOCEAN (GAZOCEAN), SIREN 682014071, etat A, siege 132 BOULEVARD MICHELET 13008 MARSEILLE. Accord sur le nom ET la commune. Geocodage BAN de l'adresse du siege : type housenumber, score 0.97, « 132 Boulevard michelet 13008 Marseille », point de siege."
+   "note": "Registre SIRENE (API Recherche d'entreprises, 2026-09-02) : GAZOCEAN (GAZOCEAN), SIREN 682014071, etat A, siege 132 BOULEVARD MICHELET 13008 MARSEILLE. Accord sur le nom ET la commune. Geocodage BAN de l'adresse du siege : type housenumber, score 0.97, « 132 Boulevard michelet 13008 Marseille », point de siege.",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-geiranger-fjordservice",
@@ -375821,7 +375970,10 @@
    "nom_officiel": null,
    "nature_du_point": "siege",
    "site": "https://abeilles-international.net/",
-   "confiance": "moyenne"
+   "confiance": "moyenne",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-leucate-evasion-marine",
@@ -379121,7 +379273,10 @@
    "adresse": "LD PORT DU BLOSCON 29680 ROSCOFF",
    "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/927250217",
    "fondation": 1972,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/927250217"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/927250217",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-br-drene-angelsen-yn017w",
@@ -379960,7 +380115,10 @@
    "site": "https://pennarbed.breizhgo.bzh/",
    "confiance": "haute",
    "note": "Conditions générales de transport de l'exploitant, texte extrait du PDF : « LA COMPAGNIE MARITIME PENN AR BED - KEOLIS MARITIME BREST, société à responsabilité limitée au capital de 8000 €, dont le siège social est situé : 1er Éperon Port de Commerce CS 82954 29229 BREST Cedex 2, enregistrée au RCS Brest sous le numéro 383 935 582 ». Concordant avec SIRENE : SIREN 383935582, enseigne « BREIZHGO PENN AR BED », NAF 50.20Z. La compagnie dessert Ouessant, Molène et Sein sous délégation de service public de la Région Bretagne ; l'intitulé source ne retient que Sein, ce qui sous-décrit son périmètre. Coordonnée = géocodage SIRENE : la BAN ne rend aucun résultat sur « 1er éperon port de commerce ».",
-   "uuid": "a04ce1c9-8d9f-43f1-8131-9e65bad82b29"
+   "uuid": "a04ce1c9-8d9f-43f1-8131-9e65bad82b29",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-companhia-brasileira-de-offshore",
@@ -379987,7 +380145,8 @@
     "Département de la Charente-Maritime",
     "Conseil départemental de la Charente-Maritime",
     "Departement de la Charente-Maritime (regie portuaire departementale)",
-    "Departement de la Charente-Maritime (service departemental de dragage des ports)"
+    "Departement de la Charente-Maritime (service departemental de dragage des ports)",
+    "Conseil général de la Charente-Maritime"
    ],
    "navires": 5,
    "ville": "La Rochelle",
@@ -380008,6 +380167,9 @@
      "coques": 3,
      "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/221700016 (DEPARTEMENT DE LA CHARENTE-MARITIME, SIREN 221700016, actif, La Rochelle : une seule personne morale, la régie portuaire est un service de la collectivité)"
     }
+   ],
+   "appartenance": [
+    "AdF"
    ]
   },
   {
@@ -380147,7 +380309,10 @@
    "adresse": "PALAIS DE LA MER 5 B AV PASCAL LOTA 20200 BASTIA",
    "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/496320151",
    "fondation": 1963,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/496320151"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/496320151",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-corsica-linea",
@@ -380176,7 +380341,10 @@
    "adresse": "4 BOULEVARD DU ROI JEROME 20000 AJACCIO",
    "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/815243852",
    "fondation": 2015,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/815243852"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/815243852",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-croisieres-chateaubriand",
@@ -380646,7 +380814,10 @@
    "site": "https://www.dfds.com/",
    "confiance": "haute",
    "note": "Le site officiel du groupe écrit « DFDS is headquartered and listed in Copenhagen », ce qui établit la ville. L'adresse exacte, Marmorvej 18, 2100 København Ø, la forme juridique (Aktieselskab), le CVR 14194711 et l'activité déclarée « Sø- og kysttransport af passagerer » proviennent du registre danois des sociétés interrogé via cvrapi.dk (https://cvrapi.dk/api?search=14194711&country=dk), qui est un accès au registre CVR et non le portail officiel datacvr.virk.dk, lequel n'a pas été ouvert. Coordonnée issue du registre officiel danois des adresses (https://api.dataforsyningen.dk/adresser?vejnavn=Marmorvej&husnr=18&postnr=2100) pour Marmorvej 18, 2100 København Ø. ATTENTION, L'INTITULÉ SOURCE AGRÈGE DEUX EXPLOITANTS DISTINCTS : d'après l'article Wikipédia MV Caesarea Trader, ouvert et lu, le navire (ex-Commodore Goodwill, mis en service le 4 mars 1996) a été exploité par Commodore Ferries puis Commodore Shipping et Condor Ferries avant son rachat par DFDS Seaways en 2025. Commodore Ferries était une compagnie des îles Anglo-Normandes et n'est en rien DFDS : les deux ne doivent pas être confondues ni fusionnées. Le service DFDS concerné dessert Jersey depuis Portsmouth et Saint-Malo ; le point donné est le siège du groupe, pas une tête de ligne.",
-   "uuid": "9ac21d94-f735-42c1-b5ed-cb07b11e042f"
+   "uuid": "9ac21d94-f735-42c1-b5ed-cb07b11e042f",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-dga-marine-nationale-sunqzz",
@@ -383754,7 +383925,10 @@
     "le": "2026-09-02"
    },
    "acf_id": "org-jalilo",
-   "uuid": "f02b97dc-5348-48ea-bfc5-1f8fb9add8d1"
+   "uuid": "f02b97dc-5348-48ea-bfc5-1f8fb9add8d1",
+   "appartenance": [
+    "ACF"
+   ]
   },
   {
    "id": "ope-jan-arve-birkeland",
@@ -384425,7 +384599,8 @@
    "alias": [
     "La Meridionale",
     "Cie Meridionale de Navigation",
-    "LA MERIDIONALE (LA MERIDIONALE ET-OU MERIDIONALE) (CMN)"
+    "LA MERIDIONALE (LA MERIDIONALE ET-OU MERIDIONALE) (CMN)",
+    "Compagnie méridionale de navigation"
    ],
    "navires": 4,
    "ville": "Marseille",
@@ -384443,7 +384618,10 @@
    "site": "http://www.lameridionale.fr/",
    "confiance": "haute",
    "fondation": 1957,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/057801730"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/057801730",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-labrador-marine-cote-du-labrador-canada",
@@ -385171,7 +385349,10 @@
    "site": "http://www.manche-iles-express.com/",
    "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification sirene : https://annuaire-entreprises.data.gouv.fr/entreprise/522554195 ; SIRENE : creation de la personne morale le 2010-06-01 ; adresse de la page : 1, rue des Iles 50400 Granville",
    "fondation": 2010,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/522554195"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/522554195",
+   "appartenance": [
+    "ACF"
+   ]
   },
   {
    "id": "ope-marika-fiskeri",
@@ -391425,7 +391606,10 @@
    "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/410508758",
    "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification sirene : https://annuaire-entreprises.data.gouv.fr/entreprise/410508758 ; SIRENE : creation de la personne morale le 1997-01-03 ; adresse de la page : allée Loïc Caradec 56000 Vannes",
    "fondation": 1997,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/410508758"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/410508758",
+   "appartenance": [
+    "ACF"
+   ]
   },
   {
    "id": "ope-transtal-shipping",
@@ -392247,7 +392431,10 @@
    "lon": null,
    "geo_precision": null,
    "source": null,
-   "uuid": "a32fa0e4-93d5-4977-8355-2f927ad9587b"
+   "uuid": "a32fa0e4-93d5-4977-8355-2f927ad9587b",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "ope-volstad-maritime",
@@ -392694,7 +392881,10 @@
     "le": "2026-09-02"
    },
    "acf_id": "org-solkaper",
-   "uuid": "32d8479e-7ea3-42aa-a436-7523d12db3fc"
+   "uuid": "32d8479e-7ea3-42aa-a436-7523d12db3fc",
+   "appartenance": [
+    "ACF"
+   ]
   },
   {
    "id": "ope-socatra",
@@ -392720,7 +392910,10 @@
    "adresse": "9 ALLEE DE TOURNY 33000 BORDEAUX",
    "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/310288162",
    "nature_du_point": "siege",
-   "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification site : http://www.socatra.com/ ; SIRENE : plusieurs entites accordent, non tranche 310288162/909450157/919749614/849594429/750700312/508679859/517793998/440878676 ; 19 resultats lus"
+   "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification site : http://www.socatra.com/ ; SIRENE : plusieurs entites accordent, non tranche 310288162/909450157/919749614/849594429/750700312/508679859/517793998/440878676 ; 19 resultats lus",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-transport-maritime-service",
@@ -392812,7 +393005,10 @@
    "adresse": "1625 ROUTE DE SAINTE-ANNE 29280 PLOUZANE",
    "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/878407618",
    "nature_du_point": "siege",
-   "note": "Registre SIRENE (API Recherche d'entreprises, 2026-09-02) : GENAVIR, SIREN 878407618, etat A, siege 1625 ROUTE DE SAINTE-ANNE 29280 PLOUZANE. Accord sur le nom ET la commune (commune corrigee : commune relevee au registre SIRENE sur le nom (NAF 50.20Z, entite active GENAVIR), cle de recherche pour le second accord, https://annuaire-entreprises.data.gouv.fr/entreprise/878407618). Geocodage BAN de l'adresse du siege : type housenumber, score 0.96, « 1625 Route de Sainte Anne 29280 Plouzané », point de siege."
+   "note": "Registre SIRENE (API Recherche d'entreprises, 2026-09-02) : GENAVIR, SIREN 878407618, etat A, siege 1625 ROUTE DE SAINTE-ANNE 29280 PLOUZANE. Accord sur le nom ET la commune (commune corrigee : commune relevee au registre SIRENE sur le nom (NAF 50.20Z, entite active GENAVIR), cle de recherche pour le second accord, https://annuaire-entreprises.data.gouv.fr/entreprise/878407618). Geocodage BAN de l'adresse du siege : type housenumber, score 0.96, « 1625 Route de Sainte Anne 29280 Plouzané », point de siege.",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-aremiti-pacific-cruises",
@@ -392923,7 +393119,8 @@
     "V Ships",
     "V SHIPS FRANCE SAS (V.SHIPS FRANCE SAS)",
     "V SHIPS FRANCE SAS",
-    "V.Ships SAS"
+    "V.Ships SAS",
+    "V.Ships France"
    ],
    "navires": 13,
    "ville": "Nantes",
@@ -392941,7 +393138,10 @@
    "nature_du_point": "siege",
    "note": "Registre SIRENE (API Recherche d'entreprises, 2026-09-02) : V SHIPS FRANCE SAS (V.SHIPS FRANCE SAS), SIREN 437893159, etat A, siege 34 PLACE VIARME 44000 NANTES. Accord sur le nom ET la commune (commune corrigee : commune relevee au registre SIRENE sur le nom (NAF 50.20Z, entite active V SHIPS FRANCE SAS (V.SHIPS FRANCE SAS)), cle de recherche pour le second accord, https://annuaire-entreprises.data.gouv.fr/entreprise/437893159). Geocodage BAN de l'adresse du siege : type housenumber, score 0.98, « 34 Place Viarme 44000 Nantes », point de siege.",
    "fondation": 2001,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/437893159"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/437893159",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-sudiles",
@@ -392996,7 +393196,8 @@
    "alias": [
     "Maritima",
     "MARITIMA",
-    "Maritima (groupe Sogestran)"
+    "Maritima (groupe Sogestran)",
+    "Maritima SA"
    ],
    "navires": 8,
    "ville": "Le Havre",
@@ -393014,7 +393215,10 @@
    "nature_du_point": "siege",
    "note": "Registre SIRENE (API Recherche d'entreprises, 2026-09-02) : MARITIMA, SIREN 312560923, etat A, siege 11 RUE DU PONT V 76600 LE HAVRE. Accord sur le nom ET la commune (commune corrigee : commune relevee au registre SIRENE sur le nom (NAF 50.20Z, entite active MARITIMA), cle de recherche pour le second accord, https://annuaire-entreprises.data.gouv.fr/entreprise/312560923). Geocodage BAN de l'adresse du siege : type housenumber, score 0.96, « 11 Rue du Pont V 76600 Le Havre », point de siege.",
    "fondation": 1978,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/312560923"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/312560923",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-someca",
@@ -393033,7 +393237,10 @@
    "site": null,
    "source": null,
    "confiance": null,
-   "uuid": "0a741947-cc81-4ec8-9aba-33b714505726"
+   "uuid": "0a741947-cc81-4ec8-9aba-33b714505726",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-tmdd",
@@ -393113,7 +393320,10 @@
    "adresse": "ZONE PORTUAIRE DE BREGAILLON 83500 LA SEYNE-SUR-MER",
    "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/407523752",
    "fondation": 1996,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/407523752"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/407523752",
+   "appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "ope-exmar-shipmanagement",
@@ -393176,7 +393386,10 @@
    "adresse": "4 BOULEVARD SAADE - QUAI ARENC 13002 MARSEILLE",
    "adresse_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/562024422",
    "nature_du_point": "siege",
-   "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification wikipedia : https://fr.wikipedia.org/wiki/CMA_CGM ; SIRENE : plusieurs entites accordent, non tranche 562024422/319014619/441213261/892497520/447560889/907599088/479811499/799431663/832310460/808125710/534977376 ; 30 resultats lus ; site http://www.cma-cgm.com/ : HTTP 403 (refus au robot, non contourne)"
+   "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification wikipedia : https://fr.wikipedia.org/wiki/CMA_CGM ; SIRENE : plusieurs entites accordent, non tranche 562024422/319014619/441213261/892497520/447560889/907599088/479811499/799431663/832310460/808125710/534977376 ; 30 resultats lus ; site http://www.cma-cgm.com/ : HTTP 403 (refus au robot, non contourne)",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-hargous-cie-xnl5jt",
@@ -393241,7 +393454,10 @@
    "nature_du_point": "siege",
    "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification sirene : https://annuaire-entreprises.data.gouv.fr/entreprise/339834178 ; SIRENE : creation de la personne morale le 1986-12-15",
    "fondation": 1986,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/339834178"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/339834178",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-aet",
@@ -393605,7 +393821,10 @@
    "site": null,
    "source": null,
    "confiance": null,
-   "uuid": "903d47fa-3fcd-4d1b-8a5b-7f39568576b4"
+   "uuid": "903d47fa-3fcd-4d1b-8a5b-7f39568576b4",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-pilotes-de-la-loire",
@@ -393624,7 +393843,10 @@
    "site": null,
    "source": null,
    "confiance": null,
-   "uuid": "715505ed-dd65-429c-affd-ee9edc966982"
+   "uuid": "715505ed-dd65-429c-affd-ee9edc966982",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-st-management",
@@ -393672,7 +393894,10 @@
    "nature_du_point": "siege",
    "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification sirene : https://annuaire-entreprises.data.gouv.fr/entreprise/420454399 ; SIRENE : creation de la personne morale le 1998-09-18 ; adresse de la page : 4 rue Paul Marcel BP 54214 44032 Nantes cedex 01",
    "fondation": 1998,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/420454399"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/420454399",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-societe-de-transports-des-iles",
@@ -393767,7 +393992,8 @@
    "alias": [
     "L'Express des Iles",
     "L'EXPRESS DES ILES",
-    "FRS (Allemagne)"
+    "FRS (Allemagne)",
+    "L'Express des Îles"
    ],
    "navires": 7,
    "ville": "Pointe à Pitre",
@@ -393785,7 +394011,10 @@
    "nature_du_point": "siege",
    "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification sirene : https://annuaire-entreprises.data.gouv.fr/entreprise/437743974 ; SIRENE : creation de la personne morale le 2001-03-31 ; adresse de la page : 9, immeuble Darse, quai Gatine 97110 Pointe à Pitre",
    "fondation": 2001,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/437743974"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/437743974",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-cable-maintenance-offshore",
@@ -393831,7 +394060,10 @@
    "nature_du_point": "siege",
    "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification sirene : https://annuaire-entreprises.data.gouv.fr/entreprise/424722130 ; SIRENE : creation de la personne morale le 1999-09-24 ; adresse de la page : 16-18 rue Paul Lafargue 92800 Puteaux",
    "fondation": 1999,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/424722130"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/424722130",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-plastic-odyssey-expedition",
@@ -394680,7 +394912,8 @@
    "nom": "Cie Armoricaine de Navigation",
    "nom_officiel": null,
    "alias": [
-    "Cie Armoricaine de Navigation"
+    "Cie Armoricaine de Navigation",
+    "Compagnie Armoricaine de Navigation"
    ],
    "navires": 1,
    "ville": "Pontrieux",
@@ -394699,7 +394932,10 @@
    },
    "uuid": "34154935-cd53-48cd-8fd8-48077feccc39",
    "nature_du_point": "siege",
-   "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification site : https://www.compagnie-armoricaine-de-navigation.fr/ ; SIRENE : aucun accord nom + commune ; 22 resultats lus"
+   "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification site : https://www.compagnie-armoricaine-de-navigation.fr/ ; SIRENE : aucun accord nom + commune ; 22 resultats lus",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-cie-corsaire",
@@ -394879,7 +395115,11 @@
    },
    "uuid": "c3c060ca-d350-42f2-ae3c-b832817c24a3",
    "nature_du_point": "siege",
-   "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification site : http://www.comex.fr/ ; SIRENE : aucun accord nom + commune ; 10 resultats lus"
+   "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification site : http://www.comex.fr/ ; SIRENE : aucun accord nom + commune ; 10 resultats lus",
+   "appartenance": [
+    "AdF",
+    "GICAN"
+   ]
   },
   {
    "id": "ope-compagnie-francaise-de-croisieres",
@@ -395078,7 +395318,8 @@
     "DRAGAGE TRANSPORTS ET TRAVAUX MARITIMES (DTM)",
     "DRAGAGE TRANSPORTS ET TRAVAUX MARITIMES",
     "Dragages Transports & Travaux Maritimes (DTM)",
-    "Dragages Transports et Travaux"
+    "Dragages Transports et Travaux",
+    "DTM"
    ],
    "navires": 2,
    "ville": "La Rochelle",
@@ -395108,6 +395349,9 @@
      "coques": 2,
      "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/304516420"
     }
+   ],
+   "appartenance": [
+    "AdF"
    ]
   },
   {
@@ -395259,7 +395503,10 @@
    },
    "uuid": "f0c886df-b850-4810-b99a-bc53bbd8af11",
    "nature_du_point": "siege",
-   "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification site : https://pilotes-maritimes.com/ ; SIRENE : aucun accord nom + commune ; 31 resultats lus"
+   "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification site : https://pilotes-maritimes.com/ ; SIRENE : aucun accord nom + commune ; 31 resultats lus",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-france-lng-shipping",
@@ -395359,6 +395606,9 @@
      "coques": 1,
      "source": "https://jifmar.com/legal-notice/"
     }
+   ],
+   "appartenance": [
+    "AdF"
    ]
   },
   {
@@ -395833,7 +396083,10 @@
    "nature_du_point": "siege",
    "note": "Moisson marine-marchande.net (compagnies, 2026-09-02) : https://www.marine-marchande.net/compagnies/compagnies.htm ; verification sirene : https://annuaire-entreprises.data.gouv.fr/entreprise/318992690 ; SIRENE : creation de la personne morale le 1980-05-29 ; adresse de la page : Zone portuaire 44550 Montoir de Bretagne",
    "fondation": 1980,
-   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/318992690"
+   "fondation_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/318992690",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-thomas-services-maritimes",
@@ -396675,6 +396928,9 @@
      "coques": 1,
      "source": "https://www.lda.fr/mentions-legales"
     }
+   ],
+   "appartenance": [
+    "AdF"
    ]
   },
   {
@@ -400976,7 +401232,8 @@
    "nom": "Sea Tankers",
    "nom_officiel": "Sea Tankers",
    "alias": [
-    "Sea Tankers"
+    "Sea Tankers",
+    "Sea Tankers Shipping"
    ],
    "navires": 13,
    "ville": null,
@@ -400987,7 +401244,10 @@
    "site": null,
    "source": null,
    "confiance": null,
-   "uuid": "8bf86b9b-9089-41a1-8699-b3ecfdf92e70"
+   "uuid": "8bf86b9b-9089-41a1-8699-b3ecfdf92e70",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-tankers-uk-agencies",
@@ -401755,7 +402015,8 @@
    "nom": "Les Sabliers de l'Odet",
    "nom_officiel": "Les Sabliers de l'Odet",
    "alias": [
-    "Les Sabliers de l'Odet"
+    "Les Sabliers de l'Odet",
+    "Sabliers de l'Odet"
    ],
    "navires": 1,
    "ville": null,
@@ -401766,7 +402027,10 @@
    "site": null,
    "source": null,
    "confiance": null,
-   "uuid": "54fac033-f75b-4bbf-83cb-3b1ef4311959"
+   "uuid": "54fac033-f75b-4bbf-83cb-3b1ef4311959",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-vale-nouvelle-caledonie-3qlsza",
@@ -402097,7 +402361,8 @@
    "nom": "Sté Remorquage Maritime de Rouen",
    "nom_officiel": "Sté Remorquage Maritime de Rouen",
    "alias": [
-    "Sté Remorquage Maritime de Rouen"
+    "Sté Remorquage Maritime de Rouen",
+    "Société Remorquage Maritime de Rouen"
    ],
    "navires": 1,
    "ville": null,
@@ -402108,7 +402373,10 @@
    "site": null,
    "source": null,
    "confiance": null,
-   "uuid": "5beb5c20-6b77-4c1f-97d3-96fe00ba4bd4"
+   "uuid": "5beb5c20-6b77-4c1f-97d3-96fe00ba4bd4",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-powell-duffryn-francaise",
@@ -402437,7 +402705,10 @@
    "actif": false,
    "actif_source": "https://annuaire-entreprises.data.gouv.fr/entreprise/478950504",
    "actif_methode": "API publique Recherche d'entreprises (SIRENE) : personne morale IXBLUE DIVISION IXSURVEY, SIREN 478 950 504, creee le 30/09/2004, cessee le 01/09/2016. Une cessation de personne morale ne tue pas la maison : l'activite a ete reprise par l'entite de tete du groupe, aujourd'hui EXAIL, SIREN 433 185 121, meme adresse, active (ECA Group et iXblue sont devenus Exail en octobre 2022).",
-   "nature_du_point": "siege"
+   "nature_du_point": "siege",
+   "appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "ope-tmsi",
@@ -457849,7 +458120,7 @@
   {
    "id": "org-splmna",
    "nom": "SPLMNA",
-   "nom_complet": null,
+   "nom_complet": "Syndicat Professionnel Lamanage des ports de la Manche et de l'Atlantique",
    "type": "syndicat professionnel",
    "pays": "France",
    "represente": [
@@ -457857,11 +458128,14 @@
    ],
    "secteur": "lamanage",
    "site": null,
-   "source": null,
+   "source": "https://armateurscotiers.fr/nos-adherents/splmna",
    "note": "Association dont dépendent les stations de lamanage adhérentes (appartenance: SPLMNA). Ce n'est pas une société exploitante : les stations sont les opérateurs. Sigle non expansé au registre, à confirmer auprès de la maison.",
    "uuid": "0fbfc7dc-0666-4812-918a-0b11f62a3140",
    "cles_appartenance": [
     "SPLMNA"
+   ],
+   "membre_de": [
+    "ACF"
    ]
   },
   {
@@ -457878,7 +458152,10 @@
    "site": "https://gican.asso.fr",
    "source": "https://gican.asso.fr",
    "note": "Organisation des chantiers et équipementiers français.",
-   "uuid": "7500be71-e429-4910-a6cc-e045b3bcdf63"
+   "uuid": "7500be71-e429-4910-a6cc-e045b3bcdf63",
+   "cles_appartenance": [
+    "GICAN"
+   ]
   },
   {
    "id": "org-acf",
@@ -457911,7 +458188,10 @@
    "site": "https://www.armateursdefrance.org",
    "source": "https://www.armateursdefrance.org",
    "note": "Compagnies adhérentes listées sur son site.",
-   "uuid": "ec55b81c-a6c2-4098-a5ce-fa1a0cdbf282"
+   "uuid": "ec55b81c-a6c2-4098-a5ce-fa1a0cdbf282",
+   "cles_appartenance": [
+    "AdF"
+   ]
   },
   {
    "id": "org-aperma",
@@ -457944,6 +458224,9 @@
    "uuid": "63820cbe-22ca-4411-9325-a18a985372b8",
    "cles_appartenance": [
     "ARMAM"
+   ],
+   "membre_de": [
+    "ACF"
    ]
   },
   {
