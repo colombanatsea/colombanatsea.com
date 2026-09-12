@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Registre naval européen",
   "version": "0.1.0-mvp",
-  "date_maj": "2026-09-09",
+  "date_maj": "2026-09-12",
   "note": "Registre des chantiers navals européens et de leurs navires. Chaque champ porte sa source ; les champs non sourcés restent vides. Le taux de sourcing OPPOSABLE (source tierce, recevable, vivante) est mesuré par audit-sourcing.js et vaut 61 % au niveau du navire : le taux de remplissage, plus élevé, ne le remplace pas.",
   "perimetres_ref": {
    "construction-neuve": "Construction neuve",
@@ -16763,8 +16763,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "ferry avec capacité véhicules",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Roulier / Ferry / Navires mixtes",
      "id": "nav-b7589a97d546",
      "chantier_id": "piriou-concarneau",
      "operateur_id": "ope-compagnie-yeu-continent",
@@ -16778,7 +16778,8 @@
        "port_lourd_dwt"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Kephrenn et Eneziz",
@@ -17288,8 +17289,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "ferry avec capacité véhicules",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Roulier / Ferry / Navires mixtes",
      "id": "nav-475d8a3e8e4e",
      "chantier_id": "piriou-concarneau",
      "operateur_id": "ope-oceane",
@@ -17303,7 +17304,8 @@
        "port_lourd_dwt"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "L'Astrolabe",
@@ -17560,8 +17562,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "capacités passagers ET fret renseignées",
-     "cotier_segment": "Mixte passagers + fret",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Roulier / Ferry / Navires mixtes",
      "id": "nav-b44b2079bf5e",
      "chantier_id": "piriou-concarneau",
      "operateur_id": "ope-breizhgo-penn-ar-bed",
@@ -17574,7 +17576,8 @@
        "port_lourd_dwt"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Franche Terre",
@@ -17790,7 +17793,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-baecbdbe0ce2",
      "chantier_id": "piriou-concarneau",
@@ -17806,7 +17809,8 @@
        "port_lourd_dwt"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Cap Sainte Marie",
@@ -18603,8 +18607,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers »",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-ff12d999bd61",
      "chantier_id": "piriou-concarneau",
      "operateur_id": "ope-les-vedettes-de-brehat",
@@ -18623,7 +18627,8 @@
        "capacite_pax"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Eneziz",
@@ -18651,8 +18656,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers »",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-3657aa5c73ec",
      "chantier_id": "piriou-concarneau",
      "operateur_id": "ope-les-vedettes-de-brehat",
@@ -18671,7 +18676,8 @@
        "capacite_pax"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "CARIBDESIR II",
@@ -20739,7 +20745,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-e44fa83245e5",
      "chantier_id": "socarenam-boulogne",
@@ -20747,7 +20753,8 @@
      "acf_id": "cd76-bac23",
      "source_ref": "Declaration de l'adherent a la plateforme ACF (armateurscotiers.fr), non publique, identifiant ACF cd76-bac23, relevee le 2026-09-02",
      "uuid": "e230bdd7-3bbc-4329-a3aa-519582a5670b",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Sébastien Vauban",
@@ -20816,7 +20823,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-05464b095dd2",
      "chantier_id": "socarenam-boulogne",
@@ -20833,7 +20840,8 @@
        "port_lourd_dwt"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "L'Ostréa",
@@ -21826,13 +21834,15 @@
      "caractere_motif": "propriete: marine nationale ; exploitation: marine nationale",
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "cotier": "non",
-     "cotier_motif": "type non couvert par la typologie de l'atelier (engin de débarquement)",
+     "cotier": "oui",
+     "cotier_motif": "segment arbitré coque par coque",
      "id": "nav-e9a16ccd1dbd",
      "chantier_id": "socarenam-boulogne",
      "operateur_id": "ope-marine-nationale-fr",
      "uuid": "7123c403-97e9-4f4e-9168-4b75c2755728",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_segment": "Fret portuaire",
+     "cotier_arbitre": true
     },
     {
      "nom": "Hallebarde",
@@ -22990,14 +23000,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Roulier / Ferry / Navires mixtes",
      "id": "nav-6a40eff182e4",
      "chantier_id": "cmn-cherbourg",
      "operateur_id": "ope-oceane",
      "acf_id": "oceane-vindilis",
      "uuid": "dd2543ae-1ff2-4503-a863-7aea90cbca45",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Tara Polar Station",
@@ -24869,7 +24880,7 @@
      "propriete": "privee",
      "caractere_motif": "propriete: compagnie",
      "cotier": "oui",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-82674cdd0a96",
      "chantier_id": "ocea-les-sables",
@@ -24889,7 +24900,8 @@
      },
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Gwenn ha Du",
@@ -24936,7 +24948,7 @@
      "propriete": "privee",
      "caractere_motif": "propriete: compagnie",
      "cotier": "oui",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-833973a8994b",
      "chantier_id": "ocea-les-sables",
@@ -24956,7 +24968,8 @@
      },
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "NNS ZHIZOKO (OCEA OSV 115, navire hydrographique de la Marine nigeriane)",
@@ -26223,15 +26236,16 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-bf71a07bfc07",
      "chantier_id": "ocea-les-sables",
      "operateur_id": "ope-tao",
      "acf_id": "tao-kerpont",
      "source_ref": "Declaration de l'adherent a la plateforme ACF (armateurscotiers.fr), non publique, identifiant ACF tao-kerpont, relevee le 2026-09-02",
      "uuid": "ccefc85c-6978-4c7a-a99b-1aaa48d76689",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Mélusine",
@@ -26530,14 +26544,15 @@
      "caractere_motif": "propriete: metropole",
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "cotier": "indetermine",
-     "cotier_motif": "type porte « ferry / roulier », capacité non précisée ; longueur absente, gabarit non vérifié",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier": "oui",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-de94554c699a",
      "chantier_id": "ocea-les-sables",
      "operateur_id": "ope-navigone",
      "uuid": "f332cd7d-00da-4d76-883a-000357e1e70d",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "La Fenotte",
@@ -26644,14 +26659,15 @@
      "caractere_motif": "propriete: metropole",
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "cotier": "indetermine",
-     "cotier_motif": "type porte « ferry / roulier », capacité non précisée ; longueur absente, gabarit non vérifié",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier": "oui",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-74fe73193531",
      "chantier_id": "ocea-les-sables",
      "operateur_id": "ope-navigone",
      "uuid": "9054379b-0a73-459e-a029-48af57c0143e",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Le Canut",
@@ -26705,14 +26721,15 @@
      "caractere_motif": "propriete: metropole",
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "cotier": "indetermine",
-     "cotier_motif": "type porte « ferry / roulier », capacité non précisée ; longueur absente, gabarit non vérifié",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier": "oui",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-190842f70a81",
      "chantier_id": "ocea-les-sables",
      "operateur_id": "ope-navigone",
      "uuid": "aa8c0e86-2e2a-4aec-8595-cc35a8b99ce8",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Chef de Caux",
@@ -27817,8 +27834,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-9386b0c4380f",
      "chantier_id": "ocea-les-sables",
      "operateur_id": "ope-transrades",
@@ -27832,7 +27849,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Chevalier-Paul.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Edmond Dantès",
@@ -27905,8 +27923,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-d12037e184ea",
      "chantier_id": "ocea-les-sables",
      "operateur_id": "ope-transrades",
@@ -27920,7 +27938,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Edmond-Dantes.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Henri Jacques Espérandieu",
@@ -27994,8 +28013,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-8e8a3d04dc69",
      "chantier_id": "ocea-les-sables",
      "operateur_id": "ope-transrades",
@@ -28009,7 +28028,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/HJ-Esperandieu.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Bréhatine",
@@ -28039,8 +28059,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers »",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-c94cb0a10456",
      "chantier_id": "ocea-les-sables",
      "operateur_id": "ope-les-vedettes-de-brehat",
@@ -28054,7 +28074,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Brehatine.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Inno'Vent",
@@ -28228,14 +28249,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-0a21a9c1304e",
      "chantier_id": "ocea-les-sables",
      "operateur_id": "ope-cmt",
      "acf_id": "cmt-saintnicolas",
      "uuid": "5c13e9e2-e27c-4130-95c6-b6760682130b",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Kahouanne",
@@ -35773,8 +35795,8 @@
       "annee_confirmee": "2011"
      },
      "cotier": "oui",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers »",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-02c75431269f",
      "chantier_id": "glehen-douarnenez",
      "operateur_id": "ope-service-maritime-de-l-ile-d-aix-liaison-ijel75",
@@ -35794,7 +35816,8 @@
      },
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Nevez Amzer",
@@ -36002,8 +36025,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "capacités passagers ET fret renseignées",
-     "cotier_segment": "Mixte passagers + fret",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Roulier / Ferry / Navires mixtes",
      "id": "nav-268469651e89",
      "chantier_id": "glehen-douarnenez",
      "operateur_id": "ope-compagnie-penn-ar-bed-desserte-ile-de-se-161iqen",
@@ -36019,7 +36042,8 @@
        "imo"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Bara Pemdez",
@@ -36101,15 +36125,16 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-ac7c74240185",
      "chantier_id": "glehen-douarnenez",
      "operateur_id": "ope-morlenn-express",
      "acf_id": "morlenn-louarn",
      "source_ref": "Declaration de l'adherent a la plateforme ACF (armateurscotiers.fr), non publique, identifiant ACF morlenn-louarn, relevee le 2026-09-02",
      "uuid": "6f940a26-95d8-4075-8456-920c94a0bb90",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Melvan",
@@ -36165,8 +36190,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Mixte passagers + fret",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Roulier / Ferry / Navires mixtes",
      "id": "nav-8b8d5aa2c19e",
      "chantier_id": "glehen-douarnenez",
      "operateur_id": "ope-oceane",
@@ -36181,7 +36206,8 @@
        "port_lourd_dwt"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Pétrel",
@@ -36234,8 +36260,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-27746c1dc2ef",
      "chantier_id": "glehen-douarnenez",
      "operateur_id": "ope-penn-ar-bed",
@@ -36250,7 +36276,8 @@
       "source": "https://www.marine-marchande.net/Flotte/P-T/Petrel.htm",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Jacques de Thezac",
@@ -36354,7 +36381,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "ferry à passagers de moins de 30 m",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-eced6c17341f",
      "chantier_id": "glehen-douarnenez",
@@ -36368,7 +36395,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Rose-Here.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Rivage Express",
@@ -36449,7 +36477,7 @@
      ],
      "source_ref": "Declaration de l'adherent a la plateforme ACF (armateurscotiers.fr), non publique, identifiant ACF ves-armam-vedettes-odet-01, relevee le 2026-09-02",
      "cotier": "oui",
-     "cotier_motif": "ferry à passagers de moins de 30 m",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-d5a3fe0d1dbd",
      "chantier_id": "glehen-douarnenez",
@@ -36468,7 +36496,8 @@
      },
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Armor",
@@ -37968,8 +37997,8 @@
      },
      "note": "MMSI 228201020 ; la liste du GT porte 2023",
      "id": "nav-4c3f5674a28b",
-     "cotier": "non",
-     "cotier_motif": "type non couvert par la typologie de l'atelier (bateau de travail portuaire)",
+     "cotier": "oui",
+     "cotier_motif": "segment arbitré coque par coque",
      "uuid": "bdfc9689-f28a-4e01-b7ac-90c8cafd6e55",
      "enrichissement": {
       "le": "2026-09-02",
@@ -37987,7 +38016,9 @@
      },
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_segment": "Fret portuaire",
+     "cotier_arbitre": true
     }
    ],
    "geo_source": "https://api-adresse.data.gouv.fr/search/?q=port+du+rosmeur+douarnenez",
@@ -38972,15 +39003,16 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-416481243812",
      "chantier_id": "chantiers-bernard-lorient",
      "operateur_id": "ope-tao",
      "acf_id": "tao-traitdunion",
      "source_ref": "Declaration de l'adherent a la plateforme ACF (armateurscotiers.fr), non publique, identifiant ACF tao-traitdunion, relevee le 2026-09-02",
      "uuid": "e7e65cb6-28dc-4dec-bf6d-4eeef726f905",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Frya",
@@ -39810,8 +39842,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "navire à grande vitesse (NGV/HSC)",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Vedette à passagers",
      "id": "nav-af7e5b3c4457",
      "chantier_id": "chantiers-bernard-lorient",
      "operateur_id": "ope-navix",
@@ -39828,7 +39860,8 @@
        "capacite_pax"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Kerisper",
@@ -39856,8 +39889,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "navire à grande vitesse (NGV/HSC)",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Vedette à passagers",
      "id": "nav-6514cf18206d",
      "chantier_id": "chantiers-bernard-lorient",
      "operateur_id": "ope-navix",
@@ -39874,7 +39907,8 @@
        "capacite_pax"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Enez Vriad",
@@ -39901,8 +39935,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers »",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-98c05bc2c814",
      "chantier_id": "chantiers-bernard-lorient",
      "operateur_id": "ope-les-vedettes-de-brehat",
@@ -39919,7 +39953,8 @@
        "capacite_pax"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     }
    ],
    "geo_source": "https://api-adresse.data.gouv.fr/search/?q=port+de+pen+mane+locmiquelic",
@@ -40393,7 +40428,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « bac / double-ender / amphidrome »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-a478eb5a492c",
      "chantier_id": "merre-nort-sur-erdre",
@@ -40408,7 +40443,8 @@
        "imo"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "RP 10 - remorqueurs-pousseurs de 10 tonnes (programme de 29 unités, 18 construites par Merré/CIB)",
@@ -40638,14 +40674,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-55ae1010d1b5",
      "chantier_id": "merre-nort-sur-erdre",
      "operateur_id": "ope-smtdr",
      "acf_id": "smtdr-barcarin5",
      "uuid": "e0683662-3b39-4fe3-a76a-5367594ba198",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Île Dumet",
@@ -40720,7 +40757,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « bac / double-ender / amphidrome »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-17bf1e288558",
      "chantier_id": "merre-nort-sur-erdre",
@@ -40734,7 +40771,8 @@
        "jauge_gt"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Lola",
@@ -40809,7 +40847,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « bac / double-ender / amphidrome »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-236b5b57f385",
      "chantier_id": "merre-nort-sur-erdre",
@@ -40823,7 +40861,8 @@
        "jauge_gt"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Fort Boyard",
@@ -40958,7 +40997,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Fret côtier",
      "id": "nav-856cdf442fce",
      "chantier_id": "merre-nort-sur-erdre",
@@ -40976,7 +41015,8 @@
        "imo"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Morges",
@@ -41994,7 +42034,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-de6a1d05dcbf",
      "chantier_id": "merre-nort-sur-erdre",
@@ -42012,7 +42052,8 @@
        "capacite_pax"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "CASAM IV",
@@ -46307,8 +46348,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-cc4483a8e960",
      "chantier_id": "cnb-bordeaux",
      "operateur_id": "ope-blue-lines",
@@ -46323,7 +46364,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Pearl-Island.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     }
    ],
    "geo_source": "https://api-adresse.data.gouv.fr/search/?q=162+quai+de+brazza+bordeaux&limit=1",
@@ -59484,8 +59526,8 @@
      "caractere_motif": "propriete: compagnie",
      "source_ref": "https://martinez-constructions-navales.fr/produits/corsaire-demeraude-vedette-de-transport-de-passagers — (Plans: Bureau d'étude Mer et Design) ; https://meretdesign.fr/",
      "cotier": "oui",
-     "cotier_motif": "navire à grande vitesse (NGV/HSC)",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Vedette à passagers",
      "id": "nav-ddcaa2a0bf21",
      "chantier_id": "chantier-naval-martinez-martinez-constructions-n-saint-cyprien",
      "operateur_id": "ope-compagnie-corsaire",
@@ -59504,7 +59546,8 @@
      },
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Mahi Mahi III",
@@ -59792,7 +59835,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-bfab9a923192",
      "chantier_id": "chantier-naval-martinez-martinez-constructions-n-saint-cyprien",
@@ -59810,7 +59853,8 @@
        "capacite_pax"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Capitaine Pesqui",
@@ -62072,13 +62116,14 @@
      "exploitation": "service-public",
      "caractere_motif": "exploitation: passeur",
      "cotier": "oui",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-19b0450c219f",
      "chantier_id": "pech-alu-international-inzinzac-lochris",
      "operateur_id": "ope-le-passeur-des-iles",
      "acf_id": "ves-armam-passeur-des-iles-01",
-     "uuid": "72411d51-b9bc-41f8-a7a3-cd3c6c7e6f99"
+     "uuid": "72411d51-b9bc-41f8-a7a3-cd3c6c7e6f99",
+     "cotier_arbitre": true
     },
     {
      "nom": "Mobula",
@@ -63158,15 +63203,16 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-2d7c6a4676e9",
      "chantier_id": "pech-alu-international-inzinzac-lochris",
      "operateur_id": "ope-smtdr",
      "acf_id": "smtdr-sauvage4",
      "source_ref": "Declaration de l'adherent a la plateforme ACF (armateurscotiers.fr), non publique, identifiant ACF smtdr-sauvage4, relevee le 2026-09-02",
      "uuid": "55712df5-4ee8-4fca-bc42-6611efada996",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Talhouant",
@@ -63215,15 +63261,16 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-a013dcc58f41",
      "chantier_id": "pech-alu-international-inzinzac-lochris",
      "operateur_id": "ope-tao",
      "acf_id": "tao-talhouant",
      "source_ref": "Declaration de l'adherent a la plateforme ACF (armateurscotiers.fr), non publique, identifiant ACF tao-talhouant, relevee le 2026-09-02",
      "uuid": "3b24fe0e-2667-41f8-a2bd-af9b99aa7795",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Tanguethen",
@@ -63272,15 +63319,16 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-54e321741dd8",
      "chantier_id": "pech-alu-international-inzinzac-lochris",
      "operateur_id": "ope-tao",
      "acf_id": "tao-tanguethen",
      "source_ref": "Declaration de l'adherent a la plateforme ACF (armateurscotiers.fr), non publique, identifiant ACF tao-tanguethen, relevee le 2026-09-02",
      "uuid": "4d904d2a-6379-44aa-8b0e-e25d7eff9db0",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Boatcom",
@@ -64049,8 +64097,8 @@
      "propriete": "privee",
      "caractere_motif": "propriete: compagnie",
      "cotier": "oui",
-     "cotier_motif": "navire à grande vitesse (NGV/HSC)",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-5c479c216d30",
      "chantier_id": "ocea-site-saint-nazaire-saint-nazaire",
      "operateur_id": "ope-navix-vannes",
@@ -64069,7 +64117,8 @@
      },
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "NNS Shiroro, NNS Ose (2017) ; NNS Gongola, NNS Calabar (2018)",
@@ -77353,12 +77402,13 @@
      "source": "https://meretmarine.com/fr/content/alu-marine-livre-la-nouvelle-vedette-fluviale-de-calais",
      "propulsion": [],
      "cotier": "oui",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers »",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-ac7bc519561a",
      "chantier_id": "alumarine-shipyard-coueron",
      "operateur_id": "ope-sitac-calais",
-     "uuid": "90b7a651-bb49-4102-9a2b-f15f79aa13ef"
+     "uuid": "90b7a651-bb49-4102-9a2b-f15f79aa13ef",
+     "cotier_arbitre": true
     },
     {
      "nom": "Ar Gazeg II",
@@ -88204,12 +88254,14 @@
      "caractere": "prive",
      "propriete": "privee",
      "caractere_motif": "propriete: compagnie",
-     "cotier": "non",
-     "cotier_motif": "type non couvert par la typologie de l'atelier (bateau à passagers (réhabilitation intégrale + hybridation))",
+     "cotier": "oui",
+     "cotier_motif": "segment arbitré coque par coque",
      "id": "nav-d73fe79842dc",
      "chantier_id": "chantiers-de-la-haute-seine-villeneuve-le-ro",
      "operateur_id": "ope-compagnie-des-bateaux-mouches-4m3k8r",
-     "uuid": "65ff63aa-39e9-4d0a-9c93-3aca740aa7ac"
+     "uuid": "65ff63aa-39e9-4d0a-9c93-3aca740aa7ac",
+     "cotier_segment": "Bac / passage d'eau",
+     "cotier_arbitre": true
     },
     {
      "nom": "Héméra",
@@ -118186,14 +118238,16 @@
      "caractere_motif": "propriete: region",
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "cotier": "non",
-     "cotier_motif": "type non couvert par la typologie de l'atelier (NGV / catamaran rapide a passagers (Fjellstrand Flyingcat 46), max 6 voitures, 430-439 passagers, 32 nds)",
+     "cotier": "oui",
+     "cotier_motif": "segment arbitré coque par coque",
      "id": "nav-b57d874c7abb",
      "chantier_id": "fjellstrand-as-omastrand",
      "operateur_id": "ope-compagnie-yeu-continent",
      "acf_id": "cyc-chatelet",
      "uuid": "2af0d2e7-a32d-4b55-99f5-2a41a25028c4",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_segment": "NGV",
+     "cotier_arbitre": true
     },
     {
      "nom": "Pont d'Yeu",
@@ -118257,14 +118311,16 @@
      "caractere_motif": "propriete: region",
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "cotier": "non",
-     "cotier_motif": "type non couvert par la typologie de l'atelier (NGV / catamaran rapide a passagers (Fjellstrand Flyingcat 46), max 6 voitures, 430 passagers, 32 nds)",
+     "cotier": "oui",
+     "cotier_motif": "segment arbitré coque par coque",
      "id": "nav-4f9b40013990",
      "chantier_id": "fjellstrand-as-omastrand",
      "operateur_id": "ope-compagnie-yeu-continent",
      "acf_id": "cyc-pontdyeu",
      "uuid": "c8a8dcd8-607e-4e55-8a5b-35fcb5e2eed5",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_segment": "NGV",
+     "cotier_arbitre": true
     },
     {
      "nom": "Kommandøren",
@@ -218349,8 +218405,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-f0fdd99a617d",
      "chantier_id": "fr-yard-chantier-de-l-arsenal",
      "operateur_id": "ope-cmt",
@@ -218367,7 +218423,8 @@
       "confiance": "simple"
      },
      "uuid": "53a1d5b2-4b22-4662-b820-fc58b1beabe2",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Le Suroît",
@@ -218415,8 +218472,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-6bbdcf40cc11",
      "chantier_id": "fr-yard-chantier-de-l-arsenal",
      "operateur_id": "ope-cmt",
@@ -218439,7 +218496,8 @@
       "confiance": "simple"
      },
      "uuid": "99d69977-fb70-4bfc-a85a-08dd0a101ee8",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Navettes portuaires Les Sables d'Olonne (2 x Nep12)",
@@ -218557,7 +218615,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-8b98ea6a555e",
      "chantier_id": "fr-yard-tmi",
@@ -218574,7 +218632,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/La-Vendeenne.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "L'Estello",
@@ -218633,8 +218692,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-c4e44362fcc8",
      "chantier_id": "fr-yard-tmi",
      "operateur_id": "ope-rd-tpm",
@@ -218649,7 +218708,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Lestello.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "L'Esquinade",
@@ -218708,8 +218768,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-a9f178bd9345",
      "chantier_id": "fr-yard-tmi",
      "operateur_id": "ope-rd-tpm",
@@ -218724,7 +218784,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Lesquinade.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "La Rascasso",
@@ -218783,8 +218844,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-bc24c5d92f31",
      "chantier_id": "fr-yard-tmi",
      "operateur_id": "ope-rd-tpm",
@@ -218799,7 +218860,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/La-Rascasso.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Longo Maï",
@@ -218858,8 +218920,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-d6ac85c035fc",
      "chantier_id": "fr-yard-tmi",
      "operateur_id": "ope-rd-tpm",
@@ -218874,7 +218936,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Longo-mai.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Lou Merou",
@@ -218933,8 +218996,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-9330188222b6",
      "chantier_id": "fr-yard-tmi",
      "operateur_id": "ope-rd-tpm",
@@ -218949,7 +219012,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Lou-Merou.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Lou Mistrau",
@@ -219008,8 +219072,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-48357d7b9f11",
      "chantier_id": "fr-yard-tmi",
      "operateur_id": "ope-rd-tpm",
@@ -219024,7 +219088,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Lou-Mistrau.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Lou Pichoun",
@@ -219083,8 +219148,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-7d63396390ec",
      "chantier_id": "fr-yard-tmi",
      "operateur_id": "ope-rd-tpm",
@@ -219099,7 +219164,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Lou-Pichoun.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Lou Roucaou",
@@ -219158,8 +219224,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-7a8eceebde89",
      "chantier_id": "fr-yard-tmi",
      "operateur_id": "ope-rd-tpm",
@@ -219174,7 +219240,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Lou-Roucaou.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Lou Souleu",
@@ -219233,8 +219300,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-3c20b3b4f0ad",
      "chantier_id": "fr-yard-tmi",
      "operateur_id": "ope-rd-tpm",
@@ -219249,7 +219316,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Lou-Souleu.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Méditerranée 14",
@@ -219316,14 +219384,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Mixte passagers + fret",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Roulier / Ferry / Navires mixtes",
      "id": "nav-eee5095e80e1",
      "chantier_id": "fr-yard-tmi",
      "operateur_id": "ope-tlv-tvm",
      "acf_id": "tlv-med14",
      "uuid": "4412d9da-5b2b-4ec9-a06b-7cf4e194b59c",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Méditerranée 15",
@@ -219396,14 +219465,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Mixte passagers + fret",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Roulier / Ferry / Navires mixtes",
      "id": "nav-ae1dff0ce57e",
      "chantier_id": "fr-yard-tmi",
      "operateur_id": "ope-tlv-tvm",
      "acf_id": "tlv-med15",
      "uuid": "1383bcd3-6db0-4cc2-a87a-067d231fee14",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Saint Pierre",
@@ -219456,8 +219526,8 @@
      "tracabilite": "url-non-verifiee",
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "cotier": "indetermine",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers » ; longueur absente, gabarit non vérifié",
+     "cotier": "oui",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-b40ad3a94462",
      "chantier_id": "fr-yard-tmi",
@@ -219477,7 +219547,8 @@
        "capacite_pax"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Laisse Dire III",
@@ -219931,7 +220002,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-762bcba84aca",
      "chantier_id": "fr-yard-gamelin",
@@ -219948,7 +220019,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Ogia.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Port Fromentine",
@@ -220003,7 +220075,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-410648f2c8f3",
      "chantier_id": "fr-yard-gamelin",
@@ -220020,7 +220092,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Port-Fromentine.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Arun",
@@ -220079,8 +220152,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-f3268d5a61ee",
      "chantier_id": "fr-yard-gamelin",
      "operateur_id": "ope-morlenn-express",
@@ -220098,7 +220171,8 @@
        "port_lourd_dwt"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Bindy",
@@ -220164,8 +220238,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-bb31dd6bd025",
      "chantier_id": "fr-yard-gamelin",
      "operateur_id": "ope-morlenn-express",
@@ -220181,7 +220255,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Bindy.htm",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Terenez",
@@ -220246,8 +220321,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-96aff4d4317e",
      "chantier_id": "fr-yard-gamelin",
      "operateur_id": "ope-morlenn-express",
@@ -220262,7 +220337,8 @@
       "source": "https://www.marine-marchande.net/Flotte/P-T/Terenez.htm",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Tibidy",
@@ -220326,8 +220402,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-094a174c8aa9",
      "chantier_id": "fr-yard-gamelin",
      "operateur_id": "ope-morlenn-express",
@@ -220343,7 +220419,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Tibidy.htm",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Treberon",
@@ -220407,8 +220484,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-04f51f3b377f",
      "chantier_id": "fr-yard-gamelin",
      "operateur_id": "ope-morlenn-express",
@@ -220424,7 +220501,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Treberon.htm",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Les 2 Rives",
@@ -220488,15 +220566,16 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-27e890cdfdf8",
      "chantier_id": "fr-yard-gamelin",
      "operateur_id": "ope-tao",
      "acf_id": "tao-2rives",
      "source_ref": "Declaration de l'adherent a la plateforme ACF (armateurscotiers.fr), non publique, identifiant ACF tao-2rives, relevee le 2026-09-02",
      "uuid": "da8f571b-6f7e-4f5c-b960-9a1cc4990ee2",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Boëdic 2",
@@ -220543,8 +220622,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-4cf14cc141b0",
      "chantier_id": "fr-yard-gamelin",
      "operateur_id": "ope-breizhgo-ile-d-arz-17ngv6x",
@@ -220560,7 +220639,8 @@
        "longueur_m"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Mor Bihan",
@@ -220587,7 +220667,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-dd79722f07bb",
      "chantier_id": "fr-yard-gamelin",
@@ -220605,7 +220685,8 @@
        "capacite_pax"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Copernic",
@@ -220665,14 +220746,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-dfb59ba16a5d",
      "chantier_id": "fr-yard-gamelin",
      "operateur_id": "ope-tdlr",
      "acf_id": "tdlr-copernic",
      "uuid": "6dd3a715-4582-4ef3-bb68-c034d0db0478",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Galilée",
@@ -220732,14 +220814,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-cc34b45a15b7",
      "chantier_id": "fr-yard-gamelin",
      "operateur_id": "ope-tdlr",
      "acf_id": "tdlr-galilee",
      "uuid": "e5975ce5-b58d-4b7b-85df-dfb020452955",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Tocqueville",
@@ -220953,14 +221036,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-7c3bb1142e9c",
      "chantier_id": "fr-yard-chantier-naval-du-ponant",
      "operateur_id": "ope-kmfa",
      "acf_id": "kmfa-pierreloti",
      "uuid": "f731980d-c86d-4290-a83c-ba16fa1a0b1e",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     }
    ],
    "sources": [
@@ -221046,8 +221130,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Roulier / Ferry / Navires mixtes",
      "id": "nav-77ffbc553e25",
      "chantier_id": "fr-yard-aker-yard-lorient",
      "operateur_id": "ope-oceane",
@@ -221061,7 +221145,8 @@
        "port_lourd_dwt"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Île de Groix",
@@ -221118,14 +221203,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Roulier / Ferry / Navires mixtes",
      "id": "nav-582feb56838f",
      "chantier_id": "fr-yard-aker-yard-lorient",
      "operateur_id": "ope-oceane",
      "acf_id": "oceane-iledegroix",
      "uuid": "63f7926a-d3bb-43dd-8c42-859487c260f2",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Anatife (pétrolier)",
@@ -221150,8 +221236,8 @@
      "note": "HOMONYME. Ne pas confondre avec l'Anatife chalutier-thonier de 1970 (17,88 m, Chantier Naval Henaff, Le Guilvinec) egalement present dans cette base. Un rapprochement par le nom seul confondrait les deux coques.",
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "cotier": "non",
-     "cotier_motif": "hors périmètre de la flotte côtière (type : Pétrolier caboteur double coque, ravitaillement des îles)",
+     "cotier": "oui",
+     "cotier_motif": "segment arbitré coque par coque",
      "id": "nav-29500c563aca",
      "chantier_id": "fr-yard-aker-yard-lorient",
      "operateur_id": "ope-marine-energie",
@@ -221168,7 +221254,9 @@
        "imo"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_segment": "Fret côtier",
+     "cotier_arbitre": true
     }
    ],
    "sources": [
@@ -221264,14 +221352,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "ferry avec capacité véhicules",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Roulier / Ferry / Navires mixtes",
      "id": "nav-b214ec75b396",
      "chantier_id": "fr-yard-la-perriere-lorient",
      "operateur_id": "ope-oceane",
      "acf_id": "oceane-sainttudy",
      "uuid": "9eea7b88-c7d6-4c58-9243-7d6507d26e82",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "CASTOR 02",
@@ -221463,8 +221552,8 @@
      "note": "En reserve pour les indisponibilites des autres ferries (marine-marchande.net)",
      "id": "nav-edb83b9cf154",
      "cotier": "oui",
-     "cotier_motif": "ferry avec capacité véhicules",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Vedette à passagers",
      "uuid": "545a198e-594e-46d7-8661-2f4ba2d1f6a3",
      "enrichissement": {
       "le": "2026-09-02",
@@ -221479,7 +221568,8 @@
       "par": "cle canonique exacte et lieu accorde (« lorient, france »)",
       "libelle": "La Perriere, Lorient",
       "le": "2026-09-02"
-     }
+     },
+     "cotier_arbitre": true
     },
     {
      "nom": "Provençal 2",
@@ -221674,14 +221764,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-fbc5628a94f3",
      "chantier_id": "fr-yard-cib-brest",
      "operateur_id": "ope-penn-ar-bed",
      "acf_id": "pab-drtricard2",
      "uuid": "531e8e5c-5330-435b-8a14-a635cbc7aa49",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Molenez",
@@ -221735,7 +221826,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Fret côtier",
      "id": "nav-f53ecebbcb85",
      "chantier_id": "fr-yard-cib-brest",
@@ -221752,7 +221843,8 @@
        "imo"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Valbelle (PM 509)",
@@ -221919,8 +222011,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Mixte passagers + fret",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Roulier / Ferry / Navires mixtes",
      "id": "nav-eea9e15336f2",
      "chantier_id": "fr-yard-paimbeuf",
      "operateur_id": "ope-penn-ar-bed",
@@ -221936,7 +222028,8 @@
        "imo"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     }
    ],
    "sources": [
@@ -222020,14 +222113,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-d9e36ec2676f",
      "chantier_id": "fr-yard-stx-lorient",
      "operateur_id": "ope-tao",
      "acf_id": "tao-arvagtredann",
      "uuid": "03bcb620-590c-47fd-abe1-295d67f79d60",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     }
    ],
    "sources": [
@@ -222109,14 +222203,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-19d0f0f7908c",
      "chantier_id": "fr-yard-dubourdieu",
      "operateur_id": "ope-tdlr",
      "acf_id": "tdlr-petitoiseau",
      "uuid": "a0f94b05-c762-47b0-879c-4f57abdc82c2",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Planula IV",
@@ -222243,7 +222338,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Fret côtier",
      "id": "nav-9ba54dc48537",
      "chantier_id": "fr-yard-snrtm",
@@ -222251,7 +222346,8 @@
      "acf_id": "tlv-archipel5",
      "source_ref": "Declaration de l'adherent a la plateforme ACF (armateurscotiers.fr), non publique, identifiant ACF tlv-archipel5, relevee le 2026-09-02",
      "uuid": "bf8a58da-3498-42fa-aa60-e11b01d1bbc0",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Méditerranée IX",
@@ -222306,8 +222402,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-648b48d9a619",
      "chantier_id": "fr-yard-snrtm",
      "operateur_id": "ope-tlv-tvm",
@@ -222321,7 +222417,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Mediterranee-IX.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Méditerranée VIII",
@@ -222375,8 +222472,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-c63e12da5fd0",
      "chantier_id": "fr-yard-snrtm",
      "operateur_id": "ope-tlv-tvm",
@@ -222392,7 +222489,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Mediterranee-VIII.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Méditerranée XI",
@@ -222446,8 +222544,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-6374455b5c7c",
      "chantier_id": "fr-yard-snrtm",
      "operateur_id": "ope-tlv-tvm",
@@ -222463,7 +222561,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Mediterranee-XI.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Archipel III",
@@ -222487,14 +222586,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-35a53bb741d6",
      "chantier_id": "fr-yard-snrtm",
      "operateur_id": "ope-tlv-tvm",
      "acf_id": "tlv-archipel-3",
      "uuid": "ede9eba0-81fb-499d-a569-9aa8f36306e9",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Mediterranee XVII",
@@ -222517,7 +222617,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-d2e6703d5c32",
      "chantier_id": "fr-yard-snrtm",
@@ -222535,7 +222635,8 @@
        "capacite_pax"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     }
    ],
    "sources": [
@@ -222736,8 +222837,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-4c88cadf5c1a",
      "chantier_id": "cn-yard-odc-marine-dalian",
      "operateur_id": "ope-blue-lines",
@@ -222751,7 +222852,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Anse-Bleue.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Gros Ilets",
@@ -222801,14 +222903,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-3cb510346774",
      "chantier_id": "cn-yard-odc-marine-dalian",
      "operateur_id": "ope-blue-lines",
      "acf_id": "bl-grosilets",
      "uuid": "5718d404-d248-4db5-86d4-954cccdd1567",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Belle Martinique",
@@ -222860,8 +222963,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-bef926093907",
      "chantier_id": "cn-yard-odc-marine-dalian",
      "operateur_id": "ope-blue-lines",
@@ -222876,7 +222979,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Belle-Martinique.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Cap Salomon",
@@ -222928,8 +223032,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-d9912cf1be6c",
      "chantier_id": "cn-yard-odc-marine-dalian",
      "operateur_id": "ope-blue-lines",
@@ -222944,7 +223048,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Cap-Salomon.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Diamant",
@@ -222995,8 +223100,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-5ed68fe17726",
      "chantier_id": "cn-yard-odc-marine-dalian",
      "operateur_id": "ope-blue-lines",
@@ -223011,7 +223116,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Diamant.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Fort Royal",
@@ -223060,8 +223166,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Vedette à passagers",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Bac / passage d'eau",
      "id": "nav-b952d2c2f428",
      "chantier_id": "cn-yard-odc-marine-dalian",
      "operateur_id": "ope-blue-lines",
@@ -223076,7 +223182,8 @@
       "source": "https://www.marine-marchande.net/Flotte/Vedettes/Fort-Royal.html",
       "champs": []
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Girolata 1",
@@ -223500,8 +223607,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Roulier / Ferry / Navires mixtes",
      "id": "nav-35e0389fc2df",
      "chantier_id": "ro-yard-damen-galati",
      "operateur_id": "ope-spm-ferries",
@@ -223522,7 +223629,8 @@
       "source": "https://lemarin.ouest-france.fr/shipping/grand-format-les-navires-de-commerce-de-la-flotte-francaise-en-outre-mer-fa6809c2-a2ea-11f1-94d9-ff4da0548a19",
       "le": "2026-09-05",
       "confiance": "simple"
-     }
+     },
+     "cotier_arbitre": true
     },
     {
      "nom": "Suroît",
@@ -223573,8 +223681,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Roulier / Ferry / Navires mixtes",
      "id": "nav-7e5f0fb3b0e9",
      "chantier_id": "ro-yard-damen-galati",
      "operateur_id": "ope-spm-ferries",
@@ -223595,7 +223703,8 @@
       "source": "https://lemarin.ouest-france.fr/shipping/grand-format-les-navires-de-commerce-de-la-flotte-francaise-en-outre-mer-fa6809c2-a2ea-11f1-94d9-ff4da0548a19",
       "le": "2026-09-05",
       "confiance": "simple"
-     }
+     },
+     "cotier_arbitre": true
     }
    ],
    "contact_source": "https://www.damen.com/companies/damen-shipyards-galati",
@@ -223703,7 +223812,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-77dbe9fbc842",
      "chantier_id": "es-yard-zamakona-bilbao",
@@ -223711,7 +223820,8 @@
      "acf_id": "dtmd-gironde",
      "source_ref": "Declaration de l'adherent a la plateforme ACF (armateurscotiers.fr), non publique, identifiant ACF dtmd-gironde, relevee le 2026-09-02",
      "uuid": "ab6aef49-3ebe-4127-a54f-97bfb88d0873",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Ivar Aasen (C416)",
@@ -224060,8 +224170,8 @@
        "source": "https://www.marine-marchande.net/Flotte/A-E/CotesdeBlaye.htm"
       }
      ],
-     "cotier": "non",
-     "cotier_motif": "type non couvert par la typologie de l'atelier (Navire de charge)",
+     "cotier": "oui",
+     "cotier_motif": "segment arbitré coque par coque",
      "id": "nav-65a8c4679778",
      "chantier_id": "fr-yard-dubigeon-normandie",
      "uuid": "1741ddd5-739b-496f-a305-2c28d97c8e95",
@@ -224097,7 +224207,9 @@
       ]
      },
      "sortie_pavillon": "devenu Owendo ; Vendu au Gabon, nommé OWENDO",
-     "operateur_id": "ope-dtmd-cd33"
+     "operateur_id": "ope-dtmd-cd33",
+     "cotier_segment": "Bac / passage d'eau",
+     "cotier_arbitre": true
     },
     {
      "nom": "Corse",
@@ -224196,7 +224308,7 @@
       }
      ],
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-9b0e77ef175a",
      "chantier_id": "fr-yard-sud-navires-industries",
@@ -224219,7 +224331,8 @@
       "le": "2026-09-02",
       "confiance": "simple"
      },
-     "uuid": "026c39b2-4206-423f-bf87-dc7adb621768"
+     "uuid": "026c39b2-4206-423f-bf87-dc7adb621768",
+     "cotier_arbitre": true
     }
    ],
    "actif": true,
@@ -224273,8 +224386,8 @@
       }
      ],
      "cotier": "oui",
-     "cotier_motif": "navire à grande vitesse (NGV/HSC)",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "NGV",
      "id": "nav-382af3e683a2",
      "chantier_id": "austal-henderson",
      "uuid": "f2927cc6-f2e0-4dfe-a0f3-a69086b80d54",
@@ -224305,7 +224418,8 @@
       "source": "https://lemarin.ouest-france.fr/shipping/grand-format-les-navires-de-commerce-de-la-flotte-francaise-en-outre-mer-fa6809c2-a2ea-11f1-94d9-ff4da0548a19",
       "le": "2026-09-05",
       "confiance": "simple"
-     }
+     },
+     "cotier_arbitre": true
     },
     {
      "nom": "Corail Express",
@@ -224570,8 +224684,8 @@
        "source": "http://courriersdefrance.blogspot.com/2020/05/vedettes-de-lodet.html"
       }
      ],
-     "cotier": "non",
-     "cotier_motif": "hors périmètre de la flotte côtière (type : Catamaran à vision sous-marine)",
+     "cotier": "oui",
+     "cotier_motif": "segment arbitré coque par coque",
      "id": "nav-9911276f4cdc",
      "chantier_id": "fr-yard-chantiers-verger",
      "operateur_id": "ope-vedettes-de-l-odet-sksgpd",
@@ -224590,7 +224704,9 @@
      },
      "pavillon_pays": "France",
      "pavillon_zone": "France",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_segment": "Vedette à passagers",
+     "cotier_arbitre": true
     }
    ],
    "sources_ref": [
@@ -224636,12 +224752,13 @@
        "source": "http://www.channelislandsshipping.je/page71.html"
       }
      ],
-     "cotier": "indetermine",
-     "cotier_motif": "type porte « vedette / navette / navire à passagers » ; longueur absente, gabarit non vérifié",
+     "cotier": "oui",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Vedette à passagers",
      "id": "nav-6092d345647a",
      "chantier_id": "cassens-werft-emden",
-     "uuid": "a943c13c-842a-457b-b4ee-ffd9e780215d"
+     "uuid": "a943c13c-842a-457b-b4ee-ffd9e780215d",
+     "cotier_arbitre": true
     }
    ],
    "pays_zone": "Europe",
@@ -226993,7 +227110,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « fret côtier / portuaire »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Fret côtier",
      "id": "nav-f9ff5b308f24",
      "chantier_id": "pa-yard-theclabodewes",
@@ -227020,7 +227137,8 @@
        "motif": "Le champ `capacite_pax` portait 12, qui n'a jamais designe des passagers : la source ecrit « capacite : 12 evp, 1 rampe de chaque bord » sur champ capacite de la coque de la source de la coque, soit une capacite de cargaison en EVP. Le champ est vide : une case vide dit la verite, une valeur fausse ment."
       }
      ],
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Wenna",
@@ -276089,11 +276207,13 @@
      "type": "cargo general / polyvalent",
      "annee": "2011",
      "source": "https://en.wikipedia.org/wiki/List_of_ship_launches_in_2011",
-     "cotier": "non",
-     "cotier_motif": "fret non rattaché à une desserte insulaire ou portuaire (type : cargo general / polyvalent)",
+     "cotier": "oui",
+     "cotier_motif": "segment arbitré coque par coque",
      "id": "nav-ac386cc478c1",
      "chantier_id": "pa-yard-maswaterhuizen-waterhuizen",
-     "uuid": "d0e022ad-cebe-4f9a-b01a-09ff51040188"
+     "uuid": "d0e022ad-cebe-4f9a-b01a-09ff51040188",
+     "cotier_segment": "NGV",
+     "cotier_arbitre": true
     },
     {
      "nom": "Lady Anna",
@@ -294393,8 +294513,8 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « bac / double-ender / amphidrome »",
-     "cotier_segment": "Bac / passage d'eau",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "Roulier / Ferry / Navires mixtes",
      "id": "nav-6dab4000baa9",
      "chantier_id": "xx-yard-loceanindien-portlouis",
      "operateur_id": "ope-service-des-transports-maritimes-de-mayotte",
@@ -294411,7 +294531,8 @@
       ]
      },
      "pavillon_registre": "France",
-     "port_lourd_dwt": 219
+     "port_lourd_dwt": 219,
+     "cotier_arbitre": true
     },
     {
      "nom": "Polé",
@@ -294467,7 +294588,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « bac / double-ender / amphidrome »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-2fc03432ae61",
      "chantier_id": "xx-yard-loceanindien-portlouis",
@@ -294484,7 +294605,8 @@
        "imo"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Karihani",
@@ -294546,7 +294668,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « bac / double-ender / amphidrome »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-69c0e3ca517a",
      "chantier_id": "xx-yard-loceanindien-portlouis",
@@ -294562,7 +294684,8 @@
        "imo"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Imane",
@@ -294618,7 +294741,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « bac / double-ender / amphidrome »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-145af9875783",
      "chantier_id": "xx-yard-loceanindien-portlouis",
@@ -294635,7 +294758,8 @@
        "imo"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Chatouilleuse",
@@ -294699,7 +294823,7 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "type porte « bac / double-ender / amphidrome »",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-32f4db6e6c1e",
      "chantier_id": "xx-yard-loceanindien-portlouis",
@@ -294716,7 +294840,8 @@
        "imo"
       ]
      },
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     },
     {
      "nom": "Malani",
@@ -295124,14 +295249,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "navire à grande vitesse (NGV/HSC)",
-     "cotier_segment": "Roulier / Ferry / NGV",
+     "cotier_motif": "segment arbitré coque par coque",
+     "cotier_segment": "NGV",
      "id": "nav-dbb4539055af",
      "chantier_id": "xx-yard-damensingapore-singapour",
      "operateur_id": "ope-manche-iles-express",
      "acf_id": "dno-granville",
      "uuid": "57c0da6e-afd4-4a31-a3f1-b5e6f4b9a1ec",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     }
    ],
    "sources": [
@@ -295229,14 +295355,15 @@
      "pavillon_pays": "France",
      "pavillon_zone": "France",
      "cotier": "oui",
-     "cotier_motif": "typage porté par la base",
+     "cotier_motif": "segment arbitré coque par coque",
      "cotier_segment": "Bac / passage d'eau",
      "id": "nav-1b50655d5a91",
      "chantier_id": "fr-yard-normandie-grandquevilly",
      "operateur_id": "ope-departement-de-seine-maritime-c7boji",
      "acf_id": "cd76-bac13",
      "uuid": "2f260fca-c5c8-4c14-aa1d-039c5c81285c",
-     "pavillon_registre": "France"
+     "pavillon_registre": "France",
+     "cotier_arbitre": true
     }
    ],
    "sources": [
@@ -403461,8 +403588,8 @@
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
-   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "id": "nav-343e7d368bb7",
    "chantier_id": null,
    "operateur_id": "ope-breizhgo-ile-d-arz-17ngv6x",
@@ -403476,7 +403603,8 @@
     "confiance": "simple"
    },
    "uuid": "f7962608-25ee-4acb-a416-ed0c9e3c9503",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Capo Rosso 1",
@@ -403589,7 +403717,7 @@
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Bac / passage d'eau",
    "id": "nav-8b3d7cfabd9b",
    "chantier_id": null,
@@ -403608,7 +403736,8 @@
     "confiance": "simple"
    },
    "uuid": "ddbd36cc-6560-47fd-989f-60b979591b16",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Sauvage III",
@@ -403659,7 +403788,7 @@
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Bac / passage d'eau",
    "id": "nav-48104194f007",
    "chantier_id": null,
@@ -403678,7 +403807,8 @@
     "confiance": "simple"
    },
    "uuid": "2fcc6dc3-6cd7-4299-ac3e-638e256447b2",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Eric Bloodaxe",
@@ -403727,8 +403857,8 @@
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
-   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "id": "nav-7243f6af89c9",
    "chantier_id": null,
    "operateur_id": "ope-tao",
@@ -403743,7 +403873,8 @@
     "confiance": "simple"
    },
    "uuid": "d2e18af7-2532-4913-8158-ca0006184d9c",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Le Nouch",
@@ -403802,8 +403933,8 @@
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
-   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "id": "nav-bad8e634f318",
    "chantier_id": null,
    "operateur_id": "ope-cmt",
@@ -403811,7 +403942,8 @@
    "acf_id": "cmt-lenouch",
    "source_ref": "Declaration de l'adherent a la plateforme ACF (armateurscotiers.fr), non publique, identifiant ACF cmt-lenouch, relevee le 2026-09-02",
    "uuid": "a8becd7b-a585-454e-ae46-f7a7fe9180f9",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Le Nouch 2",
@@ -403870,8 +404002,8 @@
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
-   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "id": "nav-0cbd5e7d50d0",
    "chantier_id": null,
    "operateur_id": "ope-cmt",
@@ -403879,7 +404011,8 @@
    "acf_id": "cmt-lenouch2",
    "source_ref": "Declaration de l'adherent a la plateforme ACF (armateurscotiers.fr), non publique, identifiant ACF cmt-lenouch2, relevee le 2026-09-02",
    "uuid": "9a50c27a-d236-414b-bc69-894a9099c82a",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Le Passeur Électrique",
@@ -403929,8 +404062,8 @@
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
-   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "id": "nav-b38a0cc4798c",
    "chantier_id": null,
    "operateur_id": "ope-cmt",
@@ -403938,7 +404071,8 @@
    "acf_id": "cmt-passeur",
    "source_ref": "Declaration de l'adherent a la plateforme ACF (armateurscotiers.fr), non publique, identifiant ACF cmt-passeur, relevee le 2026-09-02",
    "uuid": "fec73588-a9a2-47bd-9123-123e7b1e0964",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Le Passeur Électrique 2",
@@ -403988,8 +404122,8 @@
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
-   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "id": "nav-3c8059218cec",
    "chantier_id": null,
    "operateur_id": "ope-cmt",
@@ -403997,7 +404131,8 @@
    "acf_id": "cmt-passeur2",
    "source_ref": "Declaration de l'adherent a la plateforme ACF (armateurscotiers.fr), non publique, identifiant ACF cmt-passeur2, relevee le 2026-09-02",
    "uuid": "3a4034ab-5516-44d6-b36e-092a9c32bebd",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Ampère",
@@ -404061,8 +404196,8 @@
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
-   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "id": "nav-c50859e8dddd",
    "chantier_id": null,
    "operateur_id": "ope-tdlr",
@@ -404077,7 +404212,8 @@
     "confiance": "simple"
    },
    "uuid": "40fdfe65-3bff-4fca-872d-41175c0b4462",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Volta",
@@ -404149,8 +404285,8 @@
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
-   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "id": "nav-749ce7f572c1",
    "chantier_id": null,
    "operateur_id": "ope-tdlr",
@@ -404165,7 +404301,8 @@
     "confiance": "simple"
    },
    "uuid": "d8c50082-fc4f-490d-95db-a32b17652248",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Anne de Bretagne",
@@ -404219,7 +404356,7 @@
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "cotier": "oui",
-   "cotier_motif": "type porte « bac / double-ender / amphidrome »",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Bac / passage d'eau",
    "id": "nav-0fe23cf4192b",
    "chantier_id": null,
@@ -404228,7 +404365,8 @@
    "acf_id": "bacsloire-annebretagne",
    "source": "https://www.marine-marchande.net/Flotte/A-E/Anne-de-Bretagne.htm",
    "uuid": "41dea97c-039c-4635-b712-009f9db45afa",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Fort de la Pré",
@@ -404281,8 +404419,8 @@
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
-   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "id": "nav-de07fdefbefa",
    "chantier_id": null,
    "operateur_id": "ope-rd-tpm",
@@ -404297,7 +404435,8 @@
     "confiance": "simple"
    },
    "uuid": "0f8c8cd4-a95e-4116-afae-2b0565799a9a",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "La Mousco",
@@ -404350,8 +404489,8 @@
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
-   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "id": "nav-c8444d1c3264",
    "chantier_id": null,
    "operateur_id": "ope-rd-tpm",
@@ -404366,7 +404505,8 @@
     "confiance": "simple"
    },
    "uuid": "b21e6b14-4fb0-4463-a703-56ef30465f25",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Lou Gabian",
@@ -404419,8 +404559,8 @@
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
-   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "id": "nav-dca342dd2aeb",
    "chantier_id": null,
    "operateur_id": "ope-rd-tpm",
@@ -404435,7 +404575,8 @@
     "confiance": "simple"
    },
    "uuid": "e10bd342-439d-405e-959e-ae24d2f7d7e8",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Le Jeune France",
@@ -404566,7 +404707,7 @@
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "cotier": "oui",
-   "cotier_motif": "type porte « vedette / navette / navire à passagers »",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
    "id": "nav-ddda1b03c4ae",
    "chantier_id": null,
@@ -404575,7 +404716,8 @@
    "acf_id": "jalilo-le-jalilo",
    "capacite_pax": 74,
    "uuid": "b7dbc495-7096-40d1-94b4-5dfa95e7600b",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "L'Hippocampe",
@@ -405169,7 +405311,7 @@
    "operateur_id": "ope-armor-navigation",
    "id": "nav-242be7e3ba3e",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
    "uuid": "707d8fae-5b61-4144-a208-847c1b3b613d",
    "sources_tierces": [
@@ -405186,7 +405328,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Le Fou de Bassan",
@@ -405687,8 +405830,8 @@
    "chantier_id": null,
    "operateur_id": "ope-bateliers-de-la-cote-d-azur-2j16s8",
    "id": "nav-c5b7373892e8",
-   "cotier": "indetermine",
-   "cotier_motif": "type porte « vedette / navette / navire à passagers » ; longueur absente, gabarit non vérifié",
+   "cotier": "oui",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
    "uuid": "12436f2b-39aa-4b4e-9ddf-fc617f46c522",
    "sources_tierces": [
@@ -405704,7 +405847,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Le Miramar",
@@ -405735,8 +405879,8 @@
    "chantier_id": null,
    "operateur_id": "ope-bateliers-de-la-cote-d-azur-2j16s8",
    "id": "nav-5c823e535c43",
-   "cotier": "indetermine",
-   "cotier_motif": "type porte « vedette / navette / navire à passagers » ; longueur absente, gabarit non vérifié",
+   "cotier": "oui",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
    "uuid": "a7a7d3b7-469c-4dfd-a46e-748f580d27eb",
    "sources_tierces": [
@@ -405752,7 +405896,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Le Vision d'Azur",
@@ -406547,8 +406692,8 @@
    "chantier_id": null,
    "operateur_id": "ope-croisieres-inter-iles-1muvdsj",
    "id": "nav-5d27db48b99b",
-   "cotier": "indetermine",
-   "cotier_motif": "type porte « vedette / navette / navire à passagers » ; longueur absente, gabarit non vérifié",
+   "cotier": "oui",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
    "uuid": "1d6955b8-a1dd-4b3a-ae8b-4cce5140a5c9",
    "sources_tierces": [
@@ -406564,7 +406709,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Melody",
@@ -406760,8 +406906,8 @@
    "chantier_id": null,
    "operateur_id": "ope-croisieres-inter-iles-1muvdsj",
    "id": "nav-83540ba065a3",
-   "cotier": "indetermine",
-   "cotier_motif": "type porte « vedette / navette / navire à passagers » ; longueur absente, gabarit non vérifié",
+   "cotier": "oui",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
    "uuid": "1622cc6b-2f8c-4c49-84c7-cbac8c76eb20",
    "sources_tierces": [
@@ -406777,7 +406923,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Marie-Louise",
@@ -407692,9 +407839,9 @@
    "chantier_id": null,
    "operateur_id": "ope-icard-maritime",
    "id": "nav-31a32a67f282",
-   "cotier": "indetermine",
-   "cotier_motif": "navire à grande vitesse (NGV/HSC) ; longueur absente, gabarit non vérifié",
-   "cotier_segment": "Roulier / Ferry / NGV",
+   "cotier": "oui",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "uuid": "3e895147-137f-4433-8d09-9240c99429de",
    "sources_tierces": [
     "https://www.marine-marchande.net/Flotte/Vedettes/Thalassa-7.html"
@@ -407709,7 +407856,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Aquilade I",
@@ -407822,8 +407970,8 @@
    "chantier_id": null,
    "operateur_id": "ope-izenah-croisieres",
    "id": "nav-de90548db2c7",
-   "cotier": "indetermine",
-   "cotier_motif": "type porte « vedette / navette / navire à passagers » ; longueur absente, gabarit non vérifié",
+   "cotier": "oui",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
    "uuid": "6af73505-341b-479b-8164-4dcc5aa37f9c",
    "sources_tierces": [
@@ -407839,7 +407987,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Le Thalassa",
@@ -407952,10 +408101,11 @@
    "chantier_id": null,
    "operateur_id": "ope-izenah-croisieres",
    "id": "nav-c3cebc8c7ee2",
-   "cotier": "indetermine",
-   "cotier_motif": "type porte « vedette / navette / navire à passagers » ; longueur absente, gabarit non vérifié",
+   "cotier": "oui",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
-   "uuid": "e0d9eebb-d7b0-48f5-a869-ec554a8a935b"
+   "uuid": "e0d9eebb-d7b0-48f5-a869-ec554a8a935b",
+   "cotier_arbitre": true
   },
   {
    "nom": "Le Colibr-e",
@@ -409553,8 +409703,8 @@
    "operateur_id": "ope-societe-paul-ricard",
    "id": "nav-165d6f9cfd75",
    "cotier": "oui",
-   "cotier_motif": "capacités passagers ET fret renseignées",
-   "cotier_segment": "Mixte passagers + fret",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "verification": {
     "statut": "corrige",
     "champs": 4,
@@ -409574,7 +409724,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "L'Azur",
@@ -412900,8 +413051,8 @@
    "chantier_id": null,
    "operateur_id": "ope-trans-cote-azur",
    "id": "nav-34b1eb145c0c",
-   "cotier": "indetermine",
-   "cotier_motif": "type porte « vedette / navette / navire à passagers » ; longueur absente, gabarit non vérifié",
+   "cotier": "oui",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
    "uuid": "7d032ab3-6d11-4fd9-8e58-de4423328eec",
    "sources_tierces": [
@@ -412917,7 +413068,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Vision des Mers",
@@ -412948,9 +413100,11 @@
    "chantier_id": null,
    "operateur_id": "ope-trans-cote-azur",
    "id": "nav-a29c7067f8e6",
-   "cotier": "non",
-   "cotier_motif": "hors périmètre de la flotte côtière (type : navire a vision sous-marine)",
-   "uuid": "aeab3ab2-87a4-4a02-8530-a24793b13297"
+   "cotier": "oui",
+   "cotier_motif": "segment arbitré coque par coque",
+   "uuid": "aeab3ab2-87a4-4a02-8530-a24793b13297",
+   "cotier_segment": "Vedette à passagers",
+   "cotier_arbitre": true
   },
   {
    "nom": "Archipel",
@@ -415476,9 +415630,9 @@
    "chantier_id": null,
    "operateur_id": "ope-vedettes-iles-d-or-le-corsaire-qpfa4x",
    "id": "nav-ae438805440e",
-   "cotier": "indetermine",
-   "cotier_motif": "navire à grande vitesse (NGV/HSC) ; longueur absente, gabarit non vérifié",
-   "cotier_segment": "Roulier / Ferry / NGV",
+   "cotier": "oui",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Vedette à passagers",
    "uuid": "8389b87c-96ee-4936-8cee-087d7bda7dee",
    "sources_tierces": [
     "https://www.marine-marchande.net/Flotte/Vedettes/Iles-dOrXX.html"
@@ -415493,7 +415647,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Le Corsaire I",
@@ -415524,9 +415679,9 @@
    "chantier_id": null,
    "operateur_id": "ope-vedettes-iles-d-or-le-corsaire-qpfa4x",
    "id": "nav-2dea6b08a4ce",
-   "cotier": "indetermine",
-   "cotier_motif": "navire à grande vitesse (NGV/HSC) ; longueur absente, gabarit non vérifié",
-   "cotier_segment": "Roulier / Ferry / NGV",
+   "cotier": "oui",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Vedette à passagers",
    "uuid": "7e92e10e-f6de-408f-857d-2d3e048ab7d4",
    "sources_tierces": [
     "https://www.marine-marchande.net/Flotte/Vedettes/Le-corsaire-I.html"
@@ -415541,7 +415696,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Seascope",
@@ -415606,9 +415762,10 @@
    "operateur_id": "ope-vedettes-jolie-france",
    "id": "nav-d5670b57126d",
    "cotier": "oui",
-   "cotier_motif": "type porte « vedette / navette / navire à passagers »",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
-   "uuid": "1801e109-433b-47fb-bf9f-e1b454bc0e26"
+   "uuid": "1801e109-433b-47fb-bf9f-e1b454bc0e26",
+   "cotier_arbitre": true
   },
   {
    "nom": "Jolie France",
@@ -415790,9 +415947,10 @@
    "tracabilite": "reference-sans-url",
    "id": "nav-ad0fb13518b6",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
-   "uuid": "24222447-d297-49ad-a78f-2167da89de46"
+   "uuid": "24222447-d297-49ad-a78f-2167da89de46",
+   "cotier_arbitre": true
   },
   {
    "nom": "Aigrette 1",
@@ -415824,7 +415982,7 @@
    "operateur_id": "ope-vedettes-de-l-odet-sksgpd",
    "id": "nav-83a06d7e0697",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
    "verification": {
     "statut": "corrige",
@@ -415843,7 +416001,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Aigrette III",
@@ -415875,7 +416034,7 @@
    "operateur_id": "ope-vedettes-de-l-odet-sksgpd",
    "id": "nav-78733fa749a7",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
    "verification": {
     "statut": "corrige",
@@ -415894,7 +416053,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Glenn II",
@@ -415926,7 +416086,7 @@
    "operateur_id": "ope-vedettes-de-l-odet-sksgpd",
    "id": "nav-fee338ffdecb",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
    "verification": {
     "statut": "corrige",
@@ -415945,7 +416105,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Cote d'Azur 1",
@@ -416512,9 +416673,10 @@
    "note": "ex Poseidon (marine-marchande.net)",
    "id": "nav-d9260b47667c",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
-   "uuid": "d3af93fb-09ef-4b77-8149-fba001be988f"
+   "uuid": "d3af93fb-09ef-4b77-8149-fba001be988f",
+   "cotier_arbitre": true
   },
   {
    "nom": "Iroko",
@@ -416546,7 +416708,7 @@
    "note": "ex Monarque, ex Govihan (marine-marchande.net)",
    "id": "nav-b1929390aedd",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
    "uuid": "7a6a3460-dee6-4354-bf11-834adeed16e9",
    "enrichissement": {
@@ -416558,7 +416720,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Chateaubriand III",
@@ -416595,7 +416758,7 @@
    "note": "Bateau-restaurant sur la Rance depuis juillet 2020 (agendaou.fr) ; IMO 9042611, ex Azenor selon vesselfinder.com",
    "id": "nav-07de9bfa17aa",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
    "uuid": "16efaf79-ef77-4a8a-8fa5-f280ec778d50",
    "enrichissement": {
@@ -416607,7 +416770,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Dravanteg",
@@ -416654,7 +416818,7 @@
    },
    "id": "nav-8e835f307d3b",
    "cotier": "oui",
-   "cotier_motif": "ferry à passagers de moins de 30 m",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
    "uuid": "8f4b5054-7d77-496b-a32e-8a6d8668a076",
    "enrichissement": {
@@ -416664,7 +416828,8 @@
      "energie"
     ]
    },
-   "sortie_pavillon": "vendu en 2016, à qui ?"
+   "sortie_pavillon": "vendu en 2016, à qui ?",
+   "cotier_arbitre": true
   },
   {
    "nom": "Eudes d'Aquitaine",
@@ -416739,7 +416904,7 @@
    "operateur_id": "ope-navipromer",
    "id": "nav-12fb8d26788d",
    "cotier": "oui",
-   "cotier_motif": "typage porté par la base",
+   "cotier_motif": "segment arbitré coque par coque",
    "cotier_segment": "Vedette à passagers",
    "uuid": "e329f093-7853-4e2f-a695-606a17477d13",
    "enrichissement": {
@@ -416751,7 +416916,8 @@
    },
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Polarfront",
@@ -416790,8 +416956,8 @@
    },
    "note": "Ancien navire meteorologique norvegien, exploite par Latitude Blanche depuis le 28 juin 2017 (Wikipedia)",
    "id": "nav-e1979e8d8329",
-   "cotier": "non",
-   "cotier_motif": "hors périmètre de la flotte côtière (type : yacht d'expedition)",
+   "cotier": "oui",
+   "cotier_motif": "segment arbitré coque par coque",
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "uuid": "0f3c5c54-5dfb-4266-814a-fa37faf6a607",
@@ -416804,7 +416970,9 @@
      "proprietaire"
     ]
    },
-   "pavillon_registre": "RIF"
+   "pavillon_registre": "RIF",
+   "cotier_segment": "Vedette à passagers",
+   "cotier_arbitre": true
   },
   {
    "nom": "San Antonio X",
@@ -416883,10 +417051,11 @@
    ],
    "note": "Catamaran electro-solaire en service depuis fevrier 2010 aux cotes du Cesar (rtm.fr)",
    "id": "nav-9ca938ac5aa1",
-   "cotier": "indetermine",
-   "cotier_motif": "type porte « vedette / navette / navire à passagers » ; longueur absente, gabarit non vérifié",
-   "cotier_segment": "Vedette à passagers",
-   "uuid": "9c6a8256-3026-4a7a-8b00-42639528e564"
+   "cotier": "oui",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
+   "uuid": "9c6a8256-3026-4a7a-8b00-42639528e564",
+   "cotier_arbitre": true
   },
   {
    "nom": "Chantester 2",
@@ -416917,8 +417086,8 @@
    "operateur_id": "ope-chevrey-fastout-x5bcvv",
    "note": "La liste du GT ecrit « Chantester II »",
    "id": "nav-995c106bc74f",
-   "cotier": "non",
-   "cotier_motif": "type non couvert par la typologie de l'atelier (navire de charge)",
+   "cotier": "oui",
+   "cotier_motif": "segment arbitré coque par coque",
    "uuid": "5410a6c4-9a38-42ba-b773-aaee67510c44",
    "enrichissement": {
     "le": "2026-09-02",
@@ -416927,7 +417096,9 @@
      "jauge_gt",
      "energie"
     ]
-   }
+   },
+   "cotier_segment": "Fret portuaire",
+   "cotier_arbitre": true
   },
   {
    "nom": "Deauville",
@@ -417057,8 +417228,8 @@
    "note": "Mise en service chez CTM Deher en 1990 (ctmdeher.com) ; construit en 1970 selon vesselfinder.com (IMO 7114111), l'annee de mise en service n'est pas l'annee de construction",
    "id": "nav-70eedeec1149",
    "cotier": "oui",
-   "cotier_motif": "type porte « vedette / navette / navire à passagers »",
-   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "uuid": "e87a2593-99ca-43c5-9bb9-0bb880351ca4",
@@ -417069,7 +417240,8 @@
      "jauge_gt"
     ]
    },
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Miss Karaibes",
@@ -417105,8 +417277,8 @@
    "note": "Mise en service chez CTM Deher en 2015 (ctmdeher.com) ; construit en 1998 selon vesselfinder.com",
    "id": "nav-1b90f6e1e02b",
    "cotier": "oui",
-   "cotier_motif": "type porte « vedette / navette / navire à passagers »",
-   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "uuid": "c05939bd-3b88-40d9-9f1b-ca119b150c9d",
@@ -417118,7 +417290,8 @@
      "port_lourd_dwt"
     ]
    },
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Miss des Iles",
@@ -417150,8 +417323,8 @@
    "note": "Mise en service chez CTM Deher en 2017 (ctmdeher.com), annee de construction non etablie",
    "id": "nav-51e5d4c1f624",
    "cotier": "oui",
-   "cotier_motif": "type porte « vedette / navette / navire à passagers »",
-   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "uuid": "24622433-5f8b-437d-9f43-5fb8f3127e63",
@@ -417166,7 +417339,8 @@
      "jauge_gt"
     ]
    },
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Miss Outre-mer",
@@ -417201,8 +417375,8 @@
    ],
    "id": "nav-5c206f0c6a1a",
    "cotier": "oui",
-   "cotier_motif": "type porte « vedette / navette / navire à passagers »",
-   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_segment": "Bac / passage d'eau",
    "pavillon_pays": "France",
    "pavillon_zone": "France",
    "uuid": "b6cc35a3-7127-49f9-a18f-958b11c64165",
@@ -417214,7 +417388,8 @@
      "port_lourd_dwt"
     ]
    },
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_arbitre": true
   },
   {
    "nom": "Esperance I",
@@ -426375,11 +426550,13 @@
    "note": "ex , Celestina (1981), Trident 4 (1987), Acajou (1998), Spirit 2 (2011) | JB / JN = 248 / 165",
    "id": "nav-206648cba9e9",
    "uuid": "70347fc1-acbf-418d-9748-7ba8b8c01656",
-   "cotier": "non",
-   "cotier_motif": "type non couvert par la typologie de l'atelier (Catamaran grande vitesse)",
+   "cotier": "oui",
+   "cotier_motif": "segment arbitré coque par coque",
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier_segment": "Vedette à passagers",
+   "cotier_arbitre": true
   },
   {
    "nom": "TUHAAPAE IV",
@@ -426819,7 +426996,11 @@
    "uuid": "938c3241-ecba-446b-b9ce-3e6787a75c87",
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier": "oui",
+   "cotier_segment": "Vedette à passagers",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_arbitre": true
   },
   {
    "nom": "Alizé",
@@ -457794,7 +457975,11 @@
    "uuid": "33b4156b-3f4e-43b9-bf68-e39dda536ace",
    "pavillon_pays": "France",
    "pavillon_zone": "France",
-   "pavillon_registre": "France"
+   "pavillon_registre": "France",
+   "cotier": "oui",
+   "cotier_segment": "Fret côtier",
+   "cotier_motif": "segment arbitré coque par coque",
+   "cotier_arbitre": true
   },
   {
    "nom": "Ourson",
